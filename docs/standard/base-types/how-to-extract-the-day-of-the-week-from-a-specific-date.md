@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Estrarre il giorno della settimana da una data specifica'
+title: 'Procedura: estrarre il giorno della settimana da una data specifica'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 771bd0276310eecb534fb80836faadb1a8aa10bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084194"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: Estrarre il giorno della settimana da una data specifica
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: estrarre il giorno della settimana da una data specifica
 .NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Per estrarre un numero che indica il giorno della settimana da una data specifica  
@@ -104,4 +102,4 @@ ms.locfileid: "65589782"
 
 - [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

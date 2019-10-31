@@ -9,19 +9,17 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6e0e7e69affd93320ec3f3d73e6254befaf6ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084308"
 ---
 # <a name="parsing-strings-in-net"></a>Analisi di stringhe in .NET
 Un'operazione di analisi converte una stringa che rappresenta un tipo di base .NET in quel tipo di base. Ad esempio, un'operazione di analisi viene usata per convertire una stringa in un numero a virgola mobile o in un valore di data e ora. Il metodo più comunemente usato per eseguire un'operazione di analisi è il metodo `Parse`. Poiché l'analisi è l'operazione inversa della formattazione (che comporta la conversione di un tipo di base nella relativa rappresentazione di stringa), vengono applicate molte delle stesse regole e convenzioni. Se la formattazione usa un oggetto che implementa l'interfaccia <xref:System.IFormatProvider> per visualizzare informazioni di formattazione dipendenti dalle impostazioni cultura, l'analisi usa anche un oggetto che implementa l'interfaccia <xref:System.IFormatProvider> per stabilire come interpretare una rappresentazione di stringa. Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)  
  Descrive come eseguire la conversione di stringhe in tipi numerici .NET.  
   

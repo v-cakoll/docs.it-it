@@ -1,20 +1,18 @@
 ---
-title: 'Procedura: Scorrere le directory dei file con PLINQ'
+title: 'Procedura: scorrere le directory dei file con PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091373"
 ---
-# <a name="how-to-iterate-file-directories-with-plinq"></a>Procedura: Scorrere le directory dei file con PLINQ
+# <a name="how-to-iterate-file-directories-with-plinq"></a>Procedura: scorrere le directory dei file con PLINQ
 Questo esempio mostra due semplici modi per parallelizzare le operazioni su directory di file. La prima query usa il metodo <xref:System.IO.Directory.GetFiles%2A> per popolare una matrice di nomi di file in una directory e in tutte le sottodirectory. Questo metodo non restituisce alcun risultato finché non viene popolata l'intera matrice e di conseguenza può introdurre latenza all'inizio dell'operazione. Tuttavia, dopo che la matrice viene popolata, PLINQ può elaborarla in parallelo molto rapidamente.  
   
  La seconda query usa i metodi statici <xref:System.IO.Directory.EnumerateDirectories%2A> e <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, che iniziano a restituire risultati immediatamente. Questo approccio può rivelarsi più veloce quando si esegue l'iterazione di alberi di directory di grandi dimensioni, anche se i tempi di elaborazione rispetto al primo esempio possono dipendere da molti fattori.  
@@ -32,7 +30,7 @@ Questo esempio mostra due semplici modi per parallelizzare le operazioni su dire
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   
- Quando si usa <xref:System.IO.Directory.GetFiles%2A>, assicurarsi di avere autorizzazioni sufficienti per tutte le directory nell'albero. In caso contrario, verrà generata un'eccezione e non verrà restituito alcun risultato. Quando si usa <xref:System.IO.Directory.EnumerateDirectories%2A> in una query PLINQ, risulta problematico gestire le eccezioni di I/O in un modo appropriato che permetta di proseguire con l'iterazione. Se il codice deve gestire eccezioni di I/O o di accesso non autorizzato, è consigliabile provare l'approccio descritto in [Procedura: Scorrere le directory dei file con la classe Parallel](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
+ Quando si usa <xref:System.IO.Directory.GetFiles%2A>, assicurarsi di avere autorizzazioni sufficienti per tutte le directory nell'albero. In caso contrario, verrà generata un'eccezione e non verrà restituito alcun risultato. Quando si usa <xref:System.IO.Directory.EnumerateDirectories%2A> in una query PLINQ, risulta problematico gestire le eccezioni di I/O in un modo appropriato che permetta di proseguire con l'iterazione. Se il codice deve gestire eccezioni di I/O o di accesso non autorizzato, è consigliabile provare l'approccio descritto in [Procedura: Eseguire l'iterazione di file di directory con la classe Parallel](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
   
  Se la latenza di I/O costituisce un problema, ad esempio con I/O di file in una rete, provare a usare una delle tecniche di I/O asincrono descritte in [Task Parallel Library e programmazione asincrona .NET Framework tradizionale](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) e in questo [post di blog](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   

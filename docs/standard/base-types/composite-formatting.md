@@ -13,14 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091566"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -67,7 +65,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composto quale: "0x{0:X} {0:E} {0:N}", come nell'esempio riportato di seguito.  
+ Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composito "0x{0:X} {0:E} {0:N}", come nell'esempio seguente.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -89,9 +87,9 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 |Tipo o categoria di tipo|Vedere|  
 |---------------------------|---------|  
-|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   

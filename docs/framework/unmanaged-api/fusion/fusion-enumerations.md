@@ -6,19 +6,17 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108497"
 ---
 # <a name="fusion-enumerations"></a>Enumerazioni Fusion
 In questa sezione vengono descritte le enumerazioni non gestite utilizzate dall'API Fusion.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Enumerazione ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)  
  Indica l'origine di un assembly rappresentato da [IAssemblyCacheItem](iassemblycacheitem-interface.md) nel Global assembly cache.  
   
@@ -35,7 +33,7 @@ In questa sezione vengono descritte le enumerazioni non gestite utilizzate dall'
  Indica l'equivalenza di due identità di assembly, come determinato dalla funzione [CompareAssemblyIdentity](compareassemblyidentity-function.md) .  
   
  [Enumerazione CREATE_ASM_NAME_OBJ_FLAGS](create-asm-name-obj-flags-enumeration.md)  
- Specifica gli attributi di un `IAssemblyName` oggetto quando viene creato dalla funzione [CreateAssemblyNameObject](createassemblynameobject-function.md) .  
+ Specifica gli attributi di un oggetto `IAssemblyName` quando viene creato dalla funzione [CreateAssemblyNameObject](createassemblynameobject-function.md) .  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Interfacce Fusion](fusion-interfaces.md)  

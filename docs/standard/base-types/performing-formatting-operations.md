@@ -10,27 +10,25 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5073042d578573e904c185bbc18486a82e6be678
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 63ba008ab7c6f1b7f7466ef60f7597a8df9bd8fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084321"
 ---
 # <a name="performing-formatting-operations"></a>Esecuzione di operazioni di formattazione
 Gli argomenti che seguono contengono istruzioni dettagliate per l'esecuzione di operazioni di formattazione specifiche.  
   
 - [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
-- [Procedura: Definire e usare provider di formati numerici personalizzati](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+- [Come definire e usare provider di formati numerici personalizzati](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
 - [Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
 - [Procedura: Estrarre il giorno della settimana da una data specifica](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
-- [Procedura: Valori di data e ora round trip](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+- [Procedura: Eseguire il round trip dei valori di data e ora](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
 - [Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   

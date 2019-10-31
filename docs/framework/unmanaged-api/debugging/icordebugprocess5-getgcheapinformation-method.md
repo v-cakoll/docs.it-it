@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e94034fcdcd8d86f34c61af30a7729a80c913fac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3aa9fe884b16a239f5105dd262edeb8fc3e4abaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084410"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>Metodo ICorDebugProcess5::GetGCHeapInformation
-Fornisce informazioni generali sull'heap di garbage collection, ad esempio se è attualmente enumerabile.  
+Fornisce informazioni generali sull'heap di Garbage Collection, ad esempio se è attualmente enumerabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetGCHeapInformation(
   
 ## <a name="parameters"></a>Parametri  
  `pHeapInfo`  
- [out] Un puntatore a un [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) valore che fornisce informazioni generali sull'heap di garbage collection.  
+ out Puntatore a un valore [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) che fornisce informazioni generali sull'heap Garbage Collection.  
   
 ## <a name="remarks"></a>Note  
- Il `ICorDebugProcess5::GetGCHeapInformation` metodo deve essere chiamato prima dell'enumerazione dell'heap o heap singole aree per garantire che le strutture di garbage collection nel processo sono attualmente valide. Non è possibile scorrere l'heap di garbage collection mentre è in corso una raccolta. In caso contrario, l'enumerazione può acquisire le strutture di garbage collection che non sono validi.  
+ È necessario chiamare il metodo `ICorDebugProcess5::GetGCHeapInformation` prima di enumerare le aree heap o singoli heap per assicurarsi che le strutture Garbage Collection nel processo siano attualmente valide. Non è possibile eseguire il percorso dell'heap Garbage Collection mentre è in corso una raccolta. In caso contrario, è possibile che l'enumerazione acquisisca Garbage Collection strutture che non sono valide.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

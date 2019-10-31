@@ -6,14 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], constants
 - unmanaged API reference [.NET Framework], constants
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 88dfdfcaee4a53e9b3c6e4b7e8187c8bfd5eaa13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786963"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099611"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Costanti (riferimenti alle API non gestite)
 In questo argomento vengono descritti il tipo di linguaggio, il fornitore del linguaggio e le costanti dei tipi di documento definiti in CorSym. idl.  
@@ -38,7 +36,7 @@ In questo argomento vengono descritti il tipo di linguaggio, il fornitore del li
 ## <a name="language-vendor-constants"></a>Costanti fornitore del linguaggio  
  La tabella seguente illustra le costanti del fornitore del linguaggio, che rappresentano i GUID che identificano i fornitori del linguaggio di programmazione.  
   
-|Simbolo|DESCRIZIONE|  
+|Simbolo|Descrizione|  
 |------------|-----------------|  
 |CorSym_LanguageVendor_Microsoft|Indica Microsoft.|  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798489"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101856"
 ---
 # <a name="getpropertyorigin-function"></a>Funzione GetPropertyOrigin
 
@@ -72,11 +70,11 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 Poiché una classe può ereditare proprietà da una o più classi di base, gli sviluppatori spesso vogliono determinare la proprietà in cui è definito un determinato metodo.
 
-Il `pstrClassName` parametro non deve puntare a un oggetto `BSTR` valido prima che la funzione venga chiamata perché si `out` tratta di un parametro; questo puntatore non viene deallocato dopo la restituzione della funzione.
+Il parametro `pstrClassName` non deve puntare a una `BSTR` valida prima della chiamata della funzione perché si tratta di un parametro `out`; Questo puntatore non viene deallocato dopo la restituzione della funzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

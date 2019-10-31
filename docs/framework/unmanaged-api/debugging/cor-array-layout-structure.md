@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099460"
 ---
 # <a name="cor_array_layout-structure"></a>Struttura COR_ARRAY_LAYOUT
 Fornisce informazioni sul layout di un oggetto Array in memoria.  
@@ -41,7 +39,7 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -55,16 +53,16 @@ typedef struct COR_ARRAY_LAYOUT {
 |`rankOffset`|Offset in corrispondenza del quale vengono avviate le classificazioni.|  
   
 ## <a name="remarks"></a>Note  
- Il `rankSize` campo specifica la dimensione di un rango in una matrice multidimensionale. È accurato anche per le matrici unidimensionali.  
+ Il campo `rankSize` specifica la dimensione di un rango in una matrice multidimensionale. È accurato anche per le matrici unidimensionali.  
   
  Il valore di `numRanks` è 1 per una matrice unidimensionale e `N` per una matrice multidimensionale di `N` dimensioni.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

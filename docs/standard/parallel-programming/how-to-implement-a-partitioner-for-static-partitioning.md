@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 302d7d98d04e528d205edf38c3fa13bb3f2b2252
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 94fbb681b20b9c920c20df2a9017f75a9aa9a6ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091527"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>Procedura: implementare un partitioner per il partizionamento statico
 L'esempio seguente come implementare un semplice partitioner personalizzato per PLINQ che esegue il partizionamento statico. Poiché il partitioner non supporta partizioni dinamiche, non può essere usato da <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Questo partitioner specifico potrebbe offrire un aumento di velocità rispetto al partitioner dell'intervallo predefinito per origini dati per cui ogni elemento richiede tempi di elaborazione sempre maggiori.  

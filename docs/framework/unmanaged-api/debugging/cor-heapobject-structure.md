@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 270360a8950197eca14e02a60554659e5ac7b91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099070"
 ---
 # <a name="cor_heapobject-structure"></a>Struttura COR_HEAPOBJECT
 Fornisce informazioni su un oggetto nell'heap gestito.  
@@ -36,7 +34,7 @@ typedef struct _COR_HEAPOBJECT {
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -45,22 +43,22 @@ typedef struct _COR_HEAPOBJECT {
 |`type`|Token [COR_TYPEID](cor-typeid-structure.md) che rappresenta il tipo dell'oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `COR_HEAPOBJECT`le istanze possono essere recuperate tramite l'enumerazione di un oggetto interfaccia [ICorDebugHeapEnum](icordebugheapenum-interface.md) popolato chiamando il metodo [ICorDebugProcess5:: EnumerateHeap](icordebugprocess5-enumerateheap-method.md) .  
+ è possibile recuperare le istanze di `COR_HEAPOBJECT` enumerando un oggetto interfaccia [ICorDebugHeapEnum](icordebugheapenum-interface.md) popolato chiamando il metodo [ICorDebugProcess5:: EnumerateHeap](icordebugprocess5-enumerateheap-method.md) .  
   
- Un' `COR_HEAPOBJECT` istanza di fornisce informazioni su un oggetto attivo nell'heap gestito oppure su un oggetto che non è radicato da alcun oggetto, ma non è ancora stato raccolto dal Garbage Collector.  
+ Un'istanza di `COR_HEAPOBJECT` fornisce informazioni su un oggetto attivo nell'heap gestito oppure su un oggetto che non è radicato da alcun oggetto, ma che non è ancora stato raccolto dall'Garbage Collector.  
   
- Per ottenere prestazioni migliori, `COR_HEAPOBJECT.address` il campo è `CORDB_ADDRESS` un valore anziché il valore dell'interfaccia ICorDebugValue usato nella maggior parte delle API di debug. Per ottenere un oggetto ICorDebugValue per un indirizzo di oggetto specificato, è possibile passare `CORDB_ADDRESS` il valore al metodo [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
+ Per ottenere prestazioni ottimali, il campo `COR_HEAPOBJECT.address` è un valore `CORDB_ADDRESS` anziché il valore dell'interfaccia ICorDebugValue usato nella maggior parte delle API di debug. Per ottenere un oggetto ICorDebugValue per un indirizzo di oggetto specificato, è possibile passare il valore `CORDB_ADDRESS` al metodo [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- Per ottenere prestazioni migliori, `COR_HEAPOBJECT.type` il campo è `COR_TYPEID` un valore anziché il valore di interfaccia ICorDebugType usato nella maggior parte delle API di debug. Per ottenere un oggetto ICorDebugType per un ID tipo specificato, è possibile passare il `COR_TYPEID` valore al metodo [ICorDebugProcess5:: GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) .  
+ Per ottenere prestazioni ottimali, il campo `COR_HEAPOBJECT.type` è un valore `COR_TYPEID` anziché il valore di interfaccia ICorDebugType usato nella maggior parte delle API di debug. Per ottenere un oggetto ICorDebugType per un ID tipo specificato, è possibile passare il valore `COR_TYPEID` al metodo [ICorDebugProcess5:: GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) .  
   
- La `COR_HEAPOBJECT` struttura include un'interfaccia com con conteggio dei riferimenti. Se si recupera un' `COR_HEAPOBJECT` istanza dall'enumeratore chiamando il metodo [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , è necessario rilasciare successivamente il riferimento.  
+ La struttura `COR_HEAPOBJECT` include un'interfaccia COM con conteggio dei riferimenti. Se si recupera un'istanza di `COR_HEAPOBJECT` dall'enumeratore chiamando il metodo [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , è necessario rilasciare successivamente il riferimento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

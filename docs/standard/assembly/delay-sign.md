@@ -1,5 +1,5 @@
 ---
-title: Ritardare la firma di un assembly
+title: Firma ritardata di un assembly
 ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e7679520e246ab3eda03e6f0e0d092c7d09f1845
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991328"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084336"
 ---
-# <a name="delay-sign-an-assembly"></a>Ritardare la firma di un assembly
+# <a name="delay-sign-an-assembly"></a>Firma ritardata di un assembly
 
 Un'organizzazione può avere una coppia di chiavi strettamente sorvegliata a cui gli sviluppatori non possono accedere su base giornaliera. La chiave pubblica è spesso disponibile, ma l'accesso alla chiave privata è consentito solo ad alcune persone. Quando si sviluppano assembly con nome sicuro, in ogni assembly che fa riferimento all'assembly con nome sicuro di destinazione è contenuto un token della chiave pubblica usata per assegnare un nome sicuro all'assembly di destinazione. È quindi necessario che la chiave pubblica risulti disponibile durante il processo di sviluppo.
 
@@ -37,7 +35,7 @@ Per ritardare la firma di un assembly:
 
    - <xref:System.Reflection.AssemblyDelaySignAttribute>, che indica che si sta usando il ritardo della firma passando **true** come parametro al costruttore.
 
-   Ad esempio:
+   Esempio:
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];
@@ -76,7 +74,7 @@ Per ritardare la firma di un assembly:
    > Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
 
    > [!NOTE]
-   > Se si usa il ritardo della firma durante lo sviluppo con Visual Studio in un computer a 64 bit e si compila un assembly per **Qualsiasi CPU**, potrebbe essere necessario applicare due volte l'opzione **-Vr**. In Visual Studio **Qualsiasi CPU** è un valore della proprietà di compilazione **Piattaforma di destinazione**. Quando si esegue la compilazione dalla riga di comando, è l'impostazione predefinita. Per eseguire l'applicazione dalla riga di comando o da Esplora file, usare la versione a 64 bit di [sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md) per applicare l'opzione **-VR** all'assembly. Per caricare l'assembly in Visual Studio in fase di progettazione, ad esempio se l'assembly contiene componenti usati da altri assembly nell'applicazione, usare la versione a 32 bit dello strumento Nome sicuro. Questo perché il compilatore JIT compila l'assembly nel codice nativo a 64 bit quando l'assembly viene eseguito dalla riga di comando e nel codice nativo a 32 bit quando l'assembly viene caricato nell'ambiente di progettazione.
+   > Se si usa il ritardo della firma durante lo sviluppo con Visual Studio in un computer a 64 bit e si compila un assembly per **Qualsiasi CPU**, potrebbe essere necessario applicare due volte l'opzione **-Vr**. In Visual Studio **qualsiasi CPU** è un valore della proprietà di compilazione di **destinazione della piattaforma** . quando si esegue la compilazione dalla riga di comando, si tratta dell'impostazione predefinita. Per eseguire l'applicazione dalla riga di comando o da Esplora file, usare la versione a 64 bit di [sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md) per applicare l'opzione **-VR** all'assembly. Per caricare l'assembly in Visual Studio in fase di progettazione, ad esempio se l'assembly contiene componenti usati da altri assembly nell'applicazione, usare la versione a 32 bit dello strumento Nome sicuro. Questo perché il compilatore JIT compila l'assembly nel codice nativo a 64 bit quando l'assembly viene eseguito dalla riga di comando e nel codice nativo a 32 bit quando l'assembly viene caricato nell'ambiente di progettazione.
 
 5. Successivamente, di solito prima della consegna, sottoporre l'assembly all'autorità di firma dell'organizzazione per la firma con nome sicuro effettiva tramite l'opzione **-R** dello strumento Nome sicuro.
 

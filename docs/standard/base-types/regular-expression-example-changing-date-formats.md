@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084186"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Esempio di espressione regolare: modifica dei formati di data
 Nell'esempio di codice seguente viene utilizzato il metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> per sostituire le date nel formato *mm*/*gg*/*aa* con date nel formato *gg*-*mm*-*aa*.  
@@ -34,10 +32,10 @@ Nell'esempio di codice seguente viene utilizzato il metodo <xref:System.Text.Reg
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#2)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#2)]  
   
-## <a name="comments"></a>Commenti  
+## <a name="comments"></a>Comments  
  Il criterio di ricerca di espressioni regolari `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?<month>\d{1,2})`|Trova la corrispondenza con una o due cifre decimali. Equivale al gruppo acquisito `month`.|  
@@ -49,7 +47,7 @@ Nell'esempio di codice seguente viene utilizzato il metodo <xref:System.Text.Reg
   
  Il modello `${day}-${month}-${year}` definisce la stringa di sostituzione come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`$(day)`|Aggiunge la stringa acquisita dal gruppo di acquisizione `day`.|  
 |`-`|Aggiunge un trattino.|  

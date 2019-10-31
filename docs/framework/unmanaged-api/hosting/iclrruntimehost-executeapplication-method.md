@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b56ffab8fb6a9ef70b51421f9cdc5535111e527
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120475"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Metodo ICLRRuntimeHost::ExecuteApplication
 Utilizzato negli scenari di distribuzione ClickOnce basati su manifesto per specificare l'applicazione da attivare in un nuovo dominio. Per ulteriori informazioni su questi scenari, vedere [sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -45,13 +43,13 @@ HRESULT ExecuteApplication(
  in Nome completo dell'applicazione, come definito per <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- in Numero di stringhe contenute nella `ppwzManifestPaths` matrice.  
+ in Numero di stringhe contenute nella matrice `ppwzManifestPaths`.  
   
  `ppwzManifestPaths`  
  [in] Facoltativo. Matrice di stringhe che contiene i percorsi dei manifesti per l'applicazione.  
   
  `dwActivationData`  
- in Numero di stringhe contenute nella `ppwzActivationData` matrice.  
+ in Numero di stringhe contenute nella matrice `ppwzActivationData`.  
   
  `ppwzActivationData`  
  [in] Facoltativo. Matrice di stringhe che contiene i dati di attivazione dell'applicazione, ad esempio la parte della stringa di query dell'URL per le applicazioni distribuite sul Web.  
@@ -63,7 +61,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`la restituzione è riuscita.|  
+|S_OK|`ExecuteApplication` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -71,19 +69,19 @@ HRESULT ExecuteApplication(
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `ExecuteApplication`viene usato per attivare le applicazioni ClickOnce in un dominio applicazione appena creato.  
+ `ExecuteApplication` viene utilizzato per attivare le applicazioni ClickOnce in un dominio applicazione appena creato.  
   
- Il `pReturnValue` parametro di output viene impostato sul valore restituito dall'applicazione. Se si fornisce un valore null per `pReturnValue`, `ExecuteApplication` non ha esito negativo, ma non restituisce alcun valore.  
+ Il parametro di output `pReturnValue` è impostato sul valore restituito dall'applicazione. Se si fornisce un valore null per `pReturnValue`, `ExecuteApplication` non ha esito negativo, ma non restituisce alcun valore.  
   
 > [!IMPORTANT]
-> Non chiamare il metodo [Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) del metodo prima di chiamare `ExecuteApplication` il metodo per attivare un'applicazione basata su manifesto. Se il `Start` metodo viene chiamato per primo, `ExecuteApplication` la chiamata al metodo avrà esito negativo.  
+> Non chiamare il metodo [Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) del metodo prima di chiamare il metodo `ExecuteApplication` per attivare un'applicazione basata su manifesto. Se il metodo `Start` viene chiamato per primo, la chiamata al metodo `ExecuteApplication` avrà esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -94,4 +92,4 @@ HRESULT ExecuteApplication(
 - <xref:System.ApplicationIdentity>
 - [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [Metodo SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [Procedura dettagliata: Download di assembly su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Procedura dettagliata: download di assembly su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
