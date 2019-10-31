@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Applicazione di stili a contenuto WPF'
+title: 'Procedura dettagliata: applicazione di stili al contenuto WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,24 +9,24 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8b9e2c5c05f1a4b263890c2d8ca8474abe07d836
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658478"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197409"
 ---
-# <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: Stile contenuto WPF
+# <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: stile contenuto WPF
 
 Questo articolo illustra come applicare lo stile a un controllo Windows Presentation Foundation (WPF) ospitato in un Windows Form.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
 ## <a name="create-the-project"></a>Creare il progetto
 
-Aprire Visual Studio e creare un nuovo progetto di applicazione Windows Forms in Visual Basic o C# in `StylingWpfContent`un oggetto visivo denominato.
+Aprire Visual Studio e creare un nuovo progetto di applicazione Windows Forms in Visual Basic o C# in un oggetto visivo denominato `StylingWpfContent`.
 
 > [!NOTE]
 > Con il contenuto WPF sono supportati solo progetti C# e Visual Basic.
@@ -35,15 +35,15 @@ Aprire Visual Studio e creare un nuovo progetto di applicazione Windows Forms in
 
 Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo in un controllo <xref:System.Windows.Forms.Integration.ElementHost>.
 
-1. Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [Procedura dettagliata: Creazione di nuovo contenuto WPF in Windows Forms in fase](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)di progettazione.
+1. Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per ulteriori informazioni, vedere [procedura dettagliata: creazione di nuovi contenuti WPF in Windows Forms in fase di progettazione](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
 
 2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato.
 
-3. Nella finestra **Proprietà** impostare il valore delle <xref:System.Windows.FrameworkElement.Width%2A> proprietà e <xref:System.Windows.FrameworkElement.Height%2A> su **200**.
+3. Nella finestra **Proprietà** impostare il valore delle proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> su **200**.
 
-4. Aggiungere un <xref:System.Windows.Controls.Button?displayProperty=nameWithType> <xref:System.Windows.Controls.UserControl> controllo a e <xref:System.Windows.Controls.ContentControl.Content%2A> impostare il valore della proprietà su **Cancel**.
+4. Aggiungere un controllo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> al <xref:System.Windows.Controls.UserControl> e impostare il valore della proprietà <xref:System.Windows.Controls.ContentControl.Content%2A> su **Annulla**.
 
-5. Aggiungere un secondo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> controllo <xref:System.Windows.Controls.UserControl> a e <xref:System.Windows.Controls.ContentControl.Content%2A> impostare il valore della proprietà su **OK**.
+5. Aggiungere un secondo controllo <xref:System.Windows.Controls.Button?displayProperty=nameWithType> al <xref:System.Windows.Controls.UserControl> e impostare il valore della proprietà <xref:System.Windows.Controls.ContentControl.Content%2A> su **OK**.
 
 6. Compilare il progetto.
 
@@ -53,13 +53,13 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
 1. Aprire `Form1` in Progettazione Windows Form.
 
-1. Nella **casella degli strumenti**fare doppio clic `UserControl1` su per creare un'istanza `UserControl1` di nel form.
+1. Nella **casella degli strumenti**fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.
 
    L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.
 
-1. Nel pannello smart tag per `elementHost1`fare clic su **modifica contenuto ospitato** nell'elenco a discesa.
+1. Nel pannello smart tag per `elementHost1`fare clic su **modifica contenuto ospitato** dall'elenco a discesa.
 
-   `UserControl1`viene aperto in WPF Designer.
+   `UserControl1` viene aperto in WPF Designer.
 
 1. Nella visualizzazione XAML inserire il seguente codice XAML dopo il tag di apertura `<UserControl>`. Questo codice XAML crea una sfumatura con un bordo sfumato a contrasto. Quando si fa clic sul controllo, le sfumature vengono modificate per generare l'aspetto di un pulsante premuto. Per altre informazioni, vedere [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md).
 
@@ -111,7 +111,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
    </UserControl.Resources>
    ```
 
-1. Applicare lo `<Button>` stile definito nel passaggio precedente al pulsante Annulla inserendo il codice XAML seguente nel tag del pulsante **Annulla.** `SimpleButton`
+1. Applicare lo stile `SimpleButton` definito nel passaggio precedente al pulsante Annulla inserendo il codice XAML seguente nel tag `<Button>` del pulsante **Annulla** .
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -140,6 +140,6 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migrazione e interoperabilità](../../wpf/advanced/migration-and-interoperability.md)
 - [Uso di controlli WPF](using-wpf-controls.md)
-- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Progettare XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Cenni preliminari su XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md)

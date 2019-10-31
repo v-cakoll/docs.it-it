@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8764a3d665c997460419561eb168f92ca769c30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773875"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192104"
 ---
 # <a name="assemblybindinfo-structure"></a>Struttura AssemblyBindInfo
-Informazioni dettagliate sugli assembly di riferimento.  
+Fornisce informazioni dettagliate sull'assembly a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,24 +35,24 @@ typedef struct _AssemblyBindInfo {
 } AssemblyBindInfo;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`dwAppDomainId`|Un identificatore univoco per il `IStream` restituito da una chiamata a [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), da cui deve essere caricato l'assembly di riferimento.|  
-|`lpReferencedIdentity`|Un identificatore univoco per l'assembly di riferimento.|  
-|`lpPostPolicyIdentity`|L'identificatore per l'assembly di riferimento dopo l'applicazione di tutti i valori dei criteri di associazione.|  
-|`ePolicyLevel`|Uno dei [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valori che indicano quali criteri di controllo delle versioni, se presente, devono essere applicati all'assembly di riferimento.|  
+|`dwAppDomainId`|Identificatore univoco per il `IStream` restituito da una chiamata a [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), da cui deve essere caricato l'assembly a cui si fa riferimento.|  
+|`lpReferencedIdentity`|Identificatore univoco per l'assembly a cui si fa riferimento.|  
+|`lpPostPolicyIdentity`|Identificatore dell'assembly a cui si fa riferimento dopo l'applicazione di tutti i valori dei criteri di associazione.|  
+|`ePolicyLevel`|Uno dei valori di [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) che indica quali criteri di controllo delle versioni, se presenti, devono essere applicati all'assembly a cui si fa riferimento.|  
   
 ## <a name="remarks"></a>Note  
- L'identificatore univoco viene fornito dall'host `dwAppDomainId` a common language runtime (CLR). Dopo una chiamata a `IHostAssemblyStore::ProvideAssembly` viene restituito, il runtime usa l'identificatore per determinare se il contenuto del `IStream` sono stati mappati. In questo caso, il runtime carica la copia esistente anziché la modifica del flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi restituiscano dalle chiamate a [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). Pertanto, l'identificatore deve essere univoco per le richieste di modulo e per le richieste di assembly.  
+ L'host fornisce l'identificatore univoco `dwAppDomainId` al Common Language Runtime (CLR). Dopo che una chiamata a `IHostAssemblyStore::ProvideAssembly` restituisce, il runtime usa l'identificatore per determinare se è stato eseguito il mapping del contenuto della `IStream`. In tal caso, il runtime carica la copia esistente anziché rimappare il flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi restituiti dalle chiamate a [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). Pertanto, l'identificatore deve essere univoco per le richieste di modulo e per le richieste di assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.idl  
+ **Intestazione:** MSCorEE. idl  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

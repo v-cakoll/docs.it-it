@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 8a1b4869588c8dd030cf6276969063ec99b79e33
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0ace2b13473db30a4500648a67f6ce34edf3e587
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046589"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197554"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomi di elementi dichiarati (Visual Basic)
 Ogni elemento dichiarato ha un nome, detto anche *identificatore*, che è quello usato dal codice per farvi riferimento.  
@@ -63,7 +63,7 @@ Ogni elemento dichiarato ha un nome, detto anche *identificatore*, che è quello
  `xyz$wv`  
   
 > [!CAUTION]
-> I nomi di elemento che iniziano con un`_`carattere di sottolineatura () non fanno parte dell' [indipendenza del linguaggio e dei componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md) , quindi il codice conforme a CLS non può usare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
+> I nomi di elemento che iniziano con un carattere di sottolineatura (`_`) non fanno parte dell' [indipendenza del linguaggio e dei componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md) , quindi il codice conforme a CLS non può usare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
   
 ### <a name="name-length-guidelines"></a>Linee guida per la lunghezza del nome  
  In pratica, il nome deve essere il più breve possibile, pur identificando chiaramente la natura dell'elemento. In questo modo è possibile migliorare la leggibilità del codice e ridurre la lunghezza delle righe e le dimensioni del file di origine.  
@@ -71,7 +71,7 @@ Ogni elemento dichiarato ha un nome, detto anche *identificatore*, che è quello
  D'altra parte, il nome non dovrebbe essere così breve che non descriva in modo adeguato ciò che l'elemento rappresenta e come viene usato dal codice. Questo è importante per la leggibilità del codice. Se un altro utente sta provando a comprenderlo o se si sta esaminando molto tempo dopo averlo scritto, i nomi degli elementi appropriati possono risparmiare una notevole quantità di tempo.  
   
 ## <a name="escaped-names"></a>Nomi preceduti da un carattere di escape  
- In genere, il nome di un elemento non deve corrispondere a nessuna delle parole chiave riservate `Case` da `Friend`Visual Basic, ad esempio o. Tuttavia, è possibile definire un *nome*preceduto da un carattere di escape, racchiuso`[ ]`tra parentesi quadre (). Un nome preceduto da un carattere di escape può corrispondere a qualsiasi parola chiave Visual Basic, poiché le parentesi quadre rimuovono qualsiasi ambiguità. Si usano anche le parentesi quadre quando si fa riferimento al nome in un secondo momento nel codice.  
+ In genere, il nome di un elemento non deve corrispondere a nessuna delle parole chiave riservate da Visual Basic, ad esempio `Case` o `Friend`. Tuttavia, è possibile definire un *nome*preceduto da un carattere di escape racchiuso tra parentesi quadre (`[ ]`). Un nome preceduto da un carattere di escape può corrispondere a qualsiasi parola chiave Visual Basic, poiché le parentesi quadre rimuovono qualsiasi ambiguità. Si usano anche le parentesi quadre quando si fa riferimento al nome in un secondo momento nel codice.  
   
  In generale, è consigliabile usare i nomi con caratteri di escape solo nei casi seguenti:  
   
@@ -79,12 +79,12 @@ Ogni elemento dichiarato ha un nome, detto anche *identificatore*, che è quello
   
 - Si sta lavorando con il codice scritto in un altro linguaggio in cui la parola chiave specificata non è riservata.  
   
- In caso contrario, è consigliabile rinominare l'elemento se il nome è in conflitto con una parola chiave. Il Integrated Development Environment (IDE) fornisce un modo semplice per eseguire questa operazione. Per altre informazioni, vedere [refactoring](/visualstudio/vb-ide/refactoring-vb).  
+ In caso contrario, è consigliabile rinominare l'elemento se il nome è in conflitto con una parola chiave. Il Integrated Development Environment (IDE) fornisce un modo semplice per eseguire questa operazione. Per altre informazioni, vedere [refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
   
 ## <a name="case-sensitivity-in-names"></a>Distinzione maiuscole/minuscole nei nomi  
  I nomi degli elementi in Visual Basic non fanno distinzione tra maiuscole e minuscole. Ciò significa che quando il compilatore confronta due nomi che differiscono solo per i casi alfabetici, li interpreta come lo stesso nome. Ad esempio, se si ha `ABC` e `abc` , il compilatore li interpreta come se facessero riferimento allo stesso elemento dichiarato.  
   
- Tuttavia, il Common Language Runtime (CLR) usa l'associazione con distinzione tra maiuscole e minuscole. Perciò, quando si genera un assembly o una DLL e la si rende disponibile ad altri assembly, i nomi distinguono fra maiuscole e minuscole. Se ad esempio si definisce una classe con un elemento denominato `ABC`e altri assembly usano la classe mediante il Common Language Runtime, devono fare riferimento all'elemento come `ABC`. Se successivamente si ricompila la classe e si modifica il nome dell'elemento in `abc`, gli altri assembly che usano la classe non possono più accedere a tale elemento. Pertanto, quando si rilascia una versione aggiornata di un assembly, non si devono modificare le maiuscole e le minuscole degli elementi pubblici.  
+ Tuttavia, il Common Language Runtime (CLR) usa l'associazione con distinzione tra maiuscole e minuscole. Perciò, quando si genera un assembly o una DLL e la si rende disponibile ad altri assembly, i nomi distinguono fra maiuscole e minuscole. Se ad esempio si definisce una classe con un elemento denominato `ABC`e altri assembly usano la classe mediante il Common Language Runtime, devono fare riferimento all'elemento come `ABC`. Se successivamente si ricompila la classe e si modifica il nome dell'elemento in `abc`, gli altri assembly che usano la classe non potranno più accedere a tale elemento. Pertanto, quando si rilascia una versione aggiornata di un assembly, non si devono modificare le maiuscole e le minuscole degli elementi pubblici.  
   
 ## <a name="names-and-locales"></a>Nomi e impostazioni locali  
  Il confronto dei nomi è indipendente dalle impostazioni locali. Se due nomi corrispondono in un'unica impostazione locale, viene garantita la corrispondenza con tutte le impostazioni locali.  

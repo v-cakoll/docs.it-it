@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192118"
 ---
 # <a name="icordebugchaingetnext-method"></a>Metodo ICorDebugChain::GetNext
 Ottiene la catena di frame successiva per il thread.  
@@ -37,10 +35,10 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di frame per il thread successiva. Se questa è l'ultimo catena, `ppChain` è null.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di frame successiva per il thread. Se questa catena è l'ultima catena, `ppChain` è null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

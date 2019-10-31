@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192150"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>Metodo ICorDebugChain::GetActiveFrame
-Ottiene attivo (vale a dire più recente) frame della catena.  
+Ottiene il frame attivo (ovvero, più recente) nella catena.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parametri  
  `ppFrame`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugFrame rappresenta attivo (vale a dire più recente) frame della catena.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugFrame che rappresenta il frame attivo (ovvero il più recente) nella catena.  
   
 ## <a name="remarks"></a>Note  
- Se non è disponibile alcun stack frame gestito `ppFrame` è impostato su null.  
+ Se non è disponibile alcun stack frame gestito, `ppFrame` è impostato su null.  
   
- Se il frame attivo non è disponibile, la chiamata avrà esito positivo e `ppFrame` sarà null. Non sarà disponibili per catene avviate da CHAIN_ENTER_UNMANAGED e per alcuni catene avviate da CHAIN_CLASS_INIT frame attivi. Vedere l'enumerazione CorDebugChainReason.  
+ Se il frame attivo non è disponibile, la chiamata avrà esito positivo e `ppFrame` sarà null. I frame attivi non saranno disponibili per le catene avviate a causa di CHAIN_ENTER_UNMANAGED e per alcune catene avviate a causa di CHAIN_CLASS_INIT. Vedere l'enumerazione CorDebugChainReason.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

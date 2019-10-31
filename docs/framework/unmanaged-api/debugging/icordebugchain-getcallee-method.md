@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196330"
 ---
 # <a name="icordebugchaingetcallee-method"></a>Metodo ICorDebugChain::GetCallee
-Ottiene la catena di chiamata da questa catena.  
+Ottiene la catena chiamata dalla catena.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di chiamate. Se la catena è attualmente in esecuzione (vale a dire se questa catena non è in attesa di una catena di chiamata), `ppChain` sarà null.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena chiamata. Se questa catena è attualmente in esecuzione (ovvero se questa catena non è in attesa della restituzione di una catena chiamata), `ppChain` sarà null.  
   
 ## <a name="remarks"></a>Note  
- Questa catena attenderà la catena di chiamata restituire prima di riprendere l'esecuzione. La catena di chiamate potrebbe essere in un altro thread nel caso di chiamate per il marshalling cross-thread.  
+ Questa catena attende che la catena chiamata restituisca prima di riprendere l'esecuzione. La catena chiamata può trovarsi in un altro thread nel caso di chiamate con marshalling tra thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

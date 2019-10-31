@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 75ba041a93b71377928591967e1554742e1d17e1
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237380"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198456"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Tipi nello spazio dei nomi Microsoft. VisualBasic. MyServices non disponibili
 
@@ -19,14 +19,14 @@ I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.MyServices?displayPrope
 I tipi nello spazio dei nomi <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> sono disponibili in alcune versioni di .NET Core 3,0 Preview. Non sono più disponibili a partire da .NET Core 3,0 Preview 9.
 
 I tipi sono stati rimossi per evitare dipendenze di assembly non necessarie o modifiche di rilievo nelle versioni successive.
- 
+
 #### <a name="recommended-action"></a>Azione consigliata
 
 Se il codice dipende dall'uso dei tipi **Microsoft. VisualBasic. MyServices** e dei relativi membri, nella libreria di classi .NET sono presenti tipi e membri corrispondenti. Di seguito è riportato un mapping dei tipi **Microsoft. VisualBasic. MyServices** ai tipi di libreria di classi .NET equivalenti:
 
 |Tipo Microsoft. VisualBasic. MyServices|Tipo libreria di classi .NET|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType> per le applicazioni WPF, <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> per applicazioni Windows Forms| 
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType> per applicazioni WPF <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> per applicazioni Windows Forms|
 |<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|Tipi nello spazio dei nomi <xref:System.IO>|
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|Tipi correlati al registro di sistema nello spazio dei nomi <xref:Microsoft.Win32>|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|

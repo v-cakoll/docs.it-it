@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e6638f731b335ba7552379cdc77fa912a1def4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195935"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Metodo ICLRRuntimeInfo::LoadErrorString
 Converte un valore HRESULT in un messaggio di errore appropriato per le impostazioni cultura specificate.  
@@ -45,16 +43,16 @@ HRESULT LoadErrorString(
   
 ## <a name="parameters"></a>Parametri  
  `iResourceID`  
- [in] Il valore HRESULT da convertire.  
+ in HRESULT da tradurre.  
   
  `pwzBuffer`  
- [out] La stringa di messaggio associata all'HRESULT specificato.  
+ out Stringa di messaggio associata al valore HRESULT specificato.  
   
  `pcchBuffer`  
- [in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce le dimensioni previste del `pwzbuffer` per consentire la preallocazione.  
+ [in, out] Dimensioni del `pwzbuffer` per evitare sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce la dimensione prevista di `pwzbuffer` per consentire la preallocazione.  
   
  `iLocaleID`  
- [in] Identificatore delle impostazioni cultura. Per usare le impostazioni cultura predefinite, è necessario specificare -1.  
+ in Identificatore delle impostazioni cultura. Per utilizzare le impostazioni cultura predefinite, è necessario specificare-1.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -66,11 +64,11 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` è null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: Sovranità dei dati per microservizio
 description: La sovranità dei dati per microservizio è uno dei punti chiave dei microservizi. Ogni microservizio deve essere l'unico proprietario del proprio database, che non viene condiviso con nessun altro. Naturalmente, tutte le istanze di un microservizio si connettono allo stesso database a disponibilità elevata.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834472"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191915"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
@@ -25,9 +25,11 @@ L'approccio tradizionale (dati monolitici) usato in molte applicazioni prevede t
 
 Nell'approccio tradizionale, è presente un database singolo condiviso tra tutti i servizi, in genere in un'architettura a più livelli. Nell'approccio basato su microservizi, ogni microservizio è proprietario del modello/dati. L'approccio basato sul database centralizzato risulta apparentemente più semplice e sembra consentire il riutilizzo delle entità nei diversi sottosistemi per assicurare la coerenza complessiva. In realtà si ottengono tuttavia tabelle di grandi dimensioni che gestiscono molti sottosistemi diversi e che includono attributi e colonne che risultano nella maggior parte dei casi superflui. Questo approccio è paragonabile all'uso della stessa mappa fisica per una breve passeggiata, per una gita di un giorno in auto e per l'apprendimento della geografia.
 
-Un'applicazione monolitica con in genere un singolo database relazionale offre due vantaggi importanti: le [transazioni ACID](https://en.wikipedia.org/wiki/ACID) e il linguaggio SQL, che possono essere usati in tutte le tabelle e in tutti i dati correlati all'applicazione. Questo approccio consente di scrivere con facilità una query che combina dati da più tabelle.
+Un'applicazione monolitica con in genere un singolo database relazionale offre due vantaggi importanti, ovvero le [transazioni ACID](https://en.wikipedia.org/wiki/ACID) e il linguaggio SQL, che possono essere usati in tutte le tabelle e in tutti i dati correlati all'applicazione. Questo approccio consente di scrivere con facilità una query che combina dati da più tabelle.
 
-L'accesso ai dati risulta tuttavia più complesso quando si passa a un'architettura di microservizi. Anche nel caso in cui sia possibile o necessario usare le transazioni ACID entro un microservizio o un contesto delimitato, i dati di proprietà di ogni microservizio sono privati per il microservizio specifico ed è possibile accedervi solo tramite la rispettiva API di microservizio. L'incapsulamento dei dati assicura che i microservizi siano a regime di controllo libero e possano evolversi in modo indipendente. Se più servizi accedono agli stessi dati, gli aggiornamenti dello schema richiederebbero aggiornamenti coordinati per tutti i servizi. Ciò comprometterebbe l'autonomia del ciclo di vita dei microservizi. Le strutture di dati distribuite tuttavia non consentono di eseguire alcuna transazione ACID tra microservizi. È quindi necessario usare la coerenza finale quando un processo aziendale interessa più microservizi. Ciò è molto più difficile da implementare rispetto ai semplici join SQL, perché non è possibile creare vincoli di integrità o usare le transazioni distribuite tra database distinti, come verrà spiegato in un secondo momento. Analogamente, molte altre funzionalità di database relazionali non sono disponibili tra più microservizi.
+Tuttavia, l'accesso ai dati diventa molto più complicato quando si passa a un'architettura di microservizi. Anche quando si usano transazioni ACID all'interno di un microservizio o di un contesto delimitato, è fondamentale considerare che i dati di proprietà di ogni microservizio sono privati per quel microservizio ed è necessario accedervi solo in modo sincrono tramite gli endpoint dell'API (REST, gRPC, SOAP e così via) o in modo asincrono tramite messaggistica (AMQP o simile).
+
+L'incapsulamento dei dati assicura che i microservizi siano a regime di controllo libero e possano evolversi in modo indipendente. Se più servizi accedono agli stessi dati, gli aggiornamenti dello schema richiederebbero aggiornamenti coordinati per tutti i servizi. Ciò comprometterebbe l'autonomia del ciclo di vita dei microservizi. Le strutture di dati distribuite tuttavia non consentono di eseguire alcuna transazione ACID tra microservizi. È quindi necessario usare la coerenza finale quando un processo aziendale interessa più microservizi. Ciò è molto più difficile da implementare rispetto ai semplici join SQL, perché non è possibile creare vincoli di integrità o usare le transazioni distribuite tra database distinti, come verrà spiegato in un secondo momento. Analogamente, molte altre funzionalità di database relazionali non sono disponibili tra più microservizi.
 
 I diversi microservizi inoltre usano spesso diversi *tipi* di database. Le applicazioni moderne archiviano ed elaborano diversi tipi di dati e un database relazionale non è sempre la scelta ottimale. Per alcuni casi d'uso è possibile che un database NoSQL, ad esempio Azure CosmosDB o MongoDB, offra un modello di dati più appropriato e prestazioni e scalabilità migliori rispetto a un database SQL come SQL Server o il database SQL di Azure. In altri casi un database relazionale è comunque l'approccio migliore. Le applicazioni basate su microservizi usano quindi spesso una combinazione di database SQL e NoSQL. Questo approccio viene a volte definito [persistenza poliglotta](https://martinfowler.com/bliki/PolyglotPersistence.html).
 
@@ -47,16 +49,16 @@ I microservizi risultano vantaggiosi per DDD perché forniscono limiti reali sot
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Criterio:  database per servizio** \
+- **Chris Richardson. Modello: database per servizio** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
-- **Martin Fowler. BoundedContext** \
+- **Martin Fowler. \ BoundedContext**
   <https://martinfowler.com/bliki/BoundedContext.html>
 
-- **Martin Fowler. PolyglotPersistence** \
+- **Martin Fowler. \ PolyglotPersistence**
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Progettazione orientata al dominio strategico con il Mapping del contesto** \
+- **Alberto Brandolini. Progettazione basata su domini strategici con mapping del contesto** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]

@@ -2,12 +2,12 @@
 title: Informazioni di riferimento sulle proprietà dinamiche LINQ to XML
 ms.date: 10/22/2019
 ms.topic: reference
-ms.openlocfilehash: ca3684716f9b562d0e6a006c26730a1d1a28f8b1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 48b51e92eb78786b2cc189e3e7daa00875b41585
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920930"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197047"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>Proprietà dinamiche di LINQ to XML
 
@@ -21,7 +21,7 @@ Relativamente ai valori risolti, le proprietà dinamiche descritte in questa sez
 
 - Valori indicizzati, ad esempio le proprietà [Elements](elements-xelement-dynamic-property.md) e [Descendants](descendants-xelement-dynamic-property.md) di <xref:System.Xml.Linq.XElement>, che vengono risolti in un tipo di indicizzatore. Affinché i tipi di indicizzatori vengano risolti nel valore o nella raccolta desiderata, è necessario passare un parametro di nome espanso.
 
-Tutte le proprietà dinamiche che restituiscono un valore indicizzato di tipo <xref:System.Collections.Generic.IEnumerable%601> usano l'esecuzione posticipata. Per altre informazioni sull'esecuzione posticipata, vedere [Introduzione alle query LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
+Tutte le proprietà dinamiche che restituiscono un valore indicizzato di tipo <xref:System.Collections.Generic.IEnumerable%601> usano l'esecuzione posticipata. Per altre informazioni sull'esecuzione posticipata, vedere [Introduzione alle query LINQ (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="reference"></a>Reference
 
@@ -33,4 +33,4 @@ Tutte le proprietà dinamiche che restituiscono un valore indicizzato di tipo <x
 
 - [Associazione dati WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Panoramica del data binding WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
-- [Introduzione alle query LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [Introduzione alle query LINQ (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)

@@ -2,12 +2,12 @@
 title: Protezione delle applicazioni ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795052"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196724"
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o eliminare definitivamente dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -16,7 +16,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
   
  Il codice protetto non difende dai problemi di sicurezza che si possono verificare quando si usano risorse non gestite quali i database. La maggior parte dei database di server, ad esempio SQL Server, dispone di sistemi di sicurezza interni, che aumentano la protezione se correttamente implementati. Tuttavia, anche un'origine dati con un sistema di sicurezza efficace può subire danni da un attacco se non è configurata in modo appropriato.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica della sicurezza](security-overview.md)  
  Vengono forniti consigli per la progettazione di applicazioni ADO.NET protette.  
   
@@ -39,7 +39,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Considerazioni sulla sicurezza](./ef/security-considerations.md)  
  Viene descritta la sicurezza per le applicazioni Entity Framework.  
   
- [Sicurezza](../../../standard/security/index.md)  
+ [Security](../../../standard/security/index.md)  
  Contiene collegamenti ad argomenti in cui vengono descritti tutti gli aspetti della sicurezza in .NET.  
   
  [Strumenti di sicurezza](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
@@ -48,7 +48,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Risorse per la creazione di applicazioni sicure](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Vengono forniti collegamenti ad argomenti relativi alla creazione di applicazioni protette.  
   
- [Bibliografia sulla sicurezza](/visualstudio/ide/security-bibliography)  
+ [Bibliografia sulla sicurezza](/visualstudio/ide/securing-applications)  
  Vengono forniti collegamenti a risorse esterne disponibili online e in formato cartaceo.  
   
 ## <a name="see-also"></a>Vedere anche

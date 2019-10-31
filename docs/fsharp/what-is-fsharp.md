@@ -72,7 +72,7 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#i record e le unioni discriminate sono non null, non modificabili e confrontabili per impostazione predefinita, rendendoli molto facili da utilizzare.
+I record F# e le unioni discriminate sono non null, non modificabili e confrontabili per impostazione predefinita, rendendoli molto facili da utilizzare.
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Applicare la correttezza alle funzioni e ai criteri di ricerca
 

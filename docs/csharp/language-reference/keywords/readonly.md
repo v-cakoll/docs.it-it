@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960849"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191865"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
@@ -27,7 +27,7 @@ La parola chiave `readonly` è un modificatore che può essere usata in quattro 
   - Poiché i tipi di riferimento contengono un riferimento ai rispettivi dati, un campo contenente un tipo di riferimento `readonly` deve sempre fare riferimento allo stesso oggetto, L'oggetto non è modificabile. Il modificatore `readonly` impedisce che il campo venga sostituito da un'istanza diversa del tipo di riferimento. Tuttavia, il modificatore non impedisce la modifica dei dati dell'istanza del campo tramite il campo di sola lettura.
 
   > [!WARNING]
-  > Un tipo visibile esternamente che contiene un campo di sola lettura visibile esternamente che è un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può generare un avviso [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "non dichiarare tipi di riferimento modificabili in sola lettura".
+  > Un tipo visibile esternamente che contiene un campo di sola lettura visibile esternamente che è un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può generare un avviso [CA2104](/visualstudio/code-quality/ca2104) : "non dichiarare tipi di riferimento modificabili in sola lettura".
 
 - In una definizione [`readonly struct` ](#readonly-struct-example), `readonly` indica che non è possibile modificare `struct`.
 - In una [definizione di membro`readonly`](#readonly-member-examples)`readonly` indica che un membro di un `struct` non modifica lo stato interno dello struct.

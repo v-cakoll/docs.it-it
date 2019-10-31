@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192140"
 ---
 # <a name="icordebugchaingetcaller-method"></a>Metodo ICorDebugChain::GetCaller
 Ottiene la catena che ha chiamato questa catena.  
@@ -37,15 +35,15 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di chiamata.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena chiamante.  
   
- Se questa catena è stata chiamata spontaneamente (come sarebbe il caso se questa catena o il debugger inizializzata nello stack di chiamate), `ppChain` sarà null.  
+ Se questa catena è stata chiamata in modo spontaneo (come nel caso in cui la catena o il debugger ha inizializzato lo stack di chiamate), `ppChain` sarà null.  
   
 ## <a name="remarks"></a>Note  
- La catena di chiamata può essere su un thread diverso, se è stato effettuato il marshalling della chiamata tra thread.  
+ La catena chiamante può trovarsi in un thread diverso, se la chiamata è stata sottoposta a marshalling tra thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

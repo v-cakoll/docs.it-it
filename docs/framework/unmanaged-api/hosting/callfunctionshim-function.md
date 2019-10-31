@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773770"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192099"
 ---
 # <a name="callfunctionshim-function"></a>Funzione CallFunctionShim
-Effettua una chiamata alla funzione che ha il nome specificato e i parametri nella libreria specificata.  
+Esegue una chiamata alla funzione con il nome e i parametri specificati nella libreria specificata.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Parametri  
  `szDllName`  
- [in] Il nome della libreria che contiene la funzione.  
+ in Nome della libreria che contiene la funzione.  
   
  `szFunctionName`  
- [in] Il nome della funzione.  
+ in Nome della funzione.  
   
  `lpvArgument1`  
- [in] Il primo argomento da passare alla funzione.  
+ in Primo argomento da passare alla funzione.  
   
  `lpvArgument2`  
- [in] Il secondo argomento da passare alla funzione.  
+ in Secondo argomento da passare alla funzione.  
   
  `szVersion`  
- [in] La versione della libreria che contiene la funzione.  
+ in Versione della raccolta che contiene la funzione.  
   
  `pvReserved`  
- [in] Riservato per utilizzi futuri. Passare zero in questo parametro.  
+ in Riservato per usi futuri. Passare zero in questo parametro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

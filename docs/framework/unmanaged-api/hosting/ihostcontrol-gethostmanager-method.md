@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c23773dce448c8c98d4926dff3fa51100e683fd0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192044"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Metodo IHostControl::GetHostManager
-Ottiene un puntatore a interfaccia per l'implementazione dell'host dell'interfaccia con l'oggetto specificato `IID`.  
+Ottiene un puntatore di interfaccia all'implementazione dell'host dell'interfaccia con la `IID`specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,26 +36,26 @@ HRESULT GetHostManager (
   
 ## <a name="parameters"></a>Parametri  
  `riid`  
- [in] Il `IID` dell'interfaccia che common language runtime (CLR) sta eseguendo una query per.  
+ in `IID` dell'interfaccia per cui viene eseguita la query per il Common Language Runtime (CLR).  
   
  `ppObject`  
- [out] Un puntatore di interfaccia implementato dall'host, o null se l'host non supporta questa interfaccia.  
+ out Puntatore all'interfaccia implementata dall'host oppure null se l'host non supporta questa interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`GetHostManager` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|La richiesta `IID` non è valido.|  
-|E_NOINTERFACE|L'interfaccia richiesta non è supportato.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_INVALIDARG|Il `IID` richiesto non è valido.|  
+|E_NOINTERFACE|L'interfaccia richiesta non è supportata.|  
   
 ## <a name="remarks"></a>Note  
- CLR esegue query sull'host per determinare se supporta uno o più delle interfacce seguenti:  
+ CLR esegue una query sull'host per determinare se supporta una o più delle interfacce seguenti:  
   
 - [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
@@ -77,16 +75,16 @@ HRESULT GetHostManager (
   
 - [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Se l'host supporta l'interfaccia specificata, il sistema imposta `ppObject` alla relativa implementazione di tale interfaccia. In caso contrario, imposta `ppObject` su null.  
+ Se l'host supporta l'interfaccia specificata, imposta `ppObject` alla relativa implementazione di tale interfaccia. In caso contrario, imposta `ppObject` su null.  
   
- CLR non chiama `Release` sugli amministratori dell'host, anche quando si arresta.  
+ CLR non chiama `Release` nei gestori host, neanche quando viene arrestato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -6,60 +6,58 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195919"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5
-In questa sezione vengono descritte le interfacce che non gestiti gli host possono usare per l'integrazione common language runtime (CLR) nel .NET Framework 4, .NET Framework 4.5 e versioni successive nelle proprie applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  
+In questa sezione vengono descritte le interfacce che gli host non gestiti possono utilizzare per integrare il Common Language Runtime (CLR) nel .NET Framework 4, .NET Framework 4,5 e versioni successive nelle applicazioni. Queste interfacce forniscono metodi che consentono a un host di configurare e caricare il runtime in un processo.  
   
- A partire da .NET Framework 4, tutte le interfacce di hosting presentano le caratteristiche seguenti:  
+ A partire da .NET Framework 4, tutte le interfacce di hosting presentano le seguenti caratteristiche:  
   
-- Usano la gestione della durata (`AddRef` e `Release`), incapsulamento (contesto implicito) e `QueryInterface` da COM.  
+- Usano la gestione della durata (`AddRef` e `Release`), l'incapsulamento (contesto implicito) e `QueryInterface` da COM.  
   
-- Non usano, ad esempio i tipi COM `BSTR`, `SAFEARRAY`, o `VARIANT`.  
+- Non usano tipi COM, ad esempio `BSTR`, `SAFEARRAY`o `VARIANT`.  
   
-- Non sono presenti modelli di apartment, aggregazione o l'attivazione del Registro di sistema che usano il [funzione CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
+- Non sono disponibili modelli di Apartment, aggregazioni o attivazione del registro di sistema che utilizzano la [funzione CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Interfaccia ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- Fornisce metodi per controllare memoria e utilizzo della CPU di un dominio dell'applicazione.  
+ Fornisce metodi che controllano l'utilizzo della CPU e della memoria del dominio dell'applicazione.  
   
  [Interfaccia ICLRDomainManager](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- Consente all'host specificare il gestore del dominio dell'applicazione che verrà usato per inizializzare il dominio applicazione predefinito e specificare le proprietà di inizializzazione.  
+ Consente all'host di specificare il gestore di dominio dell'applicazione che verrà utilizzato per inizializzare il dominio applicazione predefinito e per specificare le proprietà di inizializzazione.  
   
  [Interfaccia ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)  
- Fornisce il [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) metodo, che consente a un host impostare le dimensioni del segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0 sui valori maggiore `DWORD`.  
+ Fornisce il metodo [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) , che consente a un host di impostare le dimensioni del segmento Garbage Collection e la dimensione massima della generazione 0 del sistema Garbage Collection su valori maggiori di `DWORD`.  
   
  [Interfaccia ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- Fornisce metodi che restituiscono una versione specifica di CLR, elencano tutti i runtime installati, elencare tutti i runtime in-process, restituiscono l'interfaccia di attivazione e individuano la versione CLR usata per compilare un assembly.  
+ Fornisce metodi che restituiscono una versione specifica di CLR, elencano tutti i CLR installati, elencano tutti i runtime in-process, restituiscono l'interfaccia di attivazione e individuano la versione CLR utilizzata per compilare un assembly.  
   
  [Interfaccia ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- Fornisce il [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metodo che fornisce un'interfaccia CLR in base ai criteri, assembly gestito, versione e file di configurazione.  
+ Fornisce il metodo [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) che fornisce un'interfaccia CLR in base ai criteri, all'assembly gestito, alla versione e al file di configurazione.  
   
  [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- Fornisce metodi che restituiscono informazioni su una specifica del runtime, inclusi lo stato di caricamento, directory e versione.  
+ Fornisce metodi che restituiscono informazioni su un runtime specifico, tra cui la versione, la directory e lo stato di caricamento.  
   
  [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- Fornisce funzioni statiche globali di base per la firma degli assembly con nomi sicuri. Tutti i [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) metodi restituiscono valori HRESULT COM standard.  
+ Fornisce funzioni statiche globali di base per la firma di assembly con nomi sicuri. Tutti i metodi [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) restituiscono HRESULT COM standard.  
   
  [Interfaccia ICLRStrongName2](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname2-interface.md)  
- Offre la possibilità di creare i nomi sicuri usando il gruppo di SHA-2 di algoritmi Secure Hash (SHA-256, SHA-384 e SHA-512).  
+ Offre la possibilità di creare nomi sicuri usando il gruppo SHA-2 di algoritmi hash sicuri (SHA-256, SHA-384 e SHA-512).  
   
  [Interfaccia ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
- Fornisce tutte le funzionalità dei [interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); inoltre, fornisce metodi che consentono le interruzioni dei thread per essere ritardato sul thread corrente.  
+ Fornisce tutte le funzionalità dell' [interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); fornisce inoltre metodi che consentono interruzioni di thread in ritardo sul thread corrente.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Interfacce di hosting CLR deprecate e coclassi](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Descrive le interfacce di hosting fornite con le versioni di .NET Framework 1.0 e 1.1.  
+ Descrive le interfacce di hosting fornite con le versioni .NET Framework 1,0 e 1,1.  
   
  [Interfacce di hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- Descrive le interfacce di hosting fornite con le versioni di .NET Framework 2.0, 3.0 e 3.5.  
+ Descrive le interfacce di hosting fornite con le versioni .NET Framework 2,0, 3,0 e 3,5.  
   
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- Viene introdotto l'hosting di .NET Framework.
+ Introduce l'hosting nel .NET Framework.

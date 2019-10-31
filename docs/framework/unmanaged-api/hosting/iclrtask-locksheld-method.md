@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e88a4dc3-02cc-4703-a474-292b71c40657
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9de2ad07efa1a9a8bb93aced600e687b2634111
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a3c42e2877957e3bbf5031e6ba650e4c9e0364e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195940"
 ---
 # <a name="iclrtasklocksheld-method"></a>Metodo ICLRTask::LocksHeld
-Ottiene il numero di blocchi attualmente mantenuti attivi per l'attività.  
+Ottiene il numero di blocchi attualmente conservati nell'attività.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,25 +35,25 @@ HRESULT LocksHeld (
   
 ## <a name="parameters"></a>Parametri  
  `pLockCount`  
- [out] Il numero di blocchi mantenuti attivi per l'attività al momento della chiamata al metodo.  
+ out Numero di blocchi conservati nell'attività al momento della chiamata al metodo.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`LocksHeld` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`LocksHeld` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

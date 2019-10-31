@@ -4,12 +4,12 @@ description: Informazioni su come eseguire la migrazione di un'app Web Form ASP.
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087922"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191940"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Eseguire la migrazione da Web Form ASP.NET a blazer
 
@@ -84,7 +84,7 @@ Il progetto Blazer elenca le dipendenze richieste all'interno di un elemento `<I
 </ItemGroup>
 ```
 
-Un pacchetto NuGet che semplifica la vita degli sviluppatori di Web Form è [Windows Compatibility Pack](/dotnet/core/porting/windows-compat-pack). Sebbene .NET Core sia multipiattaforma, alcune funzionalità sono disponibili solo in Windows. Le funzionalità specifiche di Windows vengono rese disponibili tramite l'installazione di Compatibility Pack. Esempi di queste funzionalità includono il registro di sistema, WMI e i servizi directory. Il pacchetto aggiunge circa 20.000 API e attiva molti servizi con cui potrebbe essere già noto. Il progetto eShop non richiede il pacchetto di compatibilità. Tuttavia, se i progetti utilizzano funzionalità specifiche di Windows, il pacchetto semplifica le attività di migrazione.
+Un pacchetto NuGet che semplifica la vita degli sviluppatori di Web Form è [Windows Compatibility Pack](../../core/porting/windows-compat-pack.md). Sebbene .NET Core sia multipiattaforma, alcune funzionalità sono disponibili solo in Windows. Le funzionalità specifiche di Windows vengono rese disponibili tramite l'installazione di Compatibility Pack. Esempi di queste funzionalità includono il registro di sistema, WMI e i servizi directory. Il pacchetto aggiunge circa 20.000 API e attiva molti servizi con cui potrebbe essere già noto. Il progetto eShop non richiede il pacchetto di compatibilità. Tuttavia, se i progetti utilizzano funzionalità specifiche di Windows, il pacchetto semplifica le attività di migrazione.
 
 ## <a name="enable-startup-process"></a>Abilita processo di avvio
 

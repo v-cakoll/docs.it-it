@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787374"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198172"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Impossibile scrivere l'output in memoria
 Si è verificato un problema durante la scrittura dell'output in memoria.  
@@ -23,7 +23,7 @@ Si è verificato un problema durante la scrittura dell'output in memoria.
   
 1. Ripetere la compilazione del programma, per controllare se l'errore si verifica di nuovo.  
   
-2. Se l'errore si ripresenta, salvare il lavoro e riavviare Visual Studio.  
+2. Se l'errore persiste, salvare il lavoro e riavviare Visual Studio.  
   
 3. Se l'errore si ripete, reinstallare Visual Basic.  
   
@@ -31,4 +31,4 @@ Si è verificato un problema durante la scrittura dell'output in memoria.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/feedback-options) (Comunicazioni con Microsoft)

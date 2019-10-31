@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035452"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191691"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -15,9 +15,9 @@ Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione
 
 Il documento illustra il processo per offrire il proprio contributo per gli articoli e gli esempi di codice ospitati nel [sito della documentazione di .NET](https://docs.microsoft.com/dotnet). I contributi possono essere semplici come le correzioni di errori di ortografia o complessi, ad esempio nuovi articoli.
 
+- [Cosa fare e cosa non fare](#dos-and-donts)
 - [Processo per fornire il contributo](#process-for-contributing)
 - [Esperienza interattiva in C#](#the-c-interactive-experience)
-- [Cosa fare e cosa non fare](#dos-and-donts)
 - [Contratto di licenza con il collaboratore](#contributor-license-agreement)
 
 Questo repository contiene la documentazione concettuale per .NET. Il sito della documentazione di .NET è costituito da più repository oltre a questo:
@@ -28,6 +28,24 @@ Questo repository contiene la documentazione concettuale per .NET. Il sito della
     I problemi e le attività per questo repository vengono rilevati in [DotNet/DotNet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Riferimento di .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)  
     Problemi e taks per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
+
+## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
+
+Il seguente elenco illustra alcune regole che è necessario tenere presenti quando si inviano contributi alla documentazione di .NET:
+
+- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo. Per le modifiche bulk, suddividere il lavoro in richieste pull più piccole (fino a 100 di file). Questa guida è fortemente consigliata se la richiesta pull non segue le linee guida seguenti.
+- **Esaminare i** [problemi correnti per i](https://github.com/dotnet/docs/labels/up-for-grabs) suggerimenti sulle attività.
+- **Creare una** richiesta pull per ogni attività. Le richieste pull che includono più modifiche non correlate sono molto più difficili da rivedere. Che ritarda le revisioni e l'Unione di richieste pull. Questa linea guida si applica anche alle revisioni: si prova a non suggerire modifiche non correlate nelle revisioni. si chiede che le revisioni della community rispettano questa linea guida.
+- **Fornire una** descrizione chiara del lavoro nella richiesta pull. Indicare le modifiche e il motivo. La descrizione predefinita di "Update article.md" non è utile per i revisori.
+- **Non** inviare richieste pull per le modifiche solo stile senza una discussione preliminare. Queste richieste pull hanno tempo aggiuntivo per verificarne l'accuratezza e l'Unione causa spesso conflitti di merge con altri aggiornamenti importanti. Ci stiamo impegnando per seguire uno stile coerente, ma stiamo bilanciando il lavoro con altre attività. Gli articoli vengono introdotti in conformità allo stile quando si eseguono aggiornamenti principali per altri motivi. 
+- **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md). Le nuove aggiunte devono seguire queste linee guida.
+- **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
+- **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
+- **SCIVERE UN BLOG O INVIARE TWEET** (o usare altri mezzi) frequentemente per informazioni sui contributi.
+
+Queste linee guida consentono di rispettare il tempo degli utenti. Molti utenti contribuiscono a questi repository. Seguendo queste linee guida, è più semplice esaminare e unire la richiesta pull in modo tempestivo. Queste procedure riducono al minimo i conflitti con le richieste pull di altri membri della community e del team. Poiché le richieste pull che non seguono queste linee guida spesso causano un lavoro aggiuntivo per i membri della community e degli Stati Uniti, tali richieste potrebbero essere rifiutate. Se si desidera un'eccezione, iniziare creando un problema.
+
+> Nota: si potrebbe osservare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./styleguide/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito.
 
 ## <a name="process-for-contributing"></a>Processo per apportare il contributo
 
@@ -135,19 +153,6 @@ L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori 
 
 - Gli articoli in cui il codice di esempio genera un output di maggiori dimensioni non devono includerlo nei commenti perché nasconde il codice dopo che l'esempio è stato eseguito.
 - Articoli in cui l'esempio illustra un argomento, ma l'output non è fondamentale per comprenderlo, ad esempio un codice che esegue una query LINQ per illustrare la sintassi della query e quindi visualizzare ogni elemento nella raccolta di output.
-
-## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
-
-Il seguente elenco illustra alcune regole che è necessario tenere presenti quando si inviano contributi alla documentazione di .NET:
-
-- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo. Per le modifiche bulk, suddividere il lavoro in richieste pull più piccole (fino a 100 di file).
-- **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md).
-- **USARE** il file [modello](./styleguide/template.md) come punto di partenza del proprio lavoro.
-- **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
-- **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
-- **SCIVERE UN BLOG O INVIARE TWEET** (o usare altri mezzi) frequentemente per informazioni sui contributi.
-
-> Nota: si potrebbe osservare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./styleguide/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito.
 
 ## <a name="contributor-license-agreement"></a>Contratto di licenza per contributi
 

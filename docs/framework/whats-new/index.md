@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 0e1248cc7fd29324810f164b4f0623c141439df2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f9d1c7835c95c904104a165a556b8d527343c30
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091940"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197783"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -2128,6 +2128,6 @@ Il progetto Libreria di classi portabile in Visual Studio 2012 (e versioni succe
 
 - [.NET Framework e rilascio fuori programma](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md)
-- [Novità di Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [Novità di Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET 2.0](/aspnet)
 - [Novità di Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
