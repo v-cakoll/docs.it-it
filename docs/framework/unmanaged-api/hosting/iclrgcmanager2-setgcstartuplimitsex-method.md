@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77de550cd3fb614e03f8028707c3cbf914734910
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141096"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Metodo ICLRGCManager2::SetGCStartupLimitsEx
 Imposta la dimensione di un segmento di Garbage Collection e la dimensione massima della generazione 0 del sistema Garbage Collection.  
@@ -51,7 +49,7 @@ HRESULT SetGCStartupLimitsEx (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx`la restituzione è riuscita.|  
+|S_OK|`SetGCStartupLimitsEx` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -59,16 +57,16 @@ HRESULT SetGCStartupLimitsEx (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- È possibile specificare `SetGCStartupLimitsEx` i valori impostati solo prima dell'avvio dell'host. Le chiamate successive `SetGCStartupLimitsEx` a vengono ignorate.  
+ È possibile specificare i valori che `SetGCStartupLimitsEx` imposta solo prima dell'avvio dell'host. Le chiamate successive a `SetGCStartupLimitsEx` verranno ignorate.  
   
  Per impostare uno dei due parametri senza influire sull'altro, specificare 0 (zero) per il parametro che non si desidera modificare.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

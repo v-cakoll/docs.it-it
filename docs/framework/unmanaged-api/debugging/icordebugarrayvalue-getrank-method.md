@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e83c82c-593d-4691-90b0-383d218b415e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abf24b81bae4d16c3a03aa668d4e1f5e8117cc93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a4cf1f9ea1ccb174b5fb9336040d5e168653fb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088284"
 ---
 # <a name="icordebugarrayvaluegetrank-method"></a>Metodo ICorDebugArrayValue::GetRank
 Ottiene il numero di dimensioni nella matrice.  
@@ -37,10 +35,10 @@ HRESULT GetRank (
   
 ## <a name="parameters"></a>Parametri  
  `pnRank`  
- [out] Un puntatore al numero di dimensioni in questo `ICorDebugArrayValue` oggetto.  
+ out Puntatore al numero di dimensioni in questo oggetto `ICorDebugArrayValue`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

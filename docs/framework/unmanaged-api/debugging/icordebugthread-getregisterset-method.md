@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b9b6260-98ac-4cfd-88e5-5d7614f94a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8769293364c111754f4bfe9360a0dca93c0ba13c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c62bd73b693322bd679b07b46e3549e1cfc8a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133391"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>Metodo ICorDebugThread::GetRegisterSet
-Ottiene un puntatore di interfaccia al set di registri che è associato con la parte attiva di questo oggetto ICorDebugThread.  
+Ottiene un puntatore a interfaccia al set di registri associato alla parte attiva di questo oggetto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parametri  
  `ppRegisters`  
- [out] Un puntatore all'indirizzo di un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) oggetto di interfaccia che rappresenta il registro è impostato per la parte attiva del thread.  
+ out Puntatore all'indirizzo di un oggetto interfaccia [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) che rappresenta il set di registri per la parte attiva di questo thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

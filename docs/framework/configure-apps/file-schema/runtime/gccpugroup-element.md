@@ -5,22 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252568"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116837"
 ---
-# <a name="gccpugroup-element"></a>\<Elemento > GCCpuGroup
+# <a name="gccpugroup-element"></a>\<elemento > GCCpuGroup
 
 Specifica se Garbage Collection supporta più gruppi di CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,14 +39,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`false`|Garbage Collection non supporta più gruppi di CPU. Questa è l'impostazione predefinita.|
 |`true`|Se il server Garbage Collection è abilitato, Garbage Collection supporta più gruppi di CPU.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+Nessuna.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -59,10 +57,10 @@ Nessuno.
 
 ## <a name="remarks"></a>Note
 
-Quando un computer dispone di più gruppi di CPU e Garbage Collection server è abilitato (vedere l' [ \<elemento > gcserver](gcserver-element.md) ), l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU e prende in considerazione tutti i core durante la creazione e heap di bilanciamento.
+Quando un computer dispone di più gruppi di CPU e Garbage Collection server è abilitato (vedere l'elemento [\<gcserver](gcserver-element.md) ), l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU e prende in considerazione tutti i core durante la creazione e heap di bilanciamento.
 
 > [!NOTE]
-> Questo elemento si applica solo ai thread Garbage Collection. Per consentire al runtime di distribuire i thread utente in tutti i gruppi di CPU, è necessario abilitare anche l' [ \<elemento Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
+> Questo elemento si applica solo ai thread Garbage Collection. Per consentire al runtime di distribuire i thread utente in tutti i gruppi di CPU, è necessario abilitare anche l'elemento [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Esempio
 

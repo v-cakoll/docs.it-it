@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f14d00f17a61576a50e26d3cbcf734a10ed3c03a
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d30c8fe71a0dfff7de9bb2f43b325cbb8016a23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123046"
 ---
 # <a name="guid_managedname-attribute"></a>Attributo GUID_ManagedName
 Definisce un attributo di interfaccia personalizzato che specifica il nome dello spazio dei nomi gestito per una libreria COM (Component Object Model).  
@@ -39,7 +37,7 @@ Definisce un attributo di interfaccia personalizzato che specifica il nome dello
  Nome dello spazio dei nomi gestito per la libreria.  
   
 ## <a name="definition"></a>Definizione  
- `GUID_ManagedName`è definito in cor. h come segue:  
+ `GUID_ManagedName` è definito in cor. h come segue:  
   
 ```cpp
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -49,12 +47,12 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ## <a name="remarks"></a>Note  
  Un attributo di interfaccia personalizzato definisce i metadati per un oggetto nella libreria dei tipi.  
   
- Utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> per recuperare il nome gestito dall'attributo.  
+ Utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> per recuperare il nome gestito dall'attributo.  
   
  Per ulteriori informazioni, vedere [attributi di interfaccia](/cpp/windows/attributes/interface-attributes) nella documentazione C++ di riferimento Visual.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una definizione di `GUID_ManagedName` libreria utilizzando l'attributo.  
+ Nell'esempio seguente viene illustrata una definizione di libreria utilizzando l'attributo `GUID_ManagedName`.  
   
 ```idl
 [  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774055"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138196"
 ---
 # <a name="etasktype-enumeration"></a>Enumerazione ETaskType
-Contiene valori che indicano il tipo di attività che è rappresentato da un [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) o un' [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfaccia.  
+Contiene valori che indicano il tipo di attività rappresentato da un'interfaccia [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) o [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,28 +42,28 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|L'interfaccia rappresenta un'attività di scaricamento del dominio applicazione.|  
-|`TT_DEBUGGERHELPER`|L'interfaccia rappresenta un'attività di supporto del debugger.|  
+|`TT_DEBUGGERHELPER`|L'interfaccia rappresenta un'attività helper del debugger.|  
 |`TT_FINALIZER`|L'interfaccia rappresenta un'attività del finalizzatore.|  
-|`TT_GC`|L'interfaccia rappresenta un'attività di garbage collection.|  
-|`TT_THREADPOOL_GATE`|L'interfaccia rappresenta un'attività di thread di attività di controllo.|  
-|`TT_THREADPOOL_IOCOMPLETION`|L'interfaccia rappresenta un'attività di thread dei / o o un'attività di thread di porta di completamento.|  
-|`TT_THREADPOOL_TIMER`|L'interfaccia rappresenta un'attività di thread di timer.|  
-|`TT_THREADPOOL_WAIT`|L'interfaccia rappresenta un'attività di thread di attesa.|  
-|`TT_THREADPOOL_WORKER`|L'interfaccia rappresenta un'attività di thread di lavoro.|  
-|`TT_UNKNOWN`|L'attività è sconosciuto.|  
-|`TT_USER`|L'interfaccia rappresenta un'attività definita dall'utente.|  
+|`TT_GC`|L'interfaccia rappresenta un'attività Garbage Collection.|  
+|`TT_THREADPOOL_GATE`|L'interfaccia rappresenta un'attività del thread del controllo.|  
+|`TT_THREADPOOL_IOCOMPLETION`|L'interfaccia rappresenta un'attività thread di I/O o un'attività thread della porta di completamento.|  
+|`TT_THREADPOOL_TIMER`|L'interfaccia rappresenta un'attività thread del timer.|  
+|`TT_THREADPOOL_WAIT`|L'interfaccia rappresenta un'attività thread di attesa.|  
+|`TT_THREADPOOL_WORKER`|L'interfaccia rappresenta un'attività thread di lavoro.|  
+|`TT_UNKNOWN`|L'attività è sconosciuta.|  
+|`TT_USER`|L'interfaccia rappresenta un'attività utente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

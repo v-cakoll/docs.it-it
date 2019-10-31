@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c076dd2912a22e4f9492492a2d7a9fb73db88e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139032"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>Metodo ICorDebugStepper2::SetJMC
-Imposta un valore che specifica se i passaggi da ICorDebugStepper solo tramite il codice creato dallo sviluppatore di un'applicazione. Questo processo è noto anche come just my code (JMC) il debug.  
+Imposta un valore che specifica se questo ICorDebugStepper passaggi solo tramite codice creato dallo sviluppatore di un'applicazione. Questo processo è noto anche come debug JMC (Just My Code).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT SetJMC (
   
 ## <a name="parameters"></a>Parametri  
  `fIsJMCStepper`  
- [in] Impostare su `true` per eseguire solo codice che viene creato dallo sviluppatore dell'applicazione; in caso contrario, impostato su `false`.  
+ in Impostare su `true` per eseguire il passaggio solo tramite codice creato dallo sviluppatore di un'applicazione. in caso contrario, impostare su `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

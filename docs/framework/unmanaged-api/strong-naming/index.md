@@ -6,21 +6,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a697d96864f336982c05b5bcc7c48efef2df0f6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799208"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140642"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma con nome sicuro per gli assembly.  
   
  La firma di un assembly con un nome sicuro comporta l'aggiunta di una crittografia con chiave pubblica al file che contiene il manifesto dell'assembly. La firma con nome sicuro garantisce l'univocità del nome, ne impedisce l'utilizzo fraudolento e fornisce un'identità univoca al chiamante quando viene risolto un riferimento. I nomi sicuri non garantiscono tuttavia nessun grado di attendibilità.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 > [!NOTE]
 > Tutte queste funzioni sono state deprecate a partire da .NET Framework 4. Per le proposte alternative, vedere l'interfaccia [ICLRStrongName](../hosting/iclrstrongname-interface.md).  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3f3c4503-570e-44c1-ae6a-a3c6b840c732
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea2c72a91aaa09d1c2d0e0944b73beb9ea313d0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a736990188023031eb8df5a76dd16fcc289cfe20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738034"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134028"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>Metodo ICorDebugAppDomain::EnumerateSteppers
-Ottiene un enumeratore per tutti i gestori di istruzioni attive nel dominio dell'applicazione.  
+Ottiene un enumeratore per tutti i Stepper attivi nel dominio applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT EnumerateSteppers (
   
 ## <a name="parameters"></a>Parametri  
  `ppSteppers`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugStepperEnum che è l'enumeratore per tutti i gestori di istruzioni attive nel dominio dell'applicazione.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugStepperEnum che rappresenta l'enumeratore per tutti i Stepper attivi nel dominio applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -2,19 +2,17 @@
 title: Authenticode (riferimenti alle API non gestite)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d2c0163d03a19a7bc00ae705fd633ef4f0880082
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132461"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (riferimenti alle API non gestite)
 Supporta il modulo di creazione e verifica delle licenze Authenticode XrML.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Funzione _AxlGetIssuerPublicKeyHash](axlgetissuerpublickeyhash-function.md)  
  Recupera l'hash SHA-1 della chiave pubblica associata alla chiave privata usata per firmare il certificato specificato.  
   

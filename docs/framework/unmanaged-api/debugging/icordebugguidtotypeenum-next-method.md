@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f334b4a28b0573fa938c2fda340c0c03175ff18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138522"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>Metodo ICorDebugGuidToTypeEnum::Next
-Ottiene il numero specificato di [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) istanze che eseguono il mapping alle informazioni sul tipo GUID.  
+Ottiene il numero specificato di istanze di [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) che mappano i GUID alle informazioni sul tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +37,13 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di oggetti di mapping al tipo di GUID da recuperare.  
+ in Numero di oggetti mapping da GUID a tipo da recuperare.  
   
  `values`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) che esegue il mapping di un GUID di Runtime di Windows per l'oggetto ICorDebugType corrispondente.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) che esegue il mapping di un GUID Windows Runtime al relativo oggetto ICorDebugType corrispondente.  
   
  `pceltFetched`  
- [out] Un puntatore al numero di [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) effettivamente restituiti in oggetti `values`.  
+ out Puntatore al numero di oggetti [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) effettivamente restituiti in `values`.  
   
 ## <a name="remarks"></a>Note  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0288c9912125e20cfb9f9aaaac5003ae9e0b51e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8643c54950486b6374045ff83928c8c7fb568a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140944"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>Metodo ICLRMetaHost::ExitProcess
-Tenta di arresto normale runtime caricati tutti e quindi termina il processo. Sostituisce il [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) (funzione).  
+Tenta di arrestare correttamente tutti i runtime caricati, quindi termina il processo. Sostituisce la funzione [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +34,19 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parametri  
  `iExitCode`  
- [in] Il codice di uscita del processo.  
+ in Codice di uscita del processo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo non restituisce mai, pertanto il relativo valore restituito è indefinito.  
+ Questo metodo non restituisce mai, quindi il valore restituito non è definito.  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

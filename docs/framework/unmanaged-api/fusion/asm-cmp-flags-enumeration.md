@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109321"
 ---
 # <a name="asm_cmp_flags-enumeration"></a>Enumerazione ASM_CMP_FLAGS
 Indica la versione, la compilazione, le impostazioni cultura, la firma e così via, di due assembly da confrontare con il metodo [IAssemblyName:: EQUAL](iassemblyname-isequal-method.md) .  
@@ -68,11 +66,11 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

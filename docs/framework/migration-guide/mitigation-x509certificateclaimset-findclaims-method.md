@@ -1,17 +1,15 @@
 ---
-title: 'Mitigazione: metodo X509CertificateClaimSet.FindClaims'
+title: 'Mitigazione: Metodo X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5591ecebeb924f84cc0efdaf78f40f9d835d2d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126081"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigazione: metodo X509CertificateClaimSet.FindClaims
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigazione: Metodo X509CertificateClaimSet.FindClaims
 A partire dalle app destinate a .NET Framework 4.6.1, il metodo <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tenterà di far corrispondere l'argomento `claimType` con tutte le voci DNS nel relativo campo SAN.  
   
 ## <a name="impact"></a>Impatto  
@@ -19,7 +17,7 @@ A partire dalle app destinate a .NET Framework 4.6.1, il metodo <xref:System.Ide
   
  Per le app destinate a versioni precedenti di .NET Framework, il metodo <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> cerca di far corrispondere l'argomento `claimType` solo con l'ultima voce DNS.  
   
-## <a name="mitigation"></a>Mitigazione  
+## <a name="mitigation"></a>Attenuazione  
  Se la modifica è indesiderata, le app destinate a versioni di .NET Framework a partire da .NET Framework 4.6.1 possono rifiutarla esplicitamente aggiungendo l'impostazione di configurazione seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'app:  
   
 ```xml  

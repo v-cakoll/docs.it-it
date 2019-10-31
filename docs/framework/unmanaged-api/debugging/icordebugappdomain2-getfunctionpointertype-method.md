@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089054"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>Metodo ICorDebugAppDomain2::GetFunctionPointerType
-Ottiene un puntatore a una funzione che dispone di una determinata firma.  
+Ottiene un puntatore a una funzione con una firma specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>Parametri  
  `nTypeArgs`  
- [in] Il numero di argomenti tipo per la funzione.  
+ in Numero di argomenti di tipo per la funzione.  
   
  `ppTypeArgs`  
- [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento tipo della funzione. Il primo elemento è il tipo restituito; ognuno degli altri elementi è un tipo di parametro.  
+ in Matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di tipo della funzione. Il primo elemento è il tipo restituito. ognuno degli altri elementi è un tipo di parametro.  
   
  `ppType`  
- [out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il puntatore alla funzione.  
+ out Puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il puntatore alla funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

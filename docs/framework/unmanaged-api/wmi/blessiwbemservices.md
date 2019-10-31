@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138773"
 ---
 # <a name="blessiwbemservices-function"></a>Funzione BlessIWbemServices
 Indica se le credenziali utente consentono l'accesso alla classe [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) specificata.   
@@ -65,7 +63,7 @@ in Livello di autorizzazione.
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *Winerror. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 
@@ -75,7 +73,7 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 ## <a name="requirements"></a>Requisiti  
 
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

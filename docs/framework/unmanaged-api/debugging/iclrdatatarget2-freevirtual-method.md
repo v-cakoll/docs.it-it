@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112321"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>Metodo ICLRDataTarget2::FreeVirtual
-Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per liberare memoria precedentemente allocato nello spazio degli indirizzi del processo di destinazione.  
+Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per liberare memoria allocata in precedenza nello spazio degli indirizzi del processo di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +37,23 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Parametri  
  `addr`  
- [in] Oggetto `CLRDATA_ADDRESS` valore che specifica l'indirizzo iniziale della memoria da liberare.  
+ in Valore `CLRDATA_ADDRESS` che specifica l'indirizzo iniziale della memoria da liberare.  
   
  `size`  
- [in] Le dimensioni, in byte, della memoria da liberare.  
+ in Dimensione, in byte, della memoria da liberare.  
   
  `typeFlags`  
- [in] Flag che controllano la liberazione della memoria. Vedere Win32 `VirtualFree` (funzione).  
+ in Flag che controllano la liberazione della memoria. Vedere la funzione Win32 `VirtualFree`.  
   
 ## <a name="remarks"></a>Note  
- Il `FreeVirtual` metodo funge da wrapper logico per Win32 `VirtualFree` (funzione).  
+ Il metodo `FreeVirtual` funge da wrapper logico per la funzione di `VirtualFree` Win32.  
   
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

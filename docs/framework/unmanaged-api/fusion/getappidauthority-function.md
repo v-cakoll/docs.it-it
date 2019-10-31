@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f968dad-0d09-47fb-bebc-94c39a0d16ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8471610008bee02c7cc4e7654b21d6aca5dcf53a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 22a6af61251942f068676daaee2bdfa868e32a97
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134548"
 ---
 # <a name="getappidauthority-function"></a>Funzione GetAppIdAuthority
 Ottiene un puntatore a un'istanza di [IAppIdAuthority](iappidauthority-interface.md) che gestisce le chiavi per le identità dell'applicazione e i riferimenti.  
@@ -37,10 +35,10 @@ HRESULT GetAppIdAuthority (
   
 ## <a name="parameters"></a>Parametri  
  `ppIAppIdAuthority`  
- out Puntatore restituito `IAppIdAuthority` .  
+ out Puntatore `IAppIdAuthority` restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

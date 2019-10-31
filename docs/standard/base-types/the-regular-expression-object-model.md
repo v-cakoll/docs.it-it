@@ -35,14 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664667"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124805"
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
 <a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Include le sezioni seguenti:  
@@ -89,9 +87,9 @@ ms.locfileid: "64664667"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
   
- Il criterio di ricerca di espressioni regolari `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`^`|Trova la corrispondenza con l'inizio della stringa di input.|  
 |`\d{3}`|Trova la corrispondenza con tre cifre decimali.|  
@@ -109,7 +107,7 @@ ms.locfileid: "64664667"
   
  Il criterio di espressione regolare `\b(\w+)\W+(\1)\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -129,9 +127,9 @@ ms.locfileid: "64664667"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/replace1.vb#4)]  
   
- Il criterio di ricerca di espressioni regolari `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -141,7 +139,7 @@ ms.locfileid: "64664667"
   
  Il modello di sostituzione `$$$&` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Stringa di sostituzione|  
+|Criterio|Stringa di sostituzione|  
 |-------------|------------------------|  
 |`$$`|Simbolo del dollaro ($).|  
 |`$&`|Intera stringa corrispondente.|  
@@ -152,9 +150,9 @@ ms.locfileid: "64664667"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/split1.vb#5)]  
   
- Il criterio di ricerca di espressioni regolari `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d{1,2}`|Trova la corrispondenza con una o due cifre decimali.|  
@@ -217,7 +215,7 @@ ms.locfileid: "64664667"
   
  Il criterio di espressione regolare `\b\d+(,\d{3})*\.\d{2}\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -246,9 +244,9 @@ ms.locfileid: "64664667"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/groupcollection1.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/groupcollection1.vb#10)]  
   
- Il criterio di ricerca di espressioni regolari `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -275,16 +273,16 @@ ms.locfileid: "64664667"
  [!code-csharp[RegularExpressions.Classes#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#8)]
  [!code-vb[RegularExpressions.Classes#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#8)]  
   
- Il criterio di ricerca di espressioni regolari `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(?<name>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `name`.|  
 |`:`|Trova la corrispondenza con i due punti.|  
 |`(?<value>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `value`.|  
   
- Le proprietà della classe <xref:System.Text.RegularExpressions.Group> offrono informazioni sul gruppo Capture: La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo Capture nel testo di input, la proprietà `Group.Length` contiene la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al criterio definito dal gruppo Capture.  
+ Le proprietà della classe <xref:System.Text.RegularExpressions.Group> forniscono informazioni sul gruppo acquisito. La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo acquisito nel testo di input, la proprietà `Group.Length` include la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al modello definito dal gruppo di acquisizione.  
   
  L'applicazione di quantificatori a un gruppo (per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
   
@@ -301,7 +299,7 @@ ms.locfileid: "64664667"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- I quantificatori possono corrispondere a più occorrenze di un modello definito da un gruppo di acquisizione. In questo caso, le proprietà `Value` e `Length` di un oggetto <xref:System.Text.RegularExpressions.Group> contengono informazioni sull'ultima sottostringa acquisita. Ad esempio, l'espressione regolare seguente corrisponde a una singola frase che termina con un punto. Usa due costrutti di raggruppamento: il primo acquisisce parole singole insieme a uno spazio e il secondo acquisisce parole singole. Come illustrato dall'output dell'esempio, anche se l'espressione regolare riesce ad acquisire un'intera frase, il secondo gruppo di acquisizione acquisisce solo l'ultima parola.  
+- I quantificatori possono corrispondere a più occorrenze di un modello definito da un gruppo di acquisizione. In questo caso, le proprietà `Value` e `Length` di un oggetto <xref:System.Text.RegularExpressions.Group> contengono informazioni sull'ultima sottostringa acquisita. Ad esempio, l'espressione regolare seguente corrisponde a una singola frase che termina con un punto. Usa due costrutti di raggruppamento: il primo acquisisce singole parole insieme a un carattere di spaziatura e il secondo acquisisce le singole parole. Come illustrato dall'output dell'esempio, anche se l'espressione regolare riesce ad acquisire un'intera frase, il secondo gruppo di acquisizione acquisisce solo l'ultima parola.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -341,7 +339,7 @@ ms.locfileid: "64664667"
   
  L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`(\s\w+)*`|Trova la corrispondenza con zero o più occorrenze di un carattere di spaziatura seguito da uno o più caratteri di parola. Questo modello corrisponde a nomi di città composti da più parole. Equivale al terzo gruppo di acquisizione.|  

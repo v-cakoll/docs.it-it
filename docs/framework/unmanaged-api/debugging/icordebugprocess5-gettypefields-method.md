@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132664"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Metodo ICorDebugProcess5::GetTypeFields
-Vengono fornite informazioni sui campi che appartengono a un tipo.  
+Fornisce informazioni sui campi che appartengono a un tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Parametri  
  `id`  
- [in] L'identificatore del tipo le cui informazioni di campo viene recuperati.  
+ in Identificatore del tipo le cui informazioni sul campo vengono recuperate.  
   
  `celt`  
- [in] I numerosi [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) oggetti le cui informazioni di campo deve essere recuperato.  
+ in Numero di oggetti [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) di cui è necessario recuperare le informazioni sul campo.  
   
  `fields`  
- [out] Matrice di [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) gli oggetti che forniscono informazioni sui campi che appartengono al tipo.  
+ out Matrice di oggetti [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) che forniscono informazioni sui campi che appartengono al tipo.  
   
  `pceltNeeded`  
- [out] Un puntatore al numero di [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) oggetti inclusi nel `fields`.  
+ out Puntatore al numero di oggetti [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) inclusi nel `fields`.  
   
 ## <a name="remarks"></a>Note  
- Il `celt` parametro che specifica il numero di campi cui informazioni di campo, il metodo viene utilizzato per popolare `fields`, deve corrispondere al valore della `COR_TYPE_LAYOUT::numFields` campo.  
+ Il parametro `celt`, che specifica il numero di campi le cui informazioni sul campo utilizzate dal metodo per popolare `fields`, devono corrispondere al valore del campo `COR_TYPE_LAYOUT::numFields`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

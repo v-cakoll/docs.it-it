@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 973b2c44-8dfc-40c1-9035-10f4846627e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 539a8edf6d7248235a6e672edc9464679a2eab82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796753"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134503"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Metodo IAssemblyCache::UninstallAssembly
 Disinstalla l'assembly specificato dal Global Assembly Cache.  
@@ -64,7 +62,7 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

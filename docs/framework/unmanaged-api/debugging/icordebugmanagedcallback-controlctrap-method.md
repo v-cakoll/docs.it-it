@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759788"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137422"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>Metodo ICorDebugManagedCallback::ControlCTrap
-Notifica al debugger che CTRL + C viene intercettata nel processo di cui è in corso il debug.  
+Notifica al debugger che la combinazione di tasti CTRL + C è intrappolata nel processo di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +35,20 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo in cui viene intercettata CTRL + C.  
+ in Puntatore a un oggetto ICorDebugProcess che rappresenta il processo in cui viene intercettata la combinazione di tasti CTRL + C.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il debugger gestirà le trap di CTRL + C.|  
-|S_FALSE|Il debugger non gestirà il trap CTRL + C.|  
+|S_OK|Il debugger gestirà la trap CTRL + C.|  
+|S_FALSE|Il debugger non gestirà la trap CTRL + C.|  
   
 ## <a name="remarks"></a>Note  
- Per questo callback vengono arrestati tutti i domini applicazione all'interno del processo.  
+ Tutti i domini applicazione all'interno del processo vengono arrestati per questo callback.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 622b6c523adfb7bae2fc38826152ef69709568cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03c0f94d10629b677cca4c4c456cdaab344cfcdd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139425"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Metodo IHostSyncManager::CreateCrst
 Crea un oggetto sezione critica per la sincronizzazione.  
@@ -43,7 +41,7 @@ HRESULT CreateCrst (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst`la restituzione è riuscita.|  
+|S_OK|`CreateCrst` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -52,14 +50,14 @@ HRESULT CreateCrst (
 |E_OUTOFMEMORY|Memoria insufficiente per creare la sezione critica richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Gli oggetti sezione critici forniscono una sincronizzazione simile a quella fornita da un oggetto mutex, ad eccezione del fatto che le sezioni critiche possono essere utilizzate solo dai thread di un singolo processo. `CreateCrst`rispecchia la funzione `InitializeCriticalSection` Win32.  
+ Gli oggetti sezione critici forniscono una sincronizzazione simile a quella fornita da un oggetto mutex, ad eccezione del fatto che le sezioni critiche possono essere utilizzate solo dai thread di un singolo processo. `CreateCrst` rispecchia la funzione di `InitializeCriticalSection` Win32.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

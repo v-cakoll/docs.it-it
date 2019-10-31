@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16916d62a528222db952a1d29dc7c69de2352191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133118"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>Metodo IHostTaskManager::CreateTask
-Richieste che l'host crea una nuova attività.  
+Richiede che l'host crei una nuova attività.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,38 +38,38 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parametri  
  `stacksize`  
- [in] La dimensione richiesta, in byte di stack richiesto, oppure 0 (zero) per le dimensioni predefinite.  
+ in Dimensioni richieste, in byte, dello stack richiesto o 0 (zero) per le dimensioni predefinite.  
   
  `pStartAddress`  
- [in] Un puntatore alla funzione di attività consiste nell'eseguire.  
+ in Puntatore alla funzione che deve essere eseguita dall'attività.  
   
  `pParameter`  
- [in] Un puntatore ai dati utente deve essere passato alla funzione, o null se la funzione non accetta parametri.  
+ in Puntatore ai dati utente da passare alla funzione oppure null se la funzione non accetta parametri.  
   
  `ppTask`  
- [out] Un puntatore all'indirizzo di un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza creata dall'host o null se non è possibile creare l'attività. L'attività rimane in uno stato sospeso finché non viene avviato in modo esplicito da una chiamata a [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+ out Puntatore all'indirizzo di un'istanza di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) creato dall'host oppure null se non è possibile creare l'attività. L'attività rimane in stato sospeso fino a quando non viene avviata in modo esplicito da una chiamata a [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateTask` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`CreateTask` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Memoria insufficiente era disponibile per creare l'attività richiesta.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Memoria insufficiente per creare l'attività richiesta.|  
   
 ## <a name="remarks"></a>Note  
- CLR chiama `CreateTask` per richiedere che l'host crea una nuova attività. L'host restituisce un puntatore a interfaccia per un `IHostTask` istanza. L'attività restituita deve rimanere sospeso finché non viene avviato in modo esplicito da una chiamata a `IHostTask::Start`.  
+ CLR chiama `CreateTask` per richiedere che l'host crei una nuova attività. L'host restituisce un puntatore a interfaccia a un'istanza di `IHostTask`. L'attività restituita deve rimanere sospesa fino a quando non viene avviata in modo esplicito da una chiamata a `IHostTask::Start`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961002"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122555"
 ---
 # <a name="icordebugmodule3-interface"></a>Interfaccia ICorDebugModule3
 Crea un lettore di simboli per un modulo dinamico.  
@@ -52,11 +50,11 @@ interface ICorDebugModule3 : IUnknown
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni .NET Framework:** 4,5, 4, 3,5 SP1
   

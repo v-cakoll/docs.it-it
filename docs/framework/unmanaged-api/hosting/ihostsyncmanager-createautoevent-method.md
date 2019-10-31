@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad704ff1e38d59df9e26d34b6dc62c40522aa728
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3778e12dd96d4f4653633252e13469601c4879d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139445"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>Metodo IHostSyncManager::CreateAutoEvent
-Crea un oggetto evento auto-reset.  
+Crea un oggetto evento di reimpostazione automatica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,29 +35,29 @@ HRESULT CreateAutoEvent (
   
 ## <a name="parameters"></a>Parametri  
  `ppEvent`  
- [out] Un puntatore all'indirizzo di un [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) istanza implementata dall'host, o null se non è stato possibile creare l'oggetto evento.  
+ out Puntatore all'indirizzo di un'istanza di [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) implementato dall'host oppure null se non è stato possibile creare l'oggetto evento.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`CreateAutoEvent` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Memoria insufficiente era disponibile per creare l'oggetto evento richiesto.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Memoria insufficiente per creare l'oggetto evento richiesto.|  
   
 ## <a name="remarks"></a>Note  
- `CreateAutoEvent` Crea un oggetto di auto-evento il cui stato viene automaticamente impostato su non segnalato dopo che il thread in attesa è stato rilasciato. Questo metodo esegue il mirroring Win32 `CreateEvent` funzione con un valore di `false` specificato per il `bManualReset` parametro  
+ `CreateAutoEvent` crea un oggetto evento automatico il cui stato viene automaticamente modificato in non segnalato dopo il rilascio del thread in attesa. Questo metodo rispecchia la funzione Win32 `CreateEvent` con un valore `false` specificato per il parametro `bManualReset`  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,15 +1,15 @@
 ---
 title: 'Esercitazione: categorizzare i problemi di supporto-classificazione multiclasse'
 description: Informazioni su come usare ML.NET in uno scenario di classificazione multiclasse per assegnare i problemi di GitHub a un'area specifica.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1cd213653c23c4d713e03d53394885f1f3ebb6f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094586"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Esercitazione: categorizzare i problemi di supporto usando la classificazione multiclasse con ML .NET
 
@@ -272,13 +272,13 @@ Osservare l'uso del metodo [Transform()](xref:Microsoft.ML.ITransformer.Transfor
 
 Le metriche seguenti vengono valutate per la classificazione multiclasse:
 
-* MicroAccuracy (Accuratezza micro): ogni coppia campione-classe contribuisce nello stesso modo alla metrica di accuratezza.  Il valore desiderato per MicroAccuracy è il valore più prossimo a 1.
+* MicroAccuracy (Accuratezza micro): ogni coppia campione-classe contribuisce nello stesso modo alla metrica di accuratezza.  Si vuole che la micro precisione sia la più vicina possibile.
 
-* MacroAccuracy (Accuratezza macro): ogni classe contribuisce nello stesso modo alla metrica di accuratezza. Alle classi di minoranza viene assegnato un peso uguale a quello delle classi più grandi. Il valore desiderato per MacroAccuracy è il valore più prossimo a 1.
+* MacroAccuracy (Accuratezza macro): ogni classe contribuisce nello stesso modo alla metrica di accuratezza. Alle classi di minoranza viene assegnato un peso uguale a quello delle classi più grandi. Si vuole che l'accuratezza della macro sia il più vicino possibile.
 
 * LogLoss (Perdita di log): vedere [Perdita di log](../resources/glossary.md#log-loss). Il valore desiderato per LogLoss è il valore più prossimo a 0.
 
-* LogLossReduction (Riduzione della perdita di log): è compreso nell'intervallo [-inf, 100], dove 100 corrisponde a stime perfette e 0 indica stime medie. Il valore desiderato per LogLossReduction è il valore più prossimo a 0.
+* Riduzione della perdita di log: intervalli da [-inf, 1,00], dove 1,00 è una stima perfetta e 0 indica stime significative. Si vuole che la riduzione della perdita di log sia il più vicino possibile.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Visualizzazione delle metriche per la convalida del modello
 

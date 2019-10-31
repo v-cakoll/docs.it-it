@@ -1,25 +1,23 @@
 ---
-title: Imposta attributi assembly
+title: Impostare gli attributi dell'assembly
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d0809ec3da5a12abe950e63f9665037323a0ab39
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138651"
 ---
-# <a name="set-assembly-attributes"></a>Imposta attributi assembly
+# <a name="set-assembly-attributes"></a>Impostare gli attributi dell'assembly
 
 Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Tali attributi sono suddivisi nei seguenti gruppi di informazioni:
 
@@ -39,9 +37,9 @@ Nella tabella seguente vengono descritti gli attributi relativi alla versione e 
 
 |Attributi relativi all'identità dell'assembly|Descrizione|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:**  tutti gli assembly il cui attributo relativo alle impostazioni cultura non è impostato su null vengono considerati dal runtime come assembly satellite e sono soggetti alle regole di associazione degli assembly satellite. Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:** tutti gli assembly il cui attributo "Culture" non è impostato su Null vengono considerati dal runtime come assembly satellite. e sono soggetti alle regole di associazione degli assembly satellite. Per ulteriori informazioni, vedere [come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valore che consente di impostare gli attributi relativi all'assembly, indicando ad esempio se è consentita l'esecuzione affiancata di più versioni.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:**  Se l'attributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> non viene applicato a un assembly, il numero di versione specificato dall'attributo <xref:System.Reflection.AssemblyVersionAttribute> viene usato dalle proprietà  <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:** se l'attributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> non viene applicato a un assembly, il numero di versione specificato dall'attributo <xref:System.Reflection.AssemblyVersionAttribute> viene usato dalle proprietà  <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 
 Nel seguente esempio di codice viene mostrato come applicare a un assembly gli attributi relativi alla versione e alle impostazioni cultura.
 
@@ -75,7 +73,7 @@ Gli attributi informativi consentono di fornire informazioni aggiuntive relative
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valore stringa in cui viene specificato un nome di società.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valore stringa in cui vengono specificate informazioni relative al copyright.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Valore stringa in cui viene specificato il numero di versione del file Win32. L'impostazione predefinita è solitamente la versione dell'assembly.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valore stringa in cui vengono specificate informazioni relative alla versione non usate da Common Language Runtime, quale il numero di versione del prodotto completo. **Nota:**  se questo attributo viene applicato a un assembly, è possibile ottenere la stringa che specifica in fase di esecuzione tramite la proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. La stringa viene usata anche nel percorso e nella chiave del Registro di sistema specificati dalle proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valore stringa in cui vengono specificate informazioni relative alla versione non usate da Common Language Runtime, quale il numero di versione del prodotto completo. **Nota:** se questo attributo viene applicato a un assembly, è possibile ottenere la stringa specificata in fase di esecuzione tramite la proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. La stringa viene usata anche nel percorso e nella chiave del Registro di sistema specificati dalle proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 |<xref:System.Reflection.AssemblyProductAttribute>|Valore stringa in cui vengono specificate informazioni relative al prodotto.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Valore stringa in cui vengono specificate informazioni relative al marchio registrato.|
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133684"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Enumerazione CorDebugStepReason
 Indica l'esito di una singola istruzione.  
@@ -40,20 +38,20 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`STEP_NORMAL`|L'esecuzione di istruzioni completata in genere, entro la stessa funzione.|  
-|`STEP_RETURN`|L'esecuzione di istruzioni continuato in genere, dopo la funzione ha restituito.|  
-|`STEP_CALL`|L'esecuzione di istruzioni continuato in genere, all'inizio di una nuova funzione chiamata.|  
+|`STEP_NORMAL`|Esecuzione di un'istruzione in modo normale completata, all'interno della stessa funzione.|  
+|`STEP_RETURN`|L'esecuzione di un'istruzione continua normalmente, dopo la restituzione della funzione.|  
+|`STEP_CALL`|L'esecuzione di un'istruzione continua normalmente, all'inizio di una funzione appena chiamata.|  
 |`STEP_EXCEPTION_FILTER`|È stata generata un'eccezione e il controllo è stato passato a un filtro eccezioni.|  
 |`STEP_EXCEPTION_HANDLER`|È stata generata un'eccezione e il controllo è stato passato a un gestore di eccezioni.|  
 |`STEP_INTERCEPT`|Il controllo è stato passato a un intercettore.|  
-|`STEP_EXIT`|Il thread sia stato chiuso prima del completamento dell'istruzione.|  
+|`STEP_EXIT`|Il thread è stato terminato prima del completamento del passaggio.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

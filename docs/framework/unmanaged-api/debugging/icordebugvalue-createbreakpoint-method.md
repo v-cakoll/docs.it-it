@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f21e3c586ed665ef0b6e55b720f891cc405311ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6285c244f3949b3814b875a01336532d0d7e49c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137107"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>Metodo ICorDebugValue::CreateBreakpoint
-Il `CreateBreakpoint` (metodo) non è attualmente implementato.  
+Il metodo `CreateBreakpoint` non è attualmente implementato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +34,7 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

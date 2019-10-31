@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053230"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119982"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
@@ -35,7 +33,7 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 - [Procedura: Compilare un assembly su singolo file](build-single-file-assembly.md)  
   
-- [Procedura: Compilare un assembly con più file](build-multifile-assembly.md)  
+- [Procedura: Compilare un assembly su più file](build-multifile-assembly.md)  
   
 - [Procedura: Creare una coppia di chiavi pubblica/privata](../../standard/assembly/create-public-private-key-pair.md)  
   
@@ -51,7 +49,7 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 - [Procedura: Rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [Procedura: Visualizzare il contenuto degli assembly](../../standard/assembly/view-contents.md)  
+- [Procedura: Visualizzare il contenuto dell'assembly](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

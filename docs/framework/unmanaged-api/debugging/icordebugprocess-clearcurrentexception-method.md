@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37a7d8fa4439d52db3cddfff22ac6580b19af58a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128905"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>Metodo ICorDebugProcess::ClearCurrentException
 Cancella l'eccezione non gestita corrente sul thread specificato.  
@@ -35,15 +33,15 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'ID del thread in cui l'eccezione non gestita corrente verrà cancellato.  
+ in ID del thread in cui verrà cancellata l'eccezione non gestita corrente.  
   
 ## <a name="remarks"></a>Note  
- Chiamare questo metodo prima di chiamare [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) quando un thread ha segnalato un'eccezione non gestita che deve essere ignorata dall'oggetto del debug. Ciò consente di correggere in sospeso in banda (IB) sia gli eventi di out-of-band (OOB) sul thread specificato. Tutti i punti di interruzione OOB e passo a passo eccezioni vengono automaticamente cancellate.  
+ Chiamare questo metodo prima di chiamare [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) quando un thread ha segnalato un'eccezione non gestita che deve essere ignorata dall'oggetto del debug. Questa operazione eliminerà gli eventi in banda (IB) e fuori banda (OOB) in attesa sul thread specificato. Tutti i punti di interruzione OOB e le eccezioni a singolo passaggio vengono cancellati automaticamente.  
   
- Uso [ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) intercettare corrente delle eccezioni in un thread gestito.  
+ Usare [ICorDebugThread2:: InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) per intercettare l'eccezione gestita corrente su un thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

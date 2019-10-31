@@ -8,14 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a460ac730db85dfa8d4a8ee6949a168bc228193d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631385"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123208"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
@@ -43,7 +41,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
   
  L'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|DESCRIZIONE|  
+|Interfaccia|Descrizione|  
 |---------------|-----------------|  
 |**IDispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
@@ -52,7 +50,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
   
  RCW usa facoltativamente le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|DESCRIZIONE|  
+|Interfaccia|Descrizione|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|Talvolta l'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.|  
 |**IDispatchEx** (solo .NET Framework) |Se la classe implementa **IDispatchEx**, l'oggetto RCW implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  

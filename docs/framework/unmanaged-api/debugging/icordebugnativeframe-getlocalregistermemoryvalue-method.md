@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44d7c23f88f5ea93f608d06b69f69b2c3637b5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746189"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096838"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Metodo ICorDebugNativeFrame::GetLocalRegisterMemoryValue
-Ottiene il valore di un argomento o una variabile locale, di cui il Word meno significativa e Word più significativa vengono archiviati nella posizione di memoria e nel registro viene specificato, rispettivamente, per il frame nativo.  
+Ottiene il valore di un argomento o di una variabile locale, di cui la parola bassa e la parola alta vengono archiviati nella posizione di memoria e nel registro specificato rispettivamente per il frame nativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,22 +39,22 @@ HRESULT GetLocalRegisterMemoryValue (
   
 ## <a name="parameters"></a>Parametri  
  `highWordReg`  
- [in] Valore dell'enumerazione che specifica il registro contenente la Word più significativa del valore "CorDebugRegister".  
+ in Valore dell'enumerazione "CorDebugRegister" che specifica il registro contenente la parola alta del valore.  
   
  `lowWordAddress`  
- [in] Oggetto `CORDB_ADDRESS` valore che specifica la posizione di memoria che contiene la Word meno significativa del valore.  
+ in Valore `CORDB_ADDRESS` che specifica la posizione di memoria contenente la parola bassa del valore.  
   
  `cbSigBlob`  
- [in] Intero che specifica le dimensioni della firma binaria dei metadati che fa riferimento il `pvSigBlob` parametro.  
+ in Integer che specifica la dimensione della firma dei metadati binari a cui fa riferimento il parametro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Oggetto `PCCOR_SIGNATURE` valore che punta alla firma binaria dei metadati del tipo del valore.  
+ in Valore `PCCOR_SIGNATURE` che punta alla firma dei metadati binaria del tipo del valore.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nella posizione di registrazione e la memoria specificata.  
+ out Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nel registro e nella posizione di memoria specificati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

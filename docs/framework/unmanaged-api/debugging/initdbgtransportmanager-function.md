@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764778"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103283"
 ---
 # <a name="initdbgtransportmanager-function"></a>Funzione InitDbgTransportManager
 Inizializza il gestore trasporto per connettersi a una destinazione remota per l'enumerazione del runtime e dei processi.  
@@ -45,10 +43,10 @@ HRESULT InitDbgTransportManager ();
  Altri errori.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CoreClrRemoteDebuggingInterfaces.h  
+ **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Libreria:** mscordbi_macx86. dll  
   
- **Versioni di .NET framework:** 3.5 SP1
+ **Versioni .NET Framework:** 3,5 SP1

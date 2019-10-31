@@ -1,17 +1,15 @@
 ---
-title: 'Mitigazione: implementazioni IMessageFilter.PreFilterMessage personalizzate'
+title: 'Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5174c67e4204c2e20e5730ab7c092ccbb0aeda1a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126268"
 ---
-# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigazione: implementazioni IMessageFilter.PreFilterMessage personalizzate
+# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate
 
 Nelle app di Windows Forms destinate a versioni di .NET Framework a partire da .NET Framework 4.6.1, un'implementazione di <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> personalizzata può filtrare in modo sicuro i messaggi quando il metodo <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> viene chiamato se l'implementazione <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>:
 
@@ -29,7 +27,7 @@ Questa modifica riguarda solo app Windows Forms destinate a versioni di .NET Fra
 
 Per le app Windows Form destinate a versioni precedenti di .NET Framework, questo tipo di implementazioni in alcuni casi genera un'eccezione <xref:System.IndexOutOfRangeException> quando viene chiamato il metodo <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>
 
-## <a name="mitigation"></a>Mitigazione
+## <a name="mitigation"></a>Attenuazione
 
 Se la modifica è indesiderata, le app destinate a .NET Framework 4.6.1 o versione successiva la possono rifiutare esplicitamente aggiungendo l'impostazione di configurazione seguente alla sezione [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'app:
 

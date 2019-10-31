@@ -5,21 +5,19 @@ helpviewer_keywords:
 - etwEnable element
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117389"
 ---
-# <a name="etwenable-element"></a>\<Elemento > etwEnable
+# <a name="etwenable-element"></a>\<elemento > etwEnable
 Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> etwEnabled**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,19 +30,19 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |enabled|Attributo obbligatorio.<br /><br /> Specifica se ETW deve essere abilitato.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |true|Abilita ETW. Si tratta dell'impostazione predefinita per le versioni di Windows che iniziano con i sistemi operativi Windows Vista e Windows Server 2008.|  
-|false|Disabilitare ETW. Si tratta dell'impostazione predefinita per le versioni precedenti di Windows.|  
+|False|Disabilitare ETW. Si tratta dell'impostazione predefinita per le versioni precedenti di Windows.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

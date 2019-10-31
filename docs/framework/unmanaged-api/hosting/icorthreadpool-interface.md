@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911244"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133211"
 ---
 # <a name="icorthreadpool-interface"></a>Interfaccia ICorThreadpool
 Fornisce metodi per accedere al pool di thread.  
@@ -31,7 +29,7 @@ Fornisce metodi per accedere al pool di thread.
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo CorRegisterWaitForSingleObject](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Riservato esclusivamente per uso interno.|  
 |[Metodo CorUnregisterWait](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Riservato esclusivamente per uso interno.|  
@@ -46,11 +44,11 @@ Fornisce metodi per accedere al pool di thread.
 |[Metodo CorGetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Riservato esclusivamente per uso interno.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

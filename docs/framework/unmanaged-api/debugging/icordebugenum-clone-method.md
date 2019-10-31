@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec769c343ad055132c6d84e64600fc459357a85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124701"
 ---
 # <a name="icordebugenumclone-method"></a>Metodo ICorDebugEnum::Clone
-Crea una copia dell'oggetto ICorDebugEnum.  
+Crea una copia di questo oggetto ICorDebugEnum.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parametri  
  `ppEnum`  
- [out] Un puntatore all'indirizzo di un `ICorDebugEnum` oggetto che rappresenta una copia di questo `ICorDebugEnum` oggetto.  
+ out Puntatore all'indirizzo di un `ICorDebugEnum` oggetto che è una copia di questo oggetto `ICorDebugEnum`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44d5b7fdb2908678671505649bb906c0c5f740e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751136"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141478"
 ---
 # <a name="stackoverflowtype-enumeration"></a>Enumerazione StackOverflowType
-Contiene valori che indicano la causa principale di un evento di stack overflow.  
+Contiene valori che indicano la cause sottostante di un evento di overflow dello stack.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +34,23 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`SO_ClrEngine`|L'overflow dello stack è stato causato dal motore di esecuzione.|  
-|`SO_Managed`|L'overflow dello stack è stato causato da codice gestito.|  
+|`SO_Managed`|L'overflow dello stack è stato causato dal codice gestito.|  
 |`SO_Other`|L'overflow dello stack è stato causato da codice non gestito.|  
   
 ## <a name="remarks"></a>Note  
- Queste informazioni vengono passate all'host tramite una chiamata per il [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) (metodo).  
+ Queste informazioni vengono passate all'host tramite una chiamata al metodo [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766403"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095885"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>Metodo ICorDebugObjectValue::GetFieldValue
 Ottiene il valore del campo specificato della classe specificata per il valore dell'oggetto.  
@@ -39,21 +37,21 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>Parametri  
  `pClass`  
- [in] Un puntatore a un oggetto "ICorDebugClass" che rappresenta la classe per cui ottenere il valore del campo.  
+ in Puntatore a un oggetto "ICorDebugClass" che rappresenta la classe per la quale ottenere il valore del campo.  
   
  `fieldDef`  
- [in] Un `mdFieldDef` token che fa riferimento a metadati che descrivono il campo.  
+ in Token `mdFieldDef` che fa riferimento ai metadati che descrivono il campo.  
   
  `ppValue`  
- [out] Un puntatore a un oggetto "ICorDebugValue" che rappresenta il valore del campo specificato.  
+ out Puntatore a un oggetto "ICorDebugValue" che rappresenta il valore del campo specificato.  
   
 ## <a name="remarks"></a>Note  
- La classe, specificata nella `pClass` parametro deve essere nella gerarchia della classe del valore dell'oggetto e il campo deve essere un campo di tale classe.  
+ La classe, specificata nel parametro `pClass`, deve trovarsi nella gerarchia della classe del valore dell'oggetto e il campo deve essere un campo di tale classe.  
   
- Il `GetFieldValue` metodo avrà comunque esito positivo per oggetti generici e le classi generiche. Ad esempio, se MyDictionary\<V > eredita dal dizionario\<stringa, V >, e il valore dell'oggetto è di tipo MyDictionary\<int32 >, passando il `ICorDebugClass` oggetto per il dizionario\<K, V > verrà ottenere correttamente un campo del dizionario\<string, int32 >.  
+ Il metodo `GetFieldValue` avrà comunque esito positivo per gli oggetti generici e le classi generiche. Se, ad esempio, il dizionario\<V > eredita da Dictionary\<String, V > e il valore dell'oggetto è di tipo dizionario\<Int32 >, passando l'oggetto `ICorDebugClass` per Dictionary\<K, V > otterrà correttamente un campo di Dictionary\<String, Int32 >.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorProfilerCallback8::DynamicMethodJITCompilationStarted
+title: ICorProfilerCallback8::D Metodo ynamicMethodJITCompilationStarted
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136458"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>Metodo ICorProfilerCallback8::DynamicMethodJITCompilationStarted
-[Supportato in .NET Framework 4.7 e versioni successive]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D Metodo ynamicMethodJITCompilationStarted
+[Supportato in .NET Framework 4,7 e versioni successive]  
   
-Notifica al profiler ogni volta che è stata avviata la compilazione JIT di un metodo dinamico.  
+Notifica al profiler ogni volta che viene avviata la compilazione JIT di un metodo dinamico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,28 +33,28 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parametri  
 [in] `functionId`  
-L'identificatore della funzione in memoria per la quale JIT viene avviata la compilazione.   
+Identificatore della funzione in memoria per la quale viene avviata la compilazione JIT.   
 
 [in] `fIsSafeToBlock`   
-`true` per indicare che il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; `false` per indicare che il blocco non avrà effetto il funzionamento del runtime.  
+`true` per indicare che il blocco può causare la restituzione del thread chiamante da parte del runtime. `false` per indicare che il blocco non influirà sul funzionamento del runtime.  
 
 [in] `pILHeader`    
-Puntatore al primo byte dell'intestazione di linguaggio intermedio del metodo.   
+Puntatore al primo byte dell'intestazione IL del metodo.   
 
 [in] `cbILHeader`    
-Il numero di byte nell'intestazione del linguaggio intermedio. 
+Numero di byte nell'intestazione IL. 
 
 ## <a name="remarks"></a>Note  
 
-Questo callback viene attivato ogni volta che un metodo dinamico viene compilato tramite JIT. Sono inclusi vari stub a livello di integrità e i metodi LCG. L'obiettivo consiste nel fornire gli autori di profiler con le informazioni necessarie per identificare il metodo compilato per gli utenti.
+Questo callback viene attivato ogni volta che un metodo dinamico viene compilato tramite JIT. Sono inclusi vari Stub IL e metodi LCG. Il suo obiettivo consiste nel fornire ai writer del profiler informazioni sufficienti per identificare il metodo compilato agli utenti.
 
 > [!NOTE]
-> `functionId` valori non possono essere usati per risolvere i relativi token di metadati, perché i metadati non dispongono di metodi dinamici.
+> non è possibile usare i valori `functionId` per risolvere i token dei metadati, perché i metodi dinamici non hanno metadati.
 
-Il `pILHeader` puntatore è valido solo durante il callback.
+Il puntatore `pILHeader` è valido solo durante il callback.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

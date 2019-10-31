@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72f2550-bdec-4a20-a2f4-2e14847266c1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5114f74e80da925c7a153b9e481c54067152eaec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796511"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108208"
 ---
 # <a name="idefinitionappid-interface"></a>Interfaccia IDefinitionAppId
 Rappresenta un identificatore univoco per il codice che definisce l'applicazione nell'ambito corrente.  
@@ -30,15 +28,15 @@ Rappresenta un identificatore univoco per il codice che definisce l'applicazione
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Ottiene una stringa formattata che rappresenta il codice in `IDefinitionAppId` questo oggetto.|  
-|`IDefinitionAppId::put_Codebase`|Imposta il codice di questo `IDefinitionAppId` oggetto sul valore stringa formattato specificato.|  
+|`IDefinitionAppId::get_Codebase`|Ottiene una stringa formattata che rappresenta il codice in questo oggetto `IDefinitionAppId`.|  
+|`IDefinitionAppId::put_Codebase`|Imposta il codice di questo oggetto `IDefinitionAppId` sul valore stringa formattato specificato.|  
 |`IDefinitionAppId::EnumAppPath`|Ottiene un puntatore a interfaccia a un oggetto [IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md) che contiene gli assembly nel percorso dell'applicazione corrente.|  
 |`IDefinitionAppId::SetAppPath`|Imposta il percorso dell'applicazione per l'assembly nell'ambito corrente sul valore a cui fa riferimento l'oggetto [IDefinitionIdentity](idefinitionidentity-interface.md) specificato.|  
-|`IDefinitionAppId::get_SubscriptionId`|Ottiene un puntatore a una rappresentazione di stringa dell'identificatore del token per una sottoscrizione di `IDefinitionAppId` questo oggetto.|  
-|`IDefinitionAppId::put_SubscriptionId`|Imposta l'identificatore del token per una sottoscrizione di `IDefinitionAppId` questo oggetto sul valore stringa specificato.|  
+|`IDefinitionAppId::get_SubscriptionId`|Ottiene un puntatore a una rappresentazione di stringa dell'identificatore del token per una sottoscrizione a questo oggetto `IDefinitionAppId`.|  
+|`IDefinitionAppId::put_SubscriptionId`|Imposta l'identificatore del token per una sottoscrizione a questo oggetto `IDefinitionAppId` sul valore stringa specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

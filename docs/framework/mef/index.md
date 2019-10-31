@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fc66837dc31dc1697bcb4ad6dddfb57bfb99bd4
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: da73200513d451ee391fb6dd9c214a5b8ca771c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126344"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +60,7 @@ Managed Extensibility Framework o MEF è una libreria per la creazione di applic
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: applicazione di esempio
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: esempio di applicazione
 
 Il modo più semplice per vedere le potenzialità di MEF è compilare una semplice applicazione MEF. In questo esempio viene compilata una calcolatrice molto semplice denominata SimpleCalculator. L'obiettivo di SimpleCalculator è creare un'applicazione console che accetta comandi aritmetici di base, nel formato "5+3" o "6-2", e restituisce le risposte corrette. Tramite MEF sarà possibile aggiungere nuovi operatori senza modificare il codice dell'applicazione.
 
@@ -150,7 +148,7 @@ La chiamata a <xref:System.ComponentModel.Composition.AttributedModelServices.Co
 ## <a name="imports-and-exports-with-attributes"></a>Importazioni ed esportazioni con attributi
  Prima di tutto, `Program` deve importare una calcolatrice. Ciò consente di separare le problematiche dell'interfaccia utente, ad esempio l'input e l'output della console che andrà in `Program`, dalla logica della calcolatrice.
 
- Aggiungere il codice seguente alla classe `Program`:
+ Aggiungere il codice seguente alla classe `Program` :
 
 ```vb
 <Import(GetType(ICalculator))>
@@ -432,7 +430,7 @@ class Subtract : IOperation
 
  Aggiungere al progetto SimpleCalculator una nuova directory denominata `Extensions`. Assicurarsi di aggiungerla a livello di progetto e non a livello di soluzione. Aggiungere quindi alla soluzione un nuovo progetto Libreria di classi denominato `ExtendedOperations`. Il nuovo progetto verrà compilato in un assembly separato.
 
- Aprire la finestra di progettazione proprietà progetto per il progetto ExtendedOperations e fare clic il **compilare** oppure **compilazione** scheda. Modificare **Percorso dell'output di compilazione** o **Percorso output** affinché punti alla directory Extensions nella directory del progetto SimpleCalculator (..\SimpleCalculator\Extensions\\).
+ Aprire la finestra di progettazione Proprietà progetto per il progetto ExtendedOperations e fare clic **sulla scheda Compila o compila.** modificare il percorso dell' **output di compilazione** o il **percorso di output** in modo che punti alla directory Extensions nel progetto SimpleCalculator Directory (.. \SimpleCalculator\Extensions\\).
 
  In Module1.vb o Program.cs aggiungere la riga seguente al costruttore `Program`:
 
@@ -444,7 +442,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione si usa un percorso relativo. A questo punto, <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> aggiungerà al contenitore di composizione qualsiasi parte trovata negli assembly contenuti nella directory Extensions.
+ Sostituire il percorso di esempio con il percorso della directory Extensions. Il percorso assoluto è solo a scopo di debug. In un'applicazione di produzione è necessario usare un percorso relativo. Il <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> ora aggiungerà tutte le parti presenti in tutti gli assembly nella directory Extensions al contenitore di composizione.
 
  Nel progetto ExtendedOperations aggiungere i riferimenti a SimpleCalculator e System.ComponentModel.Composition. Nel file di classe ExtendedOperations aggiungere un'istruzione `Imports` o `using` per System.ComponentModel.Composition. In Visual Basic aggiungere anche un'istruzione `Imports` per SimpleCalculator. Quindi, aggiungere la seguente classe al file di classe ExtendedOperations:
 

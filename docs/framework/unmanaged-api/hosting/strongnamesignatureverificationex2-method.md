@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141405"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>Metodo StrongNameSignatureVerificationEx2
-Verifica la firma di un assembly con nome sicuro e fornisce un mapping tra la chiave ECMA e una chiave reale.  
+Verifica la firma di un assembly con nome sicuro e fornisce un mapping dalla chiave ECMA a una chiave reale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,29 +38,29 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Parametri  
  `wszFilePath`  
- [in] Il percorso del file di (.exe o DLL) eseguibile portabile per l'assembly da verificare.  
+ in Percorso del file eseguibile (exe o dll) portatile per l'assembly da verificare.  
   
  `fForceVerification`  
- [in] `true` per eseguire la verifica, anche se è necessario eseguire l'override delle impostazioni del Registro di sistema; in caso contrario, `false`.  
+ [in] `true` per eseguire la verifica, anche se è necessario eseguire l'override delle impostazioni del registro di sistema; in caso contrario, `false`.  
   
  `pbEcmaPublicKey`  
- [in] Un puntatore per il mapping dalla chiave pubblica ECMA per il tasto effettivo usato per la verifica.  
+ in Puntatore al mapping dalla chiave pubblica ECMA alla chiave reale utilizzata per la verifica.  
   
  `cbEcmaPublicKey`  
- [in] La lunghezza della chiave pubblica reale ECMA.  
+ in Lunghezza della chiave pubblica ECMA reale.  
   
  `pfWasVerified`  
- [out] `true` se la firma con nome sicuro è stato verificato; in caso contrario, `false`. Questo parametro viene impostato anche su `false` se la verifica ha avuto esito positivo a causa delle impostazioni del Registro di sistema.  
+ [out] `true` se la firma del nome sicuro è stata verificata. in caso contrario, `false`. Questo parametro viene impostato anche su `false` se la verifica ha avuto esito positivo a causa delle impostazioni del registro di sistema.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se la verifica ha avuto esito positivo. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` se la verifica ha avuto esito positivo; in caso contrario, valore HRESULT che indica l'esito negativo (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

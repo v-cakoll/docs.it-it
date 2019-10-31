@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5a86b3abf821a37944a0e478d0bc8f1bea31ccb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e00fb73bf884446ec220a114c49863386da456ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114250"
 ---
 # <a name="net-framework-guide"></a>Guida a .NET Framework
 
@@ -38,7 +36,7 @@ Vedere [Ripristinare .NET Framework](./install/repair.md) per informazioni su co
 
 Per informazioni più dettagliate sul download di .NET Framework, vedere [Install the .NET Framework for developers](./install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 * [Novità](./whats-new/index.md)  
 Vengono descritte le nuove funzionalità e le modifiche principali incluse nelle versioni più recenti di .NET Framework. Sono inclusi elenchi di tipi e membri obsoleti e viene fornita una guida per eseguire la migrazione delle applicazioni dalla versione precedente di .NET Framework.
@@ -63,4 +61,4 @@ Fornisce la documentazione per le API di .NET Framework private usate dagli stru
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.8)
+* [Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.8)

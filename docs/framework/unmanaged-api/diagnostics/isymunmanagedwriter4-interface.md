@@ -2,14 +2,12 @@
 title: Interfaccia ISymUnmanagedWriter4
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5732cc08512df25a14cc8ea9dcaa03c56207dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a656777461c50b5a1593917278eb54abda982dc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962332"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134572"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>Interfaccia ISymUnmanagedWriter4
 Interfaccia ISymUnmanagedWriter4.  
@@ -25,10 +23,10 @@ Interfaccia ISymUnmanagedWriter4.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Equivale [metodo GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) ad eccezione del fatto che la stringa di percorso verrà anteposti tanti zeri che seguono il carattere null di terminazione per rendere i dati di stringa di una dimensione fissa di `MAX_PATH`. Spaziatura interna viene assegnata solo se la lunghezza della stringa percorso stesso è minore di `MAX_PATH`.<br /><br /> Questo rende più semplice scrivere strumenti di tale file PE differenza.|  
+|[Metodo GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Funziona allo stesso modo del [Metodo GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , con la differenza che la stringa di percorso viene riempita con zeri che seguono il carattere null di terminazione per fare in modo che i dati della stringa siano di dimensioni fisse `MAX_PATH`. La spaziatura interna viene specificata solo se la lunghezza della stringa di percorso è minore di `MAX_PATH`.<br /><br /> In questo modo è più semplice scrivere strumenti che differenziano i file PE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

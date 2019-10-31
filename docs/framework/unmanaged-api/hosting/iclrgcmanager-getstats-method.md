@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9df9263a0356b0c3c1a6d1da950c670f5a020d1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e8b65c735028029f4fb44c2640df74ef171d9de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141147"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Metodo ICLRGCManager::GetStats
 Ottiene un set di statistiche correnti sul sistema Garbage Collection del Common Language Runtime.  
@@ -41,9 +39,9 @@ HRESULT GetStats (
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetStats`la restituzione è riuscita.|  
+|S_OK|`GetStats` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -51,9 +49,9 @@ HRESULT GetStats (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- CLR calcola e restituisce solo le statistiche specificate dal `Flags` `pStats`campo.  
+ CLR calcola e restituisce solo le statistiche specificate dal campo `Flags` di `pStats`.  
   
- Impostare il `Flags` campo su uno o più valori dell'enumerazione [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) per specificare le statistiche nella struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) da impostare.  
+ Impostare il campo `Flags` su uno o più valori dell'enumerazione [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) per specificare le statistiche nella struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) da impostare.  
   
  Di seguito è riportato un esempio di utilizzo:  
   
@@ -64,11 +62,11 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

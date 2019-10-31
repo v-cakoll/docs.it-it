@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132072"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>Metodo ICorDebugType::GetStaticFieldValue
-Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che contiene il valore del campo statico a cui fa riferimento il campo specificato token lo stack frame specificato.  
+Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che contiene il valore del campo statico a cui fa riferimento il token di campo specificato nel stack frame specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,26 +37,26 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parametri  
  `fieldDef`  
- [in] Un `mdFieldDef` token che specifica il campo statico.  
+ in Token `mdFieldDef` che specifica il campo statico.  
   
  `pFrame`  
- [in] Un puntatore a un'interfaccia ICorDebugFrame che rappresenta il frame dello stack.  
+ in Puntatore a un ICorDebugFrame che rappresenta l'stack frame.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un `ICorDebugValue` che contiene il valore del campo statico.  
+ out Puntatore all'indirizzo di un `ICorDebugValue` che contiene il valore del campo statico.  
   
 ## <a name="remarks"></a>Note  
- Il `GetStaticFieldValue` metodo può essere usato solo se il tipo è ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, come indicato dal [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) (metodo).  
+ Il metodo `GetStaticFieldValue` può essere utilizzato solo se il tipo è ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, come indicato dal metodo [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) .  
   
- Per i tipi non generici, l'operazione eseguita da `GetStaticFieldValue` è identica alla chiamata [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) sull'oggetto restituito da ICorDebugClass [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ Per i tipi non generici, l'operazione eseguita da `GetStaticFieldValue` è identica alla chiamata di [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) sull'oggetto ICorDebugClass restituito da [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
   
- Per i tipi generici, un valore del campo statico è relativo alla creazione di un'istanza particolare. Inoltre, se il campo statico può essere relativo a un thread, un contesto o un dominio dell'applicazione, quindi lo stack frame per il debugger di determinare il valore appropriato.  
+ Per i tipi generici, un valore di campo statico sarà relativo a una particolare creazione di istanza. Se, inoltre, il campo statico potrebbe essere relativo a un thread, a un contesto o a un dominio dell'applicazione, il stack frame consentirà al debugger di determinare il valore appropriato.  
   
 ## <a name="remarks"></a>Note  
  `GetStaticFieldValue` può essere utilizzato solo quando una chiamata a `ICorDebugType::GetType` restituisce un valore di ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

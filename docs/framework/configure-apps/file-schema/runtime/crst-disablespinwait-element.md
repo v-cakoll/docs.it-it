@@ -5,22 +5,20 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252719"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117646"
 ---
-# <a name="crst_disablespinwait-element"></a>\<Elemento > Crst_DisableSpinWait
+# <a name="crst_disablespinwait-element"></a>\<elemento > Crst_DisableSpinWait
 
 Specifica se disabilitare lo spin-waiting per una sezione critica in caso di conflitto.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Crst_DisableSpinWait**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +34,17 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**enabled**|Specifica se la rotazione in attesa di sezioni critiche quando sono in conflitto è disabilitata.|  
+|**abilitato**|Specifica se la rotazione in attesa di sezioni critiche quando sono in conflitto è disabilitata.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |1|Disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica.|  
-|0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Rappresenta il valore predefinito.|  
+|0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Questo è il valore predefinito.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

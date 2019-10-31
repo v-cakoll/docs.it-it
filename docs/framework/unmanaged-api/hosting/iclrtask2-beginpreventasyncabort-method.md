@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67841bbcd796e41b3b81f922020fe6c3677730c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124558"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>Metodo ICLRTask2::BeginPreventAsyncAbort
-Ritardi nuove richieste di interruzione dal conseguente interruzioni di thread nel thread corrente.  
+Ritarda la creazione di nuove richieste di interruzione del thread dal risultato di interruzioni di thread sul thread corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,20 +40,20 @@ HRESULT BeginPreventAsyncAbort();
 |HOST_E_INVALIDOPERATION|Il metodo è stato chiamato su un thread che non è il thread corrente.|  
   
 ## <a name="remarks"></a>Note  
- Chiamare questo metodo incrementa il contatore di ritardo di interruzione per il thread corrente di uno.  
+ La chiamata a questo metodo consente di incrementare di uno il contatore Delay-thread-Abort per il thread corrente.  
   
- Le chiamate a `BeginPreventAsyncAbort` e [ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) possono essere annidati. Ritardo fino a quando il contatore è maggiore di zero, interruzioni di thread per il thread corrente. Se questa chiamata non è abbinata con una chiamata al `EndPreventAsyncAbort` metodo, è possibile raggiungere uno stato nel quale thread interruzioni non possono essere recapitate al thread corrente.  
+ Le chiamate a `BeginPreventAsyncAbort` e [ICLRTask2:: EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) possono essere nidificate. Fino a quando il contatore è maggiore di zero, le interruzioni dei thread per il thread corrente vengono posticipate. Se questa chiamata non è associata a una chiamata al metodo `EndPreventAsyncAbort`, è possibile raggiungere uno stato in cui non è possibile recapitare le interruzioni di thread al thread corrente.  
   
- Il ritardo non viene applicato per un thread che interrompe se stesso.  
+ Il ritardo non viene rispettato per un thread che si interrompe automaticamente.  
   
- La funzionalità che viene esposto da questa funzionalità viene utilizzata internamente dalla macchina virtuale (VM). Un uso improprio di questi metodi può causare un comportamento non specificato nella macchina virtuale. Ad esempio, chiamando `EndPreventAsyncAbort` senza prima chiamare `BeginPreventAsyncAbort` è stato possibile impostare il contatore a zero quando la macchina virtuale in precedenza ha incrementato in. Analogamente, il contatore interno non viene controllato dell'overflow. Se l'utilizzo supera il limite di integrale perché aumenta di host e la macchina virtuale, il comportamento risultante è specificato.  
+ La funzionalità esposta da questa funzionalità viene usata internamente dalla macchina virtuale (VM). Un utilizzo improprio di questi metodi può causare un comportamento non specificato nella macchina virtuale. Ad esempio, la chiamata di `EndPreventAsyncAbort` senza chiamare prima `BeginPreventAsyncAbort` può impostare il contatore su zero quando la VM lo ha incrementato in precedenza. Analogamente, il contatore interno non viene controllato per l'overflow. Se supera il limite integrale perché viene incrementato sia dall'host che dalla macchina virtuale, il comportamento risultante non è specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

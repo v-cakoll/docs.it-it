@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109485"
 ---
 # <a name="asm_cache_flags-enumeration"></a>Enumerazione ASM_CACHE_FLAGS
 Indica l'origine di un assembly rappresentato da [IAssemblyCacheItem](iassemblycacheitem-interface.md) nel Global assembly cache.  
@@ -49,11 +47,11 @@ typedef enum {
 |`ASM_CACHE_ROOT_EX`|Indica che la funzione [GetCachePath](getcachepath-function.md) deve restituire il percorso del Global assembly cache per CLR versione 4. Significativo solo nel contesto di una chiamata a [GetCachePath](getcachepath-function.md).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

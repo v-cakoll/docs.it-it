@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugVariableHome::GetLocationType
+title: 'Metodo ICorDebugVariableHome:: GetLocationType'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLocationType
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b7b95c79b41737ade42e6a9a2741f9c43a41130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125103"
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a>Metodo ICorDebugVariableHome::GetLocationType
-Ottiene il tipo di percorso nativo della variabile.  
+# <a name="icordebugvariablehomegetlocationtype-method"></a>Metodo ICorDebugVariableHome:: GetLocationType
+Ottiene il tipo della posizione nativa della variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetLocationType(
   
 ## <a name="parameters"></a>Parametri  
  `pLocationType`  
- [out] Puntatore al tipo di percorso nativo della variabile.  Vedere le [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumerazione per altre informazioni.  
+ out Puntatore al tipo della posizione nativa della variabile.  Per ulteriori informazioni, vedere l'enumerazione [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

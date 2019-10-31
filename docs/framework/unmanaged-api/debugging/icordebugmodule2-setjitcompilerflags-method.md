@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea574c84-c622-4589-9a14-b55771af5e06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 114f4ff261d9612a81d17bf5b3df2f87323f77f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2358cee1b3a9aa50fb1f0e61d558f164a39aa86c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137354"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>Metodo ICorDebugModule2::SetJITCompilerFlags
-Imposta i flag che controllano la compilazione just-in-time (JIT) di questa interfaccia ICorDebugModule2.  
+Imposta i flag che controllano la compilazione JIT (just-in-Time) di questo ICorDebugModule2.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT SetJITCompilerFlags (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Una combinazione bit per bit del [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) valori di enumerazione.  
+ in Combinazione bit per bit dei valori dell'enumerazione [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) .  
   
 ## <a name="remarks"></a>Note  
- Se il `dwFlags` il valore è valido, il `SetJITCompilerFlags` metodo avrà esito negativo.  
+ Se il valore `dwFlags` non è valido, il `SetJITCompilerFlags` metodo avrà esito negativo.  
   
- Il `SetJITCompilerFlags` metodo può essere chiamato solo dall'interno di [LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) callback per questo modulo. Prova a chiamare una volta il `ICorDebugManagedCallback::LoadModule` callback è stato inviato avranno esito negativo.  
+ Il metodo `SetJITCompilerFlags` può essere chiamato solo dall'interno del callback [ICorDebugManagedCallback:: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) per questo modulo. Il tentativo di chiamare questo oggetto dopo il recapito `ICorDebugManagedCallback::LoadModule` callback avrà esito negativo.  
   
- Modifica e continuazione non è supportato in piattaforme Win9x o a 64 bit. Pertanto, se si chiama il `SetJITCompilerFlags` metodo su una di queste due piattaforme con il flag CORDEBUG_JIT_ENABLE_ENC impostato `dwFlags`, il `SetJITCompilerFlags` (metodo) e tutti i metodi specifici per modifica e continuazione, ad esempio [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), avrà esito negativo.  
+ La funzionalità modifica e continuazione non è supportata nelle piattaforme Win9x o a 64 bit. Se pertanto si chiama il metodo `SetJITCompilerFlags` su una di queste due piattaforme con il flag CORDEBUG_JIT_ENABLE_ENC impostato in `dwFlags`, il metodo `SetJITCompilerFlags` e tutti i metodi specifici per la modifica e la continuazione, ad esempio [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), avranno esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

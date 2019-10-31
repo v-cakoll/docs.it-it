@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b35e7a9-b40e-40a9-8d8e-b82e823fc575
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dde27f74ac59d033b6e25fba1dbb8e52c4b91af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a242764710d92e81e8089bc2919734bfac4bcdb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760683"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137568"
 ---
 # <a name="icordebugstepperisactive-method"></a>Metodo ICorDebugStepper::IsActive
-Ottiene un valore che indica se questo ICorDebugStepper è in esecuzione un passaggio.  
+Ottiene un valore che indica se questo ICorDebugStepper sta attualmente eseguendo un passaggio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>Parametri  
  `pbActive`  
- [out] Restituisce `true` se il gestore di istruzioni sta attualmente eseguendo un'istruzione; in caso contrario, restituisce `false`.  
+ out Restituisce `true` se il gestore di istruzioni sta attualmente eseguendo un passaggio; in caso contrario, restituisce `false`.  
   
 ## <a name="remarks"></a>Note  
- Qualsiasi azione passaggio rimane attivo finché il debugger non riceve un [StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) chiamare, che disattiva automaticamente il gestore di istruzioni. Un gestore di istruzioni può anche essere disattivato in modo anomalo chiamando [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) prima del callback di condizione viene raggiunto.  
+ Qualsiasi azione Step rimane attiva fino a quando il debugger non riceve una chiamata [ICorDebugManagedCallback:: StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) , che disattiva automaticamente il stepper. Un stepper può anche essere disattivato in modo anomalo chiamando [ICorDebugStepper::D ttiva](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) prima che venga raggiunta la condizione di callback.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

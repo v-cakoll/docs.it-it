@@ -12,14 +12,12 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103881"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelle di conversione dei tipi in .NET
 Si parla di conversione verso un tipo di dati più grande quando un valore di un certo tipo viene convertito in un altro tipo di dimensioni identiche o maggiori. Si parla di conversione verso un tipo di dati più piccolo quando un valore di un certo tipo viene convertito in un valore di un altro tipo di dimensioni inferiori. Le tabelle in questo argomento illustrano i comportamenti di entrambi i tipi di conversioni.  
@@ -27,7 +25,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
 ## <a name="widening-conversions"></a>conversioni verso un tipo di dati più grande  
  Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono essere eseguite senza la perdita di informazioni.  
   
-|Tipo|Conversione senza perdita di dati in|  
+|Digitare|Conversione senza perdita di dati in|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -42,7 +40,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
   
  Alcune conversioni verso il tipo di dati più grande <xref:System.Single> o <xref:System.Double> possono causare una perdita di precisione. Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono generare una perdita di informazioni.  
   
-|Tipo|Conversione in|  
+|Digitare|Conversione in|  
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
@@ -57,7 +55,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
   
  Nella tabella seguente sono elencate le conversioni che generano un evento <xref:System.OverflowException> tramite <xref:System.Convert?displayProperty=nameWithType> o qualsiasi conversione controllata se il valore del tipo convertito non rientra nell'intervallo specificato per il tipo risultante.  
   
-|Tipo|Conversione in|  
+|Digitare|Conversione in|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
 |<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  

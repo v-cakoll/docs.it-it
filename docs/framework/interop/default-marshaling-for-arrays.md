@@ -8,14 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123572"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -120,7 +118,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Anche se è possibile applicare gli attributi **size_is** o **length_is** a una matrice nell'origine Interface Definition Language (IDL) per comunicare la dimensione a un client, il compilatore Microsoft Interface Definition Language (MIDL) non propaga tali informazioni alla libreria dei tipi. Senza conoscere la dimensione, il servizio di marshalling di interoperabilità non può effettuare il marshalling degli elementi della matrice. Di conseguenza, le matrici a lunghezza variabile vengono importate come argomenti di riferimento. Ad esempio:  
+ Anche se è possibile applicare gli attributi **size_is** o **length_is** a una matrice nell'origine Interface Definition Language (IDL) per comunicare la dimensione a un client, il compilatore Microsoft Interface Definition Language (MIDL) non propaga tali informazioni alla libreria dei tipi. Senza conoscere la dimensione, il servizio di marshalling di interoperabilità non può effettuare il marshalling degli elementi della matrice. Di conseguenza, le matrici a lunghezza variabile vengono importate come argomenti di riferimento. Esempio:  
   
  **Firma non gestita**  
   
@@ -160,7 +158,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
-- Definire la dimensione della matrice come costante. Ad esempio:  
+- Definire la dimensione della matrice come costante. Esempio:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -191,7 +189,7 @@ void New3(ref String ar);
  Nell'automazione OLE esiste una limitazione relativa alle matrici di strutture contenenti LPSTR o LPWSTR.  È quindi necessario effettuare il marshalling dei campi **String** come **UnmanagedType.BSTR**. In caso contrario, verrà generata un'eccezione.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
- Quando un metodo contenente un parametro **ELEMENT_TYPE_SZARRAY** (matrice unidimensionale) viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. Le stesse regole di conversione si applicano ai tipi di elementi della matrice. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
+ Quando un metodo contenente un parametro **ELEMENT_TYPE_SZARRAY** (matrice unidimensionale) viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. Le stesse regole di conversione si applicano ai tipi di elementi della matrice. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -214,7 +212,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  La priorità delle matrici protette è sempre 1 e il limite inferiore è sempre 0. La dimensione viene determinata in fase di esecuzione dalla dimensione della matrice gestita che viene passata.  
   
- È anche possibile effettuare il marshalling della matrice come matrice di tipo C usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ad esempio:  
+ È anche possibile effettuare il marshalling della matrice come matrice di tipo C usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -249,7 +247,7 @@ HRESULT New(LPStr ar[]);
  Anche se gestore di marshalling ha le informazioni sulla lunghezza necessarie per effettuare il marshalling della matrice, la lunghezza della matrice viene in genere passata come argomento separato per comunicare la lunghezza al computer chiamato.  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
- Quando un metodo contenente un parametro **ELEMENT_TYPE_ARRAY** viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
+ Quando un metodo contenente un parametro **ELEMENT_TYPE_ARRAY** viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -272,7 +270,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Priorità, dimensione e limiti delle matrici protette vengono determinati in fase di esecuzione dalle caratteristiche della matrice gestita.  
   
- È anche possibile effettuare il marshalling della matrice come matrice di tipo C applicando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ad esempio:  
+ È anche possibile effettuare il marshalling della matrice come matrice di tipo C applicando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -312,7 +310,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Ad esempio:  
+ Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -362,7 +360,7 @@ public struct MyStruct {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copia e blocco](copying-and-pinning.md)

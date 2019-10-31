@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33729e9efa999eb276140ddd2571a4844e15dd6d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8151531e470b149012b2dd4fca918c8937f13918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770833"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133344"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>Metodo ICorRuntimeHost::SwitchOutLogicalThreadState
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -37,16 +35,16 @@ HRESULT SwitchOutLogicalThreadState(
   
 ## <a name="parameters"></a>Parametri  
  `pFiberCookie`  
- [out] Cookie che indica i fiber sta per essere disattivato.  
+ out Cookie che indica che la fibra è stata disattivata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versione di .NET framework:** 1.0, 1.1  
+ **Versione .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vedere anche
 

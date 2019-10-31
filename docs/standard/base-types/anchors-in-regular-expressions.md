@@ -16,20 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: bf5e98f895c17a3ab9b16e63601fa40fb9e15417
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046476"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140539"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
   
-|Ancoraggio|DESCRIZIONE|  
+|Ancoraggio|Descrizione|  
 |------------|-----------------|  
 |`^`|Per impostazione predefinita, la corrispondenza deve verificarsi all'inizio della stringa; in modalità multiriga, deve verificarsi all'inizio della riga. Per altre informazioni, vedere [Inizio di stringa o riga](#Start).|  
 |`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi alla fine della riga oppure prima di `\n` alla fine della riga. Per altre informazioni, vedere [Fine di stringa o riga](#End).|  
@@ -53,12 +51,12 @@ ms.locfileid: "70046476"
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
   
- Il criterio di ricerca di espressioni regolari `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`^`|La corrispondenza deve iniziare all'inizio della stringa di input (o all'inizio della riga se il metodo viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ).|  
-|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio almeno due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: Il secondo è costituito dalla parola acquisita e il terzo dagli spazi vuoti acquisiti.|  
+|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio almeno due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita e il terzo è costituito dallo spazio vuoto acquisito.|  
 |`,\s`|Trova una virgola seguita da uno spazio vuoto.|  
 |`(\w+\s\w+)`|Trova uno o più caratteri alfanumerici seguiti da uno spazio, seguito da uno o più caratteri alfanumerici. Questo è il quarto gruppo di acquisizione.|  
 |`,`|Trova la corrispondenza con una virgola.|  
@@ -128,7 +126,7 @@ ms.locfileid: "70046476"
   
  L'espressione regolare `\G(\w+\s?\w*),?` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\G`|La corrispondenza deve iniziare nel punto in cui termina l'ultima corrispondenza.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -141,7 +139,7 @@ ms.locfileid: "70046476"
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>Confine di parola: \b  
- L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. Per altre informazioni, vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). La corrispondenza può verificarsi anche in un confine di parola all'inizio o alla fine della stringa.  
+ L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. Per ulteriori informazioni, vedere [classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). La corrispondenza può verificarsi anche su un confine di parola all'inizio o alla fine della stringa.  
   
  L'ancoraggio `\b` viene usato di frequente per garantire che una sottoespressione corrisponda a un'intera parola anziché solo all'inizio o alla fine di una parola. L'espressione regolare `\bare\w*\b` nell'esempio seguente mostra questo utilizzo. L'espressione trova qualsiasi parola che inizia con la sottostringa "are". L'output dell'esempio mostra anche che `\b` trova sia l'inizio sia la fine della stringa di input.  
   
@@ -150,7 +148,7 @@ ms.locfileid: "70046476"
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`are`|Trova la sottostringa "are".|  
@@ -170,7 +168,7 @@ ms.locfileid: "70046476"
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\B`|La corrispondenza non deve iniziare nel confine di parola.|  
 |`qu`|Trova la sottostringa "qu".|  

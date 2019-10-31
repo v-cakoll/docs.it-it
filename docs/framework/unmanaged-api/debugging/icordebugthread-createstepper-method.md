@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95a00e8646589e7897636c1698b7c2647cd233fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133587"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>Metodo ICorDebugThread::CreateStepper
-Crea un oggetto ICorDebugStepper che consente l'esecuzione di istruzioni tramite il frame attivo di ICorDebugThread.  
+Crea un oggetto ICorDebugStepper che consente l'esecuzione di un'istruzione alla volta nel frame attivo di ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parametri  
  `ppStepper`  
- [out] Un puntatore all'indirizzo di un `ICorDebugStepper` oggetto che consente l'esecuzione di istruzioni tramite il frame attivo del thread.  
+ out Puntatore all'indirizzo di un `ICorDebugStepper` oggetto che consente di scorrere il frame attivo del thread.  
   
 ## <a name="remarks"></a>Note  
- Il frame attivo potrebbe contenere codice non gestito.  
+ Il frame attivo può essere codice non gestito.  
   
- Il `ICorDebugStepper` interfaccia deve essere usata per eseguire l'effettiva esecuzione delle istruzioni.  
+ È necessario utilizzare l'interfaccia `ICorDebugStepper` per eseguire l'esecuzione dell'istruzione effettiva.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

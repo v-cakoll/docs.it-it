@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2e53bfb46579cc51b7ad88ef7de2b9f8d2f9390
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095114"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>Metodo ICorDebugILFrame2::EnumerateTypeParameters
-Ottiene un oggetto ICorDebugTypeEnum che contiene il <xref:System.Type> parametri in questo frame.  
+Ottiene un oggetto ICorDebugTypeEnum che contiene i parametri di <xref:System.Type> in questo frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>Parametri  
  `ppTyParEnum`  
- Un puntatore all'indirizzo di un oggetto di interfaccia ICorDebugTypeEnum che consente l'enumerazione dei parametri di tipo.  
+ Puntatore all'indirizzo di un oggetto interfaccia ICorDebugTypeEnum che consente l'enumerazione dei parametri di tipo.  
   
- L'elenco di parametri di tipo include i parametri di tipo classe (se presente) seguite dai parametri di tipo di metodo (se presente).  
+ L'elenco dei parametri di tipo include i parametri di tipo di classe, se presenti, seguiti dai parametri di tipo del metodo, se presenti.  
   
 ## <a name="remarks"></a>Note  
- Usare la [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) metodo per determinare il numero di parametri di tipo classe e metodo digitare i parametri contenuti in questo elenco.  
+ Usare il metodo [IMetaDataImport2:: EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) per determinare il numero di parametri di tipo di classe e i parametri di tipo di metodo contenuti nell'elenco.  
   
  I parametri di tipo non sono sempre disponibili.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

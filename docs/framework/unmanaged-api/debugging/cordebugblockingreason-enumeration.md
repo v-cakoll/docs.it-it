@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6ac2531-ddfe-46fd-88fe-8b1eabe0b255
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: bc488e55bf64468eb62e2dc6eaedca62ebde3310
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098980"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>Enumerazione CorDebugBlockingReason
 Specifica i motivi che possono causare il blocco di un thread su un oggetto specifico.  
@@ -37,23 +35,23 @@ Typedef enum CorDebugBlockingReason
 }  CorDebugBlockingReason;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|Solo per uso interno.|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|Un thread sta tentando di acquisire la sezione critica associata al blocco di monitoraggio su un oggetto. Questa situazione si verifica in genere quando si chiama uno <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> dei <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metodi o.|  
-|`BLOCKING_MONITOR_EVENT`|Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto. Questa situazione si verifica in genere quando si chiama uno <xref:System.Threading.Monitor?displayProperty=nameWithType> dei `Wait` metodi.|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|Un thread sta tentando di acquisire la sezione critica associata al blocco di monitoraggio su un oggetto. Questa situazione si verifica in genere quando si chiama uno dei metodi <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> o <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>.|  
+|`BLOCKING_MONITOR_EVENT`|Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto. Questa situazione si verifica in genere quando si chiama uno dei metodi di `Wait` <xref:System.Threading.Monitor?displayProperty=nameWithType>.|  
   
 ## <a name="remarks"></a>Note  
- Quando il `BLOCKING_MONITOR_CRITICAL_SECTION` membro `BLOCKING_MONITOR_EVENT` o viene usato in una struttura [CorDebugBlockingObject](cordebugblockingobject-structure.md) , il `pBlockingObject` membro della struttura punta a un'interfaccia "ICorDebugValue" che rappresenta l'oggetto immesso. È inoltre garantita l'implementazione dell'interfaccia [ICorDebugHeapValue3](icordebugheapvalue3-interface.md) .  
+ Quando il `BLOCKING_MONITOR_CRITICAL_SECTION` o il membro `BLOCKING_MONITOR_EVENT` viene usato in una struttura [CorDebugBlockingObject](cordebugblockingobject-structure.md) , il membro `pBlockingObject` della struttura punta a un'interfaccia "ICorDebugValue" che rappresenta l'oggetto immesso. È inoltre garantita l'implementazione dell'interfaccia [ICorDebugHeapValue3](icordebugheapvalue3-interface.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

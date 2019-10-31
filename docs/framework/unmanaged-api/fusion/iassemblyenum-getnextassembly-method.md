@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d7a4ca2-5f46-4ef1-a9a2-257884e9dc11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73c531378355100fdfca264ea9f96ff4d7c7ceda
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ade404557d65fa073b6a0e66fe8234b41223ecde
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796682"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134441"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a>Metodo IAssemblyEnum::GetNextAssembly
 Ottiene un puntatore al [IAssemblyName](iassemblyname-interface.md) successivo contenuto nell'oggetto [IAssemblyEnum](iassemblyenum-interface.md) .  
@@ -39,16 +37,16 @@ HRESULT GetNextAssembly (
   
 ## <a name="parameters"></a>Parametri  
  `pvReserved`  
- in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
  `ppName`  
- out Puntatore restituito `IAssemblyName` .  
+ out Puntatore `IAssemblyName` restituito.  
   
  `dwFlags`  
- in Riservato per l'estendibilità futura. `dwFlags`deve essere 0 (zero).  
+ in Riservato per l'estendibilità futura. `dwFlags` deve essere 0 (zero).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

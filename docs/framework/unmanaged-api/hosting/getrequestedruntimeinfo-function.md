@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136314"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Funzione GetRequestedRuntimeInfo
-Ottiene informazioni di versione e la directory di common language runtime (CLR) richiesto da un'applicazione.  
+Ottiene le informazioni sulla versione e sulla directory relative alla Common Language Runtime (CLR) richiesta da un'applicazione.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,64 +47,64 @@ HRESULT GetRequestedRuntimeInfo (
   
 ## <a name="parameters"></a>Parametri  
  `pExe`  
- [in] Il nome dell'applicazione.  
+ in Nome dell'applicazione.  
   
  `pwszVersion`  
- [in] Stringa che specifica il numero di versione del runtime.  
+ in Stringa che specifica il numero di versione del runtime.  
   
  `pConfigurationFile`  
- [in] Il nome del file di configurazione associato `pExe`.  
+ in Nome del file di configurazione associato a `pExe`.  
   
  `startupFlags`  
- [in] Uno o più i [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) valori di enumerazione.  
+ in Uno o più valori di enumerazione [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
   
  `runtimeInfoFlags`  
- [in] Uno o più i [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) valori di enumerazione.  
+ in Uno o più valori di enumerazione [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) .  
   
  `pDirectory`  
- [out] Un buffer che contiene il percorso della directory per il runtime di una volta completata correttamente.  
+ out Buffer che contiene il percorso di directory del runtime dopo il completamento.  
   
  `dwDirectory`  
- [in] La lunghezza del buffer della directory.  
+ in Lunghezza del buffer di directory.  
   
  `dwDirectoryLength`  
- [out] Puntatore alla lunghezza della stringa di percorso di directory.  
+ out Puntatore alla lunghezza della stringa del percorso di directory.  
   
  `pVersion`  
- [out] Un buffer che contiene il numero di versione del runtime di una volta completata correttamente.  
+ out Buffer che contiene il numero di versione del runtime dopo il completamento.  
   
  `cchBuffer`  
- [in] La lunghezza del buffer di stringa di versione.  
+ in Lunghezza del buffer della stringa di versione.  
   
  `dwlength`  
- [out] Puntatore alla lunghezza della stringa di versione.  
+ out Puntatore alla lunghezza della stringa di versione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore standard modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
+ Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|ERROR_INSUFFICIENT_BUFFER|Il buffer di directory non è sufficiente per archiviare il percorso della directory.<br /><br /> -oppure-<br /><br /> Il buffer di versione non è sufficiente per archiviare la stringa di versione.|  
+|ERROR_INSUFFICIENT_BUFFER|Il buffer di directory non è abbastanza grande per archiviare il percorso della directory.<br /><br /> -oppure-<br /><br /> Il buffer della versione non è abbastanza grande per archiviare la stringa di versione.|  
   
 ## <a name="remarks"></a>Note  
- Il `GetRequestedRuntimeInfo` metodo restituisce le informazioni di runtime relative alla versione caricata nel processo, che non è necessariamente la versione più recente installata nel computer.  
+ Il metodo `GetRequestedRuntimeInfo` restituisce informazioni in fase di esecuzione sulla versione caricata nel processo, che non è necessariamente la versione più recente installata nel computer.  
   
- In .NET Framework versione 2.0, è possibile ottenere informazioni sull'ultima versione installata tramite il `GetRequestedRuntimeInfo` metodo come indicato di seguito:  
+ Nel .NET Framework versione 2,0, è possibile ottenere informazioni sull'ultima versione installata usando il metodo `GetRequestedRuntimeInfo` come indicato di seguito:  
   
-- Specificare il `pExe`, `pwszVersion`, e `pConfigurationFile` parametri come valori null.  
+- Specificare i parametri `pExe`, `pwszVersion`e `pConfigurationFile` come null.  
   
-- Specificare il flag RUNTIME_INFO_UPGRADE_VERSION nel `RUNTIME_INFO_FLAGS` enumerazioni per il `runtimeInfoFlags` parametro.  
+- Specificare il flag RUNTIME_INFO_UPGRADE_VERSION nelle enumerazioni `RUNTIME_INFO_FLAGS` per il parametro `runtimeInfoFlags`.  
   
- Il `GetRequestedRuntimeInfo` metodo non restituisce la versione più recente di Common Language Runtime nelle circostanze seguenti:  
+ Il metodo `GetRequestedRuntimeInfo` non restituisce la versione più recente di CLR nelle circostanze seguenti:  
   
-- Esiste un file di configurazione che specifica il caricamento di una particolare versione CLR. Si noti che .NET Framework utilizzerà il file di configurazione anche se si specifica null per il `pConfigurationFile` parametro.  
+- Un file di configurazione dell'applicazione che specifica il caricamento di una determinata versione di CLR esiste. Si noti che il .NET Framework utilizzerà il file di configurazione anche se si specifica null per il parametro `pConfigurationFile`.  
   
-- Il [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) metodo è stato chiamato specificando una versione precedente di Common Language Runtime.  
+- Il metodo [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) è stato chiamato specificando una versione precedente di CLR.  
   
-- Un'applicazione che è stata compilata per una versione precedente di Common Language Runtime è in esecuzione.  
+- Un'applicazione compilata per una versione CLR precedente è attualmente in esecuzione.  
   
- Per il `runtimeInfoFlags` parametro, è possibile specificare solo una delle costanti dell'architettura di `RUNTIME_INFO_FLAGS` enumerazione per volta:  
+ Per il parametro `runtimeInfoFlags`, è possibile specificare solo una delle costanti di architettura dell'enumerazione `RUNTIME_INFO_FLAGS` alla volta:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,11 +113,11 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

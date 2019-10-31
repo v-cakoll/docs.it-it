@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125507"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Metodo ICorDebugComObjectValue::GetCachedInterfacePointers
-Ottiene i puntatori a interfaccia raw memorizzato nella cache su corrente runtime callable wrapper (RCW).  
+Ottiene i puntatori di interfaccia raw memorizzati nella cache nel Runtime Callable Wrapper (RCW) corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,21 +35,21 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parametri  
  `bIInspectableOnly`  
- [in] Un valore che indica se il metodo restituirà solo le interfacce di Windows Runtime (`IInspectable` interfacce) o tutte le interfacce COM presenti nella cache il runtime callable wrapper (RCW).  
+ in Valore che indica se il metodo restituirà solo Windows Runtime interfacce (`IInspectable` interfacce) o tutte le interfacce COM memorizzate nella cache dal Runtime Callable Wrapper (RCW).  
   
  `celt`  
- [in] Il numero di oggetti cui indirizzi devono essere recuperate.  
+ in Numero di oggetti di cui devono essere recuperati gli indirizzi.  
   
  `pceltFetched`  
- [out] Un puntatore al numero di `CORDB_ADDRESS` valori effettivamente restituiti nella `ptrs`.  
+ out Puntatore al numero di valori di `CORDB_ADDRESS` effettivamente restituiti in `ptrs`.  
   
  `ptrs`  
- Un puntatore all'indirizzo iniziale di una matrice di `CORDB_ADDRESS` valori che contengono gli indirizzi di memorizzati nella cache gli oggetti dell'interfaccia.  
+ Puntatore all'indirizzo iniziale di una matrice di valori `CORDB_ADDRESS` che contengono gli indirizzi degli oggetti dell'interfaccia memorizzati nella cache.  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

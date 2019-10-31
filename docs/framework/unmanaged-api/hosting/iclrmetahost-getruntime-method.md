@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b796942df153bf2c6ab703d748449331c9a0b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb305aaa18fcb8dc63e3090297aabc8defc3a401
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140940"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Metodo ICLRMetaHost::GetRuntime
 Ottiene l'interfaccia [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) che corrisponde a una particolare versione di Common Language Runtime (CLR). Questo metodo sostituisce la funzione [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) utilizzata con il flag [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
@@ -39,7 +37,7 @@ HRESULT GetRuntime (
   
 ## <a name="parameters"></a>Parametri  
  `pwzVersion`  
- in La versione di compilazione .NET Framework archiviata nei metadati, nel formato "v*a*. *B* [. *X*] ". *A*, *B*e *X* sono numeri decimali che corrispondono alla versione principale, alla versione secondaria e al numero di Build.  
+ in La versione di compilazione .NET Framework archiviata nei metadati, nel formato "v*a*. *B*[. *X*] ". *A*, *B*e *X* sono numeri decimali che corrispondono alla versione principale, alla versione secondaria e al numero di Build.  
   
 > [!NOTE]
 > Questo parametro deve corrispondere al nome della directory per la versione .NET Framework, come appare in C:\Windows\Microsoft.NET\Framework o C:\Windows\Microsoft.NET\Framework64.  
@@ -61,14 +59,14 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` o `ppRuntime` è null.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo interagisce in modo coerente con le interfacce legacy, ad esempio l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) e le funzioni legacy `CorBindTo*` , ad esempio le funzioni deprecate (vedere [funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) nel .NET Framework 2,0 hosting API). Ovvero, i runtime caricati con l'API legacy sono visibili alla nuova API e i runtime caricati con la nuova API sono visibili all'API legacy.  
+ Questo metodo interagisce in modo coerente con le interfacce legacy, ad esempio l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) e le funzioni legacy come le funzioni di `CorBindTo*` deprecate (vedere [funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) nell'API di hosting .NET Framework 2,0). Ovvero, i runtime caricati con l'API legacy sono visibili alla nuova API e i runtime caricati con la nuova API sono visibili all'API legacy.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e4bd55a52cdbb3c242b8c3e5ff21f970b93ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765034"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140509"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Metodo ICorPublishAppDomainEnum::Next
-Ottiene il numero specificato di domini applicazione attualmente esistenti nel processo, a partire dalla posizione corrente.  
+Ottiene il numero specificato di domini applicazione attualmente presenti nel processo, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di elementi da recuperare.  
+ in Numero di elementi da recuperare.  
   
  `objects`  
- [out] Un puntatore alla matrice di recuperati [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) oggetti, ognuno dei quali rappresenta un dominio dell'applicazione.  
+ out Puntatore alla matrice di oggetti [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) recuperati, ognuno dei quali rappresenta un dominio dell'applicazione.  
   
  `pceltFetched`  
- [out] Puntatore al numero di domini applicazione effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di domini applicazione effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorPub.idl, CorPub.h  
+ **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737601"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088681"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Metodo ICorDebugArrayValue::GetBaseIndicies
-Ottiene l'indice di base di ogni dimensione della matrice.  
+Ottiene l'indice di base di ogni dimensione nella matrice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +37,13 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>Parametri  
  `cdim`  
- [in] Il numero di dimensioni di questo `ICorDebugArrayValue` oggetto. Questo valore viene anche le dimensioni dei `indicies` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.  
+ in Numero di dimensioni dell'oggetto `ICorDebugArrayValue`. Questo valore corrisponde anche alla dimensione della matrice `indicies` perché la relativa dimensione è uguale al numero di dimensioni dell'oggetto `ICorDebugArrayValue`.  
   
  `indicies`  
- [out] Matrice di interi, ognuno dei quali è l'indice di base (vale a dire, l'indice iniziale) di una dimensione di questo `ICorDebugArrayValue` oggetto.  
+ out Matrice di Integer, ognuno dei quali è l'indice di base, ovvero l'indice iniziale, di una dimensione di questo oggetto `ICorDebugArrayValue`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

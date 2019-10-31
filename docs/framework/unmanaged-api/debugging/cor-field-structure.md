@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132351"
 ---
 # <a name="cor_field-structure"></a>Struttura COR_FIELD
 Fornisce informazioni su un campo in un oggetto.  
@@ -37,11 +35,11 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Token che può essere usato per ottenere informazioni sui campi.|  
+|`token`|Token `mdFieldDef` che può essere utilizzato per ottenere informazioni sui campi.|  
 |`offset`|Offset, in byte, per i dati dei campi nell'oggetto.|  
 |`id`|Valore [COR_TYPEID](cor-typeid-structure.md) che identifica il tipo di questo campo.|  
 |`fieldType`|Valore di enumerazione CorElementType che indica il tipo del campo.|  
@@ -49,11 +47,11 @@ typedef struct COR_FIELD{
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bb04ba090be9cab551bc39d8d9f1be974c747d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085140"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>Metodo ICorDebugEval::CreateValue
 Crea un valore del tipo specificato, con un valore iniziale pari a zero o null.  
   
- Questo metodo è obsoleto in .NET Framework versione 2.0. Uso [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) invece.  
+ Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorDebugEval2:: CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,31 +39,31 @@ HRESULT CreateValue (
   
 ## <a name="parameters"></a>Parametri  
  `elementType`  
- [in] Valore di [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) enumerazione che specifica il tipo del valore.  
+ in Valore dell'enumerazione [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) che specifica il tipo del valore.  
   
  `pElementClass`  
- [in] Puntatore a un [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) oggetto che specifica la classe del valore, se il tipo non è un tipo primitivo.  
+ in Puntatore a un oggetto [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) che specifica la classe del valore, se il tipo non è un tipo primitivo.  
   
  `ppValue`  
- [out] Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore.  
+ out Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore.  
   
 ## <a name="remarks"></a>Note  
- `CreateValue` Crea un `ICorDebugValue` oggetto del tipo specificato al solo scopo di utilizzo in una valutazione della funzione. Questo oggetto di valore è utilizzabile per passare le costanti di utente come parametri.  
+ `CreateValue` crea un oggetto `ICorDebugValue` del tipo specificato per l'utilizzo esclusivo in una valutazione di funzione. Questo oggetto valore può essere utilizzato per passare le costanti utente come parametri.  
   
- Se il tipo del valore è un tipo primitivo, il valore iniziale è pari a zero o null. Uso [ICorDebugGenericValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) per impostare il valore di un tipo primitivo.  
+ Se il tipo del valore è un tipo primitivo, il valore iniziale è zero o null. Usare [ICorDebugGenericValue:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) per impostare il valore di un tipo primitivo.  
   
- Se il valore di `elementType` è ELEMENT_TYPE_CLASS, si ottiene un' "interfaccia ICorDebugReferenceValue" (restituite in `ppValue`) che rappresenta il riferimento all'oggetto null. È possibile utilizzare questa oggetto passare null per una valutazione della funzione con parametri per riferimento oggetto. Non è possibile impostare il `ICorDebugValue` ad alcun elemento; rimane sempre null.  
+ Se il valore di `elementType` è ELEMENT_TYPE_CLASS, si ottiene un "ICorDebugReferenceValue" (restituito in `ppValue`) che rappresenta il riferimento all'oggetto null. È possibile utilizzare questo oggetto per passare valori null a una valutazione di funzione con parametri di riferimento a un oggetto. Non è possibile impostare il `ICorDebugValue` su qualsiasi elemento; rimane sempre null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Metodo CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
-- [ICorDebugEval (interfaccia)](icordebugeval-interface.md)
+- [Interfaccia ICorDebugEval](icordebugeval-interface.md)

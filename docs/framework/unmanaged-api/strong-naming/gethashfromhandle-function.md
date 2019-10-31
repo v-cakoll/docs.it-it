@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140656"
 ---
 # <a name="gethashfromhandle-function"></a>Funzione GetHashFromHandle
 Genera un hash basato sul contenuto del file con l'handle di file specificato, usando l'algoritmo hash specificato.  
@@ -51,17 +49,17 @@ HRESULT GetHashFromHandle (
  out Buffer hash restituito.  
   
  `cchHash`  
- in Dimensione massima richiesta di `pbHash`.  
+ in Dimensioni massime richieste di `pbHash`.  
   
  `pchHash`  
  out Dimensione, in byte, dell'oggetto restituito `pbHash`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

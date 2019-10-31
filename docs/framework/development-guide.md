@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122472"
 ---
 # <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Concetti di base sulle applicazioni](../standard/application-essentials.md)  
  Vengono fornite informazioni sulle attività per lo sviluppo di app di base, quali programmazione con assembly e domini applicazione, uso di attributi, formattazione e tipi di base di analisi, uso di raccolte, gestione di eventi ed eccezioni, uso di file, flussi di dati e generics.  
   
@@ -35,7 +33,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Flussi di lavoro di compilazione con Windows Workflow Foundation](windows-workflow-foundation/index.md)     
  Vengono fornite informazioni sul modello di programmazione, sugli esempi e sugli strumenti per Windows Workflow Foundation (WF).  
 
- [Applicazioni dei servizi di Windows](./windows-services/index.md)  
+ [Applicazioni di servizi Windows](./windows-services/index.md)  
  Viene illustrato come usare Visual Studio e .NET Framework per creare un'app che viene installata come servizio e che avvia, arresta e diversamente controlla il proprio comportamento.  
   
  [Elaborazione parallela, concorrenza e programmazione asincrona in .NET](../standard/parallel-processing-and-concurrency.md)  
@@ -50,10 +48,10 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Compilazione di app con .NET Native](./net-native/index.md)  
  Descrive come usare la tecnologia di precompilazione di .NET Native per compilare e distribuire app di Windows Store. .NET Native compila le app scritte in codice gestito (C#) e destinate a .NET Framework in codice nativo.  
   
- [Sicurezza](../standard/security/index.md)  
+ [Security](../standard/security/index.md)  
  Vengono fornite informazioni sulle classi e sui servizi in .NET Framework che semplificano lo sviluppo di app sicure.  
   
- [Debug, analisi e profilatura](./debug-trace-profile/index.md)  
+ [Debug, traccia e profilatura](./debug-trace-profile/index.md)  
  Viene illustrato come eseguire test, ottimizzare e profilare le app .NET Framework e l'ambiente dell'app. Questa sezione include informazioni per amministratori e sviluppatori.  
   
  [Sviluppo per piattaforme multiple](../standard/cross-platform/index.md)  
@@ -65,7 +63,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Prestazioni](./performance/index.md)  
  Vengono fornite informazioni sulla memorizzazione nella cache, l'inizializzazione differita, l'affidabilità e gli eventi ETW.  
  
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  [Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Offre sintassi, esempi di codice e informazioni sull'uso per ogni classe contenuta negli spazi dei nomi .NET Framework.  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141719"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next (funzione)
 Recupera il qualificatore successivo in un'enumerazione avviata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
@@ -53,13 +51,13 @@ in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn
 [in] Riservato. Questo parametro deve essere 0.
 
 `pstrName`   
-out Nome del qualificatore. Se `null`, questo parametro viene ignorato; in caso `pstrName` contrario, non deve puntare a `BSTR` una perdita di memoria o valida. Se non è null, la funzione alloca sempre un nuovo `BSTR` oggetto quando restituisce `WBEM_S_NO_ERROR`.
+out Nome del qualificatore. Se `null`, questo parametro viene ignorato; in caso contrario, `pstrName` non deve puntare a una `BSTR` valida o si verifica una perdita di memoria. Se non è null, la funzione alloca sempre un nuovo `BSTR` quando restituisce `WBEM_S_NO_ERROR`.
 
 `pVal`   
-out In caso di esito positivo, il valore per il qualificatore. Se la funzione `pVal` ha esito `VARIANT` negativo, l'oggetto a cui fa riferimento non viene modificato. Se questo parametro è `null`, il parametro viene ignorato.
+out In caso di esito positivo, il valore per il qualificatore. Se la funzione ha esito negativo, il `VARIANT` a cui punta `pVal` non viene modificato. Se questo parametro è `null`, il parametro viene ignorato.
 
 `plFlavor`   
-out Puntatore a un oggetto LONG che riceve la versione del qualificatore. Se non si desidera ottenere informazioni sul sapore, questo parametro `null`può essere. 
+out Puntatore a un oggetto LONG che riceve la versione del qualificatore. Se non si desidera ottenere informazioni sul sapore, questo parametro può essere `null`. 
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -77,12 +75,12 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) .
 
-Chiamare ripetutamente `QualifierSet_Next` la funzione per enumerare tutti i qualificatori fino a quando `WBEM_S_NO_MORE_DATA`la funzione non restituisce. Per terminare l'enumerazione in anticipo, chiamare la funzione [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
+Chiamare ripetutamente la funzione `QualifierSet_Next` per enumerare tutti i qualificatori fino a quando la funzione non restituisce `WBEM_S_NO_MORE_DATA`. Per terminare l'enumerazione in anticipo, chiamare la funzione [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
 
 L'ordine dei qualificatori restituiti durante l'enumerazione non è definito.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6e5beabb5ac1b5a4b2a34ae8e18b7fad7c86504
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 390a29760c0f3680ca082561607ab678e8bd1e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133000"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Metodo IHostTaskManager::ReverseEnterRuntime
 Notifica all'host che viene effettuata una chiamata al Common Language Runtime (CLR) dal codice non gestito.  
@@ -37,7 +35,7 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime`la restituzione è riuscita.|  
+|S_OK|`ReverseEnterRuntime` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -46,17 +44,17 @@ HRESULT ReverseEnterRuntime ();
 |E_OUTOFMEMORY|La memoria disponibile non è sufficiente per completare l'allocazione delle risorse richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Se la chiamata a CLR viene eseguita da una sequenza originata nel codice gestito, ogni chiamata a `ReverseEnterRuntime` corrisponde a una chiamata a [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Se la chiamata a CLR viene eseguita da una sequenza che ha avuto origine nel codice gestito, ogni chiamata a `ReverseEnterRuntime` corrisponde a una chiamata a [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
-> Le chiamate possono provenire da codice non gestito senza essere nidificate. In questo caso, non viene effettuata alcuna chiamata a [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)o `ReverseLeaveRuntime`e il numero di chiamate a `ReverseEnterRuntime` non equivale al numero di chiamate a `ReverseLeaveRuntime`.  
+> Le chiamate possono provenire da codice non gestito senza essere nidificate. In questo caso, non viene effettuata alcuna chiamata a [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)o `ReverseLeaveRuntime`e il numero di chiamate a `ReverseEnterRuntime` non è uguale al numero di chiamate a `ReverseLeaveRuntime`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

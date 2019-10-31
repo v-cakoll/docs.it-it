@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092028"
 ---
 # <a name="waitortimercallback-function-pointer"></a>Puntatore alla funzione WAITORTIMERCALLBACK
-Punta a una funzione che notifica all'host che un handle di attesa (<xref:System.Threading.WaitHandle>) è stato segnalato o timeout.  
+Punta a una funzione che notifica all'host che un handle di attesa (<xref:System.Threading.WaitHandle>) è stato segnalato o si è verificato un timeout.  
   
  Questo puntatore a funzione è stato deprecato in .NET Framework 4.  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parametri  
  `lpParameter`  
- [in] Un puntatore a un oggetto che contiene le informazioni definite dall'host.  
+ in Puntatore a un oggetto che contiene le informazioni definite dall'host.  
   
  `TimerOrWaitFired`  
- [in] `true` se l'handle di attesa si è verificato un timeout, o `false` se è stato segnalato.  
+ [in] `true` se l'handle di attesa è scaduto oppure `false` se è stato segnalato.  
   
 ## <a name="remarks"></a>Note  
- La funzione a cui `WAITORTIMERCALLBACK` punti è una funzione di callback e devono essere implementati dal writer dell'applicazione host.  
+ Funzione a cui `WAITORTIMERCALLBACK` punti è una funzione di callback e deve essere implementata dal writer dell'applicazione host.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorWks.dll  
+ **Libreria:** MSCorWks. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

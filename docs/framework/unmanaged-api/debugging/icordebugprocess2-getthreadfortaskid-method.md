@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c85040a31966a92ead6ca4786f62852f17923056
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11acf997b2efd74bc8394d830f36d3acbd1eef56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736928"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137204"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Metodo ICorDebugProcess2::GetThreadForTaskID
-Ottiene il thread su cui è in esecuzione l'attività con l'identificatore specificato.  
+Ottiene il thread in cui è in esecuzione l'attività con l'identificatore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT GetThreadForTaskID (
   
 ## <a name="parameters"></a>Parametri  
  `taskid`  
- [in] L'identificatore dell'attività.  
+ in Identificatore dell'attività.  
   
  `ppThread`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugThread2 che rappresenta il thread da recuperare.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugThread2 che rappresenta il thread da recuperare.  
   
 ## <a name="remarks"></a>Note  
- L'host può impostare l'identificatore dell'attività usando il [SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) (metodo).  
+ L'host può impostare l'identificatore di attività usando il metodo [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

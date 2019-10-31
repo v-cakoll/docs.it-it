@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192875"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138017"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Procedura: mettersi in ascolto di richieste di annullamento tramite polling
 L'esempio seguente illustra un modo in cui il codice utente può eseguire il polling di un token di annullamento a intervalli regolari per verificare se è stato richiesto l'annullamento dal thread chiamante. Questo esempio usa il tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, ma lo stesso modello si applica alle operazioni asincrone create direttamente dal tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> o <xref:System.Threading.Thread?displayProperty=nameWithType>.  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137634"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>Metodo ICorDebugEval2::CallParameterizedFunction
-Imposta una chiamata alla funzione ICorDebugFunction specificato, che può essere nidificata in una classe il cui costruttore accetta <xref:System.Type> accettano parametri oppure può stesso <xref:System.Type> parametri.  
+Imposta una chiamata all'oggetto ICorDebugFunction specificato, che può essere annidato all'interno di una classe il cui costruttore accetta <xref:System.Type> parametri o accetta <xref:System.Type> parametri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,29 +39,29 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>Parametri  
  `pFunction`  
- [in] Un puntatore a un `ICorDebugFunction` oggetto che rappresenta la funzione da chiamare.  
+ in Puntatore a un oggetto `ICorDebugFunction` che rappresenta la funzione da chiamare.  
   
  `nTypeArgs`  
- [in] Il numero di argomenti che la funzione accetta.  
+ in Numero di argomenti accettati dalla funzione.  
   
  `ppTypeArgs`  
- [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di funzione.  
+ in Matrice di puntatori, ciascuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento della funzione.  
   
  `nArgs`  
- [in] Il numero di valori passati nella funzione.  
+ in Numero di valori passati nella funzione.  
   
  `ppArgs`  
- [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugValue che rappresenta un valore passato in una funzione.  
+ in Matrice di puntatori, ciascuno dei quali punta a un oggetto ICorDebugValue che rappresenta un valore passato in un argomento della funzione.  
   
 ## <a name="remarks"></a>Note  
- `CallParameterizedFunction` è simile a [CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) ad eccezione del fatto che la funzione può trovarsi all'interno di una classe con i parametri di tipo, può accettare direttamente i parametri di tipo, o entrambi. Gli argomenti di tipo devono essere forniti prima della classe, quindi per la funzione.  
+ `CallParameterizedFunction` è simile a [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , ad eccezione del fatto che la funzione potrebbe trovarsi all'interno di una classe con parametri di tipo, può prendere parametri di tipo o entrambi. Gli argomenti di tipo devono essere specificati per primi per la classe e quindi per la funzione.  
   
- Se la funzione è in un altro dominio applicazione, si verificherà una transizione. Tuttavia, tutti gli argomenti tipo e il valore devono essere nel dominio dell'applicazione di destinazione.  
+ Se la funzione si trova in un dominio applicazione diverso, si verificherà una transizione. Tuttavia, tutti gli argomenti relativi al tipo e al valore devono trovarsi nel dominio dell'applicazione di destinazione.  
   
- Valutazione della funzione può essere eseguita solo in alcuni scenari. Se `CallParameterizedFunction` o `ICorDebugEval::CallFunction` ha esito negativo, il valore HRESULT restituito indicherà il motivo più generale possibili per errore.  
+ La valutazione della funzione può essere eseguita solo in scenari limitati. Se `CallParameterizedFunction` o `ICorDebugEval::CallFunction` ha esito negativo, il valore HRESULT restituito indicherà il motivo più generale possibile dell'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

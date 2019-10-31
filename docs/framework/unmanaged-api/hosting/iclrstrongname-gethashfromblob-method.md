@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135201"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Metodo ICLRStrongName::GetHashFromBlob
 Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.  
@@ -42,32 +40,32 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Parametri  
  `pbBlob`  
- [in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.  
+ in Puntatore all'indirizzo del blocco di memoria di cui eseguire l'hashing.  
   
  `cchBlob`  
- [in] La lunghezza, espressa in byte, del blocco di memoria.  
+ in Lunghezza, in byte, del blocco di memoria.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usare zero per l'algoritmo predefinito.  
   
  `pbHash`  
- [out] Il buffer di hash restituito.  
+ out Buffer hash restituito.  
   
  `cchHash`  
- [in] La dimensione massima richiesta del `pbHash`.  
+ in Dimensioni massime richieste di `pbHash`.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
+ out Dimensione, in byte, dell'oggetto restituito `pbHash`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` se il metodo è stato completato correttamente; in caso contrario, valore HRESULT che indica l'esito negativo (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

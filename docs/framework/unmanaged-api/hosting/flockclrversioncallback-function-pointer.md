@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46e3356df6578f2adf2ceee00b1363b65fd014ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1ad414c30788801e14a33e98a0893e2a0f58d0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760237"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136509"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>Puntatore alla funzione FLockClrVersionCallback
-Punta a una funzione che il common language runtime (CLR) chiama per indicare che l'inizializzazione è avviato o completato.  
+Punta a una funzione chiamata da Common Language Runtime (CLR) per indicare che l'inizializzazione è stata avviata o completata.  
   
  Questo puntatore a funzione è stato deprecato in .NET Framework 4.  
   
@@ -38,11 +36,11 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
  Questa funzione viene implementata dall'host.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorWks.dll  
+ **Libreria:** MSCorWks. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134087"
 ---
 # <a name="icordebuginitialize-method"></a>Metodo ICorDebug::Initialize
-Inizializza il `ICorDebug` oggetto.  
+Inizializza l'oggetto `ICorDebug`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +32,10 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>Note  
- Il debugger deve chiamare `Initialize` al momento della creazione di servizi tempo necessario per inizializzare il debug. Questo metodo deve essere chiamato prima di qualsiasi altro metodo nel `ICorDebug` viene chiamato.  
+ Il debugger deve chiamare `Initialize` al momento della creazione per inizializzare i servizi di debug. Questo metodo deve essere chiamato prima di chiamare qualsiasi altro metodo in `ICorDebug`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

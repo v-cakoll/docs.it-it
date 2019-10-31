@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 362e917e1684c91bde80a8b5c2e6a27a18a99190
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740022"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098204"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>Enumerazione CorDebugGenerationTypes
 Specifica la generazione di un'area di memoria nell'heap gestito.  
@@ -37,19 +35,19 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Nome del membro|Descrizione|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|Generazione 0.|  
 |`CorDebug_Gen1`|Generazione 1.|  
 |`CorDebug_Gen2`|Generazione 2.|  
-|`CorDebug_LOH`|L'heap oggetti grandi.|  
+|`CorDebug_LOH`|Heap degli oggetti grandi.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

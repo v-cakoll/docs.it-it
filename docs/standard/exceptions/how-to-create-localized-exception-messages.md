@@ -2,24 +2,23 @@
 title: "Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati"
 description: Informazioni su come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141530"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 
-In questo articolo si apprenderà come creare eccezioni definite dall'utente ereditate dalla classe di base <xref:System.Exception> con messaggi di eccezione localizzati tramite assembly satellite.
+In questo articolo si apprenderà come creare eccezioni definite dall'utente ereditate dalla classe <xref:System.Exception> di base con messaggi di eccezione localizzati tramite assembly satellite.
 
 ## <a name="create-custom-exceptions"></a>Creare eccezioni personalizzate
 
 .NET contiene molte eccezioni diverse che è possibile usare. Tuttavia, in alcuni casi in cui nessuno soddisfa le proprie esigenze, è possibile creare eccezioni personalizzate.
 
-Si supponga di voler creare un `StudentNotFoundException` che contiene una proprietà `StudentName`.
+Si supponga di voler creare un `StudentNotFoundException` contenente una proprietà `StudentName`.
 Per creare un'eccezione personalizzata, attenersi alla procedura seguente:
 
 1. Creare una classe serializzabile che erediti da <xref:System.Exception>. Il nome della classe deve terminare con "Exception":
@@ -83,7 +82,7 @@ Gli [assembly satellite](../../framework/resources/creating-satellite-assemblies
 Per creare i messaggi di eccezione localizzati:
 
 1. Creare una nuova cartella denominata *Resources* per conservare i file di risorse.
-1. Aggiungere un nuovo file di risorse. Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e selezionare **Aggiungi** > **nuovo elemento** > **file di risorse**. Denominare il file *ExceptionMessages. resx*. Questo è il file di risorse predefinito.
+1. Aggiungere un nuovo file di risorse. Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella **Esplora soluzioni**e scegliere **Aggiungi** > **nuovo elemento** > **file di risorse**. Denominare il file *ExceptionMessages. resx*. Questo è il file di risorse predefinito.
 1. Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nella figura seguente:
 
    ![Aggiungere risorse alle impostazioni cultura predefinite](media/add-resources-to-default-culture.jpg)
@@ -102,7 +101,7 @@ Per creare i messaggi di eccezione localizzati:
     ```
 
   > [!NOTE]
-  > Se il nome del progetto è `TestProject` e il file di risorse *ExceptionMessages. resx* risiede nella cartella *Resources* del progetto, il nome completo del file di risorse è `TestProject.Resources.ExceptionMessages`.
+  > Se il nome del progetto è `TestProject` e il file di risorse *ExceptionMessages. resx* risiede nella cartella *Resources* del progetto, il nome completo del file di risorse viene `TestProject.Resources.ExceptionMessages`.
 
 ## <a name="see-also"></a>Vedere anche
 

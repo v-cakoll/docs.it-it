@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753661"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084828"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Metodo ICorDebugEval2::NewParameterizedArray
-Consente di allocare una nuova matrice del tipo di elemento specificato e le dimensioni.  
+Alloca una nuova matrice del tipo e delle dimensioni dell'elemento specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Parametri  
  `pElementType`  
- [in] Un puntatore a un oggetto ICorDebugType che rappresenta il tipo di elemento memorizzato nella matrice.  
+ in Puntatore a un oggetto ICorDebugType che rappresenta il tipo di elemento archiviato nella matrice.  
   
  `rank`  
- [in] Il numero di dimensioni della matrice. In .NET Framework versione 2.0, questo valore deve essere 1.  
+ in Numero di dimensioni della matrice. Nel .NET Framework versione 2,0, questo valore deve essere 1.  
   
  `dims`  
- [in] Le dimensioni, in byte, di ogni dimensione della matrice.  
+ in Dimensione, in byte, di ogni dimensione della matrice.  
   
  `lowBounds`  
- [in] Facoltativo. Il limite inferiore di ogni dimensione della matrice. Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.  
+ [in] Facoltativo. Limite inferiore di ogni dimensione della matrice. Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.  
   
 ## <a name="remarks"></a>Note  
- Gli elementi della matrice possono essere istanze di un tipo generico. La matrice viene sempre creata nel dominio dell'applicazione in cui è attualmente in esecuzione il thread. In .NET Framework 2.0, il valore di `rank` deve essere 1.  
+ Gli elementi della matrice possono essere istanze di un tipo generico. La matrice viene sempre creata nel dominio applicazione in cui è attualmente in esecuzione il thread. Nel .NET Framework 2,0, il valore di `rank` deve essere 1.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

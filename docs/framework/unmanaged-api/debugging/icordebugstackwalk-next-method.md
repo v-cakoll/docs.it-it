@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131819"
 ---
 # <a name="icordebugstackwalknext-method"></a>Metodo ICorDebugStackWalk::Next
-Sposta il [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto per il frame successivo.  
+Sposta l'oggetto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nel frame successivo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +36,18 @@ HRESULT Next();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il runtime è stato rimosso fino al fotogramma successivo (vedere la sezione Osservazioni).|  
-|E_FAIL|Il `ICorDebugStackWalk` non è stato possibile avanzare l'oggetto.|  
-|CORDBG_S_AT_END_OF_STACK|In seguito a questa rimozione è stata raggiunta la fine dello stack.|  
-|CORDBG_E_PAST_END_OF_STACK|Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.|  
+|S_OK|Il runtime è stato rimosso fino al frame successivo. vedere la sezione Osservazioni.|  
+|E_FAIL|Impossibile avanzare l'oggetto `ICorDebugStackWalk`.|  
+|CORDBG_S_AT_END_OF_STACK|È stata raggiunta la fine dello stack come risultato della rimozione.|  
+|CORDBG_E_PAST_END_OF_STACK|Il puntatore al frame è già alla fine dello stack. non è pertanto possibile accedere a nessun frame aggiuntivo.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Il `Next` metodo progressi di `ICorDebugStackWalk` solo se il runtime può rimuovere il frame corrente dell'oggetto per il frame di chiamata. In caso contrario, l'oggetto sposta il frame successivo che il runtime è in grado di rimozione.  
+ Il metodo `Next` sposta l'oggetto `ICorDebugStackWalk` al frame chiamante solo se il runtime è in grado di rimuovere il frame corrente. In caso contrario, l'oggetto avanza al frame successivo che il runtime è in grado di rimuovere.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

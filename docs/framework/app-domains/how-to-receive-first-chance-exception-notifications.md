@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ricevere notifiche di eccezioni first-chance'
+title: 'Procedura: ricevere notifiche di eccezioni first-chance'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119869"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Procedura: Ricevere notifiche di eccezioni first-chance
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Procedura: ricevere notifiche di eccezioni first-chance
 L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.AppDomain> consente di ricevere una notifica in cui si informa che è stata generata un'eccezione, prima che Common Language Runtime inizi a cercare gestori di eccezioni .
 
  L'evento viene generato a livello di dominio dell'applicazione. Poiché un thread di esecuzione può passare attraverso più domini dell'applicazione, un'eccezione che non viene gestita in un dominio dell'applicazione può essere gestita in un altro dominio dell'applicazione. La notifica si verifica in ogni dominio dell'applicazione che ha aggiunto un gestore per l'evento fino a quando un dominio non gestisce l'eccezione.

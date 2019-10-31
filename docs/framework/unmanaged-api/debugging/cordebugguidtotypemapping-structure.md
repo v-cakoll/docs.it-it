@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132832"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>Struttura CorDebugGuidToTypeMapping
-Esegue il mapping di un GUID di Runtime di Windows per l'oggetto ICorDebugType corrispondente.  
+Esegue il mapping di un GUID Windows Runtime al relativo oggetto ICorDebugType corrispondente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,12 +35,12 @@ typedef struct CorDebugGuidToTypeMapping {
 } CorDebugGuidToTypeMapping;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`iid`|Il GUID del tipo di Runtime di Windows memorizzato nella cache.|  
-|`pType`|Un puntatore a un oggetto ICorDebugType che fornisce informazioni sul tipo memorizzato nella cache.|  
+|`iid`|GUID del tipo di Windows Runtime memorizzato nella cache.|  
+|`pType`|Puntatore a un oggetto ICorDebugType che fornisce informazioni sul tipo memorizzato nella cache.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Windows Runtime.  

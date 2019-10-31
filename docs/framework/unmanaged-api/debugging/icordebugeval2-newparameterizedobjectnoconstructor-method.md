@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084813"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>Metodo ICorDebugEval2::NewParameterizedObjectNoConstructor
-Crea un'istanza di un nuovo oggetto di tipo con parametri della classe specificata senza effettuare alcun tentativo di chiamare un metodo del costruttore.  
+Crea un'istanza di un nuovo oggetto di tipo con parametri della classe specificata senza provare a chiamare un metodo del costruttore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,19 +37,19 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>Parametri  
  `pClass`  
- [in] Un puntatore a un oggetto ICorDebugClass che rappresenta la classe dell'oggetto da cui creare istanze.  
+ in Puntatore a un oggetto ICorDebugClass che rappresenta la classe dell'oggetto di cui creare un'istanza.  
   
  `nTypeArgs`  
- [in] Il numero di argomenti tipo passati.  
+ in Numero di argomenti di tipo passati.  
   
  `ppTypeArgs`  
- [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di tipo per l'oggetto che viene viene creata un'istanza.  
+ in Matrice di puntatori, ciascuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di tipo per l'oggetto di cui viene creata un'istanza.  
   
 ## <a name="remarks"></a>Note  
- Il `NewParameterizedObjectNoConstructor` metodo avrà esito negativo se un numero errato di argomenti di tipo o i tipi errati di argomenti tipo passati.  
+ Il metodo `NewParameterizedObjectNoConstructor` avrà esito negativo se viene passato un numero errato di argomenti di tipo o tipi non corretti di argomenti di tipo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

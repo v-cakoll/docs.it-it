@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d30384ea8b9ff4eee41abd43ae39486f770039e7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 63fb505a92683fda21b6e71a6ca891ca35afba1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136416"
 ---
 # <a name="getcorsystemdirectory-function"></a>Funzione GetCORSystemDirectory
 Restituisce la directory di installazione del Common Language Runtime (CLR) che viene caricata nel processo. La directory di installazione è completamente qualificata, ad esempio "c:\Windows\Microsoft.net\framework\v1.0.3705".  
@@ -44,7 +42,7 @@ HRESULT GetCORSystemDirectory (
  out Buffer in cui il runtime restituisce una stringa che contiene il nome completo della directory di installazione per il runtime caricato nel processo. Se il runtime non è ancora stato caricato nel processo, la funzione restituisce le informazioni di directory appropriate per la versione più recente del runtime installato nel computer.  
   
  `cchBuffer`  
- in Dimensione, in byte, di `pbuffer`.  
+ in Dimensione, in byte, del `pbuffer`.  
   
  `dwLength`  
  out Numero di caratteri restituiti in `pbuffer`.  
@@ -55,11 +53,11 @@ HRESULT GetCORSystemDirectory (
 > Non utilizzare questa funzione nei processi che eseguono la versione 4 di CLR. Se nel computer è installata una versione precedente di CLR, questa funzione restituisce la directory di installazione per tale versione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

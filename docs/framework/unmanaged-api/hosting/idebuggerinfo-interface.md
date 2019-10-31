@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9395a8a0-ffb9-475f-8da6-890999ae4bb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bb52d499faa83bd05ac0e6c817582f229ae183c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133190"
 ---
 # <a name="idebuggerinfo-interface"></a>Interfaccia IDebuggerInfo
 Fornisce metodi per ottenere informazioni sullo stato dei servizi di debug.  
@@ -30,14 +28,14 @@ Fornisce metodi per ottenere informazioni sullo stato dei servizi di debug.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Ottiene un valore che indica se un debugger gestito viene collegato al processo.|  
+|[Metodo IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Ottiene un valore che indica se un debugger gestito è associato a questo processo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

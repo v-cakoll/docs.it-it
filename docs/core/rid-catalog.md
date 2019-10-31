@@ -2,12 +2,12 @@
 title: Catalogo dei RID (Runtime IDentifier) di .NET Core
 description: Informazioni sull'identificatore di runtime (RID) e su come vengono usati i RID in .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: HT
+ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100915"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -39,7 +39,7 @@ I RID che rappresentano un sistema operativo reale seguono in genere il modello 
 
 ## <a name="rid-graph"></a>Grafico RID
 
-Il grafico RID o grafico di fallback di runtime è un elenco di RID compatibili tra loro. I RID sono definiti nel pacchetto [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). È possibile visualizzare l'elenco di RID supportati e il grafico RID nel file [*runtime.json* ](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), disponibile nel repository CoreFX. In questo file, si noterà che tutti i RID, ad eccezione di quello di base, contengono un'istruzione `"#import"`. Queste istruzioni indicano RID compatibili.
+Il grafico RID o grafico di fallback di runtime è un elenco di RID compatibili tra loro. I RID sono definiti nel pacchetto [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). È possibile visualizzare l'elenco di RID supportati e il grafico RID nel file [*runtime.json* ](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json), disponibile nel repository CoreFX. In questo file, si noterà che tutti i RID, ad eccezione di quello di base, contengono un'istruzione `"#import"`. Queste istruzioni indicano RID compatibili.
 
 Quando NuGet ripristina i pacchetti, tenta di trovare una corrispondenza esatta per il runtime specificato.
 Se non trova una corrispondenza esatta, NuGet ripercorre il grafico a ritroso fino a individuare il sistema compatibile più simile in base al grafico RID.
@@ -80,7 +80,7 @@ Esistono alcune considerazioni che è necessario tenere presenti quando si lavor
 ## <a name="using-rids"></a>Uso dei RID
 
 Per usare i RID, è necessario sapere quali sono quelli disponibili. Alla piattaforma vengono regolarmente aggiunti nuovi valori.
-Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
+Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
 
 .NET Core 2.0 SDK introduce il concetto di RID portabili. Si tratta di nuovi valori aggiunti al grafico RID che non sono associati a una versione specifica o a una distribuzione specifica del sistema operativo e sono la scelta preferibile quando si usa .NET Core 2.0 e versioni successive. Risultano particolarmente utili per la gestione di più distribuzioni di Linux, perché la maggior parte dei RID di distribuzione sono mappati ai RID portabili.
 
@@ -88,7 +88,7 @@ L'elenco seguente mostra un piccolo subset dei RID più comuni usati per ogni si
 
 ## <a name="windows-rids"></a>RID Windows
 
-Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
+Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
 
 - Portable (.NET Core 2.0 o versioni successive)
   - `win-x64`
@@ -112,7 +112,7 @@ Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](windows-p
 
 ## <a name="linux-rids"></a>RID Linux
 
-Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX. I dispositivi che eseguono una distribuzione non elencata di seguito potrebbero funzionare con uno dei RID portabili. Ad esempio, i dispositivi Raspberry Pi che eseguono una distribuzione di Linux non elencata possono essere assegnati a `linux-arm`.
+Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX. I dispositivi che eseguono una distribuzione non elencata di seguito potrebbero funzionare con uno dei RID portabili. Ad esempio, i dispositivi Raspberry Pi che eseguono una distribuzione di Linux non elencata possono essere assegnati a `linux-arm`.
 
 - Portable (.NET Core 2.0 o versioni successive)
   - `linux-x64` (La maggior parte delle distribuzioni desktop, ad esempio CentOS, Debian, Fedora, Ubuntu e derivati)
@@ -130,7 +130,7 @@ Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](linux-prere
 
 ## <a name="macos-rids"></a>RID macOS
 
-I RID macOS usano la personalizzazione "OSX" precedente. Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
+I RID macOS usano la personalizzazione "OSX" precedente. Sono elencati solo i valori comuni. Per la versione più recente e completa, vedere il file [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) nel repository CoreFX.
 
 - Portable (.NET Core 2.0 o versioni successive)
   - `osx-x64` (La versione minima del sistema operativo è macOS 10.12 Sierra)
@@ -149,4 +149,4 @@ Per altre informazioni, vedere [Prerequisiti per .NET Core in macOS](macos-prere
 
 ## <a name="see-also"></a>Vedere anche
 
-- [ID di runtime](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [ID di runtime](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

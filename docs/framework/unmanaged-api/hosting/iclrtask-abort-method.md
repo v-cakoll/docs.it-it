@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3594b5f-2e41-4e36-9096-3586276a138c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e48292d1b0bfaa990cca1b290f769d96938d433
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 026d4c14abed030b80e8e1b3f8363fbd59ac05e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124910"
 ---
 # <a name="iclrtaskabort-method"></a>Metodo ICLRTask::Abort
-Richiede che common language runtime (CLR) di interrompere l'attività che l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza rappresenta.  
+Richiede che il Common Language Runtime (CLR) interrompa l'attività rappresentata dall'istanza corrente di [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,24 +33,24 @@ HRESULT Abort ();
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Abort` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`Abort` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il Common Language Runtime genera una <xref:System.Threading.ThreadAbortException> quando l'host chiama `Abort`. Restituisce immediatamente dopo l'inizializzazione, le informazioni sull'eccezione senza tempi di attesa per il codice utente, ad esempio i finalizzatori o meccanismi di gestione delle eccezioni per l'esecuzione. Le chiamate a `Abort` vengono quindi eseguite rapidamente.  
+ CLR genera un'<xref:System.Threading.ThreadAbortException> quando l'host chiama `Abort`. Viene restituito immediatamente dopo l'inizializzazione delle informazioni sull'eccezione, senza attendere l'esecuzione del codice utente, ad esempio finalizzatori o meccanismi di gestione delle eccezioni. Le chiamate a `Abort` quindi restituiscono rapidamente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

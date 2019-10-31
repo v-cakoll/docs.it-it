@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96e63d121bb64fd1aa6433881f7806b5c4058115
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 72a1b6fdc40f3169500d8cf3b3028315106ecc69
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140236"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>Metodo ICorDebugValue3::GetSize64
-Ottiene la dimensione, espressa in byte, di questo [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) oggetto.  
+Ottiene la dimensione in byte di questo oggetto [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT GetSize64(
   
 ## <a name="parameters"></a>Parametri  
  pSize  
- [out] Un puntatore alla dimensione, espressa in byte, di questo oggetto.  
+ out Puntatore alla dimensione, in byte, dell'oggetto.  
   
 ## <a name="remarks"></a>Note  
- Se questo tipo di valore è un tipo riferimento, questo metodo restituisce la dimensione del puntatore anziché le dimensioni dell'oggetto.  
+ Se il tipo di questo valore è un tipo di riferimento, questo metodo restituisce le dimensioni del puntatore anziché le dimensioni dell'oggetto.  
   
- Il `ICorDebugValue3::GetSize` metodo si differenzia dal [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) metodo nel tipo del relativo parametro di output. Nelle [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md), il parametro di output è un `ULONG32`; nella `ICorDebugValue3::GetSize`, è un `ULONG64`. In questo modo, il [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) interfaccia per segnalare le dimensioni delle matrici che superano 2 GB.  
+ Il metodo `ICorDebugValue3::GetSize` differisce dal metodo [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) nel tipo del parametro di output. In [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md), il parametro di output è un `ULONG32`; in `ICorDebugValue3::GetSize`, si tratta di un `ULONG64`. Ciò consente all'interfaccia [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) di segnalare le dimensioni delle matrici che superano 2 GB.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

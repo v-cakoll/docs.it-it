@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26b3761ab49f36c5f687ff2c62882667e044d299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8364d38f7ab81b73fd8b47d2251bc0ff1b2c71e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138239"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>Enumerazione EMemoryCriticalLevel
-Contiene valori che indicano l'impatto di un errore quando un'allocazione di memoria specifico è stato richiesto ma non può essere soddisfatta.  
+Contiene valori che indicano l'effetto di un errore quando un'allocazione di memoria specifica è stata richiesta ma non può essere soddisfatta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +34,23 @@ typedef enum {
 } EMemoryCriticalLevel;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`eAppDomainCritical`|Indica che l'allocazione è fondamentale per l'esecuzione di codice gestito nel dominio che ha richiesto l'allocazione. Se non è possibile allocare memoria, CLR non può garantire che il dominio è ancora utilizzabile. L'host decide l'azione da intraprendere quando l'allocazione non può essere soddisfatta. È possibile indicare a CLR per interrompere la `AppDomain` automaticamente, oppure consentire di continuare l'esecuzione chiamando metodi sulla [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
-|`eProcessCritical`|Indica che l'allocazione è fondamentale per l'esecuzione di codice gestito nel processo. Questo valore viene utilizzato durante l'avvio e durante l'esecuzione dei finalizzatori. Se non è possibile allocare memoria, CLR non può funzionare nel processo. Se l'allocazione ha esito negativo, il CLR è disabilitato in modo efficace. Tutte le chiamate successive in CLR non HOST_E_CLRNOTAVAILABLE.|  
-|`eTaskCritical`|Indica che l'allocazione è fondamentale per l'esecuzione di attività che ha richiesto l'allocazione. Se non è possibile allocare memoria, CLR non può garantire che l'attività possa essere eseguito. In caso di errore, il Common Language Runtime genera una <xref:System.Threading.ThreadAbortException> sul thread del sistema operativo fisico.|  
+|`eAppDomainCritical`|Indica che l'allocazione è essenziale per l'esecuzione di codice gestito nel dominio che ha richiesto l'allocazione. Se non è possibile allocare memoria, CLR non può garantire che il dominio sia ancora utilizzabile. L'host decide l'azione da intraprendere quando l'allocazione non può essere soddisfatta. Può indicare a CLR di interrompere automaticamente il `AppDomain` o consentirne l'esecuzione chiamando metodi su [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
+|`eProcessCritical`|Indica che l'allocazione è fondamentale per l'esecuzione del codice gestito nel processo. Questo valore viene usato durante l'avvio e durante l'esecuzione di finalizzatori. Se non è possibile allocare memoria, il CLR non può funzionare nel processo. Se l'allocazione ha esito negativo, CLR viene disabilitato in modo efficace. Tutte le chiamate successive a CLR hanno esito negativo con HOST_E_CLRNOTAVAILABLE.|  
+|`eTaskCritical`|Indica che l'allocazione è essenziale per l'esecuzione dell'attività che ha richiesto l'allocazione. Se non è possibile allocare memoria, CLR non può garantire che l'attività possa essere eseguita. In caso di errore, CLR genera una <xref:System.Threading.ThreadAbortException> nel thread del sistema operativo fisico.|  
   
 ## <a name="remarks"></a>Note  
- I metodi di allocazione di memoria definiti nel [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) e [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) interfacce accettano un parametro di questo tipo. In base alla gravità dell'errore, un host può decidere se eseguire immediatamente la richiesta di allocazione o in attesa finché può essere soddisfatta.  
+ I metodi di allocazione della memoria definiti nelle interfacce [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) e [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) accettano un parametro di questo tipo. A seconda del livello di gravità di un errore, un host può decidere se interrompere immediatamente la richiesta di allocazione o attendere fino a quando non può essere soddisfatta.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

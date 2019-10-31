@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116463"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<Elemento > legacyCorruptedStateExceptionsPolicy
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<elemento > legacyCorruptedStateExceptionsPolicy
 Specifica se il Common Language Runtime consente al codice gestito di intercettare le violazioni di accesso e altre eccezioni di stato danneggiate.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +36,13 @@ Specifica se il Common Language Runtime consente al codice gestito di intercetta
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|L'applicazione non rileverà gli errori di eccezione di stato danneggiato, ad esempio le violazioni di accesso. Questa è l'impostazione predefinita.|  
 |`true`|L'applicazione rileverà gli errori di eccezioni di stato danneggiato, ad esempio le violazioni di accesso.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -56,13 +54,13 @@ Specifica se il Common Language Runtime consente al codice gestito di intercetta
 ## <a name="remarks"></a>Note  
  Nel .NET Framework versione 3,5 e versioni precedenti, il Common Language Runtime codice gestito consentito per intercettare le eccezioni generate da Stati di processo danneggiati. Una violazione di accesso è un esempio di questo tipo di eccezione.  
   
- A partire da .NET Framework 4, il codice gestito non rileva più questi tipi di eccezioni nei `catch` blocchi. Tuttavia, è possibile eseguire l'override di questa modifica e mantenere la gestione delle eccezioni di stato danneggiate in due modi:  
+ A partire da .NET Framework 4, il codice gestito non rileva più questi tipi di eccezioni nei blocchi di `catch`. Tuttavia, è possibile eseguire l'override di questa modifica e mantenere la gestione delle eccezioni di stato danneggiate in due modi:  
   
-- Impostare l' `<legacyCorruptedStateExceptionsPolicy>` `enabled` attributo dell'elemento su `true`. Questa impostazione di configurazione viene applicata processwide e influiscono su tutti i metodi.  
+- Impostare l'attributo `enabled` dell'elemento `<legacyCorruptedStateExceptionsPolicy>` su `true`. Questa impostazione di configurazione viene applicata processwide e influiscono su tutti i metodi.  
   
- -oppure-  
+ oppure  
   
-- Applicare l' <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> attributo al metodo che contiene il blocco Exceptions `catch` .  
+- Applicare l'attributo <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al metodo che contiene le eccezioni `catch` blocco.  
   
  Questo elemento di configurazione è disponibile solo in .NET Framework 4 e versioni successive.  
   

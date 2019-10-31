@@ -9,16 +9,14 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134181"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedura: Scrivere un ciclo Parallel.ForEach semplice
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedura: scrivere un ciclo Parallel. ForEach semplice
 
 Questo esempio mostra come usare un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> per abilitare il parallelismo dei dati in un'origine dati <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -34,7 +32,7 @@ Questo esempio presuppone che diversi file con estensione jpg siano presenti in 
 
 Un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> funziona come un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il ciclo esegue il partizionamento della raccolta di origine e pianifica il lavoro in più thread in base all'ambiente di sistema. Più processori ci sono nel sistema, più velocemente viene eseguito il metodo parallelo. Per alcune raccolte di origine può risultare più veloce un ciclo sequenziale, a seconda delle dimensioni dell'origine e del tipo di attività svolta dal ciclo. Per ulteriori informazioni sulle prestazioni, vedere [potenziali trappole nel parallelismo di dati e attività](potential-pitfalls-in-data-and-task-parallelism.md).
 
-Per altre informazioni sui cicli paralleli, vedere [Procedura: Scrivere un ciclo Parallel.For semplice](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
+Per altre informazioni sui cicli paralleli, vedere [procedura: scrivere un ciclo Parallel. for semplice](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 
 Per usare <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> con una raccolta non generica, è possibile usare il metodo di estensione <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> per convertire la raccolta in una generica, come illustrato nell'esempio seguente:
 

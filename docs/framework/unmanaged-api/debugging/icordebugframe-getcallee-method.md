@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121219"
 ---
 # <a name="icordebugframegetcallee-method"></a>Metodo ICorDebugFrame::GetCallee
-Ottiene un puntatore all'oggetto ICorDebugFrame nella catena che ha chiamato il frame corrente.  
+Ottiene un puntatore all'oggetto ICorDebugFrame nella catena corrente chiamato da questo frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parametri  
  `ppFrame`  
- [out] Un puntatore all'indirizzo di un `ICorDebugFrame` oggetto che rappresenta il frame di chiamata. Questo valore è null se il frame di chiamata è il frame più interno nella catena di corrente.  
+ out Puntatore all'indirizzo di un `ICorDebugFrame` oggetto che rappresenta il frame chiamato. Questo valore è null se il frame chiamante è il frame più interno nella catena corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

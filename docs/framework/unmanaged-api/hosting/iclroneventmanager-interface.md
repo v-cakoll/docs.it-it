@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e15a0c1-8ab6-43d0-ae28-6ec7a4edd913
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3633db69877db771d919c9f43da4809f8321f77c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1b22e77fe20d5e2d755efcd7a63c8f2bdc781e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140849"
 ---
 # <a name="iclroneventmanager-interface"></a>Interfaccia ICLROnEventManager
 Fornisce metodi che consentono all'host di registrare e annullare la registrazione di callback per gli eventi di Common Language Runtime (CLR).  
@@ -34,17 +32,17 @@ Fornisce metodi che consentono all'host di registrare e annullare la registrazio
 |[Metodo UnregisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-unregisteractiononevent-method.md)|Annulla la registrazione di un puntatore di callback registrato in precedenza per l'evento specificato.|  
   
 ## <a name="remarks"></a>Note  
- Per registrare e annullare la registrazione di callback di evento, l'host ottiene un `ICLROnEventManager` riferimento a chiamando il metodo [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
+ Per registrare e annullare la registrazione di callback di evento, l'host ottiene un riferimento a `ICLROnEventManager` chiamando il metodo [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
   
 > [!NOTE]
 > Gli eventi descritti da [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) possono essere generati più di una volta e da thread diversi per segnalare uno scaricamento o la disabilitazione del CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

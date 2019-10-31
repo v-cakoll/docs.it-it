@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122684"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Metodo ICorDebugInternalFrame2::GetFrameAddress
 Restituisce l'indirizzo dello stack del frame interno.  
@@ -35,7 +33,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>Parametri  
  `pAddress`  
- [out] Puntatore al `CORDB_ADDRESS` per il frame interno.  
+ out Puntatore al `CORDB_ADDRESS` per il frame interno.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -43,14 +41,14 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|L'indirizzo del frame interno è stato restituito correttamente.|  
-|E_FAIL|L'indirizzo del frame interno non può essere restituito.|  
+|E_FAIL|Non è stato possibile restituire l'indirizzo del frame interno.|  
 |E_INVALIDARG|`pAddress` è `null`.|  
   
 ## <a name="remarks"></a>Note  
- Il valore restituito in `pAddress` può essere utilizzato per determinare la posizione del frame interno rispetto a altro frame nello stack. Anche nei computer basati su IA-64, il frame interno si trova solo dello stack e nessun puntatore corrispondente a un archivio di backup.  
+ Il valore restituito in `pAddress` può essere usato per determinare la posizione del frame interno rispetto ad altri frame nello stack. Anche nei computer basati su IA-64, il frame interno risiede solo nello stack e non esiste alcun puntatore corrispondente a un archivio di backup.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

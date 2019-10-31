@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088505"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Metodo ICorDebugArrayValue::GetDimensions
-Ottiene il numero di elementi in ogni dimensione di questa matrice.  
+Ottiene il numero di elementi in ogni dimensione della matrice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,15 +37,15 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>Parametri  
  `cdim`  
- [in] Il numero di dimensioni dell'oggetto ICorDebugArrayValue.  
+ in Numero di dimensioni di questo oggetto ICorDebugArrayValue.  
   
- Questo valore viene anche le dimensioni dei `dims` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.  
+ Questo valore corrisponde anche alla dimensione della matrice `dims` perché la relativa dimensione è uguale al numero di dimensioni dell'oggetto `ICorDebugArrayValue`.  
   
  `dims`  
- [out] Matrice di interi, ognuno dei quali specifica il numero di elementi in una dimensione in questo `ICorDebugArrayValue` oggetto.  
+ out Matrice di Integer, ognuno dei quali specifica il numero di elementi in una dimensione in questo oggetto `ICorDebugArrayValue`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Gestire le eccezioni in una query PLINQ'
+title: 'Procedura: gestire le eccezioni in una query PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9b5dce796e546bf041c28864c8bf66b5f51965e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123098"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: Gestire le eccezioni in una query PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: gestire le eccezioni in una query PLINQ
 
 Il primo esempio in questo argomento mostra come gestire l'oggetto <xref:System.AggregateException?displayProperty=nameWithType>, che può essere generato da una query PLINQ in fase di esecuzione. Il secondo esempio mostra come inserire blocchi Try-Catch all'interno di delegati, il più vicino possibile al punto in cui verrà generata l'eccezione. In questo modo, è possibile intercettare le eccezioni non appena si verificano, per poter proseguire con l'esecuzione della query. Quando alle eccezioni è consentita la propagazione fino al thread di unione, è possibile che una query continui a elaborare alcuni elementi dopo la generazione dell'eccezione.
 

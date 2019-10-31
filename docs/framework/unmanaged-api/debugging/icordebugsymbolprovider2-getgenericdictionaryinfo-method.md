@@ -1,17 +1,15 @@
 ---
-title: Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+title: 'Metodo ICorDebugSymbolProvider2:: GetGenericDictionaryInfo'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133625"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metodo ICorDebugSymbolProvider2:: GetGenericDictionaryInfo
 
 Recupera una mappa di dizionari generici.
 
@@ -26,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parametri
 
 `ppMemoryBuffer`\
-[out] Un puntatore all'indirizzo di un [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) oggetto contenente la mappa di dizionari generici. Per altre informazioni, vedere la sezione Osservazioni.
+out Puntatore all'indirizzo di un oggetto [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) contenente la mappa del dizionario generico. Per altre informazioni, vedere la sezione Osservazioni.
 
 ## <a name="remarks"></a>Note
 
@@ -35,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
 
 La mappa è costituita da due sezioni di primo livello:
 
-- Oggetto [directory](#Directory) contenente gli indirizzi virtuali relativi (RVA) di tutti i dizionari inclusi nella mappa.
+- Una [directory](#Directory) contenente gli indirizzi RVA (relative Virtual Address) di tutti i dizionari inclusi in questa mappa.
 
-- Un byte allineato [heap](#Heap) che contiene informazioni sulle creazione di istanze di oggetti. Viene avviato immediatamente dopo l'ultima voce di directory.
+- [Heap](#Heap) allineato ai byte che contiene informazioni sulla creazione di istanze di oggetti. Viene avviato immediatamente dopo l'ultima voce di directory.
 
 <a name="Directory"></a>
 
@@ -47,13 +45,13 @@ Ogni voce nella directory fa riferimento a un offset all'interno dell'heap, ovve
 
 La parte directory della mappa di dizionari generici presenta la struttura seguente:
 
-- I primi 4 byte contengono il numero di voci del dizionario, cioè il numero di indirizzi RVA (Relative Virtual Address) presenti nel dizionario. Si farà riferimento a questo valore come *N*. Se viene impostato il bit significativo, le voci vengono organizzate in base all'indirizzo RVA (Relative Virtual Address) in ordine crescente.
+- I primi 4 byte contengono il numero di voci del dizionario, cioè il numero di indirizzi RVA (Relative Virtual Address) presenti nel dizionario. Il valore verrà fatto riferimento a *N*. Se viene impostato il bit elevato, le voci vengono ordinate in base all'indirizzo virtuale relativo in ordine crescente.
 
-- Il *N* seguono le voci di directory. Ogni voce è costituita da 8 byte in due segmenti di 4 byte:
+- Seguono le *N* voci di directory. Ogni voce è costituita da 8 byte in due segmenti di 4 byte:
 
-  - Byte 0 a 3: RVA; indirizzo virtuale relativo del dizionario.
+  - Byte da 0 a 3: RVA, ovvero l'indirizzo RVA (Relative Virtual Address) del dizionario.
 
-  - Byte 4-7: Offset; un offset rispetto all'inizio dell'heap.
+  - Byte da 4 a 7: Offset, ovvero un offset relativo all'inizio dell'heap.
 
 <a name="Heap"></a>
 
@@ -71,15 +69,15 @@ Il formato di ogni elemento delle informazioni sull'heap è il seguente:
 
 - Lunghezza in byte di questo elemento di informazioni sulla creazione di un'istanza, nel formato di metadati ECMA compresso. Il valore esclude le informazioni sulla lunghezza.
 
-- Il numero di tipi di istanza generica, oppure *T*, nel formato di metadati ECMA compresso.
+- Il numero di tipi di creazione di istanze generiche, o *T*, nel formato di metadati ECMA compresso.
 
-- *T* tipi, ognuno rappresentato nel formato di firma di tipo ECMA.
+- Tipi *T* , ognuno rappresentato nel formato di firma del tipo ECMA.
 
 L'inclusione della lunghezza per ogni elemento dell'heap consente un ordinamento semplice della sezione della directory senza influire sull'heap.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 

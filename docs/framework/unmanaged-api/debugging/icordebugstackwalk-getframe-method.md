@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131830"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Metodo ICorDebugStackWalk::GetFrame
-Ottiene il frame corrente nella [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.  
+Ottiene il frame corrente nell'oggetto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,26 +33,26 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="parameters"></a>Parametri  
  `pFrame`  
- [in] Un puntatore all'indirizzo dell'oggetto che rappresenta il frame corrente nello stack frame creato.  
+ in Puntatore all'indirizzo dell'oggetto frame creato che rappresenta il frame corrente nello stack.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il runtime restituito correttamente il frame corrente.|  
+|S_OK|Il runtime ha restituito correttamente il frame corrente.|  
 |E_FAIL|Il frame corrente non è stato restituito.|  
-|S_FALSE|Il frame corrente è uno stack frame nativo.|  
+|S_FALSE|Il frame corrente è un stack frame nativo.|  
 |E_INVALIDARG|`pFrame` è null.|  
-|CORDBG_E_PAST_END_OF_STACK|Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.|  
+|CORDBG_E_PAST_END_OF_STACK|Il puntatore al frame è già alla fine dello stack. non è pertanto possibile accedere a nessun frame aggiuntivo.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- `ICorDebugStackWalk` Restituisce solo gli stack frame effettivi. Usare la [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo per restituire i frame interni. (Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei).  
+ `ICorDebugStackWalk` restituisce solo stack frame effettivi. Usare il metodo [ICorDebugThread3:: GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) per restituire frame interni. (I frame interni sono strutture di dati inserite nello stack dal runtime per archiviare i dati temporanei).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

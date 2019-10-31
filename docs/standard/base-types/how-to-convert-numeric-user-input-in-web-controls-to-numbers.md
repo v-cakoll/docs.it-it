@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web"
+title: "Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,14 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140103"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti possono immettere dati numerici in un controllo <xref:System.Web.UI.WebControls.TextBox> in un numero praticamente illimitato di formati. Di conseguenza, è molto importante determinare le impostazioni locali e le impostazioni cultura dell'utente della pagina Web. Quando si analizza l'input dell'utente, è quindi possibile applicare le convenzioni di formattazione definite dalle impostazioni locali e dalle impostazioni cultura dell'utente.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Per convertire l'input numerico da un controllo Web TextBox a un numero  

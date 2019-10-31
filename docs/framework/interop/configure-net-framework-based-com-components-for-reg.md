@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione"
+title: "Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123660"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
   
 - Per identificare il componente gestito, le applicazioni COM devono disporre di un manifesto dell'applicazione di tipo Win32.  
@@ -105,11 +103,11 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 4. Identificare ogni classe nell'assembly. Usare l'elemento `<clrClass>` per identificare in modo univoco ogni classe nell'assembly gestito. L'elemento, che costituisce un sottoelemento di `<assembly>` dispone degli attributi descritti nella tabella seguente.  
   
-    |Attributo|Descrizione|Obbligatoria|  
+    |Attributo|Descrizione|Richiesto|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identificatore che specifica la classe da attivare.|Sì|  
+    |`clsid`|Identificatore che specifica la classe da attivare.|Yes|  
     |`description`|Stringa contenente informazioni sul componente. Il valore predefinito è una stringa vuota.|No|  
-    |`name`|Stringa che rappresenta la classe gestita.|Sì|  
+    |`name`|Stringa che rappresenta la classe gestita.|Yes|  
     |`progid`|Identificatore da usare per l'attivazione con associazione tardiva.|No|  
     |`threadingModel`|Modello di threading COM. "Both" è il valore predefinito.|No|  
     |`runtimeVersion`|Specifica la versione di Common Language Runtime (CLR) da usare. Se questo attributo non viene specificato e CLR non è ancora stato caricato, il componente viene caricato con l'ultimo CLR installato prima della versione 4. Se si specifica v1.0.3705, v1.1.4322 o v2.0.50727, la versione esegue automaticamente il roll forward all'ultima versione di CLR installata prima della versione 4 (di solito v2.0.50727). Se è già stata caricata un'altra versione di CLR ed è possibile caricare la versione specificata side-by-side in-process, la versione specificata viene caricata; in caso contrario, viene usato il CLR caricato. Ciò potrebbe causare un errore di caricamento.|No|  
@@ -168,7 +166,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
     `/win32res:myresource.res`  
   
-     Anche in `myresource.res` questo caso, è il nome del file di risorse contenente le risorse incorporate.  
+     Anche in questo caso, `myresource.res` è il nome del file di risorse contenente le risorse incorporate.  
   
 ## <a name="see-also"></a>Vedere anche
 

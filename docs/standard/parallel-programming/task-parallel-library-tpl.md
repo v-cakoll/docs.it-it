@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 962c89acf12595ca5b9f27fe411b31773cc5e0c2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139964"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli spazi dei nomi <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Threading.Tasks?displayProperty=nameWithType>. Lo scopo di TPL è di rendere gli sviluppatori più produttivi mediante la semplificazione del processo di aggiunta di parallelismo e concorrenza alle applicazioni. La libreria TPL ridimensiona il grado di concorrenza dinamicamente per utilizzare in modo efficace tutti i processori disponibili. La libreria TPL gestisce inoltre il partizionamento del lavoro, la pianificazione dei thread in <xref:System.Threading.ThreadPool>, il supporto per l'annullamento, la gestione dello stato e altri dettagli di basso livello. Quando si utilizza TPL, è possibile ottimizzare le prestazioni del codice concentrandosi sulle operazioni per cui il programma è stato progettato.  
@@ -23,7 +21,7 @@ La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli s
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|Descrizione|  
 |-|-|  
 |[Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Viene descritto come creare cicli `for` e `foreach` paralleli (`For` e `For Each` in Visual Basic).|  
 |[Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Viene descritto come creare ed eseguire attività tramite <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> in modo implicito o direttamente tramite oggetti <xref:System.Threading.Tasks.Task> in modo esplicito.|  

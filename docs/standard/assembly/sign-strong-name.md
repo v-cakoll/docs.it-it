@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Firma di un assembly con un nome sicuro'
+title: 'Procedura: firmare un assembly con un nome sicuro'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 527fd68ef40e152b57a1fc98113094d3b41fbaae
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973061"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138603"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firma di un assembly con un nome sicuro
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
 
 > [!NOTE]
 > Sebbene .NET Core supporti assembly con nome sicuro e tutti gli assembly nella libreria .NET Core siano firmati, la maggior parte degli assembly di terze parti non necessita di nomi sicuri. Per altre informazioni, vedere [firma con nome sicuro](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) su GitHub.
@@ -35,7 +33,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 - Utilizzando le opzioni del compilatore.  
   
- Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi crittografiche. Per altre informazioni sulla creazione di una coppia di chiavi, vedere [Procedura: Creare una coppia di chiavi pubblica/privata](create-public-private-key-pair.md).  
+ Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi crittografiche. Per ulteriori informazioni sulla creazione di una coppia di chiavi, vedere [procedura: creare una coppia di chiavi pubblica/privata](create-public-private-key-pair.md).  
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Creare e firmare un assembly con un nome sicuro usando Visual Studio  
   
@@ -43,7 +41,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 2. Scegliere la scheda **Firma** .  
   
-3. Selezionare la casella **Firma assembly** .  
+3. Selezionare la casella **Firma assembly**.  
   
 4. Nella casella **Scegli un file chiave con nome sicuro** scegliere **Sfoglia**e quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **nuovo** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro** .  
   
@@ -60,7 +58,7 @@ Dove:
 
 - *AssemblyName* è il nome dell'assembly fortemente firmato (un file con estensione *dll* o *exe* ) che verrà generato da assembly linker.  
   
-- *ModuleName* è il nome di un modulo di codice .NET Framework (un file con estensione *netmodule* ) che include uno o più tipi. È possibile creare un file con *estensione netmodule* compilando il codice `/target:module` con l' C# opzione in o Visual Basic.
+- *ModuleName* è il nome di un modulo di codice .NET Framework (un file con estensione *netmodule* ) che include uno o più tipi. È possibile creare un file con *estensione netmodule* compilando il codice con l'opzione C# `/target:module` in o Visual Basic.
   
 - *fileFileName* è il nome del contenitore o del file che contiene la coppia di chiavi. Assembly linker interpreta un percorso relativo in relazione alla directory corrente.  
 
@@ -81,7 +79,7 @@ Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [Assembly L
    > [!NOTE]
    > Nei compilatori C# e Visual Basic vengono pubblicati avvisi del compilatore (rispettivamente CS1699 e BC41008) quando viene rilevato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente. È possibile ignorare gli avvisi.  
 
-Nell'esempio seguente viene usato <xref:System.Reflection.AssemblyKeyFileAttribute> l'attributo con un file di chiave denominato Key *file. snk*, che si trova nella directory in cui viene compilato l'assembly.  
+Nell'esempio seguente viene usato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> con un file di chiave denominato Key *file. snk*, che si trova nella directory in cui viene compilato l'assembly.  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];

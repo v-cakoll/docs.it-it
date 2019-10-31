@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba25d166-1d28-4f1d-aca2-de298bbca669
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1a4da6df58c928582a830ef92d286437cb5003c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09a8a2bb38378f5d4a32d7b00b68d02f1aa4c054
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110717"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>Metodo ICorDebug::EnumerateProcesses
-Ottiene un enumeratore per i processi sottoposti a debug.  
+Ottiene un enumeratore per i processi di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT EnumerateProcesses (
   
 ## <a name="parameters"></a>Parametri  
  `ppProcess`  
- Un puntatore all'indirizzo di un oggetto ICorDebugProcessEnum che è l'enumeratore per i processi in corso il debug.  
+ Puntatore all'indirizzo di un oggetto ICorDebugProcessEnum che rappresenta l'enumeratore per i processi di cui è in corso il debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

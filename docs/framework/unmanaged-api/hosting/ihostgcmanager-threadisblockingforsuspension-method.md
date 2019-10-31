@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb78026f875c18a557951108518c9280f5eb567d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb807a6a344c49baeedfa88aef989a9cb2ec8a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937673"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133911"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>Metodo IHostGCManager::ThreadIsBlockingForSuspension
 Notifica all'host che il thread da cui è stata effettuata la chiamata al metodo sta per essere bloccato per un Garbage Collection.  
@@ -35,9 +33,9 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`la restituzione è riuscita.|  
+|S_OK|`ThreadIsBlockingForSuspension` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -45,17 +43,17 @@ HRESULT ThreadIsBlockingForSuspension ();
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- CLR chiama in genere il `ThreadIsBlockForSuspension` metodo in preparazione per un Garbage Collection, per offrire all'host la possibilità di ripianificare il thread per le attività non gestite.  
+ CLR chiama in genere il metodo `ThreadIsBlockForSuspension` per preparare un Garbage Collection, in modo da offrire all'host la possibilità di ripianificare il thread per le attività non gestite.  
   
 > [!IMPORTANT]
-> L'host può ripianificare le attività solo dopo una `ThreadIsBlockingForSuspension`chiamata a. Dopo che il runtime chiama [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), l'host non deve ripianificare un'attività.  
+> L'host può pianificare le attività solo dopo una chiamata a `ThreadIsBlockingForSuspension`. Dopo che il runtime chiama [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), l'host non deve ripianificare un'attività.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

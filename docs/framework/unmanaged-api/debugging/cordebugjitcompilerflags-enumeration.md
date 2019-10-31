@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097966"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>Enumerazione CorDebugJITCompilerFlags
 Contiene valori che influenzano il comportamento del compilatore JIT gestito.  
@@ -38,16 +36,16 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Specifica che il compilatore deve tenere traccia dei dati di compilazione e consentire l'ottimizzazione.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Specifica che il compilatore deve tenere traccia dei dati di compilazione, ma disabilitare le ottimizzazioni.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Specifica che il compilatore deve tenere traccia dei dati di compilazione, disabilitare le ottimizzazioni e Abilita modifica e continuazione tecnologie.|  
+|`CORDEBUG_JIT_DEFAULT`|Specifica che il compilatore deve tenere traccia dei dati di compilazione e consente le ottimizzazioni.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Specifica che il compilatore deve tenere traccia dei dati di compilazione, ma disabilita le ottimizzazioni.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Specifica che il compilatore deve tenere traccia dei dati di compilazione, Disabilita le ottimizzazioni e Abilita le tecnologie di modifica e continuazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

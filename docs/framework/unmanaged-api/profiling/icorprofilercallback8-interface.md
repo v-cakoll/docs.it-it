@@ -8,29 +8,27 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e536e61a8d812e442e1e54188c99d6a1d4586757
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4516c8f9673052b521c1f0f594978236fef1e0ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136446"
 ---
 # <a name="icorprofilercallback8-interface"></a>Interfaccia ICorProfilerCallback8
-[Supportato in .NET Framework 4.7 e versioni successive]  
+[Supportato in .NET Framework 4,7 e versioni successive]  
 
- Una sottoclasse [ICorProfilerCallback7](icorprofilercallback7-interface.md) che fornisce i metodi di callback usati da common language runtime per notificare al profiler che la compilazione JIT di un metodo dinamico è iniziata e terminata. 
+ Sottoclasse di [ICorProfilerCallback7](icorprofilercallback7-interface.md) che fornisce metodi di callback utilizzati dalla Common Language Runtime per notificare al profiler che la compilazione JIT di un metodo dinamico è stata avviata e completata. 
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Notifica al profiler che è stata avviata la compilazione JIT di un metodo dinamico.|  
-|[Metodo DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica al profiler che ha terminato la compilazione JIT di un metodo dinamico.|  
+|[Metodo DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica al profiler che la compilazione JIT di un metodo dinamico è stata completata.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

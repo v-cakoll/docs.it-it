@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali'
+title: 'Procedura: scrivere un ciclo Parallel.For con variabili di thread locali'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139718"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: scrivere un ciclo Parallel.For con variabili di thread locali
 Questo esempio illustra come usare le variabili locali di thread per archiviare e recuperare lo stato in ogni attività separata creata da un ciclo <xref:System.Threading.Tasks.Parallel.For%2A>. L'uso dei dati locali di thread permette di evitare il sovraccarico dovuto alla sincronizzazione di un numero elevato di accessi a uno stato condiviso. Invece di scrivere in una risorsa condivisa a ogni iterazione, si calcola e si archivia il valore fino al completamento di tutte le iterazioni per l'attività. È quindi possibile scrivere il risultato finale una volta sola nella risorsa condivisa oppure passarlo a un altro metodo.  
   
 ## <a name="example"></a>Esempio  
@@ -28,7 +26,7 @@ Questo esempio illustra come usare le variabili locali di thread per archiviare 
   
  I primi due parametri di ogni metodo <xref:System.Threading.Tasks.Parallel.For%2A> specificano i valori di iterazione iniziali e finali. In questo overload del metodo, il terzo parametro corrisponde alla posizione di inizializzazione dello stato locale. In questo contesto lo stato locale indica una variabile la cui durata si estende da immediatamente prima della prima iterazione del ciclo nel thread corrente a immediatamente dopo l'ultima iterazione.  
   
- Il tipo del terzo parametro è <xref:System.Func%601>, dove `TResult` indica il tipo della variabile in cui sarà archiviato lo stato locale di thread. Il tipo corrispondente è definito dall'argomento di tipo generico fornito quando si chiama il metodo <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> generico, che in questo caso è <xref:System.Int64>. L'argomento tipo indica al compilatore il tipo di variabile temporanea che sarà usata per l'archiviazione dello stato locale di thread. In questo esempio l'espressione `() => 0` (o `Function() 0` in Visual Basic) inizializza la variabile locale di thread su zero. Se un argomento di tipo generico è un tipo di riferimento o un tipo di valore definito dall'utente, l'espressione avrà un aspetto analogo al seguente:  
+ Il tipo del terzo parametro è <xref:System.Func%601>, dove `TResult` indica il tipo della variabile in cui sarà archiviato lo stato locale di thread. Il tipo corrispondente è definito dall'argomento tipo generico fornito quando si chiama il metodo <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> generico, che in questo caso è <xref:System.Int64>. L'argomento tipo indica al compilatore il tipo di variabile temporanea che sarà usata per l'archiviazione dello stato locale di thread. In questo esempio l'espressione `() => 0` (o `Function() 0` in Visual Basic) inizializza la variabile locale di thread su zero. Se un argomento tipo generico è un tipo di riferimento o un tipo di valore definito dall'utente, l'espressione avrà un aspetto analogo al seguente:  
   
 ```csharp  
 () => new MyClass()  
@@ -38,7 +36,7 @@ Questo esempio illustra come usare le variabili locali di thread per archiviare 
 Function() new MyClass()  
 ```  
   
- Il quarto parametro definisce la logica del ciclo. Deve essere un delegato o un'espressione lambda con firma `Func<int, ParallelLoopState, long, long>` in C# o `Func(Of Integer, ParallelLoopState, Long, Long)` in Visual Basic. Il primo parametro è il valore del contatore di cicli per quell'iterazione del ciclo. Il secondo è un oggetto <xref:System.Threading.Tasks.ParallelLoopState> che può essere usato per uscire dal ciclo. L'oggetto è fornito dalla classe <xref:System.Threading.Tasks.Parallel> a ogni occorrenza del ciclo. Il terzo parametro è la variabile locale di thread. L'ultimo parametro è il tipo restituito. In questo caso il tipo è <xref:System.Int64>, poiché questo è il tipo specificato nell'argomento di tipo <xref:System.Threading.Tasks.Parallel.For%2A>. Questa variabile è denominata `subtotal` ed è restituita dall'espressione lambda. Il valore restituito è usato per inizializzare `subtotal` in ogni iterazione successiva del ciclo. È anche possibile considerare quest'ultimo parametro come un valore passato a ogni iterazione e quindi passato al delegato `localFinally` al completamento dell'ultima iterazione.  
+ Il quarto parametro definisce la logica del ciclo. Deve essere un delegato o un'espressione lambda con firma `Func<int, ParallelLoopState, long, long>` in C# o `Func(Of Integer, ParallelLoopState, Long, Long)` in Visual Basic. Il primo parametro è il valore del contatore di cicli per quell'iterazione del ciclo. Il secondo è un oggetto <xref:System.Threading.Tasks.ParallelLoopState> che può essere usato per uscire dal ciclo. L'oggetto è fornito dalla classe <xref:System.Threading.Tasks.Parallel> a ogni occorrenza del ciclo. Il terzo parametro è la variabile locale di thread. L'ultimo parametro è il tipo restituito. In questo caso il tipo è <xref:System.Int64>, poiché questo è il tipo specificato nell'argomento tipo <xref:System.Threading.Tasks.Parallel.For%2A>. Questa variabile è denominata `subtotal` ed è restituita dall'espressione lambda. Il valore restituito è usato per inizializzare `subtotal` in ogni iterazione successiva del ciclo. È anche possibile considerare quest'ultimo parametro come un valore passato a ogni iterazione e quindi passato al delegato `localFinally` al completamento dell'ultima iterazione.  
   
  Il quinto parametro definisce il metodo chiamato una volta, dopo il completamento di tutte le iterazioni in un determinato thread. Il tipo di argomento di input corrisponde di nuovo all'argomento di tipo del metodo <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> e al tipo restituito dall'espressione lambda del corpo. In questo esempio il valore è aggiunto a una variabile nell'ambito delle classi in un modo thread-safe chiamando il metodo <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>. L'uso di una variabile locale di thread permette di evitare di scrivere nella variabile della classe a ogni iterazione del ciclo.  
   

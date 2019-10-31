@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119799"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedura: Installare un assembly nella Global Assembly Cache
 
@@ -26,7 +24,7 @@ Gli assembly condivisi da più applicazioni vengono archiviati nella Global Asse
 - [Strumento Global assembly cache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> È possibile installare solo assembly con nome sicuro in Global Assembly Cache. Per informazioni sulla creazione di un assembly con nome sicuro, vedere [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md).
+> È possibile installare solo assembly con nome sicuro in Global Assembly Cache. Per informazioni su come creare un assembly con nome sicuro, vedere [procedura: firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -47,7 +45,7 @@ gacutil -i <assembly name>
 
 In questo comando *\<nome assembly>* è il nome dell'assembly da installare nella Global Assembly Cache.
 
-Se *gacutil. exe* non è presente nel percorso di sistema, usare il [prompt dei comandi per gli sviluppatori per la  *\<versione*di Visual Studio >](../tools/developer-command-prompt-for-vs.md).
+Se *gacutil. exe* non è presente nel percorso di sistema, usare il [prompt dei comandi per gli sviluppatori per Visual studio *\<versione >* ](../tools/developer-command-prompt-for-vs.md).
 
 L'esempio seguente consente di installare un assembly con nome file *hello.dll* nella Global Assembly Cache.
 
@@ -61,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>Vedere anche
 
 - [Usare gli assembly e i Global Assembly Cache](working-with-assemblies-and-the-gac.md)
-- [Procedura: Rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)
+- [Procedura: rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil. exe (strumento Global assembly cache)](../tools/gacutil-exe-gac-tool.md)
-- [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)
+- [Procedura: firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)

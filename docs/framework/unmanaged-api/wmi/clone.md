@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Clone function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5957f591dca7df30178660eb3fb074567c285715
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c8e7781a3efe7679ef2e05747862911db88bcc5f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798715"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141622"
 ---
 # <a name="clone-function"></a>Funzione Clone
 Restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.   
@@ -47,16 +45,16 @@ in Questo parametro è inutilizzato.
 in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `ppCopy`  
-out Nuovo oggetto che è un solo completo di `ptr`. Questo argomento non può `null` essere se riceve la copia dell'oggetto corrente.
+out Nuovo oggetto che è un `ptr`completo. Questo argomento non può essere `null` se riceve la copia dell'oggetto corrente.
 
 ## <a name="return-value"></a>Valore restituito
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`è stato specificato come parametro e non è valido in questo utilizzo. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` è stato specificato come parametro e non è valido in questo utilizzo. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente per clonare l'oggetto. |
 | `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
@@ -67,7 +65,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 L'oggetto clonato è un oggetto COM con conteggio dei riferimenti pari a 1.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

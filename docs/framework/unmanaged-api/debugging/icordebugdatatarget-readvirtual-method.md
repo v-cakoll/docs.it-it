@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122176"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Metodo ICorDebugDataTarget::ReadVirtual
 Ottiene un blocco di memoria contigua a partire dall'indirizzo specificato e lo restituisce nel buffer fornito.  
@@ -40,22 +38,22 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>Parametri  
  `address`  
- [in] L'indirizzo iniziale di memoria richiesta.  
+ in Indirizzo iniziale della memoria richiesta.  
   
  `pbuffer`  
- [out] Buffer in cui verrà archiviata la memoria.  
+ out Buffer in cui verrà archiviata la memoria.  
   
  `bytesRequested`  
- [in] Il numero di byte da ottenere dall'indirizzo di destinazione.  
+ in Numero di byte da ottenere dall'indirizzo di destinazione.  
   
  `pBytesRead`  
- [out] Il numero di byte effettivamente letti dall'indirizzo di destinazione. Questo può essere minore `bytesRequested`.  
+ out Numero di byte effettivamente letti dall'indirizzo di destinazione. Questa operazione può essere inferiore a `bytesRequested`.  
   
 ## <a name="remarks"></a>Note  
- Se è possibile leggere il primo byte (in corrispondenza dell'indirizzo iniziale specificato), la chiamata deve restituire esito positivo (per supportare la lettura efficiente di strutture di dati con lunghezza autodescrittiva, come le stringhe con terminazione null).  
+ Se è possibile leggere il primo byte (all'indirizzo iniziale specificato), la chiamata dovrebbe restituire esito positivo (per supportare una lettura efficiente delle strutture di dati con lunghezza autodescrittiva, ad esempio stringhe con terminazione null).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

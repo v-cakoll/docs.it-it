@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098864"
 ---
 # <a name="cordebugehclause-structure"></a>Struttura CorDebugEHClause
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -40,7 +38,7 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -53,9 +51,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Offset, in byte, dall'inizio del corpo del metodo per un gestore di eccezioni basato sul filtro.|  
   
 ## <a name="remarks"></a>Note  
- Matrice di `CoreDebugEHClause` restituito da valori di [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) (metodo).  
+ Una matrice di valori `CoreDebugEHClause` viene restituita dal metodo [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) .  
   
- Le informazioni sulla clausola di gestione delle eccezioni sono definite dalla specifica CLI. Per altre informazioni, vedere [Standard ECMA-355: Common Language Infrastructure (CLI), 6a edizione](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Le informazioni sulla clausola di gestione delle eccezioni sono definite dalla specifica CLI. Per ulteriori informazioni, vedere [standard ECMA-355: Common Language Infrastructure (CLI), 6a Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Il campo `flags` può contenere i flag seguenti. Si noti che non sono definiti in CorDebug.idl o CorDebug.h.  
   
@@ -67,7 +65,7 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Clausola fault (una clausola `finally` che viene chiamata solo quando viene generata un'eccezione).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

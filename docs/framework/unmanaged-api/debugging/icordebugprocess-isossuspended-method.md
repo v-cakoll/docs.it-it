@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da69d4bff0f17eb607dda45fb7dbafea8c59f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128763"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>Metodo ICorDebugProcess::IsOSSuspended
-Ottiene un valore che indica se il thread specificato è stata sospesa in seguito il debugger di interruzione del processo.  
+Ottiene un valore che indica se il thread specificato è stato sospeso a causa dell'arresto del processo da parte del debugger.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT IsOSSuspended(
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'ID del thread in questione.  
+ in ID del thread in questione.  
   
  `pbSuspended`  
- [out] Un puntatore a un valore booleano che è `true` se il thread specificato è stata sospesa; in caso contrario *`pbSuspended` è `false`.  
+ out Puntatore a un valore booleano che viene `true` se il thread specificato è stato sospeso; in caso contrario, *`pbSuspended` è `false`.  
   
 ## <a name="remarks"></a>Note  
- Quando il thread specificato è stata sospesa in seguito il debugger di interruzione del processo, un conteggio di sospensione Win32 del thread specificato viene incrementato di uno. L'interfaccia utente del debugger (UI) potrebbe voler sfruttare queste informazioni in considerazione se viene visualizzato il sistema operativo (OS) sospendere conteggio dei thread per l'utente.  
+ Quando il thread specificato è stato sospeso a causa dell'arresto del processo da parte del debugger, il numero di sospensione Win32 del thread specificato viene incrementato di uno. L'interfaccia utente del debugger può voler prendere in considerazione queste informazioni se Visualizza il numero di sospensione del thread del sistema operativo per l'utente.  
   
- Il `IsOSSuspended` metodo senso solo nel contesto di debug non gestito. Durante il debug gestito, i thread sono in modo cooperativo sospeso anziché sospeso del sistema operativo.  
+ Il metodo `IsOSSuspended` ha senso solo nel contesto del debug non gestito. Durante il debug gestito, i thread vengono sospesi in modo cooperativo anziché sospesi dal sistema operativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

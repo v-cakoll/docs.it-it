@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0eacb4b0a06fbe086935b59eba7d33135b6bef19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d773368c85fd42fd169109cf1c7e6635705ebb7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759718"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090233"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>Metodo ICorDebugManagedCallback::CreateProcess
-Quando un processo è stato collegato o avviato per la prima volta, invia una notifica del debugger.  
+Notifica al debugger il momento in cui un processo è stato collegato o avviato per la prima volta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo di cui è stato collegato o avviato.  
+ in Puntatore a un oggetto ICorDebugProcess che rappresenta il processo collegato o avviato.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo non viene chiamato fino a quando non viene inizializzato in common language runtime. La maggior parte delle [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi restituiranno CORDBG_E_NOTREADY prima il `CreateProcess` callback.  
+ Questo metodo non viene chiamato fino a quando non viene inizializzata la Common Language Runtime. La maggior parte dei metodi di [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) restituirà CORDBG_E_NOTREADY prima del callback `CreateProcess`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

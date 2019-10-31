@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096099"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Metodo ICorDebugObjectEnum::Next
-Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
+Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +41,13 @@ HRESULT Next (
  [in] Numero di oggetti da recuperare.  
   
  `objects`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un oggetto CORDB_ADDRESS.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto CORDB_ADDRESS.  
   
  `pceltFetched`  
- [out] Puntatore al numero di oggetti effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di oggetti effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

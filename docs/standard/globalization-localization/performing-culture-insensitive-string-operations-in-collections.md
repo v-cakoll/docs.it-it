@@ -15,21 +15,19 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 222376e220bf74274082dfc6b76dc861d4f8ddc5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120824"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte
 
 Nello spazio dei nomi <xref:System.Collections> sono disponibili classi e membri che per impostazione predefinita forniscono un comportamento dipendente dalle impostazioni cultura. I costruttori senza parametri per le classi <xref:System.Collections.CaseInsensitiveComparer> e <xref:System.Collections.CaseInsensitiveHashCodeProvider> inizializzano una nuova istanza tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Per impostazione predefinita, tutti gli overload del metodo <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> creano una nuova istanza della classe <xref:System.Collections.Hashtable> tramite la proprietà `Thread.CurrentCulture`. Per impostazione predefinita, gli overload del metodo <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> consentono di eseguire ordinamenti dipendenti dalle impostazioni cultura tramite `Thread.CurrentCulture`. Ordinamento e ricerca in un <xref:System.Collections.SortedList> possono essere influenzati dal `Thread.CurrentCulture` quando vengono usate stringhe come chiavi. Per ottenere risultati indipendenti dalle impostazioni cultura da queste classi e da questi metodi dello spazio dei nomi `Collections`, attenersi ai consigli sull'utilizzo forniti in questa sezione.
 
 > [!NOTE]
-> Il <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> passaggio a un metodo di confronto comporta l'esecuzione di un confronto senza distinzione tra le impostazioni cultura. Non viene tuttavia eseguito un confronto non linguistico, ad esempio per percorsi di file, chiavi del Registro di sistema e variabili di ambiente e non sono supportate le decisioni relative alla sicurezza basate sul risultato del confronto. Per un confronto non linguistico o per il supporto delle decisioni relative alla sicurezza basate sul risultato, l'applicazione deve utilizzare un metodo di confronto che accetti un valore <xref:System.StringComparison>. L'applicazione deve quindi passare <xref:System.StringComparison>.
+> Passando <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> a un metodo di confronto, viene eseguito un confronto senza distinzione tra le impostazioni cultura. Non viene tuttavia eseguito un confronto non linguistico, ad esempio per percorsi di file, chiavi del Registro di sistema e variabili di ambiente e non sono supportate le decisioni relative alla sicurezza basate sul risultato del confronto. Per un confronto non linguistico o per il supporto delle decisioni relative alla sicurezza basate sul risultato, l'applicazione deve utilizzare un metodo di confronto che accetti un valore <xref:System.StringComparison>. L'applicazione deve quindi passare <xref:System.StringComparison>.
 
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Uso delle classi CaseInsensitiveComparer e CaseInsensitiveHashCodeProvider
 

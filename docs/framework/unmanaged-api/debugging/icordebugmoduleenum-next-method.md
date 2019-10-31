@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765288"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096921"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Metodo ICorDebugModuleEnum::Next
-Ottiene il numero di istanze di "ICorDebugModule" specificate da `celt` dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
+Ottiene il numero di istanze "ICorDebugModule" specificate da `celt` dall'enumerazione, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di `ICorDebugModule` istanze da recuperare.  
+ in Numero di istanze di `ICorDebugModule` da recuperare.  
   
  `modules`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugModule` oggetto.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugModule`.  
   
  `pceltFetched`  
- [out] Puntatore al numero di `ICorDebugModule` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di istanze di `ICorDebugModule` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

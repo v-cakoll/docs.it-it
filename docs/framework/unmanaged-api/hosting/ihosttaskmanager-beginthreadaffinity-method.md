@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fea3ab88-ce41-4c5a-847b-bb78cd748da6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59af484710dc0848d7712017021adc5f3dcb7bce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c157cf27d2fe86288024a6c35e6dcbea3c46347
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749765"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133112"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>Metodo IHostTaskManager::BeginThreadAffinity
-Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere spostato a un altro thread del sistema operativo.  
+Notifica all'host che il codice gestito sta immettendo un punto in cui l'attività corrente non deve essere spostata in un altro thread del sistema operativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +35,22 @@ HRESULT BeginThreadAffinity ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`BeginThreadAffinity` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`BeginThreadAffinity` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- CLR chiama in genere `IHostTaskManager::BeginThreadAffinity` nel contesto di una chiamata a <xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>. L'attività corrente non deve essere ripianificata fino a quando non viene eseguita una chiamata corrispondente a [EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md). Le attività possono essere passati all'esterno, ma quando vengono riattivate in, deve essere assegnati al thread del sistema operativo stesso da cui erano state disattivate. Annidati le chiamate a `BeginThreadAffinity` non hanno alcun effetto, poiché la chiamata si riferisce all'attività corrente.  
+ CLR chiama in genere `IHostTaskManager::BeginThreadAffinity` nel contesto di una chiamata a <xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>. L'attività corrente non deve essere ripianificata finché non viene effettuata una chiamata corrispondente a [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md). Le attività possono essere disattivate, ma quando vengono riattivate, devono essere assegnate allo stesso thread del sistema operativo da cui sono state disattivate. Le chiamate annidate a `BeginThreadAffinity` non hanno alcun effetto, perché la chiamata fa riferimento all'attività corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

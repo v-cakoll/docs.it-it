@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113708"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Metodo ICLRDataTarget::GetTLSValue
-Ottiene un valore dall'archiviazione thread-local (TLS) del thread nel processo di destinazione specificato. Questo metodo viene chiamato dai servizi di accesso dati di common language runtime (CLR).  
+Ottiene un valore dall'archiviazione locale di thread (TLS) del thread specificato nel processo di destinazione. Questo metodo viene chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'identificatore del sistema operativo di un thread nel processo di destinazione.  
+ in Identificatore del sistema operativo di un thread nel processo di destinazione.  
   
  `index`  
- [in] L'indice della posizione. Questo valore deve essere un indice valido nell'archivio locale del thread specificato.  
+ in Indice della posizione. Questo valore deve essere un indice valido nell'archivio locale del thread specificato.  
   
  `value`  
- [out] Un puntatore a un `CLRDATA_ADDRESS` valore che specifica il valore restituito dalla posizione specificata TLS.  
+ out Puntatore a un valore `CLRDATA_ADDRESS` che specifica il valore restituito dal percorso TLS specificato.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

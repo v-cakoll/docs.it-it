@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084218"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  
@@ -36,9 +34,9 @@ Nell'esempio riportato di seguito viene cercata una stringa di input e vengono v
  [!code-csharp[RegularExpressions.Examples.HREF#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#2)]
  [!code-vb[RegularExpressions.Examples.HREF#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#2)]  
   
- Il criterio di ricerca di espressioni regolari `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di espressione regolare `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`href`|Corrisponde alla stringa letterale "href". La corrispondenza non fa distinzione tra maiuscole e minuscole.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  

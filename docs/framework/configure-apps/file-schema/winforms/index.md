@@ -2,14 +2,12 @@
 title: Sezione di configurazione di Windows Form
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e76e11ef8bb39d72cb16655c948354bc326e75bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a54df0b6301f1aae14d5561c91c6792cb0a1620
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913094"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109818"
 ---
 # <a name="windows-forms-configuration-section"></a>Sezione di configurazione di Windows Form
 Le impostazioni di configurazione di Windows Form consentono a un'app Windows Form di archiviare e recuperare informazioni sulle impostazioni dell'applicazione personalizzate, ad esempio il supporto di più monitor, il supporto di valori DPI alti e altre impostazioni di configurazione predefinite.
@@ -32,11 +30,11 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-Nessuno.
+Nessuna.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Elemento  |DESCRIZIONE |
+Elemento  |Descrizione |
 ---------|---------|
 [`<add>`](windows-forms-add-configuration-element.md) | Aggiunge una chiave per l'impostazione di configurazione con un valore specificato |
 

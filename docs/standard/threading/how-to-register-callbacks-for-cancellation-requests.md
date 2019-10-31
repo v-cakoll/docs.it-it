@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Registrare i callback per le richieste di annullamento'
+title: 'Procedura: registrare i callback per le richieste di annullamento'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 187d47f04761b85420f894c98d9495cd74c0c253
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137992"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Procedura: Registrare i callback per le richieste di annullamento
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Procedura: registrare i callback per le richieste di annullamento
 L'esempio seguente mostra come registrare un delegato che verrà richiamato quando una proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> diventa true in seguito a una chiamata a <xref:System.Threading.CancellationTokenSource.Cancel%2A> sull'oggetto che ha creato il token. Usare questa tecnica per annullare le operazioni asincrone che non supportano in modo nativo il framework di annullamento unificato e per sbloccare i metodi che potrebbero essere in attesa del completamento di un'operazione asincrona.  
   
 > [!NOTE]

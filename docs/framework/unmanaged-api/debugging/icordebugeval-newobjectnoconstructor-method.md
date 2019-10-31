@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e4a09db3cedce7b0ae6049c7e550c0c3e21cc8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 255d88dcdd880c73a7535cddcad410dcfdcf1d70
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753179"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132654"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>Metodo ICorDebugEval::NewObjectNoConstructor
-Consente di allocare una nuova istanza dell'oggetto del tipo specificato, senza effettuare alcun tentativo di chiamare un metodo del costruttore.  
+Alloca una nuova istanza dell'oggetto del tipo specificato, senza tentare di chiamare un metodo del costruttore.  
   
- Questo metodo è obsoleto in .NET Framework versione 2.0. Uso [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) invece.  
+ Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT NewObjectNoConstructor (
   
 ## <a name="parameters"></a>Parametri  
  `pClass`  
- [in] Puntatore a un oggetto ICorDebugClass che rappresenta il tipo di oggetto da cui creare istanze.  
+ in Puntatore a un oggetto ICorDebugClass che rappresenta il tipo di oggetto di cui creare un'istanza.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

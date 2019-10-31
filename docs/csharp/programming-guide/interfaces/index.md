@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039333"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120162"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
-Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che devono essere implementate da una [classe](../../language-reference/keywords/class.md) o uno [struct](../../language-reference/keywords/struct.md) non astratta.
+Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che devono essere implementate da una [classe](../../language-reference/keywords/class.md) non astratta o da uno [struct](../../language-reference/keywords/struct.md) .
   
 Usando le interfacce, è possibile, ad esempio, includere il comportamento di più origini in una classe. Tale funzionalità è importante in C# perché il linguaggio non supporta l'ereditarietà multipla delle classi. Inoltre è necessario usare un'interfaccia se si vuole simulare l'ereditarietà per le struct, perché non possono effettivamente ereditare da un'altra struct o classe.  
   

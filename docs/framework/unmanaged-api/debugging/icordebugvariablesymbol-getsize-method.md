@@ -2,14 +2,12 @@
 title: 'Metodo metodo icordebugvariablesymbol:: GetSize'
 ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 782073968030d3dcdbbe49e0ed7732fe15c4a3bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61dad9522f9171166ca56a97e68b9a149d35e49a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968171"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120996"
 ---
 # <a name="icordebugvariablesymbolgetsize-method"></a>Metodo metodo icordebugvariablesymbol:: GetSize
 Ottiene le dimensioni di una variabile in byte.  
@@ -32,11 +30,11 @@ HRESULT GetSize(
 > Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

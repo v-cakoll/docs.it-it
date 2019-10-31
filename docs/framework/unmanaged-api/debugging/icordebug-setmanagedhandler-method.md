@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134061"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>Metodo ICorDebug::SetManagedHandler
-Specifica l'oggetto di gestore eventi per gli eventi gestiti.  
+Specifica l'oggetto gestore eventi per gli eventi gestiti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>Parametri  
  `pCallback`  
- [in] Un puntatore a un [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) oggetto, ovvero l'oggetto gestore evento.  
+ in Puntatore a un oggetto [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) , che è l'oggetto del gestore eventi.  
   
 ## <a name="remarks"></a>Note  
  `SetManagedHandler` deve essere chiamato in fase di creazione.  
   
- Se il `ICorDebugManagedCallback` implementazione non contiene interfacce sufficienti per gestire gli eventi di debug per l'applicazione in fase di debug, `SetManagedHandler` restituisce un HRESULT di tipo E_NOINTERFACE.  
+ Se l'implementazione del `ICorDebugManagedCallback` non contiene interfacce sufficienti per gestire gli eventi di debug per l'applicazione di cui è in corso il debug, `SetManagedHandler` restituisce un valore HRESULT di E_NOINTERFACE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

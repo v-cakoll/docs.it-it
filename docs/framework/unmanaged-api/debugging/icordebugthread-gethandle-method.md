@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133457"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Metodo ICorDebugThread::GetHandle
-Ottiene l'handle corrente per la parte attiva del ICorDebugThread.  
+Ottiene l'handle corrente per la parte attiva di ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Parametri  
  `phThreadHandle`  
- [out] Un puntatore a un HTHREAD che rappresenta l'handle della parte attiva del thread.  
+ out Puntatore a un HTHREAD che rappresenta l'handle della parte attiva del thread.  
   
 ## <a name="remarks"></a>Note  
- L'handle può cambiare quando viene eseguita, il processo e può essere diverso per le diverse parti del thread.  
+ L'handle può cambiare durante l'esecuzione del processo e può essere diverso per le diverse parti del thread.  
   
- Questo handle è di proprietà dell'API di debug. Il debugger deve duplicarla prima di poterla usare.  
+ Questo handle è di proprietà dell'API di debug. Il debugger dovrebbe duplicarlo prima di usarlo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

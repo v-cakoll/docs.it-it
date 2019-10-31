@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084788"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>Metodo ICorDebugEval2::NewStringWithLength
-Crea una stringa di lunghezza specificata, con il contenuto specificato.  
+Crea una stringa della lunghezza specificata, con il contenuto specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +36,18 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>Parametri  
  `string`  
- [in] Puntatore al valore stringa.  
+ in Puntatore al valore stringa.  
   
  `uiLength`  
- [in] Lunghezza della stringa.  
+ in Lunghezza della stringa.  
   
 ## <a name="remarks"></a>Note  
- Se finale della stringa carattere null deve essere nella stringa gestita, il chiamante del `NewStringWithLength` metodo è necessario assicurarsi che la lunghezza della stringa include il carattere null finale.  
+ Se si prevede che il carattere null finale della stringa si trovi nella stringa gestita, il chiamante del metodo `NewStringWithLength` deve garantire che la lunghezza della stringa includa il carattere null finale.  
   
- La stringa viene sempre creata nel dominio dell'applicazione in cui il thread è in esecuzione.  
+ La stringa viene sempre creata nel dominio applicazione in cui è attualmente in esecuzione il thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

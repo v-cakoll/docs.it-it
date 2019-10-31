@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137380"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Metodo ICorDebugManagedCallback::EditAndContinueRemap
-Questo metodo è stato deprecato. Notifica al debugger che è stato inviato un evento di modifica del mapping per l'ambiente di sviluppo integrato (IDE).  
+Questo metodo è stato deprecato. Notifica al debugger che è stato inviato un evento di modifica del mapping al Integrated Development Environment (IDE).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +37,10 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `EditAndContinueRemap` metodo viene chiamato quando è stata tentata l'esecuzione del codice in una versione precedente di una funzione di aggiornamento. Il common language runtime chiama il `EditAndContinueRemap` metodo per inviare un evento di modifica del mapping all'IDE.  
+ Il metodo `EditAndContinueRemap` viene chiamato quando è stata tentata l'esecuzione del codice in una versione precedente di una funzione aggiornata. Il Common Language Runtime chiama il metodo `EditAndContinueRemap` per inviare un evento di modifica del mapping all'IDE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

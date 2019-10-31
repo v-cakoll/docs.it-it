@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129014"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
 Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza di origine in modo che più thread possano operare simultaneamente su parti diverse, in genere su thread separati. Se i risultati devono essere utilizzati in un unico thread, ad esempio in un ciclo `foreach` (`For Each` in Visual Basic), i risultati di ogni thread devono essere nuovamente uniti in un'unica sequenza. Il tipo di merge che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine nei risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dal punto di vista del thread consumer (che è anche quello dell'utente dell'applicazione), una query completamente memorizzata nel buffer potrebbe essere eseguita per un periodo considerevole di tempo prima che produca il primo risultato. Gli altri operatori, per impostazione predefinita, sono parzialmente memorizzati nel buffer e generano i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, non è memorizzato nel buffer per impostazione predefinita. Genera immediatamente tutti gli elementi di tutti i thread.  
@@ -25,7 +23,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Per l'esempio completo, vedere [Procedura: Specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Per l'esempio completo, vedere [Procedura: Specificare le opzioni di Merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Se la query specifica non può supportare l'opzione richiesta, l'opzione verrà ignorata. Nella maggior parte dei casi, non è necessario specificare un'opzione di merge per una query PLINQ. In alcuni casi, tuttavia, in base ai test e alle misurazioni, può risultare evidente che una query viene eseguita meglio in una modalità non predefinita. Un uso comune di questa opzione è quello di forzare un operatore di merge in blocchi per trasmettere i risultati e poter fornire un'interfaccia utente più reattiva.  
   
@@ -47,19 +45,19 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
 ## <a name="query-operators-that-support-merge-options"></a>Operatori di query che supportano le opzioni di merge  
  La tabella seguente elenca gli operatori che supportano tutte le modalità delle opzioni di merge, soggette alle restrizioni specificate.  
   
-|Operatore|Restrizioni|  
+|??|Restrizioni|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nessuno|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Nessuno|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Nessuno|  
   
  Tutti gli altri operatori di query PLINQ potrebbero ignorare le opzioni di merge fornito dall'utente. Alcuni operatori di query, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A> e <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, non possono generare elementi finché tutti non sono stati prodotti e riordinati. Quando viene usato <xref:System.Linq.ParallelMergeOptions> in una query che contiene anche un operatore, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A>, il comportamento di merge non verrà quindi applicato nella query finché tale operatore non avrà prodotto i risultati.  
   

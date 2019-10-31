@@ -14,14 +14,12 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798179"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107297"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (funzione)
 Scrive un numero specificato di byte in una proprietà identificata da un handle di proprietà.
@@ -71,12 +69,12 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Usare questa funzione per impostare la stringa e tutti gli altri`DWORD` `QWORD` dati non o non.
+Usare questa funzione per impostare la stringa e tutti gli altri dati non`DWORD` o non`QWORD`.
 
-Per i valori di proprietà non `lNumBytes` stringa, deve essere la dimensione dati corretta del tipo di proprietà specificato. Per i valori delle proprietà `lNumBytes` di stringa, deve essere la lunghezza della stringa specificata in byte e la stringa stessa deve avere una lunghezza pari in byte e deve essere seguita da un carattere di terminazione null.
+Per i valori di proprietà non stringa, `lNumBytes` deve essere la dimensione dei dati corretta del tipo di proprietà specificato. Per i valori delle proprietà di stringa, `lNumBytes` deve essere la lunghezza della stringa specificata in byte e la stringa stessa deve avere una lunghezza pari in byte e essere seguita da un carattere di terminazione null.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

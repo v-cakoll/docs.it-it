@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web'
+title: 'Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,16 +13,14 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138739"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Per analizzare stringhe di data e ora immesse dall'utente  
@@ -115,5 +113,5 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
 
 - [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcb78dd5374ff97f23d7dfea63fe33fa96836958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938312"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124538"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Metodo ICLRTaskManager::CreateTask
 Richiede in modo esplicito che il Common Language Runtime (CLR) crei una nuova attività.  
@@ -52,19 +50,19 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|La memoria disponibile non è sufficiente per allocare la risorsa richiesta.|  
   
 ## <a name="remarks"></a>Note  
- CLR crea una nuova attività automaticamente al momento dell'inizializzazione, quando il codice utente crea un thread utilizzando i <xref:System.Threading> tipi nello spazio dei nomi o quando le dimensioni del pool di thread vengono aumentate. Vengono inoltre create attività quando il codice non gestito effettua una chiamata a una funzione gestita.  
+ CLR crea una nuova attività automaticamente al momento dell'inizializzazione, quando il codice utente crea un thread utilizzando i tipi nello spazio dei nomi <xref:System.Threading> o quando le dimensioni del pool di thread vengono aumentate. Vengono inoltre create attività quando il codice non gestito effettua una chiamata a una funzione gestita.  
   
- `CreateTask`consente all'host di eseguire una richiesta esplicita che CLR crea una nuova attività. Ad esempio, l'host può richiamare questo metodo per preinizializzare le strutture dei dati.  
+ `CreateTask` consente all'host di eseguire una richiesta esplicita che CLR crea una nuova attività. Ad esempio, l'host può richiamare questo metodo per preinizializzare le strutture dei dati.  
   
 > [!IMPORTANT]
 > La nuova attività viene restituita in stato sospeso e rimane sospesa fino a quando l'host non chiama in modo esplicito [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

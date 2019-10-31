@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738826"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122942"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>Metodo ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion
-Chiamata eseguita dal [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) per segnalare al debugger il risultato di un tentativo di enumerare una determinata area di memoria.  
+Chiamata eseguita da [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) per segnalare al debugger il risultato di un tentativo di enumerare un'area di memoria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>Parametri  
  `address`  
- [in] Indirizzo iniziale dell'area di memoria che è stata da enumerare.  
+ in Indirizzo iniziale dell'area di memoria che deve essere enumerata.  
   
  `size`  
- [in] Le dimensioni, in byte, dell'area della memoria.  
+ in Dimensione, in byte, dell'area di memoria.  
   
 ## <a name="remarks"></a>Note  
- Il `ICLRDataEnumMemoryRegions::EnumMemoryRegions` metodo chiamerà il metodo di callback dopo ogni tentativo di enumerare un'area di memoria. L'enumerazione continuerà anche se questo metodo restituisce un HRESULT che indica un errore.  
+ Il metodo `ICLRDataEnumMemoryRegions::EnumMemoryRegions` chiamerà questo metodo di callback dopo ogni tentativo di enumerazione di un'area di memoria. L'enumerazione continuerà anche se il metodo restituisce un valore HRESULT che indica un errore.  
   
- Le aree segnalate da questo callback possono essere duplicati o le aree di sovrapposizione.  
+ Le aree segnalate da questo callback possono essere duplicati o aree sovrapposte.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

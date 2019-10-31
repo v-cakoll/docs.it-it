@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 942c9544a6ce868c3b6296569d4a16a44281cdba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 512009e053605e2018f1fcbafa422c1a36ddecc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136901"
 ---
 # <a name="corruntimehost-coclass"></a>Coclasse CorRuntimeHost
-Fornisce interfacce per la gestione delle applicazioni che vengono eseguite da common language runtime.  
+Fornisce interfacce per la gestione delle applicazioni eseguite dal Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +40,18 @@ coclass CorRuntimeHost {
   
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
-|[Interfaccia ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Fornisce metodi per la configurazione di common language runtime (CLR).|  
-|[Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, common language runtime per creare e configurare domini dell'applicazione, accedere al dominio predefinito di enumerare tutti i domini in esecuzione nel processo.|  
+|[Interfaccia ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Fornisce metodi per la configurazione del Common Language Runtime (CLR).|  
+|[Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Fornisce metodi che consentono all'host di avviare e arrestare il Common Language Runtime in modo esplicito, di creare e configurare i domini applicazione, di accedere al dominio predefinito e di enumerare tutti i domini in esecuzione nel processo.|  
 |[Interfaccia IDebuggerInfo](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|Fornisce metodi per ottenere informazioni sullo stato dei servizi di debug.|  
-|[Interfaccia IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|Fornisce metodi di recupero di informazioni sul sistema di garbage collection e di controllo di alcuni aspetti del processo di garbage collection.|  
-|"IValidator"|Fornisce metodi per la convalida delle immagini eseguibili portabili e report dettagliati degli errori di convalida.|  
+|[Interfaccia IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|Fornisce metodi per ottenere informazioni sul sistema Garbage Collection e per controllare alcuni aspetti di Garbage Collection.|  
+|IValidator|Fornisce metodi per la convalida di immagini eseguibili portabili e report dettagliati degli errori di convalida.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.idl  
+ **Intestazione:** MSCorEE. idl  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

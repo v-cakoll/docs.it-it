@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141460"
 ---
 # <a name="startup_flags-enumeration"></a>Enumerazione STARTUP_FLAGS
 Contiene valori che indicano il comportamento di avvio del Common Language Runtime (CLR). Per impostazione predefinita, Garbage Collection non è simultanea e solo la libreria di classi di base viene caricata nell'area indipendente dal dominio.  
@@ -55,7 +53,7 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|Member|DESCRIZIONE|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Specifica che deve essere utilizzata la Garbage Collection simultanea. Se il chiamante richiede la compilazione del server e la Garbage Collection simultanea in un computer a processore singolo, vengono eseguite invece le Garbage Collection di compilazione e non simultanee della workstation. **Nota:**  La Garbage Collection simultanea non è supportata nelle applicazioni che eseguono l'emulatore WOW64 x86 nei sistemi a 64 bit che implementano l'architettura Intel Itanium (denominata in precedenza IA-64). Per ulteriori informazioni sull'utilizzo di WOW64 in sistemi Windows a 64 bit, vedere [esecuzione di applicazioni a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Specifica che deve essere eseguita l'ottimizzazione del caricatore.|  
@@ -72,14 +70,14 @@ typedef enum {
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Specifica che le rappresentazioni gestite e le rappresentazioni realizzate tramite platform invoke propagano tra punti asincroni. Per impostazione predefinita, solo le rappresentazioni gestite si propagano tra punti asincroni.|  
 |`STARTUP_TRIM_GC_COMMIT`|Specifica che Garbage Collection utilizzerà uno spazio meno vincolato quando la memoria di sistema è insufficiente. Vedere `gcTrimCommitOnLowMemory` in [ottimizzazione per l'hosting Web condiviso](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
 |`STARTUP_ETW`|Specifica che traccia eventi per Windows (ETW) è abilitato per gli eventi Common Language Runtime. A partire da Windows Vista, la traccia eventi è sempre abilitata, quindi questo flag non ha alcun effetto. Vedere [controllo .NET Framework registrazione](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Specifica che il monitoraggio delle risorse del dominio applicazione è abilitato. Vedere l' <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> elemento Property e [ \<appDomainResourceMonitoring >](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ARM`|Specifica che il monitoraggio delle risorse del dominio applicazione è abilitato. Vedere la proprietà <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> e [\<elemento > appDomainResourceMonitoring](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

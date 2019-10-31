@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e32ce10b708afa5741d83cbd05f14accb4b2014f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137905"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Metodo ICorDebugFunction::GetILCode
-Ottiene l'istanza ICorDebugCode che rappresenta il codice Microsoft intermediate language (MSIL) associato all'oggetto ICorDebugFunction.  
+Ottiene l'istanza di ICorDebugCode che rappresenta il codice MSIL (Microsoft Intermediate Language) associato a questo oggetto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parametri  
  `ppCode`  
- [out] Un puntatore al `ICorDebugCode` istanza oppure null se la funzione non è stata compilata in MSIL.  
+ out Puntatore all'istanza `ICorDebugCode` o null se la funzione non è stata compilata in MSIL.  
   
 ## <a name="remarks"></a>Note  
- Se Modifica e continuazione è stata consentita su questa funzione, il `GetILCode` metodo verrà visualizzato il codice MSIL corrispondente alla versione modificata della funzione del codice in common language runtime (CLR).  
+ Se in questa funzione è consentita l'autorizzazione Modifica e continuazione, il metodo `GetILCode` otterrà il codice MSIL corrispondente alla versione modificata del codice di questa funzione nel Common Language Runtime (CLR).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

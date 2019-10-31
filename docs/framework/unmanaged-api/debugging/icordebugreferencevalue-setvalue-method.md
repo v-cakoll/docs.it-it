@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d3f6eec-d772-401f-a028-1a2ecdc31e95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 804aa4a6508713b2d6f2d154fc47e09638994468
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61563488bff682cc7a417296c3db8eb7e7cf965a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747358"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139326"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>Metodo ICorDebugReferenceValue::SetValue
-Imposta l'indirizzo di memoria specificato. Vale a dire, questo metodo imposta ICorDebugReferenceValue in modo che punti a un oggetto.  
+Imposta l'indirizzo di memoria specificato. Questo metodo imposta quindi questo ICorDebugReferenceValue in modo che punti a un oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>Parametri  
  `value`  
- [in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo dell'oggetto a cui questo `ICorDebugReferenceValue` punti.  
+ in Valore `CORDB_ADDRESS` che specifica l'indirizzo dell'oggetto a cui punta questo `ICorDebugReferenceValue`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

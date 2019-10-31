@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5031a5d3-2564-412a-9007-e36d4631308a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6bfde8a934da857e580c603bd1c0115a04a4070
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e49bf6a7db9edb9e5ae489cc0655eea54406643d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754641"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137885"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>Metodo ICorDebugFunction::GetModule
-Ottiene il modulo in cui questa funzione è definita.  
+Ottiene il modulo in cui è definita questa funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>Parametri  
  `ppModule`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugModule che rappresenta il modulo in cui questa funzione è definita.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugModule che rappresenta il modulo in cui è definita questa funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

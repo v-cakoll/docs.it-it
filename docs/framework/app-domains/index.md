@@ -7,14 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 84d674f7ae8e80d7a5e6a40539e3330fcfa9b563
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119824"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programmazione con i domini applicazione e gli assembly
 
@@ -22,7 +20,7 @@ Gli host come Microsoft Internet Explorer, ASP.NET e la shell di Windows carican
   
 Tuttavia, se si sta creando un'applicazione che ospita Common Language Runtime, strumenti o codice che si vogliono scaricare a livello di codice o componenti modulari che possono essere scaricati e ricaricati in tempo reale, si creano anche domini dell'applicazione personalizzati. Anche se non si sta creando un host di runtime, questa sezione fornisce importanti informazioni su come utilizzare i domini dell'applicazione e gli assembly caricati al loro interno.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
 [Argomenti relativi alle procedure per domini applicazione e assembly](application-domains-and-assemblies-how-to-topics.md)  
 Fornisce i collegamenti a tutte le procedure contenute nella documentazione sui concetti relativi alla programmazione con domini dell'applicazione e assembly.  

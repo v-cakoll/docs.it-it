@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134706"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>Metodo ICorDebugAppDomain::GetObject
-Ottiene un puntatore a interfaccia per il dominio di applicazione di common language runtime (CLR).  
+Ottiene un puntatore a interfaccia per il dominio dell'applicazione Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +35,16 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parametri  
  `ppObject`  
- [out] Un puntatore all'indirizzo di un oggetto di interfaccia ICorDebugValue che rappresenta il dominio dell'applicazione CLR.  
+ out Puntatore all'indirizzo di un oggetto interfaccia ICorDebugValue che rappresenta il dominio applicazione CLR.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se un oggetto gestito <xref:System.AppDomain?displayProperty=nameWithType> oggetto non è stato costruito per il dominio applicazione, il metodo restituisce `S_FALSE` e le inserisce `NULL` in `*ppObject`.  
+ Se per questo dominio applicazione non è stato costruito un oggetto <xref:System.AppDomain?displayProperty=nameWithType> gestito, il metodo restituisce `S_FALSE` e inserisce `NULL` in `*ppObject`.  
   
 ## <a name="remarks"></a>Note  
- Ogni dominio dell'applicazione in un processo potrebbe essere un oggetto gestito <xref:System.AppDomain?displayProperty=nameWithType> oggetto in fase di esecuzione che lo rappresenta. Questa funzione Ottiene un oggetto di interfaccia ICorDebugValue che corrisponde a questo gestiti <xref:System.AppDomain?displayProperty=nameWithType> oggetto.  
+ Ogni dominio applicazione in un processo può avere un oggetto <xref:System.AppDomain?displayProperty=nameWithType> gestito nel runtime che lo rappresenta. Questa funzione ottiene un oggetto interfaccia ICorDebugValue che corrisponde a questo oggetto <xref:System.AppDomain?displayProperty=nameWithType> gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

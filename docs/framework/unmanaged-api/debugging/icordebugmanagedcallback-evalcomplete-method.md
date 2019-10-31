@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a874646a6746a9b2fc8ce597e6c1ca47340c199a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137346"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Metodo ICorDebugManagedCallback::EvalComplete
-Notifica al debugger che è stata completata una valutazione.  
+Notifica al debugger che la valutazione è stata completata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT EvalComplete (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui è stata eseguita la valutazione.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui è stata eseguita la valutazione.  
   
  `pThread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata eseguita la valutazione.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata eseguita la valutazione.  
   
  `pEval`  
- [in] Un puntatore a un oggetto ICorDebugEval che rappresenta il codice che ha eseguito la valutazione.  
+ in Puntatore a un oggetto ICorDebugEval che rappresenta il codice che ha eseguito la valutazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 96bb3a530bf4c63c3662ecfa635a929381fc0de6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121529"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>Metodo IHostSecurityContext::Capture
 Ottiene un clone dell'istanza di [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) restituita da una chiamata a [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
@@ -37,13 +35,13 @@ HRESULT Capture (
   
 ## <a name="parameters"></a>Parametri  
  `ppClonedContext`  
- out Puntatore all'indirizzo di un clone dell' `IHostSecurityContext` oggetto da acquisire.  
+ out Puntatore all'indirizzo di un clone dell'oggetto `IHostSecurityContext` da acquisire.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Capture`la restituzione è riuscita.|  
+|S_OK|`Capture` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -51,14 +49,14 @@ HRESULT Capture (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il puntatore di interfaccia restituito `Capture` da è un clone del contesto acquisito. Quando queste informazioni vengono spostate in un punto di codice asincrono, la relativa durata è separata da quella dell'indicatore di misura in cui è stata effettuata la chiamata. Il puntatore originale può pertanto essere rilasciato.  
+ Il puntatore di interfaccia restituito da `Capture` è un clone del contesto acquisito. Quando queste informazioni vengono spostate in un punto di codice asincrono, la relativa durata è separata da quella dell'indicatore di misura in cui è stata effettuata la chiamata. Il puntatore originale può pertanto essere rilasciato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

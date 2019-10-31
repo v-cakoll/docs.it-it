@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137789"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Metodo ICorDebugFunction2::SetJMCStatus
-Contrassegna la funzione rappresentata da ICorDebugFunction2 per Just My Code l'esecuzione di istruzioni.  
+Contrassegna la funzione rappresentata da questo ICorDebugFunction2 per Just My Code esecuzione di un'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +35,20 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametri  
  `bIsJustMyCode`  
- [in] Impostare su `true` per contrassegnare la funzione come codice utente; in caso contrario, impostato su `false`.  
+ in Impostare su `true` per contrassegnare la funzione come codice utente; in caso contrario, impostare su `false`.  
   
 ## <a name="return-values"></a>Valori restituiti  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|La funzione è stata contrassegnata.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|La funzione non può essere contrassegnata come codice utente perché non è possibile eseguire il debug.|  
+|`S_OK`|La funzione è stata contrassegnata correttamente.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Impossibile contrassegnare la funzione come codice utente perché non può essere sottoposta a debug.|  
   
 ## <a name="remarks"></a>Note  
- Un Just My Code ignorerà il codice non utente. Il codice utente deve essere un subset di debug.  
+ Un Just My Code stepper ignorerà il codice non utente. Il codice utente deve essere un subset del codice di cui è possibile eseguire il debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

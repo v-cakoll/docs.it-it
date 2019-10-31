@@ -1,17 +1,15 @@
 ---
-title: Metodo ICorDebugSymbolProvider::GetMethodProps
+title: 'Metodo metodo icordebugsymbolprovider:: GetMethodProps'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138834"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Metodo ICorDebugSymbolProvider::GetMethodProps
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Metodo metodo icordebugsymbolprovider:: GetMethodProps
 Restituisce informazioni sulle proprietà del metodo, ad esempio il token di metadati del metodo e informazioni sui relativi parametri generici, da un indirizzo RVA (Relative Virtual Address) fornito in tale metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -47,17 +45,17 @@ HRESULT GetMethodProps(
  [out] Buffer contenente le firme typespec di tutti i parametri generici.  
   
 ## <a name="remarks"></a>Note  
- Per ottenere `signature` le dimensioni richieste della matrice del metodo, impostare l' `cbSignature` argomento su 0 e `signature` su **null**. Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.  
+ Per ottenere le dimensioni richieste della matrice `signature` del metodo, impostare l'argomento di `cbSignature` su 0 e `signature` su **null**. Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

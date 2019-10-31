@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111023"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Interfaccia ICLRMetadataLocator
-Usato dal livello di servizi di accesso ai dati per individuare i metadati degli assembly in un processo di destinazione.  
+Utilizzato dal livello servizi di accesso ai dati per individuare i metadati degli assembly in un processo di destinazione.  
   
 ## <a name="methods"></a>Metodi  
   
@@ -33,12 +31,12 @@ Usato dal livello di servizi di accesso ai dati per individuare i metadati degli
 |[Metodo getMetaData](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera i metadati di un'immagine dal processo di destinazione.|  
   
 ## <a name="remarks"></a>Note  
- Il client API, ovvero il debugger, deve implementare questa interfaccia in modo appropriato per il processo di destinazione specifico. Ad esempio, l'implementazione per un processo reale sarebbe diversa da quella di un dump di memoria.  
+ Il client API, ovvero il debugger, deve implementare questa interfaccia in modo appropriato per il processo di destinazione specifico. Ad esempio, l'implementazione per un processo Live sarà diversa da quella di un dump di memoria.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

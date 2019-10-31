@@ -10,23 +10,21 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115851"
 ---
-# <a name="publisherpolicy-element"></a>\<Elemento > publisherPolicy apply
+# <a name="publisherpolicy-element"></a>\<elemento > publisherPolicy apply
 Specifica se il runtime applica i criteri dell'editore.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> publisherPolicy apply**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp;[ **&nbsp; &nbsp; \<assemblyBinding > \** ](assemblybinding-element-for-runtime.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**dependentAssembly**](dependentassembly-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherPolicy apply** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +37,7 @@ Specifica se il runtime applica i criteri dell'editore.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`apply`|Specifica se applicare i criteri dell'editore.|  
   
@@ -52,26 +50,26 @@ Specifica se il runtime applica i criteri dell'editore.
   
 ### <a name="child-elements"></a>Elementi figlio  
 
-Nessuno.  
+Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`dependentAssembly`|Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare un `<dependentAssembly>` elemento per ogni assembly.|  
+|`dependentAssembly`|Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare un elemento `<dependentAssembly>` per ogni assembly.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Quando un fornitore di componenti rilascia una nuova versione di un assembly, il fornitore può includere un criterio editore, in modo che le applicazioni che usano la versione precedente usino ora la nuova versione. Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire l'  **\<elemento > publisherPolicy apply** nell'elemento  **\<> di dependentAssembly** .  
+ Quando un fornitore di componenti rilascia una nuova versione di un assembly, il fornitore può includere un criterio editore, in modo che le applicazioni che usano la versione precedente usino ora la nuova versione. Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire l'elemento **\<publisherpolicy apply >** nell'elemento **\<dependentAssembly >** .  
   
  L'impostazione predefinita per l'attributo **Apply** è **Sì**. L'impostazione dell'attributo **Apply** su **No** sostituisce le impostazioni **Yes** precedenti di un assembly.  
   
- L'autorizzazione è necessaria affinché un'applicazione ignori esplicitamente i criteri del server di pubblicazione usando l' [ \<elemento publisherPolicy apply Apply = "No"/>](publisherpolicy-element.md) nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando <xref:System.Security.Permissions.SecurityPermissionFlag> il flag <xref:System.Security.Permissions.SecurityPermission>su. Per altre informazioni, vedere [autorizzazione di sicurezza](../../assembly-binding-redirection-security-permission.md)per il reindirizzamento dell'associazione di assembly.  
+ L'autorizzazione è necessaria affinché un'applicazione ignori esplicitamente i criteri del server di pubblicazione utilizzando l'elemento [\<publisherPolicy apply Apply = "No"/>](publisherpolicy-element.md) nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando il flag di <xref:System.Security.Permissions.SecurityPermissionFlag> nel <xref:System.Security.Permissions.SecurityPermission>. Per altre informazioni, vedere [autorizzazione di sicurezza](../../assembly-binding-redirection-security-permission.md)per il reindirizzamento dell'associazione di assembly.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono disattivati i criteri dell'editore `myAssembly`per l'assembly.  
+ Nell'esempio seguente vengono disattivati i criteri dell'editore per l'assembly, `myAssembly`.  
   
 ```xml  
 <configuration>  

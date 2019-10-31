@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134809"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Metodo IGCHost2::SetGCStartupLimitsEx
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
@@ -38,20 +36,20 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Parametri  
  `SegmentSize`  
- [in] Le dimensioni del segmento usato dal sistema di garbage collection.  
+ in Dimensioni del segmento utilizzato dal sistema di Garbage Collection.  
   
  `MaxGen0Size`  
- [in] La dimensione massima per la generazione 0.  
+ in Dimensione massima per la generazione 0.  
   
 ## <a name="remarks"></a>Note  
- I valori che `SetGCStartupLimitsEx` set possono essere specificati solo prima dell'avvio dell'host. Questi valori non possono essere modificati in un secondo momento.  
+ È possibile specificare i valori che `SetGCStartupLimitsEx` imposta solo prima dell'avvio dell'host. Questi valori non possono essere modificati in un secondo momento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** GCHost.idl, GCHost.h  
+ **Intestazione:** GCHost. idl, GCHost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -8,20 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3e602057bfd2dea15887daee9058b12f26992f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134257"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestione delle eccezioni (Task Parallel Library)
 
 Salvo in determinati scenari descritti più avanti in questo argomento, le eccezioni non gestite generate da codice utente in esecuzione in un'attività vengono propagate nel thread di unione. Le eccezioni vengono propagate quando si usa uno dei metodi <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> di istanza e li si gestisce includendo la chiamata in un'istruzione `try`/`catch`. Se un'attività è il padre di attività figlio connesse o se si è in attesa di più attività, potrebbero essere generate più eccezioni.
 
-Per propagare tutte le eccezioni nel thread chiamante, l'infrastruttura di Task ne esegue il wrapping in un'istanza di <xref:System.AggregateException> . L'eccezione <xref:System.AggregateException> ha una proprietà <xref:System.AggregateException.InnerExceptions%2A> che può essere enumerata per esaminare tutte le eccezioni originali generate e per gestire (o non gestire) individualmente ognuna di esse. È anche possibile gestire le eccezioni originali usando il metodo <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> .
+Per propagare tutte le eccezioni nel thread chiamante, l'infrastruttura di Task ne esegue il wrapping in un'istanza di <xref:System.AggregateException> . L'eccezione <xref:System.AggregateException> ha una proprietà <xref:System.AggregateException.InnerExceptions%2A> che può essere enumerata per esaminare tutte le eccezioni originali generate e per gestire (o non gestire) individualmente ognuna di esse. È anche possibile gestire le eccezioni originali usando il metodo <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>.
 
 Anche se viene generata un'unica eccezione, il sistema ne esegue comunque il wrapping in un oggetto <xref:System.AggregateException> , come illustrato nell'esempio seguente.
 
@@ -95,7 +93,7 @@ In un'applicazione reale, il delegato della continuazione potrebbe registrare in
 
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException
 
-In alcuni scenari, ad esempio durante l'hosting di plug-in non attendibili, le eccezioni benigne potrebbero essere comuni e potrebbe risultare troppo difficile osservarle tutte manualmente. In questi casi è possibile gestire l'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> . L'istanza di <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> passata al gestore può essere usata per evitare la propagazione dell'eccezione non osservata al thread di unione.
+In alcuni scenari, ad esempio durante l'hosting di plug-in non attendibili, le eccezioni benigne potrebbero essere comuni e potrebbe risultare troppo difficile osservarle tutte manualmente. In questi casi è possibile gestire l'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. L'istanza di <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> passata al gestore può essere usata per evitare la propagazione dell'eccezione non osservata al thread di unione.
 
 ## <a name="see-also"></a>Vedere anche
 

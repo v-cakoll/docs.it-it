@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139572"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>Metodo ICorRuntimeHost::GetConfiguration
-Ottiene un oggetto che consente all'host specificare la configurazione di callback di common language runtime (CLR).  
+Ottiene un oggetto che consente all'host di specificare la configurazione di callback del Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +35,19 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>Parametri  
  `pConfiguration`  
- [out] Un puntatore all'indirizzo di un [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) oggetto che può essere usato per configurare il CLR.  
+ out Puntatore all'indirizzo di un oggetto [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) che può essere utilizzato per configurare CLR.  
   
 ## <a name="remarks"></a>Note  
- CLR deve essere configurato prima dell'inizializzazione; in caso contrario, il `GetConfiguration` metodo restituisce un HRESULT che indica un errore.  
+ CLR deve essere configurato prima dell'inizializzazione. in caso contrario, il metodo `GetConfiguration` restituisce un valore HRESULT che indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET framework:** 1.0, 1.1  
+ **Versioni .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vedere anche
 

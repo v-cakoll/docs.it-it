@@ -7,21 +7,19 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113803"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrazione di assembly presso COM
 È possibile eseguire uno strumento da riga di comando denominato [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) per registrare o annullare la registrazione di un assembly per l'uso con COM. Regasm.exe aggiunge informazioni sulla classe al Registro di sistema, così che i client COM possano usare la classe di .NET Framework in modo trasparente. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fornisce funzionalità equivalenti.  
   
  Un componente gestito deve essere registrato nel Registro di sistema di Windows per poter essere attivato da un client COM. La tabella seguente mostra le chiavi che Regasm.exe aggiunge in genere al Registro di sistema di Windows. 000000 indica il valore GUID effettivo.  
   
-|GUID|Description|Chiave del Registro di sistema|  
+|GUID|Descrizione|Chiave del Registro di sistema|  
 |----------|-----------------|------------------|  
 |CLSID|Identificatore di classe|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|Identificatore di interfaccia|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -46,6 +44,6 @@ ms.locfileid: "64648550"
 ## <a name="see-also"></a>Vedere anche
 
 - [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)
-- [Procedura: Fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md)
+- [Procedura: fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md)
 - [Chiamata di un oggetto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Distribuzione di un'applicazione per l'accesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

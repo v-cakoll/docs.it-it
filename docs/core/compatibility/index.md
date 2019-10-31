@@ -1,15 +1,13 @@
 ---
 title: Valutare le modifiche che causano un'interruzione - .NET Core
 description: Informazioni sui modi in cui .NET Core tenta di garantire la compatibilità tra le versioni di .NET per sviluppatori.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089353"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Valutare le modifiche che causano un'interruzione
 
@@ -26,7 +24,7 @@ Questo articolo descrive le categorie di modifiche di compatibilità (o che caus
 > [!NOTE]
 > Per una definizione delle categorie di compatibilità, come la compatibilità a livello di codice binario e la compatibilità con le versioni precedenti, vedere [Categorie di modifiche che causano un'interruzione](categories.md).
 
-Le sezioni seguenti descrivono le categorie delle modifiche apportate alle API di .NET Core e il relativo impatto sulla compatibilità delle applicazioni. L'icona ✔️ indica che una modifica di un determinato tipo è consentita, ❌ indica che non è consentita e ❓ indica che può essere o non essere consentita. Le modifiche di quest'ultima categoria richiedono una valutazione della prevedibilità, ovvietà e coerenza del comportamento precedente.
+Le sezioni seguenti descrivono le categorie delle modifiche apportate alle API di .NET Core e il relativo impatto sulla compatibilità delle applicazioni. L'icona ✔️ indica che è consentito un particolare tipo di modifica, ❌ indica che non è consentita e ❓ indica una modifica che può essere o meno consentita. Le modifiche di quest'ultima categoria richiedono una valutazione della prevedibilità, ovvietà e coerenza del comportamento precedente.
 
 > [!NOTE]
 > Oltre a servire da guida per la valutazione delle modifiche alle librerie di .NET Core, questi criteri possono essere usati dagli sviluppatori di librerie per valutare le modifiche alle librerie destinate a più versioni e implementazioni di .NET.
@@ -59,19 +57,19 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
 - **✔️ Espansione della visibilità di un tipo**
 
-- **❌ Modifica dello spazio dei nomi o del nome di un tipo**
+- **❌ modifica dello spazio dei nomi o del nome di un tipo**
 
-- **❌ Ridenominazione o rimozione di un tipo pubblico**
+- **❌ la ridenominazione o la rimozione di un tipo pubblico**
 
    Questa operazione causa l'interruzione di tutto il codice che usa il tipo rinominato o rimosso.
 
-- **❌ Modifica del tipo sottostante di un'enumerazione**
+- **❌ modifica del tipo sottostante di un'enumerazione**
 
    Si tratta di una modifica che causa un'interruzione a livello di compilazione, comportamento e codice binario che può rendere non analizzabili gli argomenti degli attributi.
 
-- **❌ Sealing di un tipo che in precedenza era non sealed**
+- **❌ il sealing di un tipo precedentemente non sealed**
 
-- **❌ Aggiunta di un'interfaccia al set di tipi di base di un'interfaccia**
+- **❌ l'aggiunta di un'interfaccia al set di tipi di base di un'interfaccia**
 
    Se un'interfaccia implementa un'interfaccia che in precedenza non implementava, tutti i tipi che implementavano la versione originale dell'interfaccia vengono interrotti.
 
@@ -79,17 +77,17 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Esiste un'unica eccezione alla regola per la rimozione di un'interfaccia. È possibile aggiungere l'implementazione di un'interfaccia che deriva dall'interfaccia rimossa. È ad esempio possibile rimuovere <xref:System.IDisposable> se il tipo o l'interfaccia implementa ora <xref:System.ComponentModel.IComponent>, che implementa a sua volta l'interfaccia <xref:System.IDisposable>.
 
-- **❌ Modifica di un tipo `readonly struct` in un tipo [struct](../../csharp/language-reference/keywords/struct.md)**
+- **❌ la modifica di un tipo di `readonly struct` in un tipo [struct](../../csharp/language-reference/keywords/struct.md)**
 
   Si noti che la modifica di un tipo `struct` in un tipo `readonly struct` è consentita.
 
-- **❌ Modifica di un tipo [struct](../../csharp/language-reference/keywords/struct.md) in un tipo `ref struct` e viceversa**
+- **❌ la modifica di un tipo [struct](../../csharp/language-reference/keywords/struct.md) in un tipo di `ref struct` e viceversa**
 
-- **❌ Limitazione della visibilità di un tipo**
+- **❌ riduzione della visibilità di un tipo**
 
    L'espansione della visibilità di un tipo è tuttavia consentita.
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 - **✔️ Espansione della visibilità di un membro non [virtuale](../../csharp/language-reference/keywords/sealed.md)**
 
@@ -121,23 +119,23 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
    Questa modifica ha impatto sulla serializzazione.
 
-- **❌ Ridenominazione o rimozione di un parametro o un membro pubblico**
+- **❌ la ridenominazione o la rimozione di un membro o un parametro pubblico**
 
    Questa operazione causa l'interruzione di tutto il codice che usa il parametro o il membro rinominato o rimosso.
 
    Si noti che questo include la rimozione o la ridenominazione di un getter o un setter da una proprietà, nonché la ridenominazione o la rimozione dei membri di un'enumerazione.
 
-- **❌ Aggiunta di un membro a un'interfaccia**
+- **❌ l'aggiunta di un membro a un'interfaccia**
 
-- **❌ Modifica del valore di una costante pubblica o del membro di un'enumerazione**
+- **❌ la modifica del valore di una costante pubblica o di un membro di enumerazione**
 
-- **❌ Modifica del tipo di una proprietà, di un campo, di un parametro o di un valore restituito**
+- **❌ modifica del tipo di una proprietà, un campo, un parametro o un valore restituito**
 
-- **❌ Aggiunta, rimozione o modifica dell'ordine dei parametri**
+- **❌ l'aggiunta, la rimozione o la modifica dell'ordine dei parametri**
 
-- **❌ Aggiunta o rimozione della parola chiave [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) o [ref](../../csharp/language-reference/keywords/ref.md) in un parametro**
+- **❌ l'aggiunta o la rimozione della parola chiave [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) o [ref](../../csharp/language-reference/keywords/ref.md) da un parametro**
 
-- **❌ Ridenominazione di un parametro (inclusa la modifica di maiuscole e minuscole)**
+- **❌ la ridenominazione di un parametro (inclusa la modifica del case)**
 
   Questa viene considerata una modifica che causa un'interruzione per due motivi:
   
@@ -145,13 +143,13 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
   
   - Interrompe la [compatibilità a livello di codice sorgente](categories.md#source-compatibility) quando gli sviluppatori usano [argomenti denominati](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
-- **❌ Modifica di un valore restituito `ref` in un valore restituito `ref readonly`**
+- **❌ la modifica da un valore restituito `ref` a un valore restituito `ref readonly`**
 
-- **✔️ Modifica di un `ref readonly` in un valore restituito `ref` su un metodo o un'interfaccia virtuale**
+- **❌️ la modifica da un `ref readonly` a un valore restituito `ref` su un metodo o un'interfaccia virtuale**
 
-- **❌ Aggiunta o rimozione della parola chiave [abstract](../../csharp/language-reference/keywords/abstract.md) in un membro**
+- **❌ l'aggiunta o la rimozione di un oggetto [abstract](../../csharp/language-reference/keywords/abstract.md) da un membro**
 
-- **❌ Rimozione della parola chiave [virtual](../../csharp/language-reference/keywords/virtual.md) da un membro**
+- **❌ la rimozione della parola chiave [Virtual](../../csharp/language-reference/keywords/virtual.md) da un membro**
 
   Anche se spesso questa non è una modifica che causa un'interruzione perché il compilatore C# tende a generare istruzioni [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) in linguaggio intermedio (IL) per chiamare metodi non virtuali (diversamente da una normale chiamata, `callvirt` esegue un controllo null), questo comportamento non è invariabile per diversi motivi:
   - C# non è l'unico linguaggio di destinazione di .NET.
@@ -160,48 +158,48 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
   
   Quando un metodo viene impostato come virtuale, spesso il codice consumer finisce per chiamarlo in modo non virtuale.
 
-- **❌ Aggiunta della parola chiave [virtual](../../csharp/language-reference/keywords/virtual.md) a un membro**
+- **❌ aggiunta della parola chiave [Virtual](../../csharp/language-reference/keywords/virtual.md) a un membro**
 
-- **❌ Impostazione di un membro virtuale come astratto**
+- **❌ rendere astratto un membro virtuale**
 
   Un [membro virtuale](../../csharp/language-reference/keywords/virtual.md) fornisce un'implementazione di metodo che *può essere* sottoposta a override da una classe derivata. Un [membro astratto](../../csharp/language-reference/keywords/abstract.md) non fornisce alcuna implementazione e *deve essere* sottoposto a override.
 
-- **❌ Aggiunta di un membro astratto a un tipo pubblico che ha costruttori accessibili (pubblici o protetti) e che non è [sealed](../../csharp/language-reference/keywords/sealed.md)**
+- **❌ l'aggiunta di un membro astratto a un tipo pubblico con costruttori accessibili (pubblici o protetti) e non [sealed](../../csharp/language-reference/keywords/sealed.md)**
 
-- **❌ Aggiunta o rimozione della parola chiave [static](../../csharp/language-reference/keywords/static.md) in un membro**
+- **❌ l'aggiunta o la rimozione della parola chiave [static](../../csharp/language-reference/keywords/static.md) da un membro**
 
-- **❌ Aggiunta di un overload che preclude un overload esistente e che definisce un comportamento diverso**
+- **❌ l'aggiunta di un overload che impedisce un overload esistente e definisce un comportamento diverso**
 
   Questa modifica causa un'interruzione dei client esistenti associati all'overload precedente. Se, ad esempio, una classe dispone di una singola versione di un metodo che accetta uno struct <xref:System.UInt32>, un consumer esistente viene correttamente associato a tale overload quando viene passato un valore <xref:System.Int32>. Se tuttavia si aggiunge un overload che accetta uno struct <xref:System.Int32>, quando viene eseguita la ricompilazione o viene usata l'associazione tardiva, il compilatore stabilisce l'associazione con il nuovo overload. In caso di comportamento diverso, si tratta di una modifica che causa un'interruzione.
 
-- **❌ Aggiunta di un costruttore a una classe che in precedenza era priva di costruttori senza aggiungere il costruttore senza parametri**
+- **❌ l'aggiunta di un costruttore a una classe che in precedenza non aveva alcun costruttore senza aggiungere il costruttore senza parametri**
 
-- **❌️ Aggiunta di [readonly](../../csharp/language-reference/keywords/readonly.md) a un campo**
+- **❌️ l'aggiunta di [ReadOnly](../../csharp/language-reference/keywords/readonly.md) a un campo**
 
-- **❌ Limitazione della visibilità di un membro**
+- **❌ riduzione della visibilità di un membro**
 
    Ciò include la limitazione della visibilità di un membro [protetto](../../csharp/language-reference/keywords/protected.md) quando non sono presenti costruttori *accessibili* (pubblici o protetti) e il tipo *non* è [sealed](../../csharp/language-reference/keywords/sealed.md). Se questo non avviene, la limitazione della visibilità di un membro protetto è consentita.
 
    L'espansione della visibilità di un membro è tuttavia consentita.
 
-- **❌ Modifica del tipo di un membro**
+- **❌ modifica del tipo di un membro**
 
    Il valore restituito di un metodo o il tipo di una proprietà o di un campo non può essere modificato. Ad esempio, la firma di un metodo che restituisce un tipo <xref:System.Object> non può essere modificata in modo da restituire un tipo <xref:System.String> o viceversa.
 
-- **❌ Aggiunta di un campo a uno struct che in precedenza era senza stato**
+- **❌ l'aggiunta di un campo a uno struct che in precedenza non aveva alcuno stato**
 
   Determinate regole di assegnazione consentono l'uso di variabili non inizializzate, purché il tipo di variabile sia uno struct senza stato. Se lo struct è definito con stato, può verificarsi un problema di mancata inizializzazione dei dati del codice. Si tratta potenzialmente di una modifica che causa un'interruzione a livello di codice sorgente e di codice binario.
 
-- **❌ Generazione di un evento esistente che in precedenza non veniva mai generato**
+- **❌ la generazione di un evento esistente quando non è mai stato generato prima**
 
-## <a name="behavioral-changes"></a>Modifiche funzionali
+## <a name="behavioral-changes"></a>Modifiche del comportamento
 
 ### <a name="assemblies"></a>Assembly
 
 - **✔️ Rendere portabile un assembly quando le stesse piattaforme sono ancora supportate**
 
-- **❌ Modifica del nome di un assembly**
-- **❌ Modifica della chiave pubblica di un assembly**
+- **❌ la modifica del nome di un assembly**
+- **❌ la modifica della chiave pubblica di un assembly**
 
 ### <a name="properties-fields-parameters-and-return-values"></a>Proprietà, campi, parametri e valori restituiti
 
@@ -213,19 +211,19 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Si noti che l'intervallo di valori che possono essere passati al metodo o che vengono restituiti dal membro può essere esteso, ma il tipo di parametro o di membro deve rimanere invariato. Ad esempio, i valori passati a un metodo possono aumentare da 0-124 a 0-255, ma il tipo di parametro non può cambiare da <xref:System.Byte> a <xref:System.Int32>.
 
-- **✔️ Aumento dell'intervallo di valori accettati per una proprietà o un parametro se il membro è [virtuale](../../csharp/language-reference/keywords/virtual.md)**
+- **❌ aumentare l'intervallo di valori accettati per una proprietà o un parametro se il membro è [virtuale](../../csharp/language-reference/keywords/virtual.md)**
 
    Questa modifica interrompe i membri sottoposti a override esistenti, che non funzioneranno correttamente per l'intervallo di valori esteso.
 
-- **❌ Riduzione dell'intervallo di valori accettati per una proprietà o un parametro**
+- **❌ la riduzione dell'intervallo di valori accettati per una proprietà o un parametro**
 
-- **❌ Aumento dell'intervallo di valori restituiti per una proprietà, un campo, un valore restituito o un parametro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
+- **❌ aumentare l'intervallo di valori restituiti per una proprietà, un campo, un valore restituito o un parametro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **❌ Modifica dei valori restituiti per una proprietà, un campo, un valore restituito da un metodo o un parametro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
+- **❌ la modifica dei valori restituiti per una proprietà, un campo, un valore restituito di un metodo o un parametro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **❌ Modifica del valore predefinito di una proprietà, un campo o un parametro**
+- **❌ modifica del valore predefinito di una proprietà, un campo o un parametro**
 
-- **❌ Modifica della precisione di un valore numerico restituito**
+- **❌ modifica della precisione di un valore restituito numerico**
 
 - **❓ Modifica nell'analisi dell'input e nella generazione di nuove eccezioni (anche se il comportamento dell'analisi non è specificato nella documentazione**
 
@@ -258,15 +256,15 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Gli sviluppatori non devono basarsi sul testo dei messaggi di errore, che cambiano anche in base alle impostazioni cultura dell'utente.
 
-- **❌ Generazione di un'eccezione in tutti gli altri casi non elencati**
+- **❌ generata un'eccezione in qualsiasi altro caso non elencato sopra**
 
-- **❌ Rimozione di un'eccezione in tutti gli altri casi non elencati**
+- **❌ la rimozione di un'eccezione in altri casi non elencati in precedenza**
 
 ### <a name="attributes"></a>Attributi
 
 - **✔️ Modifica del valore di un attributo che *non* è osservabile**
 
-- **✔️ Modifica del valore di un attributo che *è* osservabile**
+- **❌ modifica del valore di un *attributo osservabile***
 
 - **❓ Rimozione di un attributo**
 
@@ -276,7 +274,7 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
 - **✔️ Supporto di un'operazione su una piattaforma che in precedenza non era supportata**
 
-- **❌ Mancato supporto o nuova richiesta di uno specifico Service Pack per un'operazione che in precedenza era supportata su una piattaforma**
+- **❌ non supporta o che ora richiede un Service Pack specifico per un'operazione supportata in precedenza in una piattaforma**
 
 ## <a name="internal-implementation-changes"></a>Modifiche all'implementazione interna
 
@@ -296,26 +294,26 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   La modifica in questione è accettabile se non è classificata per altri motivi come modifica che causa un'interruzione. È spesso necessario eseguire azioni che includono operazioni supplementari o che aggiungono nuove funzionalità. Questo ha quasi sempre effetto sulle prestazioni, ma può essere fondamentale per fare in modo che l'API in questione funzioni come previsto.
 
-- **❌ Modifica di un'API sincrona in una asincrona (e viceversa)**
+- **❌ la modifica di un'API sincrona in asincrona (e viceversa)**
 
 ## <a name="code-changes"></a>Modifiche al codice
 
 - **✔️ Aggiunta di [params](../../csharp/language-reference/keywords/params.md) a un parametro**
 
-- **❌ Modifica di uno [struct](../../csharp/language-reference/keywords/struct.md) in una [classe](../../csharp/language-reference/keywords/class.md) e viceversa**
+- **❌ la modifica di uno [struct](../../csharp/language-reference/keywords/struct.md) in una [classe](../../csharp/language-reference/keywords/class.md) e viceversa**
 
-- **❌ Aggiunta della parola chiave [checked](../../csharp/language-reference/keywords/virtual.md) a un blocco di codice**
+- **❌ aggiunta della parola chiave [checked](../../csharp/language-reference/keywords/virtual.md) a un blocco di codice**
 
    Per effetto di questa modifica, il codice eseguito in precedenza può generare un'eccezione <xref:System.OverflowException> e non essere accettabile.
 
-- **❌ Rimozione di [params](../../csharp/language-reference/keywords/params.md) da un parametro**
+- **❌ la rimozione di [parametri](../../csharp/language-reference/keywords/params.md) da un parametro**
 
-- **❌ Modifica dell'ordine di generazione degli eventi**
+- **❌ modificare l'ordine in cui vengono generati gli eventi**
 
   Gli sviluppatori possono ragionevolmente aspettarsi che gli eventi vengano generati nello stesso ordine e il codice degli sviluppatori spesso dipende dall'ordine di generazione degli eventi.
 
-- **❌ Rimozione della generazione di un evento per effetto di una determinata azione**
+- **❌ la rimozione della generazione di un evento in un'azione specificata**
 
-- **❌ Modifica del numero di volte in cui vengono chiamati determinati eventi**
+- **❌ la modifica del numero di volte in cui vengono chiamati gli eventi specificati**
 
-- **❌ Aggiunta di <xref:System.FlagsAttribute> a un tipo di enumerazione**
+- **❌ l'aggiunta del <xref:System.FlagsAttribute> a un tipo di enumerazione**

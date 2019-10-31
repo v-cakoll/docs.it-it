@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08dfa3ddbfd9cffdb0cb88d0325e5703a854668a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04f6a088c5bbe96e3909ba600aa8ffab937abe2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993512"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140406"
 ---
 # <a name="icorpublishprocess-interface"></a>Interfaccia ICorPublishProcess
 Fornisce metodi che accedono alle informazioni da visualizzare su un processo.  
@@ -30,15 +28,15 @@ Fornisce metodi che accedono alle informazioni da visualizzare su un processo.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnumAppDomains](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|Ottiene un' [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) istanza che contiene i domini applicazione nel processo di cui fa riferimento questo `ICorPublishProcess`.|  
-|[Metodo GetDisplayName](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|Ottiene il percorso completo del file eseguibile per il processo a cui fa riferimento `ICorPublishProcess`.|  
-|[Metodo GetProcessID](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|Ottiene l'identificatore del sistema operativo per il processo a cui fa riferimento `ICorPublishProcess`.|  
-|[Metodo IsManaged](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|Ottiene un valore che indica se il processo fa riferimento questo `ICorPublishProcess` è noto per essere in esecuzione il codice gestito.|  
+|[Metodo EnumAppDomains](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|Ottiene un'istanza di [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) che contiene i domini applicazione nel processo a cui fa riferimento questo `ICorPublishProcess`.|  
+|[Metodo GetDisplayName](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|Ottiene il percorso completo dell'eseguibile per il processo a cui fa riferimento questo `ICorPublishProcess`.|  
+|[Metodo GetProcessID](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|Ottiene l'identificatore del sistema operativo per il processo a cui fa riferimento questo `ICorPublishProcess`.|  
+|[Metodo IsManaged](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|Ottiene un valore che indica se il processo a cui viene fatto riferimento da questo `ICorPublishProcess` è noto per l'esecuzione di codice gestito.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorPub.idl, CorPub.h  
+ **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62c81741b1260c20b25a0f49a33d3a20ebde24a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92282b09c4fbc0a5ed63c0dbca0f1a234bb421a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133329"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>Metodo ICorThreadpool::CorCallOrQueueUserWorkItem
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -38,11 +36,11 @@ HRESULT CorCallOrQueueUserWorkItem (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

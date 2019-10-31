@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a771100ad4d63173fdb3b1ddea5ae3d67fbbc7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4baaf5e4f5117ee936fa6d758798c340551c48b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960681"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121074"
 ---
 # <a name="icordebugcodeenum-interface"></a>Interfaccia ICorDebugCodeEnum
 
@@ -31,7 +29,7 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugCode".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Ottiene il numero specificato di `ICorDebugCode` istanze dall'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Ottiene il numero specificato di istanze di `ICorDebugCode` dall'enumerazione, a partire dalla posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -39,11 +37,11 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugCode".
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

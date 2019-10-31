@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131921"
 ---
 # <a name="comcallunmarshal-coclass"></a>Coclasse ComCallUnmarshal
-Fornisce interfacce per gestire il marshalling di puntatori a interfaccia.  
+Fornisce interfacce per la gestione del marshalling dei puntatori di interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,14 +36,14 @@ coclass ComCallUnmarshal {
   
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
-|`IMarshal`|Fornisce metodi per la creazione, l'inizializzazione e gestione di un proxy in un processo client.|  
+|`IMarshal`|Fornisce metodi per la creazione, l'inizializzazione e la gestione di un proxy in un processo client.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.idl  
+ **Intestazione:** MSCorEE. idl  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

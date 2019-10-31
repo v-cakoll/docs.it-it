@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106826"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Procedura: eseguire il wrapping di modelli EAP in un'attività
 Nell'esempio seguente viene illustrato come esporre una sequenza arbitraria di operazioni del modello asincrono basato su eventi (EAP) come un'unica attività tramite un oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601>. L'esempio mostra anche come usare un oggetto <xref:System.Threading.CancellationToken> per richiamare i metodi di annullamento predefiniti sugli oggetti <xref:System.Net.WebClient>.  

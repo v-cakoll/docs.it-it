@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f381cc687b4c28dd58a02aea8cf931f569cf9611
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133173"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>Metodo IDebuggerInfo::IsDebuggerAttached
-Ottiene un valore che indica se un debugger gestito viene collegato al processo.  
+Ottiene un valore che indica se un debugger gestito è associato a questo processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +35,14 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Parametri  
  `pbAttached`  
- [out] Un puntatore a un valore che rappresenta `true` se un debugger gestito viene collegato al processo; in caso contrario, `false`.  
+ out Puntatore a un valore `true` se al processo è associato un debugger gestito; in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

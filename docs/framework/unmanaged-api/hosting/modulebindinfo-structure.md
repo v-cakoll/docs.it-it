@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781170"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133744"
 ---
 # <a name="modulebindinfo-structure"></a>Struttura ModuleBindInfo
-Fornisce informazioni dettagliate sul modulo cui viene fatto riferimento e l'assembly che lo contiene.  
+Fornisce informazioni dettagliate sul modulo a cui si fa riferimento e sull'assembly che la contiene.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +34,23 @@ typedef struct _ModuleBindInfo {
 } ModuleBindInfo;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`dwAppDomainId`|Un identificatore univoco per il `IStream` restituito da una chiamata ai [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) metodo da cui è possibile caricare il modulo di cui viene fatto riferimento.|  
-|`lpAssemblyIdentity`|Identificatore univoco per l'assembly che contiene il modulo di cui viene fatto riferimento.|  
-|`lpModuleName`|Il nome del modulo cui viene fatto riferimento.|  
+|`dwAppDomainId`|Identificatore univoco per il `IStream` restituito da una chiamata al metodo [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) da cui deve essere caricato il modulo a cui si fa riferimento.|  
+|`lpAssemblyIdentity`|Identificatore univoco per l'assembly che contiene il modulo a cui si fa riferimento.|  
+|`lpModuleName`|Nome del modulo a cui si fa riferimento.|  
   
 ## <a name="remarks"></a>Note  
- `ModuleBindInfo` viene passato come parametro al `IHostAssemblyStore::ProvideModule`. L'identificatore univoco viene fornito dall'host `dwAppDomainId` a common language runtime (CLR). Dopo una chiamata al [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) metodo viene restituito, il runtime usa l'identificatore per determinare se il contenuto del `IStream` sono stati mappati. In questo caso, il runtime carica la copia esistente anziché la modifica del flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi che vengono restituiti dalle chiamate al `IHostAssemblyStore::ProvideAssembly` (metodo). Pertanto, l'identificatore deve essere univoco per le richieste di modulo anche per quanto riguarda le richieste di assembly.  
+ `ModuleBindInfo` viene passato come parametro a `IHostAssemblyStore::ProvideModule`. L'host fornisce l'identificatore univoco `dwAppDomainId` al Common Language Runtime (CLR). Dopo che una chiamata al metodo [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) restituisce, il runtime usa l'identificatore per determinare se è stato eseguito il mapping del contenuto della `IStream`. In tal caso, il runtime carica la copia esistente anziché rimappare il flusso. Il runtime usa anche questo identificatore come chiave di ricerca per i flussi restituiti dalle chiamate al metodo `IHostAssemblyStore::ProvideAssembly`. Pertanto, l'identificatore deve essere univoco per le richieste di modulo e per le richieste di assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.idl  
+ **Intestazione:** MSCorEE. idl  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

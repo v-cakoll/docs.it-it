@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746412"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124727"
 ---
 # <a name="icordebugchaingetprevious-method"></a>Metodo ICorDebugChain::GetPrevious
-Ottiene la catena di frame precedente per il thread.  
+Ottiene la catena di fotogrammi precedente per il thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetPrevious (
   
 ## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di frame per il thread precedente. Se questa è la prima catena `ppChain` è null.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di fotogrammi precedente per il thread. Se questa catena è la prima catena, `ppChain` è null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

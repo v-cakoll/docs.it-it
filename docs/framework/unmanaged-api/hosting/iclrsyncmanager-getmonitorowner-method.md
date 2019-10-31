@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e08af840d1c4a654fa9b9ff8b2064f5265afaf9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3aec11674275769bb5c4b68521a40a72a1d68a22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943248"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124674"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>Metodo ICLRSyncManager::GetMonitorOwner
 Ottiene l'istanza di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) a cui appartiene il monitoraggio identificato dal cookie specificato.  
@@ -41,13 +39,13 @@ HRESULT GetMonitorOwner (
  in Cookie associato al monitoraggio.  
   
  `ppOwnerHostTask`  
- out Puntatore all'oggetto `IHostTask` che attualmente possiede il monitoraggio oppure null se nessuna attività ha la proprietà.  
+ out Puntatore al `IHostTask` attualmente proprietario del monitoraggio oppure null se nessuna attività ha la proprietà.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner`la restituzione è riuscita.|  
+|S_OK|`GetMonitorOwner` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -55,19 +53,19 @@ HRESULT GetMonitorOwner (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- L'host chiama `GetMonitorOwner` in genere come parte di un meccanismo di rilevamento di deadlock. Il cookie è associato a un monitoraggio quando viene creato tramite una chiamata a [IHostSyncManager:: CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).  
+ L'host chiama in genere `GetMonitorOwner` come parte di un meccanismo di rilevamento del deadlock. Il cookie è associato a un monitoraggio quando viene creato tramite una chiamata a [IHostSyncManager:: CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).  
   
 > [!NOTE]
 > Una chiamata per rilasciare l'evento sottostante al monitoraggio potrebbe bloccarsi, ma non deadlock, se una chiamata a questo metodo è attualmente attiva sul cookie associato a tale monitoraggio. Anche altre attività potrebbero bloccarsi se tentano di acquisire questo monitoraggio.  
   
- `GetMonitorOwner`viene sempre restituito immediatamente e può essere chiamato in qualsiasi momento dopo una `CreateMonitorEvent`chiamata a. L'host non deve attendere finché un'attività non è in attesa dell'evento.  
+ `GetMonitorOwner` restituisce sempre immediatamente e può essere chiamato in qualsiasi momento dopo una chiamata a `CreateMonitorEvent`. L'host non deve attendere finché un'attività non è in attesa dell'evento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

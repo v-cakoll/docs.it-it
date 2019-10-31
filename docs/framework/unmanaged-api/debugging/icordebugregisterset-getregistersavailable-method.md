@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137694"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>Metodo ICorDebugRegisterSet::GetRegistersAvailable
-Ottiene una maschera di bit che indica quali registri in questo [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) sono attualmente disponibili.  
+Ottiene una maschera di bit che indica i registri attualmente disponibili in questo [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametri  
  `pAvailable`  
- [out] Maschera di bit che indica quali registri sono attualmente disponibili.  
+ out Maschera di bit che indica i registri attualmente disponibili.  
   
 ## <a name="remarks"></a>Note  
- Un registro potrebbe non essere disponibile se non è possibile determinare il valore per una determinata situazione.  
+ Un registro potrebbe non essere disponibile se non è possibile determinare il relativo valore per la situazione specificata.  
   
- La maschera restituita contiene un bit per ogni registrazione (1 << indice register). Il valore di bit è 1 se la registrazione è disponibile, oppure 0 se non è disponibile.  
+ La maschera restituita contiene un bit per ogni registro (1 < < l'indice di registro). Il valore di bit è 1 se il registro è disponibile oppure 0 se non è disponibile.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

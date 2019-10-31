@@ -11,14 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140148"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modello di programmazione asincrona (APM)
 Un'operazione asincrona in cui viene usato il modello di progettazione dell'oggetto <xref:System.IAsyncResult> viene implementata come due metodi denominati `BeginOperationName` e `EndOperationName` tramite cui viene rispettivamente avviata e terminata l'operazione asincrona *NomeOperazione*. La classe <xref:System.IO.FileStream> fornisce ad esempio i metodi <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> per la lettura asincrona dei byte da un file. Tali metodi implementano la versione asincrona del metodo <xref:System.IO.FileStream.Read%2A> .  
@@ -31,7 +29,7 @@ Un'operazione asincrona in cui viene usato il modello di progettazione dell'ogge
 ## <a name="beginning-an-asynchronous-operation"></a>Avvio di un'operazione asincrona  
  Il metodo `BeginOperationName` avvia l'operazione asincrona *NomeOperazione* e restituisce un oggetto che implementa l'interfaccia <xref:System.IAsyncResult>. Gli oggetti<xref:System.IAsyncResult> archiviano le informazioni sulle operazioni asincrone. La tabella seguente illustra le informazioni relative a un'operazione asincrona.  
   
-|Member|DESCRIZIONE|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Oggetto facoltativo specifico dell'applicazione che contiene informazioni sull'operazione asincrona.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Oggetto <xref:System.Threading.WaitHandle> che può essere usato per bloccare l'esecuzione dell'applicazione fino al completamento dell'operazione asincrona.|  

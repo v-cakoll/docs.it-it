@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5004cd293b64436c41caef1c7393d2229d1a6ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740082"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098474"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>Enumerazione CorDebugExceptionUnwindCallbackType
 Indica l'evento segnalato dal callback durante la fase di rimozione.  
@@ -35,15 +33,15 @@ typedef enum CorDebugExceptionUnwindCallbackType {
 } CorDebugExceptionUnwindCallbackType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_UNWIND_BEGIN`|Inizio del processo di rimozione.|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|È stata intercettata l'eccezione.|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|L'eccezione è stata intercettata.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

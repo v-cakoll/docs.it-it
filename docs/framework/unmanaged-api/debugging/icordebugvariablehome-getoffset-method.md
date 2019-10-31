@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugVariableHome::GetOffset
+title: 'Metodo ICorDebugVariableHome:: GetOffset'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125101"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>Metodo ICorDebugVariableHome::GetOffset
-Ottiene l'offset del Registro di base per una variabile.  
+# <a name="icordebugvariablehomegetoffset-method"></a>Metodo ICorDebugVariableHome:: GetOffset
+Ottiene l'offset dal registro di base per una variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametri  
  `pOffset`  
- [out] L'offset dalla base registratore di cassa.  
+ out Offset dal registro di base.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce i valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|`S_OK`|La variabile è in una posizione di memoria relativo al registro.|  
-|`E_FAIL`|La variabile non è presente in una posizione di memoria relativo al registro.|  
+|`S_OK`|La variabile si trova in una posizione di memoria relativa al registro.|  
+|`E_FAIL`|La variabile non si trova in una posizione di memoria relativa al registro.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

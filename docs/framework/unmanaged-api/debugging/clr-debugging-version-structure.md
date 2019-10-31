@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132423"
 ---
 # <a name="clr_debugging_version-structure"></a>Struttura CLR_DEBUGGING_VERSION
 Definisce la versione del prodotto di Common Language Runtime (CLR) per fini di debug.  
@@ -39,7 +37,7 @@ typedef struct _CLR_DEBUGGING_VERSION
 } CLR_DEBUGGING_VERSION;
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -50,14 +48,14 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wRevision`|Numero di revisione.|  
   
 ## <a name="remarks"></a>Note  
- La `CLR_DEBUGGING_VERSION` struttura corrisponde alla struttura COR_VERSION, tuttavia, la `CLR_DEBUGGING_VERSION` struttura fornisce un campo della versione della struttura aggiuntiva (`wStructVersion`). Attualmente, questo campo deve essere impostato su zero.  
+ La struttura di `CLR_DEBUGGING_VERSION` corrisponde alla struttura COR_VERSION, tuttavia, la struttura `CLR_DEBUGGING_VERSION` fornisce un campo della versione della struttura aggiuntiva (`wStructVersion`). Attualmente, questo campo deve essere impostato su zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl  
+ **Intestazione:** CorDebug. idl  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

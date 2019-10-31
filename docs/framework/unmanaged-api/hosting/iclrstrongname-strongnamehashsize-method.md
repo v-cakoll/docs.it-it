@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 058ff84ad9d56ce1ce2defd50c20ce50e1d791a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8db3b1854e334cef4d91d21eb5f666ba2e88fc2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135055"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>Metodo ICLRStrongName::StrongNameHashSize
 Ottiene le dimensioni del buffer necessarie per un hash usando l'algoritmo hash specificato.  
@@ -38,20 +36,20 @@ HRESULT StrongNameHashSize (
   
 ## <a name="parameters"></a>Parametri  
  `ulHashAlg`  
- [in] L'algoritmo hash usato per calcolare le dimensioni del buffer.  
+ in Algoritmo hash utilizzato per calcolare le dimensioni del buffer.  
   
  `pcbSize`  
- [out] Dimensioni del buffer restituito, in byte.  
+ out Dimensioni del buffer restituito, in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` se il metodo è stato completato correttamente; in caso contrario, valore HRESULT che indica l'esito negativo (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

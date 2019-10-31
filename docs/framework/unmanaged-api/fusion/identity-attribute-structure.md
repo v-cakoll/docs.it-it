@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796494"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107978"
 ---
 # <a name="identity_attribute-structure"></a>Struttura IDENTITY_ATTRIBUTE
 Contiene informazioni sugli attributi di metadati relativi a un'istanza di [IDefinitionIdentity](idefinitionidentity-interface.md) .  
@@ -38,19 +36,19 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>Members  
   
-|Member|DESCRIZIONE|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`pszNamespace`|Puntatore a una stringa di caratteri con terminazione null che contiene lo spazio dei nomi in cui si trova l'attributo.|  
 |`pszName`|Puntatore a una stringa di caratteri con terminazione null che contiene il nome dell'attributo.|  
 |`pszValue`|Puntatore a una stringa di caratteri con terminazione null che contiene il valore dell'attributo.|  
   
 ## <a name="remarks"></a>Note  
- La `IDENTITY_ATTRIBUTE` struttura contiene tre puntatori a stringhe di caratteri con terminazione null. Queste tre stringhe descrivono un attributo.  
+ La struttura `IDENTITY_ATTRIBUTE` contiene tre puntatori a stringhe di caratteri con terminazione null. Queste tre stringhe descrivono un attributo.  
   
- Un'istanza di una `IDENTITY_ATTRIBUTE` struttura è associata a un'istanza di una struttura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . La `IDENTITY_ATTRIBUTE` struttura contiene le stringhe effettive e la struttura `IDENTITY_ATTRIBUTE_BLOB` corrispondente elenca gli offset alle `IDENTITY_ATTRIBUTE` tre stringhe elencate nella struttura.  
+ Un'istanza di una struttura `IDENTITY_ATTRIBUTE` è associata a un'istanza di una struttura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . La struttura di `IDENTITY_ATTRIBUTE` contiene le stringhe effettive e la struttura `IDENTITY_ATTRIBUTE_BLOB` corrispondente elenca gli offset alle tre stringhe elencate nella struttura `IDENTITY_ATTRIBUTE`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

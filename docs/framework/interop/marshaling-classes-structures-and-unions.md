@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151754"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114032"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, proprietà ed eventi nonché metodi statici e non statici. Una differenza fondamentale è data dal fatto che le strutture sono tipi di valore e le classi sono tipi di riferimento.  
   
  Nella tabella seguente sono elencate le opzioni di marshalling per le classi, le strutture e le unioni con la descrizione dell'utilizzo e un collegamento all'esempio corrispondente di platform invoke.  
   
-|Tipo|Descrizione|Esempio|  
+|Digitare|Descrizione|Esempio|  
 |----------|-----------------|------------|  
 |Classe per valore.|Passa una classe con membri Integer come parametro in/out, come il case gestito.|SysTime (esempio)|  
 |Struttura per valore.|Passa le strutture come parametri in.|Structures (esempio)|  
@@ -68,7 +66,7 @@ In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, 
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
+ [PinvokeLib](marshaling-data-with-platform-invoke.md#pinvokelibdll) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture, ovvero: **MYPERSON**, **MYPERSON2**, **MYPERSON3** e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
   
 ```cpp  
 typedef struct _MYPERSON  

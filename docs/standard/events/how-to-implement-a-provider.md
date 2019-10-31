@@ -10,17 +10,15 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141546"
 ---
 # <a name="how-to-implement-a-provider"></a>Procedura: Implementare un provider
-Lo schema progettuale degli observer richiede una divisione tra un provider, che monitora i dati e invia le notifiche, e uno o più observer, che ricevono le notifiche (callback) dal provider. Questo argomento mostra come creare un provider. Un argomento correlato, [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md), descrive come creare un observer.  
+Lo schema progettuale degli observer richiede una divisione tra un provider, che monitora i dati e invia le notifiche, e uno o più observer, che ricevono le notifiche (callback) dal provider. Questo argomento mostra come creare un provider. Un argomento correlato, [Procedura: Implementare un observer](../../../docs/standard/events/how-to-implement-an-observer.md), descrive come creare un observer.  
   
 ### <a name="to-create-a-provider"></a>Per creare un provider  
   

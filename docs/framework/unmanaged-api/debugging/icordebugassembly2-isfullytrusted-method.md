@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bef51fe9df0f85659603c637f11ed4e856c8e01a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133958"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>Metodo ICorDebugAssembly2::IsFullyTrusted
-Ottiene un valore che indica se l'assembly è stata concessa l'attendibilità totale da sistema di sicurezza di runtime.  
+Ottiene un valore che indica se all'assembly è stata concessa l'attendibilità totale dal sistema di sicurezza del runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT IsFullyTrusted(
   
 ## <a name="parameters"></a>Parametri  
  `pbFullyTrusted`  
- [out] `true` se l'assembly è stata concessa l'attendibilità totale da sistema di sicurezza di runtime; in caso contrario, `false`.  
+ [out] `true` se all'assembly è stata concessa l'attendibilità totale dal sistema di sicurezza di runtime; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo restituisce un valore HRESULT di CORDBG_E_NOTREADY se i criteri di sicurezza per l'assembly non sono ancora stato risolto, vale a dire, se nessun codice nell'assembly è stato ancora eseguito.  
+ Questo metodo restituisce un valore HRESULT di CORDBG_E_NOTREADY se i criteri di sicurezza per l'assembly non sono stati ancora risolti, ovvero se non è stato ancora eseguito alcun codice nell'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

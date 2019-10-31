@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22d0f8abd1481bfd75a0d08f49b28cebf78bb4cb
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 58927803b741acf6c1964b35f6603e6901f9cbf1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139278"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati
 In questo documento viene descritto come utilizzare la libreria del flusso di dati TPL per scrivere messaggi in un blocco di flussi di dati e per leggerli da quest'ultimo. La libreria del flusso di dati TPL fornisce sia metodi sincroni sia asincroni per la lettura e scrittura di messaggi da e in un blocco di flussi di dati. In questo documento viene utilizzata la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Mediante la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> i messaggi vengono inseriti nel buffer; inoltre, essa viene utilizzata sia come origine sia come destinazione dei messaggi.  
@@ -52,7 +50,7 @@ In questo documento viene descritto come utilizzare la libreria del flusso di da
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo esempio viene mostrato come leggere da un blocco di messaggi e come scrivere in quest'ultimo direttamente. È anche possibile connettere i blocchi di flussi di dati per creare *pipeline*, che sono sequenze lineari di blocchi di flussi di dati, o *reti*, che sono grafici di blocchi di flussi di dati. I dati di origini in una pipeline o in una rete vengono propagati nelle destinazioni in modo asincrono quando i dati in questione diventano disponibili. Per un esempio in cui viene creata una pipeline di base del flusso di dati, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio in cui viene creata una rete più complessa del flusso di dati, vedere [Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ In questo esempio viene mostrato come leggere da un blocco di messaggi e come scrivere in quest'ultimo direttamente. È anche possibile connettere i blocchi di flussi di dati per creare *pipeline*, che sono sequenze lineari di blocchi di flussi di dati, o *reti*, che sono grafici di blocchi di flussi di dati. I dati di origini in una pipeline o in una rete vengono propagati nelle destinazioni in modo asincrono quando i dati in questione diventano disponibili. Per un esempio che crea una pipeline di base del flusso di dati, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio che crea una rete del flusso di dati più complessa, vedere [Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

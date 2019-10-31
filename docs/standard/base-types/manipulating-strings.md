@@ -6,19 +6,17 @@ helpviewer_keywords:
 - strings [.NET Framework], manipulating
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca4e24cb882daf7efd14da83011d50d05a85232b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135224"
 ---
 # <a name="manipulating-strings-in-net"></a>Modifica di stringhe in .NET
 .NET offre un insieme completo di routine che consentono di creare, confrontare e modificare stringhe in modo efficiente, nonché di analizzare rapidamente elevate quantità di testo e dati per cercare, rimuovere e sostituire pattern di testo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md)  
  Esamina i metodi di ordinamento, confronto e combinazione di maiuscole e minuscole delle stringhe in .NET e offre suggerimenti per la selezione di un metodo di gestione delle stringhe.  
   
@@ -35,5 +33,5 @@ ms.locfileid: "33567588"
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  Illustra come usare la libreria di classi di base per implementare la formattazione, come formattare i tipi numerici, come formattare i tipi di stringhe e come eseguire la formattazione per impostazioni cultura specifiche.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)  
  Viene descritta l'inizializzazione di oggetti sui valori descritti dalle rappresentazioni in forma di stringa di tali oggetti. L'analisi è l'operazione contraria alla formattazione.

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137331"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Metodo ICorDebugNativeFrame::GetIP
-Ottiene il codice nativo offset posizione a cui è attualmente impostato il puntatore all'istruzione.  
+Ottiene la posizione di offset del codice nativo a cui è attualmente impostato il puntatore all'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parametri  
  `pnOffset`  
- [out] Puntatore alla posizione di offset nel codice nativo.  
+ out Puntatore alla posizione di offset nel codice nativo.  
   
 ## <a name="remarks"></a>Note  
- Se lo stack frame che è rappresentato da questo "ICorDebugNativeFrame" è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire. Se lo stack frame corrente non è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire quando viene riattivato lo stack frame.  
+ Se la stack frame rappresentata da questo "ICorDebugNativeFrame" è attiva, l'offset corrisponde all'indirizzo dell'istruzione successiva da eseguire. Se questo stack frame non è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire quando il stack frame viene riattivato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

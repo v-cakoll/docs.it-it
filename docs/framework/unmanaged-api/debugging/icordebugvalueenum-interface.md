@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0aa7e5cfce67c2854f943f65909acb39cfc0d214
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cc9849ee8cd160a33ae9c769f7b98a87eafb8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134607"
 ---
 # <a name="icordebugvalueenum-interface"></a>Interfaccia ICorDebugValueEnum
 Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugValue".  
@@ -30,7 +28,7 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugValue".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Ottiene il numero specificato di `ICorDebugValue` istanze dall'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Ottiene il numero specificato di istanze di `ICorDebugValue` dall'enumerazione, a partire dalla posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -38,11 +36,11 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugValue".
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

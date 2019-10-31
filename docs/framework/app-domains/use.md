@@ -6,14 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11774620dba03cc980ec3e2e2d3bd1a855dc6295
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119729"
 ---
 # <a name="using-application-domains"></a>Uso dei domini dell'applicazione
 
@@ -21,7 +19,7 @@ I domini dell'applicazione offrono un'unità di isolamento per Common Language R
   
 Per la maggior parte delle applicazioni, non è necessario creare il proprio dominio dell'applicazione. L'host di runtime crea tutti i domini dell'applicazione necessari. È tuttavia possibile creare e configurare domini dell'applicazione aggiuntivi se l'applicazione necessita di isolare il codice o di usare e scaricare DLL.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
 [Procedura: Creare un dominio dell'applicazione](how-to-create-an-application-domain.md)  
 Viene descritto come creare a livello di codice un dominio dell'applicazione.  
@@ -50,7 +48,7 @@ Viene spiegato come è possibile ricevere una notifica della generazione di un'e
 [Risoluzione caricamenti assembly](../../standard/assembly/resolve-loads.md)  
 Vengono offerte indicazioni sull'uso dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per risolvere gli errori di caricamento di assembly.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
 
 <xref:System.AppDomain>  
 Rappresenta un dominio dell'applicazione. Offre metodi per creare e controllare i domini dell'applicazione.  

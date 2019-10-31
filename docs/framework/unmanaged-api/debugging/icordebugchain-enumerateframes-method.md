@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b024d3396dfe1796fcb18afa122d4aee39c4ccc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132715"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>Metodo ICorDebugChain::EnumerateFrames
-Ottiene un enumeratore contenente tutti gli stack frame gestiti nella catena, inizia con il frame più recente.  
+Ottiene un enumeratore che contiene tutti gli stack frame gestiti nella catena, a partire dal frame più recente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateFrames (
   
 ## <a name="parameters"></a>Parametri  
  `ppFrames`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugFrameEnum che è l'enumeratore per gli stack frame.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugFrameEnum che rappresenta l'enumeratore per gli stack frame.  
   
 ## <a name="remarks"></a>Note  
- La catena di rappresenta lo stack di chiamate fisico per il thread.  
+ La catena rappresenta lo stack di chiamate fisico per il thread.  
   
- Il `EnumerateFrames` metodo deve essere chiamato solo per le catene gestite. L'API di debug non fornisce metodi per ottenere i frame contenuti nelle catene non gestite. Il debugger deve utilizzare altri mezzi per ottenere queste informazioni.  
+ Il metodo di `EnumerateFrames` deve essere chiamato solo per le catene gestite. L'API di debug non fornisce metodi per ottenere i frame contenuti nelle catene non gestite. Per ottenere queste informazioni, il debugger deve utilizzare altri mezzi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

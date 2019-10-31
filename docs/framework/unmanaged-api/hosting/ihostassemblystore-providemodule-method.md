@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9290fd70b17b5a6456d85cb4b037ebbc62e028f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eed09a8149a21140ad61133f29391f86cb0fb929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124477"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Metodo IHostAssemblyStore::ProvideModule
-Risolve un file di risorse modulo all'interno di un assembly o un collegato (ma non incorporato).  
+Risolve un modulo all'interno di un assembly o di un file di risorse collegato, ma non incorporato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,39 +38,39 @@ HRESULT ProvideModule (
   
 ## <a name="parameters"></a>Parametri  
  `pBindInfo`  
- [in] Un puntatore a un [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) istanza che descrive il modulo richiesto <xref:System.AppDomain>, assembly e il nome del modulo.  
+ in Puntatore a un'istanza di [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) che descrive il <xref:System.AppDomain>del modulo, l'assembly e il nome del modulo richiesti.  
   
  `pdwModuleId`  
- [out] Un puntatore a un identificatore univoco per il `IStream` contenente il modulo caricato.  
+ out Puntatore a un identificatore univoco per la `IStream` che contiene il modulo caricato.  
   
  `ppStmModuleImage`  
- [out] Un puntatore all'indirizzo di un `IStream` dell'oggetto, che contiene l'immagine del file eseguibile portabile (PE) di essere caricati oppure null se non è stato possibile trovare il modulo.  
+ out Puntatore all'indirizzo di un oggetto `IStream`, che contiene l'immagine PE (Portable Executable) da caricare, oppure null se il modulo non è stato trovato.  
   
  `ppStmPDB`  
- [out] Un puntatore all'indirizzo di un `IStream` dell'oggetto, che contiene le informazioni di debug (PDB) del programma per il modulo richiesto o null se il file con estensione PDB non è stato trovato.  
+ out Puntatore all'indirizzo di un oggetto `IStream`, che contiene le informazioni di debug del programma (PDB) per il modulo richiesto, oppure null se il file con estensione PDB non è stato trovato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`ProvideModule` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|COR_E_FILENOTFOUND (0x80070002)|L'assembly richiesto o risorsa collegata non è possibile individuare.|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` non è sufficientemente grande da contenere l'identificatore che l'host deve essere restituito.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|COR_E_FILENOTFOUND (0x80070002)|Impossibile trovare l'assembly o la risorsa collegata richiesta.|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` non è sufficientemente grande da contenere l'identificatore che l'host vuole restituire.|  
   
 ## <a name="remarks"></a>Note  
- Il valore identity restituiti per `pdwModuleId` è specificato dall'host. Gli identificatori devono essere univoci all'interno della durata di un processo. Common Language Runtime Usa questo valore come l'identificatore univoco per il flusso associato. Ogni valore viene confrontato con i valori per `pAssemblyId` restituiti dalle chiamate a [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) e con i valori di `pdwModuleId` restituito da altre chiamate a `ProvideModule`. Se l'host restituisce lo stesso valore di identificatore per un altro `IStream`, Common Language Runtime controlla se il contenuto del flusso è già stato mappato. In questo caso, CLR caricata la copia esistente di immagine anziché eseguire il mapping di una nuova. Pertanto, l'identificatore non deve sovrapporsi con gli identificatori di assembly restituiti da `ProvideAssembly`.  
+ Il valore Identity restituito per `pdwModuleId` viene specificato dall'host. Gli identificatori devono essere univoci entro la durata di un processo. CLR utilizza questo valore come identificatore univoco per il flusso associato. Verifica ogni valore in base ai valori per `pAssemblyId` restituiti dalle chiamate a [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) e ai valori per `pdwModuleId` restituiti da altre chiamate a `ProvideModule`. Se l'host restituisce lo stesso valore di identificatore per un altro `IStream`, CLR verifica se il contenuto del flusso è già stato mappato. In tal caso, CLR carica la copia esistente dell'immagine anziché mapparne una nuova. Pertanto, anche l'identificatore non deve sovrapporsi agli identificatori di assembly restituiti da `ProvideAssembly`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

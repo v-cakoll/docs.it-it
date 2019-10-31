@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ae09b4f1cd069edf81be583c7c4226717736094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134588"
 ---
 # <a name="icordebugvalueenumnext-method"></a>Metodo ICorDebugValueEnum::Next
-Ottiene il numero di istanze di "ICorDebugValue" specificato dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
+Ottiene il numero specificato di istanze "ICorDebugValue" dall'enumerazione, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di `ICorDebugValue` istanze da recuperare.  
+ in Numero di istanze di `ICorDebugValue` da recuperare.  
   
  `values`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugValue` oggetto.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugValue`.  
   
  `pceltFetched`  
- [out] Puntatore al numero di `ICorDebugValue` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di istanze di `ICorDebugValue` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

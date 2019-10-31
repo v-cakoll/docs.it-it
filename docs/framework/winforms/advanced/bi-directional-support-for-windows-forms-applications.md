@@ -7,14 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bb97d545da422a129ece1f432b3120e1a994c453
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141190"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Supporto bidirezionale per le applicazioni Windows Forms
 È possibile usare Visual Studio per creare applicazioni basate su Windows che supportano lingue bidirezionali (da destra a sinistra) come l'arabo e l'ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.
@@ -23,7 +21,7 @@ ms.locfileid: "71956922"
  Le impostazioni cultura e le impostazioni cultura dell'interfaccia utente determinano il funzionamento di un'applicazione rispetto a date, orari, valuta e altre informazioni. Il supporto per le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per le lingue bidirezionali è uguale a quello per le altre lingue. Per altre informazioni, vedere [classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Proprietà RightToLeft e RightToLeftLayout
- La classe base <xref:System.Windows.Forms.Control> da cui derivano i form include una proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> che è possibile impostare per modificare l'ordine di lettura di un form e dei relativi controlli. Se si imposta la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A>, i controlli sul form erediteranno questa impostazione per impostazione predefinita. Tuttavia, è anche possibile impostare singolarmente la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> nella maggior parte dei controlli. Vedere anche [How per: Visualizzare il testo da destra a sinistra in Windows Forms per la globalizzazione @ no__t-0.
+ La classe base <xref:System.Windows.Forms.Control> da cui derivano i form include una proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> che è possibile impostare per modificare l'ordine di lettura di un form e dei relativi controlli. Se si imposta la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A>, i controlli sul form erediteranno questa impostazione per impostazione predefinita. Tuttavia, è anche possibile impostare singolarmente la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> nella maggior parte dei controlli. Vedere anche [Procedura: visualizzare il testo da destra a sinistra in Windows Form per la globalizzazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).
 
  L'effetto della proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> può essere diverso da un controllo a un altro. In alcuni controlli, questa proprietà imposta soltanto l'ordine di lettura, come nei controlli <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ToolTip>. In altri controlli, la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> modifica sia ordine di lettura che il layout, ad esempio, nei controlli <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.CheckBox>. Altri controlli richiedono che la proprietà <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> venga applicata per eseguire il mirroring del layout da destra a sinistra. La tabella seguente fornisce informazioni dettagliate sugli effetti delle proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> sui singoli controlli di Windows Form.
 
@@ -39,7 +37,7 @@ ms.locfileid: "71956922"
 |<xref:System.Windows.Forms.DataGridView>|Influisce sul layout di controllo e sull'ordine di lettura da destra a sinistra|Nessun effetto|No|
 |<xref:System.Windows.Forms.DateTimePicker>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Yes|
 |<xref:System.Windows.Forms.DomainUpDown>|Allinea a sinistra i pulsanti SU e GIÙ|Nessun effetto|No|
-|<xref:System.Windows.Forms.ErrorProvider>|Non supportate|Nessun effetto|No|
+|<xref:System.Windows.Forms.ErrorProvider>|Non supportato|Nessun effetto|No|
 |<xref:System.Windows.Forms.FontDialog>|Dipende dalla lingua del sistema operativo|Nessun effetto|No|
 |<xref:System.Windows.Forms.Form>|Imposta l'ordine di lettura da destra a sinistra e inverte le barre di scorrimento|Esegue il mirroring del form|Yes|
 |<xref:System.Windows.Forms.GroupBox>|La barra del titolo viene visualizzata allineata a destra. I controlli figlio possono ereditare questa proprietà.|Usare <xref:System.Windows.Forms.TableLayoutPanel> all'interno del controllo per il supporto al mirroring da destra a sinistra|No|
@@ -52,21 +50,21 @@ ms.locfileid: "71956922"
 |<xref:System.Windows.Forms.MainMenu>|Visualizzato allineato a destra con ordine di lettura da destra a sinistra in fase di esecuzione (non in fase di progettazione)|Nessun effetto|No|
 |<xref:System.Windows.Forms.MaskedTextBox>|Visualizza il testo da destra a sinistra.|Nessun effetto|No|
 |<xref:System.Windows.Forms.MonthCalendar>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Yes|
-|<xref:System.Windows.Forms.NotifyIcon>|Non supportate|Non supportate|No|
+|<xref:System.Windows.Forms.NotifyIcon>|Non supportato|Non supportato|No|
 |<xref:System.Windows.Forms.NumericUpDown>|I pulsanti SU e GIÙ sono allineati a sinistra|Nessun effetto|No|
-|<xref:System.Windows.Forms.OpenFileDialog>|Nei sistemi operativi da destra a sinistra, l'impostazione della proprietà <xref:System.Windows.Forms.Control.RightToLeft> del modulo contenitore su <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> consente di localizzare la finestra di dialogo |Nessun effetto|No|
+|<xref:System.Windows.Forms.OpenFileDialog>|Nei sistemi operativi da destra a sinistra, l'impostazione della proprietà <xref:System.Windows.Forms.Control.RightToLeft> del form che lo contiene su <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localizza la finestra di dialogo |Nessun effetto|No|
 |<xref:System.Windows.Forms.PageSetupDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|
 |<xref:System.Windows.Forms.Panel>|I controlli figlio possono ereditare questa proprietà|Usare <xref:System.Windows.Forms.TableLayoutPanel> all'interno del controllo per il supporto da destra a sinistra|Yes|
-|<xref:System.Windows.Forms.PictureBox>|Non supportate|Nessun effetto|No|
+|<xref:System.Windows.Forms.PictureBox>|Non supportato|Nessun effetto|No|
 |<xref:System.Windows.Forms.PrintDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|
 |<xref:System.Drawing.Printing.PrintDocument>|La barra di scorrimento verticale diventa allineata a sinistra e la barra di scorrimento orizzontale inizia da sinistra|Nessun effetto|No|
-|<xref:System.Windows.Forms.PrintPreviewDialog>|Non supportate|Non supportate|No|
+|<xref:System.Windows.Forms.PrintPreviewDialog>|Non supportato|Non supportato|No|
 |<xref:System.Windows.Forms.ProgressBar>|Non interessato da questa proprietà|Esegue il mirroring del controllo|Yes|
 |<xref:System.Windows.Forms.RadioButton>|Il pulsante di opzione viene visualizzato a destra del testo|Nessun effetto|No|
 |<xref:System.Windows.Forms.RichTextBox>|Gli elementi del controllo che includono testo vengono visualizzati da destra a sinistra con ordine di lettura da destra a sinistra|Nessun effetto|No|
 |<xref:System.Windows.Forms.SaveFileDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|
 |<xref:System.Windows.Forms.SplitContainer>|Il layout del pannello viene invertito; la barra di scorrimento verticale viene visualizzata a sinistra; la barra di scorrimento orizzontale inizia da destra|Usare <xref:System.Windows.Forms.TableLayoutPanel> per eseguire il mirroring dell'ordine dei controlli figlio|No|
-|<xref:System.Windows.Forms.Splitter>|Non supportate|Nessun effetto|No|
+|<xref:System.Windows.Forms.Splitter>|Non supportato|Nessun effetto|No|
 |<xref:System.Windows.Forms.StatusBar>|Non supportato. In alternativa, usare <xref:System.Windows.Forms.StatusStrip>|Nessun effetto. In alternativa, usare <xref:System.Windows.Forms.StatusStrip>|No|
 |<xref:System.Windows.Forms.TabControl>|Non interessato da questa proprietà|Esegue il mirroring del controllo|Yes|
 |<xref:System.Windows.Forms.TextBox>|Visualizza il testo da destra a sinistra con ordine di lettura da destra a sinistra|Nessun effetto|No|

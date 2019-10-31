@@ -7,21 +7,19 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f90abf9f6c2bc0aed2cf01558b2c0cca4e967e81
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0d6dd291a24928487a040c0427f058dee80bf836
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117379"
 ---
-# <a name="enforcefipspolicy-element"></a>\<Elemento > enforceFIPSPolicy
+# <a name="enforcefipspolicy-element"></a>\<elemento > enforceFIPSPolicy
 Specifica se applicare un requisito di configurazione del computer che specifica che gli algoritmi di crittografia devono essere conformi a FIPS (Federal Information Processing Standards).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +38,13 @@ Specifica se applicare un requisito di configurazione del computer che specifica
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|`true`|Se il computer è configurato per richiedere che gli algoritmi di crittografia siano conformi a FIPS, il requisito viene applicato. Se una classe implementa un algoritmo non conforme a FIPS, i costruttori o `Create` i metodi di tale classe generano eccezioni quando vengono eseguiti nel computer. Questa è l'impostazione predefinita.|  
+|`true`|Se il computer è configurato per richiedere che gli algoritmi di crittografia siano conformi a FIPS, il requisito viene applicato. Se una classe implementa un algoritmo non conforme a FIPS, i costruttori o i metodi `Create` per tale classe generano eccezioni quando vengono eseguiti nel computer. Questa è l'impostazione predefinita.|  
 |`false`|Gli algoritmi di crittografia utilizzati dall'applicazione non devono essere conformi a FIPS, indipendentemente dalla configurazione del computer.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -56,7 +54,7 @@ Specifica se applicare un requisito di configurazione del computer che specifica
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- A partire da .NET Framework 2,0, la creazione di classi che implementano algoritmi di crittografia è controllata dalla configurazione del computer. Se il computer è configurato per richiedere che gli algoritmi siano conformi a FIPS e una classe implementa un algoritmo non conforme a FIPS, qualsiasi tentativo di creare un'istanza di tale classe genererà un'eccezione. I costruttori generano <xref:System.InvalidOperationException> un'eccezione e `Create` i metodi generano <xref:System.Reflection.TargetInvocationException> un'eccezione con <xref:System.InvalidOperationException> un'eccezione interna.  
+ A partire da .NET Framework 2,0, la creazione di classi che implementano algoritmi di crittografia è controllata dalla configurazione del computer. Se il computer è configurato per richiedere che gli algoritmi siano conformi a FIPS e una classe implementa un algoritmo non conforme a FIPS, qualsiasi tentativo di creare un'istanza di tale classe genererà un'eccezione. I costruttori generano un'eccezione <xref:System.InvalidOperationException> e `Create` metodi generano un'eccezione <xref:System.Reflection.TargetInvocationException> con un'eccezione <xref:System.InvalidOperationException> interna.  
   
  Se l'applicazione viene eseguita su computer le cui configurazioni richiedono la conformità con FIPS e l'applicazione utilizza un algoritmo non conforme a FIPS, è possibile utilizzare questo elemento nel file di configurazione per impedire che il Common Language Runtime (CLR) da applicazione della conformità FIPS. Questo elemento è stato introdotto in .NET Framework 2,0 Service Pack 1.  
   

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64653931"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139944"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Task Parallel Library e programmazione asincrona .NET Framework tradizionale
 .NET Framework offre i due modelli standard seguenti per eseguire operazioni asincrone di solo I/O e di solo calcolo:  
@@ -104,7 +102,7 @@ ms.locfileid: "64653931"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Per un esempio più completo che include la gestione aggiuntiva delle eccezioni e illustra come chiamare il metodo dal codice client, vedere [Procedura: Eseguire il wrapping di modelli EAP in un'attività](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Per un esempio più completo, che include gestione aggiuntiva delle eccezioni e mostra come chiamare il metodo dal codice client, vedere [Procedura: Eseguire il wrapping di modelli EAP in un'attività](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Tenere presente che qualsiasi attività creata da <xref:System.Threading.Tasks.TaskCompletionSource%601> verrà avviata da TaskCompletionSource e, di conseguenza, il codice utente non deve chiamare il metodo Start sull'attività.  
   

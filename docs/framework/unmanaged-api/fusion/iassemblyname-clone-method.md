@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b345e08-5e16-4e3d-a044-4e19d0892943
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1236a574a85c01e3e1be5df9644bd04bbf0753ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796649"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134413"
 ---
 # <a name="iassemblynameclone-method"></a>Metodo IAssemblyName::Clone
 Crea una copia superficiale di questo oggetto [IAssemblyName](iassemblyname-interface.md) .  
@@ -37,10 +35,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parametri  
  `pName`  
- out Copia restituita dell' `IAssemblyName` oggetto.  
+ out Copia restituita di questo oggetto `IAssemblyName`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a3f01edcd6ce1d16ab2c651a66d2fd9cd2eb0ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e0b0c4ed9bac4abd1dc185031e41c1e3ed014a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737828"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134665"
 ---
 # <a name="icordebugappdomainisattached-method"></a>Metodo ICorDebugAppDomain::IsAttached
-Ottiene un valore che indica se il debugger è collegato al dominio dell'applicazione.  
+Ottiene un valore che indica se il debugger è collegato al dominio applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT IsAttached (
   
 ## <a name="parameters"></a>Parametri  
  `pbAttached`  
- [out] `true` se il debugger è collegato al dominio dell'applicazione; in caso contrario, `false`.  
+ [out] `true` se il debugger è collegato al dominio applicazione; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Impossibile utilizzare i metodi dell'interfaccia ICorDebugController fino a quando il debugger viene connesso al dominio dell'applicazione.  
+ I metodi ICorDebugController non possono essere usati finché il debugger non si connette al dominio applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

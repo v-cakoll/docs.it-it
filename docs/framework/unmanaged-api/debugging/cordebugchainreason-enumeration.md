@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132272"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Enumerazione CorDebugChainReason
 Indica i motivi che determinano l'avvio di una catena di chiamate.  
@@ -46,7 +44,7 @@ typedef enum CorDebugChainReason {
 } CorDebugChainReason;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -68,11 +66,11 @@ typedef enum CorDebugChainReason {
  Usare il metodo [ICorDebugChain:: GetReason](icordebugchain-getreason-method.md) per verificare i motivi dell'avvio di una catena di chiamate.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

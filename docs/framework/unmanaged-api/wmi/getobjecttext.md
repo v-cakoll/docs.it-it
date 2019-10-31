@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102459"
 ---
 # <a name="getobjecttext-function"></a>Funzione GetObjectText
 Restituisce un rendering testuale dell'oggetto nella sintassi Managed Object Format (MOF).
@@ -48,10 +46,10 @@ in Questo parametro è inutilizzato.
 in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
-in Normalmente 0. Se `WBEM_FLAG_NO_FLAVORS` viene specificato (o 0x1), i qualificatori vengono inclusi senza informazioni sulla propagazione o sul sapore.
+in Normalmente 0. Se viene specificato `WBEM_FLAG_NO_FLAVORS` (o 0x1), i qualificatori vengono inclusi senza informazioni sulla propagazione o sul sapore.
 
 `pstrObjectText`   
-out Puntatore a un oggetto `null` nella voce. Al ritorno, un oggetto appena `BSTR` allocato contenente un rendering della sintassi MOF dell'oggetto.  
+out Puntatore a un `null` alla voce. Al ritorno, un `BSTR` appena allocato contenente un rendering della sintassi MOF dell'oggetto.  
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -75,10 +73,10 @@ Per ricostruire il testo dei parametri di un metodo viene utilizzato l'algoritmo
 1. I parametri vengono risequenziati nell'ordine dei valori dell'identificatore.
 1. I parametri specificati come `[in]` e `[out]` vengono combinati in un singolo parametro.
  
-`pstrObjectText`deve essere un puntatore a un `null` oggetto quando viene chiamata la funzione. non deve puntare a una stringa valida prima della chiamata al metodo, perché il puntatore non verrà deallocato.
+`pstrObjectText` deve essere un puntatore a una `null` quando viene chiamata la funzione; non deve puntare a una stringa valida prima della chiamata al metodo, perché il puntatore non verrà deallocato.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132234"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Enumerazione CorDebugExceptionCallbackType
-Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.  
+Indica il tipo di callback eseguito da un evento [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|È stata generata un'eccezione.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Il processo di chiusura eccezione immesso il codice utente.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Il processo di chiusura di eccezione trovato un `catch` blocco nel codice utente.|  
-|`DEBUG_EXCEPTION_UNHANDLED`|L'eccezione non gestita.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|L'eccezione Windup il codice utente immesso.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Il processo Windup dell'eccezione ha rilevato un blocco `catch` nel codice utente.|  
+|`DEBUG_EXCEPTION_UNHANDLED`|L'eccezione non è stata gestita.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1272df17a9a9a500b84f62914811b8d109bf3cdd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140078"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>Metodo ICorDebugThread2::GetTaskID
 Ottiene l'identificatore dell'attività in esecuzione su questo thread.  
@@ -37,13 +35,13 @@ HRESULT GetTaskID (
   
 ## <a name="parameters"></a>Parametri  
  `pTaskId`  
- [out] Un puntatore all'identificatore dell'attività in esecuzione sul thread rappresentato da questo oggetto ICorDebugThread2.  
+ out Puntatore all'identificatore dell'attività in esecuzione sul thread rappresentato da questo oggetto ICorDebugThread2.  
   
 ## <a name="remarks"></a>Note  
- Un'attività può essere eseguito sul thread solo se il thread è associato a una connessione. `GetTaskID` restituisce zero in `pTaskId` se il thread non è associato a una connessione.  
+ Un'attività può essere eseguita solo nel thread se il thread è associato a una connessione. `GetTaskID` restituisce zero in `pTaskId` se il thread non è associato a una connessione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

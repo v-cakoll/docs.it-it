@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761082"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137448"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Metodo ICorDebugManagedCallback2::Exception
-Notifica al debugger che una ricerca di un gestore di eccezioni è stato avviato.  
+Notifica al debugger che è stata avviata una ricerca di un gestore di eccezioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,39 +40,39 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.  
   
  `pThread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.  
   
  `pFrame`  
- [in] Un puntatore a un oggetto ICorDebugFrame che rappresenta un frame, come determinato dal `dwEventType` parametro. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
+ in Puntatore a un oggetto ICorDebugFrame che rappresenta un frame, come determinato dal parametro `dwEventType`. Per ulteriori informazioni, vedere la tabella nella sezione Osservazioni.  
   
  `nOffset`  
- [in] Intero che specifica un offset, come determinato dal `dwEventType` parametro. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
+ in Intero che specifica un offset, come determinato dal parametro `dwEventType`. Per ulteriori informazioni, vedere la tabella nella sezione Osservazioni.  
   
  `dwEventType`  
- [in] Valore dell'enumerazione CorDebugExceptionCallbackType che specifica il tipo di questo callback di eccezione.  
+ in Valore dell'enumerazione CorDebugExceptionCallbackType che specifica il tipo di questo callback di eccezione.  
   
  `dwFlags`  
- [in] Valore di [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumerazione che specifica informazioni aggiuntive sull'eccezione  
+ in Valore dell'enumerazione [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) che specifica informazioni aggiuntive sull'eccezione  
   
 ## <a name="remarks"></a>Note  
- Il `Exception` callback viene chiamato in vari momenti durante la fase di ricerca del processo di gestione delle eccezioni. Vale a dire può essere chiamato più volte durante la rimozione di un'eccezione.  
+ Il callback `Exception` viene chiamato in diversi punti durante la fase di ricerca del processo di gestione delle eccezioni. Ovvero, può essere chiamato più volte durante la rimozione di un'eccezione.  
   
- L'eccezione in fase di elaborazione può essere recuperato dall'oggetto ICorDebugThread fa riferimento il `pThread` parametro.  
+ L'eccezione elaborata può essere recuperata dall'oggetto ICorDebugThread a cui fa riferimento il parametro `pThread`.  
   
- Il frame specifico e l'offset sono determinati dal `dwEventType` parametro come indicato di seguito:  
+ Il frame e l'offset specifici sono determinati dal parametro `dwEventType` come indicato di seguito:  
   
 |Valore di `dwEventType`|Valore di `pFrame`|Valore di `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Frame che ha generato l'eccezione.|Il puntatore dell'istruzione nel frame.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Il frame di codice utente più vicino al punto dell'eccezione generata.|Il puntatore dell'istruzione nel frame.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Frame che contiene il gestore catch.|Offset Microsoft intermediate language (MSIL) dell'inizio del gestore catch.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Non è definito.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Frame che ha generato l'eccezione.|Puntatore all'istruzione nel frame.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Frame del codice utente più vicino al punto dell'eccezione generata.|Puntatore all'istruzione nel frame.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Frame che contiene il gestore catch.|Offset MSIL (Microsoft Intermediate Language) dell'inizio del gestore catch.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Non definito.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

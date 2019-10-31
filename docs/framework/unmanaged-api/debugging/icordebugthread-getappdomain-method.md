@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a845eed993914e02de34ec5c60ed232ccabc561e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133521"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>Metodo ICorDebugThread::GetAppDomain
-Ottiene un puntatore a interfaccia per il dominio dell'applicazione in cui è attualmente in esecuzione ICorDebugThread.  
+Ottiene un puntatore a interfaccia per il dominio dell'applicazione in cui è attualmente in esecuzione il ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Parametri  
  `ppAppDomain`  
- [out] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui questo thread è in esecuzione.  
+ out Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui è attualmente in esecuzione il thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

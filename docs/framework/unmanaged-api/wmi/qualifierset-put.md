@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120239"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put (funzione)
 
@@ -53,7 +51,7 @@ in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn
 in Nome del qualificatore da scrivere.
 
 `pVal`\
-in Puntatore a un oggetto valido `VARIANT` che contiene il qualificatore da scrivere. Questo parametro non può `null`essere.
+in Puntatore a un `VARIANT` valido che contiene il qualificatore da scrivere. Questo parametro non può essere `null`.
 
 `lFlavor`\
 in Una delle costanti seguenti che definisce le versioni del qualificatore desiderate per questo qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
@@ -70,12 +68,12 @@ in Una delle costanti seguenti che definisce le versioni del qualificatore desid
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Si è verificato un tentativo non valido di specificare il qualificatore di **chiave** su una proprietà che non può essere una chiave. Le chiavi sono specificate nella definizione della classe per un oggetto e non possono essere modificate per ogni singola istanza. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Il `pVal` parametro non è di un tipo di qualificatore valido. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Non è possibile chiamare il `QualifierSet_Put` metodo sul qualificatore perché l'oggetto proprietario non consente le sostituzioni. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Il parametro `pVal` non è di un tipo di qualificatore valido. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Non è possibile chiamare il metodo `QualifierSet_Put` sul qualificatore perché l'oggetto proprietario non consente le sostituzioni. |
 | `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
@@ -84,7 +82,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141610"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Costrutti vari nelle espressioni regolari
 Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello dell'espressione regolare. I restanti due consentono di includere commenti in un'espressione regolare.  
@@ -40,7 +38,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
  Qualsiasi modifica nelle opzioni dell'espressione regolare definita dal costrutto `(?imnsx-imnsx)` rimane attiva fino alla fine del gruppo di inclusione.  
   
 > [!NOTE]
-> Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` offre la stessa funzionalità per una sottoespressione. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` offre la stessa funzionalità per una sottoespressione. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Nell'esempio seguente vengono usate le opzioni `i`, `n` e `x` per disabilitare la distinzione tra maiuscole e minuscole e abilitare le acquisizioni esplicite, nonché per ignorare lo spazio vuoto nel modello dell'espressione regolare all'interno di un'espressione regolare.  
   
@@ -49,7 +47,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  Nell'esempio vengono definite due espressioni regolari. La prima, `\b(D\w+)\s(d\w+)\b`, corrisponde a due parole consecutive che iniziano con una "D" maiuscola e una "d" minuscola. La seconda espressione regolare, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opzioni inline per modificare questo modello, come descritto nella tabella seguente. Confrontando i risultati viene confermato l'effetto del costrutto `(?ixn)`.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(D\w+)`|Trovare la corrispondenza di una "D" maiuscola seguita da uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -63,7 +61,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente. Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole. Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?# case-sensitive comparison)`|Un commento. Non influisce sul comportamento della corrispondenza tra modelli.|  
@@ -84,7 +82,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\{`|Trovare la corrispondenza con una parentesi graffa di apertura.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  

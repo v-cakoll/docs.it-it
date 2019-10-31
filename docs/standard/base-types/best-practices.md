@@ -10,15 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 89585ff97183912feb9b9af0bd326041b7381bfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105717"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 
@@ -43,7 +41,7 @@ Per corrispondere a un input non vincolato, un'espressione regolare deve potere 
 L'ultimo tipo di testo è particolarmente problematico per un'espressione regolare scritta per gestire l'input vincolato. Se tale espressione regolare si basa anche sul [backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) esteso, il motore delle espressioni regolari può richiedere una quantità eccessiva di tempo, in alcuni casi molte ore o giorni, per l'elaborazione di un testo apparentemente irrilevante.
 
 > [!WARNING]
-> Nell'esempio seguente viene utilizzata un'espressione regolare soggetta a un backtracking eccessivo e che con tutta probabilità rifiuta indirizzi di posta elettronica validi. Non utilizzarla in una routine di convalida di posta elettronica. Per un'espressione regolare che convalida gli indirizzi di posta elettronica, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+> Nell'esempio seguente viene utilizzata un'espressione regolare soggetta a un backtracking eccessivo e che con tutta probabilità rifiuta indirizzi di posta elettronica validi. Non utilizzarla in una routine di convalida di posta elettronica. Per un'espressione regolare che convalida gli indirizzi di posta elettronica, vedere [Procedura: Verificare che le stringhe siano in formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
 
 Si consideri, ad esempio, un'espressione regolare comunemente utilizzata ma estremamente problematica per la convalida dell'alias di un indirizzo di posta elettronica. L'espressione regolare `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` viene scritta per elaborare gli indirizzi di posta elettronica ritenuti validi, composti da un carattere alfanumerico seguito da zero o più caratteri che possono essere alfanumerici, punti o trattini. L'espressione regolare deve terminare con un carattere alfanumerico. Tuttavia, come illustrato nell'esempio seguente, sebbene questa espressione regolare gestisca facilmente l'input valido, le prestazioni risulteranno molto inefficienti quando viene elaborato un input quasi valido.
 
@@ -65,7 +63,7 @@ Per risolvere tale problema, è possibile effettuare le operazioni seguenti:
 Il modello a oggetti delle espressioni regolari di .NET è basato sulla classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, che rappresenta il motore delle espressioni regolari. Il fattore principale che spesso influisce sulle prestazioni delle espressioni regolari è il modo in cui viene utilizzato il motore <xref:System.Text.RegularExpressions.Regex>. Per definire un'espressione regolare è necessario associare il motore delle espressioni regolari a un modello di espressione regolare. Tale processo di associazione, indipendentemente dal fatto che comporti la creazione di un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> passando al relativo costruttore un modello di espressione regolare o la chiamata a un metodo statico passando il modello di espressione regolare con una stringa da analizzare, è necessariamente dispendioso.
 
 > [!NOTE]
-> Per una discussione più dettagliata sulle implicazioni, in termini di prestazioni, dell'uso di espressioni regolari interpretate e compilate, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.
+> Per informazioni più dettagliate sull'impatto che può avere l'uso delle espressioni regolari interpretate e compilate sulle prestazioni, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.
 
 È possibile associare il motore delle espressioni regolari a un modello di espressione regolare specifico e quindi usare il motore per trovare una corrispondenza con il testo in diversi modi:
 
@@ -105,7 +103,7 @@ Per impostazione predefinita, nella cache vengono memorizzati gli ultimi 15 mode
 
 L'espressione regolare `\p{Sc}+\s*\d+` usata in questo esempio verifica che la stringa di input sia costituita da un simbolo di valuta e da almeno una cifra decimale. Il modello viene definito come illustrato nella tabella seguente.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`\p{Sc}+`|Trova la corrispondenza di uno o più caratteri nella categoria Unicode Symbol, Currency.|
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|
@@ -126,7 +124,7 @@ Nell'esempio seguente vengono confrontate le prestazioni delle espressioni regol
 
 Il criterio di espressione regolare usato nell'esempio, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, è definito nel modo illustrato nella tabella seguente.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
@@ -135,7 +133,7 @@ Il criterio di espressione regolare usato nell'esempio, `\b(\w+((\r?\n)|,?\s))*\
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
 |`[.?:;!]`|Trova la corrispondenza di un punto, un punto interrogativo, due punti, un punto e virgola o un punto esclamativo.|
 
-### <a name="regular-expressions-compiled-to-an-assembly"></a>Espressioni regolari: Compilato in un assembly
+### <a name="regular-expressions-compiled-to-an-assembly"></a>Espressioni regolari: compilate in un assembly
 
 .NET consente anche di creare un assembly che contiene le espressioni regolari compilate. In questo modo il calo di prestazioni della compilazione delle espressioni regolari viene spostato dalla fase di esecuzione alla fase di progettazione. Vengono tuttavia richieste alcune operazioni aggiuntive: è necessario definire in anticipo le espressioni regolari e compilarle in un assembly. Il compilatore può quindi fare riferimento all'assembly durante la compilazione del codice sorgente che utilizza le espressioni regolari dell'assembly. Ogni espressione regolare compilata inclusa nell'assembly viene rappresentata da una classe derivata da <xref:System.Text.RegularExpressions.Regex>.
 
@@ -149,7 +147,7 @@ Per compilare le espressioni regolari in un assembly, è necessario chiamare il 
 
 Se si usano le espressioni regolari compilate per ottimizzare le prestazioni, è consigliabile non usare la reflection per creare l'assembly, caricare il motore delle espressioni regolari ed eseguire i metodi di corrispondenza dei modelli. A tale scopo occorre evitare di compilare i modelli di espressione regolare in modo dinamico e occorre specificare le opzioni di corrispondenza dei modelli, ad esempio la corrispondenza dei modelli senza distinzione tra maiuscole e minuscole, al momento della creazione dell'assembly. È inoltre necessario separare il codice mediante cui viene creato l'assembly dal codice che utilizza l'espressione regolare.
 
-Nell'esempio seguente viene illustrato come creare un assembly contenente un'espressione regolare compilata. Viene creato un assembly denominato `RegexLib.dll` con una singola classe di espressioni regolari, `SentencePattern`, che contiene il criterio di espressione regolare per la corrispondenza delle frasi usato nella sezione [Espressioni regolari interpretate ed espressioni regolari compilate](#interpreted-vs-compiled-regular-expressions).
+Nell'esempio seguente viene illustrato come creare un assembly contenente un'espressione regolare compilata. Viene creato un assembly denominato `RegexLib.dll` con una singola classe di espressioni regolari, `SentencePattern`, che contiene il modello di espressione regolare per la corrispondenza delle frasi usato nella sezione [espressioni regolari interpretate e compilate](#interpreted-vs-compiled-regular-expressions) .
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]
@@ -164,13 +162,13 @@ Quando l'esempio viene compilato in un eseguibile ed eseguito, viene creato un a
 In genere, il motore delle espressioni regolari usa la progressione lineare per spostarsi in una stringa di input e confrontarla con un modello di espressione regolare. Tuttavia, quando in un modello di espressione regolare vengono usati quantificatori indeterminati come `*`, `+` e `?`, il motore delle espressioni regolari può tralasciare una parte delle corrispondenze parziali corrette e tornare a uno stato salvato in precedenza per cercare una corrispondenza corretta per l'intero modello. Questo processo è noto come backtracking.
 
 > [!NOTE]
-> Per altre informazioni sul backtracking, vedere [Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Per una discussione dettagliata sul backtracking, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.
+> Per altre informazioni sul backtracking, vedere [Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Per informazioni più dettagliate sul backtracking, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) sul blog del team BCL.
 
 Il supporto del backtracking fornisce alle espressioni regolari potenza e flessibilità. Inoltre la responsabilità del controllo del funzionamento del motore delle espressioni regolari viene affidata agli sviluppatori delle espressioni regolari. Poiché spesso gli sviluppatori non sono consapevoli di questa responsabilità, un utilizzo improprio del backtracking o un utilizzo eccessivo del backtracking rappresenta spesso la causa principale della riduzione delle prestazioni delle espressioni regolari. Nello scenario peggiore, il tempo di esecuzione può raddoppiarsi per ogni carattere aggiuntivo nella stringa di input. Utilizzando infatti il backtracking in modo eccessivo, è facile creare l'equivalente a livello di codice di un ciclo infinito se l'input corrisponde quasi al modello di espressione regolare. Il motore delle espressioni regolari può richiedere ore o persino giorni per l'elaborazione di una stringa di input relativamente breve.
 
 L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni delle applicazioni sebbene il backtracking non sia essenziale per una corrispondenza. Ad esempio, l'espressione regolare `\b\p{Lu}\w*\b` cerca una corrispondenza di tutte le parole che iniziano con un carattere maiuscolo, come illustrato nella tabella seguente.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-|-|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\p{Lu}`|Trova la corrispondenza di un carattere maiuscolo.|
@@ -193,7 +191,7 @@ Ad esempio, il criterio di espressione regolare `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$`
 
 In questi casi, è possibile ottimizzare le prestazioni dell'espressione regolare rimuovendo i quantificatori annidati e sostituendo la sottoespressione esterna con un'asserzione lookahead o lookbehind di larghezza zero. Le asserzioni lookahead e lookbehind sono ancoraggi; non spostano il puntatore nella stringa di input, ma eseguono il lookahead e lookbehind per verificare se è stata soddisfatta una condizione specificata. Ad esempio, l'espressione regolare del numero parte può essere riscritta come `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Tale modello di espressione regolare viene definito come illustrato nella tabella seguente.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Il numero parte deve essere costituito da almeno uno di questi caratteri.|
@@ -207,7 +205,7 @@ Nell'esempio seguente viene illustrato l'utilizzo dell'espressione regolare per 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 |Elemento di linguaggio|Descrizione|
 |----------------------|-----------------|
@@ -220,7 +218,7 @@ Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che
 
 Se le espressioni regolari elaborano l'input che corrisponde quasi al modello dell'espressione regolare, possono spesso basarsi su un backtracking eccessivo, con un impatto notevole sulle prestazioni. Oltre a considerare attentamente l'utilizzo del backtracking e a testare l'espressione regolare rispetto all'input maggiormente corrispondente, è necessario impostare sempre un valore di timeout per assicurarsi che l'impatto di un eventuale backtracking eccessivo sia contenuto.
 
-L'intervallo di timeout dell'espressione regolare definisce il periodo di tempo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima del timeout. L'intervallo di timeout predefinito è <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> che indica nessun timeout per l'espressione regolare. È possibile eseguire l'override di questo valore e definire un intervallo di timeout come segue:
+L'intervallo di timeout dell'espressione regolare definisce il periodo di tempo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima del timeout. L'intervallo di timeout predefinito è <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, il che significa che l'espressione regolare non prevede il timeout. È possibile eseguire l'override di questo valore e definire un intervallo di timeout come segue:
 
 - Specificando un valore di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> chiamando il costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.
 
@@ -243,7 +241,7 @@ Tuttavia, l'utilizzo di questi elementi del linguaggio ha un costo. Comportano i
 
 I costrutti di raggruppamento spesso vengono utilizzati solo in un'espressione regolare in modo tale che sia possibile applicarvi i quantificatori e che i gruppi acquisiti da queste sottoespressioni non vengano utilizzati successivamente. Ad esempio, l'espressione regolare `\b(\w+[;,]?\s?)+[.?!]` è progettata per acquisire un'intera frase. Nella tabella seguente vengono descritti gli elementi del linguaggio di tale modello di espressione regolare e il relativo effetto sulle raccolte <xref:System.Text.RegularExpressions.Match> e <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> dell'oggetto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
@@ -268,7 +266,7 @@ Quando le sottoespressioni vengono utilizzate solo per applicarvi i quantificato
 
 - Usare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Disabilita tutte le acquisizioni non denominate o implicite nel modello di espressione regolare. Quando si usa questa opzione, è possibile acquisire solo le sottostringhe che corrispondono ai gruppi denominati definiti con l'elemento del linguaggio `(?<name>subexpression)`. Il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> può essere passato al parametro `options` del costruttore della classe <xref:System.Text.RegularExpressions.Regex> o al parametro `options` di un metodo <xref:System.Text.RegularExpressions.Regex> statico corrispondente.
 
-- Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite dal punto nel modello di espressione regolare in corrispondenza del quale viene visualizzato l'elemento. Le acquisizioni vengono disabilitate fino alla fine del modello o finché l'opzione `(-n)` non abilita le acquisizioni non denominate o implicite. Per altre informazioni, vedere [Costrutti vari](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
+- Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite dal punto nel modello di espressione regolare in corrispondenza del quale viene visualizzato l'elemento. Le acquisizioni vengono disabilitate fino alla fine del modello o finché l'opzione `(-n)` non abilita le acquisizioni non denominate o implicite. Per altre informazioni, vedere [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
 
 - Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx:subexpression)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite in `subexpression`. Vengono inoltre disabilitate tutte le acquisizioni dai gruppi di acquisizione annidati non denominati o impliciti.
 

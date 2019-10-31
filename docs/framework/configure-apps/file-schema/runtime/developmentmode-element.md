@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117623"
 ---
-# <a name="developmentmode-element"></a>\<Elemento > developmentMode
+# <a name="developmentmode-element"></a>\<elemento > developmentMode
 Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,13 +40,13 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
   
 ## <a name="developerinstallation-attribute"></a>Attributo developerInstallation  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**true**|Cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
 |**false**|Non cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH. Questa è l'impostazione predefinita|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -75,4 +73,4 @@ Specifica se il runtime cerca gli assembly nelle directory specificate dalla var
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)
-- [Procedura: Individuare gli assembly usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Procedura: individuare assembly mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

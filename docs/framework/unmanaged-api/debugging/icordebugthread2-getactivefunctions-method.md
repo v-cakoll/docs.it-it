@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769039"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139937"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>Metodo ICorDebugThread2::GetActiveFunctions
-Ottiene informazioni sulla funzione attiva in ognuno dei frame di questo thread.  
+Ottiene informazioni sulla funzione attiva in ogni frame del thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,20 +41,20 @@ HRESULT GetActiveFunctions (
  [in] Dimensione della matrice `pFunctions`.  
   
  `pcFunctions`  
- [out] Un puntatore al numero di oggetti restituiti nel `pFunctions` matrice. Il numero di oggetti restituito sarà uguale al numero di frame gestiti nello stack.  
+ out Puntatore al numero di oggetti restituiti nella matrice `pFunctions`. Il numero di oggetti restituiti sarà uguale al numero di frame gestiti nello stack.  
   
  `pFunctions`  
- [in, out] Matrice di oggetti COR_ACTIVE_FUNCTION, ognuno dei quali contiene informazioni sulle funzioni attive nei frame di questo thread.  
+ [in, out] Matrice di oggetti COR_ACTIVE_FUNCTION, ognuno dei quali contiene informazioni sulle funzioni attive nei frame del thread.  
   
- Il primo elemento da utilizzare per il frame foglia e così via fino alla radice dello stack.  
+ Il primo elemento verrà usato per il frame foglia e così via tornando alla radice dello stack.  
   
 ## <a name="remarks"></a>Note  
- Se `pFunctions` è null per input, `GetActiveFunctions` restituisce solo il numero di funzioni sullo stack. Vale a dire, se `pFunctions` è null per input, `GetActiveFunctions` restituisce un valore solo in `pcFunctions`.  
+ Se `pFunctions` è null per l'input, `GetActiveFunctions` restituisce solo il numero di funzioni presenti nello stack. Ovvero, se `pFunctions` è null per l'input, `GetActiveFunctions` restituisce un valore solo in `pcFunctions`.  
   
- Il `GetActiveFunctions` metodo è inteso come ottimizzazione acquisizione le stesse informazioni da una traccia dello stack frame e include solo i frame che avrebbe dovuto un oggetto ICorDebugILFrame per essi nell'analisi dello stack completo.  
+ Il metodo `GetActiveFunctions` è concepito come ottimizzazione per ottenere le stesse informazioni dai frame in una traccia dello stack e include solo i frame per i quali sarebbe stato disponibile un oggetto ICorDebugILFrame nell'analisi dello stack completa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

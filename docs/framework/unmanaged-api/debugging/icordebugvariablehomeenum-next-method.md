@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugVariableHomeEnum::Next
+title: 'ICorDebugVariableHomeEnum:: Next (metodo)'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121926"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>Metodo ICorDebugVariableHomeEnum::Next
-Ottiene il numero specificato di [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) istanze che contengono informazioni sulle variabili locali e gli argomenti in una funzione.  
+# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next (metodo)
+Ottiene il numero specificato di istanze di [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) che contengono informazioni sulle variabili e gli argomenti locali in una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,10 +40,10 @@ HRESULT Next(
  [in] Numero di oggetti da recuperare.  
   
  `homes`  
- Una matrice di puntatori, ognuno dei quali punta a un [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) oggetto che fornisce informazioni su un argomento di una funzione o variabile locale.  
+ Matrice di puntatori, ciascuno dei quali punta a un oggetto [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) che fornisce informazioni su una variabile locale o un argomento di una funzione.  
   
  `pceltFetched`  
- [out] Il numero di istanze effettivamente restituiti in oggetti.  
+ out Numero di istanze effettivamente restituite negli oggetti.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce i valori seguenti.  
@@ -53,13 +51,13 @@ HRESULT Next(
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|Metodo completato correttamente.|  
-|`S_FALSE`|Recuperato il numero effettivo di istanze, come riportati nelle `pceltFetched`, è inferiore al numero di istanze richieste.|  
+|`S_FALSE`|Il numero effettivo di istanze recuperate, come riflesso in `pceltFetched`, è inferiore al numero di istanze richieste.|  
   
 ## <a name="remarks"></a>Note  
- Il [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) che consente di recuperare un massimo di `celt` oggetti partendo dalla posizione corrente dell'enumeratore. Quando termina, il metodo `pceltFetched` contiene il numero effettivo di oggetti recuperati.  
+ Il metodo [ICorDebugVariableHomeEnum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) recupera un massimo di `celt` oggetti a partire dalla posizione corrente dell'enumeratore. Quando il metodo restituisce un risultato, `pceltFetched` contiene il numero effettivo di oggetti recuperati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

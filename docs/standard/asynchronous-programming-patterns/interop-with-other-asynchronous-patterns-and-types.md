@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123982"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilità con altri tipi e modelli asincroni
 In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> , altrimenti noto come [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o modello `Begin/End` .  In .NET Framework 2.0 è stato aggiunto [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partire da .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) sostituisce sia APM che EAP, ma consente di compilare facilmente le routine di migrazione dai modelli precedenti.  
@@ -48,7 +46,7 @@ In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> 
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- È possibile usare il metodo <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> per implementare un wrapper di TAP per questa operazione come segue:  
+ È possibile usare il metodo <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> per implementare un wrapper TAP per questa operazione come segue:  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
@@ -94,12 +92,12 @@ In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> 
   
 <a name="WHToTap"></a>   
 ### <a name="from-wait-handles-to-tap"></a>da handle di attesa a TAP  
- Sebbene gli handle di attesa non implementino un modello asincrono, gli sviluppatori avanzati possono usare la classe <xref:System.Threading.WaitHandle> e il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> per le notifiche asincrone quando è impostato un handle di attesa.  È possibile eseguire il wrapping del metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> per abilitare un'alternativa basata su attività a qualsiasi attesa sincrona su un handle di attesa:  
+ Anche se gli handle di attesa non implementano un modello asincrono, gli sviluppatori avanzati possono usare la classe <xref:System.Threading.WaitHandle> e il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> per le notifiche asincrone quando è impostato un handle di attesa.  È possibile eseguire il wrapping del metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> per abilitare un'alternativa basata su attività a qualsiasi attesa sincrona su un handle di attesa:  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- Con questo metodo, è possibile usare le implementazioni di <xref:System.Threading.WaitHandle> esistenti nei metodi asincroni.  Ad esempio, se si desidera limitare il numero di operazioni asincrone eseguite in un momento specifico, è possibile usare un semaforo (oggetto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ).  È possibile limitare a *N* il numero di operazioni eseguite contemporaneamente inizializzando il conteggio del semaforo a *N*, rimanendo in attesa del semaforo ogni volta che si desidera eseguire un'operazione e rilasciando il semaforo quando l'operazione è terminata:  
+ Con questo metodo, è possibile usare le implementazioni di <xref:System.Threading.WaitHandle> esistenti nei metodi asincroni.  Se, ad esempio, si vuole limitare il numero di operazioni asincrone in esecuzione in un momento specifico, è possibile usare un semaforo (oggetto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>).  È possibile limitare a *N* il numero di operazioni eseguite contemporaneamente inizializzando il conteggio del semaforo a *N*, rimanendo in attesa del semaforo ogni volta che si desidera eseguire un'operazione e rilasciando il semaforo quando l'operazione è terminata:  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -117,4 +115,4 @@ In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> 
 
 - [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

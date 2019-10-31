@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739331"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132114"
 ---
 # <a name="createcordbobject-function"></a>Funzione CreateCordbObject
 Crea un'interfaccia del debugger ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) che fornisce la funzionalità per creare un'istanza di una sessione di debug gestita in un processo remoto.  
@@ -42,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Versione del debugger del processo di destinazione. Questo parametro deve essere CorDebugVersion_2_0 per il debug remoto.  
   
  `ppCordb`  
- [out] Puntatore a un puntatore a un oggetto che sarà possibile eseguire il cast a un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaccia e restituito.  
+ out Puntatore a un puntatore a un oggetto di cui verrà eseguito il cast a un'interfaccia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) e restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -58,13 +56,13 @@ HRESULT CordbCreateObject (
  Altri errori.  
   
 ## <a name="remarks"></a>Note  
- Il [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaccia restituita in `ppCordb` è l'interfaccia di debug di livello superiore per tutti i servizi di debug gestito.  
+ L'interfaccia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) restituita in `ppCordb` è l'interfaccia di debug di primo livello per tutti i servizi di debug gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CoreClrRemoteDebuggingInterfaces.h  
+ **Intestazione:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Libreria:** mscordbi_macx86. dll  
   
- **Versioni di .NET framework:** 3.5 SP1
+ **Versioni .NET Framework:** 3,5 SP1

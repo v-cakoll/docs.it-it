@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7add64f9-19a8-46a9-be62-905d5e7d1bd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bacd93baae3f0c0b70c4b910e8130551b4f3e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 573b08fcf2ce0fa5ce3187df6ae6a1c2cc385f52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134013"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a>Metodo ICorDebugAppDomain::EnumerateAssemblies
 Ottiene un enumeratore per gli assembly nel dominio dell'applicazione.  
@@ -37,10 +35,10 @@ HRESULT EnumerateAssemblies (
   
 ## <a name="parameters"></a>Parametri  
  `ppAssemblies`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugAssemblyEnum che è l'enumeratore per gli assembly nel dominio dell'applicazione.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugAssemblyEnum che rappresenta l'enumeratore per gli assembly nel dominio dell'applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

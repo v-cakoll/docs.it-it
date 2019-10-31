@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985511"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126898"
 ---
 # <a name="iappdomainbinding-interface"></a>Interfaccia IAppDomainBinding
-Fornisce un metodo che viene chiamato da common language runtime (CLR) di notificare all'applicazione host che è stato creato un dominio dell'applicazione.  
+Fornisce un metodo chiamato dal Common Language Runtime (CLR) per notificare all'applicazione host che è stato creato un dominio dell'applicazione.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio dell'applicazione.|  
+|[Metodo OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato dal Common Language Runtime (CLR) per notificare all'host che è stato creato un dominio dell'applicazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

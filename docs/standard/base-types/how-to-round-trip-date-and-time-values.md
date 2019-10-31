@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Valori di data e ora round trip'
+title: 'Procedura: Eseguire il round trip dei valori di data e ora'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc3393c27d2955528822c193c36a0f6d86f5c148
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132002"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Valori di data e ora round trip
+# <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Eseguire il round trip dei valori di data e ora
 
 In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. Questo argomento illustra come salvare e ripristinare un valore <xref:System.DateTime>, un valore <xref:System.DateTimeOffset> e un valore di data e ora con informazioni sul fuso orario, in modo che il valore ripristinato identifichi la stessa ora del valore salvato.
 
@@ -40,7 +38,7 @@ L'esempio seguente illustra come eseguire il round trip di un valore <xref:Syste
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Quando si esegue il round trip di un valore <xref:System.DateTime>, questa tecnica consente di mantenere correttamente l'ora per tutte le ore locali e UTC. Se, ad esempio, un valore <xref:System.DateTime> locale viene salvato in un sistema con fuso orario ora solare pacifico e viene ripristinato in un sistema con fuso orario ora solare centrale, la data e l'ora ripristinate saranno due ore avanti rispetto all'orario originale. Ciò riflette la differenza tra i due fusi orari. Tuttavia, questa tecnica non è sempre accurata per le ore non specificate. Tutti i valori <xref:System.DateTime> la cui proprietà <xref:System.DateTime.Kind%2A> è <xref:System.DateTimeKind.Unspecified> vengono trattati come valori di ora locale. Se ciò non avvenisse, <xref:System.DateTime> non potrebbe identificare il punto nel tempo corretto. La soluzione alternativa per questa limitazione consiste nell'associare un valore di data e ora al proprio fuso orario per l'operazione di salvataggio e ripristino.
+Quando si esegue il round trip di un valore <xref:System.DateTime>, questa tecnica consente di mantenere correttamente l'ora per tutte le ore locali e UTC. Ad esempio, se un valore locale <xref:System.DateTime> viene salvato in un sistema nel fuso orario standard del Pacifico (Stati Uniti) e viene ripristinato in un sistema nel fuso orario standard degli Stati Uniti Centrali, la data e l'ora ripristinate saranno due ore avanti rispetto all'ora originale, la quale riflette la differenza di tempo tra i due fusi orari. Tuttavia, questa tecnica non è sempre accurata per le ore non specificate. Tutti i valori <xref:System.DateTime> la cui proprietà <xref:System.DateTime.Kind%2A> è <xref:System.DateTimeKind.Unspecified> vengono trattati come valori di ora locale. Se ciò non avvenisse, <xref:System.DateTime> non potrebbe identificare il punto nel tempo corretto. La soluzione alternativa per questa limitazione consiste nell'associare un valore di data e ora al proprio fuso orario per l'operazione di salvataggio e ripristino.
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Per eseguire il round trip di un valore DateTimeOffset
 
@@ -89,13 +87,13 @@ Gli esempi presentano i requisiti seguenti:
 
   - <xref:System> (solo C#).
 
-  - <xref:System.Globalization?displayProperty=nameWithType>.
+  - <xref:System.Globalization?displayProperty=nameWithType>
 
-  - <xref:System.IO?displayProperty=nameWithType>.
+  - <xref:System.IO?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
 
 - Ogni esempio di codice, ad eccezione della classe `DateInTimeZone`, deve essere incluso in una classe o un modulo di Visual Basic, ne deve essere eseguito il wrapping nei metodi e deve essere chiamato dal metodo `Main`.
 

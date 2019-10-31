@@ -1,15 +1,13 @@
 ---
 title: Novità di .NET Core 2.0
 description: Informazioni sulle nuove funzionalità in .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100835"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -112,7 +110,7 @@ Per .NET Core 1.x in macOS era richiesta la libreria di crittografia del toolkit
 
 Anche le librerie di classi di .NET Standard 2.0 fanno riferimento alle librerie di classi di .NET Framework, a condizione che chiamino API presenti in .NET Standard 2.0. Non è richiesta alcuna ricompilazione delle librerie di .NET Framework.
 
-Per un elenco delle API aggiunte a .NET Standard dall'ultima versione, ovvero .NET Standard 1.6, vedere [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) (Confronto tra .NET Standard 2.0 e 1.6).
+Per un elenco delle API aggiunte alla .NET Standard dall'ultima versione, .NET Standard 1,6, vedere [.NET Standard 2,0 rispetto a 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Superficie estesa
 

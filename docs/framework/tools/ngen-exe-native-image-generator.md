@@ -18,14 +18,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085201"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 
@@ -77,22 +75,22 @@ ngen /? | /help
 
 Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `action`. Per le descrizioni delle singole parti di `action`, vedere le tabelle [Argomenti](#ArgumentTable), [Livelli di priorità](#PriorityTable), [Scenari](#ScenarioTable) e [Configurazione](#ConfigTable). Nella tabella [Opzioni](#OptionTable) vengono descritte le `options` e le opzioni della Guida.
 
-|Azione|DESCRIZIONE|
+|Operazione|Descrizione|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera le immagini native per un assembly e le relative dipendenze e installa le immagini nella cache delle immagini native.<br /><br /> Se si specifica l'opzione `/queue`, l'azione viene accodata per il servizio immagini native. La priorità predefinita è 3. Vedere la tabella [Livelli di priorità](#PriorityTable).|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  a partire da .NET Framework 4, l'azione `uninstall`* non è più supportata.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina le immagini native di un assembly e le relative dipendenze dalla cache delle immagini native.<br /><br /> Per disinstallare una singola immagine e le relative dipendenze, ricorrere agli stessi argomenti della riga di comando usati per l'installazione dell'immagine. **Nota:**  A partire da .NET Framework 4, l'azione `uninstall` * non è più supportata.|
 |`update` [`/queue`]|Aggiorna le immagini native diventate non valide.<br /><br /> Se si specifica l'opzione `/queue`, gli aggiornamenti vengono accodati per il servizio immagini native. Gli aggiornamenti vengono sempre pianificati con priorità 3, in modo da essere eseguiti durante i periodi di inattività del computer.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Visualizza lo stato delle immagini native di un assembly e le relative dipendenze.<br /><br /> Se non viene fornito alcun argomento, verrà visualizzato l'intero contenuto della cache delle immagini native.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -oppure-<br /><br /> `eqi` [1&#124;2&#124;3]|Esegue i processi di compilazione accodati.<br /><br /> Se è specificata una priorità, verranno eseguiti i processi di compilazione che hanno un livello di priorità maggiore o uguale a quello specificato. Se non è specificata alcuna priorità, verranno eseguiti tutti i processi di compilazione accodati.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> oppure<br /><br /> `eqi` [1&#124;2&#124;3]|Esegue i processi di compilazione accodati.<br /><br /> Se è specificata una priorità, verranno eseguiti i processi di compilazione che hanno un livello di priorità maggiore o uguale a quello specificato. Se non è specificata alcuna priorità, verranno eseguiti tutti i processi di compilazione accodati.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Sospende il servizio immagini native, riprende il servizio sospeso o esegue una query sullo stato del servizio.|
 
 <a name="ArgumentTable"></a>
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>argomenti
 
-|Argomento|DESCRIZIONE|
+|Argomento|Descrizione|
 |--------------|-----------------|
-|`assemblyName`|Nome visualizzato completo dell'assembly. Ad esempio `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:**  È possibile fornire un nome parziale di assembly, ad esempio `myAssembly`, per le azioni `display` e `uninstall`. <br /><br /> È possibile specificare un solo assembly per ogni riga di comando di Ngen.exe.|
+|`assemblyName`|Nome visualizzato completo dell'assembly. Ad esempio `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:** è possibile fornire un nome parziale di assembly, ad esempio `myAssembly`, per le azioni `display` e `uninstall`. <br /><br /> È possibile specificare un solo assembly per ogni riga di comando di Ngen.exe.|
 |`assemblyPath`|Percorso esplicito dell'assembly. È possibile specificare un percorso completo o relativo.<br /><br /> Se si specifica un nome di file senza percorso, l'assembly deve trovarsi nella directory corrente.<br /><br /> È possibile specificare un solo assembly per ogni riga di comando di Ngen.exe.|
 
 <a name="PriorityTable"></a>
@@ -132,7 +130,7 @@ Nella tabella riportata di seguito viene illustrata la sintassi di ciascuna `act
 |------------|-----------------|
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|
 |`/silent`|Evita la visualizzazione dei messaggi di operazione riuscita.|
-|`/verbose`|Visualizza informazioni dettagliate per il debug. **Nota:**  a causa di limitazioni del sistema operativo, in Windows 98 e Windows Millennium Edition viene visualizzata una quantità ridotta di informazioni aggiuntive.|
+|`/verbose`|Visualizza informazioni dettagliate per il debug. **Nota:** a causa di limitazioni del sistema operativo, in Windows 98 e Windows Millennium Edition viene visualizzata una quantità ridotta di informazioni aggiuntive.|
 |`/help`, `/?`|Visualizza la sintassi e le opzioni di comando della versione corrente.|
 
 ## <a name="remarks"></a>Note
@@ -396,7 +394,7 @@ Quando genera un'immagine nativa, Ngen.exe registra queste informazioni. Quando 
 
 <a name="Troubleshooting"></a>
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Gli argomenti seguenti per la risoluzione dei problemi consentono di vedere quali immagini native vengono usate dall'applicazione e quali non possono essere usate da questa per determinare quando il compilatore JIT inizia a compilare un metodo. Illustrano anche come rifiutare esplicitamente la compilazione di immagini native di metodi specificati.
 
@@ -463,7 +461,7 @@ Per disinstallare una dipendenza, è necessario usare le stesse opzioni della ri
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Per creare un'immagine nativa per un assembly nella Global Assembly Cache, usare il nome visualizzato dell'assembly, Ad esempio:
+Per creare un'immagine nativa per un assembly nella Global Assembly Cache, usare il nome visualizzato dell'assembly, Esempio:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -562,7 +560,7 @@ Per esempi relativi al servizio immagini native, vedere [Servizio immagini nativ
 
 ## <a name="native-image-task"></a>Attività di immagini native
 
-L'attività di immagini native è un'attività di Windows che esegue automaticamente la generazione e la gestione delle immagini native. L'attività di immagini native genera e recupera le immagini native automaticamente per gli scenari supportati Consente poi ai programmi di installazione di usare [Ngen.exe (generatore di immagini native)](ngen-exe-native-image-generator.md) per creare e aggiornare le immagini native a un'ora posticipata.
+L'attività di immagini native è un'attività di Windows che esegue automaticamente la generazione e la gestione delle immagini native. L'attività di immagini native genera e recupera le immagini native automaticamente per gli scenari supportati Consente inoltre ai programmi di installazione di usare [NGen. exe (Generatore di immagini native)](ngen-exe-native-image-generator.md) per creare e aggiornare le immagini native a un'ora posticipata.
 
 L'attività di immagini native viene registrata una volta per ogni architettura della CPU supportata in un computer, per consentire la compilazione di applicazioni destinate a ogni architettura:
 

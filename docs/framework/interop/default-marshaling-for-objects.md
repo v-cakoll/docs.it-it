@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044171"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123582"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 
@@ -134,7 +132,7 @@ Quando viene effettuato il marshalling di un oggetto a una variante, il tipo di 
 
 La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=nameWithType>.
 
-|Tipo di oggetto|Tipo di variante COM|
+|Tipo oggetto|Tipo di variante COM|
 |-----------------|----------------------|
 |Riferimento all'oggetto null (**Nothing** in Visual Basic).|**VT_EMPTY**|
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|
@@ -250,7 +248,7 @@ Il valore della variante COM viene determinato chiamando l'interfaccia **IConver
 
 Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volte il valore della variante di cui viene effettuato il marshalling determinano il tipo dell'oggetto prodotto. La tabella seguente identifica tale tipo di variante e il tipo di oggetto corrispondente creato dal gestore di marshalling quando una variante viene passata da COM a .NET Framework.
 
-|Tipo di variante COM|Tipo di oggetto|
+|Tipo di variante COM|Tipo oggetto|
 |----------------------|-----------------|
 |**VT_EMPTY**|Riferimento all'oggetto null (**Nothing** in Visual Basic).|
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|
@@ -312,7 +310,7 @@ Per propagare le modifiche al chiamante, i parametri devono essere passati per r
 
 La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.
 
-|Da|A|Modifiche propagate|
+|Da|Per|Modifiche propagate|
 |----------|--------|-----------------------------|
 |**Variante**  *v*|**Oggetto**  *o*|Never|
 |**Oggetto**  *o*|**Variante**  *v*|Never|
@@ -323,7 +321,7 @@ La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copia e blocco](copying-and-pinning.md)

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f516bf1f19e4d4a77e2d6af834a1c3d4e34c327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123292"
 ---
 # <a name="ivalidator-interface"></a>Interfaccia IValidator
-Fornisce metodi per la convalida le immagini (PE) eseguibili portabili e segnalazione di errori di convalida.  
+Fornisce metodi per convalidare immagini PE (Portable Executable) e segnalare errori di convalida.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|Validate|Convalida il file specificato di PE o Microsoft intermediate language (MSIL).|  
+|Validate|Convalida il file PE o Microsoft Intermediate Language (MSIL) specificato.|  
 |FormatEventInfo|Ottiene il messaggio di errore corrispondente all'errore di convalida specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator. H  
+ **Intestazione:** IValidator. idl, IValidator. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129661"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Metodo ICorDebugProcess5::EnumerateGCReferences
-Ottiene un enumeratore per tutti gli oggetti che devono essere sottoposto a garbage collection in un processo.  
+Ottiene un enumeratore per tutti gli oggetti che devono essere sottoposti a Garbage Collection in un processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Parametri  
  `enumerateWeakReferences`  
- [in] Valore booleano che indica se i riferimenti deboli sono anche da enumerare. Se `enumerateWeakReferences` viene `true`, il `ppEnum` enumeratore include riferimenti forti e i riferimenti deboli. Se `enumerateWeakReferences` è `false`, l'enumeratore include solo i riferimenti sicuri.  
+ in Valore booleano che indica se devono essere enumerati anche i riferimenti deboli. Se `enumerateWeakReferences` è `true`, l'enumeratore `ppEnum` include sia riferimenti sicuri che riferimenti deboli. Se `enumerateWeakReferences` è `false`, l'enumeratore include solo riferimenti sicuri.  
   
  `ppEnum`  
- [out] Un puntatore all'indirizzo di un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) vale a dire un enumeratore per gli oggetti per essere sottoposto a garbage collection.  
+ out Puntatore all'indirizzo di un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) che rappresenta un enumeratore per gli oggetti di cui eseguire il Garbage Collector.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo fornisce un modo per determinare la catena di definizione radice completa per qualsiasi oggetto gestito in un processo e può essere utilizzato per determinare il motivo per cui un oggetto è ancora attivo.  
+ Questo metodo fornisce un modo per determinare la catena di radice completa per qualsiasi oggetto gestito in un processo e può essere utilizzato per determinare il motivo per cui un oggetto è ancora attivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

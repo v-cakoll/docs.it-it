@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121300"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>Metodo ICorDebugHeapValue3::GetMonitorEventWaitList
-Fornisce un elenco ordinato di thread che vengono messe in coda sull'evento associato a un blocco di monitoraggio.  
+Fornisce un elenco ordinato di thread accodati per l'evento associato a un blocco di monitoraggio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="parameters"></a>Parametri  
  `ppThreadEnum`  
- [out] L'enumeratore ICorDebugThreadEnum che fornisce l'elenco ordinato di thread.  
+ out Enumeratore ICorDebugThreadEnum che fornisce l'elenco ordinato di thread.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -50,18 +48,18 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Il primo thread nell'elenco è il primo thread che viene rilasciato per la chiamata successiva a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Il thread successivo nell'elenco è ha rilasciato la seguente chiamata e così via.  
+ Il primo thread nell'elenco è il primo thread rilasciato dalla chiamata successiva a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Il thread successivo nell'elenco viene rilasciato nella chiamata seguente e così via.  
   
- Se l'elenco non è vuoto, questo metodo restituisce S_OK. Se l'elenco è vuoto, il metodo restituisce S_FALSE. In questo caso, l'enumerazione è ancora valido, anche se è vuota.  
+ Se l'elenco non è vuoto, questo metodo restituisce S_OK. Se l'elenco è vuoto, il metodo restituisce S_FALSE; in questo caso, l'enumerazione è ancora valida, anche se è vuota.  
   
- In entrambi i casi, l'interfaccia di enumerazione è utilizzabile solo per la durata dello stato di sincronizzazione corrente. Tuttavia, le interfacce del thread erogate da quest'ultimo sono valide fino alla chiusura del thread.  
+ In entrambi i casi, l'interfaccia di enumerazione è utilizzabile solo per la durata dello stato sincronizzato corrente. Tuttavia, le interfacce del thread da esso disposte sono valide fino alla chiusura del thread.  
   
  Se `ppThreadEnum` non è un puntatore valido, il risultato è indefinito.  
   
- Se si verifica un errore in modo che non può essere determinato che, se presente, i thread sono in attesa per il monitoraggio, il metodo restituisce un HRESULT che indica un errore.  
+ Se si verifica un errore in modo che non possa essere determinato quale, se presente, i thread sono in attesa del monitoraggio, il metodo restituisce un valore HRESULT che indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

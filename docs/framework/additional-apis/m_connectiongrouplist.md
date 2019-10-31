@@ -1,5 +1,5 @@
 ---
-title: Campo ServicePoint.m_ConnectionGroupList
+title: Campo ServicePoint. m_ConnectionGroupList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85359492fbf06942a57c51142620cab015999b31
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 1991dae4d03f617857b860f920077531f7937bf1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120053"
 ---
-# <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList campo
+# <a name="servicepointm_connectiongrouplist-field"></a>Campo ServicePoint. m\_ConnectionGroupList
 
-`ServicePoint.m_ConnectionGroupList` è un <xref:System.Collections.Hashtable> dei gruppi di connessione, ognuna contenente una connessione per il <xref:System.Net.ServicePoint>dell'URI.
+`ServicePoint.m_ConnectionGroupList` è un <xref:System.Collections.Hashtable> di gruppi di connessione, ognuno dei quali contiene una connessione per l'URI del <xref:System.Net.ServicePoint>.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -30,14 +30,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> Il `ServicePoint.m_ConnectionGroupList` campo è privato e non deve essere utilizzato direttamente nel codice.
+> Il campo `ServicePoint.m_ConnectionGroupList` è privato e non è destinato a essere usato direttamente nel codice.
 > 
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Net>
 
-**Assembly:** Sistema (in System. dll)
+**Assembly:** System (in System. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

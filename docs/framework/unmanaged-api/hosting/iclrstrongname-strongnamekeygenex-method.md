@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: acbf401ac2abb5ded151a48017a8a977cd0f4b71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747790"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135026"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Metodo ICLRStrongName::StrongNameKeyGenEx
-Genera una nuova coppia di chiavi pubblica/privata con la dimensione della chiave specificata per l'uso di nome sicuro.  
+Genera una nuova coppia di chiavi pubblica/privata con la dimensione della chiave specificata, per l'uso del nome sicuro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,38 +39,38 @@ HRESULT StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Parametri  
  `wszKeyContainer`  
- [in] Il nome di contenitore di chiavi richiesto. `wszKeyContainer` deve essere una stringa non vuota o null per generare un nome temporaneo.  
+ in Nome del contenitore di chiavi richiesto. `wszKeyContainer` deve essere una stringa non vuota o null per generare un nome temporaneo.  
   
  `dwFlags`  
- [in] Un valore che specifica se lasciare la chiave di registrazione. Sono supportati i valori seguenti:  
+ in Valore che specifica se lasciare la chiave registrata. Sono supportati i valori seguenti:  
   
-- 0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
+- 0x00000000: viene usato quando `wszKeyContainer` è null per generare un nome del contenitore di chiavi temporaneo.  
   
-- 0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
+- 0x00000001 (`SN_LEAVE_KEY`): specifica che la chiave deve essere lasciata registrata.  
   
  `dwKeySize`  
- [in] Dimensione richiesta della chiave, espressa in bit.  
+ in Dimensioni richieste della chiave, in bit.  
   
  `ppbKeyBlob`  
- [out] La coppia di chiavi pubblica/privata restituita.  
+ out Coppia di chiavi pubblica/privata restituita.  
   
  `pcbKeyBlob`  
- [out] Le dimensioni, in byte, di `ppbKeyBlob`.  
+ out Dimensione, in byte, del `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` se il metodo è stato completato correttamente; in caso contrario, valore HRESULT che indica l'esito negativo (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="remarks"></a>Note  
- Le versioni di .NET Framework 1.0 e 1.1 richiedono un `dwKeySize` pari a 1024 bit per firmare un assembly con nome sicuro; versione 2.0 aggiunge il supporto per le chiavi a 2048 bit.  
+ Per la firma di un assembly con un nome sicuro, le versioni di .NET Framework 1,0 e 1,1 richiedono un `dwKeySize` di 1024 bit; la versione 2,0 aggiunge i supporti per le chiavi a 2048 bit.  
   
- Una volta recuperata la chiave, è necessario chiamare il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodo per rilasciare la memoria allocata.  
+ Dopo che la chiave è stata recuperata, è necessario chiamare il metodo [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) per rilasciare la memoria allocata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

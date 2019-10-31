@@ -1,5 +1,5 @@
 ---
-title: Campo ConnectionGroup.m_ConnectionList
+title: Campo ConnectionGroup. m_ConnectionList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301403"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120009"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList campo
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup. m\_campo ConnectionName
 
-`ConnectionGroup.m_ConnectionList` è un <xref:System.Collections.ArrayList> degli oggetti connessione che viene usato lo stesso URI e Condividi gli stessi valori per alcune altre proprietà, ad esempio scadenza e l'autenticazione.
+`ConnectionGroup.m_ConnectionList` è un <xref:System.Collections.ArrayList> di oggetti connessione che serve lo stesso URI e condividono gli stessi valori per alcune altre proprietà, ad esempio la scadenza e l'autenticazione.
 
 ## <a name="syntax"></a>Sintassi
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Il `ConnectionGroup.m_ConnectionList` campo è privato e non deve essere utilizzato direttamente nel codice.
+> Il campo `ConnectionGroup.m_ConnectionList` è privato e non è destinato a essere usato direttamente nel codice.
 > 
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questo campo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Net>
 
-**Assembly:** Sistema (in System. dll)
+**Assembly:** System (in System. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75f42a8b-ed68-4718-a030-a179cfba7d72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f5c28b7513ccfd0f1a645ed1cd6a3207a7cf0f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765d5449cebbdec5f106a8e4743fee2f0ee5521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133130"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>Metodo IHostTaskManager::BeginDelayAbort
-Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere interrotta.  
+Notifica all'host che il codice gestito sta immettendo un punto in cui l'attività corrente non deve essere interrotta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,23 +35,23 @@ HRESULT BeginDelayAbort ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`BeginDelayAbort` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`BeginDelayAbort` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_UNEXPECTED|`BeginDelayAbort` è già stato chiamato, ma la chiamata corrispondente a [EndDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md) non è ancora stato ricevuto.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_UNEXPECTED|`BeginDelayAbort` è già stato chiamato, ma non è stata ancora ricevuta la chiamata corrispondente a [EndDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md) .|  
   
 ## <a name="remarks"></a>Note  
- L'host non deve interrompere l'attività corrente fino a `EndDelayAbort` viene chiamato. Se un'altra chiamata a `BeginDelayAbort` viene eseguita senza una chiamata corrispondente a `EndDelayAbort`, l'host deve restituire E_UNEXPECTED `BeginDelayAbort`e non deve eseguire alcuna azione.  
+ L'host non deve interrompere l'attività corrente fino a quando non viene chiamato `EndDelayAbort`. Se un'altra chiamata a `BeginDelayAbort` viene effettuata senza una chiamata corrispondente a `EndDelayAbort`, l'host deve restituire E_UNEXPECTED da `BeginDelayAbort`e non deve eseguire alcuna azione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

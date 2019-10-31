@@ -7,20 +7,18 @@ helpviewer_keywords:
 - strings [.NET Framework], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seadec18
-ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132917"
 ---
 # <a name="basic-string-operations-in-net"></a>Operazioni di base su stringhe in .NET
 Le applicazioni spesso interagiscono con gli utenti creando messaggi in base all'input dell'utente. I siti Web ad esempio rispondono spesso a un utente che si è appena connesso con un saluto specifico che include il nome dell'utente. Nelle cassi <xref:System.String?displayProperty=nameWithType> e<xref:System.Text.StringBuilder?displayProperty=nameWithType> sono disponibili vari metodi che consentono una costruzione dinamica di stringhe personalizzate da visualizzare nell'interfaccia utente. Questi metodi consentono anche di eseguire una serie di operazioni di base sulle stringhe, come la creazione di nuove stringhe partendo da matrici di byte, il confronto di valori di stringhe e la modifica di stringhe esistenti.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di nuove stringhe](../../../docs/standard/base-types/creating-new.md)  
  Descrive le operazioni di base per convertire gli oggetti in stringhe e combinare diverse stringhe.  
   

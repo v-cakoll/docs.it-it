@@ -5,14 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104676"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (strumento .NET Security Annotator)
 Lo strumento .NET Security Annotator (SecAnnotate.exe) è un'applicazione da riga di comando che identifica le parti `SecurityCritical` e `SecuritySafeCritical` di uno o più assembly.  
@@ -31,23 +29,23 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
-|`/a`<br /><br /> oppure<br /><br /> `/showstatistics`|Mostra le statistiche sull'utilizzo della trasparenza negli assembly analizzati.|  
-|`/d:` *directory*<br /><br /> oppure<br /><br /> `/referencedir:` *directory*|Specifica una directory in cui cercare gli assembly dipendenti durante l'annotazione.|  
-|`/i`<br /><br /> oppure<br /><br /> `/includesignatures`|Include informazioni estese sulle firme nel file di rapporto sulle annotazioni.|  
-|`/n`<br /><br /> oppure<br /><br /> `/nogac`|Interrompe la ricerca degli assembly di riferimento nella Global Assembly Cache.|  
-|`/o:` *output.xml*<br /><br /> oppure<br /><br /> `/out:` *output.xml*|Specifica il file delle annotazioni di output.|  
-|`/p:` *maxpasses*<br /><br /> oppure<br /><br /> `/maximumpasses:` *maxpasses*|Specifica il numero massimo di passaggi di aggiunta annotazioni da effettuare sugli assembly prima di interrompere la generazione di nuove annotazioni.|  
-|`/q`<br /><br /> oppure<br /><br /> `/quiet`|Specifica una modalità non interattiva, nella quale l'annotatore non restituisce messaggi di stato, ma solo informazioni sugli errori.|  
-|`/r:` *assembly*<br /><br /> oppure<br /><br /> `/referenceassembly:` *assembly*|Include l'assembly specificato quando vengono risolti gli assembly dipendenti durante l'annotazione. Gli assembly di riferimento sono prioritari rispetto agli assembly trovati nel percorso di riferimento.|  
-|`/s:` *rulename*<br /><br /> oppure<br /><br /> `/suppressrule:` *rulename*|Elimina l'esecuzione della regola di trasparenza specificata sugli assembly di input.|  
-|`/t`<br /><br /> oppure<br /><br /> `/forcetransparent`|Forza lo strumento di annotazione a trattare tutti gli assembly che non dispongono di alcuna annotazione di trasparenza come se fossero completamente trasparenti.|  
-|`/t`:*assembly*<br /><br /> oppure<br /><br /> `/forcetransparent`:*assembly*|Forza la trasparenza per l'assembly specificato, a prescindere dalle relative annotazioni correnti a livello di assembly.|  
+|`/a`<br /><br /> Oppure<br /><br /> `/showstatistics`|Mostra le statistiche sull'utilizzo della trasparenza negli assembly analizzati.|  
+|`/d:` *directory*<br /><br /> Oppure<br /><br /> `/referencedir:` *directory*|Specifica una directory in cui cercare gli assembly dipendenti durante l'annotazione.|  
+|`/i`<br /><br /> Oppure<br /><br /> `/includesignatures`|Include informazioni estese sulle firme nel file di rapporto sulle annotazioni.|  
+|`/n`<br /><br /> Oppure<br /><br /> `/nogac`|Interrompe la ricerca degli assembly di riferimento nella Global Assembly Cache.|  
+|`/o:` *output.xml*<br /><br /> Oppure<br /><br /> `/out:` *output.xml*|Specifica il file delle annotazioni di output.|  
+|`/p:` *maxpasses*<br /><br /> Oppure<br /><br /> `/maximumpasses:` *maxpasses*|Specifica il numero massimo di passaggi di aggiunta annotazioni da effettuare sugli assembly prima di interrompere la generazione di nuove annotazioni.|  
+|`/q`<br /><br /> Oppure<br /><br /> `/quiet`|Specifica una modalità non interattiva, nella quale l'annotatore non restituisce messaggi di stato, ma solo informazioni sugli errori.|  
+|`/r:` *assembly*<br /><br /> Oppure<br /><br /> `/referenceassembly:` *assembly*|Include l'assembly specificato quando vengono risolti gli assembly dipendenti durante l'annotazione. Gli assembly di riferimento sono prioritari rispetto agli assembly trovati nel percorso di riferimento.|  
+|`/s:` *rulename*<br /><br /> Oppure<br /><br /> `/suppressrule:` *rulename*|Elimina l'esecuzione della regola di trasparenza specificata sugli assembly di input.|  
+|`/t`<br /><br /> Oppure<br /><br /> `/forcetransparent`|Forza lo strumento di annotazione a trattare tutti gli assembly che non dispongono di alcuna annotazione di trasparenza come se fossero completamente trasparenti.|  
+|`/t`:*assembly*<br /><br /> Oppure<br /><br /> `/forcetransparent`:*assembly*|Forza la trasparenza per l'assembly specificato, a prescindere dalle relative annotazioni correnti a livello di assembly.|  
 |||  
-|`/v`<br /><br /> oppure<br /><br /> `/verify`|Verifica solo che le annotazioni di un assembly siano corrette. Non tenta di eseguire più passaggi per trovare tutte le annotazioni necessarie se non supera la verifica.|  
-|`/x`<br /><br /> oppure<br /><br /> `/verbose`|Specifica un output dettagliato durante l'annotazione.|  
-|`/y:` *directory*<br /><br /> oppure<br /><br /> `/symbolpath:` *directory*|Include la directory specificata quando si ricercano file di simboli durante l'annotazione.|  
+|`/v`<br /><br /> Oppure<br /><br /> `/verify`|Verifica solo che le annotazioni di un assembly siano corrette. Non tenta di eseguire più passaggi per trovare tutte le annotazioni necessarie se non supera la verifica.|  
+|`/x`<br /><br /> Oppure<br /><br /> `/verbose`|Specifica un output dettagliato durante l'annotazione.|  
+|`/y:` *directory*<br /><br /> Oppure<br /><br /> `/symbolpath:` *directory*|Include la directory specificata quando si ricercano file di simboli durante l'annotazione.|  
   
 ## <a name="remarks"></a>Note  
  Parametri e assembly possono essere forniti anche in un file di risposta specificato sulla riga di comando, preceduti dal simbolo di chiocciola (@). Ogni riga nel file di risposta deve contenere un solo parametro o nome di assembly.  

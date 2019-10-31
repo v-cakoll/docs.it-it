@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098166"
 ---
 # <a name="cordebughandletype-enumeration"></a>Enumerazione CorDebugHandleType
 Indica il tipo di handle.  
@@ -35,15 +33,15 @@ typedef enum CorDebugHandleType {
 } CorDebugHandleType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|L'handle è forte, che impedisce un oggetto viene recuperato da garbage collection.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|L'handle è debole, che non impedisce un oggetto viene recuperato da garbage collection.<br /><br /> L'handle viene invalidato quando l'oggetto viene raccolto.|  
+|`HANDLE_STRONG`|Il punto di controllo è sicuro e impedisce a un oggetto di essere recuperato da Garbage Collection.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|L'handle è debole, che non impedisce che un oggetto venga recuperato dal Garbage Collection.<br /><br /> Quando l'oggetto viene raccolto, l'handle diventa non valido.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758368"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136941"
 ---
 # <a name="corlaunchapplication-function"></a>Funzione CorLaunchApplication
 Avvia l'applicazione nel percorso di rete specificato, utilizzando i manifesti specificati e altri dati dell'applicazione.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,32 +43,32 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parametri  
  `dwClickOnceHost`  
- [in] Valore di [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumerazione che specifica il tipo di host che è l'avvio dell'applicazione.  
+ in Valore dell'enumerazione [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) che specifica il tipo di host che sta avviando l'applicazione.  
   
  `pwzAppFullName`  
- [in] Il nome completo dell'applicazione in corso di avvio.  
+ in Nome completo dell'applicazione in fase di avvio.  
   
  `dwManifestPaths`  
- [in] Il numero di percorsi di manifesto dell'applicazione.  
+ in Numero di percorsi del manifesto per l'applicazione.  
   
  `ppwzManifestPaths`  
- [in] Matrice di stringhe, ognuna delle quali specifica un percorso di un manifesto dell'applicazione in corso di avvio.  
+ in Matrice di stringhe, ognuna delle quali specifica un percorso di un manifesto per l'applicazione in fase di avvio.  
   
  `dwActivationData`  
- [in] Il numero di elementi di dati di attivazione per l'applicazione in corso di avvio.  
+ in Numero di elementi di dati di attivazione per l'applicazione in fase di avvio.  
   
  `ppwzActivationData`  
- [in] Matrice di stringhe, ognuna delle quali è un elemento di dati di attivazione per l'applicazione in corso di avvio.  
+ in Una matrice di stringhe, ognuna delle quali è un elemento di dati di attivazione per l'applicazione che viene avviata.  
   
  `lpProcessInformation`  
- [out] Puntatore alle informazioni sul processo in cui è stata caricata l'applicazione.  
+ out Puntatore alle informazioni sul processo in cui è stata caricata l'applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

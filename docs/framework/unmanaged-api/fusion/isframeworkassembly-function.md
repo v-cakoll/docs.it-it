@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123062"
 ---
 # <a name="isframeworkassembly-function"></a>Funzione IsFrameworkAssembly
 Ottiene un valore che indica se l'assembly specificato è gestito.  
@@ -51,14 +49,14 @@ HRESULT IsFrameworkAssembly (
  [in] Le dimensioni di `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Note  
- Il `pwzAssemblyReference` parametro è un puntatore a una stringa di caratteri che contiene il nome di un assembly.  
+ Il parametro `pwzAssemblyReference` è un puntatore a una stringa di caratteri che contiene il nome di un assembly.  
   
- Se questo assembly fa parte dell'.NET Framework, il `pbIsFrameworkAssembly` parametro conterrà un valore booleano pari `true`a.  
+ Se questo assembly fa parte dell'.NET Framework, il parametro `pbIsFrameworkAssembly` conterrà un valore booleano di `true`.  
   
- Se l'assembly denominato non fa parte dell'.NET Framework o se il `pwzAssemblyReference` parametro non specifica un nome di assembly, `pbIsFrameworkAssembly` conterrà un valore booleano pari `false`a.  
+ Se l'assembly denominato non fa parte dell'.NET Framework o se il parametro `pwzAssemblyReference` non specifica un nome di assembly, `pbIsFrameworkAssembly` conterrà un valore booleano di `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

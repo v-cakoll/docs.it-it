@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe80050d7b513bce2660b81c5e4faa35b375f22b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6dc25cbeef2576a2ecc6ec39b2cb3f9abb7b9964
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139563"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>Metodo ICorRuntimeHost::GetDefaultDomain
-Ottiene un puntatore di interfaccia di tipo <xref:System._AppDomain?displayProperty=nameWithType> che rappresenta il dominio predefinito per il processo corrente.  
+Ottiene un puntatore a interfaccia di tipo <xref:System._AppDomain?displayProperty=nameWithType> che rappresenta il dominio predefinito per il processo corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,27 +35,27 @@ HRESULT GetDefaultDomain (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [out] Un puntatore a interfaccia typu <xref:System._AppDomain?displayProperty=nameWithType> per il <xref:System.AppDomain> istanza che rappresenta il dominio applicazione predefinito per il processo.  
+ out Puntatore a interfaccia di tipo <xref:System._AppDomain?displayProperty=nameWithType> all'istanza <xref:System.AppDomain> che rappresenta il dominio applicazione predefinito per il processo.  
   
- Il puntatore è tipizzato `IUnknown`, in modo che i chiamanti in genere consigliabile chiamare `QueryInterface` per ottenere un puntatore di interfaccia di tipo <xref:System._AppDomain?displayProperty=nameWithType>.  
+ Questo puntatore è tipizzato `IUnknown`, quindi i chiamanti devono in genere chiamare `QueryInterface` per ottenere un puntatore a interfaccia di tipo <xref:System._AppDomain?displayProperty=nameWithType>.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|L'operazione è riuscita.|  
-|S_FALSE|Impossibile completare l'operazione.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, common language runtime (CLR) non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|Operazione completata.|  
+|S_FALSE|Non è stato possibile completare l'operazione.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, il Common Language Runtime (CLR) non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET framework:** 1.0, 1.1  
+ **Versioni .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131936"
 ---
 # <a name="coinitializeee-function"></a>Funzione CoInitializeEE
-Garantisce che il motore di esecuzione di common language runtime è caricato in un processo. Questa funzione è obsoleta in .NET Framework 4. Usare la [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metodo invece.  
+Garantisce che il motore di esecuzione Common Language Runtime venga caricato in un processo. Questa funzione è deprecata nel .NET Framework 4. Usare invece il metodo [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Parametri  
  `fFlags`  
- [in] Uno dei [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) costanti di enumerazione.  
+ in Una delle costanti di enumerazione [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) .  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce i codici di errore COM standard, come definito nel file Winerror. h e i valori nella tabella seguente.  
+ Questo metodo restituisce i codici di errore COM standard come definito in Winerror. h e i valori nella tabella seguente.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
@@ -52,11 +50,11 @@ HRESULT CoInitializeEE (
  Questo metodo carica il motore di esecuzione se non è stato caricato in precedenza.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

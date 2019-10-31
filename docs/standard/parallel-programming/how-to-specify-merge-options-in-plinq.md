@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare le opzioni di merge in PLINQ'
+title: 'Procedura: specificare le opzioni di merge in PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 947f3cb15b7eb372d20884ece73374114c48f472
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139273"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>Procedura: Specificare le opzioni di merge in PLINQ
+# <a name="how-to-specify-merge-options-in-plinq"></a>Procedura: specificare le opzioni di merge in PLINQ
 Questo esempio mostra come specificare le opzioni di merge che verranno applicate a tutti gli operatori successivi in una query PLINQ. Non è necessario impostare le opzioni di merge in modo esplicito, ma facendolo è possibile migliorare le prestazioni. Per altre informazioni sulle opzioni di merge, vedere [Opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]

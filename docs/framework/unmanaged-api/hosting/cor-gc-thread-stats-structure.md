@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136979"
 ---
-# <a name="corgcthreadstats-structure"></a>Struttura COR_GC_THREAD_STATS
-Contiene le statistiche per ogni thread relative alla garbage collection.  
+# <a name="cor_gc_thread_stats-structure"></a>Struttura COR_GC_THREAD_STATS
+Contiene statistiche per thread che riguardano Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,22 +33,22 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Il numero di byte di memoria allocata nel thread in cui è associato all'oggetto corrente `COR_GC_THREAD_STATS` istanza. Questo numero viene impostato su zero ogni volta che si verifica una da zero la generazione di garbage collection.|  
-|`Flags`|Il numero di byte promossi a una generazione superiore le più recenti di garbage collection.|  
+|`PerThreadAllocation`|Numero di byte di memoria allocata nel thread associato all'istanza di `COR_GC_THREAD_STATS` corrente. Questo numero viene cancellato a zero ogni volta che viene generato un Garbage Collection di generazione zero.|  
+|`Flags`|Numero di byte promossi a una generazione più elevata nel Garbage Collection più recente.|  
   
 ## <a name="remarks"></a>Note  
  [ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) accetta un parametro di output di tipo `COR_GC_THREAD_STATS`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** GCHost.idl  
+ **Intestazione:** GCHost. idl  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

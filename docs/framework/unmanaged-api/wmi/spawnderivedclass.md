@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120186"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass (funzione)
 Crea un nuovo oggetto di classe derivata da un oggetto specificato.    
@@ -50,7 +48,7 @@ in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-
 [in] Riservato. Questo parametro deve essere 0.
 
 `ppNewClass`  
-out Riceve il puntatore al nuovo oggetto definizione di classe. Se si verifica un errore, non viene restituito un nuovo oggetto e `ppNewClass` viene lasciato invariato. Il valore non può `null`essere.
+out Riceve il puntatore al nuovo oggetto definizione di classe. Se si verifica un errore, non viene restituito un nuovo oggetto e `ppNewClass` viene lasciato invariato. Il valore non può essere `null`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -69,12 +67,12 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
-`ptr`deve essere una definizione di classe che diventa la classe padre dell'oggetto generato. L'oggetto restituito diventa una sottoclasse dell'oggetto corrente.
+`ptr` deve essere una definizione di classe che diventa la classe padre dell'oggetto generato. L'oggetto restituito diventa una sottoclasse dell'oggetto corrente.
 
 Il nuovo oggetto restituito in `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Non è possibile eseguire l'override di questo comportamento. Non esiste un altro metodo con cui è possibile creare sottoclassi (classi derivate).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

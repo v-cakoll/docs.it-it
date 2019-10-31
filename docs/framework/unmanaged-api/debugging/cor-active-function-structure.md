@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132387"
 ---
 # <a name="cor_active_function-structure"></a>Struttura COR_ACTIVE_FUNCTION
 Contiene informazioni sulle funzioni attualmente attive nei frame di un thread. Questa struttura viene utilizzata dal metodo [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .  
@@ -38,22 +36,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 } COR_ACTIVE_FUNCTION;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`pAppDomain`|Puntatore al proprietario del dominio dell'applicazione del `ilOffset` campo.|  
-|`pModule`|Puntatore al proprietario del modulo del `ilOffset` campo.|  
-|`pFunction`|Puntatore al proprietario della funzione del `ilOffset` campo.|  
+|`pAppDomain`|Puntatore al proprietario del dominio dell'applicazione del campo `ilOffset`.|  
+|`pModule`|Puntatore al proprietario del modulo del campo `ilOffset`.|  
+|`pFunction`|Puntatore al proprietario della funzione del campo `ilOffset`.|  
 |`ilOffset`|Offset MSIL (Microsoft Intermediate Language) del frame.|  
 |`flags`|Riservato per l'estendibilità futura.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl  
+ **Intestazione:** CorDebug. idl  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44196647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141637"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Procedura: Attraversare un albero binario con attività in parallelo
 L'esempio seguente mostra due modi in cui è possibile usare le attività parallele per attraversare una struttura dei dati ad albero. La creazione dell'albero stesso viene svolta come esercizio.  

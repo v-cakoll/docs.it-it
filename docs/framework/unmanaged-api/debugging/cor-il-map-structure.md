@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132348"
 ---
 # <a name="cor_il_map-structure"></a>Struttura COR_IL_MAP
 Specifica le modifiche nell'offset relativo di una funzione.  
@@ -36,16 +34,16 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`oldOffset`|Offset MSIL (Microsoft Intermediate Language) precedente relativo all'inizio della funzione.|  
 |`newOffset`|Nuovo offset MSIL relativo all'inizio della funzione.|  
-|`fAccurate`|`true`Se il mapping è noto come accurato; in caso `false`contrario,.|  
+|`fAccurate`|`true` se il mapping è noto come accurato; in caso contrario, `false`.|  
   
 ## <a name="remarks"></a>Note  
- Il formato della mappa è il seguente: Si presuppone che `oldOffset` il debugger si riferisca a un offset MSIL all'interno del codice MSIL originale, non modificato. Il `newOffset` parametro fa riferimento all'offset MSIL corrispondente all'interno del nuovo codice instrumentato.  
+ Il formato della mappa è il seguente: il debugger presuppone che `oldOffset` faccia riferimento a un offset MSIL all'interno del codice MSIL originale, non modificato. Il parametro `newOffset` si riferisce all'offset MSIL corrispondente all'interno del nuovo codice instrumentato.  
   
  Per il corretto funzionamento, è necessario soddisfare i requisiti seguenti:  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - Verrà eseguito il mapping di un nuovo offset di 20 o superiore alla precedente offset 9.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorProf.idl  
+ **Intestazione:** CorDebug. idl, CorProf. idl  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

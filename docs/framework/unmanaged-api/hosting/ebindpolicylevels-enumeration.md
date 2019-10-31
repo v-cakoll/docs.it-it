@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136559"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>Enumerazione EBindPolicyLevels
-Fornisce flag per specificare il livello in cui applicare o modificare i criteri di assembly.  
+Fornisce i flag per specificare il livello al quale applicare o modificare i criteri di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +39,7 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -50,19 +48,19 @@ typedef enum {
 |`ePolicyLevelHost`|Specifica che i criteri devono essere applicati a livello di host.|  
 |`ePolicyLevelNone`|Non specifica alcun flag a livello di criteri.|  
 |`ePolicyLevelPublisher`|Specifica che i criteri devono essere applicati a livello di server di pubblicazione.|  
-|`ePolicyLevelRetargetable`|Specifica che i criteri devono essere applicati a diversi livelli.|  
-|`ePolicyPortability`|Specifica che i criteri devono supportare la portabilità tra diverse implementazioni di un assembly .NET Framework. Vedere le [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) elemento di file di configurazione.|  
-|`ePolicyUnifiedToCLR`|Specifica che i criteri devono essere uniti a quella di common language runtime (CLR).|  
+|`ePolicyLevelRetargetable`|Specifica che i criteri devono essere applicabili a livelli variabili.|  
+|`ePolicyPortability`|Specifica che i criteri devono supportare la portabilità tra le implementazioni di un assembly .NET Framework. Vedere l'elemento del file di configurazione [\<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) .|  
+|`ePolicyUnifiedToCLR`|Specifica che i criteri devono essere unificati a quello del Common Language Runtime (CLR).|  
   
 ## <a name="remarks"></a>Note  
- Questa enumerazione viene passata ai metodi del [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfaccia per specificare le modifiche nei criteri dell'applicazione.  
+ Questa enumerazione viene passata ai metodi dell'interfaccia [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) per specificare le modifiche nei criteri dell'applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132e0868426670ba61d8ee12ba7007be1a8a52de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746157"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139403"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>Metodo ICorDebugNativeFrame::GetLocalRegisterValue
-Ottiene il valore di un argomento o una variabile locale viene archiviato nel registro specificato per il frame nativo.  
+Ottiene il valore di un argomento o di una variabile locale archiviata nel registro specificato per il frame nativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT GetLocalRegisterValue (
   
 ## <a name="parameters"></a>Parametri  
  `reg`  
- [in] Valore dell'enumerazione che specifica il registro contenente il valore "CorDebugRegister".  
+ in Valore dell'enumerazione "CorDebugRegister" che specifica il registro che contiene il valore.  
   
  `cbSigBlob`  
- [in] Intero che specifica le dimensioni della firma binaria dei metadati che fa riferimento il `pvSigBlob` parametro.  
+ in Integer che specifica la dimensione della firma dei metadati binari a cui fa riferimento il parametro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Oggetto `PCCOR_SIGNATURE` valore che punta alla firma binaria dei metadati del tipo del valore.  
+ in Valore `PCCOR_SIGNATURE` che punta alla firma dei metadati binaria del tipo del valore.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nel registro specificato.  
+ out Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nel registro specificato.  
   
 ## <a name="remarks"></a>Note  
- Il `GetLocalRegisterValue` metodo può essere utilizzato in un frame nativo o un just-in-time (JIT)-frame compilato.  
+ Il metodo `GetLocalRegisterValue` può essere usato in un frame nativo o in un frame compilato con JIT (just-in-Time).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

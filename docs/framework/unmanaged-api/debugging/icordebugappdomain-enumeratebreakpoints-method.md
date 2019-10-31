@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a683f1531ed28fbd8ef085414bb7cb365762ffde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3611684a17d51fc4fdba31dd4049540039b43e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110511"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Metodo ICorDebugAppDomain::EnumerateBreakpoints
-Ottiene un enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.  
+Ottiene un enumeratore per tutti i punti di interruzione attivi nel dominio applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateBreakpoints (
   
 ## <a name="parameters"></a>Parametri  
  `ppBreakpoints`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugBreakpointEnum che è l'enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugBreakpointEnum che rappresenta l'enumeratore per tutti i punti di interruzione attivi nel dominio applicazione.  
   
 ## <a name="remarks"></a>Note  
- L'enumeratore include tutti i tipi di punti di interruzione, tra cui i punti di interruzione di funzione e i punti di interruzione dei dati.  
+ L'enumeratore include tutti i tipi di punti di interruzione, inclusi i punti di interruzione delle funzioni e i punti di interruzione dei dati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

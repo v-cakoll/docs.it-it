@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131854"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Metodo ICorDebugStackWalk::GetContext
-Restituisce il contesto per il fotogramma corrente di [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.  
+Restituisce il contesto per il frame corrente nell'oggetto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,34 +36,34 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Parametri  
  `contextFlags`  
- [in] Flag che indicano il contenuto richiesto del buffer del contesto (definite in Winnt. H).  
+ in Flag che indicano il contenuto richiesto del buffer del contesto (definito in WinNT. h).  
   
  `contextBufSize`  
- [in] La dimensione allocata del buffer del contesto.  
+ in Dimensione allocata del buffer del contesto.  
   
  `contextSize`  
- [out] Le dimensioni effettive del contesto. Questo valore deve essere minore o uguale alla dimensione del buffer del contesto.  
+ out Dimensioni effettive del contesto. Questo valore deve essere minore o uguale alla dimensione del buffer del contesto.  
   
  `contextBuf`  
- [out] Il buffer del contesto.  
+ out Buffer del contesto.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il contesto per il fotogramma corrente è stato restituito correttamente.|  
-|E_FAIL|Il contesto non può essere restituito.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Il buffer del contesto è troppo piccolo.|  
-|CORDBG_E_PAST_END_OF_STACK|Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.|  
+|S_OK|Il contesto per il frame corrente è stato restituito correttamente.|  
+|E_FAIL|Non è stato possibile restituire il contesto.|  
+|HRESULT_FROM_WIN32 (BUFFER ERROR_INSUFFICIENT)|Il buffer del contesto è troppo piccolo.|  
+|CORDBG_E_PAST_END_OF_STACK|Il puntatore al frame è già alla fine dello stack. non è pertanto possibile accedere a nessun frame aggiuntivo.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Poiché la rimozione Ripristina solo un subset dei registri, ad esempio registri non volatili, il contesto potrebbe non corrispondere esattamente allo stato del registro al momento della chiamata.  
+ Poiché la rimozione ripristina solo un subset dei registri, ad esempio i registri non volatili, il contesto potrebbe non corrispondere esattamente allo stato del registro al momento della chiamata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

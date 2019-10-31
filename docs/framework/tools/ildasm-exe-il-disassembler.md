@@ -9,14 +9,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105053"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -46,7 +44,7 @@ Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib
 
 Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winmd*.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/bytes**|Mostra i byte effettivi, in formato esadecimale, come commenti di istruzioni.|
 |**/caverbal**|Genera blob di attributi personalizzati in forma descrittiva. Il formato predefinito è quello binario.|
@@ -63,7 +61,7 @@ Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winm
 
 Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per l'output su file o su console.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/all**|Specifica una combinazione di opzioni **/header**, **/bytes**, **/stats**, **/classlist** e **/token**.|
 |**/classlist**|Include un elenco di classi definite nel modulo.|

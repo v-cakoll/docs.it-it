@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb9e5bdf85c6d487fd82422522854076c03e2288
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140458"
 ---
 # <a name="icorpublishenumskip-method"></a>Metodo ICorPublishEnum::Skip
-Sposta in avanti il cursore nell'enumerazione per il numero specificato di elementi.  
+Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,12 +35,12 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di elementi da cui si desidera spostare in avanti il cursore.  
+ in Numero di elementi in base ai quali spostare il cursore avanti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorPub.idl, CorPub.h  
+ **Intestazione:** CorPub. idl, CorPub. h  
   
  **Libreria:** CorGuids.lib  
   

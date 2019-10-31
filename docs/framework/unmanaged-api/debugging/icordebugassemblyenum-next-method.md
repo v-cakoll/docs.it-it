@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122866"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>Metodo ICorDebugAssemblyEnum::Next
-Ottiene il numero di assembly specificato dalla raccolta, a partire dalla posizione corrente del cursore.  
+Ottiene il numero specificato di assembly dalla raccolta, a partire dalla posizione corrente del cursore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di assembly da recuperare.  
+ in Numero di assembly da recuperare.  
   
  `values`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugAssembly che rappresenta un assembly.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto ICorDebugAssembly che rappresenta un assembly.  
   
  `pceltFetched`  
- [out] Puntatore al numero di assembly effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di assembly effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

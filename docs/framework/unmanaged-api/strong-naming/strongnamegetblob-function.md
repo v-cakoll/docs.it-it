@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e99346ecca651346b46c220a5e427cbc7f4c4697
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095018"
 ---
 # <a name="strongnamegetblob-function"></a>Funzione StrongNameGetBlob
 Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.  
@@ -46,20 +44,20 @@ BOOLEAN StrongNameGetBlob (
  in Buffer in cui caricare il file eseguibile.  
   
  `pcbBlob`  
- [in, out] Dimensione massima richiesta, in byte, di `pbBlob`. Al ritorno, le dimensioni effettive, in byte, `pbBlob`di.  
+ [in, out] Dimensione massima richiesta, in byte, del `pbBlob`. Al ritorno, le dimensioni effettive, in byte, di `pbBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al completamento; in caso `false`contrario,.  
+ `true` al completamento; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Se la `StrongNameGetBlob` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
+ Se la funzione `StrongNameGetBlob` non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

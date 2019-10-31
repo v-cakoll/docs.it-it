@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c54707d4c767fbb644ed892767be8351d2fd95b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72ffd7b47795ee8e46f8fbff07559133843793e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141154"
 ---
 # <a name="iclrgcmanager2-interface"></a>Interfaccia ICLRGCManager2
 Fornisce metodi che consentono a un host di interagire con il sistema di Garbage Collection del Common Language Runtime.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Imposta la dimensione di un segmento di Garbage Collection e la dimensione massima della generazione 0 del sistema Garbage Collection. Abilita la generazione 0 e le dimensioni dei `DWORD`segmenti maggiori di.|  
+|[Metodo SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Imposta la dimensione di un segmento di Garbage Collection e la dimensione massima della generazione 0 del sistema Garbage Collection. Abilita la generazione 0 e le dimensioni dei segmenti maggiori di `DWORD`.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia eredita dall' [Interfaccia ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  
   
- Il Common Language Runtime (CLR) implementa il meccanismo Garbage Collection con il tipo <xref:System.GC> gestito. Per ulteriori informazioni sul sistema di Garbage Collection, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
+ Il Common Language Runtime (CLR) implementa il meccanismo Garbage Collection con il tipo di <xref:System.GC> gestito. Per ulteriori informazioni sul sistema di Garbage Collection, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

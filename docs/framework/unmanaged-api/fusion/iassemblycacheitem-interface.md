@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2493b5338824e1eab3f82a9023bbcced59a98fc8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134458"
 ---
 # <a name="iassemblycacheitem-interface"></a>Interfaccia IAssemblyCacheItem
 Rappresenta un singolo assembly nel Global Assembly Cache.  
@@ -35,7 +33,7 @@ Rappresenta un singolo assembly nel Global Assembly Cache.
 |[Metodo CreateStream](iassemblycacheitem-createstream-method.md)|Crea un flusso con il nome e il formato specificati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

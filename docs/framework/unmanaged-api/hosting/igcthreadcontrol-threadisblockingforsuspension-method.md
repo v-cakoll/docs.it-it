@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8609b32ad2dea699b5b248b2b8bb3d81ec744043
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134743"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>Metodo IGCThreadControl::ThreadIsBlockingForSuspension
-Notifica all'host che il thread che effettua la chiamata sta per bloccare, ad esempio per un'operazione di garbage collection o altri sospensione.  
+Notifica all'host che il thread che sta effettuando la chiamata sta per essere bloccato, ad esempio per un Garbage Collection o un'altra sospensione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +32,14 @@ HRESULT ThreadIsBlockingForSuspension ( );
 ```  
   
 ## <a name="remarks"></a>Note  
- L'host può scegliere all'interno di `ThreadIsBlockingForSuspension` callback se si desidera modificare la pianificazione di un thread.  
+ L'host può scegliere all'interno del callback `ThreadIsBlockingForSuspension` se ripianificare un thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

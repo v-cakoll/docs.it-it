@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127049"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Funzione GetRequestedRuntimeVersionForCLSID
-Ottiene le informazioni sulla versione di common language runtime (CLR) appropriata per la classe con l'oggetto specificato `CLSID`.  
+Ottiene le informazioni sulla versione di Common Language Runtime (CLR) appropriate per la classe con la `CLSID`specificata.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,38 +40,38 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Parametri  
  `rclsid`  
- [in]  Il `CLSID` del componente.  
+ in  `CLSID` del componente.  
   
  `pVersion`  
- [out]  Un buffer che contiene la stringa del numero di versione al completamento.  
+ out  Buffer che contiene la stringa del numero di versione al completamento dell'operazione.  
   
  `cchBuffer`  
- [in]  Le dimensioni, in caratteri "wide", del `pVersion` buffer.  
+ in  Dimensione, in caratteri wide, del buffer `pVersion`.  
   
  `dwLength`  
- [out] La lunghezza, espressa in byte, del buffer restituito.  
+ out Lunghezza, in byte, del buffer restituito.  
   
  `dwResolutionFlags`  
- [in]  Uno dei valori CLSID_RESOLUTION_FLAGS. Sono supportati i valori seguenti:  
+ in  Uno dei valori CLSID_RESOLUTION_FLAGS. Sono supportati i valori seguenti:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) specifica che deve essere utilizzato il comportamento predefinito di interoperabilità.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) specifica che deve essere utilizzato il comportamento di interoperabilità predefinito.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) consente di specificare che deve essere ricercato nel Registro di sistema e devono essere applicati criteri shim.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) specifica che deve essere eseguita la ricerca nel registro di sistema e applicare i criteri shim.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|La funzione ha restituito correttamente.|  
-|E_INVALIDARG|Uno dei parametri è un formato o tipo non valido.|  
-|ERROR_INSUFFICIENT_BUFFER|Il `pVersion` buffer non è sufficientemente grande da contenere l'intera stringa di versione.|  
-|REGDB_E_CLASSNOTREG|Nessuna classe registrata con l'oggetto specificato `CLSID`.|  
-|E_POINTER|`dwLength` è null, o `cchBuffer` sia abbastanza grande da contenere la stringa di versione, ma `pVersion` è null.|  
+|E_INVALIDARG|Il tipo o il formato di uno dei parametri non è valido.|  
+|ERROR_INSUFFICIENT_BUFFER|Il buffer di `pVersion` non è sufficientemente grande da mantenere l'intera stringa di versione.|  
+|REGDB_E_CLASSNOTREG|Non è stata registrata alcuna classe con la `CLSID`specificata.|  
+|E_POINTER|`dwLength` è null o `cchBuffer` è sufficientemente grande per poter essere contenuta nella stringa di versione, ma `pVersion` è null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

@@ -2,14 +2,12 @@
 title: 'Metodo metodo icordebugsymbolprovider:: GetTypeProps'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133671"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Metodo metodo icordebugsymbolprovider:: GetTypeProps
 Restituisce informazioni sulle proprietà di un tipo, ad esempio il numero di firma dei parametri generici, dato un indirizzo RVA (Relative Virtual Address) in un oggetto vtable.  
@@ -39,17 +37,17 @@ HRESULT GetTypeProps(
  [out] Buffer contenente le firme typespec di tutti i parametri generici.  
   
 ## <a name="remarks"></a>Note  
- Per ottenere `signature` la dimensione necessaria della matrice del tipo, impostare l' `cbSignature` argomento su 0 e `signature` su **null**. Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.  
+ Per ottenere le dimensioni richieste della matrice di `signature` del tipo, impostare l'argomento di `cbSignature` su 0 e `signature` su **null**. Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.  
   
 > [!NOTE]
 > Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

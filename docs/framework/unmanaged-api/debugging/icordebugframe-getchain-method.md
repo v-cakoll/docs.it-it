@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9677fd14f50cf93eac7eeaef784082d45e8884c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137682"
 ---
 # <a name="icordebugframegetchain-method"></a>Metodo ICorDebugFrame::GetChain
-Ottiene un puntatore per il frame è una parte della catena.  
+Ottiene un puntatore alla catena di cui fa parte questo frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetChain (
   
 ## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena che contiene il frame.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena contenente questo frame.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

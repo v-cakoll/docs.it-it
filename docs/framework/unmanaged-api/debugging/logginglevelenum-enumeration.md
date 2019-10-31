@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139208"
 ---
 # <a name="logginglevelenum-enumeration"></a>Enumerazione LoggingLevelEnum
 Indica il livello di gravità di un messaggio descrittivo scritto nel registro eventi quando un thread gestito registra un evento.  
@@ -46,11 +44,11 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`LTraceLevel0`|Il messaggio è un livello di traccia, 0.|  
+|`LTraceLevel0`|Il messaggio è un livello di traccia 0.|  
 |`LTraceLevel1`|Il messaggio è un livello di traccia 1.|  
 |`LTraceLevel2`|Il messaggio è un livello di traccia 2.|  
 |`LTraceLevel3`|Il messaggio è un livello di traccia 3.|  
@@ -65,10 +63,10 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|Il messaggio è un livello di panico.|  
   
 ## <a name="remarks"></a>Note  
- Common language runtime (CLR) chiama il [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) metodo per notificare al debugger che un thread gestito ha registrato un evento. CLR passa un valore di `LoggingLevelEnum` enumerazione per indicare il livello di gravità del messaggio che il thread gestito ha scritto nel registro eventi.  
+ Il Common Language Runtime (CLR) chiama il metodo [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) per notificare al debugger che un thread gestito ha registrato un evento. CLR passa un valore dell'enumerazione `LoggingLevelEnum` per indicare il livello di gravità del messaggio scritto dal thread gestito nel registro eventi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

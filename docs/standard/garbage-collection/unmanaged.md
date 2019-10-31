@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141357"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Pulizia delle risorse non gestite
 
@@ -39,13 +37,13 @@ Se i tipi utilizzano risorse non gestite, è necessario effettuare le operazioni
 
 I consumer del tipo in uso possono quindi chiamare l'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> direttamente per liberare la memoria utilizzata dalle risorse non gestite. Quando si implementa correttamente un metodo <xref:System.IDisposable.Dispose%2A>, il metodo <xref:System.Object.Finalize%2A> o il proprio override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType> diventa una misura di protezione per la pulizia delle risorse nel caso in cui il metodo <xref:System.IDisposable.Dispose%2A> non venga chiamato.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Implementazione di un metodo Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md): descrive come implementare il [criterio Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) per il rilascio delle risorse non gestite.
 
 [Uso di oggetti che implementano IDisposable](../../../docs/standard/garbage-collection/using-objects.md): descrive come i consumer di un determinato tipo garantiscono che venga chiamata l'implementazione <xref:System.IDisposable.Dispose%2A> corrispondente. A tale scopo, si consiglia l'utilizzo dell'istruzione `using` in C# o l'istruzione `Using` in Visual Basic.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 Viene definito il metodo <xref:System.IDisposable.Dispose%2A> per il rilascio delle risorse non gestite.

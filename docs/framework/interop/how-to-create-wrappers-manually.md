@@ -1,19 +1,17 @@
 ---
-title: 'Procedura: Creare wrapper manualmente'
+title: 'Procedura: creare wrapper manualmente'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5db0ec9050c74b27d3ee25a99dcf8e2319835ffb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a647e4b434d0c38a2a84e9faec1d603d2bc4bb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123921"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Procedura: Creare wrapper manualmente
+# <a name="how-to-create-wrappers-manually"></a>Procedura: creare wrapper manualmente
 Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, è consigliabile iniziare con una libreria dei tipi o un file IDL esistente. Se non si ha il file IDL o non è possibile generare un file di libreria dei tipi, simulare i tipi COM mediante la creazione di dichiarazioni gestite e l'esportazione dell'assembly risultante in una libreria dei tipi.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Per simulare i tipi COM dall'origine gestita  
@@ -32,7 +30,7 @@ Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, �
   
 3. Dopo aver completato le dichiarazioni, compilare il file come si compila qualunque altro codice sorgente gestito.  
   
-4. Come per i tipi importati con Tlbimp.exe, alcuni tipi richiedono altre informazioni che è possibile aggiungere direttamente al codice. Per informazioni dettagliate, vedere [Procedura: Modificare assembly di interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
+4. Come per i tipi importati con Tlbimp.exe, alcuni tipi richiedono altre informazioni che è possibile aggiungere direttamente al codice. Per dettagli, vedere [Procedura: Modificare assembly di interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente mostra un esempio di interfaccia `ISATest` e di classe `SATest` in IDL e i tipi corrispondenti nel codice sorgente C#.  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4ac86fdc0852c701b66986b6a304695fbdc8e755
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780394"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127686"
 ---
 # <a name="icorruntimehoststart-method"></a>Metodo ICorRuntimeHost::Start
-Avvia common language runtime (CLR).  
+Avvia il Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +35,22 @@ HRESULT Start ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|L'operazione è riuscita.|  
-|S_FALSE|Impossibile completare l'operazione.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|Operazione completata.|  
+|S_FALSE|Non è stato possibile completare l'operazione.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, il CLR non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
   
 ## <a name="remarks"></a>Note  
- In genere non è necessario chiamare il `Start` metodo, perché Common Language Runtime viene avviato automaticamente alla prima richiesta per eseguire codice gestito.  
+ In genere non è necessario chiamare il metodo `Start`, perché CLR viene avviato automaticamente alla prima richiesta di esecuzione del codice gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
- **Versioni di .NET framework:** 1.0, 1.1  
+ **Versioni .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vedere anche
 

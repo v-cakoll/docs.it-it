@@ -1,5 +1,5 @@
 ---
-title: Creazione di assembly
+title: Creare assembly
 ms.date: 08/19/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2dda45cca182d75bc77916cdf862ada9faead9ec
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122491"
 ---
-# <a name="create-assemblies"></a>Creazione di assembly
+# <a name="create-assemblies"></a>Creare assembly
 
 È possibile creare assembly con uno o più file usando un ambiente IDE, ad esempio Visual Studio, oppure con i compilatori e gli strumenti forniti da Windows SDK. L'assembly più semplice è costituito da un unico file con un nome semplice, caricato in un unico dominio dell'applicazione. Altri assembly all'esterno della directory dell'applicazione non possono fare riferimento a questo assembly, che non può neanche essere sottoposto al controllo della versione. Per disinstallare l'applicazione costituita dall'assembly, è sufficiente eliminare la directory in cui si trova. Per molti sviluppatori un assembly con queste funzionalità è tutto ciò che serve per distribuire un'applicazione.
 
@@ -24,7 +22,7 @@ ms.locfileid: "70973306"
 
 Quando si raggruppano moduli di codice e risorse negli assembly, sono disponibili diverse opzioni in base ai fattori seguenti:
 
-- Controllo delle versioni
+- Versionamento
 
      Raggruppare i moduli che devono avere le stesse informazioni sulla versione.
 
@@ -36,7 +34,7 @@ Quando si raggruppano moduli di codice e risorse negli assembly, sono disponibil
 
      Raggruppare i moduli se possono essere usati insieme in modo logico per uno scopo. Ad esempio, è possibile inserire nello stesso assembly un assembly costituito da tipi e classi usati raramente per la manutenzione di programmi. In più, i tipi che si intende condividere più applicazioni devono essere raggruppati in un assembly, che deve essere firmato con un nome sicuro.
 
-- Security
+- Sicurezza
 
      Raggruppare moduli contenenti tipi che richiedono le stesse autorizzazioni di sicurezza.
 
@@ -50,7 +48,7 @@ Quando si rendono disponibili assembly Common Language Runtime alle applicazioni
 
 - [Programma con assembly](program.md)
 - [Controllo delle versioni degli assembly](versioning.md)
-- [Procedura: Compilare un assembly a file singolo](../../framework/app-domains/build-single-file-assembly.md)
-- [Procedura: Compilare un assembly su più file](../../framework/app-domains/build-multifile-assembly.md)
+- [Procedura: compilare un assembly a file singolo](../../framework/app-domains/build-single-file-assembly.md)
+- [Procedura: compilare un assembly su più file](../../framework/app-domains/build-multifile-assembly.md)
 - [Come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assembly su più file](../../framework/app-domains/multifile-assemblies.md)

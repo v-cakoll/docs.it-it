@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097956"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumerazione CorDebugInternalFrameType
-Identifica il tipo di stack frame. Questa enumerazione viene utilizzata per la [ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) (metodo).  
+Identifica il tipo di stack frame. Questa enumerazione viene utilizzata dal metodo [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,24 +43,24 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Valore null. Il `ICorDebugInternalFrame::GetFrameType` metodo non restituisce mai questo valore.|  
-|`STUBFRAME_M2U`|Un frame di uno stub a gestito.|  
-|`STUBFRAME_U2M`|Un frame di stub non gestito a gestito.|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|Una transizione tra i domini applicazione.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Una chiamata al metodo di caricamento leggero.|  
+|`STUBFRAME_NONE`|Valore null. Il metodo `ICorDebugInternalFrame::GetFrameType` non restituisce mai questo valore.|  
+|`STUBFRAME_M2U`|Frame dello stub gestito da gestito a non gestito.|  
+|`STUBFRAME_U2M`|Frame stub non gestito.|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|Transizione tra domini dell'applicazione.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Una chiamata al metodo Lightweight.|  
 |`STUBFRAME_FUNC_EVAL`|Inizio della valutazione della funzione.|  
-|`STUBFRAME_INTERNALCALL`|Una chiamata interna in common language runtime.|  
+|`STUBFRAME_INTERNALCALL`|Una chiamata interna all'Common Language Runtime.|  
 |`STUBFRAME_CLASS_INIT`|Inizio dell'inizializzazione di una classe.|  
 |`STUBFRAME_EXCEPTION`|Eccezione generata.|  
-|`STUBFRAME_SECURITY`|Un frame utilizzato per la sicurezza dall'accesso di codice.|  
-|`STUBFRAME_JIT_COMPILATION`|Il runtime è un metodo di compilazione JIT.|  
+|`STUBFRAME_SECURITY`|Frame utilizzato per la sicurezza dall'accesso di codice.|  
+|`STUBFRAME_JIT_COMPILATION`|Il Runtime sta eseguendo la compilazione JIT di un metodo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

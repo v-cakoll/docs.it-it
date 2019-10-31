@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134481"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Metodo IAssemblyCacheItem::CreateStream
 
@@ -63,7 +61,7 @@ out Puntatore all'indirizzo dell'istanza di [IStream](/windows/desktop/api/objid
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** Fusion. h
 

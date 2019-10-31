@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: cd6a3982-6ed3-4909-808d-a66055e813e0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6bc73683a6c37ceaaffc635a58803b71c3b6cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2902744b6af3c7b2bd4def73b04807ce3333a8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131884"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>Interfaccia ICorDebugRuntimeUnwindableFrame
 Fornisce supporto per i metodi non gestiti che richiedono a Common Language Runtime (CLR) di rimuovere un frame.  
   
 ## <a name="remarks"></a>Note  
- `ICorDebugRuntimeUnwindableFrame` è una versione particolare dell'interfaccia ICorDebugFrame. Viene usato dai metodi non gestiti che richiedono il runtime di rimuovere un frame sullo stack corrente. Convenzioni di rimozione esistenti non funzionano, perché non utilizzare codice con compilazione JIT. Quando il debugger rileva un frame non, consigliabile usare la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) metodo per la rimozione, ma deve eseguire l'ispezione stesso. Quando il debugger riceve un' `ICorDebugRuntimeUnwindableFrame`, può chiamare le [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) metodo per recuperare il contesto del frame.  
+ `ICorDebugRuntimeUnwindableFrame` è una versione specializzata dell'interfaccia ICorDebugFrame. Viene usato da metodi non gestiti che richiedono al runtime di rimuovere un frame nello stack corrente. Le convenzioni di rimozione esistenti non funzionano perché non utilizzano codice compilato tramite JIT. Quando il debugger rileva un frame non ricaricabile, deve usare il metodo [ICorDebugStackWalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) per rimuoverlo, ma deve eseguire un controllo. Quando il debugger riceve una `ICorDebugRuntimeUnwindableFrame`, può chiamare il metodo [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) per recuperare il contesto del frame.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

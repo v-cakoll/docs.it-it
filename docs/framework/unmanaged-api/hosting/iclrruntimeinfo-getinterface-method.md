@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120245"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Metodo ICLRRuntimeInfo::GetInterface
-Carica CLR nel processo corrente e restituisce come puntatori a interfaccia, runtime [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Carica CLR nel processo corrente e restituisce i puntatori dell'interfaccia di runtime, ad esempio [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
   
- Questo metodo sostituisce tutte le `CorBindTo`* funzioni nel [funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sezione.  
+ Questo metodo sostituisce tutte le funzioni `CorBindTo`* nella sezione [funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +38,13 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>Parametri  
  `rclsid`  
- [in] L'interfaccia CLSID della coclasse.  
+ in Interfaccia CLSID per la coclasse.  
   
  `riid`  
- [in] L'IID richiesti `rclsid` interfaccia.  
+ in IID dell'interfaccia `rclsid` richiesta.  
   
  `ppUnk`  
- [out] Un puntatore all'interfaccia di query.  
+ out Puntatore all'interfaccia sottoposta a query.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -55,13 +53,13 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppUnk` è null.|  
-|E_OUTOFMEMORY|Memoria insufficiente è disponibile per gestire la richiesta.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso era già associato ai criteri di attivazione 2 versione CLR legacy.|  
+|E_OUTOFMEMORY|La memoria disponibile non è sufficiente per gestire la richiesta.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso era già associato ai criteri di attivazione di CLR versione 2 Legacy.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo, il CLR caricato ma non inizializzato.  
+ Questo metodo fa sì che CLR venga caricato ma non inizializzato.  
   
- La tabella seguente mostra le combinazioni supportate per `rclsid` e `riid`.  
+ Nella tabella seguente vengono illustrate le combinazioni supportate per `rclsid` e `riid`.  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -75,11 +73,11 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

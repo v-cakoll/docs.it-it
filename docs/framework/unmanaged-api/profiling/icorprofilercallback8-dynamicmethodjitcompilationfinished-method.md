@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorProfilerCallback8::DynamicMethodJITCompilationFinished
+title: ICorProfilerCallback8::D Metodo ynamicMethodJITCompilationFinished
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e04459614ca697908fb9b71ecc3931ac305a838
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136576"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>Metodo ICorProfilerCallback8::DynamicMethodJITCompilationFinished
-[Supportato in .NET Framework 4.7 e versioni successive]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D Metodo ynamicMethodJITCompilationFinished
+[Supportato in .NET Framework 4,7 e versioni successive]  
   
-Notifica al profiler ogni volta che è stata completata la compilazione JIT di un metodo dinamico.  
+Notifica al profiler ogni volta che la compilazione JIT di un metodo dinamico è stata completata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,23 +32,23 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>Parametri  
 [in] `functionId`  
-L'identificatore della funzione in memoria per la quale JIT viene avviata la compilazione.   
+Identificatore della funzione in memoria per la quale viene avviata la compilazione JIT.   
 
 [in] `hrStatus`   
-Un valore che indica se la compilazione JIT è riuscita.
+Valore che indica se la compilazione JIT è stata eseguita correttamente.
 
 [in] `fIsSafeToBlock`   
-`true` per indicare che il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; `false` per indicare che il blocco non avrà effetto il funzionamento del runtime.  
+`true` per indicare che il blocco può causare la restituzione del thread chiamante da parte del runtime. `false` per indicare che il blocco non influirà sul funzionamento del runtime.  
 
 ## <a name="remarks"></a>Note  
 
-Questo callback viene attivato ogni volta che ha terminato la compilazione JIT di un metodo dinamico. Sono inclusi vari stub a livello di integrità e i metodi LCG. L'obiettivo consiste nel fornire gli autori di profiler con le informazioni necessarie per identificare il metodo compilato per gli utenti.
+Questo callback viene attivato ogni volta che viene completata la compilazione JIT di un metodo dinamico. Sono inclusi vari Stub IL e metodi LCG. Il suo obiettivo consiste nel fornire ai writer del profiler informazioni sufficienti per identificare il metodo compilato agli utenti.
 
 > [!NOTE]
-> `functionId` valori non possono essere usati per risolvere i relativi token di metadati, perché i metadati non dispongono di metodi dinamici.
+> non è possibile usare i valori `functionId` per risolvere i token dei metadati, perché i metodi dinamici non hanno metadati.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

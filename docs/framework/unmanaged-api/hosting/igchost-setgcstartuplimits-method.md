@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ae50fb3ff15097f9a6ca5839f3832bcfc58d3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134846"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Metodo IGCHost::SetGCStartupLimits
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
   
 > [!IMPORTANT]
-> A partire da .NET Framework 4,5, è possibile impostare dimensioni del segmento e dimensioni massime 0 di generazione su `DWORD` valori maggiori di usando il metodo [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
+> A partire da .NET Framework 4,5, è possibile impostare le dimensioni del segmento e le dimensioni massime 0 di generazione su valori maggiori di `DWORD` usando il metodo [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,14 +45,14 @@ HRESULT SetGCStartupLimits (
  in Dimensione massima per la generazione 0.  
   
 ## <a name="remarks"></a>Note  
- Il `SetGCStartupLimits` metodo può essere chiamato una sola volta. Questi valori non possono essere modificati in un secondo momento.  
+ Il metodo `SetGCStartupLimits` può essere chiamato una sola volta. Questi valori non possono essere modificati in un secondo momento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** GCHost. idl, GCHost. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

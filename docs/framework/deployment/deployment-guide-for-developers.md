@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121544"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare qualsiasi versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
 
 Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#redistributable-packages). È anche possibile scaricare i pacchetti ridistribuibili e i Language Pack dalle pagine dell'Area download Microsoft seguenti:
 
-- .NET Framework 4.8 per tutti i sistemi operativi ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=2085155) o [programma di installazione offline](https://go.microsoft.com/fwlink/?linkid=2088631))
+- .NET Framework 4.8 per tutti i sistemi operativi ([programma di installazione Web](https://go.microsoft.com/fwlink/?LinkId=2085155) o [programma di installazione offline](https://go.microsoft.com/fwlink/?linkid=2088631))
 
 - .NET Framework 4.7.2 per tutti i sistemi operativi ([programma di installazione Web](https://go.microsoft.com/fwlink/?LinkId=863262) o [programma di installazione offline](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -59,7 +57,7 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 - Se si disinstalla .NET Framework 4.5 o una delle versioni intermedie, si rimuovono anche i file di .NET Framework 4 preesistenti. Se si vuole tornare a .NET Framework 4, è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [installazione del .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
-- Il file ridistribuibile di .NET Framework 4.5 è stato aggiornato il 9 ottobre 2012 per risolvere un problema correlato a un timestamp errato in un certificato digitale, che ha causato la scadenza anticipata della firma digitale su file creati e firmati da Microsoft. Se in precedenza è stato installato .NET Framework 4.5 Redistributable Package del 16 agosto 2012, è consigliabile aggiornare la copia con l'ultimo file ridistribuibile dall' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Per altre informazioni su questo problema, vedere l' [avviso di sicurezza Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- Il file ridistribuibile di .NET Framework 4.5 è stato aggiornato il 9 ottobre 2012 per risolvere un problema correlato a un timestamp errato in un certificato digitale, che ha causato la scadenza anticipata della firma digitale su file creati e firmati da Microsoft. Se in precedenza è stato installato .NET Framework 4.5 Redistributable Package del 16 agosto 2012, è consigliabile aggiornare la copia con l'ultimo file ridistribuibile dall'[Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Per altre informazioni su questo problema, vedere l' [avviso di sicurezza Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
 Per informazioni su come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete, vedere [Guida alla distribuzione per amministratori](guide-for-administrators.md).
 
@@ -69,8 +67,8 @@ Quando si ritiene di poter procedere alla pubblicazione dell'applicazione in un 
 
 |Strategia di distribuzione per l'applicazione|Metodi di distribuzione disponibili|Pacchetto ridistribuibile di .NET Framework da usare|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Web installer](#redistributable-packages)|
-|Installazione da disco|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Offline installer](#redistributable-packages)|
+|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione Web](#redistributable-packages)|
+|Installazione da disco|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione offline](#redistributable-packages)|
 |Installazione da una rete locale (per applicazioni aziendali)|- [ClickOnce](#clickonce-deployment)|[Programma di installazione Web](#redistributable-packages) (vedere [ClickOnce](#clickonce-deployment) per le restrizioni) o [programma di installazione offline](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Pacchetti ridistribuibili
@@ -242,7 +240,7 @@ Se è disponibile un pacchetto di installazione personalizzato, è possibile avv
 
 - [Stabilire](#detecting-the-language-packs) se i Language Pack sono già installati nel computer dell'utente.
 
-- Se si vuole controllare la distribuzione, avviare automaticamente il processo di installazione di .NET Framework e tenerne traccia (vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)).
+- Se si vuole controllare la distribuzione, avviare automaticamente il processo di installazione di .NET Framework e tenerne traccia (vedere [How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Se si distribuisce il programma di installazione offline, [concatenare separatamente i Language Pack](#chain_langpack).
 
@@ -254,7 +252,7 @@ Se è disponibile un pacchetto di installazione personalizzato, è possibile avv
 
 ### <a name="detecting-the-net-framework"></a>Rilevamento di .NET Framework
 
-Il programma di installazione di .NET Framework scrive le chiavi del Registro di sistema quando l'installazione viene completata correttamente. È possibile verificare se .NET Framework 4.5 o versione successiva è installato controllando se nella cartella `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` del Registro di sistema è presente un valore `DWORD` denominato `Release`. Si noti che "NET Framework Setup" non inizia con un punto. La presenza di questa chiave indica che .NET Framework 4.5 o versione successiva è installato nel computer. Il valore di `Release` indica la versione di .NET Framework installata.
+Il programma di installazione di .NET Framework scrive le chiavi del Registro di sistema quando l'installazione viene completata correttamente. È possibile verificare se .NET Framework 4.5 o versione successiva è installato controllando se nella cartella `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` del Registro di sistema è presente un valore `DWORD` denominato `Release`. Si noti che "NET Framework Setup" non inizia con un punto. L'esistenza di questa chiave indica che nel computer è installato .NET Framework 4,5 o una versione successiva. Il valore di `Release` indica la versione di .NET Framework installata.
 
 > [!IMPORTANT]
 > Verificare la presenza di un valore  **maggiore o uguale** al valore della parola chiave Release quando si prova a rilevare se è presente una versione specifica.
@@ -284,15 +282,15 @@ Il programma di installazione di .NET Framework scrive le chiavi del Registro di
 
 ### <a name="detecting-the-language-packs"></a>Rilevamento dei Language Pack
 
-È possibile verificare se un Language Pack è installato controllando se nella cartella HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* del Registro di sistema è presente un valore DWORD denominato `Release`. Si noti che "NET Framework Setup" non inizia con un punto. *LCID* specifica un identificatore delle impostazioni locali; vedere le [lingue supportate](#supported-languages) per un elenco di tali identificatori.
+È possibile verificare se un Language Pack è installato controllando se nella cartella HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* del Registro di sistema è presente un valore DWORD denominato `Release`. Si noti che "NET Framework Setup" non inizia con un punto. *LCID* specifica un identificatore delle impostazioni locali; vedere [lingue supportate](#supported-languages) per un elenco di tali identificatori.
 
 Ad esempio, per rilevare se è installato il Language Pack giapponese completo (LCID = 1041), recuperare il valore denominato seguente dal registro di sistema:
 
 | | |
 |-|-|
 | Chiave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| nome | Release |
-| Type | DWORD |
+| Name | Versione |
+| Digitare | DWORD |
 
 Per determinare se per una versione particolare di .NET Framework dalla 4.5 alla 4.7.2 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE del valore DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
 
@@ -335,13 +333,13 @@ Non è necessario concatenare i Language Pack se si usa il programma di installa
 
 Per un elenco completo di opzioni della riga di comando, vedere la sezione [Opzioni della riga di comando](#command-line-options) .
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>Troubleshooting
 
 #### <a name="return-codes"></a>Codici restituiti
 
 Nella tabella seguente sono elencati i codici restituiti più comuni per il programma di installazione ridistribuibile di .NET Framework. I codici restituiti sono gli stessi per tutte le versioni del programma di installazione. Per collegamenti a informazioni dettagliate, vedere la sezione successiva.
 
-|Codice restituito|Description|
+|Codice restituito|Descrizione|
 |-----------------|-----------------|
 |0|Installazione completata.|
 |1602|Installazione annullata dall'utente.|
@@ -358,7 +356,7 @@ Fare riferimento al contenuto seguente:
 
 - [Codici di errore del moniker URL](https://go.microsoft.com/fwlink/?LinkId=180947)
 
-- [Codici di errore WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [WinHttp error codes](https://go.microsoft.com/fwlink/?LinkId=180948) (Codici di errore WinHttp)
 
 #### <a name="other-error-codes"></a>Altri codici di errore
 
@@ -366,7 +364,7 @@ Fare riferimento al contenuto seguente:
 
 - [Windows Installer error codes](https://go.microsoft.com/fwlink/?LinkId=180949) (Codici di errore di Windows Installer)
 
-- [Codici di risultato dell'Agente di Windows Update](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Windows Update Agent result codes](https://go.microsoft.com/fwlink/?LinkId=180951) (Codici restituiti dall'Agente di Windows Update)
 
 ## <a name="uninstalling-the-net-framework"></a>Disinstallazione di .NET Framework
 
@@ -385,7 +383,7 @@ Nella tabella seguente sono elencate le opzioni che è possibile includere quand
 |------------|-----------------|
 |**/CEIPConsent**|Sostituisce il comportamento predefinito e invia un commento anonimo a Microsoft al fine di migliorare le future esperienze di distribuzione. È possibile usare questa opzione solo se il programma di installazione richiede il consenso e se l'utente concede l'autorizzazione a inviare commenti anonimi a Microsoft.|
 |**/chainingpackage** `packageName`|Specifica il nome dell'eseguibile che esegue il concatenamento. Queste informazioni vengono inviate a Microsoft come commento anonimo per contribuire a migliorare le future esperienze di distribuzione.<br /><br /> Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Lucerne Publishing"** . Per un esempio di un pacchetto di concatenamento, vedere [Ottenere informazioni sullo stato di avanzamento da un pacchetto di installazione](https://go.microsoft.com/fwlink/?LinkId=181926) in MSDN Library.|
-|**/LCID**  `LCID`<br /><br /> dove `LCID` specifica un identificatore delle impostazioni locali (vedere [lingue supportate](#supported-languages)).|Installa il Language Pack specificato da `LCID` e forza la visualizzazione dell'interfaccia utente in tale lingua, a meno che non sia impostata la modalità non interattiva.<br /><br /> Per il programma di installazione Web, questa opzione concatena-installa il Language Pack dal Web. **Nota:**  usare questa opzione solo con il programma di installazione Web.|
+|**/LCID**  `LCID`<br /><br /> dove `LCID` specifica un identificatore delle impostazioni locali (vedere [lingue supportate](#supported-languages)).|Installa il Language Pack specificato da `LCID` e forza la visualizzazione dell'interfaccia utente in tale lingua, a meno che non sia impostata la modalità non interattiva.<br /><br /> Per il programma di installazione Web, questa opzione concatena-installa il Language Pack dal Web. **Nota:** usare questa opzione solo con il programma di installazione Web.|
 |**/log** `file` &#124; `folder`|Specifica il percorso del file di log. Il valore predefinito è la cartella temporanea per il processo e il nome del file predefinito è basato sul pacchetto. Se l'estensione del file è TXT, viene prodotto un log in formato testo. Se si specifica un'altra estensione o nessuna estensione, viene creato un log in formato HTML.|
 |**/msioptions**|Specifica le opzioni da passare per gli elementi MSI e MSP, ad esempio: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impedisce il riavvio automatico del programma di installazione. Se si usa questa opzione, l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio (vedere [Recupero di informazioni sullo stato di avanzamento da un pacchetto di installazione](https://go.microsoft.com/fwlink/?LinkId=179606) in MSDN Library).|
@@ -399,7 +397,7 @@ Nella tabella seguente sono elencate le opzioni che è possibile includere quand
 |**/showrmui**|Usata solo con l'opzione **/passive** . Visualizza una finestra di messaggio che richiede agli utenti di chiudere le applicazioni .NET Framework in esecuzione. Questa finestra di messaggio mantiene lo stesso comportamento a prescindere dalla modalità.|
 |**/uninstall**|Disinstalla .NET Framework ridistribuibile.|
 
-### <a name="supported-languages"></a>Lingue supportate
+### <a name="supported-languages"></a>lingue supportate
 
 Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibili per NET Framework 4.5 e per le relative versioni intermedie.
 

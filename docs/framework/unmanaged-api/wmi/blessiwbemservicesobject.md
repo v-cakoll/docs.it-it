@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f77ff394668a235dd63cf0cddf71ea418a28125b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141678"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Funzione BlessIWbemServicesObject
 Indica se le credenziali utente consentono l'accesso a un oggetto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) specificato. 
@@ -75,7 +73,7 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
  **Intestazione:** WMINet_Utils. idl
 

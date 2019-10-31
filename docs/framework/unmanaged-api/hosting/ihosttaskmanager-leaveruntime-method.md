@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ac1c18d094deca50d461ef9ff0933a4f87176e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132999"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Metodo IHostTaskManager::LeaveRuntime
 Notifica all'host che l'attività attualmente in esecuzione sta per uscire dalla Common Language Runtime (CLR) e immettere codice non gestito.  
@@ -46,7 +44,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`la restituzione è riuscita.|  
+|S_OK|`LeaveRuntime` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -55,9 +53,9 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|La memoria disponibile non è sufficiente per completare l'allocazione richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Le sequenze di chiamate da e verso codice non gestito possono essere nidificate. L'elenco seguente, ad esempio, descrive una situazione ipotetica in cui la sequenza di `LeaveRuntime`chiamate a, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)e `IHostTaskManager::EnterRuntime` consente all'host di identificare i livelli annidati.  
+ Le sequenze di chiamate da e verso codice non gestito possono essere nidificate. L'elenco seguente, ad esempio, descrive una situazione ipotetica in cui la sequenza di chiamate a `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)e `IHostTaskManager::EnterRuntime` consente all'host di identificare il livelli annidati.  
   
-|Azione|Chiamata al metodo corrispondente|  
+|Operazione|Chiamata al metodo corrispondente|  
 |------------|-------------------------------|  
 |Un eseguibile Visual Basic gestito chiama una funzione non gestita scritta in C utilizzando platform invoke.|`IHostTaskManager::LeaveRuntime`|  
 |La funzione C non gestita chiama un metodo in una DLL gestita scritta in C#.|`IHostTaskManager::ReverseEnterRuntime`|  
@@ -67,11 +65,11 @@ HRESULT LeaveRuntime (
 |La prima funzione non gestita restituisce l'esecuzione al programma Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

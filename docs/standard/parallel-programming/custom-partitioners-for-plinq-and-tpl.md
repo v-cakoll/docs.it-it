@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 42df511857d367859fc68e2d881dd5b5e2e0bfbc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662568"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141562"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitioner personalizzati per PLINQ e TPL
 
@@ -101,7 +99,7 @@ La tabella seguente fornisce altri dettagli su come i tre tipi di partitioner di
 
 Se si prevede che il partitioner venga usato in un metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, è necessario poter restituire un numero dinamico di partizioni. Questo significa che il partitioner può fornire un enumeratore per una nuova partizione on demand in qualsiasi momento durante l'esecuzione del ciclo. In sostanza, quando il ciclo aggiunge una nuova attività parallela, richiede una nuova partizione per tale attività. Se è necessario che i dati siano ordinabili, derivare da <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> in modo che a ogni elemento in ogni partizione venga assegnato un indice univoco.
 
-Per altre informazioni e un esempio, vedere [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Per altre informazioni e per un esempio, vedere [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
 
 ### <a name="contract-for-partitioners"></a>Contratto per i partitioner
 
@@ -119,7 +117,7 @@ Quando si implementa un partitioner personalizzato, seguire queste linee guida p
 
   - `KeysOrderedInEachPartition`: ogni partizione restituisce elementi con indici di chiave crescenti.
 
-  - `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave nella partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.
+  - `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave della partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.
 
   - `KeysNormalized`: tutti gli indici di chiave sono a incremento progressivo costante senza gap, a partire da zero.
 

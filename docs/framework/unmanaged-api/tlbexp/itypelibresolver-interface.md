@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28a750846407a2b035e42533765eb83a87bfce3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104103"
 ---
 # <a name="itypelibresolver-interface"></a>Interfaccia ITypeLibResolver
 Fornisce il [metodo ResolveTypeLib](resolvetypelib-method.md), che risolve il percorso del file di una libreria dei tipi.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo ResolveTypeLib](resolvetypelib-method.md)|Risolve il nome semplice di una libreria dei tipi restituendo il percorso completo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef. idl, TlbRef. h  
   
- **Libreria** TlbRef.lib  
+ **Libreria:** TlbRef. lib  
   
  **Versione .NET Framework:** 4, 3,5, 3,0, 2,0  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9324e1596913fdafb13239dbefd631cbe3c6ffe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134945"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>Metodo IDebuggerThreadControl::ThreadIsBlockingForDebugger
-Notifica all'host che riguarda il thread che sta inviando il callback al blocco all'interno di servizi di debug.  
+Notifica all'host che il thread che sta inviando questo callback sta per bloccarsi nei servizi di debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,16 +32,16 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `ThreadIsBlockingForDebugger` metodo sarà sempre chiamato su un thread di runtime.  
+ Il metodo `ThreadIsBlockingForDebugger` sarà sempre chiamato su un thread di Runtime.  
   
- Il `ThreadIsBlockingForDebugger` metodo consente all'host di un'opportunità per eseguire un'altra azione mentre il thread si blocca.  
+ Il metodo `ThreadIsBlockingForDebugger` offre all'host la possibilità di eseguire un'altra azione durante il blocco del thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836318"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140581"
 ---
 # <a name="writing-custom-attributes"></a>Scrittura di attributi personalizzati
 Per progettare attributi personalizzati, non è necessario apprendere molti nuovi concetti. Se si ha familiarità con la programmazione orientata agli oggetti e si è in grado di progettare le classi, si ha già gran parte delle conoscenze necessarie. Gli attributi personalizzati sono essenzialmente classi tradizionali che derivano direttamente o indirettamente da <xref:System.Attribute?displayProperty=nameWithType>. Analogamente alle classi tradizionali, gli attributi personalizzati contengono metodi che archiviano e recuperano dati.  
@@ -47,7 +45,7 @@ Per progettare attributi personalizzati, non è necessario apprendere molti nuov
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- L'oggetto <xref:System.AttributeUsageAttribute> ha tre membri importanti per la creazione di attributi personalizzati: [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property) e [AllowMultiple](#allowmultiple-property).  
+ L'oggetto <xref:System.AttributeUsageAttribute> ha tre membri importanti per la creazione di attributi personalizzati: [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property)e [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>Membro AttributeTargets  
  Nell'esempio precedente è specificato <xref:System.AttributeTargets.All?displayProperty=nameWithType>, a indicare che questo attributo può essere applicato a tutti gli elementi di programma. In alternativa, è possibile specificare <xref:System.AttributeTargets.Class?displayProperty=nameWithType>, a indicare che l'attributo può essere applicato solo a una classe, oppure <xref:System.AttributeTargets.Method?displayProperty=nameWithType>, a indicare che l'attributo può essere applicato solo a un metodo. Questa procedura può essere usata per contrassegnare tutti gli elementi di programma per la descrizione mediante un attributo personalizzato.  

@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugCode4::EnumerateVariableHomes
+title: 'Metodo interfacce icordebugcode4:: EnumerateVariableHomes'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4.EnumerateVariableHomes
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0e6acdf6996f437c85b629b0af886287b1aef03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 850cbd2367dddd9f46375817e271cb8e7183cf64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121093"
 ---
-# <a name="icordebugcode4enumeratevariablehomes-method"></a>Metodo ICorDebugCode4::EnumerateVariableHomes
-Ottiene un enumeratore per le variabili locali e gli argomenti in una funzione.  
+# <a name="icordebugcode4enumeratevariablehomes-method"></a>Metodo interfacce icordebugcode4:: EnumerateVariableHomes
+Ottiene un enumeratore per le variabili e gli argomenti locali in una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateVariableHomes(
   
 ## <a name="parameters"></a>Parametri  
  `ppEnum`  
- Un puntatore all'indirizzo di un [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) oggetto di interfaccia che è un enumeratore per le variabili locali e gli argomenti in una funzione.  
+ Puntatore all'indirizzo di un oggetto interfaccia [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) che è un enumeratore per le variabili e gli argomenti locali in una funzione.  
   
 ## <a name="remarks"></a>Note  
- Il [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) oggetto di interfaccia è un enumeratore standard derivato dall'interfaccia "ICorDebugEnum" che consente di enumerare [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) oggetti. La raccolta può includere più [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) oggetti per lo stesso indice slot o argomento se dispongono di diverse posizioni in diversi momenti della funzione.  
+ L'oggetto interfaccia [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) è un enumeratore standard derivato dall'interfaccia "ICorDebugEnum" che consente di enumerare gli oggetti [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) . La raccolta può includere più oggetti [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) per lo stesso indice di slot o di argomento se hanno case diverse in punti diversi della funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

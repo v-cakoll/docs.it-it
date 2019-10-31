@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127497"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Metodo ICorDebugHeapValue3::GetThreadOwningMonitorLock
-Restituisce il thread gestito che possiede il blocco di monitoraggio per questo oggetto.  
+Restituisce il thread gestito proprietario del blocco di monitoraggio su questo oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +36,10 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>Parametri  
  `ppThread`  
- [out] Il thread gestito che possiede il blocco di monitoraggio per questo oggetto.  
+ out Thread gestito proprietario del blocco di monitoraggio su questo oggetto.  
   
  `pAcquisitionCount`  
- [out] Il numero di volte in cui che il thread dovrà rilasciare il blocco prima di restituire a essere senza proprietario.  
+ out Il numero di volte in cui il thread deve rilasciare il blocco prima che torni a essere senza proprietario.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -49,25 +47,25 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|S_FALSE|Nessun thread gestito possiede il blocco di monitoraggio per questo oggetto.|  
+|S_FALSE|Nessun thread gestito è proprietario del blocco di monitoraggio per questo oggetto.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Se un thread gestito è il proprietario del blocco di monitoraggio per questo oggetto:  
+ Se un thread gestito è proprietario del blocco di monitoraggio su questo oggetto:  
   
 - Il metodo restituisce S_OK.  
   
-- L'oggetto thread è valido fino a quando la chiusura del thread.  
+- L'oggetto thread è valido fino alla chiusura del thread.  
   
- Se nessun thread gestito possiede il blocco di monitoraggio tohoto objektu `ppThread` e `pAcquisitionCount` rimangono invariati, e il metodo restituisce S_FALSE.  
+ Se nessun thread gestito è proprietario del blocco di monitoraggio su questo oggetto, `ppThread` e `pAcquisitionCount` sono invariati e il metodo restituisce S_FALSE.  
   
  Se `ppThread` o `pAcquisitionCount` non è un puntatore valido, il risultato è indefinito.  
   
- Se si verifica un errore in modo che non può essere determinato che, se presente, thread proprietario del blocco di monitoraggio per l'oggetto, il metodo restituisce un HRESULT che indica un errore.  
+ Se si verifica un errore in modo che non sia possibile determinare quale thread è proprietario del blocco di monitoraggio su questo oggetto, il metodo restituisce un valore HRESULT che indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

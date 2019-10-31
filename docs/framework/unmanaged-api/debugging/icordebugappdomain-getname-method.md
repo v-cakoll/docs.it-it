@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110305"
 ---
 # <a name="icordebugappdomaingetname-method"></a>Metodo ICorDebugAppDomain::GetName
 Ottiene il nome del dominio dell'applicazione.  
@@ -40,19 +38,19 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametri  
  `cchName`  
- [in] Dimensione della matrice `szName`. Impostare questo valore su zero per il metodo put in modalità query.  
+ [in] Dimensione della matrice `szName`. Impostare questo valore su zero per inserire questo metodo in modalità query.  
   
  `pcchName`  
- [out] Un puntatore alla dimensione del nome o il numero di caratteri effettivamente restituiti nella `szName`. In modalità query, questo valore consente al chiamante di sapere come un buffer di grandi dimensioni da allocare per il nome.  
+ out Puntatore alla dimensione del nome o al numero di caratteri effettivamente restituiti in `szName`. In modalità query questo valore consente al chiamante di rilevare la dimensione di un buffer da allocare per il nome.  
   
  `szName`  
- [out] Matrice che archivia il nome del dominio dell'applicazione.  
+ out Matrice che archivia il nome del dominio dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- Un debugger chiama il `GetName` metodo una volta per ottenere la dimensione del buffer necessaria per il nome. Il debugger esegue l'allocazione di buffer e quindi chiama il metodo di una seconda volta per riempire il buffer. La prima chiamata, per ottenere le dimensioni del nome, è detto *modalità query*.  
+ Un debugger chiama il metodo `GetName` una volta per ottenere la dimensione di un buffer necessario per il nome. Il debugger alloca il buffer e quindi chiama il metodo una seconda volta per riempire il buffer. La prima chiamata, per ottenere le dimensioni del nome, viene definita *modalità query*.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

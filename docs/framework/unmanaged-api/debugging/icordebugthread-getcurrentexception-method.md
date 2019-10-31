@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a6d53ebfebb8c883065ce119c2338a2225f0472
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8082b2a3654f1605f18f3b68f54464dc83c8e60a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133481"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>Metodo ICorDebugThread::GetCurrentException
-Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che rappresenta un'eccezione generata dal codice gestito.  
+Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che rappresenta un'eccezione attualmente generata dal codice gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT GetCurrentException (
   
 ## <a name="parameters"></a>Parametri  
  `ppExceptionObject`  
- [out] Un puntatore all'indirizzo di un `ICorDebugValue` oggetto che rappresenta l'eccezione generata dal codice gestito.  
+ out Puntatore all'indirizzo di un `ICorDebugValue` oggetto che rappresenta l'eccezione generata attualmente dal codice gestito.  
   
 ## <a name="remarks"></a>Note  
- L'oggetto eccezione sarà disponibile dal momento in cui viene generata l'eccezione fino alla fine del `catch` blocco. Una valutazione della funzione, che viene eseguita dai metodi ICorDebugEval, cancellerà l'oggetto eccezione nel programma di installazione e ripristinarlo quindi sul completamento.  
+ L'oggetto Exception sarà presente dal momento in cui viene generata l'eccezione fino alla fine del blocco `catch`. Una valutazione della funzione, eseguita dai metodi ICorDebugEval, eliminerà l'oggetto eccezione durante l'installazione e lo ripristinerà al completamento.  
   
- Le eccezioni possono essere annidate (ad esempio, se viene generata un'eccezione in un filtro o in una funzione di valutazione), potrebbero essere presenti più eccezioni in sospeso in un unico thread. `GetCurrentException` Restituisce l'eccezione più recente.  
+ È possibile nidificare le eccezioni, ad esempio se un'eccezione viene generata in un filtro o in una valutazione di funzione, quindi potrebbero esserci più eccezioni in attesa in un singolo thread. `GetCurrentException` restituisce l'eccezione più recente.  
   
- L'oggetto eccezione e il tipo può cambiare per tutta la durata dell'eccezione. Ad esempio, dopo che viene generata un'eccezione di tipo x, common language runtime (CLR) può eseguire memoria insufficiente e alzato di livello un'eccezione di memoria insufficiente.  
+ L'oggetto eccezione e il tipo possono cambiare per tutta la durata dell'eccezione. Ad esempio, dopo che è stata generata un'eccezione di tipo x, il Common Language Runtime (CLR) potrebbe esaurire la memoria e innalzarlo di livello a un'eccezione di memoria insufficiente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

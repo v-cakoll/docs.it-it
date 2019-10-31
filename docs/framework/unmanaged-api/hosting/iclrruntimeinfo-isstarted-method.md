@@ -13,17 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34590744407b25d7d53c06c452fff5bac2a95246
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136380"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Metodo ICLRRuntimeInfo::IsStarted
-Indica se il runtime è stato avviato (vale a dire, se il [ICLRRuntimeHost::](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) è stato chiamato e ha avuto esito positivo).  
+Indica se il runtime è stato avviato, ovvero se il [Metodo ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) è stato chiamato e ha avuto esito positivo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,10 +33,10 @@ HRESULT IsStarted(
   
 ## <a name="parameters"></a>Parametri  
  `pbStarted`  
- [out] `true` se questa istanza di runtime è avviato; in caso contrario, `false`.  
+ [out] `true` se il runtime è stato avviato; in caso contrario, `false`.  
   
  `pdwStartupFlags`  
- [out] Restituisce i flag utilizzati per avviare il runtime.  
+ out Restituisce i flag utilizzati per avviare il Runtime.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -46,17 +44,17 @@ HRESULT IsStarted(
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_NOTIMPL|La versione di common language runtime (CLR) è precedente alla versione CLR in .NET Framework 4.|  
+|E_NOTIMPL|La versione di Common Language Runtime (CLR) è precedente alla versione CLR nella .NET Framework 4.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo non funziona con le versioni CLR precedenti alla versione di CLR in .NET Framework 4.  
+ Questo metodo non funziona con le versioni CLR precedenti alla versione CLR nel .NET Framework 4.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

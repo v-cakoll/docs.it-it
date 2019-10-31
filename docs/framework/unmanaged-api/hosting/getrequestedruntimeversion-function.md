@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136349"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Funzione GetRequestedRuntimeVersion
-Ottiene il numero di versione di common language runtime (CLR) richiesto dall'applicazione specificata. Se non viene installata la versione, ottiene la versione più recente installata prima della versione richiesta.  
+Ottiene il numero di versione della Common Language Runtime (CLR) richiesta dall'applicazione specificata. Se tale versione non è installata, ottiene la versione più recente installata prima della versione richiesta.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,32 +40,32 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>Parametri  
  `pExe`  
- [in] Il nome dell'applicazione.  
+ in Nome dell'applicazione.  
   
  `pVersion`  
- [out] Un buffer che contiene la stringa del numero di versione al completamento.  
+ out Buffer che contiene la stringa del numero di versione al completamento dell'operazione.  
   
  `cchBuffer`  
- [in] La lunghezza del buffer della versione.  
+ in Lunghezza del buffer della versione.  
   
  `pdwLength`  
- [out] Puntatore alla lunghezza della stringa di numeri di versione.  
+ out Puntatore alla lunghezza della stringa del numero di versione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore standard modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
+ Questo metodo restituisce i codici di errore standard Component Object Model (COM), come definito in WinError. h, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|ERROR_INSUFFICIENT_BUFFER|Il buffer di versione non è sufficiente per archiviare la stringa di versione.|  
+|ERROR_INSUFFICIENT_BUFFER|Il buffer della versione non è abbastanza grande per archiviare la stringa di versione.|  
 |E_POINTER|`pdwLength` è null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

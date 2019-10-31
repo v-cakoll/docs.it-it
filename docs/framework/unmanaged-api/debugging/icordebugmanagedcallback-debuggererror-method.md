@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137378"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Metodo ICorDebugManagedCallback::DebuggerError
-Notifica al debugger che si è verificato un errore durante il tentativo di gestire un evento da common language runtime (CLR).  
+Notifica al debugger che si è verificato un errore durante il tentativo di gestire un evento dal Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +37,21 @@ HRESULT DebuggerError (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo in cui si è verificato l'evento.  
+ in Puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo in cui si è verificato l'evento.  
   
  `errorHR`  
- [in] Il valore HRESULT restituito dal gestore dell'evento.  
+ in Valore HRESULT restituito dal gestore eventi.  
   
  `errorCode`  
- [in] Valore intero che specifica l'errore CLR.  
+ in Integer che specifica l'errore CLR.  
   
 ## <a name="remarks"></a>Note  
  Il processo può essere inserito in modalità pass-through, a seconda della natura dell'errore.  
   
- Il `DebugError` callback indica che i servizi di debug sono stati disabilitati a causa di un errore, in modo debugger devono rendere disponibile il messaggio di errore all'utente. [ICorDebugProcess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) saranno sicure per chiamata, ma tutti gli altri metodi, tra cui [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), non deve essere chiamato. Il debugger deve utilizzare le funzionalità del sistema operativo per la terminazione dei processi.  
+ Il callback `DebugError` indica che i servizi di debug sono stati disabilitati a causa di un errore, pertanto i debugger devono rendere disponibile il messaggio di errore per l'utente. [ICorDebugProcess:: GetId](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) sarà sicuro chiamare, ma tutti gli altri metodi, incluso [ICorDebug:: terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), non devono essere chiamati. Il debugger deve usare le funzionalità del sistema operativo per terminare i processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

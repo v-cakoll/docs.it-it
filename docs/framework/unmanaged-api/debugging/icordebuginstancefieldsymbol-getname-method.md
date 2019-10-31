@@ -1,17 +1,15 @@
 ---
-title: Metodo ICorDebugInstanceFieldSymbol::GetName
+title: 'Metodo ICorDebugInstanceFieldSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b1b3cc489c504942806b043fa2e3b76d5415d84
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139044"
 ---
-# <a name="icordebuginstancefieldsymbolgetname-method"></a>Metodo ICorDebugInstanceFieldSymbol::GetName
+# <a name="icordebuginstancefieldsymbolgetname-method"></a>Metodo ICorDebugInstanceFieldSymbol:: GetName
 Ottiene il nome del campo di istanza.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,11 +38,11 @@ HRESULT GetName(
 > Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

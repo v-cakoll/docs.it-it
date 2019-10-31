@@ -4,14 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114007"
 ---
 # <a name="marshaling-data-with-com-interop"></a>dati di marshalling con interoperabilità COM
 Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gestito ed esporre oggetti gestiti a COM. Il supporto per effettuare il marshalling dei dati verso e da COM è estensivo e garantisce sempre il comportamento di marshalling corretto.  
@@ -24,7 +22,7 @@ Grazie all'interoperabilità COM, è possibile usare oggetti COM dal codice gest
   
  Le sezioni seguenti riportano collegamenti ad argomenti che descrivono i processi per la personalizzazione dei wrapper di interoperabilità quando è possibile o necessario fornire altre informazioni sui tipi al gestore di marshalling.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 [Procedura: Creare wrapper manualmente](how-to-create-wrappers-manually.md)   
 Descrive come creare manualmente un wrapper COM nel codice sorgente gestito. 
  

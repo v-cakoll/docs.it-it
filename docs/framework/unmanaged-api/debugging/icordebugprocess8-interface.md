@@ -2,30 +2,28 @@
 title: Interfaccia ICorDebugProcess8
 ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6db1bc7e87750a36415439707777fed99e358ea
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: dc7de361386b9ee21d6cf05c36a7f63c3e1c25f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123362"
 ---
 # <a name="icordebugprocess8-interface"></a>Interfaccia ICorDebugProcess8
-[Supportato in .NET Framework 4.6 e versioni successive]  
+[Supportato in .NET Framework 4,6 e versioni successive]  
   
- Estende logicamente l'interfaccia ICorDebugProcess per abilitare o disabilitare determinate [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) callback di eccezione.  
+ Estende logicamente l'interfaccia ICorDebugProcess per abilitare o disabilitare determinati tipi di callback di eccezione [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnableExceptionCallbacksOutsideOfMyCode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Abilita o disabilita alcuni tipi di [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) callback di eccezione.|  
+|[Metodo EnableExceptionCallbacksOutsideOfMyCode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Abilita o disabilita alcuni tipi di callback di eccezione [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

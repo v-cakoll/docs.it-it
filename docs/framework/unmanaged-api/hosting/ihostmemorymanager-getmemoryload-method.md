@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 917ebe3c2001a9bc87978685d7f9a19eb3d98220
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2210dcd9e8a8af92b7905ec680c53c1119e6a3cf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136714"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>Metodo IHostMemoryManager::GetMemoryLoad
-Ottiene la quantità di memoria fisica che è attualmente in uso e pertanto non disponibile, come indicato dall'host.  
+Ottiene la quantità di memoria fisica attualmente in uso e pertanto non disponibile, come segnalato dall'host.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,33 +36,33 @@ HRESULT GetMemoryLoad (
   
 ## <a name="parameters"></a>Parametri  
  `pMemoryLoad`  
- [out] Puntatore alla percentuale approssimativa di memoria fisica totale che è attualmente in uso.  
+ out Puntatore alla percentuale approssimativa della memoria fisica totale attualmente in uso.  
   
  `pAvailableBytes`  
- [out] Puntatore al numero di byte disponibili per common language runtime (CLR).  
+ out Puntatore al numero di byte disponibili per il Common Language Runtime (CLR).  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`GetMemoryLoad` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `GetMemoryLoad` esegue il wrapping di Win32 `GlobalMemoryStatus` (funzione). Il valore di `pMemoryLoad` equivale al `dwMemoryLoad` campo le `MEMORYSTATUS` struttura restituita da `GlobalMemoryStatus`.  
+ `GetMemoryLoad` esegue il wrapping della funzione di `GlobalMemoryStatus` Win32. Il valore di `pMemoryLoad` è l'equivalente del campo `dwMemoryLoad` nella struttura `MEMORYSTATUS` restituita da `GlobalMemoryStatus`.  
   
- Il runtime usa il valore restituito come un'euristica per il garbage collector. Ad esempio, se l'host segnala che la maggior parte della memoria è in uso, il garbage collector può scegliere di raccogliere dai più generazioni per aumentare la quantità di memoria che può potenzialmente diventano disponibile.  
+ Il runtime usa il valore restituito come euristica per la Garbage Collector. Se, ad esempio, l'host segnala che la maggior parte della memoria è in uso, è possibile che l'Garbage Collector scelga di raccogliere da più generazioni per aumentare la quantità di memoria potenzialmente disponibile.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

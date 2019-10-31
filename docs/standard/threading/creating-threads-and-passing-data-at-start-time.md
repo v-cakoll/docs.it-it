@@ -11,14 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716039"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138095"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Creazione di thread e passaggio di dati all'avvio
 

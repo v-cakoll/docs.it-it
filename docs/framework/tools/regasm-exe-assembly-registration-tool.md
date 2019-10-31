@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4038f8e4a3c012fab9df6019b5f9f19375f61f2a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104956"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 
@@ -36,7 +34,7 @@ regasm assemblyFile [options]
 |---------------|-----------------|
 |*fileAssembly*|Assembly da registrare con COM.|
 
-|Opzione|DESCRIZIONE|
+|Opzione|Descrizione|
 |------------|-----------------|
 |**/codebase**|Crea una voce Codebase nel Registro di sistema che specifica il percorso del file di un assembly non installato nella Global Assembly Cache. È consigliabile non specificare questa opzione se successivamente si intende installare nella Global Assembly Cache l'assembly che si sta registrando. L'argomento *fileAssembly* specificato con l'opzione **/codebase** deve essere un [assembly con nome sicuro](../../standard/assembly/strong-named.md).|
 |**/registered**|Specifica che questo strumento includerà riferimenti solo alle librerie dei tipi che sono già state registrate.|

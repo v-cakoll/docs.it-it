@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111000"
 ---
 # <a name="icordebugcreateprocess-method"></a>Metodo ICorDebug::CreateProcess
-Avvia un processo e il thread principale sotto il controllo del debugger.  
+Avvia un processo e il relativo thread primario sotto il controllo del debugger.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,52 +46,52 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parametri  
  `lpApplicationName`  
- [in] Puntatore a una stringa con terminazione null che specifica il modulo deve essere eseguito dal processo avviato. Il modulo viene eseguito nel contesto di sicurezza del processo chiamante.  
+ in Puntatore a una stringa con terminazione null che specifica il modulo che deve essere eseguito dal processo avviato. Il modulo viene eseguito nel contesto di sicurezza del processo chiamante.  
   
  `lpCommandLine`  
- [in] Puntatore a una stringa con terminazione null che specifica la riga di comando deve essere eseguito dal processo avviato. Il nome dell'applicazione (ad esempio, "SomeApp.exe") deve essere il primo argomento.  
+ in Puntatore a una stringa con terminazione null che specifica la riga di comando che deve essere eseguita dal processo avviato. Il nome dell'applicazione (ad esempio, "SomeApp. exe") deve essere il primo argomento.  
   
  `lpProcessAttributes`  
- [in] Puntatore a un Win32 `SECURITY_ATTRIBUTES` struttura che specifica il descrittore di sicurezza per il processo. Se `lpProcessAttributes` è null, il processo Ottiene un descrittore di sicurezza predefinito.  
+ in Puntatore a una struttura di `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il processo. Se `lpProcessAttributes` è null, il processo ottiene un descrittore di sicurezza predefinito.  
   
  `lpThreadAttributes`  
- [in] Puntatore a un Win32 `SECURITY_ATTRIBUTES` struttura che specifica il descrittore di sicurezza per il thread principale del processo. Se `lpThreadAttributes` è null, il thread Ottiene un descrittore di sicurezza predefinito.  
+ in Puntatore a una struttura di `SECURITY_ATTRIBUTES` Win32 che specifica il descrittore di sicurezza per il thread principale del processo. Se `lpThreadAttributes` è null, il thread ottiene un descrittore di sicurezza predefinito.  
   
  `bInheritHandles`  
- [in] Impostare su `true` per indicare che ogni handle ereditabile nel processo chiamante viene ereditato dal processo avviato, o `false` per indicare che l'handle non vengono ereditati. I punti di controllo ereditati sono gli stessi diritti di accesso e valore come gli handle originali.  
+ in Impostare su `true` per indicare che ogni handle ereditabile nel processo chiamante viene ereditato dal processo avviato oppure `false` per indicare che gli handle non vengono ereditati. Gli handle ereditati hanno lo stesso valore e i diritti di accesso degli handle originali.  
   
  `dwCreationFlags`  
- [in] Una combinazione bit per bit del [flag di creazione processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) che controllano la classe di priorità e il comportamento del processo avviato.  
+ in Combinazione bit per bit dei [flag di creazione del processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) che controllano la classe di priorità e il comportamento del processo avviato.  
   
  `lpEnvironment`  
- [in] Puntatore a un blocco di ambiente per il nuovo processo.  
+ in Puntatore a un blocco di ambiente per il nuovo processo.  
   
  `lpCurrentDirectory`  
- [in] Puntatore a una stringa con terminazione null che specifica il percorso completo per directory corrente per il processo. Se questo parametro è null, il nuovo processo avrà la stessa unità e directory corrente del processo chiamante.  
+ in Puntatore a una stringa con terminazione null che specifica il percorso completo della directory corrente per il processo. Se questo parametro è null, il nuovo processo avrà la stessa unità e la stessa directory correnti del processo chiamante.  
   
  `lpStartupInfo`  
- [in] Puntatore a un Win32 `STARTUPINFOW` struttura che specifica la postazione, desktop, gli handle di standard e aspetto della finestra principale per il processo avviato.  
+ in Puntatore a una struttura di `STARTUPINFOW` Win32 che specifica la stazione della finestra, il desktop, gli handle standard e l'aspetto della finestra principale per il processo avviato.  
   
  `lpProcessInformation`  
- [in] Puntatore a un Win32 `PROCESS_INFORMATION` struttura che specifica le informazioni di identificazione sul processo da avviare.  
+ in Puntatore a una struttura di `PROCESS_INFORMATION` Win32 che specifica le informazioni di identificazione relative al processo da avviare.  
   
  `debuggingFlags`  
- [in] Valore dell'enumerazione CorDebugCreateProcessFlags che specifica le opzioni di debug.  
+ in Valore dell'enumerazione CorDebugCreateProcessFlags che specifica le opzioni di debug.  
   
  `ppProcess`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo.  
   
 ## <a name="remarks"></a>Note  
- I parametri di questo metodo sono identici a quelli di Win32 `CreateProcess` (metodo).  
+ I parametri di questo metodo sono identici a quelli del metodo Win32 `CreateProcess`.  
   
- Per abilitare il debug in modalità mista non gestiti, impostare `dwCreationFlags` su DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se si desidera usare solo il debug gestito, non impostare questi flag.  
+ Per abilitare il debug in modalità mista non gestita, impostare `dwCreationFlags` su &#124; DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS. Se si desidera utilizzare solo il debug gestito, non impostare questi flag.  
   
- Se il debugger e il processo per essere eseguito il debug (il processo associato) condividere un'unica console e se il debug di interoperabilità viene usato, è possibile che il processo associato a mantenere attivi i blocchi console e terminare con un evento di debug. Il debugger verrà quindi bloccare qualsiasi tentativo di utilizzare la console. Per evitare questo problema, impostare il flag CREATE_NEW_CONSOLE `dwCreationFlags` parametro.  
+ Se il debugger e il processo di cui è in corso il debug (il processo collegato) condividono un'unica console e se viene usato il debug di interoperabilità, è possibile che il processo collegato mantenga i blocchi della console e arresti in corrispondenza di un evento di debug. Il debugger bloccherà quindi qualsiasi tentativo di usare la console. Per evitare questo problema, impostare il flag CREATE_NEW_CONSOLE nel parametro `dwCreationFlags`.  
   
- Debug di interoperabilità non è supportato nelle piattaforme Win9x e non x86, ad esempio le piattaforme basate su IA-64 e AMD64 basato.  
+ Il debug di interoperabilità non è supportato in piattaforme Win9x e non x86, ad esempio piattaforme basate su IA-64 e AMD64.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

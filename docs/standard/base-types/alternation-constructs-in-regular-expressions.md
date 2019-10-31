@@ -15,15 +15,13 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c6f33023d747ce20964c7cb83a66d6764b6030cd
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736607"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140559"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 
@@ -45,21 +43,21 @@ Analogamente alla classe di caratteri positivi, il carattere `|` può essere usa
 
 L'espressione regolare che usa il carattere `|`, `\bgr(a|e)y\b`, viene interpretata come illustrato nella tabella seguente:
 
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`gr`|Corrisponde ai caratteri "gr".|  
 |<code>(a&#124;e)</code>|Corrisponde a una "a" o una "e".|  
 |`y\b`|Corrisponde a una "y" in un confine di parola.|  
 
-Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari. La classe di caratteri non offre questa funzionalità. L'esempio seguente usa il carattere `|` per estrarre un numero di previdenza sociale (SSN, Social Security Number) degli Stati Uniti, che corrisponde a un numero a 9 cifre (d, digit) con il formato *ddd*-*dd*-*dddd*, oppure un identificativo del datore di lavoro (EIN, Employer Identification Number) degli Stati Uniti, che corrisponde a un numero a 9 cifre (d, digit) con il formato *dd*-*ddddddd*.
+Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari. (La classe di caratteri non fornisce questa funzionalità). Nell'esempio seguente viene usato il carattere `|` per estrarre un numero di previdenza sociale (SSN) statunitense, ovvero un numero a 9 cifre con formato *ddd*-*DD*-*dddd*o un numero di identificazione del datore di lavoro (EIN) statunitense, che è un numero a 9 cifre con formato *gg*-*ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
 
 L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente:
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
@@ -70,13 +68,13 @@ L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata 
 
 Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale. La sintassi è la seguente:  
 
-`(?(` *espressione* `)` *sì* `|` *no* `)`
+`(?(` *expression* `)` *yes* `|` *no* `)`
 
 dove *espressione* è il criterio iniziale per la corrispondenza, *sì* è il criterio di corrispondenza se viene trovata una corrispondenza per *espressione* e *no* è il criterio facoltativo di corrispondenza se non viene trovata una corrispondenza per *espressione* . Il motore delle espressioni regolari considera *espressione* come un'asserzione di larghezza zero, ovvero questo motore non avanza nel flusso di input dopo aver valutato *espressione*. Questo costrutto è pertanto equivalente a quanto segue:
 
-`(?(?=` *espressione* `)` *sì* `|` *no* `)`
+`(?(?=` *expression* `)` *yes* `|` *no* `)`
 
-dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per altre informazioni, vedere [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *espressione* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [Ancoraggi in espressioni regolari](anchors-in-regular-expressions.md)) o una sottoespressione contenuta in *yes*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì* .  
+dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per ulteriori informazioni, vedere [costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *Expression* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [ancoraggi](anchors-in-regular-expressions.md)) o una sottoespressione anch ' essa contenuta in *Sì*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì* .  
   
 > [!NOTE]
 > Se *espressione* è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per altre informazioni, vedere la sezione successiva, [Corrispondenza condizionale in base a un gruppo Capture valido](#Conditional_Group). In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.  
@@ -86,9 +84,9 @@ L'esempio seguente è una variante dell'esempio visualizzato nella sezione relat
 [!code-csharp[RegularExpressions.Language.Alternation#3](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
 [!code-vb[RegularExpressions.Language.Alternation#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]
 
-Il criterio di espressione regolare `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
+Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
 
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?(\d{2}-)`|Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.|  
@@ -101,9 +99,9 @@ Il criterio di espressione regolare `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\
 
 Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato. La sintassi è la seguente:
 
-`(?(` *nome* `)` *sì* `|` *no* `)`
+`(?(` *name* `)` *yes* `|` *no* `)`
 
-oppure
+Oppure
 
 `(?(` *numero* `)` *sì* `|` *no* `)`
 
@@ -116,9 +114,9 @@ L'esempio seguente è una variante dell'esempio visualizzato nella sezione relat
 [!code-csharp[RegularExpressions.Language.Alternation#4](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
 [!code-vb[RegularExpressions.Language.Alternation#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]
 
-Il criterio di espressione regolare `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
+Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretato come illustrato nella tabella seguente:
 
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?<n2>\d{2}-)?`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138214"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservazione dell'ordine in PLINQ
 In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. Una query deve essere eseguita il più velocemente possibile ma comunque produrre i risultati corretti. In alcuni casi, la correttezza richiede il mantenimento dell'ordine della sequenza di origine, ma l'ordinamento può essere oneroso a livello di risorse di calcolo. Pertanto, per impostazione predefinita, PLINQ non mantiene l'ordine della sequenza di origine. Da questo punto di vista, PLINQ è simile a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ma differisce da LINQ to Objects, che mantiene l'ordinamento.  
@@ -66,7 +64,7 @@ In PLINQ, l'obiettivo è ottimizzare le prestazioni, mantenendo la correttezza. 
   
  Alcuni operatori di query PLINQ si comportano in modo diverso, a seconda che la sequenza di origine sia ordinata o non ordinata. Questi operatori sono elencati nella tabella seguente.  
   
-|Operatore|Risultato quando la sequenza di origine è ordinata|Risultato quando la sequenza di origine non è ordinata|  
+|??|Risultato quando la sequenza di origine è ordinata|Risultato quando la sequenza di origine non è ordinata|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
 |<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Output non deterministico per operazioni non associative o non commutative|Output non deterministico per operazioni non associative o non commutative|  
 |<xref:System.Linq.ParallelEnumerable.All%2A>|Non applicabile|Non applicabile|  

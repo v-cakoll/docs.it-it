@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122579"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>Metodo ICorDebugManagedCallback::BreakpointSetError
-Notifica al debugger che common language runtime è stato possibile associare con precisione un punto di interruzione è stata impostata prima di una funzione si trovava just-in-time (JIT) compilato.  
+Notifica al debugger che il Common Language Runtime non è stato in grado di associare accuratamente un punto di interruzione impostato prima della compilazione JIT (just-in-Time) di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT BreakpointSetError (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il punto di interruzione non associato.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il punto di interruzione non associato.  
   
  `pThread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene il punto di interruzione non associato.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene il punto di interruzione non associato.  
   
  `pBreakpoint`  
- [in] Un puntatore a un oggetto ICorDebugBreakpoint che rappresenta il punto di interruzione non associato.  
+ in Puntatore a un oggetto ICorDebugBreakpoint che rappresenta il punto di interruzione non associato.  
   
  `dwError`  
- [in] Numero intero che indica l'errore.  
+ in Intero che indica l'errore.  
   
 ## <a name="remarks"></a>Note  
- Il punto di interruzione specificato non verrà mai attivato. Il debugger deve disattivare e riassociarla.  
+ Il punto di interruzione specificato non verrà mai raggiunto. Il debugger dovrebbe disattivarlo e riassociarlo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

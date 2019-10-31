@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50a4bedfee0c402bb76265371d3b9809263ef97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36d314211d95dff6648753f5d550a2cfd402a918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134051"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>Metodo ICorDebug::SetUnmanagedHandler
-Specifica l'oggetto di gestore eventi per gli eventi non gestiti.  
+Specifica l'oggetto gestore eventi per gli eventi non gestiti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT SetUnmanagedHandler (
   
 ## <a name="parameters"></a>Parametri  
  `pCallback`  
- [in] Un puntatore a un [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) oggetto che rappresenta il gestore eventi per gli eventi non gestiti.  
+ in Puntatore a un oggetto [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) che rappresenta il gestore eventi per gli eventi non gestiti.  
   
 ## <a name="remarks"></a>Note  
- Il gestore eventi relativo oggetto non gestito devono essere impostati eventi dopo una chiamata a [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) e prima delle chiamate a [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) o [DebugActiveProcess ](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md). Tuttavia, per scopi di legacy, non occorre impostare l'oggetto gestore evento per eventi non gestiti fino a quando non viene generato il primo evento di debug nativi. In particolare, se `ICorDebug::CreateProcess` ha impostato il flag CREATE_SUSPENDED, debug nativo non possono essere inviati gli eventi fino a quando non viene ripreso il thread principale.  
+ L'oggetto gestore eventi per gli eventi non gestiti deve essere impostato dopo una chiamata a [ICorDebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) e prima di qualsiasi chiamata a [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) o [ICorDebug::D ebugactiveprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md). Per gli scopi legacy, tuttavia, non è necessario impostare l'oggetto gestore eventi per gli eventi non gestiti fino a quando non viene generato il primo evento di debug nativo. In particolare, se `ICorDebug::CreateProcess` ha impostato il flag CREATE_SUSPENDED, gli eventi di debug nativi non possono essere inviati fino a quando non viene ripreso il thread principale.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

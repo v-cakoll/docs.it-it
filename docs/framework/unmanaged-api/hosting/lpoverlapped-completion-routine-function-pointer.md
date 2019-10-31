@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090898"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a>Puntatore alla funzione LPOVERLAPPED_COMPLETION_ROUTINE
-Punta a una funzione che notifica all'host quando un sovrapposta (vale a dire, asincrona) i/o a un dispositivo è stata completata.  
+# <a name="lpoverlapped_completion_routine-function-pointer"></a>Puntatore alla funzione LPOVERLAPPED_COMPLETION_ROUTINE
+Punta a una funzione che notifica all'host quando è stata completata un'operazione di I/O sovrapposta (ovvero asincrona) a un dispositivo.  
   
  Questo puntatore a funzione è stato deprecato in .NET Framework 4.  
   
@@ -40,25 +38,25 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 ## <a name="parameters"></a>Parametri  
  `dwErrorCode`  
- [in] Un valore che corrisponde a un codice di errore se il dispositivo è stato chiuso; in caso contrario, questo valore è zero.  
+ in Valore che rappresenta un codice di errore se il dispositivo è stato chiuso; in caso contrario, questo valore è zero.  
   
- Chiusura di un dispositivo fa sì che tutte in sospeso i/o al dispositivo per essere completata immediatamente.  
+ La chiusura di un dispositivo comporta immediatamente il completamento di tutte le operazioni di I/O in sospeso nel dispositivo.  
   
  `dwNumberOfBytesTransfered`  
- [in] Il numero di byte trasferiti dall'operazione dei / o.  
+ in Numero di byte trasferiti dall'operazione di I/O.  
   
  `lpOverlapped`  
- [in] Un puntatore a una struttura che contiene le informazioni da utilizzare per completare la richiesta dei / o.  
+ in Puntatore a una struttura che contiene le informazioni da utilizzare per completare la richiesta di I/O.  
   
 ## <a name="remarks"></a>Note  
- La funzione a cui `LPOVERLAPPED_COMPLETION_ROUTINE` punti è una funzione di callback e devono essere implementati dal writer dell'applicazione host. La funzione di richiamata consente all'host elaborare la richiesta dei / o completata.  
+ Funzione a cui `LPOVERLAPPED_COMPLETION_ROUTINE` punti è una funzione di callback e deve essere implementata dal writer dell'applicazione host. La funzione di callback consente all'host di elaborare la richiesta di I/O completata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorWks.dll  
+ **Libreria:** MSCorWks. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

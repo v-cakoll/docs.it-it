@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b8bbe76-a45d-4989-bacb-11df42f8798c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 66ce6ce322a0fb58f64d65501a33f58ad92bcd2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c08a790d4dad748e5d09271bd870add22255b4a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132617"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>Metodo IHostSyncManager::SetCLRSyncManager
-Imposta il [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) istanza da associare all'oggetto corrente [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md) istanza.  
+Imposta l'istanza di [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) da associare all'istanza corrente di [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,28 +35,28 @@ HRESULT SetCLRSyncManager (
   
 ## <a name="parameters"></a>Parametri  
  `pManager`  
- [in] Un puntatore a un `ICLRSyncManager` istanza fornita da common language runtime (CLR).  
+ in Puntatore a un'istanza di `ICLRSyncManager` fornita dall'Common Language Runtime (CLR).  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetCLRSyncManager` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`SetCLRSyncManager` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Per facilitare la comunicazione tra l'host e il CLR, interfacce di hosting sono disponibili a livello generale in coppie. Un membro della coppia viene implementato dall'host e l'altro membro viene implementato da CLR. Come un'implementazione lato host, il `IHostSyncManager` interfaccia corrisponde alla `ICLRSyncManager` interfaccia implementata da CLR. CLR chiama `SetCLRSyncManager` per specificare un `ICLRSyncManager` istanza dell'host da associare a corrente `IHostSyncManager` istanza.  
+ Per facilitare la comunicazione tra l'host e CLR, le interfacce di hosting sono in genere in coppia. Un membro della coppia viene implementato dall'host e l'altro membro viene implementato da CLR. Come implementazione lato host, l'interfaccia `IHostSyncManager` corrisponde all'interfaccia `ICLRSyncManager` implementata da CLR. CLR chiama `SetCLRSyncManager` per fornire un'istanza di `ICLRSyncManager` per l'host da associare all'istanza di `IHostSyncManager` corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

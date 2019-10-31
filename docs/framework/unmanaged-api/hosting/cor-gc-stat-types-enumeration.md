@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fdfe33c5b488d8f464001a86233124d4e7df0ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0fbc462283ef1577de8100e60fd09caa53db539
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131920"
 ---
-# <a name="corgcstattypes-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
-Specifica le statistiche devono essere registrati per una garbage collection.  
+# <a name="cor_gc_stat_types-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
+Specifica le statistiche da registrare per un Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +34,19 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Note  
- Questa enumerazione specifica le statistiche nella [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devono essere impostate struttura [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) (metodo).  
+ Questa enumerazione specifica quali statistiche nella struttura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) devono essere impostate dal metodo [ICLRGCManager:: GetStatistics](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) .  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`COR_GC_COUNTS`|Registra il numero di operazioni di garbage collection eseguite per ogni generazione.|  
-|`COR_GC_MEMORYUSAGE`|I record memoria utilizzo e la garbage collection statistiche sulle dimensioni.|  
+|`COR_GC_COUNTS`|Registra il numero di operazioni di Garbage Collection eseguite per ogni generazione.|  
+|`COR_GC_MEMORYUSAGE`|Registra l'utilizzo della memoria e le statistiche delle dimensioni del Garbage Collection.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** GCHost.idl, GCHost.h  
+ **Intestazione:** GCHost. idl, GCHost. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

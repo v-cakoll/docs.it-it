@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132849"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -86,18 +84,18 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
  Nella tabella riportata di seguito sono elencati i tipi di base disponibili in .NET. con una breve descrizione di ogni tipo. Viene anche indicato il tipo corrispondente in Visual Basic, C#, C++, e F#.  
   
-|Category|Nome di classe|Description|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
+|Category|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> -oppure-<br /> **signed** **char**|**sbyte**|  
+|Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**char senza segno**|**byte**|  
+||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> oppure<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Intero con segno a 16 bit.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> -oppure-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> oppure<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Intero senza segno a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> -oppure-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> oppure<br /> **long senza segno**|**uint32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**<br> oppure<br>**single**|  
-||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**<br> oppure <br> **double**|  
+|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**<br> Oppure<br>**single**|  
+||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**<br> Oppure <br> **double**|  
 |Logica|<xref:System.Boolean>|Un valore Boolean (true o false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Altro|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Un valore decimale a 128 bit.|**Decimal**|**decimal**|**Decimal**|**decimal**|  

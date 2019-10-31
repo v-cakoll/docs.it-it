@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136474"
 ---
 # <a name="getcorrequiredversion-function"></a>Funzione GetCORRequiredVersion
-Ottiene il numero di versione necessaria di common language runtime (CLR).  
+Ottiene il numero di versione Common Language Runtime (CLR) obbligatorio.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +38,20 @@ HRESULT GetCORRequiredVersion (
   
 ## <a name="parameters"></a>Parametri  
  `pbuffer`  
- [out] Un buffer contenente una stringa che specifica il numero di versione.  
+ out Buffer contenente una stringa che specifica il numero di versione.  
   
  `cchBuffer`  
- [in] Le dimensioni, in byte, del buffer.  
+ in Dimensione, in byte, del buffer.  
   
  `dwLength`  
- [out] Il numero di byte restituiti nel buffer.  
+ out Numero di byte restituiti nel buffer.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

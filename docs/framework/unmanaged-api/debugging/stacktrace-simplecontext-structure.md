@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139125"
 ---
-# <a name="stacktracesimplecontext-structure"></a>Struttura StackTrace_SimpleContext
+# <a name="stacktrace_simplecontext-structure"></a>Struttura StackTrace_SimpleContext
 Fornisce un contesto semplice che può essere usato invece di una struttura `CONTEXT` completa.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,21 +36,21 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`StackOffset`|Il puntatore dello stack, o il puntatore dello stack invio (ESP) x86 piattaforme.|  
-|`FrameOffset`|L'offset di frame, o il registro EBP x86 piattaforme.|  
-|`InstructionOffset`|Il puntatore all'istruzione o il puntatore all'istruzione invio (EIP) x86 piattaforme.|  
+|`StackOffset`|Il puntatore dello stack o il puntatore di stack di immissione (ESP) sulle piattaforme x86.|  
+|`FrameOffset`|Offset del frame oppure il registro EBP sulle piattaforme x86.|  
+|`InstructionOffset`|Puntatore all'istruzione oppure il puntatore all'istruzione Enter (PEI) sulle piattaforme x86.|  
   
 ## <a name="remarks"></a>Note  
- Poiché le funzioni di traccia dello stack in genere necessario restituire solo l'indirizzo di offset di frame e indirizzo dello stack, è possibile usare la `SimpleContext` struttura invece di un grande `CONTEXT` struttura.  
+ Poiché le funzioni di analisi dello stack in genere devono restituire solo l'indirizzo, l'offset del frame e l'indirizzo dello stack, è possibile usare facoltativamente la struttura di `SimpleContext` anziché una struttura di `CONTEXT` di grandi dimensioni.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace.h  
+ **Intestazione:** SOS_Stacktrace. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

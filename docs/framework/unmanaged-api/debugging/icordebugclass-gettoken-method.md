@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b944112ce0b00e84da6243e2e48917e2318b0f1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6964c931307a40f384ad8a8e355cab0aad575ec6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746838"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125767"
 ---
 # <a name="icordebugclassgettoken-method"></a>Metodo ICorDebugClass::GetToken
-Ottiene il `TypeDef` token di metadati che fa riferimento alla definizione di questa classe.  
+Ottiene il token di metadati `TypeDef` che fa riferimento alla definizione di questa classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>Parametri  
  `pTypeDef`  
- [out] Un puntatore a un `mdTypeDef` token che fa riferimento alla definizione di questa classe.  
+ out Puntatore a un token di `mdTypeDef` che fa riferimento alla definizione di questa classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

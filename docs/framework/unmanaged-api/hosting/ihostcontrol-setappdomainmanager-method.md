@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6562bbe7-0d67-4c50-a958-3a18cf680375
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de264135450190fd028eb8cf12017d94cc65ffac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134717"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>Metodo IHostControl::SetAppDomainManager
 Notifica all'host che è stato creato un dominio dell'applicazione.  
@@ -38,33 +36,33 @@ HRESULT SetAppDomainManager (
   
 ## <a name="parameters"></a>Parametri  
  `dwAppDomainID`  
- [in] L'identificatore numerico dell'oggetto selezionato <xref:System.AppDomain>.  
+ in Identificatore numerico del <xref:System.AppDomain>selezionato.  
   
  `pUnkAppDomainManager`  
- [in] Un puntatore per il <xref:System.AppDomainManager> oggetto che implementa l'host come `IUnknown`.  
+ in Puntatore all'oggetto <xref:System.AppDomainManager> che l'host implementa come `IUnknown`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetAppDomainManager` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`SetAppDomainManager` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il <xref:System.AppDomainManager> fornisce un meccanismo per eseguire il bootstrap in codice gestito e per controllare la creazione e configurazione di ciascun host <xref:System.AppDomain>. Il <xref:System.AppDomainManager> viene caricato in ognuno <xref:System.AppDomain> quando che <xref:System.AppDomain> viene creato. Se sceglie, CLR notifica all'host che creato il dominio dell'applicazione impostando il valore della `pUnkAppDomainManager` parametro.  
+ Il <xref:System.AppDomainManager> fornisce all'host un meccanismo per eseguire il bootstrap nel codice gestito e controllare la creazione e le impostazioni di ogni <xref:System.AppDomain>. Il <xref:System.AppDomainManager> viene caricato in ogni <xref:System.AppDomain> quando viene creato il <xref:System.AppDomain>. Se si sceglie, CLR notifica all'host che il dominio applicazione è stato creato impostando il valore del parametro `pUnkAppDomainManager`.  
   
- Nella sua implementazione del `SetAppDomainManager` metodo, l'host può impostare il nome dell'assembly e il tipo per il gestore del dominio applicazione.  
+ Nell'implementazione del metodo `SetAppDomainManager`, l'host può impostare il nome e il tipo dell'assembly per il gestore del dominio dell'applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

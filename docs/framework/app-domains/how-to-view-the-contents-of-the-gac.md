@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare il contenuto della Global Assembly Cache'
+title: 'Procedura: visualizzare il contenuto della Global Assembly Cache'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,14 +11,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c319c5f7c9bb808b2ce7ee10178722287e456339
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119825"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Procedura: Visualizzare il contenuto della Global Assembly Cache
 
@@ -32,7 +30,7 @@ Per visualizzare un elenco degli assembly nella Global Assembly Cache, aprire [P
 gacutil -l
 ```
 
--oppure-
+oppure
 
 ```shell
 gacutil /l

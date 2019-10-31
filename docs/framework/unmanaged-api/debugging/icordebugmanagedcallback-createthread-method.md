@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401cb41d8231e78b8657513e1a755a50814e463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137399"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>Metodo ICorDebugManagedCallback::CreateThread
-Notifica al debugger che ha avviato un thread esegue codice gestito.  
+Notifica al debugger che un thread ha avviato l'esecuzione del codice gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT CreateThread (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il thread.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il thread.  
   
  `thread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread.  
   
 ## <a name="remarks"></a>Note  
- Il thread viene collocato nella prima istruzione di codice gestito deve essere eseguito.  
+ Il thread verrà posizionato in corrispondenza della prima istruzione di codice gestito da eseguire.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

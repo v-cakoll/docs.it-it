@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133715"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Enumerazione CorDebugStateChange
 
@@ -33,7 +31,7 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 | Member            | Descrizione                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
@@ -42,11 +40,11 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>Note
 
- Un membro del `CorDebugStateChange` enumerazione viene fornita come argomento quando il debugger chiama il `ProcessStateChanged` metodo mediante [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) o [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ Un membro dell'enumerazione `CorDebugStateChange` viene fornito come argomento quando il debugger chiama il metodo `ProcessStateChanged` con [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) o [Metodo icordebugprocess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
  **Intestazione:** CorDebug.idl, CorDebug.h
 

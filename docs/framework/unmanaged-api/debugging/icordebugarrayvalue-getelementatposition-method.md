@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088422"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>Metodo ICorDebugArrayValue::GetElementAtPosition
-Ottiene l'elemento in corrispondenza della posizione specificata, considerando la matrice come una matrice unidimensionale in base zero.  
+Ottiene l'elemento in corrispondenza della posizione specificata, considerando la matrice come matrice unidimensionale in base zero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT GetElementAtPosition (
   
 ## <a name="parameters"></a>Parametri  
  `nPosition`  
- [in] La posizione dell'elemento da recuperare.  
+ in Posizione dell'elemento da recuperare.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento.  
   
 ## <a name="remarks"></a>Note  
- Il layout di una matrice multidimensionale segue lo stile C++ del layout della matrice.  
+ Il layout di una matrice MULTIDIMENSIONE segue lo C++ stile del layout della matrice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
