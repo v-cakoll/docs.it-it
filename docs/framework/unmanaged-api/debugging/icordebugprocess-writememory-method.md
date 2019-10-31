@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4599bf310a0b819bc662b90a5a86e87ac27c37b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137262"
 ---
-# <a name="icordebugprocesswritememory-method"></a><span data-ttu-id="549e0-102">Metodo ICorDebugProcess::WriteMemory</span><span class="sxs-lookup"><span data-stu-id="549e0-102">ICorDebugProcess::WriteMemory Method</span></span>
-<span data-ttu-id="549e0-103">Scrive dati in un'area di memoria di questo processo.</span><span class="sxs-lookup"><span data-stu-id="549e0-103">Writes data to an area of memory in this process.</span></span>  
+# <a name="icordebugprocesswritememory-method"></a><span data-ttu-id="7e09c-102">Metodo ICorDebugProcess::WriteMemory</span><span class="sxs-lookup"><span data-stu-id="7e09c-102">ICorDebugProcess::WriteMemory Method</span></span>
+<span data-ttu-id="7e09c-103">Scrive i dati in un'area di memoria in questo processo.</span><span class="sxs-lookup"><span data-stu-id="7e09c-103">Writes data to an area of memory in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="549e0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="549e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e09c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7e09c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT WriteMemory(  
@@ -37,29 +35,29 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="549e0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="549e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e09c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7e09c-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="549e0-106">[in] Oggetto `CORDB_ADDRESS` valore, ovvero l'indirizzo di base dell'area di memoria a dati che viene scritto.</span><span class="sxs-lookup"><span data-stu-id="549e0-106">[in] A `CORDB_ADDRESS` value that is the base address of the memory area to which data is written.</span></span> <span data-ttu-id="549e0-107">Prima che si verifichi il trasferimento dei dati, il sistema verifica che l'area di memoria della dimensione specificata, iniziando in corrispondenza l'indirizzo di base, sia accessibile in scrittura.</span><span class="sxs-lookup"><span data-stu-id="549e0-107">Before data transfer occurs, the system verifies that the memory area of the specified size, beginning at the base address, is accessible for writing.</span></span> <span data-ttu-id="549e0-108">Se non è accessibile, il metodo ha esito negativo.</span><span class="sxs-lookup"><span data-stu-id="549e0-108">If it is not accessible, the method fails.</span></span>  
+ <span data-ttu-id="7e09c-106">in Valore `CORDB_ADDRESS` che rappresenta l'indirizzo di base dell'area di memoria in cui vengono scritti i dati.</span><span class="sxs-lookup"><span data-stu-id="7e09c-106">[in] A `CORDB_ADDRESS` value that is the base address of the memory area to which data is written.</span></span> <span data-ttu-id="7e09c-107">Prima che si verifichi il trasferimento dei dati, il sistema verifica che l'area di memoria della dimensione specificata, a partire dall'indirizzo di base, sia accessibile per la scrittura.</span><span class="sxs-lookup"><span data-stu-id="7e09c-107">Before data transfer occurs, the system verifies that the memory area of the specified size, beginning at the base address, is accessible for writing.</span></span> <span data-ttu-id="7e09c-108">Se non è accessibile, il metodo ha esito negativo.</span><span class="sxs-lookup"><span data-stu-id="7e09c-108">If it is not accessible, the method fails.</span></span>  
   
  `size`  
- <span data-ttu-id="549e0-109">[in] Il numero di byte da scrivere nell'area di memoria.</span><span class="sxs-lookup"><span data-stu-id="549e0-109">[in] The number of bytes to be written to the memory area.</span></span>  
+ <span data-ttu-id="7e09c-109">in Numero di byte da scrivere nell'area di memoria.</span><span class="sxs-lookup"><span data-stu-id="7e09c-109">[in] The number of bytes to be written to the memory area.</span></span>  
   
  `buffer`  
- <span data-ttu-id="549e0-110">[in] Un buffer contenente dati da scrivere.</span><span class="sxs-lookup"><span data-stu-id="549e0-110">[in] A buffer that contains data to be written.</span></span>  
+ <span data-ttu-id="7e09c-110">in Buffer contenente i dati da scrivere.</span><span class="sxs-lookup"><span data-stu-id="7e09c-110">[in] A buffer that contains data to be written.</span></span>  
   
  `written`  
- <span data-ttu-id="549e0-111">[out] Un puntatore a una variabile che riceve il numero di byte scritti nell'area di memoria di questo processo.</span><span class="sxs-lookup"><span data-stu-id="549e0-111">[out] A pointer to a variable that receives the number of bytes written to the memory area in this process.</span></span> <span data-ttu-id="549e0-112">Se `written` è NULL, questo parametro viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="549e0-112">If `written` is NULL, this parameter is ignored.</span></span>  
+ <span data-ttu-id="7e09c-111">out Puntatore a una variabile che riceve il numero di byte scritti nell'area di memoria del processo.</span><span class="sxs-lookup"><span data-stu-id="7e09c-111">[out] A pointer to a variable that receives the number of bytes written to the memory area in this process.</span></span> <span data-ttu-id="7e09c-112">Se `written` è NULL, questo parametro viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="7e09c-112">If `written` is NULL, this parameter is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="549e0-113">Note</span><span class="sxs-lookup"><span data-stu-id="549e0-113">Remarks</span></span>  
- <span data-ttu-id="549e0-114">Dati vengono scritti automaticamente protetti da qualsiasi punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="549e0-114">Data is automatically written behind any breakpoints.</span></span> <span data-ttu-id="549e0-115">In .NET Framework versione 2.0, debugger nativo non devono usare questo metodo per inserire i punti di interruzione nel flusso di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="549e0-115">In the .NET Framework version 2.0, native debuggers should not use this method to inject breakpoints into the instruction stream.</span></span> <span data-ttu-id="549e0-116">Uso [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) invece.</span><span class="sxs-lookup"><span data-stu-id="549e0-116">Use [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e09c-113">Note</span><span class="sxs-lookup"><span data-stu-id="7e09c-113">Remarks</span></span>  
+ <span data-ttu-id="7e09c-114">I dati vengono scritti automaticamente dietro i punti di interruzione.</span><span class="sxs-lookup"><span data-stu-id="7e09c-114">Data is automatically written behind any breakpoints.</span></span> <span data-ttu-id="7e09c-115">In .NET Framework versione 2,0 i debugger nativi non devono usare questo metodo per inserire i punti di interruzione nel flusso di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="7e09c-115">In the .NET Framework version 2.0, native debuggers should not use this method to inject breakpoints into the instruction stream.</span></span> <span data-ttu-id="7e09c-116">Usare invece [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) .</span><span class="sxs-lookup"><span data-stu-id="7e09c-116">Use [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) instead.</span></span>  
   
- <span data-ttu-id="549e0-117">Il `WriteMemory` metodo deve essere usato solo all'esterno di codice gestito.</span><span class="sxs-lookup"><span data-stu-id="549e0-117">The `WriteMemory` method should be used only outside of managed code.</span></span> <span data-ttu-id="549e0-118">Questo metodo può danneggiare il runtime se utilizzato in modo non corretto.</span><span class="sxs-lookup"><span data-stu-id="549e0-118">This method can corrupt the runtime if used improperly.</span></span>  
+ <span data-ttu-id="7e09c-117">Il metodo `WriteMemory` deve essere utilizzato solo all'esterno del codice gestito.</span><span class="sxs-lookup"><span data-stu-id="7e09c-117">The `WriteMemory` method should be used only outside of managed code.</span></span> <span data-ttu-id="7e09c-118">Questo metodo può danneggiare il runtime se usato in modo errato.</span><span class="sxs-lookup"><span data-stu-id="7e09c-118">This method can corrupt the runtime if used improperly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="549e0-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="549e0-119">Requirements</span></span>  
- <span data-ttu-id="549e0-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="549e0-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e09c-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7e09c-119">Requirements</span></span>  
+ <span data-ttu-id="7e09c-120">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e09c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="549e0-121">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="549e0-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7e09c-121">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e09c-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="549e0-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="549e0-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e09c-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e09c-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="549e0-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="549e0-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="7e09c-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e09c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

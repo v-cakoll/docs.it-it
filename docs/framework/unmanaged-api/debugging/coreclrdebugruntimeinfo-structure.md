@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58832e110f67a54d3bd57a7284b2e26e43d6bf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132135"
 ---
-# <a name="coreclrdebugruntimeinfo-structure"></a><span data-ttu-id="e5c9c-102">Struttura CoreClrDebugRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="e5c9c-102">CoreClrDebugRuntimeInfo Structure</span></span>
-<span data-ttu-id="e5c9c-103">Rappresenta un'istanza di Common Language Runtime (CLR) che viene caricata in un processo in un computer remoto.</span><span class="sxs-lookup"><span data-stu-id="e5c9c-103">Represents a common language runtime (CLR) instance that is loaded in a process on a remote machine.</span></span>  
+# <a name="coreclrdebugruntimeinfo-structure"></a><span data-ttu-id="4d7cc-102">Struttura CoreClrDebugRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="4d7cc-102">CoreClrDebugRuntimeInfo Structure</span></span>
+<span data-ttu-id="4d7cc-103">Rappresenta un'istanza di Common Language Runtime (CLR) che viene caricata in un processo in un computer remoto.</span><span class="sxs-lookup"><span data-stu-id="4d7cc-103">Represents a common language runtime (CLR) instance that is loaded in a process on a remote machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5c9c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e5c9c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d7cc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4d7cc-104">Syntax</span></span>  
   
 ```cpp  
 struct  CoreClrDebugRuntimeInfo {  
@@ -36,17 +34,17 @@ struct  CoreClrDebugRuntimeInfo {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e5c9c-105">Membri</span><span class="sxs-lookup"><span data-stu-id="e5c9c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4d7cc-105">Members</span><span class="sxs-lookup"><span data-stu-id="4d7cc-105">Members</span></span>  
   
-|<span data-ttu-id="e5c9c-106">Member</span><span class="sxs-lookup"><span data-stu-id="e5c9c-106">Member</span></span>|<span data-ttu-id="e5c9c-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e5c9c-107">Description</span></span>|  
+|<span data-ttu-id="4d7cc-106">Member</span><span class="sxs-lookup"><span data-stu-id="4d7cc-106">Member</span></span>|<span data-ttu-id="4d7cc-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4d7cc-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_dwInternalID`|<span data-ttu-id="e5c9c-108">Identificatore di runtime assegnato dal proxy di debug remoto in esecuzione sul computer di destinazione.</span><span class="sxs-lookup"><span data-stu-id="e5c9c-108">Runtime identifier that is assigned by the remote debugging proxy running on the target machine.</span></span>|  
+|`m_dwInternalID`|<span data-ttu-id="4d7cc-108">Identificatore di runtime assegnato dal proxy di debug remoto in esecuzione sul computer di destinazione.</span><span class="sxs-lookup"><span data-stu-id="4d7cc-108">Runtime identifier that is assigned by the remote debugging proxy running on the target machine.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e5c9c-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e5c9c-109">Requirements</span></span>  
- <span data-ttu-id="e5c9c-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5c9c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d7cc-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4d7cc-109">Requirements</span></span>  
+ <span data-ttu-id="4d7cc-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d7cc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5c9c-111">**Intestazione:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="e5c9c-111">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="4d7cc-111">**Intestazione:** CoreClrRemoteDebuggingInterfaces. h</span><span class="sxs-lookup"><span data-stu-id="4d7cc-111">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="e5c9c-112">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="e5c9c-112">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="4d7cc-112">**Libreria:** mscordbi_macx86. dll</span><span class="sxs-lookup"><span data-stu-id="4d7cc-112">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="e5c9c-113">**Versioni di .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="e5c9c-113">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="4d7cc-113">**Versioni .NET Framework:** 3,5 SP1</span><span class="sxs-lookup"><span data-stu-id="4d7cc-113">**.NET Framework Versions:** 3.5 SP1</span></span>

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fc834580-3a90-4315-95d2-349b6bb7d059
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ee186604529a3e77a0217c5688df5b62ff8b28c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d5b07acb9dc374fdd8872ed982a92171da28603
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137224"
 ---
-# <a name="icordebugprocess2getdesiredngencompilerflags-method"></a><span data-ttu-id="e1393-102">Metodo ICorDebugProcess2::GetDesiredNGENCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="e1393-102">ICorDebugProcess2::GetDesiredNGENCompilerFlags Method</span></span>
-<span data-ttu-id="e1393-103">Ottiene le impostazioni dell'indicatore che usa common language runtime (CLR) per selezionare i valori corretti precompilati o meno il compilatore corrente (vale a dire, native) immagine da caricare in questo processo.</span><span class="sxs-lookup"><span data-stu-id="e1393-103">Gets the current compiler flag settings that the common language runtime (CLR) uses to select the correct precompiled (that is, native) image to be loaded into this process.</span></span>  
+# <a name="icordebugprocess2getdesiredngencompilerflags-method"></a><span data-ttu-id="ffd51-102">Metodo ICorDebugProcess2::GetDesiredNGENCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="ffd51-102">ICorDebugProcess2::GetDesiredNGENCompilerFlags Method</span></span>
+<span data-ttu-id="ffd51-103">Ottiene le impostazioni correnti del flag del compilatore utilizzate dal Common Language Runtime (CLR) per selezionare l'immagine precompilata (ovvero nativa) corretta da caricare in questo processo.</span><span class="sxs-lookup"><span data-stu-id="ffd51-103">Gets the current compiler flag settings that the common language runtime (CLR) uses to select the correct precompiled (that is, native) image to be loaded into this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1393-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e1393-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffd51-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ffd51-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDesiredNGENCompilerFlags (  
@@ -35,18 +33,18 @@ HRESULT GetDesiredNGENCompilerFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e1393-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e1393-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ffd51-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ffd51-105">Parameters</span></span>  
  `pdwFlags`  
- <span data-ttu-id="e1393-106">[out] Un puntatore a una combinazione bit per bit del [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) valori di enumerazione che vengono usati per selezionare l'immagine corretta precompilata da caricare.</span><span class="sxs-lookup"><span data-stu-id="e1393-106">[out] A pointer to a bitwise combination of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration values that are used to select the correct precompiled image to be loaded.</span></span>  
+ <span data-ttu-id="ffd51-106">out Puntatore a una combinazione bit per bit dei valori di enumerazione [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) usati per selezionare l'immagine precompilata corretta da caricare.</span><span class="sxs-lookup"><span data-stu-id="ffd51-106">[out] A pointer to a bitwise combination of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration values that are used to select the correct precompiled image to be loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e1393-107">Note</span><span class="sxs-lookup"><span data-stu-id="e1393-107">Remarks</span></span>  
- <span data-ttu-id="e1393-108">Usare la [ICorDebugProcess2::SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) metodo per impostare il flag che CLR verranno utilizzati per selezionare l'immagine corretta pre-compilata da caricare.</span><span class="sxs-lookup"><span data-stu-id="e1393-108">Use the [ICorDebugProcess2::SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) method to set the flags that the CLR will use to select the correct pre-compiled image to load.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ffd51-107">Note</span><span class="sxs-lookup"><span data-stu-id="ffd51-107">Remarks</span></span>  
+ <span data-ttu-id="ffd51-108">Utilizzare il metodo [ICorDebugProcess2:: SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) per impostare i flag che CLR utilizzerà per selezionare l'immagine precompilata corretta da caricare.</span><span class="sxs-lookup"><span data-stu-id="ffd51-108">Use the [ICorDebugProcess2::SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) method to set the flags that the CLR will use to select the correct pre-compiled image to load.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1393-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e1393-109">Requirements</span></span>  
- <span data-ttu-id="e1393-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1393-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffd51-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ffd51-109">Requirements</span></span>  
+ <span data-ttu-id="ffd51-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffd51-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1393-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1393-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ffd51-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffd51-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e1393-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1393-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ffd51-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffd51-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e1393-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1393-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="ffd51-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffd51-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108897"
 ---
-# <a name="createapplicationcontext-function"></a><span data-ttu-id="d237d-102">Funzione CreateApplicationContext</span><span class="sxs-lookup"><span data-stu-id="d237d-102">CreateApplicationContext Function</span></span>
-<span data-ttu-id="d237d-103">Questa funzione supporta l'infrastruttura .NET Framework e non può essere usata direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="d237d-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="createapplicationcontext-function"></a><span data-ttu-id="5e220-102">Funzione CreateApplicationContext</span><span class="sxs-lookup"><span data-stu-id="5e220-102">CreateApplicationContext Function</span></span>
+<span data-ttu-id="5e220-103">Questa funzione supporta l'infrastruttura .NET Framework e non può essere usata direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="5e220-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d237d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d237d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e220-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5e220-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateApplicationContext (  
@@ -35,24 +33,24 @@ HRESULT CreateApplicationContext (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d237d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d237d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e220-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5e220-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="d237d-106">in Puntatore a un nome descrittivo.</span><span class="sxs-lookup"><span data-stu-id="d237d-106">[in] A pointer to a friendly name.</span></span>  
+ <span data-ttu-id="5e220-106">in Puntatore a un nome descrittivo.</span><span class="sxs-lookup"><span data-stu-id="5e220-106">[in] A pointer to a friendly name.</span></span>  
   
  `ppCtx`  
- <span data-ttu-id="d237d-107">out Puntatore a un contesto dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d237d-107">[out] A pointer to an application context.</span></span>  
+ <span data-ttu-id="5e220-107">out Puntatore a un contesto dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5e220-107">[out] A pointer to an application context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d237d-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d237d-108">Requirements</span></span>  
- <span data-ttu-id="d237d-109">**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d237d-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e220-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5e220-108">Requirements</span></span>  
+ <span data-ttu-id="5e220-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e220-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d237d-110">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="d237d-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5e220-110">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="5e220-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="d237d-111">**Libreria** Incluso come risorsa in Fusion. dll</span><span class="sxs-lookup"><span data-stu-id="d237d-111">**Library:** Included as a resource in Fusion.dll</span></span>  
+ <span data-ttu-id="5e220-111">**Libreria:** Incluso come risorsa in Fusion. dll</span><span class="sxs-lookup"><span data-stu-id="5e220-111">**Library:** Included as a resource in Fusion.dll</span></span>  
   
- <span data-ttu-id="d237d-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d237d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5e220-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e220-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d237d-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d237d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e220-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e220-113">See also</span></span>
 
-- [<span data-ttu-id="d237d-114">Interfaccia IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="d237d-114">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
-- [<span data-ttu-id="d237d-115">Funzioni statiche globali Fusion</span><span class="sxs-lookup"><span data-stu-id="d237d-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
-- [<span data-ttu-id="d237d-116">Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="d237d-116">Global Assembly Cache</span></span>](../../app-domains/gac.md)
+- [<span data-ttu-id="5e220-114">Interfaccia IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="5e220-114">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
+- [<span data-ttu-id="5e220-115">Funzioni statiche globali Fusion</span><span class="sxs-lookup"><span data-stu-id="5e220-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="5e220-116">Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="5e220-116">Global Assembly Cache</span></span>](../../app-domains/gac.md)

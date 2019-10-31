@@ -8,19 +8,17 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8ecada29528b065ddad0abc80a850ee0f347f6b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f0806e0273b111e3398fb8f2884231b96cf1116
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099764"
 ---
-# <a name="certfreeauthenticodetimestamperinfo-function"></a><span data-ttu-id="882b1-102">Funzione CertFreeAuthenticodeTimestamperInfo</span><span class="sxs-lookup"><span data-stu-id="882b1-102">CertFreeAuthenticodeTimestamperInfo Function</span></span>
-<span data-ttu-id="882b1-103">Libera le risorse allocate per la struttura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="882b1-103">Frees resources allocated for the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
+# <a name="certfreeauthenticodetimestamperinfo-function"></a><span data-ttu-id="af57f-102">Funzione CertFreeAuthenticodeTimestamperInfo</span><span class="sxs-lookup"><span data-stu-id="af57f-102">CertFreeAuthenticodeTimestamperInfo Function</span></span>
+<span data-ttu-id="af57f-103">Libera le risorse allocate per la struttura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="af57f-103">Frees resources allocated for the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="882b1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="882b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af57f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="af57f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CertFreeAuthenticodeTimestamperInfo (  
@@ -28,13 +26,13 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="882b1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="882b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af57f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="af57f-105">Parameters</span></span>  
  `pTimestamperInfo`  
- <span data-ttu-id="882b1-106">[in, out] Informazioni relative a chi ha apposto il timestamp da rilasciare.</span><span class="sxs-lookup"><span data-stu-id="882b1-106">[in, out] The time stamper information to be released.</span></span> <span data-ttu-id="882b1-107">Vedere la struttura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="882b1-107">See the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
+ <span data-ttu-id="af57f-106">[in, out] Informazioni relative a chi ha apposto il timestamp da rilasciare.</span><span class="sxs-lookup"><span data-stu-id="af57f-106">[in, out] The time stamper information to be released.</span></span> <span data-ttu-id="af57f-107">Vedere la struttura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="af57f-107">See the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="882b1-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="882b1-108">Return Value</span></span>  
- <span data-ttu-id="882b1-109">`S_OK` se la funzione ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="882b1-109">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="882b1-110">In caso contrario, verrà restituito un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="882b1-110">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="af57f-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="af57f-108">Return Value</span></span>  
+ <span data-ttu-id="af57f-109">`S_OK` se la funzione ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="af57f-109">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="af57f-110">In caso contrario, verrà restituito un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="af57f-110">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="882b1-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="882b1-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af57f-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af57f-111">See also</span></span>
 
-- [<span data-ttu-id="882b1-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="882b1-112">Authenticode</span></span>](index.md)
+- [<span data-ttu-id="af57f-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="af57f-112">Authenticode</span></span>](index.md)

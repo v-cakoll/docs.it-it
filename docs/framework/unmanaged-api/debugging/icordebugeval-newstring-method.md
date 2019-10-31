@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137649"
 ---
-# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="6a412-102">Metodo ICorDebugEval::NewString</span><span class="sxs-lookup"><span data-stu-id="6a412-102">ICorDebugEval::NewString Method</span></span>
-<span data-ttu-id="6a412-103">Consente di allocare una nuova istanza di stringa con il contenuto specificato.</span><span class="sxs-lookup"><span data-stu-id="6a412-103">Allocates a new string instance with the specified contents.</span></span>  
+# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="f7574-102">Metodo ICorDebugEval::NewString</span><span class="sxs-lookup"><span data-stu-id="f7574-102">ICorDebugEval::NewString Method</span></span>
+<span data-ttu-id="f7574-103">Alloca una nuova istanza di stringa con il contenuto specificato.</span><span class="sxs-lookup"><span data-stu-id="f7574-103">Allocates a new string instance with the specified contents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a412-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6a412-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7574-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f7574-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT NewString (  
@@ -35,18 +33,18 @@ HRESULT NewString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a412-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6a412-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f7574-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f7574-105">Parameters</span></span>  
  `string`  
- <span data-ttu-id="6a412-106">[in] Puntatore al contenuto della stringa.</span><span class="sxs-lookup"><span data-stu-id="6a412-106">[in] Pointer to the contents for the string.</span></span>  
+ <span data-ttu-id="f7574-106">in Puntatore al contenuto della stringa.</span><span class="sxs-lookup"><span data-stu-id="f7574-106">[in] Pointer to the contents for the string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6a412-107">Note</span><span class="sxs-lookup"><span data-stu-id="6a412-107">Remarks</span></span>  
- <span data-ttu-id="6a412-108">La stringa viene sempre creata nel dominio dell'applicazione in cui il thread è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="6a412-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f7574-107">Note</span><span class="sxs-lookup"><span data-stu-id="f7574-107">Remarks</span></span>  
+ <span data-ttu-id="f7574-108">La stringa viene sempre creata nel dominio applicazione in cui è attualmente in esecuzione il thread.</span><span class="sxs-lookup"><span data-stu-id="f7574-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a412-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6a412-109">Requirements</span></span>  
- <span data-ttu-id="6a412-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a412-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7574-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f7574-109">Requirements</span></span>  
+ <span data-ttu-id="f7574-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7574-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a412-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6a412-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f7574-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f7574-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6a412-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a412-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f7574-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f7574-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a412-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a412-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f7574-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7574-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
