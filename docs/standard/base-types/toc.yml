@@ -118,7 +118,7 @@
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: 'Procedura: Rimuovere caratteri non validi da una stringa'
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: 'Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido'
+                - name: Come verificare che le stringhe siano in formato di posta elettronica valido
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: Codifica dei caratteri in .NET
           href: character-encoding.md
