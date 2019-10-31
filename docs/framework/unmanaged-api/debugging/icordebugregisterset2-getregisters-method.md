@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131360"
 ---
-# <a name="icordebugregisterset2getregisters-method"></a><span data-ttu-id="1f722-102">Metodo ICorDebugRegisterSet2::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="1f722-102">ICorDebugRegisterSet2::GetRegisters Method</span></span>
-<span data-ttu-id="1f722-103">Ottiene il valore di ogni registro (per la piattaforma su cui è attualmente in esecuzione codice) specificato dalla maschera di bit.</span><span class="sxs-lookup"><span data-stu-id="1f722-103">Gets the value of each register (for the platform on which code is currently executing) that is specified by the given bit mask.</span></span>  
+# <a name="icordebugregisterset2getregisters-method"></a><span data-ttu-id="895ca-102">Metodo ICorDebugRegisterSet2::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="895ca-102">ICorDebugRegisterSet2::GetRegisters Method</span></span>
+<span data-ttu-id="895ca-103">Ottiene il valore di ogni registro (per la piattaforma in cui è attualmente in esecuzione il codice) specificato dalla maschera di bit specificata.</span><span class="sxs-lookup"><span data-stu-id="895ca-103">Gets the value of each register (for the platform on which code is currently executing) that is specified by the given bit mask.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f722-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1f722-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="895ca-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="895ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRegisters (  
@@ -38,38 +36,38 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1f722-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="1f722-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="895ca-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="895ca-105">Parameters</span></span>  
  `maskCount`  
- <span data-ttu-id="1f722-106">[in] Le dimensioni, in byte, del `mask` matrice.</span><span class="sxs-lookup"><span data-stu-id="1f722-106">[in] The size, in bytes, of the `mask` array.</span></span>  
+ <span data-ttu-id="895ca-106">in Dimensione, in byte, della matrice `mask`.</span><span class="sxs-lookup"><span data-stu-id="895ca-106">[in] The size, in bytes, of the `mask` array.</span></span>  
   
  `mask`  
- <span data-ttu-id="1f722-107">[in] Matrice di byte, ogni bit che corrisponde a un registro.</span><span class="sxs-lookup"><span data-stu-id="1f722-107">[in] An array of bytes, each bit of which corresponds to a register.</span></span> <span data-ttu-id="1f722-108">Se il bit è 1, verrà recuperato il corrispondente valore del registro.</span><span class="sxs-lookup"><span data-stu-id="1f722-108">If the bit is 1, the corresponding register's value will be retrieved.</span></span>  
+ <span data-ttu-id="895ca-107">in Matrice di byte, ogni bit corrispondente a un registro.</span><span class="sxs-lookup"><span data-stu-id="895ca-107">[in] An array of bytes, each bit of which corresponds to a register.</span></span> <span data-ttu-id="895ca-108">Se il bit è 1, verrà recuperato il valore del registro corrispondente.</span><span class="sxs-lookup"><span data-stu-id="895ca-108">If the bit is 1, the corresponding register's value will be retrieved.</span></span>  
   
  `regCount`  
- <span data-ttu-id="1f722-109">[in] Il numero di valori di registro da recuperare.</span><span class="sxs-lookup"><span data-stu-id="1f722-109">[in] The number of register values to be retrieved.</span></span>  
+ <span data-ttu-id="895ca-109">in Numero di valori di registro da recuperare.</span><span class="sxs-lookup"><span data-stu-id="895ca-109">[in] The number of register values to be retrieved.</span></span>  
   
  `regBuffer`  
- <span data-ttu-id="1f722-110">[out] Matrice di `CORDB_REGISTER` oggetti, ognuno dei quali riceve il valore di un registro.</span><span class="sxs-lookup"><span data-stu-id="1f722-110">[out] An array of `CORDB_REGISTER` objects, each of which receives the value of a register.</span></span>  
+ <span data-ttu-id="895ca-110">out Matrice di oggetti `CORDB_REGISTER`, ognuno dei quali riceve il valore di un registro.</span><span class="sxs-lookup"><span data-stu-id="895ca-110">[out] An array of `CORDB_REGISTER` objects, each of which receives the value of a register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f722-111">Note</span><span class="sxs-lookup"><span data-stu-id="1f722-111">Remarks</span></span>  
- <span data-ttu-id="1f722-112">Il `GetRegisters` metodo restituisce una matrice di valori dai registri che vengono specificati dalla maschera.</span><span class="sxs-lookup"><span data-stu-id="1f722-112">The `GetRegisters` method returns an array of values from the registers that are specified by the mask.</span></span> <span data-ttu-id="1f722-113">La matrice non contiene valori dei registri la cui maschera bit non è impostato.</span><span class="sxs-lookup"><span data-stu-id="1f722-113">The array does not contain values of registers whose mask bit is not set.</span></span> <span data-ttu-id="1f722-114">Di conseguenza, le dimensioni del `regBuffer` matrice deve essere uguale al numero di 1 nella maschera.</span><span class="sxs-lookup"><span data-stu-id="1f722-114">Thus, the size of the `regBuffer` array must be equal to the number of 1's in the mask.</span></span> <span data-ttu-id="1f722-115">Se il valore di `regCount` è troppo piccolo per il numero di registri indicati dalla maschera, i valori dei registri numerati superiore verrà troncato dal set.</span><span class="sxs-lookup"><span data-stu-id="1f722-115">If the value of `regCount` is too small for the number of registers indicated by the mask, the values of the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="1f722-116">Se `regCount` è troppo grande, inutilizzata `regBuffer` elementi saranno non modificati.</span><span class="sxs-lookup"><span data-stu-id="1f722-116">If `regCount` is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="895ca-111">Note</span><span class="sxs-lookup"><span data-stu-id="895ca-111">Remarks</span></span>  
+ <span data-ttu-id="895ca-112">Il metodo `GetRegisters` restituisce una matrice di valori dai registri specificati dalla maschera.</span><span class="sxs-lookup"><span data-stu-id="895ca-112">The `GetRegisters` method returns an array of values from the registers that are specified by the mask.</span></span> <span data-ttu-id="895ca-113">La matrice non contiene valori di registri il cui bit mask non è impostato.</span><span class="sxs-lookup"><span data-stu-id="895ca-113">The array does not contain values of registers whose mask bit is not set.</span></span> <span data-ttu-id="895ca-114">Pertanto, le dimensioni della matrice di `regBuffer` devono essere uguali al numero di 1 nella maschera.</span><span class="sxs-lookup"><span data-stu-id="895ca-114">Thus, the size of the `regBuffer` array must be equal to the number of 1's in the mask.</span></span> <span data-ttu-id="895ca-115">Se il valore di `regCount` è troppo piccolo per il numero di registri indicato dalla maschera, i valori dei registri con numero superiore verranno troncati dal set.</span><span class="sxs-lookup"><span data-stu-id="895ca-115">If the value of `regCount` is too small for the number of registers indicated by the mask, the values of the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="895ca-116">Se `regCount` è troppo grande, gli elementi `regBuffer` non utilizzati non verranno modificati.</span><span class="sxs-lookup"><span data-stu-id="895ca-116">If `regCount` is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
   
- <span data-ttu-id="1f722-117">Se un registro non disponibile viene indicato dalla maschera, verrà restituito un valore indeterminato per tale registro.</span><span class="sxs-lookup"><span data-stu-id="1f722-117">If an unavailable register is indicated by the mask, an indeterminate value will be returned for that register.</span></span>  
+ <span data-ttu-id="895ca-117">Se un registro non disponibile è indicato dalla maschera, viene restituito un valore indeterminato per tale registro.</span><span class="sxs-lookup"><span data-stu-id="895ca-117">If an unavailable register is indicated by the mask, an indeterminate value will be returned for that register.</span></span>  
   
- <span data-ttu-id="1f722-118">Il `ICorDebugRegisterSet2::GetRegisters` metodo è necessario per le piattaforme che hanno più di 64 registri.</span><span class="sxs-lookup"><span data-stu-id="1f722-118">The `ICorDebugRegisterSet2::GetRegisters` method is necessary for platforms which have more than 64 registers.</span></span> <span data-ttu-id="1f722-119">Ad esempio, IA64 è 128 registri di utilizzo generico e 128 registri a virgola mobile, pertanto è necessario più di 64-bit nella maschera di bit.</span><span class="sxs-lookup"><span data-stu-id="1f722-119">For example, IA64 has 128 general purpose registers and 128 floating-point registers, so you need more than 64-bits in the bit mask.</span></span>  
+ <span data-ttu-id="895ca-118">Il metodo `ICorDebugRegisterSet2::GetRegisters` è necessario per le piattaforme con più di 64 registri.</span><span class="sxs-lookup"><span data-stu-id="895ca-118">The `ICorDebugRegisterSet2::GetRegisters` method is necessary for platforms which have more than 64 registers.</span></span> <span data-ttu-id="895ca-119">Ad esempio, IA64 ha 128 registri per utilizzo generico e 128 registri a virgola mobile, quindi è necessario più di 64 bit nella maschera di bit.</span><span class="sxs-lookup"><span data-stu-id="895ca-119">For example, IA64 has 128 general purpose registers and 128 floating-point registers, so you need more than 64-bits in the bit mask.</span></span>  
   
- <span data-ttu-id="1f722-120">Se non è più di 64 registri, come nel caso in piattaforme, ad esempio x86, il `GetRegisters` metodo converte semplicemente i byte nel `mask` matrice di byte in un `ULONG64` e quindi chiama il [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) metodo, che utilizza il `ULONG64` maschera.</span><span class="sxs-lookup"><span data-stu-id="1f722-120">If you do not have more than 64 registers, as is the case on platforms such as x86, the `GetRegisters` method actually just translates the bytes in the `mask` byte array into a `ULONG64` and then calls the [ICorDebugRegisterSet::GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) method, which takes the `ULONG64` mask.</span></span>  
+ <span data-ttu-id="895ca-120">Se non si dispone di più di 64 registri, come nel caso di piattaforme come x86, il metodo `GetRegisters` converte in realtà solo i byte nella matrice `mask` byte in una `ULONG64` e quindi chiama il metodo [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) , che accetta il `ULONG64` maschera.</span><span class="sxs-lookup"><span data-stu-id="895ca-120">If you do not have more than 64 registers, as is the case on platforms such as x86, the `GetRegisters` method actually just translates the bytes in the `mask` byte array into a `ULONG64` and then calls the [ICorDebugRegisterSet::GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) method, which takes the `ULONG64` mask.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f722-121">Requisiti</span><span class="sxs-lookup"><span data-stu-id="1f722-121">Requirements</span></span>  
- <span data-ttu-id="1f722-122">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f722-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="895ca-121">Requisiti</span><span class="sxs-lookup"><span data-stu-id="895ca-121">Requirements</span></span>  
+ <span data-ttu-id="895ca-122">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="895ca-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f722-123">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1f722-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="895ca-123">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="895ca-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1f722-124">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1f722-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="895ca-124">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="895ca-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1f722-125">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f722-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="895ca-125">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="895ca-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f722-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1f722-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="895ca-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="895ca-126">See also</span></span>
 
-- [<span data-ttu-id="1f722-127">Interfaccia ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="1f722-127">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [<span data-ttu-id="1f722-128">Interfaccia ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="1f722-128">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="895ca-127">Interfaccia ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="895ca-127">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="895ca-128">Interfaccia ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="895ca-128">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

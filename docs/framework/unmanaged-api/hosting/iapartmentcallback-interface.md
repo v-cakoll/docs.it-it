@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4424509c16dd1d9f83db117ae7343fa03995297e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126904"
 ---
-# <a name="iapartmentcallback-interface"></a><span data-ttu-id="c5c5b-102">Interfaccia IApartmentCallback</span><span class="sxs-lookup"><span data-stu-id="c5c5b-102">IApartmentCallback Interface</span></span>
-<span data-ttu-id="c5c5b-103">Fornisce metodi per rendere i callback all'interno di un apartment.</span><span class="sxs-lookup"><span data-stu-id="c5c5b-103">Provides methods for making callbacks within an apartment.</span></span> <span data-ttu-id="c5c5b-104">Un' *apartment* è un contenitore logico in un processo per gli oggetti che condividono gli stessi requisiti di accesso di thread.</span><span class="sxs-lookup"><span data-stu-id="c5c5b-104">An *apartment* is a logical container within a process for objects that share the same thread access requirements.</span></span>  
+# <a name="iapartmentcallback-interface"></a><span data-ttu-id="2b002-102">Interfaccia IApartmentCallback</span><span class="sxs-lookup"><span data-stu-id="2b002-102">IApartmentCallback Interface</span></span>
+<span data-ttu-id="2b002-103">Fornisce metodi per l'esecuzione di callback in un Apartment.</span><span class="sxs-lookup"><span data-stu-id="2b002-103">Provides methods for making callbacks within an apartment.</span></span> <span data-ttu-id="2b002-104">Un *Apartment* è un contenitore logico all'interno di un processo per gli oggetti che condividono gli stessi requisiti di accesso ai thread.</span><span class="sxs-lookup"><span data-stu-id="2b002-104">An *apartment* is a logical container within a process for objects that share the same thread access requirements.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c5c5b-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="c5c5b-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2b002-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="2b002-105">Methods</span></span>  
   
-|<span data-ttu-id="c5c5b-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="c5c5b-106">Method</span></span>|<span data-ttu-id="c5c5b-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c5c5b-107">Description</span></span>|  
+|<span data-ttu-id="2b002-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="2b002-106">Method</span></span>|<span data-ttu-id="2b002-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2b002-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c5c5b-108">Metodo DoCallback</span><span class="sxs-lookup"><span data-stu-id="c5c5b-108">DoCallback Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|<span data-ttu-id="c5c5b-109">Esegue la funzione specificata all'interno di un apartment.</span><span class="sxs-lookup"><span data-stu-id="c5c5b-109">Executes the specified function within an apartment.</span></span>|  
+|[<span data-ttu-id="2b002-108">Metodo DoCallback</span><span class="sxs-lookup"><span data-stu-id="2b002-108">DoCallback Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|<span data-ttu-id="2b002-109">Esegue la funzione specificata in un Apartment.</span><span class="sxs-lookup"><span data-stu-id="2b002-109">Executes the specified function within an apartment.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c5c5b-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c5c5b-110">Requirements</span></span>  
- <span data-ttu-id="c5c5b-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5c5b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b002-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2b002-110">Requirements</span></span>  
+ <span data-ttu-id="2b002-111">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b002-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5c5b-112">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c5c5b-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2b002-112">**Intestazione:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="2b002-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c5c5b-113">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c5c5b-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2b002-113">**Libreria:** Incluso come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="2b002-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c5c5b-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5c5b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2b002-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b002-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5c5b-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5c5b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b002-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2b002-115">See also</span></span>
 
-- [<span data-ttu-id="c5c5b-116">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="c5c5b-116">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="2b002-116">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="2b002-116">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

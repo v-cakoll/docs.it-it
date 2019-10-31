@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1000e24d9952f13aa41ff2b85339dd64c14d175e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25c7894fef13b1cca96e9a1d0acaf70001630e30
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962256"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125467"
 ---
-# <a name="icordebugcontext-interface"></a><span data-ttu-id="95d4d-102">Interfaccia ICorDebugContext</span><span class="sxs-lookup"><span data-stu-id="95d4d-102">ICorDebugContext Interface</span></span>
+# <a name="icordebugcontext-interface"></a><span data-ttu-id="f9d6f-102">Interfaccia ICorDebugContext</span><span class="sxs-lookup"><span data-stu-id="f9d6f-102">ICorDebugContext Interface</span></span>
 
-<span data-ttu-id="95d4d-103">Rappresenta un oggetto di contesto.</span><span class="sxs-lookup"><span data-stu-id="95d4d-103">Represents a context object.</span></span> <span data-ttu-id="95d4d-104">Questa interfaccia non è stata ancora implementata.</span><span class="sxs-lookup"><span data-stu-id="95d4d-104">This interface has not been implemented yet.</span></span>  
+<span data-ttu-id="f9d6f-103">Rappresenta un oggetto di contesto.</span><span class="sxs-lookup"><span data-stu-id="f9d6f-103">Represents a context object.</span></span> <span data-ttu-id="f9d6f-104">Questa interfaccia non è stata ancora implementata.</span><span class="sxs-lookup"><span data-stu-id="f9d6f-104">This interface has not been implemented yet.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="95d4d-105">Note</span><span class="sxs-lookup"><span data-stu-id="95d4d-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f9d6f-105">Note</span><span class="sxs-lookup"><span data-stu-id="f9d6f-105">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="95d4d-106">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="95d4d-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="f9d6f-106">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="f9d6f-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95d4d-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="95d4d-107">Requirements</span></span>  
- <span data-ttu-id="95d4d-108">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95d4d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9d6f-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f9d6f-107">Requirements</span></span>  
+ <span data-ttu-id="f9d6f-108">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9d6f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95d4d-109">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="95d4d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f9d6f-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9d6f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="95d4d-110">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="95d4d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f9d6f-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9d6f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="95d4d-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95d4d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9d6f-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9d6f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95d4d-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="95d4d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9d6f-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f9d6f-112">See also</span></span>
 
-- [<span data-ttu-id="95d4d-113">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="95d4d-113">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f9d6f-113">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="f9d6f-113">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

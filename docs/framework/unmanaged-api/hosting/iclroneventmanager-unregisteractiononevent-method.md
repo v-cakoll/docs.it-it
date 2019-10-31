@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00ad48dfe57d388653a9151393dd7b91a28a9615
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f952978a2591c82b2ad3f5059070124b7873c94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140819"
 ---
-# <a name="iclroneventmanagerunregisteractiononevent-method"></a><span data-ttu-id="cb046-102">Metodo ICLROnEventManager::UnregisterActionOnEvent</span><span class="sxs-lookup"><span data-stu-id="cb046-102">ICLROnEventManager::UnregisterActionOnEvent Method</span></span>
-<span data-ttu-id="cb046-103">Annulla la registrazione di un puntatore di callback registrato in precedenza per l'evento specificato.</span><span class="sxs-lookup"><span data-stu-id="cb046-103">Unregisters a previously registered callback pointer for the specified event.</span></span>  
+# <a name="iclroneventmanagerunregisteractiononevent-method"></a><span data-ttu-id="19d1b-102">Metodo ICLROnEventManager::UnregisterActionOnEvent</span><span class="sxs-lookup"><span data-stu-id="19d1b-102">ICLROnEventManager::UnregisterActionOnEvent Method</span></span>
+<span data-ttu-id="19d1b-103">Annulla la registrazione di un puntatore di callback registrato in precedenza per l'evento specificato.</span><span class="sxs-lookup"><span data-stu-id="19d1b-103">Unregisters a previously registered callback pointer for the specified event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb046-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cb046-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19d1b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="19d1b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnregisterActionOnEvent (  
@@ -36,36 +34,36 @@ HRESULT UnregisterActionOnEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb046-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cb046-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="19d1b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="19d1b-105">Parameters</span></span>  
  `event`  
- <span data-ttu-id="cb046-106">[in] Uno dei [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) valori, che indica l'evento per cui si desidera annullare la registrazione il puntatore di richiamata descritto da `pAction`.</span><span class="sxs-lookup"><span data-stu-id="cb046-106">[in] One of the [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) values, indicating the event for which to unregister the callback pointer described by `pAction`.</span></span>  
+ <span data-ttu-id="19d1b-106">in Uno dei valori di [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) , che indica l'evento per il quale annullare la registrazione del puntatore di callback descritto da `pAction`.</span><span class="sxs-lookup"><span data-stu-id="19d1b-106">[in] One of the [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) values, indicating the event for which to unregister the callback pointer described by `pAction`.</span></span>  
   
  `pAction`  
- <span data-ttu-id="cb046-107">[in] Un puntatore a un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) che è stato passato come parametro per il [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="cb046-107">[in] A pointer to an [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) object that was passed as a parameter to the [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
+ <span data-ttu-id="19d1b-107">in Puntatore a un oggetto [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) passato come parametro al metodo [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) .</span><span class="sxs-lookup"><span data-stu-id="19d1b-107">[in] A pointer to an [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) object that was passed as a parameter to the [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cb046-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cb046-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="19d1b-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="19d1b-108">Return Value</span></span>  
   
-|<span data-ttu-id="cb046-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cb046-109">HRESULT</span></span>|<span data-ttu-id="cb046-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cb046-110">Description</span></span>|  
+|<span data-ttu-id="19d1b-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="19d1b-109">HRESULT</span></span>|<span data-ttu-id="19d1b-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="19d1b-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cb046-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="cb046-111">S_OK</span></span>|<span data-ttu-id="cb046-112">`UnregisterActionOnEvent` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="cb046-112">`UnregisterActionOnEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="cb046-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cb046-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cb046-114">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="cb046-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="cb046-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cb046-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cb046-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="cb046-116">The call timed out.</span></span>|  
-|<span data-ttu-id="cb046-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cb046-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cb046-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="cb046-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="cb046-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cb046-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cb046-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="cb046-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="cb046-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cb046-121">E_FAIL</span></span>|<span data-ttu-id="cb046-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="cb046-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cb046-123">Dopo che un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="cb046-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cb046-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="cb046-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="19d1b-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="19d1b-111">S_OK</span></span>|<span data-ttu-id="19d1b-112">`UnregisterActionOnEvent` ha restituito un esito positivo.</span><span class="sxs-lookup"><span data-stu-id="19d1b-112">`UnregisterActionOnEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="19d1b-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="19d1b-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="19d1b-114">Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.</span><span class="sxs-lookup"><span data-stu-id="19d1b-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="19d1b-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="19d1b-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="19d1b-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="19d1b-116">The call timed out.</span></span>|  
+|<span data-ttu-id="19d1b-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="19d1b-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="19d1b-118">Il chiamante non è il proprietario del blocco.</span><span class="sxs-lookup"><span data-stu-id="19d1b-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="19d1b-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="19d1b-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="19d1b-120">Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="19d1b-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="19d1b-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="19d1b-121">E_FAIL</span></span>|<span data-ttu-id="19d1b-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="19d1b-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="19d1b-123">Dopo che un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="19d1b-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="19d1b-124">Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="19d1b-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cb046-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cb046-125">Requirements</span></span>  
- <span data-ttu-id="cb046-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb046-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19d1b-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="19d1b-125">Requirements</span></span>  
+ <span data-ttu-id="19d1b-126">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19d1b-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb046-127">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cb046-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="19d1b-127">**Intestazione:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="19d1b-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cb046-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="cb046-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="19d1b-128">**Libreria:** Incluso come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="19d1b-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cb046-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb046-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="19d1b-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19d1b-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb046-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cb046-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19d1b-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="19d1b-130">See also</span></span>
 
-- [<span data-ttu-id="cb046-131">Enumerazione EClrEvent</span><span class="sxs-lookup"><span data-stu-id="cb046-131">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [<span data-ttu-id="cb046-132">Interfaccia IActionOnCLREvent</span><span class="sxs-lookup"><span data-stu-id="cb046-132">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [<span data-ttu-id="cb046-133">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="cb046-133">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="cb046-134">Interfaccia ICLROnEventManager</span><span class="sxs-lookup"><span data-stu-id="cb046-134">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [<span data-ttu-id="19d1b-131">Enumerazione EClrEvent</span><span class="sxs-lookup"><span data-stu-id="19d1b-131">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [<span data-ttu-id="19d1b-132">Interfaccia IActionOnCLREvent</span><span class="sxs-lookup"><span data-stu-id="19d1b-132">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [<span data-ttu-id="19d1b-133">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="19d1b-133">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="19d1b-134">Interfaccia ICLROnEventManager</span><span class="sxs-lookup"><span data-stu-id="19d1b-134">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)

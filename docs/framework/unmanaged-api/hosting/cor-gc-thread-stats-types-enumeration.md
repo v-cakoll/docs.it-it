@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63275aaa7ed1f63c4f100845d2cbe9e93fcd0bcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131251"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="31783-102">Enumerazione COR_GC_THREAD_STATS_TYPES</span><span class="sxs-lookup"><span data-stu-id="31783-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="31783-103">Indica le statistiche per un thread di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="31783-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="cor_gc_thread_stats_types-enumeration"></a><span data-ttu-id="81ca5-102">Enumerazione COR_GC_THREAD_STATS_TYPES</span><span class="sxs-lookup"><span data-stu-id="81ca5-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="81ca5-103">Indica le statistiche Garbage Collection per un thread.</span><span class="sxs-lookup"><span data-stu-id="81ca5-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="31783-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="31783-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81ca5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="81ca5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,19 +32,19 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="31783-105">Membri</span><span class="sxs-lookup"><span data-stu-id="31783-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="81ca5-105">Members</span><span class="sxs-lookup"><span data-stu-id="81ca5-105">Members</span></span>  
   
-|<span data-ttu-id="31783-106">Member</span><span class="sxs-lookup"><span data-stu-id="31783-106">Member</span></span>|<span data-ttu-id="31783-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="31783-107">Description</span></span>|  
+|<span data-ttu-id="81ca5-106">Member</span><span class="sxs-lookup"><span data-stu-id="81ca5-106">Member</span></span>|<span data-ttu-id="81ca5-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="81ca5-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="31783-108">Il thread di byte che sono state alzate di livello il più recente operazione di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="31783-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="81ca5-108">Il thread ha i byte innalzati di livello nell'Garbage Collection più recente.</span><span class="sxs-lookup"><span data-stu-id="81ca5-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="31783-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="31783-109">Requirements</span></span>  
- <span data-ttu-id="31783-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="31783-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81ca5-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="81ca5-109">Requirements</span></span>  
+ <span data-ttu-id="81ca5-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81ca5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="31783-111">**Intestazione:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="31783-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="81ca5-111">**Intestazione:** GCHost. idl, GCHost. h</span><span class="sxs-lookup"><span data-stu-id="81ca5-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="31783-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31783-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="81ca5-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81ca5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31783-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="31783-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81ca5-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81ca5-113">See also</span></span>
 
-- [<span data-ttu-id="31783-114">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="31783-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="81ca5-114">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="81ca5-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
