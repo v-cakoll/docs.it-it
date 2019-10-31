@@ -6,12 +6,12 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 15f334f280c2aca83ba5b628a1137464c31c6282
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5f59f1c4c269a52131a324bbd2bfbe817ab794a4
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005549"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197093"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 Fa in modo che il compilatore accetti solo la sintassi inclusa nella versione della lingua Visual Basic specificata.  
@@ -22,7 +22,7 @@ Fa in modo che il compilatore accetti solo la sintassi inclusa nella versione de
 -langversion:version  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `version`  
  Obbligatorio. La versione del linguaggio da utilizzare durante la compilazione. I valori accettati sono `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` e `latest`.
 
@@ -35,7 +35,7 @@ Fa in modo che il compilatore accetti solo la sintassi inclusa nella versione de
   
  È possibile utilizzare questa opzione quando si sviluppano applicazioni destinate a versioni diverse del .NET Framework. Ad esempio, se la destinazione è .NET Framework 3,5, è possibile usare questa opzione per assicurarsi di non usare la sintassi della versione 10,0 del linguaggio.  
   
- È possibile impostare `-langversion` direttamente solo tramite la riga di comando. Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
+ È possibile impostare `-langversion` direttamente solo tramite la riga di comando. Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `sample.vb` per Visual Basic 9,0.  
@@ -48,4 +48,4 @@ vbc -langversion:9.0 sample.vb
 
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+- [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

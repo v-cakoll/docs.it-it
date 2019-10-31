@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394348"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198462"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: IO sincrono disabilitato in tutti i server
 
@@ -53,7 +53,7 @@ per impostazione predefinita sono consentiti `HttpRequest.Body.Read`, `HttpRespo
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-Queste API sincrone non sono consentite per impostazione predefinita: 
+Queste API sincrone non sono consentite per impostazione predefinita:
 
 Si verificano errori simili a:
 

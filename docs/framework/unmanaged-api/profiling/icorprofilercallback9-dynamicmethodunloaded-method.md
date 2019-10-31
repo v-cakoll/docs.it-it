@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorProfilerCallback9::DynamicMethodUnloaded
+title: ICorProfilerCallback9::D Metodo ynamicMethodUnloaded
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback9.DynamicMethodUnloaded
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 680bd351a64632e67432ee03352ee7caa8f4b2d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 05a788179ff40a6889ed613b5f8659dd3f8e066f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196327"
 ---
-# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>Metodo ICorProfilerCallback9::DynamicMethodUnloaded
+# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D Metodo ynamicMethodUnloaded
 [Supportato in .NET Framework 4.7.2 e versioni successive]  
   
-Notifica al profiler ogni volta che un metodo dinamico viene sottoposto a garbage raccolti e successivamente scaricata.  
+Notifica al profiler ogni volta che un metodo dinamico viene sottoposta a Garbage Collection e successivamente scaricato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,10 +30,10 @@ HRESULT DynamicMethodUnloaded(
   
 ## <a name="parameters"></a>Parametri  
 [in] `functionId`  
-L'identificatore della funzione in memoria che è stato sottoposto a garbage collection e scaricato.   
+Identificatore della funzione in memoria che è stata sottoposta a Garbage Collection e scaricata.   
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
@@ -45,7 +43,7 @@ L'identificatore della funzione in memoria che è stato sottoposto a garbage col
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo ICorProfilerCallback8.DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [Metodo ICorProfilerCallback8.DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationStarted, metodo](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationFinished, metodo](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [Interfaccia ICorProfilerCallback9](icorprofilercallback9-interface.md)
 - [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

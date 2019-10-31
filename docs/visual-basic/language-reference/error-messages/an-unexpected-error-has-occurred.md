@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 8130eee93ab5c14043283c28f522da53f9047e85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9643d14b3e94e814c492b362b9db3e37cff4ce9f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646900"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197380"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Errore imprevisto. Impossibile acquisire una risorsa del sistema operativo necessaria per l'avvio di istanze singole
 L'applicazione non è riuscita ad acquisire una risorsa del sistema operativo necessaria. Alcune possibili cause di questo problema sono:  
@@ -34,4 +34,4 @@ L'applicazione non è riuscita ad acquisire una risorsa del sistema operativo ne
 
 - [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/feedback-options) (Comunicazioni con Microsoft)
