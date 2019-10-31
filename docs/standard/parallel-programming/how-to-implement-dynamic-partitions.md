@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Implementare partizioni dinamiche'
+title: 'Procedura: implementare partizioni dinamiche'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,29 +8,27 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5719c6afc1c5efc6138f0a4931d1725a6f20909a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 3970566b4e3f51ce538c328d4e69b20ec22ec09b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091412"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="39cc9-102">Procedura: Implementare partizioni dinamiche</span><span class="sxs-lookup"><span data-stu-id="39cc9-102">How to: Implement Dynamic Partitions</span></span>
+# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="cf0f2-102">Procedura: implementare partizioni dinamiche</span><span class="sxs-lookup"><span data-stu-id="cf0f2-102">How to: Implement Dynamic Partitions</span></span>
 
-<span data-ttu-id="39cc9-103">L'esempio seguente mostra come implementare un oggetto <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> personalizzato che implementa il partizionamento dinamico e che può essere usato da determinati overload <xref:System.Threading.Tasks.Parallel.ForEach%2A> e da PLINQ.</span><span class="sxs-lookup"><span data-stu-id="39cc9-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
+<span data-ttu-id="cf0f2-103">L'esempio seguente mostra come implementare un oggetto <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> personalizzato che implementa il partizionamento dinamico e che può essere usato da determinati overload <xref:System.Threading.Tasks.Parallel.ForEach%2A> e da PLINQ.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="39cc9-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="39cc9-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cf0f2-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="cf0f2-104">Example</span></span>
 
-<span data-ttu-id="39cc9-105">Ogni volta che una partizione chiama <xref:System.Collections.IEnumerator.MoveNext%2A> nell'enumeratore, l'enumeratore fornisce la partizione con un elemento dell'elenco.</span><span class="sxs-lookup"><span data-stu-id="39cc9-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="39cc9-106">Nel caso di PLINQ e di <xref:System.Threading.Tasks.Parallel.ForEach%2A>, la partizione è un'istanza <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="39cc9-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="39cc9-107">Poiché le richieste vengono eseguite contemporaneamente su più thread, l'accesso all'indice corrente è sincronizzato.</span><span class="sxs-lookup"><span data-stu-id="39cc9-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
+<span data-ttu-id="cf0f2-105">Ogni volta che una partizione chiama <xref:System.Collections.IEnumerator.MoveNext%2A> nell'enumeratore, l'enumeratore fornisce la partizione con un elemento dell'elenco.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="cf0f2-106">Nel caso di PLINQ e di <xref:System.Threading.Tasks.Parallel.ForEach%2A>, la partizione è un'istanza <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="cf0f2-107">Poiché le richieste vengono eseguite contemporaneamente su più thread, l'accesso all'indice corrente è sincronizzato.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
 
 [!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner02.cs#OrderableListPartitioner)]
 [!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
 
-<span data-ttu-id="39cc9-108">Questo è un esempio di partizionamento in blocchi, con ogni blocco costituito da un elemento.</span><span class="sxs-lookup"><span data-stu-id="39cc9-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="39cc9-109">Fornendo più elementi per volta, è possibile ridurre il conflitto sul blocco e ottenere in teoria prestazioni più veloci.</span><span class="sxs-lookup"><span data-stu-id="39cc9-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="39cc9-110">A un certo punto, tuttavia, blocchi più grandi potrebbero richiedere logica di bilanciamento del carico aggiuntiva per mantenere occupati tutti i thread fino al completamento del lavoro.</span><span class="sxs-lookup"><span data-stu-id="39cc9-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
+<span data-ttu-id="cf0f2-108">Questo è un esempio di partizionamento in blocchi, con ogni blocco costituito da un elemento.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="cf0f2-109">Fornendo più elementi per volta, è possibile ridurre il conflitto sul blocco e ottenere in teoria prestazioni più veloci.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="cf0f2-110">A un certo punto, tuttavia, blocchi più grandi potrebbero richiedere logica di bilanciamento del carico aggiuntiva per mantenere occupati tutti i thread fino al completamento del lavoro.</span><span class="sxs-lookup"><span data-stu-id="cf0f2-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39cc9-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="39cc9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf0f2-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cf0f2-111">See also</span></span>
 
-* [<span data-ttu-id="39cc9-112">Partitioner personalizzati per PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="39cc9-112">Custom Partitioners for PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-* [<span data-ttu-id="39cc9-113">Procedura: Implementare un partitioner per il partizionamento statico</span><span class="sxs-lookup"><span data-stu-id="39cc9-113">How to: Implement a Partitioner for Static Partitioning</span></span>](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+* [<span data-ttu-id="cf0f2-112">Partitioner personalizzati per PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="cf0f2-112">Custom Partitioners for PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
+* [<span data-ttu-id="cf0f2-113">Procedura: Implementare un partitioner per il partizionamento statico</span><span class="sxs-lookup"><span data-stu-id="cf0f2-113">How to: Implement a Partitioner for Static Partitioning</span></span>](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
