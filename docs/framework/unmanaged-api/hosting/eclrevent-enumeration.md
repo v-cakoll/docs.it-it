@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769715"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131140"
 ---
 # <a name="eclrevent-enumeration"></a>Enumerazione EClrEvent
-Descrive gli eventi di common language runtime (CLR) per il quale l'host può registrare i callback.  
+Vengono descritti gli eventi di Common Language Runtime (CLR) per i quali l'host può registrare i callback.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,28 +35,28 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Specifica un errore irreversibile di CLR.|  
+|`Event_ClrDisabled`|Specifica un errore CLR irreversibile.|  
 |`Event_DomainUnload`|Specifica lo scaricamento di un particolare <xref:System.AppDomain>.|  
-|`Event_MDAFired`|Specifica che un messaggio al debug gestito Assistant (MDA) sia stato generato.|  
+|`Event_MDAFired`|Specifica che è stato generato un messaggio assistente al debug gestito (MDA).|  
 |`Event_StackOverflow`|Specifica che si è verificato un errore di overflow dello stack.|  
   
 ## <a name="remarks"></a>Note  
- L'host può registrare i callback per uno qualsiasi dei tipi di eventi descritti da `EClrEvent` chiamando i metodi del [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interfaccia. L'host ottiene un puntatore all'interfaccia chiamando il [ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) (metodo).  
+ L'host può registrare callback per uno dei tipi di evento descritti da `EClrEvent` chiamando i metodi dell'interfaccia [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) . L'host ottiene un puntatore a questa interfaccia chiamando il metodo [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
   
- Il `Event_CLRDisabled` e `Event_DomainUnload` eventi possono essere generati più di una volta e da thread diversi da segnalare uno scaricamento o la disattivazione di CLR.  
+ Gli eventi `Event_CLRDisabled` e `Event_DomainUnload` possono essere generati più di una volta e da thread diversi per segnalare uno scaricamento o la disabilitazione di CLR.  
   
- Il `Event_MDAFired` eventi genera la creazione di un' [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) istanza che contiene i dettagli del messaggio assistente al debug gestito. Per altre informazioni sulle assistenti al debug gestito, vedere [diagnostica degli errori con assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ L'evento `Event_MDAFired` genera la creazione di un'istanza di [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) che contiene i dettagli del messaggio dell'assistente al debug gestito. Per ulteriori informazioni su MDA, vedere la pagina relativa alla [diagnosi degli errori con gli assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 644ece86-384d-4c63-9fba-52c789616ff7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 04c36d1e5f0e79b71963683a3b613a9ad7392bcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125522"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Metodo ICorDebugCodeEnum::Next
 
@@ -42,13 +40,13 @@ HRESULT Next (
 ## <a name="parameters"></a>Parametri
 
 `celt`  
-in Numero di istanze di @no__t 0 da recuperare.
+in Numero di istanze di `ICorDebugCode` da recuperare.
 
 `values`  
 out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugCode`.
 
 `pceltFetched`  
-out Puntatore al numero di istanze di @no__t 0 effettivamente restituite. Questo valore può essere null se `celt` è uno.
+out Puntatore al numero di istanze di `ICorDebugCode` restituite effettivamente. Questo valore può essere null se `celt` è uno.
 
 ## <a name="requirements"></a>Requisiti
 

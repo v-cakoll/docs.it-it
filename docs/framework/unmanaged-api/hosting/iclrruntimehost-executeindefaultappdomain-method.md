@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b7540f166311bbc9e5efa21d136132cc72b7c12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed841d1b2ff346ebef668cbd96a58ddfe466b3b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120439"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>Metodo ICLRRuntimeHost::ExecuteInDefaultAppDomain
-Chiama il metodo specificato nel tipo specificato nell'assembly gestito specificato.  
+Chiama il metodo specificato del tipo specificato nell'assembly gestito specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,30 +39,30 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="parameters"></a>Parametri  
  `pwzAssemblyPath`  
- [in] Il percorso per il <xref:System.Reflection.Assembly> che definisce il <xref:System.Type> il cui metodo deve essere richiamato.  
+ in Percorso della <xref:System.Reflection.Assembly> che definisce l'<xref:System.Type> di cui deve essere richiamato il metodo.  
   
  `pwzTypeName`  
- [in] Il nome del <xref:System.Type> che definisce il metodo da richiamare.  
+ in Nome della <xref:System.Type> che definisce il metodo da richiamare.  
   
  `pwzMethodName`  
- [in] Nome del metodo da richiamare.  
+ in Nome del metodo da richiamare.  
   
  `pwzArgument`  
- [in] Il parametro della stringa da passare al metodo.  
+ in Parametro di stringa da passare al metodo.  
   
  `pReturnValue`  
- [out] Valore intero restituito dal metodo richiamato.  
+ out Valore integer restituito dal metodo richiamato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`ExecuteInDefaultAppDomain` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, il CRL non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, il CRL non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
  Il metodo richiamato deve avere la firma seguente:  
@@ -73,14 +71,14 @@ HRESULT ExecuteInDefaultAppDomain (
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- in cui `pwzMethodName` rappresenta il nome del metodo richiamato, e `pwzArgument` rappresenta il valore di stringa passato come parametro al metodo. Se il valore HRESULT è impostato su S_OK, `pReturnValue` è impostata sul valore integer restituito dal metodo richiamato. In caso contrario, `pReturnValue` non è impostata.  
+ dove `pwzMethodName` rappresenta il nome del metodo richiamato e `pwzArgument` rappresenta il valore stringa passato come parametro al metodo. Se il valore HRESULT è impostato su S_OK, `pReturnValue` viene impostato sul valore integer restituito dal metodo richiamato. In caso contrario, `pReturnValue` non è impostato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

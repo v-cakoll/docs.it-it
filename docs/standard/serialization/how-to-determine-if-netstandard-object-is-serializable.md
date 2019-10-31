@@ -1,6 +1,6 @@
 ---
 title: Come determinare se un oggetto .NET Standard è serializzabile
-description: Viene illustrato come determinare se un tipo .NET Standard può essere serializzato in fase di esecuzione.
+description: Viene illustrato come determinare se un tipo di .NET Standard può essere serializzato in fase di esecuzione.
 ms.date: 10/20/2017
 dev_langs:
 - csharp
@@ -8,22 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87bf863b158fe3b2c03c7a6d23462bc2aabf9966
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106624"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Come determinare se un oggetto .NET Standard è serializzabile
 
-.NET Standard è una specifica che definisce i tipi e membri che devono essere presenti nelle specifiche implementazioni .NET conformi a tale versione dello standard. Tuttavia, .NET Standard non definisce se un tipo è serializzabile. I tipi definiti nella libreria .NET Standard non siano contrassegnati con il <xref:System.SerializableAttribute> attributo. Al contrario, le implementazioni di .NET specifiche, ad esempio .NET Framework e .NET Core, sono gratuite determinare se un determinato tipo è serializzabile. 
+Il .NET Standard è una specifica che definisce i tipi e i membri che devono essere presenti in implementazioni .NET specifiche conformi a tale versione dello standard. Tuttavia, il .NET Standard non definisce se un tipo è serializzabile. I tipi definiti nella libreria .NET Standard non sono contrassegnati con l'attributo <xref:System.SerializableAttribute>. Al contrario, le implementazioni di .NET specifiche, ad esempio .NET Framework e .NET Core, sono gratuite per determinare se un determinato tipo è serializzabile. 
 
-Se è stata sviluppata una libreria destinata a .NET Standard, la libreria può essere utilizzata da qualsiasi implementazione di .NET che supporta .NET Standard. Ciò significa che è possibile sapere in anticipo se un determinato tipo è serializzabile. è solo possibile determinare se è serializzabile in fase di esecuzione.
+Se è stata sviluppata una libreria destinata al .NET Standard, la libreria può essere utilizzata da qualsiasi implementazione di .NET che supporti l'.NET Standard. Ciò significa che non è possibile sapere in anticipo se un determinato tipo è serializzabile; è possibile determinare solo se è serializzabile in fase di esecuzione.
 
-È possibile determinare se un oggetto serializzabile in fase di esecuzione eseguendo il recupero del valore dei <xref:System.Type.IsSerializable> proprietà di un <xref:System.Type> oggetto che rappresenta il tipo dell'oggetto. Nell'esempio seguente fornisce un'implementazione. Definisce un `IsSerializable(Object)` metodo di estensione che indica se qualsiasi <xref:System.Object> istanza può essere serializzata.
+È possibile determinare se un oggetto è serializzabile in fase di esecuzione recuperando il valore della proprietà <xref:System.Type.IsSerializable> di un oggetto <xref:System.Type> che rappresenta il tipo di tale oggetto. Nell'esempio seguente viene fornita un'implementazione di. Definisce un metodo di estensione `IsSerializable(Object)` che indica se è possibile serializzare un'istanza di <xref:System.Object>.
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]

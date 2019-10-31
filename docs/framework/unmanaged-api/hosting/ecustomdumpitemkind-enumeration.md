@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131187"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>Enumerazione ECustomDumpItemKind
-Riservato per un'estensione futura della [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struttura.  
+Riservato per l'estensione futura della struttura [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,18 +32,18 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`DUMP_ITEM_None`|Riservato per usi futuri.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

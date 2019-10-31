@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088496"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>Metodo ICorDebugArrayValue::GetElement
-Ottiene il valore dell'elemento della matrice specificata.  
+Ottiene il valore dell'elemento di matrice specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +38,20 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parametri  
  `cdim`  
- [in] Il numero di dimensioni di questo `ICorDebugArrayValue` oggetto.  
+ in Numero di dimensioni dell'oggetto `ICorDebugArrayValue`.  
   
- Questo valore viene anche le dimensioni dei `indices` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.  
+ Questo valore corrisponde anche alla dimensione della matrice `indices` perché la relativa dimensione è uguale al numero di dimensioni dell'oggetto `ICorDebugArrayValue`.  
   
  `indices`  
- [in] Una matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione del `ICorDebugArrayValue` oggetto.  
+ in Matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione dell'oggetto `ICorDebugArrayValue`.  
   
- Questo valore non deve essere null.  
+ Questo valore non può essere null.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131116"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumerazione EClrFailure
-Descrive il set di errori per il quale l'host può impostare le azioni dei criteri.  
+Descrive il set di errori per i quali un host può impostare le azioni dei criteri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,27 +38,27 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa (ad esempio, un thread, un blocco di memoria o un blocco) in un'area critica del codice.|  
-|`FAIL_CriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa (ad esempio, un thread, un blocco di memoria o un blocco) in un'area critica del codice.|  
-|`FAIL_FatalRuntime`|Common language runtime (CLR) non è più in grado di eseguire codice gestito nel processo. Da questo momento, le chiamate a qualsiasi host funzioni restituiscono un valore HRESULT di HOST_E_CLRNOTAVAILABLE.|  
-|`FAIL_OrphanedLock`|Un thread non è riuscito a rilasciare un blocco all'uscita da un <xref:System.AppDomain> oggetto. L'host non è possibile impostare questo tentativo provoca l'interruzione di un thread.|  
+|`FAIL_NonCriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa, ad esempio un thread, un blocco di memoria o un blocco, in un'area di codice non critica.|  
+|`FAIL_CriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa, ad esempio un thread, un blocco di memoria o un blocco, in un'area critica del codice.|  
+|`FAIL_FatalRuntime`|Il Common Language Runtime (CLR) non è più in grado di eseguire il codice gestito nel processo. In questo caso, le chiamate a qualsiasi funzione di hosting restituiscono un valore HRESULT di HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Un thread non è riuscito a rilasciare un blocco quando viene restituito da un oggetto <xref:System.AppDomain>. L'host non è in grado di impostare questo errore in modo da causare l'interruzione di un thread.|  
 |`FAIL_StackOverflow`|Si è verificato un overflow dello stack.|  
-|`FAIL_AccessViolation`|È stato effettuato un tentativo di leggere o scrivere nella memoria protetta. Non è supportato in .NET Framework 4.|  
-|`FAIL_CodeContract`|Si è verificato un errore di contratto di codice. Visualizzare [contratti di codice](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_AccessViolation`|È stato effettuato un tentativo di lettura o scrittura della memoria protetta. Non supportato in .NET Framework 4.|  
+|`FAIL_CodeContract`|Si è verificato un errore del contratto di codice. Vedere [contratti di codice](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Note  
- Vedere le [SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) metodo per un elenco delle [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valori host possono essere utilizzati per specificare le azioni dei criteri per le condizioni di errore. Per altre informazioni sulle aree critiche e non critici del codice, vedere [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Vedere il metodo [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) per un elenco di valori [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) che l'host può usare per specificare le azioni dei criteri per le condizioni di errore. Per ulteriori informazioni sulle aree di codice critiche e non critiche, vedere [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

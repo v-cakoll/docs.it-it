@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798641"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130446"
 ---
 # <a name="execnotificationquerywmi-function"></a>Funzione ExecNotificationQueryWmi
 
@@ -53,7 +51,7 @@ HRESULT ExecNotificationQueryWmi (
 in Stringa con il linguaggio di query valido supportato da gestione Windows. Deve essere "WQL", l'acronimo di WMI Query Language.
 
 `strQuery`\
-in Testo della query. Questo parametro non può `null`essere.
+in Testo della query. Questo parametro non può essere `null`.
 
 `lFlags`\
 in Combinazione dei due flag seguenti che influiscono sul comportamento di questa funzione. Questi valori vengono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice.
@@ -64,7 +62,7 @@ in Combinazione dei due flag seguenti che influiscono sul comportamento di quest
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La funzione restituisce un enumeratore di sola trasmissione. In genere, gli enumeratori di sola trasmissione sono più veloci e utilizzano meno memoria rispetto agli enumeratori convenzionali, ma non consentono le chiamate da [clonare](clone.md). |
 
 `pCtx`\
-in In genere, questo valore `null`è. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce gli eventi richiesti.
+in In genere, questo valore è `null`. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce gli eventi richiesti.
 
 `ppEnum`\
 out Se non si verificano errori, riceve il puntatore all'enumeratore che consente al chiamante di recuperare le istanze nel set di risultati della query. Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) .
@@ -91,14 +89,14 @@ in Nome di dominio dell'utente. Per ulteriori informazioni, vedere la funzione [
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | L'utente non dispone delle autorizzazioni necessarie per visualizzare una o più classi che la funzione può restituire. |
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | La query specifica una classe che non esiste. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | È stata richiesta una quantità eccessiva di precisione nel recapito degli eventi. È necessario specificare una maggiore tolleranza di polling. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La query richiede più informazioni di quelle che possono essere fornite da gestione Windows. `HRESULT` Viene restituito quando una query di evento restituisce una richiesta di eseguire il polling di tutti gli oggetti in uno spazio dei nomi. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La query richiede più informazioni di quelle che possono essere fornite da gestione Windows. Questa `HRESULT` viene restituita quando una query di evento restituisce una richiesta di eseguire il polling di tutti gli oggetti in uno spazio dei nomi. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Errore di sintassi della query. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Il linguaggio di query richiesto non è supportato. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | La query è troppo complessa. |
@@ -112,15 +110,15 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) .
 
-Dopo la restituzione della funzione, il chiamante passa periodicamente `ppEnum` l'oggetto restituito alla funzione [successiva](next.md) per verificare se sono disponibili eventi.
+Dopo la restituzione della funzione, il chiamante passa periodicamente l'oggetto `ppEnum` restituito alla funzione [successiva](next.md) per verificare se sono disponibili eventi.
 
-Sono previsti limiti al numero di `AND` parole chiave e `OR` che è possibile utilizzare nelle query WQL. Un numero elevato di parole chiave WQL utilizzate in una query complessa può causare la restituzione del `WBEM_E_QUOTA_VIOLATION` codice di errore (o 0x8004106c) di WMI `HRESULT` come valore. Il limite di parole chiave WQL dipende dalla complessità della query.
+Sono previsti limiti per il numero di parole chiave `AND` e `OR` che possono essere utilizzate nelle query WQL. Un numero elevato di parole chiave WQL utilizzate in una query complessa può causare la restituzione da parte di WMI del codice di errore `WBEM_E_QUOTA_VIOLATION` (o 0x8004106c) come valore `HRESULT`. Il limite di parole chiave WQL dipende dalla complessità della query.
 
 Se la chiamata di funzione ha esito negativo, è possibile ottenere ulteriori informazioni sull'errore chiamando la funzione [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

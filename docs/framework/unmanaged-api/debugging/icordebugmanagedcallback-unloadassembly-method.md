@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130647"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>Metodo ICorDebugManagedCallback::UnloadAssembly
-Notifica al debugger che è stato scaricato un assembly di common language runtime.  
+Notifica al debugger che è stato scaricato un assembly Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio dell'applicazione che contiene l'assembly.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene l'assembly.  
   
  `pAssembly`  
- [in] Un puntatore a un oggetto ICorDebugAssembly che rappresenta l'assembly.  
+ in Puntatore a un oggetto ICorDebugAssembly che rappresenta l'assembly.  
   
 ## <a name="remarks"></a>Note  
  L'assembly non deve essere utilizzato dopo questo callback.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

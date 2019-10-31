@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorDebugVariableHome::GetRegister
+title: 'Metodo ICorDebugVariableHome:: getRegister'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125066"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>Metodo ICorDebugVariableHome::GetRegister
-Ottiene il registro contenente una variabile con un tipo di posizione di `VLT_REGISTER`e la registrazione di base per una variabile con un tipo di posizione di `VLT_REGISTER_RELATIVE`.  
+# <a name="icordebugvariablehomegetregister-method"></a>Metodo ICorDebugVariableHome:: getRegister
+Ottiene il registro contenente una variabile con un tipo di posizione `VLT_REGISTER`e il registro di base per una variabile con un tipo di posizione `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>Parametri  
  `pRegister`  
- [out] Un valore di enumerazione CorDebugRegister che indica la registrazione per una variabile con un tipo di posizione di `VLT_REGISTER`e la registrazione di base per una variabile con un tipo di posizione di `VLT_REGISTER_RELATIVE`.  
+ out Valore di Enumerazione CorDebugRegister che indica il registro per una variabile con un tipo di posizione `VLT_REGISTER`e il registro di base per una variabile con un tipo di posizione `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce i valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|`S_OK`|La variabile è il registro indicato dal `pRegister` argomento.|  
-|`E_FAIL`|La variabile non è presente in un registro o un percorso relativo al registro.|  
+|`S_OK`|La variabile si trova nel registro indicato dall'argomento `pRegister`.|  
+|`E_FAIL`|La variabile non si trova in un registro o in un percorso relativo al registro.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

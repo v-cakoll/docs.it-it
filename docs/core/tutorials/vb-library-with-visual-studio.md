@@ -1,18 +1,16 @@
 ---
 title: Compilare una libreria di classi .NET Standard con Visual Basic in Visual Studio 2017
 description: Informazioni su come compilare una libreria di classi .NET Standard scritta in Visual Basic usando Visual Studio 2017
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100872"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Compilare una libreria .NET Standard con Visual Basic e .NET Core SDK in Visual Studio 2017
 
@@ -39,7 +37,7 @@ Creare un progetto di libreria di classi:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file della soluzione **ClassLibraryProjects** e dal menu di scelta rapida selezionare **Aggiungi** > **Nuovo progetto**.
 
-1. Nella finestra di dialogo **Aggiungi nuovo progetto** espandere il nodo **Visual Basic**, quindi selezionare il nodo **.NET Standard** seguito dal modello di progetto **Libreria di classi (.NET Standard)**. Nella casella di testo **Nome** immettere "StringLibrary" come nome del progetto. Scegliere **OK** per creare il progetto di libreria di classi.
+1. Nella finestra di dialogo **Aggiungi nuovo progetto** espandere il nodo **Visual Basic**, quindi selezionare il nodo **.NET Standard** seguito dal modello di progetto **Libreria di classi (.NET Standard)** . Nella casella di testo **Nome** immettere "StringLibrary" come nome del progetto. Scegliere **OK** per creare il progetto di libreria di classi.
 
    ![Finestra di dialogo per l'aggiunta di un nuovo progetto di libreria di classi in Visual Studio](./media/vb-library-with-visual-studio/create-new-library-project.png)
 

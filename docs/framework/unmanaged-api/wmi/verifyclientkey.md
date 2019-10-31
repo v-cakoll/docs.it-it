@@ -14,14 +14,12 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107352"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey (funzione)
 Verifica che la chiave client includa la sicurezza corretta.  
@@ -36,14 +34,14 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore `ERROR_SUCCESS` restituito è (0).
+Se la funzione ha esito positivo, il valore restituito è `ERROR_SUCCESS` (0).
 
 Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in *Winerror. h*.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.def  
+ **Intestazione:** WMINet_Utils. def  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

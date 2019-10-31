@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8e5a1813a81a84eac612a53964d39b48f0c536
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cee095003c136142052b8f946fa8227927c80ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096872"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>Metodo ICorDebugNativeFrame::GetLocalMemoryValue
-Ottiene il valore di un argomento o una variabile locale viene archiviato nella posizione di memoria specificata per il frame nativo.  
+Ottiene il valore di un argomento o di una variabile locale archiviata nella posizione di memoria specificata per il frame nativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,19 +38,19 @@ HRESULT GetLocalMemoryValue (
   
 ## <a name="parameters"></a>Parametri  
  `address`  
- [in] Oggetto `CORDB_ADDRESS` valore che specifica la posizione di memoria che contiene il valore.  
+ in Valore `CORDB_ADDRESS` che specifica la posizione di memoria contenente il valore.  
   
  `cbSigBlob`  
- [in] Intero che specifica le dimensioni della firma binaria dei metadati che fa riferimento il `pvSigBlob` parametro.  
+ in Integer che specifica la dimensione della firma dei metadati binari a cui fa riferimento il parametro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Oggetto `PCCOR_SIGNATURE` valore che punta alla firma binaria dei metadati del tipo del valore.  
+ in Valore `PCCOR_SIGNATURE` che punta alla firma dei metadati binaria del tipo del valore.  
   
  `ppValue`  
- [out] Un puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nella posizione di memoria specificata.  
+ out Puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nella posizione di memoria specificata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

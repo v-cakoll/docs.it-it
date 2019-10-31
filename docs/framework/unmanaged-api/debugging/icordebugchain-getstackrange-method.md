@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123855"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Metodo ICorDebugChain::GetStackRange
-Ottiene l'intervallo di indirizzi del segmento di stack per questa catena.  
+Ottiene l'intervallo di indirizzi del segmento dello stack per questa catena.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametri  
  `pStart`  
- [out] Un puntatore a un `CORDB_ADDRESS` valore, ovvero l'indirizzo iniziale del segmento dello stack.  
+ out Puntatore a un valore `CORDB_ADDRESS` che rappresenta l'indirizzo iniziale del segmento dello stack.  
   
  `pEnd`  
- [out] Un puntatore a un `CORDB_ADDRESS` valore che corrisponde all'indirizzo finale del segmento dello stack.  
+ out Puntatore a un valore `CORDB_ADDRESS` che rappresenta l'indirizzo finale del segmento dello stack.  
   
 ## <a name="remarks"></a>Note  
- L'intervallo numerico è significativa solo per il confronto dei percorsi dello stack frame. È possibile fare supposizioni su ciò che effettivamente è memorizzato nello stack.  
+ L'intervallo numerico è significativo solo per il confronto dei percorsi di stack frame. Non è possibile creare presupposti sugli elementi effettivamente archiviati nello stack.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

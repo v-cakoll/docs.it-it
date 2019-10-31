@@ -1,17 +1,15 @@
 ---
-title: <TypeInstantiation>Elemento (.NET Native)
+title: Elemento <TypeInstantiation> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128672"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<Elemento > TypeInstantiation (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<elemento TypeInstantiation > (.NET Native)
 Applica i criteri di reflection di runtime a un tipo generico costruito.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -59,13 +57,13 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
   
 ## <a name="arguments-attribute"></a>Attributo di argomenti  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*type_argument*|Specifica gli argomenti tipo generico. Se sono presenti più argomenti, saranno separati da virgole. Ogni argomento deve essere costituito dal nome completo del tipo.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il tipo generico costruito. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -99,11 +97,11 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
  Se un elemento `<TypeInstantiation>` è figlio di un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) o [\<Type>](type-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre. Se un elemento [\<Type>](type-element-net-native.md) definisce una corrispondente definizione di tipo generico, l'elemento `<TypeInstantiation>` esegue l'override dei criteri di reflection di runtime solo per le istanze del tipo generico costruito specificato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.  
+ Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Dopo la compilazione con la catena di strumenti .NET native, l'esempio genera un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) sulla riga che chiama <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> il metodo. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
+ Dopo la compilazione con la catena di strumenti .NET Native, l'esempio genera un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) sulla riga che chiama il metodo <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. È possibile eliminare l'eccezione e fornire i metadati necessari aggiungendo il seguente elemento `<TypeInstantiation>` al file di direttive di runtime:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

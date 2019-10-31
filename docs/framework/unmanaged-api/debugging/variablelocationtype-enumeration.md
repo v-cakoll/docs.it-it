@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139109"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumerazione VariableLocationType
 Indica il tipo di percorso nativo di una variabile.  
@@ -37,19 +35,19 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`VLT_REGISTER`|La variabile è in un registro di sistema.|  
-|`VLT_REGISTER_RELATIVE`|La variabile è in una posizione di memoria relativo al registro.|  
-|`VLT_INVALID`|La variabile non viene archiviata in un registro o una posizione di memoria relativo al registro.|  
+|`VLT_REGISTER`|La variabile si trova in un registro.|  
+|`VLT_REGISTER_RELATIVE`|La variabile si trova in una posizione di memoria relativa al registro.|  
+|`VLT_INVALID`|La variabile non è archiviata in un registro o in una posizione di memoria relativa al registro.|  
   
 ## <a name="remarks"></a>Note  
- Un membro del `VariableLocationType` enumerazione viene restituita per la [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) (metodo).  
+ Un membro dell'enumerazione `VariableLocationType` viene restituito dal metodo [ICorDebugVariableHome:: GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

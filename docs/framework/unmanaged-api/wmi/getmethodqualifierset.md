@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a36200fd214d013a10ed21c22e1f652de2cbf17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102580"
 ---
 # <a name="getmethodqualifierset-function"></a>Funzione GetMethodQualifierSet
 
@@ -49,10 +47,10 @@ in Questo parametro è inutilizzato.
 in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-in Nome del metodo. `wszMethod`deve puntare a un oggetto `LPCWSTR`valido.
+in Nome del metodo. `wszMethod` deve puntare a una `LPCWSTR`valida.
 
 `ppQualSet`\
-out Riceve il puntatore a interfaccia che consente di accedere ai qualificatori del metodo. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore è impostato in modo da `null`puntare a.
+out Riceve il puntatore a interfaccia che consente di accedere ai qualificatori del metodo. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore è impostato in modo da puntare a `null`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -74,7 +72,7 @@ Poiché ogni metodo può avere qualificatori propri, il [puntatore IWbemQualifie
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorProfilerInfo7::ApplyMetaData
+title: 'Metodo ICorProfilerInfo7:: ApplyMetaData'
 ms.date: 02/15/2019
 dev_langs:
 - cpp
@@ -10,19 +10,17 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f261b02dd19ead0d6803cae543f39a06c99f033
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00d9bef1e2b59a2d2207d1e343380e0e81bee848
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130355"
 ---
-# <a name="icorprofilerinfo7applymetadata-method"></a>Metodo ICorProfilerInfo7::ApplyMetaData
+# <a name="icorprofilerinfo7applymetadata-method"></a>Metodo ICorProfilerInfo7:: ApplyMetaData
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
   
- Applica i metadati appena definito dal `IMetadataEmit::Define*` metodi a un modulo specificato.  
+ Applica i metadati appena definiti dal `IMetadataEmit::Define*` metodi a un modulo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,33 +32,33 @@ HRESULT ApplyMetaData(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] L'identificatore del modulo i cui metadati è stato modificato.  
+ in Identificatore del modulo i cui metadati sono stati modificati.  
   
 ## <a name="remarks"></a>Note  
- Se vengono apportate modifiche ai metadati dopo il [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, è necessario chiamare questo metodo prima di usare i nuovi metadati.  
+ Se vengono apportate modifiche ai metadati dopo il callback [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) , è necessario chiamare questo metodo prima di utilizzare i nuovi metadati.  
   
- `ApplyMetaData` supporta solo aggiungendo i tipi di metadati seguenti:  
+ `ApplyMetaData` supporta solo l'aggiunta dei seguenti tipi di metadati:  
   
-- `AssemblyRef` i record, che è possibile creare chiamando il [DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md). ProcessOnStatus.  
+- `AssemblyRef` record, che è possibile creare chiamando [IMetaDataAssemblyEmit::D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md). ProcessOnStatus.  
   
-- `TypeRef` i record, che è possibile creare chiamando il [DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) (metodo).  
+- `TypeRef` record, creato chiamando il metodo [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) .  
   
-- `TypeSpec` i record, che è possibile creare chiamando il [GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) (metodo).  
+- `TypeSpec` record, che è possibile creare chiamando il metodo [IMetaDataEmit:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) .  
   
-- `MemberRef` i record, che è possibile creare chiamando il [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) (metodo).  
+- `MemberRef` record, creato chiamando il metodo [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) .  
   
-- `MemberSpec` i record, che è possibile creare chiamando il [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) (metodo).  
+- `MemberSpec` record, che è possibile creare chiamando il metodo [IMetaDataEmit2::D efinemethodspec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) .  
   
-- `UserString` i record, che è possibile creare chiamando il [DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) (metodo).  
+- `UserString` record, creato chiamando il metodo [IMetaDataEmit::D efineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) .  
 
-A partire da .NET Core 3.0, `ApplyMetaData` supporta anche i tipi seguenti:
+A partire da .NET Core 3,0, `ApplyMetaData` supporta anche i tipi seguenti:
 
-- `TypeDef` i record, che è possibile creare chiamando il [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (metodo).
+- `TypeDef` record, creato chiamando il metodo [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) .
 
-- `MethodDef` i record, che è possibile creare chiamando il [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) (metodo). Tuttavia, l'aggiunta di metodi virtuali a un tipo esistente non è supportata. Metodi virtuali devono essere aggiunto prima la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.
+- `MethodDef` record, creato chiamando il metodo [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) . Tuttavia, l'aggiunta di metodi virtuali a un tipo esistente non è supportata. È necessario aggiungere i metodi virtuali prima del callback di [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) .
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

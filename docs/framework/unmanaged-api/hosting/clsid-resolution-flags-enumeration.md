@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779137"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137001"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>Enumerazione CLSID_RESOLUTION_FLAGS
-Contiene valori che indicano come common language runtime (CLR) è necessario risolvere una `CLSID`.  
+# <a name="clsid_resolution_flags-enumeration"></a>Enumerazione CLSID_RESOLUTION_FLAGS
+Contiene valori che indicano il modo in cui il Common Language Runtime (CLR) deve risolvere una `CLSID`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,17 +33,17 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Indica il comportamento predefinito.|  
-|`CLSID_RESOLUTION_REGISTERED`|Indica che il runtime cerca il Registro di sistema e applica i criteri di shim.|  
+|`CLSID_RESOLUTION_REGISTERED`|Indica che il runtime cerca nel registro di sistema e applica i criteri di shim.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

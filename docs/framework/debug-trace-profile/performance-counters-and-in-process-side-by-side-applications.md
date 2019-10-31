@@ -10,14 +10,12 @@ helpviewer_keywords:
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c583e9568a55b994f0516af2dcdf29f0d0f21fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a50b0f92837c3a962fa21d5c1342492d7fa397dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121575"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contatori delle prestazioni e applicazioni affiancate in-process
 Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle prestazioni in base al runtime. Questo argomento descrive la modifica del Registro di sistema necessaria per abilitare questa funzionalità.  
@@ -29,7 +27,7 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
   
 - Quando un'applicazione usa più istanze di Common Language Runtime. Il .NET Framework 4 supporta gli scenari di hosting affiancato in-process. ovvero un singolo processo o un'applicazione può caricare più istanze del Common Language Runtime. Se una singola applicazione denominata app.exe carica due istanze di runtime, per impostazione predefinita verranno designate come **app** e **app#1** nella colonna **Istanza**. In questo caso, non è chiaro se **app** e **app#1** fanno riferimento a due applicazioni con lo stesso nome o alla stessa applicazione con due runtime. Se più applicazioni con lo stesso nome caricano più runtime, l'ambiguità è ancora maggiore.  
   
- È possibile impostare una chiave del Registro di sistema per evitare questa ambiguità. Per le applicazioni sviluppate utilizzando il .NET Framework 4, questa modifica del registro di sistema aggiunge un identificatore di processo seguito da un identificatore dell'istanza di runtime al nome dell'applicazione nella colonna dell' **istanza** . Anziché come *applicazione* o *applicazione*#1, l'applicazione è ora identificata come *applicazione*_`p`*IDprocesso*\_`r`*IDruntime* nella colonna **Istanza**. Se un'applicazione è stata sviluppata utilizzando una versione precedente del Common Language Runtime, tale istanza viene rappresentata come`p`*ProcessID* *dell'applicazione\_* purché sia installato il .NET Framework 4.  
+ È possibile impostare una chiave del Registro di sistema per evitare questa ambiguità. Per le applicazioni sviluppate utilizzando il .NET Framework 4, questa modifica del registro di sistema aggiunge un identificatore di processo seguito da un identificatore dell'istanza di runtime al nome dell'applicazione nella colonna dell' **istanza** . Anziché come *applicazione* o *applicazione*#1, l'applicazione è ora identificata come *applicazione*_`p`*IDprocesso*\_`r`*IDruntime* nella colonna **Istanza**. Se un'applicazione è stata sviluppata utilizzando una versione precedente del Common Language Runtime, tale istanza viene rappresentata come *\_dell'applicazione*`p`*ProcessID* purché sia installata la .NET Framework 4.  
   
 ## <a name="performance-counters-for-in-process-side-by-side-applications"></a>Contatori delle prestazioni per applicazioni affiancate in-process  
  Per gestire i contatori delle prestazioni per più versioni di Common Language Runtime ospitate in una singola applicazione, è necessario modificare una chiave del Registro di sistema, come illustrato nella tabella seguente.  
@@ -50,7 +48,7 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
  [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
  [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
- Quando si apportano queste modifiche al registro di sistema, Perfmon. exe Visualizza i nomi delle applicazioni destinate a`p`.NET Framework 4 come *Application*_*ProcessID*\_`r`*IDruntime*, dove *applicazione* è il nome dell'applicazione, *ProcessID* è l'identificatore del processo dell'applicazione e *IDruntime* è un identificatore Common Language Runtime. Ad esempio, se un'applicazione denominata app.exe carica due istanze di Common Language Runtime, Perfmon.exe può identificare un'istanza come app_p1416_r10 e la seconda come app_p3160_r10. L'identificatore di runtime risolve solo eventuali ambiguità per i runtime all'interno di un processo e non fornisce informazioni sul runtime. (Ad esempio, l'ID di runtime non ha alcuna relazione con la versione o lo SKU del runtime.)  
+ Quando si apportano queste modifiche al registro di sistema, Perfmon. exe Visualizza i nomi delle applicazioni destinate a .NET Framework 4 come *applicazione*_`p`*processid*\_`r`*IDruntime*, dove *applicazione* è il nome del l'applicazione, *ProcessID* è l'identificatore del processo dell'applicazione e *IDruntime* è un identificatore Common Language Runtime. Ad esempio, se un'applicazione denominata app.exe carica due istanze di Common Language Runtime, Perfmon.exe può identificare un'istanza come app_p1416_r10 e la seconda come app_p3160_r10. L'identificatore di runtime risolve solo eventuali ambiguità per i runtime all'interno di un processo e non fornisce informazioni sul runtime. (Ad esempio, l'ID di runtime non ha alcuna relazione con la versione o lo SKU del runtime.)  
   
  Se la .NET Framework 4 è installata, la modifica del registro di sistema influiscono anche sulle applicazioni sviluppate con versioni precedenti del .NET Framework. Questi elementi vengono visualizzati in Perfmon.exe come *applicazione_* `p`*IDprocesso*, dove *applicazione* è il nome dell'applicazione e *IDprocesso* è l'identificatore di processo. Ad esempio, se vengono monitorati i contatori delle prestazioni di due applicazioni denominate app.exe, una potrebbe essere visualizzata come app_p23900 e l'altra come app_p24908.  
   

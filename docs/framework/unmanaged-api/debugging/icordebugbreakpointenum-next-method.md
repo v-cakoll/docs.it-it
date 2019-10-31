@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122738"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>Metodo ICorDebugBreakpointEnum::Next
-Ottiene il numero di istanze ICorDebugBreakpoint specificato dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
+Ottiene il numero specificato di istanze di ICorDebugBreakpoint dall'enumerazione, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di `ICorDebugBreakpoint` istanze da recuperare.  
+ in Numero di istanze di `ICorDebugBreakpoint` da recuperare.  
   
  `breakpoints`  
- [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugBreakpoint` oggetto che rappresenta un punto di interruzione.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugBreakpoint` che rappresenta un punto di interruzione.  
   
  `pceltFetched`  
- [out] Un puntatore al numero di `ICorDebugBreakpoint` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
+ out Puntatore al numero di istanze di `ICorDebugBreakpoint` restituite effettivamente. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

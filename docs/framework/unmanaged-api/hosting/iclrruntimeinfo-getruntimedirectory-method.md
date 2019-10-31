@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2455c896ebdc12f2bb92a30d55745f7bd5bc308a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0a2e5f259fe1ee566f9cc25152b2d2a1f740bea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120334"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>Metodo ICLRRuntimeInfo::GetRuntimeDirectory
-Ottiene la directory di installazione di common language runtime (CLR) associato a questa interfaccia.  
+Ottiene la directory di installazione del Common Language Runtime (CLR) associato a questa interfaccia.  
   
- Questo metodo sostituisce le [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) funzione fornita nelle versioni di .NET Framework 2.0, 3.0 e 3.5.  
+ Questo metodo sostituisce la funzione [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) fornita in .NET Framework versioni 2,0, 3,0 e 3,5.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +37,10 @@ HRESULT GetRuntimeDirectory(
   
 ## <a name="parameters"></a>Parametri  
  `pwzBuffer`  
- [out] Restituisce la directory di installazione di CLR. Il percorso di installazione è completo. ad esempio, "c:\windows\microsoft.net\framework\v1.0.3705\\".  
+ out Restituisce la directory di installazione CLR. Il percorso di installazione è completo. ad esempio, "c:\Windows\Microsoft.net\framework\v1.0.3705\\".  
   
  `pchBuffer`  
- [in, out] Specifica la dimensione del `pwzBuffer` per evitare i sovraccarichi del buffer. Se `pwzBuffer` è null, `pchBuffer` restituisce la dimensione necessaria della `pwzBuffer`.  
+ [in, out] Specifica le dimensioni del `pwzBuffer` per evitare sovraccarichi del buffer. Se `pwzBuffer` è null, `pchBuffer` restituisce la dimensione richiesta di `pwzBuffer`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -55,11 +53,11 @@ HRESULT GetRuntimeDirectory(
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

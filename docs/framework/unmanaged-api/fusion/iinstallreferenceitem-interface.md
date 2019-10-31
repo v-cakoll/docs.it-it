@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: 66df494d-1a2f-4441-8ee6-cfed0217b4e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 016ded7b1393d6e03faa029ab5be661bf4ff4efd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796389"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131665"
 ---
 # <a name="iinstallreferenceitem-interface"></a>Interfaccia IInstallReferenceItem
 Rappresenta un elemento installato nell'Global Assembly Cache.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetReference](iinstallreferenceitem-getreference-method.md)|Ottiene un puntatore alla `FUSION_INSTALL_REFERENCE` struttura rappresentata `IInstallReferenceItem`dall'oggetto.|  
+|[Metodo GetReference](iinstallreferenceitem-getreference-method.md)|Ottiene un puntatore alla struttura `FUSION_INSTALL_REFERENCE` rappresentata dall'`IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

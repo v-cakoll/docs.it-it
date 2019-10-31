@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyHandle function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5af003f0295e0b403727f9af6b03ab81c4b8bccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101865"
 ---
 # <a name="getpropertyhandle-function"></a>Funzione GetPropertyHandle
 
@@ -53,7 +51,7 @@ in Puntatore a un'istanza di [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn
 in Stringa con terminazione null di caratteri con codifica UTF16 che contiene il nome della proprietà.
 
 `pType`\
-out Puntatore a un [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) membro di enumerazione che rappresenta il tipo CIM della proprietà.
+out Puntatore a un membro di enumerazione [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) che rappresenta il tipo CIM della proprietà.
 
 `pHandle`\
 out Puntatore a un Integer contenente l'handle della proprietà.
@@ -66,7 +64,7 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il nome di proprietà specificato non è stato trovato. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | La proprietà richiesta è di tipo `CIM_OBJECT` o. `CIM_ARRAY` |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | La proprietà richiesta è di tipo `CIM_OBJECT` o `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
@@ -75,11 +73,11 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 È possibile utilizzare questo handle per identificare le proprietà quando si utilizzano i metodi [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) per leggere o scrivere i valori delle proprietà.
 
-È possibile recuperare gli handle per le proprietà di tutti i tipi `CIM_OBJECT` di `CIM_ARRAY`dati diversi da e. Gli handle restituiti funzionano in tutte le istanze di una classe.
+È possibile recuperare gli handle per le proprietà di tutti i tipi di dati diversi da `CIM_OBJECT` e `CIM_ARRAY`. Gli handle restituiti funzionano in tutte le istanze di una classe.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

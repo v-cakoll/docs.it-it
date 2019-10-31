@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128801"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>Metodo ICorDebugProcess::GetThreadContext
 Ottiene il contesto per il thread specificato in questo processo.  
@@ -39,7 +37,7 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'ID del thread per il quale recuperare il contesto.  
+ in ID del thread per il quale recuperare il contesto.  
   
  `contextSize`  
  [in] Dimensione della matrice `context`.  
@@ -50,12 +48,12 @@ HRESULT GetThreadContext(
  Il contesto specifica l'architettura del processore in cui è in esecuzione il thread.  
   
 ## <a name="remarks"></a>Note  
- Il debugger deve chiamare questo metodo anziché Win32 `GetThreadContext` metodo, perché il thread effettivamente potrebbe trovarsi in uno stato "cui", in cui il contesto è stato modificato temporaneamente. Questo metodo deve essere utilizzato solo quando un thread in codice nativo. Uso [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) per i thread in codice gestito.  
+ Il debugger deve chiamare questo metodo anziché il metodo Win32 `GetThreadContext`, perché il thread potrebbe essere effettivamente in stato "Hijack", in cui il contesto è stato modificato temporaneamente. Questo metodo deve essere utilizzato solo quando un thread è in codice nativo. Usare [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) per i thread nel codice gestito.  
   
- I dati restituiti sono una struttura scelta per la piattaforma corrente. Come avviene con Win32 `GetThreadContext` metodo, il chiamante deve inizializzare il `context` parametro prima di chiamare questo metodo.  
+ I dati restituiti sono una struttura di contesto per la piattaforma corrente. Analogamente al metodo Win32 `GetThreadContext`, il chiamante deve inizializzare il parametro `context` prima di chiamare questo metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

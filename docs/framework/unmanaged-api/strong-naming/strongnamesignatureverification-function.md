@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 933758dd-231e-4382-8819-242c0a13a4b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8943df861b1bff2b28c68d0233fc336d1b5d4579
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7dd61be008ba08ca2b28ae3e7e8ff6326f8a41d9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129241"
 ---
 # <a name="strongnamesignatureverification-function"></a>Funzione StrongNameSignatureVerification
 Ottiene un valore che indica se il manifesto dell'assembly nel percorso specificato contiene una firma con nome sicuro, che viene verificata in base ai flag specificati.  
@@ -45,32 +43,32 @@ BOOLEAN StrongNameSignatureVerification (
  `dwInFlags`  
  in Flag per modificare il comportamento di verifica. Sono supportati i valori seguenti:  
   
-- `SN_INFLAG_FORCE_VER`(0x00000001): impone la verifica anche se è necessario eseguire l'override delle impostazioni del registro di sistema.  
+- `SN_INFLAG_FORCE_VER` (0x00000001): impone la verifica anche se è necessario eseguire l'override delle impostazioni del registro di sistema.  
   
-- `SN_INFLAG_INSTALL`(0x00000002): specifica che questa è la prima volta che il manifesto viene verificato.  
+- `SN_INFLAG_INSTALL` (0x00000002): specifica che questa è la prima volta che il manifesto viene verificato.  
   
-- `SN_INFLAG_ADMIN_ACCESS`(0x00000004): specifica che la cache consentirà l'accesso solo agli utenti che dispongono di privilegi amministrativi.  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004): specifica che la cache consentirà l'accesso solo agli utenti che dispongono di privilegi amministrativi.  
   
-- `SN_INFLAG_USER_ACCESS`(0x00000008): specifica che l'assembly sarà accessibile solo all'utente corrente.  
+- `SN_INFLAG_USER_ACCESS` (0x00000008): specifica che l'assembly sarà accessibile solo all'utente corrente.  
   
-- `SN_INFLAG_ALL_ACCESS`(0x00000010): specifica che la cache non fornirà alcuna garanzia di restrizione di accesso.  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010): specifica che la cache non fornirà alcuna garanzia di restrizione di accesso.  
   
-- `SN_INFLAG_RUNTIME`(0x80000000)-riservato per il debug interno.  
+- `SN_INFLAG_RUNTIME` (0x80000000)-riservato per il debug interno.  
   
  `pdwOutFlags`  
  out Flag che indicano se la firma del nome sicuro è stata verificata. È supportato il valore seguente:  
   
-- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001): questo valore è impostato su `false` per specificare che la verifica ha avuto esito positivo a causa delle impostazioni del registro di sistema.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001): questo valore è impostato su `false` per specificare che la verifica ha avuto esito positivo a causa delle impostazioni del registro di sistema.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se la verifica ha avuto esito positivo; in caso `false`contrario,.  
+ `true` se la verifica ha avuto esito positivo; in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

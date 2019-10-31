@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123049"
 ---
 # <a name="prebindassemblyex-function"></a>Funzione PreBindAssemblyEx
 Ottiene il nome visualizzato post-criteri per un assembly.  
@@ -58,17 +56,17 @@ HRESULT PreBindAssemblyEx (
  out Contiene il nome visualizzato post-criteri.  
   
  `pvReserved`  
- in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
 ## <a name="remarks"></a>Note  
- Il `ppNamePostPolicy` parametro di output viene impostato solo se la funzione restituisce HRESULT FUSION_E_REF_DEF_MISMATCH. In caso contrario, è null.  
+ Il parametro di output `ppNamePostPolicy` viene impostato solo se la funzione restituisce HRESULT FUSION_E_REF_DEF_MISMATCH. In caso contrario, è null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

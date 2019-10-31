@@ -5,21 +5,19 @@ helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1ac2900707ddb39c62b34b0ebfbc4547cdd2653
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a418fc546313b74bb965a0b223eca9c2e5acc08
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115795"
 ---
-# <a name="relativebindforresources-element"></a>\<Elemento > relativeBindForResources
+# <a name="relativebindforresources-element"></a>\<elemento > relativeBindForResources
 Ottimizza le ricerche degli assembly satellite.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +37,13 @@ Ottimizza le ricerche degli assembly satellite.
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|`false`|Tramite il runtime non vengono ottimizzate le ricerche degli assembly satellite. Rappresenta il valore predefinito.|  
+|`false`|Tramite il runtime non vengono ottimizzate le ricerche degli assembly satellite. Questo è il valore predefinito.|  
 |`true`|Tramite il runtime vengono ottimizzate le ricerche degli assembly satellite.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

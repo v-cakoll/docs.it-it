@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131806"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Metodo ICorDebugStackWalk::SetContext
-Imposta il [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) contesto corrente dell'oggetto a un contesto valido per il thread.  
+Imposta il contesto corrente dell'oggetto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) su un contesto valido per il thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,21 +35,21 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parametri  
  `flag`  
- [in] Oggetto [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flag che indica se il contesto proviene dal frame attivo nello stack, o un contesto ottenuto dalla rimozione dello stack.  
+ in Flag [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) che indica se il contesto è del frame attivo nello stack o un contesto ottenuto tramite la rimozione dello stack.  
   
  `contextSize`  
- [in] Le dimensioni allocate del `CONTEXT` buffer.  
+ in Dimensione allocata del buffer `CONTEXT`.  
   
  `context`  
- [in] Il `CONTEXT` buffer.  
+ in Buffer `CONTEXT`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il `ICorDebugStackWalk` contesto dell'oggetto è stato impostato correttamente.|  
-|E_FAIL|Il `ICorDebugStackWalk` contesto dell'oggetto non è stato impostato.|  
+|S_OK|Il contesto dell'oggetto `ICorDebugStackWalk` è stato impostato correttamente.|  
+|E_FAIL|Il contesto dell'oggetto `ICorDebugStackWalk` non è stato impostato.|  
 |E_INVALIDARG|Il contesto è null.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Il buffer del contesto è troppo piccolo.|  
   
@@ -60,12 +58,12 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="remarks"></a>Note  
  Questo metodo non modifica il contesto corrente del thread.  
   
- Impostazione del contesto corrente per un contesto non valido può causare risultati imprevedibili dal percorso chiamate dello stack.  
+ L'impostazione del contesto corrente su un contesto non valido può causare risultati imprevedibili dal camminatore dello stack.  
   
- È possibile recuperare una copia bit per bit esatta di questo contesto chiamando immediatamente la [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) (metodo).  
+ È possibile recuperare un'esatta copia bit per bit di questo contesto chiamando immediatamente il metodo [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: c0765321-656c-441e-bab5-58176292be1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d7d4a295832a958fb6a8fe2e6c43a09135500d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cf490bcd167b7a498ae21f479f616694ccb5521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139473"
 ---
 # <a name="ihostsemaphore-interface"></a>Interfaccia IHostSemaphore
-Rappresenta l'implementazione dell'host di un semaforo per il threading.  
+Rappresenta l'implementazione dell'host di un semaforo per il Threading.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Aumenta il numero di corrente `IHostSemaphore` istanza base al valore specificato.|  
-|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Fa sì che l'oggetto corrente `IHostSemaphore` istanza in attesa fino a quando non è di proprietà o il periodo di tempo specificato.|  
+|[Metodo ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Aumenta il numero dell'istanza di `IHostSemaphore` corrente in base al valore specificato.|  
+|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Fa in modo che l'istanza corrente di `IHostSemaphore` attenda finché non è di proprietà o la quantità di tempo specificata scade.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

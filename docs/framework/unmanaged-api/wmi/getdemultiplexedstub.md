@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetDemultiplexedStub function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9cc028b3300b43f8a0fb3e29f8b5ac6e1817b8c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127462"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub (funzione)
 Crea un sink di inoltro oggetti per consentire a un client di ricevere chiamate asincrone da Gestione Windows.
@@ -44,19 +42,19 @@ HRESULT GetDemultiplexedStub (
 in Puntatore all'implementazione in-process del client di [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).
 
 `isLocal`  
-in Flag che indica se l'evento è locale (`true`); in caso contrario,. `false`
+in Flag che indica se l'evento è locale (`true`); in caso contrario, `false`.
 
 `ppObject`  
 out Sink di server d'avanzamento oggetto per consentire a un client di ricevere chiamate asincrone dalla gestione di Windows.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore `S_OK` restituito è (0).
+Se la funzione ha esito positivo, il valore restituito è `S_OK` (0).
 
 Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero. Per ottenere informazioni estese sull'errore, chiamare la funzione [GetErrorInfo](geterrorinfo.md) .
     
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

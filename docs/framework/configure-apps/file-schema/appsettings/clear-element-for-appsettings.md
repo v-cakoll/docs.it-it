@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e1c3a3cfd61a9fa8e7abdae9a25ec1bc674492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119221"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Cancella > elemento per \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<elemento clear > per \<appSettings >
 
 Cancella le impostazioni dell'applicazione personalizzata.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cancella >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,7 +34,7 @@ Cancella le impostazioni dell'applicazione personalizzata.
 
 ## <a name="attributes"></a>Attributi
 
-Nessuna
+Nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -44,7 +44,7 @@ Nessuna
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuna
+Nessuno
 
 ## <a name="example"></a>Esempio
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102618"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo (funzione)
 Recupera le informazioni di errore dalla chiamata di funzione precedente.  
@@ -36,16 +34,16 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Valore restituito
 
-Puntatore a un oggetto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se la chiamata di funzione ha esito positivo `null` o se ha esito negativo.
+Puntatore a un oggetto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se la chiamata di funzione ha esito positivo o `null` se ha esito negativo.
   
 ## <a name="remarks"></a>Note
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IComThreadingInfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.def  
+ **Intestazione:** WMINet_Utils. def  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

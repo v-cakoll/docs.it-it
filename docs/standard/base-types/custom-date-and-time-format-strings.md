@@ -14,14 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8f36016b19583a06118edc906cf60a82be32f8
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103775"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -46,7 +44,7 @@ Nelle operazioni di analisi, le stringhe di formato di data e ora personalizzate
 
 Nella tabella seguente vengono descritti gli identificatori di formato data e ora personalizzati e viene visualizzata una stringa di risultato prodotta da ogni identificatore di formato. Per impostazione predefinita, le stringhe di risultato riflettono le convenzioni di formattazione delle impostazioni cultura en-US. Se un identificatore di formato specifico produce una stringa di risultato localizzata, nell'esempio vengono anche indicate le impostazioni cultura alle quali si applica la stringa di risultato. Per altre informazioni sull'uso di stringhe di formato di data e ora personalizzato, vedere la sezione [Note](#notes).
 
-| Identificatore di formato | Description | Esempi |
+| Identificatore di formato | Descrizione | Esempi |
 | ---------------------- | ----------------- | -------------- |
 |"d"|Giorno del mese, da 1 a 31.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|Giorno del mese, da 01 a 31.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -92,10 +90,10 @@ Nella tabella seguente vengono descritti gli identificatori di formato data e or
 |"zzz"|Offset di ore e minuti rispetto a UTC.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "zzz"](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|Separatore dell'ora.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato ":"](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
 |"/"|Separatore di data.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Definisce il carattere seguente come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
-|&#92;|Carattere di escape.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals) e [Uso del carattere di escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
-|Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
+|&#92;|Carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
+|Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
 Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o <xref:System.DateTimeOffset>.
 
@@ -358,7 +356,7 @@ Per i valori <xref:System.DateTimeOffset>, l'identificatore di formato "K" è eq
 
 Se l'identificatore di formato "K" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
-L'esempio seguente mostra la stringa risultante dall'uso dell'identificatore di formato personalizzato "K" con vari valori <xref:System.DateTime> e <xref:System.DateTimeOffset> in un sistema nel fuso orario Pacifico (Stati Uniti).
+Nell'esempio seguente viene visualizzata la stringa risultante dall'utilizzo dell'identificatore di formato personalizzato "K" con vari valori <xref:System.DateTime> e <xref:System.DateTimeOffset> in un sistema nel fuso Ora solare Pacifico (Stati Uniti).
 
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#12](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#12)]
 [!code-vb[Formatting.DateAndTime.Custom#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#12)]
@@ -629,9 +627,9 @@ I caratteri seguenti in una stringa di formato di data e ora sono riservati e ve
 
 ||||||
 |-|-|-|-|-|
-|F|H|K|M|d|
+|F|h|K|M|d|
 |f|V|h|m|s|
-|u|y|l|%|:|
+|u|s|l|%|:|
 |/|"|'|&#92;||
 
 Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.
@@ -686,7 +684,7 @@ Nell'esempio seguente viene usato il carattere di escape per impedire che durant
 
 L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.
 
-Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
+Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
 
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo
 

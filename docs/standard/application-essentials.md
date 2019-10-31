@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122543"
 ---
 # <a name="net-framework-application-essentials"></a>Concetti di base sulle applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni sulle attività di base per lo sviluppo di applicazioni in .NET Framework.  

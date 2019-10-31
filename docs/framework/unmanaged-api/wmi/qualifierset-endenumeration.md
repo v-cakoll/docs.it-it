@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127283"
 ---
 # <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration (funzione)
 Termina l'enumerazione iniziata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
@@ -49,7 +47,7 @@ in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn
 
 Il valore seguente restituito da questa funzione è definito nel file di intestazione *WbemCli. h* oppure è possibile definirlo come costante nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
@@ -61,7 +59,7 @@ Questa chiamata è consigliata, ma non obbligatoria. Rilascia immediatamente le 
 
 ## <a name="requirements"></a>Requisiti  
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
 **Intestazione:** WMINet_Utils. idl  
   

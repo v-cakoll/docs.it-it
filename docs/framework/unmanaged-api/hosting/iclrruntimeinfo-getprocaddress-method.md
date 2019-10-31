@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120278"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>Metodo ICLRRuntimeInfo::GetProcAddress
-Ottiene l'indirizzo di una funzione specificata esportata da common language runtime (CLR) associato a questa interfaccia.  
+Ottiene l'indirizzo di una funzione specificata esportata dalla Common Language Runtime (CLR) associata a questa interfaccia.  
   
- Questo metodo sostituisce le [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) (funzione).  
+ Questo metodo sostituisce la funzione [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +37,10 @@ HRESULT GetProcAddress(
   
 ## <a name="parameters"></a>Parametri  
  `pszProcName`  
- [in] Il nome della funzione esportata.  
+ in Nome della funzione esportata.  
   
  `ppProc`  
- [out] L'indirizzo della funzione esportata.  
+ out Indirizzo della funzione esportata.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -54,14 +52,14 @@ HRESULT GetProcAddress(
 |CLR_E_SHIM_RUNTIMEEXPORT|La funzione specificata non è una funzione esportata.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo, il CLR caricato ma non inizializzato.  
+ Questo metodo fa sì che CLR venga caricato ma non inizializzato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

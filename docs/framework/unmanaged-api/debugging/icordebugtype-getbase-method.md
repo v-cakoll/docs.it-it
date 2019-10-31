@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122340"
 ---
 # <a name="icordebugtypegetbase-method"></a>Metodo ICorDebugType::GetBase
-Ottiene un puntatore a interfaccia ICorDebugType che rappresenta il tipo di base, se presente, del tipo rappresentato da questo `ICorDebugType`.  
+Ottiene un puntatore a interfaccia a un oggetto ICorDebugType che rappresenta il tipo di base, se presente, del tipo rappresentato da questo `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parametri  
  `pBase`  
- [out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il tipo di base.  
+ out Puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il tipo di base.  
   
 ## <a name="remarks"></a>Note  
- Cercare il tipo di base per un tipo è utile per implementare le funzionalità comuni del debugger, ad esempio stampando tutti i campi di un oggetto o delle relative classi padre.  
+ La ricerca del tipo di base per un tipo è utile per implementare funzionalità comuni del debugger, ad esempio la stampa di tutti i campi di un oggetto o delle relative classi padre.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

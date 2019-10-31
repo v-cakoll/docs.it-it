@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127833"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Metodo ICLRValidator::Validate
-Convalida il file eseguibile portabile (PE) o Microsoft intermediate language (MSIL) nel file specificato.  
+Convalida il file eseguibile portatile (PE) o il linguaggio MSIL (Microsoft Intermediate Language) nel file specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,46 +42,46 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parametri  
  `veh`  
- [in] Un puntatore a un `IVEHandler` istanza che gestisce gli errori di convalida.  
+ in Puntatore a un'istanza di `IVEHandler` che gestisce gli errori di convalida.  
   
  `ulAppDomainId`  
- [in] L'identificatore per l'oggetto corrente <xref:System.AppDomain>.  
+ in Identificatore per l'<xref:System.AppDomain>corrente.  
   
  `ulFlags`  
- [in] Una combinazione di [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) valori, che indica il tipo di convalida da eseguire.  
+ in Combinazione di valori [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) , che indica il tipo di convalida da eseguire.  
   
  `ulMaxError`  
- [in] Il numero massimo di errori consentiti prima di disattivare la convalida.  
+ in Numero massimo di errori da consentire prima di uscire dalla convalida.  
   
  `token`  
- [in] Non usato.  
+ in Inutilizzati.  
   
  `fileName`  
- [in] Il nome del file da convalidare.  
+ in Nome del file da convalidare.  
   
  `pe`  
- [in] Puntatore al buffer di file.  
+ in Puntatore al buffer di file.  
   
  `ulSize`  
- [in] Le dimensioni, in byte, del file da convalidare.  
+ in Dimensione, in byte, del file da convalidare.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Validate` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`Validate` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator. H  
+ **Intestazione:** IValidator. idl, IValidator. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

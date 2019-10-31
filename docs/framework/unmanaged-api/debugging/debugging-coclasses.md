@@ -6,19 +6,17 @@ helpviewer_keywords:
 - debugging coclasses [.NET Framework]
 - coclasses [.NET Framework debugging]
 ms.assetid: 94f94159-108e-436c-99e7-dff3beeb2503
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 403815f38e0ce85d34d97f17b0af23246b5507e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc39b087e05a7770d88dd47123cd0d7a8e781cd0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698395"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124374"
 ---
 # <a name="debugging-coclasses"></a>Coclassi di debug
 Questa sezione descrive le coclassi non gestite usate dall'API di debug.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Coclasse CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
  Fornisce interfacce per la pubblicazione di informazioni sui domini dell'applicazione e sui processi.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aeb4c9935d5e9e4063497dd56276edfe6e62752a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ce822533b0699f3467dc08044aa4dab59285a77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765594"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120307"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>Metodo ICLRRuntimeInfo::GetDefaultStartupFlags
-Ottiene il flag di avvio e i file di configurazione di host che verrà usato per avviare il runtime.  
+Ottiene i flag di avvio e il file di configurazione host che verranno utilizzati per avviare il Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,30 +36,30 @@ HRESULT GetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Parametri  
  `pdwStartupFlags`  
- [out] Puntatore ai flag di avvio host attualmente impostati.  
+ out Puntatore ai flag di avvio dell'host attualmente impostati.  
   
  `pwzHostConfigFile`  
- [out] Un puntatore al percorso di directory del file di configurazione host corrente.  
+ out Puntatore al percorso della directory del file di configurazione dell'host corrente.  
   
  `pcchHostConfigFile`  
- [in, out] In input, le dimensioni di `pwzHostConfigFile`, per evitare i sovraccarichi del buffer. Se `pwzHostConfigFile` è null, il metodo restituisce la dimensione necessaria della `pwzHostConfigFile` per pre-allocazione.  
+ [in, out] In input, dimensioni di `pwzHostConfigFile`, per evitare sovraccarichi del buffer. Se `pwzHostConfigFile` è null, il metodo restituisce la dimensione richiesta di `pwzHostConfigFile` per la pre-allocazione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce il valore HRESULT specifico seguente, nonché gli errori HRESULT che indicano un errore di metodo.  
+ Questo metodo restituisce il seguente HRESULT specifico, oltre a errori HRESULT che indicano un errore del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo restituisce i valori di flag predefiniti (`STARTUP_CONCURRENT_GC` e `NULL`), o i valori forniti da una precedente chiamata ai [SetDefaultStartupFlags (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o i valori impostati da uno qualsiasi del `CorBind*` metodi se vengono associati a questa versione del runtime.  
+ Questo metodo restituisce i valori dei flag predefiniti (`STARTUP_CONCURRENT_GC` e `NULL`) o i valori forniti da una chiamata precedente al [Metodo ICLRRuntimeInfo:: SetDefaultStartupFlags](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)o i valori impostati da uno dei metodi di `CorBind*` se sono associati a questo runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ee2e4d44af547c82a21a782121976d07118c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124722"
 ---
 # <a name="icordebugchaingetreason-method"></a>Metodo ICorDebugChain::GetReason
-Ottiene il motivo per la creazione di questa catena di chiamata.  
+Ottiene il motivo per la genesi della catena chiamante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetReason (
   
 ## <a name="parameters"></a>Parametri  
  `pReason`  
- [out] Un puntatore a un valore (una combinazione bit per bit) dell'enumerazione CorDebugChainReason che indica il motivo per la creazione di questa catena di chiamata.  
+ out Puntatore a un valore (combinazione bit per bit) dell'enumerazione CorDebugChainReason che indica il motivo della Genesi della catena chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

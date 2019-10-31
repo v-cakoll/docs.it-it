@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798553"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102536"
 ---
 # <a name="getmethodorigin-function"></a>Funzione GetMethodOrigin
 Determina la classe in cui viene dichiarato un metodo.
@@ -57,7 +55,7 @@ out Riceve il nome della classe a cui appartiene il metodo.
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il metodo specificato non è stato trovato. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non sono validi. |
@@ -69,10 +67,10 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 Poiché una classe può ereditare metodi da una o più classi base, gli sviluppatori spesso vogliono determinare la classe in cui è definito un determinato metodo.
 
-Il `pstrClassName` parametro non deve puntare a un oggetto `BSTR` valido prima che la funzione venga chiamata perché si `out` tratta di un parametro; questo puntatore non viene deallocato dopo la restituzione della funzione.
+Il parametro `pstrClassName` non deve puntare a una `BSTR` valida prima della chiamata della funzione perché si tratta di un parametro `out`; Questo puntatore non viene deallocato dopo la restituzione della funzione.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129974"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creare i file di risorse per le app .NET
 
@@ -60,7 +58,7 @@ name2=value2
 
  Il formato dei file di risorse con estensione txt e restext è identico. L'estensione restext serve semplicemente a rendere immediatamente identificabili i file di testo come file di risorse basati su testo.
 
- Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* e *value* devono essere separati da un segno di uguale (=). Ad esempio:
+ Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* e *value* devono essere separati da un segno di uguale (=). Esempio:
 
 ```text
 FileMenuName=File
@@ -72,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 > Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.
 
- Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. Ad esempio:
+ Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. Esempio:
 
 ```text
 EmptyString=
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  Se il file di testo contiene occorrenze duplicate di *name*, il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) visualizza un avviso e ignora il secondo nome.
 
- *value* non può contenere caratteri di nuova riga, ma è possibile usare caratteri di escape nello stile del linguaggio C, come `\n` per rappresentare una nuova riga e `\t` per rappresentare un carattere di tabulazione. È anche possibile includere un carattere barra rovesciata se è preceduto da un carattere di escape, ad esempio "\\\\". Sono anche consentite le stringhe vuote.
+ il *valore* non può contenere caratteri di nuova riga, ma è possibile usare caratteri di escape di tipo linguaggio C, ad esempio `\n` per rappresentare una nuova riga e `\t` per rappresentare una scheda. È anche possibile includere un carattere barra rovesciata se è preceduto da un carattere di escape, ad esempio "\\\\". Sono anche consentite le stringhe vuote.
 
  È consigliabile salvare le risorse nel formato di file di testo con la codifica UTF-8 UTF-16 in ordine dei byte little-endian o big-endian. Il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), tuttavia, che consente di convertire un file con estensione txt in un file con estensione resources, per impostazione predefinita considera i file come salvati con la codifica UTF-8. Se si vuole che Resgen.exe riconosca un file come salvato con la codifica UTF-16, è necessario includere un byte order mark Unicode (U + FEFF) all'inizio del file.
 

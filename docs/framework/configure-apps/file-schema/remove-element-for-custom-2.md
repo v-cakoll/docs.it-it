@@ -1,5 +1,5 @@
 ---
-title: <remove>elemento per NameValueSectionHandler e DictionarySectionHandler
+title: elemento <remove> per NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc1519a794e24e04074dd2a674ecc2c0f3666521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118569"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<rimuovere > elemento per NameValueSectionHandler e DictionarySectionHandler
 
 Rimuove un'impostazione definita in precedenza.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<rimuovi >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,21 +40,21 @@ Rimuove un'impostazione definita in precedenza.
 
 | Elemento | Descrizione |
 | ------- | ------------|
-| [SectionName > elemento  **\<** ](custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzate <xref:System.Configuration.NameValueSectionHandler> che <xref:System.Configuration.DictionarySectionHandler> usano le classi e. |
+| [ **\<sectionname >** Elemento](custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzate che usano le classi <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuna
+Nessuno
 
 ## <a name="remarks"></a>Note
 
-È possibile usare l'  **\<elemento remove >** per rimuovere le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
+È possibile usare l'elemento **\<remove >** per rimuovere le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento remove >** in un file di configurazione dell'applicazione per rimuovere le impostazioni definite in precedenza nel file di configurazione del computer.
+Nell'esempio seguente viene illustrato come utilizzare il **\<rimuovere >** elemento in un file di configurazione dell'applicazione per rimuovere le impostazioni definite in precedenza nel file di configurazione del computer.
 
-Nel codice del file di configurazione del computer seguente `key1` viene dichiarata la sezione  **\<>** e vengono aggiunte `key2`due impostazioni:
+Il seguente codice del file di configurazione del computer dichiara la sezione **\<sezione >** e aggiunge due impostazioni, `key1` e `key2`:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Nel codice del file di configurazione del computer seguente `key1` viene dichiar
 </configuration>
 ```
 
-Il codice del file di configurazione dell'applicazione `key2` seguente consente di rimuovere l'impostazione dall'  **\<area >** :
+Il codice del file di configurazione dell'applicazione seguente rimuove l'impostazione `key2` da **\<sezione >** :
 
 ```xml
 <!--Application configuration file -->

@@ -1,15 +1,14 @@
 ---
 title: Variabili discard - Guida di C#
 description: Descrive il supporto in C# delle variabili discard, che sono variabili non assegnate e rimovibili, e le modalità d'uso di tali variabili.
-author: rpetrusha
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 783266b6893a597d790af82db50b4f52a00ad0bf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100635"
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
 

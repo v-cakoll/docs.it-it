@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973173"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107146"
 ---
 # <a name="assembly-manifest"></a>Manifesto dell'assembly
 Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere archiviato in un file PE ( *exe* o *dll*) con codice MSIL (Microsoft Intermediate Language) o in un file PE autonomo che contiene solo informazioni del manifesto dell'assembly.  
@@ -41,7 +39,7 @@ Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che des
 ## <a name="assembly-manifest-contents"></a>Contenuto del manifesto dell'assembly  
  Nella tabella che segue vengono mostrate le informazioni contenute nel manifesto dell'assembly. I primi quattro elementi: il nome dell'assembly, il numero di versione, le impostazioni cultura e le informazioni sul nome sicuro costituiscono l'identità dell'assembly.  
   
-|Informazioni|DESCRIZIONE|  
+|Informazioni|Descrizione|  
 |-----------------|-----------------|  
 |Nome assembly|Una stringa di testo che specifica il nome dell'assembly.|  
 |Numero di versione|Un numero di versione principale e secondario e un numero di revisione e di build. Common Language Runtime utilizza tali numeri per assicurare l'applicazione dei criteri per la gestione delle versioni.|  

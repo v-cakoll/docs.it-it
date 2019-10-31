@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045696"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129966"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 
@@ -88,7 +86,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Per l'elenco completo delle opzioni disponibili con Al.exe, vedere [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
   
-## <a name="satellite-assemblies-an-example"></a>Assembly satellite: Esempio  
+## <a name="satellite-assemblies-an-example"></a>Assembly satellite: un esempio  
  Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza una finestra di messaggio contenente un saluto localizzato. L'esempio include le risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia) e russe (Russia). Le impostazioni cultura inglesi sono le impostazioni cultura di fallback. Per creare l'esempio, eseguire le operazioni seguenti:  
   
 1. Creare un file di risorse denominato Greeting.resx o Greeting.txt che deve contenere le risorse per le impostazioni cultura predefinite. Salvare in questo file un'unica stringa denominata `HelloString` il cui valore sia "Hello world!" .
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Installazione di un assembly satellite nella Global Assembly Cache
 
-Durante la ricerca di risorse nell'ambito del processo di fallback delle risorse, il runtime prima cerca nella [Global Assembly Cache](../app-domains/gac.md). Per altre informazioni, vedere la sezione "Processo di fallback delle risorse" dell'argomento [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md). Non appena un assembly satellite viene firmato con un nome sicuro, può essere installato nella Global Assembly Cache tramite lo [strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
+Durante la ricerca di risorse nell'ambito del processo di fallback delle risorse, il runtime prima cerca nella [Global Assembly Cache](../app-domains/gac.md). Per ulteriori informazioni, vedere la sezione "processo di fallback delle risorse" nell'argomento Creazione di [pacchetti e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md) . Non appena un assembly satellite viene firmato con un nome sicuro, può essere installato nella Global Assembly Cache usando il [strumento Global Assembly Cache (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
 
 Il comando Gacutil.exe seguente installa StringLibrary.resources.dll nella Global Assembly Cache:
 
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 L'opzione **/i** specifica che Gacutil.exe deve installare l'assembly specificato nella Global Assembly Cache. Dopo l'installazione dell'assembly satellite nella cache, le risorse in esso contenute diventano disponibili per tutte le applicazioni progettate per l'uso dell'assembly satellite.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Risorse nella Global Assembly Cache: Esempio
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Risorse nella Global Assembly Cache: un esempio
 
 L'esempio seguente usa un metodo di una libreria di classi .NET Framework per estrarre e restituire un messaggio di saluto localizzato contenuto in un file di risorse. La libreria e le relative risorse sono registrate nella Global Assembly Cache. L'esempio include risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia), russe (Russia) e inglesi. Le impostazioni cultura predefinite corrispondono a quelle inglesi e le risorse corrispondenti sono archiviate nell'assembly principale. All'inizio dell'esempio viene impostato il ritardo della firma della libreria e dei relativi assembly con una chiave pubblica. Questi vengono quindi firmati di nuovo con una coppia di chiavi pubblica/privata. Per creare l'esempio, eseguire le operazioni seguenti:
 

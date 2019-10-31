@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622635"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120879"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizzazione e localizzazione di applicazioni .NET
 
@@ -46,7 +44,7 @@ In .NET viene fornito ampio supporto per lo sviluppo di applicazioni internazion
 
 Per altre informazioni, vedere la [documentazione sulla globalizzazione](/globalization/).
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Globalizzazione](globalization.md)
 
@@ -68,7 +66,7 @@ Viene descritto come usare metodi e classi di .NET definiti come dipendenti dall
 
 Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 - Spazio dei nomi <xref:System.Globalization?displayProperty=nameWithType>
 

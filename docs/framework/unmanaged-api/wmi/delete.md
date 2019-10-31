@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798678"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127659"
 ---
 # <a name="delete-function"></a>Funzione Delete
 
@@ -48,7 +46,7 @@ in Questo parametro è inutilizzato.
 in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-in Nome della proprietà da eliminare. `wszName`deve essere un puntatore a un oggetto `LPCWSTR`valido.
+in Nome della proprietà da eliminare. `wszName` deve essere un puntatore a una `LPCWSTR`valida.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -72,7 +70,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

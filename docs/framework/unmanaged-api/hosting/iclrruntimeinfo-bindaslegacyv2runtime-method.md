@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ea4bd222500015f6c78cb0455539aa2c24e681
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d37ec8e17e62f58212a5f79f4d6b6aa75f57bf7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765609"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120263"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>Metodo ICLRRuntimeInfo::BindAsLegacyV2Runtime
-Associa il runtime corrente per tutti i legacy common language runtime (CLR) versione 2 attivazione decisioni relative ai criteri.  
+Associa il runtime corrente per tutte le decisioni relative ai criteri di attivazione della versione 2 di Common Language Runtime legacy (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,22 +32,22 @@ HRESULT BindAsLegacyV2Runtime ();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce gli HRESULT specifici seguenti:  
+ Questo metodo restituisce i valori HRESULT specifici seguenti:  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|L'associazione ha avuto esito positivo o questo runtime già associato come il runtime criteri 2 attivazione della versione CLR legacy.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso era già associato ai criteri di attivazione 2 versione CLR legacy.|  
+|S_OK|Associazione riuscita oppure il runtime è già stato associato come runtime legacy dei criteri di attivazione di CLR versione 2.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso era già associato ai criteri di attivazione di CLR versione 2 Legacy.|  
   
 ## <a name="remarks"></a>Note  
- Se il runtime corrente è già associato per tutti i precedenti CLR versione 2 attivazione decisioni relative ai criteri (ad esempio, tramite il `useLegacyV2RuntimeActivationPolicy` attributo la [ \<avvio > elemento](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) nel file di configurazione), questo metodo non restituisce un risultato di errore. al contrario, il risultato è S_OK, semplicemente come lo sarebbe se il metodo ha associato correttamente i criteri di attivazione legacy.  
+ Se il runtime corrente è già associato a tutte le decisioni del criterio di attivazione di CLR versione 2 Legacy (ad esempio, usando l'attributo `useLegacyV2RuntimeActivationPolicy` nell' [elemento >\<Startup](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) nel file di configurazione), questo metodo non restituisce un risultato di errore. al contrario, il risultato è S_OK, così come sarebbe se il metodo avesse associato correttamente i criteri di attivazione legacy.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4229d567fc4ced5e3b78b390ced29fb9ea60f93b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137835"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>Metodo ICorDebugFunction::GetToken
-Ottiene i metadati del token per questa funzione.  
+Ottiene il token di metadati per questa funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>Parametri  
  `pMethodDef`  
- [out] Un puntatore a un `mdMethodDef` token che fa riferimento ai metadati per questa funzione.  
+ out Puntatore a un token di `mdMethodDef` che fa riferimento ai metadati per questa funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

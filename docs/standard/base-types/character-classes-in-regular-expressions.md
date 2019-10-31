@@ -12,15 +12,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120606"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -74,7 +72,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 
 Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`[aeiou]`|Corrisponde a tutte le vocali.|  
 |`[\p{P}\d]`|Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.|  
@@ -87,7 +85,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`gr`|Corrisponde ai caratteri letterali "gr".|  
 |`[ae]`|Corrisponde a una "a" o una "e".|  
@@ -102,7 +100,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`[A-Z]`|Corrisponde a qualsiasi carattere maiuscolo da A a Z.|  
@@ -137,7 +135,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corrisponde a tutti i caratteri eccetto le vocali.|  
 |`[^\p{P}\d]`|Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.|  
@@ -149,7 +147,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`th`|Corrisponde ai caratteri letterali "th".|  
@@ -196,7 +194,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\p{IsGreek}+`|Corrisponde a uno o più caratteri greci.|  
@@ -344,7 +342,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\d` equivale a `[0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
+ L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di espressione regolare `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -366,7 +364,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Se viene specificato il comportamento conforme a ECMAScript, `\D` equivale a `[^0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
- Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
+ Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di espressione regolare `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -442,7 +440,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> -oppure-<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> oppure<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -486,7 +484,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -oppure-<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> oppure<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  

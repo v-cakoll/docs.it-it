@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6da6fabc6632bea58b28a00f55d05f4c2cc5b46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 790999093f874a4d81dd5db74ef012b1d997a12f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762682"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109651"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>Metodo ICorDebugModule::GetClassFromToken
 Ottiene la classe specificata dal token di metadati.  
@@ -38,13 +36,13 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametri  
  `typedef`  
- [in] Un `mdTypeDef` token di metadati che fa riferimento ai metadati di una classe.  
+ in Token di metadati `mdTypeDef` che fa riferimento ai metadati di una classe.  
   
  `ppClass`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugClass che rappresenta la classe.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugClass che rappresenta la classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

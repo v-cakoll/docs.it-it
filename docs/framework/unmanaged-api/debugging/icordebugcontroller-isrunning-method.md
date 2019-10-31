@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f24c07a654dc2345cb65226463573576a6fb3658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125346"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>Metodo ICorDebugController::IsRunning
-Ottiene un valore che indica se il thread del processo attualmente in esecuzione liberamente.  
+Ottiene un valore che indica se i thread del processo sono attualmente in esecuzione liberamente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT IsRunning (
   
 ## <a name="parameters"></a>Parametri  
  `pbRunning`  
- [out] Un puntatore a un valore che rappresenta `true` se il thread nel processo esegue liberamente; in caso contrario, `false`.  
+ out Puntatore a un valore `true` se i thread del processo vengono eseguiti liberamente; in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -1,17 +1,15 @@
 ---
-title: <Event>Elemento (.NET Native)
+title: Elemento <Event> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7fb0245c50677da0397ba9c4918f171dcb217ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049840"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128499"
 ---
-# <a name="event-element-net-native"></a>\<Elemento > evento (.NET Native)
+# <a name="event-element-net-native"></a>\<elemento > evento (.NET Native)
 Applica i criteri di reflection di runtime a un evento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -27,7 +25,7 @@ Applica i criteri di reflection di runtime a un evento.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|DESCRIZIONE|  
+|Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome dell'evento.|  
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni o per l'enumerazione dell'evento, ma non abilita l'accesso dinamico al runtime.|  
@@ -46,7 +44,7 @@ Applica i criteri di reflection di runtime a un evento.
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per l'evento. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

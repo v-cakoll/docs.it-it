@@ -1,5 +1,5 @@
 ---
-title: Metodo IcorDebugVariableHome::GetLiveRange
+title: 'Metodo IcorDebugVariableHome:: GetLiveRange'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774137"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125124"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>Metodo IcorDebugVariableHome::GetLiveRange
-Ottiene l'intervallo nativo su cui questa variabile è in tempo reale.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Metodo IcorDebugVariableHome:: GetLiveRange
+Ottiene l'intervallo nativo su cui questa variabile è attiva.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +36,13 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>Parametri  
  `pStartOffset`  
- [out] L'offset logico in cui la variabile è primo in tempo reale.  
+ out Offset logico in corrispondenza del quale la variabile è la prima Live.  
   
  `pEndOffset`  
- [out] L'offset logico immediatamente dopo il punto in corrispondenza del quale la variabile è l'ultimo in tempo reale.  
+ out Offset logico immediatamente dopo il punto in cui la variabile è l'ultima volta in tempo reale.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

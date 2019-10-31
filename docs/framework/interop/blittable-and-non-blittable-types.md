@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051895"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123725"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -59,7 +57,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
  Nella tabella seguente sono elencati i tipi non copiabili da BLT dello spazio dei nomi <xref:System>. Anche i [delegati](default-marshaling-behavior.md#default-marshaling-for-delegates), ossia le strutture di dati che fanno riferimento a un metodo statico o a un'istanza di classe, non sono copiabili da BLT.  
   
-|Tipi non copiabili da BLT|Description|  
+|Tipi non copiabili da BLT|Descrizione|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
@@ -75,4 +73,4 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)

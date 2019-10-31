@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129699"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>Metodo ICorDebugProcess3::SetEnableCustomNotification
-Abilita e disabilita le notifiche di debugger personalizzati del tipo specificato.  
+Abilita e Disabilita le notifiche personalizzate del debugger del tipo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,18 +34,18 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="parameters"></a>Parametri  
  `pClass`  
- [in] Tipo che specifica le notifiche di debugger personalizzati.  
+ in Tipo che specifica le notifiche personalizzate del debugger.  
   
  `fEnable`  
- [in] `true` per abilitare le notifiche di debugger personalizzati. `false` per disabilitare le notifiche. Il valore predefinito è `false`.  
+ [in] `true` per abilitare le notifiche personalizzate del debugger; `false` disabilitare le notifiche. Il valore predefinito è `false`.  
   
 ## <a name="remarks"></a>Note  
- Quando `fEnable` è impostata su `true`, le chiamate al <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> trigger metodo un' [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) callback. Le notifiche sono disabilitate per impostazione predefinita. Pertanto, il debugger deve specificare qualsiasi tipo di notifica a conoscenza e si vuole gestire. Poiché il [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) classe ha come ambita dal dominio applicazione, il debugger deve chiamare `SetEnableCustomNotification` per ogni dominio dell'applicazione del processo se vuole ricevere la notifica nell'intero processo.  
+ Quando `fEnable` è impostato su `true`, le chiamate al metodo <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> attivano un callback [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) . Le notifiche sono disabilitate per impostazione predefinita. Pertanto, è necessario che il debugger specifichi i tipi di notifica che conosce e desidera gestire. Poiché l'ambito della classe [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) è definito dal dominio dell'applicazione, il debugger deve chiamare `SetEnableCustomNotification` per ogni dominio dell'applicazione nel processo se desidera ricevere la notifica nell'intero processo.  
   
- A partire da .NET Framework 4, il solo avviso supportato è una notifica di dipendenza cross-thread.  
+ A partire da .NET Framework 4, l'unica notifica supportata è una notifica di dipendenza tra thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -2,21 +2,19 @@
 title: <EnableAmPmParseAdjustment> Elemento
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117364"
 ---
-# <a name="enableampmparseadjustment-element"></a>\<Elemento > EnableAmPmParseAdjustment
+# <a name="enableampmparseadjustment-element"></a>\<elemento > EnableAmPmParseAdjustment
 Determina se i metodi di analisi di data e ora usano un set di regole modificato per analizzare le stringhe di data contenenti un indicatore giorno, mese, ora e AM/PM.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,13 +33,13 @@ Determina se i metodi di analisi di data e ora usano un set di regole modificato
   
 ### <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|I metodi di analisi di data e ora non utilizzano regole regolate per l'analisi delle stringhe di data che contengono solo il giorno, il mese, l'ora e l'indicatore AM/PM.|  
 |1|I metodi di analisi di data e ora usano regole regolate per l'analisi delle stringhe di data che contengono solo il giorno, il mese, l'ora e l'indicatore AM/PM.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -51,7 +49,7 @@ Determina se i metodi di analisi di data e ora usano un set di regole modificato
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- L' `<EnableAmPmParseAdjustment>` elemento controlla il modo in cui i metodi seguenti analizzano una stringa di data contenente un giorno e un mese numerici seguiti da un'ora e un indicatore AM/PM (ad esempio "4/10 6 am"):  
+ L'elemento `<EnableAmPmParseAdjustment>` controlla il modo in cui i metodi seguenti analizzano una stringa di data contenente un giorno e un mese numerici seguiti da un'ora e un indicatore AM/PM (ad esempio "4/10 6 AM"):  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,7 +63,7 @@ Determina se i metodi di analisi di data e ora usano un set di regole modificato
   
  Nessun altro modello è interessato.  
   
- L' `<EnableAmPmParseAdjustment>` elemento non ha alcun effetto <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>sui metodi <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
+ L'elemento `<EnableAmPmParseAdjustment>` non ha alcun effetto sui metodi <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 > In .NET Core e .NET Native le regole di analisi AM/PM modificate sono abilitate per impostazione predefinita.  
@@ -74,14 +72,14 @@ Determina se i metodi di analisi di data e ora usano un set di regole modificato
   
  Se la regola di regolazione dell'analisi è abilitata, il metodo di analisi interpreta il giorno e il mese come appartenente all'anno corrente e interpreta l'ora come ora del formato a 12 ore.  
   
- Nella tabella seguente viene illustrata la differenza nel <xref:System.DateTime> valore quando il <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> metodo viene utilizzato per analizzare la stringa "" 4/10 6 am `enabled` "con la `<EnableAmPmParseAdjustment>` proprietà dell'elemento impostata su" 0 "o" 1 ". Si presuppone che la data odierna sia il 5 gennaio 2017 e visualizzi la data come se fosse formattata usando la stringa di formato "G" delle impostazioni cultura specificate.  
+ Nella tabella seguente viene illustrata la differenza nel valore <xref:System.DateTime> quando viene utilizzato il metodo <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> per analizzare la stringa "" 4/10 6 AM "con la proprietà `enabled` dell'elemento `<EnableAmPmParseAdjustment>` impostata su" 0 "o" 1 ". Si presuppone che la data odierna sia il 5 gennaio 2017 e visualizzi la data come se fosse formattata usando la stringa di formato "G" delle impostazioni cultura specificate.  
   
-|Nome delle impostazioni cultura|enabled="0"|enabled="1"|  
+|Nome delle impostazioni cultura|Enabled = "0"|Enabled = "1"|  
 |------------------|------------------|------------------|  
 |en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Elemento runtime >](runtime-element.md)
+- [\<elemento > Runtime](runtime-element.md)
 - [Elemento \<configuration>](../configuration-element.md)

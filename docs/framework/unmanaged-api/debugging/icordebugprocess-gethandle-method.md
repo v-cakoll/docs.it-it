@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4061580d59b0cf2a6e6e481d5242005e9452caf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128877"
 ---
 # <a name="icordebugprocessgethandle-method"></a>Metodo ICorDebugProcess::GetHandle
 Ottiene un handle per il processo.  
@@ -35,13 +33,13 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
   
 ## <a name="parameters"></a>Parametri  
  `phProcessHandle`  
- [out] Un puntatore a un `HPROCESS` che rappresenta l'handle del processo.  
+ out Puntatore a un `HPROCESS` che rappresenta l'handle del processo.  
   
 ## <a name="remarks"></a>Note  
- L'handle recuperato è di proprietà dell'interfaccia di debug. Il debugger deve duplicazione dell'handle prima di poterla usare.  
+ L'handle recuperato è di proprietà dell'interfaccia di debug. Il debugger deve duplicare l'handle prima di usarlo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

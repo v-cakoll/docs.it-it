@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb80f3cc199d4d9f774cb3898335d26fe44b807
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127137"
 ---
 # <a name="getidentityauthority-function"></a>Funzione GetIdentityAuthority
 Ottiene un puntatore a un'istanza di [IIdentityAuthority](iidentityauthority-interface.md) che gestisce le chiavi per gli oggetti di codice.  
@@ -37,10 +35,10 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>Parametri  
  `ppIIdentityAuthority`  
- out Puntatore restituito `IIdentityAuthority` .  
+ out Puntatore `IIdentityAuthority` restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

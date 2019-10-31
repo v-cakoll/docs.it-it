@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363956"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126377"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 
@@ -201,7 +199,7 @@ public class MyClass
 }
 ```
 
-Quando il tipo di contratto è dedotto dalla parola chiave `dynamic` , corrisponderà a qualsiasi tipo di contratto. In questo caso un'importazione deve **sempre** specificare un nome di contratto a cui corrispondere. Se non è stato specificato alcun nome di contratto, l'importazione sarà considerata come non corrispondente ad alcuna esportazione. Entrambe le esportazioni seguenti corrispondono all'importazione precedente.
+Quando il tipo di contratto è dedotto dalla parola chiave `dynamic` , corrisponderà a qualsiasi tipo di contratto. In questo caso un'importazione deve **sempre** specificare un nome di contratto a cui corrispondere. Se non viene specificato alcun nome di contratto, l'importazione verrà considerata non corrispondente ad alcuna esportazione. Entrambe le esportazioni seguenti corrisponderanno all'importazione precedente.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -343,7 +341,7 @@ Se il costruttore di una parte necessita di un valore importato, tale oggetto no
 
 L'attributo `Import` specifica un requisito necessario per il funzionamento della parte. Se non è possibile soddisfare un'importazione, la composizione della parte avrà esito negativo e la parte non sarà disponibile.
 
-È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo, anche se l'importazione non corrisponde ad alcuna esportazione disponibile, e la proprietà che esegue l'importazione sarà impostata sul valore predefinito per il tipo di proprietà specifico (`null` per proprietà degli oggetti, `false` per proprietà booleane oppure zero per proprietà numeriche). La classe seguente usa un'importazione facoltativa.
+È possibile specificare che un'importazione è *facoltativa* usando la proprietà `AllowDefault` . In questo caso, la composizione avrà esito positivo anche se l'importazione non corrisponde ad alcuna esportazione disponibile e la proprietà importata verrà impostata sul valore predefinito per il tipo di proprietà (`null` per le proprietà dell'oggetto, `false` per i valori booleani o zero per le proprietà numeriche). La classe seguente usa un'importazione facoltativa.
 
 ```vb
 Public Class MyClass1
@@ -687,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-Se a un attributo `InheritedExport` sono associati metadati, anche i metadati saranno ereditati. Per altre informazioni, vedere la sezione precedente "Metadati e viste dei metadati". I metadati ereditati non possono essere modificati dalla sottoclasse. Dichiarando di nuovo l'attributo `InheritedExport` con lo stesso nome e tipo di contratto ma con nuovi metadati, tuttavia, la sottoclasse potrà sostituire i metadati ereditati con nuovi metadati. La classe seguente illustra questo principio. La parte `MegaLogger` eredita da `Logger` e include l'attributo `InheritedExport` . Poiché `MegaLogger` ripete la dichiarazione di nuovi metadati con nome Status, non erediterà i metadati Name e Version da `Logger`.
+Se a un attributo `InheritedExport` sono associati metadati, anche i metadati saranno ereditati. Per ulteriori informazioni, vedere la sezione precedente "viste metadati e metadati". I metadati ereditati non possono essere modificati dalla sottoclasse. Dichiarando di nuovo l'attributo `InheritedExport` con lo stesso nome e tipo di contratto ma con nuovi metadati, tuttavia, la sottoclasse potrà sostituire i metadati ereditati con nuovi metadati. La classe seguente illustra questo principio. La parte `MegaLogger` eredita da `Logger` e include l'attributo `InheritedExport` . Poiché `MegaLogger` ripete la dichiarazione di nuovi metadati con nome Status, non erediterà i metadati Name e Version da `Logger`.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-Quando si dichiara di nuovo l'attributo `InheritedExport` per eseguire l'override dei metadati, occorre assicurarsi che i tipi di contratto siano uguali. Nell'esempio precedente, `IPlugin` è il tipo di contratto. In caso di differenza, invece di eseguire l'override, il secondo attributo creerà una seconda esportazione indipendente dalla parte. In genere, ciò significa che sarà necessario specificare in modo esplicito il tipo di contratto quando si esegue l'override di un attributo `InheritedExport` , come illustrato nell'esempio precedente.
+Quando si dichiara di nuovo l'attributo `InheritedExport` per eseguire l'override dei metadati, occorre assicurarsi che i tipi di contratto siano uguali. Nell'esempio precedente `IPlugin` è il tipo di contratto. Se sono diversi, anziché eseguire l'override di, il secondo attributo creerà una seconda esportazione indipendente dalla parte. In genere, ciò significa che sarà necessario specificare in modo esplicito il tipo di contratto quando si esegue l'override di un attributo `InheritedExport` , come illustrato nell'esempio precedente.
 
 Poiché non è possibile creare direttamente istanze delle interfacce, non è in genere possibile decorarle con attributi `Export` o `Import` . Un'interfaccia può essere tuttavia decorata con l'attributo `InheritedExport` a livello di interfaccia e tale esportazione, insieme a eventuali metadati associati, sarà ereditata da qualsiasi classe che esegue l'implementazione. L'interfaccia stessa, tuttavia, non sarà disponibile come parte.
 
@@ -984,5 +982,5 @@ Per i contenitori di composizione di lunga durata, il consumo di memoria da part
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Video di Channel 9: Aprire le applicazioni con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Video di Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Video Channel 9: Aprire le applicazioni con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Video Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

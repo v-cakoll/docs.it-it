@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126440"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 Il motore delle espressioni regolari di .NET Framework è un selettore di espressioni regolari di backtracking che incorpora un motore NFA (Nondeterministic Finite Automaton) tradizionale come quello usato da Perl, Python, Emacs e Tcl. Ciò lo distingue dai motori delle espressioni regolari puri DFA (Deterministic Finite Automaton), più veloci ma più limitati, come quelli usati in awk, egrep o lex. Lo distingue anche dai motori NFA POSIX, standardizzati ma più lenti. Nella sezione seguente vengono descritti i tre tipi di motori delle espressioni regolari e viene spiegato perché le espressioni regolari in .NET Framework vengono implementate usando un motore NFA tradizionale.  
@@ -45,7 +43,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Le versioni greedy e lazy di questa espressione regolare vengono definite come illustrato nella tabella seguente:
   
-    |Modello|Descrizione|  
+    |Criterio|Descrizione|  
     |-------------|-----------------|  
     |`.+` (quantificatore greedy)|Trova almeno un'occorrenza di qualsiasi carattere. In questo modo il motore delle espressioni regolari considera soddisfatta la corrispondenza con l'intera stringa ed esegue il backtracking, necessario per verificare le corrispondenze con il resto del criterio.|  
     |`.+?` (quantificatore lazy)|Trova almeno un'occorrenza di qualsiasi carattere, ma accetta la corrispondenza con il minor numero possibile di caratteri.|  
@@ -61,7 +59,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      L'espressione regolare `\b[A-Z]+\b(?=\P{P})` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|Descrizione|  
+    |Criterio|Descrizione|  
     |-------------|-----------------|  
     |`\b`|Inizia la corrispondenza sul confine di parola.|  
     |`[A-Z]+`|Trova la corrispondenza con qualsiasi carattere alfabetico una o più volte. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -75,9 +73,9 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
   
-     Il criterio di ricerca di espressioni regolari `\b(?!non)\w+\b` è definito nel modo illustrato nella tabella seguente.  
+     Il criterio di espressione regolare `\b(?!non)\w+\b` è definito nel modo illustrato nella tabella seguente.  
   
-    |Modello|DESCRIZIONE|  
+    |Criterio|Descrizione|  
     |-------------|-----------------|  
     |`\b`|Inizia la corrispondenza sul confine di parola.|  
     |`(?!non)`|Esegue il lookahead per verificare che la stringa corrente non inizi con "non". In caso contrario, la corrispondenza ha esito negativo.|  
@@ -93,7 +91,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-    |Modello|Descrizione|  
+    |Criterio|Descrizione|  
     |-------------|-----------------|  
     |`^`|Inizia la corrispondenza all'inizio di una riga.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Trova la corrispondenza con zero o un'occorrenza della stringa `<PRIVATE>` seguita da un carattere di spazio vuoto. Assegna la corrispondenza a un gruppo di acquisizione denominato `Pvt`.|  
@@ -124,18 +122,18 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Per altre informazioni sulla corrispondenza da destra a sinistra, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
-- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` per lookbehind positivo e `(?<!`*subexpression*`)` per lookbehind negativo. Questa funzionalità è simile a lookahead, illustrata in precedenza in questo argomento. Poiché il motore delle espressioni regolari consente la corrispondenza da destra a sinistra completa, le espressioni regolari consentono lookbehind illimitati. Il lookbehind positivo e negativo consente inoltre di evitare l'annidamento di quantificatori quando la sottoespressione annidata è un superset di un'espressione esterna. Le espressioni regolari con tali quantificatori spesso influiscono negativamente sulle prestazioni. L'esempio seguente, ad esempio, verifica se una stringa inizia e termina con un carattere alfanumerico e se qualsiasi altro carattere nella stringa appartiene a un subset più ampio. Forma una parte dell'espressione regolare usata per convalidare gli indirizzi di posta elettronica. Per altre informazioni, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` per lookbehind positivo e `(?<!`*subexpression*`)` per lookbehind negativo. Questa funzionalità è simile a lookahead, illustrata in precedenza in questo argomento. Poiché il motore delle espressioni regolari consente la corrispondenza da destra a sinistra completa, le espressioni regolari consentono lookbehind illimitati. Il lookbehind positivo e negativo consente inoltre di evitare l'annidamento di quantificatori quando la sottoespressione annidata è un superset di un'espressione esterna. Le espressioni regolari con tali quantificatori spesso influiscono negativamente sulle prestazioni. L'esempio seguente, ad esempio, verifica se una stringa inizia e termina con un carattere alfanumerico e se qualsiasi altro carattere nella stringa appartiene a un subset più ampio. Il criterio costituisce una parte dell'espressione regolare usata per convalidare gli indirizzi di posta elettronica. Per altre informazioni, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
      L'espressione regolare ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|Descrizione|  
+    |Criterio|Descrizione|  
     |-------------|-----------------|  
     |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
     |`[A-Z0-9]`|Trova la corrispondenza con qualsiasi carattere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Trova zero o più occorrenze di qualsiasi carattere alfanumerico o di uno qualsiasi dei caratteri seguenti:  -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; o ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>| Trovare la corrispondenza con zero o più occorrenze di qualsiasi carattere alfanumerico o con uno dei caratteri seguenti:-,!, #, $,%, &,',., \*, +,/, =,?, ^, \`, {, &#124;}, o ~.|  
     |`(?<=[A-Z0-9])`|Esegue il lookbehind al carattere precedente, che deve essere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|  
     |`$`|Terminare la corrispondenza alla fine della stringa.|  
   
@@ -153,5 +151,5 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
 |[Esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md)|Esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.|  
 |[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informazioni su set di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari.|  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

@@ -3,14 +3,12 @@ title: Cenni preliminari sul modello SOM XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129139"
 ---
 # <a name="xml-schema-object-model-overview"></a>Cenni preliminari sul modello SOM XML
 Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API completa che consente di creare, modificare e convalidare schemi a livello di programmazione. L'API del modello SOM agisce sui documenti di schema XML in modo simile a come il DOM agisce sui documenti XML. I documenti di schema XML sono file XML validi che, una volta caricati nell'API del modello SOM, contengono informazioni sulla struttura e la validità di altri documenti XML conformi allo schema.  
@@ -34,7 +32,7 @@ Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API compl
 ## <a name="the-schema-object-model"></a>Schema Object Model (SOM)  
  Il modello SOM include una vasta gamma di classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> che corrispondono agli elementi in uno schema XML. Ad esempio, l'elemento `<xsd:schema>...</xsd:schema>` è associato alla classe <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> e tutte le informazioni che possono essere contenute in un elemento `<xsd:schema/>` possono essere rappresentate usando la classe <xref:System.Xml.Schema.XmlSchema>. Analogamente, gli elementi `<xsd:element>...</xsd:element>` e `<xsd:attribute>...</xsd:attribute>` sono associati rispettivamente alle classi <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> e <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType>. Questa associazione continua per tutti gli elementi di uno schema XML creando un modello SOM XML nello spazio dei nomi <xref:System.Xml.Schema> mostrato nel diagramma seguente.  
   
- ![Modello a oggetti System.Xml.Schema](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
+ ![Modello a oggetti Xml.Schema](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  Per altre informazioni su ogni classe nello spazio dei nomi <xref:System.Xml.Schema>, vedere la documentazione di riferimento relativa allo spazio dei nomi <xref:System.Xml.Schema> nella libreria di classi di .NET Framework.  
   

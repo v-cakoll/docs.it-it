@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e025b6a-280e-40a2-a2d0-b15f58777b81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2461d20dc65706fcfdb8b9a2088d634c771fa1fb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 860a818b08cb88b0fa17adccdfac5c81c0ec502c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130568"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>Metodo ICLRSyncManager::GetRWLockOwnerNext
 Ottiene l'istanza di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) successiva bloccata sul blocco reader-writer corrente.  
@@ -41,13 +39,13 @@ HRESULT GetRWLockOwnerNext (
  in Iteratore creato tramite una chiamata a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
   
  `ppOwnerHostTask`  
- out Puntatore al successivo `IHostTask` in attesa del blocco oppure null se nessuna attività è in attesa.  
+ out Puntatore al `IHostTask` successivo in attesa del blocco oppure null se nessuna attività è in attesa.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetRWLockOwnerNext`la restituzione è riuscita.|  
+|S_OK|`GetRWLockOwnerNext` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -55,17 +53,17 @@ HRESULT GetRWLockOwnerNext (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Se `ppOwnerHostTask` è impostato su null, l'iterazione è terminata e l'host deve chiamare il metodo [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) .  
+ Se `ppOwnerHostTask` è impostato su null, l'iterazione viene terminata e l'host deve chiamare il metodo [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) .  
   
 > [!NOTE]
-> CLR chiama `AddRef` `IHostTask` su a cui `ppOwnerHostTask` punta per impedire l'uscita da questa attività mentre l'host include il puntatore. L'host deve chiamare `Release` per decrementare il conteggio dei riferimenti al termine dell'operazione.  
+> CLR chiama `AddRef` sul `IHostTask` a cui `ppOwnerHostTask` punta per impedire l'uscita di questa attività mentre l'host include il puntatore. L'host deve chiamare `Release` per decrementare il conteggio dei riferimenti al termine dell'operazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

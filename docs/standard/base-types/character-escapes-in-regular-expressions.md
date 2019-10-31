@@ -15,15 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "69934837"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120581"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
 La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:  
@@ -42,7 +40,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
 |---------------------------|-----------------|  
 |Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per trovare una corrispondenza con essi in un'espressione regolare, è necessario aggiungere un carattere di escape o includerli in un [gruppo di caratteri positivi](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
 |`\a`|Corrisponde a un carattere di controllo del segnale acustico di avviso, `\u0007`.|  
-|`\b`|In una classe di caratteri `[`*character_group*`]` corrisponde a una carattere backspace, `\u0008`.  Vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Al di fuori di una classe di caratteri, `\b` è un ancoraggio che corrisponde a un confine di parola. Vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md).|  
+|`\b`|In una classe di caratteri `[`*character_group*`]` corrisponde a una carattere backspace, `\u0008`.  Vedere [classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Al di fuori di una classe di caratteri, `\b` è un ancoraggio che corrisponde a un confine di parola. Vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md).|  
 |`\t`|Corrisponde a un carattere di tabulazione, `\u0009`.|  
 |`\r`|Corrisponde a un carattere di ritorno a capo, `\u000D`. Si noti che `\r` non equivale al carattere di nuova riga, `\n`.|  
 |`\v`|Corrisponde a un carattere di tabulazione verticale, `\u000B`.|  
@@ -52,7 +50,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
 |`\` *nnn*|Corrisponde a un carattere ASCII dove *nnn* è costituito da due o tre cifre che rappresentano il codice carattere ottale. Ad esempio, `\040` rappresenta un carattere di spazio. Questo costrutto viene interpretato come un backreference se è costituito solo da una cifra, ad esempio `\2` o se corrisponde al numero di un gruppo di acquisizione. Vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).|  
 |`\x` *nn*|Corrisponde a un carattere ASCII dove *nn* è un codice carattere esadecimale a due cifre.|  
 |`\c` *X*|Corrisponde a un carattere di controllo ASCII, dove X è la lettera del carattere di controllo. Ad esempio, `\cC` corrisponde a CTRL-C.|  
-|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:**  la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. La sequenza di caratteri di escape Perl 5 ha il formato `\x{` *####* `…}`, dove *####* `…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
+|`\u` *nnnn*|Corrisponde a un'unità di codice UTF-16 il cui valore è l'esadecimale *nnnn*. **Nota:** la sequenza di caratteri di escape Perl 5 usata per specificare Unicode non è supportata da .NET. La sequenza di caratteri di escape Perl 5 ha il formato `\x{` *####* `…}`, dove *####* `…` è una serie di cifre esadecimali. Usare invece `\u`*nnnn*.|  
 |`\`|Quando è seguito da un carattere non riconosciuto come carattere di escape, corrisponde a tale carattere. Ad esempio, `\*` corrisponde a un asterisco (*) ed equivale a `\x2A`.|  
   
 ## <a name="an-example"></a>Esempio  
@@ -63,7 +61,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
  L'espressione regolare `\G(.+)[\t|\u007c](.+)\r?\n` viene interpretata come illustrato nella tabella seguente.  
   
-|Pattern|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`\G`|Inizia la corrispondenza dove termina l'ultima corrispondenza.|  
 |`(.+)`|Trova la corrispondenza con qualsiasi carattere uno o più volte. Equivale al primo gruppo di acquisizione.|  

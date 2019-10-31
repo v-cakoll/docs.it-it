@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107125"
 ---
 # <a name="assembly-names"></a>Nomi degli assembly
 Il nome di un assembly viene archiviato nei metadati e ha un effetto significativo sull'ambito dell'assembly e sull'uso dell'assembly da parte di un'applicazione. Un assembly con un nome sicuro dispone di un nome completo costituito da nome, impostazioni cultura, chiave pubblica e numero di versione dell'assembly. Questo nome è spesso detto nome visualizzato. Nel caso degli assembly caricati è possibile ottenere tale nome con la proprietà <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -24,7 +22,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
-> In .NET Framework versione 2.0 all'identità dell'assembly viene aggiunta l'architettura del processore, per il supporto di versioni di assembly specifiche per un determinato processore. È possibile creare versioni di un assembly la cui identità differisce solo per l'architettura del processore, ad esempio versioni specifiche per processori a 32 bit o a 64 bit. L'architettura del processore non è obbligatoria per i nomi sicuri. Per altre informazioni, vedere <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
+> In .NET Framework versione 2.0 all'identità dell'assembly viene aggiunta l'architettura del processore, per il supporto di versioni di assembly specifiche per un determinato processore. È possibile creare versioni di un assembly la cui identità differisce solo per l'architettura del processore, ad esempio versioni specifiche per processori a 32 bit o a 64 bit. L'architettura del processore non è obbligatoria per i nomi sicuri. Per ulteriori informazioni, vedere <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  In questo esempio il nome completo indica che l'assembly `myTypes` ha un nome sicuro con un token di chiave pubblica, il valore di impostazioni cultura corrispondente a Inglese (Stati Uniti) e il numero di versione 1.0.1234.0. L'architettura del processore è "msil". Ciò significa che l'assembly sarà compilato con modalità JIT (Just-In-Time) in codice a 32 bit o a 64 bit a seconda del sistema operativo e del processore.  
   
@@ -50,16 +48,16 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="name-application-components"></a>Assegnare un nome ai componenti dell'applicazione  
  Quando determina l'identità di un assembly il runtime non considera il nome file. L'identità dell'assembly, costituita da nome, versione, impostazioni cultura e nome sicuro dell'assembly, deve risultare chiara per il runtime.  
   
- Se, ad esempio, si dispone di un assembly denominato MyAssembly *. exe* che fa riferimento a un assembly denominato MyAssembly *. dll*, l'associazione viene eseguita correttamente se si esegue *myAssembly. exe*. Tuttavia, se un'altra applicazione esegue *myAssembly. exe* <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>usando il metodo, il runtime determina `myAssembly` che è già caricato quando *myAssembly. exe* richiede l'associazione a. `myAssembly` In questo caso, *myAssembly. dll* non viene mai caricato. Poiché *myAssembly. exe* non contiene il tipo richiesto, si verifica un <xref:System.TypeLoadException> errore.  
+ Se, ad esempio, si dispone di un assembly denominato MyAssembly *. exe* che fa riferimento a un assembly denominato MyAssembly *. dll*, l'associazione viene eseguita correttamente se si esegue *myAssembly. exe*. Tuttavia, se un'altra applicazione esegue *myAssembly. exe* utilizzando il metodo <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, il runtime determina che `myAssembly` è già caricato quando *myAssembly. exe* richiede l'associazione al `myAssembly`. In questo caso, *myAssembly. dll* non viene mai caricato. Poiché *myAssembly. exe* non contiene il tipo richiesto, si verifica un <xref:System.TypeLoadException>.  
   
  Per evitare questo problema assicurarsi che gli assembly che costituiscono l'applicazione non abbiano lo stesso nome oppure posizionare gli assembly con lo stesso nome in directory diverse.  
   
 > [!NOTE]
-> Nel .NET Framework, se si inserisce un assembly con nome sicuro nel Global Assembly Cache, il nome file dell'assembly deve corrispondere al nome dell'assembly, escluso l'estensione del nome file, ad esempio *. exe* o *. dll*. Se, ad esempio, il nome file di un assembly è *myAssembly. dll*, il nome dell'assembly deve `myAssembly`essere. Gli assembly privati distribuiti solo nella directory radice dell'applicazione possono avere un nome dell'assembly diverso dal nome file.  
+> Nel .NET Framework, se si inserisce un assembly con nome sicuro nel Global Assembly Cache, il nome file dell'assembly deve corrispondere al nome dell'assembly, escluso l'estensione del nome file, ad esempio *. exe* o *. dll*. Se, ad esempio, il nome file di un assembly è *myAssembly. dll*, il nome dell'assembly deve essere `myAssembly`. Gli assembly privati distribuiti solo nella directory radice dell'applicazione possono avere un nome dell'assembly diverso dal nome file.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Determinare il nome completo di un assembly](find-fully-qualified-name.md)
+- [Procedura: determinare il nome completo di un assembly](find-fully-qualified-name.md)
 - [Creazione di assembly](create.md)
 - [Assembly con nomi sicuri](strong-named.md)
 - [Assembly Cache globale](../../framework/app-domains/gac.md)

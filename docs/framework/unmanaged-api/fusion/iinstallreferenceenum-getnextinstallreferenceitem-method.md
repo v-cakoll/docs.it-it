@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce969c9d-6538-4c34-8784-148ffd99fe7a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0dad50f1acac38f8cdc505026e88d42882deb580
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131714"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>Metodo IInstallReferenceEnum::GetNextInstallReferenceItem
 Ottiene un puntatore al successivo oggetto [IInstallReferenceItem](iinstallreferenceitem-interface.md) contenuto nell'oggetto [IInstallReferenceEnum](iinstallreferenceenum-interface.md) .  
@@ -39,16 +37,16 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>Parametri  
  `ppRefItem`  
- out Puntatore restituito `IInstallReferenceItem` .  
+ out Puntatore `IInstallReferenceItem` restituito.  
   
  `dwFlags`  
- in Riservato per l'estendibilità futura. `dwFlags`deve essere 0 (zero).  
+ in Riservato per l'estendibilità futura. `dwFlags` deve essere 0 (zero).  
   
  `pvReserved`  
- in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

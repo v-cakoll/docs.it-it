@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049661"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128380"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilazione di app con .NET Native
 
@@ -61,13 +59,13 @@ Tuttavia .NET Native implica più di una compilazione in codice nativo. trasform
 
 Per le app Windows per Windows 10, caricare i file binari per la compilazione con .NET Native in pacchetti di applicazioni (file APPX) in Windows Store.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 Per altre informazioni sullo sviluppo di applicazioni con la compilazione con .NET Native, vedere i seguenti argomenti:
 
-- [Introduzione con la compilazione del codice .NET Native: Procedura dettagliata dell'esperienza per sviluppatori](getting-started-with-net-native.md)
+- [Introduzione alla compilazione con .NET Native: procedura dettagliata dell'esperienza di sviluppatore](getting-started-with-net-native.md)
 
-- [.NET Native e compilazione:](net-native-and-compilation.md) Il modo in cui .NET Native compila il progetto in codice nativo.
+- [Compilazione e .NET Native:](net-native-and-compilation.md) compilazione di un progetto in codice nativo con .NET Native.
 
 - [Reflection e .NET Native](reflection-and-net-native.md)
 
@@ -77,7 +75,7 @@ Per altre informazioni sullo sviluppo di applicazioni con la compilazione con .N
 
   - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 
-- [Serialization and Metadata](serialization-and-metadata.md) (Serializzazione e metadati)
+- [Serializzazione e metadati](serialization-and-metadata.md)
 
 - [Migrating Your Windows Store App to .NET Native](migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)
 

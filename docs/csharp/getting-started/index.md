@@ -4,16 +4,14 @@ description: Esercitazioni brevi e semplici per imparare velocemente i concetti 
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182428"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099959"
 ---
 # <a name="get-started-with-c"></a>Introduzione a C\#
 
@@ -31,7 +29,7 @@ Sono disponibili gli argomenti seguenti:
 
    Le informazioni in questo argomento consentono di creare ed eseguire una semplice applicazione Hello World e quindi modificarla per ottenere un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](../../core/tutorials/debugging-with-visual-studio.md) e [pubblicarla](../../core/tutorials/publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
 
-- [Building a class library with C# and .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md) (Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017)
+- [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 
    Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](../../core/tutorials/testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 

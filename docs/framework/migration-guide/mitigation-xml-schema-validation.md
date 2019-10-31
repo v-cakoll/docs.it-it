@@ -1,26 +1,24 @@
 ---
-title: 'Mitigazione: Convalida di XML Schema'
+title: 'Attenuazione: Convalida di XML Schema'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7feed7de4a6c76f5f2ba0e2ea1c532aad6bde4de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126069"
 ---
-# <a name="mitigation-xml-schema-validation"></a>Mitigazione: Convalida di XML Schema
+# <a name="mitigation-xml-schema-validation"></a>Attenuazione: Convalida di XML Schema
 In .NET Framework 4.6 la convalida dello schema XSD rileva la violazione di vincoli univoci se viene usata una chiave composta e una chiave è vuota.  
   
 ## <a name="impact"></a>Impatto  
  L'impatto di questa modifica potrebbe essere minimo: basato sulla specifica dello schema, un errore di convalida dello schema è previsto se `xsd:unique` viene violato da una chiave composta con una chiave vuota.  
   
-## <a name="mitigation"></a>Mitigazione  
+## <a name="mitigation"></a>Attenuazione  
  La rilevazione di un errore di convalida dello schema se una chiave composta possiede una chiave vuota è una funzione configurabile:  
   
 - A partire dalle app destinate a .NET Framework 4.6, la rilevazione dell'errore di convalida dello schema viene abilitata per impostazione predefinita; tuttavia, è possibile escluderla, in modo che l'errore di convalida dello schema non venga rilevato.  

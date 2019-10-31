@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902772"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122439"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>Metodo ICorDebugThread4::GetCurrentCustomDebuggerNotification
 
-Ottiene l'oggetto corrente [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) oggetto nel thread corrente.
+Ottiene l'oggetto [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) corrente sul thread corrente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,15 +37,15 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Parametri
 
 `ppNotificationObject`\
-[out] Un puntatore all'oggetto corrente `ICorDebugManagedCallback3::CustomNotification` oggetto nel thread corrente.
+out Puntatore all'oggetto `ICorDebugManagedCallback3::CustomNotification` corrente sul thread corrente.
 
 ## <a name="remarks"></a>Note
 
-Il valore di `ppNotificationObject` è null se il metodo non viene chiamato dall'interno una `ICorDebugManagedCallback3::CustomNotification` callback, o se non esiste alcun oggetto di notifica corrente.
+Il valore di `ppNotificationObject` è null se il metodo non viene chiamato dall'interno di un callback `ICorDebugManagedCallback3::CustomNotification` o se non esiste alcun oggetto notifica corrente.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 

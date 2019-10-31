@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084791"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>Metodo ICorDebugEval2::RudeAbort
-Interrompe il calcolo da questo `ICorDebugEval2` attualmente in esecuzione.  
+Interrompe il calcolo che questo `ICorDebugEval2` sta attualmente eseguendo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +32,10 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Note  
- `RudeAbort` non rilascia i blocchi che contiene l'analizzatore, in modo che lascia la sessione di debug in uno stato non sicuro. Chiamare questo metodo con estrema cautela.  
+ `RudeAbort` non rilascia alcun blocco che l'analizzatore possiede, quindi lascia la sessione di debug in uno stato non sicuro. Chiamare questo metodo con estrema cautela.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

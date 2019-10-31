@@ -9,14 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665266"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127529"
 ---
 # <a name="the-managed-thread-pool"></a>Pool di thread gestiti
 
@@ -93,6 +91,6 @@ Vi sono diversi scenari in cui è opportuno creare e gestire i propri thread anz
 - [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)
 - [Procedura: Restituire un valore da un'attività](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [Threading Objects and Features](threading-objects-and-features.md) (Oggetti e funzionalità del threading)
-- [Threads and Threading](threads-and-threading.md) (Thread e threading)
+- [Thread e Threading](threads-and-threading.md)
 - [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
 - [Timer](timers.md)

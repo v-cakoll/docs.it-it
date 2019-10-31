@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128660"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Metodo IHostMemoryManager::NeedsVirtualAddressSpace
-Notifica all'host che common language runtime (CLR) sta per tentare di utilizzare la memoria specificata.  
+Notifica all'host che il Common Language Runtime (CLR) tenterà di utilizzare la memoria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,22 +36,22 @@ HRESULT NeedsVirtualAddressSpace (
   
 ## <a name="parameters"></a>Parametri  
  `startAddress`  
- [in] Indirizzo iniziale della memoria.  
+ in Indirizzo iniziale della memoria.  
   
  `size`  
- [in] Le dimensioni, in byte, della memoria.  
+ in Dimensione, in byte, della memoria.  
   
 ## <a name="remarks"></a>Note  
- Il `NeedsVirtualAddressSpace` metodo è un metodo di callback e devono essere implementato dal writer dell'applicazione host. Viene chiamato da Common Language Runtime.  
+ Il metodo `NeedsVirtualAddressSpace` è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
   
- Se l'host non desidera che il Common Language Runtime utilizza la memoria specificata, può restituire un valore HRESULT E_OUTOFMEMORY.  
+ Se l'host non desidera che CLR utilizzi la memoria specificata, può restituire un valore HRESULT E_OUTOFMEMORY.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

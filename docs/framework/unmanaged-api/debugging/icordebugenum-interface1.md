@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085256"
 ---
 # <a name="icordebugenum-interface"></a>Interfaccia ICorDebugEnum
 
@@ -29,15 +27,15 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia di questo `ICorDebugEnum` oggetto.|  
+|[Metodo Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia di questo oggetto `ICorDebugEnum`.|  
 |[Metodo GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ottiene il numero di elementi nell'enumerazione.|  
 |[Metodo Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Sposta il cursore all'inizio dell'enumerazione.|  
 |[Metodo Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Sposta il cursore verso l'interno dell'enumerazione in base al numero di elementi specificato.|  
   
 ## <a name="remarks"></a>Note  
- Gli enumeratori seguenti derivano `ICorDebugEnum`da:  
+ Gli enumeratori seguenti derivano da `ICorDebugEnum`:  
   
 - ICorDebugAppDomainEnum  
   
@@ -85,11 +83,11 @@ Funge da interfaccia di base astratta per gli enumeratori utilizzati da un'appli
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

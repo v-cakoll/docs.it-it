@@ -12,15 +12,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140529"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 
@@ -75,7 +73,7 @@ dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espr
 
 L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(?<char>\w)\k<char>` costituita dagli elementi seguenti.
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |`(?<char>\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna a un gruppo di acquisizione denominato `char`.|
 |`\k<char>`|Trova la corrispondenza del carattere successivo, uguale al valore del gruppo di acquisizione denominato `char`.|
@@ -95,7 +93,7 @@ Se *nome* è la rappresentazione stringa di un numero e nessun gruppo di acquisi
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Viene invece generata un' <xref:System.ArgumentException>eccezione. L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
+Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Viene invece generata un'<xref:System.ArgumentException>. L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -106,7 +104,7 @@ Un backreference fa riferimento alla definizione più recente di un gruppo, vale
 
 L'esempio seguente include un modello di espressione regolare `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \1. Nella tabella seguente sono descritti i modelli di espressione regolare.
 
-|Modello|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`(?<1>a)`|Trova la corrispondenza del carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|
 |`(?<1>\1b)*`|Trova 0 o più occorrenze del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|
@@ -126,7 +124,7 @@ In questo esempio `*` è un quantificatore di cicli, vale a dire che viene esegu
 
 Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza. Questo comportamento è illustrato dal modello delle espressioni regolari `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, definito nel modo seguente:
 
-|Modello|DESCRIZIONE|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`(\p{Lu}{2})`|Trova la corrispondenza di due maiuscole. Equivale al primo gruppo di acquisizione.|

@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07c23a32037e83a878bb3136c48176f19249b207
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948694"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121255"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>Metodo ICorDebugProcess5::GetTypeID
-Converte un indirizzo di oggetto a un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) identificatore.  
+Converte un indirizzo di oggetto in un identificatore [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,15 +38,15 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>Parametri  
  `obj`  
- [in] L'indirizzo dell'oggetto.  
+ in Indirizzo dell'oggetto.  
   
  `pId`  
- Un puntatore per il [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) valore che identifica l'oggetto.  
+ Puntatore al valore [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) che identifica l'oggetto.  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

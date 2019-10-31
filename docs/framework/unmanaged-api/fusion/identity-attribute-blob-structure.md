@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108003"
 ---
 # <a name="identity_attribute_blob-structure"></a>Struttura IDENTITY_ATTRIBUTE_BLOB
-Contiene informazioni su un singolo attributo in un assembly ed è costituito da `DWORD`tre. Ogni `DWORD` è un offset in un buffer di caratteri prodotto `CurrentIntoBuffer` dal metodo dell'interfaccia [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Contiene informazioni su un singolo attributo in un assembly ed è costituito da tre `DWORD`. Ogni `DWORD` è un offset in un buffer di caratteri prodotto dal metodo `CurrentIntoBuffer` dell'interfaccia [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|Terzo offset nel buffer di caratteri. Questo percorso contrassegna l'inizio del valore dell'attributo.|  
   
 ## <a name="sample"></a>Esempio  
- Nell'esempio seguente vengono illustrati alcuni passaggi di base, che alla fine comportano una struttura popolata `IDENTITY_ATTRIBUTE_BLOB` :  
+ Nell'esempio seguente vengono illustrati alcuni passaggi di base, che alla fine comportano una struttura di `IDENTITY_ATTRIBUTE_BLOB` popolata:  
   
 1. Ottenere un [IReferenceIdentity](ireferenceidentity-interface.md) per l'assembly.  
   
-2. Chiamare il `IReferenceIdentity::EnumAttributes` metodo e ottenere un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
+2. Chiamare il metodo `IReferenceIdentity::EnumAttributes` e ottenere un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Creare un buffer di caratteri ed eseguirne il cast `IDENTITY_ATTRIBUTE_BLOB` come una struttura.  
+3. Creare un buffer di caratteri ed eseguirne il cast come struttura `IDENTITY_ATTRIBUTE_BLOB`.  
   
-4. Chiamare il `CurrentIntoBuffer` metodo `IEnumIDENTITY_ATTRIBUTE` dell'interfaccia. Questo metodo copia gli attributi `Namespace`, `Name`e `Value` nel buffer di caratteri. I tre offset a tali stringhe diventeranno disponibili nella `IDENTITY_ATTRIBUTE_BLOB` struttura.  
+4. Chiamare il metodo `CurrentIntoBuffer` dell'interfaccia `IEnumIDENTITY_ATTRIBUTE`. Questo metodo copia gli attributi `Namespace`, `Name`e `Value` nel buffer di caratteri. I tre offset a tali stringhe diventeranno disponibili nella struttura `IDENTITY_ATTRIBUTE_BLOB`.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -236,7 +234,7 @@ Exit:
  Versione = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

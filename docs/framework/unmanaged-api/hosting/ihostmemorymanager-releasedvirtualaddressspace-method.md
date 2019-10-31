@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1876601-6ab9-48e1-8ebd-184af1d0cd76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5096eb1064485c02b599659cc9ae889e7151581c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46082ddcee0163d5e61b3e468eb32c71e9f242ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128619"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>Metodo IHostMemoryManager::ReleasedVirtualAddressSpace
-Notifica all'host che common language runtime (CLR) ha completato l'utilizzo di memoria specificato.  
+Notifica all'host che la Common Language Runtime (CLR) ha terminato l'utilizzo della memoria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT ReleasedVirtualAddressSpace(
   
 ## <a name="parameters"></a>Parametri  
  `startAddress`  
- [in] Puntatore all'indirizzo iniziale della memoria da rilasciare.  
+ in Puntatore all'indirizzo iniziale della memoria da rilasciare.  
   
 ## <a name="remarks"></a>Note  
- Il `ReleasedVirtualAddressSpace` metodo è un metodo di callback e devono essere implementato dal writer dell'applicazione host. Viene chiamato da Common Language Runtime.  
+ Il metodo `ReleasedVirtualAddressSpace` è un metodo di callback e deve essere implementato dal writer dell'applicazione host. Viene chiamato da CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

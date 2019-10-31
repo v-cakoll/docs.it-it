@@ -1,17 +1,15 @@
 ---
-title: <Subtypes>Elemento (.NET Native)
+title: Elemento <Subtypes> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049119"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128100"
 ---
-# <a name="subtypes-element-net-native"></a>\<Elemento > sottotipi (.NET Native)
+# <a name="subtypes-element-net-native"></a>Elemento > di sottotipi \<(.NET Native)
 Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -34,7 +32,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|DESCRIZIONE|  
+|Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
@@ -54,7 +52,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -91,7 +89,7 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Digitare > elemento](type-element-net-native.md)
+- [\<tipo > elemento](type-element-net-native.md)
 - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
 - [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)

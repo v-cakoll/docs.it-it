@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94b591c4-9302-4af2-a510-089496afb036
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bfc503bfc2b278d7a7344b94cb089cd8e019890
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64537ab97c1256cc6f963999b027bafc25cbbccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125736"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>Metodo ICorDebugClass2::GetParameterizedType
 Ottiene la dichiarazione del tipo per questa classe.  
@@ -40,31 +38,31 @@ HRESULT GetParameterizedType (
   
 ## <a name="parameters"></a>Parametri  
  `elementType`  
- [in] Valore dell'enumerazione CorElementType che specifica il tipo di elemento per questa classe: Impostare questo valore su ELEMENT_TYPE_VALUETYPE se questo ICorDebugClass2 rappresenta un tipo di valore. Impostare questo valore su ELEMENT_TYPE_CLASS se questa `ICorDebugClass2` rappresenta un tipo complesso.  
+ in Valore dell'enumerazione CorElementType che specifica il tipo di elemento per questa classe: impostare questo valore su ELEMENT_TYPE_VALUETYPE se il ICorDebugClass2 rappresenta un tipo di valore. Impostare questo valore su ELEMENT_TYPE_CLASS se il `ICorDebugClass2` rappresenta un tipo complesso.  
   
  `nTypeArgs`  
- [in] Il numero di parametri di tipo, se il tipo è generico. Il numero di parametri di tipo (se presente) deve corrispondere al numero richiesto dalla classe.  
+ in Il numero di parametri di tipo, se il tipo è generico. Il numero di parametri di tipo (se presente) deve corrispondere al numero richiesto dalla classe.  
   
  `ppTypeArgs`  
- [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un parametro di tipo. Se la classe non generica, questo valore è null.  
+ in Matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un parametro di tipo. Se la classe non è generica, questo valore è null.  
   
  `ppType`  
- [out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta la dichiarazione del tipo. Questo oggetto è equivalente a un <xref:System.Type> oggetto nel codice gestito.  
+ out Puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta la dichiarazione del tipo. Questo oggetto è equivalente a un oggetto <xref:System.Type> nel codice gestito.  
   
 ## <a name="remarks"></a>Note  
- Se la classe non generica, vale a dire, se non ha parametri di tipo, `GetParameterizedType` semplicemente Ottiene l'oggetto di tipo runtime corrispondente alla classe. Il `elementType` parametro deve essere impostato per il tipo di elemento corretto per la classe: ELEMENT_TYPE_VALUETYPE se la classe è un tipo di valore. in caso contrario, ELEMENT_TYPE_CLASS.  
+ Se la classe non è generica, ovvero se non ha parametri di tipo, `GetParameterizedType` ottiene semplicemente l'oggetto del tipo di runtime corrispondente alla classe. Il parametro `elementType` deve essere impostato sul tipo di elemento corretto per la classe: ELEMENT_TYPE_VALUETYPE se la classe è un tipo valore. in caso contrario, ELEMENT_TYPE_CLASS.  
   
- Se la classe accetta i parametri di tipo (ad esempio, `ArrayList<T>`), è possibile usare `GetParameterizedType` per costruire un oggetto di tipo per un tipo con istanze, ad esempio `ArrayList<int>`.  
+ Se la classe accetta parametri di tipo (ad esempio `ArrayList<T>`), è possibile usare `GetParameterizedType` per costruire un oggetto tipo per un tipo di cui è stata creata un'istanza, ad esempio `ArrayList<int>`.  
   
 ## <a name="background-information"></a>Informazioni di base  
- Nelle versioni 1.0 e 1.1 di .NET Framework, ogni tipo nei metadati è stato possibile eseguire direttamente il mapping a un tipo di processo in esecuzione. Di conseguenza, un tipo di metadati e un tipo di runtime aveva una sola rappresentazione nel processo in esecuzione. Tuttavia, un tipo generico nei metadati può essere mappato a molte istanze diverse del tipo nel processo in esecuzione. Ad esempio, il tipo di metadati `SortedList<K,V>` può eseguire il mapping a `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`e così via. Di conseguenza, è necessario un modo per gestire l'istanza del tipo.  
+ Nelle versioni .NET Framework 1,0 e 1,1, è possibile eseguire il mapping diretto di ogni tipo nei metadati a un tipo del processo in esecuzione. Pertanto, un tipo di metadati e un tipo di runtime hanno una sola rappresentazione nel processo in esecuzione. Tuttavia, è possibile eseguire il mapping di un tipo generico nei metadati a numerose creazioni di istanze diverse del tipo nel processo in esecuzione. Il tipo di metadati `SortedList<K,V>`, ad esempio, può essere mappato a `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`e così via. Pertanto, è necessario un modo per gestire la creazione dell'istanza del tipo.  
   
- .NET Framework versione 2.0 introduce il `ICorDebugType` interfaccia. Per un tipo generico, un `ICorDebugClass` oppure `ICorDebugClass2` rappresenta il tipo privo di istanze (`SortedList<K,V>`) e un `ICorDebugType` oggetto rappresenta i vari tipi di istanziati. Dato un `ICorDebugClass` oppure `ICorDebugClass2` dell'oggetto, è possibile creare un `ICorDebugType` oggetto per ogni istanza creata chiamando il `ICorDebugClass2::GetParameterizedType` (metodo). È anche possibile creare un `ICorDebugType` oggetto per un tipo semplice, ad esempio Int32, o per un tipo non generico.  
+ Il .NET Framework versione 2,0 introduce l'interfaccia `ICorDebugType`. Per un tipo generico, un oggetto `ICorDebugClass` o `ICorDebugClass2` rappresenta il tipo privo di istanze (`SortedList<K,V>`) e un oggetto `ICorDebugType` rappresenta i vari tipi di cui è stata creata un'istanza. Dato un oggetto `ICorDebugClass` o `ICorDebugClass2`, è possibile creare un oggetto `ICorDebugType` per qualsiasi creazione di istanza chiamando il metodo `ICorDebugClass2::GetParameterizedType`. È anche possibile creare un oggetto `ICorDebugType` per un tipo semplice, ad esempio Int32, o per un tipo non generico.  
   
- L'introduzione del `ICorDebugType` oggetto per rappresentare la nozione di fase di esecuzione di un tipo ha un effetto domino in tutta l'API. Funzioni che in passato richiedeva un `ICorDebugClass` oppure `ICorDebugClass2` dell'oggetto o persino una `CorElementType` valore sono generalizzati per sfruttare un `ICorDebugType` oggetto.  
+ L'introduzione dell'oggetto `ICorDebugType` per rappresentare la nozione di runtime di un tipo ha un effetto ripple nell'API. Le funzioni che in precedenza hanno eseguito un `ICorDebugClass` o `ICorDebugClass2` oggetto o anche un valore `CorElementType` sono generalizzate in modo da assumere un oggetto `ICorDebugType`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Fare riferimento a un assembly con nome sicuro'
+title: 'Procedura: fare riferimento a un assembly con nome sicuro'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127638"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: Fare riferimento a un assembly con nome sicuro
+# <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: fare riferimento a un assembly con nome sicuro
 Il processo per la creazione di riferimenti a tipi o risorse in un assembly con nome sicuro è solitamente trasparente all'utente. È possibile creare i riferimenti in fase di compilazione (associazione anticipata) o in fase di esecuzione.  
   
 Un riferimento in fase di compilazione si verifica quando si indica al compilatore che l'assembly da compilare fa riferimento in modo esplicito a un altro assembly. Quando si usano i riferimenti in fase di compilazione, il compilatore riceve automaticamente la chiave pubblica dell'assembly con nome sicuro di destinazione e inserisce la chiave nel riferimento dell'assembly in fase di compilazione.
@@ -44,11 +42,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
 
 ## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Creare un riferimento in fase di esecuzione a un assembly con nome sicuro  
   
-Quando si crea un riferimento in fase di esecuzione a un assembly con nome sicuro, ad esempio usando il <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodo <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o, è necessario usare il nome visualizzato dell'assembly con nome sicuro a cui si fa riferimento. La sintassi di un nome visualizzato è la seguente:  
+Quando si crea un riferimento in fase di esecuzione a un assembly con nome sicuro, ad esempio usando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, è necessario usare il nome visualizzato dell'assembly con nome sicuro a cui si fa riferimento. La sintassi di un nome visualizzato è la seguente:  
 
 \<*nome assembly*> **,** \<*numero versione*> **,** \<*cultura*> **,** \<*token chiave pubblica*>  
 
-Ad esempio:  
+Esempio:  
 
 ```console
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   

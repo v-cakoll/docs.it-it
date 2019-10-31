@@ -12,14 +12,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046099"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130257"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection offre l'infrastruttura usata dai compilatori di linguaggi per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. Visual Basic consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  
@@ -66,7 +64,7 @@ End Module
   
  **BindToMethod** restituisce <xref:System.Reflection.MethodBase> da richiamare o un riferimento Null (**Nothing** in Visual Basic) se non è possibile effettuare la chiamata. **MethodBase** restituisce valori non necessariamente compresi tra quelli contenuti nel parametro *match*, sebbene questo sia il caso più frequente.  
   
- Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per altre informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per ulteriori informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  Il set di membri disponibili è costituito dai membri definiti nel tipo o in qualsiasi tipo di base. Se si specifica <xref:System.Reflection.BindingFlags>, il set restituito comprenderà membri di qualsiasi accessibilità. Se **BindingFlags.NonPublic** non viene specificato, il binder dovrà applicare le regole di accessibilità. Quando si specifica il flag di associazione **Public** o **NonPublic** è necessario specificare anche il flag di associazione **Instance** o **Static**. In caso contrario non verrà restituito alcun membro.  
   

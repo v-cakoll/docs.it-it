@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130584"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Metodo ICorDebugManagedCallback2::CreateConnection
 Notifica al debugger che è stata creata una nuova connessione.  
@@ -39,23 +37,23 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo in cui è stata creata la connessione  
+ in Puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo in cui è stata creata la connessione  
   
  `dwConnectionId`  
- [in] L'ID della nuova connessione.  
+ in ID della nuova connessione.  
   
  `pConnName`  
- [in] Un puntatore al nome della nuova connessione.  
+ in Puntatore al nome della nuova connessione.  
   
 ## <a name="remarks"></a>Note  
- Oggetto `CreateConnection` callback verrà generato in entrambi i casi seguenti:  
+ Un callback `CreateConnection` verrà attivato in uno dei seguenti casi:  
   
-- Quando un debugger viene collegato a un processo che contiene le connessioni. In questo caso, il runtime verrà generare e inviare un `CreateConnection` eventi e una [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) evento per ogni connessione del processo.  
+- Quando un debugger si connette a un processo che contiene connessioni. In questo caso, il runtime genererà e invierà un evento `CreateConnection` e un evento [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) per ogni connessione nel processo.  
   
-- Quando un host chiama [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) nel [API Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Quando un host chiama [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) nell' [API di hosting](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

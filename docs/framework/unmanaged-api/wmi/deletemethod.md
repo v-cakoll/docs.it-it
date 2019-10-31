@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120656"
 ---
 # <a name="deletemethod-function"></a>Funzione DeleteMethod
 Elimina il metodo specificato da una definizione di classe CIM.
@@ -47,7 +45,7 @@ in Questo parametro è inutilizzato.
 in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-in Nome del metodo da rimuovere dalla tabella della classe. `wszName`deve essere un puntatore a un oggetto `LPCWSTR`valido.
+in Nome del metodo da rimuovere dalla tabella della classe. `wszName` deve essere un puntatore a una `LPCWSTR`valida.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -66,7 +64,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 L'eliminazione del metodo non è supportata per i puntatori [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che puntano a istanze CIM.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

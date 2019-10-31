@@ -6,14 +6,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121604"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contatori di prestazioni in .NET Framework
 In questo argomento viene fornito un elenco di contatori delle prestazioni che è possibile trovare in [Performance Monitor di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -50,7 +48,7 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 ## <a name="interop-performance-counters"></a>Contatori delle prestazioni per l'interoperabilità  
  La categoria di interoperabilità CLR .NET della console Prestazioni include contatori che forniscono informazioni sull'interazione dell'applicazione con i componenti COM, i servizi COM+ e le librerie dei tipi esterne. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|DESCRIZIONE|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |**CCW**|Visualizza il numero corrente di COM Callable Wrapper (CCW). Un CCW è un proxy per un oggetto gestito a cui fa riferimento un client COM non gestito. Questo contatore indica il numero di oggetti gestiti a cui fa riferimento un codice COM non gestito.|  
 |**Marshalling**|Visualizza il numero totale di volte in cui è stato effettuato il marshalling di argomenti e valori restituiti dal codice gestito a quello non gestito e viceversa dall'avvio dell'applicazione. Questo contatore non viene incrementato se gli stub vengono impostati come inline. Gli stub sono responsabili del marshalling degli argomenti e dei valori restituiti. In genere gli stub vengono impostati come inline se il sovraccarico del marshalling è ridotto.|  
@@ -62,7 +60,7 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 ## <a name="jit-performance-counters"></a>JIT (contatori di prestazioni)  
  La categoria JIT CLR .NET della console Prestazioni include contatori che forniscono informazioni sul codice con compilazione JIT. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|DESCRIZIONE|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |**Byte IL compilati Just-In-Time**|Visualizza il numero totale di byte Microsoft Intermediate Language (MSIL) compilati dal compilatore Just-In-Time (JIT) dall'avvio dell'applicazione. Questo contatore è equivalente al contatore **Totale byte IL compilati Just-In-Time**.|  
 |**Metodi compilati Just-In-Time**|Visualizza il numero totale di metodi con compilazione JIT dall'avvio dell'applicazione. Questo contatore non include metodi con precompilazione JIT.|  
@@ -98,7 +96,7 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 ## <a name="lock-and-thread-performance-counters"></a>Contatori delle prestazioni di blocchi e thread  
  La categoria LocksAndThreads CLR .NET della console Prestazioni include contatori che forniscono informazioni sui blocchi e i thread gestiti usati da un'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|DESCRIZIONE|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |**Thread logici attuali**|Visualizza il numero di oggetti thread attualmente gestiti nell'applicazione. Questo contatore mantiene il conteggio sia dei thread in esecuzione che di quelli arrestati. Questo contatore non rappresenta una media nel tempo, ma visualizza solo l'ultimo valore osservato.|  
 |**Thread fisici attuali**|Visualizza il numero di thread del sistema operativo nativo creati e posseduti da Common Language Runtime usati come thread sottostanti per gli oggetti thread gestiti. Il valore di questo contatore non include thread usati dal runtime durante le operazioni interne. Si tratta di un sottoinsieme dei thread nel processo del sistema operativo.|  
@@ -243,7 +241,7 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="security-performance-counters"></a>Contatori delle prestazioni di sicurezza  
  La categoria di sicurezza CLR .NET della console Prestazioni include contatori che forniscono informazioni sui controlli di sicurezza eseguiti da Common Language Runtime per un'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|DESCRIZIONE|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |**Controlli Linktime**|Visualizza il numero totale di controlli di sicurezza per l'accesso di codice in fase di collegamento dall'avvio dell'applicazione. I controlli di sicurezza per l'accesso di codice in fase di collegamento vengono eseguiti quando un chiamante richiede una particolare autorizzazione in fase di compilazione Just-In-Time (JIT). Un controllo in fase di collegamento viene eseguito una sola volta per ogni chiamante. Questo conteggio non segnala problemi gravi relativi alle prestazioni, ma indica solo l'attività del sistema di sicurezza.|  
 |**Percentuale tempo impiegato in controlli runtime**|Visualizza la percentuale di tempo impiegato per eseguire i controlli di sicurezza per l'accesso di codice di runtime dall'ultimo campionamento. Questo contatore viene aggiornato alla fine di un controllo di sicurezza di .NET Framework. Non rappresenta una media, ma l'ultimo valore osservato.|  

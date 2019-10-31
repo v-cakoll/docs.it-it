@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131243"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>Enumerazione EClrUnhandledException
 Descrive le opzioni disponibili per la gestione delle eccezioni non gestite nel codice utente.  
@@ -35,22 +33,22 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|Specifica che si verifica il comportamento predefinito. Il processo viene eliminato.|  
-|`eHostDeterminedPolicy`|Specifica che common language runtime (CLR) ignora le eccezioni non gestite e consente all'host di determinare alcuna azione ulteriore.|  
+|`eRuntimeDeterminedPolicy`|Specifica che si verifica il comportamento predefinito. Il processo è stato eliminato.|  
+|`eHostDeterminedPolicy`|Specifica che il Common Language Runtime (CLR) ignora le eccezioni non gestite e consente all'host di determinare eventuali ulteriori azioni.|  
   
 ## <a name="remarks"></a>Note  
- Per specificare che CLR si comportano come le versioni precedenti, usare il `eHostDeterminedPolicy` membro.  
+ Per specificare che CLR si comporti come le versioni precedenti, usare il membro `eHostDeterminedPolicy`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

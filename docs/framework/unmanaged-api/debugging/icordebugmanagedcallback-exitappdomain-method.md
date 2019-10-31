@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755806"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130798"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>Metodo ICorDebugManagedCallback::ExitAppDomain
-Notifica al debugger che è stato chiuso un dominio dell'applicazione.  
+Notifica al debugger che un dominio applicazione è stato terminato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +36,13 @@ HRESULT ExitAppDomain (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo che contiene il dominio applicazione specificato.  
+ in Puntatore a un oggetto ICorDebugProcess che rappresenta il processo che contiene il dominio applicazione specificato.  
   
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio dell'applicazione che è stato terminato.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione terminato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

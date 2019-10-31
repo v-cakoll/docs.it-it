@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798259"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120202"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity (funzione)
 Assegna il token di rappresentazione fornito al thread corrente.   
@@ -43,12 +41,12 @@ in Token di rappresentazione da associare al thread corrente. Il valore può ess
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore `S_OK` restituito è (0).
+Se la funzione ha esito positivo, il valore restituito è `S_OK` (0).
 
 Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero. Per ottenere informazioni estese sull'errore, chiamare la funzione [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

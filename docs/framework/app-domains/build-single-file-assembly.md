@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Compilazione di un .NET Framework assembly a file singolo'
+title: 'Procedura: compilare un assembly a file singolo .NET Framework'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991240"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119942"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Procedura: Compilazione di un .NET Framework assembly a file singolo
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Procedura: compilare un assembly a file singolo .NET Framework
 
 Un assembly su singolo file, che rappresenta il tipo di assembly più semplice, contiene le informazioni e l'implementazione relative al tipo, oltre al [manifesto dell'assembly](../../standard/assembly/manifest.md). È possibile usare i compilatori della riga di comando o Visual Studio per creare un assembly a file singolo destinato al .NET Framework. Per impostazione predefinita, il compilatore crea un file di assembly con estensione *exe* .
 
@@ -39,7 +37,7 @@ Al prompt dei comandi digitare il seguente comando:
 
 In questo comando *comando compilatore* è il comando del compilatore per il linguaggio usato nel modulo di codice e *nome modulo* è il nome del modulo di codice da compilare nell'assembly.
 
-Nell'esempio seguente viene creato un assembly denominato *Decode. exe* da un modulo di codice `myCode`denominato.
+Nell'esempio seguente viene creato un assembly denominato *Decode. exe* da un modulo di codice denominato `myCode`.
 
 ```csharp
 csc myCode.cs
@@ -57,7 +55,7 @@ Al prompt dei comandi digitare il seguente comando:
 
 In questo comando *comando compilatore* è il comando del compilatore per il linguaggio usato nel modulo di codice, *nome file* è il nome del file di output e *nome modulo* è il nome del modulo di codice da compilare nell'assembly.
 
-Nell'esempio seguente viene creato un assembly denominato MyAssembly *. exe* da un modulo di codice `myCode`denominato.
+Nell'esempio seguente viene creato un assembly denominato MyAssembly *. exe* da un modulo di codice denominato `myCode`.
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -76,7 +74,7 @@ Per creare un assembly di librerie, digitare il comando seguente al prompt dei c
 
 In questo comando *comando compilatore* è il comando del compilatore per il linguaggio usato nel modulo di codice e *nome modulo* è il nome del modulo di codice da compilare nell'assembly. È possibile usare anche altre opzioni del compilatore, ad esempio l'opzione **-out:** .
 
-Nell'esempio seguente viene creato un assembly di libreria denominato *myCodeAssembly. dll* da un modulo `myCode`di codice denominato.
+Nell'esempio seguente viene creato un assembly di libreria denominato *myCodeAssembly. dll* da un modulo di codice denominato `myCode`.
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs
@@ -90,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Creazione di assembly](../../standard/assembly/create.md)
 - [Assembly su più file](multifile-assemblies.md)
-- [Procedura: Compilare un assembly su più file](build-multifile-assembly.md)
+- [Procedura: compilare un assembly su più file](build-multifile-assembly.md)
 - [Programma con assembly](../../standard/assembly/program.md)

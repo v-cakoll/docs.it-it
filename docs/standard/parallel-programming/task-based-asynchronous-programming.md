@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139991"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 
@@ -44,7 +42,7 @@ Il metodo <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWi
 > [!NOTE]
 > Il numero di istanze <xref:System.Threading.Tasks.Task> create automaticamente da <xref:System.Threading.Tasks.Parallel.Invoke%2A> non è necessariamente uguale al numero dei delegati forniti. La libreria TPL può applicare varie ottimizzazioni, specialmente nel caso di un numero elevato di delegati.
 
-Per altre informazioni, vedere [Procedura: Usare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Per altre informazioni, vedere [Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 Per ottenere un controllo maggiore sull'esecuzione delle attività o per restituire un valore dall'attività, è necessario utilizzare in modo più esplicito gli oggetti <xref:System.Threading.Tasks.Task>.
 
@@ -97,7 +95,7 @@ Ogni attività riceve un ID di tipo Integer con cui viene identificata in modo u
 
 La maggior parte delle API che creano attività genera overload che accettano un parametro <xref:System.Threading.Tasks.TaskCreationOptions>. Quando si specifica una di queste opzioni si indica all'utilità di pianificazione il modo in cui pianificare l'attività nel pool di thread. Nella tabella seguente sono elencate le varie opzioni di creazione delle attività.
 
-|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|DESCRIZIONE|
+|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|Descrizione|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Valore predefinito quando non si specificano opzioni. L'utilità di pianificazione usa le proprie regole euristiche predefinite per pianificare l'attività.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Specifica che l'attività deve essere pianificata in modo che le attività create prima abbiano più possibilità di essere eseguite prima delle attività create in un secondo momento.|
@@ -216,7 +214,7 @@ Il metodo <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithTyp
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, è possibile creare un oggetto <xref:System.Threading.Tasks.Task%601> contenente un risultato precedentemente calcolato. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato. Per un esempio che utilizza <xref:System.Threading.Tasks.Task.FromResult%2A> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache, vedere [Procedura: creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
+Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, è possibile creare un oggetto <xref:System.Threading.Tasks.Task%601> contenente un risultato precedentemente calcolato. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato. Per un esempio che usa <xref:System.Threading.Tasks.Task.FromResult%2A> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache, vedere [Procedura: Creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
 
 ## <a name="handling-exceptions-in-tasks"></a>Gestione delle eccezioni nelle attività
 
@@ -256,11 +254,11 @@ L'oggetto <xref:System.Threading.Tasks.TaskFactory> predefinito è accessibile c
 
 ## <a name="tasks-without-delegates"></a>Attività senza delegati
 
-In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
 ## <a name="custom-schedulers"></a>Utilità di pianificazione personalizzate
 
-Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.
+Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.
 
 ## <a name="related-data-structures"></a>Strutture di dati correlate
 
@@ -274,18 +272,18 @@ Se è necessario ereditare da <xref:System.Threading.Tasks.Task> o <xref:System.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|DESCRIZIONE|
+|Titolo|Descrizione|
 |-|-|
 |[Concatenamento di attività tramite attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Viene descritto il funzionamento delle continuazioni.|
 |[Attività figlio connesse e disconnesse](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Viene descritta la differenza tra attività figlio collegate e scollegate.|
 |[Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md)|Viene descritto il supporto dell'annullamento, incorporato nell'oggetto <xref:System.Threading.Tasks.Task>.|
 |[Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Viene descritto come vengono gestite le eccezioni su thread simultanei.|
-|[Procedura: Usare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Procedura: Usare parallel_invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
 |[Procedura: Restituire un valore da un'attività](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Viene descritto come restituire valori dalle attività.|
 |[Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Viene descritto come annullare le attività.|
-|[Procedura: creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache.|
+|[Procedura: Creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache.|
 |[Procedura: Attraversare un albero binario con attività in parallelo](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Viene descritto come usare le attività per attraversare un albero binario.|
-|[Procedura: Annullare il wrapping di un'attività annidata](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Viene illustrato come usare il metodo di estensione <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|
+|[Procedura: annullare il wrapping di un'attività annidata](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Viene illustrato come usare il metodo di estensione <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|
 |[Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Viene descritto come utilizzare <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> per creare cicli paralleli su dati.|
 |[Programmazione parallela](../../../docs/standard/parallel-programming/index.md)|Nodo di livello principale per la programmazione parallela di .NET Framework.|
 

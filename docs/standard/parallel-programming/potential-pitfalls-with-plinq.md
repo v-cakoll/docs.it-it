@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139997"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Problemi potenziali dell'utilizzo di PLINQ
 
@@ -79,11 +77,11 @@ Anche se PLINQ esegue una query su più thread, se si usano i risultati in un ci
 
 Lo stesso problema si verifica con <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. In altre parole, `source.AsParallel().Where().ForAll(...)` deve essere fortemente preferito a
 
-`Parallel.ForEach(source.AsParallel().Where(), ...)`.
+`Parallel.ForEach(source.AsParallel().Where(), ...)`
 
 ## <a name="be-aware-of-thread-affinity-issues"></a>Tenere presente i problemi di affinità di thread
 
-Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Se si tenta di accedere allo stato condiviso di un controllo Windows Form in una query PLINQ, viene generata un'eccezione se si esegue il debugger. Questa impostazione può essere disattivata. Tuttavia, se la query viene usata nel thread dell'interfaccia utente, è possibile accedere al controllo dal ciclo `foreach` che enumera i risultati della query perché tale codice viene eseguito in un solo thread.
+Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Se si tenta di accedere allo stato condiviso di un controllo Windows Form in una query PLINQ, viene generata un'eccezione se si esegue il debugger. Questa impostazione può essere disattivata. Tuttavia, se la query viene utilizzata nel thread UI, è possibile accedere al controllo dal ciclo `foreach` che enumera i risultati della query perché il codice viene eseguito in un solo thread.
 
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Non presupporre che le iterazioni di Foreach, For e ForAll vengano eseguite sempre in parallelo
 

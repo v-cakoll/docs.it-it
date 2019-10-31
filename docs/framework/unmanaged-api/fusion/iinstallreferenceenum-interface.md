@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796412"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131728"
 ---
 # <a name="iinstallreferenceenum-interface"></a>Interfaccia IInstallReferenceEnum
 Rappresenta un enumeratore per gli assembly di riferimento installati nell'Global Assembly Cache.  
@@ -40,12 +38,12 @@ interface IInstallReferenceEnum : IUnknown {
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Ottiene un puntatore al successivo `IInstallReferenceItem` contenuto `IInstallReferenceEnum`nell'oggetto.|  
+|[Metodo GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Ottiene un puntatore al `IInstallReferenceItem` successivo contenuto nell'`IInstallReferenceEnum`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

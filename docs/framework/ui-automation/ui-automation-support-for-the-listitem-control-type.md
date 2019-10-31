@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123086"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo ListItem
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039442"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|A seconda dei casi|Se l'elemento può essere modificato per visualizzare o nascondere informazioni, è necessario implementare questo pattern di controllo.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|A seconda dei casi|Se l'elemento può essere modificato, è necessario implementare questo pattern di controllo. Le modifiche al controllo elemento elenco vengono apportate modifiche ai valori di <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>e <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|A seconda dei casi|Se è supportato lo spostamento spaziale tra elementi all'interno del contenitore elenco e il contenitore è organizzato in righe e colonne, è necessario implementare il pattern di controllo GridItem.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|A seconda dei casi|Se l'elemento include un comando che può essere eseguito su di esso, oltre alla selezione, è necessario implementare questo pattern. In genere si tratta di un'azione associata all'esecuzione del doppio clic sul controllo elemento elenco. Ad esempio, l'avvio di un documento da [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]o la riproduzione di un file musicale in Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|A seconda dei casi|Se l'elemento include un comando che può essere eseguito su di esso, oltre alla selezione, è necessario implementare questo pattern. In genere si tratta di un'azione associata all'esecuzione del doppio clic sul controllo elemento elenco. Ad esempio, l'avvio di un documento da Esplora risorse di Microsoft Windows o la riproduzione di un file musicale in Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  

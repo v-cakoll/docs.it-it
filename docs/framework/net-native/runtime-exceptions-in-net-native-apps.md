@@ -2,14 +2,12 @@
 title: Eccezioni di runtime in app .NET
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3132e2c9502c91cbfa0b120f664fd0c6f99a2663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049167"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128149"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Eccezioni di runtime in app .NET
 È importante testare le build di versione dell'app della piattaforma UWP (Universal Windows Platform) nelle rispettive piattaforme di destinazione, perché le configurazioni di tipo Debug e di tipo Versione sono completamente diverse. Per impostazione predefinita, la configurazione di tipo Debug usa il runtime di .NET Core per compilare l'app, mentre quella di tipo Versione usa .NET Native per compilare l'app nel codice nativo.  
@@ -28,7 +26,7 @@ ms.locfileid: "71049167"
   
 - Le dimensioni del file eseguibile vengono ridotte il più possibile. Uno dei modi in cui .NET Native riesce a ridurre le dimensioni del file eseguibile consiste nel tagliare significativamente i messaggi di eccezione di runtime, come descritto in maggiore dettaglio nella sezione [Runtime exception messages](#Messages) .  
   
-- Il codice viene notevolmente ottimizzato. Questo significa che laddove possibile viene usato l'incorporamento, che sposta il codice dalle routine esterne in quella chiamante.   Il fatto che .NET Native fornisca un runtime specializzato e implementi massicciamente l'incorporamento influisce sullo stack di chiamate visualizzato durante il debug.  Per altre informazioni, vedere la sezione [Runtime call stack](#CallStack) .  
+- Il codice viene notevolmente ottimizzato. Questo significa che laddove possibile viene usato l'incorporamento, (Incorporamento sposta il codice dalle routine esterne alla routine chiamante).   Il fatto che .NET Native fornisca un runtime specializzato e implementi l'inlining aggressivo influiscono sullo stack di chiamate visualizzato durante il debug.  Per altre informazioni, vedere la sezione [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
 > Per controllare se le build di tipo Debug e Versione sono compilate con la catena di strumenti .NET Native, selezionare o deselezionare la casella **Compilare con la catena di strumenti .NET Native** .   Notare però che per la compilazione della versione di produzione dell'app, Windows Store userà sempre la catena di strumenti .NET Native.  

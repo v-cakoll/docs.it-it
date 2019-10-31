@@ -9,14 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120782"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -32,7 +30,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e il nome della directory inizia con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
-|Path  |Description  |
+|Percorso  |Descrizione  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Percorso file assoluto dalla radice dell'unità C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Percorso assoluto dalla radice dell'unità corrente. |
@@ -62,7 +60,7 @@ I percorsi UNC (Universal Naming Convention), che vengono usati per accedere all
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
 
-|Path  |Description  |
+|Percorso  |Descrizione  |
 | -- | -- |
 | `\\system07\C$\` | Directory radice dell'unità C: in `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | File Foo.txt nella directory Test del volume \\\\Server2\\Share.|
@@ -95,7 +93,7 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    Il primo segmento del percorso del dispositivo DOS dopo l'identificatore del percorso del dispositivo identifica il volume o l'unità (ad esempio, `\\?\C:\` e `\\.\BootPartition\`).
 
-   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio:
+   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Esempio:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`

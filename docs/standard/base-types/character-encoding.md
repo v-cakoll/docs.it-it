@@ -11,15 +11,13 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248628d9907a3984b2c06e5f2f3a1e5c2faa2a67
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120597"
 ---
 # <a name="character-encoding-in-net"></a>Codifica dei caratteri in .NET
 
@@ -29,7 +27,7 @@ I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei
 
 - Un decodificatore, che converte una sequenza di byte in una sequenza di caratteri.
 
-La codifica dei caratteri descrive le regole in base alle quali operano un codificatore e un decodificatore. Ad esempio, la classe <xref:System.Text.UTF8Encoding> descrive le regole per la codifica e la decodifica con Unicode Transformation Format a 8 bit (UTF-8), che usa da uno a quattro byte per rappresentare un singolo carattere Unicode. La codifica e la decodifica possono includere anche la convalida. Ad esempio, la classe <xref:System.Text.UnicodeEncoding> controlla tutti i surrogati per assicurarsi che costituiscano coppie di surrogati valide. Una coppia di surrogati è costituita da un carattere con un punto di codice compreso tra U+D800 e U+DBFF seguito da un carattere con un punto di codice compreso tra U+DC00 e U+DFFF.  Una strategia di fallback determina come un codificatore gestisce i caratteri non validi o come un decodificatore gestisce i byte non validi.
+La codifica dei caratteri descrive le regole in base alle quali operano un codificatore e un decodificatore. Ad esempio, la classe <xref:System.Text.UTF8Encoding> descrive le regole per la codifica e la decodifica con Unicode Transformation Format a 8 bit (UTF-8), che usa da uno a quattro byte per rappresentare un singolo carattere Unicode. La codifica e la decodifica possono includere anche la convalida. Ad esempio, la classe <xref:System.Text.UnicodeEncoding> controlla tutti i surrogati per assicurarsi che costituiscano coppie di surrogati valide. Una coppia di surrogati è costituita da un carattere con un punto di codice compreso tra U + D800 e U + DBFF seguito da un carattere con un punto di codice compreso tra U + DC00 e U + DFFF.  Una strategia di fallback determina come un codificatore gestisce i caratteri non validi o come un decodificatore gestisce i byte non validi.
 
 > [!WARNING]
 > Le classi di codifica in .NET consentono di archiviare e convertire i dati di tipo carattere. Non devono essere usate per archiviare i dati binari in formato stringa. In base alla codifica usata, la conversione dei dati binari in formato stringa con le classi Encoding può introdurre un comportamento imprevisto e generare dati non accurati o danneggiati. Per convertire i dati binari in un formato stringa, usare il metodo <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> .
@@ -69,7 +67,7 @@ Tutte le classi Encoding dei caratteri in .NET ereditano dalla classe <xref:Syst
 
 È possibile recuperare informazioni su tutte le codifiche disponibili in .NET chiamando il metodo <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET supporta i sistemi di codifica dei caratteri elencati nella tabella seguente.
 
-|Codifica|Classe|DESCRIZIONE|Vantaggi/Svantaggi|
+|Codifica|Class|Descrizione|Vantaggi/Svantaggi|
 |--------------|-----------|-----------------|-------------------------------|
 |non|<xref:System.Text.ASCIIEncoding>|Codifica un intervallo limitato di caratteri usando i sette bit più bassi di un byte.|Poiché questa codifica supporta solo i valori dei caratteri compresi tra U+0000 e U+007F, nella maggior parte dei casi non è adatta per le applicazioni internazionalizzate.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Rappresenta i caratteri come sequenze di caratteri ASCII a 7 bit. I caratteri Unicode non ASCII sono rappresentati da una sequenza di escape di caratteri ASCII.|UTF-7 supporta protocolli di newsgroup e di posta elettronica. UTF-7 non è tuttavia particolarmente sicura o affidabile. In alcuni casi, la modifica di un bit può alterare radicalmente l'interpretazione di un'intera stringa UTF-7. In altri casi, stringhe UTF-7 diverse possono codificare lo stesso testo. Per le sequenze che includono caratteri non ASCII, UTF-7 richiede più spazio di UTF-8 e la codifica/decodifica è più lenta. Di conseguenza, è consigliabile usare UTF-8 anziché UTF-7, se possibile.|
@@ -153,7 +151,7 @@ Quando un metodo tenta di codificare o decodificare un carattere, ma non esiste 
 
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback
 
-Quando un carattere non ha una corrispondenza esatta nella codifica di destinazione, il codificatore può provare a eseguirne il mapping a un carattere simile. Il fallback con mapping più appropriato è principalmente un problema di codifica più che di decodifica. Esistono pochissime tabelle codici contenenti caratteri di cui non è possibile eseguire correttamente il mapping a Unicode. Il fallback con mapping più appropriato è quello predefinito per le codifiche della tabella codici e Double Byte Character Set recuperate dagli overload <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> e <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>.
+Quando un carattere non ha una corrispondenza esatta nella codifica di destinazione, il codificatore può provare a eseguirne il mapping a un carattere simile. Il fallback con mapping più appropriato è principalmente un problema di codifica più che di decodifica. Sono disponibili pochissime tabelle codici contenenti caratteri di cui non è possibile eseguire correttamente il mapping a Unicode. Il fallback con mapping più appropriato è quello predefinito per le codifiche della tabella codici e del set di caratteri DBCS che vengono recuperate dal <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> e <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> overload.
 
 > [!NOTE]
 > In teoria, le classi Encoding Unicode fornite in .NET (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> e <xref:System.Text.UTF32Encoding>) supportano ogni carattere di ogni set di caratteri e quindi possono essere usate per eliminare i problemi di fallback con mapping più appropriato.

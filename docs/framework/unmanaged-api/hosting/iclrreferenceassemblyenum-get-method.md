@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a69e32d418478071f9b99a391e6bef9095d6f4ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8f479443e168c3fc7c627c3227e59f1e8b54f0e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120511"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>Metodo ICLRReferenceAssemblyEnum::Get
-Ottiene l'identità dell'assembly in corrispondenza dell'indice specificato.  
+Ottiene l'identità dell'assembly in corrispondenza dell'indice fornito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,36 +37,36 @@ HRESULT Get (
   
 ## <a name="parameters"></a>Parametri  
  `dwIndex`  
- [in] Indice a base zero dell'identità dell'assembly da restituire.  
+ in Indice in base zero dell'identità dell'assembly da restituire.  
   
  `pwzBuffer`  
- [out] Un buffer contenente i dati di identità di assembly.  
+ out Buffer contenente i dati di identità dell'assembly.  
   
  `pcchBufferSize`  
- [in, out] Le dimensioni del `pwzBuffer` buffer.  
+ [in, out] Dimensioni del buffer `pwzBuffer`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Get` stato restituito correttamente.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` è troppo piccolo.|  
-|ERROR_NO_MORE_ITEMS|L'enumerazione non contiene più elementi.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`Get` ha restituito un esito positivo.|  
+|ERROR_INSUFFICIENT_BUFFER|il `pwzBuffer` è troppo piccolo.|  
+|ERROR_NO_MORE_ITEMS|L'enumerazione non contiene altri elementi.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `Get` viene in genere chiamato due volte. La prima chiamata fornisce un valore null per `pwzBuffer`e imposta `pcchBufferSize` alle dimensioni appropriate per `pwzBuffer`. La seconda chiamata fornisce dimensioni appropriate `pwzBuffer`e contiene i dati di identità di assembly canonico dopo il completamento.  
+ `Get` viene in genere chiamato due volte. La prima chiamata fornisce un valore null per `pwzBuffer`e imposta `pcchBufferSize` sulle dimensioni appropriate per `pwzBuffer`. La seconda chiamata fornisce un `pwzBuffer`di dimensioni appropriate e contiene i dati di identità dell'assembly canonico al termine dell'esecuzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

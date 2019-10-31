@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191155"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091596"
 ---
 # <a name="numerics-in-net"></a>Valori numerici in .NET
 
@@ -28,7 +26,7 @@ ms.locfileid: "50191155"
 
 .NET supporta tipi integer a 8, 16, 32 e 64 bit con o senza segno, elencati nella tabella seguente:
   
-|Tipo|Con segno/Senza segno|Dimensioni (in byte)|Valore minimo|Valore massimo|  
+|Digitare|Con segno/Senza segno|Dimensioni (in byte)|Valore minimo|Valore massimo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Senza segno|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Firmato|2|-32,768|32,767|  
@@ -54,7 +52,7 @@ La struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> è u
 
 .NET include tre tipi primitivi a virgola mobile, elencati nella tabella seguente:
   
-|Tipo|Dimensioni (in byte)|Intervallo approssimativo|Precisione|  
+|Digitare|Dimensioni (in byte)|Intervallo approssimativo|Precisione|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|  
 |<xref:System.Double?displayProperty=nameWithType>|8|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|  
@@ -98,4 +96,4 @@ I tipi abilitati per SIMD vengono implementati in modo da poter essere usati con
 ## <a name="see-also"></a>Vedere anche
 
 - [Concetti di base sulle applicazioni](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [Stringhe di formato numerico standard](base-types/standard-numeric-format-strings.md)

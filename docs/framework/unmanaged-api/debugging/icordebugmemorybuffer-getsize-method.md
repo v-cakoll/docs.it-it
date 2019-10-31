@@ -1,17 +1,15 @@
 ---
-title: Metodo ICorDebugMemoryBuffer::GetSize
+title: 'Metodo ICorDebugMemoryBuffer:: GetSize'
 ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1c88d389f80b4b3d811d95f65acd41f294d076b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1693860abe99884ee443be0666dfb6b485a219a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128002"
 ---
-# <a name="icordebugmemorybuffergetsize-method"></a>Metodo ICorDebugMemoryBuffer::GetSize
+# <a name="icordebugmemorybuffergetsize-method"></a>Metodo ICorDebugMemoryBuffer:: GetSize
 Ottiene le dimensioni del buffer di memoria, espresse in byte.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -32,11 +30,11 @@ HRESULT GetSize(
 > Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

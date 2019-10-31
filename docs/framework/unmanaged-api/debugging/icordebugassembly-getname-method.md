@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127166"
 ---
 # <a name="icordebugassemblygetname-method"></a>Metodo ICorDebugAssembly::GetName
-Ottiene il nome dell'assembly a cui questo `ICorDebugAssembly` istanza rappresenta.  
+Ottiene il nome dell'assembly rappresentato da questa istanza di `ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,16 +40,16 @@ HRESULT GetName (
  [in] Dimensione della matrice `szName`.  
   
  `pcchName`  
- [out] Un puntatore a un intero che specifica la lunghezza effettiva del nome.  
+ out Puntatore a un Integer che specifica la lunghezza effettiva del nome.  
   
  `szName`  
- [out] Matrice che archivia il nome.  
+ out Matrice che archivia il nome.  
   
 ## <a name="remarks"></a>Note  
- Il `GetName` metodo restituisce il nome di file e percorso completo dell'assembly.  
+ Il metodo `GetName` restituisce il percorso completo e il nome file dell'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

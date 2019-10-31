@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104973"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
 Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio. Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice. In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.  
@@ -34,11 +32,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Interrompe la verifica dopo un numero di errori pari a *maxErrorCount*.<br /><br /> Questo parametro non è supportato in .NET Framework 2.0 o versione successiva.|  
 |**/clock**|Misura e segnala i seguenti tempi di verifica in millisecondi:<br /><br /> **MD Val. cycle**<br /> Ciclo di convalida dei metadati<br /><br /> **MD Val. pure**<br /> Pure di convalida dei metadati<br /><br /> **IL Ver. cycle**<br /> Ciclo di verifica di MSIL (Microsoft Intermediate Language)<br /><br /> **IL Ver pure**<br /> Pure di verifica MSIL<br /><br /> I tempi **MD Val. cycle** e **IL Ver. cycle** includono il tempo richiesto per l'esecuzione delle procedure di avvio e chiusura necessarie. I tempi **MD Val. pure** e **IL Ver pure** corrispondono al tempo richiesto solo per l'esecuzione della convalida o della verifica.|  

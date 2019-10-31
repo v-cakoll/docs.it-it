@@ -5,21 +5,19 @@ helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54bccd134a2f77925e80bfc681770b28c05f77a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: efa6dce1035f7d2cf63b74c6a03d911b5dede722
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116957"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<Elemento > forcePerformanceCounterUniqueSharedMemoryReads
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<elemento > forcePerformanceCounterUniqueSharedMemoryReads
 Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +37,13 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|PerfCounter. dll non usa l'impostazione predefinita del registro di sistema CategoryOptions.|  
 |`true`|PerfCounter. dll usa l'impostazione del registro di sistema CategoryOptions.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -59,12 +57,12 @@ enabled="true|false"/>
   
  A partire da .NET Framework 4, quando si utilizzano i contatori delle prestazioni, PerfCounter. dll controlla la voce del registro di sistema CategoryOptions per ogni provider per determinare se deve essere letta dalla memoria condivisa specifica della categoria o dalla memoria condivisa globale. Il .NET Framework 1,1 PerfCounter. dll non legge la voce del registro di sistema perché non è in grado di riconoscere la memoria condivisa specifica della categoria; viene sempre letta dalla memoria condivisa globale.  
   
- Per compatibilità con le versioni precedenti, il .NET Framework 4 PerfCounter. dll non controlla la voce del registro di sistema CategoryOptions durante l'esecuzione in un'applicazione .NET Framework 1,1. Usa semplicemente la memoria condivisa globale, proprio come la .NET Framework 1,1 PerfCounter. dll. Tuttavia, è possibile indicare al .NET Framework 4 PerfCounter. dll di controllare l'impostazione del registro di sistema `<forcePerformanceCounterUniqueSharedMemoryReads>` abilitando l'elemento.  
+ Per compatibilità con le versioni precedenti, il .NET Framework 4 PerfCounter. dll non controlla la voce del registro di sistema CategoryOptions durante l'esecuzione in un'applicazione .NET Framework 1,1. Usa semplicemente la memoria condivisa globale, proprio come la .NET Framework 1,1 PerfCounter. dll. Tuttavia, è possibile indicare al .NET Framework 4 PerfCounter. dll di controllare l'impostazione del registro di sistema abilitando l'elemento `<forcePerformanceCounterUniqueSharedMemoryReads>`.  
   
 > [!NOTE]
-> L'abilitazione dell'elemento non garantisce che venga usata la memoria condivisa specifica della `<forcePerformanceCounterUniqueSharedMemoryReads>` categoria. L'impostazione Enabled `true` su fa sì che PerfCounter. dll faccia riferimento all'impostazione del registro di sistema CategoryOptions. L'impostazione predefinita per CategoryOptions consiste nell'usare la memoria condivisa specifica della categoria; Tuttavia, è possibile modificare CategoryOptions per indicare che deve essere utilizzata la memoria condivisa globale.  
+> L'abilitazione dell'elemento `<forcePerformanceCounterUniqueSharedMemoryReads>` non garantisce che venga utilizzata la memoria condivisa specifica della categoria. Se si imposta Enabled su `true`, PerfCounter. dll fa riferimento solo all'impostazione del registro di sistema CategoryOptions. L'impostazione predefinita per CategoryOptions consiste nell'usare la memoria condivisa specifica della categoria; Tuttavia, è possibile modificare CategoryOptions per indicare che deve essere utilizzata la memoria condivisa globale.  
   
- La chiave del registro di sistema che contiene l'impostazione\\CategoryOptions è\>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services < CategoryName \Performance. Per impostazione predefinita, CategoryOptions è impostato su 3, che indica a PerfCounter. dll di usare la memoria condivisa specifica della categoria. Se CategoryOptions è impostato su 0, PerfCounter. dll utilizza la memoria condivisa globale. I dati dell'istanza verranno riutilizzati solo se il nome dell'istanza da creare è identico all'istanza in fase di riutilizzo. Tutte le versioni saranno in grado di scrivere nella categoria. Se CategoryOptions è impostato su 1, viene utilizzata la memoria condivisa globale, ma i dati dell'istanza possono essere riutilizzati se il nome della categoria ha la stessa lunghezza della categoria riutilizzata.  
+ La chiave del registro di sistema che contiene l'impostazione CategoryOptions è HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< CategoryName\>\Performance. Per impostazione predefinita, CategoryOptions è impostato su 3, che indica a PerfCounter. dll di usare la memoria condivisa specifica della categoria. Se CategoryOptions è impostato su 0, PerfCounter. dll utilizza la memoria condivisa globale. I dati dell'istanza verranno riutilizzati solo se il nome dell'istanza da creare è identico all'istanza in fase di riutilizzo. Tutte le versioni saranno in grado di scrivere nella categoria. Se CategoryOptions è impostato su 1, viene utilizzata la memoria condivisa globale, ma i dati dell'istanza possono essere riutilizzati se il nome della categoria ha la stessa lunghezza della categoria riutilizzata.  
   
  Le impostazioni 0 e 1 possono causare perdite di memoria e la compilazione della memoria del contatore delle prestazioni.  
   

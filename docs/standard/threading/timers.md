@@ -12,13 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 644ccf5951e9d2556fc697d2fd763f026fd0ebdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128946"
 ---
 # <a name="timers"></a>Timer
 
@@ -46,7 +45,7 @@ L'esempio seguente illustra come creare un timer che chiama il delegato fornito 
 [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
 [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
 
-Per ulteriori informazioni ed esempi, vedere <xref:System.Threading.Timer?displayProperty=nameWithType>.
+Per altre informazioni ed esempi, vedere <xref:System.Threading.Timer?displayProperty=nameWithType>.
 
 ## <a name="the-systemtimerstimer-class"></a>Classe System.Timers.Timer
 
@@ -54,7 +53,7 @@ Un altro timer utilizzabile in un ambiente con multithreading è <xref:System.Ti
 
 Quando si crea un oggetto <xref:System.Timers.Timer?displayProperty=nameWithType>, è possibile specificare l'intervallo di tempo in cui si desidera generare un evento <xref:System.Timers.Timer.Elapsed>. Usare la proprietà <xref:System.Timers.Timer.Enabled%2A> per indicare se un timer deve generare un evento <xref:System.Timers.Timer.Elapsed>. Se un evento <xref:System.Timers.Timer.Elapsed> deve essere generato una sola volta dopo l'intervallo specificato, impostare <xref:System.Timers.Timer.AutoReset%2A> su `false`. Il valore predefinito della proprietà <xref:System.Timers.Timer.AutoReset%2A> è `true`, vale a dire che un evento <xref:System.Timers.Timer.Elapsed> viene generato periodicamente in base all'intervallo definito dalla proprietà <xref:System.Timers.Timer.Interval%2A>.
 
-Per ulteriori informazioni ed esempi, vedere <xref:System.Timers.Timer?displayProperty=nameWithType>.
+Per altre informazioni ed esempi, vedere <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
 ## <a name="see-also"></a>Vedere anche
 

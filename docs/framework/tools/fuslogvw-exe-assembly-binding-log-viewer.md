@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129852"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 
@@ -42,7 +40,7 @@ Nel visualizzatore è riportata una voce per ciascuna associazione di assembly n
 2. Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata. È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**. Tale directory deve essere pulita e contenere solo file generati dal runtime. Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile. Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.
 
     > [!NOTE]
-    > È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente. Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.
+    > È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache WinInet e pertanto lo pulisce automaticamente. Se si specifica un percorso di binding personalizzato, l'utente è responsabile della pulizia.
 
 ### <a name="to-view-details-about-a-specific-failure"></a>Per visualizzare i dettagli relativi a un errore specifico
 
@@ -218,7 +216,7 @@ Discarding native image.
 2. Immettere il percorso nella casella di testo **Percorso personalizzato log**.
 
 > [!NOTE]
-> Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.
+> Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il danneggiamento e consentire a Fusion di visualizzare di nuovo i log di binding, deselezionare la cache IE eliminando i file Internet temporanei dall'interno della finestra di dialogo Opzioni Internet di Internet Explorer.
 >
 > Se l'applicazione non gestita ospita Common Language Runtime mediante l'implementazione delle interfacce `IHostAssemblyManager` e `IHostAssemblyStore`, le voci di logo non possono essere archiviate nella cache wininet.  Per visualizzare le voci di log di host personalizzati che implementano tali interfacce, è necessario specificare un percorso alternativo per il log.
 

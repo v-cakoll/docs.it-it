@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599455"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124458"
 ---
 # <a name="ihostautoevent-interface"></a>Interfaccia IHostAutoEvent
-Fornisce una rappresentazione dell'implementazione dell'host di un evento auto-reset.  
+Fornisce una rappresentazione dell'implementazione dell'host di un evento di reimpostazione automatica.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Imposta l'oggetto corrente `IHostAutoEvent` istanza da uno stato segnalato.|  
-|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Fa sì che l'oggetto corrente `IHostAutoEvent` istanza in attesa fino a quando l'evento è di proprietà o un determinato periodo di tempo specificato.|  
+|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Imposta l'istanza corrente di `IHostAutoEvent` su uno stato segnalato.|  
+|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Fa in modo che l'istanza corrente di `IHostAutoEvent` attenda finché l'evento non è di proprietà o non trascorre un intervallo di tempo specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

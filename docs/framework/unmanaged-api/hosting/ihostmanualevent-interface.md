@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad580f7cab81323e09a24dc12db39f223be3aeb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eba189d6dfca3781c28631a72a9af3c037efeda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973064"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136791"
 ---
 # <a name="ihostmanualevent-interface"></a>Interfaccia IHostManualEvent
 Fornisce l'implementazione dell'host di una rappresentazione di un evento di reimpostazione manuale.  
@@ -30,16 +28,16 @@ Fornisce l'implementazione dell'host di una rappresentazione di un evento di rei
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Reimposta corrente `IHostManualEvent` istanza da uno stato non segnalato.|  
-|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Imposta l'oggetto corrente `IHostManualEvent` istanza da uno stato segnalato.|  
-|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Fa sì che l'oggetto corrente `IHostManualEvent` istanza in attesa fino a quando non è di proprietà o un determinato periodo di tempo specificato.|  
+|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Reimposta l'istanza corrente di `IHostManualEvent` su uno stato non segnalato.|  
+|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Imposta l'istanza corrente di `IHostManualEvent` su uno stato segnalato.|  
+|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Fa in modo che l'istanza corrente di `IHostManualEvent` attenda fino a quando non è di proprietà o che trascorre un intervallo di tempo specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

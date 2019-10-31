@@ -1,20 +1,18 @@
 ---
-title: 'Procedura: Creare wrapper COM'
+title: 'Procedura: creare wrapper COM'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123933"
 ---
-# <a name="how-to-create-com-wrappers"></a>Procedura: Creare wrapper COM
+# <a name="how-to-create-com-wrappers"></a>Procedura: creare wrapper COM
 
 È possibile creare wrapper COM (Component Object Model) usando le funzionalità di Visual Studio 2005 o gli strumenti .NET Framework Tlbimp.exe e Regasm.exe. Entrambi i metodi generano due tipi di wrapper COM:
 

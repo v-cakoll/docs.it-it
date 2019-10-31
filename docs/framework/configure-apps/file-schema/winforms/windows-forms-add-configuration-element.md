@@ -5,18 +5,16 @@ helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb607af0933ea64b7d67f8ed082ffce6e7d21f51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26b806f84c3e1bc44e0437a8f8806316b14897b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109654"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Aggiungi elemento di configurazione
 
-L' `<add>` elemento aggiunge una chiave predefinita che specifica se l'app Windows Form supporta le funzionalità aggiunte alle app Windows Forms in .NET Framework 4,7 o versione successiva.
+L'elemento `<add>` aggiunge una chiave predefinita che specifica se l'app Windows Form supporta le funzionalità aggiunte alle app Windows Forms nel .NET Framework 4,7 o versioni successive.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,23 +35,23 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 | `key`     | Attributo obbligatorio. Nome di chiave predefinito che corrisponde a un particolare Windows Forms funzionalità personalizzabile. |
 | `value`   | Attributo obbligatorio. Valore da assegnare a `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`nomi di attributi e valori associati
+### <a name="key-attribute-names-and-associated-values"></a>`key` nomi di attributo e valori associati
 
-| `key`nome | Valori | Descrizione |
+| Nome in `key` | Valori | Descrizione |
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se i controlli ancorati vengono ridimensionati in un singolo passaggio. "true" per disabilitare il ridimensionamento del singolo passaggio; in caso contrario, false. Per ulteriori informazioni, vedere la sezione relativa alla scalabilità singola nelle [Note](#remarks) . |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica se un'applicazione è compatibile con DPI. Impostare la chiave su "PerMonitorV2" per supportare la consapevolezza dpi; in caso contrario, impostarlo su "false". La consapevolezza DPI è una funzionalità di consenso esplicito; per sfruttare i vantaggi del supporto di Windows Forms DPI elevato, è necessario impostarne il valore su "PerMonitorV2". Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) . |
-| "CheckedListBox. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.CheckedListBox> controllo sfrutta i miglioramenti apportati alla scalabilità e al layout introdotti nella .NET Framework 4,7. "vero" per rifiutare esplicitamente il ridimensionamento e i miglioramenti del layout; in caso contrario, "false". |
-| "DataGridView. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se i <xref:System.Windows.Forms.DataGridView> miglioramenti del layout e del ridimensionamento del controllo introdotti nella .NET Framework 4,7. "true" per rifiutare esplicitamente la consapevolezza DPI; "false" in caso contrario. |
+| "CheckedListBox. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il controllo <xref:System.Windows.Forms.CheckedListBox> sfrutta i miglioramenti apportati alla scalabilità e al layout introdotti nella .NET Framework 4,7. "vero" per rifiutare esplicitamente il ridimensionamento e i miglioramenti del layout; in caso contrario, "false". |
+| "DataGridView. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se i miglioramenti apportati alla scalabilità e <xref:System.Windows.Forms.DataGridView> al layout introdotti nel .NET Framework 4,7. "true" per rifiutare esplicitamente la consapevolezza DPI; "false" in caso contrario. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" per rifiutare esplicitamente la ricezione di messaggi correlati alle modifiche di ridimensionamento DPI; "false" in caso contrario. Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) . |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica se un Windows Forms Application viene ridimensionato automaticamente a causa delle modifiche di ridimensionamento DPI. "true" per abilitare il ridimensionamento automatico; in caso contrario, false. |
-| "Form. DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se l' <xref:System.Windows.Forms.Form> oggetto viene ridimensionato in un singolo passaggio. "true" per disabilitare il ridimensionamento a passaggio singolo; in caso contrario, false. Per ulteriori informazioni, vedere la sezione relativa alla scalabilità singola nelle [Note](#remarks) . |
-| "MonthCalendar. DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.MonthCalendar> controllo viene ridimensionato in un singolo passaggio. "true" per disabilitare il ridimensionamento a passaggio singolo; in caso contrario, false. Per ulteriori informazioni, vedere la sezione relativa alla scalabilità singola nelle [Note](#remarks) . |
-| "ToolStrip. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.ToolStrip> controllo sfrutta i miglioramenti apportati alla scalabilità e al layout introdotti nella .NET Framework 4,7. "true" per rifiutare esplicitamente la consapevolezza DPI; "false" in caso contrario. |
+| "Form. DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.Form> viene ridimensionato in un singolo passaggio. "true" per disabilitare il ridimensionamento a passaggio singolo; in caso contrario, false. Per ulteriori informazioni, vedere la sezione relativa alla scalabilità singola nelle [Note](#remarks) . |
+| "MonthCalendar. DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il controllo <xref:System.Windows.Forms.MonthCalendar> viene ridimensionato in un singolo passaggio. "true" per disabilitare il ridimensionamento a passaggio singolo; in caso contrario, false. Per ulteriori informazioni, vedere la sezione relativa alla scalabilità singola nelle [Note](#remarks) . |
+| "ToolStrip. DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il controllo <xref:System.Windows.Forms.ToolStrip> sfrutta i miglioramenti apportati alla scalabilità e al layout introdotti nella .NET Framework 4,7. "true" per rifiutare esplicitamente la consapevolezza DPI; "false" in caso contrario. |
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+Nessuna.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -65,29 +63,29 @@ Nessuno.
 
 A partire da .NET Framework 4.7, l'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` consente di configurare le applicazioni Windows Form in modo da sfruttare i vantaggi delle funzionalità aggiunte nelle versioni recenti di .NET Framework.
 
-L' `<System.Windows.Forms.ApplicationConfigurationSection>` elemento consente di aggiungere uno o più elementi figlio `<add>` , ognuno dei quali definisce un'impostazione di configurazione specifica.
+L'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` consente di aggiungere uno o più elementi `<add>` figlio, ognuno dei quali definisce un'impostazione di configurazione specifica.
 
 Per una panoramica del supporto di Windows Forms DPI elevato, vedere Supporto di valori [DPI alti in Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md).
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-Windows Forms app eseguite in versioni di Windows a partire da Windows 10 Creators Edition e versioni di destinazione di .NET Framework a partire da .NET Framework 4,7 possono essere configurate per sfruttare i miglioramenti a DPI elevati introdotti nella .NET Framework 4,7. Sono inclusi:
+Windows Forms app eseguite in versioni di Windows a partire da Windows 10 Creators Edition e versioni di destinazione di .NET Framework a partire da .NET Framework 4,7 possono essere configurate per sfruttare i miglioramenti a DPI elevati introdotti nella .NET Framework 4,7. tra cui:
 
 - Supporto per scenari con valori DPI dinamici in cui l'utente modifica il valore DPI o il fattore di scala dopo l'avvio di un Windows Forms Application.
 
-- Miglioramenti apportati alla scalabilità e al layout di un numero di controlli di <xref:System.Windows.Forms.MonthCalendar> Windows Forms, ad <xref:System.Windows.Forms.CheckedListBox> esempio il controllo e il controllo.
+- Miglioramenti apportati alla scalabilità e al layout di un numero di controlli di Windows Forms, ad esempio il controllo <xref:System.Windows.Forms.MonthCalendar> e il controllo <xref:System.Windows.Forms.CheckedListBox>.
 
-La consapevolezza DPI elevata è una funzionalità di consenso esplicito; per impostazione predefinita, il valore `DpiAwareness` di `false`è. È possibile acconsentire esplicitamente al supporto Windows Forms per la consapevolezza dpi impostando il valore di `PerMonitorV2` questa chiave su nel file di configurazione dell'applicazione. Se la funzionalità DPI Awareness è abilitata, vengono abilitate anche tutte le funzionalità DPI singole. Sono inclusi:
+La consapevolezza DPI elevata è una funzionalità di consenso esplicito; per impostazione predefinita, il valore di `DpiAwareness` è `false`. È possibile acconsentire esplicitamente al supporto Windows Forms per la consapevolezza DPI impostando il valore di questa chiave su `PerMonitorV2` nel file di configurazione dell'applicazione. Se la funzionalità DPI Awareness è abilitata, vengono abilitate anche tutte le funzionalità DPI singole. tra cui:
 
-- DPI modificati messaggi, che sono controllati dalla `DisableDpiChangedMessageHandling` chiave.
+- DPI modificati messaggi, che sono controllati dalla chiave `DisableDpiChangedMessageHandling`.
 
-- Supporto di dpi dinamici, controllato dalla `EnableWindowsFormsHighDpiAutoResizing` chiave.
+- Supporto di DPI dinamici, controllato dalla chiave `EnableWindowsFormsHighDpiAutoResizing`.
 
-- Ridimensionamento del controllo a passaggio singolo, che è controllato `Form.DisableSinglePassControlScaling` da per <xref:System.Windows.Forms.Form> i singoli controlli, `AnchorLayout.DisableSinglePassControlScaling` dalla chiave `MonthCalendar.DisableSinglePassControlScaling` per i controlli ancorati e dalla chiave per il <xref:System.Windows.Forms.MonthCalendar> controllo.
+- Ridimensionamento del controllo a passaggio singolo, che è controllato dal `Form.DisableSinglePassControlScaling` per i singoli controlli <xref:System.Windows.Forms.Form>, dalla chiave `AnchorLayout.DisableSinglePassControlScaling` per i controlli ancorati e dalla chiave `MonthCalendar.DisableSinglePassControlScaling` per il controllo <xref:System.Windows.Forms.MonthCalendar>
 
-- Miglioramenti del layout e della scalabilità DPI elevati, controllati dalla `CheckListBox.DisableHighDpiImprovements` chiave per il <xref:System.Windows.Forms.CheckedListBox> controllo, dalla `Toolstrip.DisableHighDpiImprovements` `DataGridView.DisableHighDpiImprovements` chiave per il <xref:System.Windows.Forms.DataGridView> controllo e dalla chiave per il <xref:System.Windows.Forms.ToolStrip> controllo.
+- Miglioramenti della scalabilità e del layout con valori DPI alti, controllati dalla chiave di `CheckListBox.DisableHighDpiImprovements` per il controllo <xref:System.Windows.Forms.CheckedListBox>, dalla chiave `DataGridView.DisableHighDpiImprovements` per il controllo <xref:System.Windows.Forms.DataGridView> e dalla chiave di `Toolstrip.DisableHighDpiImprovements` per il controllo <xref:System.Windows.Forms.ToolStrip>.
 
-La singola impostazione di consenso esplicito predefinita fornita `DpiAwareness` impostando su `PerMonitorV2` è generalmente adatta per le nuove applicazioni Windows Forms. Tuttavia, è possibile rifiutare esplicitamente i singoli miglioramenti a DPI elevati aggiungendo la chiave corrispondente al file di configurazione dell'applicazione. Ad esempio, per sfruttare tutte le nuove funzionalità DPI ad eccezione del supporto di DPI dinamici, è necessario aggiungere il codice seguente al file di configurazione dell'applicazione:
+La singola impostazione di consenso esplicito predefinita fornita impostando `DpiAwareness` su `PerMonitorV2` è generalmente adatta per le nuove applicazioni Windows Forms. Tuttavia, è possibile rifiutare esplicitamente i singoli miglioramenti a DPI elevati aggiungendo la chiave corrispondente al file di configurazione dell'applicazione. Ad esempio, per sfruttare tutte le nuove funzionalità DPI ad eccezione del supporto di DPI dinamici, è necessario aggiungere il codice seguente al file di configurazione dell'applicazione:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -103,7 +101,7 @@ Per ulteriori informazioni su come sfruttare i vantaggi del supporto di valori D
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-A partire da .NET Framework 4,7, i controlli Windows Forms generano una serie di eventi correlati alle modifiche nel ridimensionamento DPI. Sono inclusi gli <xref:System.Windows.Forms.Control.DpiChangedAfterParent>eventi <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, e <xref:System.Windows.Forms.Form.DpiChanged> . Il valore della `DisableDpiChangedMessageHandling` chiave determina se questi eventi vengono generati in un Windows Forms Application.
+A partire da .NET Framework 4,7, i controlli Windows Forms generano una serie di eventi correlati alle modifiche nel ridimensionamento DPI. Sono inclusi gli eventi <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>e <xref:System.Windows.Forms.Form.DpiChanged>. Il valore della chiave di `DisableDpiChangedMessageHandling` determina se questi eventi vengono generati in un Windows Forms Application.
 
 ### <a name="single-pass-scaling"></a>Scalabilità a passaggio singolo
 

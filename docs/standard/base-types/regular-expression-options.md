@@ -12,14 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957359"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121725"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 
@@ -58,7 +56,7 @@ ms.locfileid: "71957359"
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Applicando opzioni inline in un particolare costrutto di raggruppamento in un criterio di ricerca di espressioni regolari con la sintassi `(?imnsx-imnsx:`*sottoespressione*`)`. Nessun segno prima di un set di opzioni attiva il set. Un segno meno prima di un set di opzioni disattiva il set. `?` è una parte fissa della sintassi del costrutto di linguaggio richiesta se vengono abilitate o disabilitate funzioni. L'opzione si applica solo al gruppo specificato. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Applicando opzioni inline in un particolare costrutto di raggruppamento in un criterio di ricerca di espressioni regolari con la sintassi `(?imnsx-imnsx:`*sottoespressione*`)`. Nessun segno prima di un set di opzioni attiva il set. Un segno meno prima di un set di opzioni disattiva il set. (`?` è una parte fissa della sintassi del costrutto di linguaggio richiesta se le opzioni sono abilitate o disabilitate.) L'opzione si applica solo a tale gruppo. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
   Nell'esempio seguente viene illustrato questo concetto. Le opzioni online vengono usate in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi vuoti nel criterio durante l'identificazione delle parole che iniziano con la lettera "d".
 
@@ -114,7 +112,7 @@ Nelle sezioni seguenti sono riportate le opzioni supportate dalle espressioni re
 
 ## <a name="default-options"></a>Opzioni predefinite
 
-L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> indica che non sono state specificate opzioni e che il motore delle espressioni regolari usa il comportamento predefinito. Sono inclusi gli elementi seguenti:
+L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> indica che non sono state specificate opzioni e che il motore delle espressioni regolari usa il comportamento predefinito. Il comportamento predefinito include quanto segue:
 
 - Il criterio viene interpretato come canonico anziché come espressione regolare ECMAScript.
 
@@ -170,9 +168,9 @@ L'esempio seguente estrae i nomi e i punteggi dei giocatori di bowling e li aggi
 [!code-csharp[Conceptual.Regex.Language.Options#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline1.cs#3)]
 [!code-vb[Conceptual.Regex.Language.Options#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline1.vb#3)]
 
-Il criterio di ricerca di espressioni regolari `^(\w+)\s(\d+)\r*$` è definito nel modo illustrato nella tabella seguente.
+Il criterio di espressione regolare `^(\w+)\s(\d+)\r*$` è definito nel modo illustrato nella tabella seguente.
 
-|Pattern|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`^`|Comincia all'inizio della riga.|
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|
@@ -227,7 +225,7 @@ L'esempio seguente mostra informazioni sulle corrispondenze restituite dal crite
 
 Il criterio di ricerca di espressioni regolari `\b\(?((?>\w+),?\s?)+[\.!?]\)?` è definito nel modo illustrato nella tabella seguente.
 
-|Pattern|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia dal confine di una parola.|
 |`\(?`|Trova la corrispondenza di una o nessuna parentesi di apertura ("(").|
@@ -337,7 +335,7 @@ Notare anche che l'asserzione lookahead (l'elemento di linguaggio `(?=`*sottoesp
 
 Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.
 
-|Pattern|Descrizione|
+|Criterio|Descrizione|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|L'inizio della corrispondenza deve essere preceduto da una o due cifre decimali seguite da uno spazio.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
@@ -374,7 +372,7 @@ Il comportamento di ECMAScript e quello delle espressioni regolari canoniche dif
 
   L'espressione regolare è definita nel modo illustrato nella tabella seguente.
 
-  |Pattern|Descrizione|
+  |Criterio|Descrizione|
   |-------------|-----------------|
   |(a+)|Trova la corrispondenza della lettera "a" una o più volte. Equivale al secondo gruppo di acquisizione.|
   |(\1)|Trova la corrispondenza della sottostringa acquisita dal primo gruppo di acquisizione. Equivale al terzo gruppo di acquisizione.|

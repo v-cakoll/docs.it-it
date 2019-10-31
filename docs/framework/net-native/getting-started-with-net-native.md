@@ -2,14 +2,12 @@
 title: Introduzione di .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de887f73a5cc3968dda7e0e4dd14493883485d2b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128406"
 ---
 # <a name="getting-started-with-net-native"></a>Introduzione di .NET Native
 
@@ -45,7 +43,7 @@ Per impostazione predefinita, le compilazioni di debug vengono compilate tramite
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Passaggio 2: Gestisci l'utilizzo della reflection e della serializzazione aggiuntivi
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Passaggio 2: Gestire l'uso aggiuntivo della reflection e della serializzazione
 
 Default.rd.xml, il file di direttive di runtime, aggiunto automaticamente al progetto al momento della creazione, si trova nella cartella **Proprietà** del progetto se si sviluppa in C#, nella cartella **Progetto personale** del progetto se si sviluppa in Visual Basic.
 
@@ -60,7 +58,7 @@ Esistono due categorie di serializzatori ed entrambe possono richiedere voci agg
 
 - Serializzatori non basati sulla reflection. I serializzatori nella libreria di classi .NET Framework, ad esempio le classi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>e <xref:System.Xml.Serialization.XmlSerializer> , non si basano sulla reflection. Tuttavia, richiedono che il codice venga generato in base all'oggetto da serializzare o deserializzare.  Per altre informazioni, vedere la sezione "Serializzatori Microsoft" in [Serialization and Metadata](serialization-and-metadata.md).
 
-- Serializzatori di terze parti. Le librerie di serializzazione di terze parti, la più comune delle quali è il serializzatore JSON di Newtonsoft, sono generalmente basate sulla \*Reflection e richiedono voci nel file. Rd. XML per supportare la serializzazione e la deserializzazione degli oggetti. Per altre informazioni, vedere la sezione "Serializzatori di terze parti" in [Serialization and Metadata](serialization-and-metadata.md).
+- Serializzatori di terze parti. Le librerie di serializzazione di terze parti, la più comune delle quali è il serializzatore JSON di Newtonsoft, sono generalmente basate sulla reflection e richiedono voci nel file \*. Rd. XML per supportare la serializzazione e la deserializzazione degli oggetti. Per altre informazioni, vedere la sezione "Serializzatori di terze parti" in [Serialization and Metadata](serialization-and-metadata.md).
 
 **Metodi basati sulla reflection**
 
@@ -81,9 +79,9 @@ Per altre informazioni, vedere [APIs That Rely on Reflection](apis-that-rely-on-
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Passaggio 3: Distribuire e testare le build di rilascio dell'app
 
-Dopo aver aggiornato il file di direttive di runtime, è possibile ricompilare e distribuire le build di rilascio dell'app. I file binari di .NET Native vengono inseriti nella sottodirectory ILC.out della directory specificata nella casella di testo **Percorso dell'output di compilazione** della scheda **Compila** della finestra di dialogo **Proprietà** . I file binari non inclusi nella cartella non sono stati compilati con .NET Native. Testare accuratamente l'app e tutti gli scenari, inclusi gli scenari di errore, in ogni piattaforma di destinazione.
+Dopo aver aggiornato il file di direttive di runtime, è possibile ricompilare e distribuire le build di rilascio dell'app. .NET Native file binari vengono inseriti nella sottodirectory ILC. out della directory specificata nella casella di testo **percorso output di compilazione** della finestra di dialogo **Proprietà** del progetto, scheda **Compila** . i file binari non inclusi in questa cartella non sono stati compilati con .NET Native. Testare accuratamente l'app e tutti gli scenari, inclusi gli scenari di errore, in ogni piattaforma di destinazione.
 
-Se l'app non funziona correttamente (in particolare nei casi in cui genera eccezioni [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingInteropDataException](missinginteropdataexception-class-net-native.md) in fase di esecuzione), seguire le istruzioni nella sezione successiva [, passaggio 4: Risolvere manualmente i metadati](#Step4)mancanti. L'abilitazione di eccezioni first-chance aiuta a individuare i bug.
+Se l'app non funziona correttamente (in particolare se genera eccezioni [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingInteropDataException](missinginteropdataexception-class-net-native.md) in runtime), seguire le istruzioni della sezione successiva [Passaggio 4: Risolvere manualmente i metadati mancanti](#Step4). L'abilitazione di eccezioni first-chance aiuta a individuare i bug.
 
 Quando sono state testate e sottoposte a debug le build di debug dell'app e si è certi di aver eliminato le eccezioni [MissingMetadataException](missingmetadataexception-class-net-native.md) e [MissingInteropDataException](missinginteropdataexception-class-net-native.md) , è consigliabile testare l'app come un'app ottimizzata .NET native. Per eseguire questa operazione, modificare la configurazione del progetto attiva da **Debug** a **Rilascio**.
 
@@ -117,7 +115,7 @@ Quando si risolve un'eccezione relativa a metadati mancanti, prendere in conside
 
 Per alcuni esempi specifici di gestione delle eccezioni e di altri problemi relativi ai test dell'app, vedere:
 
-- [Esempio: Gestione delle eccezioni durante l'associazione dei dati](example-handling-exceptions-when-binding-data.md)
+- [Esempio: Gestione delle eccezioni al momento del data binding](example-handling-exceptions-when-binding-data.md)
 
 - [Esempio: Risoluzione dei problemi di programmazione dinamica](example-troubleshooting-dynamic-programming.md)
 
@@ -131,4 +129,4 @@ Per alcuni esempi specifici di gestione delle eccezioni e di altri problemi rela
 - [Reflection e .NET Native](reflection-and-net-native.md)
 - [API basate sulla reflection](apis-that-rely-on-reflection.md)
 - [Serializzazione e metadati](serialization-and-metadata.md)
-- [Migrazione dell'app di Windows Store a .NET Native](migrating-your-windows-store-app-to-net-native.md)
+- [Migrating Your Windows Store App to .NET Native](migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)

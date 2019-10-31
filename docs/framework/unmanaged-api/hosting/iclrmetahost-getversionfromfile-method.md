@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55bb3eb4-f665-42fc-973c-465567570e82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a237dff63015cda2cf2ca86a64bb4028ec9b6e2c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140924"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>Metodo ICLRMetaHost::GetVersionFromFile
 Ottiene la versione di compilazione .NET Framework originale di un assembly (archiviata nei metadati), dato il percorso del file. Questo metodo sostituisce la funzione [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) .  
@@ -42,7 +40,7 @@ HRESULT GetVersionFromFile (
  in Percorso completo del file di assembly.  
   
  `pwzbuffer`  
- out La versione di compilazione .NET Framework archiviata nei metadati, nel formato "v*a*. *B* [. *X*] ". *A*, *B*e *X* sono numeri decimali che corrispondono alla versione principale, alla versione secondaria e al numero di Build. La lunghezza di questa stringa è limitata a MAX_PATH.  
+ out La versione di compilazione .NET Framework archiviata nei metadati, nel formato "v*a*. *B*[. *X*] ". *A*, *B*e *X* sono numeri decimali che corrispondono alla versione principale, alla versione secondaria e al numero di Build. La lunghezza di questa stringa è limitata a MAX_PATH.  
   
 > [!NOTE]
 > Questo output corrisponde al nome della directory per la versione .NET Framework, così come viene visualizzato in C:\Windows\Microsoft.NET\Framework.  
@@ -50,7 +48,7 @@ HRESULT GetVersionFromFile (
  I valori di esempio sono "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" e "v 4.0. *X*", dove *x* dipende dal numero di build installato. Si noti che il prefisso "v" è obbligatorio.  
   
  `pcchBuffer`  
- [in, out] Dimensioni di per `pwzbuffer` evitare sovraccarichi del buffer.  
+ [in, out] Dimensioni del `pwzbuffer` per evitare sovraccarichi del buffer.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -62,11 +60,11 @@ HRESULT GetVersionFromFile (
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Il buffer è troppo piccolo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

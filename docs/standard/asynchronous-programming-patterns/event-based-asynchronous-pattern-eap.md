@@ -7,14 +7,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130934"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Modello asincrono basato su eventi (EAP)
 
@@ -23,7 +21,7 @@ ms.locfileid: "54513490"
 > [!NOTE]
 > A partire da .NET Framework 4, Task Parallel Library fornisce un nuovo modello di programmazione asincrona e parallela. Per altre informazioni, vedere [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) e [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).
   
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
  [Panoramica sul modello asincrono basato su eventi](event-based-asynchronous-pattern-overview.md)  
  Descrive il modo in cui il modello asincrono basato su eventi rende disponibili i vantaggi delle applicazioni multithread, nascondendo al tempo stesso molti dei problemi complessi correlati alla progettazione multithread.  
@@ -46,7 +44,7 @@ ms.locfileid: "54513490"
  [Procedura: Usare componenti che supportano il modello asincrono basato su eventi](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Descrive come usare un componente che supporta il modello asincrono basato su eventi.  
   
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
  <xref:System.ComponentModel.AsyncOperation>  
  Descrive la classe <xref:System.ComponentModel.AsyncOperation> e include collegamenti a tutti i membri corrispondenti.  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e5422ac-afa1-403d-a894-2d7348673e38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a2213c146374033c5a985a714352edad04f178a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83192fd2d24e740ab470988531db823b34df4494
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131429"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>Metodo ICorDebugManagedCallback3::CustomNotification
-Indica che è stata generata una notifica di debugger personalizzati.  
+Indica che è stata generata una notifica del debugger personalizzata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +34,10 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 ## <a name="parameters"></a>Parametri  
  `pThread`  
- [in] Puntatore al thread che ha generato la notifica.  
+ in Puntatore al thread che ha generato la notifica.  
   
  `pAppDomain`  
- [in] Puntatore al dominio dell'applicazione che contiene il thread che ha generato la notifica.  
+ in Puntatore al dominio dell'applicazione che contiene il thread che ha generato la notifica.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -51,12 +49,12 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Una chiamata successiva per la [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) metodo recupera l'oggetto thread che è stato passato al <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> (metodo). Tipo dell'oggetto thread deve avere precedentemente abilitato chiamando il [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) (metodo). Il debugger può leggere i parametri specifici del tipo dei campi dell'oggetto thread e può archiviare le risposte nei campi.  
+ Una chiamata successiva al metodo [ICorDebugThread4:: GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) recupera l'oggetto thread passato al metodo <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>. Il tipo dell'oggetto thread deve essere stato precedentemente abilitato chiamando il metodo [ICorDebugProcess3:: SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) . Il debugger può leggere i parametri specifici del tipo dai campi dell'oggetto thread e può archiviare le risposte nei campi.  
   
- Il [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaccia non impone alcun criterio ai tipi di notifiche o il relativo contenuto e la semantica delle notifiche è esclusivamente un contratto tra i debugger e le applicazioni .NET Framework.  
+ L'interfaccia [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) non impone alcun criterio sui tipi di notifiche o il relativo contenuto e la semantica delle notifiche è esclusivamente un contratto tra i debugger, le applicazioni e il .NET Framework.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

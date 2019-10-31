@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b238a953fa5cd57c8b7af9a0643bfc36ee1032e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968868"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088858"
 ---
 # <a name="icordebugappdomain3-interface"></a>Interfaccia ICorDebugAppDomain3
 Fornisce metodi per recuperare informazioni sulle rappresentazioni gestite dei tipi Windows Runtime attualmente caricati in un dominio applicazione. Questa interfaccia è un'estensione delle interfacce ICorDebugAppDomain e ICorDebugAppDomain2.  
@@ -30,11 +28,11 @@ Fornisce metodi per recuperare informazioni sulle rappresentazioni gestite dei t
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ottiene un enumeratore per tutti i tipi di Windows Runtime memorizzati nella cache.|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ottiene un enumeratore per i tipi di Windows Runtime memorizzati nella cache in un dominio applicazione in base ai relativi identificatori di interfaccia.|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ottiene un enumeratore per tutti i tipi di Windows Runtime memorizzati nella cache.|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ottiene un enumeratore per i tipi di Windows Runtime memorizzati nella cache in un dominio applicazione in base ai relativi identificatori di interfaccia.|  
   
 ## <a name="remarks"></a>Note  
- Questa interfaccia deve essere utilizzata da un debugger insieme a una chiamata di valutazione della funzione a `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Quando il metodo recupera gli identificatori di interfaccia supportati da un oggetto Windows Runtime Server, il debugger può utilizzare i metodi definiti in questa interfaccia per eseguirne il mapping ai tipi gestiti che corrispondono a tali interfacce.  
+ Questa interfaccia deve essere utilizzata da un debugger insieme a una chiamata di valutazione della funzione per `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Quando il metodo recupera gli identificatori di interfaccia supportati da un oggetto Windows Runtime Server, il debugger può utilizzare i metodi definiti in questa interfaccia per eseguirne il mapping ai tipi gestiti che corrispondono a tali interfacce.  
   
  Per recuperare un'istanza di questa interfaccia, eseguire `QueryInterface` in un'istanza dell'interfaccia ICorDebugAppDomain o ICorDebugAppDomain2.  
   
@@ -42,11 +40,11 @@ Fornisce metodi per recuperare informazioni sulle rappresentazioni gestite dei t
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Windows Runtime  
+ **Piattaforme:** Windows Runtime  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

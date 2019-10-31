@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124232"
 ---
 # <a name="icordebugevalabort-method"></a>Metodo ICorDebugEval::Abort
-Interrompe il calcolo di che questo oggetto ICorDebugEval attualmente in esecuzione.  
+Interrompe il calcolo attualmente effettuato dall'oggetto ICorDebugEval.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +32,10 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>Note  
- Se la versione di valutazione è annidata e non è quello più recente, il `Abort` metodo potrebbe non riuscire.  
+ Se la valutazione è annidata e non è quella più recente, il `Abort` metodo potrebbe non riuscire.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

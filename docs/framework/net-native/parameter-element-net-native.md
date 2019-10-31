@@ -1,17 +1,15 @@
 ---
-title: <Parameter>Elemento (.NET Native)
+title: Elemento <Parameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128191"
 ---
-# <a name="parameter-element-net-native"></a>\<Elemento > parametro (.NET Native)
+# <a name="parameter-element-net-native"></a>Elemento \<> Parameter (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,12 +55,12 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

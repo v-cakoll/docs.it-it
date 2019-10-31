@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755443"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139380"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>Metodo ICorDebugProcess::ModifyLogSwitch
-Imposta il livello di gravità dell'opzione di log specificato.  
+Imposta il livello di gravità dell'opzione di log specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +35,16 @@ HRESULT ModifyLogSwitch(
   
 ## <a name="parameters"></a>Parametri  
  `pLogSwitchName`  
- [in] Un puntatore a una stringa che specifica il nome dell'opzione di log.  
+ in Puntatore a una stringa che specifica il nome dell'opzione di log.  
   
  `lLevel`  
- [in] Il livello di gravità da impostare per il commutatore di log specificato.  
+ in Livello di gravità da impostare per l'opzione di log specificata.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo è valido solo dopo il [ICorDebugManagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) si è verificato un callback.  
+ Questo metodo è valido solo dopo che si è verificato il callback [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

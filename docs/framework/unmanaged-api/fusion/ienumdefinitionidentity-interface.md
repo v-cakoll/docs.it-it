@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107949"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Interfaccia IEnumDefinitionIdentity
-Funge da enumeratore per una raccolta di `IDefinitionIdentity` oggetti.  
+Funge da enumeratore per una raccolta di oggetti `IDefinitionIdentity`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,15 +51,15 @@ IEnumDefinitionIdentity : IUnknown {
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a un `IEnumDefinitionIdentity` nuovo oggetto che contiene gli stessi membri di `IEnumDefinitionIdentity`questo oggetto.|  
-|`IEnumDefinitionIdentity::Next`|Ottiene il numero specificato di `IDefinitionIdentity` oggetti, a partire dalla posizione corrente.|  
-|`IEnumDefinitionIdentity::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumDefinitionIdentity`oggetto.|  
+|`IEnumDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a un nuovo oggetto `IEnumDefinitionIdentity` contenente gli stessi membri di questo `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Next`|Ottiene il numero specificato di oggetti `IDefinitionIdentity`, a partire dalla posizione corrente.|  
+|`IEnumDefinitionIdentity::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Skip`|Sposta il puntatore all'istruzione in poi in base al numero specificato di elementi, a partire dalla posizione corrente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   

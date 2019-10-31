@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1425d48bb18d4161a1c96239b76b8315ae258705
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112775"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>Metodo ICLRDataTarget::SetTLSValue
-Imposta un valore nell'archiviazione thread-local (TLS) del thread nel processo di destinazione specificato. Questo metodo viene chiamato dai servizi di accesso dati di common language runtime (CLR).  
+Imposta un valore nell'archiviazione locale di thread (TLS) del thread specificato nel processo di destinazione. Questo metodo viene chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +37,21 @@ HRESULT SetTLSValue (
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'identificatore del sistema operativo di un thread nel processo di destinazione.  
+ in Identificatore del sistema operativo di un thread nel processo di destinazione.  
   
  `index`  
- [in] L'indice della posizione. Questo valore deve essere un indice valido nell'archivio locale del thread specificato.  
+ in Indice della posizione. Questo valore deve essere un indice valido nell'archivio locale del thread specificato.  
   
  `value`  
- [in] Oggetto `CLRDATA_ADDRESS` valore che specifica il valore da inserire nella località specificata TLS.  
+ in Valore `CLRDATA_ADDRESS` che specifica il valore da inserire nella posizione TLS specificata.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

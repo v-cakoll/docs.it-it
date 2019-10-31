@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4011932af6f4b058906c19566e4c1abe96b409db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131453"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Metodo ICorDebugManagedCallback2::MDANotification
-Fornisce la notifica che l'esecuzione di codice ha rilevato un assistente al debug gestito (MDA) nell'applicazione in fase di debug.  
+Fornisce la notifica che l'esecuzione del codice ha rilevato un assistente al debug gestito (MDA) nell'applicazione di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +37,31 @@ HRESULT MDANotification(
   
 ## <a name="parameters"></a>Parametri  
  `pController`  
- [in] Puntatore a un'interfaccia ICorDebugController che espone il processo o un dominio dell'applicazione in cui si è verificato l'assistente al debug gestito.  
+ in Puntatore a un'interfaccia ICorDebugController che espone il processo o il dominio dell'applicazione in cui si è verificato l'assistente al debug gestito.  
   
- Un debugger non deve fare supposizioni sul fatto che il controller è un processo o un dominio applicazione, anche se sempre possibile eseguire una query l'interfaccia per effettuare una determinazione.  
+ Un debugger non deve prevedere se il controller è un processo o un dominio dell'applicazione, anche se può sempre eseguire una query sull'interfaccia per eseguire una determinazione.  
   
  `pThread`  
- [in] Un puntatore a un'interfaccia ICorDebugThread che espone il thread gestito in cui si è verificato l'evento di debug.  
+ in Puntatore a un'interfaccia ICorDebugThread che espone il thread gestito in cui si è verificato l'evento di debug.  
   
- Se si è verificato l'assistente al debug gestito in una funzione non gestita del thread, il valore di `pThread` sarà null.  
+ Se l'assistente al debug gestito è stato eseguito in un thread non gestito, il valore di `pThread` sarà null.  
   
- È necessario ottenere l'ID del thread del sistema operativo (OS) direttamente l'oggetto Assistente al debug gestito.  
+ È necessario ottenere l'ID del thread del sistema operativo dall'oggetto MDA stesso.  
   
  `pMDA`  
- [in] Un puntatore a un [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) interfaccia che espone le informazioni di assistente al debug gestito.  
+ in Puntatore a un'interfaccia [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) che espone le informazioni dell'assistente al debug gestito.  
   
 ## <a name="remarks"></a>Note  
- Un assistente al debug gestito è un avviso euristico e non richiede alcuna azione esplicita del debugger, ad eccezione di chiamata [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per riprendere l'esecuzione dell'applicazione che viene eseguito il debug.  
+ Un assistente al debug gestito è un avviso euristico e non richiede alcuna azione esplicita del debugger ad eccezione della chiamata a [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per riprendere l'esecuzione dell'applicazione di cui è in corso il debug.  
   
- Common language runtime (CLR) può determinare quali assistenti al debug gestito vengono attivati e quali dati si trovano in qualsiasi dato assistente al debug gestito in qualsiasi momento. Di conseguenza, i debugger non devono compilare tutte le funzionalità che richiedono i modelli di assistente al debug gestito specifici.  
+ Il Common Language Runtime (CLR) può determinare quali MDA vengono attivati e quali dati si trovano in un determinato MDA in qualsiasi momento. Pertanto, i debugger non devono compilare funzionalità che richiedono modelli di assistente al debug gestito specifici.  
   
- Assistenti al debug gestito può essere accodate e generati subito dopo l'assistente al debug gestito viene rilevato. Questo problema può verificarsi se il runtime deve rimanere in attesa fino a raggiungere un punto sicuro per l'attivazione l'assistente al debug gestito, anziché attivato l'assistente al debug gestito quando lo rileva. Significa anche che il runtime può attivare un numero di assistenti al debug gestito in un unico set di callback in coda (simile a un'operazione di evento "Collega").  
+ MDA può essere accodato e generato poco dopo che è stato rilevato l'assistente al debug gestito. Questo problema può verificarsi se il runtime deve attendere fino a quando non raggiunge un punto sicuro per l'attivazione dell'assistente al debug gestito, anziché eseguire l'assistente al debug gestito quando lo rileva. Significa anche che il runtime può generare un certo numero di MDA in un unico set di callback in coda (analogamente a un'operazione di "associazione").  
   
- Un debugger deve rilasciare il riferimento a un `ICorDebugMDA` immediatamente dopo la restituzione dall'istanza il `MDANotification` callback per consentire a CLR riciclare la memoria utilizzata da un assistente al debug gestito. Rilasciare l'istanza può migliorare le prestazioni se si stanno attivando molti assistenti al debug gestito.  
+ Un debugger deve rilasciare il riferimento a un'istanza di `ICorDebugMDA` immediatamente dopo la restituzione dal callback `MDANotification`, per consentire a CLR di riciclare la memoria utilizzata da un assistente al debug gestito. Il rilascio dell'istanza può migliorare le prestazioni in caso di generazione di molti MDA.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

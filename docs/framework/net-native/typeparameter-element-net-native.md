@@ -1,17 +1,15 @@
 ---
-title: <TypeParameter>Elemento (.NET Native)
+title: Elemento <TypeParameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049055"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128929"
 ---
-# <a name="typeparameter-element-net-native"></a>\<Elemento > TypeParameter (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<elemento TypeParameter > (.NET Native)
 Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,16 +55,16 @@ Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9b4867ad19f25e35ca31c007c0d238b949abab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c18ed781d44c873b4cd1957bf0102a4ce0cccad4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139224"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>Metodo ICorDebugModule::EnableClassLoadCallbacks
-Controlli se il [LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) i callback vengono chiamati per questo modulo.  
+Controlla se i callback [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) vengono chiamati per questo modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +35,15 @@ HRESULT EnableClassLoadCallbacks(
   
 ## <a name="parameters"></a>Parametri  
  `bClassLoadCallbacks`  
- [in] Impostare questo valore su `true` per abilitare common language runtime (CLR) per chiamare il `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` metodi quando si verificano gli eventi associati.  
+ in Impostare questo valore su `true` per consentire al Common Language Runtime (CLR) di chiamare i metodi di `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` quando si verificano gli eventi associati.  
   
  Il valore predefinito è `false` per i moduli non dinamici. Il valore è sempre `true` per i moduli dinamici e non può essere modificato.  
   
 ## <a name="remarks"></a>Note  
- Il `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` callback sono sempre abilitati per i moduli dinamici e non può essere disabilitato.  
+ I callback `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` sono sempre abilitati per i moduli dinamici e non possono essere disabilitati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131506"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039458"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usata per i controlli che possono essere ancorati in un contenitore di ancoraggio, ad esempio barre degli strumenti o caselle di strumenti.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usata per i controlli che possono essere espansi o compressi, ad esempio voci di menu in un'applicazione, come il menu **File** .|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usata per i controlli che supportano la funzionalità di griglia, come il ridimensionamento e spostamento in una cella specificata, ad esempio la visualizzazione Icone grandi in Esplora risorse o le tabelle semplici senza intestazioni in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usata per i controlli contenenti celle all'interno di griglie. Le singole celle devono supportare il pattern GridItem. Ad esempio, ogni cella nella visualizzazione Dettagli di [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] .|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usata per i controlli contenenti celle all'interno di griglie. Le singole celle devono supportare il pattern GridItem. Ad esempio, ogni cella nella visualizzazione dettagli di Esplora risorse di Microsoft Windows.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Usata per i controlli che possono essere richiamati, ad esempio un pulsante.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Usata per i controlli che possono passare tra più rappresentazioni dello stesso set di informazioni, dati o elementi figlio. Ad esempio, un controllo visualizzazione elenco in cui i dati sono disponibili nelle visualizzazioni anteprima, affiancata, icona, elenco o dettagliata.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Usata per i controlli contenenti un intervallo di valori che possono essere applicati al controllo. Ad esempio, un controllo casella di selezione contenente gli anni potrebbe avere un intervallo di valori da 1900 a 2010, mentre un altro controllo casella di selezione contenente i mesi può avere un intervallo di valori da 1 a 12.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039458"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Usata per i controlli in cui è possibile passare alternativamente tra stati, ad esempio caselle di controllo e voci di menu selezionabili.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Usata per i controlli che è possibile ridimensionare, spostare e ruotare. Il pattern di controllo Transform viene in genere usato in finestre di progettazione, moduli, editor grafici e applicazioni di disegno.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Consente ai client di ottenere o impostare un valore per i controlli che non supportano un intervallo di valori, ad esempio, un controllo di selezione di data e ora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo Microsoft Windows. Esempi di controlli Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]e così via), le finestre figlio MDI (Multiple Document Interface) e le finestre di dialogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo Microsoft Windows. Esempi di controlli Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Esplora risorse di Microsoft Windows e così via), le finestre figlio dell'interfaccia a documenti multipli (MDI) e le finestre di dialogo.|  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119024"
 ---
 # <a name="configsections-element-for-configuration"></a>\<elemento > configSections per \<Configuration >
 
 Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+&nbsp;&nbsp; **\<configSections >**
 
 ## <a name="attributes"></a>Attributi
 
-Nessuna
+Nessuno
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -35,16 +35,16 @@ Nessuna
 
 ## <a name="child-elements"></a>Elementi figlio
 
-|     | DESCRIZIONE |
+|     | Descrizione |
 | --- | ----------- |
-| [ **\<> sezione**](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [ **\<sezione >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
+| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 
 ## <a name="remarks"></a>Note
 
-Se questo elemento si trova in un file di configurazione, deve essere il primo elemento figlio dell'  **\<elemento Configuration >** .
+Se questo elemento si trova in un file di configurazione, deve essere il primo elemento figlio dell'elemento **\<configuration >** .
 
 ## <a name="example"></a>Esempio
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e215cf4f6d6c3cfde3fa723ecae67aa77e189917
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096197"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Metodo ICorDebugNativeFrame2::IsMatchingParentFrame
-Determina se l'intervallo specificato è l'elemento padre del frame corrente.  
+Determina se il frame specificato è l'elemento padre del frame corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,27 +35,27 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="parameters"></a>Parametri  
  `pPotentialParentFrame`  
- [in] Un puntatore all'oggetto frame che si vuole valutare lo stato di padre.  
+ in Puntatore all'oggetto frame che si desidera valutare per lo stato padre.  
   
  `pIsParent`  
- [out] `true` se `pPotentialParentFrame` è padre del frame corrente; in caso contrario, `false`.  
+ [out] `true` se `pPotentialParentFrame` è l'elemento padre del frame corrente; in caso contrario, `false`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Lo stato dell'elemento padre è stato restituito correttamente.|  
-|E_FAIL|Lo stato dell'elemento padre non può essere restituito.|  
+|S_OK|Lo stato padre è stato restituito correttamente.|  
+|E_FAIL|Non è stato possibile restituire lo stato padre.|  
 |E_INVALIDARG|`pPotentialParentFrame` o `pIsParent` è null.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- `IsMatchingParentFrame` Restituisce `true` se l'oggetto cornice passa al metodo è l'elemento padre dell'oggetto frame sul quale è stato chiamato il metodo. Se si chiama il metodo su un frame che non è un figlio del frame specificato, viene restituito un errore.  
+ `IsMatchingParentFrame` restituisce `true` se l'oggetto frame passato al metodo è l'elemento padre dell'oggetto frame su cui è stato chiamato il metodo. Se si chiama il metodo su un frame che non è figlio del frame specificato, viene restituito un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

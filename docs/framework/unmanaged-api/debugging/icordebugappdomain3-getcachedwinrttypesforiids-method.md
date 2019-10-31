@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ef8d1c47275d3cbd69c1516b788b950f8535513
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0369cc6d98736542b764e5914d733a9341753b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088871"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>Metodo ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs
-Ottiene un enumeratore per i tipi Windows Runtime memorizzato nella cache in un dominio di applicazione basato su identificatori relativi interfaccia.  
+Ottiene un enumeratore per i tipi di Windows Runtime memorizzati nella cache in un dominio applicazione in base ai relativi identificatori di interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
 ## <a name="parameters"></a>Parametri  
  `cReqTypes`  
- [in] Il numero di tipi richiesti.  
+ in Numero di tipi necessari.  
   
  `iidsToResolve`  
- [in] Puntatore a una matrice contenente gli identificatori di interfaccia corrispondenti per le rappresentazioni gestite dei tipi Windows Runtime da recuperare.  
+ in Puntatore a una matrice contenente gli identificatori di interfaccia corrispondenti alle rappresentazioni gestite dei tipi di Windows Runtime da recuperare.  
   
  `ppTypesEnum`  
- [out] Un puntatore all'indirizzo di un oggetto di interfaccia "ICorDebugTypeEnum" che consente l'enumerazione delle rappresentazioni gestite memorizzato nella cache dei tipi Windows Runtime recuperati in base gli identificatori di interfaccia in `iidsToResolve`.  
+ out Puntatore all'indirizzo di un oggetto interfaccia "ICorDebugTypeEnum" che consente l'enumerazione delle rappresentazioni gestite memorizzate nella cache dei tipi di Windows Runtime recuperati, in base agli identificatori di interfaccia in `iidsToResolve`.  
   
 ## <a name="remarks"></a>Note  
- Se il metodo non riesce a recuperare le informazioni per un identificatore di interfaccia specifica, la voce corrispondente nella raccolta "ICorDebugTypeEnum" sarà un tipo `ELEMENT_TYPE_END` per gli errori a causa di problemi di recupero dei dati, o `ELEMENT_TYPE_VOID` per interfaccia sconosciuto identificatori.  
+ Se il metodo non riesce a recuperare informazioni per un identificatore di interfaccia specifico, la voce corrispondente nella raccolta "ICorDebugTypeEnum" avrà un tipo di `ELEMENT_TYPE_END` per gli errori causati da problemi di recupero dei dati o `ELEMENT_TYPE_VOID` per gli identificatori di interfaccia sconosciuti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Windows Runtime  

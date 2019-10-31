@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133622"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>Metodo ICorDebugThread::CreateEval
 Crea un oggetto ICorDebugEval che raccoglie ed espone la funzionalità di ICorDebugThread.  
@@ -37,13 +35,13 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parametri  
  `ppEval`  
- [out] Un puntatore all'indirizzo di un `ICorDebugEval` oggetto raccoglie ed espone la funzionalità di questo thread.  
+ out Puntatore all'indirizzo di un `ICorDebugEval` oggetto che raccoglie ed espone la funzionalità di questo thread.  
   
 ## <a name="remarks"></a>Note  
- L'oggetto valutazione effettuerà il push una catena di nuovo nel thread prima di eseguire il calcolo. In questo modo si interromperà il calcolo viene eseguito sul thread fino al completamento della versione di valutazione.  
+ L'oggetto di valutazione effettuerà il push di una nuova catena nel thread prima di eseguire il calcolo. Questa operazione interrompe il calcolo attualmente eseguito sul thread fino al completamento della valutazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

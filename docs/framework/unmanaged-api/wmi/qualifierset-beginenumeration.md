@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79edbd876fc9992f088b9adb159e005c735a72cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127320"
 ---
 # <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration (funzione)
 
@@ -69,15 +67,15 @@ Per enumerare tutti i qualificatori in un oggetto, questo metodo deve essere chi
 
 I flag che possono essere passati come `lEnumFlags` argomento vengono definiti nel file di intestazione *WbemCli. h* oppure possono essere definiti come costanti nel codice.
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |  | 0 | Restituisce i nomi di tutti i qualificatori. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituisce solo i nomi dei qualificatori specifici della proprietà o dell'oggetto corrente. <br/> Per una proprietà: Restituire solo i qualificatori specifici della proprietà (incluse le sostituzioni) e non i qualificatori propagati dalla definizione della classe. <br/> Per un'istanza: Restituisce solo nomi di qualificatori specifici dell'istanza. <br/> Per una classe: Restituisce solo i qualificatori specifici della classe derivata.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: Restituisce solo i qualificatori propagati a questa proprietà dalla definizione della classe e non da quelli della proprietà stessa. <br/> Per un'istanza: Restituisce solo i qualificatori propagati dalla definizione della classe. <br/> Per una classe: Restituisce solo i nomi dei qualificatori ereditati dalle classi padre. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituisce solo i nomi dei qualificatori specifici della proprietà o dell'oggetto corrente. <br/> Per una proprietà: restituire solo i qualificatori specifici della proprietà (incluse le sostituzioni) e non i qualificatori propagati dalla definizione della classe. <br/> Per un'istanza: restituire solo nomi di qualificatori specifici dell'istanza. <br/> Per una classe: restituire solo i qualificatori specifici della classe derivata.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: restituire solo i qualificatori propagati a questa proprietà dalla definizione della classe e non da quelli della proprietà stessa. <br/> Per un'istanza: restituire solo i qualificatori propagati dalla definizione della classe. <br/> Per una classe: restituire solo i nomi dei qualificatori ereditati dalle classi padre. |
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

@@ -2,19 +2,17 @@
 title: Metodo ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset
 ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 923c85a9dff11753a338fcfd3673d3590fca607a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b108c8c87d3afdbfacb569ab501274e5c45c2e2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129181"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>Metodo ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset
-Imposta l'offset per il gestore catch generato dal compilatore che esegue il wrapping di un metodo asincrono IL.  
+Imposta l'offset il per il gestore catch generato dal compilatore che esegue il wrapping di un metodo asincrono.  
   
- L'offset IL di catch generato viene utilizzato dal debugger per gestire la cattura come se fossero codice non utente anche se potrebbe verificarsi in un metodo del codice utente. In particolare, viene usato in risposta a un **CatchHandlerFound** evento dell'eccezione.  
+ L'offset il dell'operazione catch generata viene utilizzato dal debugger per gestire l'oggetto Catch come se fosse un codice non utente, anche se potrebbe verificarsi in un metodo del codice utente. In particolare, viene usato in risposta a un evento di eccezione **CatchHandlerFound** .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +30,7 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
  Restituisce `HRESULT`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

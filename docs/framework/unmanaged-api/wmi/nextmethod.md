@@ -14,14 +14,12 @@ helpviewer_keywords:
 - NextMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee743a4499824bea723043d5a2c7d57d7cbd7106
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c20fe5b4a081bd41f51365a36ab5f8f8cfb71ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798430"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127366"
 ---
 # <a name="nextmethod-function"></a>NextMethod (funzione)
 Recupera il metodo successivo in un'enumerazione che inizia con una chiamata a [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -53,21 +51,21 @@ in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-
 [in] Riservato. Questo parametro deve essere 0.
 
 `pName`  
-out Puntatore che punta a `null` prima della chiamata. Quando la funzione restituisce, l'indirizzo di un nuovo `BSTR` oggetto che contiene il nome del metodo. 
+out Puntatore che punta a `null` prima della chiamata. Quando la funzione restituisce, l'indirizzo di un nuovo `BSTR` che contiene il nome del metodo. 
 
 `ppSignatureIn`  
-out Puntatore che riceve un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che contiene i `in` parametri per il metodo. 
+out Puntatore che riceve un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che contiene i parametri di `in` per il metodo. 
 
 `ppSignatureOut`  
-out Puntatore che riceve un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che contiene i `out` parametri per il metodo. 
+out Puntatore che riceve un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che contiene i parametri di `out` per il metodo. 
 
 ## <a name="return-value"></a>Valore restituito
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Nessuna chiamata alla [`BeginEnumeration`](beginenumeration.md) funzione. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Non è stata chiamata la funzione [`BeginEnumeration`](beginenumeration.md) . |
 | `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Non sono presenti altre proprietà nell'enumerazione. |
   
@@ -82,7 +80,7 @@ Il chiamante avvia la sequenza di enumerazione chiamando la funzione [BeginMetho
 Per un C++ esempio, vedere il metodo [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) .
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

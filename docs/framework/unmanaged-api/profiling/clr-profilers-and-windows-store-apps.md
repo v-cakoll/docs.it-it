@@ -12,14 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291406"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140395"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profiler CLR e app di Windows Store
 
@@ -114,7 +112,7 @@ In genere, le app di Windows Store possono accedere solo a un set limitato di pe
 
 ### <a name="startup-load"></a>Caricamento avvio
 
-In genere, in un'applicazione desktop, l'interfaccia utente del profiler richiede un caricamento di avvio della DLL del profiler inizializzando un blocco di ambiente che contiene le variabili di ambiente dell'API di profilatura CLR richieste (ad esempio, `COR_PROFILER`, `COR_ENABLE_PROFILING` e `COR_PROFILER_PATH`) e quindi creando un nuovo elaborare con il blocco di ambiente. Lo stesso vale per le app di Windows Store, ma i meccanismi sono diversi.
+In genere, in un'applicazione desktop, l'interfaccia utente del profiler richiede un caricamento di avvio della DLL del profiler inizializzando un blocco di ambiente che contiene le variabili di ambiente dell'API di profilatura CLR richieste (ad esempio, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e quindi creando un nuovo elaborare con il blocco di ambiente. Lo stesso vale per le app di Windows Store, ma i meccanismi sono diversi.
 
 **Non eseguire con privilegi elevati**
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Specifica del blocco di ambiente personalizzato**
 
-Una nuova interfaccia COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), consente di personalizzare il comportamento di esecuzione di un'app di Windows Store per semplificare la creazione di alcune forme di diagnostica. Uno dei metodi, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), consente di passare un blocco di ambiente all'app di Windows Store quando viene avviato, insieme ad altri effetti utili come la disabilitazione della sospensione automatica dei processi. Il blocco dell'ambiente è importante perché è necessario specificare le variabili di ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING` e `COR_PROFILER_PATH)`) usate da CLR per caricare la DLL del profiler.
+Una nuova interfaccia COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), consente di personalizzare il comportamento di esecuzione di un'app di Windows Store per semplificare la creazione di alcune forme di diagnostica. Uno dei metodi, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), consente di passare un blocco di ambiente all'app di Windows Store quando viene avviato, insieme ad altri effetti utili come la disabilitazione della sospensione automatica dei processi. Il blocco dell'ambiente è importante perché è necessario specificare le variabili di ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH)`) utilizzate da CLR per caricare la DLL del profiler.
 
 Si prenda in considerazione il seguente frammento di codice:
 
@@ -149,7 +147,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 È necessario avere a che fare con un paio di elementi:
 
-- `packageFullName` può essere determinato durante l'iterazione dei pacchetti e l'acquisizione di `package.Id.FullName`.
+- è possibile determinare `packageFullName` durante l'iterazione dei pacchetti e l'acquisizione di `package.Id.FullName`.
 
 - `debuggerCommandLine` è un po' più interessante. Per passare il blocco di ambiente personalizzato all'app di Windows Store, è necessario scrivere un debugger fittizio semplicistico. Windows genera l'app di Windows Store sospesa e quindi associa il debugger avviando il debugger con una riga di comando come nell'esempio seguente:
 
@@ -157,7 +155,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     dove `-p 1336` indica che l'app di Windows Store presenta l'ID di processo 1336 e `-tid 1424` indica che il thread con ID 1424 è il thread sospeso. Il debugger fittizio analizzerà il ThreadID dalla riga di comando, riprenderà il thread e quindi verrà chiuso.
+     dove `-p 1336` indica che l'app di Windows Store ha l'ID processo 1336 e `-tid 1424` significa che l'ID del thread 1424 è il thread sospeso. Il debugger fittizio analizzerà il ThreadID dalla riga di comando, riprenderà il thread e quindi verrà chiuso.
 
      Ecco un esempio C++ di codice per eseguire questa operazione (assicurarsi di aggiungere il controllo degli errori):
 
@@ -253,7 +251,7 @@ Quindi, l'app di Windows Store ha caricato finalmente la DLL del profiler. A que
 
 Quando si Esplora l'API Windows, si noterà che ogni API è documentata come applicabile alle app desktop, alle app di Windows Store o a entrambe. Ad esempio, la sezione **requisiti** della documentazione per la funzione [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) indica che la funzione si applica solo alle applicazioni desktop. Al contrario, la funzione [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) è disponibile sia per le applicazioni desktop che per le app di Windows Store.
 
-Quando si sviluppa la DLL del profiler, considerarla come se si trattasse di un'app di Windows Store e usare solo le API documentate come disponibili per le app di Windows Store. Analizzare le dipendenze (ad esempio, è possibile eseguire `link /dump /imports` sulla DLL del profiler per controllare), quindi cercare la documentazione per verificare quali dipendenze sono OK e quali no. Nella maggior parte dei casi, le violazioni possono essere corrette semplicemente sostituendo le stesse con una forma più recente dell'API documentata come sicura (ad esempio, sostituendo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) con [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Quando si sviluppa la DLL del profiler, considerarla come se si trattasse di un'app di Windows Store e usare solo le API documentate come disponibili per le app di Windows Store. Analizzare le dipendenze (ad esempio, è possibile eseguire `link /dump /imports` per la DLL del profiler da controllare), quindi cercare la documentazione per verificare quali dipendenze sono OK e quali no. Nella maggior parte dei casi, le violazioni possono essere corrette semplicemente sostituendo le stesse con una forma più recente dell'API documentata come sicura (ad esempio, sostituendo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) con [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
 Si può notare che la DLL del profiler chiama alcune API che si applicano solo alle app desktop, ma sembrano funzionare anche quando la DLL del profiler viene caricata in un'app di Windows Store. Tenere presente che è rischioso usare qualsiasi API non documentata per l'uso con le app di Windows Store nella DLL del profiler quando viene caricata in un processo di app di Windows Store:
 
@@ -298,7 +296,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Nel frattempo, la DLL del profiler può eseguire fondamentalmente la stessa operazione, anche se può raggiungere più facilmente la classe <xref:Windows.Storage.ApplicationData> usando la proprietà [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
+Nel frattempo, la DLL del profiler può eseguire fondamentalmente la stessa operazione, anche se può ottenere più facilmente la <xref:Windows.Storage.ApplicationData> classe usando la proprietà [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
 **Comunicazione tramite eventi**
 
@@ -384,13 +382,13 @@ Per comprendere le conseguenze di questo, è importante comprendere le differenz
 
 Il punto rilevante è che le chiamate effettuate sui thread creati dal profiler sono sempre considerate sincrone, anche se tali chiamate vengono effettuate dall'esterno di un'implementazione di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler. Almeno, questo era il caso. Ora che CLR ha trasformato il thread del profiler in un thread gestito a causa della chiamata al [Metodo ForceGC](icorprofilerinfo-forcegc-method.md), il thread non è più considerato il thread del profiler. Di conseguenza, CLR applica una definizione più rigorosa di ciò che si qualifica come sincrono per quel thread, ovvero che una chiamata deve provenire dall'interno di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler per essere qualificata come sincrona.
 
-Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi . Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. (Vedere il post di Blog [Profiler Stack Walking: Nozioni di base e oltre @ no__t-0 per ulteriori informazioni.
+Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi . Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. Per ulteriori informazioni, vedere il post di Blog relativo all' [analisi dello stack del profiler: Nozioni di base e](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) altro.
 
 Pertanto, è consigliabile usare qualsiasi thread creato dalla DLL del profiler per chiamare il [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) *solo* per l'attivazione di cataloghi globali e la risposta ai callback GC. Non deve chiamare l'API di profilatura per eseguire altre attività, come il campionamento dello stack o lo scollegamento.
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-A partire da .NET Framework 4,5, è disponibile un nuovo callback GC, [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), che fornisce al profiler informazioni più complete sugli *handle dipendenti*. Questi handle consentono di aggiungere in modo efficace un riferimento da un oggetto di origine a un oggetto di destinazione ai fini della gestione della durata GC. Gli handle dipendenti non sono nuovi e gli sviluppatori che programmano il codice gestito sono riusciti a creare i propri handle dipendenti usando la classe <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> anche prima di Windows 8 e il .NET Framework 4,5.
+A partire da .NET Framework 4,5, è disponibile un nuovo callback GC, [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), che fornisce al profiler informazioni più complete sugli *handle dipendenti*. Questi handle consentono di aggiungere in modo efficace un riferimento da un oggetto di origine a un oggetto di destinazione ai fini della gestione della durata GC. Gli handle dipendenti non sono nuovi e gli sviluppatori che programmano il codice gestito sono stati in grado di creare i propri handle dipendenti usando la classe <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> anche prima di Windows 8 e il .NET Framework 4,5.
 
 Tuttavia, le app di Windows Store XAML gestite ora usano in modo intensivo gli handle dipendenti. In particolare, CLR li utilizza per facilitare la gestione dei cicli di riferimento tra oggetti gestiti e oggetti Windows Runtime non gestiti. Ciò significa che è più importante che mai per i profiler di memoria vengano informati di questi handle dipendenti in modo che possano essere visualizzati insieme al resto dei bordi nel grafico dell'heap. La DLL del profiler deve usare [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)e [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) insieme per formare una visualizzazione completa del grafico dell'heap.
 

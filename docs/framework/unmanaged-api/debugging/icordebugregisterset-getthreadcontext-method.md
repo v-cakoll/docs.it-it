@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747185"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127159"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>Metodo ICorDebugRegisterSet::GetThreadContext
 Ottiene il contesto del thread corrente.  
@@ -39,18 +37,18 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametri  
  `contextSize`  
- [in] Le dimensioni, in byte, del `context` matrice.  
+ in Dimensione, in byte, della matrice `context`.  
   
  `context`  
- [in, out] Una matrice di byte che compongono Win32 `CONTEXT` struttura per la piattaforma corrente.  
+ [in, out] Matrice di byte che compongono la struttura di `CONTEXT` Win32 per la piattaforma corrente.  
   
 ## <a name="remarks"></a>Note  
- Il debugger deve chiamare questa funzione anziché Win32 `GetThreadContext` funzionare, perché il thread potrebbe essere in uno stato "cui" in cui il contesto è stato modificato temporaneamente. I dati restituiti sono Win32 `CONTEXT` struttura per la piattaforma corrente.  
+ Il debugger deve chiamare questa funzione al posto della funzione Win32 `GetThreadContext`, perché il thread potrebbe trovarsi in uno stato di "Hijack" in cui il contesto è stato modificato temporaneamente. I dati restituiti sono una struttura di `CONTEXT` Win32 per la piattaforma corrente.  
   
- Per i frame foglia, i client devono controllare i registri che sono validi con [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Per i frame non foglia, i client devono verificare quali registri sono validi usando [ICorDebugRegisterSet:: GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

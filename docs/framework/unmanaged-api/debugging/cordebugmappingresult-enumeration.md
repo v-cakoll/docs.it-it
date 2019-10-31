@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739758"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097928"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Enumerazione CorDebugMappingResult
 Fornisce informazioni su come è stato ottenuto il valore del puntatore dell'istruzione.  
@@ -39,22 +37,22 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Il codice nativo è nel prologo, pertanto il valore dell'indirizzo IP è 0.|  
-|`MAPPING_EPILOG`|Il codice nativo è incluso un epilogo, pertanto il valore dell'indirizzo IP è l'indirizzo dell'ultima istruzione del metodo.|  
-|`MAPPING_NO_INFO`|Nessuna informazione di mapping è disponibile per il metodo, pertanto il valore dell'indirizzo IP è 0.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Anche se sono le informazioni di mapping per il metodo, l'indirizzo corrente non è possibile eseguire il mapping al codice Microsoft intermediate language (MSIL). Il valore dell'indirizzo IP è 0.|  
-|`MAPPING_EXACT`|Il metodo esegue il mapping di esattamente in codice MSIL o il frame è stato interpretato, pertanto il valore dell'indirizzo IP è accurato.|  
-|`MAPPING_APPROXIMATE`|Il metodo è stato mappato correttamente, ma il valore dell'indirizzo IP può essere approssimativo.|  
+|`MAPPING_PROLOG`|Il codice nativo è nel prologo, quindi il valore dell'indirizzo IP è 0.|  
+|`MAPPING_EPILOG`|Il codice nativo si trova in un epilogo, quindi il valore dell'indirizzo IP è l'indirizzo dell'ultima istruzione del metodo.|  
+|`MAPPING_NO_INFO`|Non sono disponibili informazioni di mapping per il metodo, quindi il valore dell'indirizzo IP è 0.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Sebbene esistano informazioni di mapping per il metodo, non è possibile eseguire il mapping dell'indirizzo corrente al codice MSIL (Microsoft Intermediate Language). Il valore dell'indirizzo IP è 0.|  
+|`MAPPING_EXACT`|Il metodo esegue il mapping esatto al codice MSIL o il frame è stato interpretato, quindi il valore dell'indirizzo IP è accurato.|  
+|`MAPPING_APPROXIMATE`|Il mapping del metodo è stato eseguito correttamente, ma il valore dell'indirizzo IP potrebbe essere approssimativo.|  
   
 ## <a name="remarks"></a>Note  
- È possibile usare la [GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) metodo per ottenere il valore del puntatore dell'istruzione.  
+ È possibile usare il metodo [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) per ottenere il valore del puntatore all'istruzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

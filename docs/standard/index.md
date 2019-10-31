@@ -2,16 +2,15 @@
 title: Guida di .NET
 description: Informazioni su .NET.
 author: cartermp
-ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: dfc66bd2bdc69d1236a635b30697bc1cd607821c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120762"
 ---
 # <a name="net-guide"></a>Guida di .NET
 
@@ -52,7 +51,7 @@ Se si è interessati ad approfondire alcuni dei concetti di base di .NET, consul
 * [Interoperabilità nativa](native-interop/index.md)
 * [Garbage Collection](garbagecollection/index.md)
 * [Tipi di base in .NET](base-types/index.md)
-* [Raccolte](collections/index.md)
+* [raccolte](collections/index.md)
 * [Date, ore e fusi orari](datetime/index.md)
 * [Programmazione asincrona](async.md)
 

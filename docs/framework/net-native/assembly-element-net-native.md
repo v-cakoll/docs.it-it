@@ -1,17 +1,15 @@
 ---
-title: <Assembly>Elemento (.NET Native)
+title: Elemento <Assembly> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128503"
 ---
-# <a name="assembly-element-net-native"></a>\<Elemento > assembly (.NET Native)
+# <a name="assembly-element-net-native"></a>Elemento \<assembly > (.NET Native)
 Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,7 +33,7 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato asse
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|DESCRIZIONE|  
+|Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome semplice di un assembly.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
@@ -71,7 +69,7 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato asse
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime. L'elemento [\<Application>](application-element-net-native.md) può contenere nessuno, uno o più elementi `<Assembly>`.|  
 |[\<Library>](library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime. L'elemento [\<Library>](library-element-net-native.md) può contenere nessuno o un elemento `<Assembly>`.|  

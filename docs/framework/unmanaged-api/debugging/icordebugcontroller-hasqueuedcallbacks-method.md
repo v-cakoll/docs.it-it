@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125392"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>Metodo ICorDebugController::HasQueuedCallbacks
-Ottiene un valore che indica se i callback gestiti attualmente in coda per il thread specificato.  
+Ottiene un valore che indica se i callback gestiti sono attualmente in coda per il thread specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,20 +36,20 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>Parametri  
  `pThread`  
- [in] Un puntatore a un oggetto "ICorDebugThread" che rappresenta il thread.  
+ in Puntatore a un oggetto "ICorDebugThread" che rappresenta il thread.  
   
  `pbQueued`  
- [out] Un puntatore a un valore che rappresenta `true` se i callback gestiti sono attualmente in coda per il thread specificato; in caso contrario, `false`.  
+ out Puntatore a un valore `true` se sono attualmente presenti callback gestiti in coda per il thread specificato. in caso contrario, `false`.  
   
- Se si specifica null per il `pThread` parametro, `HasQueuedCallbacks` restituirà `true` se sono presenti attualmente callback gestito accodati per uno o più thread.  
+ Se viene specificato null per il parametro `pThread`, `HasQueuedCallbacks` restituirà `true` se sono presenti callback attualmente gestiti in coda per qualsiasi thread.  
   
 ## <a name="remarks"></a>Note  
- I callback saranno inviati uno alla volta, ogni volta che [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) viene chiamato. Il debugger può controllare questo flag se si desiderano segnalare gli eventi di debug più che si verificano contemporaneamente.  
+ I callback verranno inviati uno alla volta, ogni volta che viene chiamato [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) . Il debugger può verificare questo flag se desidera segnalare più eventi di debug che si verificano simultaneamente.  
   
- Quando si trovano nella coda degli eventi di debug, essi essersi già verificati, in modo che il debugger è necessario eliminare l'intera coda per essere certi dello stato dell'oggetto del debug. (Chiamare `ICorDebugController::Continue` per svuotare la coda.) Ad esempio, se la coda contiene due eventi di debug sul thread *X*, e il debugger sospende il thread *X* dopo il primo evento di debug e quindi chiama `ICorDebugController::Continue`, il secondo evento di debug per thread *X* verranno inviati anche se il thread è stata sospesa.  
+ Quando gli eventi di debug sono accodati, si sono già verificati, pertanto il debugger deve svuotare l'intera coda per assicurarsi che lo stato dell'oggetto del debug. Chiamare `ICorDebugController::Continue` per svuotare la coda. Se, ad esempio, la coda contiene due eventi di debug sul thread *x*e il debugger sospende il thread *x* dopo il primo evento di debug e quindi chiama `ICorDebugController::Continue`, il secondo evento di debug per il thread *x* verrà inviato anche se il il thread è stato sospeso.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -1,20 +1,18 @@
 ---
-title: 'Procedura: Registrare assembly di interoperabilità primari'
+title: 'Procedura: registrare assembly di interoperabilità primari'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107685"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Procedura: Registrare assembly di interoperabilità primari
+# <a name="how-to-register-primary-interop-assemblies"></a>Procedura: registrare assembly di interoperabilità primari
 
 È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 

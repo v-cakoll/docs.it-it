@@ -1,17 +1,15 @@
 ---
-title: <Type>Elemento (.NET Native)
+title: Elemento <Type> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091846"
 ---
-# <a name="type-element-net-native"></a>\<Elemento Type > (.NET Native)
+# <a name="type-element-net-native"></a>Elemento > di tipo \<(.NET Native)
 
 Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una struttura.
 
@@ -65,7 +63,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<AttributeImplies>](attributeimplies-element-net-native.md)|Se il tipo contenitore è un attributo, definisce i criteri di runtime per gli elementi del codice a cui è applicato l'attributo.|
 |[\<Event>](event-element-net-native.md)|Applica i criteri di reflection a un evento appartenente a questo tipo.|
@@ -81,7 +79,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<Application>](application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime.|
 |[\<Assembly>](assembly-element-net-native.md)|Applica i criteri di reflection a tutti i tipi in un determinato assembly.|
@@ -102,11 +100,11 @@ Se il tipo è un tipo generico, il nome è decorato da un simbolo di accento gra
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo. Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.
+Nell'esempio seguente viene usata la reflection per visualizzare le informazioni su campi, proprietà e metodi della classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>. Poiché l'esempio recupera semplicemente le informazioni sul tipo, la disponibilità dei metadati è controllata dall'impostazione dei criteri `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Poiché i metadati per <xref:System.Collections.Generic.List%601> la classe non vengono inclusi automaticamente dalla catena di strumenti .NET native, l'esempio non riesce a visualizzare le informazioni sul membro richieste in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
+ Poiché i metadati per la classe <xref:System.Collections.Generic.List%601> non vengono inclusi automaticamente dalla catena di strumenti .NET Native, nell'esempio non vengono visualizzate le informazioni sul membro richieste in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +118,11 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 ```
 
 ## <a name="example"></a>Esempio
- Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=nameWithType>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.
+ Nell'esempio seguente viene usata la reflection per recuperare un oggetto <xref:System.Reflection.PropertyInfo> che rappresenta la proprietà <xref:System.String.Chars%2A?displayProperty=nameWithType>. Viene quindi usato il metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> per recuperare il valore del settimo carattere in una stringa e visualizzare tutti i caratteri nella stringa. La variabile `b` nell'esempio è un controllo <xref:Windows.UI.Xaml.Controls.TextBlock>.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Poiché i metadati per <xref:System.String> l'oggetto non sono disponibili, la chiamata <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> al metodo genera <xref:System.NullReferenceException> un'eccezione in fase di esecuzione quando viene compilata con la catena di strumenti .NET native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
+ Poiché i metadati per l'oggetto <xref:System.String> non sono disponibili, la chiamata al metodo <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> genera un'eccezione <xref:System.NullReferenceException> in fase di esecuzione quando viene compilata con la catena di strumenti .NET Native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

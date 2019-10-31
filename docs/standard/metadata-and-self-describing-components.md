@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353903"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121943"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadati e componenti auto-descrittivi
 
@@ -159,11 +157,11 @@ Il compilatore JIT legge il codice MSIL dell'intero metodo, lo analizza approfon
 
 Nella tabella che segue viene illustrata la parte di **MethodDef** a cui fa riferimento il token di metadati che descrive il metodo `Add`. Benché questo assembly includa altre tabelle di metadati, ciascuna con i propri valori univoci, viene qui discussa solo questa tabella.
 
-|Riga|RVA (Relative Virtual Address)|ImplFlags|Flag|nome<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|
+|Riga|RVA (Relative Virtual Address)|ImplFlags|Flags|Name<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gestita|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
-|2|0x00002058|IL<br /><br /> Gestita|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|Stringa|
-|3|0x0000208c|IL<br /><br /> Gestita|Public<br /><br /> Static<br /><br /> ReuseSlot|Aggiunta|int, int, int|
+|1|0x00002050|IL<br /><br /> Gestito|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
+|2|0x00002058|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|Stringa|
+|3\.|0x0000208c|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Aggiunta|int, int, int|
 
 Ogni colonna della tabella contiene importanti informazioni sul codice. La colonna **RVA** consente al runtime di calcolare l'indirizzo di memoria iniziale del codice MSIL che definisce questo metodo. Le colonne **ImplFlags** e **Flags** contengono maschere di bit che descrivono il metodo, indicando ad esempio se il metodo è pubblico o privato. La colonna **Name** indicizza il nome del metodo nell'heap delle stringhe. La colonna **Signature** indicizza la definizione della firma del metodo nell'heap dei blob.
 

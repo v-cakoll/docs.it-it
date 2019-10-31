@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759899"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122595"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>Metodo ICorDebugManagedCallback::Breakpoint
-Notifica il debugger quando viene rilevato un punto di interruzione.  
+Notifica al debugger quando viene rilevato un punto di interruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il punto di interruzione.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il punto di interruzione.  
   
  `pThread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene il punto di interruzione.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene il punto di interruzione.  
   
  `pBreakpoint`  
- [in] Un puntatore a un oggetto ICorDebugBreakpoint che rappresenta il punto di interruzione.  
+ in Puntatore a un oggetto ICorDebugBreakpoint che rappresenta il punto di interruzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

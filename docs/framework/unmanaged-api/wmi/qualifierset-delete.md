@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798331"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127304"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete (funzione)
 Elimina un qualificatore specificato in base al nome.  
@@ -53,7 +51,7 @@ in Nome del qualificatore da eliminare.
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |DESCRIZIONE  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Il parametro `wszName` non è valido. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | L'eliminazione di questo qualificatore non è valida. |
@@ -65,10 +63,10 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet::D Elimina](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-A causa delle regole di propagazione dei qualificatori, è possibile che un qualificatore specifico sia stato ereditato da un altro oggetto e sottoposto a override nella classe o nell'istanza corrente. In questo caso, il `QualifierSet_Delete` metodo reimposta il qualificatore sul valore ereditato originale. La funzione in questo caso restituisce il codice `WBEM_S_RESET_TO_DEFAULT`di stato.
+A causa delle regole di propagazione dei qualificatori, è possibile che un qualificatore specifico sia stato ereditato da un altro oggetto e sottoposto a override nella classe o nell'istanza corrente. In questo caso, il metodo `QualifierSet_Delete` Reimposta il qualificatore sul valore ereditato originale. La funzione in questo caso restituisce il codice di stato `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

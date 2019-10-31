@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4424509c16dd1d9f83db117ae7343fa03995297e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126904"
 ---
 # <a name="iapartmentcallback-interface"></a>Interfaccia IApartmentCallback
-Fornisce metodi per rendere i callback all'interno di un apartment. Un' *apartment* è un contenitore logico in un processo per gli oggetti che condividono gli stessi requisiti di accesso di thread.  
+Fornisce metodi per l'esecuzione di callback in un Apartment. Un *Apartment* è un contenitore logico all'interno di un processo per gli oggetti che condividono gli stessi requisiti di accesso ai thread.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo DoCallback](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Esegue la funzione specificata all'interno di un apartment.|  
+|[Metodo DoCallback](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Esegue la funzione specificata in un Apartment.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

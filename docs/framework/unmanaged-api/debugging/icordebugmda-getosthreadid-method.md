@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5d676e0fad33ca994b2e5bcd7adf269e306cb55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e9846234f8217b822860c2400a54a91a651a0a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129822"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>Metodo ICorDebugMDA::GetOSThreadId
-Ottiene l'identificatore del thread del sistema operativo (OS) su cui l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) è in esecuzione.  
+Ottiene l'identificatore del thread del sistema operativo su cui è in esecuzione l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT GetOSThreadId (
   
 ## <a name="parameters"></a>Parametri  
  `pOsTid`  
- [out] Un puntatore all'identificatore del thread del sistema operativo.  
+ out Puntatore all'identificatore del thread del sistema operativo.  
   
 ## <a name="remarks"></a>Note  
- Il thread del sistema operativo verrà usato invece di un oggetto ICorDebugThread per consentire situazioni in cui un assistente al debug gestito viene attivato su un thread nativo o su un thread gestito che non ha ancora inserito codice gestito.  
+ Il thread del sistema operativo viene usato al posto di ICorDebugThread per consentire situazioni in cui un assistente al debug gestito viene attivato in un thread nativo o in un thread gestito che non ha ancora immesso codice gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

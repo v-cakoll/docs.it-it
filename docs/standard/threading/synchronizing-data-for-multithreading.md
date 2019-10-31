@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968420"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128970"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 
@@ -72,7 +70,7 @@ Solo nelle applicazioni .NET Framework e Xamarin è possibile usare <xref:System
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
-- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Cenni preliminari sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
 - [Istruzione SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [Istruzione lock](../../csharp/language-reference/keywords/lock-statement.md)

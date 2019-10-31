@@ -6,19 +6,17 @@ helpviewer_keywords:
 - debugging [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], debugging
 ms.assetid: f0bf70be-42ef-4c46-8709-1694b5f99018
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f6e6f011bf3970dac280f2fed2f3e84c9bae132a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103307"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Debug (riferimenti alle API non gestite)
 L'API di debug consente a un debugger di effettuare il debug del codice in esecuzione nell'ambiente di Common Language Runtime (CLR). Il codice di cui eseguire il debug può essere di qualsiasi tipo supportato da CLR.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
  Descrive le coclassi non gestite usate dall'API di debug.  
   

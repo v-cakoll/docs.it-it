@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2ea7ebff122622a0db46160d23574619664f8ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bb2a6b68a3c6e981a2d6c833d3f44d4c836bd23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124006"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>Metodo ICorDebugReferenceValue::Dereference
-Ottiene l'oggetto a cui viene fatto riferimento.  
+Ottiene l'oggetto a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT Dereference (
   
 ## <a name="parameters"></a>Parametri  
  `ppValue`  
- [out] Un puntatore all'indirizzo di un'interfaccia ICorDebugValue che rappresenta l'oggetto a cui fa riferimento questo oggetto ICorDebugReferenceValue.  
+ out Puntatore all'indirizzo di un ICorDebugValue che rappresenta l'oggetto a cui fa riferimento questo oggetto ICorDebugReferenceValue.  
   
 ## <a name="remarks"></a>Note  
- Il `ICorDebugValue` oggetto è valido solo mentre il relativo riferimento non è ancora stato disabilitato.  
+ L'oggetto `ICorDebugValue` è valido solo se il relativo riferimento non è ancora stato disabilitato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -2,14 +2,12 @@
 title: 'Mitigazione: Rendering di finestre WPF'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 374f24ff8a66f689fbd6ca635905ba73bc9e0450
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126093"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigazione: Rendering di finestre WPF
 
@@ -21,7 +19,7 @@ In generale, il rendering di un'intera finestra su più monitor senza ritaglio �
 
 L'impatto esatto del rendering di finestre WPF su più monitor in Windows 8 e versioni successive non è precisamente quantificabile poiché dipende da numerosi fattori. In alcuni casi, potrebbe produrre un impatto indesiderato sulle prestazioni, in particolare per gli utenti che eseguono applicazioni a elevato utilizzo di grafica e hanno finestre che si estendono su più monitor. In altri casi, si potrebbe semplicemente volere un comportamento coerente tra le versioni di .NET Framework.
 
-## <a name="mitigation"></a>Mitigazione
+## <a name="mitigation"></a>Attenuazione
 
 È possibile disabilitare questa modifica e ripristinare il comportamento precedente di ritaglio di una finestra WPF quando si estende oltre un singolo schermo. Questo risultato può essere raggiunto in due modi:
 

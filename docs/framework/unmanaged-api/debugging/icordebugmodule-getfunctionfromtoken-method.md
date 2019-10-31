@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 547986633172d6f5e6549ad2048833dc9fb0cef3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb966a918c63b4fbc00dcf52819b9384427dfdaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129583"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>Metodo ICorDebugModule::GetFunctionFromToken
 Ottiene la funzione specificata dal token di metadati.  
@@ -38,16 +36,16 @@ HRESULT GetFunctionFromToken(
   
 ## <a name="parameters"></a>Parametri  
  `methodDef`  
- [in] Oggetto `mdMethodDef` token di metadati che fa riferimento ai metadati della funzione.  
+ in Token di metadati `mdMethodDef` che fa riferimento ai metadati della funzione.  
   
  `ppFunction`  
- [out] Un puntatore all'indirizzo di un oggetto di interfaccia ICorDebugFunction che rappresenta la funzione.  
+ out Puntatore all'indirizzo di un oggetto interfaccia ICorDebugFunction che rappresenta la funzione.  
   
 ## <a name="remarks"></a>Note  
- Il `GetFunctionFromToken` metodo restituisce un HRESULT CORDBG_E_FUNCTION_NOT_IL se il valore passato in `methodDef` non fa riferimento a un metodo di Microsoft intermediate language (MSIL).  
+ Il metodo `GetFunctionFromToken` restituisce un HRESULT CORDBG_E_FUNCTION_NOT_IL se il valore passato in `methodDef` non fa riferimento a un metodo MSIL (Microsoft Intermediate Language).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

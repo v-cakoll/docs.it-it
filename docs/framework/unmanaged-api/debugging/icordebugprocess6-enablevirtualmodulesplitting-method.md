@@ -2,14 +2,12 @@
 title: Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bd06dd3f58a1f74fbdb5ec61c4896f5c1696856
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32648f40046959ffd8676fe67a1e0a123b0e801f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123515"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 Abilita o disabilita la suddivisione dei moduli virtuali.  
@@ -46,7 +44,7 @@ HRESULT EnableVirtualModuleSplitting(
  moduli normali  
  I moduli non uniti durante la compilazione. Non corrispondono né ai moduli del contenitore né ai moduli secondari.  
   
- I moduli contenitore e i moduli secondari sono rappresentati da oggetti dell'interfaccia ICorDebugModule. Tuttavia, il comportamento dell'interfaccia è leggermente diverso in ogni caso, come descritto nella \<sezione > della sezione x-ref a.  
+ I moduli contenitore e i moduli secondari sono rappresentati da oggetti dell'interfaccia ICorDebugModule. Tuttavia, il comportamento dell'interfaccia è leggermente diverso in ogni caso, come descritto nella sezione \<x-ref to > Section.  
   
 ## <a name="modules-and-assemblies"></a>Moduli e assembly  
  Gli assembly a più moduli non sono supportati per gli scenari di unione degli assembly, quindi esiste una relazione uno a uno tra un modulo e un assembly. Ogni oggetto ICorDebugModule, indipendentemente dal fatto che rappresenti un modulo contenitore o un sottomodulo, ha un oggetto ICorDebugAssembly corrispondente. Il metodo [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) esegue la conversione dal modulo all'assembly. Per eseguire il mapping nell'altra direzione, il metodo [ICorDebugAssembly:: EnumerateModules](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md) enumera solo 1 modulo. In questo caso l'assembly e il modulo formano una coppia strettamente collegata, quindi i termini assembly e modulo sono quasi del tutto intercambiabili.  
@@ -98,17 +96,17 @@ HRESULT EnableVirtualModuleSplitting(
 |Metodo|`enableSplitting` = `true`|`enableSplitting` = `false`|  
 |------------|---------------------------------|----------------------------------|  
 |[ICorDebugFunction:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Restituisce il modulo secondario in cui questa funzione è stata definita in origine|Restituisce il modulo del contenitore a cui questa funzione è stata unita|  
-|[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Restituisce il modulo secondario in cui questa classe è stata definita in origine.|Restituisce il modulo del contenitore a cui questa classe è stata unita.|  
+|[ICorDebugClass:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Restituisce il modulo secondario in cui questa classe è stata definita in origine.|Restituisce il modulo del contenitore a cui questa classe è stata unita.|  
 |ICorDebugModuleDebugEvent::GetModule|Restituisce il modulo del contenitore caricato. I moduli secondari non vengono associati a eventi di caricamento a prescindere da questa impostazione.|Restituisce il modulo del contenitore caricato.|  
-|[ICorDebugAppDomain::EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Restituisce un elenco di assembly secondari e normali. Non sono inclusi assembly del contenitore. **Nota:**  Se mancano i simboli in qualsiasi assembly del contenitore, non verranno enumerati gli assembly secondari. Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|Restituisce un elenco di assembly del contenitore e normali; non sono inclusi assembly secondari. **Nota:**  Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|  
-|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (se si fa riferimento solo al codice IL)|Restituisce IL, valido in un'immagine di assembly pre-merge. In particolare, quando i tipi a cui si fa riferimento non sono definiti nel modulo virtuale che contiene IL, gli eventuali token di metadati inline corrispondono correttamente a TypeRef o MemberRef. Questi token TypeRef o MemberRef possono essere cercati nell'oggetto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) per l'oggetto ICorDebugModule virtuale corrispondente.|Restituisce IL nell'immagine di assembly post-unione.|  
+|[ICorDebugAppDomain:: EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Restituisce un elenco di assembly secondari e normali. Non sono inclusi assembly del contenitore. **Nota:**  Se nell'assembly del contenitore mancano i simboli, nessuno dei relativi assembly secondari verrà enumerato. Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|Restituisce un elenco di assembly del contenitore e normali; non sono inclusi assembly secondari. **Nota:**  Se nell'assembly normale mancano i simboli, è possibile che venga enumerata o meno.|  
+|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (quando si fa riferimento solo al codice il)|Restituisce IL, valido in un'immagine di assembly pre-merge. In particolare, quando i tipi a cui si fa riferimento non sono definiti nel modulo virtuale che contiene IL, gli eventuali token di metadati inline corrispondono correttamente a TypeRef o MemberRef. Questi token TypeRef o MemberRef possono essere cercati nell'oggetto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) per l'oggetto ICorDebugModule virtuale corrispondente.|Restituisce IL nell'immagine di assembly post-unione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

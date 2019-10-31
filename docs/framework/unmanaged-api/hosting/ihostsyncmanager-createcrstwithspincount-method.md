@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16fcc631e7e734e1bce4566f31d209a8433fbfdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 632b8d43ed459d489825dc796d39864e2ed15ec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139419"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>Metodo IHostSyncManager::CreateCrstWithSpinCount
-Crea un oggetto sezione critica con conteggio di selezione per la sincronizzazione.  
+Crea un oggetto sezione critico con il numero di spin per la sincronizzazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,32 +36,32 @@ HRESULT CreateCrstWithSpinCount (
   
 ## <a name="parameters"></a>Parametri  
  `dwSpinCount`  
- [in] Specifica il conteggio della rotazione per l'oggetto sezione critica.  
+ in Specifica il numero di spin per l'oggetto sezione critica.  
   
  `ppCrst`  
- [out] Un puntatore all'indirizzo di un [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) istanza oppure null se non è stato possibile creare la sezione critica.  
+ out Puntatore all'indirizzo di un'istanza di [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) o null se non è stato possibile creare la sezione critica.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`CreateCrstWithSpinCount` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Memoria insufficiente era disponibile per creare la sezione critica richiesta.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Memoria insufficiente per creare la sezione critica richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Il numero spin viene utilizzato solo in un sistema multiprocessore. Il numero spin specifica il numero di volte in cui che un thread di chiamata è necessario attivare prima di eseguire un'operazione di attesa su un semaforo associata a una sezione critica non disponibile. Se durante l'operazione di selezione non è più disponibile nella sezione critica, il thread chiamante consente di evitare l'operazione di attesa. `CreateCrstWithSpinCount` rispecchia Win32 `InitializeCriticalSectionAndSpinCount` (funzione).  
+ Un numero di spin viene usato solo in un sistema a più processori. Il numero di spin specifica il numero di volte in cui un thread chiamante deve girare prima di eseguire un'operazione di attesa su un semaforo associato a una sezione critica non disponibile. Se la sezione critica diventa disponibile durante l'operazione di rotazione, il thread chiamante evita l'operazione di attesa. `CreateCrstWithSpinCount` rispecchia la funzione di `InitializeCriticalSectionAndSpinCount` Win32.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

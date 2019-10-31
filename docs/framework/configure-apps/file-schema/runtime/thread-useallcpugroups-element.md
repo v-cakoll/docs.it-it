@@ -2,22 +2,20 @@
 title: Elemento <Thread_UseAllCpuGroups>
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252280"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115403"
 ---
-# <a name="thread_useallcpugroups-element"></a>\<Elemento > Thread_UseAllCpuGroups
+# <a name="thread_useallcpugroups-element"></a>\<elemento > Thread_UseAllCpuGroups
 
 Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Thread_UseAllCpuGroups**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,14 +36,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`false`|Il runtime non distribuisce i thread gestiti tra più gruppi di CPU. Questa è l'impostazione predefinita.|
-|`true`|Il runtime distribuisce i thread gestiti tra più gruppi di CPU, se il computer dispone di più gruppi di CPU e l' [ \<elemento > GCCpuGroup](gccpugroup-element.md) è abilitato.|
+|`true`|Il runtime distribuisce i thread gestiti tra più gruppi di CPU, se il computer dispone di più gruppi di CPU e l'elemento [\<> GCCpuGroup](gccpugroup-element.md) è abilitato.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+Nessuna.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -56,7 +54,7 @@ Nessuno.
 
 ## <a name="remarks"></a>Note
 
-Quando un computer dispone di più gruppi di CPU, l'abilitazione di questo elemento fa sì che il runtime distribuisca i thread gestiti in tutti i gruppi di CPU. Per usare questa funzionalità, è necessario abilitare anche l'elemento [ \<> GCCpuGroup](gccpugroup-element.md) , che estende Garbage Collection a tutti i gruppi di CPU e prende in considerazione tutti i core quando crea e bilancia gli heap. L'abilitazione dell' [ \<elemento > GCCpuGroup](gccpugroup-element.md) richiede l'abilitazione dell'elemento [ \<> di gcserver](gcserver-element.md) . Se questi elementi non sono abilitati, l' `<Thread_UseAllCpuGroups>` abilitazione dell'elemento non ha alcun effetto.
+Quando un computer dispone di più gruppi di CPU, l'abilitazione di questo elemento fa sì che il runtime distribuisca i thread gestiti in tutti i gruppi di CPU. Per usare questa funzionalità, è necessario abilitare anche l'elemento [\<> GCCpuGroup](gccpugroup-element.md) , che estende Garbage Collection a tutti i gruppi di CPU e prende in considerazione tutti i core quando crea e bilancia gli heap. Per abilitare l'elemento [\<GCCpuGroup >](gccpugroup-element.md) è necessario abilitare l'elemento [\<gcServer >](gcserver-element.md) . Se questi elementi non sono abilitati, l'abilitazione dell'elemento `<Thread_UseAllCpuGroups>` non ha alcun effetto.
 
 ## <a name="example"></a>Esempio
 
@@ -76,4 +74,4 @@ Nell'esempio seguente viene illustrato come abilitare il supporto per più grupp
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)
-- [\<Elemento > GCCpuGroup](gccpugroup-element.md)
+- [\<elemento > GCCpuGroup](gccpugroup-element.md)

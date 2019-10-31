@@ -16,15 +16,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105712"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -73,12 +71,12 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Nella tabella seguente vengono descritte alcune delle caratteristiche che una classe può avere. Ogni linguaggio che supporta il runtime fornisce un modo per indicare che una classe o membro di classe dispone di una o più di queste caratteristiche. È tuttavia possibile che i singoli linguaggi di programmazione destinati a .NET non rendano disponibili tutte queste caratteristiche.  
   
-|Caratteristica|DESCRIZIONE|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |sealed|Specifica che da questo tipo non è possibile derivare un'altra classe.|  
 |implementa|Indica che la classe utilizza una o più interfacce fornendo implementazioni dei membri di interfaccia.|  
 |abstract|Indica che non è possibile creare un'istanza della classe. Per utilizzarla è necessario derivare da essa un'altra classe.|  
-|eredita|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
+|inherits|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
@@ -190,7 +188,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ### <a name="type-accessibility"></a>Accessibilità dei tipi  
  Tutti i tipi dispongono di un modificatore che ne regola l'accessibilità da parte di altri tipi. Nella tabella che segue si descrive l'accessibilità dei tipi supportata dal runtime.  
   
-|Accessibilità|DESCRIZIONE|  
+|Accessibilità|Descrizione|  
 |-------------------|-----------------|  
 |public|Il tipo è accessibile da tutti gli assembly.|  
 |assembly|Il tipo è accessibile solo dall'interno dell'assembly.|  
@@ -278,7 +276,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore senza parametri e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore senza parametri. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
   
 <a name="Events"></a>   
-### <a name="events"></a>Eventi  
+### <a name="events"></a>eventi  
  Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>   
@@ -291,16 +289,16 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi  
  In Common Type System i membri dei tipi possono disporre di caratteristiche diverse, anche se non è necessario che i linguaggi le supportino tutte. Nella tabella riportata di seguito vengono descritte le caratteristiche dei membri.  
   
-|Caratteristica|Si applica a|DESCRIZIONE|  
+|Caratteristica|Si applica a|Descrizione|  
 |--------------------|------------------|-----------------|  
 |abstract|Metodi, proprietà ed eventi|Il tipo non fornisce l'implementazione del metodo. I tipi che ereditano o implementano metodi astratti devono fornire un'implementazione per il metodo. L'unica eccezione si verifica nel caso in cui il tipo derivato sia esso stesso un tipo astratto. Tutti i metodi astratti sono virtuali.|  
-|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutti|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
+|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|All|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
 |final|Metodi, proprietà ed eventi|Il metodo virtuale non può essere sottoposto a override in un tipo derivato.|  
 |initialize-only|Campi|Il valore può essere solo inizializzato e non può essere scritto dopo l'inizializzazione.|  
 |istanza|Campi, metodi, proprietà ed eventi|Se un membro non è contrassegnato come `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) o `Overridable` (Visual Basic), è un membro di istanza (nessuna parola chiave di istanza). Ci saranno tante copie di tali membri in memoria quanti sono gli oggetti che li utilizzano.|  
-|valore letterale|Campi|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
-|newslot o override|Tutti|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> ignora<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
-|statico|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
+|literal|Campi|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
+|newslot o override|All|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> ignora<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
+|static|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
 |virtuale|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
   
 ### <a name="overloading"></a>Overload  

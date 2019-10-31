@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762770"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109718"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>Metodo ICorDebugModule::EnableJITDebugging
-Controlla se il compilatore JIT just-in-time mantiene le informazioni di debug per i metodi all'interno del modulo.  
+Controlla se il compilatore JIT (just-in-Time) conserva le informazioni di debug per i metodi all'interno di questo modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT EnableJITDebugging(
   
 ## <a name="parameters"></a>Parametri  
  `bTrackJITInfo`  
- [in] Impostare questo valore su `true` per consentire al compilatore JIT conservare le informazioni di mapping tra la versione di Microsoft intermediate language (MSIL) e la versione di ogni metodo in questo modulo compilato tramite JIT.  
+ in Impostare questo valore su `true` per consentire al compilatore JIT di mantenere le informazioni di mapping tra la versione Microsoft Intermediate Language (MSIL) e la versione compilata tramite JIT di ogni metodo in questo modulo.  
   
  `bAllowJitOpts`  
- [in] Impostare questo valore su `true` per consentire al compilatore JIT generare il codice con alcune ottimizzazioni JIT specifiche per il debug.  
+ in Impostare questo valore su `true` per consentire al compilatore JIT di generare codice con determinate ottimizzazioni specifiche di JIT per il debug.  
   
 ## <a name="remarks"></a>Note  
- Debug JIT è abilitato per impostazione predefinita per tutti i moduli che vengono caricati quando il debugger è attivo. A livello di programmazione abilitando o disabilitando le impostazioni di override delle impostazioni globali.  
+ Il debug JIT è abilitato per impostazione predefinita per tutti i moduli caricati quando il debugger è attivo. L'abilitazione o la disabilitazione delle impostazioni a livello di codice sostituisce le impostazioni globali.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

@@ -8,28 +8,26 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c383a2e221e61770d3c28a65c561c48f6059b6d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136569"
 ---
 # <a name="icorprofilercallback9-interface"></a>Interfaccia ICorProfilerCallback9
 [Supportato in .NET Framework 4.7.2 e versioni successive]  
 
- Una sottoclasse [ICorProfilerCallback8](icorprofilercallback8-interface.md) che fornisce un metodo di callback usato da common language runtime per notificare al profiler che un metodo dinamico è stato sottoposto a garbage raccolti e successivamente scaricata.  
+ Sottoclasse di [ICorProfilerCallback8](icorprofilercallback8-interface.md) che fornisce un metodo di callback utilizzato dal Common Language Runtime per notificare al profiler che un metodo dinamico è stato sottoposta a Garbage Collection e successivamente scaricato.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo DynamicMethodUnloaded](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Notifica al profiler che un metodo dinamico è stato sottoposto a garbage raccolti e successivamente scaricata.|  
+|[Metodo DynamicMethodUnloaded](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Notifica al profiler che un metodo dinamico è stato sottoposta a Garbage Collection e successivamente scaricato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
@@ -39,5 +37,5 @@ ms.locfileid: "61991991"
 
 - [Interfacce di profilatura](profiling-interfaces.md)
 - [Interfaccia ICorProfilerCallback8](icorprofilercallback9-interface.md)
-- [Metodo ICorProfilerCallback8.DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [Metodo ICorProfilerCallback8.DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationStarted, metodo](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationFinished, metodo](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

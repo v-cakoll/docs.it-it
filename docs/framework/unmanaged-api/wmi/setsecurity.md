@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d27779bcfc97e1c4156b8782896e83d4754491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798246"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120221"
 ---
 # <a name="setsecurity-function"></a>Funzione di sicurezza
 
@@ -41,20 +39,20 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parametri
 
 `pNeedToReset`\
-out Quando la funzione restituisce un valore, contiene un puntatore `boolean` a un valore che indica se il token deve essere reimpostato chiamando la funzione [ResetSecurity](resetsecurity.md) .
+out Quando la funzione restituisce un valore, contiene un puntatore a un `boolean` che indica se il token deve essere reimpostato chiamando la funzione [ResetSecurity](resetsecurity.md) .
 
 `token`\
 out Quando la funzione restituisce un valore, contiene un puntatore all'handle del token di rappresentazione associato al thread corrente. Il valore può essere `null` se al thread corrente non è associato alcun token. 
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore `S_OK` restituito è (0).
+Se la funzione ha esito positivo, il valore restituito è `S_OK` (0).
 
 Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero. Per ottenere informazioni estese sull'errore, chiamare la funzione [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
  **Intestazione:** WMINet_Utils. idl
 

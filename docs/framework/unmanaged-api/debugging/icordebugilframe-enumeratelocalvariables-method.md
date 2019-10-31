@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c18f2fce23e979f27d9116e74b6c6b007cd33bf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07331a512dd513a94a7d8c3a8d8b0754d998b94b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131007"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>Metodo ICorDebugILFrame::EnumerateLocalVariables
-Ottiene un enumeratore per le variabili locali nel frame.  
+Ottiene un enumeratore per le variabili locali in questo frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateLocalVariables(
   
 ## <a name="parameters"></a>Parametri  
  `ppValueEnum`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugValueEnum che è l'enumeratore per le variabili locali nel frame.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugValueEnum che rappresenta l'enumeratore per le variabili locali in questo frame.  
   
 ## <a name="remarks"></a>Note  
- `EnumerateLocalVariables` Ottiene un enumeratore in grado di elencare le variabili locali nel frame di chiamata che è rappresentato dall'oggetto ICorDebugILFrame disponibili. L'elenco potrebbe non includere tutte le variabili locali nella funzione in esecuzione, poiché alcuni di essi potrebbero non essere attivo.  
+ `EnumerateLocalVariables` ottiene un enumeratore in grado di elencare le variabili locali disponibili nel frame di chiamata rappresentato da questo oggetto ICorDebugILFrame. L'elenco potrebbe non includere tutte le variabili locali nella funzione in esecuzione, perché alcune potrebbero non essere attive.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

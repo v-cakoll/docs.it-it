@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129046"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 
@@ -40,7 +38,7 @@ La classe <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> esp
 
 Oltre agli operatori query standard, la classe <xref:System.Linq.ParallelEnumerable> contiene un set di metodi che rendono possibili comportamenti specifici dell'esecuzione parallela. Questi metodi specifici di PLINQ sono elencati nella tabella seguente.
 
-|Operatore ParallelEnumerable|Description|
+|Operatore ParallelEnumerable|Descrizione|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto di ingresso di PLINQ. Specifica che la parte rimanente della query deve essere parallelizzata, se è possibile.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Specifica che la parte rimanente della query deve essere eseguita in sequenza, come una query LINQ non parallela.|
@@ -86,7 +84,7 @@ L'esempio di codice seguente illustra come scegliere esplicitamente la conservaz
 
 Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
 
-## <a name="parallel-vs-sequential-queries"></a>Confronto fra query parallele e sequenziali
+## <a name="parallel-vs-sequential-queries"></a>Query parallele e sequenziali
 
 Alcune operazioni richiedono che i dati di origine vengano recapitati in modo sequenziale. Quando è necessario, gli operatori di query <xref:System.Linq.ParallelEnumerable> ripristinano automaticamente la modalità sequenziale. Per gli operatori di query definiti dall'utente e i delegati dell'utente che richiedono l'esecuzione sequenziale, PLINQ fornisce il metodo <xref:System.Linq.ParallelEnumerable.AsSequential%2A>. Quando si usa <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, tutti gli operatori successivi nella query vengono eseguiti in sequenza fino a quando non viene richiamato il metodo <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Per altre informazioni, vedere [Procedura: Combinare query LINQ parallele e sequenziali](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).
 
@@ -103,11 +101,11 @@ Nelle query [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sequenziali
 
 La figura seguente mostra la differenza tra `foreach` e <xref:System.Linq.ParallelEnumerable.ForAll%2A> per quanto riguarda l'esecuzione di query.
 
-![Confronto tra ForAll e ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
+![ForAll e ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
 
 ## <a name="cancellation"></a>Annullamento
 
-PLINQ è integrato con i tipi di annullamento in .NET Framework 4. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md). Di conseguenza, a differenza delle query LINQ to Objects sequenziali, le query PLINQ possono essere annullate. Per creare una query PLINQ annullabile, usare l'operatore <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nella query e fornire un'istanza di <xref:System.Threading.CancellationToken> come argomento. Quando la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> nel token è impostata su true, PLINQ rileva questa impostazione, arresta l'elaborazione in tutti i thread e genera un'eccezione <xref:System.OperationCanceledException>.
+PLINQ è integrato con i tipi di annullamento in .NET Framework 4. Per ulteriori informazioni, vedere [annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md). Pertanto, a differenza delle query di LINQ to Objects sequenziali, le query PLINQ possono essere annullate. Per creare una query PLINQ annullabile, usare l'operatore <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nella query e fornire un'istanza di <xref:System.Threading.CancellationToken> come argomento. Quando la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> nel token è impostata su true, PLINQ rileva questa impostazione, arresta l'elaborazione in tutti i thread e genera un'eccezione <xref:System.OperationCanceledException>.
 
 È possibile che una query PLINQ continui a elaborare alcuni elementi dopo l'impostazione del token di annullamento.
 
@@ -132,7 +130,7 @@ PLINQ supporta un numero fisso di partizioni. È tuttavia possibile che durante 
 
 ## <a name="measuring-plinq-performance"></a>Misurazione delle prestazioni di PLINQ
 
-In molti casi una query può essere parallelizzata, ma le risorse necessarie per configurare la query parallela rappresentano uno svantaggio superiore al vantaggio ottenuto in termini di prestazioni. Se la query esegue pochi calcoli o se l'origine dati è di dimensioni ridotte, è possibile che una query PLINQ risulti più lenta di una query LINQ to Objects sequenziale. È possibile usare Parallel Performance Analyzer in Visual Studio Team Server per confrontare le prestazioni delle diverse query per individuare colli di bottiglia di elaborazione e determinare se la query è eseguita in parallelo o in modo sequenziale. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) e [Procedura: Misurare le prestazioni di esecuzione delle query di PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
+In molti casi una query può essere parallelizzata, ma le risorse necessarie per configurare la query parallela rappresentano uno svantaggio superiore al vantaggio ottenuto in termini di prestazioni. Se la query esegue pochi calcoli o se l'origine dati è di dimensioni ridotte, è possibile che una query PLINQ risulti più lenta di una query LINQ to Objects sequenziale. È possibile usare Parallel Performance Analyzer in Visual Studio Team Server per confrontare le prestazioni delle diverse query per individuare colli di bottiglia di elaborazione e determinare se la query è eseguita in parallelo o in modo sequenziale. Per altre informazioni, vedere [Visualizzatore di concorrenze](/visualstudio/profiling/concurrency-visualizer) e [Procedura: Misurare le prestazioni di esecuzione delle query di PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
 
 ## <a name="see-also"></a>Vedere anche
 

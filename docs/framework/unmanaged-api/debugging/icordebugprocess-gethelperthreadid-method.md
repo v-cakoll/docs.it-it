@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad62b267eb0c49ff8fbefeb45b523c21edc705fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128853"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>Metodo ICorDebugProcess::GetHelperThreadID
-Ottiene l'ID di thread del sistema operativo (OS) del thread di supporto interno del debugger.  
+Ottiene l'ID del thread del sistema operativo del thread helper interno del debugger.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +35,19 @@ HRESULT GetHelperThreadID (
   
 ## <a name="parameters"></a>Parametri  
  `pThreadID`  
- [out] ID del thread di supporto interno del debugger di thread di un puntatore al sistema operativo.  
+ out Puntatore all'ID del thread del sistema operativo del thread helper interno del debugger.  
   
 ## <a name="remarks"></a>Note  
- Durante il debug gestito e non gestito, è responsabilità del debugger per garantire che il thread con l'ID specificato rimanga in esecuzione se raggiunge un punto di interruzione inserito dal debugger. Un debugger può anche scegliere di nascondere questo thread da parte dell'utente. Se l'helper esiste ancora alcun thread nel processo, il `GetHelperThreadID` metodo viene restituito zero in *`pThreadID`.  
+ Durante il debug gestito e non gestito, è responsabilità del debugger garantire che il thread con l'ID specificato rimanga in esecuzione se raggiunge un punto di interruzione inserito dal debugger. Un debugger può anche voler nascondere questo thread dall'utente. Se nel processo non è ancora presente alcun thread helper, il metodo `GetHelperThreadID` restituisce zero in *`pThreadID`.  
   
- È possibile memorizzare nella cache dell'ID del thread di helper, perché può cambiare nel corso del tempo. È necessario ripetere la query l'ID del thread in corrispondenza di ogni evento di arresto.  
+ Non è possibile memorizzare nella cache l'ID del thread di supporto perché potrebbe cambiare nel tempo. È necessario eseguire di nuovo la query sull'ID del thread a ogni evento di interruzione.  
   
- L'ID del thread del thread di supporto del debugger saranno corretto in ogni non gestito [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventi, consentendo in tal modo un debugger determinare l'ID del thread del suo thread helper e lo nasconde da parte dell'utente. Un thread in cui viene identificato come un thread di supporto durante una funzione non gestita `ICorDebugManagedCallback::CreateThread` evento non verrà mai eseguito il codice utente gestito.  
+ L'ID thread del thread helper del debugger sarà corretto in ogni evento [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) non gestito, consentendo così a un debugger di determinare l'ID del thread del relativo thread helper e di nasconderlo dall'utente. Un thread identificato come thread Helper durante un evento `ICorDebugManagedCallback::CreateThread` non gestito non eseguirà mai codice utente gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl. Cordebug. H  
+ **Intestazione:** CorDebug. idl. CorDebug. h  
   
  **Libreria:** CorGuids.lib  
   

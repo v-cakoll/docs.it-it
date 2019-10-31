@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 954043414b7cdbbf701f34375372f91dd68a359c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922005"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102724"
 ---
 # <a name="iobjecthandle-interface"></a>Interfaccia IObjectHandle
-Fornisce un metodo per riferimento indiretto di oggetti marshalling per valore rimozione del wrapping.  
+Fornisce un metodo per l'annullamento del wrapping degli oggetti Marshal-by-value da un riferimento indiretto.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Annulla il wrapping di un oggetto di effettuare il marshalling per valore da un riferimento indiretto.|  
+|[Metodo Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Rimuove il wrapping di un oggetto marshalling per valore da riferimento indiretto.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

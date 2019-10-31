@@ -6,20 +6,18 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f25609bc3c4dd829c66a1a4514b7f1121f9c0909
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: HT
+ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128963"
 ---
 # <a name="threading-objects-and-features"></a>Oggetti e funzionalità del threading
 
 Oltre alla classe <xref:System.Threading.Thread?displayProperty=nameWithType>, .NET offre diverse classi utili per lo sviluppo di applicazioni multithreading. Gli articoli seguenti offrono una panoramica di queste classi:
 
-|Titolo|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Pool di thread gestiti](the-managed-thread-pool.md)|Descrive la classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType> che offre un pool di thread di lavoro gestiti da .NET.|  
 |[Timer](timers.md)|Descrive i timer .NET che possono essere usati in un ambiente con multithreading.|

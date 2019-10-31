@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ee1f6e6-1bd7-4ebb-83b8-ff9a08ca03de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16cf17d43fcad3c4f7a710678bbdc056f840eaca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57a82e4ec106fead105cc7f200e7e56026004328
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122373"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>Metodo ICorDebugType::EnumerateTypeParameters
-Ottiene un puntatore a interfaccia a un'interfaccia ICorDebugTypeEnum che contiene il <xref:System.Type> parametri della classe a cui fa riferimento questa ICorDebugType.  
+Ottiene un puntatore a interfaccia a un ICorDebugTypeEnum che contiene i parametri di <xref:System.Type> della classe a cui fa riferimento ICorDebugType.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +35,19 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>Parametri  
  `ppTyParEnum`  
- [out] Un puntatore all'indirizzo di un `ICorDebugTypeEnum` che contiene i parametri del tipo.  
+ out Puntatore all'indirizzo di un `ICorDebugTypeEnum` che contiene i parametri del tipo.  
   
 ## <a name="remarks"></a>Note  
- È possibile usare `EnumerateTypeParameters` se il valore CorElementType restituito da [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) è ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE _ PTR o ELEMENT_TYPE_FNPTR. Il numero di parametri e il loro ordine dipende dal tipo:  
+ È possibile utilizzare `EnumerateTypeParameters` se il valore CorElementType restituito da [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) è ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR o ELEMENT_TYPE_FNPTR. Il numero di parametri e il relativo ordine dipendono dal tipo:  
   
-- ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE: Il numero di parametri di tipo contenuto nel `ICorDebugTypeEnum` che termina, questo metodo varia in base al numero di parametri di tipo formale per la classe corrispondente. Ad esempio, se il tipo è `class Dict<String,int32>`, quindi `EnumerateTypeParameters` restituirà un `ICorDebugTypeEnum` che contiene gli oggetti che rappresentano `String` e `int32` nella sequenza.  
+- ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE: il numero di parametri di tipo contenuti nel `ICorDebugTypeEnum` restituito da questo metodo dipende dal numero di parametri di tipo formale per la classe corrispondente. Se, ad esempio, il tipo è `class Dict<String,int32>`, `EnumerateTypeParameters` restituirà un `ICorDebugTypeEnum` contenente oggetti che rappresentano `String` e `int32` in sequenza.  
   
-- ELEMENT_TYPE_FNPTR: Il numero di parametri di tipo contenuto nel `ICorDebugTypeEnum` sarà uno maggiore del numero di argomenti accettati dalla funzione. Il primo parametro di tipo contenuto nel `ICorDebugTypeEnum` è il tipo restituito della funzione e i parametri di tipo successive sono parametri della funzione.  
+- ELEMENT_TYPE_FNPTR: il numero di parametri di tipo contenuti nella `ICorDebugTypeEnum` sarà maggiore di uno rispetto al numero di argomenti accettati dalla funzione. Il primo parametro di tipo contenuto nell'`ICorDebugTypeEnum` è il tipo restituito per la funzione e i parametri di tipo successivi sono i parametri della funzione.  
   
-- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR: Verrà restituito un parametro di tipo. Ad esempio, se il tipo è un tipo di matrice, ad esempio `int32[]`,`EnumerateTypeParameters` restituirà un `ICorDebugTypeEnum` che contiene un oggetto che rappresenta `int32`.  
+- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR: verrà restituito un parametro di tipo. Se, ad esempio, il tipo è un tipo di matrice, ad esempio `int32[]`,`EnumerateTypeParameters` restituirà un `ICorDebugTypeEnum` contenente un oggetto che rappresenta `int32`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

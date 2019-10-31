@@ -1,17 +1,15 @@
 ---
-title: <Namespace>Elemento (.NET Native)
+title: Elemento <Namespace> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128255"
 ---
-# <a name="namespace-element-net-native"></a>\<Elemento > dello spazio dei nomi (.NET Native)
+# <a name="namespace-element-net-native"></a>Elemento > dello spazio dei nomi \<(.NET Native)
 Applica i criteri di reflection di runtime a tutti i tipi in un determinato spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,7 +33,7 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|DESCRIZIONE|  
+|Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome dello spazio dei nomi.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
@@ -51,7 +49,7 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*namespace_name*|Nome dello spazio dei nomi. Se l'elemento \<Namespace> è figlio di un elemento [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md) o [\<Assembly>](assembly-element-net-native.md), *namespace_name* deve essere un nome completo dello spazio dei nomi. Se l'elemento \<Namespace> è figlio di un altro elemento \<Namespace>, *namespace_name* deve essere un nome relativo dello spazio dei nomi.|  
   

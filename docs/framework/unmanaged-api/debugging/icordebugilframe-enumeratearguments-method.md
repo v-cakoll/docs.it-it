@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00ac81e2-a774-422a-bd88-54a4b3c99f73
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 499f58cc0a3f2d1b3c159435ed7d9b523f25e29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d74c5a6f966201c8ca9d2854de2e9986e7f1d0fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131034"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>Metodo ICorDebugILFrame::EnumerateArguments
 Ottiene un enumeratore per gli argomenti in questo frame.  
@@ -37,13 +35,13 @@ HRESULT EnumerateArguments (
   
 ## <a name="parameters"></a>Parametri  
  `ppValueEnum`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugValueEnum che è l'enumeratore per gli argomenti in questo frame.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugValueEnum che rappresenta l'enumeratore per gli argomenti in questo frame.  
   
 ## <a name="remarks"></a>Note  
- `EnumerateArguments` Ottiene un enumeratore in grado di elencare gli argomenti disponibili nel frame di chiamata che è rappresentato da questo ICorDebugILFrame oggetto. L'elenco includerà gli argomenti [vararg](/cpp/windows/vararg) (vale a dire, un numero variabile di argomenti), nonché di argomenti non `vararg`.  
+ `EnumerateArguments` ottiene un enumeratore in grado di elencare gli argomenti disponibili nel frame di chiamata rappresentato da questo oggetto ICorDebugILFrame. L'elenco includerà gli argomenti [vararg](/cpp/windows/vararg) (ovvero un numero variabile di argomenti) e gli argomenti che non sono `vararg`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

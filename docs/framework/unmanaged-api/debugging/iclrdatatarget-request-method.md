@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113345"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Metodo ICLRDataTarget::Request
-Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per richiedere un'operazione, come definito dall'implementazione.  
+Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per richiedere un'operazione, come definito dall'implementazione di.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parametri  
  `reqCode`  
- [in] Definito dall'utente.  
+ in Definito dall'utente.  
   
  `inBufferSize`  
- [in] Le dimensioni del buffer di input, che viene usato per la richiesta in ingresso.  
+ in Dimensioni del buffer di input, che viene utilizzato per la richiesta in ingresso.  
   
  `inBuffer`  
- [in] Un buffer contenente la richiesta.  
+ in Buffer contenente la richiesta.  
   
  `outBufferSize`  
- [in] Le dimensioni del buffer di output, che viene usato per la risposta.  
+ in Dimensione del buffer di output utilizzata per la risposta.  
   
  `outBuffer`  
- [out] Un Buffer contenente la risposta.  
+ out Buffer contenente la risposta.  
   
 ## <a name="remarks"></a>Note  
- Il `Request` metodo semplifica l'aggiunta di operazioni personalizzate non specificate. Vale a dire, questo metodo fornisce estensibilità senza la necessità di revisione della definizione dell'interfaccia.  
+ Il metodo `Request` facilita l'aggiunta di operazioni personalizzate non specificate. Questo metodo fornisce l'estendibilità senza richiedere la revisione della definizione dell'interfaccia.  
   
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

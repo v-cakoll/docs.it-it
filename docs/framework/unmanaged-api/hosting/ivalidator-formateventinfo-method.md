@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123303"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>Metodo IValidator::FormatEventInfo
 Ottiene il messaggio di errore corrispondente all'errore di convalida specificato.  
@@ -41,25 +39,25 @@ HRESULT FormatEventInfo(
   
 ## <a name="parameters"></a>Parametri  
  `hVECode`  
- [in] Il valore HRESULT passato al gestore di errori di convalida.  
+ in Valore HRESULT passato al gestore degli errori di convalida.  
   
  `Context`  
- [in] Oggetto `VEContext` istanza che contiene informazioni contestuali relative all'errore di convalida.  
+ in Istanza `VEContext` contenente le informazioni di contesto sull'errore di convalida.  
   
  `msg`  
  [in, out] Stringa che contiene il messaggio di errore restituito.  
   
  `ulMaxLength`  
- [in] La lunghezza massima del messaggio di errore.  
+ in Lunghezza massima del messaggio di errore.  
   
  `psa`  
- [in] Una matrice protetta contenente parametri aggiuntivi che descrive l'errore.  
+ in Matrice sicura che contiene parametri aggiuntivi che descrivono l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator. H  
+ **Intestazione:** IValidator. idl, IValidator. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

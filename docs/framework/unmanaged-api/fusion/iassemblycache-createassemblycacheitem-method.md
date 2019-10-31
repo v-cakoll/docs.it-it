@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3e50538bde8fe3509b49e3dbcb031875e6863e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796820"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127111"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Metodo IAssemblyCache::CreateAssemblyCacheItem
 Ottiene un riferimento a un nuovo oggetto [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
@@ -47,16 +45,16 @@ HRESULT CreateAssemblyCacheItem (
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
  `ppAsmItem`  
- out Puntatore restituito `IAssemblyCacheItem` .  
+ out Puntatore `IAssemblyCacheItem` restituito.  
   
  `pszAssemblyName`  
- [in, facoltativo] Coppie non canoniche delimitate `name=value` da virgole.  
+ [in, facoltativo] Coppie di `name=value` delimitate da virgole.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744756"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131258"
 ---
 # <a name="icordebugremote-interface"></a>Interfaccia ICorDebugRemote
 Consente di avviare o allegare un debugger gestito a un processo di destinazione remoto.  
@@ -63,19 +61,19 @@ interface ICorDebugRemote : IUnknown
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un processo in un computer remoto per il debug gestito.|  
-|[Metodo ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Avvia un processo in un computer remoto all'interno del debugger.|  
+|[Metodo ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Avvia un processo in un computer remoto nel debugger.|  
   
 ## <a name="remarks"></a>Note  
- Attualmente, questa funzionalità è supportata solo per il debug di applicazioni basate su Silverlight di destinazione in cui è in esecuzione in un computer Macintosh remoto.  
+ Questa funzionalità è attualmente supportata solo per il debug di una destinazione applicazione basata su Silverlight in esecuzione su un computer Macintosh remoto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** 4.5, 4, 3.5 SP1  
+ **Versioni .NET Framework:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Vedere anche
 

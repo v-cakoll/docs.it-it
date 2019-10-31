@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f65f924b872195000f73bf29b267d1fc30b74f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6ef04799c0062c40f1671cbe6d897a148e1b93bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130477"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Metodo IHostGCManager::SuspensionEnding
 Notifica all'host che la Common Language Runtime (CLR) sta riprendendo l'esecuzione delle attività nei thread che sono stati sospesi per un Garbage Collection.  
@@ -43,7 +41,7 @@ HRESULT SuspensionEnding (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SuspensionEnding`la restituzione è riuscita.|  
+|S_OK|`SuspensionEnding` ha restituito un esito positivo.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
@@ -51,17 +49,17 @@ HRESULT SuspensionEnding (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- CLR chiama `SuspensionEnding` una volta eseguito un Garbage Collection per informare l'host che il thread sta riprendendo l'esecuzione.  
+ CLR chiama `SuspensionEnding` dopo aver eseguito un Garbage Collection per informare l'host che il thread sta riprendendo l'esecuzione.  
   
 > [!IMPORTANT]
 > Non ripianificare il thread da cui è stata effettuata la chiamata al metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** MSCorEE. h  
   
- **Libreria** Incluso come risorsa in MSCorEE. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

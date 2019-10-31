@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 284a74823b01305f8c6e025f70bb9209c8607b7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137069"
 ---
 # <a name="icordebugvaluegettype-method"></a>Metodo ICorDebugValue::GetType
 Ottiene il tipo primitivo di questo oggetto "ICorDebugValue".  
@@ -37,15 +35,15 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Parametri  
  `pType`  
- [out] Puntatore a un valore di enumerazione che indica il tipo del valore "CorElementType".  
+ out Puntatore a un valore dell'enumerazione "CorElementType" che indica il tipo del valore.  
   
 ## <a name="remarks"></a>Note  
- Se l'oggetto è un tipo complesso in fase di esecuzione, tale tipo può essere esaminato mediante le sottoclassi appropriate del `ICorDebugValue` interfaccia. Ad esempio, "ICorDebugObjectValue," che eredita da `ICorDebugValue`, rappresenta un tipo complesso.  
+ Se l'oggetto è un tipo di runtime complesso, il tipo può essere esaminato tramite le sottoclassi appropriate dell'interfaccia `ICorDebugValue`. Ad esempio, "ICorDebugObjectValue", che eredita da `ICorDebugValue`, rappresenta un tipo complesso.  
   
- Il `GetType` e [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) ogni i metodi restituiscono le informazioni sul tipo di valore. Entrambi sono sostituiti da GetExactType [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) (metodo).  
+ I metodi `GetType` e [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) restituiscono informazioni sul tipo di un valore. Entrambi sono sostituiti dal metodo [ICorDebugValue2:: GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) in grado di riconoscere i generics.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

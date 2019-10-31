@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 404cd5513a1cbd353faed41030a80ec2abef235f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaba6b2166a82cfe825ffb98db515e24d4656462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138236"
 ---
 # <a name="epolicyaction-enumeration"></a>Enumerazione EPolicyAction
-Descrive le azioni dei criteri dell'host è possibile impostare per le operazioni specificate da [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e gli errori indicati dal [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+Descrive le azioni dei criteri che l'host può impostare per le operazioni descritte da [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) ed errori descritti da [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,30 +41,30 @@ typedef enum {
 } EPolicyAction;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`eAbortThread`|Specifica che common language runtime (CLR) deve interrompere il thread in modo regolare. Interruzione di una normale include i tentativi di eseguire tutti i `finally` consente di bloccare, qualsiasi `catch` i blocchi correlati alle interruzioni di thread e i finalizzatori.|  
-|`eDisableRuntime`|Specifica che Common Language Runtime deve essere stato disabilitato. Alcuna ulteriore codice gestito può essere eseguito nel processo interessato e i thread sono bloccati di accedere a CLR.|  
-|`eExitProcess`|Specifica che Common Language Runtime deve cercare una chiusura normale del processo, inclusi l'esecuzione dei finalizzatori e di pulitura e operazioni di registrazione.|  
-|`eFastExitProcess`|Specifica che Common Language Runtime deve uscire dal processo immediatamente, senza eseguire i finalizzatori o pulizia e operazioni di registrazione. Tuttavia, notifica viene inviata al debugger.|  
-|`eNoAction`|Specifica che deve essere eseguita alcuna azione.|  
-|`eRudeAbortThread`|Specifica che Common Language Runtime deve eseguire un'interruzione del thread in modo irregolare. Solo a quelli `catch` e `finally` blocchi contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> vengono eseguite.|  
-|`eRudeExitProcess`|Specifica che Common Language Runtime deve uscire dal processo senza esecuzione dei finalizzatori o la registrazione delle operazioni.|  
-|`eRudeUnloadAppDomain`|Specifica che Common Language Runtime deve eseguire uno scaricamento non regolare del <xref:System.AppDomain>. Solo i finalizzatori contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> vengono eseguite. Allo stesso modo, tutti i thread con questo <xref:System.AppDomain> nei relativi stack ricevere un' `ThreadAbortException`, ma solo quelle `catch` e `finally` i blocchi contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> vengono eseguite.|  
-|`eThrowException`|Specifica che deve essere generata un'eccezione appropriata per la condizione, ad esempio di memoria insufficiente, un sovraccarico del buffer e così via.|  
-|`eUnloadAppDomain`|Specifica che il <xref:System.AppDomain> deve essere scaricato. Common Language Runtime prova a eseguire i finalizzatori.|  
+|`eAbortThread`|Specifica che il Common Language Runtime (CLR) deve interrompere normalmente il thread. Un'interruzione normale include i tentativi di esecuzione di tutti i blocchi di `finally`, di eventuali blocchi `catch` correlati a interruzioni di thread e finalizzatori.|  
+|`eDisableRuntime`|Specifica che CLR deve immettere uno stato disabilitato. Non è possibile eseguire ulteriori codice gestito nel processo interessato e i thread non possono accedere a CLR.|  
+|`eExitProcess`|Specifica che CLR deve tentare un'uscita normale del processo, tra cui l'esecuzione di finalizzatori e l'esecuzione di operazioni di pulizia e registrazione.|  
+|`eFastExitProcess`|Specifica che CLR deve uscire immediatamente dal processo, senza eseguire finalizzatori o eseguire operazioni di pulizia e registrazione. Tuttavia, la notifica viene inviata al debugger.|  
+|`eNoAction`|Specifica che non deve essere eseguita alcuna azione.|  
+|`eRudeAbortThread`|Specifica che CLR deve eseguire un'interruzione di thread scortese. Vengono eseguiti solo i blocchi `catch` e `finally` contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute>.|  
+|`eRudeExitProcess`|Specifica che CLR deve uscire dal processo senza eseguire finalizzatori o operazioni di registrazione.|  
+|`eRudeUnloadAppDomain`|Specifica che CLR deve eseguire uno scaricamento rude del <xref:System.AppDomain>. Vengono eseguiti solo i finalizzatori contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute>. Analogamente, tutti i thread con questo <xref:System.AppDomain> nello stack ricevono una `ThreadAbortException`, ma vengono eseguiti solo i blocchi `catch` e `finally` contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute>.|  
+|`eThrowException`|Specifica che deve essere generata un'eccezione appropriata per la condizione, ad esempio memoria insufficiente, overflow del buffer e così via.|  
+|`eUnloadAppDomain`|Specifica che il <xref:System.AppDomain> deve essere scaricato. CLR tenta di eseguire i finalizzatori.|  
   
 ## <a name="remarks"></a>Note  
- L'host imposta le azioni dei criteri chiamando i metodi del [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interfaccia. Per informazioni sulle interruzioni regolari e irregolari, vedere la [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) enumerazione.  
+ L'host imposta le azioni dei criteri chiamando i metodi dell'interfaccia [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) . Per informazioni sulle interruzioni scortesi e aggraziate, vedere l'enumerazione [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

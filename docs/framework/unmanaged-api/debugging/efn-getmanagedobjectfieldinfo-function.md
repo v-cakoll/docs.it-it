@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123022"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo (funzione)
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_AAPN\_funzione GetManagedObjectFieldInfo
 Ottiene l'offset per un campo dall'inizio di un oggetto e il valore del campo, usando il puntatore all'oggetto e il nome di campo forniti.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parametri  
  `Client`  
- [in] Puntatore al client di debug.  
+ in Puntatore al client di debug.  
   
  `objAddr`  
- [in] Un puntatore all'oggetto gestito.  
+ in Puntatore A un oggetto gestito.  
   
  szFieldName  
- [in] Un puntatore all'oggetto gestito per il nome del campo.  
+ in Puntatore a un oggetto gestito al nome del campo.  
   
  `pValue`  
- [out] Il valore del campo. Questo parametro può essere null.  
+ out Valore del campo. Questo parametro può essere null.  
   
  `pOffset`  
- [out] L'offset dal `objAddr` al campo. Questo parametro può essere null.  
+ out Offset da `objAddr` al campo. Questo parametro può essere null.  
   
 ## <a name="remarks"></a>Note  
  Se l'offset è 0, non viene scritto alcun offset.  
   
- Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.  
+ Se nel thread non è attualmente presente codice gestito nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con il valore della funzione messaggi 0XA0 e un codice di errore 0x1000.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace.h  
+ **Intestazione:** SOS_Stacktrace. h  
   
- **Versione di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versione .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

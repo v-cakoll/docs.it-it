@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24bc096a0ba01c58aa963d69fa46a1d1bbe8be75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6a7d9465a454175b58bb7b9566d31f3c65420610
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752897"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085063"
 ---
 # <a name="icordebugevalgetthread-method"></a>Metodo ICorDebugEval::GetThread
-Ottiene il thread in cui questa valutazione è in esecuzione o verrà eseguito.  
+Ottiene il thread in cui è in esecuzione la valutazione o verrà eseguito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Parametri  
  `ppThread`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugThread che rappresenta il thread.  
+ out Puntatore all'indirizzo di un oggetto ICorDebugThread che rappresenta il thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

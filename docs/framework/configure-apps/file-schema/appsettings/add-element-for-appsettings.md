@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927741"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119333"
 ---
 # <a name="add-element-for-appsettings"></a>\<aggiungere > elemento per \<appSettings >
 
@@ -22,7 +22,7 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<aggiungi >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,17 +37,17 @@ Aggiunge un'impostazione dell'applicazione personalizzata.
 |           | Descrizione |
 | --------- | ----------- |
 | **key**   | Attributo obbligatorio.<br><br>Specifica il nome della chiave da aggiungere. |
-| **value** | Attributo obbligatorio.<br><br>Specifica il valore della chiave da aggiungere. |
+| **valore** | Attributo obbligatorio.<br><br>Specifica il valore della chiave da aggiungere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | DESCRIZIONE |
+|     | Descrizione |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuna
+Nessuno
 
 ## <a name="example"></a>Esempio
 
@@ -59,7 +59,7 @@ Nell'esempio seguente viene illustrato come aggiungere un'impostazione di config
 </appSettings>
 ```
 
-Nell'esempio seguente viene usato `<add>` l'elemento per definire due impostazioni di compatibilità in un'applicazione ASP.NET:
+Nell'esempio seguente viene usato l'elemento `<add>` per definire due impostazioni di compatibilità in un'applicazione ASP.NET:
 
 ```xml
 <appSettings>

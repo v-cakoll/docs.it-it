@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1d8d76084bcf0b5951c6431c6f21f352406050b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b55bd41039fce84a21c5d651d93b56f5d84b7611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737364"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088189"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>Metodo ICorDebugAssembly::EnumerateModules
-Ottiene un enumeratore per i moduli inclusi nel `ICorDebugAssembly`.  
+Ottiene un enumeratore per i moduli contenuti nell'`ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT EnumerateModules (
   
 ## <a name="parameters"></a>Parametri  
  `ppModules`  
- [out] Un puntatore all'indirizzo dell'interfaccia ICorDebugModuleEnum che corrisponde all'enumeratore.  
+ out Puntatore all'indirizzo dell'interfaccia ICorDebugModuleEnum che rappresenta l'enumeratore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

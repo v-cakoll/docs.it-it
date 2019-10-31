@@ -1,16 +1,14 @@
 ---
 title: Distribuzione di applicazioni .NET Core
 description: Informazioni sui modi per distribuire un'applicazione .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089189"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -48,7 +46,7 @@ Sono presenti anche alcuni svantaggi:
 
 Per una distribuzione autonoma, si distribuiscono l'app e le eventuali dipendenze di terze parti richieste, insieme alla versione di .NET Core usata per compilare l'app. Poiché la creazione di una distribuzione autonoma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) su più piattaforme, queste dipendenze devono essere presenti prima di eseguire l'applicazione. Per altre informazioni sull'associazione di versioni in fase di esecuzione, vedere l'articolo sull'[associazione delle versioni in .NET Core](../versions/selection.md).
 
-A partire da NET Core 2.1 SDK (versione 2.1.300), .NET Core supporta il *roll forward della versione della patch*. Quando si crea una distribuzione autonoma, gli strumenti di .NET Core includono automaticamente l'ultimo il runtime servito della versione di .NET Core a cui l'applicazione è destinata. L'ultimo runtime servito include le patch di sicurezza e altre correzioni di bug. Il runtime servito non deve essere presente nel sistema di compilazione. Viene scaricato automaticamente da NuGet.org. Per altre informazioni, incluse le istruzioni su come rifiutare esplicitamente il roll forward della versione della patch, vedere [Roll forward del runtime di distribuzione autonoma](runtime-patch-selection.md).
+A partire da NET Core 2.1 SDK (versione 2.1.300), .NET Core supporta il *roll forward della versione della patch*. Quando si crea una distribuzione autonoma, gli strumenti di .NET Core includono automaticamente l'ultimo il runtime servito della versione di .NET Core a cui l'applicazione è destinata. Il runtime di manutenzione più recente include patch di sicurezza e altre correzioni di bug. Non è necessario che il runtime servito sia presente nel sistema di compilazione. viene scaricato automaticamente da NuGet.org. Per altre informazioni, incluse le istruzioni su come rifiutare esplicitamente il rollforward della versione patch, vedere [rollforward del runtime di distribuzione autonomo](runtime-patch-selection.md).
 
 Le distribuzioni dipendenti dal framework e le distribuzioni autonome usano eseguibili host separati, quindi è possibile firmare un eseguibile host per una distribuzione autonoma con la firma del server di pubblicazione.
 

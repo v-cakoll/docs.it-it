@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130426"
 ---
 # <a name="execquerywmi-function"></a>Funzione ExecQueryWmi
 
@@ -53,7 +51,7 @@ HRESULT ExecQueryWmi (
 in Stringa con il linguaggio di query valido supportato da gestione Windows. Deve essere "WQL", l'acronimo di WMI Query Language.
 
 `strQuery`\
-in Testo della query. Questo parametro non può `null`essere.
+in Testo della query. Questo parametro non può essere `null`.
 
 `lFlags`\
 in Combinazione di flag che influiscono sul comportamento di questa funzione. I valori seguenti vengono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
@@ -64,14 +62,14 @@ in Combinazione di flag che influiscono sul comportamento di questa funzione. I 
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Il flag causa una chiamata semisincrono. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La funzione restituisce un enumeratore di sola trasmissione. In genere, gli enumeratori di sola trasmissione sono più veloci e utilizzano meno memoria rispetto agli enumeratori convenzionali, ma non consentono le chiamate da [clonare](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI mantiene i puntatori agli oggetti nell'enumerazione fino a quando non vengono rilasciati. |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garantisce che tutti gli oggetti restituiti dispongano di informazioni sufficienti in modo che le proprietà di sistema, ad esempio **__PATH**, **__RELPATH**e **__SERVER**, non `null`lo siano. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garantisce che tutti gli oggetti restituiti dispongano di informazioni sufficienti in modo che le proprietà di sistema, ad esempio **__PATH**, **__RELPATH**e **__SERVER**, non siano `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Questo flag viene usato per la realizzazione di prototipi. Non esegue la query e restituisce invece un oggetto simile a un oggetto risultato tipico. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Causa l'accesso diretto al provider per la classe specificata senza considerare la relativa classe padre o qualsiasi sottoclasse. |
 
 I flag consigliati sono `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` per ottenere prestazioni ottimali.
 
 `pCtx`\
-in In genere, questo valore `null`è. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce le classi richieste.
+in In genere, questo valore è `null`. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce le classi richieste.
 
 `ppEnum`\
 out Se non si verificano errori, riceve il puntatore all'enumeratore che consente al chiamante di recuperare le istanze nel set di risultati della query. La query può avere un set di risultati con zero istanze. Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) .
@@ -116,15 +114,15 @@ I valori seguenti restituiti da questa funzione sono definiti nel file di intest
 
 Questa funzione esegue il wrapping di una chiamata al metodo [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) .
 
-Questa funzione elabora la query specificata nel `strQuery` parametro e crea un enumeratore tramite il quale il chiamante può accedere ai risultati della query. L'enumeratore è un puntatore a un'interfaccia [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) . i risultati della query sono istanze di oggetti della classe resi disponibili tramite l'interfaccia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+Questa funzione elabora la query specificata nel parametro `strQuery` e crea un enumeratore tramite il quale il chiamante può accedere ai risultati della query. L'enumeratore è un puntatore a un'interfaccia [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) . i risultati della query sono istanze di oggetti della classe resi disponibili tramite l'interfaccia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Sono previsti limiti al numero di `AND` parole chiave e `OR` che è possibile utilizzare nelle query WQL. Un numero elevato di parole chiave WQL utilizzate in una query complessa può causare la restituzione del `WBEM_E_QUOTA_VIOLATION` codice di errore (o 0x8004106c) di WMI `HRESULT` come valore. Il limite di parole chiave WQL dipende dalla complessità della query.
+Sono previsti limiti per il numero di parole chiave `AND` e `OR` che possono essere utilizzate nelle query WQL. Un numero elevato di parole chiave WQL utilizzate in una query complessa può causare la restituzione da parte di WMI del codice di errore `WBEM_E_QUOTA_VIOLATION` (o 0x8004106c) come valore `HRESULT`. Il limite di parole chiave WQL dipende dalla complessità della query.
 
 Se la chiamata di funzione ha esito negativo, è possibile ottenere ulteriori informazioni sull'errore chiamando la funzione [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

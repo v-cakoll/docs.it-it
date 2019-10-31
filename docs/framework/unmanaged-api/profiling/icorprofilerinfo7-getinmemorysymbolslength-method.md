@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955418"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130337"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Metodo ICorProfilerInfo7:: GetInMemorySymbolsLength
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
@@ -37,12 +35,12 @@ HRESULT GetInMemorySymbolsLength(
  in Identificatore del modulo contenente il flusso in memoria.  
   
  pCountSymbolBytes  
- out Puntatore a un `DWORD` valore che, quando il metodo viene restituito, contiene la lunghezza del flusso in byte.  
+ out Puntatore a un valore `DWORD` che, quando il metodo viene restituito, contiene la lunghezza del flusso in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce `S_OK` se è possibile determinare la lunghezza del flusso di memoria, anche se è zero (0).  
   
- Il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC` se il metodo è stato creato <xref:System.Reflection.Emit?displayProperty=nameWithType>utilizzando.  
+ Il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC` se il metodo è stato creato utilizzando <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Note  
  Se il modulo dispone di simboli in memoria, la lunghezza del flusso viene posizionata in `pCountSymbolBytes`. Se il modulo non dispone di simboli in memoria, `*pCountSymbolBytes = 0`.  
@@ -51,11 +49,11 @@ HRESULT GetInMemorySymbolsLength(
 > L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato usando Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf. idl, CorProf. h  
+ **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

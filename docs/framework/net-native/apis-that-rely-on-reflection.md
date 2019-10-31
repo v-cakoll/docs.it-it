@@ -2,14 +2,12 @@
 title: API basate sulla reflection
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128535"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
 In alcuni casi, l'uso della reflection nel codice non è ovvio, quindi la catena di strumenti .NET Native non mantiene i metadati necessari in fase di esecuzione. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  

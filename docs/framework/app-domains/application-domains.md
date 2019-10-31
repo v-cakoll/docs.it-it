@@ -12,14 +12,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119979"
 ---
 # <a name="application-domains"></a>Domini applicazione
 
@@ -48,7 +46,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
     > [!NOTE]
     > Non è possibile scaricare singoli assembly o tipi. È possibile scaricare solo un dominio completo.  
   
-- Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per altre informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per ulteriori informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - L'ambito del comportamento del codice viene stabilito dall'applicazione in cui questo è in esecuzione. In altri termini, il dominio applicazione fornisce impostazioni di configurazione quali i criteri di controllo delle versioni dell'applicazione, la posizione degli assembly remoti a cui questa accede e le informazioni sul percorso degli assembly che vengono caricati nel dominio.  
   

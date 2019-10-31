@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e467234a45ae702a5b77a5f0fa8b75d4ff03c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124136"
 ---
 # <a name="beginenumeration-function"></a>Funzione BeginEnumeration
 Reimposta un enumeratore all'inizio dell'enumerazione.  
@@ -86,7 +84,7 @@ Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limitare l'enumerazione alle proprietà sottoposte a override nella definizione della classe. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limitare l'enumerazione alle proprietà sottoposte a override nella definizione della classe corrente e alle nuove proprietà definite nella classe. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Maschera (anziché un flag) da applicare a un `lEnumFlags` valore per verificare `WBEM_FLAG_CLASS_OVERRIDES_ONLY` se è impostato o `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` . |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Maschera (anziché un flag) da applicare a un valore di `lEnumFlags` per verificare se è impostato `WBEM_FLAG_CLASS_OVERRIDES_ONLY` o `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione alle proprietà definite o modificate nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione alle proprietà ereditate dalle classi di base. |
 
@@ -98,7 +96,7 @@ Costante  |Value  |Descrizione  |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione alle proprietà ereditate dalle classi di base. |
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  
   

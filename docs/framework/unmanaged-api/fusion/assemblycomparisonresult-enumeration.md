@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d3fd88a2c1ac90f823b23d8d2bcb5b177a625c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109004"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>Enumerazione AssemblyComparisonResult
 Indica l'equivalenza di due identità di assembly, come determinato dalla funzione [CompareAssemblyIdentity](compareassemblyidentity-function.md) .  
@@ -47,7 +45,7 @@ typedef enum _tagAssemblyComparisonResult {
   
 ## <a name="members"></a>Members  
   
-|Nome del membro|DESCRIZIONE|  
+|Nome del membro|Descrizione|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|Indica che tutti i campi di assembly nel confronto corrispondono.|  
 |`ACR_EquivalentFXUnified`|Indica che gli assembly sono considerati equivalenti in base all'unificazione del Common Language Runtime versione (CLR) dei numeri di versione dell'assembly nella .NET Framework versione 2,0.|  
@@ -63,11 +61,11 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_Unknown`|Indica che il motivo della mancata equivalenza non è noto.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

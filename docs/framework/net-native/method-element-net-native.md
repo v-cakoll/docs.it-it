@@ -1,17 +1,15 @@
 ---
-title: <Method>Elemento (.NET Native)
+title: Elemento <Method> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049581"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128345"
 ---
-# <a name="method-element-net-native"></a>\<Elemento > Method (.NET Native)
+# <a name="method-element-net-native"></a>Elemento \<> Method (.NET Native)
 Applica i criteri di reflection di runtime a un costruttore o a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -55,7 +53,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<Parameter>](parameter-element-net-native.md)|Applica i criteri al tipo di argomento passato a un metodo.|  
 |[\<GenericParameter>](genericparameter-element-net-native.md)|Applica i criteri al tipo di parametro di un tipo o di un metodo generico.|  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86b99b29a85f498a6bfa0363a446bf589876bff9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41226cd909900bd2da7bdcf9b9a49567d3042b01
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094883"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>Funzione StrongNameGetBlobFromImage
 Ottiene una rappresentazione binaria dell'immagine dell'assembly in corrispondenza dell'indirizzo di memoria specificato.  
@@ -44,26 +42,26 @@ BOOLEAN StrongNameGetBlobFromImage (
  in Indirizzo di memoria del manifesto dell'assembly mappato.  
   
  `dwLength`  
- in Dimensione, in byte, dell'immagine in corrispondenza `pbBase`di.  
+ in Dimensione, in byte, dell'immagine in `pbBase`.  
   
  `pbBlob`  
  in Buffer che contiene la rappresentazione binaria dell'immagine.  
   
  `pcbBlob`  
- [in, out] Dimensione massima richiesta, in byte, di `pbBlob`. Al ritorno, le dimensioni effettive, in byte, `pbBlob`di.  
+ [in, out] Dimensione massima richiesta, in byte, del `pbBlob`. Al ritorno, le dimensioni effettive, in byte, di `pbBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al completamento; in caso `false`contrario,.  
+ `true` al completamento; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Se la `StrongNameGetBlobFromImage` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
+ Se la funzione `StrongNameGetBlobFromImage` non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

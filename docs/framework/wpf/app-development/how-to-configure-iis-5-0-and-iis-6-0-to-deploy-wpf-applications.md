@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF'
+title: 'Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124420"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Procedura: Configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Procedura: configurare IIS 5.0 e IIS 6.0 per distribuire applicazioni WPF
 
-È possibile distribuire un' [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazione dalla maggior parte dei server Web, purché siano configurati con i tipi di Multipurpose Internet Mail Extensions appropriati (MIME). Per impostazione predefinita, Microsoft Internet Information Services (IIS) 7,0 è configurato con questi tipi MIME, ma Microsoft Internet Information Services (IIS) 5,0 e Microsoft Internet Information Services (IIS) 6,0 non lo sono.
+È possibile distribuire un'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dalla maggior parte dei server Web, purché siano configurati con i tipi di Multipurpose Internet Mail Extensions appropriati (MIME). Per impostazione predefinita, Microsoft Internet Information Services (IIS) 7,0 è configurato con questi tipi MIME, ma Microsoft Internet Information Services (IIS) 5,0 e Microsoft Internet Information Services (IIS) 6,0 non lo sono.
 
-In questo argomento viene descritto come configurare Microsoft Internet Information Services (IIS) 5,0 e Microsoft Internet Information Services (IIS) 6,0 per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la distribuzione di applicazioni.
+In questo argomento viene descritto come configurare Microsoft Internet Information Services (IIS) 5,0 e Microsoft Internet Information Services (IIS) 6,0 per distribuire [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.
 
 > [!NOTE]
 > È possibile controllare la stringa *UserAgent* nel registro di sistema per determinare se .NET Framework installato un sistema. Per informazioni dettagliate e uno script che esamina la stringa *UserAgent* per determinare se .NET Framework è installato in un sistema, vedere [rilevare se è installato il .NET Framework 3,0](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -63,7 +63,7 @@ In questo argomento viene descritto come configurare Microsoft Internet Informat
 > [!NOTE]
 > Non è necessario registrare tipi MIME o estensioni di file nei sistemi client. Vengono registrati automaticamente quando si installa Microsoft .NET Framework.
 
-Il seguente esempio di Microsoft Visual Basic Scripting Edition (VBScript) aggiunge automaticamente i tipi MIME necessari a IIS. Per utilizzare lo script, copiare il codice in un file con estensione vbs sul server. Quindi, eseguire lo script eseguendo il file dalla riga di comando oppure facendo doppio clic sul file in [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Il seguente esempio di Microsoft Visual Basic Scripting Edition (VBScript) aggiunge automaticamente i tipi MIME necessari a IIS. Per utilizzare lo script, copiare il codice in un file con estensione vbs sul server. Eseguire quindi lo script eseguendo il file dalla riga di comando o facendo doppio clic sul file in Esplora risorse di Microsoft Windows.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare il contenuto degli assembly'
+title: "Procedura: visualizzare il contenuto dell'assembly"
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -10,24 +10,22 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b5e306d55bf38c28e2a68172c2a035b56e8d0af
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053953"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140166"
 ---
-# <a name="how-to-view-assembly-contents"></a>Procedura: Visualizzare il contenuto degli assembly
+# <a name="how-to-view-assembly-contents"></a>Procedura: visualizzare il contenuto dell'assembly
 
 È possibile usare [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) per visualizzare informazioni di Microsoft Intermediate Language (MSIL) in un file. Se il file esaminato è un assembly, è possibile che le informazioni includano gli attributi dell'assembly, oltre a riferimenti ad altri moduli e assembly. Queste informazioni possono risultare utili nel determinare se un file è un assembly o se è parte di un assembly e se il file contiene riferimenti ad altri moduli o assembly.  
   
-Per visualizzare il contenuto di un assembly tramite *Ildasm. exe*, digitare **Ildasm** \< *assembly name*> al prompt dei comandi. Ad esempio, il comando seguente Disassembla l'assembly *Hello. exe* .  
+Per visualizzare il contenuto di un assembly tramite *Ildasm. exe*, digitare **Ildasm** \<*nome assembly*> al prompt dei comandi. Ad esempio, il comando seguente Disassembla l'assembly *Hello. exe* .  
 
 ```cmd
 ildasm Hello.exe  
@@ -120,7 +118,7 @@ Se si esegue il comando *Ildasm. exe* nell'assembly *Hello. exe* e si fa doppio 
 |**.subsystem \<** *valore* **>**|Specifica l'ambiente di applicazione necessario per il programma. In questo esempio il valore 3 indica che il file eseguibile viene eseguito da una console.|  
 |**.corflags**|Attualmente, campo riservato nei metadati.|  
   
- Il manifesto di un assembly può contenere diverse direttive, a seconda del contenuto dell'assembly. Per un elenco completo delle direttive del manifesto dell'assembly, vedere la documentazione ECMA, in particolare "Partition II: Metadata Definition and Semantics" e "Partition III: Set di istruzioni CIL ". La documentazione è disponibile online. Vedere [gli C# standard ECMA e Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) su MSDN e [standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) nel sito Web di ECMA International.  
+ Il manifesto di un assembly può contenere diverse direttive, a seconda del contenuto dell'assembly. Per un elenco completo delle direttive nel manifesto dell'assembly, vedere la documentazione relativa a ECMA, in particolare "Partition II: Metadata Definition and Semantics" e "Partition III: CIL instruction set". La documentazione è disponibile online. Vedere [gli C# standard ECMA e Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) su MSDN e [standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) nel sito Web di ECMA International.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123818"
 ---
 # <a name="icordebugchaingetthread-method"></a>Metodo ICorDebugChain::GetThread
-Ottiene il thread fisico che questa catena di chiamate è parte di.  
+Ottiene il thread fisico di cui fa parte questa catena di chiamate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +35,10 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Parametri  
  `ppThread`  
- [out] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread fisico questa catena di chiamate fa parte di.  
+ out Puntatore a un oggetto ICorDebugThread che rappresenta il thread fisico di cui fa parte questa catena di chiamate.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

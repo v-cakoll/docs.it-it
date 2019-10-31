@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139365"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>Metodo ICorDebugProcess::ReadMemory
-Legge un'area specificata di memoria del processo.  
+Legge un'area di memoria specificata per questo processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,26 +37,26 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Parametri  
  `address`  
- [in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo di base della memoria da leggere.  
+ in Valore `CORDB_ADDRESS` che specifica l'indirizzo di base della memoria da leggere.  
   
  `size`  
- [in] Il numero di byte da leggere dalla memoria.  
+ in Numero di byte da leggere dalla memoria.  
   
  `buffer`  
- [out] Un buffer che riceve il contenuto della memoria.  
+ out Buffer che riceve il contenuto della memoria.  
   
  `read`  
- [out] Un puntatore al numero di byte trasferiti nel buffer specificato.  
+ out Puntatore al numero di byte trasferiti nel buffer specificato.  
   
 ## <a name="remarks"></a>Note  
- Il `ReadMemory` metodo è principalmente destinato a essere usato per il debug di interoperabilità per controllare le aree della memoria in uso da parte dell'oggetto del debug non gestita. Questo metodo può essere utilizzato anche leggere codice Microsoft intermediate language (MSIL) e codice nativo compilato tramite JIT.  
+ Il metodo `ReadMemory` è destinato principalmente a essere utilizzato dal debug di interoperabilità per esaminare le aree di memoria utilizzate dalla parte non gestita dell'oggetto del debug. Questo metodo può essere utilizzato anche per leggere codice MSIL (Microsoft Intermediate Language) e codice nativo compilato tramite JIT.  
   
- Punti di interruzione gestite verrà rimossa dai dati che viene restituiti nel `buffer` parametro. Non verrà eseguita alcuna modifica per impostare punti di interruzione native [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Eventuali punti di interruzione gestiti verranno rimossi dai dati restituiti nel parametro `buffer`. Non verranno apportate modifiche per i punti di interruzione nativi impostati da [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Nessuna memorizzazione nella cache della memoria del processo viene eseguito.  
+ Non viene eseguita la memorizzazione nella cache della memoria del processo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

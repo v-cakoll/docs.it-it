@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738365"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111239"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>Metodo ICLRMetadataLocator::GetMetadata
-Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per recuperare i metadati di un'immagine.  
+Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per recuperare i metadati di un'immagine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,39 +44,39 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parametri  
  `imagePath`  
- [in] Stringa che specifica il percorso del file di immagine.  
+ in Stringa che specifica il percorso del file di immagine.  
   
  `imageTimestamp`  
- [in] Il timestamp del file di immagine.  
+ in Timestamp del file di immagine.  
   
  `imageSize`  
- [in] Le dimensioni del file di immagine.  
+ in Dimensioni del file di immagine.  
   
  `mvid`  
- [in] L'identificatore univoco globale dell'immagine.  
+ in Identificatore univoco globale dell'immagine.  
   
  `mdRva`  
- [in] L'indirizzo virtuale relativo (RVA) dei metadati. L'indirizzo è relativo all'indirizzo di base di immagine.  
+ in Indirizzo RVA (relativo Virtual Address) dei metadati. L'indirizzo è relativo all'indirizzo di base dell'immagine.  
   
  `flags`  
- [in] Riservato per utilizzi futuri.  
+ in Riservato per usi futuri.  
   
  `bufferSize`  
- [in] Le dimensioni del buffer in cui inserire i metadati.  
+ in Dimensione del buffer in cui inserire i metadati.  
   
  `buffer`  
- [out] Buffer in cui inserire i metadati.  
+ out Buffer in cui inserire i metadati.  
   
  `dataSize`  
- [out] Le dimensioni dei metadati restituiti.  
+ out Dimensioni dei metadati restituiti.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

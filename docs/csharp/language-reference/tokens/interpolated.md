@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101661"
 ---
 # <a name="---string-interpolation-c-reference"></a>interpolazione di $-C# String (riferimento)
 
@@ -41,7 +40,7 @@ Gli elementi tra parentesi quadre sono facoltativi. La tabella seguente descrive
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|`interpolationExpression`|Espressione che produce un risultato da formattare. La rappresentazione di `null` stringa <xref:System.String.Empty?displayProperty=nameWithType>di è.|
+|`interpolationExpression`|Espressione che produce un risultato da formattare. La rappresentazione di stringa di `null` è <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Espressione costante il cui valore definisce il numero minimo di caratteri nella rappresentazione di stringa del risultato dell'espressione. Se è positivo, la rappresentazione stringa è allineata a destra; se è negativo la rappresentazione stringa è allineata a sinistra. Per altre informazioni, vedere [Componente di allineamento](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Stringa di formato supportata dal tipo di risultato dell'espressione. Per altre informazioni, vedere [Componente della stringa di formato](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
@@ -59,16 +58,16 @@ L'esempio seguente illustra come includere una parentesi graffa in una stringa d
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Una stringa Verbatim interpolata inizia con `$` il carattere seguito `@` dal carattere. Per altre informazioni sulle stringhe verbatim, vedere gli argomenti relativi a [string](../keywords/string.md) e all'[identificatore verbatim](verbatim.md).
+Una stringa Verbatim interpolata inizia con il carattere `$` seguito dal carattere di `@`. Per altre informazioni sulle stringhe verbatim, vedere gli argomenti relativi a [string](../keywords/string.md) e all'[identificatore verbatim](verbatim.md).
 
 > [!NOTE]
-> A partire C# da 8,0, è possibile usare `$` i `@` token e in qualsiasi ordine: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti il `$` token deve essere visualizzato prima del `@` token.
+> A partire C# da 8,0, è possibile usare i token di`$`e di`@`in qualsiasi ordine: sia `$@"..."`che`@$"..."`sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token di `$` deve essere visualizzato prima del token di `@`.
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversioni implicite e come specificare `IFormatProvider` l'implementazione
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversioni implicite e come specificare l'implementazione di `IFormatProvider`
 
 Da una stringa interpolata vengono effettuate tre conversioni implicite:
 
-1. Conversione di una stringa interpolata in un'istanza <xref:System.String> che rappresenta il risultato della risoluzione della stringa interpolata, dove gli elementi dell'espressione di interpolazione vengono sostituiti con le rappresentazioni stringa dei risultati, formattate correttamente. Questa conversione usa per <xref:System.Globalization.CultureInfo.CurrentCulture> formattare i risultati dell'espressione.
+1. Conversione di una stringa interpolata in un'istanza <xref:System.String> che rappresenta il risultato della risoluzione della stringa interpolata, dove gli elementi dell'espressione di interpolazione vengono sostituiti con le rappresentazioni stringa dei risultati, formattate correttamente. Questa conversione usa il <xref:System.Globalization.CultureInfo.CurrentCulture> per formattare i risultati dell'espressione.
 
 1. Conversione di una stringa interpolata in un'istanza di <xref:System.FormattableString> che rappresenta una stringa di formato composito e i risultati dell'espressione da formattare. Questa opzione consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.FormattableString>. A tale scopo, chiamare uno dei metodi seguenti:
 

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132572"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -40,10 +38,10 @@ Le applicazioni .NET che usano informazioni su data e ora sono molto diversifica
 
 - Eseguire operazioni aritmetiche per date e ore, possibilmente con un risultato che identifichi in modo univoco e senza ambiguità una singolo momento.
 
-.NET include i tipi <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> e <xref:System.TimeZoneInfo>, che possono essere usati per compilare applicazioni che funzionano con date e ore.
+.NET include i tipi di <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>e <xref:System.TimeZoneInfo>, che possono essere usati per compilare applicazioni che funzionano con date e ore.
 
 > [!NOTE]
-> Questo argomento non illustra <xref:System.TimeZone> perché la sua funzionalità è quasi completamente incorporata nella classe <xref:System.TimeZoneInfo>. Quando possibile, usare la classe <xref:System.TimeZoneInfo> invece della classe <xref:System.TimeZone>.
+> Questo argomento non illustra <xref:System.TimeZone> perché la sua funzionalità è quasi completamente incorporata nella classe <xref:System.TimeZoneInfo>. Quando possibile, usare la classe <xref:System.TimeZoneInfo> anziché la classe <xref:System.TimeZone>.
 
 ## <a name="the-datetime-structure"></a>Struttura DateTime
 
@@ -98,9 +96,9 @@ La struttura <xref:System.TimeSpan> rappresenta un intervallo di tempo. Ecco i d
 
 - Indicare l'intervallo di tempo tra due valori di data e ora. Ad esempio, la sottrazione di un valore <xref:System.DateTime> da un altro restituisce un valore <xref:System.TimeSpan> .
 
-- Misurare il tempo trascorso. Ad esempio, la proprietà <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> restituisce un valore <xref:System.TimeSpan> che riflette l'intervallo di tempo trascorso dalla chiamata a uno dei metodi <xref:System.Diagnostics.Stopwatch> che inizia a misurare il tempo trascorso.
+- Misurare il tempo trascorso. Ad esempio, la proprietà <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> restituisce un valore <xref:System.TimeSpan> che riflette l'intervallo di tempo trascorso dalla chiamata a uno dei metodi di <xref:System.Diagnostics.Stopwatch> che inizia a misurare il tempo trascorso.
 
-Un valore <xref:System.TimeSpan> può essere usato anche come sostituzione per un valore <xref:System.DateTime> quando tale valore riflette un'ora senza riferimento a un determinato giorno. Questo utilizzo è simile a quello delle proprietà <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, che restituiscono un valore <xref:System.TimeSpan> che rappresenta l'ora senza riferimento a una data. Ad esempio, la struttura <xref:System.TimeSpan> può essere usata per indicare l'ora di apertura o di chiusura di un negozio oppure per rappresentare l'ora a cui si verifica un evento regolare.
+Un valore di <xref:System.TimeSpan> può essere utilizzato anche come sostituzione di un valore <xref:System.DateTime> quando tale valore riflette un'ora senza riferimento a un giorno specifico. Questo utilizzo è simile a quello delle proprietà <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, che restituiscono un valore <xref:System.TimeSpan> che rappresenta l'ora senza riferimento a una data. Ad esempio, la struttura <xref:System.TimeSpan> può essere usata per indicare l'ora di apertura o di chiusura di un negozio oppure per rappresentare l'ora a cui si verifica un evento regolare.
 
 L'esempio seguente definisce una struttura `StoreInfo` che include oggetti <xref:System.TimeSpan> per le ore di apertura e di chiusura di un negozio, nonché un oggetto <xref:System.TimeZoneInfo> che rappresenta il fuso orario del negozio. La struttura include anche due metodi, `IsOpenNow` e `IsOpenAt`, che indicano se il negozio è aperto a un'ora specificata dall'utente, che si suppone si trovi nel fuso orario locale.
 
@@ -114,7 +112,7 @@ La struttura `StoreInfo` può quindi essere usata da codice client simile al seg
 
 ## <a name="the-timezoneinfo-class"></a>Classe TimeZoneInfo
 
-La classe <xref:System.TimeZoneInfo> rappresenta uno dei fusi orari della terra e permette la conversione di qualsiasi data e ora di un fuso orario negli equivalenti di un altro fuso orario. La classe <xref:System.TimeZoneInfo> permette di usare date e ore in modo che qualsiasi valore di data e ora identifichi un singolo momento senza ambiguità. La classe <xref:System.TimeZoneInfo> può anche essere estesa. Benché dipenda dalle informazioni sul fuso orario fornite per i sistemi Windows e definite nel Registro di sistema, questa classe supporta la creazione di fusi orari personalizzati. Supporta anche la serializzazione e la deserializzazione delle informazioni sul fuso orario.
+La classe <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. La classe <xref:System.TimeZoneInfo> permette di usare date e ore in modo che qualsiasi valore di data e ora identifichi un singolo momento senza ambiguità. La classe <xref:System.TimeZoneInfo> può anche essere estesa. Benché dipenda dalle informazioni sul fuso orario fornite per i sistemi Windows e definite nel Registro di sistema, questa classe supporta la creazione di fusi orari personalizzati. Supporta anche la serializzazione e la deserializzazione delle informazioni sul fuso orario.
 
 In alcuni casi, per sfruttare tutti i vantaggi della classe <xref:System.TimeZoneInfo> possono essere necessarie attività aggiuntive di sviluppo. Se i valori di data e ora non sono strettamente collegati ai fusi orari a cui appartengono, è necessario ulteriore lavoro. A meno che l'applicazione non fornisca un meccanismo per collegare una data e un'ora al fuso orario associato, è facile che un determinato valore di data e ora venga dissociato dal fuso orario. Un metodo per collegare queste informazioni consiste nel definire una classe o una struttura che contiene sia i valori di data e ora sia l'oggetto fuso orario associato.
 

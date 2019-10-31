@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749111"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141241"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Metodo IManagedObject::GetObjectIdentity
-Ottiene l'identità dell'oggetto gestito.  
+Ottiene l'identità di questo oggetto gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +37,23 @@ HRESULT GetObjectIdentity (
   
 ## <a name="parameters"></a>Parametri  
  `pBSTRGUID`  
- [out] Puntatore al GUID del processo in cui risiede l'oggetto.  
+ out Puntatore al GUID del processo in cui si trova l'oggetto.  
   
  `AppDomainID`  
- [out] Un puntatore all'ID del dominio applicazione dell'oggetto.  
+ out Puntatore all'ID del dominio dell'applicazione dell'oggetto.  
   
  `pCCW`  
- [out] Un puntatore all'indice dell'oggetto nella v-table COM classico.  
+ out Puntatore all'indice dell'oggetto nella tabella v classica COM.  
   
 ## <a name="remarks"></a>Note  
- L'identità di un oggetto gestito include GUID processo, ID di dominio dell'applicazione e l'indice dell'oggetto nella v-table COM classico.  
+ L'identità di un oggetto gestito include il GUID del processo, l'ID del dominio dell'applicazione e l'indice dell'oggetto nella tabella v classica COM.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

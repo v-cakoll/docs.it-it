@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4518637eb47acf416a02c045f8ca6f8a90167277
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760446"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130784"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>Metodo ICorDebugManagedCallback::ExitProcess
 Notifica al debugger che un processo è stato terminato.  
@@ -37,17 +35,17 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo.  
+ in Puntatore a un oggetto ICorDebugProcess che rappresenta il processo.  
   
 ## <a name="remarks"></a>Note  
- Non è possibile continuare da un `ExitProcess` evento. Questo evento possono essere attivati in modo asincrono e gli altri eventi mentre il processo sembra essere stato arrestato. Ciò può verificarsi se il processo viene terminato mentre arrestato, in genere a causa di circostanza esterna.  
+ Non è possibile continuare da un evento `ExitProcess`. Questo evento può essere generato in modo asincrono ad altri eventi mentre il processo sembra arrestarsi. Questo problema può verificarsi se il processo termina durante l'arresto, in genere a causa di una forza esterna.  
   
- Se common language runtime (CLR) sta già inviando un callback gestito, questo evento verrà posticipato fino al dopo tale callback ha restituito.  
+ Se il Common Language Runtime (CLR) sta già inviando un callback gestito, questo evento verrà posticipato fino a quando non viene restituito tale callback.  
   
- Il `ExitProcess` eventi sono l'unico evento/Scaricamento di uscita che viene chiamato in fase di arresto.  
+ L'evento `ExitProcess` è l'unico evento di uscita/scaricamento garantito per essere chiamato all'arresto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

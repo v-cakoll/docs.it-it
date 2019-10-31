@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1492c6d72d68a95a79925d7789a710b5b5ed14b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d34577f0f785bc851646423b8cd732ab4d1dae0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113858"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>Metodo ICLRDataTarget::GetThreadContext
-Ottiene il contesto di esecuzione corrente per il thread nel processo di destinazione specificato. Questo metodo viene chiamato dai servizi di accesso dati di common language runtime.  
+Ottiene il contesto di esecuzione corrente per il thread specificato nel processo di destinazione. Questo metodo viene chiamato dal servizio di accesso ai dati Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,26 +39,26 @@ HRESULT GetThreadContext (
   
 ## <a name="parameters"></a>Parametri  
  `threadID`  
- [in] L'identificatore del sistema operativo di un thread nel processo di destinazione.  
+ in Identificatore del sistema operativo di un thread nel processo di destinazione.  
   
  `contextFlags`  
- [in] Flag che specificano le parti del contesto da restituire. L'implementazione restituisce almeno le parti del contesto.  
+ in Flag che specificano le parti del contesto da restituire. L'implementazione restituirà almeno queste parti del contesto.  
   
  `contextSize`  
- [in] Le dimensioni del contesto.  
+ in Dimensioni del contesto.  
   
  `context`  
- [out] Puntatore a un buffer in cui inserire il contesto.  
+ out Puntatore a un buffer in cui inserire il contesto.  
   
- I dati di `context` buffer deve essere nel formato Win32 `CONTEXT` struttura. Il contesto specifica i dati di registro specifico del processore, pertanto la definizione di Win32 `CONTEXT` struttura dipende dall'architettura del processore. Fare riferimento al file di intestazione Winnt. H per la definizione di Win32 `CONTEXT` struttura.  
+ I dati nel buffer di `context` devono essere nel formato della struttura di `CONTEXT` Win32. Il contesto specifica i dati del registro specifici del processore, pertanto la definizione della struttura Win32 `CONTEXT` dipende dall'architettura del processore. Fare riferimento al file di intestazione WinNT. h per la definizione della struttura `CONTEXT` di Win32.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
  **Libreria:** CorGuids.lib  
   

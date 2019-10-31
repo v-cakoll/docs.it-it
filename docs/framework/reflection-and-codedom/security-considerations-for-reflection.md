@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045894"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130073"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 
@@ -59,7 +57,7 @@ Un membro è critico per la sicurezza se possiede l'attributo <xref:System.Secur
 
 Queste regole valgono sempre, indipendentemente dal fatto che l'accesso al membro critico per la sicurezza venga eseguito direttamente dal codice compilato o tramite reflection.
 
-Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale (ad esempio in un dominio dell'applicazione creato mediante sandbox), il livello di attendibilità dell'assembly determina se può accedere a codice critico per la sicurezza: se l'assembly ha un nome sicuro e viene installato nella Global Assembly Cache, è un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.
+Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale, ad esempio in un dominio applicazione in modalità sandbox, il livello di attendibilità dell'assembly determina se può accedere o meno a codice critico per la sicurezza: se l'assembly è dotato di un nome sicuro ed è installato nella Global Assembly Cache, si tratta di un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.
 
 Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](../security/security-changes.md).
 
@@ -69,7 +67,7 @@ A partire da .NET Framework 4, Common Language Runtime determina il livello di t
 
 |Livello di sicurezza|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critico|`true`|`false`|`false`|
+|Critical|`true`|`false`|`false`|
 |Critico per la sicurezza|`true`|`true`|`false`|
 |Trasparente|`false`|`false`|`true`|
 
@@ -88,7 +86,7 @@ Per usare la reflection per richiamare membri non accessibili secondo le regole 
   > [!NOTE]
   > Per impostazione predefinita, i criteri di sicurezza negano questa autorizzazione al codice proveniente da Internet. L'autorizzazione, infatti, non dovrebbe mai essere concessa a codice proveniente da Internet.
 
-- Per consentire al codice di chiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro chiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
+- Per consentire al codice di richiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro richiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
 
 Ad esempio, si supponga di concedere a un dominio applicazione autorizzazioni Internet più <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, quindi di eseguire un'applicazione Internet con due assembly, A e B.
 

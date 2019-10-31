@@ -12,14 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06dbc4b7124aa873fd8471794fa25b0f47f8ce3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131581"
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 
@@ -93,7 +91,7 @@ L'esempio seguente contiene il punto di ingresso dell'applicazione che crea un'i
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|DESCRIZIONE|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Descrive le procedure consigliate per lo sviluppo di applicazioni che implementano lo schema progettuale observer.|
 |[Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)|Fornisce un'implementazione dettagliata di un provider per un'applicazione di monitoraggio della temperatura.|

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123191"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Attività figlio connesse e disconnesse
 Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> creata nel delegato dell'utente di un'altra attività, noto come *attività padre*. Un'attività figlio può essere scollegata o collegata. Un'*attività figlio scollegata* è un'attività eseguita indipendentemente dall'attività padre. Un'*attività figlio collegata* è un'attività annidata creata con l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> alla quale l'attività padre non impedisce il collegamento in modo esplicito o per impostazione predefinita. Un'attività può creare un numero qualsiasi di attività figlio collegate e scollegate, limitato solo dalle risorse di sistema.  
@@ -24,9 +22,9 @@ Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Thread
   
 |Category|Attività figlio scollegate|Attività figlio collegate|  
 |--------------|--------------------------|--------------------------|  
-|L'attività padre attende il completamento delle attività figlio.|No|Sì|  
-|L'attività padre propaga le eccezioni generate dalle attività figlio.|No|Sì|  
-|Lo stato dell'attività padre dipende dallo stato dell'attività figlio.|No|Sì|  
+|L'attività padre attende il completamento delle attività figlio.|No|Yes|  
+|L'attività padre propaga le eccezioni generate dalle attività figlio.|No|Yes|  
+|Lo stato dell'attività padre dipende dallo stato dell'attività figlio.|No|Yes|  
   
  Nella maggior parte degli scenari, è consigliabile usare l'attività figlio scollegata perché le relazioni con altre attività risultano meno complesse. Per questo motivo le attività create all'interno delle attività padre sono di tipo scollegato per impostazione predefinita ed è necessario specificare esplicitamente l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> per creare un'attività figlio collegata.  
   
@@ -76,7 +74,7 @@ Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Thread
   
  Per impedire il collegamento di un'attività figlio all'attività padre, specificare l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> quando si crea l'attività padre <xref:System.Threading.Tasks.Task> o l'oggetto <xref:System.Threading.Tasks.Task%601>. Quando un'attività tenta di connettersi all'attività padre che specifica l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, l'attività figlio non riuscirà a collegarsi a un'attività padre e verrà eseguita come se l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> non fosse stata specificata.  
   
- Se l'attività figlio non viene completata in modo tempestivo, è anche possibile impedirne il collegamento all'attività padre. Poiché un'attività padre non viene completata fino al completamento di tutte le attività figlio, un'attività figlio a esecuzione prolungata può influire negativamente sulle prestazioni dell'applicazione. Per un esempio in cui viene spiegato come migliorare le prestazioni dell'applicazione impedendo il collegamento di un'attività all'attività padre, vedere [Procedura: Evitare l'associazione di un'attività figlio alla relativa attività padre](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Se l'attività figlio non viene completata in modo tempestivo, è anche possibile impedirne il collegamento all'attività padre. Poiché un'attività padre non viene completata fino al completamento di tutte le attività figlio, un'attività figlio a esecuzione prolungata può influire negativamente sulle prestazioni dell'applicazione. Per un esempio in cui viene spiegato come migliorare le prestazioni dell'applicazione impedendo il collegamento di un'attività all'attività padre, vedere [Procedura: Impedire il collegamento di un'attività figlio all'attività padre](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

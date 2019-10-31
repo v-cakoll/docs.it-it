@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354022"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141365"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 
@@ -99,7 +97,7 @@ Il primo passaggio consiste nel [determinare se il problema è in realtà causat
 
 <a name="Issue_OOM"></a>
 
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Viene generata un'eccezione di memoria esaurita
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: viene generata un'eccezione di memoria esaurita
 
 Esistono due casi legittimi per la generazione di un'eccezione <xref:System.OutOfMemoryException> gestita:
 
@@ -123,7 +121,7 @@ Se si determina che l'eccezione non è legittima, contattare il Supporto tecnico
 
 <a name="Issue_TooMuchMemory"></a>
 
-### <a name="issue-the-process-uses-too-much-memory"></a>Problema: Il processo usa una quantità eccessiva di memoria
+### <a name="issue-the-process-uses-too-much-memory"></a>Problema: il processo usa una quantità eccessiva di memoria
 
 Un presupposto comune è che l'uso della memoria visualizzato nella scheda **Prestazioni** di Gestione attività di Windows può indicare quando viene usata una quantità eccessiva di memoria. Tuttavia, queste informazioni visualizzate riguardano il set di lavoro e non l'utilizzo della memoria virtuale.
 
@@ -149,7 +147,7 @@ Quando sembra che gli oggetti non vengano recuperati nel modo previsto per l'ope
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: L'heap gestito è troppo frammentato
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: l'heap gestito è troppo frammentato
 
 Il livello di frammentazione viene calcolato come percentuale di spazio libero rispetto alla memoria totale allocata per la generazione. Per la generazione 2, un livello accettabile di frammentazione non è maggiore del 20%. Poiché la generazione 2 può assumere dimensioni molto grandi, il rapporto di frammentazione è più importante del valore assoluto.
 
@@ -179,7 +177,7 @@ Se si ritiene che non sussista una causa legittima per la frammentazione, contat
 
 <a name="Issue_LongPauses"></a>
 
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: Le pause di Garbage Collection sono troppo prolungate
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: le pause di Garbage Collection sono troppo prolungate
 
 Poiché le operazioni di Garbage Collection avvengono in tempo reale "soft", un'applicazione deve essere in grado di tollerare alcune pause. Un criterio che determina l'esecuzione in tempo reale "soft" è che il 95% delle operazioni deve terminare in tempo.
 
@@ -197,13 +195,13 @@ Un altro metodo, più accurato, consiste nell'usare gli [eventi ETW di Garbage C
 
 <a name="Issue_Gen0"></a>
 
-### <a name="issue-generation-0-is-too-big"></a>Problema: La generazione 0 è troppo grande
+### <a name="issue-generation-0-is-too-big"></a>Problema: la generazione 0 ha dimensioni eccessive
 
 È probabile che la generazione 0 abbia un numero maggiore di oggetti in un sistema a 64 bit, in particolare se si usa un'operazione di Garbage Collection per server invece che per workstation. Ciò è dovuto al fatto che la soglia per attivare un'operazione di Garbage Collection di generazione 0 è maggiore in questi ambienti e le raccolte di generazione 0 possono essere molto più grandi. Le prestazioni sono migliori quando un'applicazione alloca molta memoria prima dell'attivazione di un'operazione di Garbage Collection.
 
 <a name="Issue_HighCPU"></a>
 
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: L'utilizzo della CPU durante un'operazione di Garbage Collection è eccessivo
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: l'utilizzo della CPU durante un'operazione di Garbage Collection è eccessivo
 
 L'utilizzo della CPU durante un'operazione di Garbage Collection è elevato. Se il periodo di tempo del processo è significativo in un'operazione di Garbage Collection, il numero di raccolte è troppo frequente oppure la raccolta dura troppo a lungo. Una frequenza di allocazione di oggetti maggiore nell'heap gestito fa sì che le operazioni di Garbage Collection avvengano più spesso. La riduzione della frequenza di allocazione riduce anche la frequenza delle operazioni di Garbage Collection.
 
@@ -361,7 +359,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   In questo esempio la dimensione dell'area libera più grande è circa 24000 KB (3A980 in formato esadecimale). Questa area è molto minore rispetto alle dimensioni richieste da Garbage Collector per un segmento.
 
-  -oppure-
+  oppure
 
 - Utilizzare il comando **vmstat**:
 

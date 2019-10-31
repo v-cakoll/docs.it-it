@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121997"
 ---
 # <a name="managed-execution-process"></a>processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
@@ -113,7 +111,7 @@ ms.locfileid: "70969021"
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadati e componenti auto-descrittivi](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (Assembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Sicurezza](../../docs/standard/security/index.md)
+- [Security](../../docs/standard/security/index.md)
 - [Interoperabilità con codice non gestito](../../docs/framework/interop/index.md)
 - [Distribuzione](../../docs/framework/deployment/net-framework-applications.md)
 - [Assembly in .NET](assembly/index.md)

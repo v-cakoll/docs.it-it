@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Definire un tipo generico tramite reflection emit'
+title: 'Procedura: definire un tipo generico tramite reflection emit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130161"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
   
 > [!IMPORTANT]
@@ -71,7 +69,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. Definire un metodo che usa i parametri di tipo del tipo generico. Si noti che questi tipi di metodi non sono generici, a meno che non abbiano specifici elenchi di parametri di tipo. Il codice seguente definisce un metodo `static` (`Shared` in Visual Basic) che accetta una matrice di `TFirst` e restituisce `List<TFirst>` (`List(Of TFirst)` in Visual Basic) contenente tutti gli elementi della matrice. Per definire questo metodo, è necessario creare il tipo `List<TFirst>` chiamando <xref:System.Type.MakeGenericType%2A> nella definizione di tipo generico `List<T>`. Quando si usa l'operatore `typeof` (`GetType` in Visual Basic), `T` viene omesso in modo da ottenere la definizione di tipo generico. Il tipo di parametro viene creato usando il metodo <xref:System.Type.MakeArrayType%2A>.  
+8. Definire un metodo che usa i parametri di tipo del tipo generico. Si noti che questi tipi di metodi non sono generici, a meno che non abbiano specifici elenchi di parametri di tipo. Il codice seguente definisce un metodo `static` (`Shared` in Visual Basic) che accetta una matrice di `TFirst` e restituisce `List<TFirst>` (`List(Of TFirst)` in Visual Basic) contenente tutti gli elementi della matrice. Per definire questo metodo, è necessario creare il tipo `List<TFirst>` chiamando <xref:System.Type.MakeGenericType%2A> nella definizione di tipo generico `List<T>`. Il `T` viene omesso quando si usa l'operatore `typeof` (`GetType` in Visual Basic) per ottenere la definizione di tipo generico. Il tipo di parametro viene creato tramite il metodo <xref:System.Type.MakeArrayType%2A>.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -81,7 +79,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
      Poiché il metodo <xref:System.Type.GetConstructor%2A> non è supportato in <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, non è possibile ottenere il costruttore di `List<TFirst>` in modo diretto. È innanzitutto necessario ottenere il costruttore della definizione di tipo generico `List<T>`, quindi chiamare un metodo che lo converta nel costruttore corrispondente di `List<TFirst>`.  
   
-     Il costruttore usato per questo esempio di codice accetta `IEnumerable<T>`. Si noti tuttavia che, non trattandosi della definizione di tipo generico dell'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è necessario sostituire il parametro di tipo `T` di `List<T>` per il parametro di tipo `T` di `IEnumerable<T>`. Per evitare che la presenza di parametri di tipo denominati `T` in entrambi i tipi generi confusione, in questo esempio di codice vengono usati i nomi `TFirst` e `TSecond`. Per ottenere il tipo dell'argomento del costruttore, creare innanzitutto la definizione di tipo generico `IEnumerable<T>` e chiamare il metodo <xref:System.Type.MakeGenericType%2A> con il primo parametro di tipo generico di `List<T>`. L'elenco di argomenti del costruttore deve essere passato come matrice che, in questo caso, contiene un unico argomento.  
+     Il costruttore usato per questo esempio di codice accetta `IEnumerable<T>`. Si noti tuttavia che, non trattandosi della definizione di tipo generico dell'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è necessario sostituire il parametro di tipo `T` di `List<T>` per il parametro di tipo `T` di `IEnumerable<T>`. Per evitare che la presenza di parametri di tipo denominati `T` Questo è il motivo per cui in questo esempio di codice vengono utilizzati i nomi `TFirst` e `TSecond`. Per ottenere il tipo dell'argomento del costruttore, iniziare con la definizione di tipo generico `IEnumerable<T>` e chiamare <xref:System.Type.MakeGenericType%2A> con il primo parametro di tipo generico di `List<T>`. L'elenco di argomenti del costruttore deve essere passato come matrice che, in questo caso, contiene un unico argomento.  
   
     > [!NOTE]
     > La definizione di tipo generico è espressa come `IEnumerable<>` quando viene usato l'operatore `typeof` in C# oppure come `IEnumerable(Of )` quando viene usato l'operatore `GetType` in Visual Basic.  
@@ -98,7 +96,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Richiamare il metodo. Poiché `ExampleMethod` non è generico ma appartiene a un tipo generico, per ottenere un oggetto <xref:System.Reflection.MethodInfo> che possa essere richiamato, è necessario creare un tipo costruito dalla definizione di tipo per `Sample`. Il tipo costruito usa la classe `Example` che, essendo un tipo di riferimento e disponendo di un costruttore senza parametri predefinito, soddisfa i vincoli di `TFirst` e la classe `ExampleDerived` che soddisfa i vincoli di `TSecond`. Il codice per `ExampleDerived` è disponibile nella sezione del codice di esempio. Questi due tipi vengono passati a <xref:System.Type.MakeGenericType%2A> per la creazione del tipo costruito. <xref:System.Reflection.MethodInfo> viene quindi ottenuto usando il metodo <xref:System.Type.GetMethod%2A>.  
+11. Richiamare il metodo. Poiché `ExampleMethod` non è generico ma appartiene a un tipo generico, per ottenere un oggetto <xref:System.Reflection.MethodInfo> che possa essere richiamato, è necessario creare un tipo costruito dalla definizione di tipo per `Sample`. Il tipo costruito usa la classe `Example` che, essendo un tipo di riferimento e disponendo di un costruttore senza parametri predefinito, soddisfa i vincoli di `TFirst` e la classe `ExampleDerived` che soddisfa i vincoli di `TSecond`. Il codice per `ExampleDerived` si trova nella sezione di codice di esempio. Questi due tipi vengono passati a <xref:System.Type.MakeGenericType%2A> per creare il tipo costruito. <xref:System.Reflection.MethodInfo> viene quindi ottenuto usando il metodo <xref:System.Type.GetMethod%2A>.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

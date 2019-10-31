@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128703"
 ---
 # <a name="compareto-function"></a>Funzione CompareTo
 
@@ -52,7 +50,7 @@ in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-
 in Combinazione bit per bit dei flag che specificano le caratteristiche dell'oggetto da considerare per il confronto. Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) .
 
 `pCompareTo`\
-in Oggetto per il confronto. `pCompareTo`deve essere un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) valida; non può essere `null`.
+in Oggetto per il confronto. `pCompareTo` deve essere un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) valida; non può essere `null`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -90,7 +88,7 @@ In alternativa, è possibile specificare un singolo flag composito come indicato
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

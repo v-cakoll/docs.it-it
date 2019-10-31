@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Eseguire l'inizializzazione lazy di oggetti"
+title: "Procedura: eseguire l'inizializzazione lenta di oggetti"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130330"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedura: Eseguire l'inizializzazione lazy di oggetti
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedura: eseguire l'inizializzazione lenta di oggetti
 La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti. L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso. Per altre informazioni, vedere [Inizializzazione differita](lazy-initialization.md).  
   
 ## <a name="example"></a>Esempio  

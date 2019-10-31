@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131504"
 ---
 # <a name="using-threads-and-threading"></a>Utilizzo di thread e threading
 
@@ -44,7 +42,7 @@ Usare il metodo <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithTy
 
 La tabella seguente illustra alcune delle proprietà dell'oggetto <xref:System.Threading.Thread>:  
   
-|Proprietà|Description|  
+|proprietà|Descrizione|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Restituisce `true` se il thread è stato avviato, ma non è stato ancora terminato normalmente o è stato interrotto.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Ottiene o imposta un valore booleano che indica se un thread è un thread in background. I thread in background sono simili ai thread in primo piano, ma un thread in background non impedisce l'arresto di un processo. Dopo l'arresto di tutti i thread in primo piano che appartengono a un processo, Common Language Runtime termina il processo chiamando il metodo <xref:System.Threading.Thread.Abort%2A> nei thread in background ancora attivi. Per altre informazioni, vedere [Thread in primo piano e in background](foreground-and-background-threads.md).|  
@@ -55,5 +53,5 @@ La tabella seguente illustra alcune delle proprietà dell'oggetto <xref:System.T
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
-- [Threads and Threading](threads-and-threading.md) (Thread e threading)
+- [Thread e Threading](threads-and-threading.md)
 - [Programmazione parallela](../parallel-programming/index.md)

@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117591"
 ---
-# <a name="dependentassembly-element"></a>\<Elemento > dependentAssembly
-Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare un `dependentAssembly` elemento per ogni assembly.  
+# <a name="dependentassembly-element"></a>\<elemento > dependentAssembly
+Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare un elemento `dependentAssembly` per ogni assembly.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp;[ **&nbsp; &nbsp; \<assemblyBinding > \** ](assemblybinding-element-for-runtime.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Contiene informazioni di identificazione sull'assembly. Questo elemento deve essere incluso in ogni `dependentAssembly` elemento.|  
+|`assemblyIdentity`|Contiene informazioni di identificazione sull'assembly. Questo elemento deve essere incluso in ogni elemento `dependentAssembly`.|  
 |`codeBase`|Specifica la posizione in cui il runtime può trovare un assembly condiviso se non è installato nel computer.|  
 |`bindingRedirect`|Reindirizza una versione dell'assembly in un'altra.|  
 |`publisherPolicy`|Specifica se il runtime applica i criteri dell'editore per questo assembly.|  

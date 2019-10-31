@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130775"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>Metodo ICorDebugManagedCallback::ExitThread
-Notifica al debugger che un thread che stava eseguendo codice gestito è stato terminato.  
+Notifica al debugger che un thread che stava eseguendo il codice gestito è stato terminato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +36,16 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread gestito.  
+ in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread gestito.  
   
  `thread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread gestito.  
+ in Puntatore a un oggetto ICorDebugThread che rappresenta il thread gestito.  
   
 ## <a name="remarks"></a>Note  
- Una volta il `ExitThread` callback viene attivato, il thread non apparirà più nelle enumerazioni dei thread.  
+ Una volta generato il callback `ExitThread`, il thread non verrà più visualizzato nelle enumerazioni dei thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

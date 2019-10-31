@@ -7,21 +7,21 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a64db49b521651ccff8b928720fe3273f8600b68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119276"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<appSettings > elemento per \<la configurazione >
+# <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings per \<Configuration >
 
 Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezione di configurazione predefinita fornita dal .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,13 +35,13 @@ Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezi
 
 |           | Descrizione |
 | --------- | ----------- |
-| **file**  | Attributo facoltativo.<br><br>Specifica un percorso relativo di un file esterno contenente le impostazioni di configurazione dell'applicazione personalizzate. Il file specificato contiene lo stesso tipo di impostazioni specificate negli  **\<elementi Aggiungi >** ,  **\<Rimuovi >** e  **\<Cancella >** e usa lo stesso formato di coppia chiave/valore di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un Windows Forms Application, si tratta della cartella binaria (ad esempio */bin/debug verranno incluse*), non del percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui si trova il file *Web. config* .<br><br>Si noti che il runtime ignora l'attributo se non è possibile trovare il file specificato. |
+| **file**  | Attributo facoltativo.<br><br>Specifica un percorso relativo di un file esterno contenente le impostazioni di configurazione dell'applicazione personalizzate. Il file specificato contiene lo stesso tipo di impostazioni specificato nell' **\<aggiungere >** , **\<rimuovere >** e **\<deselezionare** gli elementi > e usa lo stesso formato di coppia chiave/valore di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un Windows Forms Application, si tratta della cartella binaria (ad esempio */bin/debug verranno incluse*), non del percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui si trova il file *Web. config* .<br><br>Si noti che il runtime ignora l'attributo se non è possibile trovare il file specificato. |
 
 ## <a name="parent-element"></a>Elemento padre
 
 |     | Descrizione |
 | --- | ----------- |
-| [Configuration >-elemento  **\<** ](../configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [ **> di configurazione\<** Elemento](../configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
@@ -53,11 +53,11 @@ Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezi
 
 ## <a name="remarks"></a>Note
 
-L'elemento  **\<appSettings >** archivia le informazioni di configurazione dell'applicazione personalizzate, ad esempio le stringhe di connessione del database, i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. Le coppie chiave/valore specificate nell' <xref:System.Configuration.ConfigurationSettings>  **\<elemento > AppSettings** sono accessibili nel codice usando la classe.
+L'elemento **\<appSettings >** archivia informazioni di configurazione dell'applicazione personalizzate, ad esempio stringhe di connessione del database, percorsi di file, URL di servizi Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. Le coppie chiave/valore specificate nell'elemento **\<appSettings >** sono accessibili nel codice usando la classe <xref:System.Configuration.ConfigurationSettings>.
 
-È possibile usare l'attributo **file** nell'  **\<elemento > AppSettings** dei file di configurazione *Web. config* e dell'applicazione. Questo attributo specifica un file di configurazione che fornisce impostazioni aggiuntive oppure esegue l'override delle impostazioni specificate nell'  **\<elemento > AppSettings** . L'attributo **file** può essere utilizzato negli scenari di sviluppo del team del controllo del codice sorgente, ad esempio quando un utente desidera eseguire l'override delle impostazioni del progetto specificate in un file di configurazione dell'applicazione.
+È possibile usare l'attributo **file** nell'elemento **\<appSettings >** dei file di configurazione *Web. config* e dell'applicazione. Questo attributo specifica un file di configurazione che fornisce impostazioni aggiuntive oppure esegue l'override delle impostazioni specificate nell'elemento **> di\<appSettings** . L'attributo **file** può essere utilizzato negli scenari di sviluppo del team del controllo del codice sorgente, ad esempio quando un utente desidera eseguire l'override delle impostazioni del progetto specificate in un file di configurazione dell'applicazione.
 
-I file di configurazione specificati dall'attributo **file** devono avere un nodo radice di  **\<appSettings >** anziché  **\<> di configurazione**.
+I file di configurazione specificati dall'attributo **file** devono avere un nodo radice di **\<appSettings >** piuttosto che **\<> di configurazione**.
 
 ## <a name="example"></a>Esempio
 

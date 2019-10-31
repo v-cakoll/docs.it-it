@@ -5,14 +5,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fa8dc3c043665ca2f56facf516cb03e5c6bb9d7
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099988"
 ---
 # <a name="using-static-directive-c-reference"></a>Direttiva using static (Riferimenti per C#)
 
@@ -22,13 +20,13 @@ La direttiva `using static` consente di definire un tipo i cui membri statici e 
 using static <fully-qualified-type-name>;
 ```
 
-dove *fully-qualified-type-name* è il nome del tipo i cui membri statici e i tipi nidificati possono essere usati come riferimento senza specificare un nome di tipo. Se non si specifica un nome di tipo completo (il nome completo dello spazio dei nomi con il nome del tipo), C# genera l'errore del compilatore [CS0246](../compiler-messages/cs0246.md): "Il nome di tipo o di spazio dei nomi 'type/namespace' non è stato trovato. Probabilmente manca una direttiva using o un riferimento all'assembly".
+dove *fully-qualified-type-name* è il nome del tipo i cui membri statici e i tipi nidificati possono essere usati come riferimento senza specificare un nome di tipo. Se non si specifica un nome di tipo completo (il nome completo dello spazio dei nomi con il nome del tipo), C# genera l'errore del compilatore [CS0246](../compiler-messages/cs0246.md): "Impossibile trovare il nome del tipo o dello spazio dei nomi 'type/namespace' (probabilmente manca una direttiva using o un riferimento a un assembly)".
 
 La direttiva `using static` si applica a qualsiasi tipo che includa membri statici (o tipi nidificati), anche qualora siano presenti membri di istanza. Tuttavia, i membri di istanza possono essere chiamati solo tramite l'istanza del tipo.
 
 La direttiva `using static` è stata introdotta in C# 6.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Quando si chiama un membro statico si fornisce in genere il nome del tipo e il nome del membro. Immettere ripetutamente lo stesso nome di tipo per chiamare i membri del tipo può generare codice troppo dettagliato e incomprensibile. Ad esempio, la seguente definizione di una classe `Circle` fa riferimento a un numero di membri della classe <xref:System.Math>.
 

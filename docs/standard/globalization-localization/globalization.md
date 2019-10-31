@@ -13,14 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120898"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -40,7 +38,7 @@ Per impostazione predefinita, .NET usa stringhe Unicode. Una stringa Unicode è 
 
 In molti sistemi operativi e applicazioni, incluso il sistema operativo Windows, è possibile usare anche tabelle codici per rappresentare i set di caratteri. Le tabelle codici in genere contengono i valori ASCII standard compresi tra 0x00 e 0x7F ed eseguono il mapping degli altri caratteri ai valori rimanenti compresi tra 0x80 e 0xFF. L'interpretazione dei valori da 0x80 a 0xFF dipende dalla tabella codici specifica. Per questo motivo, se possibile, è consigliabile evitare l'uso di tabelle codici in un'app globalizzata.
 
-Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. Per simulare questo scenario, l'esempio specifica in modo esplicito tabelle codici diverse. Innanzitutto, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
+Nell'esempio seguente vengono illustrati i rischi di interpretazione dei dati della tabella codici quando la tabella codici predefinita in un sistema è diversa dalla tabella codici in cui i sono stati salvati i dati. (Per simulare questo scenario, l'esempio specifica in modo esplicito tabelle codici diverse). Innanzitutto, nell'esempio viene definita una matrice costituita dai caratteri maiuscoli dell'alfabeto greco. I caratteri vengono codificati in una matrice di byte usando la tabella codici 737 (nota anche come Greco MS-DOS) e la matrice di byte viene salvata in un file. Se viene recuperato il file e viene decodificata la relativa matrice di byte tramite la tabella codici 737, vengono ripristinati i caratteri originali. Tuttavia, se viene recuperato il file e viene decodificata la relativa matrice di byte usando la tabella codici 1252 (o Windows-1252, che rappresenta i caratteri nell'alfabeto latino), i caratteri originali vengono persi.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]

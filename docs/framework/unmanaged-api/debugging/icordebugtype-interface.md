@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b830af5d59c0eb177d815451ecedbdc14121aaad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f3f553ed5dc93433610365e0dae5bee54863de5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964752"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129623"
 ---
 # <a name="icordebugtype-interface"></a>Interfaccia ICorDebugType
 Rappresenta un tipo, di base o complesso, ovvero definito dall'utente. Se il tipo è generico, `ICorDebugType` rappresenta il tipo generico di cui è stata creata un'istanza.  
@@ -30,28 +28,28 @@ Rappresenta un tipo, di base o complesso, ovvero definito dall'utente. Se il tip
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugTypeEnum che fa riferimento <xref:System.Type> ai parametri generici della classe a cui `ICorDebugType`fa riferimento questo oggetto.|  
-|[Metodo GetBase](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Ottiene un puntatore a interfaccia a `ICorDebugType` un oggetto che fa riferimento alla classe di base della classe a `ICorDebugType`cui fa riferimento, se presente.|  
-|[Metodo GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugClass che fa riferimento al costruttore tipizzato di questo `ICorDebugType`oggetto.|  
-|[Metodo GetFirstTypeParameter](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Ottiene un puntatore a interfaccia a `ICorDebugType` un oggetto che fa riferimento <xref:System.Type> al primo parametro generico per il costruttore della classe a cui `ICorDebugType`fa riferimento questo oggetto.|  
+|[Metodo EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugTypeEnum che fa riferimento ai parametri di <xref:System.Type> generici della classe a cui fa riferimento questo `ICorDebugType`.|  
+|[Metodo GetBase](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Ottiene un puntatore a interfaccia a un `ICorDebugType` che fa riferimento alla classe di base della classe a cui fa riferimento questo `ICorDebugType`, se presente.|  
+|[Metodo GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugClass che fa riferimento al costruttore tipizzato di questo `ICorDebugType`.|  
+|[Metodo GetFirstTypeParameter](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Ottiene un puntatore a interfaccia a un `ICorDebugType` che fa riferimento al primo parametro di <xref:System.Type> generico per il costruttore della classe a cui fa riferimento questo `ICorDebugType`.|  
 |[Metodo GetRank](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Ottiene il numero di dimensioni in un tipo di matrice.|  
 |[Metodo GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Ottiene un puntatore a interfaccia a un ICorDebugValue che contiene il valore del campo statico a cui fa riferimento il token di campo specificato nell'stack frame specificato.|  
-|[Metodo GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Ottiene un valore CorElementType che descrive il tipo nativo del Common Language Runtime <xref:System.Type> a cui fa riferimento questo `ICorDebugType`oggetto.|  
+|[Metodo GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Ottiene un valore CorElementType che descrive il tipo nativo del Common Language Runtime <xref:System.Type> a cui fa riferimento questo `ICorDebugType`.|  
   
 ## <a name="remarks"></a>Note  
- Se il tipo è generico, `ICorDebugClass` rappresenta il tipo di cui non è stata creata un'istanza. L' `ICorDebugType` interfaccia rappresenta un tipo generico di cui è stata creata un'istanza. Ad esempio, Hashtable\<K, V > verrebbe rappresentato da `ICorDebugClass`, mentre Hashtable\<Int32, String > verrebbe rappresentato da `ICorDebugType`.  
+ Se il tipo è generico, `ICorDebugClass` rappresenta il tipo di cui non è stata creata un'istanza. L'interfaccia `ICorDebugType` rappresenta un tipo generico di cui è stata creata un'istanza. Ad esempio, Hashtable\<K, V > verrebbe rappresentato da `ICorDebugClass`, mentre Hashtable\<Int32, la stringa > verrebbe rappresentata da `ICorDebugType`.  
   
- I tipi non generici sono rappresentati `ICorDebugClass` sia `ICorDebugType`da che da. Quest'ultima interfaccia è stata introdotta nella versione .NET Framework 2,0 per gestire la creazione dell'istanza del tipo.  
+ I tipi non generici sono rappresentati sia da `ICorDebugClass` che da `ICorDebugType`. Quest'ultima interfaccia è stata introdotta nella versione .NET Framework 2,0 per gestire la creazione dell'istanza del tipo.  
   
 > [!NOTE]
 > Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug. idl, CorDebug. h  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

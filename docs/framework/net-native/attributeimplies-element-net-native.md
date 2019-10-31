@@ -1,17 +1,15 @@
 ---
-title: <AttributeImplies>Elemento (.NET Native)
+title: Elemento <AttributeImplies> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049907"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128487"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<Elemento > AttributeImplies (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<elemento AttributeImplies > (.NET Native)
 Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -54,11 +52,11 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
@@ -69,7 +67,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Digitare > elemento](type-element-net-native.md)
+- [\<tipo > elemento](type-element-net-native.md)
 - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](runtime-directive-elements.md)
 - [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)

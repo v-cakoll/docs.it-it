@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130408"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi (funzione)
 
@@ -49,7 +47,7 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>Parametri
 
 `strFilter`\
-in Nome della classe per cui si desiderano le istanze. Questo parametro non può `null`essere.
+in Nome della classe per cui si desiderano le istanze. Questo parametro non può essere `null`.
 
 `lFlags`\
 in Combinazione di flag che influiscono sul comportamento di questa funzione. I valori seguenti vengono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
@@ -66,7 +64,7 @@ in Combinazione di flag che influiscono sul comportamento di questa funzione. I 
 I flag consigliati sono `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` per ottenere prestazioni ottimali.
 
 `pCtx`\
-in In genere, questo valore `null`è. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce le istanze richieste.
+in In genere, questo valore è `null`. In caso contrario, è un puntatore a un'istanza di [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) che può essere usata dal provider che fornisce le istanze richieste.
 
 `ppEnum`\
 out Riceve il puntatore all'enumeratore.
@@ -93,7 +91,7 @@ in Nome di dominio dell'utente. Per ulteriori informazioni, vedere la funzione [
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | L'utente non dispone delle autorizzazioni necessarie per visualizzare le istanze della classe specificata. |
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |
@@ -114,7 +112,7 @@ Se la chiamata di funzione ha esito negativo, è possibile ottenere ulteriori in
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632362"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122590"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Metodo ICorDebugManagedCallback::Break
 
-Notifica al debugger quando un <xref:System.Reflection.Emit.OpCodes.Break> un'istruzione nel flusso del codice.
+Notifica al debugger quando viene eseguita un'istruzione <xref:System.Reflection.Emit.OpCodes.Break> nel flusso di codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,14 +38,14 @@ HRESULT Break (
 ## <a name="parameters"></a>Parametri
 
 `pAppDomain`\
-[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente l'istruzione di interruzione.
+in Puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene l'istruzione break.
 
 `thread`\
-[in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene l'istruzione di interruzione.
+in Puntatore a un oggetto ICorDebugThread che rappresenta il thread che contiene l'istruzione break.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
 **Intestazione:** CorDebug.idl, CorDebug.h
 

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127577"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisi di altre stringhe in .NET
 Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le stringhe che rappresentano i tipi <xref:System.Char>, <xref:System.Boolean> ed <xref:System.Enum> in tipi di dati.  
@@ -52,6 +50,6 @@ Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
 - [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

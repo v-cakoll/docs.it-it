@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129503"
 ---
 # <a name="icordebugmodulegetsize-method"></a>Metodo ICorDebugModule::GetSize
-Ottiene la dimensione, espressa in byte, del modulo.  
+Ottiene la dimensione, in byte, del modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,12 +35,12 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>Parametri  
  `pcBytes`  
- [out] Le dimensioni del modulo in byte.  
+ out Dimensioni in byte del modulo.  
   
- Se il modulo è stato prodotto dal generatore di immagini native (NGen.exe), le dimensioni del modulo sarà zero.  
+ Se il modulo è stato prodotto dal generatore di immagini native (NGen. exe), le dimensioni del modulo saranno pari a zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   

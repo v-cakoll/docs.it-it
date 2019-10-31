@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129867"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -46,7 +44,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*sourceStorename*|Archivio certificati contenente certificati, elenchi di scopi consentiti ai certificati o CRL da aggiungere, eliminare, salvare o visualizzare. Può trattarsi di un file di archivio o di un archivio di sistema.|  
 |*destinationStorename*|File o archivio certificati di output.|  
@@ -54,10 +52,10 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/add**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
-|**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni **/add** o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
-|**/c**|Aggiunge i certificati se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
-|**/CRL**|Aggiunge i CRL se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
-|**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/all**|Aggiunge tutte le voci se usata con **/add**, Elimina tutte le voci se utilizzate con **/del**. Visualizza tutte le voci se usate senza le opzioni **/Add** o **/del** . Non è possibile usare l'opzione **/all** con **/put**.|  
+|**/c**|Aggiunge i certificati se usata con **/add**, Elimina i certificati se utilizzati con **/del**. Salva i certificati se usati con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/CRL**|Aggiunge i CRL se usata con **/add**, Elimina i CRL se utilizzati con **/del**. Salva i CRL se utilizzati con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
+|**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, Elimina scopi consentiti se usato con **/del**. Salva scopi consentiti se usato con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  
 |**/del**|Elimina certificati, elenchi di scopi consentiti e CRL da un archivio certificati.|  
 |**/e** *encodingType*|Specifica il tipo di codifica dei certificati. Il valore predefinito è `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Specifica il flag di archivio aperto. Si tratta del parametro *dwFlags* passato a **CertOpenStore**. Il valore predefinito è CERT_SYSTEM_STORE_CURRENT_USER. Questa opzione viene considerata solo se viene usata l'opzione **/y**.|  

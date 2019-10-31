@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123635"
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 
@@ -33,7 +31,7 @@ Con il blocco, i dati vengono temporaneamente bloccati nella posizione di memori
 Le classi [copiabili da BLT](blittable-and-non-blittable-types.md) formattate hanno un layout fisso (formattato) e una rappresentazione dei dati comune sia nella memoria gestita che in quella non gestita. Quando questi tipi richiedono il marshalling, un puntatore all'oggetto nell'heap viene passato direttamente al chiamato, il quale può modificare il contenuto della posizione di memoria a cui il puntatore fa riferimento.
 
 > [!NOTE]
-> Il chiamato può modificare il contenuto della memoria se il parametro è contrassegnato con Out o In/Out. Al contrario, deve evitare di modificare il contenuto quando il parametro è contrassegnato con In per il marshalling, vale a dire con l'impostazione predefinita per i tipi copiabili da BLT formattati. La modifica di un oggetto In genera problemi quando la stessa classe viene esportata in una libreria dei tipi e usata per effettuare chiamate su più apartment.
+> Il chiamato può modificare il contenuto della memoria se il parametro è contrassegnato come out o in/out. Al contrario, il chiamato deve evitare di modificare il contenuto quando il parametro è impostato su Marshal come in, che è l'impostazione predefinita per i tipi copiabili in formato. La modifica di un oggetto In genera problemi quando la stessa classe viene esportata in una libreria dei tipi e usata per effettuare chiamate su più apartment.
 
 ## <a name="formatted-non-blittable-classes"></a>Classi non copiabili da BLT formattate
 
@@ -82,6 +80,6 @@ Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=nameWithType> 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Comportamento predefinito del marshalling](default-marshaling-behavior.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Marshalling di interoperabilità](interop-marshaling.md)

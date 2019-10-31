@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973320"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122507"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -66,17 +64,17 @@ Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro 
 
 - Non ha firma ritardata.
 
-Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [Procedura: Disabilitare la funzionalità](disable-strong-name-bypass-feature.md)di bypass con nome sicuro.
+Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [procedura: disabilitare la funzionalità di bypass con nome sicuro](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Procedura: Creare una coppia di chiavi pubblica/privata](create-public-private-key-pair.md)|Descrive come creare una coppia di chiavi crittografiche per la firma di un assembly.|
-|[Procedura: Firmare un assembly con un nome sicuro](sign-strong-name.md)|Descrive come creare un assembly con nome sicuro.|
+|[Procedura: firmare un assembly con un nome sicuro](sign-strong-name.md)|Descrive come creare un assembly con nome sicuro.|
 |[Denominazione sicura avanzata](enhanced-strong-naming.md)|Descrive i miglioramenti apportati ai nomi sicuri in .NET Framework 4.5.|
-|[Procedura: Fare riferimento a un assembly con nome sicuro](reference-strong-named.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|
-|[Procedura: Disabilitare la funzionalità di bypass con nome sicuro](disable-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|
+|[Procedura: fare riferimento a un assembly con nome sicuro](reference-strong-named.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|
+|[Procedura: disabilitare la funzionalità di bypass con nome sicuro](disable-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|
 |[Creazione di assembly](create.md)|Offre una panoramica degli assembly a file singolo e su più file.|
 |[Come ritardare la firma di un assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Descrive come firmare un assembly con un nome sicuro dopo la creazione dell'assembly.|
 |[Sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)|Descrive lo strumento incluso in .NET Framework che permette di creare assembly con nomi sicuri. In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.|

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1c75e1844fca4e592faa924a55432dd42fa7355
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d865f837d38894e8449af671e2d12e7676dd040
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129126"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>Metodo ICorDebugUnmanagedCallback::DebugEvent
 Notifica al debugger che è stato generato un evento nativo.  
@@ -38,22 +36,22 @@ HRESULT DebugEvent (
   
 ## <a name="parameters"></a>Parametri  
  `pDebugEvent`  
- [in] Un puntatore all'evento nativo.  
+ in Puntatore all'evento nativo.  
   
  `fOutOfBand`  
- [in] `true`, se è Impossibile interagire con lo stato del processo gestito dopo che si verifica un evento non gestito, fino a quando il debugger chiama [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); in caso contrario, `false`.  
+ [in] `true`, se l'interazione con lo stato del processo gestito è Impossibile quando si verifica un evento non gestito, finché il debugger non chiama [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Se il thread in corso il debug è un thread Win32, non usare i membri di Win32 interfaccia di debug. È possibile chiamare `ICorDebugController::Continue` solo in un thread Win32 e solo continuando dopo un evento di out-of-band.  
+ Se il thread di cui è in corso il debug è un thread Win32, non usare alcun membro dell'interfaccia di debug Win32. È possibile chiamare `ICorDebugController::Continue` solo in un thread Win32 e solo quando si continua oltre un evento fuori banda.  
   
- Il `DebugEvent` callback non segue le regole standard per i callback. Quando si chiama `DebugEvent`, il processo verrà semplicemente, lo stato di arresto del sistema operativo-debug. Il processo non verrà sincronizzato. Passerà automaticamente lo stato sincronizzato quando necessario, per soddisfare le richieste di informazioni sul codice gestito, che potrebbe comportare altro annidati `DebugEvent` i callback.  
+ Il callback `DebugEvent` non segue le regole standard per i callback. Quando si chiama `DebugEvent`, il processo si trova nello stato RAW di debug del sistema operativo. Il processo non verrà sincronizzato. Lo stato verrà automaticamente inserito quando necessario per soddisfare le richieste di informazioni sul codice gestito, operazione che può comportare altri callback di `DebugEvent` annidati.  
   
- Chiamare [ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) il processo per ignorare un evento di eccezione prima di continuare il processo. Chiamare questo metodo invia la richiesta continua DBG_CONTINUE anziché DBG_EXCEPTION_NOT_HANDLED e cancella automaticamente i punti di interruzione di out-of-band ed eccezioni passo a passo. Gli eventi di out-of-band possono provenire in qualsiasi momento, anche quando l'applicazione in fase di debug viene visualizzata arrestato e se esiste già un evento in banda in sospeso.  
+ Chiamare [ICorDebugProcess:: ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) nel processo per ignorare un evento di eccezione prima di continuare il processo. La chiamata a questo metodo invia DBG_CONTINUE anziché DBG_EXCEPTION_NOT_HANDLED nella richiesta continue e cancella automaticamente i punti di interruzione fuori banda e le eccezioni a singolo passaggio. Gli eventi fuori banda possono arrivare in qualsiasi momento, anche quando l'applicazione di cui è in corso il debug viene arrestata e quando esiste già un evento in banda in sospeso.  
   
- In .NET Framework versione 2.0, il debugger deve proseguire immediatamente dopo un evento punto di interruzione out-of-band. Il debugger deve utilizzare il [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) e [ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) metodi per aggiungere e rimuovere i punti di interruzione. Questi metodi verranno ignorate automaticamente i punti di interruzione out-of-band. Di conseguenza, i punti di interruzione solo out-of-band inviati deve essere non elaborati dei punti di interruzione già presenti nel flusso di istruzioni, ad esempio una chiamata a Win32 `DebugBreak` (funzione). Non provare a usare `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), o qualsiasi altro membro del [API di debug](../../../../docs/framework/unmanaged-api/debugging/index.md).  
+ Nel .NET Framework versione 2,0, il debugger deve continuare immediatamente dopo un evento del punto di interruzione fuori banda. Il debugger deve usare i metodi [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) e [ICorDebugProcess2:: ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) per aggiungere e rimuovere punti di interruzione. Questi metodi ignoreranno automaticamente eventuali punti di interruzione fuori banda. Pertanto, gli unici punti di interruzione fuori banda che vengono inviati devono essere punti di interruzione non elaborati già presenti nel flusso di istruzioni, ad esempio una chiamata alla funzione Win32 `DebugBreak`. Non tentare di usare `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess:: GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)o qualsiasi altro membro dell' [API di debug](../../../../docs/framework/unmanaged-api/debugging/index.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorDebug.h  
   
