@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1aa4ab44fc8ef1033dcef1a9b36d7487da86cd58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39ad45e143026f40ffcf1339e923837f9e812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779351"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195851"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Metodo IHostMemoryManager::VirtualProtect
-Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione di Win32 di `VirtualProtect` cambia la protezione in un'area delle pagine eseguito il commit nello spazio degli indirizzi virtuali del processo chiamante.  
+Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione Win32 di `VirtualProtect` modifica la protezione in un'area di pagine di cui è stato eseguito il commit nello spazio degli indirizzi virtuali del processo chiamante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,37 +38,37 @@ HRESULT VirtualProtect (
   
 ## <a name="parameters"></a>Parametri  
  `lpAddress`  
- [in] Un puntatore all'indirizzo di base per la memoria virtuale cui attributi di protezione devono essere modificato.  
+ in Puntatore all'indirizzo di base della memoria virtuale di cui devono essere modificati gli attributi di protezione.  
   
  `dwSize`  
- [in] Le dimensioni, in byte, dell'area di pagine di memoria da modificare.  
+ in Dimensione, in byte, dell'area delle pagine di memoria da modificare.  
   
  `flNewProtect`  
- [in] Tipo di protezione della memoria da applicare.  
+ in Tipo di protezione della memoria da applicare.  
   
  `pflOldProtect`  
- [out] Puntatore al valore di protezione della memoria precedente.  
+ out Puntatore al valore precedente della protezione della memoria.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`VirtualProtect` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`VirtualProtect` ha restituito un esito positivo.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Questa implementazione di `VirtualProtect` restituisce un valore HRESULT, mentre l'implementazione di Win32 restituisce un valore diverso da zero per indicare l'esito positivo e un valore zero per indicare un errore. Per altre informazioni, vedere la documentazione della piattaforma Windows.  
+ Questa implementazione di `VirtualProtect` restituisce un valore HRESULT, mentre l'implementazione Win32 restituisce un valore diverso da zero per indicare l'esito positivo e un valore zero per indicare l'esito negativo. Per ulteriori informazioni, vedere la documentazione della piattaforma Windows.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

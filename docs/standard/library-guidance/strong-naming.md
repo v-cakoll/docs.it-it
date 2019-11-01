@@ -4,12 +4,12 @@ description: Procedure consigliate per la creazione di nomi sicuri per le librer
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968976"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196966"
 ---
 # <a name="strong-naming"></a>Denominazione sicura
 
@@ -45,7 +45,7 @@ I vantaggi dei nomi sicuri sono i seguenti:
 È consigliabile usare un nome sicuro per le librerie .NET open source. L'uso di un nome sicuro per un assembly garantisce che la maggior parte degli utenti possa usare l'assembly e il caricamento dell'assembly in modalità strict riguarda solo .NET Framework.
 
 > [!NOTE]
-> Queste indicazioni si riferiscono alle librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere usato per impostazione predefinita.
+> Queste linee guida sono specifiche per le librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere eseguito per impostazione predefinita.
 
 **✔️ VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
 
@@ -53,7 +53,7 @@ I vantaggi dei nomi sicuri sono i seguenti:
 
 > Una chiave disponibile pubblicamente consente agli sviluppatori di modificare e ricompilare il codice sorgente della libreria con la stessa chiave.
 > 
-> Non rendere pubblica la chiave per la creazione di nomi sicuri se è stata usata in precedenza per concedere autorizzazioni speciali in [scenari di attendibilità parziale](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). In caso contrario, si potrebbero compromettere gli ambienti esistenti.
+> Non rendere pubblica la chiave per la creazione di nomi sicuri se è stata usata in precedenza per concedere autorizzazioni speciali in [scenari di attendibilità parziale](../../framework/misc/using-libraries-from-partially-trusted-code.md). In caso contrario, si potrebbero compromettere gli ambienti esistenti.
 
 > [!IMPORTANT]
 > Quando si vuole indicare l'identità dell'editore del codice, usare [Authenticode](/windows-hardware/drivers/install/authenticode) e la [firma di pacchetti NuGet](/nuget/create-packages/sign-a-package). Non usare la sicurezza dall'accesso di codice come prevenzione per la sicurezza.
@@ -62,11 +62,11 @@ I vantaggi dei nomi sicuri sono i seguenti:
 
 > Leggere altre informazioni su [controllo delle versioni e versione degli assembly](./versioning.md#assembly-version).
 
-**❌ NON** aggiungere, rimuovere o modificare la chiave per la creazione di nomi sicuri.
+**❌** non aggiungere, rimuovere o modificare la chiave di denominazione sicura.
 
 > Se si modifica una chiave per la creazione di nomi sicuri di un assembly, viene modificata l'identità dell'assembly e il codice compilato che lo usa non funziona più. Per altre informazioni, vedere [Binary breaking change](./breaking-changes.md#binary-breaking-change) (Modifica che causa un'interruzione del codice binario).
 
-**❌ DA NON FARE** Pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌** non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 > La pubblicazione di due pacchetti comporta la biforcazione dell'ecosistema di sviluppo. Se un'applicazione dipende da entrambi i pacchetti, inoltre, possono verificarsi conflitti di nomi di tipo. Per quanto riguarda .NET, si tratta di tipi diversi in assembly diversi.
 

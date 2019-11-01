@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: fa0f54404d1e14afa6ce48a425c984a48498a1ee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: e9278320ee3fdf9e6b89698d187f047c309ea791
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394459"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198465"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol. SuccessHandshakeData sostituito
 
-Il campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/aspnet/AspNetCore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) è stato rimosso e sostituito con un metodo helper che genera una risposta di handshake riuscita data una specifica `IHubProtocol`. 
+Il campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/aspnet/AspNetCore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) è stato rimosso e sostituito con un metodo helper che genera una risposta di handshake riuscita data una specifica `IHubProtocol`.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -20,7 +20,7 @@ Il campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/aspnet/Asp
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-`HandshakeProtocol.SuccessHandshakeData` è stato sostituito da un metodo `static` `GetSuccessfulHandshake(IHubProtocol protocol)` che restituisce un `ReadOnlyMemory<byte>` Basato sul protocollo specificato. 
+`HandshakeProtocol.SuccessHandshakeData` è stato sostituito da un metodo `static` `GetSuccessfulHandshake(IHubProtocol protocol)` che restituisce un `ReadOnlyMemory<byte>` Basato sul protocollo specificato.
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 

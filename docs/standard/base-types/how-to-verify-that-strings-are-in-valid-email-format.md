@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Verificare che le stringhe siano in formato di posta elettronica valido'
+title: Come verificare che le stringhe siano in formato di posta elettronica valido
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 1812235da6e6d02a97fe994568c5c26a3c7cde33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126405"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197577"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedura: verificare che le stringhe siano in formato di posta elettronica valido
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Come verificare che le stringhe siano in formato di posta elettronica valido
 
 L'esempio seguente usa un'espressione regolare per verificare la validità del formato di posta elettronica di una stringa.
 
@@ -50,7 +50,7 @@ Si noti che il metodo `IsValidEmail` non esegue l'autenticazione per convalidare
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-In questo esempio, il modello di espressione regolare ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` viene interpretato come illustrato nella legenda seguente. L'espressione regolare viene compilata usando il flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
+In questo esempio, il modello di espressione regolare ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` viene interpretato come illustrato nella legenda seguente. L'espressione regolare viene compilata usando il flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
 
 Pattern `^`: inizia la corrispondenza all'inizio della stringa.
 
@@ -62,7 +62,7 @@ Pattern `|(([0-9a-z]`: se il primo carattere non è una virgoletta, trovare la c
 
 Pattern `(\.(?!\.))`: se il carattere successivo è un punto, trovarne la corrispondenza. Se non è un punto, eseguire il look ahead del carattere successivo e continuare la ricerca della corrispondenza. `(?!\.)` è un'asserzione lookahead negativa di larghezza zero che impedisce la comparsa di due punti consecutivi nella parte locale di un indirizzo di posta elettronica.
 
-Pattern ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: se il carattere successivo non è un punto, trovare la corrispondenza con qualsiasi carattere alfanumerico o con uno dei caratteri seguenti:-! # $% &' * +/=? ^'{}| ~
+Pattern ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: se il carattere successivo non è un punto, trovare la corrispondenza con qualsiasi carattere alfanumerico o con uno dei caratteri seguenti:-! # $% &'\*+/=? ^\`{}| ~
 
 Pattern ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``: corrisponde al modello di alternanza (un punto seguito da un punto o da uno di un numero di caratteri) zero o più volte.
 
