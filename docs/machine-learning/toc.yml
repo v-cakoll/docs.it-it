@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Classificazione del sentiment tramite TensorFlow (classificazione del testo)
           href: tutorials/text-classification-tf.md
-    - name: Strumenti
+    - name: Model Builder e interfaccia della riga di comando
       items:
-        - name: Stimare i prezzi con Model Builder
+        - name: Stimare i prezzi (Model Builder e regressione)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
           href: tutorials/mlnet-cli.md
-        - name: Analizzare il sentiment tramite Model Builder e Razor Pages
+        - name: Analizzare il sentiment in Razor Pages (Model Builder e classificazione binaria)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Categorizzare le violazioni dell'integrità (Model Builder e classificazione multiclasse)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Programmazione probabilistica con Infer.NET
