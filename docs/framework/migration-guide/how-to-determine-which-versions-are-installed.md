@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: e339767b981cea80b1b804db7360961dc42f2102
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 748b5ea2b14abe2da0b84430461eb68a70ae268d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126318"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195225"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: Determinare le versioni di .NET Framework installate
 
@@ -95,7 +95,7 @@ La tabella seguente elenca il valore della voce DWORD **Release** nei singoli si
 
 - Per determinare se una versione specifica di .NET Framework è installata in una particolare versione del sistema operativo Windows, verificare se il valore della voce DWORD **Release** è *uguale al* valore elencato nella tabella. Ad esempio, per determinare se .NET Framework 4.6 è presente in un sistema Windows 10, verificare se è presente un valore di **Release** *uguale a* 393295.
 
-- Per determinare se è presente una versione minima di .NET Framework, usare il valore più piccolo di DWORD **RELEASE** per tale versione. Se ad esempio l'applicazione viene eseguita in .NET Framework 4.6 o versione successiva, verificare se è presente un valore della voce DWORD **RELEASE** *maggiore o uguale a* 393295. Per una tabella che elenca solo il valore minimo della voce DWORD **RELEASE** per ogni versione di .NET Framework, vedere [Valori minimi della voce DWORD Release per .NET Framework 4.5 e versioni successive](minimum-release-dword.md).
+- Per determinare se è presente una versione minima di .NET Framework, usare il valore più piccolo di DWORD **RELEASE** per tale versione. Se, ad esempio, l'applicazione viene eseguita con .NET Framework 4,8 o versione successiva, verificare la presenza di un valore DWORD di **versione** *maggiore o uguale a* 528040. Per una tabella che elenca solo il valore minimo della voce DWORD **RELEASE** per ogni versione di .NET Framework, vedere [Valori minimi della voce DWORD Release per .NET Framework 4.5 e versioni successive](minimum-release-dword.md).
 
 - Per eseguire questo test per più versioni, iniziare verificando se è presente un valore *maggiore o uguale al* valore più piccolo di DWORD per la versione più recente di .NET Framework e quindi confrontare tale valore con il valore più piccolo di DWORD per ogni versione meno recente. Se ad esempio l'applicazione richiede .NET Framework 4.7 o versione successiva e si vuole determinare quale versione di .NET Framework è presente, iniziare verificando se è presente un valore della voce DWORD **RELEASE** *maggiore o uguale a* 461808 (il valore più piccolo di DWORD per .NET Framework 4.7.2). Confrontare quindi il valore della voce DWORD **RELEASE** con il valore più piccolo per ogni versione successiva di .NET Framework. Per una tabella che elenca solo il valore minimo della voce DWORD **RELEASE** per ogni versione di .NET Framework, vedere [Valori minimi della voce DWORD Release per .NET Framework 4.5 e versioni successive](minimum-release-dword.md).
 

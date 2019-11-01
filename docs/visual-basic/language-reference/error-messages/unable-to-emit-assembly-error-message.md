@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968858"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197268"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>Impossibile creare l'assembly: \<messaggio di errore >
 
@@ -61,7 +61,7 @@ Il compilatore Visual Basic chiama assembly linker (*al. exe*, noto anche come A
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (strumento Nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Procedura: Creare una coppia di chiavi pubblica/privata](../../../standard/assembly/create-public-private-key-pair.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/feedback-options) (Comunicazioni con Microsoft)

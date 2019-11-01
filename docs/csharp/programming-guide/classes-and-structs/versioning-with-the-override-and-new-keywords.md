@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596004"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196209"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
 Il linguaggio C# è progettato in modo che il controllo delle versioni tra le classi [di base](../../language-reference/keywords/base.md) e le classi derivate in diverse librerie possa svilupparsi e mantenere la compatibilità con le versioni precedenti. Ciò significa ad esempio che l'introduzione di un nuovo membro in una classe [di base](../../language-reference/keywords/class.md) con lo stesso nome di un membro in una classe derivata è completamente supportata da C# e non causa comportamenti imprevisti. Significa inoltre che una classe deve dichiarare in modo esplicito se un metodo deve eseguire l'override di un metodo ereditato o se si tratta di un nuovo metodo che consente di nascondere un metodo ereditato con nome simile.  
@@ -56,7 +56,7 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- Se si preferisce che il metodo non esegua l'override del nuovo metodo della classe di base, attenersi alle indicazioni che seguono. Per evitare confusione tra i due metodi, è possibile rinominare il metodo da usare. Questa operazione può richiedere molto tempo e causare errori e in alcuni casi è poco pratica. Tuttavia, se il progetto è relativamente piccolo, è possibile usare le opzioni di refactoring di Visual Studio per rinominare il metodo. Per altre informazioni, vedere [Refactoring di classi e tipi (Progettazione classi)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
+ Se si preferisce che il metodo non esegua l'override del nuovo metodo della classe di base, attenersi alle indicazioni che seguono. Per evitare confusione tra i due metodi, è possibile rinominare il metodo da usare. Questa operazione può richiedere molto tempo e causare errori e in alcuni casi è poco pratica. Tuttavia, se il progetto è relativamente piccolo, è possibile usare le opzioni di refactoring di Visual Studio per rinominare il metodo. Per altre informazioni, vedere [Refactoring di classi e tipi (Progettazione classi)](/visualstudio/ide/class-designer/refactoring-classes-and-types).  
   
  In alternativa, è possibile evitare l'avviso usando la parola chiave `new` nella definizione della classe derivata:  
   
@@ -69,11 +69,11 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Quando si chiama `DoWork` per un'istanza di `Derived`, il compilatore C# tenta per prima cosa di rendere la chiamata compatibile con le versioni di `DoWork` originariamente dichiarate in `Derived`. I metodi di override non vengono considerati come dichiarati per una classe, sono nuove implementazioni di un metodo dichiarato per una classe di base. Solo se il compilatore C# non è in grado di associare la chiamata al metodo a un metodo originale in `Derived`, tenterà di associare la chiamata a un metodo sottoposto a override con lo stesso nome e parametri compatibili. Ad esempio:  
+ Quando si chiama `DoWork` per un'istanza di `Derived`, il compilatore C# tenta per prima cosa di rendere la chiamata compatibile con le versioni di `DoWork` originariamente dichiarate in `Derived`. I metodi di override non vengono considerati come dichiarati per una classe, sono nuove implementazioni di un metodo dichiarato per una classe di base. Solo se il compilatore C# non è in grado di associare la chiamata al metodo a un metodo originale in `Derived`, tenterà di associare la chiamata a un metodo sottoposto a override con lo stesso nome e parametri compatibili. Esempio:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Poiché la variabile `val` può essere convertita in un valore double in modo implicito, il compilatore C# chiama `DoWork(double)` anziché `DoWork(int)`. Questa situazione può essere evitata in due modi. Primo, evitare di dichiarare i nuovi metodi con lo stesso nome dei metodi virtuali. Secondo, è possibile indicare al compilatore C# di chiamare il metodo virtuale facendo in modo che esegua una ricerca nell'elenco dei metodi della classe di base eseguendo il cast dell'istanza di `Derived` a `Base`. Poiché il metodo è virtuale, verrà chiamata l'implementazione di `DoWork(int)` per `Derived`. Ad esempio:  
+ Poiché la variabile `val` può essere convertita in un valore double in modo implicito, il compilatore C# chiama `DoWork(double)` anziché `DoWork(int)`. Questa situazione può essere evitata in due modi. Primo, evitare di dichiarare i nuovi metodi con lo stesso nome dei metodi virtuali. Secondo, è possibile indicare al compilatore C# di chiamare il metodo virtuale facendo in modo che esegua una ricerca nell'elenco dei metodi della classe di base eseguendo il cast dell'istanza di `Derived` a `Base`. Poiché il metodo è virtuale, verrà chiamata l'implementazione di `DoWork(int)` per `Derived`. Esempio:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   

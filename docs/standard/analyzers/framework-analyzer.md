@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929301"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197957"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -24,8 +24,8 @@ Gli analizzatori della sicurezza di .NET devono essere installati come pacchetto
 
 .NET Framework Analyzer è disponibile nel pacchetto NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Questo pacchetto contiene solo gli analizzatori specifici di .NET Framework, inclusi gli analizzatori della sicurezza. Nella maggior parte dei casi è opportuno usare il pacchetto NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Il pacchetto aggregato FxCopAnalyzers contiene tutti gli analizzatori di framework inclusi nel pacchetto Framework.Analyzers, nonché i seguenti analizzatori:
 
-- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): contiene indicazioni generali e materiale sussidiario per le API .NET Standard
-- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): contiene gli analizzatori specifici delle API .NET Core.
+- [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): contiene indicazioni generali e linee guida per le API di .NET Standard
+- [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): contiene gli analizzatori specifici delle API di .NET Core.
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): contiene materiale sussidiario per il testo incluso come codice, compresi i commenti.
 
 Per installarlo, fare clic con il pulsante destro del mouse sul progetto e selezionare "Gestisci dipendenze".
@@ -52,17 +52,17 @@ Esiste un numero limitato di tipi in .NET Framework da cui non è consigliabile 
 
 **Gravità:** Avviso
 
-Altre informazioni: [CA:1058: I tipi non devono estendere tipi di base specifici](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
+Informazioni aggiuntive: [CA1058: I tipi non devono estendere tipi di base specifici](/visualstudio/code-quality/ca1058-types-should-not-extend-certain-base-types)
 
-### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: Non rilevare eccezioni di stato danneggiato
+### <a name="ca2153-do-not-catch-corrupted-state-exceptions"></a>CA2153: Evitare la gestione delle eccezioni stato danneggiato
 
 Usare le eccezioni stato danneggiato potrebbe mascherare gli errori, ad esempio le violazioni dell'accesso, e causare uno stato incoerente dell'esecuzione o rendere più semplice per gli utenti malintenzionati compromettere un sistema. In alternativa, gestire un set più specifico di tipi di eccezioni o generare di nuovo l'eccezione
 
-**Categoria:** Security
+**Categoria:** Sicurezza
 
 **Gravità:** Avviso
 
-Informazioni aggiuntive:[## CA2153: Non rilevare eccezioni di stato danneggiato](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
+Informazioni aggiuntive: [CA2153: Evitare la gestione delle eccezioni stato danneggiato](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
 ### <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementare costruttori di serializzazione
 
@@ -79,58 +79,58 @@ public class MyItemType
 }
 ```
 
-**Categoria:** Utilizzo
+**Categoria:** Uso
 
 **Gravità:** Avviso
 
-Altre informazioni: [CA2229: Implementare costruttori di serializzazione](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
+Informazioni aggiuntive: [CA2229: Implementare costruttori di serializzazione](/visualstudio/code-quality/ca2229-implement-serialization-constructors)
 
 ### <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: Contrassegnare tutti i campi non serializzabili
 
 Un campo di istanza di un tipo non serializzabile viene dichiarato in un tipo serializzabile. È necessario contrassegnare in modo esplicito tale campo con <xref:System.NonSerializedAttribute> per risolvere il problema.
 
-**Categoria:** Utilizzo
+**Categoria:** Uso
 
 **Gravità:** Avviso
 
-Altre informazioni: [CA2235: Contrassegnare tutti i campi non serializzabili](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
+Informazioni aggiuntive: [CA2235: Contrassegnare tutti i campi non serializzabili](/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields)
 
-### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Contrassegnare i tipi ISerializable con Serializable
+### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237: Contrassegnare i tipi ISerializable con SerializableAttribute
 
 Per essere riconosciuti come serializzabili in Common Language Runtime, i tipi devono essere contrassegnati usando l'attributo <xref:System.SerializableAttribute> anche quando il tipo usa una routine di serializzazione personalizzata implementando l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.
 
-**Categoria:** Utilizzo
+**Categoria:** Uso
 
 **Gravità:** Avviso
 
-Altre informazioni: [CA2237: Contrassegnare i tipi ISerializable con Serializable](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Informazioni aggiuntive: [CA2237: Contrassegnare i tipi ISerializable con SerializableAttribute](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: Elaborazione DTD non sicura nel codice XML
+### <a name="ca3075-insecure-dtd-processing-in-xml"></a>CA3075: Elaborazione DTD non protetta in XML
 
 Se si usano istanze di <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> non protette o si fa riferimento a origini di entità esterne, il parser può accettare un input non attendibile e divulgare informazioni riservate a utenti malintenzionati.  
 
-**Categoria:** Security
+**Categoria:** Sicurezza
 
 **Gravità:** Avviso
 
-Altre informazioni: [A3075: Elaborazione DTD non sicura nel codice XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
+Informazioni aggiuntive: [A3075: Elaborazione DTD non protetta in XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Non usare algoritmi di crittografia vulnerabili
+### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: non usare algoritmi di crittografia vulnerabili
 
 Gli algoritmi di crittografia si danneggiano nel tempo man mano che gli attacchi diventano più evoluti. In base al tipo e all'applicazione di questo algoritmo di crittografia, un'ulteriore riduzione dell'efficacia della crittografia può consentire agli utenti malintenzionati di leggere e manomettere i messaggi cifrati, falsificare le firme digitali, alterare il contenuto con hash o danneggiare in altro modo qualsiasi sistema crittografico basato su questo algoritmo. Per la crittografia, usare un algoritmo AES (AES-256, AES 192 e AES-128 sono accettabili) con una lunghezza di chiave maggiore di o uguale a 128 bit. Per l'hash, usare una funzione hash della famiglia SHA-2, ad esempio SHA-2 512, SHA-2 384 o SHA-2 256.
 
-**Categoria:** Security
+**Categoria:** Sicurezza
 
 **Gravità:** Avviso
 
-Altre informazioni: [CA5350: Non usare algoritmi di crittografia vulnerabili](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
+Informazioni aggiuntive: [CA5350: non usare algoritmi di crittografia vulnerabili](/visualstudio/code-quality/ca5350-do-not-use-weak-cryptographic-algorithms)
 
-### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: Non usare algoritmi di crittografia violati
+### <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: non usare algoritmi di crittografia interrotti
 
 Esiste un attacco che rende fattibile a livello di calcolo l'interruzione di questo algoritmo. Ciò consente agli utenti malintenzionati di interrompere le garanzie di crittografia che per cui è stato progettato l'algoritmo. In base al tipo e all'applicazione di questo algoritmo di crittografia, in questo modo gli utenti malintenzionati possono leggere e manomettere i messaggi cifrati, falsificare le firme digitali, alterare il contenuto con hash o danneggiare in altro modo qualsiasi sistema crittografico basato su questo algoritmo. Per la crittografia, usare un algoritmo AES (AES-256, AES 192 e AES-128 sono accettabili) con una lunghezza di chiave maggiore di o uguale a 128 bit. Per l'hash, usare una funzione hash della famiglia SHA-2, ad esempio SHA512, SHA384 o SHA256. Per le firme digitali, usare RSA con una lunghezza di chiave maggiore di o uguale a 2048 bit o ECDSA con una lunghezza di chiave maggiore di o uguale a 256 bit.
 
-**Categoria:** Security
+**Categoria:** Sicurezza
 
 **Gravità:** Avviso
 
-Informazioni aggiuntive: [CA5351: Non usare algoritmi di crittografia violati](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
+Informazioni aggiuntive: [CA5351: non usare algoritmi di crittografia interrotti](/visualstudio/code-quality/ca5351)

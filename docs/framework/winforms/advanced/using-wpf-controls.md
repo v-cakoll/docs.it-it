@@ -8,21 +8,21 @@ ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5ea92b24a2ca30c0ad137d83c8f521a952ad0c6b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e05ec7fc503565333a4d05662a4e40d8d1193af
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658493"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197470"
 ---
 # <a name="use-wpf-controls-in-windows-forms-apps"></a>Usare i controlli WPF nelle app Windows Forms
 
 È possibile utilizzare i controlli Windows Presentation Foundation (WPF) nelle applicazioni basate su Windows Forms. Sebbene si tratta di due tecnologie di visualizzazione diverse, interagiscono senza problemi.
 
-Il Progettazione Windows Form in Visual Studio fornisce un ambiente di progettazione visiva per l'hosting di controlli Windows Presentation Foundation. Un controllo WPF è ospitato da un particolare controllo Windows Forms denominato <xref:System.Windows.Forms.Integration.ElementHost>. Questo controllo consente al controllo WPF di partecipare al layout del form e di ricevere i messaggi della tastiera e del mouse. In fase di progettazione, è possibile disporre <xref:System.Windows.Forms.Integration.ElementHost> il controllo come qualsiasi Windows Forms controllo.
+Il Progettazione Windows Form in Visual Studio fornisce un ambiente di progettazione visiva per l'hosting di controlli Windows Presentation Foundation. Un controllo WPF è ospitato da un controllo Windows Forms speciale denominato <xref:System.Windows.Forms.Integration.ElementHost>. Questo controllo consente al controllo WPF di partecipare al layout del form e di ricevere i messaggi della tastiera e del mouse. In fase di progettazione è possibile disporre il controllo <xref:System.Windows.Forms.Integration.ElementHost> come qualsiasi Windows Forms controllo.
 
-È inoltre possibile utilizzare Windows Forms controlli nelle applicazioni basate su WPF. Per altre informazioni, vedere [progettazione di XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).
+È inoltre possibile utilizzare Windows Forms controlli nelle applicazioni basate su WPF. Per altre informazioni, vedere [progettazione di XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interoperatività di WPF e Windows Forms](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)
+- [Interoperatività di WPF e Windows Forms](../../wpf/advanced/wpf-and-windows-forms-interoperation.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Disposizione di controlli Windows Form in WPF'
+title: 'Procedura dettagliata: disposizione di controlli Windows Form in WPF'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 3a94ef65be99b01a9511f37872cbcacd6ec12264
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179440"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197849"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procedura dettagliata: Disposizione di controlli Windows Form in WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procedura dettagliata: disposizione di controlli Windows Form in WPF
 
 Questa procedura dettagliata illustra come usare le funzionalità di layout [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per disporre i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] in un'applicazione ibrida.
 
@@ -38,9 +38,9 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 
 Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [disposizione di Windows Forms controlli in WPF di esempio](https://go.microsoft.com/fwlink/?LinkID=159971).
 
-Al termine, si avrà una conoscenza delle funzionalità di layout [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nelle applicazioni basate su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Al termine, sarà possibile comprendere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] funzionalità di layout nelle applicazioni basate su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare la procedura dettagliata, è necessario Visual Studio.
 
@@ -58,7 +58,7 @@ Per creare e configurare il progetto, attenersi alla procedura seguente:
 
 3. Fare doppio clic su *MainWindow. XAML* per aprirlo nella visualizzazione XAML.
 
-4. Nell'elemento <xref:System.Windows.Window> aggiungere il seguente mapping dello spazio dei nomi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. Nell'elemento <xref:System.Windows.Window> aggiungere il seguente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapping dello spazio dei nomi.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -78,7 +78,7 @@ Per usare le impostazioni di layout predefinite, seguire questa procedura:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. Il controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> viene visualizzato in <xref:System.Windows.Controls.Canvas>. Il controllo ospitato viene ridimensionato in base al contenuto e l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> è dimensionato per contenere il controllo ospitato.
+2. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. Il controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> viene visualizzato nella <xref:System.Windows.Controls.Canvas>. Il controllo ospitato viene ridimensionato in base al relativo contenuto e l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> viene dimensionato per contenere il controllo ospitato.
 
 ## <a name="sizing-to-content"></a>Ridimensionamento in base al contenuto
 
@@ -141,7 +141,7 @@ Per visualizzare gli effetti dell'impostazione delle proprietà nel controllo os
 
 ## <a name="understanding-z-order-limitations"></a>Informazioni sulle limitazioni di z order
 
-Gli elementi visibili <xref:System.Windows.Forms.Integration.WindowsFormsHost> vengono sempre disegnati sopra gli altri elementi WPF e non sono interessati dall'ordine z. Per visualizzare questo comportamento dell'ordine z, eseguire le operazioni seguenti:
+Gli elementi <xref:System.Windows.Forms.Integration.WindowsFormsHost> visibili vengono sempre disegnati sopra gli altri elementi WPF e non sono interessati dall'ordine z. Per visualizzare questo comportamento dell'ordine z, eseguire le operazioni seguenti:
 
 1. Copiare il codice XAML seguente nell'elemento <xref:System.Windows.Controls.Grid>:
 
@@ -151,7 +151,7 @@ Gli elementi visibili <xref:System.Windows.Forms.Integration.WindowsFormsHost> v
 
 ## <a name="docking"></a>Ancoraggio
 
-l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> supporta l'ancoraggio [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Impostare la proprietà associata <xref:System.Windows.Controls.DockPanel.Dock%2A> per ancorare il controllo ospitato in un elemento <xref:System.Windows.Controls.DockPanel>.
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento supporta l'ancoraggio [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Impostare la proprietà associata <xref:System.Windows.Controls.DockPanel.Dock%2A> per ancorare il controllo ospitato in un elemento <xref:System.Windows.Controls.DockPanel>.
 
 Per ancorare un controllo ospitato, attenersi alla procedura seguente:
 
@@ -180,11 +180,11 @@ Per impostare la visibilità di un controllo ospitato, attenersi alla procedura 
 
 4. Fare clic sul pulsante **fare clic per rendere invisibile** per rendere invisibile l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
-5. Fare clic sul pulsante **fare clic per comprimere** per nascondere completamente l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> dal layout. Quando il controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] è compresso, gli elementi circostanti vengono ridisposti per occuparne lo spazio.
+5. Fare clic sul pulsante **fare clic per comprimere** per nascondere completamente l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> dal layout. Quando il controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] viene compresso, gli elementi circostanti vengono ridisposti per occuparne lo spazio.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Hosting di un controllo che non si adatta
 
-Alcuni controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hanno dimensioni fisse e non si adattano per riempire lo spazio disponibile nel layout. Ad esempio, il controllo <xref:System.Windows.Forms.MonthCalendar> Visualizza un mese in uno spazio fisso.
+Alcuni controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hanno una dimensione fissa e non si adattano per riempire lo spazio disponibile nel layout. Ad esempio, il controllo <xref:System.Windows.Forms.MonthCalendar> Visualizza un mese in uno spazio fisso.
 
 Per ospitare un controllo che non si estende, attenersi alla procedura seguente:
 
@@ -192,11 +192,11 @@ Per ospitare un controllo che non si estende, attenersi alla procedura seguente:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
-2. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. L'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> è centrato nella riga della griglia, ma non viene allungato per riempire lo spazio disponibile. Se la finestra è sufficientemente grande, è possibile che vengano visualizzati due o più mesi dal controllo <xref:System.Windows.Forms.MonthCalendar> ospitato, che però sono centrati nella riga. Il motore di layout [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Centra gli elementi che non possono essere ridimensionati per riempire lo spazio disponibile.
+2. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. L'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> viene centrato nella riga della griglia, ma non viene allungato per riempire lo spazio disponibile. Se la finestra è sufficientemente grande, è possibile che vengano visualizzati due o più mesi dal controllo <xref:System.Windows.Forms.MonthCalendar> host, che però sono centrati nella riga. Il motore di layout di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] centra gli elementi che non possono essere ridimensionati per riempire lo spazio disponibile.
 
 ## <a name="scaling"></a>Ridimensionamento
 
-Diversamente dagli elementi WPF, la maggior parte dei controlli Windows Forms non è continuamente scalabile. Per fornire il ridimensionamento personalizzato, è necessario eseguire l'override del metodo <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
+Diversamente dagli elementi WPF, la maggior parte dei controlli Windows Forms non è continuamente scalabile. Per fornire scalabilità personalizzata, è necessario eseguire l'override del metodo <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
 
 Per ridimensionare un controllo ospitato usando il comportamento predefinito, attenersi alla procedura seguente:
 
@@ -253,14 +253,14 @@ Per usare un contenitore di layout dinamico, attenersi alla procedura seguente:
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]
 
-4. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. L'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> riempie il <xref:System.Windows.Controls.DockPanel> e <xref:System.Windows.Forms.FlowLayoutPanel> dispone i relativi controlli figlio nel <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> predefinito.
+4. Premere <kbd>F5</kbd> per compilare ed eseguire l'applicazione. L'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> riempie l'<xref:System.Windows.Controls.DockPanel>e <xref:System.Windows.Forms.FlowLayoutPanel> dispone i relativi controlli figlio nel <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>predefinito.
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Progettare XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Considerazioni sul layout per l'elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Disposizione di controlli Windows Forms nell'esempio WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Procedura dettagliata: Hosting di un controllo Windows Forms composito in WPF @ no__t-0
-- [Procedura dettagliata: Hosting di un controllo composito WPF in Windows Forms @ no__t-0
+- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

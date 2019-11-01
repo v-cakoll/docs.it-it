@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002174"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196236"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Spiacenti, non abbiamo informazioni specifiche sull'errore C#
 
@@ -701,4 +701,4 @@ Fornisce un sito Web di QA per domande e problemi con C#l'oggetto visivo.
 
 - [Guida per programmatori C#](../programming-guide/index.md)
 - [Riferimenti per C#](../language-reference/index.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/feedback-options) (Comunicazioni con Microsoft)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168961"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195495"
 ---
 # <a name="c-walkthroughs"></a>Procedure dettagliate di C#
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
   
  In questa sezione vengono forniti collegamenti a procedure dettagliate di programmazione di C#.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
  [Accesso al Web con Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Viene illustrato come creare una soluzione asincrona usando [async](./language-reference/keywords/async.md) e [await](./language-reference/operators/await.md).  
@@ -72,4 +72,4 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](./programming-guide/index.md)
-- [Esempi di Visual Studio](/visualstudio/ide/visual-studio-samples)
+- [Esempi di Visual Studio](/visualstudio/ide/visual-studio-ide)
