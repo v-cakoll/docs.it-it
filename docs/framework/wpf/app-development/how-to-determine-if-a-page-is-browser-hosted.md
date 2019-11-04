@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare se una pagina è ospitata su browser'
+title: 'Procedura: determinare se una pagina è ospitata in un browser'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4cb1065807d16c1d1f5a95c8ac9c9cbe5a0fdab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947810"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424697"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a><span data-ttu-id="1c585-102">Procedura: Determinare se una pagina è ospitata su browser</span><span class="sxs-lookup"><span data-stu-id="1c585-102">How to: Determine If a Page is Browser Hosted</span></span>
-<span data-ttu-id="1c585-103">In questo esempio viene illustrato come determinare se un <xref:System.Windows.Controls.Page> è ospitato in un browser.</span><span class="sxs-lookup"><span data-stu-id="1c585-103">This example demonstrates how to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a><span data-ttu-id="4d925-102">Procedura: determinare se una pagina è ospitata in un browser</span><span class="sxs-lookup"><span data-stu-id="4d925-102">How to: Determine If a Page is Browser Hosted</span></span>
+<span data-ttu-id="4d925-103">Questo esempio illustra come determinare se una <xref:System.Windows.Controls.Page> è ospitata in un browser.</span><span class="sxs-lookup"><span data-stu-id="4d925-103">This example demonstrates how to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1c585-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="1c585-104">Example</span></span>  
- <span data-ttu-id="1c585-105">Oggetto <xref:System.Windows.Controls.Page> può essere indipendente dall'host e, di conseguenza, può essere caricato in diversi tipi di host, inclusi una <xref:System.Windows.Controls.Frame>, un <xref:System.Windows.Navigation.NavigationWindow>, o un browser.</span><span class="sxs-lookup"><span data-stu-id="1c585-105">A <xref:System.Windows.Controls.Page> can be host agnostic and, consequently, can be loaded into several different types of hosts, including a <xref:System.Windows.Controls.Frame>, a <xref:System.Windows.Navigation.NavigationWindow>, or a browser.</span></span> <span data-ttu-id="1c585-106">Questa situazione può verificarsi quando si dispone di un assembly della libreria che contiene una o più pagine e che viene fatto riferimento da più autonomo esplorabile ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) ospitano le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="1c585-106">This can happen when you have a library assembly that contains one or more pages, and which is referenced by multiple standalone and browsable ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) host applications.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d925-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="4d925-104">Example</span></span>  
+ <span data-ttu-id="4d925-105">Un <xref:System.Windows.Controls.Page> può essere indipendente dall'host e, di conseguenza, può essere caricato in diversi tipi di host, tra cui una <xref:System.Windows.Controls.Frame>, un <xref:System.Windows.Navigation.NavigationWindow>o un browser.</span><span class="sxs-lookup"><span data-stu-id="4d925-105">A <xref:System.Windows.Controls.Page> can be host agnostic and, consequently, can be loaded into several different types of hosts, including a <xref:System.Windows.Controls.Frame>, a <xref:System.Windows.Navigation.NavigationWindow>, or a browser.</span></span> <span data-ttu-id="4d925-106">Questo problema può verificarsi quando si dispone di un assembly di libreria che contiene una o più pagine e a cui fa riferimento più applicazioni host autonome e visualizzabili (XBAP).</span><span class="sxs-lookup"><span data-stu-id="4d925-106">This can happen when you have a library assembly that contains one or more pages, and which is referenced by multiple standalone and browsable (XAML browser application (XBAP)) host applications.</span></span>  
   
- <span data-ttu-id="1c585-107">Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> per determinare se un <xref:System.Windows.Controls.Page> è ospitato in un browser.</span><span class="sxs-lookup"><span data-stu-id="1c585-107">The following example demonstrates how to use <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
+ <span data-ttu-id="4d925-107">Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> per determinare se una <xref:System.Windows.Controls.Page> è ospitata in un browser.</span><span class="sxs-lookup"><span data-stu-id="4d925-107">The following example demonstrates how to use <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
-## <a name="see-also"></a><span data-ttu-id="1c585-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1c585-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d925-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4d925-108">See also</span></span>
 
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>

@@ -8,42 +8,42 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010345"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460495"
 ---
-# <a name="events-wpf"></a><span data-ttu-id="9794e-102">Eventi (WPF)</span><span class="sxs-lookup"><span data-stu-id="9794e-102">Events (WPF)</span></span>
-<span data-ttu-id="9794e-103">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vengono introdotti gli eventi indirizzati che possono richiamare i gestori esistenti su vari listener nell'albero degli elementi di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9794e-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="7b2fb-102">Eventi (WPF)</span><span class="sxs-lookup"><span data-stu-id="7b2fb-102">Events (WPF)</span></span>
+<span data-ttu-id="7b2fb-103">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vengono introdotti gli eventi indirizzati che possono richiamare i gestori esistenti su vari listener nell'albero degli elementi di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7b2fb-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9794e-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="9794e-104">In This Section</span></span>  
- [<span data-ttu-id="9794e-105">Cenni preliminari sugli eventi indirizzati</span><span class="sxs-lookup"><span data-stu-id="9794e-105">Routed Events Overview</span></span>](routed-events-overview.md)  
- [<span data-ttu-id="9794e-106">Cenni preliminari sugli eventi associati</span><span class="sxs-lookup"><span data-stu-id="9794e-106">Attached Events Overview</span></span>](attached-events-overview.md)  
- [<span data-ttu-id="9794e-107">Eventi di durata degli oggetti</span><span class="sxs-lookup"><span data-stu-id="9794e-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
- [<span data-ttu-id="9794e-108">Contrassegno degli eventi indirizzati come gestiti e gestione delle classi</span><span class="sxs-lookup"><span data-stu-id="9794e-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="9794e-109">Eventi di anteprima</span><span class="sxs-lookup"><span data-stu-id="9794e-109">Preview Events</span></span>](preview-events.md)  
- [<span data-ttu-id="9794e-110">Eventi di modifica delle proprietà</span><span class="sxs-lookup"><span data-stu-id="9794e-110">Property Change Events</span></span>](property-change-events.md)  
- [<span data-ttu-id="9794e-111">Visual Basic e la gestione degli eventi WPF</span><span class="sxs-lookup"><span data-stu-id="9794e-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="9794e-112">Modelli di eventi deboli</span><span class="sxs-lookup"><span data-stu-id="9794e-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
- [<span data-ttu-id="9794e-113">Procedure relative agli eventi</span><span class="sxs-lookup"><span data-stu-id="9794e-113">How-to Topics</span></span>](events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7b2fb-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="7b2fb-104">In This Section</span></span>  
+ [<span data-ttu-id="7b2fb-105">Cenni preliminari sugli eventi indirizzati</span><span class="sxs-lookup"><span data-stu-id="7b2fb-105">Routed Events Overview</span></span>](routed-events-overview.md)  
+ [<span data-ttu-id="7b2fb-106">Cenni preliminari sugli eventi associati</span><span class="sxs-lookup"><span data-stu-id="7b2fb-106">Attached Events Overview</span></span>](attached-events-overview.md)  
+ [<span data-ttu-id="7b2fb-107">Eventi di durata degli oggetti</span><span class="sxs-lookup"><span data-stu-id="7b2fb-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
+ [<span data-ttu-id="7b2fb-108">Contrassegno degli eventi indirizzati come gestiti e gestione delle classi</span><span class="sxs-lookup"><span data-stu-id="7b2fb-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="7b2fb-109">Eventi di anteprima</span><span class="sxs-lookup"><span data-stu-id="7b2fb-109">Preview Events</span></span>](preview-events.md)  
+ [<span data-ttu-id="7b2fb-110">Eventi di modifica delle proprietà</span><span class="sxs-lookup"><span data-stu-id="7b2fb-110">Property Change Events</span></span>](property-change-events.md)  
+ [<span data-ttu-id="7b2fb-111">Visual Basic e la gestione degli eventi WPF</span><span class="sxs-lookup"><span data-stu-id="7b2fb-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="7b2fb-112">Modelli di eventi deboli</span><span class="sxs-lookup"><span data-stu-id="7b2fb-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
+ [<span data-ttu-id="7b2fb-113">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="7b2fb-113">How-to Topics</span></span>](events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9794e-114">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="9794e-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7b2fb-114">Reference</span><span class="sxs-lookup"><span data-stu-id="7b2fb-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="9794e-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="9794e-115">Related Sections</span></span>  
- [<span data-ttu-id="9794e-116">Architettura WPF</span><span class="sxs-lookup"><span data-stu-id="9794e-116">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="9794e-117">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="9794e-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="9794e-118">Elementi di base</span><span class="sxs-lookup"><span data-stu-id="9794e-118">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="9794e-119">Albero degli elementi e serializzazione</span><span class="sxs-lookup"><span data-stu-id="9794e-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="9794e-120">Proprietà</span><span class="sxs-lookup"><span data-stu-id="9794e-120">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="9794e-121">Input</span><span class="sxs-lookup"><span data-stu-id="9794e-121">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="9794e-122">Risorse</span><span class="sxs-lookup"><span data-stu-id="9794e-122">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="9794e-123">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="9794e-123">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="9794e-124">Modello di contenuto WPF</span><span class="sxs-lookup"><span data-stu-id="9794e-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
-  [<span data-ttu-id="9794e-125">Modello di threading</span><span class="sxs-lookup"><span data-stu-id="9794e-125">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="7b2fb-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="7b2fb-115">Related Sections</span></span>  
+ [<span data-ttu-id="7b2fb-116">Architettura WPF</span><span class="sxs-lookup"><span data-stu-id="7b2fb-116">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="7b2fb-117">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="7b2fb-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="7b2fb-118">Elementi di base</span><span class="sxs-lookup"><span data-stu-id="7b2fb-118">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="7b2fb-119">Albero degli elementi e serializzazione</span><span class="sxs-lookup"><span data-stu-id="7b2fb-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="7b2fb-120">Proprietà</span><span class="sxs-lookup"><span data-stu-id="7b2fb-120">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="7b2fb-121">Input</span><span class="sxs-lookup"><span data-stu-id="7b2fb-121">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="7b2fb-122">Risorse</span><span class="sxs-lookup"><span data-stu-id="7b2fb-122">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="7b2fb-123">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="7b2fb-123">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [<span data-ttu-id="7b2fb-124">Modello di contenuto WPF</span><span class="sxs-lookup"><span data-stu-id="7b2fb-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="7b2fb-125">Modello di threading</span><span class="sxs-lookup"><span data-stu-id="7b2fb-125">Threading Model</span></span>](threading-model.md)
