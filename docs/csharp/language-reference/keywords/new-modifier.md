@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608623"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422677"
 ---
 # <a name="new-modifier-c-reference"></a>Modificatore new (Riferimenti per C#)
 
@@ -18,7 +18,7 @@ Se usata come modificatore di dichiarazione, la parola chiave `new` nasconde in 
 
 È anche possibile usare la parola chiave `new` per [creare un'istanza di un tipo](../operators/new-operator.md) o come [vincolo di tipo generico](./new-constraint.md).
 
-Per nascondere un membro ereditato, dichiararlo nella classe derivata usando lo stesso nome di membro e modificarlo con la parola chiave `new`. Ad esempio:
+Per nascondere un membro ereditato, dichiararlo nella classe derivata usando lo stesso nome di membro e modificarlo con la parola chiave `new`. Esempio:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
@@ -63,6 +63,6 @@ Per altre informazioni, vedere la sezione [Modificatore new](~/_csharplang/spec/
 - [Riferimenti per C#](../../language-reference/index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [Controllo delle versioni con le parole chiave Override e New](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Sapere quando usare le parole chiave Override e New](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

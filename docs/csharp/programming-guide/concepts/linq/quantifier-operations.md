@@ -2,12 +2,12 @@
 title: Operazioni del quantificatore (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 4a0f5b2c90d4b71a945dee02a32cbe897818c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 5899af79799d5b8404e60027d7ba1b005c4b1b79
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591470"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423356"
 ---
 # <a name="quantifier-operations-c"></a>Operazioni del quantificatore (C#)
 Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, che indica se alcuni o tutti gli elementi di una sequenza soddisfano una condizione.  
@@ -20,9 +20,9 @@ Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, 
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|DESCRIZIONE|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Tutti|Determina se tutti gli elementi di una sequenza soddisfano una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|All|Determina se tutti gli elementi di una sequenza soddisfano una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
 |Qualsiasi|Determina se alcuni elementi di una sequenza soddisfano una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
 |Contiene|Determina se una sequenza contiene un elemento specifico.|Non applicabile.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
@@ -30,5 +30,5 @@ Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, 
 
 - <xref:System.Linq>
 - [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
-- [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Procedura: Eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

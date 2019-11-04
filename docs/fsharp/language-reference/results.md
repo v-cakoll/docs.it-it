@@ -1,17 +1,17 @@
 ---
 title: Risultati
-description: Informazioni su come usare il F# 'Result' digitare che consentono di scrivere codice a tolleranza di errore.
+description: Informazioni su come usare il F# tipo ' Result ' per semplificare la scrittura di codice a tolleranza di errore.
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645315"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424844"
 ---
 # <a name="results"></a>Risultati
 
-A partire da F# 4.1, è presente un `Result<'T,'TFailure>` tipo di cui è possibile usare per la scrittura di codice a tolleranza di errore che può essere creato.
+A partire F# da 4,1, è disponibile un tipo di `Result<'T,'TFailure>` che è possibile usare per la scrittura di codice a tolleranza di errore che può essere composto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -20,20 +20,20 @@ A partire da F# 4.1, è presente un `Result<'T,'TFailure>` tipo di cui è possib
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
 ## <a name="remarks"></a>Note
 
-Si noti che il tipo di risultato è un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions), che è un'altra funzionalità introdotta in F# 4.1.  Vengono applicate la semantica di uguaglianza strutturale.
+Si noti che il tipo di risultato è un' [unione discriminata struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità F# introdotta in 4,1.  Qui viene applicata la semantica di uguaglianza strutturale.
 
-Il `Result` tipo viene generalmente utilizzato in monadic gestione degli errori, che è noto anche come [programmazione orientata ad ferroviarie](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno di F# della community.  L'esempio di semplice seguente illustra questo approccio.
+Il tipo di `Result` viene in genere usato per la gestione di errori monadica, che è spesso detta [programmazione orientata](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) alle ferrovie F# all'interno della community.  Nell'esempio seguente viene illustrato questo approccio.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,7 +80,7 @@ let test() =
 test()
 ```
 
-Come può notare, è piuttosto semplice concatenare diverse funzioni di convalida se si forza vengano tutte restituite una `Result`.  Questo consente di interrompere la funzionalità simile al seguente in porzioni più piccole che sono componibili come necessari in qualsiasi momento per essere.  Ciò ha anche il valore aggiunto del *applicando* l'uso di [criteri di ricerca](pattern-matching.md) alla fine di un ciclo di convalida, che a sua volta applica un livello più elevato della correttezza del programma.
+Come si può notare, è piuttosto semplice concatenare diverse funzioni di convalida se si impone che tutti restituiscano un `Result`.  In questo modo è possibile suddividere le funzionalità di questo tipo in parti più piccole, che sono componibili in quanto necessarie.  Questo ha anche il valore aggiunto per *applicare l'uso* di [criteri](pattern-matching.md) di ricerca alla fine di un ciclo di convalida, che a sua volta impone un livello superiore di correttezza del programma.
 
 ## <a name="see-also"></a>Vedere anche
 

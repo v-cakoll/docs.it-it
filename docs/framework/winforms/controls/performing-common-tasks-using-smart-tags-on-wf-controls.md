@@ -1,30 +1,30 @@
 ---
-title: 'Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form'
+title: 'Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015755"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459583"
 ---
-# <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>Procedura dettagliata: Eseguire attività comuni usando gli smart tag
+# <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>Procedura dettagliata: eseguire attività comuni usando gli smart tag
 
 Quando si costruiscono moduli e controlli per la Windows Forms Application, è possibile eseguire ripetutamente diverse attività. Di seguito sono riportate alcune delle attività comunemente eseguite che si verificheranno:
 
-- Aggiunta o rimozione di una scheda in <xref:System.Windows.Forms.TabControl>un oggetto.
+- Aggiunta o rimozione di una scheda in un <xref:System.Windows.Forms.TabControl>.
 
 - Ancoraggio di un controllo al relativo elemento padre.
 
-- Modifica dell'orientamento di un <xref:System.Windows.Forms.SplitContainer> controllo.
+- Modifica dell'orientamento di un controllo <xref:System.Windows.Forms.SplitContainer>.
 
 Per velocizzare lo sviluppo, molti controlli offrono smart tag, che sono menu sensibili al contesto che consentono di eseguire attività comuni come queste in un singolo gesto in fase di progettazione. Queste attività sono denominate *verbi smart tag*.
 
@@ -42,17 +42,17 @@ Il primo passaggio consiste nella creazione del progetto e nella configurazione 
 
 Gli smart tag sono sempre disponibili in fase di progettazione nei controlli che li offrono.
 
-1. Trascinare un <xref:System.Windows.Forms.TabControl> oggetto dalla **casella degli strumenti** nel form. Si noti il glifo smart tag (![glifo](./media/vs-winformsmttagglyph.gif)smart tag) che viene visualizzato <xref:System.Windows.Forms.TabControl>sul lato della.
+1. Trascinare un <xref:System.Windows.Forms.TabControl> dalla **casella degli strumenti** nel form. Si noti il glifo smart tag (![glifo smart tag](./media/vs-winformsmttagglyph.gif)) che viene visualizzato sul lato della <xref:System.Windows.Forms.TabControl>.
 
-2. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare la voce **Aggiungi scheda** . Osservare che viene aggiunta una nuova scheda a <xref:System.Windows.Forms.TabControl>.
+2. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare la voce **Aggiungi scheda** . Osservare che alla <xref:System.Windows.Forms.TabControl>viene aggiunta una nuova scheda.
 
 3. Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.
 
-4. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare l'elemento **Aggiungi colonna** . Osservare che una nuova colonna viene aggiunta al <xref:System.Windows.Forms.TableLayoutPanel> controllo.
+4. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare l'elemento **Aggiungi colonna** . Osservare che una nuova colonna viene aggiunta al controllo <xref:System.Windows.Forms.TableLayoutPanel>.
 
 5. Trascinare un controllo <xref:System.Windows.Forms.SplitContainer> dalla **Casella degli strumenti** al form.
 
-6. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare l'elemento di **orientamento della barra di divisione orizzontale** . Osservare che la <xref:System.Windows.Forms.SplitContainer> barra di divisione del controllo è ora orientata orizzontalmente.
+6. Fare clic sul glifo dello smart tag. Nel menu di scelta rapida visualizzato accanto al glifo selezionare l'elemento di **orientamento della barra di divisione orizzontale** . Osservare che la barra di divisione del controllo <xref:System.Windows.Forms.SplitContainer> è ora orientata orizzontalmente.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: aa22eac9d4ae06753bbed1fd5733eddeddd81a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875866"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422263"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Riferimenti per C#)
 
@@ -34,7 +34,7 @@ L'ambito del contesto unsafe si estende dall'elenco di parametri alla fine del m
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-È anche possibile usare un blocco unsafe per consentire l'uso di un codice unsafe all'interno del blocco. Ad esempio:
+È anche possibile usare un blocco unsafe per consentire l'uso di un codice unsafe all'interno del blocco. Esempio:
 
 ```csharp
 unsafe
@@ -51,7 +51,7 @@ Per compilare codice unsafe è necessario specificare l'opzione del compilatore 
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere [Codice di tipo unsafe](~/_csharplang/spec/unsafe-code.md) nella [specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Codice di tipo unsafe](~/_csharplang/spec/unsafe-code.md) nella [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 

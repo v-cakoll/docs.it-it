@@ -9,28 +9,28 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770643"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458831"
 ---
 # <a name="passwordbox-styles-and-templates"></a>Stili e modelli di PasswordBox
 
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.PasswordBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.PasswordBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
-## <a name="passwordbox-parts"></a>Parti del controllo PasswordBox
+## <a name="passwordbox-parts"></a>Parti PasswordBox
 
-La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.PasswordBox> controllo.
+Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
-|Parte|Tipo|Descrizione|
+|Parte|Digitare|Descrizione|
 |-|-|-|
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Un elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo del <xref:System.Windows.Controls.PasswordBox> viene visualizzato in questo elemento.|
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.PasswordBox> viene visualizzato in questo elemento.|
 
-## <a name="passwordbox-states"></a>Stati del controllo PasswordBox
+## <a name="passwordbox-states"></a>Stati di PasswordBox
 
-La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.PasswordBox> controllo.
+Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
 |Nome VisualState|Nome VisualStateGroup|Descrizione|
 |-|-|-|
@@ -39,13 +39,13 @@ La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.Pas
 |Disabilitato|CommonStates|Il controllo è disabilitato.|
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|
-|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|
-|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|
-|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|
+|Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non ha lo stato attivo.|
 
 ## <a name="passwordbox-controltemplate-example"></a>Esempio di ControlTemplate PasswordBox
 
-Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.PasswordBox> controllo.
+Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
 [!code-xaml[ControlTemplateExamples#PasswordBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]
 
@@ -61,5 +61,5 @@ Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemp
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

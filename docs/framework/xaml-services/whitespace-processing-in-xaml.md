@@ -7,23 +7,23 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: bf5c13f59b9e9c4774fde952a52289abb2815b65
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395987"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458503"
 ---
 # <a name="white-space-processing-in-xaml"></a>Elaborazione degli spazi vuoti in XAML
 Le regole del linguaggio per lo stato XAML che gli spazi vuoti significativi devono essere elaborati da un'implementazione del processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]. In questo argomento vengono illustrate queste regole del linguaggio XAML, Viene inoltre documentata la gestione di spazi vuoti aggiuntiva definita dall'implementazione [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] del processore XAML e del writer XAML per la serializzazione.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>Definizione di spazio vuoto  
- Coerente con [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], i caratteri di spazio vuoto in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sono spazi, avanzamento riga e tabulazione. Questi corrispondono rispettivamente ai valori Unicode 0020, 000A e 0009.  
+ Coerenti con [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], gli spazi vuoti in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sono spazi, avanzamento riga e tabulazione. Questi corrispondono rispettivamente ai valori Unicode 0020, 000A e 0009.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>Normalizzazione degli spazi vuoti  
- Per impostazione predefinita, la normalizzazione degli spazi vuoti seguente si verifica quando un processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] elabora un file [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]:  
+ Per impostazione predefinita, la normalizzazione degli spazi vuoti seguente si verifica quando un processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] elabora un file di [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]:  
   
 1. I caratteri di avanzamento riga inseriti tra i caratteri dell'Asia orientale vengono rimossi. Per una definizione dei "caratteri dell'Asia orientale", vedere la sezione relativa più avanti in questo argomento.  
   
@@ -70,12 +70,12 @@ Le regole del linguaggio per lo stato XAML che gli spazi vuoti significativi dev
   
  Anche per i modelli di contenuto che possono assumere stringhe, il comportamento predefinito all'interno di questi modelli di contenuto è che gli spazi vuoti rimanenti non vengono considerati significativi. Ad esempio, <xref:System.Windows.Controls.ListBox> accetta un <xref:System.Collections.IList>, ma lo spazio vuoto (ad esempio avanzamento riga tra ogni <xref:System.Windows.Controls.ListBoxItem>) non viene mantenuto e non viene sottoposto a rendering. Se si tenta di usare i caratteri di avanzamento riga come separatori tra le stringhe per elementi <xref:System.Windows.Controls.ListBoxItem> l'esito sarà negativo; le stringhe separate dai caratteri di avanzamento riga sono considerate come una singola stringa e un singolo elemento.  
   
- Le raccolte che trattano gli spazi vuoti come significativi sono in genere parte del modello di documento dinamico. La raccolta primaria che supporta il comportamento di mantenimento degli spazi vuoti è <xref:System.Windows.Documents.InlineCollection>. Questa classe di raccolta è dichiarata con <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; Quando viene trovato questo attributo, il processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tratterà gli spazi vuoti all'interno della raccolta come significativi. La combinazione di `xml:space="preserve"` e di uno spazio vuoto all'interno di una raccolta <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> indica che tutti gli spazi vuoti vengono conservati e sottoposti a rendering. La combinazione di `xml:space="default"` e di uno spazio vuoto all'interno di un <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> determina la normalizzazione dello spazio vuoto iniziale descritta in precedenza, che lascia uno spazio in determinate posizioni e tali spazi vengono conservati e sottoposti a rendering. Sarà l'utente a decidere il comportamento più appropriato e a usare `xml:space` in maniera selettiva per abilitare il comportamento desiderato.  
+ Le raccolte che trattano gli spazi vuoti come significativi sono in genere parte del modello di documento dinamico. La raccolta primaria che supporta il comportamento di mantenimento degli spazi vuoti è <xref:System.Windows.Documents.InlineCollection>. Questa classe di raccolta è dichiarata con il <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; Quando viene trovato questo attributo, il processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tratterà gli spazi vuoti all'interno della raccolta come significativi. La combinazione di `xml:space="preserve"` e di uno spazio vuoto all'interno di una raccolta <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> indica che tutti gli spazi vuoti vengono conservati e sottoposti a rendering. La combinazione di `xml:space="default"` e di uno spazio vuoto all'interno di un <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> determina la normalizzazione dello spazio vuoto iniziale descritta in precedenza, che lascia uno spazio in determinate posizioni e tali spazi vengono conservati e sottoposti a rendering. Sarà l'utente a decidere il comportamento più appropriato e a usare `xml:space` in maniera selettiva per abilitare il comportamento desiderato.  
   
- Inoltre, alcuni elementi inline che connotano un LineBreak in un modello di documento dinamico non devono introdurre intenzionalmente uno spazio aggiuntivo anche in una raccolta significativa di spazi vuoti. Ad esempio, l'elemento <xref:System.Windows.Documents.LineBreak> ha lo stesso scopo del tag \<BR/> in HTML e per migliorare la leggibilità nel markup, in genere un <xref:System.Windows.Documents.LineBreak> viene separato da un testo successivo da un avanzamento riga creato. Tale avanzamento riga non deve essere normalizzato per l'utilizzo come spazio iniziale nella riga successiva. Per abilitare questo comportamento, la definizione della classe per l'elemento <xref:System.Windows.Documents.LineBreak> applica il <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, che viene quindi interpretato dal processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] per indicare che lo spazio vuoto che circonda <xref:System.Windows.Documents.LineBreak> viene sempre tagliato.  
+ Inoltre, alcuni elementi inline che connotano un LineBreak in un modello di documento dinamico non devono introdurre intenzionalmente uno spazio aggiuntivo anche in una raccolta significativa di spazi vuoti. Ad esempio, l'elemento <xref:System.Windows.Documents.LineBreak> ha lo stesso scopo del tag \<BR/> in HTML e per migliorare la leggibilità nel markup, in genere un <xref:System.Windows.Documents.LineBreak> viene separato da un testo successivo da un avanzamento riga creato. Tale avanzamento riga non deve essere normalizzato per l'utilizzo come spazio iniziale nella riga successiva. Per abilitare tale comportamento, la definizione della classe per l'elemento <xref:System.Windows.Documents.LineBreak> applica l'<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, che viene quindi interpretato dal processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] per indicare che lo spazio vuoto che circonda <xref:System.Windows.Documents.LineBreak> viene sempre tagliato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [Entità carattere XML e XAML](xml-character-entities-and-xaml.md)
 - [gestione di XML: Space in XAML](xml-space-handling-in-xaml.md)

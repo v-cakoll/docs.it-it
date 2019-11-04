@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117348"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454735"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -19,7 +19,7 @@ Questo argomento illustra come iniziare a sviluppare app multipiattaforma nel co
 
 Se non si ha familiarità con il set di strumenti dell'interfaccia della riga di comando di .NET Core, leggere [Panoramica di .NET Core SDK](../tools/index.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core SDK 2,1](https://dotnet.microsoft.com/download) o versioni successive.
 - Editor di testo o editor di codice a scelta.
@@ -39,18 +39,18 @@ Ecco una descrizione rapida dei comandi digitati:
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) crea un file di progetto `Hello.csproj` aggiornato con le dipendenze necessarie per compilare un'applicazione console.  Crea inoltre un file `Program.cs` di base contenente il punto di ingresso per l'applicazione.
+   [`dotnet new`](../tools/dotnet-new.md) crea un file di progetto *Hello. csproj* aggiornato con le dipendenze necessarie per compilare un'app console. Viene inoltre creato un *Program.cs*, un file di base contenente il punto di ingresso per l'applicazione.
 
-   `Hello.csproj`:
+   *Hello. csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    Il file di progetto specifica tutti gli elementi necessari per recuperare le dipendenze e compilare il programma.
 
    - Il tag `OutputType` specifica che si sta compilando un file eseguibile, ovvero un'applicazione console.
    - Il tag `TargetFramework` specifica l'implementazione di .NET di destinazione. In uno scenario avanzato è possibile specificare più framework di destinazione ed eseguire la compilazione per ognuno di essi in un'unica operazione. In questa esercitazione verrà illustrata la procedura di compilazione solo per .NET Core 2.1.
 
-   `Program.cs`:
+   *Program.cs*:
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 

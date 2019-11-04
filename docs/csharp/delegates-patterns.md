@@ -3,12 +3,12 @@ title: Modelli comuni per i delegati
 description: Informazioni sui modelli comuni per l'uso dei delegati nel codice per evitare l'accoppiamento forte tra i componenti.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095698"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454073"
 ---
 # <a name="common-patterns-for-delegates"></a>Modelli comuni per i delegati
 
@@ -58,7 +58,7 @@ Per iniziare in modo semplice, l'implementazione iniziale accetterà i nuovi mes
 
 La classe statica precedente è l'elemento più semplice in grado di funzionare. È necessario scrivere la singola implementazione per il metodo che scrive i messaggi nella console: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Infine, è necessario collegare il delegato associandolo al delegato WriteMessage dichiarato nel logger:
 
@@ -107,13 +107,13 @@ Le due operazioni non si escludono a vicenda. È possibile associare entrambi i 
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 Successivamente, anche nella stessa applicazione, è possibile rimuovere uno dei delegati senza causare problemi nel sistema:
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>Procedure consigliate

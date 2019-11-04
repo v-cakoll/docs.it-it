@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291597"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421581"
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 
@@ -37,7 +37,7 @@ Microsoft sviluppa e supporta attivamente tre linguaggi .NET: C#, F# e Visual Ba
 
 ## <a name="automatic-memory-management"></a>Gestione automatica della memoria
 
-.NET usa [Garbage Collection](garbagecollection/index.md) per consentire la gestione automatica della memoria per i programmi. Garbage Collection ha un approccio "lazy" alla gestione della memoria, anteponendo la velocità effettiva dell'app alla raccolta immediata di memoria. Per altre informazioni sul Garbage Collector di.NET, vedere [Principi fondamentali di Garbage Collection](garbagecollection/fundamentals.md).
+.NET usa [Garbage Collection](garbage-collection/index.md) per consentire la gestione automatica della memoria per i programmi. Garbage Collection ha un approccio "lazy" alla gestione della memoria, anteponendo la velocità effettiva dell'app alla raccolta immediata di memoria. Per altre informazioni sul Garbage Collector di.NET, vedere [Principi fondamentali di Garbage Collection](garbage-collection/fundamentals.md).
 
 Le due righe di codice seguenti allocano entrambe memoria:
 
@@ -55,7 +55,7 @@ Nell'esempio seguente il runtime genera un'eccezione `InvalidIndexException` per
 
 Alcuni oggetti fanno riferimento a *risorse non gestite*. Le risorse non gestite sono risorse che non vengono gestite automaticamente dal runtime di .NET. Ad esempio, un handle di file è una risorsa non gestita. Un oggetto <xref:System.IO.FileStream> è un oggetto gestito, ma fa riferimento a un handle di file, che non è gestito. Dopo aver usato <xref:System.IO.FileStream>, è necessario rilasciare l'handle di file.
 
-In .NET gli oggetti che fanno riferimento a risorse non gestite implementano l'interfaccia <xref:System.IDisposable>. Dopo aver usato l'oggetto, è possibile chiamare il metodo <xref:System.IDisposable.Dispose> dell'oggetto, che è responsabile del rilascio delle risorse non gestite. I linguaggi .NET forniscono una pratica [istruzione `using`](../csharp/language-reference/keywords/using.md) per tali oggetti, come illustrato nell'esempio seguente:
+In .NET gli oggetti che fanno riferimento a risorse non gestite implementano l'interfaccia <xref:System.IDisposable>. Dopo aver usato l'oggetto, è possibile chiamare il metodo <xref:System.IDisposable.Dispose> dell'oggetto, che è responsabile del rilascio delle risorse non gestite. I linguaggi .NET forniscono una comoda [istruzione`using`](../csharp/language-reference/keywords/using.md) per tali oggetti, come illustrato nell'esempio seguente:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

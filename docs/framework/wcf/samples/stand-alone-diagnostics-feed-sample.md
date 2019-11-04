@@ -2,19 +2,19 @@
 title: Esempio di feed di diagnostica autonomo
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 6b83bda154a76fe10487da00359e0ceace8ce8cb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a64c209711734b4915f332e9242346e295ddea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044673"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417049"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Esempio di feed di diagnostica autonomo
 In questo esempio viene illustrato come creare un feed RSS/Atom per la diffusione con Windows Communication Foundation (WCF). Si tratta di un programma "Hello World" di base che illustra le nozioni di base del modello a oggetti e come configurarlo in un servizio di Windows Communication Foundation (WCF).  
   
- Modelli WCF i feed di diffusione come operazioni del servizio che restituiscono un <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>tipo di dati speciale,. Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0. Nell'esempio di codice seguente viene illustrato il contratto usato.  
+ Modelli WCF i feed di diffusione come operazioni del servizio che restituiscono un tipo di dati speciale, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0. Nell'esempio di codice seguente viene illustrato il contratto usato.  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "")]  
     interface IDiagnosticsService  
     {  
@@ -32,11 +32,11 @@ In questo esempio viene illustrato come creare un feed RSS/Atom per la diffusion
     }  
 ```  
   
- L' `GetProcesses` operazione viene annotata con <xref:System.ServiceModel.Web.WebGetAttribute> l'attributo che consente di controllare il modo in cui WCF invia le richieste HTTP Get alle operazioni del servizio e specifica il formato dei messaggi inviati.  
+ L'operazione `GetProcesses` viene annotata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> che consente di controllare il modo in cui WCF invia le richieste HTTP GET alle operazioni del servizio e specifica il formato dei messaggi inviati.  
   
  Analogamente a qualsiasi servizio WCF, i feed di diffusione possono essere ospitati in qualsiasi applicazione gestita. Per funzionare correttamente, i servizi di diffusione richiedono un'associazione specifica (<xref:System.ServiceModel.WebHttpBinding>) e un comportamento dell'endpoint specifico (<xref:System.ServiceModel.Description.WebHttpBehavior>). La nuova classe <xref:System.ServiceModel.Web.WebServiceHost> fornisce una API appropriata per la creazione degli endpoint senza configurazione specifica.  
   
-```  
+```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
   
             //The WebServiceHost will automatically provide a default endpoint at the base address  
@@ -53,7 +53,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  È inoltre possibile utilizzare il [modo in cui il modello a oggetti di diffusione WCF viene mappato ad Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) per leggere i dati diffusi e elaborarli utilizzando codice imperativo.  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
 new XmlReaderSettings()  
 {  
@@ -82,14 +82,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3. Eseguire l'applicazione console.  
   
-4. Durante l'esecuzione dell'applicazione console, passare a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` usare un browser compatibile con RSS.  
+4. Durante l'esecuzione dell'applicazione console, passare a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` utilizzando un browser compatibile con RSS.  
   
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

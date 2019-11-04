@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 031313c6f56801f032a5aeaff06cde8d0550af92
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582405"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424779"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a>Quando si sviluppano applicazioni autonome e ospitate nel browser di Windows Presentation Foundation (WPF), è necessario prendere in considerazione il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni (set di autorizzazioni CAS**FullTrust** ), sia distribuite con Windows Installer (MSI), XCOPY o ClickOnce. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host con attendibilità totale può creare una <xref:System.AppDomain> parzialmente attendibile usando il modello del componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti](./app-development/wpf-add-ins-overview.md)aggiuntivi di WPF.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate da browser sono ospitate da Windows Internet Explorer o Firefox e possono essere [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] o Loose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] Documents per altre informazioni, vedere [Cenni preliminari sulle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate da browser sono ospitate da Windows Internet Explorer o Firefox e possono essere applicazioni browser XAML (XBAP) o documenti [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] separati per ulteriori informazioni, vedere [Cenni preliminari sulle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate da browser vengono eseguite in una sandbox di sicurezza con attendibilità parziale, per impostazione predefinita, che è limitata al set di autorizzazioni predefinito dell'area**Internet** CAS. Questo consente di isolare in modo efficace [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate dal browser dal computer client nello stesso modo in cui si prevede che le applicazioni Web tipiche siano isolate. Un'applicazione XBAP può elevare il livello di privilegi fino ad Attendibilità totale a seconda dell'area di sicurezza dell'URL di distribuzione e della configurazione di sicurezza del client. Per altre informazioni, vedere [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md).  
   
@@ -45,13 +45,13 @@ ms.locfileid: "72582405"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Navigazione sicura  
- Per [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distingue due tipi di navigazione: applicazione e browser.  
+ Per le applicazioni XBAPs, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distingue due tipi di navigazione: applicazione e browser.  
   
  La *navigazione tramite applicazione* consiste nel passaggio tra elementi di contenuto all'interno di un'applicazione ospitata da un browser. La *navigazione tramite browser* implica la modifica del contenuto e dell'URL del percorso del browser stesso. Nella figura seguente è illustrata la relazione tra l'esplorazione dell'applicazione (in genere XAML) e la navigazione del browser (in genere HTML):
   
  ![Relazione tra esplorazione dell'applicazione e navigazione del browser.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- Il tipo di contenuto considerato sicuro per l'esplorazione di un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] è determinato principalmente dal fatto che venga utilizzata la navigazione dell'applicazione o la navigazione del browser.  
+ Il tipo di contenuto considerato sicuro per l'esplorazione di un'applicazione XBAP è determinato principalmente dal fatto che venga utilizzata la navigazione dell'applicazione o la navigazione del browser.  
   
 <a name="Application_Navigation_Security"></a>   
 ### <a name="application-navigation-security"></a>Sicurezza della navigazione tramite applicazione  
@@ -83,7 +83,7 @@ ms.locfileid: "72582405"
   
 - **Protocollo**. Il protocollo utilizzato è **http**, **https**, **file**o **mailto**.  
   
- Se un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] tenta di passare al contenuto in modo non conforme a tali condizioni, viene generata un'<xref:System.Security.SecurityException>.  
+ Se un'applicazione XBAP tenta di passare al contenuto in modo non conforme a tali condizioni, viene generata un'<xref:System.Security.SecurityException>.  
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Impostazioni di sicurezza del software per l'esplorazione Web  
@@ -124,7 +124,7 @@ ms.locfileid: "72582405"
   
 - **XAML libero**. Controlla se Internet Explorer è in grado di accedere ai file [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] e perderli. (opzioni Abilita, Disabilita e Chiedi conferma).  
   
-- **Applicazioni browser XAML**. Controlla se Internet Explorer può accedere ed eseguire [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (opzioni Abilita, Disabilita e Chiedi conferma).  
+- **Applicazioni browser XAML**. Controlla se Internet Explorer può accedere ed eseguire le applicazioni XBAP. (opzioni Abilita, Disabilita e Chiedi conferma).  
   
  Per impostazione predefinita, queste impostazioni sono tutte abilitate per le zone **Internet**, **Intranet locale**e **siti attendibili** e disabilitate per l'area **siti con restrizioni** .  
   
@@ -207,7 +207,7 @@ ms.locfileid: "72582405"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- Se si esegue un [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] parzialmente attendibile che include un controllo <xref:System.Windows.Controls.WebBrowser> WPF in Windows Internet Explorer, WPF ospita il controllo ActiveX WebBrowser nello spazio degli indirizzi del processo di Internet Explorer. Poiché il controllo ActiveX WebBrowser è ospitato nel processo di Internet Explorer, tutti i controlli delle funzionalità per Internet Explorer sono abilitati anche per il controllo ActiveX WebBrowser.  
+ Se si esegue un'applicazione browser XAML (XBAP) parzialmente attendibile che include un controllo WPF <xref:System.Windows.Controls.WebBrowser> in Windows Internet Explorer, WPF ospita il controllo ActiveX WebBrowser nello spazio degli indirizzi del processo di Internet Explorer. Poiché il controllo ActiveX WebBrowser è ospitato nel processo di Internet Explorer, tutti i controlli delle funzionalità per Internet Explorer sono abilitati anche per il controllo ActiveX WebBrowser.  
   
  Le applicazioni XBAP in esecuzione in Internet Explorer ottengono anche un livello di sicurezza aggiuntivo rispetto alle applicazioni autonome normali. Questa sicurezza aggiuntiva è dovuta al fatto che Internet Explorer, e pertanto il controllo ActiveX WebBrowser, viene eseguito in modalità protetta per impostazione predefinita in [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] e [!INCLUDE[win7](../../../includes/win7-md.md)]. Per ulteriori informazioni sulla modalità protetta, vedere [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
@@ -220,7 +220,7 @@ ms.locfileid: "72582405"
   
  Tuttavia, un assembly APTCA può presentare un difetto di sicurezza dopo l'installazione nella GAC. Quando viene individuato un difetto nel sistema di sicurezza, gli editori dell'assembly possono creare un aggiornamento della sicurezza per risolvere il problema nelle installazioni esistenti e per proteggere le installazioni eseguite dopo l'individuazione del problema. Un'opzione per l'aggiornamento è la disinstallazione dell'assembly, anche se in questo modo può essere compromessa la funzionalità di altre applicazioni client completamente attendibili che usano l'assembly.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornisce un meccanismo mediante il quale è possibile disabilitare un assembly APTCA per [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] parzialmente attendibili senza disinstallare l'assembly APTCA.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornisce un meccanismo mediante il quale è possibile disabilitare un assembly APTCA per le applicazioni XBAP parzialmente attendibili senza disinstallare l'assembly APTCA.  
   
  Per disabilitare un assembly APTCA, è necessario creare una chiave speciale del Registro di sistema:  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72582405"
  Con questa impostazione, il contenuto esterno verrà caricato in un processo separato da quello in cui è ospitata l'applicazione. Questo processo è limitato al set di autorizzazioni predefinito dell'area Internet e in questo modo l'area viene isolata efficacemente dall'applicazione host e dal computer client.  
   
 > [!NOTE]
-> Anche se la navigazione per [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file separati da un <xref:System.Windows.Navigation.NavigationWindow> o <xref:System.Windows.Controls.Frame> in un'applicazione autonoma viene implementata in base all'infrastruttura di hosting del browser WPF, che implica il processo PresentationHost, il livello di sicurezza è leggermente inferiore rispetto a quando il il contenuto viene caricato direttamente in Internet Explorer su [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] e [!INCLUDE[win7](../../../includes/win7-md.md)] (che rimane comunque tramite PresentationHost). Ciò si verifica in quanto un'applicazione WPF autonoma che usa un Web browser non fornisce la funzionalità di sicurezza di modalità protetta aggiuntiva di Internet Explorer.  
+> Anche se la navigazione per [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file separati da un <xref:System.Windows.Navigation.NavigationWindow> o <xref:System.Windows.Controls.Frame> in un'applicazione autonoma viene implementata in base all'infrastruttura di hosting del browser WPF, che implica il processo PresentationHost, il livello di sicurezza è leggermente inferiore rispetto a quando il contenuto viene caricato direttamente in Internet Explorer su [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] e [!INCLUDE[win7](../../../includes/win7-md.md)] (che rimane comunque tramite PresentationHost). Ciò si verifica in quanto un'applicazione WPF autonoma che usa un Web browser non fornisce la funzionalità di sicurezza di modalità protetta aggiuntiva di Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Risorse per lo sviluppo di applicazioni WPF che garantiscano la sicurezza  

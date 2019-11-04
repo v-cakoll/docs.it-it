@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392435"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423240"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
   
  La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. Se si è un utente completo con la programmazione o C#con, è possibile visitare l'esercitazione [Introduzione alle C# esercitazioni](../tutorials/intro-to-csharp/index.md) o [.NET nel browser, in](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)cui non è necessaria alcuna conoscenza della programmazione precedente.  
   
- Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md).  
+ Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Sezioni relative al programma
 
@@ -42,7 +42,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Delegati](./delegates/index.md)  
  
- [Matrici](./arrays/index.md)  
+ [Array](./arrays/index.md)  
   
  [Stringhe](./strings/index.md)  
   
@@ -56,7 +56,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Iteratori](./concepts/iterators.md)
   
- [Espressioni di query LINQ](./linq-query-expressions/index.md)  
+ [Espressioni di query LINQ](../linq/index.md)  
   
  [Espressioni lambda](./statements-expressions-operators/lambda-expressions.md)  
   
@@ -75,7 +75,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Attributi](./concepts/attributes/index.md)  
   
- [Raccolte](./concepts/collections.md)  
+ [raccolte](./concepts/collections.md)  
   
  [Eccezioni e gestione delle eccezioni](./exceptions/index.md)  
   

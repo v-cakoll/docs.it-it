@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396289"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417791"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -29,11 +29,11 @@ I vincoli indicano al compilatore quali funzionalità deve usare un argomento ti
 |`where T :` *\<nome dell'interfaccia>*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|
 |`where T : U`|L'argomento tipo fornito per T deve corrispondere all'argomento fornito per U o derivare da esso.|
 
-Alcuni vincoli si escludono a vicenda. Tutti i tipi di valore devono avere un costruttore senza parametri accessibile. Il vincolo `struct` implica il vincolo `new()` e il vincolo `new()` non può essere combinato con il vincolo `struct`. Il vincolo `unmanaged` implica il vincolo `struct`. Il vincolo `unmanaged` non può essere combinato con i vincoli `struct` o `new()`.
+Alcuni vincoli si escludono a vicenda. Tutti i tipi di valore devono avere un costruttore senza parametri accessibile. Il vincolo `struct` implica il vincolo `new()` e il vincolo `new()` non può essere combinato con il vincolo `struct`. Il vincolo `unmanaged` implica il vincolo `struct`. Non è possibile combinare il vincolo `unmanaged` con i vincoli `struct` o `new()`.
 
 ## <a name="why-use-constraints"></a>Motivi per cui usare i vincoli
 
-Vincolando il parametro di tipo, il numero di operazioni e di chiamate ai metodi consentite viene ampliato includendo quelle supportate dal tipo vincolante e da tutti i tipi nella relativa gerarchia di ereditarietà. Quando si progettano classi o metodi generici, se si eseguono operazioni sui membri generici che esulano dall'assegnazione semplice o che chiamano metodi non supportati da <xref:System.Object?displayProperty=nameWithType>, sarà necessario applicare vincoli al parametro di tipo. Specificando il vincolo della classe di base, ad esempio, si indica al compilatore che verranno usati come argomenti tipo solo gli oggetti del tipo specificato o derivati da esso. In presenza di questa garanzia, il compilatore può consentire le chiamate ai metodi del tipo all'interno della classe generica. L'esempio di codice seguente illustra la funzionalità che è possibile aggiungere alla classe `GenericList<T>` (in [Introduzione ai generics](introduction-to-generics.md)) applicando un vincolo della classe di base.
+Vincolando il parametro di tipo, il numero di operazioni e di chiamate ai metodi consentite viene ampliato includendo quelle supportate dal tipo vincolante e da tutti i tipi nella relativa gerarchia di ereditarietà. Quando si progettano classi o metodi generici, se si eseguono operazioni sui membri generici che esulano dall'assegnazione semplice o che chiamano metodi non supportati da <xref:System.Object?displayProperty=nameWithType>, sarà necessario applicare vincoli al parametro di tipo. Specificando il vincolo della classe di base, ad esempio, si indica al compilatore che verranno usati come argomenti tipo solo gli oggetti del tipo specificato o derivati da esso. In presenza di questa garanzia, il compilatore può consentire le chiamate ai metodi del tipo all'interno della classe generica. L'esempio di codice seguente illustra la funzionalità che è possibile aggiungere alla classe `GenericList<T>` (in [Introduzione ai generics](../../../standard/generics/index.md)) applicando un vincolo della classe di base.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -79,9 +79,9 @@ L'utilità dei parametri di tipo usati come vincoli in classi generiche è limit
 
 ## <a name="notnull-constraint"></a>Vincolo NotNull
 
-A partire C# da 8,0, è possibile usare il vincolo `notnull` per specificare che l'argomento di tipo deve essere un tipo di valore non nullable o un tipo di riferimento non nullable. Il vincolo `notnull` può essere utilizzato solo in un contesto `nullable enable`. Il compilatore genera un avviso se si aggiunge il vincolo `notnull` in un contesto ignaro Nullable. 
+A partire C# da 8,0, è possibile usare il vincolo `notnull` per specificare che l'argomento di tipo deve essere un tipo di valore non nullable o un tipo di riferimento non nullable. Il vincolo `notnull` può essere utilizzato solo in un contesto di `nullable enable`. Il compilatore genera un avviso se si aggiunge il vincolo `notnull` in un contesto ignaro Nullable. 
 
-Diversamente da altri vincoli, quando un argomento di tipo viola il vincolo `notnull`, il compilatore genera un avviso quando il codice viene compilato in un contesto `nullable enable`. Se il codice viene compilato in un contesto ignaro Nullable, il compilatore non genera avvisi o errori.
+Diversamente da altri vincoli, quando un argomento di tipo viola il vincolo di `notnull`, il compilatore genera un avviso quando il codice viene compilato in un contesto di `nullable enable`. Se il codice viene compilato in un contesto ignaro Nullable, il compilatore non genera avvisi o errori.
 
 ## <a name="unmanaged-constraint"></a>Vincolo non gestito
 
@@ -101,7 +101,7 @@ Per combinare delegati dello stesso tipo, è possibile usare il metodo riportato
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-Se si rimuove il commento dall'ultima riga, non verrà compilata. Entrambi `first` e `test` sono tipi delegati, ma si tratta di tipi delegati diversi.
+Se si rimuove il commento dall'ultima riga, non verrà compilata. Sia `first` che `test` sono tipi delegati, ma si tratta di tipi delegati diversi.
 
 ## <a name="enum-constraints"></a>Vincoli di enumerazione
 

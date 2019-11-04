@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117953"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454940"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 > * Distribuire l'app in Amazon EMR Spark
 > * Eseguire l'app
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare, eseguire le operazioni seguenti:
 
@@ -63,7 +63,7 @@ Prima di iniziare, eseguire le operazioni seguenti:
 
 4. Caricare gli elementi seguenti in un file system distribuito (ad esempio, S3) a cui può accedere il cluster:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Questo file jar è incluso nel pacchetto NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) e viene posizionato nella directory di output di compilazione dell'app.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: questo file jar è incluso nel pacchetto NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) e si trova nella directory di output di compilazione dell'app.
    * `<your app>.zip`
    * I file (come i file di dipendenza o i dati comuni accessibili a ogni ruolo di lavoro) o gli assembly (ad esempio le DLL che contengono funzioni definite dall'utente o librerie da cui dipende l'app), vengono inseriti nella directory di lavoro di ogni executor.
 
@@ -71,7 +71,7 @@ Prima di iniziare, eseguire le operazioni seguenti:
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) è una piattaforma cluster gestita che semplifica l'esecuzione di framework per Big Data in AWS.
 
-> [!NOTE] 
+> [!NOTE]
 > Amazon EMR Spark è basato su Linux. Se si è interessati a distribuire l'app in Amazon EMR Spark, pertanto, assicurarsi che l'app sia compatibile con .NET Standard e che venga usato il [compilatore .NET Core](https://dotnet.microsoft.com/download) per compilare l'app.
 
 ### <a name="deploy-microsoftsparkworker"></a>Distribuire Microsoft.Spark.Worker

@@ -5,28 +5,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588224"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417525"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversioni di puntatori (Guida per programmatori C#)
 Nella tabella seguente sono illustrate le conversioni di puntatori implicite predefinite. Le conversioni implicite possono avere luogo in numerose situazioni, ad esempio le chiamate di metodi e le istruzioni di assegnazione.  
   
 ## <a name="implicit-pointer-conversions"></a>Conversioni di puntatori implicite  
   
-|Da|A|  
+|Da|Per|  
 |----------|--------|  
 |Qualsiasi tipo di puntatore|void*|  
-|Null|Qualsiasi tipo di puntatore|  
+|null|Qualsiasi tipo di puntatore|  
   
  La conversione di puntatori esplicita consente di usare un'espressione cast per eseguire conversioni nei casi in cui non è possibile la conversione implicita. La tabella seguente illustra queste conversioni.  
   
 ## <a name="explicit-pointer-conversions"></a>Conversioni di puntatori esplicite  
   
-|Da|A|  
+|Da|Per|  
 |----------|--------|  
 |Qualsiasi tipo di puntatore|Qualsiasi altro tipo di puntatore|  
 |sbyte, byte, short, ushort, int, uint, long o ulong|Qualsiasi tipo di puntatore|  
@@ -43,7 +43,7 @@ Nella tabella seguente sono illustrate le conversioni di puntatori implicite pre
 
 - [Guida per programmatori C#](../index.md)
 - [Tipi di puntatori](./pointer-types.md)
-- [Tipi](../../language-reference/keywords/types.md)
+- [Tipi](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664008"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424859"
 ---
 # <a name="xml-documents-and-data"></a>Documenti e dati XML
 
@@ -28,13 +28,13 @@ ms.locfileid: "67664008"
 
 Per un elenco completo, cercare "System.Xml" nel [browser API .NET](https://docs.microsoft.com/dotnet/api/?term=system.xml).
 
-Le classi in questi spazi dei nomi supportano le raccomandazioni W3C (World Wide Web Consortium). Ad esempio:
+Le classi in questi spazi dei nomi supportano le raccomandazioni W3C (World Wide Web Consortium). Esempio:
 
 - La classe <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa le raccomandazioni [W3C Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) e [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).
 
 - Le classi <xref:System.Xml.XmlReader?displayProperty=nameWithType> e <xref:System.Xml.XmlWriter?displayProperty=nameWithType> supportano le raccomandazioni [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) e [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
-- Gli schemi nella classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> supportano le raccomandazioni [W3C XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/) and [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/).
+- Gli schemi nella classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> supportano le raccomandazioni [W3C XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/) e [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/).
 
 - Le classi nello spazio dei nomi <xref:System.Xml.Xsl?displayProperty=nameWithType> supportano le trasformazioni XSLT conformi alla raccomandazione [W3C XSLT 1.0](https://www.w3.org/TR/xslt).
 
@@ -58,11 +58,11 @@ Le classi XML in .NET Framework offrono i vantaggi seguenti:
 
 - **Integrazione con ADO.NET.** Le classi XML e [ADO.NET](../../../../docs/framework/data/adonet/index.md) sono strettamente integrati per riunire dati relazionali e XML. La classe <xref:System.Data.DataSet> è una cache in memoria dei dati recuperati da un database. Con la classe <xref:System.Data.DataSet> è possibile leggere e scrivere il codice XML usando le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>, mantenere la struttura interna degli schemi relazionali come XML Schema (XSD) e dedurre la struttura dello schema di un documento XML.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Opzioni di elaborazione XML](../../../../docs/standard/data/xml/xml-processing-options.md) illustra le opzioni per l'elaborazione di dati XML.
 
-[Elaborazione di dati XML in memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) illustra i tre modelli per l'elaborazione dei dati XML in memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la classe <xref:System.Xml.XmlDocument> (basata sul modello DOM di W3C) e la classe <xref:System.Xml.XPath.XPathDocument> (basata sul modello di dati XPath).
+[Elaborazione di dati XML in memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Vengono illustrati i tre modelli per l'elaborazione dei dati XML in memoria: [LINQ to XMLC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la classe <xref:System.Xml.XmlDocument> (basata sulla Document Object Model W3C) e la classe <xref:System.Xml.XPath.XPathDocument> (basata sul modello di dati XPath).
 
 [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)\
 Viene descritto come usare il processore XSLT.

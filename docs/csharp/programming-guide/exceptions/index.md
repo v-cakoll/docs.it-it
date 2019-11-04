@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 1442daf646a29c3822d06d0b649f462b37523fe2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002121"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423259"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 
@@ -32,7 +32,7 @@ Le eccezioni hanno le proprietà seguenti:
 - Racchiudere all'interno di un blocco `try` le istruzioni che potrebbero generare un'eccezione.
 - Quando si verifica un'eccezione nel blocco `try`, il flusso di controllo passa al primo gestore delle eccezioni associato presente in qualsiasi punto nello stack di chiamate. In C#, per definire un gestore di eccezioni viene usata la parola chiave `catch`.
 - Se non è presente alcun gestore di eccezioni per una determinata eccezione, il programma interrompe l'esecuzione con un messaggio di errore.
-- Non intercettare un'eccezione a meno che non sia possibile gestirla e lasciare l'applicazione in uno stato noto. Se si rileva `System.Exception`, rigenerarla usando la parola chiave `throw` alla fine del blocco `catch`.
+- Non intercettare un'eccezione a meno che non sia possibile gestirla e lasciare l'applicazione in uno stato noto. Se si rilevano `System.Exception`, generarlo nuovamente utilizzando la parola chiave `throw` alla fine del blocco `catch`.
 - Se un blocco `catch` definisce una variabile di eccezione, è possibile usarla per ottenere altre informazioni sul tipo di eccezione che si è verificato.
 - Le eccezioni possono essere generate in modo esplicito da un programma usando la parola chiave `throw`.
 - Gli oggetti eccezione contengono informazioni dettagliate sull'errore, ad esempio lo stato dello stack di chiamate e una descrizione testuale dell'errore.
@@ -47,13 +47,13 @@ Per ulteriori informazioni sulle eccezioni e la gestione delle eccezioni, vedere
 - [Gestione delle eccezioni](exception-handling.md)
 - [Creazione e generazione di eccezioni](creating-and-throwing-exceptions.md)
 - [Eccezioni generate dal compilatore](compiler-generated-exceptions.md)
-- [Procedura: Gestire un'eccezione usando try/catch (Guida per programmatori C#)](how-to-handle-an-exception-using-try-catch.md)
+- [Procedura: Gestire un'eccezione usando try-catch (Guida per programmatori C#)](how-to-handle-an-exception-using-try-catch.md)
 - [Procedura: Eseguire codice di pulitura con finally](how-to-execute-cleanup-code-using-finally.md)
-- [Procedura: Intercettare un'eccezione non CLS @ no__t-0
+- [Procedura: Intercettare un'eccezione non CLS](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nella [Specifica del linguaggio C#](../../language-reference/language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 

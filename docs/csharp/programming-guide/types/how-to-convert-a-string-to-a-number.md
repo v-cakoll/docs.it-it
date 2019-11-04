@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Convertire una stringa in un numero - Guida per programmatori C#'
+title: 'Procedura: convertire una stringa in una guida per la C# programmazione di numeri'
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133713"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417642"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: Convertire una stringa in un numero (Guida per programmatori C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: convertire una stringa in un numero (Guida per programmatori C#)
 
-È possibile convertire una [stringa](../../language-reference/keywords/string.md) in un numero chiamando il metodo `Parse` o `TryParse` disponibile per i vari tipi numerici (`int`, `long`, `double` e così via) oppure usando i metodi nella classe <xref:System.Convert?displayProperty=nameWithType>.  
+È possibile convertire una [stringa](../../language-reference/builtin-types/reference-types.md) in un numero chiamando il metodo `Parse` o `TryParse` disponibile per i vari tipi numerici (`int`, `long`, `double` e così via) oppure usando i metodi nella classe <xref:System.Convert?displayProperty=nameWithType>.  
   
  Se si ha una stringa, è leggermente più efficiente e semplice chiamare un metodo `TryParse` (ad esempio, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) o un metodo `Parse` (ad esempio, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  L'uso di un metodo <xref:System.Convert> è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
   
@@ -51,7 +51,7 @@ Nella tabella seguente sono elencati alcuni dei metodi della classe <xref:System
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- In questo esempio viene chiamato il metodo <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> per convertire una stringa di input in un tipo [int](../../language-reference/builtin-types/integral-numeric-types.md). L'esempio rileva le due eccezioni più comuni che possono essere generate da questo metodo, <xref:System.FormatException> e <xref:System.OverflowException>. Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
+ Nell'esempio seguente viene chiamato il metodo <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> per convertire una stringa di input in un valore [int](../../language-reference/builtin-types/integral-numeric-types.md). L'esempio rileva le due eccezioni più comuni che possono essere generate da questo metodo, <xref:System.FormatException> e <xref:System.OverflowException>. Se il numero risultante può essere incrementato senza superare <xref:System.Int32.MaxValue?displayProperty=nameWithType>, l'esempio aggiunge 1 al risultato e visualizza l'output.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   

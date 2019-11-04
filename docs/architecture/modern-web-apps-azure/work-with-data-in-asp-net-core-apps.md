@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117303"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419973"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -273,7 +273,7 @@ Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si
 >
 > - **Documentazione di Entity Framework**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: dati correlati**  
+> - **Entity Framework Core: dati correlati**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASP.NET Applications** (Evitare il caricamento lazy di entità in applicazioni ASPNET)  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
@@ -342,20 +342,20 @@ Nei database NoSQL è possibile archiviare più versioni di oggetti, requisito c
 
 In genere nei database NoSQL non vengono applicate le [ACID](https://en.wikipedia.org/wiki/ACID), vale a dire che sono vantaggiosi rispetto ai database relazionali in termini sia di prestazioni che di scalabilità. Sono database ideali per data set e oggetti di dati di dimensioni molto grandi che non sono particolarmente adatti per essere archiviati in strutture tabella normalizzate. Non esiste un motivo per cui un'applicazione non possa usare sia i database relazionali sia i database NoSQL a seconda dell'utilità.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB è un servizio di database NoSQL completamente gestito che offre l'archiviazione di dati privi di schema basata sul cloud. DocumentDB garantisce prestazioni rapide e prevedibili, disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono applicare le note funzionalità avanzate di query SQL su dati JSON. Tutte le risorse in DocumentDB vengono archiviate come documenti JSON. Le risorse sono gestite come _elementi_, vale a dire documenti che contengono metadati, e come _feed_, ovvero raccolte di elementi. Figura 8-2: illustra la relazione tra le diverse risorse di DocumentDB.
+Azure Cosmos DB è un servizio di database NoSQL completamente gestito che offre archiviazione di dati senza schema basata su cloud. Azure Cosmos DB è progettato per prestazioni rapide e prevedibili, disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono applicare le note funzionalità avanzate di query SQL su dati JSON. Tutte le risorse in Azure Cosmos DB vengono archiviate come documenti JSON. Le risorse sono gestite come _elementi_, vale a dire documenti che contengono metadati, e come _feed_, ovvero raccolte di elementi. La figura 8-2 Mostra la relazione tra le diverse risorse Azure Cosmos DB.
 
-![Relazione gerarchica tra le risorse di DocumentDB, un database NoSQL JSON](./media/image8-2.png)
+![Relazione gerarchica tra le risorse in Azure Cosmos DB, un database JSON NoSQL](./media/image8-2.png)
 
-**Figura 8-2.** Organizzazione delle risorse di DocumentDB.
+**Figura 8-2.** Azure Cosmos DB organizzazione delle risorse.
 
-Il linguaggio di query di DocumentDB è costituito da un'interfaccia semplice ma potente che consente di eseguire query sui documenti JSON. Il linguaggio supporta un subset di grammatica SQL ANSI e offre totale integrazione di oggetti, matrici, costruzione di oggetti e chiamate JavaScript.
+Il linguaggio di query Azure Cosmos DB è un'interfaccia semplice ma potente per l'esecuzione di query sui documenti JSON. Il linguaggio supporta un subset di grammatica SQL ANSI e offre totale integrazione di oggetti, matrici, costruzione di oggetti e chiamate JavaScript.
 
-**Riferimenti a DocumentDB**
+**Riferimenti: Azure Cosmos DB**
 
-- Introduzione a DocumentDB  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Introduzione a Azure Cosmos DB  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Altre opzioni di persistenza
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

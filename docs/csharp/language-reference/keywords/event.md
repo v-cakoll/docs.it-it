@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a6a62881f7205891bafe039a42da44eb8f8d03c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605809"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422833"
 ---
 # <a name="event-c-reference"></a>event (Riferimenti per C#)
 La parola chiave `event` viene usata per dichiarare un evento in una classe autore.  
@@ -32,7 +32,7 @@ La parola chiave `event` viene usata per dichiarare un evento in una classe auto
 ## <a name="keywords-and-events"></a>Parole chiave ed eventi  
  Agli eventi si applicano le parole chiave seguenti.  
   
-|Parola chiave|DESCRIZIONE|Per altre informazioni|  
+|Parola chiave|Descrizione|Per altre informazioni|  
 |-------------|-----------------|--------------------------|  
 |[static](./static.md)|Rende l'evento disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe.|[Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](./virtual.md)|Consente alle classi derivate di eseguire l'override del comportamento dell'evento tramite la parola chiave [override](./override.md).|[Ereditarietà](../../programming-guide/classes-and-structs/inheritance.md)|  
@@ -53,5 +53,5 @@ La parola chiave `event` viene usata per dichiarare un evento in una classe auto
 - [Parole chiave di C#](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
-- [Modificatori](./modifiers.md)
+- [Modificatori](index.md)
 - [Procedura: Combinare delegati multicast](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

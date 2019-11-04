@@ -17,21 +17,21 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924389"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418715"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
 Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
   
- [Espressioni di query LINQ](../../linq-query-expressions/index.md)  
+ [Espressioni di query LINQ](../../../linq/index.md)  
   
  [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)  
   
- [Procedura dettagliata: Scrittura di query in C#](./walkthrough-writing-queries-linq.md)  
+ [Procedura dettagliata: scrittura di query in C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > Se si ha già familiarità con un linguaggio di query, ad esempio SQL o XQuery, è possibile ignorare la maggior parte di questo argomento. Leggere la sezione sulla "clausola `from`" più avanti per informazioni sull'ordine delle clausole nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -44,7 +44,7 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
  La variabile di intervallo è come la variabile di iterazione in un ciclo `foreach` ad eccezione del fatto che non si verifica alcuna iterazione in un'espressione di query. Quando viene eseguita la query, la variabile di intervallo verrà usata come riferimento a ogni elemento successivo in `customers`. Poiché il compilatore può dedurre il tipo di `cust`, non è necessario specificarlo in modo esplicito. Altre variabili di intervallo possono essere introdotte da una clausola `let`. Per altre informazioni, vedere [Clausola let](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) e [ Clausola ](../../../language-reference/keywords/from-clause.md).  
+> Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) e [Clausola from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtro  
  Probabilmente l'operazione di query più comune consiste nell'applicazione di un filtro sotto forma di espressione booleana. Il filtro fa in modo che la query restituisca solo gli elementi per i quali l'espressione è vera. Il risultato viene generato utilizzando la clausola `where`. Il filtro in realtà specifica gli elementi da escludere dalla sequenza di origine. Nell'esempio seguente vengono restituiti solo i `customers` che hanno un indirizzo in Londra.  
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni di query LINQ](../../linq-query-expressions/index.md)
-- [Procedura dettagliata: Scrittura di query in C#](./walkthrough-writing-queries-linq.md)
+- [Espressioni di query LINQ](../../../linq/index.md)
+- [Procedura dettagliata: scrittura di query in C#](./walkthrough-writing-queries-linq.md)
 - [Parole chiave di query (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Tipi anonimi](../../classes-and-structs/anonymous-types.md)

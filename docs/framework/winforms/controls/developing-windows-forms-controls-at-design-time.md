@@ -9,15 +9,15 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1eebca72b8c564e6d846eba69b6b59139754738e
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015985"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460087"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Sviluppare controlli Windows Forms in fase di progettazione
 
@@ -28,51 +28,51 @@ ms.locfileid: "70015985"
 
 Per creare controlli personalizzati da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
-[Procedura dettagliata: Creazione di un controllo composito](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+[Procedura dettagliata: modifica di un controllo composito](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 Illustra come creare un controllo composito semplice in C#.
 
-[Procedura dettagliata: Eredità da un controllo Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+[Procedura dettagliata: eredità da un controllo Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Illustra come creare un controllo Windows Form semplice usando l'ereditarietà in C#.
 
-[Procedura dettagliata: Esecuzione di attività comuni tramite smart tag sui controlli Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Procedura dettagliata: esecuzione di attività comuni usando gli smart tag nei controlli Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
 Illustra come usare la funzionalità di smart tag nei controlli Windows Form.
 
-[Procedura dettagliata: Serializzazione di raccolte di tipi standard con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\
-Viene illustrato come utilizzare l' <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> attributo per serializzare una raccolta.
+[Procedura dettagliata: serializzazione di raccolte di tipi standard con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\
+Viene illustrato come utilizzare l'attributo <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> per serializzare una raccolta.
 
-[Procedura dettagliata: Debug di controlli di Windows Forms personalizzati in fase di progettazione](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+[Procedura dettagliata: Debug di controlli Windows Form personalizzati in fase di progettazione](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
 Illustra come eseguire il debug del comportamento in fase di progettazione di un controllo Windows Form.
 
-[Procedura dettagliata: Creazione di un controllo Windows Forms che sfrutta le funzionalità della fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)\
+[Procedura dettagliata: creazione di un controllo Windows Forms che sfrutta le funzionalità della fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)\
 Illustra come integrare profondamente un controllo composito nell'ambiente di progettazione.
 
-[Procedura: Controlli autore per Windows Forms](how-to-author-controls-for-windows-forms.md)\
+[Procedura: Creare controlli per Windows Forms](how-to-author-controls-for-windows-forms.md)\
 Offre una serie di considerazioni sull'implementazione di un controllo Windows Form.
 
-[Procedura: Crea controlli compositi](how-to-author-composite-controls.md)\
+[Procedura: modificare controlli compositi](how-to-author-composite-controls.md)\
 Illustra come creare un controllo ereditando da un controllo composito.
 
 [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)\
 Offre una panoramica della procedura di creazione di un controllo composito.
 
-[Procedura: Ereditare da controlli Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)\
-Viene illustrato come creare un controllo esteso ereditando dalla classe del <xref:System.Windows.Forms.Button> controllo.
+[Procedura: Ereditare da controlli di Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)\
+Viene illustrato come creare un controllo esteso ereditando dalla classe del controllo <xref:System.Windows.Forms.Button>.
 
 [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)\
 Offre una panoramica della creazione di un controllo esteso.
 
-[Procedura: Allineare un controllo ai bordi dei form in fase di progettazione](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
-Viene illustrato come utilizzare la <xref:System.Windows.Forms.Control.Dock%2A> proprietà per allineare il controllo al bordo del form che occupa.
+[Procedura: allineare un controllo ai bordi dei form in fase di progettazione](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
+Viene illustrato come utilizzare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> per allineare il controllo al bordo del form che occupa.
 
-[Procedura: Visualizza un controllo nella finestra di dialogo Scegli elementi della casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
+[Procedura: visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
 Illustra la procedura di installazione del controllo in modo che venga visualizzato nella finestra di dialogo **Customize Toolbox** (Personalizza casella degli strumenti).
 
-[Procedura: Specificare una bitmap della casella degli strumenti per un controllo](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
-Viene illustrato come utilizzare <xref:System.Drawing.ToolboxBitmapAttribute> per visualizzare un'icona accanto al controllo personalizzato nella **casella degli strumenti**.
+[Procedura: specificare una bitmap della casella degli strumenti per un controllo](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
+Viene illustrato come utilizzare il <xref:System.Drawing.ToolboxBitmapAttribute> per visualizzare un'icona accanto al controllo personalizzato nella **casella degli strumenti**.
 
-[Procedura: Testare il comportamento in fase di esecuzione di un UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
+[Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 Illustra come usare **UserControl Test Container** per testare il comportamento di un controllo composito.
 
 [Errori in fase di progettazione in Progettazione Windows Form](design-time-errors-in-the-windows-forms-designer.md)\
@@ -81,7 +81,7 @@ Illustra il significato e l'uso dell'elenco errori della fase di progettazione v
 [Risoluzione dei problemi relativi alla modifica di controlli e componenti](troubleshooting-control-and-component-authoring.md)\
 Illustra come diagnosticare e correggere gli errori comuni che possono verificarsi quando si crea un componente o un controllo personalizzato.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -95,5 +95,5 @@ Illustra come creare i controlli personalizzati con .NET Framework.
 [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
 Introduce Common Language Runtime, progettato per semplificare la creazione e l'uso dei componenti. Un aspetto importante di questa semplificazione è la migliore interoperabilità tra componenti scritti usando linguaggi di programmazione diversi. Common Language Specification (CLS) consente di creare strumenti e componenti che usano più linguaggi di programmazione.
 
-[Procedura dettagliata: Popolamento automatico della casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
+[Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
 Descrive come abilitare la visualizzazione dei componenti o dei controlli nella finestra di dialogo **Customize Toolbox** (Personalizza casella degli strumenti).

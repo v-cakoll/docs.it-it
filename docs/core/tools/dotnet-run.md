@@ -1,25 +1,37 @@
 ---
 title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117478"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454785"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Questo articolo si applica a: ✓** .NET Core 1.x SDK e versioni successive
 
-## <a name="name"></a>nome
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>Name
 
 `dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.
 
 ## <a name="synopsis"></a>Riepilogo
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -68,6 +80,64 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 ## <a name="options"></a>Opzioni
 
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+`--`
+
+Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.
+
+`-c|--configuration {Debug|Release}`
+
+Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato. Il framework deve essere specificato nel file di progetto.
+
+`--force`
+
+Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`--interactive`
+
+Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione).
+
+`--launch-profile <NAME>`
+
+Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione. I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`. Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).
+
+`--no-build`
+
+Non compila il progetto prima dell'esecuzione. Imposta anche in modo implicito il flag `--no-restore`.
+
+`--no-dependencies`
+
+Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
+
+`--no-launch-profile`
+
+Non tenta di usare *launchSettings.json* per configurare l'applicazione.
+
+`--no-restore`
+
+Non esegue un ripristino implicito quando si esegue il comando.
+
+`-p|--project <PATH>`
+
+Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
@@ -76,7 +146,7 @@ Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esec
 
 `-c|--configuration {Debug|Release}`
 
-Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
+Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -130,7 +200,7 @@ Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esec
 
 `-c|--configuration {Debug|Release}`
 
-Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
+Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -180,7 +250,7 @@ Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esec
 
 `-c|--configuration {Debug|Release}`
 
-Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
+Definisce la configurazione di compilazione. Il valore predefinito per la maggior parte dei progetti è `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -192,7 +262,7 @@ Stampa una breve guida per il comando.
 
 `-p|--project <PATH/PROJECT.csproj>`
 
-Specifica il percorso e il nome del file di progetto. Vedere la nota. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
+Specifica il percorso e il nome del file di progetto. (Vedere la nota). Se non specificato, viene impostato come predefinito la directory corrente.
 
 > [!NOTE]
 > Usare il percorso e il nome del file di progetto con l'opzione `-p|--project`. Una regressione nell'interfaccia della riga di comando impedisce di specificare un percorso di cartella con .NET Core SDK 1.x. Per altre informazioni su questo problema, vedere [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, non è possibile avviare un progetto (dotnet/cli #5992)).

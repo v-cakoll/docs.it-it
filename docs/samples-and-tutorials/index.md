@@ -4,12 +4,12 @@ description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855768"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423563"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
@@ -49,7 +49,7 @@ Questo esempio illustra la sintassi e le funzionalità per la creazione e l'util
 
 Questo esempio illustra la sintassi e le funzionalità per gli indicizzatori C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Delegates and Events](../csharp/delegates-events.md)** (Delegati ed eventi)
+**[Delegates and Events](../csharp/delegates-overview.md)** (Delegati ed eventi)
 
 Questo esempio illustra la sintassi e le funzionalità per i delegati e gli eventi C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) è disponibile nel repository dotnet/samples su GitHub. Nello stesso repository è disponibile un [secondo esempio](https://github.com/dotnet/samples/tree/master/csharp/events) incentrato sugli eventi.
 
@@ -95,15 +95,11 @@ In questa esercitazione viene illustrato come creare una soluzione .NET Core com
 
 Questa esercitazione illustra come compilare in .NET Core una semplice applicazione che supporta un'architettura di plug-in. L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) è disponibile nel repository dotnet/samples su GitHub.
 
-## <a name="deploying-to-containers"></a>Distribuzione nei contenitori
+## <a name="deploy-to-containers"></a>Distribuisci nei contenitori
 
-**[Running ASP.NET MVC Applications in Windows Docker Containers](../framework/docker/aspnetmvc.md)** (Esecuzione di applicazioni MVC ASP.NET nei contenitori Docker di Windows)
+**[Running ASP.NET MVC Applications in Windows Docker Containers](/aspnet/mvc/overview/deployment/docker-aspnetmvc)** (Esecuzione di applicazioni MVC ASP.NET nei contenitori Docker di Windows)
 
 Questa esercitazione illustra come distribuire un'app MVC ASP.NET esistente in un contenitore Docker di Windows. L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) è disponibile nel repository dotnet/samples su GitHub.
-
-**[Running .NET Framework Console Applications in Windows Containers](../framework/docker/console.md)** (Esecuzione di applicazioni console .NET Framework nei contenitori di Windows)
-
-Questa esercitazione illustra come distribuire un'app console esistente in un contenitore di Windows. L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) è disponibile nel repository dotnet/samples su GitHub.
 
 ## <a name="viewing-and-downloading-samples"></a>Visualizzazione e download degli esempi
 
@@ -116,6 +112,6 @@ Molti argomenti mostrano codice sorgente ed esempi disponibili per la visualizza
 1. Spostarsi all'interno delle cartelle del repository nel percorso dell'esempio. Il percorso relativo per il percorso dell'esempio viene visualizzato nella barra degli indirizzi del browser quando si segue il collegamento all'esempio.
 1. Per eseguire un esempio, sono disponibili diverse alternative:
    * Usare gli [strumenti dell'interfaccia della riga di comando dotnet](../core/tools/index.md): in una finestra della console passare alla cartella dell'esempio e usare i comandi dell'interfaccia della riga di comando dotnet.
-   * Usare [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): aprire l'esempio selezionando **File > Apri > Progetto/Soluzione** nella barra dei menu, passare alla cartella del progetto di esempio e selezionare il file di progetto ( *.csproj* o *.fsproj*).
-   * Usare [Visual Studio Code](https://code.visualstudio.com/): aprire l'esempio selezionando **File > Apri cartella** nella barra dei menu e selezionare la cartella del progetto di esempio.
+   * Usare [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): aprire l'esempio selezionando **File > Apri > Progetto/Soluzione** nella barra dei menu, passare alla cartella del progetto dell'esempio e selezionare il file di progetto ( *.csproj* o *.fsproj*).
+   * Usare [Visual Studio Code](https://code.visualstudio.com/): aprire l'esempio selezionando **File > Apri cartella** nella barra dei menu e selezionare la cartella del progetto dell'esempio.
    * Usare un ambiente IDE diverso che supporta .NET Core.

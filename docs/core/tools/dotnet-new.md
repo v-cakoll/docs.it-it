@@ -2,18 +2,18 @@
 title: Comando dotnet new
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117677"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420469"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet new`: crea un nuovo progetto, un file di configurazione o una soluzione sulla base del modello specificato.
 
@@ -62,7 +62,7 @@ Il comando `dotnet new` rappresenta un modo pratico per inizializzare un progett
 
 Questo comando chiama il [motore del modello](https://github.com/dotnet/templating) per creare gli elementi su disco in base alle opzioni e al modello specificati.
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>argomenti
 
 `TEMPLATE`
 
@@ -74,7 +74,7 @@ Se il valore di `TEMPLATE` non è una corrispondenza esatta del testo nella colo
 
 Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per ottenere un elenco dei modelli disponibili. La tabella seguente elenca i modelli preinstallati con .NET Core SDK 2.2.100. Il linguaggio predefinito per il modello è indicato tra parentesi quadre.
 
-| Modelli                                    | Nome breve        | Linguaggio     | Tag                                  |
+| Modelli                                    | Nome breve        | Language     | Tag                                  |
 |----------------------------------------------|-------------------|--------------|---------------------------------------|
 | Applicazione console                          | `console`         | [C#], F#, VB | Comune/Console                        |
 | Libreria di classi                                | `classlib`        | [C#], F#, VB | Comune/Library                        |
@@ -102,7 +102,7 @@ Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per 
 
 Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per ottenere un elenco dei modelli disponibili. La tabella seguente descrive i modelli preinstallati con .NET Core SDK 2.1.300. Il linguaggio predefinito per il modello è indicato tra parentesi quadre.
 
-| Modelli                                    | Nome breve      | Linguaggio     | Tag                                  |
+| Modelli                                    | Nome breve      | Language     | Tag                                  |
 |----------------------------------------------|-----------------|--------------|---------------------------------------|
 | Applicazione console                          | `console`       | [C#], F#, VB | Comune/Console                        |
 | Libreria di classi                                | `classlib`      | [C#], F#, VB | Comune/Library                        |
@@ -128,7 +128,7 @@ Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per 
 
 Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per ottenere un elenco dei modelli disponibili. La tabella seguente elenca i modelli preinstallati con .NET Core SDK 2.0.0. Il linguaggio predefinito per il modello è indicato tra parentesi quadre.
 
-| Modelli                                    | Nome breve    | Linguaggio     | Tag                |
+| Modelli                                    | Nome breve    | Language     | Tag                |
 |----------------------------------------------|---------------|--------------|---------------------|
 | Applicazione console                          | `console`     | [C#], F#, VB | Comune/Console      |
 | Libreria di classi                                | `classlib`    | [C#], F#, VB | Comune/Library      |
@@ -153,7 +153,7 @@ Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per 
 
 Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -all` per ottenere un elenco dei modelli disponibili. La tabella seguente elenca i modelli preinstallati con .NET Core SDK 1.0.1. Il linguaggio predefinito per il modello è indicato tra parentesi quadre.
 
-| Modelli            | Nome breve    | Linguaggio | Tag           |
+| Modelli            | Nome breve    | Language | Tag           |
 |----------------------|---------------|----------|----------------|
 | Applicazione console  | `console`     | [C#], F# | Comune/Console |
 | Libreria di classi        | `classlib`    | [C#], F# | Comune/Library |
@@ -776,6 +776,6 @@ Creare un file *global.json* nell'impostazione di directory corrente impostando 
 ## <a name="see-also"></a>Vedere anche
 
 - [Modelli personalizzati per dotnet new](custom-templates.md)
-- [Creare un modello personalizzato per dotnet new](../tutorials/create-custom-template.md)
+- [Creare un modello personalizzato per dotnet new](../tutorials/cli-templates-create-item-template.md)
 - [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Modelli disponibili per dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

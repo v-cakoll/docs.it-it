@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: daa69997f70c22a97482fd7e63d42506e7051732
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
-ms.translationtype: MT
+ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291288"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421069"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
 Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. Windows e il .NET Framework includono diverse tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -21,7 +21,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 - Distribuzione con XCopy.  
   
-- Distribuzione con [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Windows Installer la distribuzione.  
   
 - Distribuzione ClickOnce.  
   
@@ -39,15 +39,15 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] consente di assemblare le applicazioni in file eseguibili indipendenti che possono essere facilmente distribuiti ai client ed eseguiti. Inoltre, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] viene installato con Windows e Abilita l'integrazione con il desktop, il menu Start e il pannello di controllo programmi.  
+ Windows Installer consente di creare pacchetti di applicazioni come file eseguibili autonomi che possono essere facilmente distribuiti ai client ed eseguiti. Inoltre, Windows Installer viene installato con Windows e Abilita l'integrazione con il desktop, il menu Start e il pannello di controllo programmi.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] semplifica l'installazione e la disinstallazione delle applicazioni, ma non fornisce funzionalità per assicurare che le applicazioni installate restino aggiornate dal punto di vista del controllo delle versioni.  
+ Windows Installer semplifica l'installazione e la disinstallazione delle applicazioni, ma non fornisce funzionalità per garantire che le applicazioni installate siano mantenute aggiornate dal punto di vista del controllo delle versioni.  
   
  Per ulteriori informazioni su Windows Installer, vedere [Windows Installer Deployment](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Distribuzione ClickOnce  
- ClickOnce consente la distribuzione di applicazioni in stile Web per applicazioni non Web. Le applicazioni vengono pubblicate in e distribuite da server Web o file server. Sebbene ClickOnce non supporti la gamma completa di funzionalità client che @no__t le applicazioni installate da 0, supporta un subset che include quanto segue:  
+ ClickOnce consente la distribuzione di applicazioni in stile Web per applicazioni non Web. Le applicazioni vengono pubblicate in e distribuite da server Web o file server. Sebbene ClickOnce non supporti l'intera gamma di funzionalità client eseguite da Windows Installer applicazioni installate, supporta un subset che include quanto segue:  
   
 - Integrazione con il menu Start e il pannello di controllo Programmi.  
   
@@ -69,11 +69,11 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 - Applicazioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup.  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
+- Applicazioni browser XAML (XBAPs).  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Distribuzione di applicazioni autonome  
- Le applicazioni autonome vengono distribuite tramite ClickOnce o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. In entrambi i casi, per eseguire le applicazioni autonome è necessaria l'attendibilità totale. L'attendibilità viene concessa automaticamente alle applicazioni autonome che vengono distribuite mediante [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Alle applicazioni autonome distribuite tramite ClickOnce non viene concessa automaticamente l'attendibilità totale. Al contrario, ClickOnce Visualizza una finestra di dialogo di avviso di sicurezza che gli utenti devono accettare prima di installare un'applicazione autonoma. Se si accetta l'avviso, l'applicazione autonoma viene installata e le viene concessa l'attendibilità totale. In caso contrario, l'applicazione autonoma non viene installata.  
+ Le applicazioni autonome vengono distribuite tramite ClickOnce o Windows Installer. In entrambi i casi, per eseguire le applicazioni autonome è necessaria l'attendibilità totale. L'attendibilità totale viene concessa automaticamente alle applicazioni autonome distribuite mediante Windows Installer. Alle applicazioni autonome distribuite tramite ClickOnce non viene concessa automaticamente l'attendibilità totale. Al contrario, ClickOnce Visualizza una finestra di dialogo di avviso di sicurezza che gli utenti devono accettare prima di installare un'applicazione autonoma. Se si accetta l'avviso, l'applicazione autonoma viene installata e le viene concessa l'attendibilità totale. In caso contrario, l'applicazione autonoma non viene installata.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Distribuzione di applicazioni XAML solo sarkup  
@@ -81,38 +81,38 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
  Per altre informazioni sulla sicurezza per le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Sicurezza](../security-wpf.md).  
   
- Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup possono essere installate nel file system locale tramite XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Queste pagine possono essere visualizzate utilizzando Internet Explorer o Esplora risorse.  
+ Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup possono essere installate nella file system locale utilizzando XCopy o Windows Installer. Queste pagine possono essere visualizzate utilizzando Internet Explorer o Esplora risorse.  
   
  Per altre informazioni, vedere [Cenni preliminari su XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Distribuzione di applicazioni browser XAML  
- Le applicazioni browser XAML (con estensione [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]) sono applicazioni compilate che richiedono i seguenti tre file per essere distribuite:  
+ Le applicazioni XBAPs sono applicazioni compilate che richiedono la distribuzione dei tre file seguenti:  
   
-- *ApplicationName*. exe: File dell'applicazione dell'assembly eseguibile.  
+- *ApplicationName*.exe: il file dell'applicazione dell'assembly eseguibile .  
   
-- *ApplicationName*. xbap: Manifesto della distribuzione.  
+- *ApplicationName*.xbap: il manifesto di distribuzione.  
   
-- *ApplicationName*. exe. manifest: Manifesto dell'applicazione.  
+- *ApplicationName*.exe.manifest: il manifesto dell'applicazione.  
   
 > [!NOTE]
 > Per ulteriori informazioni sui manifesti dell'applicazione e di distribuzione, vedere [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
   
- Questi file vengono prodotti quando si compila un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione browser WPF @ no__t-0. Come le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono in genere pubblicate in un server Web e visualizzate con Internet Explorer.  
+ Questi file vengono generati quando viene compilata un'applicazione XBAP. Per altre informazioni, vedere [Procedura: creare un nuovo progetto di applicazione browser WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Come solo markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagine, le XBAP vengono in genere pubblicate in un server Web e visualizzate con Internet Explorer.  
   
- Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere distribuite ai client usando una qualsiasi delle tecniche di distribuzione. Tuttavia, è consigliabile usare ClickOnce poiché fornisce le funzionalità seguenti:  
+ È possibile distribuire le applicazioni XBAP ai client usando una delle tecniche di distribuzione. Tuttavia, è consigliabile usare ClickOnce poiché fornisce le funzionalità seguenti:  
   
 1. Aggiornamenti automatici quando viene pubblicata una nuova versione.  
   
-2. Elevazione dei privilegi per l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] in esecuzione con attendibilità totale.  
+2. Privilegi di elevazione per l'applicazione XBAP eseguita con attendibilità totale.  
   
  Per impostazione predefinita, ClickOnce pubblica i file dell'applicazione con l'estensione deploy. Questa impostazione può risultare problematica, ma può essere disabilitata. Per altre informazioni, vedere [Problemi relativi alla configurazione del server e del client nelle distribuzioni ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Per altre informazioni sulla distribuzione di [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], vedere [Panoramica delle applicazioni browser XAML di WPF](wpf-xaml-browser-applications-overview.md).  
+ Per ulteriori informazioni sulla distribuzione di applicazioni browser XAML (XBAPs), vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installazione di .NET Framework  
- Per eseguire un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario che il Framework di Microsoft .NET sia installato nel client. Internet Explorer rileva automaticamente se i client vengono installati con .NET Framework quando vengono visualizzate le applicazioni ospitate da browser [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Se il .NET Framework non è installato, Internet Explorer richiede agli utenti di installarlo.  
+ Per eseguire un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], il Framework di Microsoft .NET deve essere installato nel client. Internet Explorer rileva automaticamente se i client vengono installati con .NET Framework quando vengono visualizzate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni ospitate da browser. Se il .NET Framework non è installato, Internet Explorer richiede agli utenti di installarlo.  
   
  Per rilevare se la .NET Framework è installata, Internet Explorer include un'applicazione del programma di avvio automatico registrata come gestore di fallback Multipurpose Internet Mail Extensions (MIME) per i file di contenuto con le estensioni seguenti:. XAML,. XPS,. XBAP , e. Application. Se si passa a questi tipi di file e il .NET Framework non è installato nel client, l'applicazione del programma di avvio automatico richiede l'autorizzazione per l'installazione. Se non viene fornita l'autorizzazione, né l'.NET Framework né l'applicazione sono installate.  
   
@@ -123,4 +123,4 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
 ## <a name="see-also"></a>Vedere anche
 
 - [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)
-- [Sicurezza](../security-wpf.md)
+- [Security](../security-wpf.md)

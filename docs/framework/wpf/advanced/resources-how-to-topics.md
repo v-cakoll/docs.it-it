@@ -7,17 +7,17 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053483"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458713"
 ---
 # <a name="resources-how-to-topics"></a>Procedure relative alle risorse
-Gli argomenti in questa sezione descrivono come usare le risorse di Windows Presentation Foundation (WPF).  
+Negli argomenti di questa sezione viene descritto come utilizzare le risorse di Windows Presentation Foundation (WPF).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Definire e fare riferimento a una risorsa](how-to-define-and-reference-a-resource.md)  
  [Usare le risorse delle applicazioni](how-to-use-application-resources.md)  
  [Utilizzare la classe SystemFonts](how-to-use-systemfonts.md)  
@@ -25,7 +25,7 @@ Gli argomenti in questa sezione descrivono come usare le risorse di Windows Pres
  [Utilizzare SystemParameters](how-to-use-systemparameters.md)  
  [Usare chiavi dei parametri di sistema](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -35,4 +35,4 @@ Gli argomenti in questa sezione descrivono come usare le risorse di Windows Pres
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Risorse XAML](xaml-resources.md)
+ [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)

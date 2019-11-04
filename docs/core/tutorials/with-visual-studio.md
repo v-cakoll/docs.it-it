@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039592"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454758"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando C# con .NET Core SDK in Visual Studio 2017
 
-Questo argomento offre un'introduzione dettagliata per la compilazione, il debug e la pubblicazione di una semplice applicazione console .NET Core usando C# in Visual Studio 2017. Visual Studio 2017 offre un ambiente di sviluppo completo per la creazione di applicazioni .NET Core. Se l'applicazione non ha alcuna dipendenza specifica della piattaforma, è possibile eseguirla su qualsiasi piattaforma usata come destinazione da .NET Core o su qualsiasi sistema in cui è installato .NET Core.
+Questo articolo fornisce un'introduzione dettagliata per la compilazione, il debug e la pubblicazione di una semplice applicazione console .NET Core con C# in Visual Studio 2017. Visual Studio 2017 offre un ambiente di sviluppo completo per la creazione di applicazioni .NET Core. Se l'applicazione non ha alcuna dipendenza specifica della piattaforma, è possibile eseguirla su qualsiasi piattaforma usata come destinazione da .NET Core o su qualsiasi sistema in cui è installato .NET Core.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato. È possibile sviluppare l'app con .NET Core 2,1 o versioni successive.
+[Visual Studio 2017 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato. È possibile sviluppare l'app con .NET Core 2,1 o versioni successive.
 
-Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](../windows-prerequisites.md).
+Per altre informazioni, vedere l'articolo [prerequisiti per .NET Core in Windows](../windows-prerequisites.md) .
 
 ## <a name="a-simple-hello-world-application"></a>Semplice applicazione Hello World
 
 Di seguito viene descritta la creazione di una semplice applicazione console "Hello World". Attenersi ai passaggi riportati di seguito.
 
-1. Avviare Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo *Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)** . Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
+1. Avviare Visual Studio. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App Console (.NET Core)** . Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
 
    ![Finestra di dialogo Nuovo progetto con App console selezionata](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -57,9 +57,9 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
 
 Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo insieme alla data e ora. Per modificare e testare il programma, seguire questa procedura:
 
-1. Immettere il codice C# seguente nella finestra del codice immediatamente dopo la parentesi quadra di apertura che segue la riga `static void Main(string[] args)` e prima della prima parentesi quadra di chiusura:
+1. Immettere il codice C# seguente nella finestra del codice immediatamente dopo la parentesi quadra di apertura che segue la riga di `static void Main(string[] args)` e prima della prima parentesi graffa chiusa:
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    Questo codice sostituisce il contenuto del metodo `Main`.
 
@@ -81,7 +81,7 @@ L'applicazione è stata creata ed eseguita. Per sviluppare un'applicazione profe
 
 - Per informazioni sullo sviluppo e la pubblicazione di una versione distribuibile dell'applicazione, vedere [Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="related-articles"></a>Articoli correlati
 
 Anziché un'applicazione console, è possibile creare una libreria di classi con .NET Core e Visual Studio 2017. Per un'introduzione dettagliata, vedere [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](library-with-visual-studio.md).
 

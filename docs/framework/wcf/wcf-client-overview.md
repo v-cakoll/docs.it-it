@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321339"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420651"
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 In questa sezione vengono descritte le operazioni eseguite dalle applicazioni client, come configurare, creare e utilizzare un client Windows Communication Foundation (WCF) e come proteggere le applicazioni client.  
@@ -43,7 +43,7 @@ In questa sezione vengono descritte le operazioni eseguite dalle applicazioni cl
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Ottenere informazioni sul contratto di servizio, sulle associazioni e sugli indirizzi  
  In WCF, i servizi e i client modellano i contratti utilizzando attributi, interfacce e metodi gestiti. Per eseguire la connessione a un servizio in un'applicazione client è necessario ottenere le informazioni sul tipo per il contratto di servizio. Questa operazione viene in genere eseguita utilizzando lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), che Scarica i metadati dal servizio, li converte in un file di codice sorgente gestito nel linguaggio desiderato e crea un file di configurazione dell'applicazione client. che è possibile usare per configurare l'oggetto client WCF. Se ad esempio si intende creare un oggetto client WCF per richiamare una `MyCalculatorService` e si è certi che i metadati per tale servizio siano pubblicati in `http://computerName/MyCalculatorService/Service.svc?wsdl`, nell'esempio di codice riportato di seguito viene illustrato come utilizzare Svcutil. exe per ottenere un file di `ClientCode.vb` contenente la co-Service ntract nel codice gestito.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   

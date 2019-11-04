@@ -2,12 +2,12 @@
 title: Funzioni
 description: Informazioni sulle funzioni in F# e su F# come supporta costrutti comuni di programmazione funzionale.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630710"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423946"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -38,7 +38,7 @@ Nell'esempio precedente, il nome della funzione è `f`, l'argomento è `x` ed è
 
 Le funzioni possono essere contrassegnate `inline`. Per informazioni su `inline`, vedere [Funzioni inline](../functions/inline-functions.md).
 
-## <a name="scope"></a>Ambito
+## <a name="scope"></a>Scope
 
 A qualsiasi livello di ambito diverso dall'ambito del modulo, non è un errore riusare un nome di funzione o un valore. Se si riusa un nome, il nome dichiarato successivamente sostituisce il nome dichiarato in precedenza. Tuttavia, nell'ambito di livello superiore in un modulo, i nomi devono essere univoci. Ad esempio, il codice seguente genera un errore quando viene visualizzato nell'ambito del modulo, ma non quando viene visualizzato all'interno di una funzione:
 
@@ -76,7 +76,7 @@ Un corpo di funzione può contenere definizioni di funzioni e variabili locali. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Per altre informazioni, vedere [Code Formatting Guidelines](../code-formatting-guidelines.md) (Linee guida per la formattazione del codice) e [Verbose Syntax](../verbose-syntax.md) (Sintassi dettagliata).
+Per altre informazioni, vedere [Code Formatting Guidelines](../../style-guide/formatting.md) (Linee guida per la formattazione del codice) e [Verbose Syntax](../verbose-syntax.md) (Sintassi dettagliata).
 
 ## <a name="return-values"></a>Valori restituiti
 
@@ -142,7 +142,7 @@ Un'*espressione lambda* è una funzione senza nome. Negli esempi precedenti, inv
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per ulteriori informazioni, vedere [espressioni lambda: `fun` Parola chiave](../functions/lambda-expressions-the-fun-keyword.md).
+Le espressioni lambda vengono definite usando la parola chiave `fun`. Un'espressione lambda è simile a una definizione di funzione, con la differenza che al posto del token `=`, viene usato il token `->` per separare l'elenco di argomenti dal corpo della funzione. Analogamente a una definizione di funzione regolare, i tipi di argomenti possono essere dedotti o specificati in modo esplicito e il tipo restituito dell'espressione lambda viene dedotto dal tipo dell'ultima espressione nel corpo. Per altre informazioni, vedere [Espressioni lambda: parola chiave `fun`](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composizione di funzioni e pipelining
 

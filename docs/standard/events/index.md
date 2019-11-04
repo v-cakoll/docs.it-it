@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131625"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423531"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 
@@ -50,7 +50,7 @@ Sono molti gli usi dei delegati in .NET. Nel contesto degli eventi, un delegato 
   
 I delegati sono [multicast](xref:System.MulticastDelegate), il che significa che possono mantenere riferimenti a più di un metodo di gestione degli eventi. Per informazioni dettagliate, vedere la pagina di riferimento per <xref:System.Delegate>. I delegati offrono flessibilità e controlli specifici nella gestione degli eventi. Un delegato agisce come un dispatcher di eventi per la classe che genera l'evento compilando un elenco di gestori eventi registrati per l'evento.  
   
-Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione contrassegnare un delegato con la parola chiave [`delegate`](../../csharp/language-reference/keywords/delegate.md) (in C#) o [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
+Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione contrassegnare un delegato con la parola chiave [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) (in C#) o [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

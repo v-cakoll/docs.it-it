@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926412"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453592"
 ---
 # <a name="base-elements"></a>Elementi di base
-Quattro classi principali<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>-implementare una percentuale sostanziale i comuni delle funzionalità degli elementi disponibile nella programmazione WPF. Questi quattro classi sono definite in questo SDK le classi di elementi di base.  
+Quattro classi chiave,<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement>, implementano una percentuale sostanziale della funzionalità degli elementi comuni disponibile nella programmazione WPF. Queste quattro classi sono denominate in questo SDK come classi di elementi di base.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sugli elementi di base](base-elements-overview.md)  
  [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)  
  [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md)  
  [Procedure relative alle proprietà](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -39,5 +39,5 @@ Quattro classi principali<xref:System.Windows.UIElement>, <xref:System.Windows.C
   [Eventi](events-wpf.md)  
   [Input](input-wpf.md)  
   [Risorse](resources-wpf.md)  
-  [Applicazione di stili e modelli](../controls/styling-and-templating.md)  
+  [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modello di threading](threading-model.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040915"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421141"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, chiamati file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
@@ -187,15 +187,15 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Tuttavia, gli schemi file:/// e http:// richiedono che l'applicazione abbia un livello di attendibilità totale. Se l'applicazione è un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] avviato da Internet o Intranet e richiede solo il set di autorizzazioni consentite per le applicazioni avviate da tali percorsi, i file separati possono essere caricati solo dal sito di origine dell'applicazione ( percorso di avvio). Tali file sono noti come file *del sito di origine* .  
+ Tuttavia, gli schemi file:/// e http:// richiedono che l'applicazione abbia un livello di attendibilità totale. Se l'applicazione è un'applicazione browser XAML (XBAP) avviata da Internet o Intranet e richiede solo il set di autorizzazioni consentite per le applicazioni avviate da tali percorsi, i file separati possono essere caricati solo dal sito di origine dell'applicazione (percorso di avvio). Tali file sono noti come file *del sito di origine* .  
   
  I file del sito di origine rappresentano l'unica opzione per le applicazioni parzialmente attendibili, benché non siano limitati a questo tipo di applicazione. È possibile che le applicazioni completamente attendibili debbano caricare file di dati dell'applicazione sconosciuti in fase di compilazione. Sebbene queste applicazioni possano utilizzare file:///, è probabile che i file di dati dell'applicazione vengano installati nella stessa cartella dell'assembly dell'applicazione o in una sottocartella di questo. In questo caso è più facile utilizzare un riferimento al sito di origine piuttosto che file:///, poiché l'utilizzo di file:/// richiede l'elaborazione del percorso completo del file.  
   
 > [!NOTE]
-> I file del sito di origine non vengono memorizzati nella cache con un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] in un computer client, mentre i file di contenuto sono. Di conseguenza, vengono scaricati solo se esplicitamente richiesto. Se un'applicazione [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] dispone di file multimediali di grandi dimensioni, configurarli come file del sito di origine significa che l'avvio iniziale dell'applicazione è molto più veloce e che i file vengono scaricati solo su richiesta.  
+> I file del sito di origine non vengono memorizzati nella cache con un'applicazione browser XAML (XBAP) in un computer client, mentre i file di contenuto sono. Di conseguenza, vengono scaricati solo se esplicitamente richiesto. Se un'applicazione browser XAML (XBAP) contiene file multimediali di grandi dimensioni, la configurazione come file del sito di origine indica che l'avvio iniziale dell'applicazione è molto più veloce e che i file vengono scaricati solo su richiesta.  
   
 ### <a name="configuring-site-of-origin-files"></a>Configurazione dei file del sito di origine  
- Se i file del sito di origine sono inesistenti o sconosciuti in fase di compilazione, è necessario usare i meccanismi di distribuzione tradizionali per garantire che i file necessari siano disponibili in fase di esecuzione, incluso l'uso del programma `XCopy` dalla riga di comando o del [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
+ Se i file del sito di origine sono inesistenti o sconosciuti in fase di compilazione, è necessario utilizzare i meccanismi di distribuzione tradizionali per garantire che i file necessari siano disponibili in fase di esecuzione, incluso l'utilizzo del programma `XCopy` dalla riga di comando o di Microsoft Windows Installazione.  
   
  Se si conosce in fase di compilazione i file che si desidera individuare nel sito di origine, ma si desidera comunque evitare una dipendenza esplicita, è possibile aggiungere tali file a un progetto MSBuild come `None` elemento. Come per i file di contenuto, è necessario impostare l'attributo `CopyToOutputDirectory` di MSBuild per specificare che il file del sito di origine viene copiato in un percorso relativo all'assembly compilato, specificando il valore di `Always` o il valore di `PreserveNewest`.  
   

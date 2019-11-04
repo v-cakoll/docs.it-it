@@ -8,30 +8,30 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421963"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422746"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabella di formattazione dei risultati numerici (Riferimenti per C#)
 
 Nella tabella seguente vengono descritti gli identificatori di formato supportati per la formattazione dei risultati numerici. Il risultato formattato nell'ultima colonna corrisponde al valore <xref:System.Globalization.CultureInfo> "en-US".
 
-|Identificatore di formato|Description|Esempi|Risultato|  
+|Identificatore di formato|Descrizione|Esempi|Risultato|  
 |----------------------|-----------------|--------------|------------|  
 |C o c|Valuta|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
 |D o d|Decimale|`string s = $"{25:D5}";`|00025|  
 |E o e|Esponenziale|`string s = $"{250000:E2}";`|2,50E+005|  
-|F o f|A virgola fissa|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|F o f|A virgola fissa|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3\.|  
 |G o g|Generale|`string s = $"{2.5:G}";`|2.5|  
 |N o n|Numerico|`string s = $"{2500000:N}";`|2,500,000.00|  
 |P o p|Percentuale|`string s = $"{0.25:P}";`|25,00%|  
 |R o r|Round trip|`string s = $"{2.5:R}";`|2.5|  
 |X o x|Esadecimale|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Usare un identificatore di formato per creare una stringa di formato. La stringa di formato ha il formato seguente: `Axx`, dove
 
@@ -57,4 +57,4 @@ Per altre informazioni, vedere [Stringhe di formato numerico standard](../../../
 - [Formattazione di tipi](../../../standard/base-types/formatting-types.md)
 - [Formattazione composita](../../../standard/base-types/composite-formatting.md)
 - [Interpolazione di stringhe](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

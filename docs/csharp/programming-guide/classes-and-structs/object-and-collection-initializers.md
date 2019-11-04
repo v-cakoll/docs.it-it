@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1f8ae023c414f8762139b194a9a8274218d0b5aa
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596569"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419376"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inizializzatori di oggetto e di raccolte (Guida per programmatori C#)
 
@@ -126,5 +126,5 @@ I metodi `Add` possono usare la parola chiave `params` per accettare un numero v
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Espressioni di query LINQ](../linq-query-expressions/index.md)
+- [LINQ in C#](../../linq/index.md)
 - [Tipi anonimi](anonymous-types.md)

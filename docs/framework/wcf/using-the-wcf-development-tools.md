@@ -2,12 +2,12 @@
 title: Utilizzo degli strumenti di sviluppo WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 27cefb1ca1f4748f0d074ffdcd47cd6faa29da00
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320278"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420689"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizzo degli strumenti di sviluppo WCF
 Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono risultare utili per lo sviluppo di WCFservice.  
@@ -39,7 +39,7 @@ Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono r
   
  È inoltre possibile modificare l'accesso mediante lo strumento Netsh.exe disponibile in [!INCLUDE[wv](../../../includes/wv-md.md)] utilizzando l'account di amministratore con privilegi elevati. Di seguito è riportato un esempio di utilizzo di Netsh.exe.  
   
-```  
+```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   

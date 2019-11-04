@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141357"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423031"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Pulizia delle risorse non gestite
 
@@ -25,7 +25,7 @@ Per la maggior parte degli oggetti creati dall'app, le attività di gestione del
 
 Se i tipi utilizzano risorse non gestite, è necessario effettuare le operazioni seguenti:
 
-- Implementare lo [schema Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). A tale scopo è necessario fornire un'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> per abilitare il rilascio deterministico delle risorse non gestite. Un consumer del tipo in uso chiama <xref:System.IDisposable.Dispose%2A> quando l'oggetto e le risorse che utilizza non sono più necessari. Il metodo <xref:System.IDisposable.Dispose%2A> rilascia immediatamente le risorse non gestite.
+- Implementare lo [schema Dispose](implementing-dispose.md). A tale scopo è necessario fornire un'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> per abilitare il rilascio deterministico delle risorse non gestite. Un consumer del tipo in uso chiama <xref:System.IDisposable.Dispose%2A> quando l'oggetto e le risorse che utilizza non sono più necessari. Il metodo <xref:System.IDisposable.Dispose%2A> rilascia immediatamente le risorse non gestite.
 
 - Impostare il rilascio delle risorse non gestite nel caso in cui un consumer del tipo in uso ometta di chiamare <xref:System.IDisposable.Dispose%2A>. Questo risultato può essere raggiunto in due modi:
 
@@ -39,7 +39,7 @@ I consumer del tipo in uso possono quindi chiamare l'implementazione <xref:Syste
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Implementazione di un metodo Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md): descrive come implementare il [criterio Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) per il rilascio delle risorse non gestite.
+[Implementazione di un metodo Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md): descrive come implementare il [criterio Dispose](implementing-dispose.md) per il rilascio delle risorse non gestite.
 
 [Uso di oggetti che implementano IDisposable](../../../docs/standard/garbage-collection/using-objects.md): descrive come i consumer di un determinato tipo garantiscono che venga chiamata l'implementazione <xref:System.IDisposable.Dispose%2A> corrispondente. A tale scopo, si consiglia l'utilizzo dell'istruzione `using` in C# o l'istruzione `Using` in Visual Basic.
 
