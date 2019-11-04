@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601969"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422571"
 ---
 # <a name="protected-c-reference"></a>protected (Riferimenti per C#)
 
@@ -49,7 +49,7 @@ Se si impostano i livelli di accesso di `x` e `y` su [privato](private.md), il c
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -58,7 +58,7 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

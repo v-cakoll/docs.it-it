@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017657"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460406"
 ---
 # <a name="control-styles-and-templates"></a>Stili e modelli di Control
-I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando il <xref:System.Windows.Controls.ControlTemplate> di tale controllo. Non è possibile sostituire solo una parte della struttura visiva di un controllo. Per modificare la struttura ad albero visuale di un controllo è necessario impostare il <xref:System.Windows.Controls.Control.Template%2A> proprietà del controllo per il nuovo e completo <xref:System.Windows.Controls.ControlTemplate>.  
+I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando la <xref:System.Windows.Controls.ControlTemplate> di tale controllo. Non è possibile sostituire solo parte della struttura ad albero visuale di un controllo; per modificare la struttura ad albero visuale di un controllo, è necessario impostare la proprietà <xref:System.Windows.Controls.Control.Template%2A> del controllo sul <xref:System.Windows.Controls.ControlTemplate>nuovo e completo.  
   
  I temi del desktop determinano quale dizionario risorse viene usato. Per ottenere i dizionari risorse per i temi del desktop, vedere [Temi WPF predefiniti](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
@@ -33,7 +33,7 @@ I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:Syst
 |Royale.NormalColor.xaml|Tema predefinito nel sistema operativo Windows XP Media Center Edition.|  
 |Aero.NormalColor.xaml|Tema predefinito nel sistema operativo Windows Vista.|  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Stili e modelli di Button](button-styles-and-templates.md)  
  [Stili e modelli di Calendar](calendar-styles-and-templates.md)  
  [Stili e modelli di CheckBox](checkbox-styles-and-templates.md)  
@@ -50,24 +50,24 @@ I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:Syst
  [Stili e modelli di ListView](listview-styles-and-templates.md)  
  [Stili e modelli di Menu](menu-styles-and-templates.md)  
  [Stili e modelli di NavigationWindow](navigationwindow-styles-and-templates.md)  
- [PasswordBox stili e modelli](passwordbox-styles-and-templates.md)  
+ [Stili e modelli PasswordBox](passwordbox-styles-and-templates.md)  
  [Stili e modelli di ProgressBar](progressbar-styles-and-templates.md)  
  [Stili e modelli di RadioButton](radiobutton-styles-and-templates.md)  
- [I modelli e stili di RepeatButton](repeatbutton-styles-and-templates.md)  
+ [Stili e modelli di RepeatButton](repeatbutton-styles-and-templates.md)  
  [Stili e modelli di ScrollBar](scrollbar-styles-and-templates.md)  
  [Stili e modelli di ScrollViewer](scrollviewer-styles-and-templates.md)  
  [Stili e modelli di Slider](slider-styles-and-templates.md)  
  [Stili e modelli di StatusBar](statusbar-styles-and-templates.md)  
  [Stili e modelli di TabControl](tabcontrol-styles-and-templates.md)  
  [Stili e modelli di TextBox](textbox-styles-and-templates.md)  
- [Thumb stili e modelli](thumb-styles-and-templates.md)  
- [ToggleButton stili e modelli](togglebutton-styles-and-templates.md)  
+ [Stili e modelli Thumb](thumb-styles-and-templates.md)  
+ [Stili e modelli di ToggleButton](togglebutton-styles-and-templates.md)  
  [Stili e modelli di ToolBar](toolbar-styles-and-templates.md)  
  [Stili e modelli di ToolTip](tooltip-styles-and-templates.md)  
  [Stili e modelli di TreeView](treeview-styles-and-templates.md)  
  [Stili e modelli di Window](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
@@ -75,4 +75,4 @@ I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:Syst
 ## <a name="related-sections"></a>Sezioni correlate  
  [Cenni preliminari sulla modifica di controlli](control-authoring-overview.md)  
   
- [Applicazione di stili e modelli](styling-and-templating.md)
+ [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

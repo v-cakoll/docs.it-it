@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92bf49ac1ae67fb8d2e268eeaaf63cd72d9f6251
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938710"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458809"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entità carattere XML e XAML
 XAML usa entità carattere definite in XML per i caratteri speciali. Questo argomento descrive alcune entità carattere specifiche e fornisce considerazioni generali sugli altri concetti XML in XAML.  
@@ -36,7 +36,7 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
   
  L'eccezione principale è costituita dalle parentesi graffe ({ e }), che in XAML sono significative in quanto indicano a un processore XAML di interpretare come estensione di markup una sequenza di caratteri racchiusa tra parentesi graffe. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
- È comunque ancora possibile visualizzare le parentesi come caratteri letterali usando una sequenza di escape caratteristica di XAML, anziché di XML. Per altre informazioni, vedere [ {} sequenza di Escape - estensione di Markup](escape-sequence-markup-extension.md).  
+ È comunque ancora possibile visualizzare le parentesi come caratteri letterali usando una sequenza di escape caratteristica di XAML, anziché di XML. Per altre informazioni, vedere [{} sequenza di escape-estensione di markup](escape-sequence-markup-extension.md).  
   
  Si noti che una barra rovesciata (\\) non richiede una sequenza di escape quando viene gestita come una stringa.  
   
@@ -47,12 +47,12 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
 |Carattere|Entità|Note|  
 |---------------|------------|-----------|  
 |& (e commerciale)|\&amp;|Deve essere usato per i valori di attributo e per il contenuto di un elemento.|  
-|> (maggiore-carattere maggiore di)|\&gt;|Deve essere usato per un valore di attributo, ma > è accettabile come contenuto di un elemento, purché < non sia preceduto da.|  
-|< (minore-carattere maggiore di)|\&lt;|Deve essere usato per un valore di attributo, ma \< è accettabile come contenuto di un elemento, purché > non è conforme.|  
+|> (carattere maggiore di)|\&gt;|Deve essere usato per un valore di attributo, ma > è accettabile come contenuto di un elemento purché < non lo preceda.|  
+|< (carattere minore di)|\&lt;|Deve essere usato per un valore di attributo, ma \< è accettabile come contenuto di un elemento purché > non lo segua.|  
 |'' (virgolette)|\&quot;|Deve essere usato per un valore di attributo, ma le virgolette (") sono accettabili come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
 |' (virgoletta singola)|\&apos;|Deve essere usato per un valore di attributo, ma la virgoletta singola (') è accettabile come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
-|(mapping dei caratteri numerici)|&#*[intero]* ; o & #x10 *[esadecimale]*;|XAML supporta i mapping dei caratteri numerici nella codifica attiva.|  
-|(spazio unificatore)|&\#160; (presupponendo che la codifica UTF-8)|Per elementi di documenti dinamici o elementi che accettano testo, come ad esempio gli oggetti <xref:System.Windows.Controls.TextBox> di WPF, gli spazi unificatori non vengono normalizzati all'esterno del markup e questo vale anche per `xml:space="default"`. (Per altre informazioni, vedere [l'elaborazione in XAML gli spazi vuoti](whitespace-processing-in-xaml.md).)|  
+|(mapping dei caratteri numerici)|&# *[integer]* ; o & #x *[hex]* ;|XAML supporta i mapping dei caratteri numerici nella codifica attiva.|  
+|(spazio unificatore)|&\#160; (presupponendo la codifica UTF-8)|Per elementi di documenti dinamici o elementi che accettano testo, come ad esempio gli oggetti <xref:System.Windows.Controls.TextBox> di WPF, gli spazi unificatori non vengono normalizzati all'esterno del markup e questo vale anche per `xml:space="default"`. Per ulteriori informazioni, vedere [elaborazione di spazi vuoti in XAML](whitespace-processing-in-xaml.md).|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>Formato di commento XML  
@@ -60,11 +60,11 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
   
 <a name="xml_processing_instructions"></a>   
 ## <a name="xml-processing-instructions"></a>Istruzioni di elaborazione XML  
- XAML gestisce le istruzioni di elaborazione XML in conformità alle specifiche XML, in base alle quali le istruzioni devono essere passate. XAML nei servizi XAML di .NET Framework di elaborazione non usa le istruzioni di elaborazione. Gli altri framework esistenti che usano XAML non usano istruzioni di elaborazione di XAML.  
+ XAML gestisce le istruzioni di elaborazione XML in conformità alle specifiche XML, in base alle quali le istruzioni devono essere passate. L'elaborazione XAML nei servizi XAML .NET Framework non utilizza istruzioni di elaborazione. Gli altri framework esistenti che usano XAML non usano istruzioni di elaborazione di XAML.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Grammatica XamlName](xamlname-grammar.md)
-- [L'elaborazione in XAML gli spazi vuoti](whitespace-processing-in-xaml.md)
+- [Elaborazione di spazi vuoti in XAML](whitespace-processing-in-xaml.md)

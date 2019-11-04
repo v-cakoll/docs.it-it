@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ab38c2c885e230183852fff895e0a8a8f1d7a666
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582314"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459483"
 ---
 # <a name="themedictionary-markup-extension"></a>Estensione di markup ThemeDictionary
 Offre agli autori di controlli personalizzati o alle applicazioni che integrano controlli di terze parti un modo per caricare dizionari di risorse specifici del tema da usare per l'applicazione di stili al controllo.  
@@ -66,6 +66,6 @@ Offre agli autori di controlli personalizzati o alle applicazioni che integrano 
 ## <a name="see-also"></a>Vedere anche
 
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
-- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md)

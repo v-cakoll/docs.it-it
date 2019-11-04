@@ -8,22 +8,22 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981890"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458703"
 ---
 # <a name="resources-wpf"></a>Risorse (WPF)
-Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. WPF supporta diversi tipi di risorse. Queste risorse sono principalmente due tipi di risorse: Risorse XAML e i file di dati di risorse. Esempi di risorse XAML includono i pennelli e stili. File di dati di risorse sono file di dati non eseguibili necessarie per un'applicazione.  
+Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. WPF supporta diversi tipi di risorse. Queste risorse sono principalmente due tipi di risorse: risorse XAML e file di dati delle risorse. Esempi di risorse XAML includono pennelli e stili. I file di dati delle risorse sono file di dati non eseguibili necessari per un'applicazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Risorse XAML](xaml-resources.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URI di tipo pack in WPF](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.ResourceDictionary>  
   
  [Estensione di markup StaticResource](staticresource-markup-extension.md)  

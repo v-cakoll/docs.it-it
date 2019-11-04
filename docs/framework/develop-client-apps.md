@@ -13,33 +13,30 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051989"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457983"
 ---
-# <a name="developing-client-applications-with-the-net-framework"></a>Sviluppo di applicazioni client con .NET Framework
+# <a name="develop-client-applications-with-the-net-framework"></a>Sviluppare applicazioni client con la .NET Framework
 
-Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework. È possibile usare uno di questi strumenti e framework: 
+Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework. È possibile usare uno di questi strumenti e framework:
 
 - [Piattaforma UWP (Universal Windows Platform)](https://developer.microsoft.com/windows/apps)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Form](./winforms/index.md)
 
 Questa sezione include argomenti che descrivono come creare applicazioni basate su Windows con Windows Presentation Foundation o Windows Form. Tuttavia, è anche possibile creare applicazioni Web con .NET Framework e applicazioni client per computer o dispositivi da rendere disponibili tramite Microsoft Store.
- 
-## <a name="in-this-section"></a>Contenuto della sezione
+
+## <a name="in-this-section"></a>In questa sezione
 
 [Windows Presentation Foundation](./wpf/index.md)  
 Vengono fornite informazioni sullo sviluppo di applicazioni con WPF.
 
 [Windows Form](./winforms/index.md)  
 Vengono fornite informazioni sullo sviluppo di applicazioni con Windows Form.
-
-[Tecnologie client comuni](./common-client-technologies/index.md)  
-Vengono fornite informazioni sulle tecnologie aggiuntive utilizzabili durante lo sviluppo di applicazioni client.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

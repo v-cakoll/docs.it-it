@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 56d795d309aec98d43bfba506cbc4e862f13cc68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131547"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424963"
 ---
 # <a name="framework-libraries"></a>Librerie del framework
 
@@ -26,7 +26,7 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 
 .NET include un set di tipi primitivi, che vengono usati in tutti i programmi (a diversi livelli). Questi tipi contengono dati, ad esempio numeri, stringhe, byte e oggetti arbitrari. Il linguaggio C# include parole chiave per questi tipi. Un set di esempio di questi tipi è elencato di seguito, con le parole chiave del linguaggio C# corrispondenti.
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): classe di base principale nel sistema di tipo CLR. È la radice della gerarchia dei tipi.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)): classe di base principale nel sistema di tipo CLR. È la radice della gerarchia dei tipi.
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo intero con segno a 16 bit. È anche disponibile il tipo <xref:System.UInt16> senza segno.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo intero con segno a 32 bit. È anche disponibile il tipo [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) senza segno.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): tipo a virgola mobile a 32 bit.
@@ -34,7 +34,7 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo intero senza segno a 8 bit che rappresenta un byte di memoria.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano che rappresenta `true` o `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): tipo numerico a 16 bit che rappresenta un carattere Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): rappresenta una serie di caratteri. Diverso dal tipo `char[]`, ma consente l'indicizzazione in ogni singolo `char` di `string`.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)): rappresenta una serie di caratteri. Diverso dal tipo `char[]`, ma consente l'indicizzazione in ogni singolo `char` di `string`.
 
 ## <a name="data-structures"></a>Strutture di dati
 

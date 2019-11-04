@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934503"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459278"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
 
-Gli attributi possono essere utilizzati per controllare la serializzazione XML di un oggetto o per creare un flusso XML alternativo dallo stesso set di classi. Per altre informazioni sulla creazione di un flusso XML alternativo, vedere [come: Specificare un nome di elemento alternativo per un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Gli attributi possono essere utilizzati per controllare la serializzazione XML di un oggetto o per creare un flusso XML alternativo dallo stesso set di classi. Per altri dettagli sulla creazione di un flusso XML alternativo, vedere [Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Se il XML generato sia conforme alla sezione 5 del documento del World Wide Web Consortium (W3C) intitolata [SOAP Simple Object Access Protocol () 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), usare gli attributi elencati in [gli attributi che controllo con codifica SOAP Serializzazione](attributes-that-control-encoded-soap-serialization.md).
+> Se il codice XML generato deve essere conforme alla sezione 5 del documento World Wide Web Consortium (W3C) denominato [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilizzare gli attributi elencati negli [attributi che controllano la serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md).
 
 Per impostazione predefinita, un nome di elemento XML è determinato dal nome della classe o del membro. In una classe semplice denominata `Book` un campo denominato `ISBN` produrrà un tag di elemento XML \<ISBN>, come illustra l'esempio riportato di seguito.
 
@@ -70,7 +70,7 @@ Per altre informazioni sugli attributi, vedere [Attributi](../../../docs/standar
 
 ## <a name="controlling-array-serialization"></a>Controllo della serializzazione di matrice
 
-Gli attributi <xref:System.Xml.Serialization.XmlArrayAttribute> e <xref:System.Xml.Serialization.XmlArrayItemAttribute> sono progettati per controllare la serializzazione delle matrici. Uso di questi attributi, è possibile controllare il nome dell'elemento, lo spazio dei nomi e tipo di dati XSD (XML Schema) (come definito nel documento di World Wide Web Consortium [www.w3.org] intitolato "XML Schema Part 2: Tipi di dati"). È inoltre possibile specificare i tipi che possono essere inclusi in una matrice.
+Gli attributi <xref:System.Xml.Serialization.XmlArrayAttribute> e <xref:System.Xml.Serialization.XmlArrayItemAttribute> sono progettati per controllare la serializzazione delle matrici. Tramite l'utilizzo di questi attributi, è possibile controllare il nome dell'elemento, lo spazio dei nomi e tipo di dati XML Schema (XSD) (come definito nel documento intitolato "XML Schema Part 2: Datatypes" del World Wide Web Consortium [www.w3.org]). È inoltre possibile specificare i tipi che possono essere inclusi in una matrice.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> determinerà le proprietà dell'elemento XML di inclusione risultante dalla serializzazione di una matrice. Ad esempio, la serializzazione della matrice riportata di seguito, per impostazione predefinita comporterà la creazione di un elemento XML denominato `Employees`. L'elemento `Employees` conterrà una serie di elementi denominati dopo il tipo di matrice `Employee`.
 
@@ -202,7 +202,7 @@ Un'istanza serializzata potrebbe assomigliare agli elementi seguenti.
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
@@ -241,7 +241,7 @@ Un'istanza serializzata potrebbe assomigliare agli elementi seguenti.
 </Group>
 ```
 
-Un altro modo per differenziare i due flussi XML è quello di utilizzare lo strumento XML Schema Definition per generare i file del documento XML Schema (XSD) dal codice compilato. Per altri dettagli sull'uso dello strumento, vedere [Strumento XML Schema Definition e serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md). Se al campo non è applicato alcun attributo, lo schema descrive l'elemento nel modo riportato di seguito.
+Un altro modo per differenziare i due flussi XML è quello di utilizzare lo strumento XML Schema Definition per generare i file del documento XML Schema (XSD) dal codice compilato. Per ulteriori informazioni sull'utilizzo dello strumento, vedere [lo strumento XML Schema Definition e la serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md). Quando al campo non viene applicato alcun attributo, lo schema descrive l'elemento nel modo seguente.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -321,6 +321,6 @@ Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblic
 - [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)
 - [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
 - [Esempi di serializzazione XML](examples-of-xml-serialization.md)
-- [Procedura: Specificare un nome di elemento alternativo per un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
-- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)
+- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)

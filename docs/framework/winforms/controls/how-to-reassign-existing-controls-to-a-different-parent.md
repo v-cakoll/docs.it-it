@@ -1,26 +1,26 @@
 ---
-title: 'Procedura: Riassegnare i controlli esistenti a un elemento padre diverso'
+title: 'Procedura: riassegnare i controlli esistenti a un padre diverso'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1767fcff1742f4ad630b4b996c709b7ded53a129
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987032"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459206"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedura: Riassegnare i controlli esistenti a un padre diverso
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedura: riassegnare i controlli esistenti a un padre diverso
 
 È possibile assegnare i controlli presenti nel form a un nuovo controllo contenitore.
 
-1. In Visual Studio trascinare tre <xref:System.Windows.Forms.Button> controlli dalla **casella degli strumenti** nel form. Posizionarli uno accanto a altro, ma lasciarli non allineati.
+1. In Visual Studio trascinare tre controlli <xref:System.Windows.Forms.Button> dalla **casella degli strumenti** nel form. Posizionarli uno accanto a altro, ma lasciarli non allineati.
 
 2. Nella **Casella degli strumenti**fare clic sull'icona del controllo <xref:System.Windows.Forms.FlowLayoutPanel> . Non trascinare l'icona nel form.
 
@@ -42,5 +42,5 @@ ms.locfileid: "69987032"
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procedura dettagliata: Disposizione di controlli in Windows Forms tramite TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione di controlli in Windows Forms mediante guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: 7392be182aedeeebe6b7092f9868c1fabfaafcb7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963452"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458732"
 ---
 # <a name="staticresource-markup-extension"></a>Estensione del markup StaticResource
-Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributo di proprietà cercando un riferimento a una risorsa già definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di caricamento, che cercherà le risorse caricate in precedenza dal markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] della pagina corrente, nonché altre origini applicazione, e genererà il valore della risorsa come valore della proprietà negli oggetti Run-Time.  
+Fornisce un valore per qualsiasi attributo di proprietà [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] cercando un riferimento a una risorsa già definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di caricamento, che cercherà le risorse che sono state caricate in precedenza dal markup della pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] corrente, nonché altre origini applicazione, e genereranno il valore della risorsa come proprietà. valore negli oggetti della fase di esecuzione.  
   
 ## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
@@ -38,22 +38,22 @@ Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/t
   
 |||  
 |-|-|  
-|`key`|Chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dalla [direttiva x:Key](../../xaml-services/x-key-directive.md) se una risorsa è stata creata nel markup oppure è stata fornita `key` come parametro quando <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> si chiama se la risorsa è stata creata nel codice.|  
+|`key`|Chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dalla [direttiva x:Key](../../xaml-services/x-key-directive.md) se una risorsa è stata creata nel markup oppure è stata fornita come parametro di `key` quando viene chiamata <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se la risorsa è stata creata nel codice.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
-> Un `StaticResource` oggetto non deve tentare di creare un riferimento in avanti a una risorsa definita in modo lessicale all' [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] interno del file. Il tentativo di eseguire questa operazione non è supportato e anche se un riferimento di questo tipo non ha esito negativo, il tentativo di eseguire il riferimento in diretta comporterà un calo delle prestazioni <xref:System.Windows.ResourceDictionary> del tempo di caricamento quando viene eseguita la ricerca nelle tabelle hash interne che rappresentano. Per ottenere risultati ottimali, modificare la composizione dei dizionari risorse in modo che i riferimenti in diretta possano essere evitati. Se non è possibile evitare un riferimento in diretta, usare invece l' [estensione di markup DynamicResource](dynamicresource-markup-extension.md) .  
+> Un `StaticResource` non deve tentare di creare un riferimento in avanti a una risorsa definita in modo lessicale all'interno del file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Il tentativo di eseguire questa operazione non è supportato e anche se un riferimento di questo tipo non ha esito negativo, il tentativo di eseguire il riferimento in diretta comporterà un calo delle prestazioni del tempo di caricamento quando vengono cercate le tabelle hash interne che rappresentano un <xref:System.Windows.ResourceDictionary>. Per ottenere risultati ottimali, modificare la composizione dei dizionari risorse in modo che i riferimenti in diretta possano essere evitati. Se non è possibile evitare un riferimento in diretta, usare invece l' [estensione di markup DynamicResource](dynamicresource-markup-extension.md) .  
   
- L'oggetto <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> specificato deve corrispondere a una risorsa esistente, identificata con una [direttiva x:Key](../../xaml-services/x-key-directive.md) a un certo livello nella pagina, applicazione, i temi di controllo disponibili e le risorse esterne o le risorse di sistema. La ricerca di risorse viene eseguita nell'ordine specificato. Per altre informazioni sul comportamento di ricerca delle risorse per le risorse statiche e dinamiche, vedere [risorse XAML](xaml-resources.md).  
+ Il <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> specificato deve corrispondere a una risorsa esistente, identificata con una [direttiva x:Key](../../xaml-services/x-key-directive.md) a un certo livello nella pagina, applicazione, temi di controllo disponibili e risorse esterne o risorse di sistema. La ricerca di risorse viene eseguita nell'ordine specificato. Per altre informazioni sul comportamento di ricerca delle risorse per le risorse statiche e dinamiche, vedere [risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- Una chiave di risorsa può essere qualsiasi stringa definita nella [Grammatica XamlName](../../xaml-services/xamlname-grammar.md). Una chiave di risorsa può anche essere altri tipi di oggetto, ad <xref:System.Type>esempio. Una <xref:System.Type> chiave è fondamentale per il modo in cui i controlli possono essere disegnati in base ai temi, tramite una chiave di stile implicito. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).  
+ Una chiave di risorsa può essere qualsiasi stringa definita nella [Grammatica XamlName](../../xaml-services/xamlname-grammar.md). Una chiave di risorsa può essere anche altri tipi di oggetto, ad esempio un <xref:System.Type>. Una chiave <xref:System.Type> è fondamentale per il modo in cui i controlli possono essere disegnati in base ai temi, tramite una chiave di stile implicita. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).  
   
  Il mezzo dichiarativo alternativo per fare riferimento a una risorsa è come [estensione di markup DynamicResource](dynamicresource-markup-extension.md).  
   
  La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup. Il token di stringa fornito dopo la stringa dell'identificatore `StaticResource` viene assegnato come valore <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> della classe dell'estensione <xref:System.Windows.StaticResourceExtension> sottostante.  
   
- `StaticResource`può essere utilizzato nella sintassi dell'elemento oggetto. In questo caso, è necessario specificare il valore <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> della proprietà.  
+ `StaticResource` possibile utilizzare la sintassi dell'elemento oggetto. In questo caso, è necessario specificare il valore della proprietà <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>.  
   
  L'oggetto `StaticResource` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> come coppia proprietà=valore:  
   
@@ -63,7 +63,7 @@ Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/t
   
  L'utilizzo dettagliato spesso è utile per le estensioni con più proprietà da impostare o nel caso in cui alcune proprietà siano facoltative. Poiché `StaticResource` presenta una sola proprietà da impostare, obbligatoria, l'utilizzo dettagliato non è tipico.  
   
- Nell'implementazione del <xref:System.Windows.StaticResourceExtension> processore, la gestione di questa estensione di markup viene definita dalla classe. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ Nell'implementazione del processore [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la gestione di questa estensione di markup viene definita dalla classe <xref:System.Windows.StaticResourceExtension>.  
   
  `StaticResource` è un'estensione di markup. Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà. Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
@@ -72,5 +72,5 @@ Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/t
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
 - [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Risorse XAML](xaml-resources.md)
+- [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Risorse e codice](resources-and-code.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425279"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459778"
 ---
 # <a name="navigation-overview"></a>Cenni preliminari sulla navigazione
 
@@ -742,7 +742,7 @@ Come <xref:System.Windows.Controls.Frame>, per passare al codice HTML con <xref:
 
 ### <a name="navigating-to-custom-objects"></a>Spostamento in oggetti personalizzati
 
-Se sono presenti dati archiviati come oggetti personalizzati, un modo per visualizzare tali dati consiste nel creare un <xref:System.Windows.Controls.Page> con contenuto associato a tali oggetti (vedere [Cenni preliminari sul data binding](../data/data-binding-overview.md)). Se invece si preferisce evitare di creare un'intera pagina al solo scopo di visualizzare gli oggetti, è possibile spostarsi direttamente su di essi.
+Se sono presenti dati archiviati come oggetti personalizzati, un modo per visualizzare tali dati consiste nel creare un <xref:System.Windows.Controls.Page> con contenuto associato a tali oggetti (vedere [Cenni preliminari sul data binding](../../../desktop-wpf/data/data-binding-overview.md)). Se invece si preferisce evitare di creare un'intera pagina al solo scopo di visualizzare gli oggetti, è possibile spostarsi direttamente su di essi.
 
 Si consideri la classe `Person` implementata nel codice seguente.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920283"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459024"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.
@@ -54,7 +54,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 ## <a name="using-entire-objects-as-a-binding-source"></a>Uso di oggetti interi come origine del binding
  È possibile usare un oggetto intero come origine del binding. È possibile specificare un'origine di associazione usando la proprietà <xref:System.Windows.Data.Binding.Source%2A> o <xref:System.Windows.FrameworkElement.DataContext%2A>, quindi fornire una dichiarazione di binding vuota: `{Binding}`. Alcuni scenari per i quali questa possibilità risulta utile sono l'associazione a oggetti di tipo stringa, l'associazione a oggetti con più proprietà di interesse o l'associazione a oggetti Collection. Per un esempio di associazione a un intero oggetto Collection, vedere [Usare il modello Master-Detail con dati gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Affinché i dati siano significativi per la proprietà di destinazione associata, può essere necessario applicare logica personalizzata. La logica personalizzata può essere sotto forma di convertitore personalizzato (se la conversione di tipo predefinita non esiste) o di un <xref:System.Windows.DataTemplate>. Per altre informazioni sui convertitori, vedere la sezione sulla conversione dei dati in [Panoramica sul data binding](data-binding-overview.md). Per altre informazioni sui modelli di dati, vedere [Cenni preliminari sui modelli di dati](data-templating-overview.md).
+ Affinché i dati siano significativi per la proprietà di destinazione associata, può essere necessario applicare logica personalizzata. La logica personalizzata può essere sotto forma di convertitore personalizzato (se la conversione di tipo predefinita non esiste) o di un <xref:System.Windows.DataTemplate>. Per altre informazioni sui convertitori, vedere la sezione sulla conversione dei dati in [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md). Per altre informazioni sui modelli di dati, vedere [Cenni preliminari sui modelli di dati](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Uso di oggetti Collection come origine del binding
@@ -64,7 +64,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 
  La classe <xref:System.Collections.ObjectModel.ObservableCollection%601> è un'implementazione incorporata di una raccolta di dati che espone l'interfaccia <xref:System.Collections.Specialized.INotifyCollectionChanged>. I singoli oggetti dati nella raccolta devono soddisfare i requisiti descritti nelle sezioni precedenti. Per un esempio, vedere [Procedura: Creare ed eseguire l'associazione a una classe ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Prima di implementare una raccolta personalizzata, provare a usare <xref:System.Collections.ObjectModel.ObservableCollection%601> o una delle classi di raccolte esistenti, ad esempio <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>e <xref:System.ComponentModel.BindingList%601>, tra molti altri.
 
- WPF non esegue mai direttamente l'associazione a una raccolta. Se si specifica una raccolta come origine del binding, WPF esegue effettivamente il binding alla visualizzazione predefinita della raccolta stessa. Per informazioni sulle visualizzazioni predefinite, vedere [Panoramica sul data binding](data-binding-overview.md).
+ WPF non esegue mai direttamente l'associazione a una raccolta. Se si specifica una raccolta come origine del binding, WPF esegue effettivamente il binding alla visualizzazione predefinita della raccolta stessa. Per informazioni sulle visualizzazioni predefinite, vedere [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md).
 
  Se si dispone di uno scenario avanzato e si desidera implementare una raccolta personalizzata, è consigliabile utilizzare l'interfaccia <xref:System.Collections.IList>. <xref:System.Collections.IList> fornisce una raccolta non generica di oggetti a cui è possibile accedere singolarmente in base all'indice, che può migliorare le prestazioni.
 
@@ -97,6 +97,6 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Specificare l'origine di associazione](how-to-specify-the-binding-source.md)
-- [Panoramica sul data binding](data-binding-overview.md)
+- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
 - [Panoramica dei data binding WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Ottimizzare le prestazioni di data binding](../advanced/optimizing-performance-data-binding.md)

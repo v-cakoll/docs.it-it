@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202873"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420317"
 ---
 # <a name="how-to-search-strings"></a>Procedura: Cercare stringhe
 
@@ -19,7 +19,7 @@ ms.locfileid: "57202873"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Il tipo [string](../language-reference/keywords/string.md), che è un alias per la classe <xref:System.String?displayProperty=nameWithType>, fornisce diversi metodi utili per la ricerca dei contenuti di una stringa. Alcuni di questi sono <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> e <xref:System.String.LastIndexOf%2A>. La classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> offre un vocabolario avanzato per la ricerca di modelli nel testo. In questo articolo vengono illustrate queste tecniche e viene spiegato come scegliere il metodo migliore per le specifiche esigenze.
+Il tipo [string](../language-reference/builtin-types/reference-types.md#the-string-type), che è un alias per la classe <xref:System.String?displayProperty=nameWithType>, fornisce diversi metodi utili per la ricerca dei contenuti di una stringa. Alcuni di questi sono <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> e <xref:System.String.LastIndexOf%2A>. La classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> offre un vocabolario avanzato per la ricerca di modelli nel testo. In questo articolo vengono illustrate queste tecniche e viene spiegato come scegliere il metodo migliore per le specifiche esigenze.
 
 ## <a name="does-a-string-contain-text"></a>Una stringa contiene testo?
 

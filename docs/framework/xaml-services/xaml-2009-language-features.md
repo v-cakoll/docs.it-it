@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac18be4732d223561d3a0afcef0e650587385822
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938804"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459887"
 ---
 # <a name="xaml-2009-language-features"></a>Funzionalità del linguaggio XAML 2009
-XAML 2009 è il termine abbreviato per le nuove funzionalità del linguaggio XAML che estendono la specifica del linguaggio XAML esistente. XAML 2009 introduce varie nuove direttive e costrutti. Sono inclusi il [X:Arguments Directive](x-arguments-directive.md); il [direttiva X:FactoryMethod](x-factorymethod-directive.md); il [X:Reference Markup Extension](x-reference-markup-extension.md); il [direttiva X:TypeArguments ](x-typearguments-directive.md); e i tipi nativi per primitive di linguaggio comuni (ad esempio `x:Char`).  
+XAML 2009 è il termine abbreviato per le nuove funzionalità del linguaggio XAML che estendono la specifica del linguaggio XAML esistente. XAML 2009 introduce varie nuove direttive e costrutti. Che includono la [direttiva x:Arguments](x-arguments-directive.md); [direttiva x:FactoryMethod](x-factorymethod-directive.md); [estensione di markup x:Reference](x-reference-markup-extension.md); [direttiva x:TypeArguments](x-typearguments-directive.md); e tipi incorporati per le primitive di linguaggio comuni, ad esempio `x:Char`.  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Supporto XAML 2009 in WPF e Visual Studio  
@@ -34,4 +34,4 @@ XAML 2009 è il termine abbreviato per le nuove funzionalità del linguaggio XAM
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

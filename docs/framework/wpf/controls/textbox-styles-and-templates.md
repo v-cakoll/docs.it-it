@@ -9,40 +9,40 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c4680a3ea9352e94d628e786fc8e4fd71018d00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790871"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458247"
 ---
 # <a name="textbox-styles-and-templates"></a>Stili e modelli di TextBox
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.TextBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TextBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="textbox-parts"></a>Parti del controllo TextBox  
- La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.TextBox> controllo.  
+## <a name="textbox-parts"></a>Parti casella di testo  
+ Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TextBox>.  
   
-|Parte|Tipo|Descrizione|  
+|Parte|Digitare|Descrizione|  
 |-|-|-|  
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Un elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo del <xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
   
-## <a name="textbox-states"></a>Gli stati nella casella di testo  
- La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.TextBox> controllo.  
+## <a name="textbox-states"></a>Stati TextBox  
+ Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TextBox>.  
   
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
-|ReadOnly|CommonStates|L'utente non è possibile modificare il testo nel <xref:System.Windows.Controls.TextBox>.|  
+|ReadOnly|CommonStates|L'utente non può modificare il testo nel <xref:System.Windows.Controls.TextBox>.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
-|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
-|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
+|Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non ha lo stato attivo.|  
   
-## <a name="textbox-controltemplate-example"></a>Esempio di ControlTemplate nella casella di testo  
- Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.TextBox> controllo.  
+## <a name="textbox-controltemplate-example"></a>Esempio di ControlTemplate TextBox  
+ Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.TextBox>.  
   
  [!code-xaml[ControlTemplateExamples#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
   
@@ -58,5 +58,5 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

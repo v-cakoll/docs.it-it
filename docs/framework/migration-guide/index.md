@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126309"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457958"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Guida di migrazione a .NET Framework 4.8, 4.7, 4.6 e 4.5
 
@@ -25,7 +25,7 @@ Esaminare i documenti seguenti prima di eseguire la migrazione dell'app da versi
 
 - Vedere [Versioni e dipendenze](versions-and-dependencies.md) per conoscere la versione CLR sottostante a ogni versione di .NET Framework e rivedere le linee guida per specificare le app come destinazione.
 
-- Consultare [Compatibilità delle applicazioni](application-compatibility.md) per ottenere informazioni sul runtime e sulle modifiche di reindirizzamento che potrebbero interessare l'app e su come gestirle.
+- Esaminare la [compatibilità delle applicazioni](application-compatibility.md) per ottenere informazioni sul runtime e sulle modifiche di reindirizzamento che potrebbero influire sull'app e su come gestirli.
 
 - Consultare [Elementi obsoleti nella libreria di classi](../whats-new/whats-obsolete.md) per determinare i tipi o i membri del codice resi obsoleti e le alternative consigliate.
 

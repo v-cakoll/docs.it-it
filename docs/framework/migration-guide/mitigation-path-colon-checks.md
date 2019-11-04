@@ -2,12 +2,12 @@
 title: 'Mitigazione: Verifica della presenza dei due punti nel percorso'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: ee71f6ef1e70509e772aee2cc75d00c33122a92e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126225"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457905"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigazione: Verifica della presenza dei due punti nel percorso
 A partire dalle applicazioni destinate a .NET Framework 4.6.2, sono state apportate alcune modifiche per supportare i percorsi in precedenza non supportati, sia in termini di lunghezza che di formato. In particolare, i controlli per la sintassi del separatore dell'unità appropriata (due punti) sono stati resi più corretti.  
@@ -32,4 +32,4 @@ A partire dalle applicazioni destinate a .NET Framework 4.6.2, sono state apport
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di reindirizzamento](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Compatibilità delle applicazioni](application-compatibility.md)

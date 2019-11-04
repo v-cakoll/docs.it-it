@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039452"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458111"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Pattern di controllo di automazione interfaccia utente per i client
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039452"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Controlli con pattern variabili  
- Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato. Esempi di controlli che possono avere pattern variabili sono le visualizzazioni elenco (anteprime, riquadri, icone, elenchi, dettagli), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafici (a torta, a linee, a barre, valore della cella con una formula), area documento [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normale, layout Web, struttura, layout di stampa, anteprima di stampa) e Interfacce di Media Player di Microsoft Windows.  
+ Alcuni tipi di controllo supportano pattern diversi a seconda dello stato del controllo o del modo in cui questo viene usato. Esempi di controlli che possono avere pattern variabili sono le visualizzazioni elenco (anteprime, riquadri, icone, elenchi, dettagli), grafici di Microsoft Excel (a torta, a linee, a barre, valore della cella con una formula), area documento di Microsoft Word (normale, layout Web, struttura, layout di stampa, stampa Anteprima) e Microsoft Windows Media Player Skins.  
   
  I controlli che implementano i tipi di controllo personalizzati possono disporre di qualsiasi set di pattern di controllo necessario per la rappresentazione delle funzionalità dei controlli stessi.  
   

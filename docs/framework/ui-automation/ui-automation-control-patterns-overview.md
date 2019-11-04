@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131506"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458089"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131506"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usata per i controlli che possono essere ancorati in un contenitore di ancoraggio, ad esempio barre degli strumenti o caselle di strumenti.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usata per i controlli che possono essere espansi o compressi, ad esempio voci di menu in un'applicazione, come il menu **File** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usata per i controlli che supportano la funzionalità di griglia, come il ridimensionamento e spostamento in una cella specificata, ad esempio la visualizzazione Icone grandi in Esplora risorse o le tabelle semplici senza intestazioni in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usata per i controlli che supportano la funzionalità di griglia, come il ridimensionamento e spostamento in una cella specificata, Ad esempio, la visualizzazione icone grandi in Esplora risorse o le tabelle semplici senza intestazioni in Microsoft Word.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usata per i controlli contenenti celle all'interno di griglie. Le singole celle devono supportare il pattern GridItem. Ad esempio, ogni cella nella visualizzazione dettagli di Esplora risorse di Microsoft Windows.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Usata per i controlli che possono essere richiamati, ad esempio un pulsante.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Usata per i controlli che possono passare tra più rappresentazioni dello stesso set di informazioni, dati o elementi figlio. Ad esempio, un controllo visualizzazione elenco in cui i dati sono disponibili nelle visualizzazioni anteprima, affiancata, icona, elenco o dettagliata.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131506"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Usata per i controlli contenenti elementi in un elenco che supporta lo scorrimento, ad esempio un elenco contenente singoli elementi nell'elenco a scorrimento, ad esempio un controllo casella combinata.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Usata per i controlli contenitore di selezione, ad esempio caselle di riepilogo e caselle combinate.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Usata per i singoli elementi nei controlli contenitore di selezione, ad esempio caselle di riepilogo e caselle combinate.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Usata per i controlli che dispongono di una griglia e di informazioni di intestazione, ad esempio, i fogli di lavoro di [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] .|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Usata per i controlli che dispongono di una griglia e di informazioni di intestazione, Ad esempio, i fogli di lavoro di Microsoft Excel.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Usata per gli elementi in una tabella.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Usata per i controlli di modifica e i documenti che espongono informazioni testuali.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Usata per i controlli in cui è possibile passare alternativamente tra stati, ad esempio caselle di controllo e voci di menu selezionabili.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Usata per i controlli che è possibile ridimensionare, spostare e ruotare. Il pattern di controllo Transform viene in genere usato in finestre di progettazione, moduli, editor grafici e applicazioni di disegno.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Consente ai client di ottenere o impostare un valore per i controlli che non supportano un intervallo di valori, ad esempio, un controllo di selezione di data e ora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo Microsoft Windows. Esempi di controlli Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Esplora risorse di Microsoft Windows e così via), le finestre figlio dell'interfaccia a documenti multipli (MDI) e le finestre di dialogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo Microsoft Windows. Esempi di controlli Windows sono le finestre dell'applicazione di primo livello (Microsoft Word, Microsoft Windows Explorer e così via), le finestre figlio MDI (Multiple Document Interface) e le finestre di dialogo.|  
   
 ## <a name="see-also"></a>Vedere anche
 

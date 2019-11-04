@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Allineare più controlli in Windows Forms'
+title: 'Procedura: allineare più controlli in Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 334fdfa1c563844daf30eb4ee66dd66371e4774b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 48441fe7c7c2745638a8aa95fd899d7e55697e85
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987014"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459478"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: Allineare più controlli in Windows Forms
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: allineare più controlli in Windows Form
 
 Per standardizzare il layout dell'interfaccia utente dell'applicazione basata su Windows, è possibile posizionare gruppi di controlli con un unico comando.
 
@@ -32,10 +32,10 @@ Per standardizzare il layout dell'interfaccia utente dell'applicazione basata su
 ## <a name="see-also"></a>Vedere anche
 
 - [Controlli Windows Form](index.md)
-- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Aggiungere controlli a un Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
-- [Procedura dettagliata: Disposizione di controlli in Windows Forms mediante guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Procedura dettagliata: Disposizione di controlli in Windows Forms tramite TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione di controlli in Windows Forms tramite FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura: Riassegnare i controlli esistenti a un padre diverso](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura: Riassegnare i controlli esistenti a un'entità principale diversa](how-to-reassign-existing-controls-to-a-different-parent.md)

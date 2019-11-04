@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920345"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458309"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e la gestione degli eventi WPF
 Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare la parola chiave `Handles` specifica del linguaggio per associare i gestori eventi alle istanze, anziché collegare i gestori eventi agli attributi o usare il metodo <xref:System.Windows.UIElement.AddHandler%2A>. Tuttavia, la tecnica `Handles` per collegare gestori alle istanze presenta alcuni limiti, in quanto la sintassi `Handles` non è in grado di supportare alcune delle funzioni degli eventi indirizzati specifiche del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -47,4 +47,4 @@ Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
-- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

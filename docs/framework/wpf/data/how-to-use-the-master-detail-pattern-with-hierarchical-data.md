@@ -1,42 +1,42 @@
 ---
-title: 'Procedura: Usare il modello Master-Details con dati gerarchici'
+title: 'Procedura: utilizzare il modello Master-Details con dati gerarchici'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931892"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459088"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: Usare il modello Master-Details con dati gerarchici
-In questo esempio viene illustrato come implementare lo scenario master-dettagli.  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: utilizzare il modello Master-Details con dati gerarchici
+Questo esempio illustra come implementare lo scenario Master-Details.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio `LeagueList` è una raccolta di `Leagues`. Ciascuna `League` ha un `Name` e una raccolta di `Divisions`e ogni `Division` ha un nome e una raccolta di `Teams`. Ogni `Team` ha un nome.  
+ In questo esempio `LeagueList` è una raccolta di `Leagues`. Ogni `League` dispone di un `Name` e una raccolta di `Divisions`e ogni `Division` ha un nome e una raccolta di `Teams`. Ogni `Team` ha un nome del team.  
   
  [!code-xaml[MasterDetail#HowTo1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
 [!code-xaml[MasterDetail#HowTo2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
- Lo screenshot seguente mostra l'esempio. Il `Divisions` <xref:System.Windows.Controls.ListBox> tiene automaticamente traccia delle selezioni nel `Leagues` <xref:System.Windows.Controls.ListBox> e visualizzare i dati corrispondenti. Il `Teams` <xref:System.Windows.Controls.ListBox> tiene traccia delle selezioni negli altri due <xref:System.Windows.Controls.ListBox> controlli.  
+ Lo screenshot seguente mostra l'esempio. Il `Divisions` <xref:System.Windows.Controls.ListBox> rileva automaticamente le selezioni nel `Leagues` <xref:System.Windows.Controls.ListBox> e Visualizza i dati corrispondenti. Il `Teams` <xref:System.Windows.Controls.ListBox> tiene traccia delle selezioni negli altri due controlli di <xref:System.Windows.Controls.ListBox>.  
   
- ![Screenshot che mostra un Master&#45;esempio di scenario di dettaglio.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
+ ![Screenshot che mostra un esempio&#45;di scenario di dettaglio master.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
- I due aspetti da notare in questo esempio sono:  
+ I due aspetti da notare in questo esempio sono i seguenti:  
   
-1. I tre <xref:System.Windows.Controls.ListBox> associare i controlli alla stessa origine. Impostare il <xref:System.Windows.Data.Binding.Path%2A> proprietà dell'associazione per specificare il livello di dati di cui si vuole il <xref:System.Windows.Controls.ListBox> da visualizzare.  
+1. I tre controlli <xref:System.Windows.Controls.ListBox> si associano alla stessa origine. È possibile impostare la proprietà <xref:System.Windows.Data.Binding.Path%2A> dell'associazione per specificare il livello di dati che si desidera visualizzare nel <xref:System.Windows.Controls.ListBox>.  
   
-2. È necessario impostare il <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> proprietà `true` nel <xref:System.Windows.Controls.ListBox> controlli di cui la selezione si esegue il monitoraggio. Impostazione di questa proprietà garantisce che l'elemento selezionato è sempre impostato come il <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. In alternativa, se il <xref:System.Windows.Controls.ListBox> Ottiene i dati da un <xref:System.Windows.Data.CollectionViewSource>, selezione e la valuta viene sincronizzato automaticamente.  
+2. È necessario impostare la proprietà <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> su `true` sui controlli <xref:System.Windows.Controls.ListBox> di cui si sta verificando la selezione. L'impostazione di questa proprietà garantisce che l'elemento selezionato sia sempre impostato come <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. In alternativa, se il <xref:System.Windows.Controls.ListBox> ottiene i dati da un <xref:System.Windows.Data.CollectionViewSource>, sincronizza automaticamente la selezione e la valuta.  
   
- La tecnica è leggermente diversa quando si usa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dei dati. Per un esempio, vedere [usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ La tecnica è leggermente diversa quando si usano i dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Per un esempio, vedere [usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Panoramica sul data binding](data-binding-overview.md)
+- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
 - [Panoramica sui modelli di dati](data-templating-overview.md)
 - [Procedure relative alle proprietà](data-binding-how-to-topics.md)

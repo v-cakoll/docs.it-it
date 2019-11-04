@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761337"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458284"
 ---
 # <a name="treeview"></a>TreeView
-Il <xref:System.Windows.Controls.TreeView> controllo Visualizza le informazioni in una struttura gerarchica tramite nodi comprimibili.  
+Il controllo <xref:System.Windows.Controls.TreeView> Visualizza le informazioni in una struttura gerarchica usando nodi comprimibili.  
   
- Nella figura seguente è riportato un esempio di un <xref:System.Windows.Controls.TreeView> controllo che ha annidati <xref:System.Windows.Controls.TreeViewItem> controlli:  
+ Nell'illustrazione seguente è riportato un esempio di controllo <xref:System.Windows.Controls.TreeView> con controlli <xref:System.Windows.Controls.TreeViewItem> annidati:  
   
- ![Figura che mostra i controlli di TreeViewItem annidati.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Illustrazione che mostra i controlli TreeViewItem annidati.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica sul controllo TreeView](treeview-overview.md)  
  [Procedure relative alle proprietà](treeview-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Panoramica sul data binding](../data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)  
   [Panoramica sui modelli di dati](../data/data-templating-overview.md)
