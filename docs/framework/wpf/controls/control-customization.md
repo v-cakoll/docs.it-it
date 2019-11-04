@@ -7,17 +7,17 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 946724cc388c9c9456973ef164b8b6f38fd85869
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017696"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460753"
 ---
 # <a name="control-customization"></a>Personalizzazione dei controlli
-In questa categoria sono le varie classi di base, interfacce e altri elementi e i concetti utilizzati nella creazione di un completamente funzionale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controllo.  
+Questa categoria include le varie classi di base, le interfacce e altri elementi e concetti usati per la creazione di un controllo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] completamente funzionante.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sulla modifica di controlli](control-authoring-overview.md)  
  [Linee guida per la progettazione di controlli a cui è possibile applicare degli stili](guidelines-for-designing-stylable-controls.md)  
  [Strumenti decorativi](adorners.md)  
@@ -26,4 +26,4 @@ In questa categoria sono le varie classi di base, interfacce e altri elementi e 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

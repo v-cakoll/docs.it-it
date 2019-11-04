@@ -4,16 +4,16 @@ description: Esplorare le diverse attività di apprendimento automatico e le att
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630059"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424224"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Attività di apprendimento automatico in ML.NET
 
-Quando si compila un modello di apprendimento automatico, è innanzitutto necessario definire quale risultato si vuole ottenere con i dati. In tal modo è possibile scegliere l'attività di apprendimento automatico più adatta alla specifica situazione. Nell'elenco seguente sono descritte le diverse attività di apprendimento automatico tra cui è possibile scegliere e alcuni casi d'uso comuni.
+Quando si compila un modello di apprendimento automatico, è innanzitutto necessario definire quale risultato si vuole ottenere con i dati. In tal modo è possibile scegliere l'attività di apprendimento automatico più adatta alla specifica situazione. Nell'elenco seguente sono descritte le diverse attività di apprendimento automatico tra cui è possibile scegliere e alcuni casi d'uso comuni. Per ulteriori informazioni sulla scelta dell'attività appropriata per il proprio scenario, vedere [algoritmi](../how-to-choose-an-ml-net-algorithm.md).
 
 Dopo aver deciso quale attività è appropriata per il proprio scenario, è necessario scegliere l'algoritmo migliore per il training del modello. Gli algoritmi disponibili sono elencati nella sezione per ogni attività.
 
@@ -24,7 +24,7 @@ Un'attività di [apprendimento automatico con supervisione](glossary.md#supervis
 * [Comprensione del sentiment dei commenti di Twitter](../tutorials/sentiment-analysis.md) come "positivi" o "negativi".
 * Diagnosi per stabilire se un paziente ha o meno una determinata malattia.
 * Decisione di contrassegnare o meno un messaggio di posta elettronica come "posta indesiderata".
-* Identificazione di un cane o di un frutto all'interno di una foto.
+* Determinare se una foto contiene o meno un particolare elemento, ad esempio un cane o un frutto.
 
 Per altre informazioni, vedere l'articolo relativo alla [classificazione binaria](https://en.wikipedia.org/wiki/Binary_classification) su Wikipedia.
 
@@ -52,9 +52,9 @@ Per ottenere risultati ottimali con la classificazione binaria, i dati di traini
 I dati della colonna dell'etichetta di input devono essere <xref:System.Boolean>.
 I dati della colonna delle funzionalità di input devono essere un vettore a dimensione fissa di <xref:System.Single>.
 
-Questi algoritmi di training restituiscono le colonne seguenti:
+Questi istruttori restituiscono le colonne seguenti:
 
-| Nome colonna di output | Tipo di colonna | DESCRIZIONE|
+| Nome colonna di output | Tipo di colonna | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato calcolato dal modello|
 | `PredictedLabel` | <xref:System.Boolean> | L'etichetta stimata, in base al segno del punteggio. Un punteggio negativo esegue il mapping a `false` e un punteggio negativo esegue il mapping a `true`.|
@@ -91,7 +91,7 @@ La colonna delle funzionalità deve essere un vettore di dimensioni fisse di <xr
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | DESCRIZIONE|
+| Nome output | Digitare | Descrizione|
 | -- | -- | -- |
 | `Score` | Vettore di <xref:System.Single> | I punteggi di tutte le classi. Valori più alti indicano maggiori probabilità di rientrare nella classe associata. Se l'elemento i-esimo ha il valore più elevato, l'indice delle etichette stimate sarà i. Si noti che i è l'indice a base zero. |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice dell'etichetta stimata. Se il valore è i, l'etichetta effettiva potrebbe essere la categoria i-esima nel tipo di etichetta di input con valori key. |
@@ -124,7 +124,7 @@ I dati della colonna dell'etichetta di input devono essere <xref:System.Single>.
 
 Gli algoritmi di training per questa attività restituiscono quanto segue:
 
-| Nome output | Tipo | DESCRIZIONE|
+| Nome output | Digitare | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato stimato dal modello |
 
@@ -148,7 +148,7 @@ I dati delle funzionalità di input devono essere <xref:System.Single>. Non sono
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | DESCRIZIONE|
+| Nome output | Digitare | Descrizione|
 | -- | -- | -- |
 | `Score` | vettore di <xref:System.Single> | Le distanze del punto dati specificato dai baricentri di tutti i cluster |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice del cluster più vicino stimato dal modello. |
@@ -180,7 +180,7 @@ Le funzionalità di input devono essere un vettore a dimensione fissa di <xref:S
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | DESCRIZIONE|
+| Nome output | Digitare | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non negativo, illimitato calcolato dal modello di rilevamento anomalie |
 
@@ -203,7 +203,7 @@ I dati della funzionalità devono essere un vettore di dimensioni fisse di <xref
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Tipo | DESCRIZIONE|
+| Nome output | Digitare | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio illimitato calcolato dal modello per determinare la stima |
 

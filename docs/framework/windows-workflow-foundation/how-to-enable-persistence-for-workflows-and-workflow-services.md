@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Abilitare la persistenza per i flussi di lavoro e i relativi servizi'
+title: 'Procedura: abilitare la persistenza per i flussi di lavoro e i relativi servizi'
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 9357098318342d15ad7eead32cbc7218af095f6e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425345"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460888"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Procedura: Abilitare la persistenza per i flussi di lavoro e i relativi servizi
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza per i flussi di lavoro e i relativi servizi
 
 In questo argomento viene descritto come abilitare la persistenza dei flussi di lavoro e dei servizi flusso di lavoro.
 
 ## <a name="enable-persistence-for-workflows"></a>Abilitare la persistenza dei flussi di lavoro
 
-È possibile associare un archivio di istanze con un **WorkflowApplication** usando la <xref:System.Activities.WorkflowApplication.InstanceStore%2A> proprietà del <xref:System.Activities.WorkflowApplication> classe. Il metodo <xref:System.Activities.WorkflowApplication.Persist%2A> salva o rende persistente un flusso di lavoro nell'archivio di istanze associato all'applicazione. Il metodo <xref:System.Activities.WorkflowApplication.Unload%2A> rende persistente un flusso di lavoro nell'archivio di istanze, quindi scarica l'istanza dalla memoria. Il **carico** metodo carica un flusso di lavoro in memoria usando i dati del flusso di lavoro archiviati nell'archivio di persistenza di istanze.
+È possibile associare un archivio di istanze a un **WorkflowApplication** usando la proprietà <xref:System.Activities.WorkflowApplication.InstanceStore%2A> della classe <xref:System.Activities.WorkflowApplication>. Il metodo <xref:System.Activities.WorkflowApplication.Persist%2A> salva o rende persistente un flusso di lavoro nell'archivio di istanze associato all'applicazione. Il metodo <xref:System.Activities.WorkflowApplication.Unload%2A> rende persistente un flusso di lavoro nell'archivio di istanze, quindi scarica l'istanza dalla memoria. Il metodo **Load** carica un flusso di lavoro in memoria usando i dati del flusso di lavoro archiviati nell'archivio di persistenza dell'istanza.
 
-Il **Persist** metodo esegue i passaggi seguenti:
+Il metodo di **salvataggio permanente** esegue i passaggi seguenti:
 
 1. Sospende l'utilità di pianificazione del flusso di lavoro e attende finché il flusso di lavoro non entra nello stato inattivo.
 
@@ -25,7 +25,7 @@ Il **Persist** metodo esegue i passaggi seguenti:
 
 3. Riprende l'utilità di pianificazione del flusso di lavoro.
 
- Il **Unload** metodo esegue i passaggi seguenti:
+ Il metodo **unload** esegue i passaggi seguenti:
 
 1. Sospende l'utilità di pianificazione del flusso di lavoro e attende finché il flusso di lavoro non entra nello stato inattivo.
 
@@ -33,20 +33,20 @@ Il **Persist** metodo esegue i passaggi seguenti:
 
 3. Elimina l'istanza del flusso di lavoro nella memoria.
 
-Entrambi i **Persist** e **Unload** metodi si bloccheranno mentre un flusso di lavoro è in un'area di non persistenza finché non esce da tale area. Il metodo continua l'operazione di persistenza o di scarico una volta completata l'area di non persistenza. Se l'area di non persistenza non viene completata prima della scadenza del timeout, o se il processo di persistenza impiega molto tempo, verrà generata un'eccezione TimeoutException.
+Entrambi i metodi di **salvataggio permanente** e di **scaricamento** si bloccherà mentre un flusso di lavoro si trova in un'area di non salvataggio permanente finché il flusso di lavoro non esce dall'area di non salvataggio permanente. Il metodo continua l'operazione di persistenza o di scarico una volta completata l'area di non persistenza. Se l'area di non persistenza non viene completata prima della scadenza del timeout, o se il processo di persistenza impiega molto tempo, verrà generata un'eccezione TimeoutException.
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>Abilitare la persistenza dei servizi flusso di lavoro nel codice
 
-Il **DurableInstancingOptions** membro del <xref:System.ServiceModel.WorkflowServiceHost> classe ha una proprietà denominata **InstanceStore** che è possibile usare per associare un archivio di istanze di **WorkflowServiceHost** .
+Il membro **DurableInstancingOptions** della classe <xref:System.ServiceModel.WorkflowServiceHost> dispone di una proprietà denominata **InstanceStore** che è possibile utilizzare per associare un archivio di istanze a **WorkflowServiceHost**.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
 ```
 
-Quando la **WorkflowServiceHost** è aperto, la persistenza viene abilitata automaticamente se il **durableinstancingoptions. Instancestore** non null.
+Quando l'oggetto **WorkflowServiceHost** viene aperto, la persistenza viene abilitata automaticamente se **DurableInstancingOptions. InstanceStore** non è null.
 
-In genere, un comportamento del servizio fornisce l'archivio di istanze concreto da usare con un host del servizio del flusso di lavoro usando il **InstanceStore** proprietà. SqlWorkflowInstanceStoreBehavior ad esempio, consente di creare un'istanza del **SqlWorkflowInstanceStore**, lo configura e assegna alla **durableinstancingoptions. Instancestore**.
+In genere, un comportamento del servizio fornisce l'archivio di istanze concrete da usare con un host del servizio flusso di lavoro usando la proprietà **InstanceStore** . Ad esempio, SqlWorkflowInstanceStoreBehavior crea un'istanza di **SqlWorkflowInstanceStore**, la configura e la assegna a **DurableInstancingOptions. InstanceStore**.
 
 ## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>Abilitare la persistenza per i servizi flusso di lavoro tramite un file di configurazione dell'applicazione.
 
@@ -58,10 +58,10 @@ In genere, un comportamento del servizio fornisce l'archivio di istanze concreto
     <behaviors>
       <serviceBehaviors>
         <behavior name="myBehavior">
-          <SqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase">
+          <sqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase" />
         </behavior>
       </serviceBehaviors>
-    <behaviors>
+    </behaviors>
   </system.serviceModel>
 </configuration>
 ```

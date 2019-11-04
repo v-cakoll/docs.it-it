@@ -6,12 +6,12 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: cad61bd86080fc21f0a47ef92b1908d6e7588a23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126235"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457909"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigazione: Nuovo compilatore JIT a 64 bit
 A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 64 bit per la compilazione JIT. Questa modifica non riguarda il compilatore JIT a 32 bit.  
@@ -69,5 +69,5 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche al runtime](runtime-changes-in-the-net-framework-4-6.md)
+- [Compatibilità delle applicazioni](application-compatibility.md)
 - [\<useLegacyJit> Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md) (Elemento useLegacyJit>)

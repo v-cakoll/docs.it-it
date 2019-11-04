@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Eredità da un controllo di Windows Form con Visual C#'
+title: 'Procedura dettagliata: eredità da un controllo di Windows Form con Visual C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015672"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460586"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Procedura dettagliata: Ereditare da un controllo Windows Forms con C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Procedura dettagliata: ereditare da un controllo Windows Forms con C\#
 
-Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante erediterà la funzionalità dal controllo Windows Forms <xref:System.Windows.Forms.Button> standard e esporrà una proprietà personalizzata denominata. `ButtonValue`
+Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante eredita le funzionalità dal controllo Windows Forms <xref:System.Windows.Forms.Button> standard ed espone una proprietà personalizzata denominata `ButtonValue`.
 
 ## <a name="create-the-project"></a>Creare il progetto
 
@@ -36,16 +36,16 @@ Quando si crea un nuovo progetto è necessario specificarne il nome per impostar
 
 3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **ValueButton.cs** e scegliere **Visualizza codice**.
 
-4. Individuare la `class` riga dell'istruzione `public partial class ValueButton`, e modificare il tipo da cui il controllo eredita da <xref:System.Windows.Forms.UserControl> a <xref:System.Windows.Forms.Button>. Ciò consente al controllo ereditato di ereditare tutte le funzionalità del <xref:System.Windows.Forms.Button> controllo.
+4. Individuare la riga dell'istruzione `class`, `public partial class ValueButton`e modificare il tipo da cui il controllo eredita da <xref:System.Windows.Forms.UserControl> a <xref:System.Windows.Forms.Button>. Ciò consente al controllo ereditato di ereditare tutte le funzionalità del controllo <xref:System.Windows.Forms.Button>.
 
 5. In **Esplora soluzioni** aprire il nodo **ValueButton.cs** per visualizzare il file del codice generato nella finestra di progettazione **ValueButton.Designer.cs**. Aprire il file nell'**editor di codice**.
 
-6. Individuare il `InitializeComponent` metodo e rimuovere la riga che assegna la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> proprietà. Questa proprietà non esiste nel <xref:System.Windows.Forms.Button> controllo.
+6. Individuare il metodo `InitializeComponent` e rimuovere la riga che assegna la proprietà <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>. Questa proprietà non esiste nel controllo <xref:System.Windows.Forms.Button>.
 
 7. Per salvare il progetto, scegliere **Salva tutto** dal menu **File**.
 
     > [!NOTE]
-    > Non è più disponibile alcuna finestra di progettazione. Poiché il <xref:System.Windows.Forms.Button> controllo esegue un disegno personalizzato, non è possibile modificarne l'aspetto nella finestra di progettazione. La relativa rappresentazione visiva sarà esattamente identica a quella della classe da cui eredita (ovvero), <xref:System.Windows.Forms.Button>a meno che non venga modificata nel codice. È comunque possibile aggiungere nell'area di progettazione i componenti che non dispongono di elementi dell'interfaccia utente.
+    > Non è più disponibile alcuna finestra di progettazione. Poiché il controllo <xref:System.Windows.Forms.Button> esegue un disegno personalizzato, non è possibile modificarne l'aspetto nella finestra di progettazione. La relativa rappresentazione visiva sarà esattamente identica a quella della classe da cui eredita (ovvero <xref:System.Windows.Forms.Button>), a meno che non venga modificata nel codice. È comunque possibile aggiungere nell'area di progettazione i componenti che non dispongono di elementi dell'interfaccia utente.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>Aggiungere una proprietà al controllo ereditato
 
@@ -117,7 +117,7 @@ Scegliere **Compila soluzione** dal menu **Compila**. La compilazione dovrebbe e
 
 5. Impostare la proprietà **ButtonValue** su **5**.
 
-6. Nella scheda **tutti Windows Forms** della **casella degli strumenti**fare doppio clic su **etichetta** per aggiungere un <xref:System.Windows.Forms.Label> controllo al form.
+6. Nella scheda **tutti Windows Forms** della **casella degli strumenti**fare doppio clic su **etichetta** per aggiungere un controllo <xref:System.Windows.Forms.Label> al modulo.
 
 7. Posizionare l'etichetta al centro del modulo.
 
@@ -143,5 +143,5 @@ Scegliere **Compila soluzione** dal menu **Compila**. La compilazione dovrebbe e
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Visualizza un controllo nella finestra di dialogo Scegli elementi della casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Procedura dettagliata: Creazione di un controllo composito con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedura dettagliata: modifica di un controllo composito con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

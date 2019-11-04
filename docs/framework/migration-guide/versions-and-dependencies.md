@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: e2b039ba9f8183de481db09c028f8c3672f43c36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b852fbd09376995692e19d944619307d9c1057bd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085350"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458060"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), librerie di classi base e altre librerie gestite. Questo argomento descrive le funzionalità principali di .NET Framework in base alla versione, fornisce informazioni sulle versioni CLR sottostanti e sugli ambienti di sviluppo associati, e identifica le versioni installate dal sistema operativo Windows.  
@@ -62,7 +62,7 @@ Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), li
   
      .NET framework 4.5.1 e .NET Framework 4.5 vengono usati qui solo come esempi. Questo principio si applica a qualsiasi app che fa riferimento a una versione successiva di .NET Framework rispetto a quella installata nel sistema in cui è in esecuzione.  
   
- Alcune modifiche in .NET Framework possono richiedere modifiche al codice dell'app. Vedere [Compatibilità delle applicazioni](application-compatibility.md) prima di eseguire le app esistenti con .NET Framework 4.5 o versioni successive. Per altre informazioni sull'installazione della versione corrente, vedere [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md). Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) nel sito Web del supporto tecnico Microsoft.  
+ Alcune modifiche apportate all'.NET Framework possono richiedere modifiche al codice dell'app; vedere [compatibilità delle applicazioni](application-compatibility.md) prima di eseguire le app esistenti con .NET Framework 4,5 o versioni successive. Per altre informazioni sull'installazione della versione corrente, vedere [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md). Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) nel sito Web del supporto tecnico Microsoft.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Destinazione ed esecuzione di app per versioni precedenti  
 

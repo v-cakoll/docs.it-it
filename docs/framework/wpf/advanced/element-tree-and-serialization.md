@@ -8,23 +8,23 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962439"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460480"
 ---
 # <a name="element-tree-and-serialization"></a>Struttura ad albero e serializzazione degli elementi
 Gli elementi della programmazione WPF spesso esistono sotto forma di relazioni all'interno di un albero. Ad esempio, l'interfaccia utente di un'applicazione creata in XAML può essere definita dal punto di vista concettuale come albero di oggetti. L'albero degli elementi può essere suddiviso ulteriormente in due alberi discreti e tuttavia a volte paralleli: l'albero logico e la struttura ad albero visuale. In WPF la serializzazione include il salvataggio dello stato di questi due alberi oltre che dello stato dell'applicazione e la scrittura di tale stato in un file, in genere XAML.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Strutture ad albero in WPF](trees-in-wpf.md)  
  [Limitazioni relative alla serializzazione di XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
  [Inizializzazione di elementi oggetto non presenti in una struttura ad albero di oggetti](initialization-for-object-elements-not-in-an-object-tree.md)  
- [Procedure relative alla struttura ad albero e alla serializzazione degli elementi](element-tree-and-serialization-how-to-topics.md)  
+ [Procedure relative alle proprietà](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
@@ -39,5 +39,5 @@ Gli elementi della programmazione WPF spesso esistono sotto forma di relazioni a
   [Eventi](events-wpf.md)  
   [Input](input-wpf.md)  
   [Risorse](resources-wpf.md)  
-  [Applicazione di stili e modelli](../controls/styling-and-templating.md)  
+  [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modello di threading](threading-model.md)

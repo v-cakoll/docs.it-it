@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Bloccare i controlli di Windows Forms'
+title: 'Procedura: bloccare i controlli di un Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6dd079331c6c1883839efe5c6cb127044380fd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987476"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458337"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: Blocca i controlli per Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: bloccare i controlli per Windows Forms
 
 Quando si progetta l'interfaccia utente dell'applicazione Windows, è possibile bloccare i controlli una volta posizionati correttamente, in modo che non vengano spostati o ridimensionati inavvertitamente durante l'impostazione di altre proprietà.
 

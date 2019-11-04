@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920160"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459103"
 ---
 # <a name="how-to-implement-binding-validation"></a>Procedura: implementare la convalida dell'associazione
 
@@ -41,9 +41,9 @@ Come illustrato nell'esempio seguente, il <xref:System.Windows.Controls.ToolTip>
 
 Per l'esempio completo, vedere [esempio di convalida di binding](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-Si noti che se non si specifica un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> personalizzato, viene visualizzato il modello di errore predefinito per fornire un feedback visivo all'utente quando si verifica un errore di convalida. Per altre informazioni, vedere "Convalida dei dati" in [Panoramica sul data binding](data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce anche una regola di convalida integrata che controlla le eccezioni generate durante l'aggiornamento della proprietà di origine del binding. Per ulteriori informazioni, vedere <xref:System.Windows.Controls.ExceptionValidationRule>.
+Si noti che se non si specifica un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> personalizzato, viene visualizzato il modello di errore predefinito per fornire un feedback visivo all'utente quando si verifica un errore di convalida. Per altre informazioni, vedere "Convalida dei dati" in [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce anche una regola di convalida integrata che controlla le eccezioni generate durante l'aggiornamento della proprietà di origine del binding. Per ulteriori informazioni, vedere <xref:System.Windows.Controls.ExceptionValidationRule>.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sul data binding](data-binding-overview.md)
+- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
 - [Procedure relative alle proprietà](data-binding-how-to-topics.md)

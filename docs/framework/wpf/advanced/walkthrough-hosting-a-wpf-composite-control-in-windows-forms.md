@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197938"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458927"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si ha un investimento sostanziale nel codice [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], può essere più efficace estendere l'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] esistente con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno del Windows Forms Application. Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione del controllo](../controls/control-customization.md).  
@@ -87,7 +87,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 #### <a name="styling-the-ui-elements"></a>Applicazione di stili agli elementi dell'interfaccia utente  
  Molti degli elementi nel form di immissione dati hanno un aspetto simile, che significa che hanno impostazioni identiche per alcune delle loro proprietà. Anziché impostare separatamente gli attributi di ogni elemento, il codice XAML precedente USA <xref:System.Windows.Style> elementi per definire le impostazioni delle proprietà standard per le classi di elementi. Questo approccio riduce la complessità del controllo e consente di modificare l'aspetto di più elementi tramite un unico attributo di stile.  
   
- Gli elementi <xref:System.Windows.Style> sono contenuti nella proprietà <xref:System.Windows.FrameworkElement.Resources%2A> dell'elemento <xref:System.Windows.Controls.Grid>, in modo che possano essere usati da tutti gli elementi nel controllo. Se uno stile è denominato, lo si applica a un elemento aggiungendo un <xref:System.Windows.Style> elemento impostato sul nome dello stile. Gli stili che non sono denominati diventano lo stile predefinito per l'elemento. Per ulteriori informazioni sugli stili di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere applicazione di stili [e modelli](../controls/styling-and-templating.md).  
+ Gli elementi <xref:System.Windows.Style> sono contenuti nella proprietà <xref:System.Windows.FrameworkElement.Resources%2A> dell'elemento <xref:System.Windows.Controls.Grid>, in modo che possano essere usati da tutti gli elementi nel controllo. Se uno stile è denominato, lo si applica a un elemento aggiungendo un <xref:System.Windows.Style> elemento impostato sul nome dello stile. Gli stili che non sono denominati diventano lo stile predefinito per l'elemento. Per ulteriori informazioni sugli stili di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere applicazione di stili [e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  Il codice XAML seguente Mostra gli elementi <xref:System.Windows.Style> per il controllo composito. Per visualizzare come gli stili vengono applicati agli elementi, vedere il codice XAML precedente. Ad esempio, l'ultimo elemento <xref:System.Windows.Controls.TextBlock> ha lo stile `inlineText` e l'ultimo elemento <xref:System.Windows.Controls.TextBox> usa lo stile predefinito.  
   

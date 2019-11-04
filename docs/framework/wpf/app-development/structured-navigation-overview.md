@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580521"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425334"
 ---
 # <a name="structured-navigation-overview"></a>Cenni preliminari sulla navigazione strutturata
 
-Il contenuto che può essere ospitato da un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], da un <xref:System.Windows.Controls.Frame> o da un <xref:System.Windows.Navigation.NavigationWindow> è costituito da pagine che possono essere identificate dagli URI (Uniform Resource Identifier) del pacchetto e spostati da collegamenti ipertestuali. La struttura della pagine e i modi in cui è possibile spostarsi tra di esse, definiti dai collegamenti ipertestuali, costituiscono una topologia di navigazione. Tale topologia è adatta a vari tipi di applicazioni, in particolare a quelli che consentono di spostarsi tra documenti. Per tali applicazioni, l'utente può spostarsi da una pagina all'altra senza che una pagina disponga di informazioni sull'altra.
+Il contenuto che può essere ospitato da un'applicazione browser XAML (XBAP), una <xref:System.Windows.Controls.Frame>o una <xref:System.Windows.Navigation.NavigationWindow> è costituito da pagine che possono essere identificate dagli URI (Uniform Resource Identifier) del pacchetto e spostati da collegamenti ipertestuali. La struttura della pagine e i modi in cui è possibile spostarsi tra di esse, definiti dai collegamenti ipertestuali, costituiscono una topologia di navigazione. Tale topologia è adatta a vari tipi di applicazioni, in particolare a quelli che consentono di spostarsi tra documenti. Per tali applicazioni, l'utente può spostarsi da una pagina all'altra senza che una pagina disponga di informazioni sull'altra.
 
 Tuttavia, altri tipi di applicazioni presentano pagine che necessitano di informazioni su quando avviene la navigazione tra di esse. Ad esempio, si consideri un'applicazione di risorse umane che include una pagina in cui vengono elencati tutti i dipendenti di un'azienda - la pagina "Elenco dipendenti". Questa pagina può inoltre consentire agli utenti di aggiungere un nuovo dipendente facendo clic su un collegamento ipertestuale. Quando si fa clic su tale collegamento, si passa alla pagina "Aggiungi dipendente" in cui vengono raccolti i dettagli sul nuovo dipendente e quindi si torna alla pagina "Elenco dipendenti" in cui viene creato il nuovo dipendente e aggiornato l'elenco. Questo stile di navigazione è simile alla chiamata di un metodo per l'esecuzione di una determinata elaborazione e la restituzione di un valore, denominata programmazione strutturata. Analogamente, questo stile di navigazione è denominato *navigazione strutturata*.
 
@@ -129,9 +129,9 @@ Non è necessario passare parametri alla pagina chiamata. In alternativa, è pos
 
   2. Archiviare i parametri in <xref:System.Windows.Application.Properties%2A>.
 
-  3. Passare al <xref:System.Windows.Navigation.PageFunction%601> chiamato.
+  3. Passare al <xref:System.Windows.Navigation.PageFunction%601>chiamato.
 
-- Dal <xref:System.Windows.Navigation.PageFunction%601> chiamato:
+- Dal <xref:System.Windows.Navigation.PageFunction%601>chiamato:
 
   - Recuperare e utilizzare i parametri archiviati in <xref:System.Windows.Application.Properties%2A>.
 

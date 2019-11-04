@@ -1,18 +1,15 @@
 ---
-title: 'Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
+title: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834835"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460859"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
 
 In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.
 
@@ -29,7 +26,7 @@ Prima di usare tale funzionalità, creare un database usato dalla funzionalità 
 > [!IMPORTANT]
 > Se non si crea un database di persistenza, la funzionalità di archivio di istanze del flusso di lavoro SQL genera un'eccezione simile alla seguente quando un host tenta di rendere persistenti i flussi di lavoro.
 >
-> System. Data. SqlClient. SqlException: Non è stato possibile trovare stored procedure ' System. Activities. DurableInstancing. CreateLockOwner '
+> System.Data.SqlClient.SqlException: Impossibile trovare la stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'
 
 Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL. Per ulteriori informazioni sulle proprietà dell'archivio di istanze del flusso di lavoro SQL, vedere [proprietà dell'archivio di istanze del flusso di lavoro SQL](properties-of-sql-workflow-instance-store.md).
 
@@ -72,7 +69,7 @@ Nelle sezioni seguenti viene descritto come abilitare la persistenza per i fluss
    ```
 
 > [!NOTE]
-> Vedere il [How per: Creare ed eseguire un passaggio del flusso di lavoro a esecuzione prolungata @ no__t-0 del [Introduzione esercitazione](getting-started-tutorial.md) per istruzioni dettagliate.
+> Per istruzioni dettagliate, vedere [procedura: creare ed eseguire un flusso di lavoro con esecuzione prolungata](how-to-create-and-run-a-long-running-workflow.md) dell' [esercitazione Introduzione](getting-started-tutorial.md) .
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Abilitazione della persistenza per i servizi flussi di lavoro indipendenti che usano l'oggetto WorkflowServiceHost
 
@@ -140,9 +137,8 @@ Il `SqlWorkflowInstanceStoreBehavior`, un comportamento del servizio che consent
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
@@ -162,7 +158,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 L'installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] comporta l'aggiunta degli elementi seguenti correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL al file Machine.config:
 
-- Aggiunge il seguente elemento di estensione del comportamento al file Machine. config in modo da poter usare l'elemento del comportamento del servizio \<sqlWorkflowInstanceStore > nel file di configurazione per configurare la persistenza per i servizi.
+- Aggiunge il seguente elemento di estensione del comportamento al file Machine. config in modo da poter utilizzare l'elemento del comportamento del servizio \<sqlWorkflowInstanceStore > nel file di configurazione per configurare la persistenza per i servizi.
 
     ```xml
     <configuration>
@@ -172,6 +168,6 @@ L'installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-curren
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

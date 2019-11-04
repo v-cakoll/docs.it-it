@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929044"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423996"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalizzazione del marshalling delle strutture
 
@@ -26,7 +26,7 @@ In alcuni casi le regole di marshalling predefinite per le strutture non sono es
 
 **✔️ USARE** solo `LayoutKind.Explicit` nel marshalling quando lo struct nativo ha anche un layout esplicito, ad esempio un'unione.
 
-**❌ EVITARE** di usare `LayoutKind.Explicit` per il marshalling delle strutture in piattaforme non Windows. Il runtime di .NET Core non supporta il passaggio di strutture esplicite per valore a funzioni native in sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
+**❌ evitare** di usare `LayoutKind.Explicit` quando si effettua il marshalling di strutture su piattaforme non Windows se è necessario destinare i runtime prima di .net core 3,0. Il runtime di .NET Core prima del 3,0 non supporta il passaggio di strutture esplicite per valore a funzioni native su sistemi non Windows Intel o AMD a 64 bit. Tuttavia, il runtime supporta il passaggio di strutture esplicite per riferimento in tutte le piattaforme.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalizzazione del marshalling di campi booleani
 

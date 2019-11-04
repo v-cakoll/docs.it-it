@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913675"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460832"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -36,7 +36,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Creare un'applicazione di esempio  
- In questo passaggio viene preparata l'applicazione per la localizzazione. Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione. Se si vuole usare questo esempio, scaricare i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file dall'esempio dello [strumento LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
+ In questo passaggio viene preparata l'applicazione per la localizzazione. Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione. Se si vuole usare questo esempio, scaricare i file di [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dall'esempio di [strumento LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 1. Sviluppare l'applicazione fino al punto in cui si vuole iniziare la localizzazione.  
   
@@ -46,7 +46,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 3. Aggiungere gli UID ai file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Gli UID vengono usati per rilevare le modifiche apportate ai file e per identificare gli elementi da convertire. Per aggiungere gli UID ai file, eseguire **updateuid** nel file di progetto:  
   
-     **msbuild -t:updateuid helloapp.csproj**  
+     **MSBuild-t:updateuid HelloApp. csproj**  
   
      Per verificare che non siano presenti UID mancanti o duplicati, eseguire **checkuid**:  
   
@@ -91,21 +91,21 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 4. Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:  
   
-    - **analizza** o **-p:** Analizza il BAML, le risorse o i file DLL per generare un file CSV o txt.  
+    - **Parse** o **-p:** analizza BAML, le risorse o i file dll per generare un file con estensione CSV o txt.  
   
-    - **generate** o **-g:** Genera un file binario localizzato utilizzando un file convertito.  
+    - **generate** o **-g:** genera un file binario localizzato usando un file convertito.  
   
-    - **out** o **-o** {*FileDirectory*] **:** Nome del file di output.  
+    - **out** o **-o** {*FileDirectory*] **:** nome del file di output.  
   
-    - **impostazioni cultura** o **-cul** {*culture*] **:** Impostazioni locali degli assembly di output.  
+    - **culture** o **-cul** {*culture*] **:** impostazioni locali degli assembly di output.  
   
-    - **Translation** o **-Trans** {*Translation. csv*] **:** File convertito o localizzato.  
+    - **Translation** o **-Trans** {*Translation. csv*] **:** file convertito o localizzato.  
   
-    - **asmPath** o **-asmpath:** {*FileDirectory*] **:** Se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario specificare **asmPath** per l'assembly del controllo personalizzato.  
+    - **asmPath** o **-asmpath:** {*FileDirectory*] **:** se il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contiene controlli personalizzati, è necessario fornire **asmPath** all'assembly del controllo personalizzato.  
   
-    - **nologo** Non visualizza alcun logo o informazioni sul copyright.  
+    - **nologo:** non visualizza loghi o informazioni sul copyright.  
   
-    - **dettagliato** Visualizza le informazioni sulla modalità dettagliata.  
+    - **verbose:** visualizza le informazioni sulla modalità dettagliata.  
   
     > [!NOTE]
     > Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml. exe** e premere INVIO.  
@@ -137,11 +137,11 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
    2. **Chiave di risorsa**. L'identificatore della risorsa localizzata.  
   
-   3. **Categoria**. Tipo di valore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
+   3. **Category**. Tipo di valore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
   
-   4. **Leggibilità**. Se il valore può essere letto da un localizzatore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
+   4. **Readability**. Se il valore può essere letto da un localizzatore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
   
-   5. **Modificabilità**. Se il valore può essere modificato da un localizzatore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
+   5. **Modifiability**. Se il valore può essere modificato da un localizzatore. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
   
    6. **Commenti**. Descrizione aggiuntiva del valore per determinarne la modalità di localizzazione. Vedere [attributi e commenti di localizzazione](localization-attributes-and-comments.md).  
   
@@ -149,11 +149,11 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
    La tabella seguente mostra come viene eseguito il mapping di questi campi ai valori delimitati del file CSV:  
   
-   |Nome BAML|Chiave di risorsa|Categoria|Leggibilità|Modificabilità|Commenti|Valore|  
+   |Nome BAML|Chiave di risorsa|Category|Leggibilità|Modificabilità|Comments|Value|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignora|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nessuno|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nessuno|true|true||Goodbye World|
   
    Si noti che tutti i valori per il campo **Commenti** non contengono valori. Se un campo non ha un valore, è vuoto. Si noti inoltre che l'elemento nella prima riga non è leggibile né modificabile e ha "Ignora" come valore di **categoria** , il che indica che il valore non è localizzabile.  
   
@@ -161,11 +161,11 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Convertire il contenuto localizzabile  
- Usare gli strumenti disponibili per convertire il contenuto estratto. Un metodo efficace consiste nello scrivere le risorse in un file CSV e visualizzarle in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], apportando le modifiche alla conversione nell'ultima colonna (valore).  
+ Usare gli strumenti disponibili per convertire il contenuto estratto. Per eseguire questa operazione, è possibile scrivere le risorse in un file con estensione CSV e visualizzarle in Microsoft Excel, in modo da apportare modifiche alla conversione nell'ultima colonna (valore).  
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usare LocBaml per generare un nuovo file resources.dll  
- Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale. Usare l' opzione generate o **-g** per generare un nuovo file resources. dll.  
+ Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale. Usare l'opzione **generate** o **-g** per generare un nuovo file resources. dll.  
   
 1. Usare la sintassi seguente per generare un nuovo file HelloApp.resources.dll. Contrassegnare le impostazioni cultura come en-US (/cul:en-US).  
   

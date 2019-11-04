@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421141"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460918"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, chiamati file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
@@ -52,7 +52,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
 - Il file di dati dell'applicazione deve essere localizzabile. vedere [Cenni preliminari sulla globalizzazione e localizzazione WPF](../advanced/wpf-globalization-and-localization-overview.md).  
   
 > [!NOTE]
-> I file di risorse descritti in questa sezione sono diversi dai file di risorse descritti in [risorse XAML](../advanced/xaml-resources.md) e diversi dalle risorse incorporate o collegate descritte in [gestire le risorse dell'applicazione (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+> I file di risorse descritti in questa sezione sono diversi dai file di risorse descritti in [risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) e diversi dalle risorse incorporate o collegate descritte in [gestire le risorse dell'applicazione (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Configurazione dei file di risorse  
  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], un file di risorse è un file incluso in un progetto di Microsoft Build Engine (MSBuild) come elemento di `Resource`.  
