@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196236"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419708"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Spiacenti, non abbiamo informazioni specifiche sull'errore C#
 
@@ -695,7 +695,7 @@ Non sono disponibili informazioni specifiche su questo errore. È possibile cerc
 Fornisce un sito Web di QA per domande e problemi con C#l'oggetto visivo.  
 
  Vedere anche:  
- [Risorse aggiuntive per programmatori Visual C#](../getting-started/additional-resources.md)  
+ [Risorse aggiuntive per programmatori Visual C#](../getting-started/index.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

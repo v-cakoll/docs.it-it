@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534891"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422769"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
 
@@ -54,7 +54,7 @@ L'esempio seguente illustra l'uso di un valore booleano per una chiave in modo d
 
 ### <a name="grouping-by-numeric-range"></a>Raggruppamento per intervallo numerico
 
-Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [Procedura: Gestire le eccezioni nelle espressioni di query](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [Procedura: Gestire le eccezioni nelle espressioni di query](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

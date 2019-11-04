@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422954"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opzioni del compilatore C#)
 
@@ -25,7 +25,7 @@ Imposta il compilatore in modo da accettare solo sintassi inclusa nella specific
 -langversion:option
 ```
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>argomenti
 
  `option`  
  Di seguito vengono illustrati i valori validi.
@@ -43,7 +43,7 @@ Imposta il compilatore in modo da accettare solo sintassi inclusa nella specific
 |6|Il compilatore accetta solo la sintassi inclusa in C# 6.0 o versione precedente.|
 |5|Il compilatore accetta solo la sintassi inclusa in C# 5.0 o versione precedente.|
 |4|Il compilatore accetta solo la sintassi inclusa in C# 4.0 o versione precedente.|
-|3|Il compilatore accetta solo la sintassi inclusa in C# 3.0 o versione precedente.|
+|3\.|Il compilatore accetta solo la sintassi inclusa in C# 3.0 o versione precedente.|
 |ISO-2|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2006 C# (2,0).|
 |ISO-1|Il compilatore accetta solo la sintassi inclusa in ISO/IEC 23270:2003 C# (1.0/1.2).|
 
@@ -68,12 +68,12 @@ Per informazioni su come impostare questa opzione del compilatore a livello di c
 |Versione|Collegamento|Descrizione|
 |-------|----|-----------|
 |C# 7.0 e versioni successive||Attualmente non disponibile|
-|C# 6.0|[Collegamento](../language-specification/index.md)|Specifica del linguaggio C# versione 6 - Bozza non ufficiale: .NET Foundation|
+|C# 6.0|[Collegamento](/dotnet/csharp/language-reference/language-specification/introduction)|Specifica del linguaggio C# versione 6 - Bozza non ufficiale: .NET Foundation|
 |C# 5.0|[Scaricare PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standard ECMA-334, quinta edizione|
-|C# 3.0|[Scaricare DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Specifiche del linguaggio C# versione 3.0: Microsoft Corporation|
+|C# 3.0|[Scaricare DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Specifica del linguaggio C# versione 3.0: Microsoft Corporation|
 |C# 2.0|[Scaricare PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334, quarta edizione|
-|C# 1.2|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Specifiche del linguaggio C# versione 1.2: Microsoft Corporation|
-|C# 1.0|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Specifiche del linguaggio C# versione 1.0: Microsoft Corporation|
+|C# 1.2|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Specifica del linguaggio C# versione 1.2: Microsoft Corporation|
+|C# 1.0|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Specifica del linguaggio C# versione 1.0: Microsoft Corporation|
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Versione minima dell'SDK necessaria per supportare tutte le funzionalità del linguaggio
 
