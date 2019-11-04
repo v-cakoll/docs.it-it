@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: cc5afdeeeea2601eb22be316302aeacee570e5f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 38eef85446568dd6cac09c4fdc3fb76d958f423c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045375"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424494"
 ---
 # <a name="ws-reliable-session"></a>Sessioni affidabili WS
 Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni affidabili forniscono supporto per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. L'esempio implementa le sessioni per mantenere lo stato del client e specifica assicurazioni di recapito nell'ordine.  
@@ -19,7 +19,7 @@ Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
@@ -39,7 +39,7 @@ Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'endpoint contiene l'attributo `bindingConfiguration` che fa riferimento a una configurazione di associazione denominata "Binding1". La configurazione dell'associazione consente sessioni affidabili impostando `enabled` l'attributo [ \<di ReliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) su `true`. Le garanzie di recapito per le sessioni ordinate possono essere controllate impostando l'attributo ordinato su `true` o `false`. Il valore predefinito è `true`.  
+ L'endpoint contiene l'attributo `bindingConfiguration` che fa riferimento a una configurazione di associazione denominata "Binding1". La configurazione dell'associazione consente sessioni affidabili impostando l'attributo `enabled` del [\<ReliableSession](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) su `true`. Le garanzie di recapito per le sessioni ordinate possono essere controllate impostando l'attributo ordinato su `true` o `false`. Il valore predefinito è `true`.  
   
 ```xml  
 <bindings>  
@@ -62,7 +62,7 @@ Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni 
   
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -75,7 +75,7 @@ Press <ENTER> to terminate client.
   
 1. Installare ASP.NET 4,0 usando il comando seguente.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl'
+title: 'Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 110036e5031a2956375b1edf0689237661522d39
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: be6c913c43e3559806bc9f38a9c3152b544e4c07
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180201"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455532"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: Testare il comportamento in fase di esecuzione di un UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: testare il comportamento della fase di esecuzione di UserControl
 
-Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario testarne il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione basato su Windows separato e inserire il controllo in un form di test, ma questa procedura non è praticabile. Un modo più rapido e semplice consiste nell'usare il **contenitore di test UserControl** fornito da Visual Studio. Questo contenitore di test viene avviato direttamente dal progetto libreria di controlli Windows.
+Quando si sviluppa una <xref:System.Windows.Forms.UserControl>, è necessario testarne il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione basato su Windows separato e inserire il controllo in un form di test, ma questa procedura non è praticabile. Un modo più rapido e semplice consiste nell'usare il **contenitore di test UserControl** fornito da Visual Studio. Questo contenitore di test viene avviato direttamente dal progetto libreria di controlli Windows.
 
 > [!IMPORTANT]
 > Affinché il contenitore di test carichi il <xref:System.Windows.Forms.UserControl>, il controllo deve avere almeno un costruttore pubblico.
@@ -48,7 +48,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
 
 9. Premere <kbd>F5</kbd> per compilare il progetto ed eseguire il contenitore di test.
 
-10. Fare clic su **selezionare il controllo utente** <xref:System.Windows.Forms.ComboBox> per passare tra i due controlli utente.
+10. Fare clic sull'<xref:System.Windows.Forms.ComboBox> **selezionare il controllo utente** per passare tra i due controlli utente.
 
 ## <a name="test-user-controls-from-another-project"></a>Testare i controlli utente da un altro progetto
 
@@ -64,11 +64,11 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
 
 5. Nella finestra di dialogo **Apri** passare a *EsempioTestContainer. dll*compilato nella procedura precedente. Selezionare *EsempioTestContainer. dll* e fare clic sul pulsante **Apri** per caricare i controlli utente.
 
-6. Usare il **controllo utente Select** <xref:System.Windows.Forms.ComboBox> per passare tra i due controlli utente dal progetto **EsempioTestContainer** .
+6. Usare il <xref:System.Windows.Forms.ComboBox> **selezionare il controllo utente** per passare tra i due controlli utente dal progetto **EsempioTestContainer** .
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.UserControl>
-- [Procedura: Crea controlli compositi @ no__t-0
-- [Procedura dettagliata: Creazione di un controllo composito @ no__t-0
+- [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md)
+- [Procedura dettagliata: modifica di un controllo composito](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Progettazione controllo utente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

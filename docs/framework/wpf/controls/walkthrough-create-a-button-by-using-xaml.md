@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920181"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458689"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: creazione di un pulsante tramite XAML
 
@@ -92,7 +92,7 @@ Successivamente, è possibile impostare alcune proprietà su questi pulsanti per
 
      ![Pulsanti con una larghezza di 90 e un margine di 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     È possibile eseguire molte altre operazioni con gli stili, inclusi diversi modi per ottimizzare gli oggetti di destinazione, specificare valori di proprietà complessi e persino usare gli stili come input per altri stili. Per altre informazioni, vedere [Applicazione di stili e modelli](styling-and-templating.md).
+     È possibile eseguire molte altre operazioni con gli stili, inclusi diversi modi per ottimizzare gli oggetti di destinazione, specificare valori di proprietà complessi e persino usare gli stili come input per altri stili. Per altre informazioni, vedere [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 3. **Impostare un valore di proprietà di stile su una risorsa:** Le risorse consentono un metodo semplice per riutilizzare oggetti e valori comunemente definiti. È particolarmente utile per definire valori complessi usando le risorse per rendere il codice più modulare. Aggiungere il markup evidenziato seguente ad app. XAML.
 
@@ -439,7 +439,7 @@ Un modo semplice per aggiungere interattività (passaggio del mouse, uscita dal 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creare un pulsante usando Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

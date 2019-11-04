@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588198"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423124"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -23,9 +23,9 @@ void* identifier; //allowed but not recommended
 
 Il tipo specificato prima di `*` in un tipo di puntatore viene chiamato **tipo referente**. Solo un [tipo non gestito](../../language-reference/builtin-types/unmanaged-types.md) può essere un tipo referente.
 
-I tipi di puntatore non ereditano da [object](../../language-reference/keywords/object.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.
+I tipi di puntatore non ereditano da [object](../../language-reference/builtin-types/reference-types.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.
 
-Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio:
+Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Esempio:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -36,7 +36,7 @@ Un puntatore non può puntare a un riferimento o a uno [struct](../../language-r
 
 Il valore della variabile del puntatore di tipo `myType*` è l'indirizzo di una variabile di tipo `myType`. Di seguito sono riportati alcuni esempi di dichiarazioni di tipi di puntatore:
 
-|Esempio|DESCRIZIONE|
+|Esempio|Descrizione|
 |-------------|-----------------|
 |`int* p`|`p` è un puntatore a un Integer.|
 |`int** p`|`p` è un puntatore a un puntatore a un Integer.|
@@ -87,5 +87,5 @@ Per altre informazioni, vedere la sezione [Tipi puntatore](~/_csharplang/spec/un
 - [Guida per programmatori C#](../index.md)
 - [Codice unsafe e puntatori](index.md)
 - [Conversioni puntatore](pointer-conversions.md)
-- [Tipi](../../language-reference/keywords/types.md)
+- [Tipi](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

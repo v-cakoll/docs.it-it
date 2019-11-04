@@ -1,5 +1,5 @@
 ---
-title: 'Ottimizzazione delle prestazioni: Risorse delle applicazioni'
+title: 'Ottimizzazione delle prestazioni: risorse di applicazioni'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 759d02afe1934d2ace4ed226d5d911db2d676d98
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 59b124c28ade0a6c5119b651ff935d460bf4516d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005035"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458566"
 ---
-# <a name="optimizing-performance-application-resources"></a>Ottimizzazione delle prestazioni: Risorse delle applicazioni
+# <a name="optimizing-performance-application-resources"></a>Ottimizzazione delle prestazioni: risorse di applicazioni
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di condividere le risorse dell'applicazione in modo che sia possibile supportare un aspetto o un comportamento coerente in elementi tipizzati simili. In questo argomento vengono fornite alcune raccomandazioni in questa area che consentono di migliorare le prestazioni delle applicazioni.  
   
- Per altre informazioni sulle risorse, vedere [Risorse XAML](xaml-resources.md).  
+ Per altre informazioni sulle risorse, vedere [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
 ## <a name="sharing-resources"></a>Condivisione di risorse  
- Se l'applicazione usa controlli personalizzati e definisce le risorse in un <xref:System.Windows.ResourceDictionary> (o nodo delle risorse XAML), è consigliabile definire le risorse a livello di oggetto <xref:System.Windows.Application> o <xref:System.Windows.Window> oppure definirle nel tema predefinito per i controlli personalizzati. La definizione delle risorse nel <xref:System.Windows.ResourceDictionary> di un controllo personalizzato impone un effetto sulle prestazioni per ogni istanza di tale controllo. Se, ad esempio, si dispone di operazioni pennello a elevato utilizzo di prestazioni definite come parte della definizione di risorsa di un controllo personalizzato e di molte istanze del controllo personalizzato, l'working set dell'applicazione aumenterà significativamente.  
+ Se l'applicazione usa controlli personalizzati e definisce le risorse in un <xref:System.Windows.ResourceDictionary> (nodo risorse XAML), è consigliabile definire le risorse a livello di <xref:System.Windows.Application> o <xref:System.Windows.Window> oppure definirle nel tema predefinito per i controlli personalizzati. La definizione delle risorse nel <xref:System.Windows.ResourceDictionary> di un controllo personalizzato impone un effetto sulle prestazioni per ogni istanza di tale controllo. Se, ad esempio, si dispone di operazioni pennello a elevato utilizzo di prestazioni definite come parte della definizione di risorsa di un controllo personalizzato e di molte istanze del controllo personalizzato, l'working set dell'applicazione aumenterà significativamente.  
   
- Per illustrare questo punto, tenere presente quanto segue. Supponiamo che si stia sviluppando un gioco di carte usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per la maggior parte dei giochi di carte sono necessarie 52 schede con 52 visi differenti. Si decide di implementare un controllo personalizzato di una scheda e si definiscono 52 pennelli (ognuno dei quali rappresenta un volto di scheda) nelle risorse del controllo personalizzato della scheda. Nell'applicazione principale si creano inizialmente 52 istanze di questo controllo personalizzato della scheda. Ogni istanza del controllo personalizzato scheda genera 52 istanze di oggetti <xref:System.Windows.Media.Brush>, che fornisce un totale di 52 * 52 <xref:System.Windows.Media.Brush> oggetti nell'applicazione. Spostando i pennelli fuori dalla scheda risorse di controllo personalizzate per il livello di oggetto <xref:System.Windows.Application> o <xref:System.Windows.Window> oppure definendoli nel tema predefinito per il controllo personalizzato, si riduce il working set dell'applicazione, perché ora si condividono i pennelli 52 tra 52 istanze del controllo scheda.  
+ Per illustrare questo punto, tenere presente quanto segue. Supponiamo che si stia sviluppando un gioco di carte usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per la maggior parte dei giochi di carte sono necessarie 52 schede con 52 visi differenti. Si decide di implementare un controllo personalizzato di una scheda e si definiscono 52 pennelli (ognuno dei quali rappresenta un volto di scheda) nelle risorse del controllo personalizzato della scheda. Nell'applicazione principale si creano inizialmente 52 istanze di questo controllo personalizzato della scheda. Ogni istanza del controllo personalizzato della scheda genera 52 istanze di <xref:System.Windows.Media.Brush> oggetti, che fornisce un totale di 52 * 52 <xref:System.Windows.Media.Brush> oggetti nell'applicazione. Spostando i pennelli fuori dalle risorse di controllo personalizzato per il <xref:System.Windows.Application> o <xref:System.Windows.Window> a livello di oggetto o definendoli nel tema predefinito per il controllo personalizzato, si riduce il working set dell'applicazione, perché ora si condividono i pennelli 52 tra 52 istanze del controllo scheda.  
   
 ## <a name="sharing-a-brush-without-copying"></a>Condivisione di un pennello senza copia  
- Se sono presenti più elementi che usano lo stesso oggetto <xref:System.Windows.Media.Brush>, definire il pennello come risorsa e farvi riferimento, anziché definire il pennello inline in XAML. Questo metodo creerà un'istanza e la riutilizzerà, mentre la definizione dei pennelli inline in XAML crea una nuova istanza per ogni elemento.  
+ Se si dispone di più elementi che utilizzano lo stesso oggetto <xref:System.Windows.Media.Brush>, definire il pennello come risorsa e farvi riferimento, anziché definire il pennello inline in XAML. Questo metodo creerà un'istanza e la riutilizzerà, mentre la definizione dei pennelli inline in XAML crea una nuova istanza per ogni elemento.  
   
  Nell'esempio di markup seguente viene illustrato questo punto:  
   
@@ -50,6 +50,6 @@ ms.locfileid: "72005035"
 - [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
 - [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
-- [per](optimizing-performance-text.md)
+- [Testo](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

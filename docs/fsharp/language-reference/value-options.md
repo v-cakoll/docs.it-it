@@ -1,26 +1,26 @@
 ---
-title: Opzioni di valori
-description: Scopri la F# tipo di opzione di valore, ovvero una versione di uno struct di tipo di opzione.
+title: Opzioni Value
+description: Informazioni sul tipo F# di opzione value, ovvero una versione struct del tipo di opzione.
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982579"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424012"
 ---
-# <a name="value-options"></a>Opzioni di valori
+# <a name="value-options"></a>Opzioni Value
 
-Il tipo di opzione del valore in F# viene utilizzato per contengono i seguenti due casi:
+Il tipo di opzione valore F# in viene utilizzato quando si verificano le due circostanze seguenti:
 
-1. Uno scenario è appropriato per un [ F# opzione](options.md).
-2. Usando un tipo struct offre un miglioramento delle prestazioni nel proprio scenario.
+1. Uno scenario è appropriato per un' [ F# opzione](options.md).
+2. L'uso di uno struct offre un vantaggio in merito alle prestazioni nello scenario.
 
-Non tutti gli scenari sensibili alle prestazioni sono "risolto" utilizzo di struct. È necessario considerare il costo aggiuntivo di copia quando vengono utilizzati invece i tipi di riferimento. Tuttavia, grande F# programmi è comunemente creare un'istanza di molti tipi facoltativi che passano attraverso i percorsi critici e in questi casi, gli struct possono producono spesso migliori prestazioni complessive in base alla durata di un programma.
+Non tutti gli scenari sensibili alle prestazioni sono "risolti" utilizzando gli struct. È necessario prendere in considerazione il costo aggiuntivo di copia quando si usano i tipi anziché i tipi di riferimento. Tuttavia, i F# programmi di grandi dimensioni in genere creano un'istanza di molti tipi facoltativi che passano attraverso percorsi sensibili e, in questi casi, gli struct possono produrre spesso migliori prestazioni complessive per la durata di un programma.
 
 ## <a name="definition"></a>Definizione
 
-Opzione valore viene definito come un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions) che è simile al tipo di opzione di riferimento. In questo modo può essere considerata la relativa definizione:
+L'opzione value è definita come un' [unione discriminata struct](discriminated-unions.md#struct-discriminated-unions) simile al tipo di opzione di riferimento. La definizione può essere considerata in questo modo:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-Opzione valore conforme a confronto e uguaglianza strutturale. La differenza principale è che il nome compilato, nome del tipo e tutti i nomi dei casi a indicare che si tratta di un tipo di valore.
+L'opzione value è conforme all'uguaglianza strutturale e al confronto. La differenza principale consiste nel fatto che il nome compilato, il nome del tipo e i nomi dei case indicano che si tratta di un tipo di valore.
 
-## <a name="using-value-options"></a>Utilizzo delle opzioni di valore
+## <a name="using-value-options"></a>Uso delle opzioni di valore
 
-Opzioni di valore vengono utilizzate allo stesso modo [opzioni](options.md). `ValueSome` viene utilizzato per indicare che un valore è presente, e `ValueNone` viene usato quando non è presente un valore:
+Le opzioni relative ai valori vengono usate come le [Opzioni](options.md). `ValueSome` viene utilizzato per indicare che è presente un valore e `ValueNone` viene utilizzato quando non è presente un valore:
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,23 +55,23 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-Come per gli [le opzioni](options.md), la convenzione di denominazione per una funzione che restituisce `ValueOption` consiste nel prefisso `try`.
+Come per le [Opzioni](options.md), la convenzione di denominazione per una funzione che restituisce `ValueOption` consiste nel precedere `try`.
 
-## <a name="value-option-properties-and-methods"></a>Valore opzione proprietà e metodi
+## <a name="value-option-properties-and-methods"></a>Proprietà e metodi delle opzioni di valore
 
-Al momento non è una proprietà per le opzioni di valore: `Value`. Un <xref:System.InvalidOperationException> viene generata se nessun valore è presente quando viene richiamata questa proprietà.
+Al momento esiste una proprietà per le opzioni relative al valore: `Value`. Se non è presente alcun valore quando questa proprietà viene richiamata, viene generata un'<xref:System.InvalidOperationException>.
 
-## <a name="value-option-functions"></a>Funzioni con valori di opzione
+## <a name="value-option-functions"></a>Funzioni opzione valore
 
-È attualmente disponibile una funzione associata al modulo per le opzioni di valore, `defaultValueArg`:
+È attualmente disponibile una funzione associata al modulo per le opzioni relative ai valori, `defaultValueArg`:
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Come con la `defaultArg` funzione, `defaultValueArg` restituisce il valore sottostante dell'opzione di valore specificato se presente; in caso contrario, restituisce il valore predefinito specificato.
+Come per la funzione `defaultArg`, `defaultValueArg` restituisce il valore sottostante dell'opzione del valore specificato, se esistente. in caso contrario, restituisce il valore predefinito specificato.
 
-In questo momento, non sono presenti altre funzioni associata al modulo per le opzioni di valore.
+Attualmente non sono disponibili altre funzioni associate al modulo per le opzioni relative ai valori.
 
 ## <a name="see-also"></a>Vedere anche
 

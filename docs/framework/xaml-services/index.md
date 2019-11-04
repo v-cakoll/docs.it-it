@@ -6,102 +6,102 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491115"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453964"
 ---
 # <a name="xaml-services"></a>Servizi XAML
-In questo argomento descrive le funzionalità di un set di tecnologie noto come .NET Framework XAML Services. La maggior parte dei servizi e le API descritte si trovano nell'assembly System. XAML, che è un assembly introdotto con il set di .NET Framework 4 degli assembly di .NET core. I servizi includono lettori e writer, le classi dello schema e supporto dello schema, factory, assegnazione di attributi di classi di supporto intrinseco del linguaggio XAML e altre funzionalità del linguaggio XAML.  
+In questo argomento vengono descritte le funzionalità di un set di tecnologie noto come .NET Framework servizi XAML. La maggior parte dei servizi e delle API descritti si trova nell'assembly System. XAML, un assembly introdotto con il set di .NET Framework 4 degli assembly .NET Core. I servizi includono Readers e writer, classi dello schema e supporto dello schema, Factory, attribuzione di classi, supporto intrinseco del linguaggio XAML e altre funzionalità del linguaggio XAML.  
   
-## <a name="about-this-documentation"></a>Informazioni sulla documentazione  
- Documentazione concettuale per i servizi XAML di .NET Framework presuppone che si ha esperienza precedente con il linguaggio XAML e come può applicare a un framework specifico, ad esempio [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation o una caratteristica di tecnologia specifica area, ad esempio la personalizzazione di compilazione funzionalità nella <xref:Microsoft.Build.Framework.XamlTypes>. Questa documentazione non tenta di spiegare i concetti fondamentali di XAML come linguaggio di markup, terminologia della sintassi XAML o altro materiale introduttivo. Al contrario, questa documentazione illustra l'uso in modo specifico i servizi XAML di .NET Framework che sono abilitati nella libreria dell'assembly System. Xaml. La maggior parte di queste API sono per gli scenari di estendibilità e integrazione del linguaggio XAML. Ciò potrebbe includere gli elementi seguenti:  
+## <a name="about-this-documentation"></a>Informazioni su questa documentazione  
+ La documentazione concettuale per i servizi XAML di .NET Framework presuppone che si disponga di un'esperienza precedente con il linguaggio XAML e come possa essere applicata a un Framework specifico, ad esempio [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] o Windows Workflow Foundation o un'area funzionale della tecnologia specifica. ad esempio, le funzionalità di personalizzazione della compilazione in <xref:Microsoft.Build.Framework.XamlTypes>. Questa documentazione non tenta di spiegare le nozioni di base di XAML come linguaggio di markup, terminologia di sintassi XAML o altro materiale introduttivo. Questa documentazione è invece incentrata sull'utilizzo specifico dei servizi XAML .NET Framework abilitati nella libreria di assembly System. XAML. La maggior parte di queste API è destinata a scenari di integrazione e estensibilità del linguaggio XAML. Questo potrebbe includere uno degli elementi seguenti:  
   
-- Estendere le funzionalità del reader XAML base o i writer XAML (elaborazione direttamente il flusso del nodo XAML, che deriva il proprio reader XAML o writer XAML).  
+- Estensione delle funzionalità dei reader XAML di base o dei writer XAML (elaborazione diretta del flusso del nodo XAML; derivazione del lettore XAML o del writer XAML).  
   
-- La definizione XAML utilizzabile tipi personalizzati che non hanno dipendenze framework specifico e assegnazione di attributi ai tipi per indicare loro XAML digitare le caratteristiche del sistema di servizi XAML di .NET Framework.  
+- Definizione di tipi personalizzati utilizzabili da XAML che non hanno dipendenze specifiche del Framework e attribuendo i tipi per fornire le caratteristiche del sistema di tipi XAML per .NET Framework servizi XAML.  
   
-- Hosting XAML lettori o writer XAML come componente di un'applicazione, ad esempio una finestra di progettazione visiva o un editor interattivo per le origini di markup XAML.  
+- Hosting di reader XAML o writer XAML come componente di un'applicazione, ad esempio una finestra di progettazione visiva o un editor interattivo per le origini di markup XAML.  
   
-- Scrittura di XAML convertitori di valori (estensioni di markup; convertitori di tipi per i tipi personalizzati).  
+- Scrittura di convertitori di valori XAML (estensioni di markup; convertitori di tipi per tipi personalizzati).  
   
-- Definisce un contesto dello schema XAML personalizzato (usando tecniche di caricamento di assembly alternative per le origini di tipo sottostante; usando tecniche di ricerca di tipi noti invece sempre che riflette gli assembly; utilizzando i concetti di assembly caricato che non utilizzano CLR `AppDomain` e il modello di sicurezza associati).  
+- Definizione di un contesto dello schema XAML personalizzato (utilizzando tecniche di caricamento di assembly alternative per il supporto di origini dei tipi; utilizzo di tecniche di ricerca di tipi noti anziché di sempre gli assembly; utilizzo di concetti di assembly caricati che non utilizzano il `AppDomain` CLR e il relativo modello di sicurezza associato.  
   
-- Estende il sistema di tipo XAML di base.  
+- Estensione del sistema di tipi XAML di base.  
   
-- Usando il `Lookup` o `Invoker` tecniche per influenzare il XAML digitare system e la modalità di valutazione dei tipi di supporto.  
+- Utilizzando le tecniche di `Lookup` o `Invoker` per influenzare il sistema di tipi XAML e il modo in cui vengono valutati i backup dei tipi.  
   
- Se sta cercando il materiale introduttivo in XAML come linguaggio, è possibile provare [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md). Tale argomento sono illustrate XAML per un gruppo di destinatari che rappresenta una novità a [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e anche all'uso di markup XAML e le funzionalità del linguaggio XAML. Un altro documento utile è il materiale introduttivo nel [specifiche del linguaggio XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Se si sta cercando materiale introduttivo in XAML come linguaggio, è possibile provare [Cenni preliminari su XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md). In questo argomento viene illustrato XAML per un pubblico che è nuovo per [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e anche per utilizzare markup XAML e funzionalità del linguaggio XAML. Un altro documento utile è il materiale introduttivo nella [specifica del linguaggio XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Servizi XAML di .NET framework e System. XAML dell'architettura .NET  
- Nelle versioni precedenti di Microsoft .NET Framework, il supporto per le funzionalità del linguaggio XAML è stato implementato da Framework basati su Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e pertanto diversi a seconda del framework specifico si usava il relativo comportamento e l'API usata. Inclusi il XAML parser e il relativo oggetto grafico meccanismo di creazione, intrinseci del linguaggio XAML, il supporto della serializzazione e così via.  
+## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET Framework i servizi XAML e System. XAML nell'architettura .NET  
+ Nelle versioni precedenti di Microsoft .NET Framework, il supporto per le funzionalità del linguaggio XAML è stato implementato da Framework basati su Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e pertanto varia in base al comportamento e all'API utilizzata a seconda del Framework specifico in uso. Sono inclusi il parser XAML e il relativo meccanismo di creazione di oggetti grafici, intrinseci del linguaggio XAML, supporto della serializzazione e così via.  
   
- In .NET Framework 4, dei servizi XAML di .NET Framework e l'assembly System. XAML definire gran parte delle informazioni necessarie per supportare le funzionalità del linguaggio XAML. Ciò include le classi di base per i lettori XAML e writer XAML. La caratteristica più importante aggiunta a servizi XAML .NET Framework che non era presente in una qualsiasi delle implementazioni specifiche del framework XAML è una rappresentazione di sistema di tipo per XAML. La rappresentazione del sistema tipo presenta XAML in una modalità orientata agli oggetti che si concentra sulle funzionalità di XAML senza le dipendenze sulle funzionalità specifiche del Framework.  
+ In .NET Framework 4 .NET Framework servizi XAML e l'assembly System. Xaml definiscono la maggior parte degli elementi necessari per il supporto delle funzionalità del linguaggio XAML. Sono incluse le classi di base per i reader XAML e i writer XAML. La funzionalità più importante aggiunta a .NET Framework servizi XAML che non era presente in alcuna implementazione XAML specifica del Framework è una rappresentazione del sistema di tipi per XAML. La rappresentazione del sistema di tipi presenta il codice XAML in un modo orientato agli oggetti che centra sulle funzionalità XAML senza prendere le dipendenze da funzionalità specifiche dei Framework.  
   
- Il sistema di tipi XAML non è limitato dal modulo di markup o in fase di esecuzione specifiche dell'origine XAML; né è limitata da qualsiasi sistema di tipi di supporto specifici. Il sistema di tipi XAML include le rappresentazioni di oggetti per i tipi, membri, contesti dello schema XAML, i concetti a livello di XML e altri concetti del linguaggio XAML o oggetti intrinseci XAML. Utilizzo o l'estensione del sistema di tipi XAML consente di derivare dalle classi, ad esempio lettori XAML e writer XAML ed estendere le funzionalità delle rappresentazioni XAML in specifiche funzionalità abilitate da un framework, una tecnologia o un'applicazione che utilizza o genera XAML. Il concetto di un contesto dello schema XAML consente le operazioni di scrittura grafo di oggetto pratico dalla combinazione di un'implementazione del writer di oggetti XAML, sistema di tipi di supporto di una tecnologia comunicato tramite informazioni sull'assembly nel contesto e il nodo XAML origine. Per altre informazioni sul concetto dello schema XAML. visualizzare [contesto dello Schema XAML predefinito e contesto dello Schema XAML WPF](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
+ Il sistema di tipi XAML non è limitato dalle specifiche del formato di markup o della fase di esecuzione dell'origine XAML. né è limitato da alcun sistema di tipi di supporto specifico. Il sistema di tipi XAML include rappresentazioni di oggetti per tipi, membri, contesti di schema XAML, concetti a livello di XML e altri concetti del linguaggio XAML o funzioni intrinseche XAML. L'utilizzo o l'estensione del sistema di tipi XAML rende possibile la derivazione da classi quali reader XAML e writer XAML ed estendere la funzionalità delle rappresentazioni XAML in funzionalità specifiche abilitate da un Framework, una tecnologia o un'applicazione che utilizza o genera XAML. Il concetto di contesto dello schema XAML consente operazioni pratiche di scrittura di oggetti grafici dalla combinazione di un'implementazione di writer di oggetti XAML, un sistema di tipi di supporto della tecnologia come comunicato tramite le informazioni sull'assembly nel contesto e il nodo XAML origine. Per ulteriori informazioni sul concetto di schema XAML. vedere [contesto dello schema XAML predefinito e contesto dello schema XAML WPF](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
   
-## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>Flussi del nodo XAML reader XAML e writer XAML  
- Per comprendere il ruolo di servizi XAML di .NET Framework riproduce nel rapporto tra le tecnologie specifiche che usano XAML come linguaggio e il linguaggio XAML, è utile comprendere il concetto di un flusso del nodo XAML e come tale concetto forme dell'API e terminologia. Il flusso di nodi XAML è un concettuale intermedio tra l'oggetto grafico che rappresenta il XAML o, definisce e una rappresentazione in linguaggio XAML.  
+## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>Flussi di nodi XAML, reader XAML e writer XAML  
+ Per comprendere il ruolo che .NET Framework servizi XAML svolge nella relazione tra il linguaggio XAML e le tecnologie specifiche che usano XAML come linguaggio, è utile comprendere il concetto di flusso di nodi XAML e il modo in cui tale concetto forma l'API e terminologia. Il flusso di nodi XAML è un intermediario concettuale tra una rappresentazione del linguaggio XAML e l'oggetto grafico rappresentato o definito da XAML.  
   
-- Un lettore XAML è un'entità che elabora XAML in una determinata forma e produce un flusso di nodi XAML. Nell'API, un lettore XAML è rappresentato dalla classe di base <xref:System.Xaml.XamlReader>.  
+- Un reader XAML è un'entità che elabora XAML in un formato e produce un flusso di nodi XAML. Nell'API un reader XAML è rappresentato dalla classe base <xref:System.Xaml.XamlReader>.  
   
-- Un writer XAML è un'entità che elabora un flusso del nodo XAML e produce un altro elemento. Nell'API, un writer XAML è rappresentato dalla classe di base <xref:System.Xaml.XamlWriter>.  
+- Un writer XAML è un'entità che elabora un flusso di nodi XAML e produce qualcos'altro. Nell'API un writer XAML è rappresentato dalla classe base <xref:System.Xaml.XamlWriter>.  
   
- I due scenari più comuni che coinvolgono XAML sono il caricamento di XAML per creare un'istanza di un oggetto grafico e il salvataggio di un oggetto grafico da un'applicazione o lo strumento e creazione di una rappresentazione XAML (in genere nel modulo di markup salvato come file di testo). Caricamento XAML e la creazione di un oggetto grafico viene spesso definito in questa documentazione come percorso di caricamento. Il salvataggio o la serializzazione di un oggetto grafico esistente in XAML viene spesso definito in questa documentazione come Salva percorso.  
+ I due scenari più comuni che coinvolgono XAML sono il caricamento di XAML per creare un'istanza di un oggetto grafico e il salvataggio di un oggetto grafico da un'applicazione o da uno strumento e la generazione di una rappresentazione XAML, in genere in formato di markup salvata come file di testo. Il caricamento di XAML e la creazione di un oggetto grafico vengono spesso indicati in questa documentazione come percorso di caricamento. Il salvataggio o la serializzazione di un oggetto grafico esistente in XAML viene spesso indicato in questa documentazione come percorso di salvataggio.  
   
- Il tipo più comune del percorso di caricamento può essere descritte come segue:  
+ Il tipo più comune di percorso di caricamento può essere descritto di seguito:  
   
-- Iniziare con una rappresentazione XAML, in formato XML con codifica UTF- e salvati come file di testo.  
+- Iniziare con una rappresentazione XAML, in formato XML con codifica UTF e salvata come file di testo.  
   
-- Caricamento di XAML in <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> è un <xref:System.Xaml.XamlReader> sottoclasse.  
+- Caricare il codice XAML in <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> è una sottoclasse <xref:System.Xaml.XamlReader>.  
   
-- Il risultato è un flusso di nodi XAML. È possibile accedere ai singoli nodi del flusso di nodi XAML tramite <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. In questo caso l'operazione più comune consiste nel passare attraverso il flusso di nodi XAML, l'elaborazione di ogni nodo usando un record"corrente" metafora.  
+- Il risultato è un flusso di nodi XAML. È possibile accedere ai singoli nodi del flusso del nodo XAML usando <xref:System.Xaml.XamlXmlReader>API <xref:System.Xaml.XamlReader>  / . L'operazione più comune consiste nell'avanzare nel flusso del nodo XAML, elaborando ogni nodo usando una metafora "record corrente".  
   
-- Passare i nodi risultanti dal flusso di nodi XAML per un <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> è un <xref:System.Xaml.XamlWriter> sottoclasse.  
+- Passare i nodi risultanti dal flusso del nodo XAML a un'API <xref:System.Xaml.XamlObjectWriter>. <xref:System.Xaml.XamlObjectWriter> è una sottoclasse <xref:System.Xaml.XamlWriter>.  
   
-- Il <xref:System.Xaml.XamlObjectWriter> scrive un oggetto grafico, un oggetto alla volta, in base allo stato di avanzamento tramite il flusso di nodi XAML di origine. Questa operazione viene eseguita con l'assistenza di un contesto dello schema XAML e un'implementazione che può accedere gli assembly e tipi di un sistema di tipo di supporto e framework.  
+- Il <xref:System.Xaml.XamlObjectWriter> scrive un oggetto grafico, un oggetto alla volta, in base allo stato di avanzamento attraverso il flusso del nodo XAML di origine. Questa operazione viene eseguita con l'assistenza di un contesto dello schema XAML e di un'implementazione di che può accedere agli assembly e ai tipi di un Framework e di un sistema di tipi di supporto.  
   
-- Chiamare <xref:System.Xaml.XamlObjectWriter.Result%2A> alla fine del flusso di nodi XAML per ottenere l'oggetto radice dell'oggetto grafico.  
+- Chiamare <xref:System.Xaml.XamlObjectWriter.Result%2A> alla fine del flusso del nodo XAML per ottenere l'oggetto radice dell'oggetto grafico.  
   
- Il tipo più comune di percorso di salvataggio può essere descritte come segue:  
+ Il tipo più comune di percorso di salvataggio può essere descritto di seguito:  
   
-- Iniziare con l'oggetto grafico di un'ora di esecuzione dell'intera applicazione, il contenuto dell'interfaccia utente e lo stato di una fase di esecuzione, o un segmento più piccolo di rappresentazione dell'oggetto complessiva dell'applicazione in fase di esecuzione.  
+- Iniziare con l'oggetto grafico di un'intera fase di esecuzione dell'applicazione, il contenuto dell'interfaccia utente e lo stato di una fase di esecuzione oppure un segmento più piccolo della rappresentazione dell'oggetto di un'applicazione complessiva in fase di esecuzione.  
   
-- Da un oggetto di avvio logico, ad esempio una directory radice dell'applicazione o radice del documento, caricare gli oggetti in <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> è un <xref:System.Xaml.XamlReader> sottoclasse.  
+- Da un oggetto iniziale logico, ad esempio una radice dell'applicazione o una radice del documento, caricare gli oggetti in <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> è una sottoclasse <xref:System.Xaml.XamlReader>.  
   
-- Il risultato è un flusso di nodi XAML. È possibile accedere ai singoli nodi del flusso di nodi XAML tramite <xref:System.Xaml.XamlObjectReader> e <xref:System.Xaml.XamlReader> API. In questo caso l'operazione più comune consiste nel passare attraverso il flusso di nodi XAML, l'elaborazione di ogni nodo usando un record"corrente" metafora.  
+- Il risultato è un flusso di nodi XAML. È possibile accedere ai singoli nodi del flusso del nodo XAML usando <xref:System.Xaml.XamlObjectReader> e <xref:System.Xaml.XamlReader> API. L'operazione più comune consiste nell'avanzare nel flusso del nodo XAML, elaborando ogni nodo usando una metafora "record corrente".  
   
-- Passare i nodi risultanti dal flusso di nodi XAML per un <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> è un <xref:System.Xaml.XamlWriter> sottoclasse.  
+- Passare i nodi risultanti dal flusso del nodo XAML a un'API <xref:System.Xaml.XamlXmlWriter>. <xref:System.Xaml.XamlXmlWriter> è una sottoclasse <xref:System.Xaml.XamlWriter>.  
   
-- Il <xref:System.Xaml.XamlXmlWriter> scrive XAML in un UTF XML codifica. È possibile salvare questo come file di testo, come un flusso o in altri formati.  
+- Il <xref:System.Xaml.XamlXmlWriter> scrive XAML in una codifica UTF XML. È possibile salvarlo come file di testo, come flusso o in altri moduli.  
   
 - Chiamare <xref:System.Xaml.XamlXmlWriter.Flush%2A> per ottenere l'output finale.  
   
- Per altre informazioni sui concetti di flusso di nodi XAML, vedere [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md).  
+ Per altre informazioni sui concetti relativi al flusso di nodi XAML, vedere [informazioni sulle strutture e sui concetti del flusso del nodo XAML](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ### <a name="the-xamlservices-class"></a>Classe XamlServices  
- Non è sempre necessario gestire un flusso di nodi XAML. Se si desidera che un percorso di caricamento di base o un percorso di salvataggio di base, è possibile usare le API nel <xref:System.Xaml.XamlServices> classe.  
+ Non è sempre necessario gestire un flusso di nodi XAML. Se si vuole un percorso di caricamento di base o un percorso di salvataggio di base, è possibile usare le API nella classe <xref:System.Xaml.XamlServices>.  
   
-- Varie firme di <xref:System.Xaml.XamlServices.Load%2A> implementare un percorso di caricamento. È possibile caricare un file o un flusso o in grado di caricare un' <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> o <xref:System.Xaml.XamlReader> che eseguono il wrapping l'input XAML tramite caricamento con le API del lettore.  
+- Diverse firme di <xref:System.Xaml.XamlServices.Load%2A> implementano un percorso di caricamento. È possibile caricare un file o un flusso oppure è possibile caricare un <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> o <xref:System.Xaml.XamlReader> che esegue il wrapping dell'input XAML caricando le API del lettore.  
   
-- Varie firme dei <xref:System.Xaml.XamlServices.Save%2A> salvare un grafico di oggetti e producono l'output come un flusso, file, oppure <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> istanza.  
+- Diverse firme di <xref:System.Xaml.XamlServices.Save%2A> salvano un oggetto grafico e producono l'output come flusso, file o <xref:System.Xml.XmlWriter>/istanza <xref:System.IO.TextWriter>.  
   
-- <xref:System.Xaml.XamlServices.Transform%2A> Converte XAML mediante il collegamento di un percorso di caricamento e salvataggio percorso come un'unica operazione. Un contesto dello schema diverso o un sistema di tipi di backup può essere usato per <xref:System.Xaml.XamlReader> e <xref:System.Xaml.XamlWriter>, ossia ciò che influenza il modo in cui il XAML risultante viene trasformato.  
+- <xref:System.Xaml.XamlServices.Transform%2A> converte XAML collegando un percorso di caricamento e un percorso di salvataggio come singola operazione. È possibile usare un contesto dello schema diverso o un sistema di tipi di supporto diverso per <xref:System.Xaml.XamlReader> e <xref:System.Xaml.XamlWriter>, che influisce sul modo in cui il codice XAML risultante viene trasformato.  
   
- Per altre informazioni su come usare <xref:System.Xaml.XamlServices>, vedere [classe XAMLServices e lettura di XAML di base o la scrittura](xamlservices-class-and-basic-xaml-reading-or-writing.md).  
+ Per ulteriori informazioni sull'utilizzo di <xref:System.Xaml.XamlServices>, vedere [classe XamlServices e lettura o scrittura di codice XAML di base](xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   
 ## <a name="xaml-type-system"></a>Sistema di tipi XAML  
- Il sistema di tipi XAML fornisce le API necessarie per lavorare con un determinato nodo singolo di un flusso di nodi XAML.  
+ Il sistema di tipi XAML fornisce le API necessarie per lavorare con un singolo nodo di un flusso di nodi XAML.  
   
- <xref:System.Xaml.XamlType> è la rappresentazione per un oggetto - che cosa si sta elaborando tra un nodo oggetto iniziale e un nodo oggetto finale.  
+ <xref:System.Xaml.XamlType> è la rappresentazione per un oggetto, ovvero ciò che si sta elaborando tra un nodo oggetto iniziale e un nodo oggetto finale.  
   
- <xref:System.Xaml.XamlMember> è la rappresentazione per un membro di un oggetto - che cosa si sta elaborando tra un nodo membro iniziale e un nodo membro finale.  
+ <xref:System.Xaml.XamlMember> is the representation for a member of an object - what you are processing between a start member node and end member node.  
   
- Le API, ad esempio <xref:System.Xaml.XamlType.GetAllMembers%2A> e <xref:System.Xaml.XamlType.GetMember%2A> e <xref:System.Xaml.XamlMember.DeclaringType%2A> segnalano le relazioni tra una <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  
+ APIs such as <xref:System.Xaml.XamlType.GetAllMembers%2A> and <xref:System.Xaml.XamlType.GetMember%2A> and <xref:System.Xaml.XamlMember.DeclaringType%2A> report the relationships between a <xref:System.Xaml.XamlType> and <xref:System.Xaml.XamlMember>.  
   
- Il comportamento predefinito del sistema di tipi XAML come implementato dai servizi XAML di .NET Framework è basato su common language runtime (CLR) e l'analisi statica di tipi CLR negli assembly tramite reflection. Pertanto, per un tipo CLR specifico, l'implementazione predefinita del sistema di tipi XAML possa esporre lo schema XAML di quel tipo e i relativi membri e segnalarlo in termini di sistema di tipi XAML. Nel sistema di tipi XAML predefinito, il concetto di assegnabilità dei tipi viene eseguito il mapping all'ereditarietà CLR e i concetti di istanze, i tipi di valore e così via vengono associati ai comportamenti e caratteristiche CLR di supporto.  
+ The default behavior of the XAML type system as implemented by .NET Framework XAML Services is based on the common language runtime (CLR), and static analysis of CLR types in assemblies by using reflection. Therefore, for a specific CLR type, the default implementation of the XAML type system can expose the XAML schema of that type and its members and report it in terms of the XAML type system. In the default XAML type system, the concept of assignability of types is mapped onto CLR inheritance, and the concepts of instances, value types and so on are also mapped to the supporting behaviors and features of the CLR.  
   
-## <a name="reference-for-xaml-language-features"></a>Informazioni di riferimento per le funzionalità del linguaggio XAML  
- Per supportare XAML, dei servizi XAML di .NET Framework fornisce l'implementazione specifica di concetti del linguaggio XAML definite per spazio dei nomi XAML del linguaggio XAML. Questi scenari sono documentati come pagine di riferimento specifiche. Le funzionalità del linguaggio sono documentate dalla prospettiva del comportano di queste funzionalità del linguaggio quando vengono elaborati da un writer XAML che è definito dai servizi XAML di .NET Framework o un lettore XAML. Per altre informazioni, vedere [XAML Namespace (x) Funzionalità del linguaggio](xaml-namespace-x-language-features.md).
+## <a name="reference-for-xaml-language-features"></a>Reference for XAML Language Features  
+ To support XAML, .NET Framework XAML Services provides specific implementation of XAML language concepts as defined for the XAML language XAML namespace. These are documented as specific reference pages. The language features are documented from the perspective of how these language features behave when they are processed by a XAML reader or XAML writer that is defined by .NET Framework XAML Services. Per altre informazioni, vedere [XAML Namespace (x:) Language Features](xaml-namespace-x-language-features.md).

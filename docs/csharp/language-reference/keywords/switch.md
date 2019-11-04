@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424116"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422289"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -44,7 +44,7 @@ L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle e
 In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espressione che restituisce un valore dei tipi seguenti:
 
 - un [char](char.md).
-- una [string](string.md).
+- una [string](../builtin-types/reference-types.md).
 - un [bool](bool.md).
 - un valore integrale, ad esempio un [int](../builtin-types/integral-numeric-types.md) o un [long](../builtin-types/integral-numeric-types.md).
 - un valore [enum](enum.md).
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case (\<case label>) a un'altra."
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "il controllo non può passare da un'etichetta case (\<etichetta case >) a un'altra".
 
 ```csharp
 switch (caseSwitch)
@@ -125,7 +125,7 @@ dove *costant* è il valore su cui eseguire il test. *constant* può essere una 
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](char.md).
-- Un valore letterale [string](string.md).
+- Un valore letterale [string](../builtin-types/reference-types.md).
 
 L'espressione costante viene valutata nel modo seguente:
 
@@ -195,7 +195,7 @@ Si noti che la clausola `when` dell'esempio che tenta di verificare se un oggett
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_csharplang/spec/statements.md#the-switch-statement) nella [specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_csharplang/spec/statements.md#the-switch-statement) nella [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039443"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424663"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
 Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come un servizio può utilizzare i provider di appartenenze e ruoli di ASP.NET per autenticare e autorizzare i client.  
@@ -69,7 +69,7 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
 </system.web>  
 ```  
   
- Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato server deve contenere lo stesso valore per l' `SubjectName` `findValue` attributo nell'elemento di [ \<configurazione serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Il comportamento specifica inoltre che l'autenticazione delle coppie nome utente-password viene eseguita dal provider di appartenenze ASP.NET e il mapping dei ruoli viene eseguito dal provider di ruoli ASP.NET specificando i nomi definiti per i due provider.  
+ Il servizio espone un solo endpoint per la comunicazione con il servizio, che viene definito mediante il file di configurazione Web.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, per la quale è impostata l'autenticazione Windows come predefinita. In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente. Il comportamento specifica che il certificato server deve essere utilizzato per autenticare il servizio. Il certificato server deve contenere lo stesso valore per la `SubjectName` come attributo `findValue` nell'elemento di configurazione [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Il comportamento specifica inoltre che l'autenticazione delle coppie nome utente-password viene eseguita dal provider di appartenenze ASP.NET e il mapping dei ruoli viene eseguito dal provider di ruoli ASP.NET specificando i nomi definiti per i due provider.  
   
 ```xml  
 <system.serviceModel>  
@@ -150,9 +150,9 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
   
 4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5. Sul server aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. Quando `setup.bat` si esegue `service` con l'argomento viene creato un certificato del servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.  
+5. Sul server aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. Quando si esegue `setup.bat` con l'argomento `service` viene creato un certificato di servizio con il nome di dominio completo del computer e il certificato del servizio viene esportato in un file denominato Service. cer.  
   
-6. Modificare Web. config per riflettere il nuovo nome del certificato (nell' `findValue` attributo [ \<in serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
+6. Modificare Web. config per riflettere il nuovo nome del certificato (nell'attributo `findValue` nella [\<ServiceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
   
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
@@ -167,7 +167,7 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
 - Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
   
 > [!NOTE]
-> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi Windows Communication Foundation (WCF) che usano certificati tra computer, assicurarsi di cancellare i certificati del servizio installati nell'archivio CurrentUser-TrustedPeople. A tale scopo, utilizzare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi Windows Communication Foundation (WCF) che usano certificati tra computer, assicurarsi di cancellare i certificati del servizio installati nell'archivio CurrentUser-TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>File batch di installazione  
  Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.  
@@ -180,7 +180,7 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
   
      Il certificato viene memorizzato nell'archivio personale nel percorso di archivio LocalMachine.  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
   
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

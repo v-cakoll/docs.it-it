@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423668"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. Pipelines in .NET
 
@@ -91,7 +91,7 @@ Nel primo ciclo:
 
 * <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType> viene chiamato per ottenere la memoria dal writer sottostante.
 * <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType> viene chiamato per indicare al `PipeWriter` la quantità di dati scritti nel buffer.
-* viene chiamato <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> per rendere i dati disponibili per il `PipeReader`.
+* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> viene chiamato per rendere i dati disponibili per l'`PipeReader`.
 
 Nel secondo ciclo, il `PipeReader` utilizza i buffer scritti da `PipeWriter`. I buffer provengono dal socket. La chiamata a `PipeReader.ReadAsync`:
 
@@ -123,7 +123,7 @@ Per ottenere prestazioni ottimali, c'è un equilibrio tra le pause frequenti e l
 
 Per risolvere il problema precedente, il `Pipe` ha due impostazioni per controllare il flusso di dati:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: determina la quantità di dati che devono essere memorizzati nel buffer prima delle chiamate alla pausa <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: determina la quantità di dati che devono essere memorizzati nel buffer prima che le chiamate a <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> pausa.
 * <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: determina la quantità di dati che il lettore deve osservare prima che le chiamate a `PipeWriter.FlushAsync` riprendano.
 
 ![Diagramma con ResumeWriterThreshold e PauseWriterThreshold](./media/pipelines/resume-pause.png)
@@ -159,7 +159,7 @@ Quando si eseguono operazioni di I/O, è importante avere un controllo accurato 
 
 ### <a name="pipe-reset"></a>Reimpostazione pipe
 
-Spesso è efficace riutilizzare l'oggetto `Pipe`. Per reimpostare la pipe, chiamare <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> in caso di completamento di entrambe le `PipeReader` e `PipeWriter`.
+Spesso è efficace riutilizzare l'oggetto `Pipe`. Per reimpostare la pipe, chiamare <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> quando sia il `PipeReader` che il `PipeWriter` sono completati.
 
 ## <a name="pipereader"></a>PipeReader
 
@@ -194,7 +194,7 @@ Il codice seguente legge un singolo messaggio da un `PipeReader` e lo restituisc
 Il codice precedente:
 
 * Analizza un singolo messaggio.
-* Aggiorna la @no__t utilizzata-0 ed esaminata `SequencePosition` in modo che punti all'inizio del buffer di input tagliato.
+* Aggiorna le `SequencePosition` utilizzate ed esaminate `SequencePosition` in modo che puntino all'inizio del buffer di input tagliato.
 
 I due argomenti `SequencePosition` vengono aggiornati perché `TryParseMessage` rimuove il messaggio analizzato dal buffer di input. Generalmente, durante l'analisi di un singolo messaggio dal buffer, la posizione esaminata deve essere una delle seguenti:
 
@@ -311,8 +311,8 @@ Il <xref:System.IO.Pipelines.PipeWriter> gestisce i buffer per la scrittura per 
 
 Il codice precedente:
 
-* Richiede un buffer di almeno 5 byte dal `PipeWriter` con <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>.
-* Scrive i byte per la stringa ASCII `"Hello"` nell'oggetto restituito `Span<byte>`.
+* Richiede un buffer di almeno 5 byte dal `PipeWriter` usando <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>.
+* Scrive i byte per la stringa ASCII `"Hello"` al `Memory<byte>`restituito.
 * Chiama <xref:System.IO.Pipelines.PipeWriter.Advance%2A> per indicare il numero di byte scritti nel buffer.
 * Scarica l'`PipeWriter`, che invia i byte al dispositivo sottostante.
 
@@ -345,4 +345,4 @@ Il <xref:System.IO.Pipelines.IDuplexPipe> è un contratto per i tipi che support
 
 ## <a name="streams"></a>Flussi
 
-Durante la lettura o la scrittura di dati di flusso, in genere si leggono i dati utilizzando un deserializzatore e si scrivono i dati utilizzando un serializzatore. La maggior parte di queste API del flusso di lettura e scrittura ha un parametro `Stream`. Per semplificare l'integrazione con queste API esistenti, `PipeReader` e `PipeWriter` espongono un <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> restituisce un'implementazione `Stream` intorno al `PipeReader` o `PipeWriter`.
+Durante la lettura o la scrittura di dati di flusso, in genere si leggono i dati utilizzando un deserializzatore e si scrivono i dati utilizzando un serializzatore. La maggior parte di queste API del flusso di lettura e scrittura ha un parametro `Stream`. Per semplificare l'integrazione con queste API esistenti, `PipeReader` e `PipeWriter` esporre un <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> restituisce un'implementazione di `Stream` intorno al `PipeReader` o `PipeWriter`.

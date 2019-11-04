@@ -2,12 +2,12 @@
 title: Controlli messaggi
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039393"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424144"
 ---
 # <a name="message-inspectors"></a>Controlli messaggi
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
@@ -19,7 +19,7 @@ In questo esempio viene illustrato come implementare e configurare i controlli m
 ## <a name="message-inspector"></a>Controllo messaggi  
  I controlli messaggi del client implementano l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>, e i controlli messaggi del servizio implementano l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Le implementazioni possono essere combinate in una sola classe per formare un controllo messaggi che funzioni per entrambi lati. Questo esempio implementa questo controllo messaggi combinato. Il controllo viene generato tramite il passaggio di un set di schemi con cui vengono confrontati i messaggi in ingresso e in uscita e consente allo sviluppatore di specificare se i messaggi in ingresso o in uscita sono convalidati e se il controllo si trova in modalità client o di distribuzione, cosa che influisce sulla gestione degli errori illustrata in un secondo momento in questo argomento.  
   
-```  
+```csharp  
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -43,7 +43,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> viene richiamato dal dispatcher quando un messaggio è stato ricevuto, elaborato dallo stack di canali e assegnato a un servizio, ma prima che venga deserializzato e inviato a un'operazione. Se il messaggio in arrivo è crittografato, il messaggio arriva al controllo messaggi già decrittografato. Il metodo ottiene il messaggio `request` passato come un parametro per riferimento, il che significa che il messaggio potrà essere controllato, modificato o sostituito in base alla necessità. Il valore restituito può essere qualsiasi oggetto e può essere utilizzato come oggetto dello stato di correlazione che viene passato a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando il servizio restituisce una risposta al messaggio corrente. In questo esempio, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega l'esame (la convalida) del messaggio al metodo privato e locale `ValidateMessageBody` e non restituisce oggetti dello stato di correlazione. Questo metodo assicura che non passino messaggi non validi nel servizio.  
   
-```  
+```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
 {  
     if (validateRequest)  
@@ -60,7 +60,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
   
  Se si verifica un errore di convalida nel servizio, il metodo `ValidateMessageBody` genera eccezioni derivate da <xref:System.ServiceModel.FaultException>. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, queste eccezioni possono essere inserite nell'infrastruttura del modello di servizi, dove vengono automaticamente trasformate in errori SOAP e inoltrate al client. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, le eccezioni <xref:System.ServiceModel.FaultException> non possono essere inserite nell'infrastruttura, perché la trasformazione di eccezioni d'errore generate dal servizio avviene prima che il controllo messaggi venga chiamato. Pertanto l'implementazione seguente rileva l'eccezione `ReplyValidationFault` nota e sostituisce il messaggio di risposta con un messaggio di errore esplicito. Questo metodo assicura che non vengano restituiti messaggi non validi dall'implementazione del servizio.  
   
-```  
+```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -88,7 +88,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  Questa implementazione <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> assicura che non vengano inviati messaggi non validi al servizio.  
   
-```  
+```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
 {  
     if (validateRequest)  
@@ -101,7 +101,7 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
   
  L'implementazione `AfterReceiveReply` assicura che nessun messaggio non valido ricevuto dal servizio venga inoltrato al codice utente del client.  
   
-```  
+```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -115,7 +115,7 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
   
  Se non si verificano errori, viene costruito un nuovo messaggio che copia le proprietà e le intestazioni dal messaggio originale e utilizza l'InfoSet convalidato nel flusso di memoria, racchiuso in un <xref:System.Xml.XmlDictionaryReader> e aggiunto al messaggio sostitutivo.  
   
-```  
+```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
 {  
     if (!message.IsFault)  
@@ -162,7 +162,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Come illustrato precedentemente, le eccezioni generate dal gestore sono diverse per il client e per il servizio. Nel servizio, le eccezioni derivano da <xref:System.ServiceModel.FaultException>, mentre nel client che le eccezioni sono normali eccezioni personalizzate.  
   
-```  
+```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
 {  
     if (e.Severity == XmlSeverityType.Error)  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  La classe `SchemaValidationBehavior` seguente rappresenta il comportamento utilizzato per aggiungere il controllo messaggi di questo esempio alla fase di esecuzione del client o della distribuzione. L'implementazione è piuttosto semplice in entrambi casi. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> e <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, il controllo messaggi viene creato e aggiunto alla raccolta <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> della rispettiva fase di esecuzione.  
   
-```  
+```csharp  
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > Questo particolare comportamento non funge anche da attributo e pertanto non può essere aggiunto in modo dichiarativo a un tipo di contratto di un tipo di servizio. Si tratta di una decisione presa a livello di programmazione perché la raccolta di schemi non può essere caricata in una dichiarazione di attributo e fare riferimento a un ulteriore percorso di configurazione (per esempio alle impostazioni dell'applicazione) in questo attributo significa creare un elemento di configurazione non coerente con il resto della configurazione del modello del servizio. Pertanto, questo comportamento può essere aggiunto soltanto in modo imperativo tramite codice o tramite un'estensione di configurazione del modello del servizio.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Aggiunta del controllo messaggi tramite configurazione  
- Per la configurazione di un comportamento personalizzato in un endpoint nel file di configurazione dell'applicazione, il modello di servizio richiede agli implementatori di creare un *elemento di estensione* di <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>configurazione rappresentato da una classe derivata da. Questa estensione deve essere quindi aggiunta alla sezione di configurazione del modello del servizio per le estensioni come illustrato per le seguenti estensioni in questo argomento.  
+ Per la configurazione di un comportamento personalizzato in un endpoint nel file di configurazione dell'applicazione, il modello di servizio richiede agli implementatori di creare un *elemento di estensione* di configurazione rappresentato da una classe derivata da <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Questa estensione deve essere quindi aggiunta alla sezione di configurazione del modello del servizio per le estensioni come illustrato per le seguenti estensioni in questo argomento.  
   
 ```xml  
 <system.serviceModel>  
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Il metodo `CreateBehavior` sottoposto a override trasforma i dati di configurazione in un oggetto di comportamento quando la fase di esecuzione valuta i dati di configurazione mentre compila un client o un endpoint.  
   
-```  
+```csharp  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  
@@ -369,7 +369,7 @@ public bool ValidateRequest
 ## <a name="adding-message-inspectors-imperatively"></a>Aggiunta di controlli messaggi in modo imperativo  
  I comportamenti possono essere aggiunti facilmente alla fase di esecuzione del client e o del servizio utilizzando il codice imperativo, ma non utilizzando attributi (funzione non supportata in questo esempio per la ragione sopra citata) e configurazione. In questo esempio, questa operazione viene eseguita nell'applicazione client per testare il controllo messaggi del client. La classe `GenericClient` deriva da <xref:System.ServiceModel.ClientBase%601>, che espone la configurazione dell'endpoint al codice utente. Prima che il client venga aperto in modo implicito, la configurazione dell'endpoint può essere modificata, ad esempio aggiungendo i comportamenti come illustrato nel codice seguente. L'aggiunta del comportamento al servizio è praticamente equivalente alla tecnica per client illustrata e deve essere eseguita prima che l'host del servizio venga aperto.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("*** Call 'Hello' with generic client, with client behavior");  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

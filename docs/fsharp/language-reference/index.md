@@ -2,12 +2,12 @@
 title: Riferimenti per il linguaggio F#
 description: Trovare F# le informazioni sulle funzionalità del linguaggio da questo riferimento a token di lingua, concetti, tipi, espressioni e costrutti supportati dal compilatore.
 ms.date: 05/16/2016
-ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630690"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424996"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
@@ -17,7 +17,7 @@ Questa sezione è un riferimento al F# linguaggio, un linguaggio di programmazio
 
 La tabella seguente illustra gli argomenti di riferimento che includono tabelle di parole chiave, simboli e i valori letterali usati come token in F#.
 
-|Titolo|DESCRIZIONE|
+|Titolo|Descrizione|
 |-----|-----------|
 |[Riferimento per parole chiave](keyword-reference.md)|Contiene collegamenti a informazioni su tutte le parole chiave del linguaggio F#.|
 |[Riferimenti per simboli e operatori](./symbol-and-operator-reference/index.md)|Include una tabella di simboli e operatori usati nel linguaggio F#.|
@@ -42,13 +42,13 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Criteri di ricerca](pattern-matching.md)|Descrive i modelli, che rappresentano le regole per la trasformazione dei dati di input usati nel linguaggio F# per estrarre i dati di confronto con un modello, decomporre i dati nelle parti costituenti o estrarre informazioni dai dati in vari modi.|
 |[Criteri attivi](active-patterns.md)|Descrive i modelli attivi. I modelli attivi consentono di definire partizioni denominate che suddividono i dati di input. È possibile usare i criteri attivi per decomporre i dati in modo personalizzato per ogni partizione.|
 |[Asserzioni](assertions.md)|Descrive l'espressione `assert`, che è una funzionalità di debug che è possibile usare per verificare un'espressione. In caso di errore in modalità Debug, un'asserzione genera una finestra di dialogo di errore di sistema.|
-|[Gestione delle eccezioni](/.exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
+|[Gestione delle eccezioni](./exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
 |[Attributi](attributes.md)|Descrive gli attributi, che abilitano i metadati da applicare a un costrutto di programmazione.|
-|[Gestione delle risorse: Parola chiave `use`](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
+|[Gestione delle risorse: parola chiave `use` ](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
 |[Spazi dei nomi](namespaces.md)|Descrive il supporto degli spazi dei nomi in F#. Uno spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate perché consente di collegare un nome a un raggruppamento di elementi di programma.|
 |[Moduli](modules.md)|Descrive i moduli. Un modulo F# è un raggruppamento di codice F#, ad esempio valori, tipi e valori di funzioni, in un programma F#. Il codice di raggruppamento nei moduli consente di tenere insieme il codice correlato e consente di evitare conflitti di nome nel programma.|
-|[Dichiarazioni di importazione: Parola chiave `open`](import-declarations-the-open-keyword.md)|Descrive il funzionamento di `open`. Una dichiarazione di importazione specifica un modulo o uno spazio dei nomi ai cui elementi è possibile fare riferimento senza usare un nome completo.|
-|[Firme](signatures.md)|Descrive le firme e i file delle firme. Un file della firma contiene informazioni sulle firme pubbliche di un set di elementi del programma F#, ad esempio i tipi, gli spazi dei nomi e i moduli. Può essere usato per specificare l'accessibilità di questi elementi del programma.|
+|[Dichiarazioni di importazione: parola chiave `open`](import-declarations-the-open-keyword.md)|Descrive il funzionamento di `open`. Una dichiarazione di importazione specifica un modulo o uno spazio dei nomi ai cui elementi è possibile fare riferimento senza usare un nome completo.|
+|[Firme](signature-files.md)|Descrive le firme e i file delle firme. Un file della firma contiene informazioni sulle firme pubbliche di un set di elementi del programma F#, ad esempio i tipi, gli spazi dei nomi e i moduli. Può essere usato per specificare l'accessibilità di questi elementi del programma.|
 |[Documentazione di XML](xml-documentation.md)|Descrive il supporto per generare file di documentazione per i commenti ai documenti XML, noti anche come commenti a barra tripla. È possibile produrre documentazione dai commenti di codice in F# come in altri linguaggi .NET.|
 |[Sintassi dettagliata](verbose-syntax.md)|Descrive la sintassi per i costrutti F# quando la sintassi leggera non è abilitata. La sintassi dettagliata è indicata dalla direttiva `#light "off"` che si trova nella parte superiore del file di codice.|
 
@@ -67,7 +67,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Elenchi](lists.md)|Descrive elenchi. Un elenco in F# è una serie ordinata e non modificabile di elementi dello stesso tipo.|
 |[Opzioni](options.md)|Descrive il tipo di opzione. Un'opzione in F# viene usata quando un valore può esistere o meno. Un'opzione ha un tipo sottostante e può contenere un valore di tale tipo o nessun valore.|
 |[Sequenze](sequences.md)|Descrive le sequenze. Una sequenza è una serie logica di elementi dello stesso tipo. Gli elementi individuali di una sequenza vengono calcolati solo se necessario, pertanto la rappresentazione potrebbe essere minore di quella indicata da un conteggio di elementi letterali.|
-|[Matrici](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
+|[Array](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
 |[Record](records.md)|Descrive record. I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.|
 |[Unioni discriminate](discriminated-unions.md)|Descrive le unioni discriminate, che offrono supporto per i valori che possono essere uno dei vari casi denominati con tipi e i valori potenzialmente diversi.|
 |[Enumerazioni](enumerations.md)|Descrive le enumerazioni, che sono tipi che hanno un set definito di valori denominati. È possibile usarle in sostituzione ai valori letterali per rendere il codice più leggibile e gestibile.|
@@ -91,9 +91,9 @@ La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 |-----|-----------|
 |[Espressioni condizionali: `if...then...else`](conditional-expressions-if-then-else.md)|Descrive l'espressione `if...then...else`, che esegue diversi rami di codice e restituisce un valore diverso in base all'espressione booleana specificata.|
 |[Espressioni match](match-expressions.md)|Descrive l'espressione `match`, che consente il controllo del branching basato sul confronto di un'espressione con un set di modelli.|
-|[Cicli `for...to`Espressione](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
-|[Cicli `for...in`Espressione](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
-|[Cicli `while...do`Espressione](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
+|[Cicli: espressione `for...to`](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
+|[Cicli: espressione `for...in`](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
+|[Cicli: espressione `while...do`](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
 |[Espressioni di oggetto](object-expressions.md)|Descrive le espressioni di oggetto, ovvero le espressioni che creano nuove istanze di un tipo di oggetto creato dinamicamente, di un tipo di oggetto anonimo basato su un tipo di base, un'interfaccia o un set di interfacce esistenti.|
 |[Espressioni lazy](lazy-expressions.md)|Vengono descritte le espressioni Lazy, ovvero i calcoli che non vengono valutati immediatamente, ma che vengono invece valutati quando il risultato è effettivamente necessario.|
 |[Espressioni di calcolo](computation-expressions.md)|Descrive le espressioni di calcolo in F#, che specificano una sintassi efficiente per la scrittura di calcoli che possono essere ordinati in sequenza e combinati tramite costrutti di flusso di controllo e associazioni. Possono essere usati per specificare una sintassi efficiente per *monads*, ovvero una funzionalità di programmazione funzionale che può essere usata per gestire i dati, il controllo e gli effetti collaterali nei programmi funzionali. Un solo tipo di espressione di calcolo, ovvero il flusso di lavoro asincrono, offre supporto per i calcoli paralleli e asincroni. Per altre informazioni, vedere [Flussi di lavoro asincroni](asynchronous-workflows.md).|

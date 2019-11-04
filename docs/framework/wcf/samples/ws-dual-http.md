@@ -2,12 +2,12 @@
 title: HTTP duale WS
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 03cc5a2359c6430c04c6afb09f161b397fcb1afa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038486"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424551"
 ---
 # <a name="ws-dual-http"></a>HTTP duale WS
 
@@ -21,7 +21,7 @@ Nell'esempio di HTTP duale viene illustrato come configurare l'associazione `WSD
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -61,7 +61,7 @@ Nel client, è necessario configurare un indirizzo usabile dal server per la con
 
 Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.
 
-```
+```console
 Press <ENTER> to terminate client once the output is displayed.
 
 Result(100)
@@ -77,7 +77,7 @@ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client
 
 1. Installare ASP.NET 4,0 usando il comando seguente.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -88,7 +88,7 @@ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client
 4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Quando si esegue il client in una configurazione tra computer, assicurarsi di sostituire localhost sia `address` nell'attributo `clientBaseAddress` [ \<dell'endpoint > dell' \<elemento client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo del [ binding\<>](../../../../docs/framework/misc/binding.md) elemento [ dell'elementowsDualHttpBinding>conilnomedelcomputerappropriato,comeillustrato:\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+    > Quando si esegue il client in una configurazione a più computer, assicurarsi di sostituire localhost sia nell'attributo `address` dell' [endpoint\<> dell'elemento \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo `clientBaseAddress` dell' [associazione\<](../../../../docs/framework/misc/binding.md) elemento dell'elemento [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con il nome del computer appropriato, come illustrato:
 
     ```xml
     <client>

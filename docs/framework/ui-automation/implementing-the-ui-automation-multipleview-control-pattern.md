@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039506"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458184"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementazione del pattern di controllo MultipleView di automazione interfaccia utente
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039506"
   
  Il pattern di controllo <xref:System.Windows.Automation.MultipleViewPattern> viene usato per supportare i controlli che implementano più rappresentazioni dello stesso set di informazioni o controlli figlio e che sono in grado di scorrere tali rappresentazioni.  
   
- Esempi di controlli che possono presentare più viste includono la visualizzazione elenco (che può mostrare il contenuto come anteprime, riquadri, icone o dettagli), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafici (a torta, a linee, a barre, valore della cella con una formula), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] documenti (normale, layout Web, layout di stampa, lettura del layout, struttura), calendario di Microsoft Outlook (anno, mese, settimana, giorno) e interfacce di Media Player di Microsoft Windows. Le visualizzazioni supportate sono determinate dallo sviluppatore del controllo e sono specifiche di ogni controllo.  
+ Esempi di controlli che possono presentare più viste includono la visualizzazione elenco (che può visualizzare il contenuto come anteprime, riquadri, icone o dettagli), i grafici di Microsoft Excel (a torta, a linee, a barre, il valore della cella con una formula), i documenti di Microsoft Word (normale, layout Web, stampa layout, lettura layout, struttura), calendario Microsoft Outlook (anno, mese, settimana, giorno) e interfacce di Media Player di Microsoft Windows. Le visualizzazioni supportate sono determinate dallo sviluppatore del controllo e sono specifiche di ogni controllo.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  

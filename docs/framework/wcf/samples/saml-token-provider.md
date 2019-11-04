@@ -2,12 +2,12 @@
 title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044772"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424244"
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
 Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire le credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il provider di token di gestione credenziali predefinito. WCF viene inoltre fornito con un provider di token CardSpace. I provider di token personalizzati sono utili nei casi seguenti:
@@ -30,7 +30,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
 - Come viene autenticato il servizio dal client mediante il certificato X.509 del server.
 
- Il servizio espone due endpoint per comunicare con il servizio definito mediante il file di configurazione App.config. Ciascun endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe `wsFederationHttpBinding` standard che usa la sicurezza del messaggio. Un endpoint attende che il client si autentichi con un token SAML che usa una chiave di prova simmetrica mentre l'altro attende che il client si autentichi con un token SAML che usa una chiave di prova asimmetrica. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `serviceCredentials` consente di configurare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato "localhost" installato durante l'installazione dell'esempio come descritto nelle istruzioni fornite alla fine di questo argomento. Il comportamento `serviceCredentials` consente anche di configurare certificati che sono attendibili per la firma di token SAML. La configurazione seguente fa riferimento al certificato 'Alice' installato durante l'esempio.
+ Il servizio espone due endpoint per la comunicazione con il servizio, definito utilizzando il file di configurazione app. config. Ogni endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe `wsFederationHttpBinding` standard che usa la sicurezza del messaggio. Un endpoint attende che il client si autentichi con un token SAML che usa una chiave di prova simmetrica mentre l'altro attende che il client si autentichi con un token SAML che usa una chiave di prova asimmetrica. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `serviceCredentials` consente di configurare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato "localhost" installato durante l'installazione dell'esempio come descritto nelle istruzioni fornite alla fine di questo argomento. Il comportamento `serviceCredentials` consente anche di configurare certificati che sono attendibili per la firma di token SAML. La configurazione seguente fa riferimento al certificato 'Alice' installato durante l'esempio.
 
 ```xml
 <system.serviceModel>
@@ -119,7 +119,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      Per eseguire questa attività il provider di token personalizzato viene derivato dalla classe <xref:System.IdentityModel.Selectors.SecurityTokenProvider> ed esegue l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Questo metodo creare e restituisce un nuovo `SecurityToken`.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,7 +160,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene usata per creare <xref:System.IdentityModel.Selectors.SecurityTokenProvider> per il <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> specifico che viene passato nel metodo `CreateSecurityTokenProvider`. Viene inoltre usato un gestore del token di sicurezza per creare autenticatori del token e serializzatori del token, che però non sono trattati in questo esempio. In questo esempio il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenProvider` per restituire il provider di token SAML personalizzato quando i requisiti del token passati indicano che il token SAML è richiesto. Se la classe delle credenziali client (vedere il passaggio 3) non ha specificato un'asserzione, il gestore del token di sicurezza crea un'istanza appropriata.
 
-    ```
+    ```csharp
     public class SamlSecurityTokenManager :
      ClientCredentialsSecurityTokenManager
     {
@@ -232,7 +232,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      La classe delle credenziali client viene  usata per rappresentare le credenziali configurate per il proxy client e crea un gestore del token di sicurezza usato per ottenere gli autenticatori del token, i provider di token e il serializzatore di token.
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +275,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      L'esempio elimina la classe della credenziale client predefinita e fornisce la nuova classe della credenziale client così il client possa usare la credenziale client personalizzata.
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +309,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      Il certificato viene memorizzato nell'archivio personale nel percorso di archivio LocalMachine.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +323,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +333,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      Il certificato viene memorizzato nell'archivio personale nel percorso di archivio LocalUser.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,7 +347,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato che impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato emittente  non è necessario.
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 

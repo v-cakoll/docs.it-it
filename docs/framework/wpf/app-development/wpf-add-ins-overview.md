@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919731"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421094"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 
@@ -171,21 +171,21 @@ I componenti aggiuntivi forniscono spesso più interfacce utente per la visualiz
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Componenti aggiuntivi e applicazioni browser XAML
 
-Negli esempi illustrati fino a questo momento l'applicazione host era un'applicazione autonoma installata. Anche le [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] possono però ospitare componenti aggiuntivi, sebbene con i requisiti di compilazione e implementazione aggiuntivi seguenti:
+Negli esempi illustrati fino a questo momento l'applicazione host era un'applicazione autonoma installata. Tuttavia, le applicazioni browser XAML (XBAPs) possono anche ospitare i componenti aggiuntivi, sebbene con i seguenti requisiti di compilazione e implementazione aggiuntivi:
 
-- Il manifesto dell'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve essere configurato appositamente per scaricare la pipeline (cartelle e assembly) e l'assembly del componente aggiuntivo nella cache dell'applicazione ClickOnce nel computer client, nella stessa cartella del [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- Il manifesto dell'applicazione XBAP deve essere configurato appositamente per scaricare la pipeline (cartelle e assembly) e l'assembly del componente aggiuntivo nella cache dell'applicazione ClickOnce nel computer client, nella stessa cartella dell'applicazione XBAP.
 
-- Il codice di [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] per individuare e caricare i componenti aggiuntivi deve usare la cache dell'applicazione ClickOnce per il [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] come percorso della pipeline e del componente aggiuntivo.
+- Il codice XBAP per individuare e caricare i componenti aggiuntivi deve usare la cache dell'applicazione ClickOnce per l'applicazione XBAP come percorso della pipeline e del componente aggiuntivo.
 
-- L'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve caricare il componente aggiuntivo in un contesto di sicurezza speciale se tale componente fa riferimento a file separati che si trovano nel sito di origine. Se sono ospitati da applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], i componenti aggiuntivi possono fare riferimento unicamente ai file separati che si trovano nel sito di origine dell'applicazione host.
+- L'applicazione XBAP deve caricare il componente aggiuntivo in un contesto di sicurezza speciale se il componente aggiuntivo fa riferimento a file separati che si trovano nel sito di origine. Quando sono ospitate da XBAP, i componenti aggiuntivi possono fare riferimento solo a file separati che si trovano nel sito di origine dell'applicazione host.
 
 Queste attività sono descritte in dettaglio nelle sottosezioni seguenti.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configurazione della pipeline e del componente aggiuntivo per la distribuzione ClickOnce
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono scaricati ed eseguiti da una cartella sicura nella cache di distribuzione ClickOnce. Affinché un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ospiti un componente aggiuntivo, anche l'assembly della pipeline e del componente aggiuntivo deve essere scaricato nella cartella sicura. A tale scopo, è necessario configurare il manifesto dell'applicazione per includere l'assembly della pipeline e del componente aggiuntivo per il download. Questa operazione viene eseguita più facilmente in Visual Studio, anche se l'assembly della pipeline e del componente aggiuntivo deve trovarsi nella cartella radice del progetto host [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] per consentire a Visual Studio di rilevare gli assembly della pipeline.
+Le applicazioni XBAP vengono scaricate ed eseguite da una cartella sicura nella cache di distribuzione ClickOnce. Affinché un'applicazione XBAP possa ospitare un componente aggiuntivo, è necessario scaricare anche l'assembly della pipeline e del componente aggiuntivo nella cartella safe. A tale scopo, è necessario configurare il manifesto dell'applicazione per includere l'assembly della pipeline e del componente aggiuntivo per il download. Questa operazione viene eseguita più facilmente in Visual Studio, anche se l'assembly della pipeline e del componente aggiuntivo deve trovarsi nella cartella radice del progetto XBAP dell'host affinché Visual Studio rilevi gli assembly della pipeline.
 
-Di conseguenza, il primo passaggio consiste nel compilare l'assembly della pipeline e del componente aggiuntivo nella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], impostando l'output di compilazione di ogni progetto di assembly della pipeline e di assembly del componente aggiuntivo. La tabella seguente mostra i percorsi dell'output di compilazione per i progetti di assembly della pipeline e il progetto di assembly del componente aggiuntivo che si trovano nella stessa soluzione e cartella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host.
+Di conseguenza, il primo passaggio consiste nel compilare l'assembly della pipeline e del componente aggiuntivo nella radice del progetto XBAP impostando l'output di compilazione di ogni progetto di assembly della pipeline e del componente aggiuntivo. La tabella seguente illustra i percorsi di output di compilazione per i progetti di assembly della pipeline e il progetto di assembly del componente aggiuntivo che si trovano nella stessa soluzione e nella stessa cartella radice del progetto XBAP host.
 
 Tabella 1: Percorsi dell'output di compilazione per gli assembly della pipeline ospitati da un'applicazione XBAP
 
@@ -197,21 +197,21 @@ Tabella 1: Percorsi dell'output di compilazione per gli assembly della pipeline 
 |Adattatore sul lato host|`..\HostXBAP\HostSideAdapters\`|
 |Componente aggiuntivo|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Il passaggio successivo consiste nel specificare gli assembly della pipeline e l'assembly del componente aggiuntivo come [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] file di contenuto in Visual Studio effettuando le operazioni seguenti:
+Il passaggio successivo consiste nel specificare gli assembly della pipeline e l'assembly del componente aggiuntivo come file di contenuto XBAPs in Visual Studio effettuando le operazioni seguenti:
 
 1. Includere l'assembly della pipeline e del componente aggiuntivo nel progetto facendo clic con il pulsante destro del mouse su ogni cartella della pipeline in Esplora soluzioni e scegliendo **Includi nel progetto**.
 
 2. Impostare il valore per **Azione di compilazione** di ogni assembly della pipeline e del componente aggiuntivo su **Contenuto** nella finestra **Proprietà**.
 
-Il passaggio finale consiste nel configurare il manifesto dell'applicazione per includere i file di assembly della pipeline e il file di assembly del componente aggiuntivo per il download. I file devono trovarsi in cartelle alla radice della cartella nella cache ClickOnce occupata dall'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. La configurazione può essere eseguita in Visual Studio eseguendo le operazioni seguenti:
+Il passaggio finale consiste nel configurare il manifesto dell'applicazione per includere i file di assembly della pipeline e il file di assembly del componente aggiuntivo per il download. I file devono trovarsi in cartelle alla radice della cartella nella cache ClickOnce occupata dall'applicazione XBAP. La configurazione può essere eseguita in Visual Studio eseguendo le operazioni seguenti:
 
-1. Fare clic con il pulsante destro del mouse sul progetto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], scegliere **Proprietà**, fare clic su **Pubblica** e quindi fare clic sul pulsante **File applicazione**.
+1. Fare clic con il pulsante destro del mouse sul progetto XBAP, scegliere **Proprietà**, fare clic su **pubblica**, quindi fare clic sul pulsante **file applicazione** .
 
 2. Nella finestra di dialogo **File applicazione** impostare il valore di **Stato pubblicazione** di ogni DLL della pipeline e del componente aggiuntivo su **Includi (Auto)** e impostare il valore di **Gruppo di download** per ogni DLL della pipeline e del componente aggiuntivo su **(Obbligatorio)** .
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso della pipeline e del componente aggiuntivo dalla base dell'applicazione
 
-Quando la pipeline e il componente aggiuntivo sono configurati per la distribuzione ClickOnce, vengono scaricati nella stessa cartella della cache ClickOnce del [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per usare la pipeline e il componente aggiuntivo dall'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], il codice [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ottenerli dalla base dell'applicazione. I vari tipi e membri del modello di componente aggiuntivo .NET Framework per l'utilizzo di pipeline e componenti aggiuntivi forniscono supporto speciale per questo scenario. In primo luogo, il percorso viene identificato dal valore di enumerazione <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Questo valore viene usato con gli overload dei membri pertinenti del componente aggiuntivo per l'uso delle pipeline, che includono quanto segue:
+Quando la pipeline e il componente aggiuntivo sono configurati per la distribuzione ClickOnce, vengono scaricati nella stessa cartella della cache ClickOnce dell'applicazione XBAP. Per utilizzare la pipeline e il componente aggiuntivo da XBAP, è necessario che il codice XBAP li ottenga dalla base dell'applicazione. I vari tipi e membri del modello di componente aggiuntivo .NET Framework per l'utilizzo di pipeline e componenti aggiuntivi forniscono supporto speciale per questo scenario. In primo luogo, il percorso viene identificato dal valore di enumerazione <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Questo valore viene usato con gli overload dei membri pertinenti del componente aggiuntivo per l'uso delle pipeline, che includono quanto segue:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

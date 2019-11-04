@@ -31,21 +31,22 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048506"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458048"
 ---
 # <a name="handling-errors"></a>Gestione degli errori
+
 Entrambe le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> generano eccezioni di sistema (ad esempio <xref:System.ArgumentException>) ed eccezioni specifiche del Web (ovvero <xref:System.Net.WebException> generate dal metodo <xref:System.Net.WebRequest.GetResponse%2A>).  
   
- Ogni **WebException** include una proprietà <xref:System.Net.WebException.Status%2A> che contiene un valore dall'enumerazione <xref:System.Net.WebExceptionStatus>. È possibile esaminare la proprietà **Status** per determinare l'errore che si è verificato e intervenire in modo appropriato per risolvere l'errore.  
+Ogni **WebException** include una proprietà <xref:System.Net.WebException.Status%2A> che contiene un valore dall'enumerazione <xref:System.Net.WebExceptionStatus>. È possibile esaminare la proprietà **Status** per determinare l'errore che si è verificato e intervenire in modo appropriato per risolvere l'errore.  
   
- La tabella seguente descrive i possibili valori per la proprietà **Status**.  
+La tabella seguente descrive i possibili valori per la proprietà **Status**.  
   
-|Stato|DESCRIZIONE|  
+|Status|Descrizione|  
 |------------|-----------------|  
 |ConnectFailure|Non è stato possibile contattare il servizio remoto al livello di trasporto.|  
 |ConnectionClosed|Chiusura imprevista della connessione.|  
@@ -66,9 +67,9 @@ Entrambe le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> 
 |ProxyNameResolutionFailure|Il servizio di risoluzione dei nomi non è riuscito a risolvere il nome host del proxy.|  
 |UnknownError|Si è verificata un'eccezione di tipo sconosciuto.|  
   
- Quando la proprietà **Status** è **WebExceptionStatus.ProtocolError**, è disponibile un oggetto **WebResponse** che contiene la risposta dal server. È possibile esaminare questa risposta per stabilire l'origine effettiva dell'errore del protocollo.  
+Quando la proprietà **Status** è **WebExceptionStatus.ProtocolError**, è disponibile un oggetto **WebResponse** che contiene la risposta dal server. È possibile esaminare questa risposta per stabilire l'origine effettiva dell'errore del protocollo.  
   
- L'esempio seguente mostra come intercettare una **WebException**.  
+L'esempio seguente mostra come intercettare una **WebException**.  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Le applicazioni che usano la classe <xref:System.Net.Sockets.Socket> generano <xref:System.Net.Sockets.SocketException> quando si verificano errori sul socket di Windows. Le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient> sono basate sulla classe **Socket** e anch'esse generano **SocketException**.  
+Le applicazioni che usano la classe <xref:System.Net.Sockets.Socket> generano <xref:System.Net.Sockets.SocketException> quando si verificano errori sul socket di Windows. Le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient> sono basate sulla classe **Socket** e anch'esse generano **SocketException**.  
   
- Quando viene generata una **SocketException**, la classe **SocketException** imposta la proprietà <xref:System.Net.Sockets.SocketException.ErrorCode%2A> sull'ultimo errore relativo a un socket del sistema operativo che si è verificato. Per altre informazioni sui codici di errore di socket, vedere la documentazione dei codici di errore dell'API Winsock 2.0 in MSDN.  
+Quando viene generata una **SocketException**, la classe **SocketException** imposta la proprietà <xref:System.Net.Sockets.SocketException.ErrorCode%2A> sull'ultimo errore relativo a un socket del sistema operativo che si è verificato. Per altre informazioni sui codici di errore di socket, vedere la documentazione dei codici di errore dell'API Winsock 2.0 in MSDN.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni fondamentali sulla gestione delle eccezioni](../../standard/exceptions/exception-handling-fundamentals.md)
+- [Gestione e generazione di eccezioni in .NET](../../standard/exceptions/index.md)
 - [Richiesta di dati](requesting-data.md)

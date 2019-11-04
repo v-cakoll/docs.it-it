@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353758"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422206"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ I tipi semplici si differenziano da altri tipi struct in quanto permettono alcun
 
 - Le espressioni costanti, in cui tutti gli operandi sono costanti di tipo semplice, vengono valutate in fase di compilazione.
 
-Per altre informazioni, vedere la sezione [Tipi semplici](~/_csharplang/spec/types.md#simple-types) nella [specifica del linguaggio C#](../language-specification/index.md).
+Per altre informazioni, vedere la sezione [Tipi semplici](~/_csharplang/spec/types.md#simple-types) nella [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="initializing-value-types"></a>Inizializzazione dei tipi valore
 
@@ -107,6 +107,6 @@ Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabe
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Tipi](types.md)
+- [Tipi](/dotnet/csharp/language-reference/keywords)
 - [Tipi riferimento](reference-types.md)
 - [Tipi valore nullable](../../programming-guide/nullable-types/index.md)

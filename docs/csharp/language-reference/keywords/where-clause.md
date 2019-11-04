@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602030"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421937"
 ---
 # <a name="where-clause-c-reference"></a>Clausola where (Riferimento C#)
 
@@ -37,7 +37,7 @@ Una clausola `where` può contenere uno o più metodi che restituiscono valori b
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La clausola `where` è un meccanismo di filtro. Può essere posizionata praticamente ovunque in un'espressione di query, ma non può essere la prima o l'ultima clausola. Una clausola `where` la può apparire prima o dopo una clausola [group](group-clause.md) a seconda se gli elementi di origine devono essere filtrati prima o dopo essere stati raggruppati.
 
@@ -51,5 +51,5 @@ In fase di compilazione, la parola chiave `where` viene convertita in una chiama
 - [Clausola from](from-clause.md)
 - [Clausola select](select-clause.md)
 - [Filtraggio dei dati](../../programming-guide/concepts/linq/filtering-data.md)
-- [Espressioni di query LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Nozioni di base su LINQ in C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ in C#](../../linq/index.md)
+- [Nozioni di base su LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)

@@ -3,12 +3,12 @@ title: Introduzione all'archiviazione code di Azure con F#
 description: Le code di Azure forniscono messaggistica asincrona e affidabile tra i componenti dell'applicazione. La messaggistica cloud consente di ridimensionare i componenti dell'applicazione in modo indipendente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 65af98fb88e91d709eb0e35907cbc2dc097634d0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a09cbdd4b995e34177c110ce91b02162bb19dfa8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630479"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423850"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introduzione all'archiviazione code di Azure con F\#
 
@@ -20,20 +20,20 @@ Questa esercitazione illustra come scrivere F# codice per alcune attività comun
 
 Per una panoramica concettuale dell'archiviazione code, vedere [la Guida di .NET per l'archiviazione code](/azure/storage/storage-dotnet-how-to-use-queues).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per usare questa guida, è necessario [creare prima un account di archiviazione di Azure](/azure/storage/storage-create-storage-account).
 Sarà necessaria anche la chiave di accesso alle archiviazione per questo account.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Creare uno F# script e avviare F# interattivo
 
-Gli esempi in questo articolo possono essere usati in un' F# applicazione o uno F# script. Per creare uno F# script, creare un file con l' `.fsx` estensione, ad esempio `queues.fsx`, nell'ambiente F# di sviluppo.
+Gli esempi in questo articolo possono essere usati in un' F# applicazione o uno F# script. Per creare uno F# script, creare un file con l'estensione `.fsx`, ad esempio `queues.fsx`, nell'ambiente F# di sviluppo.
 
-Usare quindi una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) , per installare `WindowsAzure.Storage` il pacchetto e `WindowsAzure.Storage.dll` il riferimento nello script usando `#r` una direttiva.
+Usare quindi una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) , per installare il pacchetto `WindowsAzure.Storage` e fare riferimento `WindowsAzure.Storage.dll` nello script usando una direttiva `#r`.
 
 ### <a name="add-namespace-declarations"></a>Aggiungi dichiarazioni dello spazio dei nomi
 
-Aggiungere le seguenti `open` istruzioni all'inizio `queues.fsx` del file:
+Aggiungere le seguenti istruzioni `open` all'inizio del file di `queues.fsx`:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L1-L3)]
 
@@ -45,13 +45,13 @@ Per l'esercitazione, immettere la stringa di connessione nello script, come segu
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-Questa operazione **non** è tuttavia consigliata per i progetti reali. La chiave dell'account di archiviazione è simile alla password radice dell'account di archiviazione. Prestare sempre attenzione a proteggere la chiave dell'account di archiviazione. Evitare di distribuirla ad altri utenti, impostarla come hardcoded o salvarla in un file di testo normale accessibile ad altri utenti. È possibile rigenerare la chiave usando il portale di Azure se si ritiene che possa essere stata compromessa.
+Questa operazione non è tuttavia **consigliata** per i progetti reali. La chiave dell'account di archiviazione è simile alla password radice dell'account di archiviazione. Prestare sempre attenzione a proteggere la chiave dell'account di archiviazione. Evitare di distribuirla ad altri utenti, impostarla come hardcoded o salvarla in un file di testo normale accessibile ad altri utenti. È possibile rigenerare la chiave usando il portale di Azure se si ritiene che possa essere stata compromessa.
 
 Per le applicazioni reali, il modo migliore per gestire la stringa di connessione di archiviazione è in un file di configurazione. Per recuperare la stringa di connessione da un file di configurazione, è possibile eseguire questa operazione:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-L'uso di Configuration Manager di Azure è facoltativo. È anche possibile usare un'API, ad esempio il tipo `ConfigurationManager` di .NET Framework.
+L'uso di Configuration Manager di Azure è facoltativo. È anche possibile usare un'API, ad esempio il tipo `ConfigurationManager` del .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizzare la stringa di connessione
 
@@ -59,11 +59,11 @@ Per analizzare la stringa di connessione, usare:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L19-L20)]
 
-Verrà restituito un oggetto `CloudStorageAccount`.
+Verrà restituito un `CloudStorageAccount`.
 
 ### <a name="create-the-queue-service-client"></a>Creare il client di Servizio di accodamento
 
-La `CloudQueueClient` classe consente di recuperare le code archiviate nell'archivio code. Ecco un modo per creare il client del servizio:
+La classe `CloudQueueClient` consente di recuperare le code archiviate nell'archivio code. Ecco un modo per creare il client del servizio:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
@@ -77,23 +77,23 @@ Questo esempio illustra come creare una coda se non esiste già:
 
 ## <a name="insert-a-message-into-a-queue"></a>Inserire un messaggio in una coda
 
-Per inserire un messaggio in una coda esistente, creare innanzitutto un nuovo `CloudQueueMessage`oggetto. Chiamare quindi il `AddMessage` metodo. Un `CloudQueueMessage` oggetto può essere creato da una stringa (in formato UTF-8) o da `byte` una matrice, come indicato di seguito:
+Per inserire un messaggio in una coda esistente, creare innanzitutto un nuovo `CloudQueueMessage`. Chiamare quindi il metodo `AddMessage`. È possibile creare un `CloudQueueMessage` da una stringa (in formato UTF-8) o da una matrice di `byte`, come indicato di seguito:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
 ## <a name="peek-at-the-next-message"></a>Visualizza il messaggio successivo
 
-È possibile visualizzare il messaggio nella parte anteriore di una coda senza rimuoverlo dalla coda, chiamando il `PeekMessage` metodo.
+È possibile visualizzare il messaggio nella parte anteriore di una coda senza rimuoverlo dalla coda, chiamando il metodo `PeekMessage`.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L50-L52)]
 
 ## <a name="get-the-next-message-for-processing"></a>Ottenere il messaggio successivo per l'elaborazione
 
-È possibile recuperare il messaggio all'inizio di una coda per l'elaborazione chiamando il `GetMessage` metodo.
+È possibile recuperare il messaggio all'inizio di una coda per l'elaborazione chiamando il metodo `GetMessage`.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L58-L59)]
 
-In un secondo momento si indicherà la corretta elaborazione `DeleteMessage`del messaggio tramite.
+In un secondo momento si indicherà la corretta elaborazione del messaggio utilizzando `DeleteMessage`.
 
 ## <a name="change-the-contents-of-a-queued-message"></a>Modificare il contenuto di un messaggio in coda
 
@@ -103,7 +103,7 @@ In un secondo momento si indicherà la corretta elaborazione `DeleteMessage`del 
 
 ## <a name="de-queue-the-next-message"></a>Annulla la coda del messaggio successivo
 
-Il codice rimuove un messaggio da una coda in due passaggi. Quando si chiama `GetMessage`, si ottiene il messaggio successivo in una coda. Un messaggio restituito da `GetMessage` diventa invisibile a qualsiasi altro codice che legge i messaggi da questa coda. Per impostazione predefinita, il messaggio rimane invisibile per 30 secondi. Per completare la rimozione del messaggio dalla coda, è necessario chiamare `DeleteMessage`anche. Questo processo in due passaggi di rimozione di un messaggio assicura che se il codice non riesce a elaborare un messaggio a causa di un errore hardware o software, un'altra istanza del codice può ottenere lo stesso messaggio e riprovare. Il codice chiama `DeleteMessage` subito dopo l'elaborazione del messaggio.
+Il codice rimuove un messaggio da una coda in due passaggi. Quando si chiama `GetMessage`, si ottiene il messaggio successivo in una coda. Un messaggio restituito da `GetMessage` diventa invisibile a qualsiasi altro codice che legge i messaggi da questa coda. Per impostazione predefinita, il messaggio rimane invisibile per 30 secondi. Per completare la rimozione del messaggio dalla coda, è necessario chiamare anche `DeleteMessage`. Questo processo in due passaggi di rimozione di un messaggio assicura che se il codice non riesce a elaborare un messaggio a causa di un errore hardware o software, un'altra istanza del codice può ottenere lo stesso messaggio e riprovare. Il codice chiama `DeleteMessage` subito dopo l'elaborazione del messaggio.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -116,19 +116,19 @@ Questo esempio illustra come usare un flusso di lavoro asincrono con API di arch
 ## <a name="additional-options-for-de-queuing-messages"></a>Opzioni aggiuntive per rimuovere i messaggi dalla coda di Accodamento
 
 È possibile personalizzare il recupero dei messaggi da una coda in due modi.
-Per prima cosa, è possibile ottenere un batch di messaggi (fino a 32). In secondo luogo, è possibile impostare un timeout di invisibilità più lungo o più breve, consentendo al codice più o meno tempo di elaborare completamente ogni messaggio. Nell'esempio di codice seguente `GetMessages` viene usato per ottenere 20 messaggi in una sola chiamata e quindi elaborare ogni messaggio. Imposta anche il timeout di invisibilità su cinque minuti per ogni messaggio. Si noti che i 5 minuti iniziano per tutti i messaggi contemporaneamente, quindi dopo che sono trascorsi 5 minuti dalla chiamata a `GetMessages`, tutti i messaggi che non sono stati eliminati diventeranno nuovamente visibili.
+Per prima cosa, è possibile ottenere un batch di messaggi (fino a 32). In secondo luogo, è possibile impostare un timeout di invisibilità più lungo o più breve, consentendo al codice più o meno tempo di elaborare completamente ogni messaggio. Nell'esempio di codice seguente viene usato `GetMessages` per ottenere 20 messaggi in una sola chiamata e quindi elaborare ogni messaggio. Imposta anche il timeout di invisibilità su cinque minuti per ogni messaggio. Si noti che i 5 minuti iniziano per tutti i messaggi contemporaneamente, quindi dopo che sono trascorsi 5 minuti dalla chiamata a `GetMessages`, tutti i messaggi che non sono stati eliminati diventeranno nuovamente visibili.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
 ## <a name="get-the-queue-length"></a>Ottenere la lunghezza della coda
 
-È possibile ottenere una stima del numero di messaggi in una coda. Il `FetchAttributes` metodo richiede all'servizio di Accodamento di recuperare gli attributi della coda, incluso il numero di messaggi. La `ApproximateMessageCount` proprietà restituisce l'ultimo valore recuperato `FetchAttributes` dal metodo senza chiamare il servizio di Accodamento.
+È possibile ottenere una stima del numero di messaggi in una coda. Il metodo `FetchAttributes` chiede al Servizio di accodamento di recuperare gli attributi della coda, incluso il numero di messaggi. La proprietà `ApproximateMessageCount` restituisce l'ultimo valore recuperato dal metodo `FetchAttributes`, senza chiamare il Servizio di accodamento.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L105-L106)]
 
 ## <a name="delete-a-queue"></a>Eliminare una coda
 
-Per eliminare una coda e tutti i messaggi che contiene, chiamare il `Delete` metodo sull'oggetto Queue.
+Per eliminare una coda e tutti i messaggi che contiene, chiamare il metodo `Delete` sull'oggetto Queue.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 

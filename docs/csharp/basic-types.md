@@ -4,12 +4,12 @@ description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) i
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: f984321ab01fc4b5ddd92a20b178748de50246da
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037664"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420705"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -66,7 +66,7 @@ Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono d
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](language-reference/keywords/object.md). Le classi di raccolte generiche sono definite *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si prova ad aggiungere un numero intero all'oggetto `strings` nell'esempio precedente. Per altre informazioni, vedere [Generics](programming-guide/generics/index.md).
+L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](language-reference/builtin-types/reference-types.md#the-object-type). Le classi di raccolte generiche sono definite *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si prova ad aggiungere un numero intero all'oggetto `strings` nell'esempio precedente. Per altre informazioni, vedere [Generics](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Tipi impliciti, tipi anonimi e tipi di tupla
 
@@ -82,9 +82,9 @@ In alcuni casi non è consigliabile creare un tipo denominato per set semplici d
   
 - Supporta il principio di ereditarietà. I tipi possono derivare da altri tipi, denominati *tipi di base*. Il tipo derivato eredita (con alcune limitazioni) metodi, proprietà e altri membri del tipo di base, Il tipo di base può a sua volta derivare da un altro tipo, nel quale caso il tipo derivato eredita i membri di entrambi i tipi di base nella gerarchia di ereditarietà. Tutti i tipi, inclusi i tipi numerici predefiniti, ad esempio <xref:System.Int32> (parola chiave C#: `int`), derivano in definitiva da un unico tipo di base, ovvero <xref:System.Object> (parola chiave C#: `object`). Questa gerarchia di tipi unificati viene chiamata [Common Type System](../standard/common-type-system.md) (CTS). Per altre informazioni sull'ereditarietà in C#, vedere [Ereditarietà](programming-guide/classes-and-structs/inheritance.md).  
   
-- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET Framework e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](language-reference/keywords/struct.md) sono tipi di valore e tutti i tipi numerici predefiniti sono tipi **struct**. Per altre informazioni sui tipi di valori, vedere [Struct](structs.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](classes.md). I tipi riferimento e i tipi valore hanno regole diverse in fase di compilazione e un comportamento diverso in fase di esecuzione.
+- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET Framework e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](language-reference/keywords/struct.md) sono tipi di valore e tutti i tipi numerici predefiniti sono tipi **struct**. Per altre informazioni sui tipi di valori, vedere [Struct](structs.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](programming-guide/classes-and-structs/classes.md). I tipi riferimento e i tipi valore hanno regole diverse in fase di compilazione e un comportamento diverso in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Struct](structs.md)
-- [Classi](classes.md)
+- [Classi](programming-guide/classes-and-structs/classes.md)

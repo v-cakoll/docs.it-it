@@ -7,31 +7,31 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 39f4548bfe9e505c1369a0de8262560070fd6221
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 6e8a333fc84eb85b7a312cb87207ebc235fbfe9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833920"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424563"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Componenti aggiuntivi di Firefox per supportare la distribuzione di applicazioni .NET
-Abilitare Windows Presentation Foundation (WPF) plug-in per Firefox e .NET Framework Assistant per Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], separato [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e le applicazioni ClickOnce per lavorare con il browser Mozilla Firefox.  
+Il plug-in Windows Presentation Foundation (WPF) per Firefox e il .NET Framework Assistant per Firefox abilitano le applicazioni browser XAML (XBAPs), le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Loose e le applicazioni ClickOnce per l'uso con il browser Mozilla Firefox.  
   
-## <a name="wpf-plug-in-for-firefox"></a>Plug-in per Firefox WPF  
- Il plug-in per Firefox WPF consente [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] e regime [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file per essere aperto ed eseguito al livello superiore o in un elemento IFRAME HTML nel browser Firefox. Un' [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] è un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione che può essere pubblicati in un server Web e avviata nel browser supportati. Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è un file XAML sola che può essere aperto e visualizzato nel browser supportati, molto simile a un file XML.  
+## <a name="wpf-plug-in-for-firefox"></a>Plug-in WPF per Firefox  
+ Il plug-in WPF per Firefox consente l'esplorazione e l'esecuzione delle applicazioni XBAP e dei file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati in un IFRAME HTML del browser Firefox. Un'applicazione XBAP è un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] che può essere pubblicata su un server Web e avviata all'interno di browser supportati. Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è un file solo XAML che è possibile esplorare e visualizzare nei browser supportati, molto simile a un file XML.  
   
- Il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in per Firefox è installato con .NET Framework 3.5. Windows 7 include .NET Framework 3.5, ma non include il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in per Firefox. Non è possibile installare il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in per Firefox in Windows 7.  
+ Il plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per Firefox viene installato con il .NET Framework 3,5. La finestra 7 include il .NET Framework 3,5, ma non include il plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per Firefox. Non è possibile installare il plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per Firefox in Windows 7.  
   
- .NET Framework 4 non include il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in per Firefox. Tuttavia, se sono installati sia .NET Framework 3.5 e .NET Framework 4, il plug-in per Firefox WPF viene installato con .NET Framework 3.5. Pertanto le applicazioni .NET Framework 4 verranno eseguito comunque perché l'Host WPF caricherà la versione corretta del framework. Per altre informazioni, vedere [Host WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
+ Il .NET Framework 4 non include il plug-in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per Firefox. Tuttavia, se sono installati sia la .NET Framework 3,5 che la .NET Framework 4, il plug-in WPF per Firefox viene installato con il .NET Framework 3,5. Pertanto .NET Framework 4 applicazioni vengono comunque eseguite perché l'host WPF caricherà la versione corretta del Framework. Per ulteriori informazioni, vedere [host WPF (PresentationHost. exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant per Firefox  
- .NET Framework Assistant per Firefox Abilita autonomo di applicazioni ClickOnce per l'esecuzione dal browser Firefox. .NET Framework Assistant per Firefox funziona esattamente quando deve essere installata prima e dopo che il browser Firefox. Quando viene avviato il browser Firefox e .NET Framework 3.5 SP1 è installato, Firefox Trova e installa .NET Framework Assistant per Firefox. Gli utenti possono configurare .NET Framework Assistant per Firefox seguire questa procedura:  
+ Il .NET Framework Assistant per Firefox consente l'esecuzione di applicazioni ClickOnce autonome dal browser Firefox. Il .NET Framework Assistant per Firefox funziona in modo identico quando viene installato prima e dopo il browser Firefox. Quando viene avviato il browser Firefox e viene installato il .NET Framework 3,5 SP1, Firefox trova e installa il .NET Framework Assistant per Firefox. Gli utenti possono configurare .NET Framework Assistant per Firefox per eseguire le operazioni seguenti:  
   
 - Chiedi conferma prima di eseguire l'applicazione ClickOnce.  
   
-- Report tutte le versioni installate di .NET Framework o solo la versione più recente.  
+- Segnala tutte le versioni installate del .NET Framework o solo la versione più recente.  
   
- .NET Framework Assistant per Firefox è incluso in .NET Framework 3.5 SP1. Per informazioni sulla rimozione di .NET Framework Assistant per Firefox, vedere [come rimuovere .NET Framework Assistant per Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ Il .NET Framework Assistant per Firefox è incluso nella .NET Framework 3,5 SP1. Per informazioni sulla rimozione di .NET Framework Assistant per Firefox, vedere [How to Remove the .NET Framework Assistant for Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Vedere anche
 

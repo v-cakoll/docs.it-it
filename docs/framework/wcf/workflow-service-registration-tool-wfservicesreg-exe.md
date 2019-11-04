@@ -2,19 +2,19 @@
 title: Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916830"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425293"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe) è un strumento autonomo che può essere utilizzato per aggiungere, rimuovere o ripristinare gli elementi di configurazione per i servizi Windows Workflow Foundation (WF).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
@@ -56,11 +56,11 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Lo strumento registra inoltre scriptmap e gestori .xoml e .rules nella metabase IIS.  
   
- Nei [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] computer [!INCLUDE[wxp](../../../includes/wxp-md.md)] e (IIS 5,1 e IIS 6,0), viene registrato un set di scriptmap. xoml e. Rules.  
+ Nei computer [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), viene registrato un set di scriptmap. xoml e. Rules.  
   
  In computer a 64 bit lo strumento registra scriptmap di modalità WOW, se l'opzione `Enable32BitAppOnWin64` è abilitata, o scriptmap a 64 bit nativi, se l'opzione `Enable32BitAppOnWin64` è disabilitata.  
   
- Nei [!INCLUDE[wv](../../../includes/wv-md.md)] computer e Windows Server 2008 (IIS 7,0 e versioni successive) sono registrati due set di gestori. xoml e. Rules: uno per la modalità integrata e uno per la modalità classica.  
+ Nei computer [!INCLUDE[wv](../../../includes/wv-md.md)] e Windows Server 2008 (IIS 7,0 e versioni successive) sono registrati due set di gestori xoml e Rules: uno per la modalità integrata e uno per la modalità classica.  
   
  In computer a 64 bit sono registrati tre set di gestori (indipendentemente dallo stato dell'opzione `Enable32BitAppOnWin64`): uno per la modalità integrata, uno per la modalità classica WOW e uno per la modalità classica a 64 bit nativa.  
   

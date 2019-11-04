@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: f0df3170289d780852ee14232e92c3b71412c548
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 02dc8c21b86438c801fb151d9f02a223b60d6197
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392374"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423226"
 ---
 # <a name="indexers-c-programming-guide"></a>Indicizzatori (Guida per programmatori C#)
 
@@ -26,7 +26,7 @@ Gli indicizzatori consentono di indicizzare le istanze di una classe o struct es
 > [!NOTE]
 > Per altri esempi, vedere [Sezioni correlate](./index.md#BKMK_RelatedSections).  
   
-## <a name="expression-body-definitions"></a>Definizioni del corpo dell'espressione  
+## <a name="expression-body-definitions"></a>Definizioni di espressioni corpo  
  
 È normale che un indicizzatore ottenga o imposti una funzione di accesso in modo che sia costituita da una singola istruzione che restituisce o imposta un valore. I membri con corpo di espressione offrono una sintassi semplificata per supportare questo scenario. A partire da C# 6 è possibile implementare un indicizzatore di sola lettura come membro con corpo di espressione, come mostrato nell'esempio seguente.
 
@@ -66,7 +66,7 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-Per altre informazioni, vedere [Indicizzatori](~/_csharplang/spec/classes.md#indexers) nella [Specifica del linguaggio C#](../../language-reference/language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Indicizzatori](~/_csharplang/spec/classes.md#indexers) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
 ## <a name="see-also"></a>Vedere anche
 

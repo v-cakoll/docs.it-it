@@ -1,29 +1,34 @@
 ---
-title: 'Introduzione alla programmazione funzionale in F#'
-description: 'Scopri i concetti fondamentali della programmazione funzionale in F#.'
+title: Introduzione alla programmazione funzionale in F#
+description: Informazioni sulle nozioni di base della programmazione F#funzionale in.
 ms.date: 10/29/2018
+ms.openlocfilehash: e1a0edc61dbe13012c48e166d490e22ebc70d6a0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424706"
 ---
-
 # <a name="introduction-to-functional-programming-in-f"></a>Introduzione alla programmazione funzionale in F\#
 
-Programmazione funzionale è uno stile di programmazione che mette in evidenza l'utilizzo di funzioni e dati non modificabili. Programmazione funzionale tipizzata è quando la programmazione funzionale è combinata con i tipi statici, ad esempio con F#. In generale, i concetti seguenti sono evidenziati nella programmazione funzionale:
+La programmazione funzionale è uno stile di programmazione che enfatizza l'uso di funzioni e dati non modificabili. La programmazione funzionale tipizzata si verifica quando la programmazione funzionale è combinata con tipi statici F#, ad esempio con. In generale, i concetti seguenti sono evidenziati nella programmazione funzionale:
 
-* Funzioni come i costrutti primari che è usare
-* Espressioni anziché le istruzioni
+* Funzioni come costrutti primari usati
+* Espressioni anziché istruzioni
 * Valori non modificabili sulle variabili
-* Programmazione dichiarativa tramite programmazione imperativa
+* Programmazione dichiarativa sulla programmazione imperativa
 
-In questa serie, si esamineranno concetti e modelli di programmazione funzionale con F#. Corso della trattazione, scoprirai alcune F# troppo.
+In questa serie verranno illustrati concetti e modelli nella programmazione funzionale tramite F#. Si apprenderà anche un F# altro aspetto.
 
 ## <a name="terminology"></a>Terminologia
 
-Programmazione funzionale, ad esempio altri paradigmi di programmazione, viene fornito con un vocabolario che si sarà necessario conoscere. Ecco alcuni termini comuni si vedrà tutto il tempo:
+La programmazione funzionale, come altri paradigmi di programmazione, viene fornita con un vocabolario che dovrà essere apprese in futuro. Di seguito sono riportati alcuni termini comuni:
 
-* **Funzione** -una funzione è un costrutto che produrrà un output quando viene specificato un input. In termini più formali, si _viene eseguito il mapping_ imposta un elemento da uno a un altro set. Questo formato viene eseguito il lift nella concreti molti aspetti, soprattutto quando si usa funzioni che operano su raccolte di dati. Si tratta di concetto nella programmazione funzionale più base (e importante). 
-* **Espressione** -un'espressione è un costrutto di codice che produce un valore. In F#, questo valore deve essere associato o ignorato in modo esplicito. Un'espressione può essere facilmente sostituita da una chiamata di funzione.
-* **Purezza** -purezza è una proprietà di una funzione di modo che il relativo valore restituito è sempre uguale per gli stessi argomenti e che la sua valutazione ha effetti collaterali. Una funzione pura dipende interamente relativi argomenti.
-* **Trasparenza referenziale** -trasparenza referenziale è una proprietà di espressioni tale che può essere sostituiti con il relativo output senza influire sul comportamento di un programma.
-* **Immutabilità** -significa immutabilità che un valore non può essere modificato sul posto. Si tratta a differenza delle variabili, che può essere modificato in posizione.
+* **Function** : una funzione è un costrutto che produce un output quando viene specificato un input. Più formalmente, viene eseguito il _mapping_ di un elemento da un set a un altro set. Questo formalismo viene sollevato nel concreto in molti modi, soprattutto quando si usano funzioni che operano su raccolte di dati. Si tratta del concetto più semplice e importante nella programmazione funzionale.
+* **Espressione** : un'espressione è un costrutto nel codice che produce un valore. In F#, questo valore deve essere associato o ignorato in modo esplicito. Un'espressione può essere sostituita in modo banale da una chiamata di funzione.
+* **Purezza** -purezza è una proprietà di una funzione in modo che il valore restituito sia sempre lo stesso per gli stessi argomenti e che la relativa valutazione non abbia effetti collaterali. Una funzione pura dipende interamente dagli argomenti.
+* **Trasparenza referenziale** : la trasparenza referenziale è una proprietà di espressioni in modo che possano essere sostituite con il relativo output senza influire sul comportamento di un programma.
+* **Immutabilità-** immutabilità indica che un valore non può essere modificato sul posto. Questo si differenzia dalle variabili, che possono cambiare sul posto.
 
 ## <a name="examples"></a>Esempi
 
@@ -31,48 +36,48 @@ Gli esempi seguenti illustrano questi concetti di base.
 
 ### <a name="functions"></a>Funzioni
 
-Costrutto più fondamentale e comune nella programmazione funzionale sono la funzione. Di seguito è una funzione semplice che aggiunge 1 a un integer:
+Il costrutto più comune e fondamentale nella programmazione funzionale è la funzione. Ecco una funzione semplice che aggiunge 1 a un numero intero:
 
 ```fsharp
 let addOne x = x + 1
 ```
 
-La firma di tipo è il seguente:
+La firma del tipo è la seguente:
 
 ```fsharp
 val addOne: x:int -> int
 ```
 
-La firma può essere letto come, "`addOne` accetta un `int` denominate `x` e produrrà un `int`". Più formalmente `addOne` viene _mapping_ un valore dal set di numeri interi al set di numeri interi. Il `->` token indica questo mapping. In F#, in genere è possibile esaminare la firma della funzione e farsi un'idea di cosa.
+La firma può essere letta come "`addOne` accetta una `int` denominata `x` e produrrà un `int`". Più formalmente, `addOne` sta _eseguendo il mapping_ di un valore dal set di numeri interi al set di numeri interi. Il token `->` significa questo mapping. In F#è in genere possibile esaminare la firma della funzione per ottenere un'idea di come funziona.
 
-Quindi, perché è la firma importante? Nella programmazione funzionale tipizzata, l'implementazione di una funzione è spesso meno importante della firma del tipo effettivo. Il fatto che `addOne` aggiunge il valore 1 per un numero intero è interessante in fase di esecuzione, ma quando si costruisce un programma, il fatto che accetta e restituisce un `int` è ciò che indica come verrà effettivamente usata questa funzione. Inoltre, quando si utilizza questa funzione in modo corretto (in relazione la firma di tipo), la diagnosi dei problemi è possibile solo all'interno del corpo del `addOne` (funzione). Questo è l'impulso di programmazione funzionale tipizzata.
+Perché la firma è importante? Nella programmazione funzionale tipizzata, l'implementazione di una funzione è spesso meno importante della firma del tipo effettivo. Il fatto che `addOne` aggiunge il valore 1 a un intero è interessante in fase di esecuzione, ma quando si costruisce un programma, il fatto che accetta e restituisce un `int` è ciò che informa come si userà effettivamente questa funzione. Inoltre, una volta utilizzata correttamente questa funzione (rispetto alla firma del tipo), la diagnosi di eventuali problemi può essere eseguita solo all'interno del corpo della funzione `addOne`. Si tratta dell'impeto dietro la programmazione funzionale tipizzata.
 
 ### <a name="expressions"></a>Espressioni
 
-Le espressioni sono costrutti che restituiscono un valore. A differenza delle istruzioni che eseguono un'azione, espressioni possono essere considerate eseguendo un'azione che restituisce un valore. Le espressioni vengono usate quasi sempre a favore di istruzioni nella programmazione funzionale.
+Le espressioni sono costrutti che restituiscono un valore. Diversamente dalle istruzioni che eseguono un'azione, le espressioni possono essere considerate l'esecuzione di un'azione che restituisce un valore. Le espressioni vengono quasi sempre utilizzate a favore delle istruzioni nella programmazione funzionale.
 
-Si consideri la funzione precedente, `addOne`. Il corpo di `addOne` è un'espressione:
+Si consideri la funzione precedente `addOne`. Il corpo di `addOne` è un'espressione:
 
 ```fsharp
 // 'x + 1' is an expression!
 let addOne x = x + 1
 ```
 
-È il risultato dell'espressione che definisce il tipo di risultato di `addOne` (funzione). Ad esempio, l'espressione che costituisce questa funzione è stato possibile modificare per essere un tipo diverso, ad esempio un `string`:
+È il risultato di questa espressione che definisce il tipo di risultato della funzione `addOne`. Ad esempio, l'espressione che costituisce questa funzione può essere modificata in modo che sia un tipo diverso, ad esempio un `string`:
 
 ```fsharp
 let addOne x = x.ToString() + "1"
 ```
 
-È ora la firma della funzione:
+La firma della funzione è ora:
 
 ```fsharp
 val addOne: x:'a -> string
 ```
 
-Poiché qualsiasi tipo in F# può avere `ToString()` chiamati su di esso, il tipo di `x` apportata generico (chiamato [generalizzazione automatica](../language-reference/generics/automatic-generalization.md)), e il tipo risultante è un `string`.
+Poiché qualsiasi tipo in F# può avere `ToString()` chiamato su di esso, il tipo di `x` è stato reso generico (chiamato [generalizzazione automatica](../language-reference/generics/automatic-generalization.md)) e il tipo risultante è un `string`.
 
-Le espressioni non sono appena i corpi delle funzioni. È possibile disporre le espressioni che producono un valore utilizzato in un' posizione. Un comune è `if`:
+Le espressioni non sono solo i corpi di funzioni. È possibile avere espressioni che producono un valore usato altrove. Uno più comune è `if`:
 
 ```fsharp
 // Checks if 'x' is odd by using the mod operator
@@ -88,24 +93,24 @@ let addOneIfOdd input =
     result
 ```
 
-Il `if` espressione produce un valore chiamato `result`. Si noti che è possibile omettere `result` interamente, rendendo il `if` il corpo di espressione del `addOneIfOdd` (funzione). L'aspetto principale da ricordare riguardo a espressioni è che producono un valore.
+L'espressione `if` produce un valore denominato `result`. Si noti che è possibile omettere `result` completamente, rendendo l'espressione `if` il corpo della funzione `addOneIfOdd`. La cosa principale da ricordare sulle espressioni è che producono un valore.
 
-È presente un tipo speciale, `unit`, che viene usato quando sono presenti elementi da restituire. Ad esempio, prendere in considerazione questa semplice funzione:
+È disponibile un tipo speciale, `unit`, che viene usato quando non è necessario restituire alcun valore. Si consideri, ad esempio, questa semplice funzione:
 
 ```fsharp
 let printString (str: string) =
     printfn "String is: %s" str
 ```
 
-La firma è simile alla seguente:
+La firma ha un aspetto simile al seguente:
 
 ```fsharp
 val printString: str:string -> unit
 ```
 
-Il `unit` tipo non indica che è presente alcun valore effettivo restituito. Ciò è utile quando si dispone di una routine che deve "aziendale", anche non se nessun valore da restituire in seguito a tale lavoro.
+Il tipo di `unit` indica che non viene restituito alcun valore effettivo. Questa operazione è utile quando si dispone di una routine che deve "lavorare", anche se non è disponibile alcun valore da restituire come risultato di tale operazione.
 
-Si tratta in netto contrasto con la programmazione imperativa, in cui l'equivalente `if` costrutto è un'istruzione e restituendo valori viene spesso eseguita con le variabili di mutazione. Ad esempio, in C#, il codice potrebbe essere scritto come segue:
+Si tratta di un contrasto acuto rispetto alla programmazione imperativa, in cui il costrutto `if` equivalente è un'istruzione e la produzione di valori viene spesso eseguita con le variabili mutanti. Ad esempio, in C#il codice potrebbe essere scritto come segue:
 
 ```csharp
 bool IsOdd(int x) => x % 2 != 0;
@@ -123,22 +128,22 @@ int AddOneIfOdd(int input)
 }
 ```
 
-Vale la pena notare che C# e altri linguaggi di tipo C supportano i [espressione ternaria](../../csharp/language-reference/operators/conditional-operator.md), che consentono una programmazione condizionale basata su espressione.
+Vale la pena notare che C# e altri linguaggi di tipo C supportano l' [espressione ternaria](../../csharp/language-reference/operators/conditional-operator.md), che consente la programmazione condizionale basata su espressioni.
 
-Nella programmazione funzionale, è raro che venga modificato i valori con le istruzioni. Sebbene alcuni linguaggi funzionali supportano le istruzioni e modifica, non è più comune per usare questi concetti in programmazione funzionale.
+Nella programmazione funzionale è raro mutare i valori con le istruzioni. Sebbene alcuni linguaggi funzionali supportino istruzioni e mutazioni, non è comune usare questi concetti nella programmazione funzionale.
 
 ### <a name="pure-functions"></a>Funzioni pure
 
-Come accennato in precedenza le funzioni pure sono funzioni che:
+Come indicato in precedenza, le funzioni pure sono funzioni che:
 
-* Restituiscono sempre lo stesso valore per lo stesso input.
+* Restituisce sempre lo stesso valore per lo stesso input.
 * Non hanno effetti collaterali.
 
-È utile pensare a funzioni matematiche in questo contesto. In matematica, le funzioni dipendono unicamente i relativi argomenti e non dispongono di tutti gli effetti collaterali. Alla funzione matematica `f(x) = x + 1`, il valore di `f(x)` dipende solo dal valore di `x`. Nella programmazione funzionale le funzioni pure sono allo stesso modo.
+È utile considerare le funzioni matematiche in questo contesto. In matematica le funzioni dipendono solo dai rispettivi argomenti e non hanno effetti collaterali. Nella funzione matematica `f(x) = x + 1`il valore di `f(x)` dipende solo dal valore di `x`. Le funzioni pure nella programmazione funzionale hanno lo stesso modo.
 
-Quando si scrive una funzione pura, la funzione deve dipendere dai relativi argomenti e non esegue alcuna azione che comporta un effetto collaterale.
+Quando si scrive una funzione pura, la funzione deve dipendere solo dai relativi argomenti e non eseguire alcuna azione che abbia come risultato un effetto collaterale.
 
-Ecco un esempio di una funzione non pura perché dipende da stato globale, o modificabile:
+Di seguito è riportato un esempio di una funzione non pura perché dipende da uno stato modificabile globale:
 
 ```fsharp
 let mutable value = 1
@@ -146,58 +151,58 @@ let mutable value = 1
 let addOneToValue x = x + value
 ```
 
-Il `addOneToValue` funzione è chiaramente non pure, poiché `value` è stato possibile modificare in qualsiasi momento per avere un valore diverso da 1. Questo modello di base a un valore globale è di evitare nella programmazione funzionale.
+La funzione `addOneToValue` è chiaramente impura, perché `value` può essere modificata in qualsiasi momento per avere un valore diverso da 1. Questo modello di a seconda di un valore globale deve essere evitato nella programmazione funzionale.
 
-Ecco un altro esempio di una funzione non pura, perché consente di eseguire un effetto collaterale:
+Di seguito è riportato un altro esempio di una funzione non pura, perché esegue un effetto collaterale:
 
 ```fsharp
-let addOneToValue x = 
+let addOneToValue x =
     printfn "x is %d" x
     x + 1
 ```
 
-Anche se questa funzione non dipende da un valore globale, scrive il valore di `x` all'output del programma. Anche se non vi sono intrinsecamente problemi con questa operazione, significa che la funzione non pura. Se un'altra parte del programma dipende da un elemento esterno al programma, ad esempio il buffer di output, quindi chiamare questa funzione possono influire sulla parte del programma.
+Sebbene questa funzione non dipenda da un valore globale, scrive il valore di `x` nell'output del programma. Sebbene non vi sia alcun problema intrinseco, significa che la funzione non è pura. Se un'altra parte del programma dipende da un elemento esterno al programma, ad esempio il buffer di output, la chiamata a questa funzione può influire sull'altra parte del programma.
 
-Rimozione di `printfn` istruzione rende la funzione pure:
+La rimozione dell'istruzione `printfn` rende la funzione pure:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Anche se questa funzione non è intrinsecamente _migliori_ rispetto alla versione precedente con il `printfn` istruzione, ma questa soluzione garantisce che questa funzione non è di restituire un valore. Chiamare questa funzione qualsiasi numero di volte produca lo stesso risultato: genera solo un valore. La prevedibilità, fornita da purezza va che cercano di molti programmatori funzionali.
+Anche se questa funzione non è intrinsecamente _migliore_ della versione precedente con l'istruzione `printfn`, garantisce che la funzione restituisca un valore. La chiamata di questa funzione un numero qualsiasi di volte produce lo stesso risultato: produce solo un valore. La prevedibilità fornita dalla purezza è un elemento che molti programmatori funzionali si impegnano.
 
 ### <a name="immutability"></a>Immutabilità
 
-Infine, uno dei concetti più importanti della programmazione funzionale tipizzato è immutabilità. In F#, tutti i valori non sono modificabili per impostazione predefinita. Pertanto, che non è possibile modificare sul posto a meno che non è esplicitamente contrassegnarli come modificabile.
+Infine, uno dei concetti fondamentali della programmazione funzionale tipizzata è l'immutabilità. In F#tutti i valori non sono modificabili per impostazione predefinita. Ciò significa che non possono essere mutate sul posto a meno che non vengano contrassegnate in modo esplicito come modificabile.
 
-In pratica, funzionante con i valori non modificabili significa che si modifica l'approccio alla programmazione da, "Devo modificare un elemento", per "è necessario produrre un nuovo valore".
+In pratica, l'utilizzo di valori non modificabili significa che è possibile modificare l'approccio alla programmazione da, "devo modificare qualcosa", a "è necessario produrre un nuovo valore".
 
-Ad esempio, aggiungendo 1 al valore significa che produce un nuovo valore, non mutazione quello esistente:
+Se ad esempio si aggiunge 1 a un valore, viene generato un nuovo valore, senza mutare quello esistente:
 
 ```fsharp
 let value = 1
 let secondValue = value + 1
 ```
 
-In F#, il codice seguente esegue **non** modificare le `value` funzione; al contrario, esegue un controllo di uguaglianza:
+In F#il codice seguente **non** modifica la funzione `value`. viene invece eseguito un controllo di uguaglianza:
 
 ```fsharp
 let value = 1
 value = value + 1 // Produces a 'bool' value!
 ```
 
-Alcuni linguaggi di programmazione funzionale non supportano affatto mutation. In F#, è supportato, ma non è il comportamento predefinito per i valori.
+Alcuni linguaggi di programmazione funzionale non supportano alcuna mutazione. In F#è supportato, ma non è il comportamento predefinito per i valori.
 
-Questo concetto consente di estendere ulteriormente le strutture di dati. Nella programmazione funzionale, le strutture di dati non modificabili, ad esempio set (e molto altro ancora) avere un'implementazione diversa rispetto a inizialmente potrebbe prevedono. Concettualmente, un valore, ad esempio l'aggiunta di un elemento a un set non modifica il set, genera una _nuovo_ impostata con il valore aggiunto. Dietro le quinte, questa operazione viene spesso eseguita da una struttura di dati diversi che consente di rilevamento in modo efficiente un valore in modo che la rappresentazione appropriata dei dati può essere fornita come risultato.
+Questo concetto si estende anche ulteriormente alle strutture di dati. Nella programmazione funzionale, le strutture di dati non modificabili, ad esempio set (e molti altri), hanno un'implementazione diversa da quella prevista inizialmente. Concettualmente, qualcosa come l'aggiunta di un elemento a un set non modifica il set, produce un _nuovo_ set con il valore aggiunto. Dietro le quinte, questa operazione viene spesso eseguita da una struttura di dati diversa che consente di tenere traccia di un valore in modo efficiente, in modo che sia possibile assegnare la rappresentazione appropriata dei dati di conseguenza.
 
-Questo stile di valori e le strutture di dati è fondamentale, poiché costringe a trattare qualsiasi operazione che modifica un elemento come se crea una nuova versione di tale operazione. In questo modo per elementi quali l'uguaglianza e la comparabilità coerenza nei programmi.
+Questo stile di utilizzo di valori e strutture di dati è fondamentale, in quanto impone di trattare qualsiasi operazione che modifica un elemento come se creasse una nuova versione di tale elemento. Ciò consente di verificare la coerenza tra uguaglianza e comparabilità nei programmi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Nella sezione successiva illustrerà accuratamente le funzioni, esplorazione di modi diversi, è possibile usarli nella programmazione funzionale.
+Nella sezione successiva vengono illustrate in modo approfondito le funzioni, esplorando i diversi modi in cui è possibile usarle nella programmazione funzionale.
 
-[Funzioni di prima classe](first-class-functions.md) esamina le funzioni in profondità, che mostra come è possibile usarli in contesti diversi.
+[Funzioni di prima classe](first-class-functions.md) Esplora le funzioni in modo approfondito, mostrando come è possibile usarle in diversi contesti.
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
-Il [pensando a livello funzionale](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) serie è un'altra risorsa eccezionale per apprendere la programmazione funzionale con F#. Vengono descritti i concetti fondamentali della programmazione funzionale in modo pragmatico e facile da leggere, tramite F# funzionalità per illustrare i concetti.
+La serie [funzionale Thinking](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) è un'altra risorsa ideale per apprendere la programmazione F#funzionale con. Vengono illustrati i concetti fondamentali della programmazione funzionale in modo pragmatico e di facile lettura, usando F# le funzionalità per illustrare i concetti.

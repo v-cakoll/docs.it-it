@@ -9,12 +9,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: b62634c0f61e17c046cd474670fddf437287ab7a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634098"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422646"
 ---
 # <a name="orderby-clause-c-reference"></a>Clausola orderby (Riferimento C#)
 
@@ -32,7 +32,7 @@ Nell'esempio seguente viene eseguito un ordinamento primario sui cognomi degli s
 
 [!code-csharp[cscsrefQueryKeywords#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#22)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 In fase di compilazione, la clausola `orderby` viene convertita in una chiamata al metodo <xref:System.Linq.Enumerable.OrderBy%2A>. Eventuali chiavi multiple nella clausola `orderby` vengono convertite in chiamate al metodo <xref:System.Linq.Enumerable.ThenBy%2A>.
 
@@ -42,4 +42,4 @@ In fase di compilazione, la clausola `orderby` viene convertita in una chiamata 
 - [Parole chiave di query (LINQ)](query-keywords.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
 - [Clausola group](group-clause.md)
-- [Nozioni di base su LINQ in C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Nozioni di base su LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)

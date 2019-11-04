@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589421"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423210"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenzioni di codifica C# (Guida per programmatori C#)
  Le convenzioni di codifica hanno gli scopi seguenti:  
@@ -93,7 +93,7 @@ ms.locfileid: "69589421"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- Evitare l'uso di `var` al posto di [dynamic](../../language-reference/keywords/dynamic.md).  
+- Evitare l'uso di `var` al posto di [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
 - Usare la tipizzazione implicita per determinare il tipo della variabile del ciclo nei cicli [for](../../language-reference/keywords/for.md) e [foreach](../../language-reference/keywords/foreach-in.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "69589421"
   
 - In generale, usare `int` anziché tipi non firmati. L'utilizzo di `int` è comune in C# ed è più facile interagire con altre librerie, quando si usa `int`.  
   
-### <a name="arrays"></a>Matrici  
+### <a name="arrays"></a>Array  
   
 - Usare la sintassi concisa quando si inizializzano le matrici nella riga della dichiarazione.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "69589421"
   
 ### <a name="static-members"></a>Membri static  
   
-- Chiamare membri [static](../../language-reference/keywords/static.md) tramite il nome della classe: *ClassName.StaticMember*. Questa pratica rende più leggibile il codice semplificando l'accesso statico.  Non qualificare un membro statico definito in una classe base con il nome di una classe derivata.  Nonostante il codice venga compilato, la leggibilità del codice è fuorviante mentre il codice potrebbe essere interrotto in futuro, se si aggiunge un membro statico con lo stesso nome alla classe derivata.  
+- Chiamare i membri [static](../../language-reference/keywords/static.md) usando il nome della classe: *ClassName.StaticMember*. Questa pratica rende più leggibile il codice semplificando l'accesso statico.  Non qualificare un membro statico definito in una classe base con il nome di una classe derivata.  Nonostante il codice venga compilato, la leggibilità del codice è fuorviante mentre il codice potrebbe essere interrotto in futuro, se si aggiunge un membro statico con lo stesso nome alla classe derivata.  
   
 ### <a name="linq-queries"></a>Query LINQ  
   

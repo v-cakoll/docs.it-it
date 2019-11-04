@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104940"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454629"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -39,7 +39,7 @@ I comandi dell'SDK includono `dotnet new` e `dotnet run`. L'interfaccia della ri
 
 In casi rari potrebbe essere necessario usare una versione meno recente dell'SDK. La versione deve essere specificata in un file [*global.json*](../tools/global-json.md). I criteri dell'"uso della versione più recente" indicano che si usa solo il file *global.json* per specificare una versione di .NET Core SDK antecedente a quella installata, che è la più recente.
 
-Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se tale versione è installata, sarà questa a essere usata. Se l'SDK specificato nel file *global.json* non viene trovato, l'interfaccia della riga di comando .NET esegue il roll forward all'SDK installato più recente. Il roll-forward è analogo al comportamento predefinito quando non viene individuato alcun file *global.json*.
+Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se la versione dell'SDK è installata, verrà usata la versione. Se l'SDK specificato nel file *Global. JSON* non viene trovato, l'interfaccia della riga di comando di .NET usa le [regole di corrispondenza](../tools/global-json.md#matching-rules) per selezionare un SDK compatibile oppure ha esito negativo se non ne viene trovato nessuno.
 
 L'esempio seguente mostra la sintassi del file *global.json*:
 

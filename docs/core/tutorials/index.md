@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925948"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420837"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni
 
@@ -49,6 +49,6 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Testing unità con MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)
 - [Hosting di .NET Core da un codice nativo](netcore-hosting.md)
-- [Creare un modello personalizzato per dotnet new](create-custom-template.md)
+- [Creare un modello personalizzato per dotnet new](cli-templates-create-item-template.md)
 
 Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere la [documentazione di ASP.NET Core](/aspnet/core/).

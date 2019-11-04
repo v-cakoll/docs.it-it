@@ -3,14 +3,14 @@ title: Introduzione all'archiviazione tabelle di Azure con F#
 description: Archivia i dati strutturati nel cloud usando l'archiviazione tabelle di Azure o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395200"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424603"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e al Azure Cosmos DB API Tabella con F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e Azure Cosmos DB API Tabella con F\#
 
 Archiviazione tabelle di Azure è un servizio che archivia dati NoSQL strutturati nel cloud. L'archiviazione tabelle è un archivio di chiavi/attributi con una progettazione senza schema. Poiché l'archiviazione tabelle è con schema, è facile adattare i dati in base all'evoluzione delle esigenze dell'applicazione. L'accesso ai dati è veloce ed economicamente conveniente per tutti i tipi di applicazioni. Il costo dell'archiviazione tabelle è in genere significativamente inferiore rispetto a SQL tradizionale per volumi di dati simili.
 
@@ -54,7 +54,7 @@ Se ci si connette al servizio tabelle di archiviazione di Azure, per questa eser
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Ottenere la stringa di connessione Azure Cosmos DB
 
-Se ci si connette a Azure Cosmos DB, per questa esercitazione è necessaria la stringa di connessione. È possibile copiare la stringa di connessione dal portale di Azure. Nel portale di Azure, nell'account Cosmos DB, passare a **impostazioni** >  stringa di**connessione**e fare clic sul pulsante **copia** per copiare la stringa di connessione primaria. 
+Se ci si connette a Azure Cosmos DB, per questa esercitazione è necessaria la stringa di connessione. È possibile copiare la stringa di connessione dal portale di Azure. Nel portale di Azure, nell'account Cosmos DB, passare a **impostazioni** >  stringa di**connessione**e fare clic sul pulsante **copia** per copiare la stringa di connessione primaria.
 
 Per l'esercitazione, immettere la stringa di connessione nello script, come nell'esempio seguente:
 

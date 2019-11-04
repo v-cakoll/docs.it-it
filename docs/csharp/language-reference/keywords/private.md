@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a20c0a6fd729c2fc34449167eb92cb774bc3b84e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 19e2925cd65cc9c68ff50d370398a4f401275940
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602016"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422599"
 ---
 # <a name="private-c-reference"></a>private (Riferimenti per C#)
 
@@ -45,7 +45,7 @@ In questo esempio la classe `Employee` contiene due membri dati privati, `name` 
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -54,7 +54,7 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [public](public.md)
 - [protected](protected.md)
 - [internal](internal.md)

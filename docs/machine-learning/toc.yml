@@ -33,6 +33,8 @@
           href: tutorials/image-classification-api-transfer-learning.md
         - name: Classificare le immagini (composizione del modello)
           href: tutorials/image-classification.md
+        - name: Prevedere la domanda di noleggio biciclette (serie temporale)
+          href: tutorials/time-series-demand-forecasting.md
         - name: Analisi delle vendite di prodotti (rilevamento anomalie)
           href: tutorials/sales-anomaly-detection.md
         - name: Rilevare gli oggetti in immagini (rilevamento oggetti)

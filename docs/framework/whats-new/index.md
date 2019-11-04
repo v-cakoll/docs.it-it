@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 2f9d1c7835c95c904104a165a556b8d527343c30
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197783"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454994"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -1264,7 +1264,7 @@ Per altre informazioni su .NET Framework 4.6.1, vedere gli argomenti seguenti:
 
 - [Elenco delle modifiche di .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [Compatibilità delle applicazioni nella versione 4.6.1](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [Compatibilità delle applicazioni nella versione 4.6.1](../migration-guide/application-compatibility.md)
 
 - [Differenza tra API di .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (su GitHub)
 
@@ -1691,7 +1691,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
   Il valore predefinito è 60 secondi. Se `value` è impostato su 0, le richieste non ordinate vengono immediatamente rifiutate con un messaggio di errore simile al seguente:
 
-  ```
+  ```console
   Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
   ```
 

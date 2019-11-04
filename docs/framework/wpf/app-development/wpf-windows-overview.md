@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040868"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424934"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonome forniscono le proprie finestre usando la classe <xref:System.Windows.Window>. Questo argomento introduce <xref:System.Windows.Window> prima di illustrare le nozioni di base relative alla creazione e alla gestione di Windows in applicazioni autonome.  
   
 > [!NOTE]
-> Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitate da browser, incluse le pagine [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitate da browser, incluse le applicazioni browser XAML (XBAP) e le pagine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
@@ -257,7 +257,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- Al gestore dell'evento <xref:System.Windows.Window.Closing> viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa la proprietà<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `Boolean`impostata su `true` per impedire la chiusura di una finestra.  
+ Al gestore dell'evento <xref:System.Windows.Window.Closing> viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa la proprietà <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `Boolean`impostata su `true` per impedire la chiusura di una finestra.  
   
  Se <xref:System.Windows.Window.Closing> non viene gestita o viene gestita ma non annullata, la finestra verrà chiusa. Immediatamente prima della chiusura di una finestra, viene generato <xref:System.Windows.Window.Closed>. A questo punto, non è più possibile impedire la chiusura di una finestra.  
   
@@ -471,7 +471,7 @@ L'aspetto predefinito di una finestra include un pulsante della barra delle appl
   
  Tuttavia, non rientra nel set di autorizzazioni concesse alle applicazioni avviate da Internet o dall'area Intranet locale tramite ClickOnce. Di conseguenza, gli utenti riceveranno un avviso di sicurezza ClickOnce e dovranno elevare il set di autorizzazioni per l'applicazione a attendibilità totale.  
   
- Inoltre, per impostazione predefinita, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] non è in grado di visualizzare finestre o finestre di dialogo. Per una discussione sulle considerazioni sulla sicurezza delle applicazioni autonome, vedere strategia di sicurezza di [WPF-sicurezza della piattaforma](../wpf-security-strategy-platform-security.md).  
+ Inoltre, le applicazioni XBAPs non possono visualizzare finestre o finestre di dialogo per impostazione predefinita. Per una discussione sulle considerazioni sulla sicurezza delle applicazioni autonome, vedere strategia di sicurezza di [WPF-sicurezza della piattaforma](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Altri tipi di finestre  

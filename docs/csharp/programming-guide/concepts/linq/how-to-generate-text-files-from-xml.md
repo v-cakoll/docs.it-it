@@ -2,12 +2,12 @@
 title: 'Procedura: Generare file di testo da XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253587"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418310"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Procedura: Generare file di testo da XML (C#)
 In questo esempio viene illustrato come generare un file CSV con valori delimitati da virgole da un file XML.  
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come generare un file CSV con valori delimita
 ## <a name="example"></a>Esempio  
  Nella versione C# di questo esempio viene usata la sintassi del metodo e l'operatore `Aggregate` per generare un file CSV da un documento XML in un'unica espressione. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Projections and Transformations (LINQ to XML) (C#)](./projections-and-transformations-linq-to-xml.md) (Proiezioni e trasformazioni (LINQ to XML) in C#)
+- [Proiezioni e trasformazioni (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

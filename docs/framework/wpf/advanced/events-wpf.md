@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010345"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460495"
 ---
 # <a name="events-wpf"></a>Eventi (WPF)
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vengono introdotti gli eventi indirizzati che possono richiamare i gestori esistenti su vari listener nell'albero degli elementi di un'applicazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)  
  [Cenni preliminari sugli eventi associati](attached-events-overview.md)  
  [Eventi di durata degli oggetti](object-lifetime-events.md)  
@@ -27,9 +27,9 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
  [Eventi di modifica delle proprietà](property-change-events.md)  
  [Visual Basic e la gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md)  
  [Modelli di eventi deboli](weak-event-patterns.md)  
- [Procedure relative agli eventi](events-how-to-topics.md)  
+ [Procedure relative alle proprietà](events-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
@@ -44,6 +44,6 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
   [Proprietà](properties-wpf.md)  
   [Input](input-wpf.md)  
   [Risorse](resources-wpf.md)  
-  [Applicazione di stili e modelli](../controls/styling-and-templating.md)  
+  [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modello di contenuto WPF](../controls/wpf-content-model.md)  
   [Modello di threading](threading-model.md)

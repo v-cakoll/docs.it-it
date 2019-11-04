@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: Creare controlli per Windows Forms'
+title: 'Procedura: creare controlli per Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015923"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459420"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: Controlli autore per Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: creare controlli per Windows Forms
 
 Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un controllo può fornire o elaborare dati, accettare input dall'utente, rispondere a eventi o eseguire qualsiasi numero di altre funzioni che connettono l'utente e l'applicazione. Poiché un controllo è essenzialmente un componente con un'interfaccia grafica, può essere utilizzato per le stesse funzioni di un componente oltre che per consentire l'interazione dell'utente. I controlli vengono creati per scopi specifici e la creazione di controlli è semplicemente un'altra attività di programmazione. Tenendo conto di questo, i passaggi seguenti rappresentano una panoramica del processo di creazione di un controllo. I collegamenti forniscono altre informazioni sui singoli passaggi.
 
@@ -40,9 +40,9 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
 
 5. Se è necessario un disegno personalizzato per il controllo, aggiungere codice per esso. Per informazioni dettagliate, vedere [Disegno e rendering di controlli personalizzati](custom-control-painting-and-rendering.md).
 
-6. Se il controllo eredita da <xref:System.Windows.Forms.UserControl>, è possibile verificarne il comportamento in fase di esecuzione compilando il progetto di controllo ed eseguendolo nel **contenitore di test UserControl**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+6. Se il controllo eredita da <xref:System.Windows.Forms.UserControl>, è possibile verificarne il comportamento in fase di esecuzione compilando il progetto di controllo ed eseguendolo nel **contenitore di test UserControl**. Per altre informazioni, vedere [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
-7. È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questo processo viene illustrato come parte della [procedura dettagliata: Creazione di un controllo](walkthrough-authoring-a-composite-control-with-visual-csharp.md)composito.
+7. È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questo processo viene illustrato come parte della [procedura dettagliata: creazione di un controllo composito](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
 8. Quando si aggiunge ogni funzionalità, aggiungere le funzionalità al progetto di test per verificarne il funzionamento.
 
@@ -54,6 +54,6 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
 
 - [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
-- [Procedura: Ereditare da controlli Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Procedura: Testare il comportamento in fase di esecuzione di un UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura: Ereditare da controlli Windows Form esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

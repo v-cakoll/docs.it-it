@@ -2,12 +2,12 @@
 title: Controllo delle versioni dei servizi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321481"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423691"
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. In questo argomento viene illustrato come considerare il controllo delle versioni in Windows Communication Foundation (WCF).  
@@ -132,7 +132,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
   
  Questo meccanismo consiste nell'utilizzare le interfacce per definire i membri di ogni contratto dati e scrivere il codice di implementazione interno in termini di interfacce piuttosto che classi del contratto dati che implementano le interfacce. Nel codice seguente per la versione 1 di un servizio vengono illustrati un'interfaccia `IPurchaseOrderV1` e un oggetto `PurchaseOrderV1`:  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Mentre le operazioni del contratto di servizio verrebbero scritte come `PurchaseOrderV1`, la logica di business effettiva sarebbe `IPurchaseOrderV1`. Quindi, nella versione 2, ci sarebbero una nuova interfaccia `IPurchaseOrderV2` e una nuova classe `PurchaseOrderV2`, come illustrato nel codice seguente:  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

@@ -3,16 +3,18 @@ title: Introduzione a C# - Esercitazioni interattive
 description: Imparare a usare C# nel browser e introduzione all'ambiente di sviluppo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850774"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423099"
 ---
 # <a name="introduction-to-c"></a>Introduzione a C\#
 
-Queste sono le esercitazioni di introduzione a C#. iniziano con lezioni interattive che è possibile eseguire nel browser.
+Queste sono le esercitazioni di introduzione a C#. iniziano con lezioni interattive che è possibile eseguire nel browser. Prima di iniziare queste lezioni interattive, è possibile apprendere le nozioni di base di dalla serie di C# [ C# video 101](https://aka.ms/dotnet3-csharp) .
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 

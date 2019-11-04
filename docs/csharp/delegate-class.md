@@ -4,12 +4,12 @@ description: Informazioni sulle classi di .NET Framework che supportano i delega
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037443"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420361"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e la parola chiave `delegate`
 
@@ -32,7 +32,7 @@ Si continuerà a usare il metodo List.Sort() come esempio. Il primo passaggio co
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Il compilatore genera una classe, derivata da `System.Delegate` che corrisponde alla firma usata (in questo caso, un metodo che restituisce un valore integer e ha due argomenti). Il tipo di quel delegato è `Comparison`. Il tipo delegato `Comparison` è un tipo generico. Per informazioni dettagliate sui generics, vedere [qui](generics.md).
+Il compilatore genera una classe, derivata da `System.Delegate` che corrisponde alla firma usata (in questo caso, un metodo che restituisce un valore integer e ha due argomenti). Il tipo di quel delegato è `Comparison`. Il tipo delegato `Comparison` è un tipo generico. Per informazioni dettagliate sui generics, vedere [qui](programming-guide/generics/index.md).
 
 Si noti che può sembrare che la sintassi dichiari una variabile, ma in effetti viene dichiarato un *tipo*. È possibile definire tipi delegato all'interno di classi, direttamente all'interno di spazi dei nomi o anche nello spazio dei nomi globale.
 

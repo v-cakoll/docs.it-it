@@ -2,12 +2,12 @@
 title: 'Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 5174c67e4204c2e20e5730ab7c092ccbb0aeda1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126268"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457936"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate
 
@@ -47,4 +47,4 @@ Le app destinate a versioni precedenti di .NET Framework ma in esecuzione su .NE
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di reindirizzamento](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Compatibilità delle applicazioni](application-compatibility.md)

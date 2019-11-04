@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920058"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460428"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate
 <a name="introduction"></a>Un <xref:System.Windows.Controls.ControlTemplate> specifica la struttura visiva e il comportamento visivo di un controllo. È possibile personalizzare l'aspetto di un controllo assegnando un nuovo <xref:System.Windows.Controls.ControlTemplate>. Quando si crea una <xref:System.Windows.Controls.ControlTemplate>, si sostituisce l'aspetto di un controllo esistente senza modificarne la funzionalità. È ad esempio possibile fare in modo che i pulsanti all'interno dell'applicazione si trovino invece della forma quadrata predefinita, ma il pulsante genera comunque l'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
@@ -262,4 +262,4 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

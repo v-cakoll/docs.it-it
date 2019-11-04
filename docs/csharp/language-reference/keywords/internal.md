@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602075"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422719"
 ---
 # <a name="internal-c-reference"></a>internal (Riferimenti per C#)
 La parola chiave `internal` è un [modificatore di accesso](./access-modifiers.md) per tipi e membri dei tipi. 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -98,7 +98,7 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 - [Parole chiave di C#](./index.md)
 - [Modificatori di accesso](./access-modifiers.md)
 - [Livelli di accessibilità](./accessibility-levels.md)
-- [Modificatori](./modifiers.md)
+- [Modificatori](index.md)
 - [public](./public.md)
 - [private](./private.md)
 - [protected](./protected.md)

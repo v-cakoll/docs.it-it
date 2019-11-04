@@ -2,12 +2,12 @@
 title: Criteri attivi
 description: Informazioni su come utilizzare i F# criteri attivi per definire partizioni denominate che suddividono i dati di input nel linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: f5ed4a8600cba10d23d01628aba6ca07e543c586
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083076"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425098"
 ---
 # <a name="active-patterns"></a>Criteri attivi
 
@@ -48,7 +48,7 @@ L'output di questo programma è il seguente:
 32 is even
 ```
 
-Un altro uso dei modelli attivi consiste nel scomporre i tipi di dati in diversi modi, ad esempio quando gli stessi dati sottostanti hanno varie rappresentazioni possibili. Ad esempio, un `Color` oggetto può essere scomposto in una rappresentazione RGB o in una rappresentazione HSB.
+Un altro uso dei modelli attivi consiste nel scomporre i tipi di dati in diversi modi, ad esempio quando gli stessi dati sottostanti hanno varie rappresentazioni possibili. Un oggetto `Color`, ad esempio, può essere scomposto in una rappresentazione RGB o in una rappresentazione HSB.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
@@ -78,7 +78,7 @@ Le espressioni di criteri di ricerca risultanti consentono di scrivere i dati in
 
 ## <a name="partial-active-patterns"></a>Modelli attivi parziali
 
-In alcuni casi, è necessario partizionare solo una parte dello spazio di input. In tal caso, si scrive un set di modelli parziali ognuno dei quali corrisponde ad alcuni input ma non corrisponde ad altri input. I criteri attivi che non producono sempre un valore sono detti *modelli attivi parziali*. hanno un valore restituito che è un tipo di opzione. Per definire un criterio attivo parziale, è possibile usare un carattere jolly\_() alla fine dell'elenco di modelli all'interno delle clip a banana. Il codice seguente illustra l'uso di un criterio attivo parziale.
+In alcuni casi, è necessario partizionare solo una parte dello spazio di input. In tal caso, si scrive un set di modelli parziali ognuno dei quali corrisponde ad alcuni input ma non corrisponde ad altri input. I criteri attivi che non producono sempre un valore sono detti *modelli attivi parziali*. hanno un valore restituito che è un tipo di opzione. Per definire un criterio attivo parziale, è possibile usare un carattere jolly (\_) alla fine dell'elenco di modelli all'interno delle clip a banana. Il codice seguente illustra l'uso di un criterio attivo parziale.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
@@ -92,7 +92,7 @@ L'output dell'esempio precedente è il seguente:
 Something else : Not matched.
 ```
 
-Quando si usano modelli attivi parziali, talvolta le singole scelte possono essere disgiunte o escludono a vicenda, ma non devono esserlo. Nell'esempio seguente, il quadrato del pattern e il cubo del pattern non sono disgiunti, perché alcuni numeri sono sia quadrati che cubi, ad esempio 64. Il programma seguente usa il modello e per combinare i modelli di cubo e quadrato. Vengono stampati tutti i numeri interi fino a 1000 che sono sia quadrati che cubi, oltre a quelli che sono solo cubi. 
+Quando si usano modelli attivi parziali, talvolta le singole scelte possono essere disgiunte o escludono a vicenda, ma non devono esserlo. Nell'esempio seguente, il quadrato del pattern e il cubo del pattern non sono disgiunti, perché alcuni numeri sono sia quadrati che cubi, ad esempio 64. Il programma seguente usa il modello e per combinare i modelli di cubo e quadrato. Vengono stampati tutti i numeri interi fino a 1000 che sono sia quadrati che cubi, oltre a quelli che sono solo cubi.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -113,7 +113,7 @@ L'output è indicato di seguito:
 
 ## <a name="parameterized-active-patterns"></a>Modelli attivi con parametri
 
-I criteri attivi accettano sempre almeno un argomento per l'elemento di cui viene eseguita la corrispondenza, ma possono anche richiedere argomenti aggiuntivi, nel qual caso viene applicato il *criterio attivo con parametri* del nome. Gli argomenti aggiuntivi consentono di specializzare un modello generale. Ad esempio, i modelli attivi che usano espressioni regolari per analizzare le stringhe spesso includono l'espressione regolare come parametro aggiuntivo, come nel codice seguente, che usa anche il criterio `Integer` attivo parziale definito nell'esempio di codice precedente. In questo esempio vengono fornite stringhe che usano espressioni regolari per diversi formati di data per personalizzare il criterio attivo ParseRegex generale. Il criterio attivo Integer viene utilizzato per convertire le stringhe corrispondenti in numeri interi che possono essere passati al costruttore DateTime.
+I criteri attivi accettano sempre almeno un argomento per l'elemento di cui viene eseguita la corrispondenza, ma possono anche richiedere argomenti aggiuntivi, nel qual caso viene applicato il *criterio attivo con parametri* del nome. Gli argomenti aggiuntivi consentono di specializzare un modello generale. Ad esempio, i modelli attivi che usano espressioni regolari per analizzare le stringhe spesso includono l'espressione regolare come parametro aggiuntivo, come nel codice seguente, che usa anche il criterio attivo parziale `Integer` definito nell'esempio di codice precedente. In questo esempio vengono fornite stringhe che usano espressioni regolari per diversi formati di data per personalizzare il criterio attivo ParseRegex generale. Il criterio attivo Integer viene utilizzato per convertire le stringhe corrispondenti in numeri interi che possono essere passati al costruttore DateTime.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 

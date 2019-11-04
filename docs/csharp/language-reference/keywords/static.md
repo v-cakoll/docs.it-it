@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: b288e57d9241e294a0fa18edafe72eec675327a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: cbd0f6b4ef7976ccc2da2a735ccbba2bf23177e4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633194"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422338"
 ---
 # <a name="static-c-reference"></a>static (Riferimenti per C#)
 
@@ -71,5 +71,5 @@ Questo esempio mostra che anche se è possibile inizializzare un campo statico c
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [Classi statiche e membri di classi statiche](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

@@ -4,20 +4,17 @@ description: Compilare un'applicazione .NET Core che chiama i membri di un'altra
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
-dev_langs:
-- csharp
-- vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cfceb7ba384a28a09f172032f6edb6f5e495e9c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969301"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420905"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Usare una libreria .NET Standard in Visual Studio 2017
 
-Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riportati in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), dopo averla testata in [Test di una libreria di classi con .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile per i chiamanti. Questa operazione può essere eseguita in due modi:
+Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riportati in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), dopo averla testata in [Test di una libreria di classi con .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile per i chiamanti. Questa operazione può essere eseguita in due modi diversi:
 
 * Se la libreria verrà usata da una sola soluzione, ad esempio se è un componente di un'unica applicazione di grandi dimensioni, è possibile includerla come progetto all'interno della soluzione.
 

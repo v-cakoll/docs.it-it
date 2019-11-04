@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394241"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422630"
 ---
 # <a name="override-c-reference"></a>override (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ Il modificatore `override` è necessario per estendere o modificare l'implementa
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, la `Square` classe deve fornire un'implementazione sottoposta `GetArea` a `GetArea` override di perché viene ereditato `Shape` dalla classe astratta:
+In questo esempio, la classe `Square` deve fornire un'implementazione sottoposta a override di `GetArea` perché `GetArea` viene ereditata dalla classe `Shape` astratta:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -53,7 +53,7 @@ Questo esempio definisce una classe base denominata `Employee` e una classe deri
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Ereditarietà](../../programming-guide/classes-and-structs/inheritance.md)
 - [Parole chiave di C#](index.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [new (modifier)](new-modifier.md)

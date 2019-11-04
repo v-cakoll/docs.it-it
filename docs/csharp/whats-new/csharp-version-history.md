@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039647"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423092"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -104,7 +104,7 @@ C#la versione 4,0, rilasciata con Visual Studio 2010, avrebbe avuto un tempo dif
 
 La versione successiva introdusse comunque alcune nuove interessanti funzionalità:
 
-- [Associazione dinamica](../language-reference/keywords/dynamic.md)
+- [Associazione dinamica](../language-reference/builtin-types/reference-types.md)
 - [Argomenti denominati/facoltativi](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Covarianti e controvarianti generiche](../../standard/generics/covariance-and-contravariance.md)
 - [Tipi di interoperabilità incorporati](../../framework/interop/type-equivalence-and-embedded-interop-types.md)

@@ -2,12 +2,12 @@
 title: Controllo di accesso
 description: Informazioni su come controllare l'accesso agli elementi di programmazione, ad esempio tipi, metodi e funzioni, nel F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: fe204a883a440794fdd033c54d6d8d4fb68e0ce2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817862"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425104"
 ---
 # <a name="access-control"></a>Controllo di accesso
 
@@ -15,22 +15,22 @@ Il *controllo di accesso* si riferisce alla dichiarazione dei client che possono
 
 ## <a name="basics-of-access-control"></a>Nozioni di base sul controllo di accesso
 
-In F#gli identificatori `public`di controllo di accesso `internal`, e `private` possono essere applicati a moduli, tipi, metodi, definizioni di valori, funzioni, proprietà e campi espliciti.
+In F#è possibile applicare gli identificatori di controllo di accesso `public`, `internal`e `private` a moduli, tipi, metodi, definizioni di valore, funzioni, proprietà e campi espliciti.
 
-- `public`indica che l'entità può accedere a tutti i chiamanti.
+- `public` indica che l'entità può accedere a tutti i chiamanti.
 
-- `internal`indica che è possibile accedere all'entità solo dallo stesso assembly.
+- `internal` indica che è possibile accedere all'entità solo dallo stesso assembly.
 
-- `private`indica che è possibile accedere all'entità solo dal tipo o dal modulo di inclusione.
+- `private` indica che è possibile accedere all'entità solo dal tipo o dal modulo di inclusione.
 
 > [!NOTE]
-> L'identificatore `protected` di accesso non viene usato F#in, sebbene sia accettabile se si usano tipi creati in linguaggi che supportano `protected` l'accesso. Se pertanto si esegue l'override di un metodo protetto, il metodo rimane accessibile solo all'interno della classe e dei relativi discendenti.
+> L'identificatore di accesso `protected` non viene usato F#in, sebbene sia accettabile se si usano tipi creati in linguaggi che supportano `protected` l'accesso. Se pertanto si esegue l'override di un metodo protetto, il metodo rimane accessibile solo all'interno della classe e dei relativi discendenti.
 
-In generale, l'identificatore viene inserito davanti al nome dell'entità, tranne quando viene usato un identificatore `mutable` o `inline` , che viene visualizzato dopo l'identificatore di controllo di accesso.
+In generale, l'identificatore viene inserito davanti al nome dell'entità, tranne quando viene usato un identificatore `mutable` o `inline`, che viene visualizzato dopo l'identificatore di controllo di accesso.
 
-Se non viene usato alcun identificatore di accesso, il `public`valore predefinito è `let` , ad eccezione delle associazioni in un tipo, `private` che sono sempre di tipo.
+Se non viene usato alcun identificatore di accesso, il valore predefinito è `public`, ad eccezione dei binding `let` in un tipo, che sono sempre `private` al tipo.
 
-Le firme F# in forniscono un altro meccanismo per controllare F# l'accesso agli elementi del programma. Le firme non sono necessarie per il controllo di accesso. Per altre informazioni, vedere [Firme](signatures.md).
+Le firme F# in forniscono un altro meccanismo per controllare F# l'accesso agli elementi del programma. Le firme non sono necessarie per il controllo di accesso. Per altre informazioni, vedere [Firme](signature-files.md).
 
 ## <a name="rules-for-access-control"></a>Regole per il controllo di accesso
 
@@ -44,7 +44,7 @@ Il controllo di accesso è soggetto alle regole seguenti:
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra l'uso degli identificatori di controllo di accesso. Il progetto contiene due file, `Module1.fs` e. `Module2.fs` Ogni file è implicitamente un modulo. Sono pertanto presenti due moduli, `Module1` e. `Module2` In `Module1`sono definiti un tipo privato e un tipo interno. Il tipo privato non è accessibile da `Module2`, ma il tipo interno può essere.
+Il codice seguente illustra l'uso degli identificatori di controllo di accesso. Nel progetto sono presenti due file, `Module1.fs` e `Module2.fs`. Ogni file è implicitamente un modulo. Sono pertanto presenti due moduli, `Module1` e `Module2`. In `Module1`viene definito un tipo privato e un tipo interno. Non è possibile accedere al tipo privato dal `Module2`, ma il tipo interno può essere.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet1.fs)]
 
@@ -55,4 +55,4 @@ Il codice seguente verifica l'accessibilità dei tipi creati in `Module1.fs`.
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Firme](signatures.md)
+- [Firme](signature-files.md)

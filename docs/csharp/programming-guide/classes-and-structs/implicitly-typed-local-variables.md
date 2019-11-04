@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635558"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419383"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -55,7 +55,7 @@ Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una vari
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le restrizioni seguenti:
 
@@ -99,7 +99,7 @@ L'uso di `var`, tuttavia, può quanto meno rendere più difficoltosa la comprens
 - [Tipi anonimi](anonymous-types.md)
 - [Inizializzatori di oggetto e di raccolta](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Espressioni di query LINQ](../linq-query-expressions/index.md)
+- [LINQ in C#](../../linq/index.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: c6eff1cae79e7b555c5a41d10712b4f3022ff793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597188"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419495"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
 
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- I tipi anonimi vengono in genere usati nella clausola [select](../../language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per altre informazioni, vedere le [espressioni di query LINQ](../linq-query-expressions/index.md).  
+ I tipi anonimi vengono in genere usati nella clausola [select](../../language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per ulteriori informazioni sulle query, vedere [LINQ in C# ](../../linq/index.md).  
   
  I tipi anonimi contengono una o più proprietà pubbliche di sola lettura. Non sono validi altri tipi di membri della classe, ad esempio metodi o eventi. L'espressione usata per inizializzare una proprietà non può essere `null`, una funzione anonima o un tipo di puntatore.  
   
@@ -47,8 +47,8 @@ Console.WriteLine(v.Amount + v.Message);
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- I tipi anonimi sono tipi [class](../../language-reference/keywords/class.md) che derivano da un tipo [object](../../language-reference/keywords/object.md) e dei quali non può essere eseguito il cast ad alcun tipo, eccetto al tipo [object](../../language-reference/keywords/object.md). Il compilatore fornisce un nome per qualsiasi tipo anonimo, anche se l'applicazione non può accedervi. Dal punto di vista di Common Language Runtime, un tipo anonimo non è diverso da qualsiasi altro tipo di riferimento.  
+## <a name="remarks"></a>Note  
+ I tipi anonimi sono tipi [class](../../language-reference/keywords/class.md) che derivano da un tipo [object](../../language-reference/builtin-types/reference-types.md) e dei quali non può essere eseguito il cast ad alcun tipo, eccetto al tipo [object](../../language-reference/builtin-types/reference-types.md). Il compilatore fornisce un nome per qualsiasi tipo anonimo, anche se l'applicazione non può accedervi. Dal punto di vista di Common Language Runtime, un tipo anonimo non è diverso da qualsiasi altro tipo di riferimento.  
   
  Se due o più inizializzatori di oggetti anonimi in un assembly specificano una sequenza di proprietà nello stesso ordine e con gli stessi nomi e tipi, il compilatore considera gli oggetti come istanze dello stesso tipo. Condividono le stesse informazioni sul tipo generate dal compilatore.  
   
@@ -60,5 +60,5 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 
 - [Guida per programmatori C#](../index.md)
 - [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)
-- [Nozioni di base su LINQ in C#](../concepts/linq/getting-started-with-linq.md)
-- [Espressioni di query LINQ](../linq-query-expressions/index.md)
+- [Nozioni di base su LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ in C#](../../linq/index.md)

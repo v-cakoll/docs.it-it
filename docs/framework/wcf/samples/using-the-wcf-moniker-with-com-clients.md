@@ -2,12 +2,12 @@
 title: Utilizzo del moniker WCF con i client COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038723"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424713"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Utilizzo del moniker WCF con i client COM
 In questo esempio viene illustrato come utilizzare il moniker del servizio Windows Communication Foundation (WCF) per integrare servizi Web in ambienti di sviluppo basati su COM, ad esempio Microsoft Office Visual Basic, Applications Edition (Office VBA) o Visual Basic 6,0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come utilizzare il moniker del servizio Windo
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
@@ -70,7 +70,7 @@ regasm.exe /tlb:CalcProxy.tlb client.dll
   
  L'assembly creato deve essere aggiunto alla Global Assembly Cache. Sebbene non sia strettamente obbligatoria, questa operazione semplifica il processo in cui la fase di esecuzione individua l'assembly. Il comando seguente aggiunge l'assembly alla Global Assembly Cache.  
   
-```  
+```console  
 gacutil.exe /i client.dll  
 ```  
   
@@ -193,11 +193,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
     > [!NOTE]
     > Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, verificare di eseguire il prompt dei comandi con privilegi di amministratore.  
   
-4. `tlbexp.exe client.dll /out:CalcProxy.tlb` Digitare per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
+4. Digitare `tlbexp.exe client.dll /out:CalcProxy.tlb` per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   
-5. `regasm.exe /tlb:CalcProxy.tlb client.dll` Digitare per registrare i tipi con com. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
+5. Digitare `regasm.exe /tlb:CalcProxy.tlb client.dll` per registrare i tipi con COM. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   
-6. `gacutil.exe /i client.dll` Digitare per aggiungere l'assembly alla Global assembly cache.  
+6. Digitare `gacutil.exe /i client.dll` per aggiungere l'assembly alla Global assembly cache.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
@@ -223,11 +223,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 7. Da un prompt dei comandi spostarsi a tale directory di destinazione sul computer client. Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] assicurarsi di eseguire il prompt dei comandi come amministratore.  
   
-8. `tlbexp.exe client.dll /out:CalcProxy.tlb` Digitare per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
+8. Digitare `tlbexp.exe client.dll /out:CalcProxy.tlb` per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   
-9. `regasm.exe /tlb:CalcProxy.tlb client.dll` Digitare per registrare i tipi con com. Verificare che il percorso sia stato impostato sulla cartella che contiene `regasm.exe` prima di eseguire il comando.  
+9. Digitare `regasm.exe /tlb:CalcProxy.tlb client.dll` per registrare i tipi con COM. Verificare che il percorso sia stato impostato sulla cartella che contiene `regasm.exe` prima di eseguire il comando.  
   
-10. `gacutil.exe /i client.dll` Digitare per aggiungere l'assembly alla Global assembly cache. Verificare che il percorso sia stato impostato sulla cartella che contiene `gacutil.exe` prima di eseguire il comando.  
+10. Digitare `gacutil.exe /i client.dll` per aggiungere l'assembly alla Global assembly cache. Verificare che il percorso sia stato impostato sulla cartella che contiene `gacutil.exe` prima di eseguire il comando.  
   
 11. Verificare che sia possibile accedere al servizio dal computer client usando un browser.  
   

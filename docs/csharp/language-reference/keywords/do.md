@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5566965e77feb9d46584146829284e9e0be71539
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 08f964b1e5c78a429dc50f81398d840f58ec4b13
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422048"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422842"
 ---
 # <a name="do-c-reference"></a>do (Riferimenti per C#)
 
@@ -33,7 +33,7 @@ L'esempio seguente illustra l'utilizzo dell'istruzione `do`. Selezionare **Esegu
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere la sezione [Istruzione do](~/_csharplang/spec/statements.md#the-do-statement) della [specifica del linguaggio C#](../language-specification/index.md).
+Per altre informazioni, vedere la sezione [Istruzione do](~/_csharplang/spec/statements.md#the-do-statement) della [specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Parametri di tipo risolti staticamente
 description: Informazioni su come usare un F# parametro di tipo risolto in modo statico, che viene sostituito con un tipo effettivo in fase di compilazione anziché in fase di esecuzione.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425006"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parametri di tipo risolti staticamente
 
@@ -21,7 +21,7 @@ Un *parametro di tipo risolto* in modo statico è un parametro di tipo che viene
 
 ## <a name="remarks"></a>Note
 
-Nella F# lingua sono presenti due tipi distinti di parametri di tipo. Il primo tipo è il parametro di tipo generico standard. Questi sono indicati da un apostrofo ('), come `'T` in `'U`e. Sono equivalenti a parametri di tipo generico in altri linguaggi .NET Framework. L'altro tipo viene risolto in modo statico ed è indicato da un simbolo del cursore, come `^T` in `^U`e.
+Nella F# lingua sono presenti due tipi distinti di parametri di tipo. Il primo tipo è il parametro di tipo generico standard. Queste sono indicate da un apostrofo ('), come in `'T` e `'U`. Sono equivalenti a parametri di tipo generico in altri linguaggi .NET Framework. L'altro tipo viene risolto in modo statico ed è indicato da un simbolo del cursore, come in `^T` e `^U`.
 
 I parametri di tipo risolti staticamente sono principalmente utili insieme ai vincoli dei membri, ovvero vincoli che consentono di specificare che un argomento di tipo deve avere un membro o membri specifici per poter essere utilizzato. Non è possibile creare questo tipo di vincolo usando un normale parametro di tipo generico.
 
@@ -42,7 +42,7 @@ I metodi e le funzioni inline che usano operatori o altre funzioni con parametri
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Il tipo risolto di `(+@)` è basato sull'uso `(+)` di e `(*)`, entrambi che provocano l'inferenza del tipo per dedurre i vincoli dei membri nei parametri di tipo risolti staticamente. Il tipo risolto, come illustrato nell' F# interprete, è il seguente.
+Il tipo di `(+@)` risolto è basato sull'uso di `(+)` e `(*)`, che provocano l'inferenza del tipo per dedurre i vincoli dei membri nei parametri di tipo risolti staticamente. Il tipo risolto, come illustrato nell' F# interprete, è il seguente.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -62,7 +62,7 @@ A partire F# da 4,1, è anche possibile specificare nomi di tipi concreti nelle 
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

@@ -9,23 +9,23 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766864"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459289"
 ---
 # <a name="listbox-styles-and-templates"></a>Stili e modelli di ListBox
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ListBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ListBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="listbox-parts"></a>Parti di ListBox  
- Il <xref:System.Windows.Controls.ListBox> controllo non dispone di parti denominate.  
+ Il controllo <xref:System.Windows.Controls.ListBox> non dispone di parti denominate.  
   
- Quando si crea una <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.ListBox>, il modello potrebbe contenere un' <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>. (Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.ListBox>; i <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo).  Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario dare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.  
+ Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per una <xref:System.Windows.Controls.ListBox>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di una <xref:System.Windows.Controls.ScrollViewer>. Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento del <xref:System.Windows.Controls.ListBox>. il <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare al <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
   
 ## <a name="listbox-states"></a>Stati di ListBox  
- La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.ListBox> controllo.  
+ Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ListBox>.  
   
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
@@ -34,10 +34,10 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 |InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
   
 ## <a name="listboxitem-parts"></a>Parti di ListBoxItem  
- Il <xref:System.Windows.Controls.ListBoxItem> controllo non dispone di parti denominate.  
+ Il controllo <xref:System.Windows.Controls.ListBoxItem> non dispone di parti denominate.  
   
 ## <a name="listboxitem-states"></a>Stati di ListBoxItem  
- La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.ListBox> controllo.  
+ Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ListBox>.  
   
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
@@ -47,14 +47,14 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 |Con stato attivo|FocusStates|L'elemento ha uno stato attivo.|  
 |Con stato non attivo|FocusStates|L'elemento non ha uno stato attivo.|  
 |Deselezionato|SelectionStates|L'elemento non è selezionato.|  
-|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
+|Selezionati|SelectionStates|L'elemento è attualmente selezionato.|  
 |SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
-|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
-|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
+|Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non ha lo stato attivo.|  
   
 ## <a name="listbox-controltemplate-example"></a>Esempio di ControlTemplate ListBox  
- Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListBoxItem> controlli.  
+ Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per i controlli <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListBoxItem>.  
   
  [!code-xaml[ControlTemplateExamples#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
@@ -70,5 +70,5 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
-- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

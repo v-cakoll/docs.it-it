@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043153"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458129"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementazione del pattern di controllo Value di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IValueProvider>, incluse le informazioni relative a eventi e proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
@@ -36,7 +36,7 @@ Esempio di elemento elenco modificabile
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> non supporta il recupero delle informazioni di formattazione o dei valori delle sottostringhe. Implementare <xref:System.Windows.Automation.Provider.ITextProvider> in questi scenari.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>deve essere implementato da controlli come il controllo di selezione della selezione colori [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] da (illustrato di seguito), che supporta il mapping delle stringhe tra un valore di colore (ad esempio, "Yellow") e una struttura RGB interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> deve essere implementato da controlli come il controllo di selezione della selezione **colori** da Microsoft Word (illustrato di seguito), che supporta il mapping delle stringhe tra un valore di colore (ad esempio, "Yellow") e una struttura RGB interna equivalente.  
   
  ![Selezione colori con il colore giallo evidenziato.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Esempio di mapping delle stringhe dei campioni colore  
@@ -49,9 +49,9 @@ Esempio di mapping delle stringhe dei campioni colore
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|Nessuna|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|proprietà|Nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|proprietà|Nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|Nessuno|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Eccezioni  

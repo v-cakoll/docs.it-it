@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 7b22bbf75b29fdffd9927110ebe5b4e5309cd778
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191830"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422965"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opzioni del compilatore C#)
 L'opzione **-doc** consente di inserire commenti per la documentazione in un file XML.  
@@ -35,7 +35,7 @@ L'opzione **-doc** consente di inserire commenti per la documentazione in un fil
 ## <a name="remarks"></a>Note  
  Nei file del codice sorgente è possibile elaborare e aggiungere al file XML i commenti di documentazione che precedono quanto segue:  
   
-- Tipi definiti dall'utente, ad esempio una [classe](../keywords/class.md), un [delegato](../keywords/delegate.md) o un'[interfaccia](../keywords/interface.md)  
+- Tipi definiti dall'utente, ad esempio una [classe](../keywords/class.md), un [delegato](../builtin-types/reference-types.md#the-delegate-type) o un'[interfaccia](../keywords/interface.md)  
   
 - Membri quali un campo, un [evento](../keywords/event.md), una [proprietà](../../programming-guide/classes-and-structs/using-properties.md) o un metodo  
   

@@ -4,12 +4,12 @@ description: Informazioni su come creare un'applicazione di rilevamento delle an
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774431"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423599"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: rilevare le anomalie nelle vendite di prodotti con ML.NET
 
@@ -127,7 +127,7 @@ I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.M
 
 Il rilevamento delle anomalie segnala eventi o comportamenti inattesi o insoliti. Fornisce indizi su dove cercare i problemi e consente di rispondere alla domanda "È strano?".
 
-![È strano](./media/sales-anomaly-detection/anomalydetection.png)
+![Esempio del rilevamento anomalie "è questo strano".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 Il rilevamento delle anomalie è il processo di rilevamento degli outlier dati delle serie temporali; indica una determinata serie temporale di input in cui il comportamento non è quello previsto o è "strano".
 
@@ -152,7 +152,7 @@ Analizzare gli stessi dati di vendita del prodotto per rilevare i picchi e i pun
 
 Lo scopo del rilevamento dei picchi consiste nell'identificare i picchi improvvisi ma temporanei che differiscono notevolmente dalla maggior parte dei valori dei dati delle serie temporali. È importante rilevare questi elementi, osservazioni o eventi rari sospetti in modo tempestivo per fare in modo che abbiano un impatto minimo. L'approccio seguente può essere usato per rilevare un'ampia gamma di anomalie, quali: interruzioni del servizio, attacchi informatici o contenuto web virale. L'immagine seguente riporta un esempio di picchi in un set di dati relativo a una serie temporale:
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![Screenshot che mostra due rilevamenti di picchi.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>Aggiungere il metodo CreateEmptyDataView()
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` sono modifiche permanenti in una serie temporale di un flusso di distribuzione di valori, come le modifiche di livello e le tendenze. Queste modifiche persistenti durano molto più tempo rispetto ai `spikes` e potrebbero indicare uno o più eventi catastrofici. I `Change points` non sono in genere visibili a occhio nudo, ma possono essere rilevati nei dati usando alcuni approcci, come nel metodo seguente.  L'immagine seguente rappresenta un esempio di rilevamento di un punto di modifica:
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![Screenshot che mostra il rilevamento di un punto di modifica.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>Creare il metodo DetectChangepoint()
 

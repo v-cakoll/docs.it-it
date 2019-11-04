@@ -2,21 +2,21 @@
 title: Provider WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 89e2d370919519953e714cb0d0020587b3f53c9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd24a6d270a0bd9012bbda2a53913167c9697bc5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038505"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424506"
 ---
 # <a name="wmi-provider"></a>Provider WMI
-In questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione utilizzando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per la [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e illustra come raccogliere dati dal `ICalculator` servizio in fase di esecuzione.  
+In questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione utilizzando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per la [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e illustra come raccogliere dati dal servizio `ICalculator` in fase di esecuzione.  
   
  WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). Per ulteriori informazioni su WMI SDK, vedere [Strumentazione gestione Windows](/windows/desktop/WmiSdk/wmi-start-page). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  
   
  WCF implementa un provider WMI, un componente che espone la strumentazione in fase di esecuzione tramite un'interfaccia compatibile con WBEM. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. WCF espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
- Il provider WMI incorporato viene attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite `wmiProviderEnabled` l'attributo [ \<della > di diagnostica](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) nella [ \<sezione > System. ServiceModel](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente:  
+ Il provider WMI incorporato viene attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite l'attributo `wmiProviderEnabled` del [> di diagnostica\<](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) nella sezione [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente:  
   
 ```xml  
 <system.serviceModel>  
@@ -32,19 +32,19 @@ In questo esempio viene illustrato come raccogliere dati dai servizi Windows Com
  L'aggiunta di oggetti WMI a un servizio rende possibile la rivelazione di informazioni definite dall'utente insieme alle informazioni del provider WMI incorporato. Questa operazione viene eseguita pubblicando lo schema del servizio in WMI usando l'applicazione Installutil.exe. Le istruzioni per svolgere questa operazione, insieme ad altri dettagli, sono disponibili tra le istruzioni di installazione alla fine dell'argomento.  
   
 ## <a name="accessing-wmi-information"></a>Accesso alle informazioni WMI  
- L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API WMI per gli script, Visual Basic C++ applicazioni, le applicazioni e i https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).NET Framework (.  
+ L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API WMI per gli script, Visual Basic C++ applicazioni, le applicazioni e i .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  In questo esempio vengono utilizzati due script Java: uno per enumerare i servizi in esecuzione nel computer con alcune delle relative proprietà e il secondo per visualizzare i dati WMI definiti dall'utente. Lo script apre una connessione al provider WMI, analizza i dati e visualizza i dati raccolti.  
   
  Avviare l'esempio per creare un'istanza in esecuzione di un servizio WCF. Mentre il servizio è in esecuzione, eseguire ogni script Java utilizzando il comando seguente nel prompt dei comandi:  
   
-```  
+```console  
 cscript EnumerateServices.js  
 ```  
   
  Lo script accede alla strumentazione contenuta nel servizio e produce l'output seguente:  
   
-```  
+```console  
 Microsoft (R) Windows Script Host Version 5.6  
 Copyright © Microsoft Corporation 1996-2001. All rights reserved.  
   
@@ -102,13 +102,13 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
   
  Eseguire quindi il secondo script Java per visualizzare i dati WMI definiti dall'utente:  
   
-```  
+```console  
 cscript EnumerateCustomObjects.js  
 ```  
   
  Lo script accede alla strumentazione definita dall'utente contenuta nei servizi e produce l'output seguente:  
   
-```  
+```console 
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
@@ -139,7 +139,7 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

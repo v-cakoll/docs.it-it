@@ -5,17 +5,17 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812674"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423984"
 ---
 # <a name="programming-in-visual-basic"></a>Programmazione in Visual Basic
 Questa sezione discute le attività di programmazione da approfondire per la creazione di un'applicazione Visual Basic.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Accesso alle risorse del computer](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  Include documentazione sull'uso dell'oggetto `My.Computer` per accedere a informazioni riguardanti il computer in cui è in esecuzione un'applicazione. Viene inoltre descritto in che modo è possibile controllare tale computer.  
   
@@ -34,12 +34,12 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
  [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Include documentazione sull'accesso alle impostazioni di un'applicazione mediante l'oggetto `My.Settings`.  
   
- [Elaborazione di unità, directory e file](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ [Elaborazione di unità, directory e file](drives-directories-files/index.md)  
  Include documentazione su come accedere al file system mediante l'oggetto `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Funzionalità del linguaggio Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Nozioni di base sulla programmazione](../../../visual-basic/programming-guide/concepts/index.md)
-- [Raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
+- [raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
 - [Sviluppo di applicazioni con Visual Basic](../../../visual-basic/developing-apps/index.md)

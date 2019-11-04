@@ -1,16 +1,16 @@
 ---
 title: Distribuire un modello in Funzioni di Azure
 description: Fornire il modello di Machine Learning per l'analisi del sentiment ML.NET per le previsioni tramite Internet usando Funzioni di Azure
-ms.date: 09/12/2019
+ms.date: 10/31/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: bd08982e96f39a9685ddabc090ac3bc5c7855022
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774533"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424337"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Distribuire un modello in Funzioni di Azure
 
@@ -22,10 +22,13 @@ Informazioni su come distribuire un modello di Machine Learning ML.NET con train
 ## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" e "sviluppo Azure" installato.
-- Pacchetto NuGet Microsoft.NET.Sdk.Functions versione 1.0.28+.
 - [Strumenti di Funzioni di Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Modello con training preliminare. Usare l'[esercitazione di analisi del sentiment in ML.NET](../tutorials/sentiment-analysis.md) per creare un modello personalizzato oppure scaricare questo [modello di Machine Learning di analisi del sentiment con training preliminare](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+
+## <a name="azure-functions-sample-overview"></a>Panoramica di esempio di funzioni di Azure
+
+Questo esempio è un'  **C# applicazione trigger http di funzioni di Azure** che usa un modello di classificazione binaria con training per categorizzare il sentimento del testo come positivo o negativo. Funzioni di Azure offre un modo semplice per eseguire piccole porzioni di codice su larga scala in un ambiente senza server gestito nel cloud. Il codice per questo esempio è disponibile nel repository [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) in GitHub.
 
 ## <a name="create-azure-functions-project"></a>Creare un progetto Funzioni di Azure
 
@@ -35,7 +38,7 @@ Informazioni su come distribuire un modello di Machine Learning ML.NET con train
 
     In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e selezionare **Aggiungi** > **Nuova cartella**. Digitare "MLModels" e premere INVIO.
 
-1. Installare il **pacchetto NuGet Microsoft.ML**:
+1. Installare il **pacchetto NuGet Microsoft.ml** versione **1.3.1**:
 
     In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come Origine pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.ML**, selezionare il pacchetto nell'elenco e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
@@ -43,13 +46,13 @@ Informazioni su come distribuire un modello di Machine Learning ML.NET con train
 
     In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.Azure.Functions.Extensions**, selezionare il pacchetto nell'elenco e quindi il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
-1. Installare il **pacchetto Microsoft.Extensions.ML NuGet**:
+1. Installare il **pacchetto NuGet Microsoft.Extensions.ml** versione **1.3.1**:
 
     In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia, cercare **Microsoft.Extensions.ML**, selezionare il pacchetto nell'elenco e quindi il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
-1. Aggiornare il **pacchetto NuGet Microsoft.NET.Sdk.Functions** alla versione 1.0.28+:
+1. Installare la versione del **pacchetto NuGet Microsoft. NET. Sdk. Functions** 1.0.28 +:
 
-    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Installati, cercare **Microsoft.NET.Sdk.Functions**, selezionare il pacchetto nell'elenco, selezionare 1.0.28 o versione successiva nell'elenco a discesa Versione e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
+    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda installato, cercare **Microsoft. NET. Sdk. Functions**, selezionare il pacchetto nell'elenco, selezionare **1.0.28 o versioni successive** dall'elenco a discesa versione e selezionare il pulsante **Aggiorna** . Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
 
 ## <a name="add-pre-trained-model-to-project"></a>Aggiungere il modello con training preliminare al progetto
 
@@ -114,17 +117,11 @@ Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e modificare il campo **Nome** in *Startup.cs*. Selezionare quindi il pulsante **Aggiungi**.
+1. Aggiungere le istruzioni using seguenti all'inizio di *Startup.cs*:
 
-    Il file *Startup.cs* verrà aperto nell'editor di codice. Aggiungere l'istruzione using seguente all'inizio di *Startup.cs*:
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L1-L6)]
 
-    ```csharp
-    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
-
-    Rimuovere il codice esistente sotto le istruzioni using e aggiungere il codice seguente al file *Startup.cs*:
+1. Rimuovere il codice esistente sotto le istruzioni using e aggiungere il codice seguente:
 
     ```csharp
     [assembly: FunctionsStartup(typeof(Startup))]
@@ -132,14 +129,22 @@ Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere
     {
         public class Startup : FunctionsStartup
         {
-            public override void Configure(IFunctionsHostBuilder builder)
-            {
-                builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-            }
+
         }
     }
     ```
+
+1. Definire le variabili per archiviare l'ambiente in cui è in esecuzione l'app e il percorso del file in cui si trova il modello all'interno della classe `Startup`
+
+    [!code-csharp [DefineStartupVars](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L13-L14)]
+
+1. Di seguito, creare un costruttore per impostare i valori delle variabili `_environment` e `_modelPath`. Quando l'applicazione viene eseguita localmente, l'ambiente predefinito è *lo sviluppo*.
+
+    [!code-csharp [StartupCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L16-L29)]
+
+1. Aggiungere quindi un nuovo metodo denominato `Configure` per registrare il servizio `PredictionEnginePool` al di sotto del costruttore.
+
+    [!code-csharp [ConfigureServices](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L31-L35)]
 
 A un livello elevato, questo codice inizializza automaticamente gli oggetti e i servizi per un uso successivo quando richiesto dall'applicazione anziché eseguire manualmente questa operazione.
 
@@ -172,28 +177,7 @@ Questo codice assegna `PredictionEnginePool` passandolo al costruttore della fun
 
 Sostituire l'implementazione esistente del metodo *Run* nella classe *AnalyzeSentiment* con il codice seguente:
 
-```csharp
-[FunctionName("AnalyzeSentiment")]
-public async Task<IActionResult> Run(
-[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
-ILogger log)
-{
-    log.LogInformation("C# HTTP trigger function processed a request.");
-
-    //Parse HTTP Request Body
-    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-    SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-
-    //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
-
-    //Convert prediction to string
-    string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
-
-    //Return Prediction
-    return (ActionResult)new OkObjectResult(sentiment);
-}
-```
+[!code-csharp [AnalyzeRunMethod](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L26-L45)]
 
 Quando il metodo `Run` viene eseguito, i dati in ingresso dalla richiesta HTTP vengono deserializzati e usati come input per `PredictionEnginePool`. Viene quindi chiamato il metodo `Predict` per eseguire stime utilizzando l'`SentimentAnalysisModel` registrato nella classe `Startup` e i risultati vengono restituiti all'utente in caso di esito positivo.
 

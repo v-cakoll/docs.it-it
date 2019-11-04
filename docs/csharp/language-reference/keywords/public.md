@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: a68cbf3af2568cd3c197eaece9e2d5a25cdb4a6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: dfb6e341ea0740225d7600f07af2813d39141b45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633705"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422549"
 ---
 # <a name="public-c-reference"></a>public (Riferimenti per C#)
 
@@ -40,7 +40,7 @@ indica che PointTest.y è inaccessibile a causa del livello di protezione.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -50,7 +50,7 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
 - [Parole chiave di C#](index.md)
 - [Modificatori di accesso](access-modifiers.md)
 - [Livelli di accessibilità](accessibility-levels.md)
-- [Modificatori](modifiers.md)
+- [Modificatori](index.md)
 - [private](private.md)
 - [protected](protected.md)
 - [internal](internal.md)
