@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191815"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416729"
 ---
 # <a name="c-guide"></a>Guida a C#
 
 La Guida a C# offre molte risorse di informazioni sul linguaggio C#. Questo sito è rivolto a diverse tipologie di pubblico. A seconda del grado di esperienza riguardo alla programmazione o al linguaggio C# e a .NET, è consigliabile consultare sezioni diverse delle Guida.
 
 - Per sviluppatori senza esperienza:
+  - Guarda la [ C# serie di video 101](https://aka.ms/dotnet3-csharp). Viene fornita un'introduzione ai concetti importanti che verranno esaminati in queste esercitazioni.
+
   - Iniziare con le [esercitazioni di introduzione a C#](tutorials/intro-to-csharp/index.md). Queste esercitazioni consentono di esplorare interattivamente il linguaggio C# nel browser. Da qui è possibile passare ad altre [esercitazioni](tutorials/index.md). Queste esercitazioni illustrano come creare applicazioni C# da zero e offrono processi dettagliati per la scrittura di programmi. Vengono illustrati i concetti chiave del linguaggio e viene spiegato come creare programmi C# in modo autonomo. Se si preferisce iniziare leggendo informazioni di carattere generale, vedere la [panoramica del linguaggio C#](tour-of-csharp/index.md), in cui vengono illustrati i concetti del linguaggio C#. Dopo la lettura della panoramica, si disporrà di una conoscenza di base del linguaggio sufficiente per eseguire le esercitazioni o provare a sviluppare codice in modo autonomo.
 
 - Per gli sviluppatori che non conoscono C#:
@@ -61,7 +63,7 @@ La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni n
 - [Riferimenti per il linguaggio](language-reference/index.md)
   - Questa sezione contiene materiale di riferimento su C# che consente di comprendere la sintassi e la semantica di questo linguaggio. Vengono forniti anche materiali di riferimento per i tipi, gli operatori, gli attributi, le direttive del preprocessore, le opzioni del compilatore, nonché per errori e avvisi generati dal compilatore.
 
-- [Specifiche del linguaggio C#](./language-reference/language-specification/index.md)
+- [Specifiche del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction)
   - Collegamenti alle versioni più recenti della specifica del linguaggio C#.
 
 ## <a name="see-also"></a>Vedere anche

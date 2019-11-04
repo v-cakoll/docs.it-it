@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: d75c34cd63eb439203ef6757e62e18936eb3606a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773913"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418233"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
@@ -40,7 +40,7 @@ Nella figura seguente presa da Visual Studio viene illustrata una query LINQ com
 
 Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione introduttiva [Nozioni fondamentali sulle espressioni di query](../../../linq/query-expression-basics.md) e quindi leggere la documentazione per la tecnologia LINQ a cui si è interessati:
 
-- Documenti XML: [LINQ to XML](linq-to-xml.md)  
+- Documenti XML: [LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - Raccolte, file e stringhe .NET: [LINQ to Objects](linq-to-objects.md)
 

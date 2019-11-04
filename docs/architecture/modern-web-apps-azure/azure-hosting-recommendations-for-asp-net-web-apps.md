@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Cons
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331994"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416720"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
@@ -116,7 +116,7 @@ Azure offre una vasta gamma di opzioni per l'archiviazione di dati, pertanto l'a
 
 Per i dati transazionali e relazionali la soluzione migliore è rappresentata dai database SQL di Azure. Per dati che richiedono prestazioni elevate e sono prevalentemente di sola lettura, una cache Redis supportata da un database SQL di Azure può essere una soluzione ottimale.
 
-I dati JSON non strutturati possono essere archiviati in vari modi, dalle colonne del database SQL a BLOB o tabelle in Archiviazione di Azure a DocumentDB. Tra i metodi citati, DocumentDB offre le migliori funzionalità di query ed è l'opzione consigliata per grandi quantità di documenti JSON che richiedono il supporto dell'esecuzione di query.
+I dati JSON non strutturati possono essere archiviati in diversi modi, dalle colonne del database SQL ai BLOB o alle tabelle in archiviazione di Azure, per Azure Cosmos DB. Azure Cosmos DB offre la migliore funzionalità di query ed è l'opzione consigliata per un numero elevato di documenti basati su JSON che devono supportare l'esecuzione di query.
 
 Per i dati temporanei basati su comandi o eventi e usati per orchestrare il comportamento dell'applicazione è consigliabile usare il bus di servizio di Azure o le code di Archiviazione di Azure. Il bus di archiviazione di Azure offre maggior flessibilità ed è il servizio consigliato per la messaggistica non semplice all'interno dell'applicazione e tra le applicazioni.
 

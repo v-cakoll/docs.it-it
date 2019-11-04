@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093433"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416738"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "73093433"
 - **Multipiattaforma:** Viene eseguito nei [sistemi operativi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS e Linux.
 - **Coerenza in tutte le architetture:** esegue il codice con lo stesso comportamento in molteplici architetture, tra cui x64, x86 e ARM.
 - **Strumenti da riga di comando:** include strumenti da riga di comando facili da usare per lo sviluppo locale e in scenari di integrazione continua.
-- **Distribuzione flessibile:** Può essere incluso nell'app o installato side-by-Side (installazioni a livello di utente o a livello di sistema). Può essere usato con i [contenitori Docker](docker/index.md).
+- **Distribuzione flessibile:** Può essere incluso nell'app o installato side-by-Side (installazioni a livello di utente o a livello di sistema). Può essere usato con i [contenitori Docker](docker/introduction.md).
 - **Compatibile:** .NET Core è compatibile con .NET Framework, Novell e mono, tramite [.NET standard](../standard/net-standard.md).
 - **Open source:** la piattaforma .NET Core è open source e usa le licenze MIT e Apache 2. .NET Core è un progetto [.NET Foundation](https://dotnetfoundation.org/).
 - **Supportato da Microsoft:** .NET Core è supportato da Microsoft, in base al [Supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy).

@@ -2,12 +2,12 @@
 title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595289"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418703"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 
@@ -200,7 +200,7 @@ In questa sezione sono descritte alcune classi di raccolte comuni:
 
 La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Classe|DESCRIZIONE|
+|Class|Descrizione|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|
 |<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|
@@ -230,7 +230,7 @@ Quando possibile, usare le raccolte generiche degli spazi dei nomi <xref:System.
 
 La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:
 
-|Classe|DESCRIZIONE|
+|Class|Descrizione|
 |---|---|
 |<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|
 |<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta
 
-È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [Introduzione a LINQ in C#](./linq/getting-started-with-linq.md).
+È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [Introduzione a LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/).
 
 Nell'esempio seguente viene eseguita una query LINQ su un oggetto `List` generico. La query LINQ restituisce una raccolta diversa che contiene i risultati.
 

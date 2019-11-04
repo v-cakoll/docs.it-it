@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373759"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416696"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -75,7 +75,7 @@ Anziché duplicare la logica, è preferibile incapsularla in un costrutto di pro
 
 ### <a name="persistence-ignorance"></a>Mancato riconoscimento della persistenza
 
-Il **mancato riconoscimento della persistenza** riguarda i tipi che devono essere resi persistenti ma il cui codice non è influenzato dalla scelta della tecnologia di persistenza. In .NET tali tipi sono a volte definiti Plain Old CLR Object (POCO), in quanto non sono gravati dalla necessità di ereditare da una determinata classe base o di implementare un'interfaccia specifica. Il mancato riconoscimento della persistenza è utile perché consente allo stesso modello di business di essere reso permanente in più modi migliorando la flessibilità dell'applicazione. Le scelte di persistenza possono cambiare nel tempo, in funzione della tecnologia del database oppure possono servire ulteriori forme di persistenza oltre a quelle inizialmente presenti nell'applicazione, ad esempio, l'utilizzo di una cache Redis o di Azure DocumentDb oltre a un database relazionale.
+Il **mancato riconoscimento della persistenza** riguarda i tipi che devono essere resi persistenti ma il cui codice non è influenzato dalla scelta della tecnologia di persistenza. In .NET tali tipi sono a volte definiti Plain Old CLR Object (POCO), in quanto non sono gravati dalla necessità di ereditare da una determinata classe base o di implementare un'interfaccia specifica. Il mancato riconoscimento della persistenza è utile perché consente allo stesso modello di business di essere reso permanente in più modi migliorando la flessibilità dell'applicazione. È possibile che le opzioni di persistenza cambino nel tempo, da una tecnologia di database a un'altra o da ulteriori forme di persistenza, oltre a qualsiasi altra operazione avviata dall'applicazione (ad esempio, l'uso di una cache Redis o Azure Cosmos DB oltre a un database relazionale).
 
 Alcuni esempi di violazioni di questo principio:
 
@@ -101,7 +101,7 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Schemi progettuali JAVA: principi](https://java-design-patterns.com/principles/)
+- [Modelli di progettazione JAVA: principi](https://java-design-patterns.com/principles/)
 - [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]

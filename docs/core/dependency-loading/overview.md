@@ -5,16 +5,16 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926394"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416675"
 ---
 # <a name="dependency-loading-in-net-core"></a>Caricamento delle dipendenze in .NET Core
 
-Tutte le applicazioni .NET Core hanno dipendenze. Anche l'app `hello world` semplice presenta dipendenze da parti delle librerie di classi .NET Core.
+Tutte le applicazioni .NET Core hanno dipendenze. Anche la semplice app `hello world` presenta dipendenze da parti delle librerie di classi .NET Core.
 
 Comprendere la logica di caricamento degli assembly predefiniti di .NET Core consente di comprendere e debugging i tipici problemi di distribuzione.
 
@@ -22,7 +22,7 @@ In alcune applicazioni, le dipendenze vengono determinate in modo dinamico in fa
 
 ## <a name="understanding-assemblyloadcontext"></a>Informazioni su AssemblyLoadContext
 
-L' <xref:System.Runtime.Loader.AssemblyLoadContext> API è fondamentale per la progettazione di caricamento di .NET Core. L'articolo [informazioni su AssemblyLoadContext](understanding-assemblyloadcontext.md) fornisce una panoramica concettuale della progettazione.
+L'API <xref:System.Runtime.Loader.AssemblyLoadContext> è fondamentale per la progettazione di caricamento di .NET Core. L'articolo [informazioni su AssemblyLoadContext](understanding-assemblyloadcontext.md) fornisce una panoramica concettuale della progettazione.
 
 ## <a name="loading-details"></a>Dettagli del caricamento
 
@@ -39,4 +39,4 @@ L'esercitazione [creare un'applicazione .NET Core con i plug](../tutorials/creat
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Come usare ed eseguire il debug di assembly non caricabili in .NET Core
 
-L'articolo [How to use and Debug assembly unloadable in .NET Core](../../standard/assembly/unloadability-howto.md) è un'esercitazione dettagliata. Viene illustrato come caricare un'applicazione .NET Core, eseguirla e scaricarla. Questo articolo fornisce anche suggerimenti sul debug.
+L'articolo [How to use and Debug assembly unloadable in .NET Core](../../standard/assembly/unloadability.md) è un'esercitazione dettagliata. Viene illustrato come caricare un'applicazione .NET Core, eseguirla e scaricarla. Questo articolo fornisce anche suggerimenti sul debug.

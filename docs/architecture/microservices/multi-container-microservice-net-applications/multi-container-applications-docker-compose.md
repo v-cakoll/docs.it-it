@@ -2,16 +2,16 @@
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Come specificare la composizione di microservizi per un'applicazione a più contenitori con docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039739"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416709"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
-Il file [docker-compose.yml](https://docs.docker.com/compose/compose-file/) è stato introdotto nella sezione [Passaggio 4 di questa guida. Definire i servizi in docker-compose.yml quando si compila un'applicazione Docker a più contenitori](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Tuttavia esistono altri modi per usare i file docker-compose che vale la pena di esplorare in maggiore dettaglio.
+In questa guida, il file [Docker-compose. yml](https://docs.docker.com/compose/compose-file/) è stato introdotto nella sezione [Step 4. Definire i servizi in Docker-compose. yml quando si compila un'applicazione Docker a più contenitori](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Tuttavia esistono altri modi per usare i file docker-compose che vale la pena di esplorare in maggiore dettaglio.
 
 È possibile, ad esempio, descrivere in modo esplicito la modalità di distribuzione dell'applicazione a più contenitori nel file docker-compose.yml. Facoltativamente è possibile anche descrivere come si intende compilare le immagini Docker personalizzate. Le immagini Docker personalizzate possono essere compilate anche con l'interfaccia della riga di comando di Docker.
 
@@ -84,7 +84,7 @@ services:
 
 La chiave radice in questo file sono i servizi. Sotto questa chiave si definiscono i servizi da distribuire ed eseguire quando si esegue il comando `docker-compose up` o si esegue la distribuzione da Visual Studio usando questo file docker-compose.yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
 
-| Nome del servizio | Description |
+| Nome del servizio | Descrizione |
 |--------------|-------------|
 | webmvc       | Contenitore che include l'applicazione ASP.NET Core MVC che usa i microservizi da C\# sul lato server|
 | catalog.api  | Contenitore che include il microservizio API Web ASP.NET Core che gestisce i cataloghi |
@@ -446,11 +446,11 @@ Nel modello basato su contenitori e microservizi si avviano costantemente conten
 
 Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un framework ottimizzato per i contenitori. Oltre al fatto che .NET Core è un framework leggero con un footprint della memoria ridotto, il team si è concentrato sulle immagini Docker ottimizzate per i tre scenari principali e le ha pubblicate in un registro dell'hub Docker in *dotnet/core*, a partire dalla versione 2.1:
 
-1. **Sviluppo**: la priorità è la possibilità di scorrere e sottoporre a debug rapidamente le modifiche e le dimensioni sono secondarie.
+1. **Sviluppo**: la priorità è la capacità di eseguire rapidamente l'iterazione e il debug delle modifiche e le dimensioni secondarie.
 
-2. **Compilazione**: la priorità è la compilazione dell'applicazione; sono inclusi file binari e altre dipendenze per ottimizzare i file binari.
+2. **Build**: la priorità è la compilazione dell'applicazione e include i file binari e altre dipendenze per ottimizzare i file binari.
 
-3. **Produzione**: la priorità è la rapidità di distribuzione e avvio dei contenitori, quindi queste immagini sono limitate ai file binari e al contenuto necessario per eseguire l'applicazione.
+3. **Produzione**: il punto centrale è la distribuzione rapida e l'avvio dei contenitori, quindi queste immagini sono limitate ai file binari e al contenuto necessario per eseguire l'applicazione.
 
 A tale scopo, il team .NET offre quattro varianti di base in [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (nell'hub Docker):
 
@@ -467,7 +467,7 @@ Per velocizzare l'avvio, le immagini di runtime impostano anche automaticamente 
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **Compilazione di immagini Docker per applicazioni .NET Core**  
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
 > [Precedente](data-driven-crud-microservice.md)

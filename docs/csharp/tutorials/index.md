@@ -2,18 +2,20 @@
 title: Esercitazioni su C#
 description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
-ms.translationtype: HT
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557174"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417105"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
 Queste sono le esercitazioni su C#. iniziano con lezioni interattive che è possibile eseguire nel browser. Le esercitazioni successive e più avanzate consentono di usare gli strumenti di sviluppo .NET per creare programmi C# nel computer.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Introduzione a C# - Esercitazioni interattive
+
+Se si vuole avviare l'esplorazione in formato video, la [ C# serie di video 101](https://aka.ms/dotnet3-csharp) fornisce un'introduzione a C#. In queste esercitazioni verranno fornite informazioni sui concetti che è possibile esplorare.
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 
@@ -37,7 +39,7 @@ Questa esercitazione presuppone che siano state già completate le lezioni [Hell
 
 La lezione [Raccolte di elenchi](intro-to-csharp/list-collection.yml) offre una panoramica delle raccolte di tipo List che consentono di archiviare sequenze di dati. Si apprenderà come aggiungere e rimuovere elementi, eseguire la ricerca di elementi e ordinare gli elenchi. Verranno esaminati diversi tipi di elenchi. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](intro-to-csharp/arrays-and-collections.md).
 
-Questa esercitazione presuppone che siano state completate le lezioni elencate in precedenza.
+Questa esercitazione presuppone che siano state già completate le lezioni elencate sopra.
 
 ## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Introduzione a C# - Lavorare in locale](intro-to-csharp/local-environment.md)
 
@@ -45,12 +47,12 @@ Tutte le esercitazioni introduttive successive alla lezione relativa a Hello Wor
 
 ## <a name="explore-new-features-in-c"></a>Esplorare le nuove funzionalità in C\#
 
-* [Provare le nuove funzionalità in C# 6 in modo interattivo](exploration/csharp-6.yml): esplorare le funzionalità aggiunte in [C# 6](../whats-new/csharp-6.md) in modo interattivo nel browser.
+* [Provare le nuove funzionalità C# in 6](exploration/csharp-6.yml)in modo interattivo: esplorare le funzionalità aggiunte in [ C# 6](../whats-new/csharp-6.md) in modo interattivo nel browser.
 * [Interpolazione di stringhe](string-interpolation.md): illustra come usare l'interpolazione di stringhe per creare stringhe formattate in C#.
 * [Tipi riferimento nullable](nullable-reference-types.md): viene illustrato come usare i tipi riferimento nullable per esprimere le proprie intenzioni per i riferimenti Null.
 * [Aggiornare un progetto per usare i tipi riferimento nullable](upgrade-to-nullable-references.md): illustra le tecniche per aggiornare un progetto esistente per poter usare i tipi riferimento nullable.
 * [Estendere le funzionalità per i dati usando i criteri di ricerca](pattern-matching.md): illustra come usare i criteri di ricerca per estendere i tipi oltre le funzionalità di base.
-* [Lavorare con sequenze di dati usando indici e intervalli](ranges-indexes.md): illustra la nuova sintassi efficiente per l'accesso ai singoli elementi o intervalli di un contenitore di dati sequenziali.
+* [Usare le sequenze di dati con indici e intervalli](ranges-indexes.md): illustra una nuova sintassi pratica per accedere a singoli elementi o intervalli di un contenitore di dati sequenziali.
 
 ## <a name="general-tutorials"></a>Esercitazioni generali
 

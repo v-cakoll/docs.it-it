@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961062"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454268"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark a databricks
 
@@ -18,10 +18,11 @@ Questa esercitazione illustra come distribuire un'app nel cloud tramite Azure Da
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
-> Creare un'area di lavoro Azure Databricks.
-> Pubblicare .NET per Apache Spark app.
-> Creare un processo Spark e un cluster Spark.
-> Eseguire l'app nel cluster Spark.
+>
+> - Creare un'area di lavoro Azure Databricks.
+> - Pubblicare .NET per Apache Spark app.
+> - Creare un processo Spark e un cluster Spark.
+> - Eseguire l'app nel cluster Spark.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -44,7 +45,7 @@ In questa sezione si crea un'area di lavoro Azure Databricks usando il portale d
    ![Creare una risorsa Azure Databricks in portale di Azure](./media/databricks-deployment/create-databricks-resource.png)
 
 2. In **Azure Databricks Service**specificare i valori per creare un'area di lavoro di databricks.
-    
+
     |proprietà  |Descrizione  |
     |---------|---------|
     |**Nome area di lavoro**     | Specificare un nome per l'area di lavoro di databricks.        |
@@ -58,10 +59,10 @@ In questa sezione si crea un'area di lavoro Azure Databricks usando il portale d
 
 ## <a name="install-azure-databricks-tools"></a>Installare gli strumenti di Azure Databricks
 
-È possibile usare l'interfaccia della riga di comando di **databricks** per connettersi a Azure Databricks cluster e caricarvi file dal computer locale. I cluster databricks accedono ai file tramite DBFS (file System databricks). 
+È possibile usare l'interfaccia della riga di comando di **databricks** per connettersi a Azure Databricks cluster e caricarvi file dal computer locale. I cluster databricks accedono ai file tramite DBFS (file System databricks).
 
 1. L'interfaccia della riga di comando di databricks richiede Python 3,6 o versione successiva. Se Python è già installato, è possibile ignorare questo passaggio.
- 
+
    **Per Windows:**
 
    [Scaricare Python per Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
@@ -106,14 +107,14 @@ A questo punto dovrebbe essere possibile accedere a tutti i cluster di Azure Dat
 
 1. Microsoft. Spark. Worker consente di Apache Spark eseguire l'app, ad esempio qualsiasi funzione definita dall'utente (UDF) che è stata scritta. Scaricare [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
 
-2. *Install-Worker.sh* è uno script che consente di copiare .net per Apache Spark file dipendenti nei nodi del cluster. 
+2. *Install-Worker.sh* è uno script che consente di copiare .net per Apache Spark file dipendenti nei nodi del cluster.
 
-   Creare un nuovo file denominato **Install-Worker.sh** nel computer locale e incollare il contenuto di [Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) disponibile in GitHub. 
+   Creare un nuovo file denominato **Install-Worker.sh** nel computer locale e incollare il contenuto di [Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) disponibile in GitHub.
 
 3. *DB-init.sh* è uno script che consente di installare le dipendenze nel cluster Spark di databricks.
 
-   Creare un nuovo file denominato **DB-init.sh** nel computer locale e incollare il contenuto di [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) disponibile in GitHub. 
-   
+   Creare un nuovo file denominato **DB-init.sh** nel computer locale e incollare il contenuto di [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) disponibile in GitHub.
+
    Nel file appena creato impostare la variabile `DOTNET_SPARK_RELEASE` su `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Lasciare invariato il resto del file *DB-init.sh* .
 
 > [!Note]
@@ -121,7 +122,7 @@ A questo punto dovrebbe essere possibile accedere a tutti i cluster di Azure Dat
 
 ## <a name="publish-your-app"></a>Pubblicare l'app
 
-Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-introduzione in 10 minuti](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) esercitazione per assicurarsi che il cluster Spark possa accedere a tutti i file necessari per eseguire l'app. 
+Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-introduzione in 10 minuti](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) esercitazione per assicurarsi che il cluster Spark possa accedere a tutti i file necessari per eseguire l'app.
 
 1. Eseguire i comandi seguenti per pubblicare il *mySparkApp*:
 
@@ -163,13 +164,13 @@ In questa sezione vengono caricati diversi file in DBFS in modo che il cluster d
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Eseguire i comandi seguenti per caricare i file rimanenti che il cluster dovrà eseguire l'app: la cartella di pubblicazione compresso, *input. txt*e *Microsoft-Spark-2.4. x-0.3.0. jar*. 
+2. Eseguire i comandi seguenti per caricare i file rimanenti che il cluster dovrà eseguire l'app: la cartella di pubblicazione compresso, *input. txt*e *Microsoft-Spark-2.4. x-0.3.0. jar*.
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ In questa sezione vengono caricati diversi file in DBFS in modo che il cluster d
 
 L'app viene eseguita in Azure Databricks tramite un processo che esegue **Spark-Submit**, che è il comando usato per eseguire .net per Apache Spark processi.
 
-1. Nell'area di lavoro Azure Databricks selezionare l'icona **processi** , quindi **+ Crea processo**. 
+1. Nell'area di lavoro Azure Databricks selezionare l'icona **processi** , quindi **+ Crea processo**.
 
    ![Creare un processo di Azure Databricks](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ L'app viene eseguita in Azure Databricks tramite un processo che esegue **Spark-
 
 1. Passare al processo e selezionare **modifica** per configurare il cluster del processo.
 
-2. Impostare il cluster su **Spark 2.4.1**. Selezionare quindi **Opzioni avanzate** > **script init**. Impostare percorso script init come `dbfs:/spark-dotnet/db-init.sh`. 
+2. Impostare il cluster su **Spark 2.4.1**. Selezionare quindi **Opzioni avanzate** > **script init**. Impostare percorso script init come `dbfs:/spark-dotnet/db-init.sh`.
 
    ![Configurare il cluster Spark in Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ L'app viene eseguita in Azure Databricks tramite un processo che esegue **Spark-
 
 2. La creazione del cluster del processo richiede alcuni minuti. Una volta creato, il processo verrà inviato ed è possibile visualizzare l'output.
 
-3. Selezionare **cluster** dal menu a sinistra e quindi il nome e l'esecuzione del processo. 
+3. Selezionare **cluster** dal menu a sinistra e quindi il nome e l'esecuzione del processo.
 
 4. Selezionare **log driver** per visualizzare l'output del processo. Al termine dell'esecuzione dell'app, nella console di output standard viene visualizzata la stessa tabella di conteggio delle parole dell'esecuzione locale di Getting Started.
 

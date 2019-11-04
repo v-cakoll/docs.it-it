@@ -2,14 +2,14 @@
 title: Riferimenti per F# Interactive (fsi.exe)
 description: Informazioni sul F# modo in cui Interactive (FSI. exe) F# viene usato per eseguire il codice in modo F# interattivo nella console o per eseguire script.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002059"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419899"
 ---
-# <a name="interactive-programming-with-f"></a>Programmazione interattiva con F @ no__t-0
+# <a name="interactive-programming-with-f"></a>Programmazione interattiva con F\#
 
 > [!NOTE]
 > Questo articolo illustra attualmente solo l'esperienza per Windows.  Verrà riscritto.
@@ -25,7 +25,7 @@ Per eseguire F# Interactive dalla console, eseguire fsi.exe.  Il file FSI. exe s
 C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-dove `sku` è `Community`, `Professional` o `Enterprise`.
+dove `sku` è `Community`, `Professional`o `Enterprise`.
 
 Per informazioni sulle opzioni da riga di comando disponibili, vedere [Opzioni di F# Interactive](../../language-reference/fsharp-interactive-options.md).
 
@@ -43,10 +43,12 @@ Se è aperto un progetto che fa riferimento ad alcune librerie, è possibile far
 
 È possibile controllare gli argomenti della riga di comando (opzioni) di F# Interactive modificando le impostazioni. Nel menu **Strumenti** selezionare **Opzioni**, quindi espandere **Strumenti F#** . Le due impostazioni che è possibile modificare sono le opzioni di F# Interactive e l'impostazione **F# Interactive a 64 bit**, che è rilevante solo se si esegue F# Interactive in un computer a 64 bit. Con questa impostazione si determina se si desidera eseguire la versione a 64 bit dedicata di fsi.exe o di fsianycpu.exe, in cui si usa l'architettura del computer per determinare se l'esecuzione avviene come processo a 32 bit o 64 bit.
 
-## <a name="scripting-with-f"></a>Creazione di script con F @ no__t-0
+## <a name="scripting-with-f"></a>Creazione di script con F\#
+
 Gli script hanno l'estensione di file **.fsx** o **.fsscript**. Anziché compilare il codice sorgente e quindi eseguire in un secondo momento l'assembly compilato, è possibile eseguire semplicemente **fsi.exe** e specificare il nome del file dello script del codice sorgente F#. F# Interactive legge il codice e lo esegue in tempo reale.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Differenze tra gli ambienti interattivi, di scripting e compilati
+
 Quando si compila il codice in F# Interactive, con un'esecuzione interattiva o con un'esecuzione di uno script, viene definito il simbolo **INTERACTIVE**. Quando si compila il codice nel compilatore, viene definito il simbolo **COMPILED**. In questo modo, se il codice deve essere diverso in modalità interattiva e compilata, è possibile usare le direttive del preprocessore per la compilazione condizionale allo scopo di determinare quale usare.
 
 Alcune direttive sono disponibili quando si eseguono script in F# Interactive, mentre non sono disponibili quando si esegue il compilatore. Nella tabella seguente sono riepilogate le direttive disponibili quando si usa F# Interactive.
@@ -87,7 +89,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 L'output è indicato di seguito:
 
 ```console
-Command line arguments: 
+Command line arguments:
 file1.fsx
 test
 90
