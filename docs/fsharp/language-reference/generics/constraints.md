@@ -2,12 +2,12 @@
 title: Vincoli
 description: Informazioni sui F# vincoli che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 70a8bec1ad67d7e814cb7a96b1876bb22399c5e7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736799"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425023"
 ---
 # <a name="constraints"></a>Vincoli
 
@@ -25,17 +25,17 @@ Esistono diversi vincoli che è possibile applicare per limitare i tipi che poss
 
 |Vincolo|Sintassi|Descrizione|
 |----------|------|-----------|
-|Vincolo di tipo|*parametro Type* : *tipo* &gt;|Il tipo fornito deve essere uguale o derivato dal tipo specificato oppure, se il tipo è un'interfaccia, il tipo fornito deve implementare l'interfaccia.|
+|Vincolo di tipo|*parametro di tipo* : *tipo* di&gt;|Il tipo fornito deve essere uguale o derivato dal tipo specificato oppure, se il tipo è un'interfaccia, il tipo fornito deve implementare l'interfaccia.|
 |Vincolo null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Sono inclusi tutti i tipi di oggetto .NET F# , ma non i tipi List, Tuple, Function, Class, record o Union.|
-|Vincolo membro esplicito|[(]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo forniti deve avere un membro con la firma specificata. non è destinato all'uso comune. I membri devono essere definiti in modo esplicito nel tipo o in una parte di un'estensione di tipo implicita come destinazioni valide per un vincolo di membro esplicito.|
-|Vincolo del costruttore|*parametro di tipo* : (nuovo: unit-&gt;' a)|Il tipo specificato deve avere un costruttore senza parametri.|
+|Vincolo membro esplicito|[(]*parametro di tipo* [o... o *parametro di tipo*)]: (*membro-firma*)|Almeno uno degli argomenti di tipo forniti deve avere un membro con la firma specificata. non è destinato all'uso comune. I membri devono essere definiti in modo esplicito nel tipo o in una parte di un'estensione di tipo implicita come destinazioni valide per un vincolo di membro esplicito.|
+|Vincolo del costruttore|*parametro di tipo* : (nuovo: unità-&gt;' a)|Il tipo specificato deve avere un costruttore senza parametri.|
 |Vincolo di tipo valore|: struct|Il tipo specificato deve essere un tipo di valore .NET.|
 |Vincolo di tipo riferimento|: not struct|Il tipo specificato deve essere un tipo di riferimento .NET.|
-|Vincolo di tipo di enumerazione|: enum @ no__t-0*sottostante-tipo*&gt;|Il tipo specificato deve essere un tipo enumerato con il tipo sottostante specificato. non è destinato all'uso comune.|
-|Vincolo delegate|: Delegate @ no__t-0*Tuple-parameter-type*, *return-type*&gt;|Il tipo specificato deve essere un tipo delegato con gli argomenti e il valore restituito specificati. non è destinato all'uso comune.|
+|Vincolo di tipo di enumerazione|: enum&lt;*tipo sottostante*&gt;|Il tipo specificato deve essere un tipo enumerato con il tipo sottostante specificato. non è destinato all'uso comune.|
+|Vincolo delegate|: delegato&lt;*Tuple-parameter-type*, *tipo restituito*&gt;|Il tipo specificato deve essere un tipo delegato con gli argomenti e il valore restituito specificati. non è destinato all'uso comune.|
 |Vincolo di confronto|: confronto|Il tipo fornito deve supportare il confronto.|
 |Vincolo di uguaglianza|: uguaglianza|Il tipo specificato deve supportare l'uguaglianza.|
-|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. I tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, 0, 1, 2 o 3), tipi di enumerazione, 4 o un oggetto non generico struttura i cui campi sono tutti tipi non gestiti.|
+|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. I tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64``uint64`, o `decimal`), tipi di enumerazione, `nativeptr<_>`o una struttura non generica i cui campi sono tutti tipi non gestiti.|
 
 È necessario aggiungere un vincolo quando il codice deve usare una funzionalità disponibile sul tipo di vincolo ma non sui tipi in generale. Se ad esempio si usa il vincolo di tipo per specificare un tipo di classe, è possibile usare uno dei metodi di tale classe nella funzione o nel tipo generico.
 
@@ -43,7 +43,7 @@ Quando si scrivono parametri di tipo in modo esplicito, è talvolta necessario s
 
 I vincoli più comuni usati nel codice F# sono vincoli di tipo che specificano le classi o le interfacce di base. Gli altri vincoli vengono usati dalla F# libreria per implementare determinate funzionalità, ad esempio il vincolo esplicito dei membri, che viene usato per implementare l'overload degli operatori per gli operatori aritmetici o vengono forniti principalmente F# perché supporta il set completo di vincoli supportato dal Common Language Runtime.
 
-Durante il processo di inferenza del tipo, alcuni vincoli vengono dedotti automaticamente dal compilatore. Se, ad esempio, si usa l'operatore `+` in una funzione, il compilatore deduce un vincolo esplicito dei membri sui tipi di variabile usati nell'espressione.
+Durante il processo di inferenza del tipo, alcuni vincoli vengono dedotti automaticamente dal compilatore. Se ad esempio si usa l'operatore `+` in una funzione, il compilatore deduce un vincolo esplicito dei membri sui tipi di variabile usati nell'espressione.
 
 Il codice seguente illustra alcune dichiarazioni di vincolo:
 
@@ -53,7 +53,7 @@ type Class1<'T when 'T :> System.Exception> =
 class end
 
 // Interface Type Constraint
-type Class2<'T when 'T :> System.IComparable> = 
+type Class2<'T when 'T :> System.IComparable> =
 class end
 
 // Null constraint
