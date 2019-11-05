@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774037"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966974"
 items:
 - durationInMinutes: 2
   content: >
@@ -157,7 +157,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione interattiva sull'interpolazione di stringhe. Fare clic sul collegamento **Raccolte in C#** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione interattiva sull'interpolazione di stringhe. È possibile visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice.
 
 
     Per altre informazioni, vedere [Interpolazione di stringhe](../../language-reference/tokens/interpolated.md).
