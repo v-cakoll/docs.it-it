@@ -2,12 +2,12 @@
 title: Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulle nuove opzioni per usare IHostedService e BackgroundService per implementare attività in background nei microservizi .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770115"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737178"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 
@@ -17,11 +17,11 @@ Da un punto di vista generico, in .NET Core questi tipi di attività vengono chi
 
 Fin dalla versione .NET Core 2.0, il framework fornisce una nuova interfaccia denominata <xref:Microsoft.Extensions.Hosting.IHostedService> che consente di implementare facilmente i servizi ospitati. L'idea di base è che è possibile registrare più attività in background (servizi ospitati) che vengono eseguite in background mentre l'host o l'host Web è in esecuzione, come illustrato nell'immagine 6-26.
 
-![ASP.NET Core 1.x e 2.x supportano IWebHost per i processi in background nelle app web, .NET Core 2.1 supporta IHost per i processi in background con app console semplici.](./media/image26.png)
+![Diagramma che confronta ASP.NET Core IWebHost e .NET Core IHost.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **Figura 6-26**. Uso di IHostedService in un WebHost rispetto a un Host
 
-Si noti la differenza tra `WebHost` e `Host`.
+ASP.NET Core 1. x e 2. x supportano IWebHost per i processi in background nelle app Web. .NET Core 2,1 supporta IHost per i processi in background con app console semplici. Si noti la differenza tra `WebHost` e `Host`.
 
 Un `WebHost` (classe base che implementa `IWebHost`) in ASP.NET Core 2.0 è l'elemento infrastruttura che si usa per fornire funzionalità di server HTTP al processo, ad esempio durante l'implementazione di un'app Web MVC o un servizio API Web. Offre tutta l'efficacia di una nuova infrastruttura in ASP.NET Core, consentendo di usare l'aggiunta di dipendenze, inserire middleware nella pipeline di richieste e così via e di usare con precisione le interfacce `IHostedServices` per le attività in background.
 
@@ -45,7 +45,7 @@ SignalR è un esempio di un elemento che usa i servizi ospitati, ma è possibile
 
 È praticamente possibile ripartire il carico di lavoro di qualsiasi azione in un'attività in background basata su IHostedService.
 
-Il modo in cui si aggiungono uno o più `IHostedServices` nel `WebHost` o `Host` consiste nel registrarli tramite il metodo di  extension <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> in una ASP.NET Core `WebHost` o in una `Host` in .NET Core 2,1 e versioni successive. In pratica, è necessario registrare i servizi ospitati all'interno del noto metodo `ConfigureServices()` della classe `Startup`, come illustrato nel codice seguente da un tipico WebHost ASP.NET.
+Il modo in cui si aggiungono uno o più `IHostedServices` nel `WebHost` o `Host` consiste nel registrarli tramite il <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>metodo di estensione  in un ASP.NET Core `WebHost` o in un `Host` in .NET Core 2,1 e versioni successive. In pratica, è necessario registrare i servizi ospitati all'interno del noto metodo `ConfigureServices()` della classe `Startup`, come illustrato nel codice seguente da un tipico WebHost ASP.NET.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -224,9 +224,11 @@ WebHost.CreateDefaultBuilder(args)
 
 Nell'immagine seguente viene illustrato un riepilogo visivo delle classi e delle interfacce necessarie per l'implementazione di IHostedServices.
 
-![Diagramma classi: IWebHost e IHost possono ospitare molti servizi, che ereditano da BackgroundService, che implementa IHostedService.](./media/image27.png)
+![Diagramma che mostra che IWebHost e IHost possono ospitare molti servizi.](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **Figura 6-27**. Diagramma classi che mostra più classi e interfacce correlate a IHostedService
+
+Diagramma classi: IWebHost e IHost possono ospitare molti servizi, che ereditano da BackgroundService, che implementa IHostedService.
 
 ### <a name="deployment-considerations-and-takeaways"></a>Considerazioni finali sulla distribuzione
 

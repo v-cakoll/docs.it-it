@@ -2,20 +2,20 @@
 title: Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere gli eventi di integrazione per implementare la comunicazione basata su eventi tra microservizi.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676098"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737127"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 
 Come descritto in precedenza, quando si usa la comunicazione basata su eventi, un microservizio pubblica un evento quando succede qualcosa di rilevante, ad esempio quando aggiorna un'entità di business. Altri microservizi sottoscrivono tali eventi. Quando un microservizio riceve un evento, può aggiornare le proprie entità di business, producendo la pubblicazione di altri eventi. È questa l'essenza del concetto di coerenza finale. Questo sistema di pubblicazione/sottoscrizione viene in genere eseguito usando un'implementazione di un bus di eventi. Il bus di eventi può essere progettato come interfaccia con l'API necessaria per sottoscrivere e annullare la sottoscrizione a eventi e per pubblicare eventi. Può anche avere uno o più implementazioni basate su qualsiasi comunicazione tra processi o di messaggistica, ad esempio una coda di messaggi o un bus di servizio che supporta la comunicazione asincrona e un modello di pubblicazione/sottoscrizione.
 
-È possibile usare gli eventi per implementare le transazioni aziendali che si estendono su più servizi, offrendo una coerenza finale tra tali servizi. Una transazione con coerenza finale consiste in una serie di azioni distribuite. Per ogni azione, il microservizio aggiorna un'entità di business e pubblica un evento che attiva l'azione successiva.
+È possibile usare gli eventi per implementare le transazioni aziendali che si estendono su più servizi, offrendo una coerenza finale tra tali servizi. Una transazione con coerenza finale consiste in una serie di azioni distribuite. Per ogni azione, il microservizio aggiorna un'entità di business e pubblica un evento che attiva l'azione successiva. Nella figura 6-18 riportata di seguito viene mostrato un evento PriceUpdated pubblicato tramite e bus di eventi, quindi l'aggiornamento del prezzo viene propagato al carrello e ad altri microservizi.
 
-![Microservizio Catalog che usa la comunicazione basata su eventi attraverso un bus di eventi, per ottenere la coerenza finale con Basket e ulteriori microservizi.](./media/image19.png)
+![Diagramma della comunicazione asincrona basata su eventi con un bus di eventi.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **Figura 6-18**. Comunicazione basata sugli eventi in base a un bus di eventi
 
@@ -64,11 +64,11 @@ Esistono solo alcuni tipi di librerie che è necessario condividere tra i micros
 
 Un bus di eventi consente la comunicazione in stile pubblicazione/sottoscrizione tra microservizi senza che i componenti si rilevino esplicitamente a vicenda, come illustrato nella figura 6-19.
 
-![Il modello di base pub/sub, Microservice A pubblica nel Bus di eventi, che distribuisce ai microservizi di sottoscrizione B e C, senza che l'editore debba conoscere i sottoscrittori.](./media/image20.png)
+![Diagramma che mostra il modello di base di pubblicazione/sottoscrizione.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **Figura 6-19**. Nozioni di base di pubblicazione/sottoscrizione con un bus di eventi
 
-Il bus di eventi è correlato allo schema Observer e allo schema publish-subscribe.
+Il diagramma precedente mostra che il microservizio A pubblica il bus di eventi, che distribuisce i microservizi B e C di sottoscrizione, senza che il server di pubblicazione debba conoscerli. Il bus di eventi è correlato allo schema Observer e allo schema publish-subscribe.
 
 ### <a name="observer-pattern"></a>Schema Observer
 
@@ -92,11 +92,11 @@ Nella figura 6-19 è possibile vedere come, dal punto di vista dell'applicazione
 
 Nella figura 6-20 è possibile visualizzare un'astrazione di un bus di eventi con più implementazioni basate sulle tecnologie di messaggistica di infrastruttura come RabbitMQ, il bus di servizio di Azure o un altro broker di messaggi/eventi.
 
-![È buona norma che il bus di eventi sia definito tramite un'interfaccia, in modo da poter essere implementato con tecnologie diverse, come il bus di servizio di Azure RabbitMQ o altre tecnologie.](./media/image21.png)
+![Diagramma che illustra l'aggiunta di un livello di astrazione del bus di eventi.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **Figura 6- 20.** Più implementazioni di un bus di eventi
 
-Tuttavia, come già accennato in precedenza, usando le proprie astrazioni (l'interfaccia del bus di eventi) è efficace solo se sono necessarie funzionalità del bus di eventi di base supportate dalle astrazioni. Se sono necessarie funzionalità del bus di servizio più avanzate, è consigliabile usare l'API e le astrazioni fornite dal bus di servizio commerciale preferito anziché le proprie astrazioni.
+È buona norma che il bus di eventi sia definito tramite un'interfaccia, in modo da poter essere implementato con tecnologie diverse, come il bus di servizio di Azure RabbitMQ o altre tecnologie. Tuttavia, come già accennato in precedenza, usando le proprie astrazioni (l'interfaccia del bus di eventi) è efficace solo se sono necessarie funzionalità del bus di eventi di base supportate dalle astrazioni. Se sono necessarie funzionalità del bus di servizio più avanzate, è consigliabile usare l'API e le astrazioni fornite dal bus di servizio commerciale preferito anziché le proprie astrazioni.
 
 ### <a name="defining-an-event-bus-interface"></a>Definizione dell'interfaccia di un bus di eventi
 

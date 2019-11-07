@@ -2,12 +2,12 @@
 title: Progettazione di un microservizio orientato a DDD
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Progettazione del microservizio degli ordini orientato a DDD e dei relativi livelli dell'applicazione.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674348"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739962"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Progettare un microservizio orientato a DDD
 
@@ -37,13 +37,13 @@ Per gestire la complessità, è importante disporre di un modello di dominio con
 
 La figura 7-5 illustra una progettazione a più livelli implementata nell'applicazione eShopOnContainers.
 
-![I tre livelli in un microservizio DDD, ad esempio per gli ordini. Ogni livello è un progetto di Visual Studio: il livello dell'applicazione è Ordering.API, il livello del dominio è Ordering.Domain e il livello dell'infrastruttura è Ordering.Infrastructure.](./media/image6.png)
+![Diagramma che mostra i livelli in un microservizio di progettazione basato su dominio.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
-**Figura 7-5.** Livelli DDD nel microservizio degli ordini in eShopOnContainers
+**Figura 7-5**. Livelli DDD nel microservizio degli ordini in eShopOnContainers
 
-Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 7-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
+I tre livelli in un microservizio DDD, ad esempio per gli ordini. Ogni livello è un progetto di Visual Studio: il livello dell'applicazione è Ordering.API, il livello del dominio è Ordering.Domain e il livello dell'infrastruttura è Ordering.Infrastructure. Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 7-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
 
-![La visualizzazione Esplora soluzioni delle dipendenze di Ordering.Domain dimostra che dipende solo dalle librerie .NET Core.](./media/image7.png)
+![Screenshot dell'ordinamento delle dipendenze di dominio.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Figura 7-6**. I livelli implementati come librerie consentono un migliore controllo delle dipendenze tra i livelli
 
@@ -51,7 +51,7 @@ Si vuole progettare il sistema in modo che ogni livello comunichi solo con deter
 
 L'eccellente libro di Eric Evans sulla [progettazione basata sui domini](https://domainlanguage.com/ddd/) descrive nel modo seguente il livello del modello di dominio e il livello dell'applicazione.
 
-**Livello del modello di dominio**: responsabile della rappresentazione di concetti di business, informazioni sulla situazione aziendale e regole business. A questo livello viene controllato e usato lo stato che riflette la situazione di business, anche se i dettagli tecnici dell'archiviazione vengono delegati all'infrastruttura. Questo livello è il cuore del software di business,
+**Livello del modello di dominio**: responsabile della rappresentazione di concetti di business, informazioni sulla situazione aziendale e regole di business. A questo livello viene controllato e usato lo stato che riflette la situazione di business, anche se i dettagli tecnici dell'archiviazione vengono delegati all'infrastruttura. Questo livello è il cuore del software di business,
 
 il livello in cui viene espresso il business. Quando si implementa un livello del modello di dominio del microservizio in .NET, tale livello viene codificato come libreria di classi con entità di dominio che consentono di acquisire i dati più il comportamento (metodi con logica).
 
@@ -69,7 +69,7 @@ Ciò non significa che sia possibile spostare un modello progettato per un datab
 
 Passando al livello dell'applicazione, è possibile citare nuovamente il libro di Eric Evans sulla [progettazione basata su domini](https://domainlanguage.com/ddd/):
 
-**Livello dell'applicazione:** definisce i processi che il software deve eseguire e guida gli oggetti di dominio espressivi nella soluzione dei problemi. Le attività di cui è responsabile questo livello sono significative per il business o necessarie per l'interazione con i livelli dell'applicazione di altri sistemi. Questo livello deve essere di ampiezza limitata. Non contiene regole business o informazioni, ma si limita a coordinare le attività e a delegare il lavoro a collaborazioni di oggetti di dominio nel livello immediatamente successivo. Non presenta uno stato che riflette la situazione di business, ma può avere uno stato che riflette l'avanzamento di un'attività per l'utente o il programma.
+**Livello dell'applicazione:** definisce i processi che il software dovrà eseguire e indica agli oggetti di dominio espressivi per risolvere i problemi. Le attività di cui è responsabile questo livello sono significative per il business o necessarie per l'interazione con i livelli dell'applicazione di altri sistemi. Questo livello deve essere di ampiezza limitata. Non contiene regole business o informazioni, ma si limita a coordinare le attività e a delegare il lavoro a collaborazioni di oggetti di dominio nel livello immediatamente successivo. Non presenta uno stato che riflette la situazione di business, ma può avere uno stato che riflette l'avanzamento di un'attività per l'utente o il programma.
 
 Il livello dell'applicazione di un microservizio in .NET in genere viene codificato come progetto API Web ASP.NET Core. Il progetto implementa l'interazione del microservizio, l'accesso remoto alla rete e le API Web esterne usate dalle app client o dell'interfaccia utente. Include le query se si usa un approccio CQRS, i comandi accettati dal microservizio e la comunicazione basata su eventi tra microservizi (eventi di integrazione). L'API Web di ASP.NET Core che rappresenta il livello dell'applicazione non può contenere regole business o informazioni di dominio (in particolare regole di dominio per le transazioni o gli aggiornamenti); tali elementi devono appartenere alla libreria di classi del modello di dominio. Il livello dell'applicazione deve solo coordinare le attività e non deve contenere o definire uno stato di dominio (modello di dominio). Delega l'esecuzione delle regole di business alle classi di modello di dominio stesse (radici di aggregazione ed entità di dominio), che infine aggiorneranno i dati all'interno di tali entità di dominio.
 
@@ -85,21 +85,21 @@ In base ai principi di [Persistence Ignorance](https://deviq.com/persistence-ign
 
 I livelli o le librerie di classi e i progetti dipenderanno quindi dal livello del modello di dominio (libreria), non viceversa, come illustrato nella figura 7-7.
 
-![Dipendenze in un servizio DDD, il livello dell'applicazione dipende da dominio e infrastruttura e l'infrastruttura dipende dal dominio, ma il dominio non dipende da alcun livello.](./media/image8.png)
+![Diagramma che mostra le dipendenze esistenti tra i livelli di servizio DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Figura 7-7**. Dipendenze tra livelli in DDD
 
-Questa struttura di livello deve essere indipendente per ogni microservizio. Come notato in precedenza, è possibile implementare i microservizi più complessi seguendo gli schemi DDD e implementare microservizi più semplici basati sui dati (CRUD semplice in un unico livello) in modo più facile.
+Dipendenze in un servizio DDD, il livello dell'applicazione dipende da dominio e infrastruttura e l'infrastruttura dipende dal dominio, ma il dominio non dipende da alcun livello. Questa struttura di livello deve essere indipendente per ogni microservizio. Come notato in precedenza, è possibile implementare i microservizi più complessi seguendo gli schemi DDD e implementare microservizi più semplici basati sui dati (CRUD semplice in un unico livello) in modo più facile.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **DevIQ. Persistence Ignorance principle** \ (Principio del mancato riconoscimento della persistenza)
+- **DevIQ. Principio di persistenza dell'ignoranza** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. Infrastructure Ignorance** \ (Mancato riconoscimento dell'infrastruttura)
+- **Oren Eini. Ignoranza infrastruttura** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez. Layered Architecture In Domain-Driven Design** \ (Architettura a livelli nella progettazione basata su domini)
+- **Angel Lopez. Architettura a più livelli nella progettazione basata su domini** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]

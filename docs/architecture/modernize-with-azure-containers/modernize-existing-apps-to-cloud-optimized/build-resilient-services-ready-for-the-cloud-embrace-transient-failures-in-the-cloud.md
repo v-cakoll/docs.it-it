@@ -2,14 +2,14 @@
 title: Crea servizi resilienti pronti per il cloud. Gestire gli errori temporanei nel cloud
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Crea servizi resilienti pronti per il cloud. Gestire gli errori temporanei nel cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373964"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739404"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creare servizi resilienti pronti per il cloud: Gestire gli errori temporanei nel cloud
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crea servizi resilienti pronti per il cloud: accetta errori temporanei nel cloud
 
 La resilienza è la capacità di correggere gli errori e continuare a funzionare. La resilienza non riguarda l'evitare gli errori, ma accettando il fatto che si verifichino errori e quindi rispondendo a tali errori in modo da evitare tempi di inattività o perdite di dati. L'obiettivo della resilienza è riportare l'applicazione in uno stato pienamente operativo dopo un errore.
 
@@ -27,7 +27,7 @@ Uno scenario simile potrebbe verificarsi in un'app che usa i servizi HTTP. La re
 
 Un'applicazione resiliente come quella illustrata nella figura 4-9 dovrebbe implementare tecniche quali "tentativi con backoff esponenziale" per offrire all'applicazione la possibilità di gestire gli errori temporanei nelle risorse. È inoltre consigliabile usare "interruttori di circuito" nelle applicazioni. Un interruttore impedisce a un'applicazione di provare ad accedere a una risorsa quando si tratta in realtà di un errore a lungo termine. Usando un interruttore, l'applicazione evita di provocare un attacco Denial of Service a se stesso.
 
-![Errori parziali gestiti da tentativi con backoff esponenziale](./media/image9.png)
+![Diagramma degli errori parziali gestiti da tentativi con backoff esponenziale.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **Figura 4-9.** Errori parziali gestiti da tentativi con backoff esponenziale
 

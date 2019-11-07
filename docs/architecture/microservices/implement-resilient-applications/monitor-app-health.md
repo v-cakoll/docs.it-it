@@ -2,12 +2,12 @@
 title: Monitoraggio dell'integrità
 description: Esplorare un approccio per implementare il monitoraggio dell'integrità.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094076"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732874"
 ---
 # <a name="health-monitoring"></a>Monitoraggio dell'integrità
 
@@ -123,7 +123,7 @@ Il progetto open source [AspNetCore.Diagnostics.HealthChecks](https://github.com
 
 Ad esempio, nel microservizio `Catalog.API` sono stati aggiunti i pacchetti NuGet seguenti:
 
-![Visualizzazione di Esplora soluzioni del progetto Catalog.API in cui si fa riferimento a pacchetti NuGet AspNetCore.Diagnostics.HealthChecks](./media/image6.png)
+![Screenshot dei pacchetti NuGet AspNetCore. Diagnostics. HealthChecks.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Figura 8-7**. Controlli di integrità personalizzati implementati in Catalog.API tramite AspNetCore.Diagnostics.HealthChecks
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Dopo aver configurato i controlli di integrità come descritto in questo articolo, quando il microservizio è in esecuzione in Docker è possibile verificarne l'integrità direttamente da un browser. È necessario pubblicare la porta del contenitore nell'host Docker in modo da poter accedere al contenitore tramite l'IP dell'host Docker o tramite `localhost`, come illustrato nella Figura 8-8.
 
-![Visualizzazione nel browser della risposta JSON restituita da un controllo di integrità](./media/image7.png)
+![Screenshot della risposta JSON restituita da un controllo di integrità.](./media/monitor-app-health/health-check-json-response.png)
 
 **Figura 8-8**. Verifica dello stato di integrità di un singolo servizio da un browser
 
@@ -205,7 +205,7 @@ L'esempio eShopOnContainers contiene una pagina Web che visualizza report di ese
 
 Per fortuna [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) fornisce anche il pacchetto NuGet [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) che può essere usato per visualizzare i risultati dei controlli di integrità dagli URI configurati.
 
-![Visualizzazione nel browser dell'app WebStatus, che mostra lo stato di integrità di tutti i microservizi da eShopOnContainers](./media/image8.png)
+![Screenshot degli Stati di integrità dei controlli dell'interfaccia utente eShopOnContainers.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Figura 8-9**. Report di controllo di integrità di esempio in eShopOnContainers
 

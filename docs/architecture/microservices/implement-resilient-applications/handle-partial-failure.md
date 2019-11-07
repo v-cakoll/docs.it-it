@@ -2,12 +2,12 @@
 title: Gestione degli errori parziali
 description: Informazioni su come gestire correttamente gli errori parziali. Un microservizio potrebbe non essere completamente funzionale, ma essere comunque in grado di eseguire operazioni utili.
 ms.date: 10/16/2018
-ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674698"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732999"
 ---
 # <a name="handle-partial-failure"></a>Gestire gli errori parziali
 
@@ -15,13 +15,13 @@ Nei sistemi distribuiti, come le applicazioni basate su microservizi, esiste sem
 
 Si consideri ad esempio la pagina dei dettagli dell'ordine dell'applicazione di esempio eShopOnContainers. Se il microservizio degli ordini non risponde quando l'utente tenta di inviare un ordine, un'implementazione non corretta del processo client (l'applicazione Web MVC), se ad esempio il codice client usasse RPC sincrone senza timeout, bloccherebbe i thread a tempo indefinito in attesa di una risposta. Oltre a creare un'esperienza utente non corretta, ogni attesa senza risposta usa o blocca un thread e i thread sono estremamente preziosi nelle applicazioni a scalabilità elevata. Se molti thread sono bloccati, il runtime dell'applicazione alla fine li esaurirà. In questo caso l'applicazione potrebbe non rispondere a livello globale anziché solo parzialmente, come illustrato nella figura 8-1.
 
-![Diagramma che illustra il paragrafo precedente](./media/image1.png)
+![Diagramma che Mostra gli errori parziali.](./media/handle-partial-failure/partial-failures-diagram.png)
 
 **Figura 8-1**. Errori parziali dovuti a dipendenze che influiscono sulla disponibilità dei thread del servizio
 
-In applicazioni basate su microservizi di grandi dimensioni, ogni errore parziale può risultare amplificato, in particolare se la maggior parte dell'interazione tra i microservizi interni è basata su chiamate HTTP sincrone (scenario definito come antipattern). Si pensi a un sistema che riceve milioni di chiamate in ingresso al giorno. Se il sistema presenta una progettazione insufficiente basata su lunghe catene di chiamate HTTP sincrone, le chiamate in ingresso potrebbero generare molti milioni di chiamate in uscita (si supponga un rapporto 1:4), a dozzine di microservizi interni come dipendenze sincrone. La situazione è illustrata nella figura 8-2, in particolare per la dipendenza \#3.
+In applicazioni basate su microservizi di grandi dimensioni, ogni errore parziale può risultare amplificato, in particolare se la maggior parte dell'interazione tra i microservizi interni è basata su chiamate HTTP sincrone (scenario definito come antipattern). Si pensi a un sistema che riceve milioni di chiamate in ingresso al giorno. Se il sistema presenta una progettazione insufficiente basata su lunghe catene di chiamate HTTP sincrone, le chiamate in ingresso potrebbero generare molti milioni di chiamate in uscita (si supponga un rapporto 1:4), a dozzine di microservizi interni come dipendenze sincrone. Questa situazione è illustrata nella figura 8-2, in particolare la dipendenza \#3, che avvia una catena, chiamando #4 di dipendenza. oggetto che chiama #5.
 
-![Progettazione non corretta di microservizi app Web che dipende da una catena di dipendenze da altri microservizi](./media/image2.png)
+![Diagramma che Mostra più dipendenze distribuite.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 
 **Figura 8-2**. L'impatto di una progettazione non corretta che prevede lunghe catene di richieste HTTP
 
@@ -29,7 +29,7 @@ L'errore intermittente è garantito in un sistema distribuito basato sul cloud, 
 
 Se non si progettano e implementano tecniche in grado di garantire la tolleranza di errore, anche brevi periodi di inattività possono risultare amplificati. Ad esempio, 50 dipendenze ognuna con una disponibilità del 99,99% genererebbero diverse ore di inattività al mese a causa dell'effetto domino. Quando si verifica un errore nella dipendenza di un microservizio durante la gestione di un volume elevato di richieste, l'errore può saturare velocemente tutti i thread delle richieste disponibili in ogni servizio e determinare un arresto anomalo dell'intera applicazione.
 
-![Gli errori parziali possono risultare notevolmente amplificati dalle dipendenze concatenate](./media/image3.png)
+![Diagramma che mostra un errore parziale amplificato nei microservizi.](./media/handle-partial-failure/partial-failure-amplified-microservices.png)
 
 **Figura 8-3**. Errore parziale amplificato da microservizi con lunghe catene di chiamate HTTP sincrone
 

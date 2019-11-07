@@ -2,12 +2,12 @@
 title: Contenitori, immagini e registri Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Contenitori, immagini e registri Docker
 ms.date: 08/31/2018
-ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3b643a3bf4ca3ce1b8ba3fc40cd2f3ad8bbe5ffb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674898"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737780"
 ---
 # <a name="docker-containers-images-and-registries"></a>Contenitori, immagini e registri Docker
 
@@ -19,9 +19,11 @@ Gli sviluppatori devono archiviare le immagini in un registro, che funge da libr
 
 La figura 2-4 mostra la relazione tra le immagini e i registri in Docker con altri componenti. Mostra inoltre le varie offerte dei fornitori per i registri.
 
-![Tassonomia di base in Docker: il registro è paragonabile a una libreria in cui le immagini sono archiviate e disponibili per il pull per la creazione di contenitori per eseguire servizi o app Web. Sono disponibili registri Docker privati in locale e nel cloud pubblico. L'hub Docker è un registro pubblico gestito da Docker. Oltre a Docker Trusted Registry, una soluzione di livello aziendale, Azure offre il Registro Azure Container. Anche AWS, Google e altri hanno registri contenitori.](./media/image5.PNG)
+![Diagramma che mostra la tassonomia di base in docker.](./media/docker-containers-images-registries/taxonomy-of-docker-terms-and-concepts.png)
 
 **Figura 2-4**. Tassonomia dei termini e dei concetti di Docker
+
+il registro è paragonabile a una libreria in cui le immagini sono archiviate e disponibili per il pull per la creazione di contenitori per eseguire servizi o app Web. Sono disponibili registri Docker privati in locale e nel cloud pubblico. L'hub Docker è un registro pubblico gestito da Docker. Oltre a Docker Trusted Registry, una soluzione di livello aziendale, Azure offre il Registro Azure Container. Anche AWS, Google e altri hanno registri contenitori.
 
 L'inserimento delle immagini in un registro permette di archiviare bit di applicazioni statici e immutabili, incluse tutte le dipendenze a livello di framework. È quindi possibile creare diverse versioni delle immagini e distribuirle in più ambienti per fornire un'unità di distribuzione coerente.
 

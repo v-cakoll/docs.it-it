@@ -2,12 +2,12 @@
 title: Implementazione di letture/query in un microservizio CQRS
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere l'implementazione del lato query di CQRS nel microservizio degli ordini in eShopOnContainers con Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094058"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740035"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementare le letture/query in un microservizio CQRS
 
@@ -15,15 +15,15 @@ Per le operazioni di lettura/query, il microservizio degli ordini dall'applicazi
 
 L'approccio è semplice, come illustrato nella figura 7-3. L'interfaccia API viene implementata dai controller API Web usando qualsiasi infrastruttura, ad esempio un micro ORM (Object Relational Mapper) come Dapper, e restituendo ViewModel dinamici a seconda delle esigenze delle applicazioni dell'interfaccia utente.
 
-![L'approccio più semplice per il lato query in un approccio CQRS semplificato può essere implementato semplicemente interrogando il database con un Micro ORM di tipo Dapper, restituendo ViewModel dinamici.](./media/image3.png)
+![Diagramma che mostra le query di alto livello sul lato CQRS semplificato.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. L'approccio più semplice per le query in un microservizio CQRS
 
-Questo è l'approccio più semplice possibile per le query. Le definizioni di query interrogano il database e restituiscono un ViewModel dinamico compilato in tempo reale per ogni query. Visto che le query sono idempotenti, non modificheranno i dati indipendentemente da quante volte si esegue una query. Di conseguenza, non si è necessariamente limitati da nessuno schema DDD usato nel lato transazionale, ad esempio aggregazioni e altri schemi, ed è per tale motivo che le query sono separate dall'area transazionale. È sufficiente eseguire query sul database per i dati necessari per l'interfaccia utente e restituire un ViewModel dinamico che non deve essere definito staticamente in nessun luogo (nessuna classe per i ViewModel) tranne che nelle stesse istruzioni SQL.
+L'approccio più semplice per il lato query in un approccio CQRS semplificato può essere implementato semplicemente interrogando il database con un Micro ORM di tipo Dapper, restituendo ViewModel dinamici. Le definizioni di query interrogano il database e restituiscono un ViewModel dinamico compilato in tempo reale per ogni query. Visto che le query sono idempotenti, non modificheranno i dati indipendentemente da quante volte si esegue una query. Di conseguenza, non si è necessariamente limitati da nessuno schema DDD usato nel lato transazionale, ad esempio aggregazioni e altri schemi, ed è per tale motivo che le query sono separate dall'area transazionale. È sufficiente eseguire query sul database per i dati necessari per l'interfaccia utente e restituire un ViewModel dinamico che non deve essere definito staticamente in nessun luogo (nessuna classe per i ViewModel) tranne che nelle stesse istruzioni SQL.
 
 Visto che si tratta di un approccio semplice, il codice necessario per il lato di query (ad esempio il codice che usa un micro ORM come [Dapper](https://github.com/StackExchange/Dapper)) può essere implementato [nello stesso progetto API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). La figura 7-4 mostra un esempio. Le query sono definite nel progetto di microservizio **Ordering.API** all'interno della soluzione eShopOnContainers.
 
-![Visualizzazione di Esplora soluzioni del progetto Ordering.API, che mostra la cartella Applicazione > Query.](./media/image4.png)
+![Screenshot della cartella query del progetto ordering. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Query nel microservizio degli ordini in eShopOnContainers
 
@@ -41,7 +41,7 @@ I ViewModel possono essere tipi statici definiti nelle classi, oppure possono es
 
 Dapper è un progetto open source (originalmente creato da Sam Saffron) e fa parte dei blocchi predefiniti usati da [Stack Overflow](https://stackoverflow.com/). Per usare Dapper, è sufficiente installarlo con il [pacchetto NuGet Dapper](https://www.nuget.org/packages/Dapper), come illustrato nella figura riportata di seguito:
 
-![Pacchetto di Dapper visualizzato nella vista di gestione dei pacchetti NuGet in Visual Studio.](./media/image4.1.png)
+![Screenshot del pacchetto elegante nella visualizzazione pacchetti NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 È anche necessario aggiungere un'istruzione Using, in modo che il codice abbia accesso ai metodi di estensione di Dapper.
 
@@ -177,7 +177,7 @@ Si tratta di un altro motivo per cui i tipi restituiti espliciti sono migliori r
 
 Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di Swagger mostra le informazioni ResponseType.
 
-![Visualizzazione browser della pagina dell'interfaccia utente di Swagger per l'API degli ordini.](./media/image5.png)
+![Screenshot della pagina dell'interfaccia utente di spavalderia per l'API di ordinamento.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5**. Interfaccia utente di Swagger che mostra i tipi di risposta e i possibili codici di stato HTTP da un'API Web
 

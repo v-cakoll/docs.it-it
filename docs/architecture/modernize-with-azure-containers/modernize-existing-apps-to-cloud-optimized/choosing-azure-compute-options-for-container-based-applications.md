@@ -2,12 +2,12 @@
 title: Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitore
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitori
 ms.date: 05/04/2018
-ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318670"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737014"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitore
 
@@ -27,7 +27,7 @@ Dopo un'analisi più approfondita delle esigenze dell'applicazione, il prodotto 
 
 Nella figura 1 è possibile visualizzare una suddivisione dei diversi tipi di app e i relativi scenari di hosting di Azure ideali.
 
-![Figura 1](./media/image8.5.png)
+![Tabella di cui gli scenari di hosting di Azure sono migliori per le diverse app.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [Precedente](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

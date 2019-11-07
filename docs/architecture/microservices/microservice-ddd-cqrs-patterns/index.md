@@ -2,12 +2,12 @@
 title: Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Informazioni su come gestire scenari aziendali complessi applicando i modelli DDD e CQRS
 ms.date: 10/08/2018
-ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295915"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739846"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Gestire la complessità aziendale in un microservizio con i modelli DDD e CQRS
 
@@ -15,7 +15,9 @@ ms.locfileid: "70295915"
 
 Questa sezione illustra i microservizi più avanzati implementabili quando è necessario gestire sottosistemi complessi o i microservizi derivati dalla conoscenza degli esperti del settore con regole business in continua evoluzione. I modelli di architettura usati in questa sezione si basano su approcci per la progettazione basata su domini (DDD) e la separazione di responsabilità per query e comandi (CQRS), come illustrato nella figura 7-1.
 
-![Differenza tra l'architettura esterna (modelli di microservizio, gateway API, comunicazioni resilienti, pubblicazione/sottoscrizione e così via) e l'architettura interna (basata su dati/CRUD, modelli DDD, inserimento di dipendenze, librerie multiple e così via).](./media/image1.png)
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagramma che confronta modelli di architettura interni ed esterni.":::
+Differenza tra l'architettura esterna (modelli di microservizio, gateway API, comunicazioni resilienti, pubblicazione/sottoscrizione e così via) e l'architettura interna (basata su dati/CRUD, modelli DDD, inserimento di dipendenze, librerie multiple e così via).
+:::image-end:::
 
 **Figura 7-1**. Architettura di microservizi esterna e modelli di architettura interna per ogni microservizio a confronto
 
@@ -29,36 +31,36 @@ DDD è un argomento vasto con un'ampia gamma di risorse di apprendimento. È pos
 
 ##### <a name="ddd-domain-driven-design"></a>Progettazione basata su domini (DDD)
 
-- **Eric Evans. Domain Language** \
+- **Eric Evans.**  \ della lingua del dominio
   <https://domainlanguage.com/>
 
-- **Martin Fowler. Domain-Driven Design (Progettazione basata su domini)**  \
+- **Martin Fowler. \ della progettazione basata su dominio**
   <https://martinfowler.com/tags/domain%20driven%20design.html>
 
-- **Jimmy Bogard. Strengthening your domain: a primer (Rafforzamento del dominio: panoramica)**  \
+- **Jimmy Bogard. Rafforzamento del dominio: un Nozioni di fondo** \
   <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>Pubblicazioni sulla progettazione DDD
 
-- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software (Gestione della complessità nel software)**  \
+- **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software** \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans. Domain-Driven Design Reference: (Riferimenti nella progettazione basata su domini) Definitions and Pattern Summaries (Riepiloghi di definizioni e modelli)**  \
+- **Eric Evans. Riferimento alla progettazione basata su dominio: definizioni e riepiloghi dei modelli** \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini)**  \
+- **Vaughn Vernon. Implementazione della progettazione basata su dominio** \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn Vernon. Domain-Driven Design Distilled (Progettazione basata su domini - versione sintetizzata)**  \
+- **Vaughn Vernon. Progettazione basata su dominio distillata** \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
-- **Jimmy Nilsson. Applying Domain-Driven Design and Patterns (Applicazione di progettazione e modelli basati su domini)**  \
+- **Jimmy Nilsson. Applicazione di modelli e progettazione basati su dominio** \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET (Guida all'architettura a N livelli orientata ai domini .NET)**  \
+- **Cesar de la Torre. Guida all'architettura orientata ai domini a più livelli con .NET** \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
-- **Abel Avram e Floyd Marinescu. Domain-Driven Design Quickly (Progettazione basata su domini - concetti principali)**  \
+- **Abel Avram e Floyd Marinescu. Progettazione basata su domini \ rapidamente**
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
 - **Scott Millett, Nick Tune - Patterns, Principles, and Practices of Domain-Driven Design (Modelli, principi e procedure della progettazione basata su domini)**  \
@@ -66,7 +68,7 @@ DDD è un argomento vasto con un'ampia gamma di risorse di apprendimento. È pos
 
 ##### <a name="ddd-training"></a>Training per la progettazione DDD
 
-- **Julie Lerman e Steve Smith. Domain-Driven Design Fundamentals (Nozioni fondamentali sulla progettazione basata su domini)**  \
+- **Julie Lerman e Steve Smith. Nozioni fondamentali sulla progettazione basata su dominio** \
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]

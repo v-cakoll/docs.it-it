@@ -2,12 +2,12 @@
 title: Implementazione dello schema Circuit Breaker
 description: Informazioni su come implementare lo schema Circuit Breaker come sistema complementare per i tentativi HTTP.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094110"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732837"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
@@ -94,7 +94,7 @@ Ad esempio, quando l'applicazione è in esecuzione, è possibile abilitare il mi
 
 È quindi possibile controllare lo stato usando l'URI `http://localhost:5103/failing`, come illustrato nella figura 8-5.
 
-![Visualizzazione nel browser del risultato del controllo di stato della simulazione del middleware che non riesce](./media/image4.png)
+![Screenshot del controllo dello stato della simulazione del middleware non riuscita.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Figura 8-5**. Verifica dello stato di errore del middleware ASP.NET. In questo caso, è disabilitato.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Ecco un riepilogo. I criteri di ripetizione provano più volte a eseguire la richiesta HTTP e ottengono errori HTTP. Quando il numero di tentativi raggiunge il valore massimo impostato per i criteri dell'interruttore di circuito (in questo caso, 5), l'applicazione genera un'eccezione BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 8-6.
 
-![Visualizzazione nel browser dell'app Web MVC con un messaggio "Basket Service inoperative" attivato dai criteri dell'interruttore di circuito](./media/image5.png)
+![Screenshot dell'app Web MVC con errore inoperativo del servizio basket.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Figura 8-6**. Interruttore di circuito che restituisce un errore nell'interfaccia utente
 

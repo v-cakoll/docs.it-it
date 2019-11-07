@@ -2,12 +2,12 @@
 title: Progettazione di un'applicazione orientata ai microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Conoscere i vantaggi e gli svantaggi di un'applicazione orientata ai microservizi, in modo da poter prendere una decisione consapevole.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772056"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739555"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -65,9 +65,11 @@ Nell'intento di concentrarsi maggiormente sull'architettura e le tecnologie anzi
 
 L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi (un'applicazione Web e un'app per dispositivi mobili nativa), oltre a microservizi e contenitori back-end per tutte le operazioni richieste sul lato server con diversi gateway API come punti di ingresso consolidati ai microservizi interni. La figura 6-1 illustra l'architettura dell'applicazione di riferimento.
 
-![I client per dispositivi mobili e SPA comunicano con endpoint del gateway API singolo che quindi comunicano con i microservizi. I client Web tradizionali comunicano con microservizi MVC, che comunica con i microservizi](./media/image1.png)
+![Diagramma delle app client che usano eShopOnContainers in un singolo host docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Figura 6-1**. L'architettura dell'applicazione di riferimento eShopOnContainers per l'ambiente di sviluppo
+
+Il diagramma precedente mostra che i client per dispositivi mobili e SPA comunicano con endpoint di gateway API singoli, che quindi comunicano con i microservizi. I client Web tradizionali comunicano con microservizi MVC, che comunica con i microservizi tramite il gateway API.
 
 **Ambiente host**. Nella figura 6-1 sono visibili diversi contenitori distribuiti all'interno di un singolo host Docker, ovvero la situazione che si verifica durante la distribuzione in un singolo host Docker con il comando docker-compose up. Tuttavia, se si usa un agente di orchestrazione o un cluster di contenitori, ogni contenitore potrebbe essere eseguito in un host (nodo) differente e i nodi potrebbero eseguire un numero qualsiasi di contenitori, come illustrato in precedenza nella sezione sull'architettura.
 
@@ -140,7 +142,7 @@ Come accennato nella sezione relativa all'architettura, durante la progettazione
 
 L'architettura esterna è costituita dall'architettura di microservizi composta da più servizi, in base ai principi descritti nella sezione sull'architettura di questa guida. Tuttavia, a seconda della natura di ogni microservizio e indipendentemente dall'architettura di microservizi di alto livello scelta, è comune e in alcuni casi consigliabile disporre di diverse architetture interne, ognuna basata su schemi differenti, per microservizi diversi. I microservizi possono anche usare tecnologie e linguaggi di programmazione differenti. La figura 6-2 illustra questa diversità.
 
-![Differenza tra l'architettura esterna (modelli di microservizio, gateway API, comunicazioni resilienti, pubblicazione/sottoscrizione e così via) e l'architettura interna (basata su dati/CRUD, modelli DDD, inserimento di dipendenze, librerie multiple e così via).](./media/image2.png)
+![Diagramma che confronta modelli di architettura interni ed esterni.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Figura 6-2**. Architettura e progettazione esterne e interne a confronto
 
@@ -170,11 +172,11 @@ Esistono molti schemi architetturali usati dagli sviluppatori e dai progettisti 
 
 Il concetto fondamentale da comprendere è che nessuno stile o schema architetturale particolare né nessuna tecnologia specifica è appropriata per tutte le situazioni. La figura 6-3 illustra alcuni approcci e tecnologie (anche se non in un ordine specifico) che possono essere usati nei diversi microservizi.
 
-![Usare uno schema a più architetture e microservizi poliglotti significa combinare linguaggi e tecnologie con le esigenze di ogni microservizio facendo in modo che comunichino tra loro.](./media/image3.png)
+![Diagramma che mostra 12 microservizi complessi in un'architettura del mondo poliglotta.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Figura 6-3**. Il mondo dei diversi schemi architetturali e microservizi poliglotti
 
-Come illustra la figura 6-3, nelle applicazioni costituite da molti microservizi (contesti delimitati nella terminologia della progettazione basata su domini o semplicemente "sottosistemi" come microservizi autonomi), è possibile implementare ogni microservizio in un modo diverso. Ognuno potrebbe avere uno schema architetturale differente e usare linguaggi e database diversi in base alla natura dell'applicazione, ai requisiti aziendali e alle priorità. In alcuni casi, i microservizi potrebbero essere simili. Ma non si tratta di un caso frequente, dal momento che il limite di contesto e i requisiti di ogni sottosistema in genere sono diversi.
+Usare uno schema a più architetture e microservizi poliglotti significa combinare linguaggi e tecnologie con le esigenze di ogni microservizio facendo in modo che comunichino tra loro. Come illustra la figura 6-3, nelle applicazioni costituite da molti microservizi (contesti delimitati nella terminologia della progettazione basata su domini o semplicemente "sottosistemi" come microservizi autonomi), è possibile implementare ogni microservizio in un modo diverso. Ognuno potrebbe avere uno schema architetturale differente e usare linguaggi e database diversi in base alla natura dell'applicazione, ai requisiti aziendali e alle priorità. In alcuni casi, i microservizi potrebbero essere simili. Ma non si tratta di un caso frequente, dal momento che il limite di contesto e i requisiti di ogni sottosistema in genere sono diversi.
 
 Ad esempio, per una semplice applicazione di manutenzione CRUD, potrebbe non avere senso progettare e implementare schemi DDD. Ma per il dominio base o l'attività principale, potrebbe essere necessario applicare schemi più avanzati per gestire la complessità aziendale con regole business in continua evoluzione.
 

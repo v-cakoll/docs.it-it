@@ -2,12 +2,12 @@
 title: Progettazione del livello di persistenza dell'infrastruttura
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare lo schema repository nella progettazione del livello di persistenza dell'infrastruttura.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674118"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737931"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Progettare il livello di persistenza dell'infrastruttura
 
@@ -33,9 +33,11 @@ Se l'utente apporta modifiche, i dati da aggiornare proverranno dal livello di p
 
 È importante sottolineare di nuovo che è consigliabile definire un solo repository per ogni radice di aggregazione, come illustrato nella figura 7-17. Per raggiungere l'obiettivo della radice dell'aggregazione per mantenere la coerenza delle transazioni tra tutti gli oggetti all'interno dell'aggregazione, è consigliabile non creare mai un repository per ogni tabella nel database.
 
-![Relazioni tra i livelli di dominio e infrastruttura: l'aggregazione Buyer dipende da IBuyerRepository e l'aggregazione Order dipende dalle interfacce IOrderRepository. Queste interfacce vengono implementate nel livello di infrastruttura dai repository corrispondenti che dipendono da UnitOfWork, implementato anch'esso qui, che accede alle tabelle nel livello dati.](./media/image18.png)
+![Diagramma che illustra le relazioni del dominio e di altre infrastrutture.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. Relazione tra repository, aggregazioni e tabelle del database
+
+Il diagramma precedente mostra le relazioni tra i livelli di dominio e infrastruttura: l'aggregazione buyer dipende da IBuyerRepository e dall'aggregazione Order dipende dalle interfacce IOrderRepository, queste interfacce vengono implementate nel livello infrastruttura i repository corrispondenti che dipendono da UnitOfWork, implementati anche in questa posizione, che accede alle tabelle nel livello dati.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Applicare una radice di aggregazione per ogni repository
 
@@ -111,18 +113,18 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 - **The Repository pattern** \ (Lo schema Repository)\
   <https://deviq.com/repository-pattern/>
 
-- **Edward Hieatt and Rob Mee. Repository pattern** (Schema Repository).\ \
+- **Edward Hieatt e Rob me. Modello di repository.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **The Repository pattern** \ (Lo schema Repository)\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software)\ (Libro; include una trattazione dello schema repository) \
+- **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software.** (Libro; include una trattazione dello schema repository) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Schema Unit of Work
 
-- **Martin Fowler. Unit of Work pattern** (Schema Unit of Work).\ \
+- **Martin Fowler. Modello di unità di lavoro.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Implementazione degli schemi Repository e Unit of Work in un'applicazione ASP.NET MVC** \

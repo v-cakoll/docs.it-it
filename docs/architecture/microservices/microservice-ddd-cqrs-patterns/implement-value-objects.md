@@ -2,12 +2,12 @@
 title: Implementazione di oggetti valore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674148"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739856"
 ---
 # <a name="implement-value-objects"></a>Implementare oggetti valore
 
@@ -17,11 +17,11 @@ Un oggetto valore può fare riferimento ad altre entità. Ad esempio, in un'appl
 
 La figura 7-13 illustra l'oggetto valore Address all'interno dell'aggregazione Order.
 
-![Oggetto valore Address all'interno dell'aggregazione Order.](./media/image14.png)
+![Diagramma che mostra il valore dell'indirizzo-oggetto all'interno dell'aggregazione Order.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Figura 7-13**. Oggetto valore Address all'interno dell'aggregazione Order
 
-Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità, composta internamente da un set di attributi come OrderId, OrderDate, OrderItems e così via. Invece l'indirizzo, che è semplicemente un valore complesso costituito da paese/area geografica, strada, città e così via, e che non ha un'identità in questo dominio, deve essere modellato e gestito come oggetto valore.
+Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità e composta internamente da un set di attributi, ad esempio OrderId, OrderDate, OrderItems e così via. Tuttavia, l'indirizzo, che è semplicemente un valore complesso costituito da paese/area geografica, via, città e così via, non ha identità in questo dominio, deve essere modellato e considerato come un oggetto valore.
 
 ## <a name="important-characteristics-of-value-objects"></a>Caratteristiche importanti degli oggetti valore
 
@@ -310,10 +310,10 @@ public class Address
 - **Martin Fowler. Modello ValueObject** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software) (Libro. Include una trattazione sugli oggetti valore) \
+- **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software.** (Libro. Include una trattazione sugli oggetti valore) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).** (Libro. Include una trattazione sugli oggetti valore) \
+- **Vaughn Vernon. Implementazione della progettazione basata su dominio.** (Libro. Include una trattazione sugli oggetti valore) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
 - **Proprietà shadow** \

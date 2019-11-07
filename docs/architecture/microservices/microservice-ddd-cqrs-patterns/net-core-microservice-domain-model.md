@@ -2,12 +2,12 @@
 title: Implementazione di un modello di dominio del microservizio con .NET Core
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni dettagliate sull'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737246"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core
 
@@ -17,7 +17,9 @@ La sezione precedente ha illustrato i principi e gli schemi fondamentali per la 
 
 L'organizzazione della cartella usata per l'applicazione di riferimento eShopOnContainers dimostra il modello DDD per l'applicazione. Un'organizzazione della cartella differente potrebbe comunicare in maniera più chiara le scelte di progettazione effettuate per la propria applicazione. Come si vede nella figura 7-10, nel modello di dominio di ordinamento sono presenti due aggregazioni: l'aggregazione order e l'aggregazione buyer. Ogni aggregazione è un gruppo di entità di dominio e oggetti valore, anche se è possibile avere un aggregato costituito da una singola entità di dominio (radice dell'aggregazione o entità radice).
 
-![Nella visualizzazione Esplora soluzioni per il progetto Ordering.Domain appare la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le proprie classi di entità, i file di oggetti valore e così via. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot del progetto ordering. Domain in Esplora soluzioni.":::
+Nella visualizzazione Esplora soluzioni per il progetto Ordering.Domain appare la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le proprie classi di entità, i file di oggetti valore e così via.
+:::image-end:::
 
 **Figura 7-10**. Struttura del modello di dominio per il microservizio degli ordini in eShopOnContainers
 
@@ -31,7 +33,9 @@ Per aggregazione si intende un cluster di oggetti dominio raggruppati in modo da
 
 Per coerenza delle transazioni si intende garantire che un'aggregazione sia coerente e aggiornata al termine di un'azione di business. Ad esempio, l'aggregazione order dal modello di dominio del microservizio degli ordini eShopOnContainers è composta come illustrato nella figura 7-11.
 
-![Una visualizzazione dettagliata della cartella OrderAggregate: Address.cs è un oggetto valore, IOrderRepository è un'interfaccia di repository, Order.cs è una radice di aggregazione, OrderItem.cs è un'entità figlio e OrderStatus.cs è una classe di enumerazione.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Screenshot della cartella OrderAggregate e delle relative classi.":::
+Una visualizzazione dettagliata della cartella OrderAggregate: Address.cs è un oggetto valore, IOrderRepository è un'interfaccia di repository, Order.cs è una radice di aggregazione, OrderItem.cs è un'entità figlio e OrderStatus.cs è una classe di enumerazione.
+:::image-end:::
 
 **Figura 7-11**. Aggregazione order nella soluzione Visual Studio
 
@@ -150,7 +154,7 @@ Anche la nuova operazione OrderItem(params) sarà controllata ed eseguita dal me
 
 Quando si usa Entity Framework Core 1.1 o versioni successive, un'entità DDD può essere espressa meglio perché consente di [eseguire il mapping ai campi](https://docs.microsoft.com/ef/core/modeling/backing-field) oltre alle proprietà. Ciò è utile quando si proteggono le raccolte di entità figlio oppure oggetti valore. Con questa funzionalità avanzata, è possibile usare i semplici campi privati anziché le proprietà e implementare gli aggiornamenti della raccolta di campi nei metodi pubblici e fornire l'accesso di sola lettura usando il metodo AsReadOnly.
 
-In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Esiste tuttavia un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
+In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Tuttavia, esiste un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mappare le proprietà solo con funzioni di accesso Get ai campi nella tabella di database
 
@@ -166,13 +170,13 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
+- **Vaughn Vernon. Modellazione delle aggregazioni con DDD e Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati** \
+- **Julie Lerman. Punti dati-codifica per la progettazione basata su dominio: suggerimenti per gli sviluppatori incentrati sui dati** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan. Come creare modelli di dominio completamente incapsulati** \
+- **UDI. Come creare modelli di dominio completamente incapsulati** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]

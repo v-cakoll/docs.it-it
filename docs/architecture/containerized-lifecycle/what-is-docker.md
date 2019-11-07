@@ -2,22 +2,22 @@
 title: Che cos'è Docker?
 description: Per meglio comprendere Docker, può essere utile una semplice analogia.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770713"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738135"
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
 [Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) per automatizzare la distribuzione di app come contenitori portabili e autosufficienti che possono essere eseguiti nel cloud o in locale. Docker è anche una [società](https://www.docker.com/) che promuove e sviluppa questa tecnologia, collaborando con fornitori cloud, Linux e Windows, inclusa Microsoft.
 
-![I contenitori Docker possono essere eseguiti ovunque, in locale nel data center del cliente, in un provider di servizi esterno o nel cloud, in Azure.](./media/image2.png)
+![Diagramma che mostra le posizioni in cui è possibile eseguire i contenitori docker.](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **Figura 1-2**. Docker distribuisce contenitori a tutti i livelli del cloud ibrido
 
-I contenitori di immagini Docker possono essere eseguiti in modo nativo in Linux e Windows. Tuttavia, le immagini Windows possono essere eseguite solo negli host Windows e le immagini Linux possono essere eseguite in host Linux e in host Windows (con una macchina virtuale Linux Hyper-V, per il momento), dove con host si intende una macchina virtuale o un server.
+Come illustrato nel diagramma precedente, i contenitori Docker possono essere eseguiti ovunque, in locale nel data center del cliente, in un provider di servizi esterno o nel cloud, in Azure. I contenitori di immagini Docker possono essere eseguiti anche in modalità nativa in Linux e Windows. Tuttavia, le immagini Windows possono essere eseguite solo negli host Windows e le immagini Linux possono essere eseguite in host Linux e in host Windows (con una macchina virtuale Linux Hyper-V, per il momento), dove con host si intende una macchina virtuale o un server.
 
 Gli sviluppatori possono usare gli ambienti di sviluppo in Windows, Linux o macOS. Nel computer di sviluppo lo sviluppatore esegue un host Docker in cui vengono distribuite le immagini Docker, inclusa l'app e le relative dipendenze. Gli sviluppatori che lavorano in Linux o Mac usano un host Docker basato su Linux e possono creare solo immagini per i contenitori Linux. Gli sviluppatori che lavorano al Mac possono modificare il codice o eseguire l'interfaccia della riga di comando di Docker da macOS, ma, al momento della stesura di questo articolo, i contenitori non vengono eseguiti direttamente in macOS. Gli sviluppatori che lavorano su Windows possono creare immagini per i contenitori Linux o Windows.
 
@@ -35,9 +35,11 @@ Le immagini per questi contenitori vengono create e funzionano nello stesso modo
 
 La figura 1-3 mostra un confronto tra macchine virtuali e contenitori Docker.
 
-![Per le macchine virtuali, sono disponibili tre livelli di base nel server host, dal basso verso l'alto: infrastruttura, sistema operativo host e un hypervisor. Ogni macchina virtuale ha inoltre un proprio sistema operativo e tutte le librerie necessarie. D'altra parte, per Docker, il server host dispone solo dell'infrastruttura e del sistema operativo e, al suo inizio, il motore di contenitori, che mantiene isolato il contenitore ma condividendo i servizi del sistema operativo di base.](./media/image3.png)
+![Diagramma che mostra un confronto tra le macchine virtuali e gli ambienti contenitore.](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **Figura 1-3**. Confronto tra macchine virtuali tradizionali e contenitori Docker
+
+Come illustrato nel diagramma precedente, per le macchine virtuali sono presenti tre livelli di base nel server host. Dal basso verso l'alto: infrastruttura, sistema operativo host e hypervisor. In ogni caso, ogni macchina virtuale ha il proprio sistema operativo e tutte le librerie necessarie. D'altra parte, per Docker, il server host dispone solo dell'infrastruttura e del sistema operativo. Oltre a questo, il motore di contenitori mantiene isolati i contenitori, ma consente di condividere i servizi del sistema operativo di base singolo.
 
 Poiché i contenitori richiedono un numero molto ridotto di risorse, ad esempio non necessitano di un sistema operativo completo, sono facili da distribuire e si avviano rapidamente. In questo modo è possibile ottenere un aumento della densità, vale a dire che è possibile eseguire più servizi nella stessa unità hardware, riducendo i costi.
 

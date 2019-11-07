@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454854"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737499"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -17,7 +17,9 @@ Come accennato in precedenza, il livello dell'applicazione può essere implement
 
 Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 7-23.
 
-![La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Screenshot del microservizio ordering. API nella Esplora soluzioni.":::
+La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.
+:::image-end:::
 
 **Figura 7-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
 
@@ -181,9 +183,11 @@ Lo schema Command è intrinsecamente correlato allo schema CQRS illustrato prima
 
 Come illustrato nella figura 7-24, lo schema si basa sull'accettazione dei comandi dal lato client, sulla loro elaborazione in base alle regole del modello di dominio e infine sulla persistenza degli stati con le transazioni.
 
-![La visualizzazione di alto livello del lato Scritture in CQRS: l'app dell'interfaccia utente invia un comando tramite l'API che raggiunge un CommandHandler, che dipende dal modello di dominio e dall'infrastruttura per l'aggiornamento del database.](./media/image21.png)
+![Diagramma che mostra il flusso di dati di alto livello dal client al database.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **Figura 7-24**. Panoramica generale dei comandi o "lato transazionale" nello schema CQRS
+
+La figura 7-24 Mostra che l'app dell'interfaccia utente invia un comando tramite l'API che raggiunge una `CommandHandler`, che dipende dal modello di dominio e dall'infrastruttura, per aggiornare il database.
 
 ### <a name="the-command-class"></a>Classe di comando
 
@@ -423,9 +427,11 @@ Le altre due principali opzioni, che sono quelle consigliate, sono:
 
 Come illustrato nella figura 7-25, in un approccio CQRS si usa un Mediator intelligente, simile a un bus in memoria, in grado di eseguire il reindirizzamento al gestore comandi appropriato in base al tipo di comando o DTO che viene ricevuto. Le singole frecce nere tra i componenti rappresentano le dipendenze tra gli oggetti (in molti casi inseriti tramite inserimento delle dipendenze) con le interazioni correlate.
 
-![Zoom avanti dall'immagine precedente: il controller ASP.NET Core invia il comando alla pipeline del comando di MediatR in modo che arrivi al gestore appropriato.](./media/image22.png)
+![Diagramma che mostra un flusso di dati più dettagliato dal client al database.](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **Figura 7-25**. Uso dello schema Mediator in esecuzione in un singolo microservizio CQRS
+
+Il diagramma precedente mostra uno zoom dall'immagine 7-24: il controller ASP.NET Core invia il comando alla pipeline dei comandi di Mediator, in modo da ottenere il gestore appropriato.
 
 L'uso dello schema Mediator è sensato perché nelle applicazioni aziendali l'elaborazione delle richieste può essere complessa. Potrebbe essere necessario aggiungere un numero indeterminato di problematiche trasversali, ad esempio registrazione, convalide, controllo e sicurezza. In questi casi, è possibile affidarsi a una pipeline di Mediator (vedere [Mediator pattern](https://en.wikipedia.org/wiki/Mediator_pattern)) per fornire un mezzo per gestire questi comportamenti o problematiche trasversali aggiuntive.
 
@@ -439,11 +445,11 @@ Nel microservizio degli ordini di eShopOnContainers vengono implementati due com
 
 È anche possibile usare i messaggi asincroni basati su broker o code di messaggi, come illustrato nella figura 7-26. Questa opzione può anche essere combinata con il componente Mediator subito prima del gestore comando.
 
-![La pipeline del comando può essere gestita anche da una coda di messaggi a disponibilità elevata per recapitare i comandi al gestore appropriato.](./media/image23.png)
+![Diagramma che mostra il flusso di dataflow con una coda di messaggi a disponibilità elevata.](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **Figura 7-26**. Uso delle code di messaggi (comunicazione out-of-process e interprocesso) con i comandi CQRS
 
-L'uso di code di messaggi per accettare i comandi può rendere ancora più complessa la pipeline del comando, perché probabilmente sarà necessario dividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 7-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
+La pipeline del comando può essere gestita anche da una coda di messaggi a disponibilità elevata per recapitare i comandi al gestore appropriato. L'uso di code di messaggi per accettare i comandi può rendere ancora più complessa la pipeline del comando, perché probabilmente sarà necessario dividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 7-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
 
 A causa della natura asincrona delle code di messaggi, è tuttavia necessario capire come comunicare all'applicazione client l'esito positivo o negativo dell'elaborazione del comando. Di norma, è preferibile non usare mai i comandi di tipo "fire and forget". Ogni applicazione aziendale deve sapere se un comando è stato elaborato correttamente o quanto meno convalidato e accettato.
 

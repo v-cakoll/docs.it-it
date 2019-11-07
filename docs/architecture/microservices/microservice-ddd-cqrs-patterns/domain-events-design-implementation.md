@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093963"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739927"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -47,11 +47,11 @@ Di conseguenza, l'interfaccia del bus di eventi richiede un'infrastruttura che c
 
 Se l'esecuzione di un comando correlato a un'istanza di aggregazione richiede l'esecuzione di regole di dominio aggiuntive su una o più aggregazioni aggiuntive, è necessario progettare e implementare questi effetti collaterali in modo che vengano attivati dagli eventi del dominio. Come illustrato nella figura 7-14 e, in base a uno dei principali casi d'uso, un evento di dominio deve essere usato per propagare le modifiche dello stato tra più aggregazioni all'interno dello stesso modello di dominio.
 
-![La coerenza tra le aggregazioni avviene tramite gli eventi di dominio, l'aggregazione dell'ordine invia un evento di dominio OrderStarted gestito per aggiornare l'aggregazione dell'acquirente. ](./media/image15.png)
+![Diagramma che mostra un evento di dominio che controlla i dati a un'aggregazione del buyer.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Figura 7-14**. Eventi del dominio per garantire la coerenza tra più aggregazioni all'interno dello stesso dominio
 
-Nella figura, quando l'utente genera un ordine, l'evento del dominio OrderStarted attiva la creazione di un oggetto Buyer nel microservizio per gli ordini, in base alle informazioni dell'utente originale provenienti dal microservizio per le identità (con le informazioni fornite nel comando CreateOrder). L'evento del dominio viene generato dall'aggregazione dell'ordine nella fase iniziale di creazione.
+La figura 7-14 Mostra la coerenza tra le aggregazioni e gli eventi del dominio. Quando l'utente avvia un ordine, l'aggregazione Order Invia un evento `OrderStarted` dominio. L'evento del dominio OrderStarted viene gestito dall'aggregazione buyer per creare un oggetto buyer nel microservizio degli ordini, in base alle informazioni originali dell'utente del microservizio Identity (con le informazioni fornite nel comando CreateOrder).
 
 In alternativa, la radice di aggregazione può avere una sottoscrizione per gli eventi generati dai membri delle relative aggregazioni (entità figlio). Ad esempio, ogni entità figlio OrderItem può generare un evento quando il prezzo dell'articolo è superiore a un importo specifico o quando la quantità di articoli di prodotto è troppo elevata. La radice di aggregazione può quindi ricevere questi eventi ed eseguire un'aggregazione o un calcolo globale.
 
@@ -78,11 +78,11 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 
 Come illustrato nella figura 7-15, a partire dallo stesso evento di dominio è possibile gestire più azioni relative ad altre aggregazioni nel dominio o azioni di applicazioni aggiuntive che è necessario eseguire tra i microservizi che si connettono con gli eventi di integrazione e il bus di eventi.
 
-![Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi.](./media/image16.png)
+![Diagramma che mostra un evento di dominio che passa i dati a diversi gestori eventi.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Figura 7-15**. Gestione di più azioni per ogni dominio
 
-In genere i gestori di eventi si trovano a livello dell'applicazione perché si usano oggetti di infrastruttura, come i repository o un'API di applicazione, per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
+Per lo stesso evento possono essere presenti diversi gestori nel livello dell'applicazione, un gestore può risolvere la coerenza tra aggregazioni, un altro può pubblicare un evento di integrazione in modo che possa essere usato da altri microservizi. In genere i gestori di eventi si trovano a livello dell'applicazione perché si usano oggetti di infrastruttura, come i repository o un'API di applicazione, per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
 
 La presenza di un numero aperto di gestori per ogni evento di dominio consente di aggiungere tutte le regole di dominio necessarie, senza influire sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
 
@@ -244,7 +244,7 @@ Un approccio è un sistema di messaggistica reale o anche un bus di eventi, poss
 
 Un altro modo per eseguire il mapping degli eventi a più gestori di eventi consiste nell'usare la registrazione di tipi in un contenitore IoC in modo che sia possibile dedurre in modo dinamico dove inviare gli eventi. In altre parole, è necessario sapere quali gestori di eventi devono ricevere un evento specifico. Nella figura 7-16 viene illustrato un approccio semplificato specifico.
 
-![È possibile usare l'inserimento delle dipendenze per associare gli eventi ai gestori degli eventi. Questo è l'approccio usato da MediatR.](./media/image17.png)
+![Diagramma che illustra un dispatcher di eventi del dominio che invia eventi ai gestori appropriati.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Figura 7-16**. Dispatcher di eventi del dominio usando IoC
 

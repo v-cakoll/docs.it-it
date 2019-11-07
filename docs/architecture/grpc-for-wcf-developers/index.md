@@ -1,14 +1,14 @@
 ---
 title: ASP.NET Core gRPC per sviluppatori WCF-gRPC per sviluppatori WCF
-description: DA SCRIVERE
+description: Introduzione alla compilazione di servizi gRPC in ASP.NET Core 3,0 per sviluppatori WCF
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b89f5974dd18e7005c6479c5b9eead039364e654
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919382"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738081"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC per sviluppatori WCF
 
@@ -50,23 +50,15 @@ Editor:
 
 ## <a name="introduction"></a>Introduzione
 
-TODO
-
-## <a name="purpose"></a>Scopo
-
-TODO
+gRPC è un Framework moderno per la creazione di servizi di rete e applicazioni distribuite. Immaginate le prestazioni delle associazioni NetTCP di WCF con l'interoperabilità multipiattaforma di SOAP. gRPC si basa su HTTP/2 e sul protocollo di codifica dei messaggi protobuf per offrire una comunicazione a larghezza di banda ridotta e prestazioni elevate tra le applicazioni e i servizi. Supporta la generazione di codice server e client tra le piattaforme e i linguaggi di programmazione più diffusi, tra cui .NET, Java, Python, Node C++ . js, go e altro ancora. Con il supporto di prima classe per gRPC in ASP.NET Core 3,0, insieme agli strumenti e alle librerie gRPC esistenti per .NET 4. x, pensiamo che sia un'ottima alternativa a WCF per i team di sviluppo che vogliono adottare .NET Core nelle loro organizzazioni.
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 
-**Aggiorna**
-
-I destinatari di questa guida sono gli sviluppatori, i lead di sviluppo e gli architetti WCF interessati alla migrazione di soluzioni WCF in .NET Framework 4 e versioni precedenti a ASP.NET Core 3,0 usando i servizi gRPC.
+Questa guida è stata scritta per gli sviluppatori che lavorano in .NET Framework o .NET Core che hanno usato in precedenza WCF e che stanno tentando di eseguire la migrazione delle applicazioni a un ambiente RPC moderno per .NET Core 3,0 e versioni successive. La guida può anche essere usata più in generale per gli sviluppatori che eseguono l'aggiornamento o l'aggiornamento a .NET Core 3,0 che vogliono usare gli strumenti gRPC predefiniti.
 
 ## <a name="how-you-can-use-this-guide"></a>Come usare questa guida
 
-**Aggiorna**
-
-Si tratta di una breve introduzione alla creazione di servizi gRPC in ASP.NET Core 3,0 con particolare riferimento a WCF come piattaforma analoga. Vengono illustrati i principi di gRPC, con la correlazione di ogni concetto alle funzionalità equivalenti di WCF e vengono fornite indicazioni per la migrazione di un'applicazione WCF esistente a gRPC. È utile anche per gli sviluppatori che hanno esperienza con WCF e vogliono apprendere gRPC per creare nuovi servizi. L'applicazione di esempio può essere usata come modello o riferimento per i propri progetti e si è liberi di copiare e riutilizzare il codice dal libro o dai relativi esempi.
+Si tratta di una breve introduzione alla creazione di servizi gRPC in ASP.NET Core 3,0 con particolare riferimento a WCF come piattaforma analoga. Vengono illustrati i principi di gRPC, con la correlazione di ogni concetto alle funzionalità equivalenti di WCF e vengono fornite indicazioni per la migrazione di un'applicazione WCF esistente a gRPC. È utile anche per gli sviluppatori che hanno esperienza con WCF e vogliono apprendere gRPC per creare nuovi servizi. Le applicazioni di esempio possono essere utilizzate come modello o riferimento per i propri progetti e si è liberi di copiare e riutilizzare il codice dal libro o dai relativi esempi.
 
 È possibile inoltrare questa guida al team per aiutarlo ad acquisire una comprensione di base di queste considerazioni e opportunità. Facendo sì che tutti usino un insieme comune di termini e di principi sottostanti, si garantisce l'applicazione coerente di modelli e procedure architetturali.
 

@@ -2,12 +2,12 @@
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Come specificare la composizione di microservizi per un'applicazione a più contenitori con docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416709"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737100"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
@@ -177,9 +177,15 @@ Se si usano come destinazione ambienti diversi, è necessario usare più file co
 
 Per impostazione predefinita, Compose legge due file: docker-compose.yml e un file docker-compose.override.yml facoltativo. Come illustrato nella figura 6-11, quando si usa Visual Studio e si abilita il supporto Docker, Visual Studio crea anche un file docker-compose.vs.debug.g.yml aggiuntivo per il debug dell'applicazione. Per vedere questo file, accedere alla cartella obj\\Docker \\ nella cartella principale della soluzione.
 
-![Struttura del file di progetto docker-compose: .dockerignore per ignorare i file, docker-compose.yml per comporre microservizi, docker-compose.override.yml per configurare l'ambiente dei microservizi.](./media/image12.png)
+![Screenshot dei file in un progetto Docker compose.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Figura 6-11**. File docker-compose in Visual Studio 2017
+
+struttura del file **di progetto Docker-compose** :
+
+* *. dockerignore* -usato per ignorare i file
+* *Docker-compose. yml* : usato per comporre microservizi
+* *Docker-compose. override. yml* : usato per configurare l'ambiente di microservizi
 
 È possibile modificare i file docker-compose con qualsiasi editor di codice di Visual Studio o Sublime ed eseguire l'applicazione con il comando docker-compose up.
 
@@ -191,11 +197,11 @@ Il file docker-compose.override.yml, come suggerisce il nome, contiene le impost
 
 Un tipico caso d'uso è quello in cui si definiscono più file compose in modo da poter usare come destinazione più ambienti, ad esempio quello di produzione, staging, CI o sviluppo. Per supportare queste differenze, è possibile suddividere la configurazione di Compose in più file, come illustrato nella figura 6-12.
 
-![È possibile combinare più file docker-compose*.fml per gestire ambienti diversi.](./media/image13.png)
+![Diagramma di tre file Docker-compose impostati per eseguire l'override del file di base.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Figura 6-12**. Più file docker-compose che eseguono l'override di valori del file docker-compose.yml base
 
-Iniziare con il file docker-compose.yml base. Questo file base deve contenere le impostazioni di configurazione base o statiche, ossia che non cambiano in base all'ambiente. Ad esempio, eShopOnContainers ha come file di base il seguente file docker-compose.yml, semplificato con meno servizi.
+È possibile combinare più file Docker-compose*. yml per gestire ambienti diversi. Iniziare con il file docker-compose.yml base. Questo file base deve contenere le impostazioni di configurazione base o statiche, ossia che non cambiano in base all'ambiente. Ad esempio, eShopOnContainers ha come file di base il seguente file docker-compose.yml, semplificato con meno servizi.
 
 ```yml
 #docker-compose.yml (Base)

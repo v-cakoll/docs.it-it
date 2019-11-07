@@ -4,12 +4,12 @@ description: Protezione di microservizi e applicazioni Web .NET - Informazioni s
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798851"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736975"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteggere i microservizi e le applicazioni Web .NET
 
@@ -21,15 +21,17 @@ In molti casi è necessario che le risorse e le API pubblicate da un servizio si
 
 In scenari con microservizi, l'autenticazione viene in genere gestita a livello centrale. Se si usa un gateway API il gateway è un ottimo strumento per l'autenticazione, come illustrato nella figura 9-1. Se si usa questo approccio, assicurarsi che i singoli microservizi non possano essere raggiunti direttamente (senza il gateway API), a meno che non sia presente un sistema di sicurezza aggiuntivo per autenticare i messaggi, indipendentemente dal fatto che provengano dal gateway.
 
-![Quando il gateway API centralizza l'autenticazione, aggiunge le informazioni utente al momento dell'inoltro delle richieste ai microservizi.](./media/image1.png)
+![Diagramma che illustra il modo in cui l'app per dispositivi mobili client interagisce con il back-end.](./media/index/api-gateway-centralized-authentication.png)
 
 **Figura 9-1**. Autenticazione centralizzata con un gateway API
 
-Se è possibile accedere direttamente ai servizi, per autenticare gli utenti è possibile usare un servizio di autenticazione come Azure Active Directory o un microservizio di autenticazione dedicato con funzione di servizio token di sicurezza. Le decisioni sull'attendibilità vengono condivise tra i servizi con i token di sicurezza o i cookie. Questi token possono essere condivisi tra ASP.NET Core applicazioni, se necessario, implementando la [condivisione dei cookie](/aspnet/core/security/cookie-sharing). Questo modello è illustrato nella figura 9-2.
+Quando il gateway API centralizza l'autenticazione, aggiunge le informazioni utente al momento dell'inoltro delle richieste ai microservizi. Se è possibile accedere direttamente ai servizi, per autenticare gli utenti è possibile usare un servizio di autenticazione come Azure Active Directory o un microservizio di autenticazione dedicato con funzione di servizio token di sicurezza. Le decisioni sull'attendibilità vengono condivise tra i servizi con i token di sicurezza o i cookie. Questi token possono essere condivisi tra ASP.NET Core applicazioni, se necessario, implementando la [condivisione dei cookie](/aspnet/core/security/cookie-sharing). Questo modello è illustrato nella figura 9-2.
 
-![Quando si accede direttamente ai microservizi, l'attendibilità, che include l'autenticazione e l'autorizzazione, viene gestita da un token di sicurezza emesso da un microservizio dedicato, condiviso tra microservizi.](./media/image2.png)
+![Diagramma che illustra l'autenticazione tramite microservizi back-end.](./media/index/identity-microservice-authentication.png)
 
 **Figura 9-2**. Autenticazione mediante microservizio di identità; l'attendibilità è condivisa con un token di autorizzazione
+
+Quando l'accesso ai i microservizi è diretto, l'attendibilità, che include autenticazione e autorizzazione, viene gestita da un token di sicurezza emesso da un microservizio dedicato, condiviso tra i microservizi.
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Autenticazione tramite ASP.NET Core Identity
 
@@ -121,7 +123,7 @@ else
 
 Se quando si crea il progetto di applicazione Web ASP.NET Code in Visual Studio si sceglie l'opzione di autenticazione **Account utente individuali**, tutto il codice necessario per l'accesso con un provider esterno è già presente nel progetto, come illustrato nella figura 9-3.
 
-![Finestra di dialogo per la nuova applicazione Web ASP.NET Core, con il pulsante di modifica dell'autenticazione evidenziato.](./media/image3.png)
+![Screenshot della finestra di dialogo nuova applicazione Web ASP.NET Core.](./media/index/select-external-authentication-option.png)
 
 **Figura 9-3**. Selezione di un'opzione per l'uso dell'autenticazione esterna quando si crea un progetto di applicazione Web
 

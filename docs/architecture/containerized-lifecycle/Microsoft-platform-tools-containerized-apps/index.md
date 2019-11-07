@@ -2,12 +2,12 @@
 title: Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
 description: Informazioni sulle offerte di Microsoft per il supporto del ciclo di vita delle applicazioni Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094461"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738096"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094461"
 
 La figura 3-1 mostra gli elementi fondanti del ciclo di vita delle app Docker, classificati per tipo di lavoro svolto da più team (sviluppo di app, processi dell'infrastruttura DevOps e gestione e operazioni IT). In genere nell'organizzazione i profili dell'utente tipo responsabile per ogni area sono diversi. Lo stesso vale per le competenze.
 
-![Strumenti di Microsoft. Per il carico di lavoro sviluppo/progettazione: motore Docker per Windows, VS e VS Code, .NET Core, servizio Azure Kubernetes. Per il carico di lavoro di compilazione/test/spedizione: Azure DevOps, Team Foundation Server, interfaccia della riga di comando di Docker, servizio Kubernetes di Azure. Per il carico di lavoro esecuzione/Monitoraggio/gestione: monitoraggio di Azure, portale di Azure servizi Kubernetes di Azure, Service Fabric, altri agenti di orchestrazione.](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Diagramma che illustra gli strumenti Microsoft necessari per gestire le app docker.":::
+Strumenti di Microsoft. Per il carico di lavoro sviluppo/progettazione: motore Docker per Windows, VS e VS Code, .NET Core, servizio Azure Kubernetes. Per il carico di lavoro di compilazione/test/spedizione: Azure DevOps, Team Foundation Server, interfaccia della riga di comando di Docker, servizio Kubernetes di Azure. Per il carico di lavoro esecuzione/Monitoraggio/gestione: monitoraggio di Azure, portale di Azure servizi Kubernetes di Azure, Service Fabric, altri agenti di orchestrazione.
+:::image-end:::
 
 **Figura 3-1.** Elementi fondanti del ciclo di vita per applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 

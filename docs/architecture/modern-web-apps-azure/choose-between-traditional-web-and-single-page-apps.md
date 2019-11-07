@@ -4,16 +4,16 @@ description: Informazioni su come scegliere tra le app Web tradizionali e a pagi
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675478"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739448"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
-> "Legge di Atwood: qualsiasi applicazione che può essere scritta in JavaScript, finirà per essere scritta in JavaScript".  
+> "Legge di Atwood: qualsiasi applicazione che può essere creata in JavaScript, finirà per essere creata in JavaScript".  
 > _\- Jeff Atwood_
 
 Attualmente esistono due approcci generali alla creazione di applicazioni Web: le applicazioni Web tradizionali che eseguono la maggior parte della logica dell'applicazione nel server e le applicazioni a pagina singola (SPA, Single Page Application) che eseguono la maggior parte della logica dell'interfaccia utente in un Web browser, comunicando con il server Web principalmente attraverso API Web. È anche possibile un approccio ibrido: l'esempio più semplice è l'hosting di una o più sottoapplicazioni a pagina singola in un'applicazione Web tradizionale più grande.
@@ -40,7 +40,7 @@ I miglioramenti dell'esperienza utente offerti dal modello di applicazione a pag
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 introduce un nuovo modello per la creazione di un'interfaccia utente avanzata, interattiva e componibile, denominata Blazor. Blazor sul lato server consente agli sviluppatori di compilare l'interfaccia utente con Razor nel server e di usare una libreria JavaScript denominata WebAssembly per inviare questo codice al browser ed eseguirlo sul lato client. ASP.NET Core 3.0 è ancora in fase di sviluppo. Altre informazioni su questa tecnologia saranno disponibili nell'aggiornamento 3.0 di questo e-book. Per altre informazioni su Blazor, vedere [Get started with Blazor](https://blazor.net/docs/get-started.html) (Introduzione a Blazor).
+ASP.NET Core 3.0 introduce un nuovo modello per la creazione di un'interfaccia utente avanzata, interattiva e componibile, denominata Blazor. Blazer lato server consente agli sviluppatori di compilare l'interfaccia utente con Razor sul server e di recapitare il codice al browser e di eseguire il lato client usando [webassembly](https://webassembly.org/). ASP.NET Core 3.0 è ancora in fase di sviluppo. Altre informazioni su questa tecnologia saranno disponibili nell'aggiornamento 3.0 di questo e-book. Per altre informazioni su Blazor, vedere [Get started with Blazor](https://blazor.net/docs/get-started.html) (Introduzione a Blazor).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Quando scegliere le app Web tradizionali
 
@@ -89,7 +89,7 @@ La tabella seguente riepiloga alcuni fattori di base da considerare nella scelta
 
 | **Fattore**                                           | **App Web tradizionale** | **Applicazione a pagina singola** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
-| Il team deve conoscere JavaScript o TypeScript | **Minimo**             | **Obbligatorio**                |
+| Il team deve conoscere JavaScript o TypeScript | **Minimo**             | **Richiesto**                |
 | Supporto dei browser senza script                   | **Supportato**           | **Non supportato**           |
 | Comportamento minimo dell'applicazione lato client             | **Adeguato**         | **Eccessivo**                |
 | Esigenza di un'interfaccia utente dettagliata e complessa            | **Limitato**             | **Adeguato**             |

@@ -2,12 +2,12 @@
 title: Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 description: Informazioni su come usare HttpClientFactory, disponibile a partire da .NET Core 2.1, per la creazione di istanze `HttpClient`, semplificandone l'uso nelle applicazioni.
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093992"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737760"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -56,11 +56,13 @@ Che cos'è un "client tipizzato"? È semplicemente un elemento `HttpClient` conf
 
 Il diagramma seguente visualizza l'uso dei client tipizzati con `HttpClientFactory`.
 
-![Un ClientService (usato da un controller o da codice client) usa un HttpClient creato dalla IHttpClientFactory registrata. Questa factory assegna a HttpClient un HttpMessageHandler da un pool gestito. HttpClient può essere configurato con i criteri di Polly quando si registra la IHttpClientFactory nel contenitore di inserimento delle dipendenze con il metodo di estensione AddHttpClient.](./media/image3.5.png)
+![Diagramma che illustra la modalità di utilizzo dei client tipizzati con HttpClientFactory.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **Figura 8-4**. Uso di HttpClientFactory con le classi client tipizzati.
 
-Per prima cosa, configurare `HttpClientFactory` nell'applicazione installando il pacchetto NuGet `Microsoft.Extensions.Http` che include il metodo di estensione `AddHttpClient()` per `IServiceCollection`. Questo metodo di estensione registra l'oggetto `DefaultHttpClientFactory` da usare come oggetto singleton per l'interfaccia `IHttpClientFactory`. Definisce una configurazione temporanea per l'oggetto `HttpMessageHandlerBuilder`. Questo gestore di messaggi (oggetto `HttpMessageHandler`), estratto da un pool, viene usato dall'oggetto `HttpClient` restituito dalla factory.
+Nell'immagine precedente, un ClientService (usato da un controller o da un codice client) usa un `HttpClient` creato dal `IHttpClientFactory`registrato. Questa factory assegna la `HttpClient` una `HttpMessageHandler` da un pool gestito. La `HttpClient` può essere configurata con i criteri di Polly quando si registrano i `IHttpClientFactory` nel contenitore DI inserimento delle dipendenze con il metodo di estensione `AddHttpClient`.
+
+Per configurare la struttura precedente, aggiungere `HttpClientFactory` nell'applicazione installando il pacchetto NuGet `Microsoft.Extensions.Http` che include il metodo di estensione `AddHttpClient()` per `IServiceCollection`. Questo metodo di estensione registra l'oggetto `DefaultHttpClientFactory` da usare come oggetto singleton per l'interfaccia `IHttpClientFactory`. Definisce una configurazione temporanea per l'oggetto `HttpMessageHandlerBuilder`. Questo gestore di messaggi (oggetto `HttpMessageHandler`), estratto da un pool, viene usato dall'oggetto `HttpClient` restituito dalla factory.
 
 Nel codice successivo è possibile vedere come usare `AddHttpClient()` per registrare i client tipizzati (agenti di servizio) che devono usare `HttpClient`.
 

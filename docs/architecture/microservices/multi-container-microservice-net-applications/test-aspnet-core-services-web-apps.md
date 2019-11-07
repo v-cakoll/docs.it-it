@@ -2,12 +2,12 @@
 title: Test delle app Web e dei servizi ASP.NET di base
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Esplorare un'architettura per il test delle app Web e dei servizi ASP.NET di base all'interno di contenitori.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772022"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739467"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -144,7 +144,7 @@ I test dell'applicazione di riferimento (eShopOnContainers) sono stati ristruttu
 
 Il test di integrazione e lo unit test per ogni microservizio si trovano nella cartella dei test del rispettivo microservizio. I test di carico delle applicazioni si trovano nella cartella dei test all'interno della cartella della soluzione, come illustrato nella figura 6-25.
 
-![Struttura dei test in eShopOnContainers: ogni servizio ha una cartella "test" che include unit test e test funzionali. Nella cartella "test" della soluzione sono presenti i test funzionali e il test di carico a livello di applicazione.](./media/image42.png)
+![Screenshot di Visual Studio che indica alcuni dei progetti di test nella soluzione.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Figura 6-25**. Struttura delle cartelle di test in eShopOnContainers
 

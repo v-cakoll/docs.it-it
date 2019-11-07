@@ -2,12 +2,12 @@
 title: Progettazione di un modello di dominio del microservizio
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Comprendere i concetti principali quando si progetta un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676448"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737373"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -31,11 +31,11 @@ In una progettazione basata su domini, un'entità di dominio deve implementare l
 
 La figura 7-8 illustra un'entità di dominio che implementa non solo gli attributi dei dati, ma anche le operazioni o i metodi con la logica di dominio correlata.
 
-![Un'entità del modello di dominio implementa i comportamenti usando i metodi, vale a dire, non è un modello "anemico".](./media/image9.png)
+![Diagramma che mostra il modello di un'entità di dominio.](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **Figura 7-8**. Esempio di progettazione di un'entità di dominio che implementa dati e comportamento
 
-In alcuni casi, naturalmente, è possibile che un'entità non implementi alcuna logica nell'ambito della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un aggregazione se l'entità figlio non contiene alcuna logica speciale, poiché la maggior parte della logica è definita nella radice di aggregazione. Se si ha un microservizio complesso in cui la maggior parte della logica è implementata nelle classi del servizio anziché nelle entità di dominio, è possibile che si abbia a che fare con un modello di dominio anemico, illustrato nella sezione seguente.
+Un'entità del modello di dominio implementa i comportamenti usando i metodi, vale a dire, non è un modello "anemico". In alcuni casi, naturalmente, è possibile che un'entità non implementi alcuna logica nell'ambito della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un aggregazione se l'entità figlio non contiene alcuna logica speciale, poiché la maggior parte della logica è definita nella radice di aggregazione. Se si ha un microservizio complesso in cui la maggior parte della logica è implementata nelle classi del servizio anziché nelle entità di dominio, è possibile che si abbia a che fare con un modello di dominio anemico, illustrato nella sezione seguente.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modello di dominio avanzato e modello di dominio anemico a confronto
 
@@ -55,10 +55,10 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **DevIQ. Entità di dominio** \
+- **DevIQ. \ entità di dominio**
   <https://deviq.com/entity/>
 
-- **Martin Fowler. Modello di dominio** \
+- **Martin Fowler. Il modello di dominio** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. Il modello di dominio anemico** \
@@ -80,7 +80,7 @@ EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.mi
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Martin Fowler. Schema Value Object** \
+- **Martin Fowler. Modello oggetto valore** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Oggetto valore** \
@@ -89,7 +89,7 @@ EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.mi
 - **Oggetti valore nello sviluppo basato su test** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Progettazione basata su domini: Gestire le complessità nel software.** (Libro. Include una trattazione sugli oggetti valore) \
+- **Eric Evans. Progettazione basata su domini: affrontare la complessità nel cuore del software.** (Libro. Include una trattazione sugli oggetti valore) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Schema Aggregate
@@ -108,11 +108,11 @@ Lo scopo di una radice di aggregazione è garantire la coerenza dell'aggregazion
 
 Nella figura 7-9 è possibile osservare aggregazioni di esempio come l'aggregazione Buyer (acquirente), che contiene un'unica entità (la radice di aggregazione Buyer). L'aggregazione Order contiene invece più entità e un oggetto valore.
 
-![Un modello di dominio DDD è composto da aggregati, un aggregato può avere una o più entità e includere anche oggetti valore.](./media/image10.png)
+![Diagramma che confronta un'aggregazione buyer e un'aggregazione Order.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Figura 7-9**. Esempio di aggregazioni con una o più entità
 
-L'aggregazione Buyer può avere entità figlio aggiuntive, in base al dominio, come avviene nel microservizio degli ordini nell'applicazione di riferimento eShopOnContainers. La figura 7-9 illustra un caso in cui l'aggregazione Buyer contiene un'unica entità, come esempio di aggregazione contenente solo una radice di aggregazione.
+Un modello di dominio DDD è composto da aggregati, un aggregato può avere una o più entità e includere anche oggetti valore. L'aggregazione Buyer può avere entità figlio aggiuntive, in base al dominio, come avviene nel microservizio degli ordini nell'applicazione di riferimento eShopOnContainers. La figura 7-9 illustra un caso in cui l'aggregazione Buyer contiene un'unica entità, come esempio di aggregazione contenente solo una radice di aggregazione.
 
 Per mantenere le aggregazioni separate in un modello di progettazione basata su domini, è buona norma impedire l'esplorazione diretta tra le aggregazioni e mantenere solo il campo della chiave esterna, come implementato nel [modello di dominio del microservizio degli ordini](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. L'entità Order include solo un campo di chiave esterna per l'aggregazione Buyer, ma non una proprietà di navigazione EF Core, come illustrato nel codice seguente:
 
@@ -133,22 +133,22 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Vaughn Vernon. Effective Aggregate Design - Part I: (Progettazione efficace delle aggregazioni - Parte I) Modeling a Single Aggregate** (Modellazione di un  singolo aggregato) (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Progettazione aggregata efficace-parte I: modellazione di una singola aggregazione** (da <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part II: (Progettazione efficace delle aggregazioni - Parte II) Making Aggregates Work Together** (Integrazione degli aggregati) (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Struttura di aggregazione efficace-parte II: creazione di aggregazioni** interagiscono (da <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part III: (Progettazione efficace delle aggregazioni - Parte III) Gaining Insight Through Discovery** (Ottenere informazioni dettagliate attraverso l'individuazione) (da <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Progettazione aggregata efficace-parte III: acquisizione di informazioni dettagliate tramite individuazione** (da <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. Schemi progettuali tattici DDD** \
+- **Sergey Grybniak. Modelli di progettazione tattici di DDD** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Sviluppo di microservizi transazionali usando aggregazioni** \
+- **Chris Richardson. Sviluppo di microservizi transazionali tramite aggregazioni** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. Schema Aggregate** \
+- **DevIQ. Modello di aggregazione** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]

@@ -2,16 +2,16 @@
 title: Introduzione a contenitori e Docker
 description: Ottenere una panoramica generale dei vantaggi principali derivanti dall'uso di Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295672"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738122"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 
-*La containerizzazione è un approccio allo sviluppo del software in cui un'applicazione o un servizio, le relative dipendenze e la corrispondente configurazione (astratti come file manifesto della distribuzione) sono inclusi in uno stesso pacchetto sotto forma di immagine del contenitore. È quindi possibile testare l'applicazione nel contenitore come unità e distribuirla come istanza dell'immagine del contenitore al sistema operativo host.*
+*Il contenitore è un approccio allo sviluppo del software in cui un'applicazione o un servizio, le relative dipendenze e la relativa configurazione (astratte come file manifesto di distribuzione) vengono assemblati insieme come immagine del contenitore. È quindi possibile testare l'applicazione in contenitori come un'unità e distribuirla come un'istanza dell'immagine del contenitore nel sistema operativo host.*
 
 Proprio come i container consentono il trasporto delle merci via nave, treno o camion indipendentemente dal contenuto del carico, i contenitori software fungono da unità standard di distribuzione software in grado di contenere codice e dipendenze diversi. Questa modalità di containerizzazione del software consente a sviluppatori e professionisti IT di distribuire applicazioni tra ambienti diversi con modifiche minime se non inesistenti.
 
@@ -19,7 +19,7 @@ I contenitori contribuiscono inoltre a isolare le applicazioni una dall'altra in
 
 Ogni contenitore può eseguire un intero servizio o applicazione Web, come illustrato nella figura 1-1. In questo esempio l'host Docker è un host contenitore e App1, App2, Svc1 e Svc2 sono servizi o applicazioni inclusi nei contenitori.
 
-![Due applicazioni e due servizi in esecuzione nel sistema operativo in una macchina virtuale o un server fisico](./media/image1.png)
+![Diagramma che mostra quattro contenitori in esecuzione in una macchina virtuale o in un server.](./media/index/multiple-containers-single-host.png)
 
 **Figura 1-1**. Più contenitori in esecuzione in un host contenitore
 

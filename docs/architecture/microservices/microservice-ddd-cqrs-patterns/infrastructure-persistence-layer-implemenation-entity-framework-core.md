@@ -2,12 +2,12 @@
 title: Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Esplorare i dettagli di implementazione per il livello di persistenza dell'infrastruttura con Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674098"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737906"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementare il livello di persistenza dell'infrastruttura con Entity Framework Core
 
@@ -174,11 +174,11 @@ L'implementazione di repository personalizzati offre però diversi vantaggi quan
 
 Nella Figura 7-18 è possibile osservare le differenze tra il mancato uso di repository (e l'uso diretto della classe DbContext di Entity Framework) e l'uso di repository per agevolare il comportamento fittizio di tali repository.
 
-![Confronto tra l'uso di un repository personalizzato e una semplice classe DbContext: il repository personalizzato aggiunge un livello di astrazione che consente di semplificare il test rendendo fittizio il repository.](./media/image19.png)
+![Diagramma che mostra i componenti e il flusso di Dataflow nei due repository.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Figura 7-18**. Uso di repository personalizzati anziché una semplice classe DbContext
 
-Per il comportamento fittizio è possibile scegliere tra diverse alternative. È possibile applicare il comportamento fittizio solo ai repository oppure a un'intera unità di lavoro. In genere è sufficiente applicare il comportamento fittizio solo ai repository e non è necessario ricorrere alle tecniche complesse per astrarre e applicare il comportamento fittizio a un'intera unità di lavoro.
+La figura 7-18 Mostra che l'uso di un repository personalizzato aggiunge un livello di astrazione che può essere usato per semplificare il test simulando il repository. Per il comportamento fittizio è possibile scegliere tra diverse alternative. È possibile applicare il comportamento fittizio solo ai repository oppure a un'intera unità di lavoro. In genere è sufficiente applicare il comportamento fittizio solo ai repository e non è necessario ricorrere alle tecniche complesse per astrarre e applicare il comportamento fittizio a un'intera unità di lavoro.
 
 Più avanti, quando verrà trattato il livello dell'applicazione, verrà illustrato il funzionamento del modello di inserimento delle dipendenze in ASP.NET Core e verrà spiegato come implementarlo quando si usano i repository.
 
@@ -232,13 +232,13 @@ Si noti che l'uso della durata del singleton per il repository potrebbe causare 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Implementazione dei modelli con repository e unità di lavoro in un'applicazione MVC ASP.NET** \
+- **Implementazione degli schemi Repository e Unit of Work in un'applicazione ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Strategie di implementazione per il modello di repository con Entity Framework, Dapper e Chain** \
+- **Jonathan Allen. Strategie di implementazione per il modello di repository con Entity Framework, elegante e Chain** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Confronto tra la durata del servizio contenitore IoC di ASP.NET Core con gli ambiti delle istanze di contenitore IoC di Autofac** \
+- **Cesar de la Torre. Confronto ASP.NET Core durate del servizio contenitore IoC con gli ambiti dell'istanza del contenitore IoC Autofac** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapping di tabella

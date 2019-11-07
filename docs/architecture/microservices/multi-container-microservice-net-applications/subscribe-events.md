@@ -2,12 +2,12 @@
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035644"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737022"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -139,7 +139,7 @@ Quando si implementano i passaggi per la pubblicazione degli eventi, è possibil
 
 La figura 6-22 illustra l'architettura relativa al primo di questi approcci.
 
-![Un approccio per gestire l'atomicità quando si pubblicano eventi: usare una transazione per eseguire il commit dell'evento in una tabella di log eventi e quindi un'altra transazione per la pubblicazione (usato in eShopOnContainers)](./media/image23.png)
+![Diagramma di atomicità durante la pubblicazione senza un microservizio Worker.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Figura 6-22**. Atomicità durante la pubblicazione di eventi nel bus di eventi
 
@@ -147,7 +147,7 @@ Nell'approccio illustrato nella figura 6-22 manca un microservizio worker aggiun
 
 Nel secondo approccio si usa invece la tabella EventLog come coda e si usa sempre un microservizio worker per pubblicare i messaggi. Il processo corrispondente è simile a quello illustrato nella figura 6-23, in cui viene illustrato un microservizio aggiuntivo, mentre la tabella è l'unica origine durante la pubblicazione di eventi.
 
-![Un altro approccio per gestire l'atomicità: eseguire la pubblicazione in una tabella di log eventi e quindi pubblicare l'evento tramite un altro microservizio (un componente BackgroundWorker).](./media/image24.png)
+![Diagramma di atomicità durante la pubblicazione con un microservizio Worker.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Figura 6-23**. Atomicità durante la pubblicazione di eventi nel bus di eventi con un microservizio worker
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Il gestore dell'evento deve verificare se il prodotto è presente in una delle istanze del carrello, aggiorna il prezzo dell'articolo per ogni articolo del carrello correlato e infine crea un avviso da visualizzare all'utente sulla variazione di prezzo, come illustrato nella figura 6-24.
 
-![Visualizzazione nel browser della notifica di variazione di prezzo nel carrello dell'utente.](./media/image25.png)
+![Screenshot di un browser che mostra la notifica di modifica dei prezzi nel carrello dell'utente.](./media/subscribe-events/display-item-price-change.png)
 
 **Figura 6-24**. Visualizzazione di una variazione di prezzo dell'articolo in un carrello, comunicato dagli eventi di integrazione
 
