@@ -1,68 +1,66 @@
 - name: Assembly in .NET
   href: index.md
+- name: Contenuto degli assembly
+  href: contents.md
+- name: manifesto
+  href: manifest.md
+- name: Considerazioni sulla sicurezza
+  href: security-considerations.md
+- name: Controllo delle versioni
+  href: versioning.md
+- name: Esecuzione side-by-side
+  href: side-by-side-execution.md
+- name: Formato dei file di assembly
+  href: file-format.md
+- name: Scaricabilità in .NET Core
+  href: unloadability.md
+- name: Assembly di riferimento
+  href: reference-assemblies.md
+- name: Risolvere i caricamenti di assembly
+  href: resolve-loads.md
+- name: Creare assembly
+  href: create.md
+- name: Nomi degli assembly
+  href: names.md
+- name: Trovare il nome completo di un assembly
+  href: find-fully-qualified-name.md
+- name: Posizione dell'assembly
+  href: location.md
+- name: Impostare gli attributi dell'assembly
+  href: set-attributes.md
+- name: Assembly con nomi sicuri
   items:
-    - name: Contenuto degli assembly
-      href: contents.md
-    - name: Manifesto dell'assembly
-      href: manifest.md
-    - name: Assembly con nomi sicuri
+    - name: Panoramica
       href: strong-named.md
-    - name: Considerazioni sulla sicurezza degli assembly
-      href: security-considerations.md
-    - name: Controllo delle versioni degli assembly
-      href: versioning.md
-    - name: Assembly ed esecuzione contemporanea di più versioni
-      href: side-by-side-execution.md
-    - name: Formato dei file di assembly
-      href: file-format.md
-    - name: 'Procedura: Usare ed eseguire il debug di assembly non caricabili in .NET Core'
-      href: unloadability.md
-    - name: Assembly di riferimento
-      href: reference-assemblies.md
-    - name: Risolvere i caricamenti di assembly
-      href: resolve-loads.md
-    - name: Programmare con gli assembly
-      href: program.md
-      items:
-        - name: Creare assembly
-          href: create.md
-        - name: Nomi degli assembly
-          href: names.md
-        - name: 'Procedura: Trovare il nome completo di un assembly'
-          href: find-fully-qualified-name.md
-        - name: Posizione dell'assembly
-          href: location.md
-        - name: Impostare gli attributi dell'assembly
-          href: set-attributes.md
-        - name: Creare e usare gli assembly con nome sicuro
-          href: create-use-strong-named.md
-          items:
-            - name: 'Procedura: Creare una coppia di chiavi pubblica/privata'
-              href: create-public-private-key-pair.md
-            - name: 'Procedura: Firmare un assembly con un nome sicuro'
-              href: sign-strong-name.md
-            - name: Denominazione sicura avanzata
-              href: enhanced-strong-naming.md
-            - name: 'Procedura: Aggiungere un riferimento a un assembly con nome sicuro'
-              href: reference-strong-named.md
-            - name: 'Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro'
-              href: disable-strong-name-bypass-feature.md
-        - name: Firma ritardata di un assembly
-          href: delay-sign.md
-        - name: 'Procedura: Visualizzare il contenuto degli assembly'
-          href: view-contents.md
-        - name: Inoltro dei tipi in Common Language Runtime
-          href: type-forwarding.md
-        - name: Assembly Friend
-          href: friend.md
-          items:
-            - name: 'Procedura: Creare assembly Friend non firmati'
-              href: create-unsigned-friend.md
-            - name: 'Procedura: Creare assembly Friend firmati'
-              href: create-signed-friend.md
-        - name: 'Procedura: Determinare se un file è un assembly'
-          href: identify.md
-        - name: 'Procedura: Caricare e scaricare gli assembly'
-          href: load-unload.md
-        - name: 'Procedura dettagliata: Incorporare i tipi da assembly gestiti in Visual Studio'
-          href: embed-types-visual-studio.md
+    - name: Creare e usare gli assembly con nome sicuro
+      href: create-use-strong-named.md
+    - name: Creare una coppia di chiavi pubblica/privata
+      href: create-public-private-key-pair.md
+    - name: Firmare un assembly con un nome sicuro
+      href: sign-strong-name.md
+    - name: Denominazione sicura avanzata
+      href: enhanced-strong-naming.md
+    - name: Aggiungere un riferimento a un assembly con nome sicuro
+      href: reference-strong-named.md
+    - name: Disabilitare la funzionalità per ignorare la verifica del nome sicuro
+      href: disable-strong-name-bypass-feature.md
+- name: Firma ritardata di un assembly
+  href: delay-sign.md
+- name: Visualizzare il contenuto degli assembly
+  href: view-contents.md
+- name: Inoltro dei tipi in CLR
+  href: type-forwarding.md
+- name: Assembly Friend
+  items:
+    - name: Panoramica
+      href: friend.md
+    - name: Creare assembly Friend non firmati
+      href: create-unsigned-friend.md
+    - name: Creare assembly Friend firmati
+      href: create-signed-friend.md
+- name: Determinare se un file è un assembly
+  href: identify.md
+- name: Caricare e scaricare gli assembly
+  href: load-unload.md
+- name: 'Procedura dettagliata: Incorporare i tipi da assembly gestiti in Visual Studio'
+  href: embed-types-visual-studio.md

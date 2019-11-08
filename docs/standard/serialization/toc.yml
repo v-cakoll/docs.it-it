@@ -7,6 +7,8 @@
           href: system-text-json-overview.md
         - name: Come serializzare e deserializzare dati JSON
           href: system-text-json-how-to.md
+        - name: Come scrivere convertitori personalizzati
+          href: system-text-json-converters-how-to.md
     - name: Serializzazione binaria
       href: binary-serialization.md
       items:
