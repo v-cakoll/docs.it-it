@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b7778d6a2e0b0dd15b2911f2d1cee36208e13328
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039923"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738511"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Consente di convertire un'espressione da un tipo di dati a un altro.  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  Qualsiasi espressione valida che è possibile convertire in `data_type`.  
   
  `data_type`  
- Tipo di dati di sistema di destinazione. Deve trattarsi di un tipo primitivo (scalare). Il tipo `data_type` usato dipende dall'ambito della query. Se una query viene eseguita con <xref:System.Data.EntityClient.EntityCommand>, il tipo di dati è un tipo definito nel modello concettuale. Per altre informazioni, vedere [CSDL Specification](csdl-specification.md). Se una query viene eseguita con <xref:System.Data.Objects.ObjectQuery%601>, il tipo di dati è un tipo CLR (Common Language Runtime).  
+ Tipo di dati di sistema di destinazione. Deve trattarsi di un tipo primitivo (scalare). Il tipo `data_type` usato dipende dall'ambito della query. Se una query viene eseguita con <xref:System.Data.EntityClient.EntityCommand>, il tipo di dati è un tipo definito nel modello concettuale. Per altre informazioni, vedere [CSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec). Se una query viene eseguita con <xref:System.Data.Objects.ObjectQuery%601>, il tipo di dati è un tipo CLR (Common Language Runtime).  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce lo stesso valore di `data_type`.  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459778"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733733"
 ---
 # <a name="navigation-overview"></a>Cenni preliminari sulla navigazione
 
@@ -85,7 +85,7 @@ Utilizzando <xref:System.Windows.Controls.Page>, è possibile implementare in mo
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-Un <xref:System.Windows.Controls.Page> implementato in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup ha `Page` come elemento radice e richiede la dichiarazione dello spazio dei nomi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. L'elemento `Page` contiene il contenuto che si desidera esplorare e visualizzare. Per aggiungere contenuto, impostare l'elemento Property `Page.Content`, come illustrato nel markup seguente.
+Un <xref:System.Windows.Controls.Page> implementato in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup ha `Page` come elemento radice e richiede la dichiarazione dello spazio dei nomi XML [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. L'elemento `Page` contiene il contenuto che si desidera esplorare e visualizzare. Per aggiungere contenuto, impostare l'elemento Property `Page.Content`, come illustrato nel markup seguente.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ Un <xref:System.Windows.Controls.Page> di solo markup è utile per la visualizza
 
 Per consentire il funzionamento congiunto di un file di markup e di un file code-behind, è necessaria la configurazione seguente:
 
-- Nel markup, l'elemento `Page` deve includere l'attributo `x:Class`. Quando viene compilata l'applicazione, l'esistenza di `x:Class` nel file di markup fa sì che Microsoft Build Engine (MSBuild) crei una classe `partial` che deriva da <xref:System.Windows.Controls.Page> e ha il nome specificato dall'attributo `x:Class`. Questa operazione richiede l'aggiunta di una dichiarazione dello spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] per lo schema di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). La classe `partial` generata implementa `InitializeComponent`, che viene chiamata per registrare gli eventi e impostare le proprietà implementate nel markup.
+- Nel markup, l'elemento `Page` deve includere l'attributo `x:Class`. Quando viene compilata l'applicazione, l'esistenza di `x:Class` nel file di markup fa sì che Microsoft Build Engine (MSBuild) crei una classe `partial` che deriva da <xref:System.Windows.Controls.Page> e ha il nome specificato dall'attributo `x:Class`. Questa operazione richiede l'aggiunta di una dichiarazione dello spazio dei nomi XML per lo schema di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). La classe `partial` generata implementa `InitializeComponent`, che viene chiamata per registrare gli eventi e impostare le proprietà implementate nel markup.
 
 - Nel code-behind la classe deve essere una classe `partial` con lo stesso nome specificato dall'attributo `x:Class` nel markup e deve derivare da <xref:System.Windows.Controls.Page>. Ciò consente di associare il file code-behind alla classe `partial` generata per il file di markup quando viene compilata l'applicazione (vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati'
+title: Quali aggiornamenti e hotfix della sicurezza .NET Framework installati
 description: Informazioni su come determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati in un computer.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318963"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735196"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procedura: Determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Come determinare quali aggiornamenti di sicurezza e hotfix di .NET Framework sono installati
 
 Questo articolo illustra come trovare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati in un computer.
 
 > [!NOTE]
 > Tutte le tecniche illustrate in questo articolo richiedono un account con privilegi amministrativi.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>Per trovare gli aggiornamenti installati usando il Registro di sistema
+## <a name="use-registry-editor"></a>Utilizzare l'editor del registro di sistema
 
 Gli aggiornamenti della sicurezza e gli aggiornamenti rapidi installati per ogni versione di .NET Framework installata in un computer sono elencati nel Registro di sistema di Windows. Per visualizzare queste informazioni, è possibile usare il programma Editor del Registro di sistema (*regedit.exe*).
 
-1. Aprire il programma **regedit.exe**. In Windows 8 e versioni successive, fare clic con il pulsante destro del mouse su **Start** ![screenshot del logo della chiave Windows.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo"), quindi selezionare **Esegui**. Nella casella **Apri** immettere **regedit** e fare clic su **OK**.
+1. Aprire il programma **regedit.exe**. In Windows 8 e versioni successive, fare clic con il pulsante destro del mouse su **Start** ![screenshot del logo della chiave Windows](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo"), quindi scegliere **Esegui**. Nella casella **Apri** immettere **regedit** e fare clic su **OK**.
 
 2. Nell'Editor del Registro di sistema aprire la seguente sottochiave:
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Gli aggiornamenti installati sono elencati nelle sottochiavi che identificano la versione di .NET Framework a che si applicano. Ogni aggiornamento è identificato da un numero di Knowledge Base (KB).
 
 Nell'Editor del Registro di sistema le versioni di .NET Framework e gli aggiornamenti installati per ogni versione sono archiviati in sottochiavi diverse. Per informazioni sul rilevamento dei numeri delle versioni installate, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Per trovare gli aggiornamenti installati eseguendo una query sul Registro di sistema nel codice
+## <a name="query-the-registry-using-code"></a>Eseguire query sul Registro di sistema usando il codice
 
 L'esempio seguente consente di determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati in un computer a livello di codice:
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Per trovare gli aggiornamenti installati eseguendo una query sul Registro di sistema in PowerShell
+## <a name="use-powershell-to-query-the-registry"></a>Usare PowerShell per eseguire query sul Registro di sistema
 
 L'esempio seguente illustra come determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati in un computer usando PowerShell:
 

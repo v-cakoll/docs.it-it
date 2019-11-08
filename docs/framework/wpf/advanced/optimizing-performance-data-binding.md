@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458555"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740804"
 ---
 # <a name="optimizing-performance-data-binding"></a>Ottimizzazione delle prestazioni: associazione dati
-Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. Elements can be bound to data from a variety of data sources in the form of CLR objects and [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. Gli elementi possono essere associati a dati da un'ampia gamma di origini dati sotto forma di oggetti CLR e XML.  
   
  Questo argomento offre utili suggerimenti sulle prestazioni del data binding.  
 
@@ -21,15 +21,15 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="how-data-binding-references-are-resolved"></a>Risoluzione dei riferimenti di data binding  
  Prima di trattare i problemi di prestazioni del data binding, è opportuno scoprire come vengono risolti dal motore di data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] i riferimenti agli oggetti per il binding.  
   
- The source of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding can be any CLR object. You can bind to properties, sub-properties, or indexers of a CLR object. The binding references are resolved by using either Microsoft .NET Framework reflection or an <xref:System.ComponentModel.ICustomTypeDescriptor>. Di seguito vengono descritti i tre metodi disponibili per risolvere riferimenti a oggetti per il data binding.  
+ L'origine di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding può essere qualsiasi oggetto CLR. È possibile eseguire l'associazione a proprietà, sottoproprietà o indicizzatori di un oggetto CLR. I riferimenti di associazione vengono risolti tramite Microsoft .NET Reflection del Framework o una <xref:System.ComponentModel.ICustomTypeDescriptor>. Di seguito vengono descritti i tre metodi disponibili per risolvere riferimenti a oggetti per il data binding.  
   
- Il primo metodo prevede l'uso della reflection. In this case, the <xref:System.Reflection.PropertyInfo> object is used to discover the attributes of the property and provides access to property metadata. When using the <xref:System.ComponentModel.ICustomTypeDescriptor> interface, the data binding engine uses this interface to access the property values. The <xref:System.ComponentModel.ICustomTypeDescriptor> interface is especially useful in cases where the object does not have a static set of properties.  
+ Il primo metodo prevede l'uso della reflection. In questo caso, l'oggetto <xref:System.Reflection.PropertyInfo> viene usato per individuare gli attributi della proprietà e fornisce l'accesso ai metadati della proprietà. Quando si usa l'interfaccia <xref:System.ComponentModel.ICustomTypeDescriptor>, il motore di data binding usa questa interfaccia per accedere ai valori delle proprietà. L'interfaccia <xref:System.ComponentModel.ICustomTypeDescriptor> è particolarmente utile nei casi in cui l'oggetto non dispone di un set statico di proprietà.  
   
- Property change notifications can be provided either by implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface or by using the change notifications associated with the <xref:System.ComponentModel.TypeDescriptor>. However, the preferred strategy for implementing property change notifications is to use <xref:System.ComponentModel.INotifyPropertyChanged>.  
+ Le notifiche di modifica delle proprietà possono essere fornite implementando l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> o utilizzando le notifiche di modifica associate al <xref:System.ComponentModel.TypeDescriptor>. Tuttavia, la strategia consigliata per l'implementazione delle notifiche delle modifiche delle proprietà consiste nell'utilizzare <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
- If the source object is a CLR object and the source property is a CLR property, the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding engine has to first use reflection on the source object to get the <xref:System.ComponentModel.TypeDescriptor>, and then query for a <xref:System.ComponentModel.PropertyDescriptor>. Questa sequenza di operazioni di reflection richiede potenzialmente molto tempo da un punto di vista delle prestazioni.  
+ Se l'oggetto di origine è un oggetto CLR e la proprietà di origine è una proprietà CLR, il motore di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] data binding deve innanzitutto utilizzare la reflection sull'oggetto di origine per ottenere il <xref:System.ComponentModel.TypeDescriptor>, quindi eseguire una query per una <xref:System.ComponentModel.PropertyDescriptor>. Questa sequenza di operazioni di reflection richiede potenzialmente molto tempo da un punto di vista delle prestazioni.  
   
- The second method for resolving object references involves a CLR source object that implements the <xref:System.ComponentModel.INotifyPropertyChanged> interface, and a source property that is a CLR property. In questo caso, il motore di data binding usa direttamente la reflection sul tipo di origine e ottiene la proprietà necessaria. Sebbene presenti requisiti del working set inferiori rispetto al primo metodo, non si tratta ancora del metodo ottimale.  
+ Il secondo metodo per la risoluzione dei riferimenti a oggetti comporta un oggetto di origine CLR che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> e una proprietà di origine che è una proprietà CLR. In questo caso, il motore di data binding usa direttamente la reflection sul tipo di origine e ottiene la proprietà necessaria. Sebbene presenti requisiti del working set inferiori rispetto al primo metodo, non si tratta ancora del metodo ottimale.  
   
  Il terzo metodo per la risoluzione dei riferimenti a oggetti prevede l'uso di un oggetto di origine che è un <xref:System.Windows.DependencyObject> e una proprietà di origine <xref:System.Windows.DependencyProperty>. In questo caso, non è necessario che il motore di data binding usi la reflection: il motore della proprietà e il motore di data binding risolvono il riferimento alla proprietà in modo indipendente. Si tratta del metodo ottimale per la risoluzione dei riferimenti a oggetti usati per il data binding.  
   
@@ -69,7 +69,7 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Non convertire oggetti CLR in XML solo per il data binding  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di eseguire il binding dei dati [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenuto; Tuttavia, data binding per [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenuto è più lento del data binding agli oggetti CLR. Non convertire i dati dell'oggetto CLR in XML se l'unico scopo è data binding.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di associare dati al contenuto XML; Tuttavia, data binding al contenuto XML è più lento rispetto data binding agli oggetti CLR. Non convertire i dati dell'oggetto CLR in XML se l'unico scopo è data binding.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459995"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740647"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento vengono definiti i termini utilizzati per descrivere gli elementi della sintassi XAML. Questi termini vengono usati di frequente nel resto della documentazione, sia per la documentazione di WPF in particolare che per gli altri Framework che usano XAML o i concetti di base di XAML abilitati dal supporto del linguaggio XAML a livello di System. XAML. In questo argomento viene illustrata la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -52,7 +52,7 @@ In questo argomento vengono definiti i termini utilizzati per descrivere gli ele
 #### <a name="members-of-types-and-class-inheritance"></a>Membri di tipi ed ereditarietà delle classi  
  Le proprietà e gli eventi come appaiono come membri XAML di un tipo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono spesso ereditati dai tipi di base. Si consideri, ad esempio, questo esempio: `<Button Background="Blue" .../>`. La proprietà <xref:System.Windows.Controls.Control.Background%2A> non è una proprietà dichiarata immediatamente nella classe <xref:System.Windows.Controls.Button>, se si desidera esaminare la definizione della classe, i risultati della reflection o la documentazione. Al contrario, <xref:System.Windows.Controls.Control.Background%2A> viene ereditato dalla classe <xref:System.Windows.Controls.Control> di base.  
   
- Il comportamento di ereditarietà delle classi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementi XAML rappresenta una partenza significativa da un'interpretazione applicata dallo schema del markup XML. L'ereditarietà delle classi può diventare complessa, in particolare quando le classi di base intermedie sono astratte o quando sono incluse le interfacce. Questo è un motivo per cui il set di elementi XAML e i relativi attributi consentiti sono difficili da rappresentare in modo accurato e completo utilizzando i tipi di schema che vengono in genere utilizzati per la programmazione [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], ad esempio il formato DTD o XSD. Un altro motivo è che le funzionalità di estendibilità e mapping dei tipi del linguaggio XAML escludono la completezza di qualsiasi rappresentazione fissa dei tipi e dei membri consentiti.  
+ Il comportamento di ereditarietà delle classi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementi XAML rappresenta una partenza significativa da un'interpretazione applicata dallo schema del markup XML. L'ereditarietà delle classi può diventare complessa, in particolare quando le classi di base intermedie sono astratte o quando sono incluse le interfacce. Questo è un motivo per cui il set di elementi XAML e i relativi attributi consentiti sono difficili da rappresentare in modo accurato e completo utilizzando i tipi di schema utilizzati generalmente per la programmazione XML, ad esempio il formato DTD o XSD. Un altro motivo è che le funzionalità di estendibilità e mapping dei tipi del linguaggio XAML escludono la completezza di qualsiasi rappresentazione fissa dei tipi e dei membri consentiti.  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>Sintassi degli elementi oggetto  

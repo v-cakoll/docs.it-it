@@ -2,12 +2,12 @@
 title: tipo complesso
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 0d9b8efd08cc0dfba5b26a70773b614b0d63d74f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e21ca90a7be8f2bd9be9483c66a1e95e6ba1bee2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786756"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738542"
 ---
 # <a name="complex-type"></a>tipo complesso
 Un *tipo complesso* è un modello per la definizione di proprietà ricche e strutturate sui [tipi di entità](entity-type.md) o su altri tipi complessi. Ogni modello contiene quanto segue:  
@@ -29,7 +29,7 @@ Un *tipo complesso* è un modello per la definizione di proprietà ricche e stru
 - I tipi complessi non possono partecipare alle [associazioni](association-type.md). Nessuna entità finale di un'associazione può essere un tipo complesso e pertanto non è possibile definire [proprietà di navigazione](navigation-property.md) su tipi complessi.  
   
 ## <a name="example"></a>Esempio  
- Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo complesso, Address, con le proprietà di tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo complesso, Address, con le proprietà di tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` e `PostalCode`.  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   

@@ -2,17 +2,14 @@
 title: Modifiche di rilievo della crittografia-.NET Core
 description: Elenca le modifiche di rilievo correlate alla crittografia in .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 628162eb391c27b810e9db0a869896eb8443a06f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093087"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739745"
 ---
 # <a name="cryptography-breaking-changes"></a>Modifiche di rilievo della crittografia
-
-> [!IMPORTANT]
-> Questo articolo è in costruzione. Questo non è un elenco completo delle modifiche di rilievo di .NET Core. Per altre informazioni sulle modifiche di rilievo di .NET Core, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub. 
 
 Di seguito è riportato un elenco di modifiche di rilievo correlate alla crittografia in base alla versione di .NET Core.
 

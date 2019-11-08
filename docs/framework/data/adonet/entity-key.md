@@ -2,12 +2,12 @@
 title: chiave di entità
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: db867b3a853bd29f1faf1be2faf77776e48be2d2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 39a7500f088aa85baf0244005d6a804b3bf0b521
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795136"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737800"
 ---
 # <a name="entity-key"></a>chiave di entità
 Una *chiave di entità* è una [Proprietà](property.md) o un set di proprietà di un [tipo di entità](entity-type.md) usate per determinare l'identità. Le proprietà che costituiscono una chiave di entità vengono scelte in fase di progettazione. I valori delle proprietà della chiave di entità devono identificare in modo univoco un'istanza del tipo di entità all'interno di un [set di entità](entity-set.md) in fase di esecuzione. Le proprietà che costituiscono una chiave di entità devono essere scelte per garantire univocità delle istanze in un set di entità.  
@@ -20,14 +20,14 @@ Una *chiave di entità* è una [Proprietà](property.md) o un set di proprietà 
   
 - Le proprietà che costituiscono una chiave di entità per un determinato tipo di entità non possono essere modificate. Non è possibile consentire più di una possibile chiave di entità per un determinato tipo di entità. Le chiavi surrogate non sono supportate.  
   
-- Quando un'entità è coinvolta in una gerarchia di ereditarietà, l'entità radice deve contenere tutte le proprietà che costituiscono la chiave di entità e la chiave di entità deve essere definita sul tipo di entità radice. Per ulteriori informazioni, vedere [Entity Data Model: Ereditarietà](entity-data-model-inheritance.md).  
+- Quando un'entità è coinvolta in una gerarchia di ereditarietà, l'entità radice deve contenere tutte le proprietà che costituiscono la chiave di entità e la chiave di entità deve essere definita sul tipo di entità radice. Per ulteriori informazioni, vedere [Entity Data Model: ereditarietà](entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`. Le proprietà di ogni tipo di entità che costituiscono la chiave di entità vengono indicate con "(Key)". Si noti che il tipo di entità `Author` dispone di una chiave di entità costituita da due proprietà, `Name` e `Address`.  
   
  ![Modello di esempio con tre tipi di entità](./media/entity-key/example-model-three-entity-types.gif)  
   
- Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente. Si noti che la chiave di entità viene definita facendo riferimento alla proprietà `ISBN` del tipo di entità.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente. Si noti che la chiave di entità viene definita facendo riferimento alla proprietà `ISBN` del tipo di entità.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

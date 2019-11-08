@@ -2,12 +2,12 @@
 title: set di associazioni
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 43ab6cf9f1ee8cb971810add6b9a89467726f3e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e279322f9e950cd4359db8c6dce39bfc46d188f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785037"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732373"
 ---
 # <a name="association-set"></a>set di associazioni
 Un *set di associazioni* è un contenitore logico per le istanze di [associazione](association-type.md) dello stesso tipo. Un set di associazioni non è un costrutto di modellazione dati, ovvero non descrive la struttura di dati o relazioni. Un set di associazioni, invece, fornisce un costrutto per un ambiente host o di archiviazione (ad esempio Common Language Runtime o un database SQL Server) per raggruppare le istanze dell'associazione in modo che se ne possa eseguire il mapping a un archivio dati.  
@@ -27,11 +27,11 @@ Un *set di associazioni* è un contenitore logico per le istanze di [associazion
   
  ![Modello di esempio con tre tipi di entità](./media/association-set/example-model-three-entity-types.gif)  
   
- Nell'esempio seguente vengono illustrati un set di associazioni (`PublishedBy`) e due set di entità (`Books` e `Publishers`) basati sul modello concettuale illustrato in precedenza. Bi nel set `Books` di entità rappresenta un'istanza `Book` del tipo di entità in fase di esecuzione. Analogamente, PJ rappresenta `Publisher` un'istanza `Publishers` nel set di entità. BiPj rappresenta un'istanza dell' `PublishedBy` associazione `PublishedBy` nel set di associazioni.  
+ Nell'esempio seguente vengono illustrati un set di associazioni (`PublishedBy`) e due set di entità (`Books` e `Publishers`) basati sul modello concettuale illustrato in precedenza. Bi nel set di entità `Books` rappresenta un'istanza del tipo di entità `Book` in fase di esecuzione. Analogamente, PJ rappresenta un'istanza di `Publisher` nel set di entità `Publishers`. BiPj rappresenta un'istanza dell'associazione `PublishedBy` nel set di associazioni `PublishedBy`.  
   
  ![Screenshot che mostra un esempio di set.](./media/association-set/sets-example-association.gif)  
   
- Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce un contenitore di entità con un set di associazioni per ogni associazione nel diagramma precedente. Si noti che il nome e l'associazione per ogni set di associazioni sono definiti tramite attributi XML.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce un contenitore di entità con un set di associazioni per ogni associazione nel diagramma precedente. Si noti che il nome e l'associazione per ogni set di associazioni sono definiti tramite attributi XML.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   

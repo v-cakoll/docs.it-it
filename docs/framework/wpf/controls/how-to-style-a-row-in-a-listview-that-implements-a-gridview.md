@@ -6,12 +6,12 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 150988aab368e3ffef0107d29bea5ebc53163946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce79899d5c8e825ecb39e14ae8af4e0c33f13db3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459316"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733550"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Procedura: applicare uno stile a una riga in un ListView che implementa una GridView
 Questo esempio illustra come applicare uno stile a una riga in un controllo <xref:System.Windows.Controls.ListView> che implementa una modalità di <xref:System.Windows.Controls.ListView.View%2A> <xref:System.Windows.Controls.GridView>.  
@@ -19,7 +19,7 @@ Questo esempio illustra come applicare uno stile a una riga in un controllo <xre
 ## <a name="example"></a>Esempio  
  È possibile applicare uno stile a una riga in un controllo <xref:System.Windows.Controls.ListView> impostando una <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> sul controllo <xref:System.Windows.Controls.ListView>. Impostare lo stile per gli elementi rappresentati come oggetti <xref:System.Windows.Controls.ListViewItem>. Il <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> fa riferimento agli oggetti <xref:System.Windows.Controls.ControlTemplate> utilizzati per visualizzare il contenuto della riga.  
   
- L'esempio completo, da cui sono estratti gli esempi seguenti, visualizza una raccolta di informazioni relative a brani archiviati in un database [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Ogni brano nel database include un campo di classificazione e il valore di questo campo specifica la modalità di visualizzazione di una riga di informazioni relative al brano.  
+ Nell'esempio completo, da cui vengono estratti gli esempi seguenti, viene visualizzata una raccolta di informazioni sui brani archiviate in un database XML. Ogni brano nel database include un campo di classificazione e il valore di questo campo specifica la modalità di visualizzazione di una riga di informazioni relative al brano.  
   
  Nell'esempio seguente viene illustrato come definire <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> per gli oggetti <xref:System.Windows.Controls.ListViewItem> che rappresentano i brani della raccolta Song. Il <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> fa riferimento a <xref:System.Windows.Controls.ControlTemplate> oggetti che specificano come visualizzare una riga di informazioni sul brano.  
   

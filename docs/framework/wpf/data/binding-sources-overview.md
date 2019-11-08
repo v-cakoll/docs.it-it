@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459024"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740621"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.
@@ -25,7 +25,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 |oggetti Common Language Runtime (CLR)|È possibile eseguire l'associazione a proprietà pubbliche, sottoproprietà e indicizzatori di qualsiasi oggetto Common Language Runtime (CLR). Il motore di associazione usa la reflection CLR per ottenere i valori delle proprietà. In alternativa, gli oggetti che implementano <xref:System.ComponentModel.ICustomTypeDescriptor> o hanno una <xref:System.ComponentModel.TypeDescriptionProvider> registrata funzionano anche con il motore di associazione.<br /><br /> Per altre informazioni su come implementare una classe che possa essere usata come origine del binding, vedere [Implementazione di una classe come origine del binding](#classes) più avanti in questo argomento.|
 |oggetti dinamici|È possibile eseguire l'associazione alle proprietà e agli indicizzatori disponibili di un oggetto che implementa l'interfaccia <xref:System.Dynamic.IDynamicMetaObjectProvider>. Se è possibile accedere al membro nel codice, è possibile creare un'associazione a tale membro. Se ad esempio un oggetto dinamico consente di accedere a un membro nel codice tramite `someObjet.AProperty`, è possibile creare un'associazione al membro impostando il percorso di associazione su `AProperty`.|
 |Oggetti ADO.NET|È possibile eseguire l'associazione a oggetti ADO.NET, ad esempio <xref:System.Data.DataTable>. Il <xref:System.Data.DataView> ADO.NET implementa l'interfaccia <xref:System.ComponentModel.IBindingList>, che fornisce le notifiche di modifica per le quali il motore di associazione è in ascolto.|
-|Oggetti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|È possibile associare ed eseguire query `XPath` su un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>o <xref:System.Xml.XmlElement>. Un modo pratico per accedere ai dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] che rappresenta l'origine del binding nel markup consiste nell'usare un oggetto <xref:System.Windows.Data.XmlDataProvider>. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile eseguire l'associazione a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>oppure effettuare l'associazione ai risultati delle query eseguite su oggetti di questi tipi usando LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresenta l'origine del binding nel markup consiste nell'usare un oggetto <xref:System.Windows.Data.ObjectDataProvider>. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
+|Oggetti XML|È possibile associare ed eseguire query `XPath` su un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>o <xref:System.Xml.XmlElement>. Un modo pratico per accedere ai dati XML che rappresenta l'origine del binding nel markup consiste nell'usare un oggetto <xref:System.Windows.Data.XmlDataProvider>. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile eseguire l'associazione a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>oppure effettuare l'associazione ai risultati delle query eseguite su oggetti di questi tipi usando LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresenta l'origine del binding nel markup consiste nell'usare un oggetto <xref:System.Windows.Data.ObjectDataProvider>. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
 |Oggetti <xref:System.Windows.DependencyObject>.|È possibile eseguire l'associazione alle proprietà di dipendenza di qualsiasi <xref:System.Windows.DependencyObject>. Per un esempio, vedere [Eseguire l'associazione delle proprietà di due controlli](how-to-bind-the-properties-of-two-controls.md).|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 
 - È sempre possibile stabilire l'associazione alle proprietà di dipendenza.
 
- Il requisito di autorizzazione per l'associazione [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] è analogo. In una sandbox con attendibilità parziale, <xref:System.Windows.Data.XmlDataProvider> ha esito negativo quando non dispone delle autorizzazioni per accedere ai dati specificati.
+ Il requisito di autorizzazione per l'associazione XML è simile. In una sandbox con attendibilità parziale, <xref:System.Windows.Data.XmlDataProvider> ha esito negativo quando non dispone delle autorizzazioni per accedere ai dati specificati.
 
  Gli oggetti con un tipo anonimo sono interni. È possibile creare associazioni a proprietà di tipi anonimi solo in fase di esecuzione con attendibilità totale. Per altre informazioni sui tipi anonimi, vedere [Tipi anonimi (Guida per programmatori C#)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) o [Tipi anonimi (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 

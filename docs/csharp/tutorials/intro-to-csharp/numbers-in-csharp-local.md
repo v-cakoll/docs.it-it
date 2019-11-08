@@ -3,12 +3,12 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039698"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739147"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
@@ -18,7 +18,11 @@ Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo
 
 ## <a name="explore-integer-math"></a>Esplorare le operazioni matematiche su interi
 
-Creare una directory denominata *numbers-quickstart*. Impostarla come directory corrente ed eseguire `dotnet new console -n NumbersInCSharp -o .`.
+Creare una directory denominata *numbers-quickstart*. Rendere la directory corrente ed eseguire il comando seguente:
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con quanto segue:
 

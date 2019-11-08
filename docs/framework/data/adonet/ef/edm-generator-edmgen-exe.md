@@ -2,12 +2,12 @@
 title: Generatore EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: e8bf82933d19c6b7e9ec90f70bfa990e0d08847c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 858525a81e7779e7631ee8ac959110ba946cf652
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040011"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738527"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generatore EDM (EdmGen.exe)
 
@@ -45,9 +45,9 @@ Quando si usa lo strumento EdmGen.exe, è necessario specificare una delle modal
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|`/p[roject]:`stringa\<|Consente di specificare il nome del progetto da usare. Il nome del progetto viene usato come impostazione predefinita per la configurazione dello spazio dei nomi, il nome dei file di modello e di mapping, il nome del file di origine degli oggetti e il nome del file di origine di generazione delle visualizzazioni. Il nome del contenitore di entità è impostato su \<contesto > progetto.|
-|`/prov[ider]:`stringa\<|Nome del provider di dati .NET Framework da utilizzare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
-|`/c[onnectionstring]:`stringa di connessione\<|Consente di specificare la stringa usata per la connessione all'origine dati.|
+|`/p[roject]:`stringa \<|Consente di specificare il nome del progetto da usare. Il nome del progetto viene usato come impostazione predefinita per la configurazione dello spazio dei nomi, il nome dei file di modello e di mapping, il nome del file di origine degli oggetti e il nome del file di origine di generazione delle visualizzazioni. Il nome del contenitore di entità è impostato su \<contesto > progetto.|
+|`/prov[ider]:`stringa \<|Nome del provider di dati .NET Framework da utilizzare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/c[onnectionstring]:`stringa di connessione \<|Consente di specificare la stringa usata per la connessione all'origine dati.|
 |`/incsdl:`\<file >|Consente di specificare il file con estensione csdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione csdl. La specifica di più directory può essere utile per generare classi (`/mode:EntityClassGeneration`) o visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<file >|Consente di specificare il file con estensione csdl aggiuntivo o i file usati per risolvere qualsiasi riferimento nel file con estensione csdl di origine. Il file con estensione csdl di origine è il file specificato dall'opzione `/incsdl`. Il file `/refcsdl` contiene i tipi da cui dipende il file con estensione csdl di origine. Questo argomento può essere specificato più volte.|
 |`/inmsl:`\<file >|Consente di specificare il file con estensione msl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione msl. La specifica di più directory può essere utile per generare visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|
@@ -78,4 +78,4 @@ Quando si usa lo strumento EdmGen.exe, è necessario specificare una delle modal
 
 - [Strumenti Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Entity Data Model](../entity-data-model.md)
-- [Specifiche CSDL, SSDL e MSL](./language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Specifiche CSDL, SSDL e MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

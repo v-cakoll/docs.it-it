@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522794"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739291"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -222,6 +222,31 @@ L'esempio seguente specifica i fallback solo per la destinazione `netcoreapp2.1`
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
+
+## <a name="build-events"></a>Eventi di compilazione
+
+Il modo in cui vengono specificati gli eventi di pre-compilazione e post-compilazione nel file di progetto è stato modificato. Le proprietà PreBuildEvent e PostBuildEvent non sono consigliate nel formato di progetto in stile SDK, perché le macro come $ (ProjectDir) non vengono risolte. Il codice seguente, ad esempio, non è più supportato:
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+Nei progetti in stile SDK usare una destinazione MSBuild denominata `PreBuild` o `PostBuild` e impostare la proprietà `BeforeTargets` per `PreBuild` o la proprietà `AfterTargets` per `PostBuild`. Per l'esempio precedente, usare il codice seguente:
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>È possibile usare qualsiasi nome per le destinazioni di MSBuild, ma l'IDE di Visual Studio riconosce `PreBuild` e `PostBuild` destinazioni, quindi è consigliabile usare questi nomi in modo che sia possibile modificare i comandi nell'IDE di Visual Studio. 
 
 ## <a name="nuget-metadata-properties"></a>Proprietà dei metadati NuGet
 

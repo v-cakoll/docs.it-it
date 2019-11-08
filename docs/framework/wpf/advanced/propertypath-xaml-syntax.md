@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459356"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740791"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintassi XAML di PropertyPath
 
@@ -32,7 +32,7 @@ Alcune proprietà dello stile e del modello, ad esempio <xref:System.Windows.Set
 
 Il data binding è una funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che consente di eseguire il binding al valore di destinazione di qualsiasi proprietà di dipendenza. L'origine di tale data binding non deve però essere necessariamente una proprietà di dipendenza, ma può essere qualsiasi tipo di proprietà riconosciuto dal provider di dati applicabile. I percorsi delle proprietà vengono utilizzati in particolare per la <xref:System.Windows.Data.ObjectDataProvider>, che viene utilizzata per ottenere origini di associazione da oggetti Common Language Runtime (CLR) e dalle relative proprietà.
 
-Si noti che data binding [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] non usa <xref:System.Windows.PropertyPath>, perché non usa <xref:System.Windows.Data.Binding.Path%2A> nella <xref:System.Windows.Data.Binding>. Usare invece <xref:System.Windows.Data.Binding.XPath%2A> e specificare una sintassi XPath valida nella [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] dei dati. <xref:System.Windows.Data.Binding.XPath%2A> viene anche specificato come stringa, ma non è documentato qui. vedere [eseguire l'associazione a dati XML tramite un oggetto XmlDataProvider e query XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Si noti che data binding a XML non usa <xref:System.Windows.PropertyPath>, perché non usa <xref:System.Windows.Data.Binding.Path%2A> nel <xref:System.Windows.Data.Binding>. Usare invece <xref:System.Windows.Data.Binding.XPath%2A> e specificare una sintassi XPath valida nei Document Object Model XML (DOM) dei dati. <xref:System.Windows.Data.Binding.XPath%2A> viene anche specificato come stringa, ma non è documentato qui. vedere [eseguire l'associazione a dati XML tramite un oggetto XmlDataProvider e query XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 Per comprendere i percorsi delle proprietà nel data binding bisogna considerare che è possibile scegliere come destinazione del binding un singolo valore di proprietà oppure è possibile eseguire il binding a proprietà di destinazione che accettano elenchi o raccolte. Se si stanno associando raccolte, ad esempio l'associazione di un <xref:System.Windows.Controls.ListBox> che si espanderà a seconda del numero di elementi di dati presenti nella raccolta, il percorso della proprietà deve fare riferimento all'oggetto raccolta, non a singoli elementi della raccolta. Il motore di data binding corrisponderà automaticamente alla raccolta usata come origine dati per il tipo di destinazione del binding, ottenendo un comportamento come il popolamento di una <xref:System.Windows.Controls.ListBox> con una matrice di elementi.
 
@@ -76,7 +76,7 @@ Per comprendere i percorsi delle proprietà nel data binding bisogna considerare
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Le parentesi indicano che questa proprietà in un <xref:System.Windows.PropertyPath> deve essere costruita utilizzando una qualifica parziale. Può usare uno spazio dei nomi XML per trovare il tipo con un mapping appropriato. Il `ownerType` Cerca i tipi a cui un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ha accesso, tramite le dichiarazioni di <xref:System.Windows.Markup.XmlnsDefinitionAttribute> in ogni assembly. La maggior parte delle applicazioni ha lo spazio dei nomi XML predefinito mappato allo spazio dei nomi [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], quindi in genere è necessario un prefisso solo per i tipi personalizzati o per i tipi altrimenti esterni allo spazio dei nomi.  `propertyName` deve risolversi nel nome di una proprietà presente in `ownerType`. Questa sintassi viene in genere usata per uno dei casi seguenti:
+Le parentesi indicano che questa proprietà in un <xref:System.Windows.PropertyPath> deve essere costruita utilizzando una qualifica parziale. Può usare uno spazio dei nomi XML per trovare il tipo con un mapping appropriato. Il `ownerType` Cerca i tipi a cui un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ha accesso, tramite le dichiarazioni di <xref:System.Windows.Markup.XmlnsDefinitionAttribute> in ogni assembly. La maggior parte delle applicazioni ha lo spazio dei nomi XML predefinito mappato allo spazio dei nomi `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, quindi in genere è necessario un prefisso solo per i tipi personalizzati o per i tipi altrimenti esterni allo spazio dei nomi.  `propertyName` deve risolversi nel nome di una proprietà presente in `ownerType`. Questa sintassi viene in genere usata per uno dei casi seguenti:
 
 - Il percorso è specificato in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ovvero in uno stile o modello che non ha un tipo di destinazione specificato. Un utilizzo qualificato non è in genere valido in casi diversi da questo, perché in casi senza uno stile o un modello la proprietà è presente in un'istanza, non in un tipo.
 
@@ -97,7 +97,7 @@ Per l'utilizzo come destinazione dello storyboard, la proprietà specificata com
 Il carattere / in questa sintassi viene usato per spostarsi in un oggetto origine dati gerarchico e sono supportati più passaggi nella gerarchia con caratteri / successivi. L'attraversamento dell'origine tiene conto della posizione del puntatore di record corrente, determinata sincronizzando i dati con l'interfaccia utente della relativa visualizzazione. Per informazioni dettagliate sul binding con oggetti origine dati gerarchici e sul concetto di puntatore di record corrente nel data binding, vedere [Usare il modello Master-Details con dati gerarchici](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) o [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md).
 
 > [!NOTE]
-> Questa sintassi è apparentemente analoga a [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Un'espressione [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] true per l'associazione a un'origine dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] non viene utilizzata come valore di <xref:System.Windows.Data.Binding.Path%2A> e deve invece essere utilizzata per la proprietà <xref:System.Windows.Data.Binding.XPath%2A> che si escludono a vicenda.
+> In apparenza, questa sintassi è simile a XPath. Una vera espressione XPath per l'associazione a un'origine dati XML non viene utilizzata come valore di <xref:System.Windows.Data.Binding.Path%2A> e deve invece essere utilizzata per la proprietà <xref:System.Windows.Data.Binding.XPath%2A> a esclusione reciproca.
 
 ### <a name="collection-views"></a>Visualizzazioni di raccolte
 
@@ -204,7 +204,7 @@ Ad esempio, la proprietà <xref:System.Windows.Controls.Panel.Background%2A> di 
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Le parentesi indicano che questa proprietà in un <xref:System.Windows.PropertyPath> deve essere costruita utilizzando una qualifica parziale. Può usare uno spazio dei nomi XML per trovare il tipo. Il `ownerType` Cerca i tipi a cui un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ha accesso, tramite le dichiarazioni di <xref:System.Windows.Markup.XmlnsDefinitionAttribute> in ogni assembly. La maggior parte delle applicazioni ha lo spazio dei nomi XML predefinito mappato allo spazio dei nomi [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], quindi in genere è necessario un prefisso solo per i tipi personalizzati o per i tipi altrimenti esterni allo spazio dei nomi. `propertyName` deve risolversi nel nome di una proprietà presente in `ownerType`. La proprietà specificata come `propertyName` deve essere una <xref:System.Windows.DependencyProperty>. Tutte le proprietà associate di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono implementate come proprietà di dipendenza, quindi questo problema riguarda solo le proprietà associate personalizzate.
+Le parentesi indicano che questa proprietà in un <xref:System.Windows.PropertyPath> deve essere costruita utilizzando una qualifica parziale. Può usare uno spazio dei nomi XML per trovare il tipo. Il `ownerType` Cerca i tipi a cui un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ha accesso, tramite le dichiarazioni di <xref:System.Windows.Markup.XmlnsDefinitionAttribute> in ogni assembly. La maggior parte delle applicazioni ha lo spazio dei nomi XML predefinito mappato allo spazio dei nomi `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, quindi in genere è necessario un prefisso solo per i tipi personalizzati o per i tipi altrimenti esterni allo spazio dei nomi. `propertyName` deve risolversi nel nome di una proprietà presente in `ownerType`. La proprietà specificata come `propertyName` deve essere una <xref:System.Windows.DependencyProperty>. Tutte le proprietà associate di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono implementate come proprietà di dipendenza, quindi questo problema riguarda solo le proprietà associate personalizzate.
 
 <a name="indexanim"></a>
 

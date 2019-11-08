@@ -3,12 +3,12 @@ title: Classi e oggetti - Esercitazione introduttiva su C#
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834111"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736837"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Esplorare la programmazione orientata agli oggetti con classi e oggetti
 
@@ -106,7 +106,7 @@ Aggiungere la dichiarazione di membro seguente alla classe `BankAccount`:
 private static int accountNumberSeed = 1234567890;
 ```
 
-Questo è un membro dati. Il membro è `private`, ovvero è accessibile solo dal codice all'interno della classe `BankAccount`. Si tratta di un modo per separare le responsabilità pubbliche (ad esempio, la disponibilità di un numero di conto) dall'implementazione privata (il modo in cui vengono generati i numeri di conto). È anche `static`, ovvero è condiviso tra tutti gli oggetti `BankAccount`. Il valore di una variabile non statica è univoco per ogni istanza dell'oggetto `BankAccount`. Aggiungere le due righe seguenti al costruttore per assegnare il numero di conto:
+Questo è un membro dati. Il membro è `private`, ovvero è accessibile solo dal codice all'interno della classe `BankAccount`. Si tratta di un modo per separare le responsabilità pubbliche, ad esempio la presenza di un numero di conto, dall'implementazione privata (in che modo vengono generati i numeri di account). È anche `static`, il che significa che è condiviso da tutti gli oggetti `BankAccount`. Il valore di una variabile non statica è univoco per ogni istanza dell'oggetto `BankAccount`. Aggiungere le due righe seguenti al costruttore per assegnare il numero di conto:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 Usare le istruzioni [, `try` e `catch`](../../language-reference/keywords/try-catch.md) per contrassegnare un blocco di codice che può generare eccezioni e intercettare gli errori previsti. È possibile usare la stessa tecnica per testare il codice che genera un'eccezione per un saldo negativo:
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
@@ -210,6 +210,6 @@ Digitare `dotnet run` per visualizzare i risultati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In caso di problemi, è possibile visualizzare il codice sorgente per questa esercitazione nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
+Se si è rimasti bloccati, è possibile visualizzare l'origine di questa esercitazione [nel repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
-Congratulazioni, sono state completate tutte le esercitazioni introduttive su C#. Per approfondire gli argomenti, è possibile provare altre [esercitazioni](../index.md)
+Congratulazioni, sono state completate tutte le esercitazioni introduttive su C#. Per ulteriori informazioni, provare a eseguire altre [esercitazioni](../index.md).

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040212"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738210"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Un valore null in un database relazionale viene usato quando il valore in una colonna è sconosciuto o mancante. Un valore null non è né una stringa vuota (per tipi di dati carattere o data-ora) né un valore zero (per tipi di dati numerici). Nella specifica ANSI SQL-92 si afferma che un valore null deve essere uguale per tutti i tipi di dati, in modo da gestire coerentemente tutti i valori null. Lo spazio dei nomi <xref:System.Data.SqlTypes> offre una semantica di tipo null tramite l'implementazione dell'interfaccia <xref:System.Data.SqlTypes.INullable>. Ciascun tipo di dati nello spazio dei nomi <xref:System.Data.SqlTypes> dispone di una proprietà `IsNull` e di un valore `Null` che può essere assegnato a un'istanza di quel tipo di dati.  
   
 > [!NOTE]
-> In .NET Framework versione 2.0 è stato introdotto il supporto per i tipi nullable, che consentono ai programmatori di estendere un tipo di valore in modo da rappresentare tutti i valori del tipo sottostante. I tipi nullable di CLR rappresentano un'istanza della struttura <xref:System.Nullable>. Questa funzionalità risulta particolarmente utile quando i tipi di valore sono boxed e unboxed e garantisce una maggior compatibilità con i tipi di oggetto. I tipi nullable di CLR non devono essere usati per l'archiviazione di valori null di database perché il comportamento di un valore null SQL ANSI è diverso da quello di un riferimento a `null` (o `Nothing` in Visual Basic). Per gestire valori null SQL ANSI di database, usare valori null di <xref:System.Data.SqlTypes> anziché <xref:System.Nullable>. Per ulteriori informazioni sull'utilizzo dei tipi nullable CLR in Visual Basic vedere [tipi di valore Nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)e per C# vedere [utilizzo di tipi di valore Nullable](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
+> In .NET Framework versione 2.0 è stato introdotto il supporto per i tipi nullable, che consentono ai programmatori di estendere un tipo di valore in modo da rappresentare tutti i valori del tipo sottostante. I tipi nullable di CLR rappresentano un'istanza della struttura <xref:System.Nullable>. Questa funzionalità risulta particolarmente utile quando i tipi di valore sono boxed e unboxed e garantisce una maggior compatibilità con i tipi di oggetto. I tipi nullable di CLR non devono essere usati per l'archiviazione di valori null di database perché il comportamento di un valore null SQL ANSI è diverso da quello di un riferimento a `null` (o `Nothing` in Visual Basic). Per gestire valori null SQL ANSI di database, usare valori null di <xref:System.Data.SqlTypes> anziché <xref:System.Nullable>. Per ulteriori informazioni sull'utilizzo dei tipi nullable CLR in Visual Basic vedere [tipi di valore Nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)e per C# vedere [tipi di valore Nullable](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valori null e logica con tre valori  
  La concessione di valori null nelle definizioni di colonna introduce una logica con tre valori nell'applicazione. Un confronto può restituire una delle tre condizioni indicate di seguito:  

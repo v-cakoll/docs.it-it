@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422206"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739671"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -32,7 +32,7 @@ Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?di
 
 A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore. Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.
 
-Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Tuttavia, le variabili dei [tipi valore Nullable](../../programming-guide/nullable-types/index.md) corrispondenti possono essere `null`.
+Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Tuttavia, le variabili dei [tipi valore Nullable](../builtin-types/nullable-value-types.md) corrispondenti possono essere `null`.
 
 Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il valore predefinito del tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).
 
@@ -105,8 +105,6 @@ Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabe
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
-- [Tipi](/dotnet/csharp/language-reference/keywords)
+- [Parole chiave C#](index.md)
 - [Tipi riferimento](reference-types.md)
-- [Tipi valore nullable](../../programming-guide/nullable-types/index.md)
+- [Tipi valore nullable](../builtin-types/nullable-value-types.md)

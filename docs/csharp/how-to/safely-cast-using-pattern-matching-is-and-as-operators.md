@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353733"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739691"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Procedura: eseguire il cast sicuro con i criteri di ricerca e gli operatori is e as
 
@@ -23,11 +23,11 @@ Il codice seguente dimostra l'istruzione `is` dei criteri di ricerca. Contiene m
 
 Il campione precedente dimostra alcune funzionalità della sintassi dei criteri di ricerca. Le istruzioni `if (a is Mammal m)` e `if (o is Mammal m)` combinano il test con un'assegnazione di inizializzazione. L'assegnazione si verifica solo quando il test ha esito positivo. La variabile `m` è nell'ambito solo nell'istruzione `if` incorporata a cui è stata assegnata. Non è possibile accedere a `m` successivamente nello stesso metodo. Provare nella finestra interattiva.
 
-È anche possibile usare la stessa sintassi per verificare se un [tipo di valore Nullable](../programming-guide/nullable-types/index.md) ha un valore, come illustrato nel codice di esempio seguente:
+È anche possibile usare la stessa sintassi per verificare se un [tipo di valore Nullable](../language-reference/builtin-types/nullable-value-types.md) ha un valore, come illustrato nel codice di esempio seguente:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-Il campione precedente dimostra alcune funzionalità dei criteri di ricerca per l'uso con le conversioni. È possibile sottoporre a test una variabile per il criterio null controllando in modo specifico il valore `null`. Quando il valore di runtime della variabile è `null`, un'istruzione `is` che controlla il tipo restituisce sempre `false`. L'istruzione `is` dei criteri di ricerca non consente un tipo di valore nullable, quale `int?` o `Nullable<int>`, ma è possibile eseguire il test di qualunque altro tipo di valore. I modelli `is` dell'esempio precedente non sono limitati ai tipi di valore Nullable. È anche possibile usare questi modelli per verificare se una variabile di un tipo di riferimento ha un valore o è `null`.
+Il campione precedente dimostra alcune funzionalità dei criteri di ricerca per l'uso con le conversioni. È possibile sottoporre a test una variabile per il criterio null controllando in modo specifico il valore `null`. Quando il valore di runtime della variabile è `null`, un'istruzione `is` che controlla il tipo restituisce sempre `false`. L'istruzione `is` dei criteri di ricerca non consente un tipo di valore nullable, quale `int?` o `Nullable<int>`, ma è possibile eseguire il test di qualunque altro tipo di valore. I modelli di `is` dell'esempio precedente non sono limitati ai tipi di valore Nullable. È anche possibile usare questi modelli per verificare se una variabile di un tipo di riferimento ha un valore o `null`.
 
 L'esempio precedente illustra anche come utilizzare l'espressione `is` dei criteri di ricerca in un'istruzione `switch` in cui la variabile può essere di molti tipi diversi.
 

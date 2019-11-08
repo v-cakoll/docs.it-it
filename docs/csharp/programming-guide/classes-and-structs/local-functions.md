@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455383"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736846"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funzioni locali (Guida per programmatori C#)
 
@@ -43,11 +43,10 @@ Le funzioni locali possono usare i modificatori [async](../../language-reference
 
 Tutte le variabili locali definite nel membro contenitore, inclusi i relativi parametri di metodo, sono accessibili nella funzione locale. 
 
-Contrariamente a una definizione di metodo, una definizione di funzione locale non può contenere gli elementi seguenti:
+Diversamente da una definizione di metodo, una definizione di funzione locale non può includere il modificatore di accesso ai membri. Poiché tutte le funzioni locali sono private, l'integrazione di un modificatore di accesso come la parola chiave `private` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
 
-- Il modificatore di accesso ai membri. Poiché tutte le funzioni locali sono private, l'integrazione di un modificatore di accesso come la parola chiave `private` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
- 
-- La parola chiave [static](../../language-reference/keywords/static.md). L'integrazione della parola chiave `static` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
+> [!NOTE]
+> Nelle versioni C# precedenti alla 8,0, le funzioni locali non possono includere il modificatore `static`. L'integrazione della parola chiave `static` genera l'errore del compilatore CS0106: "Il modificatore 'private' non è valido per questo elemento".
 
 Non è possibile, inoltre, applicare attributi alla funzione locale o ai relativi parametri e parametri di tipo. 
  

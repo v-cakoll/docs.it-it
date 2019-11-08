@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423240"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739199"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
+
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
   
  La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. Se si è un utente completo con la programmazione o C#con, è possibile visitare l'esercitazione [Introduzione alle C# esercitazioni](../tutorials/intro-to-csharp/index.md) o [.NET nel browser, in](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)cui non è necessaria alcuna conoscenza della programmazione precedente.  
@@ -28,8 +29,9 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
 [Contenuto di un programma C#](./inside-a-program/index.md)  
   
 [Main() e argomenti della riga di comando](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Sezioni relative al linguaggio  
+
+## <a name="language-sections"></a>Sezioni relative al linguaggio
+
 [Istruzioni, espressioni e operatori](./statements-expressions-operators/index.md)  
 
  [Tipi](./types/index.md)  
@@ -41,7 +43,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
  [Tipi di enumerazione](./enumeration-types.md)  
   
  [Delegati](./delegates/index.md)  
- 
+
  [Array](./arrays/index.md)  
   
  [Stringhe](./strings/index.md)  
@@ -62,13 +64,12 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Spazi dei nomi](./namespaces/index.md)  
   
- [Tipi valore nullable](./nullable-types/index.md)  
-  
  [Codice unsafe e puntatori](./unsafe-code-pointers/index.md)  
   
  [Commenti relativi alla documentazione XML](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Sezioni relative alla piattaforma  
+## <a name="platform-sections"></a>Sezioni relative alla piattaforma
+
  [Domini dell'applicazione](../../framework/app-domains/application-domains.md)  
   
  [Assembly in .NET](../../standard/assembly/index.md)  

@@ -3,12 +3,12 @@ title: Rami e cicli - Esercitazione introduttiva su C#
 description: In questa esercitazione su rami e cicli si scriverà codice C# per esplorare la sintassi del linguaggio che supporta cicli e diramazioni condizionali per eseguire ripetutamente istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834117"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739132"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
@@ -18,7 +18,13 @@ Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 
-Creare una directory denominata *branches-tutorial*. Impostarla come directory corrente ed eseguire `dotnet new console -n BranchesAndLoops -o .`. Questo comando crea una nuova applicazione console .NET Core nella directory corrente.
+Creare una directory denominata *branches-tutorial*. Rendere la directory corrente ed eseguire il comando seguente:
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+Questo comando crea una nuova applicazione console .NET Core nella directory corrente.
 
 Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con il codice seguente:
 

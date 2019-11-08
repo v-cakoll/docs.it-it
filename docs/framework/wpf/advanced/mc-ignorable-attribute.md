@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458823"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740820"
 ---
 # <a name="mcignorable-attribute"></a>Attributo mc:Ignorable
-Specifica quali prefissi di spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] rilevati in un file di markup possono essere ignorati da un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. L'attributo `mc:Ignorable` supporta la compatibilità del markup sia per il mapping dello spazio dei nomi personalizzato che per il controllo delle versioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+Specifica quali prefissi dello spazio dei nomi XML rilevati in un file di markup possono essere ignorati da un processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. L'attributo `mc:Ignorable` supporta la compatibilità del markup sia per il mapping dello spazio dei nomi personalizzato che per il controllo delle versioni [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Utilizzo degli attributi XAML (prefisso singolo)  
   
@@ -51,7 +51,7 @@ Specifica quali prefissi di spazio dei nomi [!INCLUDE[TLA2#tla_xml](../../../../
 |*ThisElementCanBeIgnored*|Elemento che può essere ignorato dalle implementazioni del processore [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], se non è possibile risolvere il tipo sottostante.|  
   
 ## <a name="remarks"></a>Note  
- Il prefisso dello spazio dei nomi `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] è la convenzione di prefisso consigliata da usare per il mapping dello spazio dei nomi di compatibilità [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `http://schemas.openxmlformats.org/markup-compatibility/2006`.  
+ Il prefisso dello spazio dei nomi XML `mc` è la convenzione di prefisso consigliata da usare per il mapping dello spazio dei nomi di compatibilità [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `http://schemas.openxmlformats.org/markup-compatibility/2006`.  
   
  Gli elementi o gli attributi in cui la parte prefisso del nome dell'elemento sono identificati come `mc:Ignorable` non genereranno errori quando vengono elaborati da un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se tale attributo non può essere risolto in un tipo o un costrutto di programmazione sottostante, l'elemento viene ignorato. Si noti tuttavia che gli elementi ignorati possono comunque generare errori di analisi aggiuntivi per ulteriori requisiti degli elementi che sono effetti collaterali dell'elemento non elaborato. Ad esempio, un particolare modello di contenuto dell'elemento potrebbe richiedere esattamente un elemento figlio, ma se l'elemento figlio specificato si trovava in un prefisso `mc:Ignorable` e non è stato possibile risolvere l'elemento figlio specificato in un tipo, il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] potrebbe generare un errore.  
   

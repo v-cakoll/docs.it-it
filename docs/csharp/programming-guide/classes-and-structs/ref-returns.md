@@ -2,12 +2,12 @@
 title: Valori restituiti e variabili locali ref (Guida a C#)
 description: Informazioni su come definire e usare valori restituiti e variabili locali ref
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736825"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -25,7 +25,7 @@ Esistono alcune restrizioni per l'espressione che un metodo può restituire come
 
 - Il valore restituito non può essere il valore letterale `null`. La restituzione di `null` genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
-   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (privo di istanze) o un [tipo di valore Nullable](../nullable-types/index.md) per un tipo valore.
+   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (privo di istanze) o un [tipo di valore Nullable](../../language-reference/builtin-types/nullable-value-types.md) per un tipo valore.
 
 - Il valore restituito non può essere una costante, un membro di enumerazione, il valore restituito per valore da una proprietà o un metodo di un oggetto `class` o `struct`. La violazione di questa regola genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424428"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740673"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
 
@@ -46,7 +46,7 @@ Prima della compilazione, MSBuild determina la posizione di strumenti e librerie
 
 - .NET Framework.
 
-- Le directory [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].
+- Directory Windows SDK.
 
 - Il percorso degli assembly di riferimento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
@@ -64,7 +64,7 @@ Il processo di compilazione individua e associa gli assembly necessari per compi
 
 ### <a name="markup-compilationpass-1"></a>Compilazione del markup - Passaggio 1
 
-In questo passaggio, i file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono analizzati e compilati in modo che il runtime non dovrà analizzare il codice [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] e convalidare i valori delle proprietà. Il file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilato viene preliminarmente suddiviso in token in modo che, in fase di esecuzione, risulti molto più veloce da caricare rispetto a un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+In questo passaggio, i file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono analizzati e compilati in modo che il runtime non spenda tempo per l'analisi del codice XML e la convalida dei valori delle proprietà. Il file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilato viene preliminarmente suddiviso in token in modo che, in fase di esecuzione, risulti molto più veloce da caricare rispetto a un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 Durante questo passaggio, le attività dell'elenco vengono eseguite per ogni file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che rappresenta un elemento Build `Page`:
 

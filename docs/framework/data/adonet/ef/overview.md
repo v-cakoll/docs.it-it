@@ -2,12 +2,12 @@
 title: Cenni preliminari su Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854347"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738504"
 ---
 # <a name="entity-framework-overview"></a>Panoramica di Entity Framework
 
@@ -34,7 +34,7 @@ Il Entity Framework consente agli sviluppatori di usare i dati sotto forma di pr
 
 Il modello di archiviazione e i mapping possono essere modificati in base alle esigenze senza che sia necessario modificare il modello concettuale, le classi di dati o il codice dell'applicazione. Poiché i modelli di archiviazione sono specifici del provider, è possibile usare un modello concettuale coerente in varie origini dati.
 
-Il Entity Framework utilizza questi file di modello e di mapping per creare, leggere, aggiornare ed eliminare operazioni su entità e relazioni nel modello concettuale in operazioni equivalenti nell'origine dati. Il Entity Framework supporta anche il mapping di entità nel modello concettuale alle stored procedure nell'origine dati. Per ulteriori informazioni, vedere le [Specifiche CSDL, SSDL e MSL](./language-reference/csdl-ssdl-and-msl-specifications.md).
+Il Entity Framework utilizza questi file di modello e di mapping per creare, leggere, aggiornare ed eliminare operazioni su entità e relazioni nel modello concettuale in operazioni equivalenti nell'origine dati. Il Entity Framework supporta anche il mapping di entità nel modello concettuale alle stored procedure nell'origine dati. Per ulteriori informazioni, vedere le [Specifiche CSDL, SSDL e MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Eseguire il mapping di oggetti ai dati
  La programmazione orientata a oggetti pone una serie di sfide relativamente all'interazione con i sistemi di archiviazione dei dati. Anche se l'organizzazione delle classi in genere rispecchia l'organizzazione delle tabelle dei database relazionali, non si può parlare di una corrispondenza esatta. Più tabelle normalizzate corrispondono spesso a una singola classe e le relazioni tra classi sono spesso rappresentate in modo diverso rispetto alle relazioni tra tabelle. Per rappresentare il cliente per un determinato ordine, ad esempio, una classe `Order` potrebbe usare una proprietà contenente un riferimento a un'istanza di una classe `Customer`, mentre una riga della tabella `Order` in un database contiene una colonna o un set di colonne di chiave esterna con un valore che corrisponde a un valore di chiave primaria nella tabella `Customer`. Una classe `Customer` potrebbe disporre di una proprietà denominata `Orders` contenente una raccolta di istanze della classe `Order`, mentre la tabella `Customer` in un database non include colonne confrontabili. Il Entity Framework offre agli sviluppatori la flessibilità necessaria per rappresentare le relazioni in questo modo o per modellare più accuratamente le relazioni come sono rappresentate nel database.
@@ -47,7 +47,7 @@ Oltre a rappresentare una soluzione di mapping relazionale a oggetti, Entity Fra
 
 - LINQ to Entities. Fornisce supporto LINQ (Language Integrated Query) per l'esecuzione di query sui tipi di entità definiti in un modello concettuale. Per ulteriori informazioni, vedere [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [https://login.microsoftonline.com/common/]([!INCLUDE[esql](../../../../../includes/esql-md.md)]). Sottolinguaggio SQL indipendente dall'archiviazione che interagisce direttamente con le entità del modello concettuale e che supporta Entity Data Model concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)]viene utilizzato sia con query di oggetto che con query eseguite tramite il provider EntityClient. Per ulteriori informazioni, vedere [Entity SQL Overview](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sottolinguaggio SQL indipendente dall'archiviazione che interagisce direttamente con le entità del modello concettuale e che supporta Entity Data Model concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] viene utilizzato sia con query di oggetto che con query eseguite tramite il provider EntityClient. Per ulteriori informazioni, vedere [Entity SQL Overview](./language-reference/entity-sql-overview.md).
 
 Il Entity Framework include il provider di dati EntityClient. Questo provider gestisce le connessioni, traduce le query di entità in query specifiche dell'origine dati e restituisce un lettore dati utilizzato dal Entity Framework per materializzare i dati dell'entità in oggetti. Quando la materializzazione degli oggetti non è richiesta, il provider EntityClient può essere utilizzato anche come un provider di dati ADO.NET standard consentendo alle applicazioni di eseguire query [!INCLUDE[esql](../../../../../includes/esql-md.md)] e di utilizzare il lettore dati di sola lettura restituito. Per ulteriori informazioni, vedere [provider EntityClient per la Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -59,7 +59,7 @@ Gli strumenti Entity Data Model possono generare una classe derivata da `System.
 
 ## <a name="data-providers"></a>Provider di dati
 
-Il `EntityClient` provider estende il modello di provider ADO.NET accedendo ai dati in termini di entità e relazioni concettuali. Esegue query che usano [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornisce il linguaggio di query sottostante che consente la comunicazione di `EntityClient` con il database. Per ulteriori informazioni, vedere [provider EntityClient per la Entity Framework](entityclient-provider-for-the-entity-framework.md).
+Il provider di `EntityClient` estende il modello di provider ADO.NET accedendo ai dati in termini di entità e relazioni concettuali. Esegue query che usano [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornisce il linguaggio di query sottostante che consente la comunicazione di `EntityClient` con il database. Per ulteriori informazioni, vedere [provider EntityClient per la Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 Il Entity Framework include un provider di dati SqlClient aggiornato che supporta gli alberi dei comandi canonici. Per ulteriori informazioni, vedere [SqlClient per la Entity Framework](sqlclient-for-the-entity-framework.md).
 

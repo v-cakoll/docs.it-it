@@ -2,12 +2,12 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0157105290a297eff2c1bf799a2065872082e40e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783976"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735646"
 ---
 # <a name="facet"></a>facet
 Un *facet* viene usato per aggiungere dettagli a una definizione di proprietà di tipo primitivo. Una definizione di [Proprietà](property.md) contiene informazioni sul tipo di proprietà, ma spesso è necessario un maggior numero di dettagli. Un tipo di entità in un modello concettuale, ad esempio, potrebbe disporre di una proprietà di tipo `String` il cui valore non può essere impostato su null. I facet consentono di specificare questo livello di dettaglio.  
@@ -26,11 +26,11 @@ Un *facet* viene usato per aggiungere dettagli a una definizione di proprietà d
 |`MaxLength`|Specifica la lunghezza massima del valore della proprietà.|`Binary`, `String`|  
 |`Nullable`|Specifica se la proprietà può avere un valore null.|Tutte le proprietà di tipo primitivo|  
 |`Precision`|Per le proprietà di tipo `Decimal`, specifica il numero di cifre che un valore della proprietà può avere. Per le proprietà di tipo `Time`, `DateTime` e `DateTimeOffset`, specifica il numero di cifre per la parte frazionaria di secondi del valore della proprietà.|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
-|`Scale`|Specifica il numero di cifre a destra del separatore decimale per il valore della proprietà.|Decimal|  
+|`Scale`|Specifica il numero di cifre a destra del separatore decimale per il valore della proprietà.|Decimale|  
 |`Unicode`|Viene indicato se il valore della proprietà viene archiviato come Unicode.|`String`|  
   
 ## <a name="example"></a>Esempio  
- Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo di entità `Book`. Si noti che i facet vengono implementati come attributi XML. I valori dei facet indicano che nessuna proprietà può essere impostata su null e che `Scale` e `Precision` della proprietà `Revision` sono entrambi impostati su 29.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo di entità `Book`. Si noti che i facet vengono implementati come attributi XML. I valori dei facet indicano che nessuna proprietà può essere impostata su null e che `Scale` e `Precision` della proprietà `Revision` sono entrambi impostati su 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

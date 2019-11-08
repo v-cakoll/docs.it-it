@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582587"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740748"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitazioni relative alla serializzazione di XamlWriter.Save
 Il <xref:System.Windows.Markup.XamlWriter.Save%2A> API può essere usato per serializzare il contenuto di un'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] come file [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Esistono tuttavia limitazioni considerevoli relative alla definizione precisa dell'oggetto della serializzazione. Queste limitazioni vengono esaminate in questo argomento, insieme ad alcune considerazioni generali.  
@@ -40,4 +40,4 @@ Il <xref:System.Windows.Markup.XamlWriter.Save%2A> API può essere usato per ser
   
 - Documenti RTF o dinamici: il testo con tutta la formattazione e il contenimento degli elementi inclusi viene mantenuto nell'output. Questo può essere utile per i meccanismi che si avvicinano a una funzionalità degli Appunti.  
   
-- Conservazione dei dati di oggetti business: se in elementi personalizzati sono stati archiviati dei dati, ad esempio dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], finché gli oggetti business seguono le regole [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] di base, ad esempio fornire costruttori personalizzati e la conversione per valori di proprietà per riferimento, è possibile conservare tali oggetti business con la serializzazione.
+- Conservazione dei dati degli oggetti business: se i dati sono stati archiviati in elementi personalizzati, ad esempio i dati XML, a condizione che gli oggetti business seguano regole di base [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] come la fornitura di costruttori e conversione personalizzati per i valori delle proprietà per riferimento, queste attività è possibile perpetuare gli oggetti tramite la serializzazione.

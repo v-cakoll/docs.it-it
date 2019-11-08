@@ -1,17 +1,17 @@
 ---
 title: 'Esercitazione: previsione della richiesta di noleggio biciclette'
 description: Questa esercitazione illustra come prevedere la domanda per un servizio di noleggio di biciclette usando l'analisi della serie temporale univariata e ML.NET.
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: f30aac5f8467c2410e9008bafea3cf35af3f4e2a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740544"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Esercitazione: prevedere la richiesta del servizio di noleggio biciclette con l'analisi delle serie temporali e ML.NET
 
@@ -26,9 +26,6 @@ In questa esercitazione si imparerà a:
 > * Valutare il modello di previsione
 > * Salvare un modello di previsione
 > * Usare un modello di previsione
-
-> [!NOTE]
-> Questa esercitazione usa una versione di anteprima di DatabaseLoader.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -49,13 +46,13 @@ L'algoritmo usato in questa esercitazione è [Single Spectrum Analysis (SSA)](ht
 ## <a name="create-console-application"></a>Creare un'applicazione console
 
 1. Creare una nuova  **C# applicazione console .NET Core** denominata "BikeDemandForecasting".
-1. Installare il pacchetto NuGet **Microsoft.ml** Version **1.4.0-Preview2**
+1. Installare il pacchetto NuGet **Microsoft.ml** Version **1.4.0**
     1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**.
     1. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda **Sfoglia** , cercare **Microsoft.ml**.
     1. Selezionare la casella di controllo **Includi versione preliminare** .
     1. Selezionare il pulsante **Installa**.
     1. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo Accettazione della licenza se si accettano le condizioni di licenza per i pacchetti elencati.
-    1. Ripetere questi passaggi per **System. Data. SqlClient** Version **4.7.0**, **Microsoft. ml. Experimental** Version **0.16.0-Preview2**e **Microsoft. ml. TimeSeries** Version **1.4.0-Preview2**.
+    1. Ripetere questi passaggi per **System. Data. SqlClient** versione **4.7.0** e **Microsoft. ml. TimeSeries** versione **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 

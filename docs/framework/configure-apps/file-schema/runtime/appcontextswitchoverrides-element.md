@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118292"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736804"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<elemento > AppContextSwitchOverrides
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -92,7 +92,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Controlla se [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializza alcuni caratteri di controllo in base agli standard ECMAScript V6 e V8. Per altre informazioni, vedere [Mitigazione: Serializzazione dei caratteri di controllo con DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Controlla se il <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supporta più regolazioni o solo una singola regolazione per un fuso orario. Se `true`, usa il tipo di <xref:System.TimeZoneInfo> per serializzare e deserializzare i dati di data e ora; in caso contrario, viene utilizzato il tipo <xref:System.TimeZone>, che non supporta più regole di regolazione.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Controlla se <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> utilizza una dimensione della matrice maggiore durante la serializzazione e la deserializzazione dell'oggetto. Impostare questa opzione su `true` per migliorare le prestazioni della serializzazione e della deserializzazione di oggetti grafici di grandi dimensioni in base ai tipi, ad esempio <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Controlla se il costruttore <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> imposta la proprietà di <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> del nuovo oggetto con un riferimento a un oggetto esistente. Per altre informazioni, vedere [Mitigazione: Costruttore ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Controlla se il costruttore <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> imposta la proprietà di <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> del nuovo oggetto con un riferimento a un oggetto esistente. Per altre informazioni, vedere [Mitigazione: Costruttore ClaimsIdentity](../../../migration-guide/retargeting/4.6.1-4.6.2.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Controlla se il tentativo di riutilizzare un decrittografia <xref:System.Security.Cryptography.AesCryptoServiceProvider> genera un'<xref:System.Security.Cryptography.CryptographicException>. Per ulteriori informazioni, vedere [AesCryptoServiceProvider Decryptor fornisce una trasformazione riutilizzabile](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controlla se il valore della proprietà [CspParameters. ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) è un elemento [IntPtr](xref:System.IntPtr) che rappresenta la posizione di memoria di un handle di finestra o se è un handle di finestra (HWND). Per altre informazioni, vedere [Mitigazione: CspParameters.ParentWindowHandle prevede un HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Controlla se l'uso di classi di crittografia gestite in modalità FIPS genera un <xref:System.Security.Cryptography.CryptographicException> (`true`) o si basa sull'implementazione delle librerie di sistema (`false`).|.NET Framework 4.8|

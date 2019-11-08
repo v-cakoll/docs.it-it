@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8159f24e92608677cc832448fd2d79a1846ab12a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417791"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739219"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -20,7 +20,7 @@ I vincoli indicano al compilatore quali funzionalità deve usare un argomento ti
 
 |Vincolo|Descrizione|
 |----------------|-----------------|
-|`where T : struct`|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable%601>. Per ulteriori informazioni sui tipi di valore Nullable, vedere [tipi di valore Nullable](../nullable-types/index.md).|
+|`where T : struct`|L'argomento di tipo deve essere un tipo di valore non nullable. Per informazioni sui tipi di valore Nullable, vedere [tipi di valore Nullable](../../language-reference/builtin-types/nullable-value-types.md).|
 |`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
 |`where T : notnull`|L'argomento di tipo deve essere un tipo non nullable. L'argomento può essere un tipo di riferimento non nullable in C# 8,0 o versione successiva oppure un tipo di valore non nullable. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
 |`where T : unmanaged`|L'argomento tipo deve essere un [tipo non gestito](../../language-reference/builtin-types/unmanaged-types.md).|

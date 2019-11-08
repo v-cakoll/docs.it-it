@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417724"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739210"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -174,7 +174,7 @@ Come indicato in precedenza, è possibile tipizzare una variabile locale (ma non
 
 In alcuni casi non è consigliabile creare un tipo denominato per set semplici di valori correlati che non si intende archiviare o passare fuori dai limiti del metodo. A questo scopo è possibile creare *tipi anonimi*. Per altre informazioni, vedere [Tipi anonimi](../classes-and-structs/anonymous-types.md).
 
-I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601?displayProperty=nameWithType>. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici potrebbero essere null. Per altre informazioni, vedere [tipi di valore Nullable](../nullable-types/index.md).
+I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601?displayProperty=nameWithType>. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici potrebbero essere null. Per altre informazioni, vedere [tipi di valore Nullable](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Sezioni correlate
 

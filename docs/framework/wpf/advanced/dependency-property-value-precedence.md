@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458984"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740855"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 <a name="introduction"></a> Questo argomento illustra il modo in cui i meccanismi del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] possono influire sul valore di una proprietà di dipendenza e descrive la precedenza in base alla quale gli aspetti del sistema di proprietà si applicano al valore effettivo di una proprietà.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458984"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Coercizione, animazioni e valore di base  
- La coercizione e l'animazione agiscono entrambe su un valore indicato come "valore di base" in tutto l'[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Di conseguenza, il valore di base è un qualsiasi valore determinato tramite la valutazione verso l'alto negli elementi fino a raggiungere l'elemento 2.  
+ La coercizione e l'animazione agiscono entrambi su un valore definito come "valore di base" in tutto questo SDK. Di conseguenza, il valore di base è un qualsiasi valore determinato tramite la valutazione verso l'alto negli elementi fino a raggiungere l'elemento 2.  
   
  Per un'animazione, il valore di base può avere un effetto sul valore animato, se quell'animazione non specifica le impostazioni "From" e "To" per determinati comportamenti o se l'animazione ripristina intenzionalmente il valore di base quando viene completata. Per osservare questo comportamento nella pratica, eseguire l'[Esempio valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988). Tentare di impostare i valori locali dell'altezza del rettangolo nell'esempio, in modo che il valore locale iniziale sia diverso da qualsiasi impostazione "From" nell'animazione. Si noterà che le animazioni iniziano immediatamente usando i valori "From" valori e sostituiscono il valore di base una volta avviate. L'animazione potrebbe specificare per tornare al valore trovato prima dell'animazione dopo che è stato completato specificando l'<xref:System.Windows.Media.Animation.FillBehavior>stop. In seguito, verrà usata la precedenza normale per la determinazione del valore di base.  
   

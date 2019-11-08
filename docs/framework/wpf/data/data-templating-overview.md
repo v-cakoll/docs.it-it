@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460044"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740632"
 ---
 # <a name="data-templating-overview"></a>Cenni preliminari sui modelli di dati
 Il modello di applicazione di modelli di dati WPF offre una notevole flessibilità per definire la presentazione dei dati. I controlli WPF dispongono di funzionalità incorporate per supportare la personalizzazione della presentazione dei dati. In questo argomento viene illustrato innanzitutto come definire un <xref:System.Windows.DataTemplate> e quindi vengono introdotte altre funzionalità di creazione di modelli di dati, ad esempio la selezione di modelli basati sulla logica personalizzata e il supporto per la visualizzazione di dati gerarchici.  
@@ -54,7 +54,7 @@ Il modello di applicazione di modelli di dati WPF offre una notevole flessibilit
   
  ![Schermata di esempio data Templates](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- Questa soluzione risulta tuttavia limitante e poco flessibile. Se si esegue il binding a dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], non sarà inoltre possibile eseguire l'override di `ToString`.  
+ Questa soluzione risulta tuttavia limitante e poco flessibile. Inoltre, se si esegue il binding ai dati XML, non sarà possibile eseguire l'override `ToString`.  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>Definizione di DataTemplate semplice  
@@ -62,7 +62,7 @@ Il modello di applicazione di modelli di dati WPF offre una notevole flessibilit
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- I dati sottostanti per gli esempi in questo argomento sono una raccolta di oggetti CLR. Se si esegue il binding a dati [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], i concetti fondamentali sono gli stessi, ma con una piccola differenza sintattica. Ad esempio, anziché avere `Path=TaskName`, è necessario impostare <xref:System.Windows.Data.Binding.XPath%2A> su `@TaskName` (se `TaskName` è un attributo del nodo [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]).  
+ I dati sottostanti per gli esempi in questo argomento sono una raccolta di oggetti CLR. Se si esegue il binding ai dati XML, i concetti fondamentali sono gli stessi, ma c'è una lieve differenza sintattica. Ad esempio, anziché avere `Path=TaskName`, è necessario impostare <xref:System.Windows.Data.Binding.XPath%2A> su `@TaskName` (se `TaskName` è un attributo del nodo XML).  
   
  Il <xref:System.Windows.Controls.ListBox> è ora simile al seguente:  
   

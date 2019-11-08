@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041024"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733195"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Procedura dettagliata: incorporare i tipi da assembly gestiti in Visual Studio
 
@@ -34,7 +34,7 @@ In questa procedura dettagliata vengono illustrate le operazioni seguenti:
 
 ## <a name="conditions-and-limitations"></a>Condizioni e limitazioni
 
-È possibile incorporare le informazioni sul tipo da un assembly nelle condizioni seguenti: 
+È possibile incorporare le informazioni sul tipo da un assembly nelle condizioni seguenti:
 
 - L'assembly espone almeno un'interfaccia pubblica.
 - Le interfacce incorporate sono annotate con `ComImport` attributi e `Guid` attributi con GUID univoci.
@@ -321,5 +321,4 @@ Passare al percorso della cartella di output di compilazione ed eseguire *TypeEq
 - [-collegamento (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [Guida per programmatori C#](../../csharp/programming-guide/index.md)
 - [Concetti di programmazione (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
-- [Programma con assembly](program.md)
 - [Assembly in .NET](index.md)

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a553d24a12b7ea227325a76d255e2ad53ada716f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126286"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739616"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>Migrazione da .NET Framework 1.1
+# <a name="migrate-from-the-net-framework-11"></a>Eseguire la migrazione dalla .NET Framework 1,1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] e le versioni successive del sistema operativo Windows non supportano .NET Framework 1.1. Di conseguenza, le applicazioni destinate a .NET Framework 1.1 non verranno eseguite senza modifica in [!INCLUDE[win7](../../../includes/win7-md.md)] o nelle versioni successive del sistema operativo. Questo argomento illustra i passaggi richiesti per eseguire un'applicazione destinata a .NET Framework 1.1 in [!INCLUDE[win7](../../../includes/win7-md.md)] e nelle versioni successive del sistema operativo Windows. Per altre informazioni su .NET Framework 1.1 e [!INCLUDE[win8](../../../includes/win8-md.md)], vedere [Esecuzione delle applicazioni .NET Framework 1.1 in Windows 8 e versioni successive](../install/run-net-framework-1-1-apps.md).
+Windows 7 e versioni successive del sistema operativo Windows non supportano la .NET Framework 1,1. Di conseguenza, le applicazioni destinate a .NET Framework 1,1 non vengono eseguite senza modifiche in Windows 7 o versioni successive del sistema operativo. In questo argomento vengono illustrati i passaggi necessari per eseguire un'applicazione destinata a .NET Framework 1,1 in Windows 7 e versioni successive del sistema operativo Windows. Per ulteriori informazioni sul .NET Framework 1,1 e su Windows 8, vedere [eseguire app .NET Framework 1,1 in Windows 8 e versioni successive](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Reindirizzamento o ricompilazione
+## <a name="retarget-or-recompile"></a>Ridestinare o ricompilare
 
-Per fare in modo che un'applicazione compilata usi .NET Framework 1.1 per l'esecuzione in [!INCLUDE[win7](../../../includes/win7-md.md)] o in una versione successiva del sistema operativo Windows sono disponibili due modalità:
+Esistono due modi per ottenere un'applicazione compilata usando il .NET Framework 1,1 per l'esecuzione in Windows 7 o in un sistema operativo Windows successivo:
 
-- È possibile ridestinare l'applicazione per l'esecuzione in .NET Framework 4 e versioni successive. La ridestinazione richiede l'aggiunta di un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al file di configurazione dell'applicazione che ne consenta l'esecuzione in .NET Framework 4 e versioni successive. Tale file di configurazione prende il form seguente:
+- Ridestinare l'applicazione per l'esecuzione in .NET Framework 4 e versioni successive. La ridestinazione richiede l'aggiunta di un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al file di configurazione dell'applicazione che ne consenta l'esecuzione in .NET Framework 4 e versioni successive. Tale file di configurazione prende il form seguente:
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ Per fare in modo che un'applicazione compilata usi .NET Framework 1.1 per l'esec
     </configuration>
     ```
 
-- È possibile ricompilare l'applicazione con un compilatore destinato a .NET Framework 4 o versioni successive. Se è stato originariamente usato Visual Studio 2003 per sviluppare e compilare la soluzione, è possibile aprirla in Visual Studio 2010 (ed eventualmente anche nelle versioni successive) e usare la finestra di dialogo **Compatibilità del progetto** per convertire la soluzione e i file di progetto dai formati usati da Visual Studio 2003 al formato Microsoft Build Engine (MSBuild).
+- Ricompilare l'applicazione con un compilatore destinato a .NET Framework 4 o versione successiva. Se è stato originariamente usato Visual Studio 2003 per sviluppare e compilare la soluzione, è possibile aprirla in Visual Studio 2010 (ed eventualmente anche nelle versioni successive) e usare la finestra di dialogo **Compatibilità del progetto** per convertire la soluzione e i file di progetto dai formati usati da Visual Studio 2003 al formato Microsoft Build Engine (MSBuild).
 
 Indipendentemente dal fatto che si preferisca ricompilare o reindirizzare l'applicazione, è necessario determinare se l'applicazione è interessata dalle modifiche introdotte in versioni successive di .NET Framework. Queste modifiche sono di due tipi:
 
@@ -40,7 +40,7 @@ Indipendentemente dal fatto che si preferisca ricompilare o reindirizzare l'appl
 
 Se si reindirizza o si ricompila l'applicazione, è necessario rivedere sia le modifiche di interruzione e i tipi e i membri obsoleti per ogni versione di .NET Framework rilasciata dopo .NET Framework 1.1.
 
-## <a name="breaking-changes"></a>Modifiche di interruzione
+## <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
 Quando si verifica una modifica di interruzione, in base alla modifica specifica, è possibile che sia disponibile una soluzione alternativa sia per le applicazioni reindirizzate che per le applicazioni ricompilate. In alcuni casi, è possibile aggiungere un elemento figlio all'elemento [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) del file di configurazione dell'applicazione per ripristinare il comportamento precedente. Ad esempio, nel file di configurazione seguente viene ripristinato l'ordinamento della stringa e il comportamento del confronto usato in .NET Framework 1.1 che può essere usato con un'applicazione reindirizzata o ricompilata.
 

@@ -2,17 +2,14 @@
 title: Modifiche di rilievo, .NET Framework a .NET Core 3,0-.NET Core
 description: Elenca le modifiche di rilievo da .NET Framework a .NET Core 3,0 per Windows Forms e Windows Presentation Foundation.
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089566"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739446"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>Modifiche di rilievo per la migrazione da .NET Framework a .NET Core 3,0
-
-> [!IMPORTANT]
-> Questo articolo è in costruzione. Questo non è un elenco completo delle modifiche di rilievo di .NET Core. Per altre informazioni sulle modifiche di rilievo di .NET Core, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub. 
 
 Se si esegue la migrazione di un'applicazione Windows Forms o Windows Presentation Foundation da .NET Framework a .NET Core 3,0, consultare gli argomenti seguenti per le modifiche di rilievo che potrebbero incidere sull'app:
 

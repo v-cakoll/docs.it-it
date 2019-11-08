@@ -4,12 +4,12 @@ description: Informazioni su come creare un'applicazione .NET Core che supporta 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579508"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739694"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creare un'applicazione .NET Core con i plug-in
 
@@ -285,3 +285,7 @@ In questo modo si impedisce che gli assembly `A.PluginBase` vengano copiati nell
 ## <a name="plugin-target-framework-recommendations"></a>Consigli sul framework di destinazione del plug-in
 
 Poiché il caricamento delle dipendenze del plug-in usa il file *deps.json*, tenere presente la raccomandazione relativa al framework di destinazione del plug-in. In particolare, è consigliabile che i plug-in abbiano come destinazione un runtime, ad esempio .NET Core 3.0, anziché una versione di .NET Standard. Il file *.deps.json* viene generato in base al framework di destinazione del progetto e poiché numerosi pacchetti compatibili con .NET Standard offrono assembly di riferimento per la compilazione in .NET Standard e assembly di implementazione per runtime specifici, è possibile che *.deps.json* non consideri correttamente gli assembly di implementazione oppure ottenga la versione .NET Standard di un assembly anziché la versione .NET Core prevista.
+
+## <a name="plugin-framework-references"></a>Riferimenti al Framework di plug-in
+
+Attualmente, i plug-in non possono introdurre nuovi Framework nel processo. Ad esempio, non è possibile caricare un plug-in che usa il Framework di `Microsoft.AspNetCore.App` in un'applicazione che usa solo il Framework `Microsoft.NETCore.App` radice. L'applicazione host deve dichiarare i riferimenti a tutti i Framework necessari per i plug-in.

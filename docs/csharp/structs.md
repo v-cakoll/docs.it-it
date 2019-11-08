@@ -4,12 +4,12 @@ description: Informazioni sui tipi di struct e su come crearli
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423109"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739183"
 ---
 # <a name="structs"></a>Strutture
 
@@ -53,21 +53,9 @@ Gli struct condividono la maggior parte della sintassi delle classi, anche sono 
   
 - Uno struct può implementare le interfacce.
 
-## <a name="literal-values"></a>Valori letterali
-
-In C# i valori letterali ricevono un tipo dal compilatore. È possibile specificare come deve essere tipizzato un valore letterale numerico aggiungendo una lettera alla fine del numero. Per specificare, ad esempio, che il valore 4.56 deve essere considerato come un tipo float, aggiungere una "f" o una "F" dopo il numero: `4.56f`. Se non viene aggiunta alcuna lettera, il compilatore dedurrà un tipo `double` per il valore letterale. Per altre informazioni sui tipi che possono essere specificati con suffissi letterali, vedere le pagine di riferimento relative ai singoli tipi in [Tipi valore](./language-reference/keywords/value-types.md).  
-  
-Poiché i valori letterali sono tipizzati e tutti i tipi derivano in ultima istanza da <xref:System.Object>, è possibile scrivere e compilare codice come il seguente:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-Gli ultimi due esempi mostrano le funzionalità del linguaggio introdotte in C# 7.0. Il primo consente di usare un carattere di sottolineatura come un *separatore di cifra* all'interno di valori letterali numerici. È possibile posizionarli ovunque si desideri tra le cifre per migliorare la leggibilità. Non hanno alcun effetto sul valore.
-
-Il secondo indica *valori letterali binari*, che consentono di specificare schemi di bit direttamente anziché usare la notazione esadecimale.
-
 ## <a name="nullable-value-types"></a>Tipi valore nullable
 
-I tipi valore comuni non possono avere un valore [null](language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](./language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601>. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici possono essere null o non definiti. Per altre informazioni, vedere [tipi di valore Nullable](programming-guide/nullable-types/index.md).
+I tipi valore comuni non possono avere un valore [null](language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](./language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601>. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici possono essere null o non definiti. Per altre informazioni, vedere [tipi di valore Nullable](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Vedere anche
 

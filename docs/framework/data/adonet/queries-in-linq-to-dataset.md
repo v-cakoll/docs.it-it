@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794544"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735415"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Query in LINQ to DataSet
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modello più semplice e coerente per l'uso dei dati con tutti i vari tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] vengono sempre usati oggetti di programmazione.  
   
  Un'operazione di query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] comporta tre azioni: recupero dell'origine o delle origini dati, creazione della query ed esecuzione della query.  
   
- Per eseguire query su origini dati che implementano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> è possibile usare [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. La <xref:System.Data.DataTableExtensions.AsEnumerable%2A> chiamata <xref:System.Data.DataTable> a su restituisce un oggetto che implementa l' <xref:System.Collections.Generic.IEnumerable%601> interfaccia generica, che funge da origine dati per LINQ to DataSet query.  
+ Per eseguire query su origini dati che implementano l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> è possibile usare [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. La chiamata di <xref:System.Data.DataTableExtensions.AsEnumerable%2A> su un <xref:System.Data.DataTable> restituisce un oggetto che implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, che funge da origine dati per le query LINQ to DataSet.  
   
  Nella query è necessario specificare esattamente le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. In [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le query vengono archiviate nelle variabili. Se la query è progettata per restituire una sequenza di valori, la variabile di query stessa deve essere un tipo enumerabile. La variabile di query non esegue azioni né restituisce dati. Viene solo usata per archiviare le informazioni sulla query. Dopo aver creato una query è necessario eseguirla per recuperare eventuali dati.  
   
@@ -52,7 +52,7 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- Dopo aver eseguito una query, non è possibile comporre query aggiuntive e per tutte le query successive verranno usati gli operatori [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] in memoria. L'esecuzione della query verrà eseguita quando si scorre la variabile di query `foreach` in `For Each` un'istruzione o oppure tramite una [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] chiamata a uno degli operatori di conversione che provocano l'esecuzione immediata. Tali operatori includono: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> e <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Dopo aver eseguito una query, non è possibile comporre query aggiuntive e per tutte le query successive verranno usati gli operatori [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] in memoria. L'esecuzione della query verrà eseguita quando si scorre la variabile di query in un'istruzione `foreach` o `For Each` oppure mediante una chiamata a uno degli operatori di conversione [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] che provocano l'esecuzione immediata. Tali operatori includono: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> e <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
  Nell'esempio seguente la prima query restituisce tutti i prodotti ordinati in base al prezzo di listino. Viene usato il metodo <xref:System.Linq.Enumerable.ToArray%2A> per forzare l'esecuzione immediata della query:  
   
@@ -63,5 +63,5 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
 
 - [Guida per programmatori](programming-guide-linq-to-dataset.md)
 - [Esecuzione di query su oggetti DataSet](querying-datasets-linq-to-dataset.md)
-- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

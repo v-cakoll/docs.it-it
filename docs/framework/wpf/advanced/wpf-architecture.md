@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459603"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740698"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento viene fornita una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei sottosistemi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]e ne vengono descritte le modalità di interazione. Vengono inoltre forniti i dettagli relativi ad alcune scelte effettuate dagli architetti di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -42,7 +42,7 @@ In questo argomento viene fornita una presentazione guidata della gerarchia di c
   
  Quando si discute di concorrenza in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i due concetti fondamentali da comprendere sono il dispatcher e l'affinità di thread.  
   
- Durante la fase di progettazione di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'obiettivo era di passare a un singolo thread di esecuzione ma con un modello ottimizzato per l'affinità in assenza di altri thread. L'affinità di thread si verifica quando un componente utilizza l'identità del thread in esecuzione per archiviare un tipo di stato. Nella forma più comune, per archiviare lo stato viene utilizzata l'archiviazione locale di thread (TLS). L'affinità di thread richiede che ciascun thread di esecuzione logico appartenga a un solo thread fisico del sistema operativo, che può richiedere un elevato consumo di memoria. Alla fine, il modello di threading di WPF è stato tenuto in sincronia con il modello di threading User32 esistente dell'esecuzione a thread singolo con affinità di thread. Il motivo principale per questo oggetto è stato l'interoperabilità: sistemi quali [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], Appunti e Internet Explorer richiedono tutti l'esecuzione di affinità di thread singolo (STA).  
+ Durante la fase di progettazione di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'obiettivo era di passare a un singolo thread di esecuzione ma con un modello ottimizzato per l'affinità in assenza di altri thread. L'affinità di thread si verifica quando un componente utilizza l'identità del thread in esecuzione per archiviare un tipo di stato. Nella forma più comune, per archiviare lo stato viene utilizzata l'archiviazione locale di thread (TLS). L'affinità di thread richiede che ciascun thread di esecuzione logico appartenga a un solo thread fisico del sistema operativo, che può richiedere un elevato consumo di memoria. Alla fine, il modello di threading di WPF è stato tenuto in sincronia con il modello di threading User32 esistente dell'esecuzione a thread singolo con affinità di thread. Il motivo principale di questa interoperabilità è che i sistemi, ad esempio OLE 2,0, gli appunti e Internet Explorer, richiedono l'esecuzione di affinità a thread singolo (STA).  
   
  Disponendo di oggetti con threading STA, è necessaria una modalità di comunicazione tra thread e di conferma di utilizzo del thread corretto. Qui si colloca il ruolo del dispatcher. Il dispatcher è un sistema di base di invio di messaggi con più code in ordine di priorità. Gli esempi di messaggi includono le notifiche di input non elaborato (spostamenti del mouse), le funzionalità del framework (layout) o i comandi utente (esecuzione di metodi). Derivando da <xref:System.Windows.Threading.DispatcherObject>, viene creato un oggetto CLR con un comportamento STA e viene assegnato un puntatore a un dispatcher in fase di creazione.  
   

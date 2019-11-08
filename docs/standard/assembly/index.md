@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 7ac9ea194095832f6c3825ce414350bca89c26fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107236"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733149"
 ---
 # <a name="assemblies-in-net"></a>Assembly in .NET
 
-Gli assembly costituiscono le unità di base per la distribuzione, il controllo della versione, il riutilizzo, l'ambito di attivazione e le autorizzazioni di sicurezza per. Applicazioni basate su rete. Un assembly è una raccolta di tipi e risorse creati per essere usati insieme e per formare un'unità logica di funzionalità. Gli assembly hanno la forma di file eseguibili (con*estensione exe*) o di libreria a collegamento dinamico (*dll*) e sono i blocchi predefiniti delle applicazioni .NET. Gli assembly forniscono al Common Language Runtime le informazioni necessarie per riconoscere le implementazioni dei tipi. Un assembly può essere considerato come una raccolta di tipi e risorse che formano un'unità logica di funzionalità e che sono creati per interagire.
+Gli assembly costituiscono le unità di base per la distribuzione, il controllo della versione, il riutilizzo, l'ambito di attivazione e le autorizzazioni di sicurezza per. Applicazioni basate su rete. Un assembly è una raccolta di tipi e risorse creati per essere usati insieme e per formare un'unità logica di funzionalità. Gli assembly hanno la forma di file eseguibili (con*estensione exe*) o di libreria a collegamento dinamico (*dll*) e sono i blocchi predefiniti delle applicazioni .NET. Gli assembly forniscono al Common Language Runtime le informazioni necessarie per riconoscere le implementazioni dei tipi.
 
 In .NET Core e .NET Framework è possibile compilare un assembly da uno o più file di codice sorgente. In .NET Framework gli assembly possono contenere uno o più moduli. In questo modo è possibile pianificare progetti di grandi dimensioni in modo che più sviluppatori possano lavorare su moduli o file di codice sorgente distinti, combinati per creare un singolo assembly. Per altre informazioni sui moduli, vedere [procedura: compilare un assembly](../../framework/app-domains/build-multifile-assembly.md)su più file.
 
@@ -35,33 +35,33 @@ Di seguito sono riportate le proprietà degli assembly:
 
 - È possibile ottenere informazioni su un assembly a livello di codice tramite reflection. Per altre informazioni, vedere [Reflection (C#)](../../csharp/programming-guide/concepts/reflection.md) o [Reflection (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- È possibile caricare un assembly solo per esaminarlo usando la classe <xref:System.Reflection.MetadataLoadContext> in .NET Core e il metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> in .NET Core e .NET Framework.
+- È possibile caricare un assembly solo per esaminarlo usando la classe <xref:System.Reflection.MetadataLoadContext> in .NET Core e i metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> in .NET Core e .NET Framework.
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Assembly nel Common Language Runtime
 
-Gli assembly forniscono la Common Language Runtime con le informazioni necessarie per conoscere le implementazioni dei tipi. Per il runtime, un tipo non esiste all'esterno del contesto di un assembly. 
+Gli assembly forniscono la Common Language Runtime con le informazioni necessarie per conoscere le implementazioni dei tipi. Per il runtime, un tipo non esiste all'esterno del contesto di un assembly.
 
-Un assembly definisce le seguenti informazioni:  
-  
+Un assembly definisce le seguenti informazioni:
+
 - Codice eseguito dal Common Language Runtime. Si noti che ogni assembly può avere un solo punto di ingresso: `DllMain`, `WinMain` o `Main`.
-  
-- Limite di sicurezza. Un assembly è l'unità presso cui sono richieste e concesse le autorizzazioni. Per ulteriori informazioni sui limiti di sicurezza negli assembly, vedere [considerazioni sulla sicurezza degli assembly](security-considerations.md).  
-  
-- Limite del tipo. L'identità di ogni tipo include il nome dell'assembly in cui risiede. Un tipo con nome `MyType` caricato nell'ambito di un assembly è diverso da un tipo con nome `MyType` caricato nell'ambito di un altro assembly. 
-  
+
+- Limite di sicurezza. Un assembly è l'unità presso cui sono richieste e concesse le autorizzazioni. Per ulteriori informazioni sui limiti di sicurezza negli assembly, vedere [considerazioni sulla sicurezza degli assembly](security-considerations.md).
+
+- Limite del tipo. L'identità di ogni tipo include il nome dell'assembly in cui risiede. Un tipo con nome `MyType` caricato nell'ambito di un assembly è diverso da un tipo con nome `MyType` caricato nell'ambito di un altro assembly.
+
 - Limite dell'ambito di riferimento. Il [manifesto dell'assembly](#assembly-manifest) contiene metadati usati per risolvere i tipi e soddisfare le richieste di risorse. Il manifesto specifica i tipi e le risorse da esporre all'esterno dell'assembly ed enumera altri assembly da cui dipende. Il codice MSIL (Microsoft Intermediate Language) in un file eseguibile portabile (PE) non verrà eseguito a meno che non disponga di un [manifesto dell'assembly](#assembly-manifest)associato.
-  
-- Limite della versione. L'assembly è la più piccola unità di versione nella Common Language Runtime. Il controllo delle versioni di tutti i tipi e le risorse nello stesso assembly viene apposto come unità. Il [manifesto dell'assembly](#assembly-manifest) descrive le dipendenze della versione specificate per gli assembly dipendenti. Per ulteriori informazioni sul controllo delle versioni, vedere [controllo delle versioni degli assembly](versioning.md).  
-  
-- Unità di distribuzione. All'avvio di un'applicazione, devono essere presenti solo gli assembly chiamati inizialmente dall'applicazione. Gli altri assembly, ad esempio gli assembly contenenti le risorse di localizzazione o le classi di utilità, possono essere recuperati su richiesta. In questo modo le app possono essere semplici e sottili quando vengono scaricati per la prima volta. Per ulteriori informazioni sulla distribuzione degli assembly, vedere [deploy Applications](../../framework/deployment/index.md).  
-  
-- Unità di esecuzione side-by-side. Per ulteriori informazioni sull'esecuzione di più versioni di un assembly, vedere [assembly ed esecuzione side-by-side](side-by-side-execution.md).  
+
+- Limite della versione. L'assembly è la più piccola unità di versione nella Common Language Runtime. Il controllo delle versioni di tutti i tipi e le risorse nello stesso assembly viene apposto come unità. Il [manifesto dell'assembly](#assembly-manifest) descrive le dipendenze della versione specificate per gli assembly dipendenti. Per ulteriori informazioni sul controllo delle versioni, vedere [controllo delle versioni degli assembly](versioning.md).
+
+- Unità di distribuzione. All'avvio di un'applicazione, devono essere presenti solo gli assembly chiamati inizialmente dall'applicazione. Gli altri assembly, ad esempio gli assembly contenenti le risorse di localizzazione o le classi di utilità, possono essere recuperati su richiesta. In questo modo le app possono essere semplici e sottili quando vengono scaricati per la prima volta. Per ulteriori informazioni sulla distribuzione degli assembly, vedere [deploy Applications](../../framework/deployment/index.md).
+
+- Unità di esecuzione side-by-side. Per ulteriori informazioni sull'esecuzione di più versioni di un assembly, vedere [assembly ed esecuzione side-by-side](side-by-side-execution.md).
 
 ## <a name="create-an-assembly"></a>Creazione di un assembly
 
-Gli assembly possono essere statici o dinamici. Gli assembly statici sono archiviati su disco in file eseguibili portabili. Gli assembly statici possono includere interfacce, classi e risorse quali bitmap, file JPEG e altri file di risorse. È anche possibile creare assembly dinamici, eseguiti direttamente dalla memoria e non salvati su disco prima dell'esecuzione. È possibile salvare gli assembly dinamici su disco dopo l'esecuzione.  
+Gli assembly possono essere statici o dinamici. Gli assembly statici sono archiviati su disco in file eseguibili portabili. Gli assembly statici possono includere interfacce, classi e risorse quali bitmap, file JPEG e altri file di risorse. È anche possibile creare assembly dinamici, eseguiti direttamente dalla memoria e non salvati su disco prima dell'esecuzione. È possibile salvare gli assembly dinamici su disco dopo l'esecuzione.
 
-Esistono diversi modi per creare assembly. È possibile usare gli strumenti di sviluppo, ad esempio Visual Studio, che possono creare file con estensione *dll* o *exe* . È possibile usare gli strumenti nel Windows SDK per creare assembly con moduli da altri ambienti di sviluppo. Per creare assembly dinamici è anche possibile usare le API di Common Language Runtime come <xref:System.Reflection.Emit?displayProperty=nameWithType>. 
+Esistono diversi modi per creare assembly. È possibile usare gli strumenti di sviluppo, ad esempio Visual Studio, che possono creare file con estensione *dll* o *exe* . È possibile usare gli strumenti nel Windows SDK per creare assembly con moduli da altri ambienti di sviluppo. Per creare assembly dinamici è anche possibile usare le API di Common Language Runtime come <xref:System.Reflection.Emit?displayProperty=nameWithType>.
 
 Compila gli assembly in Visual Studio, creandoli con strumenti dell'interfaccia della riga di comando di .NET Core o compilando .NET Framework assembly con un compilatore da riga di comando. Per ulteriori informazioni sulla compilazione di assembly mediante gli strumenti dell'interfaccia della riga di comando di .NET Core, vedere [strumenti dell'interfaccia della riga di comando di .NET Core](../../core/tools/index.md). Per la compilazione di assembly con i compilatori della riga di comando, vedere [compilazione da riga di comando con csc. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) per C#o [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) per Visual Basic.
 
@@ -90,23 +90,23 @@ Per usare un assembly in un'applicazione, è necessario aggiungervi un riferimen
 In C#è possibile utilizzare due versioni dello stesso assembly in una singola applicazione. Per altre informazioni, vedere [alias esterno](../../csharp/language-reference/keywords/extern-alias.md).
 
 ## <a name="related-content"></a>Contenuti correlati
-  
-|Titolo|Descrizione|  
-|-----------|-----------------|  
-|[Contenuto dell'assembly](contents.md)|Elementi che costituiscono un assembly.|  
-|[Manifesto dell'assembly](manifest.md)|I dati nel manifesto dell'assembly e il modo in cui vengono archiviati negli assembly.|  
-|[Assembly Cache globale](../../framework/app-domains/gac.md)|Modalità di archiviazione e di utilizzo degli assembly nella GAC.|  
-|[Assembly con nomi sicuri](strong-named.md)|Caratteristiche degli assembly con nome sicuro.|  
-|[Considerazioni sulla sicurezza degli assembly](security-considerations.md)|Funzionamento della sicurezza con gli assembly.|  
-|[Controllo delle versioni degli assembly](versioning.md)|Panoramica dei criteri di controllo delle versioni .NET Framework.|  
-|[Posizionamento degli assembly](../../framework/app-domains/assembly-placement.md)|Posizione in cui individuare gli assembly.|  
-|[Assembly e esecuzione side-by-side](side-by-side-execution.md)|Usare più versioni del runtime o di un assembly simultaneamente.|  
-|[Programma con assembly](program.md)|Come creare, firmare e impostare attributi sugli assembly.|  
-|[Creare assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Come creare assembly dinamici.|  
-|[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Il modo in cui il .NET Framework risolve i riferimenti ad assembly in fase di esecuzione.|  
 
-## <a name="reference"></a>Reference  
- <xref:System.Reflection.Assembly?displayProperty=nameWithType>
+|Titolo|Descrizione|
+|-----------|-----------------|
+|[Contenuto dell'assembly](contents.md)|Elementi che costituiscono un assembly.|
+|[Manifesto dell'assembly](manifest.md)|I dati nel manifesto dell'assembly e il modo in cui vengono archiviati negli assembly.|
+|[Assembly Cache globale](../../framework/app-domains/gac.md)|Modalità di archiviazione e di utilizzo degli assembly nella GAC.|
+|[Assembly con nomi sicuri](strong-named.md)|Caratteristiche degli assembly con nome sicuro.|
+|[Considerazioni sulla sicurezza degli assembly](security-considerations.md)|Funzionamento della sicurezza con gli assembly.|
+|[Controllo delle versioni degli assembly](versioning.md)|Panoramica dei criteri di controllo delle versioni .NET Framework.|
+|[Posizionamento degli assembly](../../framework/app-domains/assembly-placement.md)|Posizione in cui individuare gli assembly.|
+|[Assembly e esecuzione side-by-side](side-by-side-execution.md)|Usare più versioni del runtime o di un assembly simultaneamente.|
+|[Creare assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Come creare assembly dinamici.|
+|[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Il modo in cui il .NET Framework risolve i riferimenti ad assembly in fase di esecuzione.|
+
+## <a name="reference"></a>Reference
+
+<xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>Vedere anche
 

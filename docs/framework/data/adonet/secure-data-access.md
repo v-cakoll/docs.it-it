@@ -2,12 +2,12 @@
 title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782771"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735275"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -33,7 +33,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni sull'uso dei comandi con parametri, vedere le risorse seguenti.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Parametri DataAdapter](dataadapter-parameters.md)|Viene descritto come usare parametri con `DataAdapter`.|  
 |[Modifica di dati con stored procedure](modifying-data-with-stored-procedures.md)|Viene descritto come specificare i parametri e ottenere un valore restituito.|  
@@ -55,7 +55,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Nozioni fondamentali sulla gestione delle eccezioni](../../../standard/exceptions/exception-handling-fundamentals.md)|Vengono descritte le forme di base di gestione delle eccezioni strutturata di tipo try/catch/finally|  
+|[Gestione e generazione di eccezioni in .NET](../../../standard/exceptions/index.md)|Vengono descritte le forme di base di gestione delle eccezioni strutturata di tipo try/catch/finally|  
 |[Procedure consigliate per le eccezioni](../../../standard/exceptions/best-practices-for-exceptions.md)|Vengono descritte le procedure consigliate per la gestione delle eccezioni.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Protezione delle origini dati di Microsoft Access ed Excel  
@@ -63,7 +63,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni sulla protezione dei dati di Access ed Excel, vedere le risorse seguenti.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Considerazioni sulla sicurezza e linee guida per Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
 |[Informazioni sul ruolo dei file di informazioni sul gruppo di lavoro nella sicurezza dell'accesso](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
@@ -73,7 +73,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni, vedere la seguente risorsa.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza basata sui ruoli](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Viene illustrato come integrare codice gestito con i servizi di sicurezza COM+.|  
   
@@ -82,7 +82,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Interoperabilità con codice non gestito](../../interop/index.md)|Contiene argomenti in cui viene descritto come esporre componenti COM a .NET Framework e componenti .NET Framework a COM.|
 |[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|

@@ -2,12 +2,12 @@
 title: Valutare le modifiche che causano un'interruzione - .NET Core
 description: Informazioni sui modi in cui .NET Core tenta di garantire la compatibilità tra le versioni di .NET per sviluppatori.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416661"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739344"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Valutare le modifiche che causano un'interruzione
 
@@ -52,7 +52,7 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 - **✔️ Modifica di un tipo [struct](../../csharp/language-reference/keywords/struct.md) in un tipo `readonly struct`**
 
   Si noti che la modifica un tipo `readonly struct` in un tipo `struct` non è consentita.
-  
+
 - **✔️ Aggiunta della parola chiave [sealed](../../csharp/language-reference/keywords/sealed.md) o [abstract](../../csharp/language-reference/keywords/abstract.md) a un tipo quando non sono presenti costruttori *accessibili* (pubblici o protetti)**
 
 - **✔️ Espansione della visibilità di un tipo**
@@ -138,9 +138,9 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 - **❌ la ridenominazione di un parametro (inclusa la modifica del case)**
 
   Questa viene considerata una modifica che causa un'interruzione per due motivi:
-  
+
   - Interrompe gli scenari con associazione tardiva, ad esempio la funzionalità di associazione tardiva in Visual Basic e [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) in C#.
-  
+
   - Interrompe la [compatibilità a livello di codice sorgente](categories.md#source-compatibility) quando gli sviluppatori usano [argomenti denominati](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
 - **❌ la modifica da un valore restituito `ref` a un valore restituito `ref readonly`**
@@ -153,9 +153,9 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Anche se spesso questa non è una modifica che causa un'interruzione perché il compilatore C# tende a generare istruzioni [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) in linguaggio intermedio (IL) per chiamare metodi non virtuali (diversamente da una normale chiamata, `callvirt` esegue un controllo null), questo comportamento non è invariabile per diversi motivi:
   - C# non è l'unico linguaggio di destinazione di .NET.
-  
+
   - Il compilatore C# tenta sempre più di ottimizzare `callvirt` in una normale chiamata ogni volta che il metodo di destinazione non è virtuale e presumibilmente non è null (ad esempio quando si accede a un metodo tramite l'[operatore di propagazione null ?.](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
-  
+
   Quando un metodo viene impostato come virtuale, spesso il codice consumer finisce per chiamarlo in modo non virtuale.
 
 - **❌ aggiunta della parola chiave [Virtual](../../csharp/language-reference/keywords/virtual.md) a un membro**
