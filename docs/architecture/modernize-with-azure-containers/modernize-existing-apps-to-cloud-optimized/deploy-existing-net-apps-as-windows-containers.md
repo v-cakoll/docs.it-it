@@ -3,10 +3,10 @@ title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Distribuire app .NET esistenti come contenitori di Windows
 ms.date: 04/29/2018
 ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089552"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows

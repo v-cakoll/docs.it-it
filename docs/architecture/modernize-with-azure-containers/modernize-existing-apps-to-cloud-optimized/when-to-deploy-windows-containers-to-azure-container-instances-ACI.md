@@ -3,15 +3,15 @@ title: Quando distribuire i contenitori di Windows in istanze di contenitore di 
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Quando distribuire i contenitori di Windows in istanze di contenitore di Azure (ACI)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577934"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Quando distribuire i contenitori di Windows in istanze di contenitore di Azure (ACI)
 
-Istanze di contenitore di Azure la proposta di valore principale è che è possibile distribuire immediatamente i contenitori e non è necessario mantenere tale ambiente, non è necessario aggiornare/applicare patch al sistema operativo o alle macchine virtuali sottostanti, tutto trasparente ed è sufficiente distribuire contenitori in un ambiente pronto per l'uso.
+Istanze di contenitore di Azure la proposta di valore principale è che è possibile distribuire immediatamente i contenitori e non è necessario mantenere tale ambiente, non è necessario aggiornare/applicare patch al sistema operativo o alle macchine virtuali sottostanti, tutto trasparente ed è sufficiente distribuire i contenitori in un ambiente pronto per l'uso.
 
 I motivi e gli scenari in cui si vuole usare ACI sono simili agli scenari principali quando si usano macchine virtuali di Azure con contenitori, quindi fondamentalmente gli scenari principali per l'uso di istanze di contenitore di Azure sono:
 

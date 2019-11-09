@@ -3,10 +3,10 @@ title: Casi in cui eseguire la distribuzione di contenitori Windows nell'infrast
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Quando distribuire i contenitori di Windows nell'infrastruttura VM IaaS locale
 ms.date: 04/28/2018
 ms.openlocfilehash: 5986073e295eeba5921a2d899b236c68a27251fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577974"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Casi in cui eseguire la distribuzione di contenitori Windows nell'infrastruttura di macchine virtuali IaaS locale

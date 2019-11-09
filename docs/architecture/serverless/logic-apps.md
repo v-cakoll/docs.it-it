@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577454"
 ---
 # <a name="azure-logic-apps"></a>App per la logica di Azure
@@ -25,7 +25,7 @@ Analogamente alle funzioni di Azure, è possibile avviare i flussi di lavoro del
 
 ![Trigger di app per la logica](./media/logic-app-triggers.png)
 
-Una volta attivata l'app, è possibile usare la finestra di progettazione visiva per compilare passaggi, cicli, condizioni e azioni. Tutti i dati inseriti in un passaggio precedente sono disponibili per l'uso nei passaggi successivi. Il flusso di lavoro seguente carica URL da un database CosmosDB. Trova quelli con un host di `t.co` e quindi li cerca su Twitter. Se vengono trovati Tweet corrispondenti, i documenti vengono aggiornati con i Tweet correlati chiamando una funzione.
+Una volta attivata l'app, è possibile usare la finestra di progettazione visiva per compilare passaggi, cicli, condizioni e azioni. Tutti i dati inseriti in un passaggio precedente sono disponibili per l'uso nei passaggi successivi. Il flusso di lavoro seguente carica URL da un database CosmosDB. Trova quelli con un host di `t.co` quindi li cerca su Twitter. Se vengono trovati Tweet corrispondenti, i documenti vengono aggiornati con i Tweet correlati chiamando una funzione.
 
 ![Flusso di lavoro dell'app per la logica](./media/logic-app-workflow.png)
 

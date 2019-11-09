@@ -3,10 +3,10 @@ title: Casi in cui non eseguire la distribuzione in contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Quando non eseguire la distribuzione nei contenitori di Windows
 ms.date: 04/28/2018
 ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577954"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Casi in cui non eseguire la distribuzione in contenitori Windows
@@ -33,7 +33,7 @@ Casi non supportati nei contenitori di Windows, a partire dal 2018 maggio:
 
 - I ruoli di infrastruttura Windows (DNS, DHCP, DC, NTP, PRINT, file server, IAM e così via) non sono supportati.
 
-Per altri scenari non supportati e richieste dalla community, vedere il forum di UserVoice per i contenitori di Windows <https://windowsserver.uservoice.com/forums/304624-containers>:.
+Per altri scenari non supportati e richieste dalla community, vedere il forum di UserVoice per i contenitori di Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
