@@ -40,8 +40,8 @@ Non è tutto negativo. I monoliti offrono alcuni vantaggi distinti. Ad esempio, 
 
 - build
 - test
-- Distribuire
-- Risolvere i problemi
+- distribuire
+- risolvere i problemi
 - scala
 
 Molte app riuscite attualmente disponibili sono state create come Monolith. L'app è un hit e continua ad evolversi, iterazione dopo l'iterazione, aggiungendo altre funzionalità.

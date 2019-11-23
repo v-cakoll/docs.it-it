@@ -93,15 +93,15 @@ Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezi
 
 > | **Tag** | **Sistema e versione** |
 > |---|---|
-> | **Microsoft/DotNet-Framework: 4. x-windowsservercore** | .NET Framework 4. x in Windows Server Core |
-> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x con personalizzazione ASP.NET aggiuntiva, in Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x in Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x con personalizzazione ASP.NET aggiuntiva, in Windows Server Core |
 
 Per .NET Core (multipiattaforma per Linux e Windows), i tag avranno un aspetto simile al seguente:
 
 > | **Tag** | **Sistema e versione**
 > |---|---|
-> | **Microsoft/DotNet: 2.0.0-Runtime** | Runtime di .NET Core 2,0-solo in Linux |
-> | **Microsoft/DotNet: 2.0.0-Runtime-nanoserver** | Runtime di .NET Core 2,0-solo in Windows nano server |
+> | **microsoft/dotnet:2.0.0-runtime** | Runtime di .NET Core 2,0-solo in Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Runtime di .NET Core 2,0-solo in Windows nano server |
 
 ### <a name="multi-arch-images"></a>Immagini a più Arch
 

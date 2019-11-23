@@ -15,14 +15,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699784"
 ---
-# <a name="nameentry-element"></a>Elemento > \<nameEntry
+# <a name="nameentry-element"></a>\<elemento > nameEntry
 Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping** >](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,30 +31,30 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|description|  
 |---------------|-----------------|  
 |**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo implementato dalla classe di crittografia.|  
-|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nell'elemento [> \<cryptoClass](cryptoclass-element.md) .|  
+|**classe**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nell'elemento [\<> CryptoClass](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'attributo **Name** può essere il nome di una delle classi astratte trovate nello spazio dei nomi <xref:System.Security.Cryptography>. Quando si chiama il metodo **create** in una classe di crittografia astratta, il nome della classe astratta viene passato al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. **CreateFromName** restituisce un'istanza del tipo indicato dall'attributo **Class** . Se l'attributo **Name** è un nome breve, ad esempio RSA, è possibile usare tale nome quando si chiama il metodo **CreateFromName** .  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<nameEntry** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<nameEntry >** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  
@@ -79,5 +79,5 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 
 - [Schema dei file di configurazione](../index.md)
 - [Schema delle impostazioni di crittografia](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Servizi di crittografia](../../../../standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)

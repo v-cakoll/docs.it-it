@@ -31,11 +31,11 @@ La figura 4-13 Mostra una panoramica della vera e propria piattaforma cloud ibri
 
 Azure Stack è disponibile in due opzioni di distribuzione, per soddisfare le proprie esigenze:
 
-- Sistemi integrati Azure Stack
+- Sistemi integrati di Azure Stack
 
 - Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Sistemi integrati Azure Stack
+### <a name="azure-stack-integrated-systems"></a>Sistemi integrati di Azure Stack
 
 Azure Stack sistemi integrati sono offerti attraverso una partnership di Microsoft e dei partner hardware. La partnership crea una soluzione che offre un'innovazione basata sul cloud, bilanciata dalla semplicità di gestione. Poiché Azure Stack viene offerto come sistema integrato di hardware e software, si ottiene la giusta quantità di flessibilità e controllo, pur continuando ad adottare l'innovazione dal cloud. Azure Stack i sistemi integrati hanno una dimensione compresa tra 4 e 12 nodi e sono supportati congiuntamente dal partner hardware e da Microsoft. Usare Azure Stack sistemi integrati per implementare nuovi scenari per i carichi di lavoro di produzione.
 

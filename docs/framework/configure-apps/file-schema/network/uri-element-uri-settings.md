@@ -9,11 +9,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697445"
 ---
-# <a name="uri-element-uri-settings"></a>Elemento > \<uri (impostazioni URI)
+# <a name="uri-element-uri-settings"></a>\<Uri > elemento (impostazioni URI)
 Contiene le impostazioni che specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+&nbsp;&nbsp;**uri\<>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -23,10 +23,10 @@ Contiene le impostazioni che specificano il modo in cui il .NET Framework gestis
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -42,12 +42,12 @@ Contiene le impostazioni che specificano il modo in cui il .NET Framework gestis
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'elemento `uri` contiene le impostazioni per i membri della classe <xref:System.Uri> utilizzata dalle classi nello spazio dei nomi <xref:System.Net>. Le impostazioni configurano il supporto per IRI e IDN.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>description  
  Nell'esempio seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN. Nell'esempio vengono cancellate anche tutte le impostazioni dello schema e viene aggiunto il supporto per non eseguire l'escape dei delimitatori di percorso codificati in percentuale per lo schema http.  
   
 ### <a name="code"></a>Codice  

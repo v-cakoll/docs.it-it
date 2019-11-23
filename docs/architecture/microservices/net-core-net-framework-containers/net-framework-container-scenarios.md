@@ -2,12 +2,12 @@
 title: Quando scegliere .NET Framework per i contenitori Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Quando scegliere .NET Framework per i contenitori Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093761"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966884"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando scegliere .NET Framework per i contenitori Docker
 
@@ -51,15 +51,16 @@ Nel frattempo, se una piattaforma o un servizio in Azure ancora non supporta .NE
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Guida a .NET Core**  
+- **Guida a .NET Core** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
-- **Porting from .NET Framework to .NET Core** (Portabilità da .NET Framework a .NET Core)  
+- **Porting from .NET Framework to .NET Core** \ (Portabilità da .NET Framework a .NET Core)
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Guida di .NET Core in Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **Guida a .NET Core in docker** \
+  [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **.NET Components Overview** (Panoramica dei componenti .NET)  
+- **Componenti dell'architettura .NET** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]

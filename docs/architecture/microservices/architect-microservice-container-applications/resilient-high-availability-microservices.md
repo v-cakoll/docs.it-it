@@ -74,7 +74,7 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 - Sito ufficiale di **Splunk**. \
   <https://www.splunk.com/>
 
-- **Classe EventSource Class**: API per traccia eventi per Windows (ETW) \
+- **Classe EventSource Class**: API per traccia eventi per Windows (ETW)
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]

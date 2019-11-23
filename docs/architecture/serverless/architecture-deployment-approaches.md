@@ -139,8 +139,8 @@ Esiste una vasta gamma di opzioni disponibili per l'architettura, incluso un app
 |         |IaaS     |PaaS     |Contenitore|Senza server|
 |---------|---------|---------|---------|----------|
 |**Scala**|VM       |Istanza |App      |Funzione  |
-|**Astrae**|Hardware|Piattaforma|Host sistema operativo|Runtime   |
-|**Unità** |VM       |Progetto  |Immagine    |Codice      |
+|**Astrae**|Hardware|Piattaforma|Host sistema operativo|Tipo   |
+|**Unità** |VM       |Progetto  |Image    |Codice      |
 |**Durata**|Mesi|Da giorni a mesi|Da minuti a giorni|Da millisecondi a minuti|
 |**Responsabilità**|Applicazioni, dipendenze, Runtime e sistema operativo|Applicazioni e dipendenze|Applicazioni, dipendenze e Runtime|Funzione
 

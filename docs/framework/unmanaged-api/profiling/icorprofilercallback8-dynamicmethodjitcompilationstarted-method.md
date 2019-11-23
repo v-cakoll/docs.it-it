@@ -44,7 +44,7 @@ Puntatore al primo byte dell'intestazione IL del metodo.
 [in] `cbILHeader`    
 Numero di byte nell'intestazione IL. 
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
 Questo callback viene attivato ogni volta che un metodo dinamico viene compilato tramite JIT. Sono inclusi vari Stub IL e metodi LCG. Il suo obiettivo consiste nel fornire ai writer del profiler informazioni sufficienti per identificare il metodo compilato agli utenti.
 
@@ -54,7 +54,7 @@ Questo callback viene attivato ogni volta che un metodo dinamico viene compilato
 Il puntatore `pILHeader` è valido solo durante il callback.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare stored procedure mappate per più forme di risultati'
+title: 'Procedura: utilizzare stored procedure mappate per più forme di risultati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,10 +12,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003279"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: Usare stored procedure mappate per più forme di risultati
-Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possa generare tutti i possibili tipi di proiezione, non può essere a conoscenza dell'ordine in cui verranno restituiti.  
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: utilizzare stored procedure mappate per più forme di risultati
+Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possibile generare tutti i possibili tipi di proiezione, non è in grado di stabilire l'ordine in cui verranno restituiti.  
   
- Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per forme di risultati sequenziali @ no__t-0.  
+ Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per ulteriori informazioni, vedere [procedura: utilizzare stored procedure mappate per forme di risultati sequenziali](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
   
  L'attributo <xref:System.Data.Linq.Mapping.ResultTypeAttribute> viene applicato a stored procedure che restituiscono più tipi di risultati per specificare il set di tipi che la stored procedure può restituire.  
   

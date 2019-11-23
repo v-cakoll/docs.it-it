@@ -14,14 +14,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697294"
 ---
-# <a name="listeners-element-for-source"></a>Elemento > \<listeners per \<SOURCE >
+# <a name="listeners-element-for-source"></a>\<listener > elemento per \<origine >
 Aggiunge o rimuove i listener nella raccolta <xref:System.Diagnostics.TraceSource.Listeners%2A> per un <xref:System.Diagnostics.TraceSource>. Un listener indirizza l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<origini** >](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **origine** >](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**listener** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,29 +34,29 @@ Aggiunge o rimuove i listener nella raccolta <xref:System.Diagnostics.TraceSourc
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners`.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Rimuove un listener dalla raccolta `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Rimuove un listener dalla raccolta di `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
 |`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
 |`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="configuration-file"></a>File di configurazione  
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  

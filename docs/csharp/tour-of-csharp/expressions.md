@@ -19,7 +19,7 @@ Se un'espressione contiene più operatori, la *precedenza* degli operatori deter
 Quando un operando si trova tra due operatori con la stessa precedenza, l'ordine di esecuzione delle operazioni viene determinato dall'*associatività* degli operatori:
 
 * Ad eccezione degli operatori di assegnazione e di Unione null, tutti gli operatori binari sono *associativi a sinistra*, ovvero le operazioni vengono eseguite da sinistra a destra. L'espressione `x + y + z` viene ad esempio valutata come `(x + y) + z`.
-* Gli operatori di assegnazione, gli operatori `??` e `??=` che uniscono i valori null e l'operatore condizionale `?:` sono *associativi a destra*, ovvero le operazioni vengono eseguite da destra a sinistra. L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.
+* Gli operatori di assegnazione, gli operatori di `??` e di `??=` di valori null e l'operatore condizionale `?:` sono *associativi a destra*, ovvero le operazioni vengono eseguite da destra a sinistra. L'espressione `x = y = z` viene ad esempio valutata come `x = (y = z)`.
 
 È possibile controllare la precedenza e l'associatività usando le parentesi. Ad esempio, `x + y * z` prima moltiplica `y` per `z` e quindi somma il risultato a `x`, ma `(x + y) * z` prima somma `x` e `y` e quindi moltiplica il risultato per `z`.
 

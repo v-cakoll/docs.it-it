@@ -26,7 +26,7 @@ Le pagine sono costituite dai componenti seguenti:
 - Markup HTML
 - Codice C# o Visual Basic
 - Classe code-behind che contiene le funzionalità per la logica e la gestione degli eventi
-- Controlli
+- Controls
 
 I controlli sono unità riutilizzabili dell'interfaccia utente Web a cui è possibile inserire e interagire a livello di codice in una pagina. Le pagine sono costituite da file che terminano con *. aspx* contenente markup, controlli e codice. Le classi code-behind si trovano in file con lo stesso nome di base e con estensione *aspx.cs* o *aspx. vb* , a seconda del linguaggio di programmazione usato. È interessante notare che il server Web interpreta il contenuto dei file con *estensione aspx* e li compila ogni volta che vengono modificati. Questa ricompilazione si verifica anche se il server Web è già in esecuzione.
 

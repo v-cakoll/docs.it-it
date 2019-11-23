@@ -43,16 +43,16 @@ Solo i prime tre aspetti sono descritti o introdotti nella presente guida. Gli u
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Mark Russinovich. Microservizi: una rivoluzione delle applicazioni consentita dal cloud** \
+- **Contrassegnare Russinovich. Microservizi: una rivoluzione delle applicazioni basata sul cloud** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler. Microservizi** \
+- **Martin Fowler. \ di microservizi**
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **Martin Fowler. Prerequisiti dei microservizi** \
+- **Martin Fowler. Prerequisiti per i microservizi** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Cloud computing in blocchi** \
+- **Jimmy Nilsson. Blocco del cloud computing** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
 - **Cesar de la Torre. Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft** (e-book scaricabile) \

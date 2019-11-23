@@ -59,7 +59,7 @@ Il file di progetto per un'app webassembly blazer è leggermente più occupato (
 
 I progetti di webassembly Blazer hanno come destinazione .NET Standard anziché .NET Core perché vengono eseguiti nel browser in un Runtime .NET basato su webassembly. Non è possibile installare .NET in un Web browser, ad esempio in un server o in un computer di sviluppo. Di conseguenza, il progetto fa riferimento al Framework di Blaze usando singoli riferimenti ai pacchetti.
 
-Per confronto, un progetto Web Form ASP.NET predefinito include quasi 300 righe di codice XML nel file con estensione *csproj* , la maggior parte dei quali elenca in modo esplicito i vari file di codice e di contenuto del progetto. Molte delle semplificazioni nei progetti basati su .NET Core e .NET Standard provengono dalle destinazioni predefinite e dalle proprietà importate facendo riferimento al `Microsoft.NET.Sdk.Web` SDK, spesso definito semplicemente SDK Web. Web SDK include caratteri jolly e altre convenienze che semplificano l'inclusione del codice e dei file di contenuto nel progetto. Non è necessario elencare i file in modo esplicito. Quando la destinazione è .NET Core, Web SDK aggiunge anche riferimenti a Framework sia per .NET Core che ASP.NET Core Framework condivisi. I Framework sono visibili dal nodo **dipendenze**  > **Framework** nella finestra di **Esplora soluzioni** . I Framework condivisi sono raccolte di assembly installati nel computer durante l'installazione di .NET Core.
+Per confronto, un progetto Web Form ASP.NET predefinito include quasi 300 righe di codice XML nel file con estensione *csproj* , la maggior parte dei quali elenca in modo esplicito i vari file di codice e di contenuto del progetto. Molte delle semplificazioni nei progetti basati su .NET Core e .NET Standard provengono dalle destinazioni predefinite e dalle proprietà importate facendo riferimento al `Microsoft.NET.Sdk.Web` SDK, spesso definito semplicemente SDK Web. Web SDK include caratteri jolly e altre convenienze che semplificano l'inclusione del codice e dei file di contenuto nel progetto. Non è necessario elencare i file in modo esplicito. Quando la destinazione è .NET Core, Web SDK aggiunge anche riferimenti a Framework sia per .NET Core che ASP.NET Core Framework condivisi. I Framework sono visibili dal nodo **dipendenze** > **Framework** nella finestra di **Esplora soluzioni** . I Framework condivisi sono raccolte di assembly installati nel computer durante l'installazione di .NET Core.
 
 Sebbene siano supportati, i singoli riferimenti ad assembly sono meno comuni nei progetti .NET Core. La maggior parte delle dipendenze del progetto viene gestita come riferimenti ai pacchetti NuGet. È sufficiente fare riferimento alle dipendenze del pacchetto di primo livello nei progetti .NET Core. Le dipendenze transitive vengono incluse automaticamente. Anziché usare il file *packages. config* comunemente presente nei progetti Web Form ASP.NET per fare riferimento ai pacchetti, i riferimenti al pacchetto vengono aggiunti al file di progetto usando l'elemento `<PackageReference>`.
 
@@ -123,7 +123,7 @@ La maggior parte dei file nei progetti di blazer sono file con *estensione Razor
 
 Ogni file del componente Razor viene compilato in una classe .NET quando viene compilato il progetto. La classe generata acquisisce lo stato del componente, la logica di rendering, i metodi del ciclo di vita, i gestori eventi e altre logiche. Verranno esaminati i componenti di creazione nella sezione [creazione di componenti dell'interfaccia utente riutilizzabili con blazer](./components.md) .
 
-I file *_Imports. Razor* non sono file componente Razor. Definiscono invece un set di direttive Razor da importare in altri file con *estensione Razor* all'interno della stessa cartella e nelle relative sottocartelle. Ad esempio, un file *_Imports. Razor* è un modo convenzionale per aggiungere `using` istruzioni per gli spazi dei nomi usati di frequente:
+I file *_Imports. Razor* non sono file componente Razor. Definiscono invece un set di direttive Razor da importare in altri file con *estensione Razor* all'interno della stessa cartella e nelle relative sottocartelle. Ad esempio, un file *_Imports. Razor* è un modo convenzionale per aggiungere `using` istruzioni per gli spazi dei nomi di uso comune:
 
 ```razor
 @using System.Net.Http
@@ -164,13 +164,13 @@ Per il bootstrap di Blazer, l'app deve:
 
 Nell'app Server Blazer la pagina host del componente radice viene definita nel file *_Host. cshtml* . Questo file definisce una pagina Razor, non un componente. Razor Pages utilizzare sintassi Razor per definire una pagina indirizzabile dal server, molto simile a una pagina *aspx* . Il metodo `Html.RenderComponentAsync<TComponent>(RenderMode)` viene usato per definire la posizione in cui deve essere eseguito il rendering di un componente a livello di radice. L'opzione `RenderMode` indica il modo in cui il componente deve essere sottoposto a rendering. Nella tabella seguente vengono descritte le opzioni di `RenderMode` supportate.
 
-|Opzione                        |Descrizione       |
+|Opzione                        |description       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |Rendering interattivo dopo che è stata stabilita una connessione con il browser|
 |`RenderMode.ServerPrerendered`|Primo prerendering e quindi rendering interattivo|
 |`RenderMode.Static`           |Rendering come contenuto statico|
 
-Il riferimento allo script di *_framework/blazer. Server. js* stabilisce la connessione in tempo reale con il server e quindi gestisce tutte le interazioni utente e gli aggiornamenti dell'interfaccia utente.
+Il riferimento allo script *_framework/blazor.Server.js* stabilisce la connessione in tempo reale con il server e quindi gestisce tutte le interazioni utente e gli aggiornamenti dell'interfaccia utente.
 
 ```razor
 @page "/"

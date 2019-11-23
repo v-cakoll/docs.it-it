@@ -27,13 +27,13 @@ Per ulteriori informazioni, vedere [Microsoft Enterprise Library](https://docs.m
 
 ## <a name="dealing-with-expected-exceptions"></a>Gestione delle eccezioni previste
 
-La linea di condotta appropriata consiste nell'intercettare le eccezioni previste in ogni operazione o punto di estendibilità pertinente, decidere se è possibile eseguire il ripristino da e restituire l'errore personalizzato appropriato in FaultException @ no__t-0T >.
+La linea di condotta appropriata consiste nell'intercettare le eccezioni previste in ogni operazione o punto di estendibilità pertinente, decidere se è possibile eseguire il ripristino da e restituire l'errore personalizzato appropriato in FaultException\<T >.
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Gestione di eccezioni impreviste tramite un IErrorHandler
 
 Per gestire le eccezioni impreviste, la procedura consigliata consiste nell'"hook" di un IErrorHandler. I gestori di errori intercettano solo le eccezioni a livello di runtime WCF (il livello "modello di servizio"), non a livello di canale. L'unico modo per collegare un oggetto IErrorHandler a livello di canale consiste nel creare un canale personalizzato, soluzione non consigliabile nella maggior parte degli scenari.
 
-Un'eccezione imprevista non è in genere né un'eccezione irreversibile né un'eccezione di elaborazione; è invece un'eccezione imprevista dell'utente. Un'eccezione irreversibile, ad esempio un'eccezione di memoria insufficiente, che in genere viene gestita automaticamente dal [gestore di eccezioni del modello di servizio](xref:System.ServiceModel.Dispatcher.ExceptionHandler) , in genere non può essere gestita normalmente e l'unico motivo per gestire tale eccezione potrebbe essere registrazione aggiuntiva o per restituire un'eccezione standard al client. Un'eccezione di elaborazione si verifica nell'elaborazione del messaggio, ad esempio a livello di serializzazione, di codificatore o di formattatore, e non può essere gestita con IErrorHandler, poiché in genere avviene troppo presto o troppo tardi nell'elaborazione perché il gestore possa intervenire. Analogamente, le eccezioni di trasporto non possono essere gestite a livello di IErrorHandler.
+Un'eccezione imprevista non è in genere né un'eccezione irreversibile né un'eccezione di elaborazione; è invece un'eccezione imprevista dell'utente. Un'eccezione irreversibile, ad esempio un'eccezione di memoria insufficiente, che in genere viene gestita automaticamente dal [gestore di eccezioni del modello di servizio](xref:System.ServiceModel.Dispatcher.ExceptionHandler) , in genere non può essere gestita normalmente e l'unico motivo per gestire tale eccezione può essere la registrazione aggiuntiva o restituire un'eccezione standard al client. Un'eccezione di elaborazione si verifica nell'elaborazione del messaggio, ad esempio a livello di serializzazione, di codificatore o di formattatore, e non può essere gestita con IErrorHandler, poiché in genere avviene troppo presto o troppo tardi nell'elaborazione perché il gestore possa intervenire. Analogamente, le eccezioni di trasporto non possono essere gestite a livello di IErrorHandler.
 
 Con IErrorHandler è possibile controllare in modo esplicito il comportamento dell'applicazione quando viene generata un'eccezione. È possibile:  
 
@@ -53,7 +53,7 @@ IErrorHandler.ProvideFault determina il messaggio di errore inviato al client. Q
 
 Un caso in cui è possibile usare questo approccio è quando si desidera creare una posizione centrale per la conversione delle eccezioni in errori prima che vengano inviate al client (assicurandosi che l'istanza non venga eliminata e il canale non passi in stato di errore).
 
-Il metodo IErrorHandler.HandleError in genere viene usato per implementare comportamenti correlati agli errori, quali la registrazione degli errori, le notifiche di sistema, l'arresto dell'applicazione e così via. IErrorHandler.HandleError può essere chiamato in più punti nel servizio e, a seconda di dove viene generato l'errore, il metodo HandleError può essere chiamato o meno dallo stesso thread dell'operazione; non è possibile assicurare che questo avvenga sempre.
+Il Metodo IErrorHandler. HandleError viene in genere usato per implementare comportamenti correlati agli errori, ad esempio la registrazione degli errori, le notifiche di sistema, la chiusura dell'applicazione e così via. IErrorHandler. HandleError può essere chiamato in più posizioni all'interno del servizio e, a seconda della posizione in cui viene generato l'errore, il metodo HandleError può essere chiamato o meno dallo stesso thread dell'operazione. non sono state apportate garanzie in questo senso.
 
 ## <a name="dealing-with-exceptions-outside-wcf"></a>Gestione delle eccezioni all'esterno di WCF
 

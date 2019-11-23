@@ -1,5 +1,5 @@
 ---
-title: Controlli
+title: Controls
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/03/2019
 ms.locfileid: "73459442"
 ---
-# <a name="controls"></a>Controlli
+# <a name="controls"></a>Controls
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito con molti componenti dell'interfaccia utente comuni utilizzati in quasi tutte le applicazioni Windows, ad esempio <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>e <xref:System.Windows.Controls.ListBox>. In passato, questi oggetti sono stati indicati come controlli. Mentre il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK continua a usare il termine "controllo" per indicare in modo generico qualsiasi classe che rappresenta un oggetto visibile in un'applicazione, è importante notare che una classe non deve ereditare dalla classe <xref:System.Windows.Controls.Control> per avere una presenza visibile. Le classi che ereditano dalla classe <xref:System.Windows.Controls.Control> contengono una <xref:System.Windows.Controls.ControlTemplate>, che consente al consumer di un controllo di modificare radicalmente l'aspetto del controllo senza dover creare una nuova sottoclasse.  In questo argomento viene illustrato il modo in cui i controlli (sia quelli che ereditano dalla classe <xref:System.Windows.Controls.Control> che quelli che non lo hanno) vengono comunemente usati in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 

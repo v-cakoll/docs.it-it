@@ -23,17 +23,17 @@ ms.locfileid: "73118926"
 Lo schema delle sezioni di configurazione contiene elementi che definiscono impostazioni personalizzate nei file di configurazione. Per informazioni generali sui file di configurazione e sugli schemi, vedere [schema dei file di configurazione per il .NET Framework](index.md).
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configSections >** ](configsections-element-for-configuration.md)   
-[ **\<deselezionare >** ](clear-element-for-configsections.md)   
-[ **\<rimuovere >** ](remove-element-for-configsections.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
 [ **\<> sezione**](section-element.md)   
-[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<deselezionare >** per **\<configSections >** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
-| [ **\<configSections >** ](configsections-element-for-configuration.md) | Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi. |
 | [ **\<rimuovere >** per **\<configSections >** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
 | [ **\<sezione >** per **\<configSections >** e **\<sectionGroup >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
 | [ **\<> sectionGroup** per **\<configSections >** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |

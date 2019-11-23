@@ -17,7 +17,8 @@ Sebbene non sia necessario, Azure è particolarmente adatto per supportare il eS
 
 L'architettura dell'applicazione è illustrata nella figura 2-5. A sinistra si trovano le app client, suddivise in versioni per dispositivi mobili, Web tradizionali e applicazioni a pagina singola (SPA). A destra sono disponibili i componenti lato server che costituiscono il sistema, ognuno dei quali può essere ospitato in contenitori Docker e cluster Kubernetes. L'app Web tradizionale è basata sull'applicazione ASP.NET Core MVC visualizzata in giallo. Questa app e le applicazioni per dispositivi mobili e Web SPA comunicano con i singoli microservizi tramite uno o più gateway API. Il gateway API segue il modello "backend per front-end" (BFF), che significa che ogni gateway è progettato per supportare un client front-end specifico. I singoli microservizi sono elencati a destra dei gateway API e includono sia la logica di business che un tipo di archivio di persistenza. I diversi servizi usano i database SQL Server, le istanze di cache Redis e gli archivi MongoDB/CosmosDB. All'estrema destra è il bus di eventi del sistema usato per la comunicazione tra i microservizi.
 
-![eShopOnContainers Architecture @ no__t-1**figura 2-5**. Architettura eShopOnContainers.
+![architettura eShopOnContainers](./media/eshoponcontainers-architecture.png)
+**figura 2-5**. Architettura eShopOnContainers.
 
 I componenti lato server di questa architettura vengono mappati facilmente ai servizi di Azure.
 
@@ -43,7 +44,7 @@ Utilizzando Gestione API, le applicazioni possono esporre diversi gruppi di serv
 
 Un'altra opzione se l'applicazione usa AKS consiste nel distribuire il controller di ingresso del gateway di Azure come Pod nel cluster AKS. In questo modo il cluster si integra con un gateway applicazione Azure, consentendo al gateway di bilanciare il carico del traffico ai pod AKS. [Altre informazioni sul controller di ingresso del gateway di Azure per AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>Data
+## <a name="data"></a>Dati
 
 I vari servizi back-end usati da eShopOnContainers hanno requisiti di archiviazione diversi. Diversi microservizi utilizzano database SQL Server. Il microservizio basket si avvale di una cache Redis per la relativa persistenza. Il microservizio località prevede un'API MongoDB per i dati. Azure supporta ognuno di questi formati di dati.
 

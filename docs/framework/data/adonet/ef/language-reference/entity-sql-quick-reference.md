@@ -14,7 +14,7 @@ In questo argomento viene fornita una guida di riferimento rapido alle query [!I
   
 ## <a name="literals"></a>Valori letterali  
   
-### <a name="string"></a>Stringa  
+### <a name="string"></a>String  
  I valori letterali carattere di tipo String possono essere Unicode e non Unicode. Le stringhe Unicode vengono anteposti a N. Ad esempio, `N'hello'`.  
   
  Di seguito è illustrato un esempio di valore letterale stringa Non-Unicode:  
@@ -27,7 +27,7 @@ In questo argomento viene fornita una guida di riferimento rapido alle query [!I
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |hello|  
   
@@ -44,7 +44,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
@@ -60,7 +60,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |1|  
 |2|  
@@ -83,7 +83,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  Output:  
   
-|ProductID|nome|  
+|ProductID|Name|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -103,11 +103,11 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  Output:  
   
-|ProductID|nome|ProductNumber|…|  
+|ProductID|Name|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Object  
+### <a name="object"></a>Oggetto  
  Il [costruttore di tipo denominato](named-type-constructor-entity-sql.md) crea oggetti definiti dall'utente (denominati), ad esempio `person("abc", 12)`.  
   
  Esempio:  
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |1|  
 |2|  
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -241,7 +241,7 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 |27|  
 |26|  
   
-## <a name="namespaces"></a>Spazi dei nomi  
+## <a name="namespaces"></a>Namespaces  
  L' [utilizzo](using-entity-sql.md) di specifica gli spazi dei nomi utilizzati in un'espressione di query.  
   
  Esempio:  
@@ -252,7 +252,7 @@ using SqlServer; LOWER('AA');
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
 |aa|  
   
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  Output:  
   
-|id|nome|  
+|Id|Name|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>Navigazione  
- L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [Navigate](navigate-entity-sql.md) accetta il tipo di relazione qualificato come \<namespace >. @no__t-nome del tipo di 2relationship >. Navigate restituisce Ref @ no__t-0T > Se la cardinalità dell'entità finale è 1. Se la cardinalità dell'oggetto finale è n, viene restituita la raccolta < Ref @ no__t-0T > >.  
+ L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [Navigate](navigate-entity-sql.md) accetta il tipo di relazione qualificato come \<> dello spazio dei nomi.\<> nome del tipo di relazione. Navigate restituisce Ref\<T > Se la cardinalità dell'entità finale è 1. Se la cardinalità dell'entità finale è n, viene restituita la raccolta < Ref\<T > >.  
   
  Esempio:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE e SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce la clausola SELECT VALUE per consentire di ignorare la costruzione di riga implicita. In una clausola SELECT VALUE può essere specificato un solo elemento. Quando si utilizza tale clausola, non viene costruito alcun wrapper di riga intorno agli elementi nella clausola SELECT ed è possibile produrre una raccolta della forma desiderata, ad esempio: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce la clausola SELECT VALUE per ignorare la costruzione di riga implicita. In una clausola SELECT VALUE può essere specificato un solo elemento. Quando si utilizza tale clausola, non viene costruito alcun wrapper di riga intorno agli elementi nella clausola SELECT ed è possibile produrre una raccolta della forma desiderata, ad esempio: `SELECT VALUE a`.  
   
  Esempio:  
   
@@ -326,21 +326,21 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  Output:  
   
-|nome|  
+|Name|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
 |AWC Logo Cap|  
 |...|  
   
-### <a name="select"></a>SELEZIONE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce inoltre il costruttore ROW per la costruzione di righe arbitrarie. SELECT accetta uno o più elementi nella proiezione e restituisce un record di dati con campi, ad esempio `SELECT a, b, c`.  
+### <a name="select"></a>SELECT  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce anche il costruttore Row per costruire righe arbitrarie. SELECT accetta uno o più elementi nella proiezione e restituisce un record di dati con campi, ad esempio `SELECT a, b, c`.  
   
  Esempio:  
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|nome|ProductID|  
+|Name|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -358,9 +358,9 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Output:  
   
-|Value|  
+|Valore|  
 |-----------|  
-|true|  
+|TRUE|  
   
 ## <a name="see-also"></a>Vedere anche
 

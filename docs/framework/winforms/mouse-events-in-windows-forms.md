@@ -28,7 +28,7 @@ Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizio
 
 ## <a name="mouse-information"></a>Informazioni sul mouse
 
-Un oggetto <xref:System.Windows.Forms.MouseEventArgs> viene inviato ai gestori degli eventi del mouse correlati alla pressione di un pulsante e alla registrazione dei movimenti del mouse. <xref:System.Windows.Forms.MouseEventArgs> fornisce informazioni sullo stato corrente del mouse, fra cui la posizione del puntatore nelle coordinate del client, i pulsanti del mouse premuti e se la rotellina del mouse è stata fatta scorrere. Numerosi eventi del mouse, ad esempio quelli che notificano semplicemente il momento in cui il puntatore del mouse entra o esce dai limiti di un controllo, inviano un oggetto <xref:System.EventArgs> al gestore eventi senza altre informazioni.
+Un oggetto <xref:System.Windows.Forms.MouseEventArgs> viene inviato ai gestori degli eventi del mouse correlati alla pressione di un pulsante e alla registrazione dei movimenti del mouse. <xref:System.Windows.Forms.MouseEventArgs> fornisce informazioni sullo stato corrente del mouse, inclusa la posizione del puntatore del mouse nelle coordinate client, i pulsanti del mouse e l'eventuale scorrimento della rotellina del mouse. Numerosi eventi del mouse, ad esempio quelli che notificano semplicemente il momento in cui il puntatore del mouse entra o esce dai limiti di un controllo, inviano un oggetto <xref:System.EventArgs> al gestore eventi senza altre informazioni.
 
 Se si desidera conoscere lo stato corrente dei pulsanti del mouse o la posizione del puntatore ed evitare la gestione di un evento del mouse, è anche possibile usare le proprietà <xref:System.Windows.Forms.Control.MouseButtons%2A> e <xref:System.Windows.Forms.Control.MousePosition%2A> della classe <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.MouseButtons%2A> restituisce informazioni sui pulsanti del mouse attualmente premuti. <xref:System.Windows.Forms.Control.MousePosition%2A> restituisce le coordinate dello schermo del puntatore del mouse e coincide con il valore restituito dalla proprietà <xref:System.Windows.Forms.Cursor.Position%2A>.
 
@@ -60,13 +60,13 @@ Di seguito è riportato l'ordine degli eventi generati per un doppio clic del pu
 
 5. Evento<xref:System.Windows.Forms.Control.MouseDown> .
 
-6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.Control.SetStyle%2A>, vedere il metodo <xref:System.Windows.Forms.ControlStyles>.
+6. Evento<xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.ControlStyles>, vedere il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.
 
 7. Evento<xref:System.Windows.Forms.Control.MouseDoubleClick> .
 
 8. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-Per un esempio di codice che illustra l'ordine degli eventi click del mouse, vedere [How per: Gestire gli eventi di input utente in Windows Forms Controls @ no__t-0.
+Per un esempio di codice che illustra l'ordine degli eventi click del mouse, vedere [procedura: gestire eventi di input utente nei controlli Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md).
 
 ### <a name="individual-controls"></a>Controlli autonomi
 
@@ -82,24 +82,24 @@ I controlli seguenti non sono conformi al comportamento standard dell'evento Cli
 
   - Clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Clic con pulsante destro: Nessun evento Click generato
+  - Clic con pulsante destro: nessun evento Click generato
 
   - Doppio clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Doppio clic con il pulsante destro del mouse: Nessun evento Click generato
+  - Doppio clic con pulsante destro: nessun evento Click generato
 
-- Controlli <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> e <xref:System.Windows.Forms.CheckedListBox>
+- controlli <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>e <xref:System.Windows.Forms.CheckedListBox>
 
   > [!NOTE]
   > Il comportamento dell'evento descritto di seguito si verifica se l'utente fa clic in un punto qualsiasi di tali controlli.
 
   - Clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Clic con pulsante destro: Nessun evento Click generato
+  - Clic con pulsante destro: nessun evento Click generato
 
   - Doppio clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Doppio clic con il pulsante destro del mouse: Nessun evento Click generato
+  - Doppio clic con pulsante destro: nessun evento Click generato
 
 - Controllo <xref:System.Windows.Forms.ListView>
 

@@ -54,7 +54,7 @@ Con le versioni più recenti di Docker per Mac e Windows, sviluppare applicazion
 
 Sarà anche necessario un editor di codice, con il quale sarà effettivamente possibile sviluppare l'applicazione usando al tempo stesso l'interfaccia della riga di comando di Docker.
 
-Microsoft fornisce Visual Studio Code, un editor di codice leggero supportato in Windows, Linux e macOS e fornisce IntelliSense con [supporto per molti linguaggi](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, go, Java, Ruby, Python e la maggior parte dei linguaggi moderni), [debug](https://code.visualstudio.com/Docs/editor/debugging), [integrazione con supporto per git](https://code.visualstudio.com/Docs/editor/versioncontrol) ed [estensioni](https://code.visualstudio.com/docs/extensions/overview). Questo editor è un'ottima soluzione per gli sviluppatori macOS e Linux. In Windows è inoltre possibile utilizzare Visual Studio.
+Microsoft fornisce Visual Studio Code, un editor di codice leggero supportato in Windows, Linux e macOS e fornisce IntelliSense con [supporto per molti linguaggi](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, go, Java, Ruby, Python e la maggior parte dei linguaggi moderni), il [debug](https://code.visualstudio.com/Docs/editor/debugging), l' [integrazione con git](https://code.visualstudio.com/Docs/editor/versioncontrol) e il [supporto delle estensioni](https://code.visualstudio.com/docs/extensions/overview). Questo editor è un'ottima soluzione per gli sviluppatori macOS e Linux. In Windows è inoltre possibile utilizzare Visual Studio.
 
 > [!TIP]
 > Per istruzioni sull'installazione di Visual Studio Code per Windows, Linux o macOS, vedere <https://code.visualstudio.com/docs/setup/setup-overview/>.

@@ -137,7 +137,7 @@ Il routing in blazer viene gestito dal componente `Router`. Il componente `Route
 </Router>
 ```
 
-Il componente `Router` individua i componenti instradabili nella `AppAssembly` specificata e nel `AdditionalAssemblies` specificato facoltativamente. Quando il browser si sposta, il `Router` intercetta la navigazione ed esegue il rendering del contenuto del parametro `Found` con il `RouteData` Estratto se una route corrisponde all'indirizzo. in caso contrario, il `Router` esegue il rendering del relativo parametro di `NotFound`.
+Il componente `Router` individua i componenti instradabili nella `AppAssembly` specificata e nel `AdditionalAssemblies`specificato facoltativamente. Quando il browser si sposta, il `Router` intercetta la navigazione ed esegue il rendering del contenuto del parametro `Found` con il `RouteData` Estratto se una route corrisponde all'indirizzo. in caso contrario, il `Router` esegue il rendering del relativo parametro di `NotFound`.
 
 Il componente `RouteView` gestisce il rendering del componente corrispondente specificato dall'`RouteData` con il relativo layout se ne è presente uno. Se il componente corrispondente non ha un layout, viene usato il `DefaultLayout` facoltativo specificato.
 
@@ -145,7 +145,7 @@ Il componente `LayoutView` esegue il rendering del relativo contenuto figlio all
 
 ## <a name="navigation"></a>Navigazione
 
-In ASP.NET Web Forms è possibile attivare la navigazione a una pagina diversa restituendo una risposta di reindirizzamento al browser. Esempio:
+In ASP.NET Web Forms è possibile attivare la navigazione a una pagina diversa restituendo una risposta di reindirizzamento al browser. Di seguito è riportato un esempio:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)
@@ -240,7 +240,7 @@ Per applicare un layout a una pagina, usare la direttiva `@layout`:
 @layout MainLayout
 ```
 
-È possibile specificare il layout per tutti i componenti di una cartella e sottocartelle usando un file *_Imports. Razor* . È inoltre possibile specificare un layout predefinito per tutte le pagine utilizzando il [componente router](#router-component).
+È possibile specificare il layout per tutti i componenti di una cartella e sottocartelle utilizzando un file *_Imports. Razor* . È inoltre possibile specificare un layout predefinito per tutte le pagine utilizzando il [componente router](#router-component).
 
 Le pagine master possono definire più segnaposto di contenuto, ma i layout in blazer hanno solo una singola proprietà `Body`. Questa limitazione dei componenti di layout di Blazer verrà probabilmente risolta in una versione futura.
 
@@ -276,7 +276,7 @@ L'output di cui è stato eseguito il rendering per la pagina sarà quindi:
 </div>
 ```
 
-I layout in Blazer non definiscono in genere gli elementi HTML radice per una pagina (`<html>`, `<body>`, `<head>` e così via). Gli elementi HTML radice sono invece definiti nella pagina host dell'app blazer, che viene usata per eseguire il rendering del contenuto HTML iniziale per l'app (vedere [bootstrap Blazer](project-structure.md#bootstrap-blazor)). La pagina host può eseguire il rendering di più componenti radice per l'app con markup circostante.
+I layout in Blazer non definiscono in genere gli elementi HTML radice per una pagina (`<html>`, `<body>`, `<head>`e così via). Gli elementi HTML radice sono invece definiti nella pagina host dell'app blazer, che viene usata per eseguire il rendering del contenuto HTML iniziale per l'app (vedere [bootstrap Blazer](project-structure.md#bootstrap-blazor)). La pagina host può eseguire il rendering di più componenti radice per l'app con markup circostante.
 
 I componenti in blazer, incluse le pagine, non possono eseguire il rendering di tag `<script>`. Questa restrizione di rendering esiste perché i tag `<script>` vengono caricati una volta e non possono essere modificati. Potrebbe verificarsi un comportamento imprevisto se si tenta di eseguire il rendering dinamico dei tag usando sintassi Razor. Al contrario, tutti i tag di `<script>` devono essere aggiunti alla pagina host dell'app.
 

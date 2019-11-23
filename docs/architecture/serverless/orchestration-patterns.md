@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 In alcuni casi, i flussi di lavoro possono contenere attività che importano un periodo di tempo relativamente lungo per il completamento. Immaginate un processo che avvia il backup dei file multimediali nell'archivio BLOB. A seconda delle dimensioni e della quantità dei file multimediali, il completamento di questo processo di backup potrebbe richiedere alcune ore.
 
-In questo scenario, l'`DurableOrchestrationClient` la capacità di verificare lo stato di un flusso di lavoro in esecuzione risulta utile. Quando si utilizza un `HttpTrigger` per avviare un flusso di lavoro, è possibile utilizzare il metodo `CreateCheckStatusResponse` per restituire un'istanza di `HttpResponseMessage`. Questa risposta fornisce al client un URI nel payload che può essere usato per controllare lo stato del processo in esecuzione.
+In questo scenario, l'`DurableOrchestrationClient`la capacità di verificare lo stato di un flusso di lavoro in esecuzione risulta utile. Quando si utilizza un `HttpTrigger` per avviare un flusso di lavoro, è possibile utilizzare il metodo `CreateCheckStatusResponse` per restituire un'istanza di `HttpResponseMessage`. Questa risposta fornisce al client un URI nel payload che può essere usato per controllare lo stato del processo in esecuzione.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-il metodo `CreateTimer` di `DurableOrchestrationContext` imposta la pianificazione per la successiva chiamata del ciclo per verificare la presenza di modifiche al prezzo azionario. `DurableOrchestrationContext` dispone inoltre di una proprietà `CurrentUtcDateTime` per ottenere il valore DateTime corrente in formato UTC. È preferibile usare questa proprietà anziché `DateTime.UtcNow` perché è facile da simulare per il test.
+il metodo `CreateTimer` di `DurableOrchestrationContext`imposta la pianificazione per la successiva chiamata del ciclo per verificare la presenza di modifiche al prezzo azionario. `DurableOrchestrationContext` dispone inoltre di una proprietà `CurrentUtcDateTime` per ottenere il valore DateTime corrente in formato UTC. È preferibile usare questa proprietà anziché `DateTime.UtcNow` perché è facile da simulare per il test.
 
 ## <a name="recommended-resources"></a>Risorse consigliate
 

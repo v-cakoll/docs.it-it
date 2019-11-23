@@ -15,13 +15,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697149"
 ---
-# <a name="performancecounters-element"></a>Elemento > \<performanceCounters
+# <a name="performancecounters-element"></a>Elemento > performanceCounters di \<
 
 Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<performanceCounters >**  
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<performancecounters >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,32 +31,32 @@ Specifica le dimensioni della memoria globale condivisa dai contatori delle pres
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
+Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|Descrizione|
+|Attributo|description|
 |---------------|-----------------|
 |FileMappingSize|Attributo obbligatorio.<br /><br /> Specifica la dimensione, in byte, della memoria globale condivisa dai contatori delle prestazioni. Il valore predefinito è 524288.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-No.
+Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|description|
 |-------------|-----------------|
 |`Configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I contatori delle prestazioni utilizzano un file mappato alla memoria o una memoria condivisa per pubblicare i dati sulle prestazioni.  Le dimensioni della memoria condivisa determinano il numero di istanze che possono essere usate contemporaneamente.  Esistono due tipi di memoria condivisa: memoria condivisa globale e memoria condivisa separata.  La memoria condivisa globale viene utilizzata da tutte le categorie di contatori delle prestazioni installate con le versioni .NET Framework 1,0 o 1,1.  Le categorie di contatori delle prestazioni installate con la versione di .NET Framework 2,0 usano una memoria condivisa separata, con ogni categoria di contatori delle prestazioni con memoria propria.
 
 Le dimensioni della memoria condivisa globale possono essere impostate solo con un file di configurazione.  Le dimensioni predefinite sono pari a 524.288 addii, le cui dimensioni massime sono di 33.554.432 byte e la dimensione minima è 32.768 byte.  Poiché la memoria condivisa globale è condivisa da tutti i processi e le categorie, il primo autore specifica le dimensioni.  Se si definiscono le dimensioni nel file di configurazione dell'applicazione, tale dimensione viene utilizzata solo se l'applicazione è la prima applicazione che provoca l'esecuzione dei contatori delle prestazioni.  Il percorso corretto per specificare il valore `filemappingsize` è quindi il file Machine. config.  La memoria nella memoria condivisa globale non può essere rilasciata dai singoli contatori delle prestazioni, quindi la memoria condivisa globale viene esaurita se viene creato un numero elevato di istanze del contatore delle prestazioni con nomi diversi.
 
-Per la dimensione della memoria condivisa separata, viene fatto riferimento prima del valore DWORD FileMappingSize nella chiave del registro di sistema HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category nome >* \Performance, seguito dal valore specificata per la memoria condivisa globale nel file di configurazione. Se il valore FileMappingSize non esiste, le dimensioni separate della memoria condivisa vengono impostate su un quarto (1/4) nell'impostazione globale nel file di configurazione.
+Per la dimensione della memoria condivisa separata, viene fatto riferimento al valore DWORD FileMappingSize nella chiave del registro di sistema HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\\ *\<nome della categoria >* \Performance, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore FileMappingSize non esiste, le dimensioni separate della memoria condivisa vengono impostate su un quarto (1/4) nell'impostazione globale nel file di configurazione.
 
 ## <a name="see-also"></a>Vedere anche
 

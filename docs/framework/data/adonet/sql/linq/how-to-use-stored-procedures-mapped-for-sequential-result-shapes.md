@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare stored procedure mappate per forme di risultati sequenziali'
+title: 'Procedura: utilizzare stored procedure mappate per forme di risultati sequenziali'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,8 +12,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003215"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedura: Usare stored procedure mappate per forme di risultati sequenziali
-Questo tipo di stored procedure può generare più di una forma di risultati, tuttavia si conosce l'ordine in cui tali risultati vengono restituiti. Si consideri questo scenario rispetto allo scenario in cui non si conosca la sequenza dei risultati restituiti. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per più forme risultato @ no__t-0.  
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedura: utilizzare stored procedure mappate per forme di risultati sequenziali
+Questo tipo di stored procedure può generare più di una forma di risultati, tuttavia si conosce l'ordine in cui tali risultati vengono restituiti. Si consideri questo scenario rispetto allo scenario in cui non si conosca la sequenza dei risultati restituiti. Per ulteriori informazioni, vedere [procedura: utilizzare stored procedure mappate per più forme di risultato](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato il codice T-SQL di un stored procedure che restituisce più forme di risultati in sequenza:  

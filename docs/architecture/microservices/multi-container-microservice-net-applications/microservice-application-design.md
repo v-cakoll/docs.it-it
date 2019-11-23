@@ -91,7 +91,7 @@ Pertanto, le unità di distribuzione per i microservizi (e anche per i database 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento**  \
+- **repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento** \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi

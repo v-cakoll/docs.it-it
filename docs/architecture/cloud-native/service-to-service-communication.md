@@ -3,12 +3,12 @@ title: Comunicazione da servizio a servizio
 description: Informazioni sul modo in cui i microservizi nativi del cloud back-end comunicano con altri microservizi back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094629"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087604"
 ---
 # <a name="service-to-service-communication"></a>Comunicazione da servizio a servizio
 
@@ -34,7 +34,7 @@ I sistemi di microservizi utilizzano in genere una combinazione di questi tipi d
 
 Molte volte, un microservizio potrebbe dover *eseguire una query* su un altro, richiedendo una risposta immediata per completare un'operazione. Un microservizio carrello acquisti potrebbe richiedere informazioni sul prodotto e un prezzo per aggiungere un elemento al carrello. Sono disponibili diversi approcci per l'implementazione delle operazioni di query.
 
-### <a name="requestresponse-messaging"></a>Messaggistica di richiesta/risposta
+### <a name="requestresponse-messaging"></a>Messaggistica di tipo richiesta/risposta
 
 Una delle opzioni per l'implementazione di questo scenario è la chiamata del microservizio back-end per eseguire richieste HTTP dirette ai microservizi necessari per eseguire query, come illustrato nella figura 4-8.
 
@@ -50,7 +50,7 @@ L'esecuzione di una richiesta non frequente che esegue una singola chiamata HTTP
 
 **Figura 4-9**. Concatenamento di query HTTP
 
-È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il passaggio \#3 non riesce? O il passaggio \#8 non riesce? Come si esegue il ripristino? Cosa accade se il passaggio \#6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
+È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il passaggio \#3 ha esito negativo? O il passaggio \#8 ha esito negativo? Come si esegue il ripristino? Cosa accade se il passaggio \#6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
 
 L'elevato livello di accoppiamento nell'immagine precedente suggerisce che i servizi non sono stati modellati in modo ottimale. Behoove al team di rivedere la loro progettazione.
 
@@ -78,7 +78,7 @@ Un altro approccio per separare i messaggi HTTP sincroni è un [modello Request/
 
 In questo caso, il producer di messaggi crea un messaggio basato su query che contiene un ID di correlazione univoco e lo inserisce in una coda di richieste. Il servizio consumer rimuove dalla coda i messaggi, li elabora e inserisce la risposta nella coda di risposta con lo stesso ID di correlazione. Il servizio Producer rimuove il messaggio dalla coda, ne corrisponde l'ID di correlazione e continua l'elaborazione. Le code sono descritte in dettaglio nella sezione successiva.
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Commands
 
 Un altro tipo di interazione di comunicazione è un *comando*. Un microservizio può richiedere un altro microservizio per eseguire un'azione. Il microservizio degli ordini potrebbe richiedere il microservizio shipping per creare una spedizione per un ordine approvato. Nella figura 4-12, un microservizio, denominato Producer, invia un messaggio a un altro microservizio, il consumer, che lo comanda per eseguire un'operazione.
 
@@ -144,7 +144,7 @@ La figura 4-14 illustra l'architettura di alto livello di una coda del bus di se
 
 Nella figura precedente si noti la relazione Point-to-Point. Due istanze dello stesso provider accodano i messaggi in una singola coda del bus di servizio. Ogni messaggio viene utilizzato da una sola delle tre istanze di consumer a destra. Viene quindi illustrato come implementare la messaggistica in cui i diversi consumer possono essere tutti interessati allo stesso messaggio.
 
-## <a name="events"></a>eventi
+## <a name="events"></a>Eventi
 
 Accodamento messaggi è un modo efficace per implementare la comunicazione in cui un producer può inviare un messaggio in modo asincrono a un consumer. Tuttavia, cosa accade quando *molti utenti diversi* sono interessati allo stesso messaggio? Una coda di messaggi dedicata per ogni consumer non avrebbe scalato bene e sarebbe diventato difficile da gestire.
 
@@ -166,7 +166,7 @@ Con la gestione degli eventi, la tecnologia di Accodamento viene spostata *negli
 
 **Figura 4-16**. Architettura degli argomenti
 
-Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. In questo caso, un evento "CreateOrder" verrebbe inviato alla sottoscrizione \#1 e \#3 di sottoscrizione, ma non al \#2 di sottoscrizione. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \#2 e \#3 di sottoscrizione.
+Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. In questo caso, un evento "CreateOrder" verrebbe inviato alla sottoscrizione \#1 e alla sottoscrizione \#3, ma non alla sottoscrizione \#2. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \#2 e alla sottoscrizione \#3.
 
 Il cloud di Azure supporta due servizi di argomento diversi: gli argomenti del bus di servizio di Azure e Azure EventGrid.
 
@@ -208,7 +208,7 @@ Griglia di eventi è un servizio cloud senza server completamente gestito. Viene
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Streaming di messaggi nel cloud di Azure
 
-Il bus di servizio e griglia di eventi di Azure offrono un supporto eccezionale per le applicazioni che espongono singoli eventi discreti, ad esempio un nuovo documento inserito in un Cosmos DB. Tuttavia, cosa accade se il sistema nativo del cloud deve elaborare un *flusso di eventi correlati*? I [flussi di eventi](https://msdn.microsoft.com/magazine/dn904671) sono più complessi. In genere sono ordinati in termini di tempo, intercorrelati e devono essere elaborati come un gruppo.
+Il bus di servizio e griglia di eventi di Azure offrono un supporto eccezionale per le applicazioni che espongono singoli eventi discreti, ad esempio un nuovo documento inserito in un Cosmos DB. Tuttavia, cosa accade se il sistema nativo del cloud deve elaborare un *flusso di eventi correlati*? I [flussi di eventi](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) sono più complessi. In genere sono ordinati in termini di tempo, intercorrelati e devono essere elaborati come un gruppo.
 
 [Hub eventi di Azure](https://azure.microsoft.com/services/event-hubs/) è una piattaforma di streaming di dati e un servizio di inserimento di eventi che raccoglie, trasforma e archivia gli eventi. È ottimizzato per acquisire i dati di streaming, ad esempio le notifiche di eventi continui emesse da un contesto di telemetria. Il servizio è altamente scalabile e può archiviare ed [elaborare milioni di eventi al secondo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Come illustrato nella figura 4-18, spesso si tratta di una porta anteriore per una pipeline di eventi, disaccoppiando il flusso di inserimento dal consumo di eventi.
 
@@ -220,7 +220,7 @@ Hub eventi supporta la bassa latenza e la conservazione dell'ora configurabile. 
 
 Hub eventi supporta i protocolli comuni di pubblicazione degli eventi, inclusi HTTPS e AMQP. Supporta anche Kafka 1,0. Le [applicazioni Kafka esistenti possono comunicare con l'hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) usando il protocollo Kafka offrendo un'alternativa alla gestione di cluster Kafka di grandi dimensioni. Molti sistemi open source Cloud nativi adottano Kafka.
 
-Hub eventi implementa lo streaming di messaggi tramite un [modello consumer partizionato](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) in cui ogni consumer legge solo uno specifico subset, o partizione, del flusso di messaggi. Questo modello consente un'enorme scalabilità orizzontale per l'elaborazione di eventi e fornisce altre funzionalità incentrate sui flussi che non sono disponibili in code e argomenti. Una partizione è una sequenza ordinata di eventi contenuta in un hub eventi. Man mano che arrivano gli eventi più recenti, vengono aggiunti alla fine di questa sequenza. La figura 4-19 illustra il partizionamento in un hub eventi.
+Hub eventi implementa lo streaming di messaggi tramite un [modello consumer partizionato](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) in cui ogni consumer legge solo uno specifico subset, o partizione, del flusso di messaggi. Questo modello consente notevole scalabilità orizzontale per l'elaborazione di eventi e fornisce altre funzionalità incentrate sui flussi che non sono disponibili in code e argomenti. Una partizione è una sequenza ordinata di eventi contenuta in un hub eventi. Man mano che arrivano gli eventi più recenti, vengono aggiunti alla fine di questa sequenza. La figura 4-19 illustra il partizionamento in un hub eventi.
 
 ![Partizionamento dell'hub eventi](./media/event-hub-partitioning.png)
 

@@ -86,7 +86,7 @@ Per impostazione predefinita, la maggior parte delle risorse di Azure PaaS ha so
 
 Fortunatamente, la maggior parte delle risorse di Azure può essere posizionata in una rete virtuale di Azure che consente il controllo degli accessi con granularità fine. Analogamente al modo in cui le reti locali stabiliscono reti private protette dal mondo più ampio, le reti virtuali sono isole di indirizzi IP privati che si trovano all'interno della rete di Azure.
 
-![Figure 10-1 una rete virtuale in Azure ](./media/virtual-network.png)
+![figura 10-1 una rete virtuale in Azure](./media/virtual-network.png)
 **figura 10-1**. Una rete virtuale in Azure.
 
 Nello stesso modo in cui le reti locali hanno un firewall che controlla l'accesso alla rete, è possibile stabilire un firewall simile al limite della rete virtuale. Per impostazione predefinita, tutte le risorse in una rete virtuale possono comunque comunicare con Internet. Sono solo le connessioni in ingresso che richiedono una qualche forma di eccezione esplicita del firewall.
@@ -109,7 +109,7 @@ RBAC è un sistema che fornisce un'identità alle applicazioni in esecuzione in 
 
 Il primo componente di RBAC è un'entità di sicurezza. Un'entità di sicurezza può essere un utente, un gruppo, un'entità servizio o un'identità gestita.
 
-![Figure 10-2 tipi diversi di entità di sicurezza ](./media/rbac-security-principal.png)
+![figura 10-2 tipi diversi di entità di sicurezza](./media/rbac-security-principal.png)
 **figura 10-2**. Tipi diversi di entità di sicurezza.
 
 - Utente: qualsiasi utente che dispone di un account in Azure Active Directory è un utente.
@@ -119,11 +119,11 @@ Il primo componente di RBAC è un'entità di sicurezza. Un'entità di sicurezza 
 
 L'entità di sicurezza può essere applicata alla maggior parte delle risorse. Ciò significa che è possibile assegnare un'entità di sicurezza a un contenitore in esecuzione in Azure Kubernetes, consentendo l'accesso ai segreti archiviati in Key Vault. Una funzione di Azure può assumere un'autorizzazione che consente di comunicare con un'istanza di Active Directory per convalidare un JWT per un utente chiamante. Una volta abilitati i servizi con un'entità servizio, le autorizzazioni possono essere gestite in modo granulare tramite ruoli e ambiti.
 
-## <a name="roles"></a>Ruoli
+## <a name="roles"></a>Roles
 
 Un'entità di sicurezza può assumere molti ruoli o, usando un'analogia sartoriale, ha molti cappelli. Ogni ruolo definisce una serie di autorizzazioni, ad esempio "leggere i messaggi dall'endpoint del bus di servizio di Azure". Il set di autorizzazioni valide di un'entità di sicurezza è la combinazione di tutte le autorizzazioni assegnate a tutti i ruoli dell'entità di sicurezza. Azure dispone di un numero elevato di ruoli predefiniti e gli utenti possono definire i propri ruoli.
 
-![Figure 10-3 le definizioni di ruolo RBAC ](./media/rbac-role-definition.png)
+![figura 10-3 le definizioni dei ruoli RBAC](./media/rbac-role-definition.png)
 **figura 10-3**. Definizioni di ruolo RBAC.
 
 Incorporati in Azure sono anche un numero di ruoli di alto livello, ad esempio proprietario, collaboratore, lettore e amministratore account utente. Con il ruolo proprietario, un'entità di sicurezza può accedere a tutte le risorse e assegnare le autorizzazioni ad altri utenti. Un collaboratore ha lo stesso livello di accesso a tutte le risorse, ma non può assegnare autorizzazioni. Un lettore può solo visualizzare le risorse di Azure esistenti e un amministratore dell'account utente può gestire l'accesso alle risorse di Azure.
@@ -148,7 +148,7 @@ Le regole Deny hanno la precedenza sulle regole Allow. Ora rappresenta lo stesso
 
 Come si può immaginare, avere un numero elevato di ruoli e ambiti può rendere piuttosto difficile l'autorizzazione efficace di un'entità servizio. L'accumulo di regole di negazione, serve solo per aumentare la complessità. Fortunatamente, è disponibile un calcolatore delle autorizzazioni che consente di visualizzare le autorizzazioni valide per qualsiasi entità servizio. Si trova in genere nella scheda IAM del portale, come illustrato nella figura 10-3.
 
-![Figure il calcolatore delle autorizzazioni 10-4 per un servizio app ](./media/check-rbac.png)
+![figura 10-4 Calculator delle autorizzazioni per un servizio app](./media/check-rbac.png)
 **figura 10-4**. Calcolatore delle autorizzazioni per un servizio app.
 
 ## <a name="securing-secrets"></a>Protezione dei segreti
@@ -215,7 +215,7 @@ Questo controllo può essere eseguito da un servizio esterno, ad esempio il test
 
 Anche i servizi come i database SQL di Azure usano la crittografia TLS per nascondere i dati. La parte interessante sulla crittografia dei dati in transito con TLS è che non è possibile, neanche per Microsoft, restare in ascolto sulla connessione tra computer che eseguono TLS. Questo dovrebbe garantire la comodità per le aziende in cui i dati possono essere a rischio da Microsoft o addirittura da un attore di stato con più risorse rispetto all'utente malintenzionato standard.
 
-![Figure 10-5 il report dei Lab SSL che mostra un punteggio di un per un endpoint del bus di servizio. ](./media/ssl-report.png)
+![figura 10-5 report dei Lab SSL che mostra un punteggio di un per un endpoint del bus di servizio.](./media/ssl-report.png)
 **figura 10-5**. Report di Labs SSL che mostra un punteggio di un per un endpoint del bus di servizio.
 
 Sebbene questo livello di crittografia non sia sufficiente per tutti i tempi, dovrebbe ispirare la sicurezza che le connessioni TLS di Azure siano abbastanza sicure. Azure continuerà a evolvere gli standard di sicurezza Man mano che la crittografia migliora. È interessante tenere presente che qualcuno sta osservando gli standard di sicurezza e aggiornando Azure Man mano che migliorano.
@@ -234,7 +234,7 @@ Per impostazione predefinita, le chiavi usate per la crittografia dell'archiviaz
 
 Le macchine virtuali usano l'archiviazione crittografata, ma è possibile fornire un altro livello di crittografia usando tecnologie come BitLocker in Windows o DM-Crypt in Linux. Queste tecnologie significano che anche se l'immagine del disco è stata persa, rimarrebbe quasi impossibile leggerla.
 
-### <a name="azure-sql"></a>SQL di Azure
+### <a name="azure-sql"></a>Azure SQL
 
 I database ospitati in SQL di Azure usano una tecnologia denominata Transparent Data Encryption (Transparent Data [Encryption)](/sql/relational-databases/security/encryption/transparent-data-encryption) per garantire la crittografia dei dati. Questa funzionalità è abilitata per impostazione predefinita in tutti i nuovi database SQL creati, ma deve essere abilitata manualmente per i database legacy. Transparent Data Encryption esegue la crittografia e la decrittografia in tempo reale di non solo del database, ma anche dei backup e dei log delle transazioni.
 
@@ -244,7 +244,7 @@ La parte "trasparente" di TDS deriva dal fatto che non sono necessarie modifiche
 
 La configurazione di questo livello di crittografia richiede l'esecuzione di una procedura guidata in SQL Server Management Studio di selezionare il tipo di crittografia e la posizione in Key Vault per archiviare le chiavi associate.
 
-![Figure 10-6 selezione di colonne in una tabella da crittografare con Always Encrypted ](./media/always-encrypted.png)
+![figura 10-6 selezione di colonne in una tabella da crittografare utilizzando Always Encrypted](./media/always-encrypted.png)
 **figura 10-6**. Selezione di colonne in una tabella da crittografare con Always Encrypted.
 
 Le applicazioni client che leggono le informazioni da queste colonne crittografate devono avere un limite speciale per leggere i dati crittografati. Le stringhe di connessione devono essere aggiornate con `Column Encryption Setting=Enabled` e le credenziali client devono essere recuperate dall'Key Vault. Il client SQL Server deve quindi essere preimpostato con le chiavi di crittografia della colonna. Al termine, le azioni rimanenti usano le interfacce standard per il client SQL. Ovvero strumenti come elegante e Entity Framework, basati sul client SQL, continueranno a funzionare senza modifiche. Always Encrypted potrebbe non essere ancora disponibile per ogni SQL Server driver in ogni lingua.
@@ -255,7 +255,7 @@ La combinazione di Transparent Data Encryption e Always Encrypted, entrambi util
 
 Cosmos DB è il database più recente fornito da Microsoft in Azure. È stato creato da zero con la sicurezza e la crittografia. La crittografia AES-256bit è standard per tutti i database Cosmos DB e non può essere disabilitata. In combinazione con il requisito TLS 1,2 per la comunicazione, viene crittografata l'intera soluzione di archiviazione.
 
-![Figure 10-7 il flusso di crittografia dei dati all'interno Cosmos DB ](./media/cosmos-encryption.png)
+![figura 10-7 il flusso di crittografia dei dati all'interno Cosmos DB](./media/cosmos-encryption.png)
 **figura 10-7**. Il flusso di crittografia dei dati all'interno Cosmos DB.
 
 Sebbene Cosmos DB non fornisca le chiavi di crittografia del cliente, il team ha svolto un lavoro significativo per assicurarsi che rimanga compatibile con PCI-DSS senza questo. Cosmos DB non supporta ancora la crittografia di una singola colonna simile al Always Encrypted di Azure SQL.

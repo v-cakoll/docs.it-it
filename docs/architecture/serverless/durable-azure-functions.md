@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Annotare una funzione con OrchestrationTriggerAttribute in funzioni di Azure contrassegna che funziona come funzione dell'agente di orchestrazione. È responsabile della gestione delle varie attività che costituiscono il flusso di lavoro con stato.
 
-Le funzioni dell'agente di orchestrazione non sono in grado di utilizzare binding diversi da OrchestrationTriggerAttribute. Questo attributo può essere utilizzato solo con un tipo di parametro DurableOrchestrationContext. Non è possibile usare altri input perché la deserializzazione degli input nella firma della funzione non è supportata. Per ottenere gli input forniti dal client di orchestrazione, è necessario utilizzare il metodo GetInput \<T \>.
+Le funzioni dell'agente di orchestrazione non sono in grado di utilizzare binding diversi da OrchestrationTriggerAttribute. Questo attributo può essere utilizzato solo con un tipo di parametro DurableOrchestrationContext. Non è possibile usare altri input perché la deserializzazione degli input nella firma della funzione non è supportata. Per ottenere gli input forniti dal client di orchestrazione, è necessario utilizzare il metodo GetInput\<T\>.
 
 Inoltre, i tipi restituiti delle funzioni di orchestrazione devono essere void, Task o un valore serializzabile JSON.
 

@@ -93,7 +93,7 @@ In C# sono disponibili diversi tipi di *variabili*, inclusi campi, elementi matr
   - Valore esattamente del tipo indicato
 - Tipo valore nullable
   - Valore `null` o valore esattamente del tipo indicato
-- object
+- oggetto
   - Riferimento `null`, riferimento a un oggetto di qualsiasi tipo riferimento oppure riferimento a un valore boxed di qualsiasi tipo valore
 - Tipo classe
   - Riferimento `null`, riferimento a un'istanza del tipo classe oppure riferimento a un'istanza di una classe derivata dal tipo classe

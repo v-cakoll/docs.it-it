@@ -55,7 +55,7 @@ Con questo modello, si inserisce direttamente una tabella locale, nota come *mod
 
 Il problema con questo approccio è che ora sono presenti dati duplicati nel sistema. Nei sistemi nativi del cloud, i dati duplicati non sono considerati un [anti-modello](https://en.wikipedia.org/wiki/Anti-pattern) ed è comunemente implementato nei sistemi nativi del cloud. Tuttavia, un solo sistema può essere il proprietario di un set di dati ed è necessario implementare un meccanismo di sincronizzazione affinché il sistema di registrazione aggiorni tutti i modelli di lettura associati, ogni volta che viene apportata una modifica ai dati sottostanti.
 
-## <a name="transactional-support"></a>Supporto transazionale
+## <a name="transactional-support"></a>Supporto delle transazioni
 
 Sebbene le query tra microservizi siano complesse, l'implementazione di una transazione tra microservizi può essere complessa. La sfida inerente alla gestione della coerenza dei dati tra le origini dati che si trovano in microservizi diversi non può essere sottostata. La figura 5-8 illustra il problema.
 

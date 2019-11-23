@@ -35,7 +35,7 @@ Quando si sviluppa un'applicazione di grandi dimensioni basata su microservizi, 
 
 L'interazione con più microservizi per compilare una singola schermata dell'interfaccia utente aumenta il numero di round trip in Internet. In questo modo si aumenta la latenza e la complessità sul lato dell'interfaccia utente. In teoria, le risposte dovrebbero essere aggregate in modo efficiente sul lato server. Ciò consente di ridurre la latenza, perché vengono restituiti più blocchi di dati in parallelo e alcune interfacce utente possono visualizzare i dati non appena vengono resi disponibili.
 
-- *Come si gestiscono i problemi trasversali, ad esempio le autorizzazioni, le trasformazioni dei dati e l'invio di richieste dinamiche?*
+- *Come si gestiscono i problemi di montaggio incrociato, ad esempio le autorizzazioni, le trasformazioni dei dati e l'invio di richieste dinamiche?*
 
 L'implementazione di soluzioni per la sicurezza e il montaggio incrociato, ad esempio la sicurezza e le autorizzazioni in ogni microservizio, possono richiedere un notevole impegno in termini di sviluppo. Un possibile approccio prevede di inserire questi servizi all'interno dell'host Docker o di un cluster interno, in modo da limitare l'accesso diretto dall'esterno e di implementare queste soluzioni di montaggio incrociato in una posizione centralizzata, ad esempio un gateway API.
 
@@ -103,7 +103,7 @@ A seconda del gateway API in uso, potrebbe essere possibile eseguire questa aggr
 
 Per altre informazioni, vedere [Modello di aggregazione gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
 
-**Problemi trasversali o offload del gateway.** A seconda delle funzionalità offerte da ogni gateway API, è possibile eseguire l'offload delle funzionalità dai singoli microservizi al gateway, semplificando l'implementazione di ogni microservizio attraverso il consolidamento dei problemi trasversali in un livello. Ciò è particolarmente utile per le funzionalità specializzate che possono essere complesse da implementare correttamente in ogni microservizio interno, ad esempio le funzionalità seguenti:
+**Problemi di montaggio incrociato o offload del gateway.** A seconda delle funzionalità offerte da ogni gateway API, è possibile eseguire l'offload delle funzionalità dai singoli microservizi al gateway, semplificando l'implementazione di ogni microservizio attraverso il consolidamento dei problemi di montaggio incrociato in un livello. Ciò è particolarmente utile per le funzionalità specializzate che possono essere complesse da implementare correttamente in ogni microservizio interno, ad esempio le funzionalità seguenti:
 
 - Autenticazione e autorizzazione
 - Integrazione dell'individuazione dei servizi
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [Modello di offload gateway](https://docs.microso
 
 ## <a name="using-products-with-api-gateway-features"></a>Uso di prodotti con funzionalità di gateway API
 
-Possono esserci molti altri problemi trasversali generati dai gateway API a seconda dell'implementazione. Di seguito verranno esaminati:
+Possono esserci molti altri problemi di montaggio incrociato generati dai gateway API a seconda dell'implementazione. Di seguito verranno esaminati:
 
 - [Gestione API di Azure](https://azure.microsoft.com/services/api-management/)
 - [Ocelot](https://github.com/ThreeMammals/Ocelot)
@@ -132,7 +132,7 @@ Possono esserci molti altri problemi trasversali generati dai gateway API a seco
 
 **Figura 4-14**. Utilizzo di Gestione API di Azure per il gateway API
 
-Gestione API di Azure risolve sia il gateway API sia le esigenze di gestione, ad esempio registrazione, sicurezza, misurazione e così via. In questo caso, quando si usa un prodotto come gestione API di Azure, il fatto che si disponga di un singolo gateway API non è così rischioso perché questi tipi di gateway API sono "più sottili", vale a dire che non C# si implementa codice personalizzato che può evolvere verso un componente monolitico.
+Gestione API di Azure risolve sia il gateway API sia le esigenze di gestione, ad esempio registrazione, sicurezza, misurazione e così via. In questo caso, quando si usa un prodotto come gestione API di Azure, il fatto che si disponga di un singolo gateway API non è così rischioso perché questi tipi di gateway API sono "più sottili", vale a dire che non C# si implementa codice personalizzato che potrebbe evolversi verso un componente monolitico.
 
 I gateway API fungono in genere da proxy inverso per le comunicazioni in ingresso, in cui è possibile anche filtrare le API dai microservizi interni e applicare l'autorizzazione alle API pubblicate in questo livello singolo.
 
@@ -146,7 +146,7 @@ In questa guida e nell'applicazione di esempio di riferimento (eShopOnContainers
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) è un gateway API leggero, consigliato per gli approcci più semplici. Ocelot è un gateway API open source basato su .NET Core, pensato espressamente per un'architettura di microservizi che necessita di punti di ingresso unificati nel proprio sistema. È leggero, veloce e scalabile e offre molte funzionalità, tra cui routing e autenticazione.
 
-Il motivo principale per cui si sceglie Ocelot per l' [applicazione di riferimento eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) è che Ocelot è un gateway API semplice .NET Core che è possibile distribuire nello stesso ambiente di distribuzione dell'applicazione in cui si distribuiscono i microservizi/ contenitori, ad esempio un host Docker, Kubernetes e così via. Poiché è basato su .NET Core, è multipiattaforma che ti permette di eseguire la distribuzione in Linux o Windows.
+Il motivo principale per cui si sceglie Ocelot per l' [applicazione di riferimento eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) è che Ocelot è un gateway API Lightweight .NET Core che è possibile distribuire nello stesso ambiente di distribuzione dell'applicazione in cui si distribuiscono i microservizi/contenitori, ad esempio un host Docker, Kubernetes e così via. Poiché è basato su .NET Core, è multipiattaforma che ti permette di eseguire la distribuzione in Linux o Windows.
 
 I diagrammi precedenti dei gateway API personalizzati in esecuzione nei contenitori rappresentano esattamente come è possibile eseguire anche Ocelot in un contenitore e in un'applicazione basata su microservizi.
 
@@ -170,7 +170,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Modello: gateway API/back-end per  \ front-end**
+- **Chris Richardson. Modello: gateway API/back-end per \ front-end**
   <https://microservices.io/patterns/apigateway.html>
 
 - **Schema API Gateway** \
@@ -182,7 +182,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 - **Gestione API di Azure** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **UDI. Composizione orientata ai servizi**  \
+- **UDI. Composizione orientata ai servizi** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens più grande. Messaggistica e microservizi in GOTO 2016 (video)**  \

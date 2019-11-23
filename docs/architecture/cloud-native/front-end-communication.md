@@ -61,7 +61,7 @@ Come qualsiasi gateway API, la funzionalità principale è quella di inviare le 
 
 |Funzionalità di Ocelot  | |
 | :-------- | :-------- |
-| Routing | Authentication |
+| Routing | Autenticazione |
 | Aggregazione delle richieste | Autorizzazione |
 | Individuazione dei servizi (con Consul e Eureka) | Limitazione |
 | Bilanciamento del carico | Registrazione, traccia |

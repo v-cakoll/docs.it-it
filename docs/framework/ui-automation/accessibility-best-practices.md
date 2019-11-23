@@ -14,7 +14,7 @@ ms.locfileid: "72291394"
 ---
 # <a name="accessibility-best-practices"></a>Procedure consigliate per l'accesso facilitato
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per le informazioni più aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere API di automazione [Windows: Automazione interfaccia utente @ no__t-0.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  L'implementazione delle seguenti procedure consigliate nei controlli o nelle applicazioni consente di migliorare l'accessibilità per gli utenti che utilizzano dispositivi di Assistive Technology. Molte di queste procedure consigliate si concentrano su una buona progettazione dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . Ogni procedura consigliata include informazioni sull'implementazione per i controlli o le applicazioni di [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . In molti casi, il lavoro per soddisfare le seguenti procedure consigliate è già incluso nei controlli di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
@@ -26,7 +26,7 @@ ms.locfileid: "72291394"
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Abilitare l'accesso a livello di codice a tutti gli elementi dell'interfaccia utente e al testo  
  Gli elementi dell'interfaccia utente devono consentire l'accesso a livello di codice. Se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] è un controllo standard di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , il supporto per l'accesso a livello di codice è incluso nel controllo. Se il controllo è personalizzato, cioè un controllo che è stato sottoclassato da un controllo comune o da un controllo sottoclassato da Control, è necessario verificare l'implementazione di <xref:System.Windows.Automation.Peers.AutomationPeer> per le aree che possono richiedere modifiche.  
   
- Seguendo questa procedura consigliata, i fornitori di tecnologie per l'accesso facilitato possono identificare e modificare gli elementi del [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] del prodotto.  
+ Seguendo questa procedura consigliata, i fornitori di tecnologie per l'accesso facilitato possono identificare e modificare gli elementi del [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]del prodotto.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Inserire nomi, titoli e descrizioni in oggetti di interfaccia utente, frame e pagine  
@@ -128,7 +128,7 @@ ms.locfileid: "72291394"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usare le API di input standard con chiamate indipendenti dal dispositivo  
- Le chiamate indipendenti dal dispositivo garantiscono l'uguaglianza delle funzionalità di tastiera e mouse, fornendo al tempo stesso la tecnologia per l'accesso facilitato con le informazioni necessarie sul [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Le chiamate indipendenti dal dispositivo garantiscono l'uguaglianza delle funzionalità di tastiera e mouse, fornendo al tempo stesso la tecnologia per l'accessibilità con le informazioni necessarie sul [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
 

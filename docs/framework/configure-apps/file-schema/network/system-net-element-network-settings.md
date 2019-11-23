@@ -19,7 +19,7 @@ ms.locfileid: "71697498"
 Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3System. net >**  
+&nbsp;&nbsp; **\<System. net >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,10 +29,10 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -43,7 +43,7 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
 |[mailSettings](mailsettings-element-network-settings.md)|Configura le opzioni di invio di posta elettronica SMTP (Simple Mail Transport Protocol).|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
-|[Impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per le classi in <xref:System.Net> e gli spazi dei nomi figlio correlati.|  
+|[Impostazioni](settings-element-network-settings.md)|Configura le opzioni di rete di base per le classi nell'<xref:System.Net> e gli spazi dei nomi figlio correlati.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Specifica i moduli da usare per richiedere informazioni da host Internet.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -52,8 +52,8 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
-## <a name="remarks"></a>Note  
- L'elemento [@no__t -1system. net >](system-net-element-network-settings.md) contiene le impostazioni per le classi in <xref:System.Net> e gli spazi dei nomi figlio correlati. Le impostazioni configurano i moduli di autenticazione, la gestione della connessione, le impostazioni di posta elettronica, il server proxy e i moduli di richiesta Internet per ricevere informazioni dagli host Internet.  
+## <a name="remarks"></a>Osservazioni  
+ L'elemento [\<System. net >](system-net-element-network-settings.md) contiene le impostazioni per le classi del <xref:System.Net> e gli spazi dei nomi figlio correlati. Le impostazioni configurano i moduli di autenticazione, la gestione della connessione, le impostazioni di posta elettronica, il server proxy e i moduli di richiesta Internet per ricevere informazioni dagli host Internet.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una configurazione tipica utilizzata dalle classi <xref:System.Net>.  

@@ -23,7 +23,7 @@ La tabella 6-1 elenca strumenti di gestione comuni con gli agenti di orchestrazi
 
 **Tabella 6-1**. Strumenti di gestione Docker
 
-| Strumenti di gestione | Descrizione | Agenti di orchestrazione correlati |
+| Strumenti di gestione | description | Agenti di orchestrazione correlati |
 |------------------|-------------|-----------------------|
 | [Monitoraggio di Azure per contenitori](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Strumento di gestione Kubernetes dedicato di Azure | Servizio Azure Kubernetes (AKS) |
 | [Interfaccia utente Web di Kubernetes (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Strumento di gestione Kubernetes che consente di monitorare e gestire un cluster Kubernetes locale | Servizio Azure Kubernetes<br/>Kubernetes locale |

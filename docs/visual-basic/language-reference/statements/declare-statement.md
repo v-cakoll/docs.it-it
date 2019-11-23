@@ -1,5 +1,5 @@
 ---
-title: Istruzione Declare (Visual Basic)
+title: Declare Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Declare
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: e839fe14c360229fbe0350fd7878c7a844056e8b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 48a36e3ecdef40810ea7a3194e85b5b646154331
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354082"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
-Dichiara un riferimento a una routine implementata in un file esterno.
+Declares a reference to a procedure implemented in an external file.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,94 +52,94 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="parts"></a>Parti
 
-|Nome|Definizione|
+|Termine|Definizione|
 |---|---|
-|`attributelist`|facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|facoltativo. Può essere uno dei seguenti:<br /><br /> -   [pubblico](../../../visual-basic/language-reference/modifiers/public.md)<br />[protetto](../../../visual-basic/language-reference/modifiers/protected.md) da -   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privato](../../../visual-basic/language-reference/modifiers/private.md)<br />[Friend protetto](../../language-reference/modifiers/protected-friend.md) da @no__t 0<br />Protetto da - [privato](../../language-reference/modifiers/private-protected.md)<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|facoltativo. Specifica le informazioni sul set di caratteri e la ricerca di file. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [auto](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Indica che la procedura esterna non restituisce alcun valore.|
-|`Function`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Indica che la procedura esterna restituisce un valore.|
-|`name`|Obbligatorio. Nome del riferimento esterno. Per ulteriori informazioni, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|Obbligatorio. Introduce una clausola `Lib`, che identifica il file esterno (DLL o risorsa del codice) che contiene una procedura esterna.|
-|`libname`|Obbligatorio. Nome del file che contiene la routine dichiarata.|
-|`Alias`|facoltativo. Indica che la routine dichiarata non può essere identificata all'interno del file in base al nome specificato in `name`. L'identificazione viene specificata in `aliasname`.|
-|`aliasname`|Obbligatorio se si usa la parola chiave `Alias`. Stringa che identifica la procedura in uno dei due modi seguenti:<br /><br /> Nome del punto di ingresso della routine all'interno del file, racchiuso tra virgolette (`""`)<br /><br /> -oppure-<br /><br /> Un segno di cancelletto (`#`) seguito da un Integer che specifica il numero ordinale del punto di ingresso della routine all'interno del file|
-|`parameterlist`|Obbligatorio se la procedura accetta parametri. Vedere [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Obbligatorio se si specifica `Function` e `Option Strict` è `On`. Tipo di dati del valore restituito dalla stored procedure.|
+|`attributelist`|Parametro facoltativo. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|Parametro facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Parametro facoltativo. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`charsetmodifier`|Parametro facoltativo. Specifies character set and file search information. Può essere uno dei seguenti:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure does not return a value.|
+|`Function`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure returns a value.|
+|`name`|Obbligatorio. Name of this external reference. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Obbligatorio. Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.|
+|`libname`|Obbligatorio. Name of the file that contains the declared procedure.|
+|`Alias`|Parametro facoltativo. Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`. You specify its identification in `aliasname`.|
+|`aliasname`|Required if you use the `Alias` keyword. String that identifies the procedure in one of two ways:<br /><br /> The entry point name of the procedure within its file, within quotes (`""`)<br /><br /> oppure<br /><br /> A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file|
+|`parameterlist`|Required if the procedure takes parameters. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|
+|`returntype`|Required if `Function` is specified and `Option Strict` is `On`. Data type of the value returned by the procedure.|
 
 ## <a name="remarks"></a>Note
 
-In alcuni casi è necessario chiamare una routine definita in un file, ad esempio una DLL o una risorsa di codice, all'esterno del progetto. Quando si esegue questa operazione, il compilatore Visual Basic non ha accesso alle informazioni necessarie per chiamare correttamente la stored procedure, ad esempio la posizione in cui si trova la stored procedure, il modo in cui viene identificata, la sequenza chiamante e il tipo restituito e il set di caratteri stringa usato. L'istruzione `Declare` crea un riferimento a una procedura esterna e fornisce le informazioni necessarie.
+Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project. When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The `Declare` statement creates a reference to an external procedure and supplies this necessary information.
 
-Si può usare `Declare` solo a livello di modulo. Ciò significa che il *contesto di dichiarazione* per un riferimento esterno deve essere una classe, una struttura o un modulo e non può essere un file di origine, uno spazio dei nomi, un'interfaccia, una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Si può usare `Declare` solo a livello di modulo. This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Riferimenti esterni per impostazione predefinita l'accesso [pubblico](../../../visual-basic/language-reference/modifiers/public.md) . È possibile modificare i livelli di accesso con i modificatori di accesso.
+External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You can adjust their access levels with the access modifiers.
 
 ## <a name="rules"></a>Regole
 
-- **Attributi.** È possibile applicare attributi a un riferimento esterno. Tutti gli attributi applicati hanno effetto solo nel progetto e non nel file esterno.
+- **Attributes.** You can apply attributes to an external reference. Any attribute you apply has effect only in your project, not in the external file.
 
-- **Modificatori.** Le procedure esterne sono implicitamente [condivise](../../../visual-basic/language-reference/modifiers/shared.md). Non è possibile usare la parola chiave `Shared` quando si dichiara un riferimento esterno e non è possibile modificarne lo stato condiviso.
+- **Modifiers.** External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.
 
-  Una procedura esterna non può partecipare all'override, all'implementazione di membri di interfaccia o alla gestione degli eventi. Di conseguenza, non è possibile usare la parola chiave `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` o `Handles` in un'istruzione `Declare`.
+  An external procedure cannot participate in overriding, implement interface members, or handle events. Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.
 
-- **Nome della procedura esterna.** Non è necessario assegnare a questo riferimento esterno lo stesso nome (in `name`) come nome del punto di ingresso della stored procedure all'interno del file esterno (`aliasname`). È possibile usare una clausola `Alias` per specificare il nome del punto di ingresso. Questo può essere utile se la procedura esterna ha lo stesso nome di un modificatore riservato Visual Basic o di una variabile, di una routine o di qualsiasi altro elemento di programmazione nello stesso ambito.
-
-  > [!NOTE]
-  > I nomi dei punti di ingresso nella maggior parte delle dll fanno distinzione tra maiuscole e minuscole
-
-- **Numero di procedura esterna.** In alternativa, è possibile utilizzare una clausola `Alias` per specificare il numero ordinale del punto di ingresso all'interno della tabella di esportazione del file esterno. A tale scopo, iniziare `aliasname` con un simbolo di cancelletto (`#`). Questo può essere utile se un carattere nel nome della procedura esterna non è consentito in Visual Basic o se il file esterno Esporta la stored procedure senza un nome.
-
-## <a name="data-type-rules"></a>Regole del tipo di dati
-
-- **Tipi di dati dei parametri.** Se `Option Strict` è `On`, è necessario specificare il tipo di dati di ogni parametro in `parameterlist`. Può essere qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia. All'interno `parameterlist` è possibile utilizzare una clausola `As` per specificare il tipo di dati dell'argomento da passare a ogni parametro.
+- **External Procedure Name.** You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`). You can use an `Alias` clause to specify the entry-point name. This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.
 
   > [!NOTE]
-  > Se la procedura esterna non è stata scritta per la .NET Framework, è necessario prestare attenzione che i tipi di dati corrispondano. Se, ad esempio, si dichiara un riferimento esterno a una procedura Visual Basic 6,0 con un parametro `Integer` (16 bit in Visual Basic 6,0), è necessario identificare l'argomento corrispondente come `Short` nell'istruzione `Declare`, perché questo è il tipo Integer a 16 bit in Visual Basic. Analogamente, `Long` ha una larghezza dati diversa in Visual Basic 6,0 e `Date` viene implementata in modo diverso.
+  > Entry-point names in most DLLs are case-sensitive.
 
-- **Tipo di dati restituito.** Se la procedura esterna è un `Function` e `Option Strict` è `On`, è necessario specificare il tipo di dati del valore restituito al codice chiamante. Può essere qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia.
+- **External Procedure Number.** Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file. To do this, you begin `aliasname` with a number sign (`#`). This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.
+
+## <a name="data-type-rules"></a>Data Type Rules
+
+- **Parameter Data Types.** If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`. This can be any data type or the name of an enumeration, structure, class, or interface. Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.
 
   > [!NOTE]
-  > Il compilatore Visual Basic non verifica che i tipi di dati siano compatibili con quelli della procedura esterna. In caso di mancata corrispondenza, il Common Language Runtime genera un'eccezione <xref:System.Runtime.InteropServices.MarshalDirectiveException> in fase di esecuzione.
+  > If the external procedure was not written for the .NET Framework, you must take care that the data types correspond. For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic. Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.
 
-- **Tipi di dati predefiniti.** Se `Option Strict` è `Off` e non si specifica il tipo di dati di un parametro in `parameterlist`, il compilatore Visual Basic converte l'argomento corrispondente nel [tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md). Analogamente, se non si specifica `returntype`, il compilatore accetta il tipo di dati restituito come `Object`.
+- **Return Data Type.** If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code. This can be any data type or the name of an enumeration, structure, class, or interface.
 
   > [!NOTE]
-  > Poiché si tratta di una procedura esterna che potrebbe essere stata scritta su una piattaforma diversa, è pericoloso creare ipotesi sui tipi di dati o per consentirne l'impostazione predefinita. È molto più sicuro specificare il tipo di dati di ogni parametro e del valore restituito, se presente. Questa operazione migliora inoltre la leggibilità del codice.
+  > The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure. If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.
+
+- **Default Data Types.** If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md). Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.
+
+  > [!NOTE]
+  > Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default. It is much safer to specify the data type of every parameter and of the return value, if any. This also improves the readability of your code.
 
 ## <a name="behavior"></a>Comportamento
 
-- **Ambito.** Un riferimento esterno è nell'ambito di tutta la classe, la struttura o il modulo.
+- **Scope.** An external reference is in scope throughout its class, structure, or module.
 
-- **Vita.** Un riferimento esterno ha la stessa durata della classe, della struttura o del modulo in cui è dichiarata.
+- **Lifetime.** An external reference has the same lifetime as the class, structure, or module in which it is declared.
 
-- **Chiamata a una routine esterna.** È possibile chiamare una routine esterna nello stesso modo in cui si chiama una procedura `Function` o `Sub`, usandola in un'espressione se restituisce un valore o specificandone il valore in un' [istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md) se non restituisce un valore.
+- **Calling an External Procedure.** You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.
 
-  Gli argomenti vengono passati alla procedura esterna esattamente come specificato da `parameterlist` nell'istruzione `Declare`. Non prendere in considerazione il modo in cui i parametri sono stati originariamente dichiarati nel file esterno. Analogamente, se è presente un valore restituito, utilizzarlo esattamente come specificato da `returntype` nell'istruzione `Declare`.
+  You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement. Do not take into account how the parameters were originally declared in the external file. Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.
 
-- **Set di caratteri.** È possibile specificare in `charsetmodifier` il modo in cui Visual Basic deve effettuare il marshalling delle stringhe quando viene chiamata la procedura esterna. Il modificatore `Ansi` indirizza Visual Basic per eseguire il marshalling di tutte le stringhe in valori ANSI e il modificatore `Unicode` indica di effettuare il marshalling di tutte le stringhe in valori Unicode. Il modificatore `Auto` indirizza Visual Basic per eseguire il marshalling delle stringhe in base alle regole di .NET Framework in base al riferimento esterno `name` o `aliasname` se specificato. Il valore predefinito è `Ansi`.
+- **Character Sets.** You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure. The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values. The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified. Il valore predefinito è `Ansi`.
 
-  `charsetmodifier` specifica anche il modo in cui Visual Basic cerca la procedura esterna all'interno del file esterno. `Ansi` e `Unicode` Visual Basic diretta per cercarla senza modificarne il nome durante la ricerca. `Auto` indirizza Visual Basic per determinare il set di caratteri di base della piattaforma di runtime ed eventualmente modificare il nome della procedura esterna, come indicato di seguito:
+  `charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file. `Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search. `Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:
 
-  - In una piattaforma ANSI, ad esempio Windows 95, Windows 98 o Windows Millennium Edition, cercare prima la procedura esterna senza modificarne il nome. Se l'operazione ha esito negativo, aggiungere "A" alla fine del nome della procedura esterna e cercarla nuovamente.
+  - On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification. If that fails, append "A" to the end of the external procedure name and look it up again.
 
-  - In una piattaforma Unicode, ad esempio Windows NT, Windows 2000 o Windows XP, cercare prima la procedura esterna senza modificarne il nome. Se l'operazione ha esito negativo, aggiungere "W" alla fine del nome della procedura esterna e cercarla nuovamente.
+  - On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification. If that fails, append "W" to the end of the external procedure name and look it up again.
 
-- **Meccanismo.** Visual Basic utilizza il meccanismo .NET Framework *Platform Invoke* (PInvoke) per risolvere e accedere a procedure esterne. L'istruzione `Declare` e la classe <xref:System.Runtime.InteropServices.DllImportAttribute> utilizzano entrambi questo meccanismo automaticamente e non è necessaria alcuna conoscenza di PInvoke. Per altre informazioni, vedere [Procedura dettagliata: Chiamata di API Windows @ no__t-0.
+- **Mechanism.** Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures. The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke. For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Se la procedura esterna viene eseguita all'esterno del Common Language Runtime (CLR), si tratta di *codice non gestito*. Quando si chiama una procedura di questo tipo, ad esempio una funzione API Windows o un metodo COM, è possibile esporre l'applicazione ai rischi per la sicurezza. Per altre informazioni, vedere [linee guida per la codifica di codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
+> If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*. When you call such a procedure, for example a Windows API function or a COM method, you might expose your application to security risks. For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene dichiarato un riferimento esterno a una procedura `Function` che restituisce il nome utente corrente. Viene quindi chiamata la procedura esterna `GetUserNameA` come parte della procedura `getUser`.
+The following example declares an external reference to a `Function` procedure that returns the current user name. It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>Esempio
 
-Il <xref:System.Runtime.InteropServices.DllImportAttribute> fornisce un modo alternativo per usare le funzioni nel codice non gestito. Nell'esempio seguente viene dichiarata una funzione importata senza utilizzare un'istruzione `Declare`.
+The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code. The following example declares an imported function without using a `Declare` statement.
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 

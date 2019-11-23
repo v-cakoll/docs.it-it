@@ -21,7 +21,7 @@ Un'app ASP.NET Core si basa su una serie di middleware. I middleware sono gestor
 
 La pipeline delle richieste ASP.NET Core è costituita da una sequenza di delegati di richiesta, chiamati uno dopo l'altro. Il diagramma seguente illustra il concetto. Il thread di esecuzione seguente le frecce nere.
 
-![Pipeline](media/middleware/request-delegate-pipeline.png)
+![pipeline](media/middleware/request-delegate-pipeline.png)
 
 Il diagramma precedente non dispone di un concetto di eventi del ciclo di vita. Questo concetto è fondamentale per il modo in cui vengono gestite le richieste Web Form ASP.NET. Questo sistema rende più semplice la motivazione del processo che si verifica e consente di inserire il middleware in qualsiasi momento. Il middleware viene eseguito nell'ordine in cui viene aggiunto alla pipeline della richiesta. Vengono inoltre aggiunti nel codice anziché nei file di configurazione, in genere in *Startup.cs*.
 
@@ -39,11 +39,11 @@ La tabella seguente elenca i componenti e il middleware di sostituzione in ASP.N
 |-----------------------|-----------------------------|-------------------|
 |Errori HTTP            |`CustomErrorModule`          |[Middleware delle tabelle codici di stato](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predefinito       |`DefaultDocumentModule`      |[Middleware dei file predefiniti](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
-|esplorazione directory     |`DirectoryListingModule`     |[Middleware di esplorazione directory](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
+|Esplorazione directory     |`DirectoryListingModule`     |[Middleware di esplorazione directory](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |Compressione dinamica    |`DynamicCompressionModule`   |[Middleware di compressione delle risposte](/aspnet/core/performance/response-compression)|
 |Traccia richieste non riuscite|`FailedRequestsTracingModule`|[Registrazione di ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
-|Memorizzazione nella cache di file           |`FileCacheModule`            |[Middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware)|
-|Caching HTTP           |`HttpCacheModule`            |[Middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware)|
+|Memorizzazione nella cache di file           |`FileCacheModule`            |[Middleware di memorizzazione nella cache di risposta](/aspnet/core/performance/caching/middleware)|
+|Caching HTTP           |`HttpCacheModule`            |[Middleware di memorizzazione nella cache di risposta](/aspnet/core/performance/caching/middleware)|
 |Registrazione HTTP           |`HttpLoggingModule`          |[Registrazione di ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
 |Reindirizzamento HTTP       |`HttpRedirectionModule`      |[Middleware di riscrittura URL](/aspnet/core/fundamentals/url-rewriting)|
 |filtri ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|

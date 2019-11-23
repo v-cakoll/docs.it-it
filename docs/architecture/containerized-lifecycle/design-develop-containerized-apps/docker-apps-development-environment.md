@@ -11,7 +11,7 @@ ms.locfileid: "71214298"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
 
-## <a name="development-tools-choices-ide-or-editor"></a>Strumenti di sviluppo possibili: IDE o editor
+## <a name="development-tools-choices-ide-or-editor"></a>Opzioni degli strumenti di sviluppo: IDE o editor
 
 Indipendentemente dal fatto che si preferisca usare un IDE completo e potente o un editor leggero e flessibile, Microsoft offre tutti gli strumenti necessari per lo sviluppo delle applicazioni Docker.
 

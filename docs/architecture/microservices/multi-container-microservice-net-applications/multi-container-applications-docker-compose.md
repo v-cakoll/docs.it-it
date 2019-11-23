@@ -84,7 +84,7 @@ services:
 
 La chiave radice in questo file sono i servizi. Sotto questa chiave si definiscono i servizi da distribuire ed eseguire quando si esegue il comando `docker-compose up` o si esegue la distribuzione da Visual Studio usando questo file docker-compose.yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
 
-| Nome del servizio | Descrizione |
+| Nome servizio | description |
 |--------------|-------------|
 | webmvc       | Contenitore che include l'applicazione ASP.NET Core MVC che usa i microservizi da C\# sul lato server|
 | catalog.api  | Contenitore che include il microservizio API Web ASP.NET Core che gestisce i cataloghi |

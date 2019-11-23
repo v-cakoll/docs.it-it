@@ -101,7 +101,7 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring per la resilienza: valutazione dell'accoppiamento** \
+- **Jimmy Bogard. Refactoring per la resilienza: valutazione** del \ di accoppiamento
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

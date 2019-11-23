@@ -22,7 +22,7 @@ ms.locfileid: "70849582"
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>Ambiente di sviluppo per app ASP.NET Core
 
-### <a name="development-tools-choices-ide-or-editor"></a>Strumenti di sviluppo possibili: IDE o editor
+### <a name="development-tools-choices-ide-or-editor"></a>Opzioni degli strumenti di sviluppo: IDE o editor
 
 Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti necessari sia che si scelga un IDE potente e completo sia che si preferisca un editor semplice e agile.
 
@@ -84,7 +84,7 @@ Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di app
 
 Lo sviluppo di un'applicazione ASP.NET Core per la distribuzione in Azure non differisce dalla normale procedura di sviluppo dell'applicazione. Usare l'ambiente di sviluppo locale desiderato, ovvero Visual Studio 2017 o l'interfaccia della riga di comando per .NET e Visual Studio Code o l'editor preferito. È possibile scrivere codice, eseguire ed eseguire il debug delle modifiche, eseguire test automatizzati e commit locali nel controllo del codice sorgente fino a quando non si è pronti per il push delle modifiche nel repository del controllo del codice sorgente condiviso.
 
-#### <a name="step-2-application-code-repository"></a>Passaggio 2. Repository del codice dell'applicazione
+#### <a name="step-2-application-code-repository"></a>Passaggio 2: Repository del codice dell'applicazione
 
 Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/azure/devops/git/pull-requests).
 

@@ -16,7 +16,7 @@ La tabella decisioni seguente indica se usare .NET Framework o .NET Core. Tenere
 > [!IMPORTANT]
 > I computer di sviluppo eseguiranno un host Docker, Linux o Windows. I servizi correlati da eseguire e testare insieme in un'unica soluzione dovranno essere eseguiti sulla stessa piattaforma di contenitori.
 
-| Architettura/tipo di app | Contenitori Linux | Contenitori di Windows |
+| Architettura/tipo di app | Contenitori Linux | Contenitori Windows |
 |-------------------------|------------------|--------------------|
 | Microservizi in contenitori | .NET Core | .NET Core |
 | App monolitica | .NET Core | .NET Framework <br/> .NET Core |

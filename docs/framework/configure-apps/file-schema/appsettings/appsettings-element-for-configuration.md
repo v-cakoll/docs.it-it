@@ -21,7 +21,7 @@ ms.locfileid: "73119276"
 Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezione di configurazione predefinita fornita dal .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,25 +33,25 @@ Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezi
 
 ## <a name="attribute"></a>Attributo
 
-|           | Descrizione |
+|           | description |
 | --------- | ----------- |
 | **file**  | Attributo facoltativo.<br><br>Specifica un percorso relativo di un file esterno contenente le impostazioni di configurazione dell'applicazione personalizzate. Il file specificato contiene lo stesso tipo di impostazioni specificato nell' **\<aggiungere >** , **\<rimuovere >** e **\<deselezionare** gli elementi > e usa lo stesso formato di coppia chiave/valore di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un Windows Forms Application, si tratta della cartella binaria (ad esempio */bin/debug verranno incluse*), non del percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui si trova il file *Web. config* .<br><br>Si noti che il runtime ignora l'attributo se non è possibile trovare il file specificato. |
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **> di configurazione\<** Elemento](../configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
-## <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elemento figlio
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<add>** ](add-element-for-appsettings.md) | Aggiunge un'impostazione dell'applicazione personalizzata. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | Cancella tutte le impostazioni dell'applicazione definite in precedenza. |
 | [ **\<remove>** ](remove-element-for-appsettings.md) | Rimuove un'impostazione dell'applicazione definita in precedenza. |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'elemento **\<appSettings >** archivia informazioni di configurazione dell'applicazione personalizzate, ad esempio stringhe di connessione del database, percorsi di file, URL di servizi Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione. Le coppie chiave/valore specificate nell'elemento **\<appSettings >** sono accessibili nel codice usando la classe <xref:System.Configuration.ConfigurationSettings>.
 

@@ -137,7 +137,7 @@ Che cos'è Minikube? Il progetto Minikube indica che Minikube implementa un clus
 - Dashboard
 - Runtime del contenitore: Docker, RKT, CRI-O e contenitori
 - Abilitazione di CNI (container Network Interface)
-- Ingresso
+- Dati in ingresso
 
 Dopo l'installazione di Minikube, è possibile iniziare a usarla rapidamente eseguendo il comando `minikube start`, che Scarica un'immagine e avvia il cluster Kubernetes locale. Una volta avviato il cluster, è possibile interagire con esso usando i comandi Kubernetes `kubectl` standard.
 
@@ -194,7 +194,7 @@ Il comportamento predefinito quando viene eseguita l'app è configurato anche pe
 
 Oltre allo sviluppo locale, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) offre un modo pratico per consentire a più sviluppatori di lavorare con le proprie configurazioni Kubernetes all'interno di Azure. Come si può vedere nella figura 3-7, è anche possibile eseguire l'applicazione in Azure Dev Spaces.
 
-Se non si aggiunge il supporto di Docker all'applicazione ASP.NET Core al momento della creazione, è sempre possibile aggiungerla in un secondo momento. Dalla Esplora soluzioni di Visual Studio fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi**  > **supporto Docker**, come illustrato nella figura 3-8.
+Se non si aggiunge il supporto di Docker all'applicazione ASP.NET Core al momento della creazione, è sempre possibile aggiungerla in un secondo momento. Dalla Esplora soluzioni di Visual Studio fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi** > **supporto Docker**, come illustrato nella figura 3-8.
 
 ![Aggiunta del supporto per Docker in Visual Studio](./media/visual-studio-add-docker-support.png)
 

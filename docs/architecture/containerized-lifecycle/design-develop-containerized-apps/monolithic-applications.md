@@ -61,7 +61,7 @@ Poiché i contenitori sono implicitamente non modificabili per impostazione pred
 
 Anche se le applicazioni monolitiche possano trarre vantaggio da Docker, in questo articolo i vantaggi vengono trattati solo in modo rapido. I vantaggi maggiori della gestione dei contenitori derivano dalla distribuzione con agenti di orchestrazione del contenitore, che gestiscono le varie istanze e il ciclo di vita di ogni istanza del contenitore. La suddivisione dell'applicazione monolitica in sottosistemi scalabili, sviluppabili e distribuibili a livello individuale è il punto di ingresso al campo dei microservizi.
 
-Per informazioni su come trasferire in modalità Lift-and-Shift le applicazioni monolitiche con i contenitori e come è possibile modernizzare le applicazioni, è possibile leggere questa guida Microsoft aggiuntiva, [modernizzare le applicazioni .NET esistenti con i contenitori cloud e Windows di Azure](../../modernize-with-azure-containers/index.md). che è inoltre possibile scaricare come PDF dal <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Per informazioni su come trasferire in modalità Lift-and-Shift le applicazioni monolitiche con i contenitori e come è possibile modernizzare le applicazioni, è possibile leggere questa guida Microsoft aggiuntiva, [modernizzare le applicazioni .NET esistenti con i contenitori cloud e Windows di Azure](../../modernize-with-azure-containers/index.md), che è anche possibile scaricare come PDF dal <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Pubblicare una singola app contenitore Docker in Servizio app di Azure
 

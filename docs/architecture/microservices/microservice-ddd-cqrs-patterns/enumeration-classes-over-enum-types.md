@@ -82,7 +82,7 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Enum's are evil—update (Gli enum sono il male: aggiornamento)**  \
+- **Enum's are evil—update** \ (Gli enum sono il male: aggiornamento)
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
 - **Daniel Harder. Come le enumerazioni diffondono la malattia e come curarla** \
@@ -94,7 +94,7 @@ public class CardType : Enumeration
 - **Steve Smith. Alternative enum in C#**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Classe di enumerazione di base in eShopOnContainers) \
+- **Enumeration.cs.** Base Enumeration class in eShopOnContainers \ (Classe di enumerazione di base in eShopOnContainers)
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. Classe di enumerazione di esempio in eShopOnContainers. \

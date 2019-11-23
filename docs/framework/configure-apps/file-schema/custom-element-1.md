@@ -20,7 +20,7 @@ ms.locfileid: "73118840"
 Definisce le impostazioni in una sezione di configurazione personalizzata definita da una sezione \<> elemento e utilizza la classe <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionname >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,17 +34,17 @@ Attributi e valori di attributo sono definiti dall'utente.
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
-## <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elemento figlio
 
-Nessuno
+None
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'elemento **\<sectionname >** è un elemento personalizzato definito da una [**sezione di\<** ](section-element.md) tag nell'elemento\<[**configSections >** ](configsections-element-for-configuration.md) . Quando si chiama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>, il sistema di configurazione restituisce un oggetto <xref:System.Collections.IDictionary>.
+L'elemento **\<sectionname >** è un elemento personalizzato definito da una [**sezione di\<>** ](section-element.md) tag nell'elemento\<[**configSections >** ](configsections-element-for-configuration.md) . Quando si chiama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>, il sistema di configurazione restituisce un oggetto <xref:System.Collections.IDictionary>.
 
 ## <a name="example"></a>Esempio
 

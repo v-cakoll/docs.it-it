@@ -15,7 +15,7 @@ Questa sezione contiene descrizioni e collegamenti per esempi di programmazione 
 > [!NOTE]
 > Tutti gli esempi sono disponibili nel file di [download degli esempi di .NET Framework SDK versione 2.0](https://www.microsoft.com/download/confirmation.aspx?id=22181), che è stato rilasciato per .NET Framework 2.0 e potrebbe essere obsoleto.
 
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Download Progress Indicator Technology Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/t8w6294a(v=vs.85)) (Esempio di tecnologia indicatore di stato di download)  
  Mostra come visualizzare lo stato di avanzamento di un download di file.  
   

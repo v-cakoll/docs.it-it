@@ -48,13 +48,13 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 - **Interfaccia utente composita con ASP.NET (officina particolare)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. Front-end monolitico nell'architettura di microservizi @ no__t-0  
+- **Ruben Oostinga. Front-end monolitico nell'architettura di microservizi**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. Il segreto di una migliore composizione dell'interfaccia utente @ no__t-0  
+- **Mauro Servienti. Il segreto della migliore composizione dell'interfaccia utente**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Inclusione di componenti Web front-end in microservizi @ no__t-0  
+- **Viktor Farcic. Inclusione di componenti Web front-end in microservizi**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **Gestione di front-end nell'architettura di microservizi**  

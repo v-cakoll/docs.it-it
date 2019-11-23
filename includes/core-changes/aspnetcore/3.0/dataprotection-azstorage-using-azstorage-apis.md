@@ -8,7 +8,7 @@ ms.locfileid: "72394300"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Protezione dei dati: dataprotection. AzureStorage usa le nuove API di archiviazione di Azure
 
-<xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> dipende dalle librerie di [archiviazione di Azure](https://github.com/Azure/azure-storage-net). Queste librerie hanno rinominato gli assembly, i pacchetti e gli spazi dei nomi. A partire da ASP.NET Core 3,0, `Microsoft.AspNetCore.DataProtection.AzureStorage` usa le nuove API e i pacchetti con prefisso @no__t 1.
+<xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> dipende dalle librerie di [archiviazione di Azure](https://github.com/Azure/azure-storage-net). Queste librerie hanno rinominato gli assembly, i pacchetti e gli spazi dei nomi. A partire da ASP.NET Core 3,0, `Microsoft.AspNetCore.DataProtection.AzureStorage` usa le nuove API e pacchetti con prefisso `Microsoft.Azure.Storage.`.
 
 Per domande sulle API di archiviazione di Azure, usare <https://github.com/Azure/azure-storage-net>. Per informazioni su questo problema, vedere [ASPNET/AspNetCore # 8472](https://github.com/aspnet/AspNetCore/issues/8472).
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+None
 
 <!-- 
 

@@ -1,14 +1,13 @@
 ---
 title: Gestione delle prestazioni delle applicazioni-gRPC per sviluppatori WCF
 description: Registrazione, metriche e traccia per ASP.NET Core le applicazioni gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846719"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968171"
 ---
 # <a name="application-performance-management"></a>Gestione delle prestazioni delle applicazioni
 
@@ -64,9 +63,9 @@ Per ulteriori informazioni e documentazione sulle metriche delle app, vedere il 
 
 La maggior parte delle piattaforme di metrica supporta cinque tipi di metriche di base, descritti nella tabella seguente:
 
-| Tipo di metrica | Descrizione |
+| Tipo di metrica | description |
 | ----------- | ----------- |
-| Counter     | Tiene traccia della frequenza con cui si verifica un evento, ad esempio richieste, errori e così via. |
+| Contatore     | Tiene traccia della frequenza con cui si verifica un evento, ad esempio richieste, errori e così via. |
 | Calibro       | Registra un singolo valore che cambia nel tempo, ad esempio le connessioni attive. |
 | Istogramma   | Misura una distribuzione di valori in limiti arbitrari. Ad esempio, un istogramma può tenere traccia delle dimensioni del set di dati, contare il numero di record contenuti < 10, il numero di 11-100 e 101-1000 e > 1000 record. |
 | Metro       | Misura la frequenza con cui si verifica un evento in diversi intervalli di tempo. |

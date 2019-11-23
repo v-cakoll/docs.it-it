@@ -33,7 +33,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Flussi di lavoro di compilazione con Windows Workflow Foundation](windows-workflow-foundation/index.md)     
  Vengono fornite informazioni sul modello di programmazione, sugli esempi e sugli strumenti per Windows Workflow Foundation (WF).  
 
- [Applicazioni di servizi Windows](./windows-services/index.md)  
+ [Applicazioni dei servizi di Windows](./windows-services/index.md)  
  Viene illustrato come usare Visual Studio e .NET Framework per creare un'app che viene installata come servizio e che avvia, arresta e diversamente controlla il proprio comportamento.  
   
  [Elaborazione parallela, concorrenza e programmazione asincrona in .NET](../standard/parallel-processing-and-concurrency.md)  
@@ -48,10 +48,10 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Compilazione di app con .NET Native](./net-native/index.md)  
  Descrive come usare la tecnologia di precompilazione di .NET Native per compilare e distribuire app di Windows Store. .NET Native compila le app scritte in codice gestito (C#) e destinate a .NET Framework in codice nativo.  
   
- [Security](../standard/security/index.md)  
+ [Sicurezza](../standard/security/index.md)  
  Vengono fornite informazioni sulle classi e sui servizi in .NET Framework che semplificano lo sviluppo di app sicure.  
   
- [Debug, traccia e profilatura](./debug-trace-profile/index.md)  
+ [Debug, analisi e profilatura](./debug-trace-profile/index.md)  
  Viene illustrato come eseguire test, ottimizzare e profilare le app .NET Framework e l'ambiente dell'app. Questa sezione include informazioni per amministratori e sviluppatori.  
   
  [Sviluppo per piattaforme multiple](../standard/cross-platform/index.md)  
@@ -63,7 +63,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Prestazioni](./performance/index.md)  
  Vengono fornite informazioni sulla memorizzazione nella cache, l'inizializzazione differita, l'affidabilità e gli eventi ETW.  
  
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
  [Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Offre sintassi, esempi di codice e informazioni sull'uso per ogni classe contenuta negli spazi dei nomi .NET Framework.  
   

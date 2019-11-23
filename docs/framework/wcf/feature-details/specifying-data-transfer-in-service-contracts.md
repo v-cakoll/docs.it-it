@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Talvolta il componente `DataContractSerializer` non è adatto per serializzare i tipi definiti dall'utente. WCF supporta un motore di serializzazione alternativo, il <xref:System.Xml.Serialization.XmlSerializer>, che può essere utilizzato anche per serializzare i parametri. Gli attributi del motore <xref:System.Xml.Serialization.XmlSerializer>, ad esempio `XmlAttributeAttribute`, consentono di migliorare il controllo sul codice XML risultante. Se si desidera attivare il motore <xref:System.Xml.Serialization.XmlSerializer> per una determinata operazione o per l'intero servizio, applicare l'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> a un'operazione o al servizio. Esempio:  
+ Talvolta il componente `DataContractSerializer` non è adatto per serializzare i tipi definiti dall'utente. WCF supporta un motore di serializzazione alternativo, il <xref:System.Xml.Serialization.XmlSerializer>, che può essere utilizzato anche per serializzare i parametri. Gli attributi del motore <xref:System.Xml.Serialization.XmlSerializer>, ad esempio `XmlAttributeAttribute`, consentono di migliorare il controllo sul codice XML risultante. Se si desidera attivare il motore <xref:System.Xml.Serialization.XmlSerializer> per una determinata operazione o per l'intero servizio, applicare l'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> a un'operazione o al servizio. Di seguito è riportato un esempio:  
   
 ```csharp  
 [ServiceContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Specifica delle proprietà Use e Style  
  I due stili più comunemente utilizzati per descrivere i servizi tramite Web Services Description Language (WSDL) sono Document e Remote Procedure Call (RPC). Nello stile Document, l'intero corpo del messaggio viene descritto utilizzando un unico schema e WSDL descrive le varie parti del corpo del messaggio facendo riferimento agli elementi di tale schema. Nello stile RPC, invece, WSDL descrive le varie parti del corpo del messaggio facendo riferimento a vari tipi di schema. In alcuni casi occorre selezionare manualmente uno di questi stili. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.DataContractFormatAttribute> e impostare la proprietà `Style` (quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer>) oppure impostare la proprietà `Style` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> (quando si utilizza il motore <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato in genere più accettato ed è l'unico a essere supportato da <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP ed è consigliabile evitarne l'utilizzo nei servizi più recenti. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
+ Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato più comunemente accettato ed è l'unico formato supportato dal <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP e non è consigliato per i nuovi servizi. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
   
  Nella maggior parte dei casi è consigliabile evitare di modificare le impostazioni predefinite delle proprietà `Style` e `Use`.  
   
@@ -464,7 +464,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Comportamenti di serializzazione  
- In WCF sono disponibili due comportamenti, i <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e il <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> che vengono automaticamente collegati a seconda del serializzatore utilizzato per un'operazione specifica. Poiché questi comportamenti vengono attivati automaticamente, in genere non è necessario gestirli.  
+ In WCF sono disponibili due comportamenti, i <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> automaticamente collegati a seconda del serializzatore utilizzato per un'operazione specifica. Poiché questi comportamenti vengono attivati automaticamente, in genere non è necessario gestirli.  
   
  Tuttavia, le proprietà `DataContractSerializerOperationBehavior`, `MaxItemsInObjectGraph` e `IgnoreExtensionDataObject` del comportamento `DataContractSurrogate` possono essere utilizzate per personalizzare il processo di serializzazione. Come indicato nella sezione precedente, le prime due proprietà presentano lo stesso significato. La proprietà `DataContractSurrogate` può essere utilizzata per abilitare i surrogati di contratti di dati, ovvero un meccanismo avanzato di personalizzazione ed estensione del processo di serializzazione. Per ulteriori informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
@@ -577,5 +577,5 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Procedura: Abilita flusso](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Procedura: Creare un contratto dati di base per una classe o una struttura @ no__t-0
+- [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedura: Creare un contratto di dati di base per una classe o una struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

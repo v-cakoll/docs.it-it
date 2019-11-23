@@ -1,14 +1,13 @@
 ---
 title: Protobuf i campi any e di per i tipi Variant-gRPC per gli sviluppatori WCF
 description: Informazioni su come usare il tipo any e la parola chiave di per rappresentare i tipi di oggetti Variant nei messaggi.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846384"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971608"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf i campi any e di per i tipi Variant
 
@@ -39,7 +38,7 @@ message ChangeNotification {
 }
 ```
 
-Nel C# codice, la classe`Any`fornisce metodi per l'impostazione del campo, l'estrazione del messaggio e il controllo del tipo.
+Nel C# codice, la classe `Any` fornisce metodi per l'impostazione del campo, l'estrazione del messaggio e il controllo del tipo.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)

@@ -24,14 +24,14 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
   
 ## <a name="arguments"></a>Argomenti  
  `location`  
- Obbligatorio. Nome della classe o del modulo che contiene la procedura `Sub Main` da chiamare all'avvio del programma. Il formato può essere **Main: module** o **-Main: Namespace. Module**.  
+ Obbligatoria. Nome della classe o del modulo che contiene la procedura `Sub Main` da chiamare all'avvio del programma. Il formato può essere **Main: module** o **-Main: Namespace. Module**.  
   
-## <a name="remarks"></a>Note  
- Usare questa opzione quando si crea un file eseguibile o un programma eseguibile di Windows. Se l'opzione **-Main** viene omessa, il compilatore cerca un @no__t condiviso valido-1 in tutti i moduli e le classi pubbliche.  
+## <a name="remarks"></a>Osservazioni  
+ Usare questa opzione quando si crea un file eseguibile o un programma eseguibile di Windows. Se l'opzione **-Main** viene omessa, il compilatore cerca un `Sub Main` condiviso valido in tutti i moduli e le classi pubbliche.  
   
  Per una descrizione delle diverse forme della procedura `Main`, vedere la [procedura principale in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) .  
   
- Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce una routine `Main` predefinita che avvia l'applicazione se la classe non dispone di una procedura `Main`. In questo modo è possibile compilare il codice dalla riga di comando creata nell'ambiente di sviluppo.  
+ Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce una procedura di `Main` predefinita che avvia l'applicazione se la classe non dispone di `Main` routine. In questo modo è possibile compilare il codice dalla riga di comando creata nell'ambiente di sviluppo.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   

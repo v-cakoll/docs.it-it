@@ -14,7 +14,7 @@ ms.locfileid: "71833674"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 
-Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La semantica di esecuzione della conversione SQL viene determinata da query processor del database.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte gli operatori di query standard in comandi SQL. La semantica di esecuzione della conversione SQL viene determinata da query processor del database.
 
 Gli operatori di query standard vengono definiti in base alle *sequenze*. Una sequenza viene *ordinata* e si basa sull'identità di riferimento per ogni elemento della sequenza. Per ulteriori informazioni, vedere Cenni preliminari [sugli operatoriC#di query standard ()](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Cenni preliminari sugli operatori di query standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
@@ -26,9 +26,9 @@ Nei paragrafi seguenti vengono descritte le differenze tra gli operatori di quer
 
 ### <a name="concat"></a>Concat
 
-Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali. Il funzionamento di <xref:System.Linq.Enumerable.Concat%2A> sui multiset seguiti dall'ordine comune è analogo a quello di `UNION ALL`.
+Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali. <xref:System.Linq.Enumerable.Concat%2A> funziona come `UNION ALL` sui set di impostazioni seguiti dall'ordine comune.
 
-Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati. <xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine degli argomenti. Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.
+Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati. <xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine dei relativi argomenti. Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.
 
 ### <a name="intersect-except-union"></a>Metodi Intersect, Except, Union
 
@@ -41,7 +41,7 @@ Il metodo <xref:System.Linq.Enumerable.Union%2A> viene definito per i tipi multi
 i metodi <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> sono ben definiti solo per i *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](troubleshooting.md).
+> <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> hanno determinate limitazioni quando vengono usate nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](troubleshooting.md).
 
 A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento di questi metodi sul risultato del metodo. Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
 
@@ -80,13 +80,13 @@ I metodi seguenti non vengono convertiti da [!INCLUDE[vbtecdlinq](../../../../..
 |<xref:System.Linq.Enumerable.Reverse%2A>|La conversione di questo metodo è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|La conversione di questi metodi è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Le query SQL vengono eseguite su multiset, non sulle sequenze indicizzabili.|
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (overload con argomento predefinito)|In generale non è possibile specificare un valore predefinito per una tupla arbitraria. In alcuni casi i valori null per le tuple sono consentiti tramite outer join.|
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (overload con arg predefinito)|In generale non è possibile specificare un valore predefinito per una tupla arbitraria. In alcuni casi i valori null per le tuple sono consentiti tramite outer join.|
 
 ## <a name="expression-translation"></a>Conversione di espressione
 
 ### <a name="null-semantics"></a>Semantica null
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server. Ad esempio, due valori null sono considerati diversi in impostazioni SQL Server predefinite, ma è possibile modificare le impostazioni per modificare la semantica. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono considerate le impostazioni del server durante la conversione delle query.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone la semantica di confronto null in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server. Ad esempio, due valori null sono considerati diversi in impostazioni SQL Server predefinite, ma è possibile modificare le impostazioni per modificare la semantica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server durante la conversione delle query.
 
 Un confronto con il valore letterale null viene convertito nella versione SQL appropriata (`is null` o `is not null`).
 
@@ -94,7 +94,7 @@ Il valore `null` nelle regole di confronto viene definito da SQL Server. [!INCLU
 
 ### <a name="aggregates"></a>Aggregati
 
-Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la semantica di SQL viene lasciata invariata e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per una sequenza vuota o per una sequenza che contiene solo valori null.
+Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]la semantica di SQL viene lasciata invariata e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per una sequenza vuota o per una sequenza che contiene solo valori null.
 
 Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La somma, <xref:System.Linq.Enumerable.Sum%2A>, delle quantità di valori integer a 32 bit non viene calcolata utilizzando risultati a 64 bit ed è possibile che si verifichi un overflow per una conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Sum%2A>, anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.
 
@@ -102,7 +102,7 @@ In modo analogo la conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/
 
 ### <a name="entity-arguments"></a>Argomenti di entità
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abilita i tipi di entità da usare nei metodi <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A>. Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente l'utilizzo dei tipi di entità nei metodi <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A>. Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -158,7 +158,7 @@ Metodi di conversione:
 
 ### <a name="inheritance-mapping-restrictions"></a>Limitazioni relative al mapping di ereditarietà
 
-Per altre informazioni, vedere [Procedura: Mapping delle gerarchie di ereditarietà @ no__t-0.
+Per altre informazioni, vedere [procedura: eseguire il mapping delle gerarchie di ereditarietà](how-to-map-inheritance-hierarchies.md).
 
 ### <a name="inheritance-in-queries"></a>Ereditarietà nelle query
 
@@ -188,7 +188,7 @@ Per ulteriori informazioni sul mapping a questi SQL Server tipi di data e ora, v
 
 ## <a name="sql-server-2005-support"></a>Supporto di SQL Server 2005
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta le seguenti funzionalità di SQL Server 2005:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta le seguenti funzionalità SQL Server 2005:
 
 - Stored procedure scritte per CLR SQL.
 
@@ -198,27 +198,27 @@ Per ulteriori informazioni sul mapping a questi SQL Server tipi di data e ora, v
 
 ## <a name="sql-server-2000-support"></a>Supporto di SQL Server 2000
 
-Le seguenti SQL Server 2000 limitazioni (rispetto a Microsoft SQL Server 2005) influiscono sul supporto di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+Le seguenti SQL Server 2000 limitazioni (rispetto a Microsoft SQL Server 2005) influiscono [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporto.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operatori Cross Apply e Outer Apply
 
-Questi operatori non sono disponibili in SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta una serie di operazioni di riscrittura per sostituirli con join appropriati.
+Questi operatori non sono disponibili in SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta una serie di riscritture per sostituirli con join appropriati.
 
-`Cross Apply` e `Outer Apply` vengono generati per la navigazione tra relazioni. Il set di query per cui tali riscritture sono possibili non è esattamente definito. Per questo motivo, il set minimo di query supportato per SQL Server 2000 è il set che non implica lo spostamento delle relazioni.
+`Cross Apply` e `Outer Apply` vengono generati per gli spostamenti delle relazioni. Il set di query per cui tali riscritture sono possibili non è esattamente definito. Per questo motivo, il set minimo di query supportato per SQL Server 2000 è il set che non implica lo spostamento delle relazioni.
 
 ### <a name="text--ntext"></a>text/ntext
 
-I tipi di dati `text` @ no__t-1 @ no__t-2 non possono essere utilizzati in determinate operazioni di query su `varchar(max)` @ no__t-4 @ no__t-5, supportati da Microsoft SQL Server 2005.
+I tipi di dati `text` / `ntext` non possono essere utilizzati in determinate operazioni di query su `varchar(max)` / `nvarchar(max)`, supportati da Microsoft SQL Server 2005.
 
 Non sono disponibili risoluzioni per questa limitazione. In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento attivato dalle query annidate
 
-SQL Server 2000 (tramite SP4) Binder presenta alcune idiosincrasie attivate da query nidificate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, non è possibile definire il set di query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che potrebbero causare SQL Server eccezioni.
+SQL Server 2000 (tramite SP4) Binder presenta alcune idiosincrasie attivate da query nidificate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, non è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query che potrebbero causare SQL Server eccezioni.
 
 ### <a name="skip-and-take-operators"></a>Operatori Skip e Take
 
-<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> hanno determinate limitazioni quando vengono usate nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](troubleshooting.md).
 
 ## <a name="object-materialization"></a>Materializzazione di oggetti
 
@@ -228,7 +228,7 @@ La materializzazione crea oggetti CLR da righe restituite da una o più query SQ
 
   - Costruttori
 
-  - Metodi `ToString` nelle proiezioni
+  - metodi di `ToString` nelle proiezioni
 
   - Cast dei tipi nelle proiezioni
 

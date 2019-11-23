@@ -3,18 +3,18 @@ title: App candidate per cloud native
 description: Informazioni sui tipi di applicazioni che traggono vantaggio da un approccio nativo per il cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087683"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968289"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>App candidate per cloud native
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Esaminare le app nel portfolio. Quanti di essi sono idonei per un'architettura nativa del cloud? Tutti questi elementi? Forse?
+Esaminare le app nel portfolio. Quanti di essi sono idonei per un'architettura nativa del cloud? Tutti? Forse?
 
 Applicando un'analisi costi/vantaggi, è possibile che la maggior parte dei prezzi non supporti il pesante tag di prezzo necessario per il cloud nativo. Il costo di un cloud nativo è di gran lunga superiore al valore aziendale dell'applicazione.
 
@@ -89,8 +89,6 @@ Con l'introduzione, viene ora analizzato in modo molto più dettagliato il cloud
 - [Come Netflix distribuisce il codice](https://www.infoq.com/news/2013/06/netflix/)
 
 - [Controllo dell'overload per la scalabilità di microservizi WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [RayGun-Case Study](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[Precedente](definition.md)

@@ -18,9 +18,9 @@ Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni 
 
 Restituisce la media dei valori di una raccolta. I valori Null vengono ignorati.
 
-**Argomenti**
+**argomenti**
 
-Un `Int32`, `Int64`, `Double` e `Decimal`.
+`Int32`, `Int64`, `Double`e `Decimal`.
 
 **Valore restituito**
 
@@ -34,7 +34,7 @@ Tipo di `expression`.
  
  Restituisce il checksum dei valori in una raccolta. I valori Null vengono ignorati.
  
- **Argomenti**
+ **argomenti**
  
  Raccolta (`Int32`).
  
@@ -50,9 +50,9 @@ Tipo di `expression`.
 
 Restituisce il numero di elementi in una raccolta come un valore `Int32`.
 
-**Argomenti**
+**argomenti**
 
-Una raccolta @ no__t-0T >, dove T è uno dei tipi seguenti:
+Raccolta\<T >, dove T è uno dei tipi seguenti:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Oggetto `Int32`.
  
 Restituisce il numero di elementi in una raccolta come un valore `bigint`.
  
- **Argomenti**
+ **argomenti**
  
  Raccolta (T), dove T è uno dei tipi seguenti:
  
@@ -92,7 +92,7 @@ Oggetto `Int64`.
 
 Restituisce il valore massimo nella raccolta.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (T), dove T è uno dei tipi seguenti: 
 
@@ -113,7 +113,7 @@ Tipo di `expression`.
 
 Restituisce il valore minimo in una raccolta.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (T), dove T è uno dei tipi seguenti: 
 
@@ -134,7 +134,7 @@ Tipo di `expression`.
 
 Restituisce la deviazione statistica standard di tutti i valori nell'espressione specificata.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (`Double`).
 
@@ -150,7 +150,7 @@ Oggetto `Double`.
 
 Restituisce la deviazione statistica standard relativa alla popolazione per tutti i valori dell'espressione specificata.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (`Double`).
 
@@ -166,9 +166,9 @@ Oggetto `Double`.
 
 Restituisce la somma di tutti i valori della raccolta.
 
-**Argomenti**
+**argomenti**
 
-Raccolta (T), dove T è uno dei tipi seguenti: `Int32`, `Int64`, `Double`, `Decimal`.
+Raccolta (T), dove T è uno dei tipi seguenti: `Int32`, `Int64`, `Double``Decimal`.
 
 **Valore restituito**
 
@@ -182,7 +182,7 @@ Tipo di `expression`.
 
 Restituisce la varianza statistica di tutti i valori nell'espressione specificata.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (`Double`).
 
@@ -198,7 +198,7 @@ Oggetto `Double`.
 
 Restituisce la varianza statistica della popolazione per tutti i valori nell'espressione specificata.
 
-**Argomenti**
+**argomenti**
 
 Raccolta (`Double`).
 

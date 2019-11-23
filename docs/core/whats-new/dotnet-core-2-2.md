@@ -84,7 +84,7 @@ Per informazioni sul miglioramento delle prestazioni che può derivare dalla com
 
 In .NET Core 2.2 Preview 2 la compilazione a livelli era abilitata per impostazione predefinita. È stato tuttavia deciso che non è ancora il momento opportuno per abilitare la compilazione a livelli per impostazione predefinita, quindi in .NET Core 2.2 la compilazione a livelli è ancora una funzionalità con consenso esplicito. Per informazioni sul consenso esplicito alla compilazione a livelli, vedere [Miglioramenti del compilatore JIT](dotnet-core-2-1.md#jit-compiler-improvements) in [Novità di .NET Core 2.1](dotnet-core-2-1.md).
 
-## <a name="runtime"></a>Runtime
+## <a name="runtime"></a>Tipo
 
 **Inserimento di codice prima dell'esecuzione del metodo Main**
 

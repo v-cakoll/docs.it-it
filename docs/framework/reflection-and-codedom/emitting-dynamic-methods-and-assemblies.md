@@ -53,7 +53,7 @@ Illustra le procedure di creazione, emit e richiamo di un metodo generico sempli
 [Assembly ritirabili per la generazione di tipi dinamici](collectible-assemblies.md)   
 Offre un'introduzione degli assembly ritirabili, ovvero assembly dinamici che possono essere scaricati senza scaricare il dominio dell'applicazione in cui sono stati creati.
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Cataloga i codici di istruzioni MSIL che è possibile usare per compilare i corpi dei metodi.  

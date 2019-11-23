@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) include un ampio set di contatori delle p
   
 - All: vengono attivati tutti i contatori della categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation).  
   
-- ServiceOnly: vengono attivati soltanto i contatori della categoria ServiceModelService. Questo è il valore predefinito.  
+- ServiceOnly: vengono attivati soltanto i contatori della categoria ServiceModelService. Rappresenta il valore predefinito.  
   
 - Off: vengono disattivati i contatori delle prestazioni della categoria ServiceModel*.  
   
@@ -74,7 +74,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>Tipi di contatori delle prestazioni  
  I contatori delle prestazioni vengono applicati a tre livelli differenti: servizio, endpoint e operazione.  
   
- Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Di seguito è riportato un esempio:  
+ Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Ad esempio,  
   
 - Il nome dell'istanza del contatore del servizio può essere ottenuto tramite la proprietà "CounterInstanceName" dell'istanza del [servizio](../wmi/service.md) WMI.  
   
@@ -121,11 +121,11 @@ config.Save();
 
 Diversi file vengono installati nella cartella di installazione dell'SDK, in modo che sia possibile accedere ai contatori delle prestazioni WCF a livello di codice. Questi file sono elencati di seguito:
   
-- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
-- *@no__t -1ServiceModelOperationPerfCounters. VRG*
-- *@no__t -1ServiceModelServicePerfCounters. VRG*  
-- *@no__t -1SMSvcHostPerfCounters. VRG*
-- *@no__t -1TransactionBridgePerfCounters. VRG*
+- *\_ServiceModelEndpointPerfCounters. VRG*
+- *\_ServiceModelOperationPerfCounters. VRG*
+- *\_ServiceModelServicePerfCounters. VRG*  
+- *\_SMSvcHostPerfCounters. VRG*
+- *\_TransactionBridgePerfCounters. VRG*
   
 Per ulteriori informazioni sull'accesso ai contatori a livello di codice, vedere l' [architettura di programmazione dei contatori delle prestazioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

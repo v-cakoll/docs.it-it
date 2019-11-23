@@ -20,7 +20,7 @@ ms.locfileid: "71956435"
 
 La *globalizzazione* è il processo di progettazione e sviluppo di un prodotto software che funziona per più impostazioni cultura.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Caratteri internazionali nei controlli e in Windows Form](international-fonts-in-windows-forms-and-controls.md)  
 Illustra quando e come selezionare tipi di carattere per la visualizzazione di caratteri internazionali in Windows Form.
@@ -35,18 +35,18 @@ Fornisce un'introduzione alla proprietà `ImeMode`, usta per controllare il tipo
 
 - [Globalizzazione e localizzazione di applicazioni .NET](../../../standard/globalization-localization/index.md)
 
-- [Procedura dettagliata: Download di assembly satellite su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Procedura dettagliata: download di assembly satellite su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
 - [Localizzazione delle applicazioni ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
 
-- [Procedura dettagliata: Download di assembly satellite su richiesta con l'API della distribuzione ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+- [Procedura dettagliata: download di assembly satellite su richiesta con l'API della distribuzione ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Procedura: Impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per Windows Forms globalizzazione @ no__t-0
+- [Procedura: impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per la globalizzazione di Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Procedura: Creare Windows Forms e controlli con mirroring @ no__t-0
+- [Procedura: creare Windows Forms e controlli con mirroring](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Procedura: Supporto della localizzazione nei Windows Forms con AutoSize e il controllo TableLayoutPanel @ no__t-0
+- [Procedura: Supportare la localizzazione in Windows Form usando la proprietà AutoSize e il controllo TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [Procedura dettagliata: Localizzazione Windows Forms @ no__t-0
+- [Procedura dettagliata: localizzazione di Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [Procedura dettagliata: Creazione di un layout per la regolazione della proporzione per la localizzazione @ no__t-0
+- [Procedura dettagliata: creazione di un layout per la regolazione della proporzione per la localizzazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

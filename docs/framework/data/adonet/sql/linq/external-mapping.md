@@ -23,11 +23,11 @@ ms.locfileid: "72003053"
   
 - Il file di mapping deve essere un file XML.  
   
-- Il file di mapping XML deve essere convalidato in base al file di definizione di XML Schema. Per altre informazioni, vedere [Procedura: Convalidare file di mapping esterni e DBML @ no__t-0.  
+- Il file di mapping XML deve essere convalidato in base al file di definizione di XML Schema. Per altre informazioni, vedere [procedura: convalidare file di mapping esterni e dbml](how-to-validate-dbml-and-external-mapping-files.md).  
   
 - Il mapping esterno esegue l'override del mapping basato sugli attributi. In altre parole, quando si usa un'origine del mapping esterna per creare un oggetto <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora tutti gli attributi di mapping creati nelle classi. Questo comportamento si verifica se la classe è inclusa nel file di mapping esterno.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta l'uso ibrido dei due approcci del mapping (esterno e basato sugli attributi).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta l'uso ibrido dei due approcci di mapping (basati su attributi ed esterni).  
   
 ## <a name="xml-schema-definition-file"></a>File di definizione di XML Schema  
  Il mapping esterno in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve essere convalidato in base alla seguente definizione di XML Schema.  
@@ -35,7 +35,7 @@ ms.locfileid: "72003053"
  È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file DBML. Per ulteriori informazioni, vedere [generazione di codice in LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "LinqToSqlMapping. xsd". Per usare questo file correttamente per la convalida di un file di mapping esterno, vedere [How per: Convalidare file di mapping esterni e DBML @ no__t-0.  
+> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "LinqToSqlMapping. xsd". Per usare questo file correttamente per la convalida di un file di mapping esterno, vedere [procedura: convalidare file di mapping esterni e dbml](how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generazione di codice in LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Riferimento](reference.md)
-- [Procedura: Generare il modello a oggetti come file esterno @ no__t-0
+- [Procedura: generare il modello a oggetti come file esterno](how-to-generate-the-object-model-as-an-external-file.md)

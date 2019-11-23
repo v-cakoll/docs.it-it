@@ -37,7 +37,7 @@ Il livello dell'applicazione può essere la stessa API Web. L'aspetto di progett
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Greg Young. Versioning in an Event Sourced System** (Controllo delle versioni in un sistema con origini eventi - e-book online gratuito) \
+- **Greg Young. Controllo delle versioni in un sistema originato da eventi** (gratuito per leggere l'e-book online) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]

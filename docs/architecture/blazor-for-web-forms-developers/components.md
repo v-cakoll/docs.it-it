@@ -77,15 +77,15 @@ Le direttive Razor iniziano con il carattere `@` e vengono in genere usate all'i
 
 La tabella seguente riepiloga le varie direttive Razor usate in blazer e i rispettivi equivalenti Web Form ASP.NET, se esistenti.
 
-|Direttiva    |Descrizione|Esempio|Web Form equivalenti|
+|Directive    |description|Esempio|Web Form equivalenti|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|Nessuno|
+|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|None|
 |`@code`      |Aggiunge membri di classe al componente|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Implementa l'interfaccia specificata.|`@implements IDisposable`|USA code-behind|
 |`@inherits`  |Eredita dalla classe di base specificata|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|Nessuno|
+|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|None|
 |`@layout`    |Specifica un componente di layout per il componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|Nessuno|
+|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|None|
 |`@page`      |Specifica la route per il componente|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Specifica un parametro di tipo generico per il componente|`@typeparam TItem`|USA code-behind|
 |`@using`     |Specifica uno spazio dei nomi da inserire nell'ambito|`@using MyComponentNamespace`|Aggiungi spazio dei nomi in *Web. config*|
@@ -98,7 +98,7 @@ I componenti Razor fanno anche uso estensivo degli *attributi di direttiva* sugl
 
 Nella tabella seguente vengono riepilogati i vari attributi per le direttive Razor utilizzate in blazer.
 
-|Attributo    |Descrizione|Esempio|
+|Attributo    |description|Esempio|
 |-------------|-----------|-------|
 |`@attributes`|Esegue il rendering di un dizionario di attributi|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Crea una data binding bidirezionale    |`<input @bind="username" @bind:event="oninput" />`|
@@ -106,11 +106,11 @@ Nella tabella seguente vengono riepilogati i vari attributi per le direttive Raz
 |`@key`       |Specifica una chiave che deve essere usata dall'algoritmo diffing per mantenere gli elementi in una raccolta.|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Acquisisce un riferimento all'elemento Component o HTML|`<MyDialog @ref="myDialog" />`|
 
-I vari attributi di direttiva usati da Blazer (`@onclick`, `@bind`, `@ref` e così via) sono descritti nelle sezioni seguenti e nei capitoli successivi.
+I vari attributi di direttiva usati da Blazer (`@onclick`, `@bind`, `@ref`e così via) sono descritti nelle sezioni seguenti e nei capitoli successivi.
 
 Molte delle sintassi usate nei file *. aspx* e *. ascx* hanno sintassi parallele in Razor. Di seguito è riportato un semplice confronto delle sintassi per ASP.NET Web Forms e Razor.
 
-|Funzionalità                      |Web Form           |Sintassi               |Razor         |Sintassi |
+|Caratteristica                      |Web Form           |Sintassi               |Razor         |Sintassi |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Direttive                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Blocchi di codice                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -156,7 +156,7 @@ Si pensi ai componenti Razor come se fossero tipi .NET, perché si tratta esatta
 <Counter />
 ```
 
-Come illustrato nei progetti di Blazer predefiniti, è comune inserire le direttive `@using` in un file *_Imports. Razor* , in modo che vengano importate in tutti i file con *estensione Razor* nella stessa directory e nelle directory figlio.
+Come illustrato nei progetti Blazer predefiniti, è comune inserire le direttive `@using` in un file *_Imports. Razor* in modo che vengano importate in tutti i file con *estensione Razor* nella stessa directory e nelle directory figlio.
 
 Se lo spazio dei nomi per un componente non è incluso nell'ambito, è possibile specificare un componente usando il nome completo del tipo C#, come è possibile:
 
@@ -379,7 +379,7 @@ Per eseguire l'associazione a un parametro component, utilizzare un attributo `@
 }
 ```
 
-## <a name="state-changes"></a>Modifiche di stato
+## <a name="state-changes"></a>Modifiche dello stato
 
 Se lo stato del componente è stato modificato all'esterno di un normale evento dell'interfaccia utente o di un callback di evento, il componente deve segnalare manualmente che è necessario eseguire nuovamente il rendering. Per segnalare che lo stato di un componente è stato modificato, chiamare il metodo `StateHasChanged` sul componente.
 
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>Ciclo di vita componente
 
-Il framework ASP.NET Web Forms include metodi del ciclo di vita ben definiti per moduli, pagine e controlli. Il controllo seguente, ad esempio, implementa i gestori eventi per gli eventi del ciclo di vita `Init`, `Load` e `UnLoad`:
+Il framework ASP.NET Web Forms include metodi del ciclo di vita ben definiti per moduli, pagine e controlli. Il controllo seguente, ad esempio, implementa i gestori eventi per gli eventi del ciclo di vita `Init`, `Load`e `UnLoad`:
 
 *Counter.ascx.cs*
 

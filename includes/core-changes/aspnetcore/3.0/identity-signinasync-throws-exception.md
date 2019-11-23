@@ -16,7 +16,7 @@ Per impostazione predefinita, `SignInAsync` genera un'eccezione per entità/iden
 
 #### <a name="old-behavior"></a>Comportamento precedente
 
-`SignInAsync` accetta qualsiasi entità/identità, incluse le identità in cui `IsAuthenticated` è `false`.
+`SignInAsync` accetta qualsiasi entità/identità, incluse le identità in cui viene `false``IsAuthenticated`.
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
@@ -24,11 +24,11 @@ Per impostazione predefinita, `SignInAsync` genera un'eccezione per entità/iden
 
 #### <a name="reason-for-change"></a>Motivo della modifica
 
-Il comportamento precedente è problematico perché, per impostazione predefinita, queste entità sono state rifiutate da `[Authorize]` @ no__t-1 @ no__t-2.
+Il comportamento precedente è problematico perché, per impostazione predefinita, queste entità sono state rifiutate da `[Authorize]` / `RequireAuthenticatedUser()`.
 
 #### <a name="recommended-action"></a>Azione consigliata
 
-In ASP.NET Core 3,0 Preview 6 è disponibile un flag `RequireAuthenticatedSignIn` in `AuthenticationOptions`, che è `true` per impostazione predefinita. Impostare questo flag su `false` per ripristinare il comportamento precedente.
+In ASP.NET Core 3,0 Preview 6 è disponibile un flag `RequireAuthenticatedSignIn` per `AuthenticationOptions` `true` per impostazione predefinita. Impostare questo flag su `false` per ripristinare il comportamento precedente.
 
 #### <a name="category"></a>Category
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API interessate
 
-Nessuno
+None
 
 <!-- 
 

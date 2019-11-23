@@ -1,6 +1,6 @@
 ---
-title: Monitoraggio nei servizi Kubernetes di Azure
-description: Monitoraggio nei servizi Kubernetes di Azure
+title: Monitoraggio nei servizi Azure Kubernetes
+description: Monitoraggio nei servizi Azure Kubernetes
 ms.date: 09/23/2019
 ms.openlocfilehash: 71192601eac2169db188b25da3dc91b71b860903
 ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184988"
 ---
-# <a name="monitoring-in-azure-kubernetes-services"></a>Monitoraggio nei servizi Kubernetes di Azure
+# <a name="monitoring-in-azure-kubernetes-services"></a>Monitoraggio nei servizi Azure Kubernetes
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -28,15 +28,15 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 Verrà installato elasticsearch nel cluster e la destinazione invierà tutti i log del cluster.
 
-![Un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes](./media/kibana-dashboard.png)
-**Figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
+![un esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes](./media/kibana-dashboard.png)
+**figura 7-6**. Esempio di dashboard Kibana che mostra i risultati di una query sui log inseriti da Kubernetes
 
 ## <a name="azure-container-monitoring"></a>Monitoraggio del contenitore di Azure
 
 Il monitoraggio dei contenitori di Azure supporta l'utilizzo di log solo da Kubernetes, ma anche da altri motori di orchestrazione come DC/OS, Docker Swarm e Red Hat OpenShift.
 
-![Utilizzo di log da vari contenitori](./media/containers-diagram.png)
-**Figura 7-7**.  Utilizzo di log da vari contenitori
+![l'utilizzo di log da vari contenitori](./media/containers-diagram.png)
+**figura 7-7**.  Utilizzo di log da vari contenitori
 
 Le informazioni relative a log e metriche vengono raccolte non solo dai contenitori in esecuzione nel cluster, ma anche dal cluster che ospita autonomamente. Consente di correlare le informazioni di log dai due, rendendo molto più semplice rilevare un errore.
 
@@ -44,8 +44,8 @@ L'installazione degli agenti di raccolta log è diversa nei cluster [Windows](ht
 
 Indipendentemente dall'agente di orchestrazione o dal sistema operativo che esegue il daemon di monitoraggio di Azure, le informazioni di log vengono trasmesse agli stessi strumenti di monitoraggio di Azure con cui gli utenti hanno familiarità. Ciò garantisce un'esperienza parallela in ambienti che combinano origini di log diverse, ad esempio un ambiente ibrido per Kubernetes/funzioni di Azure.
 
-![Un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione. **Figura 7-8**. ](./media/containers-dashboard.png)
- Un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.
+![un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.](./media/containers-dashboard.png)
+**figura 7-8**. Un dashboard di esempio che mostra le informazioni di registrazione e metrica da diversi contenitori in esecuzione.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

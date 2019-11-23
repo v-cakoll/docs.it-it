@@ -40,7 +40,7 @@ Valore che indica se la compilazione JIT è stata eseguita correttamente.
 [in] `fIsSafeToBlock`   
 `true` per indicare che il blocco può causare la restituzione del thread chiamante da parte del runtime. `false` per indicare che il blocco non influirà sul funzionamento del runtime.  
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
 Questo callback viene attivato ogni volta che viene completata la compilazione JIT di un metodo dinamico. Sono inclusi vari Stub IL e metodi LCG. Il suo obiettivo consiste nel fornire ai writer del profiler informazioni sufficienti per identificare il metodo compilato agli utenti.
 
@@ -48,7 +48,7 @@ Questo callback viene attivato ogni volta che viene completata la compilazione J
 > non è possibile usare i valori `functionId` per risolvere i token dei metadati, perché i metodi dinamici non hanno metadati.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

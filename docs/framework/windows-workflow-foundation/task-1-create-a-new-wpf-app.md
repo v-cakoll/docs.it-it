@@ -1,5 +1,5 @@
 ---
-title: 'Attività 1: Creare una nuova applicazione Windows Presentation Foundation'
+title: 'Attività 1: creare una nuova applicazione Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 3205840da575041b449eb841fc8084e89937fca7
@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/08/2019
 ms.locfileid: "72031891"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: Creare una nuova applicazione Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: creare una nuova applicazione Windows Presentation Foundation
 
 In questa attività verrà creata un'applicazione Windows Presentation Foundation (WPF) vuota utilizzando il modello di Visual Studio dell'applicazione WPF e verranno aggiunti riferimenti agli assembly del flusso di lavoro [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] appropriati.  
   
@@ -37,9 +37,9 @@ In questa attività verrà creata un'applicazione Windows Presentation Foundatio
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. Vedere [Task 2: Ospitare il Progettazione flussi di lavoro @ no__t-0 per informazioni su come ospitare l'area di progettazione di progettazione flussi di lavoro.
+10. Vedere [attività 2: ospitare la progettazione flussi di lavoro](task-2-host-the-workflow-designer.md) per informazioni su come ospitare l'area di progettazione di progettazione flussi di lavoro.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
-- [Task 2: Ospitare il Progettazione flussi di lavoro @ no__t-0
+- [Attività 2: Ospitare Progettazione flussi di lavoro](task-2-host-the-workflow-designer.md)

@@ -284,19 +284,19 @@ Il middleware di autenticazione con bearer token JWT può supportare anche scena
 - **Introduzione all'identità** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Autenticazione a due fattori con SMS**  \
+- **Rick Anderson. Autenticazione a due fattori con SMS** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Abilitazione dell'autenticazione con Facebook, Google e altri provider esterni** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell anicas. Introduzione a OAuth 2**  \
+- **Michell anicas. Introduzione a OAuth 2** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repository GitHub per i provider OAuth ASP.NET) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **IdentityServer4. Documentazione ufficiale**  \
+- **IdentityServer4. Documentazione ufficiale** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]

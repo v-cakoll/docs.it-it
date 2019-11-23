@@ -27,7 +27,7 @@ I controller sono un componente essenziale di qualsiasi servizio API ASP.NET Cor
 
 Lo unit test prevede l'esecuzione di test su una parte di un'applicazione isolandola dall'infrastruttura e dalle dipendenze. Quando si sottopone a unit test la logica del controller, si verifica solo il contenuto di una singola azione o metodo e non il comportamento delle relative dipendenze o del framework. Gli unit test non rilevano i problemi dell'interazione tra componenti: a questo scopo esistono i test di integrazione.
 
-Quando si sottopongono a unit test le azioni del controller, è importante concentrarsi esclusivamente sul funzionamento del relativo controller. Uno unit test del controller consente di evitare, ad esempio, filtri, routing o associazione di modelli (il mapping dei dati di richiesta a un elemento ViewModel o DTO). Gli unit test risultano in genere facili da creare e rapidi da eseguire, perché verificano un solo aspetto. Un set di unit test ben organizzato può essere eseguito spesso senza sovraccarichi eccessivi.
+Quando si sottopongono a unit test le azioni del controller, è importante concentrarsi esclusivamente sul funzionamento del relativo controller. Uno unit test del controller consente di evitare, ad esempio, filtri, routing o associazione di modelli (il mapping dei dati di richiesta a un elemento ViewModel o DTO). Gli unit test risultano in genere facili da creare e rapidi da eseguire, perché verificano un solo aspetto. Un set di unit test ben organizzato può essere eseguito spesso senza overhead eccessivi.
 
 Gli unit test vengono implementati in base ai framework di test come xUnit.net, MSTest, Moq o NUnit. Per l'applicazione di esempio eShopOnContainers, useremo xUnit.
 

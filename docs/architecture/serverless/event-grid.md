@@ -90,25 +90,25 @@ Tutte le informazioni sul messaggio sono standard, ad eccezione della proprietà
 
 Un vantaggio principale dell'uso di griglia di eventi è costituito dai messaggi automatici prodotti da Azure. In Azure le risorse vengono pubblicate automaticamente in un *argomento* che consente di effettuare la sottoscrizione per diversi eventi. Nella tabella seguente sono elencati i tipi di risorse, i tipi di messaggi e gli eventi disponibili automaticamente.
 
-| Risorsa di Azure | Tipo evento | Descrizione |
+| Risorsa di Azure | Tipo evento | description |
 | -------------- | ---------- | ----------- |
-| Sottoscrizione di Azure | Microsoft. resources. ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
-| | Microsoft. resources. ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
-| | Microsoft. resources. ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
-|  | Microsoft. resources. ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
-|  | Microsoft. resources. ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
-| | Microsoft. resources. ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
-| Archiviazione - BLOB | Microsoft. storage. BlobCreated | Generato quando viene creato un BLOB. |
-| | Microsoft. storage. BlobDeleted | Generato quando viene eliminato un BLOB. |
-| Hub eventi | Microsoft. EventHub. CaptureFileCreated | Generato quando viene creato un file di acquisizione.
-| Hub Internet delle cose | Microsoft. Devices. DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub Internet. |
-| | Microsoft. Devices. DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub Internet. |
-| Gruppi di risorse | Microsoft. resources. ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
-| | Microsoft. resources. ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
-| | Microsoft. resources. ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
-| | Microsoft. resources. ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
-| | Microsoft. resources. ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
-| | Microsoft. resources. ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
+| Sottoscrizione di Azure | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
+| | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
+| | Microsoft.Resources.ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
+|  | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
+|  | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
+| | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
+| Archiviazione - BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un BLOB. |
+| | Microsoft.Storage.BlobDeleted | Generato quando viene eliminato un BLOB. |
+| Hub eventi | Microsoft.EventHub.CaptureFileCreated | Generato quando viene creato un file di acquisizione.
+| Hub IoT | Microsoft.Devices.DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub Internet. |
+| | Microsoft.Devices.DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub Internet. |
+| Gruppi di risorse | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
+| | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
+| | Microsoft.Resources.ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
+| | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
+| | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
+| | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
 
 Per altre informazioni, vedere [schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
 

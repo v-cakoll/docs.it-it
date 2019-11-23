@@ -137,7 +137,7 @@ Per altre informazioni, vedere [Panoramica dell'animazione](animation-overview.m
 
 <a name="media"></a>
 
-## <a name="media"></a>Supporti
+## <a name="media"></a>Supporto
 
 Immagini, video e audio sono supporti multimediali per trasmettere informazioni ed esperienze utente.
 

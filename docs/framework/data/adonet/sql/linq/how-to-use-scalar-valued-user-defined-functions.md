@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Usare funzioni definite dall'utente con valori scalari"
+title: "Procedura: utilizzare funzioni definite dall'utente con valori scalari"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,11 +12,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003231"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procedura: Usare funzioni definite dall'utente con valori scalari
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procedura: utilizzare funzioni definite dall'utente con valori scalari
 È possibile eseguire il mapping di un metodo client definito in una classe a una funzione definita dall'utente usando l'attributo <xref:System.Data.Linq.Mapping.FunctionAttribute>. Notare che nel corpo del metodo viene costruita un'espressione che acquisisce lo scopo della chiamata al metodo e passa quell'espressione a <xref:System.Data.Linq.DataContext> per la conversione e l'esecuzione.  
   
 > [!NOTE]
-> Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query. Per altre informazioni, vedere [Procedura: Chiamare le funzioni definite dall'utente inline @ no__t-0.  
+> Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query. Per altre informazioni, vedere [procedura: chiamare funzioni definite dall'utente inline](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Esempio  
  Nel codice SQL seguente viene presentata una funzione con valori scalari definita dall'utente `ReverseCustName()`.  

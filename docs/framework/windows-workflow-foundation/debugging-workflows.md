@@ -11,7 +11,7 @@ ms.locfileid: "72291495"
 ---
 # <a name="debugging-workflows"></a>Esecuzione del debug dei flussi di lavoro
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Debug nell'utilità di progettazione del flusso di lavoro
 
@@ -19,7 +19,7 @@ I punti di interruzione possono essere impostati sulle attività nella finestra 
 
 ## <a name="debugging-in-xaml"></a>Debug in XAML
 
-Se un flusso di lavoro viene sospeso in un punto di interruzione nella finestra di progettazione, il flusso di lavoro può essere sottoposto a debug anche in XAML. Per visualizzare il punto di esecuzione in XAML, selezionare **visualizzazione XAML** nella finestra di progettazione del flusso di lavoro quando l'esecuzione del flusso di lavoro è sospesa. Il debug può essere nuovamente avviato dalla finestra di progettazione riaprendo il flusso di lavoro nella finestra da Esplora soluzioni. Per altre informazioni, vedere [Procedura: Eseguire il debug di XAML con il Progettazione flussi di lavoro @ no__t-0.
+Se un flusso di lavoro viene sospeso in un punto di interruzione nella finestra di progettazione, il flusso di lavoro può essere sottoposto a debug anche in XAML. Per visualizzare il punto di esecuzione in XAML, selezionare **visualizzazione XAML** nella finestra di progettazione del flusso di lavoro quando l'esecuzione del flusso di lavoro è sospesa. Il debug può essere nuovamente avviato dalla finestra di progettazione riaprendo il flusso di lavoro nella finestra da Esplora soluzioni. Per altre informazioni, vedere [procedura: eseguire il debug di XAML con la progettazione flussi di lavoro](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).
 
 ## <a name="debugging-in-code"></a>Debug nel codice
 
@@ -31,10 +31,10 @@ Il debug del flusso di lavoro è supportato anche usando l'infrastruttura di Vis
 
 ## <a name="remote-debugging"></a>Remote Debugging
 
-Windows Workflow Foundation (WF) Remote Debugging funziona allo stesso modo del debug remoto per altri componenti di Visual Studio. Per informazioni sull'uso del debug remoto, vedere [How per: Abilitare il debug remoto @ no__t-0.
+Windows Workflow Foundation (WF) Remote Debugging funziona allo stesso modo del debug remoto per altri componenti di Visual Studio. Per informazioni sull'uso del debug remoto, vedere [procedura: abilitare il debug remoto](https://go.microsoft.com/fwlink/?LinkId=196257).
 
 > [!NOTE]
-> Se l'applicazione flusso di lavoro è destinata all'architettura x86 ed è ospitata in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che Visual Studio non sia installato nel computer remoto o la destinazione dell'applicazione del flusso di lavoro venga modificata in **Qualsiasi CPU**.
+> Se l'applicazione flusso di lavoro è destinata all'architettura x86 ed è ospitata in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che Visual Studio non sia installato nel computer remoto o la destinazione dell'applicazione del flusso di lavoro venga modificata in **qualsiasi CPU**.
 
 ## <a name="extending-the-workflow-debugging-service"></a>Estensione del servizio di debug del flusso di lavoro
 

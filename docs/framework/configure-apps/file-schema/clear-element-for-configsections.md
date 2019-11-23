@@ -21,8 +21,8 @@ ms.locfileid: "73119090"
 Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<cancella >**
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,21 +32,21 @@ Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza.
 
 ## <a name="attribute"></a>Attributo
 
-|           | Descrizione |
+|           | description |
 | --------- | ----------- |
 | **name**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezioni da rimuovere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<configSections >** Elemento](configsections-element-for-configuration.md) | Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi. |
 
-## <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elemento figlio
 
-Nessuno
+None
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'elemento **\<clear >** rimuove tutte le sezioni e i gruppi di sezioni dall'applicazione definiti in precedenza nel file di configurazione corrente o a un livello superiore nella gerarchia dei file di configurazione.
 

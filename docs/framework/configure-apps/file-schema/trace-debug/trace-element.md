@@ -17,12 +17,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699174"
 ---
-# <a name="trace-element"></a>Elemento > \<trace
+# <a name="trace-element"></a>\<elemento trace >
 Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<traccia** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,11 +33,11 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|description|  
 |---------------|-----------------|  
 |`autoflush`|Attributo facoltativo.<br /><br /> Specifica se i listener di traccia scaricano automaticamente il buffer di output dopo ogni operazione di scrittura.|  
 |`indentsize`|Attributo facoltativo.<br /><br /> Specifica il numero di spazi da rientrare.|  
@@ -45,33 +45,33 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
   
 ## <a name="autoflush-attribute"></a>AutoFlush (attributo)  
   
-|Value|Descrizione|  
+|Valore|description|  
 |-----------|-----------------|  
 |`false`|Non Scarica automaticamente il buffer di output. Questa è l'impostazione predefinita.|  
 |`true`|Scarica automaticamente il buffer di output.|  
   
 ## <a name="usegloballock-attribute"></a>Attributo useGlobalLock  
   
-|Value|Descrizione|  
+|Valore|description|  
 |-----------|-----------------|  
 |`false`|Non utilizza il blocco globale se il listener è thread-safe. in caso contrario, utilizza il blocco globale.|  
 |`true`|Usa il blocco globale indipendentemente dal fatto che il listener sia thread-safe. Questa è l'impostazione predefinita.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|Specifica un listener che raccoglie, archivia e instrada i messaggi.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento `<trace>` per aggiungere il listener `MyListener` alla raccolta `Listeners`. `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. L'attributo `useGlobalLock` è impostato su `false`, che impedisce l'utilizzo del blocco globale se il listener di traccia è thread-safe. L'attributo `autoflush` è impostato su `true`, che fa sì che il listener di traccia scriva nel file indipendentemente dal fatto che venga chiamato il metodo <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. L'attributo `indentsize` è impostato su 0 (zero), che fa sì che il listener rientri zero spazi quando viene chiamato il metodo <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<trace>` per aggiungere il listener `MyListener` alla raccolta di `Listeners`. `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. L'attributo `useGlobalLock` è impostato su `false`, che impedisce l'utilizzo del blocco globale se il listener di traccia è thread-safe. L'attributo `autoflush` è impostato su `true`, che fa sì che il listener di traccia scriva nel file indipendentemente dal fatto che venga chiamato il metodo <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. L'attributo `indentsize` è impostato su 0 (zero), che fa sì che il listener rientri zero spazi quando viene chiamato il metodo <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
   
 ```xml  
 <configuration>  

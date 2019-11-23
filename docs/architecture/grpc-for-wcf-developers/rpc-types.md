@@ -1,14 +1,13 @@
 ---
 title: Tipi di RPC-gRPC per sviluppatori WCF
 description: Revisione dei tipi di chiamata di procedura remota supportata da WCF e dei relativi equivalenti in gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846225"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967266"
 ---
 # <a name="types-of-rpc"></a>Tipi di RPC
 
@@ -62,7 +61,7 @@ Come si può notare, l'implementazione di un metodo del servizio RPC unario gRPC
 
 ## <a name="wcf-duplex-one-way-to-client"></a>WCF Duplex, unidirezionale a client
 
-Le applicazioni WCF (con determinate associazioni) possono creare una connessione permanente tra client e server e il server può inviare dati al client in modo asincrono finché la connessione non viene chiusa, usando un' *interfaccia di callback* specificata nella <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> Proprietà.
+Le applicazioni WCF (con determinate associazioni) possono creare una connessione permanente tra client e server e il server può inviare dati al client in modo asincrono finché la connessione non viene chiusa, usando un' *interfaccia di callback* specificata nella proprietà <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>.
 
 i servizi gRPC forniscono funzionalità simili con i flussi di messaggi. I flussi non vengono mappati *esattamente* ai servizi duplex WCF in termini di implementazione, ma è possibile ottenere gli stessi risultati.
 
