@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332727"
 ---
-# <a name="what-is-f"></a>Che cos'è F @ no__t-0
+# <a name="what-is-f"></a>Che cos'è F\#
 
 F# è un linguaggio di programmazione funzionale che semplifica la scrittura di codice corretto e mantenibile.
 

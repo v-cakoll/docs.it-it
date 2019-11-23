@@ -31,9 +31,9 @@ I riferimenti ad altri oggetti o raccolte di altri oggetti nelle definizioni del
   
  Dopo avere creato le relazioni, è possibile scrivere query facendo riferimento alle proprietà delle relazioni definite nelle classi. Questi riferimenti alle relazioni corrispondono alle relazioni di chiave esterna nel database. Le operazioni che usano queste relazioni vengono convertite in join più complessi nell'equivalente SQL. A condizione che sia stata definita una relazione usando l'attributo <xref:System.Data.Linq.Mapping.AssociationAttribute>, non sarà necessario codificare un join esplicito in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Per semplificare la gestione di questa illusione, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una tecnica denominata *caricamento posticipato*. Per ulteriori informazioni, vedere il [caricamento posticipato rispetto al caricamento immediato](deferred-versus-immediate-loading.md).  
+ Per mantenere questa illusione, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una tecnica denominata *caricamento posticipato*. Per ulteriori informazioni, vedere il [caricamento posticipato rispetto al caricamento immediato](deferred-versus-immediate-loading.md).  
   
- Si consideri la query SQL seguente per proiettare un elenco di coppie `CustomerID` @ no__t-1 @ no__t-2:  
+ Si consideri la query SQL seguente per proiettare un elenco di coppie `CustomerID`-`OrderID`:  
   
 ```sql
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,12 +42,12 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Per ottenere gli stessi risultati tramite [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], usare il riferimento alla proprietà `Orders` esistente nella classe `Customer`. Il riferimento `Orders` fornisce le informazioni necessarie per eseguire la query e proiettare le coppie `CustomerID` @ no__t-2 @ no__t-3, come nel codice seguente:  
+ Per ottenere gli stessi risultati tramite [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], usare il riferimento alla proprietà `Orders` esistente nella classe `Customer`. Il riferimento `Orders` fornisce le informazioni necessarie per eseguire la query e proiettare il `CustomerID`-`OrderID` coppie, come nel codice seguente:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- È inoltre possibile procedere in senso inverso, ovvero eseguire una query su `Orders` e usare il relativo riferimento alla relazione di `Customer` per accedere alle informazioni sull'oggetto `Customer` associato. Il codice seguente proietta le stesse coppie `CustomerID` @ no__t-1 @ no__t-2 come prima, ma questa volta eseguendo una query su `Orders` anziché `Customers`.  
+ È inoltre possibile procedere in senso inverso, ovvero eseguire una query su `Orders` e usare il relativo riferimento alla relazione di `Customer` per accedere alle informazioni sull'oggetto `Customer` associato. Il codice seguente proietta lo stesso `CustomerID`-coppie di `OrderID` come prima, ma questa volta eseguendo una query `Orders` anziché `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

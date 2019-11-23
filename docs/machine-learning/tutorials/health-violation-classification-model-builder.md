@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 53f446d4aad8517d758e936d2d2881071f319423
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142179"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977213"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Esercitazione: classificare la gravità delle violazioni di integrità del ristorante con generatore di modelli
 
@@ -35,7 +35,7 @@ In questa esercitazione si imparerà a:
 
 Per un elenco di prerequisiti e istruzioni di installazione, vedere la [Guida all'installazione di generatore di modelli](../how-to-guides/install-model-builder.md).
 
-## <a name="model-builder-multiclass-classification-overview"></a>Panoramica della classificazione multiclasse del generatore di modelli 
+## <a name="model-builder-multiclass-classification-overview"></a>Panoramica della classificazione multiclasse del generatore di modelli
 
 Questo esempio crea un' C# applicazione console .NET Core che categorizza il rischio di violazioni di integrità usando un modello di Machine Learning compilato con il generatore di modelli. Il codice sorgente per questa esercitazione è reperibile nel repository GitHub [DotNet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
@@ -58,10 +58,10 @@ Ogni riga del set di dati contiene informazioni relative alle violazioni osserva
 | Routine-non pianificata | Cancellazione di panni non puliti o archiviati in modo appropriato o igienizzatore inadeguato | Rischio basso |
 
 - **InspectionType**: il tipo di controllo. Questo può essere un primo controllo per un nuovo stabilimento, un'ispezione di routine, un'ispezione di reclamo e molti altri tipi.
-- **ViolationDescription**: Descrizione della violazione trovata durante l'ispezione. 
+- **ViolationDescription**: Descrizione della violazione trovata durante l'ispezione.
 - **RiskCategory**: la gravità del rischio rappresenta una violazione per l'integrità e la sicurezza pubbliche.
 
-`label` è la colonna sulla quale eseguire le stime. Quando si esegue un'attività di classificazione, l'obiettivo consiste nell'assegnare una categoria (testo o numerico). In questo scenario di classificazione, alla gravità della violazione viene assegnato il valore di basso, medio o alto rischio. Di conseguenza, **RiskCategory** è l'etichetta. Il `features` sono gli input da assegnare al modello per stimare l'`label`. In questo caso, **InspectionType** e **ViolationDescription** vengono usati come funzionalità o input per stimare il **RiskCategory**.
+`label` è la colonna da stimare. Quando si esegue un'attività di classificazione, l'obiettivo consiste nell'assegnare una categoria (testo o numerico). In questo scenario di classificazione, alla gravità della violazione viene assegnato il valore di basso, medio o alto rischio. Di conseguenza, **RiskCategory** è l'etichetta. Il `features` sono gli input da assegnare al modello per stimare l'`label`. In questo caso, **InspectionType** e **ViolationDescription** vengono usati come funzionalità o input per stimare il **RiskCategory**.
 
 ## <a name="choose-a-scenario"></a>Scegliere uno scenario
 
@@ -78,10 +78,10 @@ Il generatore di modelli accetta dati da un database SQL Server o da un file loc
 
 1. Nel passaggio dati dello strumento generatore di modelli selezionare **SQL Server** dall'elenco a discesa origine dati.
 1. Selezionare il pulsante accanto alla casella di testo **Connetti a SQL Server database** .
-    1. Nella finestra di dialogo **Scegli dati** selezionare **Microsoft SQL Server file di database**. 
+    1. Nella finestra di dialogo **Scegli dati** selezionare **Microsoft SQL Server file di database**.
     1. Deselezionare la casella di controllo **Usa sempre questa selezione** e selezionare **continua**.
     1. Nella finestra di dialogo **Proprietà connessione** selezionare **Sfoglia** e selezionare il file *RestaurantScores. MDF* scaricato.
-    1. Scegliere **OK**.
+    1. Selezionare **OK**.
 1. Scegliere **violazioni** dall'elenco a discesa **nome tabella** .
 1. Scegliere **RiskCategory** nell'elenco **a discesa colonna da stimare (etichetta)** .
 1. Lasciare le selezioni di colonna predefinite, **InspectionType** e **ViolationDescription**, archiviate nell'elenco a discesa **colonne di input (funzionalità)** .
@@ -124,11 +124,11 @@ Due progetti vengono creati in seguito al processo di training.
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. Per eseguire una stima sui nuovi dati utilizzando il modello, creare una nuova istanza della classe `ModelInput` all'interno del metodo `Main` dell'applicazione. Si noti che la categoria di rischio non fa parte dell'input. Questo perché il modello genera la stima per l'oggetto. 
+1. Per eseguire una stima sui nuovi dati utilizzando il modello, creare una nuova istanza della classe `ModelInput` all'interno del metodo `Main` dell'applicazione. Si noti che la categoria di rischio non fa parte dell'input. Questo perché il modello genera la stima per l'oggetto.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. Usare il metodo `Predict` dalla classe `ConsumeModel`. Il metodo `Predict` carica il modello sottoposto a training, crea una [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e la utilizza per eseguire stime sui nuovi dati. 
+1. Usare il metodo `Predict` dalla classe `ConsumeModel`. Il metodo `Predict` carica il modello sottoposto a training, crea una [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e la utilizza per eseguire stime sui nuovi dati.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 

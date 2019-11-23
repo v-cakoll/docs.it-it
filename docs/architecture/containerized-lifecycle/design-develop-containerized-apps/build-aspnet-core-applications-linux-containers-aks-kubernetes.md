@@ -47,7 +47,7 @@ Se si ha una versione precedente di .NET Core, è possibile scaricare e installa
 
 È possibile aggiungere il supporto per Docker al momento della creazione del progetto o in seguito, in qualsiasi momento. Per aggiungere il supporto per Docker dopo la creazione del progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e selezionare **Aggiungi** > **Supporto Docker** nel menu di scelta rapida.
 
-![Opzione del menu di scelta rapida per aggiungere il supporto per Docker a un progetto esistente: Fare clic con il pulsante destro sul progetto > Aggiungi > Supporto Docker.](media/add-docker-support-to-project.png)
+![Opzione del menu di scelta rapida per aggiungere il supporto di Docker a un progetto esistente: fare clic con il pulsante destro del mouse sul progetto > Aggiungi > supporto docker.](media/add-docker-support-to-project.png)
 
 **Figura 4-38**. Aggiunta del supporto per Docker a un progetto esistente
 
@@ -69,7 +69,7 @@ Dopo aver eseguito il progetto, è possibile elencare le immagini usando il coma
 docker images
 ```
 
-![L'output della console del comando delle immagini Docker visualizza un elenco con: Repository, Tag, Image ID, Created (date) e Size.](media/docker-images-command.png)
+![Output della console del comando Docker images, Mostra un elenco con: repository, tag, image ID, created (date) e size.](media/docker-images-command.png)
 
 **Figura 4-40**. Visualizzazione immagini Docker
 
@@ -89,7 +89,7 @@ Se si esegue il comando `docker image`, vengono visualizzate entrambe le immagin
 
 ### <a name="create-a-new-tag-for-the-image"></a>Creare un nuovo tag per l'immagine
 
-Ogni immagine del contenitore deve essere contrassegnata con `loginServer` il nome del registro di sistema. Questo tag viene usato per il routing quando si effettua il push di immagini del contenitore in un registro immagini.
+Ogni immagine del contenitore deve essere contrassegnata con il nome del `loginServer` del registro di sistema. Questo tag viene usato per il routing quando si effettua il push di immagini del contenitore in un registro immagini.
 
 È possibile visualizzare il nome `loginServer` dal portale di Azure. L'informazione deriva dal Registro Azure Container.
 
@@ -190,7 +190,7 @@ A questo punto si è quasi pronti per eseguire la distribuzione usando **Kubectl
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Output della console del comando riportato sopra: Merged "MSSampleK8Cluster as current context in  /root/.kube/config](media/getting-aks-credentials.png)
+![Output della console dal comando precedente: merge di "MSSampleK8Cluster come contesto corrente in/root/.Kube/config](media/getting-aks-credentials.png)
 
 **Figura 4-47**. Ottenere le credenziali
 

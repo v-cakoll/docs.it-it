@@ -1,14 +1,13 @@
 ---
 title: Applicazioni gRPC self-hosted-gRPC per sviluppatori WCF
 description: Distribuzione di ASP.NET Core applicazioni gRPC come servizi indipendenti.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846114"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967217"
 ---
 # <a name="self-hosted-grpc-applications"></a>Applicazioni gRPC indipendenti
 
@@ -78,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Se l'applicazione non è in esecuzione come servizio Linux, il `UseSystemd` metodo non esegue alcuna operazione.
 
-A questo punto, pubblicare l'applicazione (dipendente dal Framework o autonomo per il runtime di Linux pertinente, ad esempio `linux-x64`), da Visual Studio facendo clic con il pulsante destro del mouse sul progetto e scegliendo *pubblica* dal menu di scelta rapida o dalla interfaccia della riga di comando di .NET Core usare il comando seguente.
+A questo punto, pubblicare l'applicazione (dipendente dal Framework o autonomo per il runtime di Linux pertinente, ad esempio `linux-x64`), da Visual Studio facendo clic con il pulsante destro del mouse sul progetto e scegliendo *pubblica* dal menu di scelta rapida o dal interfaccia della riga di comando di .NET Core usando il comando seguente.
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -153,7 +152,7 @@ Quando si esegue un'applicazione gRPC in produzione, è necessario usare un cert
 
 Negli host Windows, il certificato può essere caricato da un [archivio certificati](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) protetto usando la [classe X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). La classe `X509Store` può essere usata anche con l'archivio chiavi OpenSSL in alcuni host Linux.
 
-I certificati possono anche essere creati usando uno dei [costruttori X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), da un file (ad esempio un file di `.pfx` protetto da una password complessa) o da dati binari recuperati da un servizio di archiviazione protetto, ad esempio [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) .
+I certificati possono essere creati anche usando uno dei [costruttori X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), da un file, ad esempio un file di `.pfx` protetto da una password complessa, o da dati binari recuperati da un servizio di archiviazione protetto, ad esempio [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
 Il gheppio può essere configurato per l'uso di un certificato in due modi: dalla configurazione o nel codice.
 

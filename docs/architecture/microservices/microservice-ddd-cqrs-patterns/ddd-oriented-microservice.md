@@ -39,7 +39,7 @@ La figura 7-5 illustra una progettazione a più livelli implementata nell'applic
 
 ![Diagramma che mostra i livelli in un microservizio di progettazione basato su dominio.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
-**Figura 7-5**. Livelli DDD nel microservizio degli ordini in eShopOnContainers
+**Figura 7-5.** Livelli DDD nel microservizio degli ordini in eShopOnContainers
 
 I tre livelli in un microservizio DDD, ad esempio per gli ordini. Ogni livello è un progetto di Visual Studio: il livello dell'applicazione è Ordering.API, il livello del dominio è Ordering.Domain e il livello dell'infrastruttura è Ordering.Infrastructure. Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 7-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
 

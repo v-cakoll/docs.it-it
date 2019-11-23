@@ -1,14 +1,13 @@
 ---
 title: Eseguire la migrazione di servizi duplex WCF a gRPC-gRPC per sviluppatori WCF
 description: Informazioni su come eseguire la migrazione di varie forme di servizio WCF Duplex ai servizi di streaming gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846601"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971876"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>Eseguire la migrazione di servizi duplex WCF a gRPC
 
@@ -18,7 +17,7 @@ Esistono diversi modi per utilizzare i servizi duplex in Windows Communication F
 
 ## <a name="server-streaming-rpc"></a>RPC di streaming server
 
-Nella [soluzione SIMPLESTOCKTICKER WCF di esempio](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker), *SimpleStockPriceTicker*, è disponibile un servizio duplex in cui il client avvia la connessione con un elenco di simboli azionari e il server usa l' *interfaccia di callback* per inviare gli aggiornamenti man mano che diventano disponibili. Il client implementa tale interfaccia per rispondere alle chiamate provenienti dal server.
+Nella [soluzione SIMPLESTOCKTICKER WCF di esempio](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker), *SimpleStockPriceTicker*, è disponibile un servizio duplex in cui il client avvia la connessione con un elenco di simboli azionari e il server utilizza l' *interfaccia di callback* per inviare aggiornamenti non appena diventano disponibili. Il client implementa tale interfaccia per rispondere alle chiamate provenienti dal server.
 
 ### <a name="the-wcf-solution"></a>Soluzione WCF
 
@@ -164,7 +163,7 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-Come si può notare, anche se la dichiarazione nel file `.proto` indica che il metodo "restituisce" un flusso di messaggi `StockTickerUpdate`, in realtà restituisce un `Task` Vanilla. Il processo di creazione del flusso viene gestito dal codice generato e dalle librerie di runtime gRPC, che forniscono il flusso di risposta `IServerStreamWriter<StockTickerUpdate>`, pronto per l'uso.
+Come si può notare, anche se la dichiarazione nel file `.proto` indica che il metodo "restituisce" un flusso di messaggi `StockTickerUpdate`, in realtà restituisce un `Task`Vanilla. Il processo di creazione del flusso viene gestito dal codice generato e dalle librerie di runtime gRPC, che forniscono il flusso di risposta `IServerStreamWriter<StockTickerUpdate>`, pronto per l'uso.
 
 A differenza di un servizio WCF Duplex, in cui l'istanza della classe del servizio viene mantenuta attiva mentre la connessione è aperta, il servizio gRPC utilizza l'attività restituita per mantenere attivo il servizio. L'attività non deve essere completata fino alla chiusura della connessione.
 
@@ -172,7 +171,7 @@ Il servizio è in grado di stabilire quando il client ha chiuso la connessione u
 
 Nel metodo `Subscribe` ottenere quindi una `StockPriceSubscriber` e aggiungere un gestore eventi che scrive nel flusso di risposta. Attendere quindi che la connessione venga chiusa, prima di eliminare immediatamente il `subscriber` per impedire che tenti di scrivere dati nel flusso chiuso.
 
-Il metodo `WriteUpdateAsync` dispone di un `try` / blocco `catch` per gestire eventuali errori che potrebbero verificarsi durante la scrittura di un messaggio nel flusso. Si tratta di una considerazione importante in caso di connessioni permanenti su reti, che potrebbero essere interrotte in qualsiasi millisecondo, sia intenzionalmente che a causa di un errore in un punto qualsiasi.
+Il metodo `WriteUpdateAsync` dispone di un `try`/blocco `catch` per gestire eventuali errori che potrebbero verificarsi durante la scrittura di un messaggio nel flusso. Si tratta di una considerazione importante in caso di connessioni permanenti su reti, che potrebbero essere interrotte in qualsiasi millisecondo, sia intenzionalmente che a causa di un errore in un punto qualsiasi.
 
 ### <a name="using-the-stocktickerservice-from-a-client-application"></a>Uso di StockTickerService da un'applicazione client
 
@@ -346,7 +345,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-La classe `ActionMessage` generata da gRPC garantisce che sia possibile impostare solo una delle proprietà `Add` e `Remove` e individuare quale non è `null` è un modo valido per trovare il tipo di messaggio utilizzato , ma c'è un modo migliore. La generazione del codice ha creato anche un `enum ActionOneOfCase` nella classe `ActionMessage`, che ha un aspetto simile al seguente:
+La classe `ActionMessage` generata da gRPC garantisce che sia possibile impostare solo una delle proprietà `Add` e `Remove` e individuare quale non è `null` è un modo valido per trovare il tipo di messaggio usato, ma esiste un modo migliore. La generazione del codice ha creato anche un `enum ActionOneOfCase` nella classe `ActionMessage`, che ha un aspetto simile al seguente:
 
 ```csharp
 public enum ActionOneofCase {

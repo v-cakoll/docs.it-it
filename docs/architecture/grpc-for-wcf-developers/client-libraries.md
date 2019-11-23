@@ -1,14 +1,13 @@
 ---
 title: Creare librerie client di gRPC-gRPC per sviluppatori WCF
 description: Discussione dei pacchetti e delle librerie client condivise per i servizi gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419927"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967880"
 ---
 # <a name="create-grpc-client-libraries"></a>Creare librerie client gRPC
 
@@ -19,7 +18,7 @@ Uno dei vantaggi della distribuzione di una libreria client consiste nel fatto c
 > [!CAUTION]
 > **Non** è consigliabile usare codice personalizzato per fornire funzionalità essenziali, in quanto ciò significa che la funzionalità è limitata ai team .NET che usano la libreria condivisa e non ai team che usano altri linguaggi o piattaforme come Python o Java.
 
-In un ambiente multipiattaforma in cui diversi team utilizzano spesso linguaggi e Framework di programmazione diversi o in cui l'API è accessibile esternamente, semplicemente condividendo `.proto` file in modo che gli sviluppatori possano generare i propri client è il modo migliore per garantire il maggior numero possibile di team può accedere al servizio gRPC.
+In un ambiente multipiattaforma in cui diversi team utilizzano spesso linguaggi e Framework di programmazione diversi o in cui l'API è accessibile esternamente, semplicemente condividendo `.proto` file in modo che gli sviluppatori possano generare i propri client è il modo migliore per garantire che il maggior numero possibile di team possa accedere al servizio gRPC.
 
 ## <a name="useful-extensions"></a>Estensioni utili
 

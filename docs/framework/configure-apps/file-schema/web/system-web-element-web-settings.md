@@ -15,11 +15,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699101"
 ---
-# <a name="systemweb-element-web-settings"></a>@no__t elemento > -0system. Web (impostazioni Web)
+# <a name="systemweb-element-web-settings"></a>Elemento \<System. Web > (impostazioni Web)
 Contiene informazioni sul modo in cui il livello di hosting di ASP.NET gestisce il comportamento a livello di processo.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3System. web >**  
+&nbsp;&nbsp; **\<> System. Web**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,25 +30,25 @@ Contiene informazioni sul modo in cui il livello di hosting di ASP.NET gestisce 
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
 
-No.  
+Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|Specifica le impostazioni di configurazione per i pool di applicazioni IIS in un file Aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|Specifica l'elemento radice in ogni file di configurazione usato dalle applicazioni Common Language Runtime e .NET Framework.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
 L'elemento `system.web` e il relativo elemento figlio `applicationPool` sono stati aggiunti al .NET Framework a partire da .NET Framework 3,5 SP1. Quando si esegue IIS 7,0 o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare il modo in cui ASP.NET gestisce i thread e come Accoda le richieste quando ASP.NET è ospitato in un pool di applicazioni IIS. Se si esegue IIS 7,0 o versioni successive in modalità classica o ISAPI, queste impostazioni verranno ignorate.  
   

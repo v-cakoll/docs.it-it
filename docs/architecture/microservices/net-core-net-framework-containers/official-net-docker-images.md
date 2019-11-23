@@ -13,7 +13,7 @@ ms.locfileid: "71353876"
 
 Le immagini Docker .NET ufficiali sono immagini Docker create e ottimizzate da Microsoft. Sono disponibili pubblicamente nei repository Microsoft nell'[hub Docker](https://hub.docker.com/u/microsoft/). Ogni repository può contenere più immagini, a seconda delle versioni di .NET e a seconda del sistema operativo e delle relative versioni, ad esempio Linux Debian, Linux Spline, Windows Nano Server, Windows Server Core e così via.
 
-Poiché .NET Core 2,1, tutte le immagini .NET Core, incluse per ASP.NET Core sono disponibili nell'hub Docker nel repository di immagini .NET Core: <https://hub.docker.com/_/microsoft-dotnet-core/>.
+Dal momento che .NET Core 2,1, tutte le immagini .NET Core, incluse per ASP.NET Core sono disponibili nell'hub Docker nel repository di immagini .NET Core: <https://hub.docker.com/_/microsoft-dotnet-core/>.
 
 La maggior parte dei repository di immagini fornisce contrassegni completi che consentono di selezionare sia una versione specifica del framework che un sistema operativo (distribuzione di Linux o versione di Windows).
 
@@ -43,7 +43,7 @@ Anche se sono presenti più versioni delle immagini .NET Core e ASP.NET Core, tu
 
 Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si troveranno più versioni delle immagini classificate o contrassegnate con tag. Questi tag consentono di decidere l'immagine da usare a seconda della versione necessaria, come quelle nella tabella seguente:
 
-| Image | Commenti |
+| Image | Comments |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2.2** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
 | mcr.microsoft.com/dotnet/core/sdk:**2.2** | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura) |

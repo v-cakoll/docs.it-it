@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Nome di un tipo supportato.  
   
- RACCOLTA (< type_definition @ no__t-0)  
+ RACCOLTA (< type_definition`>`)  
  Espressione che restituisce una raccolta di tipi supportati, righe o riferimenti.  
   
  REF **(** `data_type` **)**  
@@ -50,7 +50,7 @@ FUNCTION function-name
  ROW **(** `row_expression` **)**  
  Espressione che restituisce record anonimi strutturalmente tipizzati da uno o più valori. Per altre informazioni, vedere [ROW](row-entity-sql.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Più funzioni con lo stesso nome possono essere dichiarate inline, purché le firme delle funzioni siano differenti. Per altre informazioni, vedere [Function Overload Resolution](function-overload-resolution-entity-sql.md).  
   
  È possibile chiamare una funzione inline in un comando Entity SQL solo dopo che è stata definita in quel comando. Tuttavia, una funzione inline può essere chiamata in un'altra funzione inline prima o dopo che la funzione chiamata è stata definita. Nell'esempio seguente la funzione A chiama la funzione B prima che la funzione B sia definita:  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Per altre informazioni, vedere [Procedura: Chiamare una funzione definita dall'utente @ no__t-0.  
+ Per altre informazioni, vedere [Procedura: chiamare una funzione definita dall'utente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per ulteriori informazioni, vedere [funzioni definite dall'utente](user-defined-functions-entity-sql.md).  
   

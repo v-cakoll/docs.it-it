@@ -64,7 +64,7 @@ Ottenere prima di tutto le credenziali:
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Output della console del comando precedente: Merged "MsSampleK8Cluster as current context in /root/.kube/config.](media/get-credentials-command-result.png)
+![Output della console dal comando precedente: merge di "MsSampleK8Cluster come contesto corrente in/root/.Kube/config.](media/get-credentials-command-result.png)
 
 **Figura 4-19**. Risultato del comando `aks get-credentials`.
 
@@ -74,7 +74,7 @@ E quindi recupero dei nodi da Kubectl:
 kubectl get nodes
 ```
 
-![Output della console del comando precedente: Elenco di nodi con stato, età (tempo di esecuzione) e versione](media/kubectl-get-nodes-command-result.png)
+![Output della console dal comando precedente: elenco di nodi con stato, età (tempo in esecuzione) e versione](media/kubectl-get-nodes-command-result.png)
 
 **Figura 4-20**. Risultato del comando `kubectl get nodes`.
 

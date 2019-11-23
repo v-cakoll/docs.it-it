@@ -108,7 +108,7 @@ A differenza di Angular, che offre un'implementazione dello schema MVC completo,
 
 Una delle funzionalità più importanti di React è l'uso di un DOM virtuale. Il DOM virtuale offre a React diversi vantaggi, tra cui le prestazioni (il DOM virtuale può ottimizzare le parti del DOM reale che è necessario aggiornare) e la testabilità (non è necessario che un browser testi React e le relative interazioni con il DOM virtuale).
 
-Anche la modalità di interazione di React con la tecnologia HTML è insolita. Anziché prevedere una netta separazione tra il codice e il markup, ad esempio con riferimenti a JavaScript visualizzati negli attributi HTML, React aggiunge il codice HTML direttamente all'interno del codice JavaScript come JSX. JSX è una sintassi simile a HTML che consente la compilazione fino al codice JavaScript puro. Ad esempio:
+Anche la modalità di interazione di React con la tecnologia HTML è insolita. Anziché prevedere una netta separazione tra il codice e il markup, ad esempio con riferimenti a JavaScript visualizzati negli attributi HTML, React aggiunge il codice HTML direttamente all'interno del codice JavaScript come JSX. JSX è una sintassi simile a HTML che consente la compilazione fino al codice JavaScript puro. Di seguito è riportato un esempio:
 
 ```js
 <ul>
@@ -144,7 +144,7 @@ I framework JavaScript continuano a evolvere molto rapidamente. Usare le conside
 >
 > - **HTML e CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass e LESS**  
+> - **Sass rispetto a LESS**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Definizione di stili per app ASP.NET Core con LESS, Sass e Font Awesome**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>

@@ -22,9 +22,9 @@ ms.locfileid: "71698157"
 # <a name="network-settings-schema"></a>Schema delle impostazioni di rete
 Tramite le impostazioni di rete viene specificata la modalità di connessione a Internet di .NET Framework.
 
-Le impostazioni @no__t -0system. net > specificano il modo in cui il .NET Framework si connette alla rete. La tabella seguente descrive la funzione di ogni elemento di configurazione figlio dell'[elemento \<system.Net> (impostazioni di rete)](system-net-element-network-settings.md).  
+Le impostazioni \<System. net > specificano il modo in cui il .NET Framework si connette alla rete. La tabella seguente descrive la funzione di ogni elemento di configurazione figlio dell'[elemento \<system.Net> (impostazioni di rete)](system-net-element-network-settings.md).  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[Elemento \<authenticationModules> (impostazioni di rete)](authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste Internet.|  
 |[Elemento \<connectionManagement> (impostazioni di rete)](connectionmanagement-element-network-settings.md)|Specifica il numero massimo di connessioni a host Internet.|  
@@ -33,9 +33,9 @@ Le impostazioni @no__t -0system. net > specificano il modo in cui il .NET Framew
 |[Elemento \<requestCaching> (impostazioni di rete)](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
 |[Elemento \<webRequestModules> (impostazioni di rete)](webrequestmodules-element-network-settings.md)|Specifica i moduli usati per richiedere informazioni da host Internet.|  
   
-Le impostazioni di > \<uri specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier). Nella tabella seguente viene descritta la funzione di ogni elemento di configurazione figlio sotto l' [elemento \<uri > (impostazioni URI)](uri-element-uri-settings.md).  
+Le impostazioni > URI \<specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier). Nella tabella seguente viene descritta la funzione di ogni elemento di configurazione figlio sotto l' [uri\<> elemento (impostazioni URI)](uri-element-uri-settings.md).  
   
-|Elemento|Descrizione|  
+|Elemento|description|  
 |-------------|-----------------|  
 |[Elemento \<idn> (impostazioni URI)](idn-element-uri-settings.md)|Specifica se l'analisi IDN (Internationalized Domain Name) viene applicata ai nomi di dominio.|  
 |[Elemento \<iriParsing> (impostazioni URI)](iriparsing-element-uri-settings.md)|Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  

@@ -27,14 +27,14 @@ Ogni linguaggio di programmazione dispone di strumenti che consentono di scriver
 * Debug
 * Informazioni
 * Avviso
-* Error
-* Irreversibile
+* Errore
+* Fatal
 
 Questi livelli di log diversi forniscono la granularità nella registrazione. Quando l'applicazione funziona correttamente nell'ambiente di produzione, può essere configurata in modo da registrare solo i messaggi importanti. Quando l'applicazione si comporta in modo errato, è possibile aumentare il livello di registrazione, in modo che vengano raccolti log più dettagliati. Questo bilancia le prestazioni in base alla facilità di debug.
 
 Le prestazioni elevate degli strumenti di registrazione e della tunability del livello di dettaglio devono incoraggiare gli sviluppatori a registrarsi di frequente. Molti prediligono un modello di registrazione della voce e dell'uscita di ogni metodo. Questo approccio può sembrare eccessivo, ma non è frequente che gli sviluppatori vogliano una minore registrazione. In realtà, non è insolito eseguire le distribuzioni per l'unico scopo di aggiungere la registrazione intorno a un metodo problematico. Errore sul lato di una registrazione eccessiva e non su un importo troppo basso. Si noti che è possibile utilizzare alcuni strumenti per fornire automaticamente questo tipo di registrazione.
 
-Nelle applicazioni tradizionali, i file di log venivano in genere archiviati nel computer locale. In realtà, nei sistemi operativi simili a UNIX è definita una struttura di cartelle che contenga tutti i log, in `/var/log`genere in. L'utilità di registrazione in un file flat in un singolo computer è notevolmente ridotta in un ambiente cloud. Le applicazioni che producono log potrebbero non avere accesso al disco locale o il disco locale può essere estremamente temporaneo perché i contenitori vengono mescolati intorno ai computer fisici.
+Nelle applicazioni tradizionali, i file di log venivano in genere archiviati nel computer locale. In realtà, nei sistemi operativi simili a UNIX è definita una struttura di cartelle che contenga tutti i log, in genere in `/var/log`. L'utilità di registrazione in un file flat in un singolo computer è notevolmente ridotta in un ambiente cloud. Le applicazioni che producono log potrebbero non avere accesso al disco locale o il disco locale può essere estremamente temporaneo perché i contenitori vengono mescolati intorno ai computer fisici.
 
 Le applicazioni native del cloud sviluppate usando un'architettura di microservizi presentano anche alcune problemi per i logger basati su file. È ora possibile che le richieste utente si estendano su più servizi che vengono eseguiti in computer diversi e possono includere funzioni senza server senza accesso a una file system locale. Sarebbe molto difficile correlare i log di un utente o di una sessione tra questi numerosi servizi e computer.
 
@@ -44,8 +44,8 @@ Fortunatamente, esistono alcune alternative eccezionali all'uso della registrazi
 
 È inoltre utile seguire alcune procedure standard per la creazione di registrazioni che si estendono su molti servizi. Ad esempio, la generazione di un [ID di correlazione](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) all'inizio di un'interazione lunga e la relativa registrazione in ogni messaggio correlato all'interazione, semplifica la ricerca di tutti i messaggi correlati. È sufficiente trovare un solo messaggio ed estrarre l'ID di correlazione per trovare tutti i messaggi correlati. Un altro esempio è garantire che il formato di log sia lo stesso per ogni servizio, indipendentemente dalla lingua o dalla libreria di registrazione utilizzata. Questa standardizzazione rende molto più semplice la lettura dei log. La figura 7-1 illustra il modo in cui un'architettura di microservizi può sfruttare la registrazione centralizzata come parte del proprio flusso di lavoro.
 
-![I log da varie origini vengono inseriti in un archivio di log centralizzato. **Figura 7-1**. ](./media/centralized-logging.png)
- I log da varie origini vengono inseriti in un archivio di log centralizzato.
+![log da varie origini vengono inseriti in un archivio di log centralizzato.](./media/centralized-logging.png)
+**figura 7-1**. I log da varie origini vengono inseriti in un archivio di log centralizzato.
 
 ## <a name="when-to-use-monitoring"></a>Quando usare il monitoraggio
 

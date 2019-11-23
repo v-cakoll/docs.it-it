@@ -25,13 +25,13 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
 ## <a name="return-value"></a>Valore restituito  
  Valore dell'entità di cui viene risolto il riferimento.  
   
-## <a name="remarks"></a>Note  
- L'operatore DEREF consente di dereferenziare un valore di riferimento e restituisce il risultato di tale operazione. Se, ad esempio, `r` è un riferimento di tipo ref @ no__t-1T >, `Deref(r)` è un'espressione di tipo `T` che restituisce l'entità a cui fa riferimento `r`. Se il valore di riferimento è Null o è inesatto, ovvero la destinazione del riferimento non esiste, il risultato dell'operatore DEREF è Null.  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore DEREF consente di dereferenziare un valore di riferimento e restituisce il risultato di tale operazione. Se ad esempio `r` è un riferimento di tipo ref\<T >, `Deref(r)` è un'espressione di tipo `T` che restituisce l'entità a cui viene fatto riferimento da `r`. Se il valore di riferimento è Null o è inesatto, ovvero la destinazione del riferimento non esiste, il risultato dell'operatore DEREF è Null.  
   
 ## <a name="example"></a>Esempio  
  Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore DEREF per dereferenziare un valore di riferimento e viene restituito il risultato di tale operazione. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Seguire la procedura descritta in [How per: Eseguire una query che restituisce i risultati di PrimitiveType @ no__t-0.  
+1. Attenersi alla procedura descritta in [procedura: eseguire una query che restituisce i risultati di PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passare la query seguente come argomento al metodo ExecutePrimitiveTypeQuery:  
   

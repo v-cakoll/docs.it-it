@@ -44,7 +44,7 @@ Sebbene forniscano molti vantaggi, i microservizi non sono disponibili in un pra
 
 - La crittografia o la decrittografia del messaggio diventa importante.
 
-I microservizi .NET del libro [: L'architettura per le applicazioni](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).NET in contenitori, disponibile gratuitamente da Microsoft, fornisce una copertura dettagliata dei modelli di comunicazione per le applicazioni di microservizi. In questo capitolo viene fornita una panoramica di alto livello di questi modelli insieme alle opzioni di implementazione disponibili nel cloud di Azure.
+Il libro [microservizi .NET: l'architettura per le applicazioni .NET in contenitori](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), disponibile gratuitamente da Microsoft, fornisce una copertura dettagliata dei modelli di comunicazione per le applicazioni di microservizi. In questo capitolo viene fornita una panoramica di alto livello di questi modelli insieme alle opzioni di implementazione disponibili nel cloud di Azure.
 
 In questo capitolo verranno innanzitutto indirizzate le comunicazioni tra le applicazioni front-end e i microservizi back-end. Verranno quindi esaminati i microservizi back-end che comunicano tra loro. Esamineremo la tecnologia di comunicazione up and gRPC. Infine, verranno esaminati nuovi modelli di comunicazione innovativi con la tecnologia mesh di servizi. Si vedrà anche come il cloud di Azure fornisca diversi tipi di *Servizi* di supporto per supportare la comunicazione nativa del cloud.
 

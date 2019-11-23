@@ -22,7 +22,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
   
  **✓ DO** utilizzare il tipo di parametro meno derivato che fornisce le funzionalità richieste da un membro.  
   
- Si supponga, ad esempio, di voler progettare un metodo che enumera una raccolta e stampa ogni elemento nella console. Questo metodo deve prendere <xref:System.Collections.IEnumerable> come parametro, ad esempio <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>.  
+ Si supponga, ad esempio, di voler progettare un metodo che enumera una raccolta e stampa ogni elemento nella console. Questo metodo deve prendere <xref:System.Collections.IEnumerable> come parametro, non <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>, ad esempio.  
   
  **X DO NOT** utilizzare parametri riservati.  
   
@@ -34,7 +34,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
   
  **✓ DO** inserire tutti `out` parametri che seguono tutti il base al valore e `ref` parametri (esclusi matrici di parametro), anche se il risultato è un'incoerenza nel parametro ordinamento viene eseguito tra gli overload (vedere [membro L'overload](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- I parametri `out` possono essere considerati come valori restituiti aggiuntivi e il raggruppamento rende più semplice la comprensione della firma del metodo.  
+ I parametri di `out` possono essere considerati come valori restituiti aggiuntivi e la loro raggruppamento rende la firma del metodo più semplice da comprendere.  
   
  **✓ DO** sia sempre coerente denominazione dei parametri quando si esegue l'override di membri o di implementazione di membri di interfaccia.  
   
@@ -50,7 +50,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
  **✓ CONSIDER** utilizzando valori booleani per i parametri del costruttore che sono realmente due stati, valori e vengono utilizzati per inizializzare le proprietà booleane.  
   
 ### <a name="validating-arguments"></a>Convalida degli argomenti  
- **✓ DO** convalidare gli argomenti passati ai membri pubblici, protetti o implementati in modo esplicito. Generare <xref:System.ArgumentException?displayProperty=nameWithType> o una delle relative sottoclassi se la convalida ha esito negativo.  
+ **✓ DO** convalidare gli argomenti passati ai membri pubblici, protetti o implementati in modo esplicito. Genera <xref:System.ArgumentException?displayProperty=nameWithType>o una delle relative sottoclassi se la convalida ha esito negativo.  
   
  Si noti che la convalida effettiva non deve necessariamente essere eseguita nel membro pubblico o protetto. Potrebbe verificarsi a un livello inferiore in una routine privata o interna. Il punto principale è che l'intera superficie esposta agli utenti finali controlla gli argomenti.  
   
@@ -67,24 +67,24 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
  Se il membro è sensibile alla sicurezza, è consigliabile creare una copia e quindi convalidare ed elaborare l'argomento.  
   
 ### <a name="parameter-passing"></a>Passaggio dei parametri  
- Dal punto di vista di una finestra di progettazione del Framework, sono disponibili tre gruppi principali di parametri: parametri per valore, parametri `ref` e parametri `out`.  
+ Dal punto di vista di una finestra di progettazione del Framework, sono disponibili tre gruppi principali di parametri: parametri per valore, parametri di `ref` e parametri di `out`.  
   
  Quando un argomento viene passato tramite un parametro per valore, il membro riceve una copia dell'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserita una copia dell'argomento nello stack. Se l'argomento è un tipo di riferimento, viene inserita una copia del riferimento nello stack. I linguaggi CLR più diffusi, ad C#esempio, VB.NET, C++e, per impostazione predefinita, passano i parametri per valore.  
   
- Quando un argomento viene passato tramite un parametro `ref`, il membro riceve un riferimento all'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserito un riferimento all'argomento nello stack. Se l'argomento è un tipo di riferimento, nello stack viene inserito un riferimento al riferimento. è possibile utilizzare i parametri `Ref` per consentire al membro di modificare gli argomenti passati dal chiamante.  
+ Quando un argomento viene passato tramite un parametro di `ref`, il membro riceve un riferimento all'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserito un riferimento all'argomento nello stack. Se l'argomento è un tipo di riferimento, nello stack viene inserito un riferimento al riferimento. è possibile utilizzare i parametri `Ref` per consentire al membro di modificare gli argomenti passati dal chiamante.  
   
- i parametri `Out` sono simili ai parametri `ref`, con alcune piccole differenze. Il parametro viene inizialmente considerato non assegnato e non può essere letto nel corpo del membro prima che venga assegnato un valore. Inoltre, è necessario assegnare un valore al parametro prima che il membro restituisca.  
+ `Out` parametri sono simili ai parametri `ref`, con alcune piccole differenze. Il parametro viene inizialmente considerato non assegnato e non può essere letto nel corpo del membro prima che venga assegnato un valore. Inoltre, è necessario assegnare un valore al parametro prima che il membro restituisca.  
   
  **X AVOID** mediante `out` o `ref` parametri.  
   
- L'uso di parametri `out` o `ref` richiede esperienza con i puntatori, informazioni sulla differenza tra tipi di valore e tipi di riferimento e metodi di gestione con più valori restituiti. Inoltre, la differenza tra `out` i `ref` parametri e non è ampiamente riconosciuta. Gli architetti di Framework che progettano per un pubblico generale non dovrebbero aspettarsi che gli utenti lavorino con i parametri `out` o `ref`.  
+ Per usare i parametri `out` o `ref` è necessaria un'esperienza con i puntatori, informazioni sulla differenza tra tipi di valore e tipi di riferimento e metodi di gestione con più valori restituiti. Inoltre, la differenza tra `out` e i parametri di `ref` non è ampiamente riconosciuta. Gli architetti di Framework che progettano i destinatari generali non dovrebbero aspettarsi che gli utenti lavorino con `out` o `ref` parametri.  
   
  **X DO NOT** passare i tipi di riferimento per riferimento.  
   
  Esistono alcune eccezioni limitate alla regola, ad esempio un metodo che può essere usato per scambiare i riferimenti.  
   
 ### <a name="members-with-variable-number-of-parameters"></a>Membri con numero variabile di parametri  
- I membri che possono assumere un numero variabile di argomenti vengono espressi fornendo un parametro di matrice. Ad esempio, <xref:System.String> fornisce il seguente metodo:  
+ I membri che possono assumere un numero variabile di argomenti vengono espressi fornendo un parametro di matrice. Ad esempio, <xref:System.String> fornisce il metodo seguente:  
   
 ```csharp  
 public class String {  
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** usare il `varargs` metodi, altrimenti noti come i puntini di sospensione.  
   
- Alcuni linguaggi CLR, ad esempio C++, supportano una convenzione alternativa per passare elenchi di parametri variabili denominati metodi `varargs`. La convenzione non deve essere utilizzata nei Framework, perché non è conforme a CLS.  
+ Alcuni linguaggi CLR, ad esempio C++, supportano una convenzione alternativa per passare elenchi di parametri variabili denominati `varargs` metodi. La convenzione non deve essere utilizzata nei Framework, perché non è conforme a CLS.  
   
 ### <a name="pointer-parameters"></a>Parametri del puntatore  
  In generale, i puntatori non devono essere visualizzati nella superficie pubblica di un Framework di codice gestito ben progettato. Nella maggior parte dei casi, i puntatori devono essere incapsulati. In alcuni casi, tuttavia, i puntatori sono necessari per motivi di interoperabilità e l'utilizzo di puntatori in tali casi è appropriato.  
@@ -151,9 +151,9 @@ public class String {
   
  Ad esempio, non è necessario passare l'indice iniziale, perché per ottenere lo stesso risultato è possibile utilizzare l'aritmetica semplice del puntatore.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- @no__t 0Reprinted per autorizzazione di Pearson Education, Inc. dalle linee guida di progettazione di [Framework: Convenzioni, idiomi e modelli per le librerie .NET riutilizzabili, 2a edizione @ no__t-0 di Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo Microsoft Windows. *  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

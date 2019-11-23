@@ -21,28 +21,28 @@ ms.locfileid: "73119024"
 Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections >**
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Attributi
 
-Nessuno
+None
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
-## <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elemento figlio
 
-|     | Descrizione |
+|     | description |
 | --- | ----------- |
 | [ **\<sezione >** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se questo elemento si trova in un file di configurazione, deve essere il primo elemento figlio dell'elemento **\<configuration >** .
 

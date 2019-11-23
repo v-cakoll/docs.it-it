@@ -1,14 +1,13 @@
 ---
 title: Docker-gRPC per sviluppatori WCF
 description: Creazione di immagini Docker per ASP.NET Core applicazioni gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846680"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967836"
 ---
 # <a name="docker"></a>Docker
 
@@ -18,7 +17,7 @@ Questa sezione include la creazione di immagini Docker per ASP.NET Core applicaz
 
 Microsoft offre una gamma di immagini di base per la compilazione e l'esecuzione di applicazioni .NET Core. Per creare un'immagine di ASP.NET Core 3,0, vengono usate due immagini di base: un'immagine dell'SDK per compilare e pubblicare l'applicazione e un'immagine di runtime per la distribuzione.
 
-| Immagine | Descrizione |
+| Image | description |
 | ----- | ----------- |
 | [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Per la compilazione di applicazioni con `docker build`. Che non deve essere utilizzato nell'ambiente di produzione. |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Contiene le dipendenze di runtime e ASP.NET Core. Per la produzione. |
@@ -70,7 +69,7 @@ Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` 
 
 ### <a name="the-build-steps"></a>Procedura di compilazione
 
-| Passaggio | Descrizione |
+| Passaggio | description |
 | ---- | ----------- |
 | `FROM ...` | Dichiara l'immagine di base e assegna l'alias di `builder` (vedere la sezione successiva per la spiegazione). |
 | `WORKDIR /src` | Crea la directory di `/src` e la imposta come directory di lavoro corrente. |
@@ -80,7 +79,7 @@ Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` 
 
 ### <a name="the-runtime-image-steps"></a>Passaggi dell'immagine di runtime
 
-| Passaggio | Descrizione |
+| Passaggio | description |
 | ---- | ----------- |
 | `FROM ...` | Dichiara una nuova immagine di base. |
 | `WORKDIR /app` | Crea la directory di `/app` e la imposta come directory di lavoro corrente. |
@@ -117,7 +116,7 @@ docker build --tag stockdata .
 
 Il flag di `--tag` con nome confuso, che può essere abbreviato in `-t`, specifica il nome completo dell'immagine, *incluso* il tag effettivo, se specificato. Il `.` alla fine specifica il *contesto* in cui verrà eseguita la compilazione. la directory di lavoro corrente per i comandi `COPY` in Dockerfile.
 
-Se si dispone di più applicazioni all'interno di una singola soluzione, è possibile mantenere il Dockerfile per ogni applicazione nella propria cartella, accanto al file di `.csproj`, ma è comunque necessario eseguire il comando `docker build` dalla directory di base per assicurarsi che la soluzione e tutti i i progetti vengono copiati nell'immagine. È possibile specificare un Dockerfile sotto la directory corrente usando il flag `--file` (o `-f`).
+Se si dispone di più applicazioni all'interno di una singola soluzione, è possibile mantenere il Dockerfile per ogni applicazione nella propria cartella, accanto al file `.csproj`, ma è comunque necessario eseguire il comando `docker build` dalla directory di base per assicurarsi che la soluzione e tutti i progetti vengano copiati nell'immagine. È possibile specificare un Dockerfile sotto la directory corrente usando il flag `--file` (o `-f`).
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .

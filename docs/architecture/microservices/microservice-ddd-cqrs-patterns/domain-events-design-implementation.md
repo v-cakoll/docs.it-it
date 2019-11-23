@@ -71,7 +71,7 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 2. Ricevere il comando in un gestore di comandi.
    - Eseguire una transazione della singola aggregazione.
    - (Facoltativo) Generare eventi del dominio per gli effetti collaterali, ad esempio OrderStartedDomainEvent.
-3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Esempio:
+3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Di seguito è riportato un esempio:
    - Verificare o creare l'acquirente e la modalità di pagamento.
    - Creare e inviare un evento di integrazione correlato al bus di eventi per propagare gli stati tra i microservizi o attivare azioni esterne, come l'invio di un messaggio di posta elettronica all'acquirente.
    - Gestire gli altri effetti collaterali.
@@ -224,7 +224,7 @@ Questa spiegazione logica si basa sull'adozione di transazioni con granularità 
 
 Tuttavia, altri sviluppatori e progettisti come Jimmy Bogard concordano sull'estensione di una singola transazione tra diverse aggregazioni, ma solo quando queste aggregazioni aggiuntive sono correlate agli effetti collaterali per lo stesso comando originale. Ad esempio, in [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un pattern migliore per gli eventi del dominio) Bogard afferma il concetto seguente:
 
-> In genere, si desidera che gli effetti collaterali di un evento di dominio si verifichino all'interno della stessa transazione logica, ma non necessariamente nello stesso ambito di generazione dell'evento del dominio \[...\] appena prima di eseguire il commit della transazione, si inviano gli eventi ai gestori rispettivi.
+> In genere, si desidera che gli effetti collaterali di un evento di dominio si verifichino all'interno della stessa transazione logica, ma non necessariamente nello stesso ambito di generazione dell'evento del dominio \[...\] appena prima di eseguire il commit della transazione, si inviano gli eventi ai rispettivi gestori.
 
 Se si inviano gli eventi del dominio immediatamente *prima* del commit della transazione originale, si vuole che gli effetti collaterali di questi eventi vengano inclusi nella stessa transazione. Ad esempio, se il metodo SaveChanges dell'oggetto DbContext di Entity Framework presenta un errore, la transazione eseguirà il rollback di tutte le modifiche, incluso il risultato di tutte le operazioni degli effetti collaterali implementate dai rispettivi gestori di eventi del dominio. Ciò avviene perché l'ambito della vita dell'oggetto DbContext viene definito come "con ambito" per impostazione predefinita. Pertanto, l'oggetto DbContext viene condiviso tra più oggetti del repository di cui viene creata un'istanza all'interno della stesso grafo di oggetto o ambito. Questo coincide con l'ambito HttpRequest quando si sviluppano app MVC o API Web.
 

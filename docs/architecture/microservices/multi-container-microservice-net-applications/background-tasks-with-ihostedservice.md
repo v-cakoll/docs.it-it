@@ -240,14 +240,14 @@ L'interfaccia di `IHostedService` fornisce un modo pratico per avviare le attivi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Compilazione di un'attività pianificata in ASP.NET Core/Standard 2,0** 
-   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Compilazione di un'attività pianificata in ASP.NET Core/Standard 2,0**
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementazione di IHostedService in ASP.NET Core 2,0** 
-   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementazione di IHostedService in ASP.NET Core 2,0**
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Esempio di GenericHost con ASP.NET Core 2,1** 
-   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **Esempio di GenericHost con ASP.NET Core 2,1**
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Precedente](test-aspnet-core-services-web-apps.md)

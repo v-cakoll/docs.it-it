@@ -1,14 +1,13 @@
 ---
 title: Creare una nuova ASP.NET Core progetto gRPC-gRPC per sviluppatori WCF
 description: Informazioni su come creare un progetto gRPC con Visual Studio o dalla riga di comando.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a30d19e1e48692ad68a648406d4bf369937744d7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 992c3f57be25ae2517d41437170dc287f58934b6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846714"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967885"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Creare un nuovo progetto ASP.NET Core gRPC
 

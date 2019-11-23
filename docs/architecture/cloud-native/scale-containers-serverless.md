@@ -1,5 +1,5 @@
 ---
-title: Ridimensionamento di contenitori e applicazioni senza server
+title: Ridimensionamento di applicazioni in contenitori e serverless
 description: Ridimensionamento di applicazioni native del cloud con il servizio Azure Kubernetes per soddisfare le richieste degli utenti aumentando le risorse di singoli computer o aumentando il numero di macchine virtuali in un cluster di applicazioni.
 ms.date: 09/23/2019
 ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184799"
 ---
-# <a name="scaling-containers-and-serverless-applications"></a>Ridimensionamento di contenitori e applicazioni senza server
+# <a name="scaling-containers-and-serverless-applications"></a>Ridimensionamento di applicazioni in contenitori e serverless
 
 È possibile ridimensionare un'applicazione in due modi tipici: scalabilità verticale e orizzontale. Il primo si riferisce all'aggiunta di funzionalità a un host, mentre quest'ultimo si riferisce all'aggiunta al numero totale di host. Un'analogia comune da usare per pensare a questo concetto è come ottenere se stessi e alcuni amici in città. Se si tratta solo di un amico, è possibile passare all'auto da corsa a due sedi. Tuttavia, se è costituito da tre o quattro, potrebbe essere necessario eseguire uno dei SUV o un minivan, aumentando la capacità. Quando il numero totale passa a una decina o più, tuttavia, probabilmente è necessario prendere più veicoli (a meno che qualcuno non guidi un bus), che illustra il concetto di scalabilità orizzontale aggiungendo più istanze (in questo caso, più veicoli). Ecco come si applicano alle applicazioni.
 
@@ -42,7 +42,7 @@ Funzioni di Azure supporta automaticamente il ridimensionamento. Il piano a cons
 
 - [Più pool di nodi AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [Scalabilità automatica del cluster AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Esercitazione: Ridimensionare le applicazioni in AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
+- [Esercitazione: ridimensionare le applicazioni in AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
 - [Scalabilità e hosting di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-scale)
 
 >[!div class="step-by-step"]

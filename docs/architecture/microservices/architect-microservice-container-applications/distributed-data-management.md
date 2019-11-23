@@ -35,7 +35,7 @@ Questo approccio consente non solo di risolvere il problema originale (come eseg
 
 Tenere presente che questo database centralizzato verrà usato solo per query e report che non richiedono dati in tempo reale. Gli aggiornamenti e le transazioni originali, da usare come fonte affidabile, devono essere presenti nei dati dei microservizi. Per la sincronizzazione dei dati, si può scegliere di usare la comunicazione basata su eventi (illustrata nelle sezioni successive) o altri strumenti di importazione/esportazione dell'infrastruttura di database. Se si usa la comunicazione basata su eventi, il processo di integrazione sarà simile alla procedura di propagazione dei dati descritto in precedenza per le tabelle di query CQRS.
 
-Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Sono esclusi i report e le analisi, che devono sempre usare database centrali con dati utilizzati meno di frequente. Spesso questo problema potrebbe essere un valido motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
+Se però la progettazione dell'applicazione implica l'aggregazione costante di informazioni di più microservizi per le query complesse, questo potrebbe essere un sintomo di una progettazione non appropriata, dal momento che un microservizio deve essere il più possibile isolato da altri microservizi. Questa operazione esclude i report e le analisi che devono sempre usare i database centrali con dati a freddo. Questo problema spesso potrebbe essere un motivo per unire i microservizi. È necessario bilanciare l'autonomia dell'evoluzione e la distribuzione di ogni microservizio con dipendenze complesse, coesione e aggregazione dei dati.
 
 ## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Problema \#3: Come ottenere la coerenza tra più microservizi
 
@@ -92,19 +92,19 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
 - **Introduzione alla coerenza dei dati** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**  \
+- **Martin Fowler. CQRS (separazione di responsabilità per query e comandi)**  \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Vista materializzata** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Row. ACID vs. BASE: ACID e BASE: il pH mutevole dell'elaborazione delle transazioni del database** \
+- **Riga Carlo. ACID rispetto a BASE: il pH di spostamento dell'elaborazione delle transazioni di database** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Transazione di compensazione** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan. Service Oriented Composition (Composizione orientata ai servizi)**  \
+- **UDI. Composizione orientata ai servizi** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]

@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332001"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972138"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -146,7 +146,7 @@ Per le applicazioni monolitiche, i progetti relativi al nucleo applicativo, all'
 
 In una soluzione di Architettura pulita ogni progetto ha responsabilità chiare. A ogni progetto appartengono quindi determinati tipi e si troveranno spesso cartelle corrispondenti a questi tipi nel progetto appropriato.
 
-Il nucleo applicativo contiene il modello aziendale che include entità, servizi e interfacce. Queste interfacce includono le astrazioni per le operazioni che verranno eseguite usando l'infrastruttura, ad esempio l'accesso ai dati, l'accesso al file system, le chiamate di rete e così via. A volte i servizi o le interfacce definiti a questo livello devono operare con tipi non entità senza alcuna dipendenza dall'interfaccia utente o dall'infrastruttura. Questi tipi possono essere definiti come semplici DTO (Data Transfer Object).
+Il nucleo applicativo contiene il modello aziendale che include entità, servizi e interfacce. Queste interfacce includono astrazioni per le operazioni che verranno eseguite usando l'infrastruttura, ad esempio l'accesso ai dati, l'accesso file system, le chiamate di rete e così via. A volte i servizi o le interfacce definite a questo livello dovranno utilizzare tipi non di entità senza dipendenze dall'interfaccia utente o dall'infrastruttura. Questi tipi possono essere definiti come semplici DTO (Data Transfer Object).
 
 ### <a name="application-core-types"></a>Tipi del nucleo applicativo
 
@@ -170,7 +170,7 @@ Il livello UI in un'applicazione MVC ASP.NET Core rappresenta il punto di ingres
 ### <a name="ui-layer-types"></a>Tipi del livello UI
 
 - Controllers
-- Filtri
+- Filtri.
 - Visualizzazioni
 - ViewModel
 - Avvio
@@ -222,7 +222,7 @@ Per un'applicazione potrebbe non essere necessaria la scalabilità delle funzion
 
 Nelle prime fasi di sviluppo di un'applicazione, i limiti funzionali naturali potrebbero inoltre non essere ancora chiari. Durante lo sviluppo di un prodotto valido minimo, la separazione naturale potrebbe non essere ancora emersa. Alcune di queste condizioni potrebbero essere temporanee. Si potrebbe iniziare creando un'applicazione monolitica e successivamente separare alcune funzionalità da sviluppare e distribuire come microservizi. Altre condizioni potrebbero essere essenziali per i problemi dell'applicazione, vale a dire che l'applicazione potrebbe non essere mai suddivisa in più microservizi.
 
-La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi aumenta la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
+La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi incrementa la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
 
 L'[applicazione di riferimento eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), molto più semplice, supporta l'utilizzo del contenitore monolitico a contenitore singolo. L'applicazione include un'applicazione Web con visualizzazioni MVC tradizionali, API Web e Razor Pages. L'applicazione può essere avviata dalla radice della soluzione usando i comandi `docker-compose build` e `docker-compose up`. Questo comando configura un contenitore per l'istanza Web usando l'oggetto `Dockerfile` all'interno della radice del progetto Web ed esegue il contenitore in una porta specifica. È possibile scaricare l'origine per questa applicazione da GitHub ed eseguirla in locale. Anche questa applicazione monolitica trae vantaggio dalla distribuzione in un ambiente basato su contenitori.
 
@@ -260,13 +260,12 @@ networks:
       name: nat
 ```
 
-Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Dockerfile` di `Web`:
+Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Web` di `Dockerfile`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore

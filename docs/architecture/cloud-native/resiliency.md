@@ -1,5 +1,5 @@
 ---
-title: Resilienza nativa del cloud
+title: Resilienza cloud nativa
 description: Architettura di app .NET cloud native per Azure | Resilienza nativa del cloud
 ms.date: 06/30/2019
 ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184841"
 ---
-# <a name="cloud-native-resiliency"></a>Resilienza nativa del cloud
+# <a name="cloud-native-resiliency"></a>Resilienza cloud nativa
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -26,7 +26,7 @@ Nella figura precedente si noti come ogni client, microservizio e [servizio di b
 Quindi, cosa potrebbe andare male?
 
 - [Latenza di rete](https://www.techopedia.com/definition/8553/network-latency)imprevista.
-- [Errori temporanei](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (errori di connettività di rete temporanei).
+- Errori [temporanei (errori](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) di connettività di rete temporanei).
 - Blocco mediante un'operazione sincrona a esecuzione prolungata.
 - Un processo host che si è arrestato in modo anomalo e verrà riavviato o spostato.
 - Un microservizio di overload che non può rispondere per un breve periodo di tempo.

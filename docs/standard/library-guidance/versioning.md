@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70969013"
 ---
-# <a name="versioning"></a>Controllo delle versioni
+# <a name="versioning"></a>Versionamento
 
 Una libreria software è raramente completa nella versione 1.0. Le librerie di buon livello si evolvono nel tempo, con l'aggiunta di funzionalità, la correzione di bug e il miglioramento delle prestazioni. È importante poter rilasciare nuove versioni di una libreria .NET, offrendo valore aggiuntivo con ogni versione, ma senza interrompere le funzionalità per gli utenti esistenti.
 

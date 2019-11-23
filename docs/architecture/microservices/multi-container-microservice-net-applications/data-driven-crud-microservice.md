@@ -291,13 +291,13 @@ Questo meccanismo di controllo delle versioni è semplice e dipende dal server c
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Scott Hansel. ASP.NET Core il controllo delle versioni dell'API Web RESTful** semplificato  \
+- **Scott Hansel. ASP.NET Core il controllo delle versioni dell'API Web RESTful** semplificato \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Versioning a RESTful web API (Controllo delle versioni delle API Web RESTful)**  \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Fielding di Roy. Controllo delle versioni, ipermedia e REST**  \
+- **Fielding di Roy. Controllo delle versioni, ipermedia e REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generazione dei metadati delle descrizioni Swagger dall'API Web ASP.NET Core
@@ -330,7 +330,7 @@ Microsoft Flow, PowerApps e le app per la logica di Azure usano proprio i metada
 
 Sono disponibili diverse opzioni per automatizzare la generazione di metadati di Swagger per le applicazioni API REST di ASP.NET Core, sotto forma di pagine della Guida dell'API funzionale basate su *swagger-ui*.
 
-Probabilmente la conoscenza migliore è [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , che è attualmente usata in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) e verrà illustrata in dettaglio in questa guida, ma è anche possibile usare [NSwag](https://github.com/RSuter/NSwag), che può generare typescript e C \# client API, nonché C \# controller, da una specifica spavalderia o OpenAPI e persino eseguendo la scansione del file con estensione dll che contiene i controller, usando [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
+Probabilmente la conoscenza migliore è [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , che è attualmente usata in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) e verrà illustrata in dettaglio in questa guida, ma è anche possibile usare [NSwag](https://github.com/RSuter/NSwag), che può generare typescript e c\# client API, oltre ai controller c\#, da una specifica spavalderia o openapi e persino eseguendo la scansione del file con estensione dll che contiene i controller, usando [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Come automatizzare la generazione di metadati di Swagger per le API con il pacchetto NuGet Swashbuckle
 

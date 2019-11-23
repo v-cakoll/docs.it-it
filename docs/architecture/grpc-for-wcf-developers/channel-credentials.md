@@ -1,14 +1,13 @@
 ---
 title: Credenziali del canale-gRPC per sviluppatori WCF
 description: Come implementare e usare le credenziali del canale gRPC in ASP.NET Core 3,0.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b424db49337a2dc6e3d0245d36349e3f408cdf6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846706"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967956"
 ---
 # <a name="channel-credentials"></a>Credenziali del canale
 
@@ -49,7 +48,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-Con l'impostazione `ClientCertificateMode.RequireCertificate` si farà in modo che il gheppio rifiuti immediatamente qualsiasi richiesta di connessione che non fornisca un certificato client, ma non convaliderà il certificato. L'aggiunta del callback `ClientCertificateValidation` consente a gheppio di convalidare il certificato client (in questo caso, assicurandosi che sia stato emesso dalla stessa *autorità di certificazione* del certificato del server) nel punto in cui viene stabilita la connessione, prima della pipeline ASP.NET Core è impegnato.
+Con l'impostazione `ClientCertificateMode.RequireCertificate` si farà in modo che il gheppio rifiuti immediatamente qualsiasi richiesta di connessione che non fornisca un certificato client, ma non convaliderà il certificato. L'aggiunta del callback `ClientCertificateValidation` consente a gheppio di convalidare il certificato client (in questo caso, assicurandosi che sia stato emesso dalla stessa *autorità di certificazione* del certificato del server) al momento della connessione, prima che venga attivata la pipeline di ASP.NET Core.
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>Aggiunta dell'autenticazione del certificato ASP.NET Core
 

@@ -32,7 +32,7 @@ Quando si distribuiscono applicazioni legacy .NET Framework è necessario usare 
 
 Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezionare il sistema operativo e la versione a seconda del tag usato, come negli esempi seguenti:
 
-| Immagine | Comments |
+| Image | Comments |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 multiarchitettura: supporta Linux e Windows nano server a seconda dell'host docker. |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2,2 multiarchitettura: supporta Linux e Windows nano server a seconda dell'host docker. <br/> L'immagine aspnetcore ha poche ottimizzazioni per ASP.NET Core. |

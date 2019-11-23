@@ -19,7 +19,7 @@ ms.locfileid: "72005083"
 # <a name="table-overview"></a>Cenni preliminari sull'elemento Table
 <xref:System.Windows.Documents.Table> è un elemento a livello di blocco che supporta la presentazione basata su griglia del contenuto del documento dinamico. La flessibilità di questo elemento lo rende molto utile, ma al contempo ne complica la comprensione e l'uso corretto.  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
+ In questo argomento sono contenute le seguenti sezioni.  
   
 - [Nozioni di base su Table](#table_basics)  
   
@@ -40,15 +40,15 @@ ms.locfileid: "72005083"
 - [Argomenti correlati] 
   
 <a name="table_basics"></a>   
-## <a name="table-basics"></a>Nozioni di base su Table  
+## <a name="table-basics"></a>Nozioni fondamentali sulle tabelle  
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Differenze tra Table e Grid  
- <xref:System.Windows.Documents.Table> e <xref:System.Windows.Controls.Grid> condividono alcune funzionalità comuni, ma ognuna è più adatta per scenari diversi. Un <xref:System.Windows.Documents.Table> è progettato per l'uso all'interno del contenuto di flusso. per altre informazioni sul contenuto dinamico, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md) . Gli elementi Grid sono particolarmente adatti all'interno di moduli (in generale in un qualsiasi punto all'esterno del contenuto dinamico). All'interno di un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supporta comportamenti del contenuto di flusso come paginazione, riflusso di colonne e selezione di contenuto, mentre un <xref:System.Windows.Controls.Grid> non lo è. Un <xref:System.Windows.Controls.Grid> d'altra parte viene usato al di fuori di un <xref:System.Windows.Documents.FlowDocument> per diversi motivi, tra cui <xref:System.Windows.Controls.Grid> aggiunge elementi basati su un indice di riga e di colonna, <xref:System.Windows.Documents.Table> No. L'elemento <xref:System.Windows.Controls.Grid> consente la sovrapposizione di contenuto figlio, consentendo l'esistenza di più di un elemento all'interno di una singola "cella". <xref:System.Windows.Documents.Table> non supporta la sovrapposizione. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati in modo assoluto rispetto all'area dei limiti "Cell". <xref:System.Windows.Documents.Table> non supporta questa funzionalità. Infine, un <xref:System.Windows.Controls.Grid> richiede un minor numero di risorse, quindi un <xref:System.Windows.Documents.Table>, quindi è consigliabile usare un <xref:System.Windows.Controls.Grid> per migliorare le prestazioni.  
+ <xref:System.Windows.Documents.Table> e <xref:System.Windows.Controls.Grid> condividono alcune funzionalità comuni, ma ognuna è più adatta per scenari diversi. Una <xref:System.Windows.Documents.Table> è progettata per l'uso all'interno del contenuto di flusso. per altre informazioni sul contenuto dinamico, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md) . Gli elementi Grid sono particolarmente adatti all'interno di moduli (in generale in un qualsiasi punto all'esterno del contenuto dinamico). All'interno di un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supporta i comportamenti del contenuto di flusso come paginazione, riflusso di colonne e selezione di contenuto mentre un <xref:System.Windows.Controls.Grid> non lo è. Un <xref:System.Windows.Controls.Grid> d'altra parte viene utilizzato meglio all'esterno di un <xref:System.Windows.Documents.FlowDocument> per molti motivi, tra cui <xref:System.Windows.Controls.Grid> aggiunge elementi in base a un indice di riga e di colonna, <xref:System.Windows.Documents.Table> non lo è. L'elemento <xref:System.Windows.Controls.Grid> consente la sovrapposizione di contenuto figlio, consentendo l'esistenza di più di un elemento all'interno di una singola "cella". <xref:System.Windows.Documents.Table> non supporta la sovrapposizione. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati in modo assoluto rispetto all'area dei limiti "Cell". <xref:System.Windows.Documents.Table> non supporta questa funzionalità. Infine, un <xref:System.Windows.Controls.Grid> richiede un minor numero di risorse e quindi una <xref:System.Windows.Documents.Table> quindi considerare l'uso di una <xref:System.Windows.Controls.Grid> per migliorare le prestazioni.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Struttura di base di Table  
- <xref:System.Windows.Documents.Table> fornisce una presentazione basata su griglia costituita da colonne (rappresentate da elementi <xref:System.Windows.Documents.TableColumn>) e da righe (rappresentate da elementi <xref:System.Windows.Documents.TableRow>). gli elementi <xref:System.Windows.Documents.TableColumn> non ospitano contenuto; definiscono semplicemente le colonne e le caratteristiche delle colonne. gli elementi <xref:System.Windows.Documents.TableRow> devono essere ospitati in un elemento <xref:System.Windows.Documents.TableRowGroup>, che definisce un raggruppamento di righe per la tabella. gli elementi <xref:System.Windows.Documents.TableCell>, che contengono il contenuto effettivo presentato dalla tabella, devono essere ospitati in un elemento <xref:System.Windows.Documents.TableRow>. <xref:System.Windows.Documents.TableCell> può contenere solo elementi che derivano da <xref:System.Windows.Documents.Block>.  Gli elementi figlio validi per un <xref:System.Windows.Documents.TableCell> includono.  
+ <xref:System.Windows.Documents.Table> fornisce una presentazione basata su griglia costituita da colonne (rappresentate da elementi <xref:System.Windows.Documents.TableColumn>) e da righe (rappresentate da elementi <xref:System.Windows.Documents.TableRow>). gli elementi <xref:System.Windows.Documents.TableColumn> non ospitano contenuto; definiscono semplicemente le colonne e le caratteristiche delle colonne. gli elementi <xref:System.Windows.Documents.TableRow> devono essere ospitati in un elemento <xref:System.Windows.Documents.TableRowGroup>, che definisce un raggruppamento di righe per la tabella. gli elementi <xref:System.Windows.Documents.TableCell>, che contengono il contenuto effettivo che deve essere presentato dalla tabella, devono essere ospitati in un elemento <xref:System.Windows.Documents.TableRow>. <xref:System.Windows.Documents.TableCell> possono contenere solo elementi che derivano da <xref:System.Windows.Documents.Block>.  Gli elementi figlio validi per un <xref:System.Windows.Documents.TableCell> includono.  
   
 - <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -61,10 +61,10 @@ ms.locfileid: "72005083"
 - <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
-> gli elementi <xref:System.Windows.Documents.TableCell> non possono ospitare direttamente il contenuto di testo. Per altre informazioni sulle regole di contenimento per gli elementi di contenuto del flusso come <xref:System.Windows.Documents.TableCell>, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
+> <xref:System.Windows.Documents.TableCell> elementi non possono ospitare direttamente contenuto di testo. Per altre informazioni sulle regole di contenimento per gli elementi di contenuto del flusso come <xref:System.Windows.Documents.TableCell>, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Table> è simile all'elemento <xref:System.Windows.Controls.Grid>, ma dispone di più funzionalità e, di conseguenza, richiede un sovraccarico delle risorse maggiore.  
+> <xref:System.Windows.Documents.Table> è simile all'elemento <xref:System.Windows.Controls.Grid> ma dispone di più funzionalità e, di conseguenza, richiede un sovraccarico di risorse maggiore.  
   
  Nell'esempio seguente viene definita una semplice tabella 2 x 3 con XAML.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72005083"
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Contenimento di Table  
- <xref:System.Windows.Documents.Table> deriva dall'elemento <xref:System.Windows.Documents.Block> e rispetta le regole comuni per gli elementi di livello @no__t 2.  Un elemento <xref:System.Windows.Documents.Table> può essere contenuto da uno qualsiasi degli elementi seguenti:  
+ <xref:System.Windows.Documents.Table> deriva dall'elemento <xref:System.Windows.Documents.Block> e rispetta le regole comuni per gli elementi <xref:System.Windows.Documents.Block> Level.  Un elemento <xref:System.Windows.Documents.Table> può essere contenuto da uno qualsiasi degli elementi seguenti:  
   
 - <xref:System.Windows.Documents.FlowDocument>  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72005083"
   
  La figura seguente illustra il rendering di questo esempio.  
   
- ![Screenshot: Gruppi di righe della tabella @ no__t-0(./media/table-rowgroups.png "Table_RowGroups")  
+ ![Screenshot: gruppi di righe di tabella](./media/table-rowgroups.png "Table_RowGroups")  
   
 <a name="rendering_precedence"></a>   
 ### <a name="background-rendering-precedence"></a>Precedenza del rendering dello sfondo  
@@ -124,7 +124,7 @@ ms.locfileid: "72005083"
   
  La figura seguente illustra il rendering di questo esempio (visualizzazione dei soli colori di sfondo).  
   
- ![Screenshot: Tabella z&#45;Order @ no__t-1(./media/table-zorder.png "Table_ZOrder")  
+ ![Screenshot: z order della tabella](./media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>Estensione su più righe o colonne  
@@ -136,13 +136,13 @@ ms.locfileid: "72005083"
   
  La figura seguente illustra il rendering di questo esempio.  
   
- ![Screenshot: Cella che si estende su tutte e tre le colonne @ no__t-0(./media/table-columnspan.png "Table_ColumnSpan")  
+ ![Screenshot: cella che si estende su tutte e tre le colonne](./media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
 ## <a name="building-a-table-with-code"></a>Compilazione di un elemento Table con codice  
- Gli esempi seguenti illustrano come creare a livello di codice un <xref:System.Windows.Documents.Table> e compilarlo con il contenuto. Il contenuto della tabella è ripartito in cinque righe (rappresentate da oggetti <xref:System.Windows.Documents.TableRow> contenuti in un oggetto <xref:System.Windows.Documents.Table.RowGroups%2A>) e sei colonne (rappresentate da oggetti <xref:System.Windows.Documents.TableColumn>). Le righe vengono usate per scopi di presentazione diversi, ad esempio una riga è destinata a contenere il titolo dell'intera tabella, una riga di intestazione a descrivere le colonne di dati nella tabella e una riga di piè di pagina a fornire informazioni di riepilogo.  Si noti che i concetti di righe di "titolo", "intestazione" e "piè di pagina" non sono inerenti alla tabella, ma fanno semplicemente riferimento a righe con caratteristiche diverse. Le celle della tabella contengono il contenuto effettivo, che può essere costituito da testo, immagini o quasi tutti gli altri elementi [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Negli esempi seguenti viene illustrato come creare una <xref:System.Windows.Documents.Table> a livello di codice e compilarla con contenuto. Il contenuto della tabella è ripartito in cinque righe (rappresentate da <xref:System.Windows.Documents.TableRow> oggetti contenuti in un oggetto <xref:System.Windows.Documents.Table.RowGroups%2A>) e sei colonne (rappresentate da oggetti <xref:System.Windows.Documents.TableColumn>). Le righe vengono usate per scopi di presentazione diversi, ad esempio una riga è destinata a contenere il titolo dell'intera tabella, una riga di intestazione a descrivere le colonne di dati nella tabella e una riga di piè di pagina a fornire informazioni di riepilogo.  Si noti che i concetti di righe di "titolo", "intestazione" e "piè di pagina" non sono inerenti alla tabella, ma fanno semplicemente riferimento a righe con caratteristiche diverse. Le celle della tabella contengono il contenuto effettivo, che può essere costituito da testo, immagini o quasi qualsiasi altro elemento [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- In primo luogo, viene creato un <xref:System.Windows.Documents.FlowDocument> per ospitare il <xref:System.Windows.Documents.Table> e viene creato un nuovo <xref:System.Windows.Documents.Table> che viene aggiunto al contenuto del <xref:System.Windows.Documents.FlowDocument>.  
+ In primo luogo, viene creato un <xref:System.Windows.Documents.FlowDocument> per ospitare la <xref:System.Windows.Documents.Table>e viene creato un nuovo <xref:System.Windows.Documents.Table> e viene aggiunto al contenuto del <xref:System.Windows.Documents.FlowDocument>.  
   
  [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  

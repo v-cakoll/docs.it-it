@@ -13,7 +13,7 @@ ms.locfileid: "72291537"
 In questo esempio viene descritto come compilare lo stack di canali in modo personalizzato implementando direttamente <xref:System.ServiceModel.ServiceHostBase> e come creare un dispatcher del canale personalizzato in un ambiente host Web. Il dispatcher del canale interagisce con <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali e recupera messaggi dallo stack di canali. Questo esempio fornisce anche un esempio di base che illustra come compilare uno stack di canali in un ambiente host Web tramite <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>ServiceHostBase personalizzato  
- In questo esempio viene implementato il tipo di base <xref:System.ServiceModel.ServiceHostBase> anziché <xref:System.ServiceModel.ServiceHost> per dimostrare come sostituire l'implementazione dello stack Windows Communication Foundation (WCF) con un livello di gestione dei messaggi personalizzato all'inizio dello stack dei canali. Viene eseguito l'override del metodo virtuale <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> per compilare i listener del canale e il dispatcher del canale.  
+ In questo esempio viene implementato il tipo di base <xref:System.ServiceModel.ServiceHostBase> anziché <xref:System.ServiceModel.ServiceHost> per illustrare come sostituire l'implementazione dello stack Windows Communication Foundation (WCF) con un livello di gestione dei messaggi personalizzato all'inizio dello stack dei canali. Viene eseguito l'override del metodo virtuale <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> per compilare i listener del canale e il dispatcher del canale.  
   
  Per implementare un servizio ospitato sul Web, ottenere l'estensione del servizio <xref:System.ServiceModel.Activation.VirtualPathExtension> dalla raccolta <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> e aggiungerla a <xref:System.ServiceModel.Channels.BindingParameterCollection> in modo che il livello di trasporto sia in grado di configurare il listener del canale in base alle impostazioni dell'ambiente host, ovvero le impostazioni Internet Information Services (IIS)/servizio di attivazione dei processi di Windows.  
   
@@ -29,7 +29,7 @@ In questo esempio viene descritto come compilare lo stack di canali in modo pers
   
  In questo caso, il verbo HTTP-GET viene gestito in modo speciale restituendo un messaggio HTML personalizzato, affinché sia possibile accedere al servizio da un browser per verificarne la corretta compilazione. Se l'azione SOAP non corrisponde, restituire un messaggio di errore per indicare che la richiesta non è supportata.  
   
- Il client di questo esempio è un normale client WCF che non presuppone alcuna parte del servizio. Il servizio è quindi appositamente progettato per corrispondere a quanto ottenuto da una normale implementazione WCF @ no__t-0. Di conseguenza, nel client viene richiesto solo un contratto di servizio.  
+ Il client di questo esempio è un normale client WCF che non presuppone alcuna parte del servizio. Il servizio è quindi appositamente progettato per trovare la corrispondenza con i risultati di una normale implementazione di WCF<xref:System.ServiceModel.ServiceHost>. Di conseguenza, nel client viene richiesto solo un contratto di servizio.  
   
 ## <a name="using-the-sample"></a>Utilizzo dell'esempio  
  L'esecuzione dell'applicazione client in modo diretto produce l'output seguente.  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

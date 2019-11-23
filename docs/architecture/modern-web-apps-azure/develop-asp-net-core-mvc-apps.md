@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181948"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971595"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ ASP.NET Core è un framework multipiattaforma open source per la compilazione di
 
 ## <a name="mvc-and-razor-pages"></a>MVC e Razor Pages
 
-ASP.NET Core MVC offre molte funzionalità utili per la compilazione di API e app basate sul Web. Il termine MVC è l'acronimo di "Model-View-Controller", un modello UI che suddivide le responsabilità della risposta alle richieste degli utenti in più sezioni. Oltre a seguire questo modello è possibile implementare funzionalità nelle app ASP.NET Core come Razor Pages. Le Razor Pages sono integrate in ASP.NET Core MVC e usano le stesse funzionalità di routing, associazione di modelli e così via. Tuttavia anziché avere cartelle e file separati per controller, viste e così via e usare il routing basato sugli attributi, le Razor Pages si trovano in un'unica cartella ("/Pages"), eseguono il routing sulla base della loro posizione relativa in tale cartella e gestiscono le richieste con gestore anziché con azioni del controller.
+ASP.NET Core MVC offre molte funzionalità utili per la compilazione di API e app basate sul Web. Il termine MVC è l'acronimo di "Model-View-Controller", un modello UI che suddivide le responsabilità della risposta alle richieste degli utenti in più sezioni. Oltre a seguire questo modello è possibile implementare funzionalità nelle app ASP.NET Core come Razor Pages. Razor Pages sono incorporati in ASP.NET Core MVC e usano le stesse funzionalità per il routing, l'associazione di modelli e così via. Tuttavia, anziché avere cartelle e file separati per controller, visualizzazioni e così via e con il routing basato su attributi, le Razor Pages vengono inserite in una singola cartella ("/Pages"), indirizzate in base alla relativa posizione in questa cartella e gestiscono le richieste con i gestori anziché le azioni del controller.
 
 Quando si crea una nuova app ASP.NET Core è importante avere determinato il tipo di app che si vuole creare. In Visual Studio è possibile scegliere tra diversi modelli. I tre modelli di progetto più comuni sono API Web, Applicazione Web e Applicazione Web (MVC). Questa scelta può essere effettuata solo quando si crea un progetto, ma non è una decisione irrevocabile. Il progetto API Web usa controller MVC standard, ma per impostazione predefinita non dispone di una cartella Views. Allo stesso modo il modello Applicazione Web predefinito usa Razor Pages e pertanto non dispone di una cartella Views. È possibile aggiungere una cartella Views a questi progetti in un secondo momento per supportare il comportamento basato sulle visualizzazioni. I progetti API Web e MVC non includono una cartella Pages per impostazione predefinita, ma è possibile aggiungerne una in un secondo momento per supportare i comportamenti basati su Razor Pages. Considerare questi tre modelli come origini del supporto per tre tipi diversi di interazione dell'utente predefinita: dati (API Web), basata sulle pagine e basata sulle visualizzazioni. Se si vuole è tuttavia possibile combinare e associare alcuni o tutti questi modelli in un singolo progetto.
 
@@ -49,9 +49,9 @@ app.UseMvc(routes =>
 });
 ```
 
-In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per _controller_, _azione_ e _ID_. I segnaposto di controller e azione hanno un valore predefinito specificato, rispettivamente "Home" e "Index", mentre il segnaposto di ID è facoltativo poiché è applicato un "?". La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
+In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per _controller_, _azione_e _ID_. Ai segnaposto del controller e dell'azione è stato specificato il valore predefinito ("Home" e "index", rispettivamente) e il segnaposto ID è facoltativo (in virtù di un "?" applicato). La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
 
-Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Ad esempio:
+Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Di seguito è riportato un esempio:
 
 ```csharp
 [Route("Home")]
@@ -90,7 +90,7 @@ Nell'esempio precedente, la pagina in questione corrisponderà a una route con u
 
 Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](/aspnet/core/mvc/models/model-binding) e la [convalida del modello](/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Ad esempio, se il metodo di azione prevede un parametro ID di tipo int, l'associazione del modello tenterà di usare questo parametro in base a un valore specificato come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
 
-Dopo l'associazione del modello ma prima della chiamata al metodo di azione, viene eseguita la convalida del modello. La convalida del modello usa gli attributi facoltativi del tipo di modello e contribuisce a garantire che l'oggetto di modello specificato sia conforme a determinati requisiti dei dati. Alcuni valori possono essere specificati come obbligatori o limitati a una determinata lunghezza o a un determinato intervallo numerico e così via. Se vengono specificati gli attributi di convalida ma il modello non è conforme ai requisiti, la proprietà ModelState.IsValid avrà valore false e il set di regole della convalida non riuscita sarà disponibile per l'invio al client che effettua la richiesta.
+Dopo l'associazione del modello ma prima della chiamata al metodo di azione, viene eseguita la convalida del modello. La convalida del modello usa gli attributi facoltativi del tipo di modello e contribuisce a garantire che l'oggetto di modello specificato sia conforme a determinati requisiti dei dati. Alcuni valori possono essere specificati come obbligatori o limitati a una determinata lunghezza o a un intervallo numerico e così via. Se vengono specificati gli attributi di convalida, ma il modello non è conforme ai propri requisiti, la proprietà ModelState. IsValid sarà false e il set di regole di convalida non riuscite sarà disponibile per l'invio al client che esegue la richiesta.
 
 Se viene usata la convalida del modello, è necessario verificare sempre che il modello sia valido prima di eseguire i comandi di modifica dello stato per garantire che l'app non sia danneggiata da dati non validi. È possibile usare un [filtro](/aspnet/core/mvc/controllers/filters) per evitare di aggiungere il codice necessario in ogni azione. I filtri di ASP.NET Core MVC consentono di intercettare i gruppi di richieste in modo che sia possibile applicare alla base di destinazione i criteri e gli aspetti comuni. I filtri possono essere applicati alle singole azioni, a interi controller o a livello globale per un'applicazione.
 
@@ -172,7 +172,7 @@ Un altro approccio per disaccoppiare l'applicazione dai dettagli di implementazi
 
 ### <a name="feature-organization"></a>Organizzazione basata sulle funzionalità
 
-Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato cartelle di funzionalità o [sezioni di funzionalità](https://msdn.microsoft.com/magazine/mt763233.aspx). Vedere anche: [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
+Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo stile organizzativo viene in genere definito cartelle funzionalità o [sezioni di funzionalità](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (vedere anche: [sezioni verticali](https://deviq.com/vertical-slices/)).
 
 A tale scopo, ASP.NET Core MVC supporta le aree. Usando le aree è possibile creare set separati di cartelle di controller e visualizzazioni, inclusi i modelli associati, in ogni cartella Area. La figure 7-1 illustra un esempio di struttura di cartelle con aree.
 
@@ -237,7 +237,7 @@ Specificare quindi questa convenzione come opzione quando si aggiunge il support
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC usa una convenzione anche per individuare le visualizzazioni. Questa convenzione può essere sostituita con una convenzione personalizzata in modo che le visualizzazioni vengano inserite nelle cartelle delle funzionalità (usando il nome della funzionalità specificato da FeatureConvention). Per altre informazioni su questo approccio e per scaricare un esempio funzionante, vedere l'articolo di MSDN [Feature Slices for ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx) (Sezioni di funzionalità per ASP.NET Core MVC).
+ASP.NET Core MVC usa una convenzione anche per individuare le visualizzazioni. Questa convenzione può essere sostituita con una convenzione personalizzata in modo che le visualizzazioni vengano inserite nelle cartelle delle funzionalità (usando il nome della funzionalità specificato da FeatureConvention). Per altre informazioni su questo approccio e per scaricare un esempio funzionante, vedere l'articolo di MSDN [Feature Slices for ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (Sezioni di funzionalità per ASP.NET Core MVC).
 
 ### <a name="cross-cutting-concerns"></a>Problemi di montaggio incrociato
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Per altre informazioni sull'implementazione di filtri e per scaricare un esempio funzionante, vedere l'articolo di MSDN [Filtri reali di ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Per altre informazioni sull'implementazione di filtri e per scaricare un esempio funzionante, vedere l'articolo di MSDN [Filtri reali di ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Riferimenti - Creazione della struttura delle applicazioni
 >
 > - **Aree**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine - Funzionalità Feature Slices per ASP.NET Core MVC**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtri**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Sicurezza
 

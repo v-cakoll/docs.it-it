@@ -15,12 +15,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697469"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>Elemento > \<webRequestModules (impostazioni di rete)
+# <a name="webrequestmodules-element-network-settings"></a>\<elemento > webRequestModules (impostazioni di rete)
 Specifica i moduli da usare per richiedere informazioni dagli host di rete.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,10 +30,10 @@ Specifica i moduli da usare per richiedere informazioni dagli host di rete.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -49,10 +49,10 @@ Specifica i moduli da usare per richiedere informazioni dagli host di rete.
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Con l'elemento `webRequestModules` vengono registrati i discendenti della classe <xref:System.Net.WebRequest> per gestire le richieste di informazioni inviate agli host di rete. I moduli di richiesta Web devono implementare l'interfaccia <xref:System.Net.IWebRequestCreate>.  
   
- Il .NET Framework include i moduli di richiesta Web per gli URI che iniziano con `http://`, `https://` e `file://`. È possibile eseguire l'override dei moduli predefiniti solo registrando un modulo personalizzato nel file di configurazione.  
+ Il .NET Framework include moduli di richiesta Web per gli URI che iniziano con `http://`, `https://`e `file://`. È possibile eseguire l'override dei moduli predefiniti solo registrando un modulo personalizzato nel file di configurazione.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

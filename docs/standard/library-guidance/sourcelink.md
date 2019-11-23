@@ -4,12 +4,12 @@ description: Procedure consigliate per l'uso del collegamento all'origine per mi
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928982"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089291"
 ---
 # <a name="source-link"></a>Collegamento all'origine
 
@@ -23,9 +23,9 @@ Il collegamento all'origine è una tecnologia che consente il debug del codice s
 
 Le istruzioni per l'uso del collegamento all'origine sono reperibili nel repository GitHub [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md).
 
-È possibile usare [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) per confermare che i metadati di collegamento all'origine siano stati incorporati correttamente nel pacchetto. Controllare che i metadati `Repository` siano presenti con un identificatore di commento e che i file con estensione .pdb si trovino insieme al .dll di ogni file di destinazione.
+È possibile usare [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) per confermare che i metadati di collegamento all'origine siano stati incorporati correttamente nel pacchetto. Controllare che i metadati di `Repository` siano presenti con un identificatore di commit e che i file con estensione PDB si trovino con la dll di ogni destinazione.
 
-![Collegamento all'origine in NuGet Package Explorer](./media/sourcelink/nuget-package-explorer-sourcelink.png "Collegamento all'origine in NuGet Package Explorer")
+![Collegamento all'origine in Esplora pacchetti NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Collegamento all'origine in Esplora pacchetti NuGet")
 
 **✔️ VALUTARE** l'uso del collegamento all'origine per aggiungere metadati di controllo del codice sorgente agli assembly e ai pacchetti NuGet.
 

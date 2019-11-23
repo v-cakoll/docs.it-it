@@ -16,13 +16,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697491"
 ---
-# <a name="requiredruntime-element"></a>elemento > \<requiredRuntime
+# <a name="requiredruntime-element"></a>\<elemento > requiredRuntime
 
 Specifica che l'applicazione supporta solo la versione 1.0 di Common Language Runtime. Questo elemento è deprecato e non deve più essere utilizzato. In alternativa, è necessario usare l'elemento [`supportedRuntime`](supportedruntime-element.md) .
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;&nbsp;[ **\<di avvio >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,34 +34,34 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
+Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|Descrizione|
+|Attributo|description|
 |---------------|-----------------|
 |`version`|Attributo facoltativo.<br /><br /> Valore stringa che specifica la versione del .NET Framework supportata da questa applicazione. Il valore stringa deve corrispondere al nome di directory trovato nella radice di installazione .NET Framework. Il contenuto del valore stringa non viene analizzato.|
 |`safemode`|Attributo facoltativo.<br /><br /> Specifica se il codice di avvio del runtime cerca il registro di sistema per determinare la versione di Runtime.|
 
 ## <a name="safemode-attribute"></a>attributo modalità provvisoria
 
-|Value|Descrizione|
+|Valore|description|
 |-----------|-----------------|
 |`false`|Il codice di avvio runtime cerca nel registro di sistema. Rappresenta il valore predefinito.|
 |`true`|Il codice di avvio del runtime non cerca nel registro di sistema.|
 
-### <a name="child-elements"></a>Elementi figlio
+### <a name="child-elements"></a>Elemento figlio
 
-No.
+Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|description|
 |-------------|-----------------|
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
-|`startup`|Contiene l' `<requiredRuntime>` elemento.|
+|`startup`|Contiene l'elemento `<requiredRuntime>`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
  Le applicazioni compilate per supportare solo la versione 1,0 del runtime devono usare l'elemento `<requiredRuntime>`. Le applicazioni compilate con la versione 1,1 o successive del runtime devono usare l'elemento `<supportedRuntime>`.
 
 > [!NOTE]
@@ -88,4 +88,4 @@ Nell'esempio seguente viene illustrato come specificare la versione del runtime 
 
 - [Schema delle impostazioni di avvio](index.md)
 - [Schema dei file di configurazione](../index.md)
-- [Procedura: Configurare un'app per supportare .NET Framework 4 o versioni successive](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Procedura: configurare un'app per supportare .NET Framework 4 o versioni successive](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

@@ -328,7 +328,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Messaggistica basata su eventi** \
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refactoring per la resilienza: valutazione dell'accoppiamento** \
+- **Jimmy Bogard. Refactoring per la resilienza: valutazione** del \ di accoppiamento
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Canale di pubblicazione-sottoscrizione** \
@@ -361,7 +361,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Il teorema CAP** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **Che cos'è il teorema CAP** \
+- **What is CAP Theorem?** (Che cos'è il teorema CAP) \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Introduzione alla coerenza dei dati** \
@@ -376,7 +376,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Bus di servizio di Azure. Messaggistica negoziata:  \ di rilevamento duplicati**
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Guida all'affidabilità**documentazione RabbitMQ \
+- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 > [!div class="step-by-step"]

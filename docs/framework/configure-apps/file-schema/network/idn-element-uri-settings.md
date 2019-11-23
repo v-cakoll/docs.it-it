@@ -9,13 +9,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698169"
 ---
-# <a name="idn-element-uri-settings"></a>Elemento > \<idn (impostazioni URI)
+# <a name="idn-element-uri-settings"></a>\<elemento > IDN (impostazioni URI)
 
 Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata a un nome di dominio.
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+&nbsp;&nbsp;[ **uri\<>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,7 +26,7 @@ Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
 
@@ -34,9 +34,9 @@ Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata 
 |-----------------|---------------------|  
 |`enabled`|Specifica se l'analisi del nome di dominio internazionale (IDN) viene applicata a un nome di dominio. il valore predefinito è None.|  
 
-### <a name="child-elements"></a>Elementi figlio
+### <a name="child-elements"></a>Elemento figlio
 
-nessuno
+None
   
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -44,7 +44,7 @@ nessuno
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Contiene le impostazioni che specificano il modo in cui il .NET Framework gestisce gli indirizzi Web espressi tramite URI (Uniform Resource Identifier).|  
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La classe <xref:System.Uri> esistente è stata estesa in .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 con supporto per gli identificatori di risorse internazionali (IRI) e i nomi di dominio internazionali (IDN). Gli utenti correnti non vedranno alcuna modifica rispetto al comportamento di .NET Framework 2,0, a meno che non vengano specificamente abilitati il supporto di IRI e IDN. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.
 

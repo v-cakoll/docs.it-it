@@ -76,16 +76,16 @@ Sebbene sia applicabile a qualsiasi applicazione basata su Web, molti profession
 
 Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
-|    |  Fattore | Descrizione  |
+|    |  Fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 1 | Codebase | Una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti (QA, staging, produzione). |
-| 2 | Dipendenze | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
-| 3\. | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
+| 2 | Dependencies | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
+| 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
 | 6 | Processi | Ogni microservizio deve essere eseguito in un processo distinto, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati. |
 | 7 | Binding porta | Ogni microservizio deve essere autonomo con le interfacce e le funzionalità esposte sulla relativa porta. In questo modo viene fornito l'isolamento da altri microservizi. |
-| 8 | concorrenza | I servizi vengono scalati orizzontalmente in un numero elevato di processi identici (copie) identici rispetto alla scalabilità verticale di una singola istanza large nel computer più potente disponibile. |
+| 8 | Concorrenza | I servizi vengono scalati orizzontalmente in un numero elevato di processi identici (copie) identici rispetto alla scalabilità verticale di una singola istanza large nel computer più potente disponibile. |
 | 9 | Disponibilità | Le istanze del servizio devono essere eliminate, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano intrinsecamente questo requisito. |
 | 10 | Parità sviluppo/prod | Mantieni gli ambienti nel ciclo di vita dell'applicazione nel modo più simile possibile, evitando costosi collegamenti. In questo caso, l'adozione di contenitori può contribuire significativamente con la promozione dello stesso ambiente di esecuzione. |
 | 11 | Registrazione | Considera i log generati dai microservizi come flussi di eventi. È possibile elaborarli con un aggregatore di eventi e propagarli a strumenti di gestione dei log e di data mining quali monitoraggio di Azure o Splunk e infine l'archiviazione a lungo termine. |
@@ -93,7 +93,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
 Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)fattori, l'autore Kevin Hoffman Details ognuno dei 12 fattori originali (scritti in 2011). Inoltre, il libro offre tre fattori aggiuntivi che riflettono la progettazione di applicazioni cloud moderne di oggi.
 
-|    |  Nuovo fattore | Descrizione  |
+|    |  Nuovo fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 13 | Prima API | Rendere tutto un servizio. Si supponga che il codice venga utilizzato da un client front-end, un gateway o un altro servizio. |
 | 14 | Telemetria | In una workstation è possibile ottenere visibilità approfondita dell'applicazione e del relativo comportamento. Nel cloud non è necessario. Assicurarsi che la progettazione includa la raccolta di dati di monitoraggio, specifici del dominio e integrità/sistema. |
@@ -223,14 +223,14 @@ La figura 1-6 illustra le attività di gestione fornite dagli agenti di orchestr
 
 Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione.
 
-|  Attività | Descrizione  |
+|  Attività | Spiegazione  |
 | :-------- | :-------- |
 | Pianificazione | Eseguire automaticamente il provisioning delle istanze del contenitore.|
 | Affinità/anti-affinità | Eseguire il provisioning di contenitori vicini o lontani tra loro, in modo da garantire disponibilità e prestazioni. |
 | Monitoraggio dell'integrità | Rilevare e correggere automaticamente gli errori.|
 | Failover | Eseguire automaticamente il provisioning dell'istanza non riuscita in computer integri.|
 | Ridimensionamento | Aggiungere o rimuovere automaticamente un'istanza del contenitore per soddisfare la domanda.|
-| Servizi di rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
+| Rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
 | Individuazione dei servizi | Consente ai contenitori di individuarsi reciprocamente.|
 | Aggiornamenti in sequenza | Coordinare gli aggiornamenti incrementali senza alcuna distribuzione del tempo di inattività. Esegue automaticamente il rollback delle modifiche problematiche.|
 
@@ -268,9 +268,9 @@ I sistemi nativi del cloud favoriscono i servizi di backup gestiti dai fornitori
 
 Una procedura consigliata consiste nel considerare un servizio di backup come *risorsa collegata*, associato in modo dinamico a un microservizio con informazioni (un URL e credenziali) archiviate in una configurazione esterna. Questa guida è stata digitata nell' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Factor \#4* specifica che i servizi di backup devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
+>*Factor \#4* indica che i servizi di supporto "devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
 
->*Factor \#3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
+>*Factor \#3* indica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
 
 Con questo modello, è possibile collegare e scollegare un servizio di supporto senza modifiche al codice. È possibile alzare di livello un microservizio da QA a un ambiente di gestione temporanea. È possibile aggiornare la configurazione del microservizio in modo che punti ai servizi di supporto in gestione temporanea e inserire le impostazioni nel contenitore tramite una variabile di ambiente.
 
@@ -298,7 +298,7 @@ In questo articolo, [che cos'è l'infrastruttura come codice](https://docs.micro
 
 L' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza, richiede passaggi distinti durante la trasformazione del codice completato in un'applicazione in esecuzione.
 
-> *Factor \#5* specifica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
+> *Factor \#5* indica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
 
 I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti.
 

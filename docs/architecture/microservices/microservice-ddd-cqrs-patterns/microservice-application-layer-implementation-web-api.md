@@ -111,7 +111,7 @@ Quando si usa l'inserimento delle dipendenze in .NET Core, potrebbe essere neces
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Matthew King. Registrazione di servizi con Scrutor**  \
+- **Matthew King. Registrazione di servizi con Scrutor** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repository GitHub. \
@@ -398,7 +398,7 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Contrassegno. Ai limiti, le applicazioni non sono orientate agli oggetti**  \
+- **Contrassegno. Ai limiti, le applicazioni non sono orientate agli oggetti** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandi ed eventi** \
@@ -407,10 +407,10 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 - **What does a command handler do?** (Qual è la funzione di un gestore comandi?) \
   <https://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard. Modelli di comandi di dominio: gestori**  \
+- **Jimmy Bogard. Modelli di comandi di dominio: gestori** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard. Modelli di comando di dominio-convalida**  \
+- **Jimmy Bogard. Modelli di comando di dominio-convalida** \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Pipeline di elaborazione del comando: come attivare un gestore comando
@@ -439,7 +439,7 @@ Un Mediator è un oggetto che incapsula la modalità di questo processo: coordin
 
 Gli elementi Decorator e i comportamenti sono simili alla [programmazione orientata agli aspetti](https://en.wikipedia.org/wiki/Aspect-oriented_programming), che viene applicata solo a una pipeline di processi specifica gestita dal componente Mediator. Gli aspetti nella programmazione orientata agli aspetti, che implementano i problemi trasversali, vengono applicati in base ai *weaver degli aspetti* inseriti in fase di compilazione o in base all'intercettazione della chiamata all'oggetto. Si dice a volte che entrambi i tipici approcci alla programmazione orientata agli aspetti "fanno magie", perché non è facile vedere come funziona la programmazione orientata agli aspetti. Quando si affrontano problemi o bug gravi, può essere difficile eseguire il debug della programmazione orientata agli aspetti. D'altra parte, questi elementi Decorator/comportamenti sono espliciti e vengono applicati solo nel contesto del Mediator, quindi il debug è molto più prevedibile e semplice.
 
-Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva spiegando in che modo eShopOnContainers implementa i [comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) di [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
+Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva spiegando in che modo eShopOnContainers implementa i [comportamenti](https://www.nuget.org/packages/MediatR/3.0.0) di [MediatR 3](https://github.com/jbogard/MediatR/wiki/Behaviors).
 
 ### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usare le code di messaggi (out-of-process) nella pipeline del comando
 
@@ -508,7 +508,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Implementare i comandi idempotenti
 
-In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Tuttavia, poiché il processo di business degli ordini è un po' più complesso e, in questo caso, inizia effettivamente nel microservizio basket, questa azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore dell'evento di integrazione denominato [ UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) invece di un semplice controller WebAPI chiamato dall'app client come nell'esempio precedente più semplice.
+In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Tuttavia, poiché il processo di business degli ordini è un po' più complesso e, in questo caso, inizia effettivamente con il microservizio basket, questa azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore dell'evento di integrazione denominato [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) anziché da un semplice controller WebAPI chiamato dall'app client come nell'esempio più semplice precedente.
 
 L'azione di invio del comando a MediatR è però molto simile, come illustrato nel codice seguente.
 
@@ -816,13 +816,13 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **MediatR.** Repository GitHub. \
   <https://github.com/jbogard/MediatR>
 
-- **CQRS with MediatR and AutoMapper (CQRS con MediatR e AutoMapper)**  \
+- **CQRS with MediatR and AutoMapper** \ (CQRS con MediatR e AutoMapper)
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Put your controllers on a diet: POSTs and commands.** (Mettere a dieta i controller: POST e comandi) \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Tackling cross-cutting concerns with a mediator pipeline (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)**  \
+- **Tackling cross-cutting concerns with a mediator pipeline** \ (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS and REST: the perfect match (CQRS e REST: la coppia perfetta)**  \
