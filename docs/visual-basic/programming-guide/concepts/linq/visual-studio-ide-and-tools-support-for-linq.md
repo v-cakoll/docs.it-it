@@ -1,25 +1,25 @@
 ---
-title: IDE di Visual Studio e supporto di strumenti per LINQ (Visual Basic)
+title: Supporto degli strumenti e IDE di Visual Studio per LINQ
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 0ed0488f76e81d3097ec84ab914e060d4d1198a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c3b051a0e8577a5e622f4cdf986945043dbdc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351037"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>IDE di Visual Studio e supporto di strumenti per LINQ (Visual Basic)
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE and Tools Support for LINQ (Visual Basic)
 L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzionalità che supportano lo sviluppo di applicazioni LINQ:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Object Relational Designer è uno strumento di progettazione visiva che è possibile usare nelle [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) applicazioni per generare le classi in Visual Basic che rappresentano i dati relazionali in un database sottostante. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) applications to generate classes in Visual Basic that represent the relational data in an underlying database. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Strumenti della riga di comando di SQLMetal  
  SQLMetal è uno strumento della riga di comando che può essere usato nei processi di compilazione per generare classi dai database esistenti per l'uso nelle applicazioni LINQ to SQL. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="linq-aware-code-editor"></a>Editor di codice sensibile a LINQ  
- L'editor di codice Visual Basic supporta LINQ ampiamente con funzionalità di formattazione e IntelliSense.  
+ The Visual Basic code editor supports LINQ extensively with IntelliSense and formatting capabilities.  
   
 ## <a name="visual-studio-debugger-support"></a>Supporto del debugger di Visual Studio  
  Il debugger di Visual Studio supporta il debug delle espressioni di query. Per altre informazioni, vedere [Debug LINQ](/visualstudio/debugger/debugging-linq).  

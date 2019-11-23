@@ -1,15 +1,15 @@
 ---
-title: Costruzione funzionale (LINQ to XML) (Visual Basic)
+title: Costruzione funzionale (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: a942d4a0fa4c33cf4699c5825ea05403bdfce48f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6366c7781372d34e15d62f81a5ceae8ff4ccda2e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618327"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353459"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Costruzione funzionale (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
 In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una potente funzionalità per la creazione di elementi XML, denominata *costruzione funzionale*. Per costruzione funzionale si intende la possibilità di creare una struttura ad albero XML in un'unica istruzione.  
   
  Diverse funzionalità importanti dell'interfaccia di programmazione [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consentono la costruzione funzionale:  
@@ -22,7 +22,7 @@ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una pote
   
  Di seguito è riportato un esempio:  
   
- Queste funzionalità consentono di scrivere codice usando i valori letterali XML per creare un albero XML, nonché di scrivere codice che usa i risultati di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esegue una query quando si crea un albero XML:  
+ These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -58,4 +58,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

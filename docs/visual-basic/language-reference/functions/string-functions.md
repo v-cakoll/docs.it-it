@@ -1,89 +1,89 @@
 ---
-title: Funzioni stringa (Visual Basic)
+title: Funzioni stringa
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582995"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349974"
 ---
 # <a name="string-functions-visual-basic"></a>Funzioni stringa (Visual Basic)
 
-Nella tabella seguente sono elencate le funzioni fornite da Visual Basic nella classe <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> per la ricerca e la modifica delle stringhe. Possono essere considerati come Visual Basic funzioni intrinseche; ovvero non è necessario chiamarli come membri espliciti di una classe, come illustrato negli esempi. Altri metodi e in alcuni casi metodi complementari sono disponibili nella classe <xref:System.String?displayProperty=nameWithType>.
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
-|Metodo .NET Framework|Descrizione|
+|.NET Framework method|Descrizione|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Restituisce un valore `Integer` che rappresenta il codice carattere corrispondente a un carattere.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Restituisce il carattere associato al codice carattere specificato.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Restituisce una matrice in base zero contenente un subset di una matrice `String` in base ai criteri di filtro specificati.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Restituisce una stringa formattata in base alle istruzioni contenute in un formato `String` espressione.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Restituisce un'espressione formattata come valore di valuta utilizzando il simbolo di valuta definito nel pannello di controllo del sistema.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Restituisce un'espressione stringa che rappresenta un valore di data/ora.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Restituisce un'espressione formattata come numero.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
 |<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Restituisce un'espressione formattata come percentuale (ovvero moltiplicata per 100) con un carattere % finale.|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Restituisce un Integer che specifica la posizione iniziale della prima occorrenza di una stringa all'interno di un altro.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Restituisce la posizione della prima occorrenza di una stringa all'interno di un'altra, a partire dal lato destro della stringa.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Restituisce una stringa creata mediante l'Unione di un numero di sottostringhe contenute in una matrice.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Restituisce una stringa o un carattere convertito in caratteri minuscoli.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Restituisce una stringa contenente un numero specificato di caratteri dal lato sinistro di una stringa.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Restituisce un intero contenente il numero di caratteri in una stringa.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Restituisce una stringa allineata a sinistra contenente la stringa specificata adattata alla lunghezza specificata.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Restituisce una stringa contenente un numero specificato di caratteri da una stringa.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Restituisce una stringa in cui una sottostringa specificata è stata sostituita con un'altra sottostringa per un numero specificato di volte.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Restituisce una stringa contenente un numero specificato di caratteri dal lato destro di una stringa.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Restituisce una stringa allineata a destra contenente la stringa specificata adattata alla lunghezza specificata.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi finali.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Restituisce una stringa costituita dal numero di spazi specificato.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Restituisce una matrice unidimensionale in base zero contenente un numero specificato di sottostringhe.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Restituisce-1, 0 o 1, in base al risultato di un confronto tra stringhe.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Restituisce una stringa convertita come specificato.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Restituisce una stringa o un oggetto costituito dal carattere specificato ripetuto per il numero di volte specificato.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Restituisce una stringa in cui l'ordine dei caratteri di una stringa specificata è invertito.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Restituisce una stringa contenente una copia di una stringa specificata senza spazi iniziali o finali.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Restituisce una stringa o un carattere contenente la stringa specificata convertita in caratteri maiuscoli.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
 
-È possibile usare l'istruzione [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) per impostare se le stringhe vengono confrontate usando un ordinamento del testo senza distinzione tra maiuscole e minuscole determinato dalle impostazioni locali del sistema (`Text`) o dalle rappresentazioni binarie interne dei caratteri (`Binary`). Il metodo di confronto del testo predefinito è `Binary`.
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). Il metodo di confronto del testo predefinito è `Binary`.
 
-## <a name="example-ucase"></a>Esempio: UCase
+## <a name="example-ucase"></a>Example: UCase
 
-In questo esempio viene utilizzata la funzione `UCase` per restituire una versione in maiuscolo di una stringa.
+This example uses the `UCase` function to return an uppercase version of a string.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Esempio: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
-In questo esempio viene utilizzata la funzione `LTrim` per rimuovere gli spazi iniziali e la funzione `RTrim` per rimuovere gli spazi finali da una variabile di stringa. Usa la funzione `Trim` per rimuovere entrambi i tipi di spazi.
+This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Esempio: Mid
+## <a name="example-mid"></a>Example: Mid
 
-In questo esempio viene utilizzata la funzione `Mid` per restituire un numero specificato di caratteri da una stringa.
+This example uses the `Mid` function to return a specified number of characters from a string.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Esempio: Len
+## <a name="example-len"></a>Example: Len
 
-In questo esempio viene utilizzato `Len` per restituire il numero di caratteri in una stringa.
+This example uses `Len` to return the number of characters in a string.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Esempio: InStr
+## <a name="example-instr"></a>Example: InStr
 
-In questo esempio viene utilizzata la funzione `InStr` per restituire la posizione della prima occorrenza di una stringa all'interno di un'altra.
+This example uses the `InStr` function to return the position of the first occurrence of one string within another.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Esempio: Format
+## <a name="example-format"></a>Example: Format
 
-Questo esempio mostra diversi usi della funzione `Format` per formattare i valori usando formati `String` e formati definiti dall'utente. Per il separatore della data (`/`), il separatore dell'ora (`:`) e gli indicatori AM/PM (`t` e `tt`), l'output formattato effettivo visualizzato dal sistema dipende dalle impostazioni locali utilizzate dal codice. Quando le ore e le date vengono visualizzate nell'ambiente di sviluppo, vengono utilizzati il formato di ora breve e il formato di data breve delle impostazioni locali del codice.
+This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
 
 > [!NOTE]
-> Per le impostazioni locali che utilizzano un orario a 24 ore, gli indicatori AM/PM (`t` e `tt`) non visualizzano alcun valore.
+> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
@@ -92,4 +92,4 @@ Questo esempio mostra diversi usi della funzione `Format` per formattare i valor
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Riepilogo della modifica delle stringhe](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [Metodi della classe System. String](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

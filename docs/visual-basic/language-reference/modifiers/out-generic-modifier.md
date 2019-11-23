@@ -1,5 +1,5 @@
 ---
-title: Out (modificatore generico) (Visual Basic)
+title: Out (modificatore generico)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053925"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351419"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificatore generico) (Visual Basic)
 
-Per i parametri di tipo generico, la `Out` parola chiave specifica che il tipo è covariante.
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
 ## <a name="remarks"></a>Note
 
@@ -37,11 +37,11 @@ In un'interfaccia generica un parametro di tipo può essere dichiarato covariant
 
 - Il parametro di tipo non viene usato come vincolo generico per i metodi di interfaccia.
 
-In un delegato generico, un parametro di tipo può essere dichiarato covariante se viene utilizzato solo come tipo restituito del metodo e non per gli argomenti del metodo.
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 La covarianza e la controvarianza sono supportate per i tipi di riferimento, ma non per i tipi di valore.
 
-In Visual Basic, è possibile dichiarare gli eventi nelle interfacce covariante senza specificare il tipo delegato. Inoltre, covariante interfacce non è possibile hanno, enumerazioni, strutture o classi annidate, ma può disporre di interfacce annidate.
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>Comportamento
 
@@ -57,7 +57,7 @@ L'esempio seguente illustra come dichiarare, estendere e implementare un'interfa
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. Indica inoltre come è possibile usare la conversione implicita per i tipi delegati.
+L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

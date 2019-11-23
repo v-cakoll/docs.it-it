@@ -1,5 +1,5 @@
 ---
-title: MustInherit (Visual Basic)
+title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
 - MustInherit
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 05b1e6b646c519216eba2d4f0df7a3e32f3dafbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30befaaf194d78d26a57f29c59bf0a603e9f07a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661253"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351503"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
-Specifica una classe può essere utilizzata solo come classe di base e non è possibile creare un oggetto direttamente da esso.  
+Specifies that a class can be used only as a base class and that you cannot create an object directly from it.  
   
 ## <a name="remarks"></a>Note  
- Lo scopo di un *classe di base* (noto anche come un' *classe astratta*) consiste nel definire funzionalità comuni a tutte le classi da esso derivate. In questo modo le classi derivate di dover ridefinire gli elementi comuni. In alcuni casi, queste funzionalità comuni non sono sufficientemente completa per creare un oggetto utilizzabile e ogni classe derivata definisce la funzionalità manca. In tal caso, è necessario il codice utilizzato per creare oggetti solo dalle classi derivate. Si utilizza `MustInherit` nella classe di base per applicare questo comportamento.  
+ The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it. This saves the derived classes from having to redefine the common elements. In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality. In such a case, you want the consuming code to create objects only from the derived classes. You use `MustInherit` on the base class to enforce this.  
   
- Un altro uso di un `MustInherit` classe consiste nel limitare una variabile a un set di classi correlate. È possibile definire una classe di base e ne derivano tutte le classi correlate. La classe di base non è necessario fornire qualsiasi funzionalità comuni a tutte le classi derivate, ma possono fungere da un filtro per assegnare valori alle variabili. Se il codice consumer dichiara una variabile come la classe di base, Visual Basic consente di assegnare solo un oggetto da una delle classi derivate a tale variabile.  
+ Another use of a `MustInherit` class is to restrict a variable to a set of related classes. You can define a base class and derive all these related classes from it. The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables. If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.  
   
- .NET Framework definisce vari `MustInherit` classi, tra di essi <xref:System.Array>, <xref:System.Enum>, e <xref:System.ValueType>. <xref:System.ValueType> è un esempio di una classe di base che limita una variabile. Tutti i tipi valore derivano da <xref:System.ValueType>. Se si dichiara una variabile come <xref:System.ValueType>, è possibile assegnare solo i tipi di valore alla variabile.  
+ The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>. <xref:System.ValueType> is an example of a base class that restricts a variable. All value types derive from <xref:System.ValueType>. If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.  
   
 ## <a name="rules"></a>Regole  
   
-- **Contesto della dichiarazione.** È possibile usare `MustInherit` solo in un `Class` istruzione.  
+- **Declaration Context.** You can use `MustInherit` only in a `Class` statement.  
   
-- **Modificatori combinati.** Non è possibile specificare `MustInherit` insieme a `NotInheritable` nella stessa dichiarazione.  
+- **Combined Modifiers.** You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata l'ereditarietà forzata e forzato viene sottoposto a override. La classe di base `shape` definisce una variabile `acrossLine`. Le classi `circle` e `square` derivano da `shape`. Ereditano la definizione di `acrossLine`, ma devono definire la funzione `area` perché questo calcolo è diverso per ogni tipo di forma.  
+ The following example illustrates both forced inheritance and forced overriding. The base class `shape` defines a variable `acrossLine`. The classes `circle` and `square` derive from `shape`. They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.  
   
  [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
- È possibile dichiarare `shape1` e `shape2` di tipo `shape`. Tuttavia, è possibile creare un oggetto dal `shape` perché manca la funzionalità della funzione `area` ed è contrassegnato `MustInherit`.  
+ You can declare `shape1` and `shape2` to be of type `shape`. However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.  
   
- Poiché sono stati dichiarati come `shape`, le variabili `shape1` e `shape2` sono limitate a oggetti delle classi derivate `circle` e `square`. Visual Basic non consente di assegnare qualsiasi altro oggetto a queste variabili, che ti offre un elevato livello di indipendenza dai tipi.  
+ Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`. Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.  
   
 ## <a name="usage"></a>Utilizzo  
- Il `MustInherit` modificatore può essere usato in questo contesto:  
+ The `MustInherit` modifier can be used in this context:  
   
  [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   

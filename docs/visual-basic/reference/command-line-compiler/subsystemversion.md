@@ -1,17 +1,17 @@
 ---
-title: -subsystemversion (Visual Basic)
+title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380327"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348542"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -60,13 +60,13 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- Il valore predefinito è 6.00 se si usa MSBuild, destinazione .NET Framework 4.5 ed è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.
+- Il valore predefinito è 6.00 se si usa MSBuild, se la destinazione è .NET Framework 4.5 e se non è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.
 
 - Il valore predefinito è 4.00 se nessuna di queste condizioni è vera.
 
 ## <a name="setting-this-option"></a>Impostazione di questa opzione
 
-Per impostare il **- subsystemversion** l'opzione del compilatore in Visual Studio, è necessario aprire il file con estensione vbproj e specificare un valore per il `SubsystemVersion` proprietà nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
+To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Vedere anche
 

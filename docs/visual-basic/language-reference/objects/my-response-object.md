@@ -1,5 +1,5 @@
 ---
-title: Oggetto My. Response (Visual Basic)
+title: Oggetto My.Response
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 522814ad48fb7548032b8a37779bb3ff6ca62413
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567448"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350649"
 ---
 # <a name="myresponse-object"></a>Oggetto My.Response
-Ottiene l' <xref:System.Web.HttpResponse> oggetto associato <xref:System.Web.UI.Page>all'oggetto. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.  
+Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.  
   
 ## <a name="remarks"></a>Note  
- L' `My.Response` oggetto contiene l'oggetto <xref:System.Web.HttpResponse> corrente associato alla pagina.  
+ The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
   
- L' `My.Response` oggetto è disponibile solo per le applicazioni ASP.NET.  
+ The `My.Response` object is only available for ASP.NET applications.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene ottenuta la raccolta di `My.Request` intestazioni dall'oggetto e `My.Response` viene utilizzato l'oggetto per scriverlo nella pagina ASP.NET.  
+ The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   

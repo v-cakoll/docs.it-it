@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956878"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350703"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Accesso agli attributi nel DOM
 
@@ -28,7 +28,6 @@ Se si desidera inserire in una raccolta tutti gli attributi di un nodo dell'elem
 Nell'esempio di codice seguente viene illustrato come recuperare una raccolta di attributi e come scorrerla usando il metodo **Count** per l'indice del ciclo. Inoltre, nel codice viene illustrato come recuperare un singolo attributo dalla raccolta e visualizzarne il valore.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -147,7 +146,6 @@ Dal momento che **XmlAttributeCollection** è una raccolta che è possibile scor
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -197,7 +195,6 @@ public class Sample
 Per rimuovere un singolo nodo di attributo da un elemento, viene usato il metodo <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> che restituisce un oggetto di tipo **XmlAttribute**. Se si dispone di **XmlAttribute**, tutti i metodi e le proprietà disponibili nella classe <xref:System.Xml.XmlAttribute?displayProperty=nameWithType>, ad esempio la ricerca di **OwnerElement**, sono disponibili in tale oggetto.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 

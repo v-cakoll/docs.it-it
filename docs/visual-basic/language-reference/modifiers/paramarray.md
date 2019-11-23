@@ -1,5 +1,5 @@
 ---
-title: ParamArray (Visual Basic)
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ParamArray
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbc87bffebc265e6062512e96fc29a64334b3c65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968368"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351364"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Specifica che un parametro di routine accetta una matrice facoltativa di elementi del tipo specificato. `ParamArray`può essere usato solo nell'ultimo parametro di un elenco di parametri.  
+Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
   
 ## <a name="remarks"></a>Note  
- `ParamArray`consente di passare un numero arbitrario di argomenti alla procedura. Un `ParamArray` parametro viene sempre dichiarato utilizzando [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- È possibile specificare uno o più argomenti per un `ParamArray` parametro passando una matrice del tipo di dati appropriato, un elenco delimitato da virgole di valori o nulla. Per informazioni dettagliate, vedere la sezione relativa alla chiamata a ParamArray in [matrici di parametri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
-> Ogni volta che si tratta di una matrice che può essere indefinitamente grande, esiste il rischio di sovraeseguire una capacità interna dell'applicazione. Se si accetta una matrice di parametri dal codice chiamante, è necessario testarne la lunghezza ed eseguire le operazioni appropriate se è troppo grande per l'applicazione.  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
   
  Il modificatore `ParamArray` può essere usato nei contesti seguenti:  
   

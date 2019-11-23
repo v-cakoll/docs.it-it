@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Scrivere messaggi di log (Visual Basic)'
+title: 'Procedura: scrivere messaggi di log'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messages
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 007d08917ed5ecae6889d03d820d48e4695c9344
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 38570047db48e009aea2af376304430db1ec29f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676122"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352063"
 ---
-# <a name="how-to-write-log-messages-visual-basic"></a>Procedura: Scrivere messaggi di log (Visual Basic)
+# <a name="how-to-write-log-messages-visual-basic"></a>Procedura: scrivere messaggi di log (Visual Basic)
 
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per registrare le informazioni sull'applicazione. Questo esempio illustra come usare il metodo `My.Application.Log.WriteEntry` per registrare le informazioni di traccia.
 

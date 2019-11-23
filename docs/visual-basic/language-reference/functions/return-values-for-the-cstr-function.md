@@ -1,5 +1,5 @@
 ---
-title: Valori restituiti dalla funzione CStr (Visual Basic)
+title: Valori restituiti dalla funzione CStr
 ms.date: 07/20/2015
 helpviewer_keywords:
 - times [Visual Basic], CStr Function return values
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: cd525ea5a295411e509f3bc37285675d15a8c4f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a40777c7290ec6d8c0d032f2edca5d889e20f04
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930041"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349994"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Valori restituiti dalla funzione CStr (Visual Basic)
-Nella tabella seguente vengono descritti i valori restituiti `CStr` per per diversi tipi di `expression`dati di.  
+The following table describes the return values for `CStr` for different data types of `expression`.  
   
-|Se `expression` il tipo è|Valori restituiti `CStr`|  
+|If `expression` type is|Valori restituiti `CStr`|  
 |-----------------------------|--------------------|  
-|[Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Stringa contenente "true" o "false".|  
-|[Tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Stringa contenente un `Date` valore (data e ora) nel formato di data breve del sistema.|  
-|[Tipi di dati numerici](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Stringa che rappresenta il numero.|  
+|[Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
+|[Tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
+|[Tipi di dati numerici](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
   
-## <a name="cstr-and-date"></a>CStr e data  
- Il `Date` tipo contiene sempre le informazioni di data e ora. Ai fini della conversione del tipo, Visual Basic considera 1/1/0001 (1 gennaio dell'anno 1) come *valore neutro* per la data e 00:00:00 (mezzanotte) come valore neutro per l'ora. `CStr`non include valori neutri nella stringa risultante. Se ad esempio si esegue la `#January 1, 0001 9:30:00#` conversione in una stringa, il risultato sarà "9:30:00 AM"; le informazioni sulla data vengono annullate. Tuttavia, le informazioni sulla data sono ancora presenti nel valore `Date` originale e possono essere ripristinate con funzioni <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>come.  
+## <a name="cstr-and-date"></a>CStr and Date  
+ The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
-> La `CStr` funzione esegue la conversione in base alle impostazioni cultura correnti dell'applicazione. Per ottenere la rappresentazione di stringa di un numero in determinate impostazioni cultura, usare il `ToString(IFormatProvider)` metodo del numero. Ad esempio, usare <xref:System.Double.ToString%2A?displayProperty=nameWithType> quando si converte un valore di `Double` tipo in `String`un oggetto.  
+> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
   
 ## <a name="see-also"></a>Vedere anche
 

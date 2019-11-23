@@ -1,5 +1,5 @@
 ---
-title: Registrazione di informazioni relative all'applicazione (Visual Basic)
+title: Registrazione di informazioni relative all'applicazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052508"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353260"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Registrazione di informazioni relative all'applicazione (Visual Basic)
+
 Questa sezione contiene argomenti che descrivono come registrare le informazioni provenienti dall'applicazione usando l'oggetto `My.Application.Log` o `My.Log`. Viene anche spiegato come estendere le funzionalità di registrazione dell'applicazione.  
   
  L'oggetto `Log` fornisce i metodi per scrivere le informazioni sui listener di log dell'applicazione, mentre la proprietà avanzata `TraceSource` dell'oggetto `Log` fornisce informazioni di configurazione dettagliate. L'oggetto `Log` può essere configurato dal file di configurazione dell'applicazione.  
@@ -25,7 +26,7 @@ Questa sezione contiene argomenti che descrivono come registrare le informazioni
   
 ## <a name="tasks"></a>Attività  
   
-|A|Vedere|  
+|Per|Vedere|  
 |--------|---------|  
 |Scrivere le informazioni sugli eventi nei log dell'applicazione.|[Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |Scrivere le informazioni sulle eccezioni nei log dell'applicazione.|[Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

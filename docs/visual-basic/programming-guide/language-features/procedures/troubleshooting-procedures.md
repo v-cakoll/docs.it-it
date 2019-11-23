@@ -1,5 +1,5 @@
 ---
-title: Procedure per la risoluzione dei problemi (Visual Basic)
+title: Troubleshooting procedures
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: c74947e21de8ba26ffde01f6f28aea67346c2071
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8d4c4929e299efb12d283492a101c18ae794110b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002080"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352510"
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>Procedure per la risoluzione dei problemi (Visual Basic)
+# <a name="troubleshooting-procedures-visual-basic"></a>Troubleshooting procedures (Visual Basic)
 
-In questa pagina vengono elencati alcuni problemi comuni che possono verificarsi durante l'utilizzo delle procedure.  
+This page lists some common problems that can occur when working with procedures.  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Restituzione di un tipo matrice da una routine Function
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Returning an array type from a function procedure
 
-Se una procedura `Function` restituisce un tipo di dati della matrice, non è possibile utilizzare il nome `Function` per archiviare i valori negli elementi della matrice. Se si tenta di eseguire questa operazione, il compilatore lo interpreta come una chiamata a `Function`. Nell'esempio seguente vengono generati errori del compilatore:
+If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array. If you attempt to do this, the compiler interprets it as a call to the `Function`. The following example generates compiler errors:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,92 +35,92 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-L'istruzione `AllOnes(i) = 1` genera un errore del compilatore perché sembra chiamare `AllOnes` con un argomento del tipo di dati errato (un valore scalare `Integer` anziché una matrice `Integer`). L'istruzione `Return AllOnes()` genera un errore del compilatore perché sembra chiamare `AllOnes` senza argomento.  
+The statement `AllOnes(i) = 1` generates a compiler error because it appears to call `AllOnes` with an argument of the wrong data type (a scalar `Integer` instead of an `Integer` array). The statement `Return AllOnes()` generates a compiler error because it appears to call `AllOnes` with no argument.  
   
- **Approccio corretto:** Per poter modificare gli elementi di una matrice che deve essere restituita, definire una matrice interna come variabile locale. Nell'esempio seguente viene compilato senza errori:
+ **Correct approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable. The following example compiles without error:
 
  [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
 
-## <a name="argument-not-modified-by-procedure-call"></a>Argomento non modificato dalla chiamata di routine
+## <a name="argument-not-modified-by-procedure-call"></a>Argument not modified by procedure call
 
-Se si intende consentire a una routine di modificare un elemento di programmazione sottostante un argomento nel codice chiamante, è necessario passarlo per riferimento. Tuttavia, una routine può accedere agli elementi di un argomento di tipo riferimento anche se viene passata per valore.
+If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference. But a procedure can access the elements of a reference type argument even if you pass it by value.
 
-- **Variabile sottostante**. Per consentire alla stored procedure di sostituire il valore dell'elemento variable sottostante, la routine deve dichiarare il parametro [ByRef](../../../language-reference/modifiers/byref.md). Inoltre, il codice chiamante non deve racchiudere l'argomento tra parentesi, perché in questo caso verrebbe eseguito l'override del meccanismo di passaggio `ByRef`.
+- **Underlying variable**. To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../language-reference/modifiers/byref.md). Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.
 
-- **Elementi di tipo riferimento**. Se si dichiara un parametro [ByVal](../../../language-reference/modifiers/byval.md), la stored procedure non può modificare l'elemento della variabile sottostante. Tuttavia, se l'argomento è un tipo riferimento, la procedura può modificare i membri dell'oggetto a cui fa riferimento, anche se non è in grado di sostituire il valore della variabile. Ad esempio, se l'argomento è una variabile di matrice, la procedura non può assegnare una nuova matrice, ma può modificare uno o più dei relativi elementi. Gli elementi modificati si riflettono nella variabile di matrice sottostante nel codice chiamante.
+- **Reference type elements**. If you declare a parameter [ByVal](../../../language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself. However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value. For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements. The changed elements are reflected in the underlying array variable in the calling code.
 
-Nell'esempio seguente vengono definite due procedure che accettano una variabile di matrice per valore e operano sui relativi elementi. La procedura `increase` ne aggiunge semplicemente una a ogni elemento. La procedura `replace` assegna una nuova matrice al parametro `a()`, quindi ne aggiunge uno a ogni elemento. Tuttavia, la riassegnazione non influisce sulla variabile di matrice sottostante nel codice chiamante perché `a()` è dichiarata `ByVal`.
+The following example defines two procedures that take an array variable by value and operate on its elements. Procedure `increase` simply adds one to each element. Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
 [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
 
-Nell'esempio seguente vengono effettuate chiamate a `increase` e `replace`:
+The following example makes calls to `increase` and `replace`:
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-La prima chiamata `MsgBox` Visualizza "After increase (n): 11, 21, 31, 41 ". Poiché `n` è un tipo di riferimento, `increase` può modificarne i membri, anche se viene passato `ByVal`.
+The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.
 
-La seconda chiamata `MsgBox` Visualizza "dopo Replace (n): 11, 21, 31, 41 ". Poiché `n` viene passata `ByVal`, `replace` non può modificare la variabile `n` assegnando una nuova matrice. Quando `replace` crea la nuova istanza della matrice `k` e la assegna alla variabile locale `a`, perde il riferimento a `n` passato dal codice chiamante. Quando incrementa i membri di `a`, viene applicata solo la matrice locale `k`.
+The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it increments the members of `a`, only the local array `k` is affected.
 
-**Approccio corretto:** Per essere in grado di modificare un elemento variabile sottostante, passarlo per riferimento. Nell'esempio seguente viene illustrata la modifica della dichiarazione di `replace` che consente di sostituire una matrice con un'altra nel codice chiamante:
+**Correct approach:** To be able to modify an underlying variable element itself, pass it by reference. The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code:
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
-## <a name="unable-to-define-an-overload"></a>Impossibile definire un overload
+## <a name="unable-to-define-an-overload"></a>Unable to define an overload
 
-Se si desidera definire una versione di overload di una routine, è necessario utilizzare lo stesso nome ma una firma diversa. Se il compilatore non è in grado di distinguere la dichiarazione da un overload con la stessa firma, viene generato un errore.
+If you want to define an overloaded version of a procedure, you must use the same name but a different signature. If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.
 
-La *firma* di una stored procedure è determinata dal nome della stored procedure e dall'elenco di parametri. Ogni overload deve avere lo stesso nome di tutti gli altri overload, ma deve essere diverso da tutti gli altri in almeno uno degli altri componenti della firma. Per altre informazioni, vedere [Procedure Overloading](./procedure-overloading.md).
+The *signature* of a procedure is determined by the procedure name and the parameter list. Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature. Per altre informazioni, vedere [Procedure Overloading](./procedure-overloading.md).
 
-Gli elementi seguenti, anche se riguardano l'elenco di parametri, non sono componenti della firma di una stored procedure:
+The following items, even though they pertain to the parameter list, are not components of a procedure's signature:
 
-- Parole chiave del modificatore di routine, ad esempio `Public`, `Shared` e `Static`.
-- Nomi dei parametri.
-- Parole chiave del modificatore di parametro, ad esempio `ByRef` e `Optional`.
-- Tipo di dati del valore restituito (ad eccezione di un operatore di conversione).
+- Procedure modifier keywords, such as `Public`, `Shared`, and `Static`.
+- Parameter names.
+- Parameter modifier keywords, such as `ByRef` and `Optional`.
+- The data type of the return value (except for a conversion operator).
 
-Non è possibile eseguire l'overload di una routine variando solo uno o più elementi precedenti.
+You cannot overload a procedure by varying only one or more of the preceding items.
 
-**Approccio corretto:** Per poter definire un overload di routine, è necessario variare la firma. Poiché è necessario utilizzare lo stesso nome, è necessario variare il numero, l'ordine o i tipi di dati dei parametri. In una routine generica, è possibile variare il numero di parametri di tipo. In un operatore di conversione ([funzione CType](../../../language-reference/functions/ctype-function.md)), è possibile variare il tipo restituito.
+**Correct approach:** To be able to define a procedure overload, you must vary the signature. Because you must use the same name, you must vary the number, order, or data types of the parameters. In a generic procedure, you can vary the number of type parameters. In a conversion operator ([CType Function](../../../language-reference/functions/ctype-function.md)), you can vary the return type.
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Risoluzione dell'overload con argomenti facoltativi e ParamArray
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
 
-Se si esegue l'overload di una routine con uno o più parametri [facoltativi](../../../language-reference/modifiers/optional.md) o un parametro [ParamArray](../../../language-reference/modifiers/paramarray.md) , è necessario evitare di duplicare gli *Overload impliciti*. Per informazioni, vedere [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).
+If you are overloading a procedure with one or more [Optional](../../../language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*. For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).
 
-## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Chiamata della versione errata di una routine di overload
+## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Calling the wrong version of an overloaded procedure
 
-Se una stored procedure ha diverse versioni di overload, è necessario avere familiarità con tutti gli elenchi di parametri e comprendere il modo in cui Visual Basic risolve le chiamate tra gli overload. In caso contrario, è possibile chiamare un overload diverso da quello previsto.
+If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how Visual Basic resolves calls among the overloads. Otherwise you could call an overload other than the intended one.
 
-Quando è stato determinato l'overload da chiamare, prestare attenzione a osservare le regole seguenti:
+When you have determined which overload you want to call, be careful to observe the following rules:
 
-- Specificare il numero corretto di argomenti e nell'ordine corretto.  
-- Idealmente, gli argomenti devono avere esattamente gli stessi tipi di dati dei parametri corrispondenti. In ogni caso, il tipo di dati di ogni argomento deve essere ampliato a quello del parametro corrispondente. Questa situazione si verifica anche se l' [istruzione Option Strict](../../../language-reference/statements/option-strict-statement.md) è impostata su `Off`. Se un overload richiede una conversione verso un tipo di caratteri più piccolo dall'elenco di argomenti, tale overload non è idoneo per la chiamata.
-- Se si forniscono argomenti che richiedono un ampliamento, rendere i tipi di dati più vicini possibile ai tipi di dati dei parametri corrispondenti. Se due o più overload accettano i tipi di dati degli argomenti, il compilatore risolve la chiamata all'overload che chiama per il minor numero di ampliamento.
+- Supply the correct number of arguments, and in the correct order.  
+- Ideally, your arguments should have the exact same data types as the corresponding parameters. In any case, the data type of each argument must widen to that of its corresponding parameter. This is true even with the [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) set to `Off`. If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.
+- If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types. If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.
 
-È possibile ridurre le probabilità di mancata corrispondenza tra tipi di dati tramite la parola chiave di conversione della [funzione CType](../../../language-reference/functions/ctype-function.md) durante la preparazione degli argomenti.
+You can reduce the chance of data type mismatches by using the [CType Function](../../../language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.
 
-### <a name="overload-resolution-failure"></a>Errore di risoluzione dell'overload
+### <a name="overload-resolution-failure"></a>Overload resolution failure
 
-Quando si chiama una routine di overload, il compilatore tenta di eliminare tutti gli overload tranne uno. Se ha esito positivo, risolve la chiamata a tale overload. Se Elimina tutti gli overload o se non è in grado di ridurre gli overload idonei a un singolo candidato, viene generato un errore.
+When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads. If it succeeds, it resolves the call to that overload. If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.
 
-Nell'esempio seguente viene illustrato il processo di risoluzione dell'overload:
+The following example illustrates the overload resolution process:
 
 [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-Nella prima chiamata, il compilatore elimina il primo overload perché il tipo del primo argomento (`Short`) viene ridotto al tipo del parametro corrispondente (`Byte`). Elimina quindi il terzo overload perché ogni tipo di argomento nel secondo overload (`Short` e `Single`) viene ampliato al tipo corrispondente nel terzo overload (`Integer` e `Single`). Il secondo overload richiede un numero meno ampio, pertanto il compilatore lo utilizza per la chiamata.
+In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.
 
-Nella seconda chiamata, il compilatore non è in grado di eliminare gli overload sulla base della riduzione. Elimina il terzo overload per lo stesso motivo della prima chiamata, perché può chiamare il secondo overload con un minor numero di tipi di argomenti. Il compilatore, tuttavia, non è in grado di risolversi tra il primo e il secondo overload. Ogni ha un tipo di parametro definito che viene ampliato al tipo corrispondente nell'altro (`Byte` per `Short`, ma da `Single` a `Double`). Il compilatore genera quindi un errore di risoluzione dell'overload.
+In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.
 
-**Approccio corretto:** Per poter chiamare una routine di overload senza ambiguità, usare la [funzione CType](../../../language-reference/functions/ctype-function.md) per trovare la corrispondenza tra i tipi di dati degli argomenti e i tipi di parametro. Nell'esempio seguente viene illustrata una chiamata a `z` che forza la risoluzione sul secondo overload.
+**Correct approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../language-reference/functions/ctype-function.md) to match the argument data types to the parameter types. The following example shows a call to `z` that forces resolution to the second overload.
 
 [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Risoluzione dell'overload con argomenti facoltativi e ParamArray
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
 
-Se due overload di una stored procedure hanno firme identiche, ad eccezione del fatto che l'ultimo parametro è dichiarato [facoltativo](../../../language-reference/modifiers/optional.md) in uno e [ParamArray](../../../language-reference/modifiers/paramarray.md) nell'altro, il compilatore risolve una chiamata a tale procedura secondo la corrispondenza più vicina. Per altre informazioni, vedere [Overload Resolution](./overload-resolution.md).
+If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../language-reference/modifiers/optional.md) in one and [ParamArray](../../../language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match. Per altre informazioni, vedere [Overload Resolution](./overload-resolution.md).
 
 ## <a name="see-also"></a>Vedere anche
 

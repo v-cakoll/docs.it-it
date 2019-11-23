@@ -1,18 +1,18 @@
 ---
-title: Modificatori (Visual Basic)
+title: Modificatori
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051182"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351533"
 ---
 # <a name="modifiers-visual-basic"></a>Modificatori (Visual Basic)
 Gli argomenti di questa sezione descrivono i modificatori di runtime di Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

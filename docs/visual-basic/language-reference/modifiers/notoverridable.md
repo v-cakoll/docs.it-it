@@ -1,5 +1,5 @@
 ---
-title: NotOverridable (Visual Basic)
+title: NotOverridable
 ms.date: 07/20/2015
 f1_keywords:
 - vb.NotOverridable
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c55d57bb3008b2825fe5382844908ea32f0d500c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920653"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351454"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifica che una proprietà o routine non può essere sottoposto a override in una classe derivata.  
+Specifies that a property or procedure cannot be overridden in a derived class.  
   
 ## <a name="remarks"></a>Note  
- Il `NotOverridable` modificatore impedisce una proprietà o metodo da sottoporre a override in una classe derivata.  Il [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modificatore consente a una proprietà o metodo in una classe per eseguire l'override in una classe derivata. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Se il `Overridable` o `NotOverridable` modificatore non è specificato, l'impostazione predefinita dipende dal fatto che la proprietà o il metodo esegue l'override di una proprietà della classe base o un metodo. Se la proprietà o il metodo esegue l'override di una proprietà della classe base o un metodo, l'impostazione predefinita è `Overridable`; in caso contrario, è `NotOverridable`.  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- Un elemento che non può essere sottoposto a override viene chiamato talvolta un *sealed* elemento.  
+ An element that cannot be overridden is sometimes called a *sealed* element.  
   
- È possibile usare `NotOverridable` solo in un'istruzione per la dichiarazione di proprietà o routine. È possibile specificare `NotOverridable` solo su una proprietà o routine che esegue l'override di un'altra proprietà o una routine, vale a dire, solo in combinazione con `Overrides`.  
+ You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
   
-## <a name="combined-modifiers"></a>Modificatori combinati  
- Non è possibile specificare `Overridable` oppure `NotOverridable` per un `Private` (metodo).  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- Non è possibile specificare `NotOverridable` assieme `MustOverride`, `Overridable`, o `Shared` nella stessa dichiarazione.  
+ You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
   
 ## <a name="usage"></a>Utilizzo  
  Il modificatore `NotOverridable` può essere usato nei contesti seguenti:  

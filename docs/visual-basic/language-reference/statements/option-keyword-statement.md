@@ -1,23 +1,23 @@
 ---
-title: Opzione <keyword> Statement (Visual Basic)
+title: Istruzione Option <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784020"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353769"
 ---
-# <a name="option-keyword-statement"></a>Opzione \<parola chiave > istruzione
-Introduce un'istruzione che specifica un'opzione del compilatore applicabili all'intero file di origine.  
+# <a name="option-keyword-statement"></a>Option \<keyword> Statement
+Introduces a statement that specifies a compiler option that applies to the entire source file.  
   
 ## <a name="remarks"></a>Note  
- Le opzioni del compilatore possono controllare se tutte le variabili devono essere dichiarate in modo esplicito, se le conversioni di tipo di restrizione devono essere esplicita o se le stringhe devono essere confrontate come testo o binari quantities.  
+ The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
   
  È possibile usare la parola chiave `Option` nei contesti seguenti:  
   
