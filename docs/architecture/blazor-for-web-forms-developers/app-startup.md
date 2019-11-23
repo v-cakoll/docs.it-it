@@ -11,13 +11,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183980"
 ---
-# <a name="app-startup"></a><span data-ttu-id="11e6d-103">Avvio dell'app</span><span class="sxs-lookup"><span data-stu-id="11e6d-103">App startup</span></span>
+# <a name="app-startup"></a><span data-ttu-id="bad85-103">Avvio dell'app</span><span class="sxs-lookup"><span data-stu-id="bad85-103">App startup</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="11e6d-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="11e6d-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="bad85-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="bad85-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="11e6d-105">[Precedente](project-structure.md)
->[Successivo](components.md)</span><span class="sxs-lookup"><span data-stu-id="11e6d-105">[Previous](project-structure.md)
+><span data-ttu-id="bad85-105">[Precedente](project-structure.md)
+>[Successivo](components.md)</span><span class="sxs-lookup"><span data-stu-id="bad85-105">[Previous](project-structure.md)
 [Next](components.md)</span></span>

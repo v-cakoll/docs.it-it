@@ -9,44 +9,44 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833728"
 ---
-# <a name="having-entity-sql"></a><span data-ttu-id="d3728-102">HAVING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d3728-102">HAVING (Entity SQL)</span></span>
-<span data-ttu-id="d3728-103">Specifica una condizione di ricerca per un gruppo o un'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="d3728-103">Specifies a search condition for a group or an aggregate.</span></span>  
+# <a name="having-entity-sql"></a><span data-ttu-id="a87f4-102">HAVING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a87f4-102">HAVING (Entity SQL)</span></span>
+<span data-ttu-id="a87f4-103">Specifica una condizione di ricerca per un gruppo o un'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="a87f4-103">Specifies a search condition for a group or an aggregate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3728-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d3728-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a87f4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a87f4-104">Syntax</span></span>  
   
 ```sql  
 [ HAVING search_condition ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="d3728-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="d3728-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="a87f4-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="a87f4-105">Arguments</span></span>  
  `search_condition`  
- <span data-ttu-id="d3728-106">Specifica la condizione di ricerca che il gruppo o l'aggregazione deve soddisfare.</span><span class="sxs-lookup"><span data-stu-id="d3728-106">Specifies the search condition for the group or the aggregate to meet.</span></span> <span data-ttu-id="d3728-107">Se viene usata assieme alla clausola GROUP BY ALL, la clausola HAVING è prioritaria rispetto a ALL.</span><span class="sxs-lookup"><span data-stu-id="d3728-107">When HAVING is used with GROUP BY ALL, the HAVING clause overrides ALL.</span></span>  
+ <span data-ttu-id="a87f4-106">Specifica la condizione di ricerca che deve essere soddisfatta dal gruppo o dall'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="a87f4-106">Specifies the search condition for the group or the aggregate to meet.</span></span> <span data-ttu-id="a87f4-107">Se viene usata assieme alla clausola GROUP BY ALL, la clausola HAVING è prioritaria rispetto a ALL.</span><span class="sxs-lookup"><span data-stu-id="a87f4-107">When HAVING is used with GROUP BY ALL, the HAVING clause overrides ALL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d3728-108">Note</span><span class="sxs-lookup"><span data-stu-id="d3728-108">Remarks</span></span>  
- <span data-ttu-id="d3728-109">La clausola HAVING viene usata per specificare una condizione di filtro aggiuntiva sul risultato di un raggruppamento.</span><span class="sxs-lookup"><span data-stu-id="d3728-109">The HAVING clause is used to specify an additional filtering condition on the result of a grouping.</span></span> <span data-ttu-id="d3728-110">Se non viene specificata alcuna clausola GROUP BY nell'espressione di query, viene presupposto un gruppo con singolo set implicito.</span><span class="sxs-lookup"><span data-stu-id="d3728-110">If no GROUP BY clause is specified in the query expression, an implicit single-set group is assumed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a87f4-108">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="a87f4-108">Remarks</span></span>  
+ <span data-ttu-id="a87f4-109">La clausola HAVING viene usata per specificare una condizione di filtro aggiuntiva sul risultato di un raggruppamento.</span><span class="sxs-lookup"><span data-stu-id="a87f4-109">The HAVING clause is used to specify an additional filtering condition on the result of a grouping.</span></span> <span data-ttu-id="a87f4-110">Se non viene specificata alcuna clausola GROUP BY nell'espressione di query, viene presupposto un gruppo con singolo set implicito.</span><span class="sxs-lookup"><span data-stu-id="a87f4-110">If no GROUP BY clause is specified in the query expression, an implicit single-set group is assumed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="d3728-111">HAVING può essere utilizzato solo con l'istruzione [Select](select-entity-sql.md) .</span><span class="sxs-lookup"><span data-stu-id="d3728-111">HAVING can be used only with the [SELECT](select-entity-sql.md) statement.</span></span> <span data-ttu-id="d3728-112">Se non si usa [Group by](group-by-entity-sql.md) , la clausola HAVING si comporta come una clausola WHERE.</span><span class="sxs-lookup"><span data-stu-id="d3728-112">When [GROUP BY](group-by-entity-sql.md) is not used, HAVING behaves like a WHERE clause.</span></span>  
+> <span data-ttu-id="a87f4-111">HAVING può essere utilizzato solo con l'istruzione [Select](select-entity-sql.md) .</span><span class="sxs-lookup"><span data-stu-id="a87f4-111">HAVING can be used only with the [SELECT](select-entity-sql.md) statement.</span></span> <span data-ttu-id="a87f4-112">Se non si usa [Group by](group-by-entity-sql.md) , la clausola HAVING si comporta come una clausola WHERE.</span><span class="sxs-lookup"><span data-stu-id="a87f4-112">When [GROUP BY](group-by-entity-sql.md) is not used, HAVING behaves like a WHERE clause.</span></span>  
   
-<span data-ttu-id="d3728-113">La clausola HAVING funziona come la clausola WHERE eccetto per il fatto che viene applicata dopo l'operazione GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="d3728-113">The HAVING clause works like the WHERE clause except that it is applied after the GROUP BY operation.</span></span> <span data-ttu-id="d3728-114">Ciò significa che la clausola HAVING può fare riferimento solo agli alias di raggruppamento e alle aggregazioni, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="d3728-114">This means that the HAVING clause can only make references to grouping aliases and aggregates, as illustrated in the following example:</span></span>
+<span data-ttu-id="a87f4-113">La clausola HAVING funziona come la clausola WHERE eccetto per il fatto che viene applicata dopo l'operazione GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="a87f4-113">The HAVING clause works like the WHERE clause except that it is applied after the GROUP BY operation.</span></span> <span data-ttu-id="a87f4-114">Ciò significa che la clausola HAVING può fare riferimento solo agli alias di raggruppamento e alle aggregazioni, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="a87f4-114">This means that the HAVING clause can only make references to grouping aliases and aggregates, as illustrated in the following example:</span></span>
   
 ```sql  
 SELECT Name, SUM(o.Price * o.Quantity) AS Total FROM orderLines AS o GROUP BY o.Product AS Name  
 HAVING SUM(o.Quantity) > 1  
 ```  
   
- <span data-ttu-id="d3728-115">L'esempio precedente consente di limitare i gruppi esclusivamente a quelli che includono più di un prodotto.</span><span class="sxs-lookup"><span data-stu-id="d3728-115">The previous restricts the groups to only those that include more than one product.</span></span>  
+ <span data-ttu-id="a87f4-115">L'esempio precedente consente di limitare i gruppi esclusivamente a quelli che includono più di un prodotto.</span><span class="sxs-lookup"><span data-stu-id="a87f4-115">The previous restricts the groups to only those that include more than one product.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d3728-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="d3728-116">Example</span></span>  
- <span data-ttu-id="d3728-117">Nella query Entity SQL seguente vengono usati gli operatori HAVING e GROUP BY per specificare una condizione di ricerca per un gruppo o un'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="d3728-117">The following Entity SQL query uses the HAVING and GROUP BY operators to specify a search condition for a group or an aggregate.</span></span> <span data-ttu-id="d3728-118">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="d3728-118">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="d3728-119">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="d3728-119">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="a87f4-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="a87f4-116">Example</span></span>  
+ <span data-ttu-id="a87f4-117">Nella query Entity SQL seguente vengono usati gli operatori HAVING e GROUP BY per specificare una condizione di ricerca per un gruppo o un'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="a87f4-117">The following Entity SQL query uses the HAVING and GROUP BY operators to specify a search condition for a group or an aggregate.</span></span> <span data-ttu-id="a87f4-118">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="a87f4-118">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="a87f4-119">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="a87f4-119">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="d3728-120">Seguire la procedura descritta in [How per: Eseguire una query che restituisce i risultati di PrimitiveType @ no__t-0.</span><span class="sxs-lookup"><span data-stu-id="d3728-120">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="a87f4-120">Attenersi alla procedura descritta in [procedura: eseguire una query che restituisce i risultati di PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="a87f4-120">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2. <span data-ttu-id="d3728-121">Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="d3728-121">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
+2. <span data-ttu-id="a87f4-121">Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="a87f4-121">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-sql[DP EntityServices Concepts#HAVING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#having)]  
   
-## <a name="see-also"></a><span data-ttu-id="d3728-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d3728-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a87f4-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a87f4-122">See also</span></span>
 
-- [<span data-ttu-id="d3728-123">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="d3728-123">Entity SQL Reference</span></span>](entity-sql-reference.md)
-- [<span data-ttu-id="d3728-124">Espressioni di query</span><span class="sxs-lookup"><span data-stu-id="d3728-124">Query Expressions</span></span>](query-expressions-entity-sql.md)
+- [<span data-ttu-id="a87f4-123">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="a87f4-123">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="a87f4-124">Espressioni di query</span><span class="sxs-lookup"><span data-stu-id="a87f4-124">Query Expressions</span></span>](query-expressions-entity-sql.md)

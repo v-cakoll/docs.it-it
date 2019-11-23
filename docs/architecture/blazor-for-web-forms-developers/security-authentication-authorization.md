@@ -11,13 +11,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183861"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="cf6e1-103">Sicurezza: autenticazione e autorizzazione in ASP.NET Web Forms e Blazer</span><span class="sxs-lookup"><span data-stu-id="cf6e1-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="c7ccf-103">Sicurezza: autenticazione e autorizzazione in ASP.NET Web Forms e Blazer</span><span class="sxs-lookup"><span data-stu-id="c7ccf-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="cf6e1-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="cf6e1-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="c7ccf-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="c7ccf-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="cf6e1-105">[Precedente](config.md)
->[Successivo](migration.md)</span><span class="sxs-lookup"><span data-stu-id="cf6e1-105">[Previous](config.md)
+><span data-ttu-id="c7ccf-105">[Precedente](config.md)
+>[Successivo](migration.md)</span><span class="sxs-lookup"><span data-stu-id="c7ccf-105">[Previous](config.md)
 [Next](migration.md)</span></span>

@@ -11,11 +11,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183784"
 ---
-# <a name="state-management"></a><span data-ttu-id="8be72-103">Gestione dello stato</span><span class="sxs-lookup"><span data-stu-id="8be72-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="0ddc6-103">Gestione dello stato</span><span class="sxs-lookup"><span data-stu-id="0ddc6-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="8be72-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="8be72-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="0ddc6-104">*Questo contenuto sarà presto disponibile.*</span><span class="sxs-lookup"><span data-stu-id="0ddc6-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +25,6 @@ ms.locfileid: "71183784"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="8be72-105">[Precedente](pages-routing-layouts.md)
->[Successivo](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="8be72-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="0ddc6-105">[Precedente](pages-routing-layouts.md)
+>[Successivo](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="0ddc6-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>
