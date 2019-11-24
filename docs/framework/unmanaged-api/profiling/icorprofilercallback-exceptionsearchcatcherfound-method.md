@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756176"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445399"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>Metodo ICorProfilerCallback::ExceptionSearchCatcherFound
-Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha individuato un gestore per l'eccezione generata.  
+Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +34,10 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione che contiene il gestore di eccezioni.  
+ [in] The ID of the function that contains the exception handler.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

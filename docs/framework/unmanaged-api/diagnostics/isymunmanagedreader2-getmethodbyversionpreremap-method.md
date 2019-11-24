@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 06b8ebf26794baa1d957cc47d1179283611b62d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2063856389b122b150a2d2744169a4a567592287
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736678"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446444"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Metodo ISymUnmanagedReader2::GetMethodByVersionPreRemap
-Ottiene un metodo del lettore di simboli, dato un token di metodo e un numero di versione di modifica e continuazione. I numeri di versione iniziano da 1 e vengano incrementati ogni volta che il metodo viene modificato in seguito a un'operazione di modifica e continuazione.  
+Gets a symbol reader method, given a method token and an edit-and-continue version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +36,19 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="parameters"></a>Parametri  
  `token`  
- [in] Il token di metadati del metodo.  
+ [in] The method metadata token.  
   
  `version`  
- [in] La versione del metodo.  
+ [in] The method version.  
   
  `pRetVal`  
- [out] Un puntatore al valore restituito [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interfaccia.  
+ [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl. CorSym.h  
+ **Header:** CorSym.idl. CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

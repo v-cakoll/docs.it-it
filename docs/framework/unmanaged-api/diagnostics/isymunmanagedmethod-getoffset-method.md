@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769431"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448943"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Metodo ISymUnmanagedMethod::GetOffset
-Restituisce l'offset all'interno di questo metodo che corrisponde a una determinata posizione all'interno di un documento.  
+Returns the offset within this method that corresponds to a given position within a document.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +37,22 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] Puntatore al documento per cui è richiesto l'offset.  
+ [in] A pointer to the document for which the offset is requested.  
   
  `line`  
- [in] Riga del documento per cui è richiesto l'offset.  
+ [in] The document line for which the offset is requested.  
   
  `column`  
- [in] La colonna di documento per cui è richiesto l'offset.  
+ [in] The document column for which the offset is requested.  
   
  `pRetVal`  
- [out] Un puntatore a un `ULONG32` che riceve gli offset.  
+ [out] A pointer to a `ULONG32` that receives the offsets.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

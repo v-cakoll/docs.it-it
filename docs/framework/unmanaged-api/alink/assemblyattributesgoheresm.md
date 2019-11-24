@@ -1,5 +1,5 @@
 ---
-title: Classe AssemblyAttributesGoHereSM (CompilerServices)
+title: AssemblyAttributesGoHereSM Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4cf9bf39-1527-49e0-a0e9-55e7a018bf66
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01b156ed9c318e71a408ea10f2744911a85faedc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 379ba20ebf675bec71e6e5f5bcfc0dc2fbd1f92c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790338"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446606"
 ---
-# <a name="assemblyattributesgoheresm-class"></a>Classe AssemblyAttributesGoHereSM
+# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM Class
 
 Usato da ALink come segnaposto per archiviare le informazioni sugli attributi personalizzati.
 
@@ -40,7 +38,7 @@ I riferimenti a questo tipo potrebbero essere incorporati in netmodule le cui or
 
 I riferimenti a questo tipo indicano gli attributi personalizzati che sono correlati alla sicurezza e sono multiuso.
 
-Questi tipi sono contrassegnati come "interni" all'interno di .NET Framework e si trovano nel <xref:System.Runtime.CompilerServices> dello spazio dei nomi.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Requisiti
 

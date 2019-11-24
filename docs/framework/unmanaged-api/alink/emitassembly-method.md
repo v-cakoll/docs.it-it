@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2adf53d1e29fda077cdcf7b79891f6271993109
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787586"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446529"
 ---
 # <a name="emitassembly-method"></a>Metodo EmitAssembly
-Crea l'assembly. Chiamare questo metodo dopo la chiusura di tutti gli altri file, ad eccezione del file di assembly. Non chiamare questo metodo quando si producono moduli non associati.  
+Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +35,16 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly.  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 335c25316b34f79b8d02eea5a7dd4ed7994fc754
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780169"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448115"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>Metodo ICorProfilerInfo::GetClassFromToken
-Ottiene l'ID della classe, dato il token di metadati. Questo metodo è obsoleto in .NET Framework versione 2.0. Uso [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) invece.  
+Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,25 +36,25 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] L'ID del modulo che contiene la classe.  
+ [in] The ID of the module that contains the class.  
   
  `typeDef`  
- [in] Un `mdTypeDef` token di metadati che fa riferimento alla classe.  
+ [in] An `mdTypeDef` metadata token that references the class.  
   
  `cTypeArgs`  
- [out] Un puntatore all'ID di classe.  
+ [out] A pointer to the class ID.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo è obsoleto. Usare invece `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` per tutti i tipi.  
+ This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** 1.0, 1.1  
+ **.NET Framework Versions:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Vedere anche
 

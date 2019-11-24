@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043452"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447143"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementazione del pattern di controllo ExpandCollapse di automazione interfaccia utente
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
 
 In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, incluse le informazioni relative a proprietà, metodi ed eventi. Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.
 
@@ -55,9 +55,9 @@ Le proprietà e i metodi seguenti sono obbligatori per l'implementazione di <xre
 
 |Membri obbligatori|Tipo di membro|Note|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Proprietà|Nessuna|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Metodo|Nessuna|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Metodo|Nessuna|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|proprietà|Nessuno|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Metodo|Nessuno|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Metodo|Nessuno|
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|A questo controllo non sono associati eventi; usare questo delegato generico.|
 
 <a name="Exceptions"></a>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046681"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447683"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 
@@ -19,7 +19,7 @@ ms.locfileid: "71046681"
 
 - Gli strumenti da riga di comando [Logman](/windows-server/administration/windows-commands/logman) e [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), inclusi nel sistema operativo Windows.
 
-- Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://go.microsoft.com/fwlink/?LinkId=179509).
+- Gli strumenti [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) in [Windows Performance Toolkit](/windows-hardware/test/wpt/). Per altre informazioni su Xperf, vedere il [blog sulle prestazioni di Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
 
 Per acquisire informazioni sugli eventi CLR, è necessario installare il provider CLR nel computer in uso. Per confermare la corretta installazione del provider, digitare `logman query providers` al prompt dei comandi. Verrà visualizzato un elenco di provider. L'elenco deve contenere una voce relativa al provider CLR, come riportato di seguito.
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Modificare la directory dei messaggi di richiesta nella cartella .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64\<] \v4. NET Version > \). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
+Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
 
 `wevtutil im CLR-ETW.man`
 

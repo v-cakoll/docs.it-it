@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747166"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446939"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Metodo ICorProfilerCallback::Shutdown
-Notifica al profiler che l'applicazione è in corso l'arresto.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +32,14 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Note  
- Il codice del profiler non è possibile chiamare i metodi del [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) dell'interfaccia dopo la `Shutdown` viene chiamato il metodo. Tutte le chiamate a `ICorProfilerInfo` metodi di causare un comportamento indefinito dopo il `Shutdown` restituzione del metodo. Possono comunque si verificano determinati eventi non modificabile dopo l'arresto; il profiler deve prestare attenzione a restituire immediatamente quando ciò si verifica.  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- Il `Shutdown` metodo verrà chiamato solo se l'applicazione gestita che si sta profilando avviata come codice gestito (vale a dire, viene gestito il fotogramma iniziale sullo stack del processo). Se l'applicazione avviata come codice non gestito, ma in un secondo momento un salto nel codice gestito, in modo da creare un'istanza di common language runtime (CLR), quindi `Shutdown` non verranno chiamati. In questi casi, il profiler deve essere inclusa nella relativa libreria un `DllMain` routine che utilizzi il DLL_PROCESS_DETACH value per liberare le risorse ed eseguire l'elaborazione di pulizia dei dati, ad esempio lo svuotamento tracce su disco e così via.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- In generale, il profiler deve far fronte ad arresti imprevisti. Ad esempio, un processo venga arrestato di Win32 `TerminateProcess` metodo (dichiarato in winbase. h). In altri casi, CLR si arresta in determinati thread gestiti (thread in background) senza il recapito dei messaggi di eliminazione per loro.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

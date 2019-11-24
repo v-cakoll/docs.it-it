@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 910f8b7f78b6348ace9036d35c0844f2a64cf433
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763151"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445282"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Metodo ICorProfilerCallback::AppDomainCreationFinished
-Notifica al profiler che un dominio dell'applicazione sia stato creato.  
+Notifies the profiler that an application domain has been created.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Parametri  
  `appDomainId`  
- [in] Identifica il dominio di cui è stato creato.  
+ [in] Identifies the domain which has been created.  
   
  `hrStatus`  
- [in] HRESULT che indica se la creazione del dominio dell'applicazione è stata completata.  
+ [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
   
 ## <a name="remarks"></a>Note  
- L'ID dell'applicazione non è valido per qualsiasi richiesta di informazioni finché il `AppDomainCreationFinished` viene chiamato il metodo.  
+ The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
   
- Alcune parti del caricamento del dominio dell'applicazione potrebbero continuare dopo il `AppDomainCreationFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte della creazione del dominio applicazione ha avuto esito positivo.  
+ Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

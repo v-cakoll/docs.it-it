@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4fd31e6b752e13a5c43198760e9a4d62a8f77d10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913734"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448569"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Enumerazione CorSymSearchPolicyAttributes
-Specifica i criteri da utilizzare durante la ricerca di un lettore di simboli. Queste costanti vengono usate dai metodi [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .  
+Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
   
 > [!IMPORTANT]
-> L'apertura di un file di database di programma (PDB) da un'origine non attendibile costituisce un rischio per la sicurezza.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,13 +43,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Esegue una query nel registro di sistema per individuare i percorsi dei simboli.|  
-|`AllowSymbolServerAccess`|Accede a un server di simboli.|  
-|`AllowOriginalPathAccess`|Cerca nel percorso specificato nella directory di debug.|  
-|`AllowReferencePathAccess`|Cerca il PDB nel punto in cui si trova il file exe.|  
+|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
+|`AllowSymbolServerAccess`|Accesses a symbol server.|  
+|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
+|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780450"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441713"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Metodo IMetaDataImport::EnumMemberRefs
 Enumera i token MemberRef che rappresentano i membri del tipo specificato.  
@@ -41,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore.  
+ [in, out] A pointer to the enumerator.  
   
  `tkParent`  
- [in] Un token ModuleRef, TypeRef, MethodDef o TypeDef per il tipo i cui membri sono da enumerare.  
+ [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
   
  `rMemberRefs`  
- [out] Matrice utilizzata per archiviare i token MemberRef.  
+ [out] The array used to store MemberRef tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMemberRefs`.  
   
  `pcTokens`  
- [out] Il numero effettivo di token MemberRef restituiti in `rMemberRefs`.  
+ [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token MemberRef per enumerare. In tal caso, `pcTokens` è impostato su zero.|  
+|`S_OK`|`EnumMemberRefs` returned successfully.|  
+|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

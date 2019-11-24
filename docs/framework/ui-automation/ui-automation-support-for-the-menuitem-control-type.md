@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 5b9983dda790fbf501b055ea8e592851e61e1e89
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039423"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446711"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo MenuItem
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
 
 In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per il tipo di controllo MenuItem. Viene descritta la struttura ad albero di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] del controllo e vengono descritte le proprietà e i pattern di controllo obbligatori per il tipo di controllo MenuItem.
 
-Un controllo menu consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. In una tipica applicazione di Microsoft Windows, una barra dei menu contiene diverse voci di menu (ad esempio **file**, **modifica**e **finestra**), mentre ogni voce di menu Visualizza un menu. Un menu contiene una raccolta di voci di menu (ad esempio **Nuovo**, **Apri**e **Chiudi**), che può essere espansa per visualizzare altre voci di menu che, se selezionate, consentono di eseguire un'azione specifica. Una voce di menu può trovarsi in un menu, una barra dei menu o una barra degli strumenti.
+Un controllo menu consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. In a typical Microsoft Windows application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu. Un menu contiene una raccolta di voci di menu (ad esempio **Nuovo**, **Apri**e **Chiudi**), che può essere espansa per visualizzare altre voci di menu che, se selezionate, consentono di eseguire un'azione specifica. Una voce di menu può trovarsi in un menu, una barra dei menu o una barra degli strumenti.
 
 Nelle sezioni seguenti vengono definiti la struttura ad albero, le proprietà, i pattern di controllo e gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo MenuItem. I requisiti di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli elenco, ovvero [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
 
@@ -32,9 +32,9 @@ Nella tabella seguente viene illustrata la visualizzazione controlli e la visual
 
 |Visualizzazione controlli|Visualizzazione contenuto|
 |------------------|------------------|
-|MenuItem "?"<br /><br /> <ul><li>Menu (sottomenu della voce di menu della Guida in linea)<br /><br /> <ul><li>MenuItem "Guida in linea"</li><li>MenuItem "Informazioni su Blocco note"</li></ul></li></ul>|MenuItem "?"<br /><br /> -MenuItem "argomenti della Guida"<br />-MenuItem "informazioni su blocco note"|
+|MenuItem "?"<br /><br /> <ul><li>Menu (sottomenu della voce di menu della Guida in linea)<br /><br /> <ul><li>MenuItem "Guida in linea"</li><li>MenuItem "Informazioni su Blocco note"</li></ul></li></ul>|MenuItem "?"<br /><br /> -   MenuItem "Help Topics"<br />-   MenuItem "About Notepad"|
 
-La visualizzazione controlli del controllo MenuItem presenta la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sopra illustrata. Si noti che la voce di menu della **Guida** è inclusa per illustrare meglio la struttura in un tipico menu della gerarchia di sottomenu.
+La visualizzazione controlli del controllo MenuItem presenta la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sopra illustrata. Note that the **Help** menu item is included to better illustrate the structure in a typical menu to submenu hierarchy.
 
 Per la visualizzazione contenuto, la voce Menu è assente dall'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] perché non apporta informazioni significative per l'utente finale.
 
@@ -42,7 +42,7 @@ Per la visualizzazione contenuto, la voce Menu è assente dall'albero di [!INCLU
 
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie
 
-La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli MenuItem. Per ulteriori informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [UI Automation Properties for clients](ui-automation-properties-for-clients.md).
+La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli MenuItem. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
 |proprietà|Value|Descrizione|
 |--------------|-----------|-----------------|

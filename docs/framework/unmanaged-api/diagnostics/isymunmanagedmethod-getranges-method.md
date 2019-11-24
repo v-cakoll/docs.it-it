@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769380"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448933"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Metodo ISymUnmanagedMethod::GetRanges
-Data una posizione in un documento, restituisce una matrice di coppie di offset iniziale e finale che corrispondono agli intervalli di Microsoft intermediate language (MSIL) che la posizione all'interno del metodo. La matrice è una matrice di interi e ha il formato [inizio, fine, inizio, fine]. Il numero di coppie di intervallo è la lunghezza della matrice divisa per 2.  
+Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] Il documento per cui è richiesto l'offset.  
+ [in] The document for which the offset is requested.  
   
  `line`  
- [in] Riga del documento corrispondente agli intervalli.  
+ [in] The document line corresponding to the ranges.  
   
  `column`  
- [in] Colonna del documento corrispondente agli intervalli.  
+ [in] The document column corresponding to the ranges.  
   
  `cRanges`  
  [in] Dimensione della matrice `ranges`.  
   
  `pcRanges`  
- [out] Un puntatore a un `ULONG32` che riceve le dimensioni del buffer necessaria per contenere gli intervalli.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
   
  `ranges`  
- [out] Puntatore al buffer che riceve gli intervalli.  
+ [out] A pointer to the buffer that receives the ranges.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6b71b620c5e41a6d16ca11370010c8353cdbd6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042504"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448798"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questa sezione sono contenute le panoramiche e le procedure per lo sviluppo di client di automazione interfaccia utente.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Automazione interfaccia utente e ridimensionamento schermo](ui-automation-and-screen-scaling.md)  
  [Supporto per automazione interfaccia utente dei controlli standard](ui-automation-support-for-standard-controls.md)  
  [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "71042504"
  [Problemi relativi al threading di automazione interfaccia utente](ui-automation-threading-issues.md)  
  [Procedure relative alle proprietà](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Windows.Automation>

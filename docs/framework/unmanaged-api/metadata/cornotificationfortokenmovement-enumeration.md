@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781692"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450150"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Enumerazione CorNotificationForTokenMovement
-Specifica le notifiche che verranno inviate al client API dei metadati quando si verifica una modifica del mapping dei token.  
+Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,41 +59,41 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Invia una notifica quando `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, o `mdFieldDef` Sposta i token.|  
-|`MDNotifyAll`|Inviare una notifica quando si sposta tutti i token.|  
-|`MDNotifyNone`|Non notificano quando spostano i token.|  
-|`MDNotifyMethodDef`|Invia una notifica quando un `mdMethodDef` passa il token.|  
-|`MDNotifyMemberRef`|Invia una notifica quando un `mdMemberRef` passa il token.|  
-|`MDNotifyFieldDef`|Invia una notifica quando un `mdFieldDef` passa il token.|  
-|`MDNotifyTypeRef`|Invia una notifica quando un `mdTypeRef` passa il token.|  
-|`MDNotifyTypeDef`|Invia una notifica quando un `mdTypeDef` passa il token.|  
-|`MDNotifyParamDef`|Invia una notifica quando un `mdParamDef` passa il token.|  
-|`MDNotifyInterfaceImpl`|Invia una notifica quando un `mdInterfaceImpl` passa il token.|  
-|`MDNotifyProperty`|Invia una notifica quando un `mdProperty` passa il token.|  
-|`MDNotifyEvent`|Invia una notifica quando un `mdEvent` passa il token.|  
-|`MDNotifySignature`|Invia una notifica quando un `mdSignature` passa il token.|  
-|`MDNotifyTypeSpec`|Invia una notifica quando un `mdTypeSpec` passa il token.|  
-|`MDNotifyCustomAttribute`|Invia una notifica quando un `mdCustomAttribute` passa il token.|  
-|`MDNotifySecurityValue`|Invia una notifica quando un `mdSecurityValue` passa il token.|  
-|`MDNotifyPermission`|Invia una notifica quando un `mdPermission` passa il token.|  
-|`MDNotifyModuleRef`|Invia una notifica quando un `mdModuleRef` passa il token.|  
-|`MDNotifyNameSpace`|Invia una notifica quando un `mdNameSpace` passa il token.|  
-|`MDNotifyAssemblyRef`|Invia una notifica quando un `mdAssemblyRef` passa il token.|  
-|`MDNotifyFile`|Invia una notifica quando un `mdFile` passa il token.|  
-|`MDNotifyExportedType`|Invia una notifica quando un `mdExportedType` passa il token.|  
-|`MDNotifyResource`|Invia una notifica quando un `mdManifestResource` passa il token.|  
+|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
+|`MDNotifyAll`|Notify when any token moves.|  
+|`MDNotifyNone`|Do not notify when tokens move.|  
+|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
+|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
+|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
+|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
+|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
+|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
+|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
+|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
+|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
+|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
+|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
+|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
+|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
+|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
+|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
+|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
+|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
+|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
+|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
+|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
   
 ## <a name="remarks"></a>Note  
- Un token può essere mappato nuovamente (che è stato spostato) durante un'unione dei metadati.  
+ A token may be re-mapped (that is, moved) during a metadata merge.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

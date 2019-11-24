@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 223ad57f0b317bf75778d4e5355ec129185f5a29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753897"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449495"
 ---
-# <a name="corprffunctionargumentrange-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_RANGE
+# <a name="cor_prf_function_argument_range-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_RANGE
 Rappresenta un blocco di argomenti della funzione archiviati in modo contiguo da sinistra a destra in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,17 +33,17 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 } COR_PRF_FUNCTION_ARGUMENT_RANGE;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Membri|Descrizione|  
+|Members|Descrizione|  
 |-------------|-----------------|  
-|`startAddress`|Indirizzo iniziale del blocco.|  
-|`length`|La lunghezza del blocco contiguo.|  
+|`startAddress`|The starting address of the block.|  
+|`length`|The length of the contiguous block.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Libreria:** CorGuids.lib  
   

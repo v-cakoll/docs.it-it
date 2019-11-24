@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 706ea37101f9f961e92d8cef2cf508c1dd0d56c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781782"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450238"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>Enumerazione CorLocalRefPreservation
 Contiene valori di flag per il trattamento dei riferimenti locali.  
@@ -37,18 +35,18 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Non Preserve riferimenti locali.|  
-|`MDPreserveLocalTypeRef`|Mantenere i riferimenti ai tipi locali.|  
-|`MDPreserveLocalMemberRef`|Mantenere i riferimenti membro locale.|  
+|`MDPreserveLocalRefsNone`|Preserve no local references.|  
+|`MDPreserveLocalTypeRef`|Preserve local type references.|  
+|`MDPreserveLocalMemberRef`|Preserve local member references.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

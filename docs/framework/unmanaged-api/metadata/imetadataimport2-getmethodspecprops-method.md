@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782288"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445249"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>Metodo IMetaDataImport2::GetMethodSpecProps
-Ottiene il token di firma dei metadati del metodo fa riferimento il MethodSpec Neobsahuje specificato.  
+Gets the metadata signature of the method referenced by the specified MethodSpec token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +38,23 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>Parametri  
  `mi`  
- [in] Token MethodSpec Neobsahuje che rappresenta la creazione dell'istanza del metodo.  
+ [in] A MethodSpec token that represents the instantiation of the method.  
   
  `tkParent`  
- [out] Puntatore al token MethodDef o MethodRef che rappresenta la definizione del metodo.  
+ [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
   
  `ppvSigBlob`  
- [out] Un puntatore per la firma binaria dei metadati del metodo.  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out] Le dimensioni, in byte, di `ppvSigBlob`.  
+ [out] The size, in bytes, of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e95255479792c7056bee7ee4f6c507e0f41eb6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776793"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449211"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Metodo ISymUnmanagedDocument::FindClosestLine
-Restituisce la riga più vicina che rappresenta un punto di sequenza, data una riga in questo documento che possa o non sia un punto di sequenza.  
+Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>Parametri  
  `line`  
- [in] Una riga in questo documento.  
+ [in] A line in this document.  
   
  `pRetVal`  
- [out] Puntatore a una variabile che riceve la riga.  
+ [out] A pointer to a variable that receives the line.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>Vedere anche
 

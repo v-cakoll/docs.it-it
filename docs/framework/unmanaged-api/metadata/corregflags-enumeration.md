@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756210"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450108"
 ---
 # <a name="corregflags-enumeration"></a>Enumerazione CorRegFlags
-Fornisce i valori di flag usati per la registrazione quando si installa un modulo o un'immagine composita.  
+Provides flag values used for registration when installing a module or composite image.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +35,20 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`regNoCopy`|Specifica che i file non devono essere copiati nella destinazione.|  
-|`regConfig`|Specifica che il modulo o un insieme è una configurazione.|  
-|`regHasRefs`|Specifica che il modulo o un insieme contiene riferimenti a classi.|  
+|`regNoCopy`|Specifies that files should not be copied into the destination.|  
+|`regConfig`|Specifies that the module or composite is a configuration.|  
+|`regHasRefs`|Specifies that the module or composite has class references.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

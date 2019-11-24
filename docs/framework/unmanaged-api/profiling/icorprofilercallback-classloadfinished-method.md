@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745446"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445125"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Metodo ICorProfilerCallback::ClassLoadFinished
-Notifica al profiler che una classe ha terminato il caricamento.  
+Notifies the profiler that a class has finished loading.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] Identifica la classe che è stata caricata.  
+ [in] Identifies the class that was loaded.  
   
  `hrStatus`  
- [in] HRESULT che indica se la classe sia stato caricato correttamente.  
+ [in] An HRESULT that indicates whether the class loaded successfully.  
   
 ## <a name="remarks"></a>Note  
- Il valore di `classId` non è valido per una richiesta di informazioni finché non la `ClassLoadFinished` viene chiamato il metodo.  
+ The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
   
- Alcune parti del caricamento della classe potrebbero continuare dopo il `ClassLoadFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte del caricamento della classe ha avuto esito positivo.  
+ Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

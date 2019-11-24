@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781961"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450092"
 ---
 # <a name="imetadataimportenummethods-method"></a>Metodo IMetaDataImport::EnumMethods
 Enumera i token MethodDef che rappresentano i metodi del tipo specificato.  
@@ -41,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in] Token TypeDef che rappresenta il tipo con i metodi da enumerare.  
+ [in] A TypeDef token representing the type with the methods to enumerate.  
   
  `rMethods`  
- [out] Matrice in cui archiviare i token MethodDef.  
+ [out] The array to store the MethodDef tokens.  
   
  `cMax`  
- [in] Le dimensioni massime di MethodDef `rMethods` matrice.  
+ [in] The maximum size of the MethodDef `rMethods` array.  
   
  `pcTokens`  
- [out] Il numero di token MethodDef restituiti in `rMethods`.  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token MethodDef per enumerare. In tal caso, `pcTokens` è uguale a zero.|  
+|`S_OK`|`EnumMethods` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

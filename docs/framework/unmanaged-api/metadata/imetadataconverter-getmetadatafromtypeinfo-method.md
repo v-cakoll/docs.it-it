@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d44484bb-23a3-49c3-9e46-69d0d9ab4f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 906ab3603d9a4926642848b547a793f129f949ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df7be11e8f275824fca658a9604178e7cf28e3ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782039"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436300"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>Metodo IMetaDataConverter::GetMetaDataFromTypeInfo
-Ottiene un puntatore a un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) istanza che rappresenta la firma dei metadati della libreria dei tipi a cui fa riferimento l'oggetto specificato `ITypeInfo` istanza.  
+Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,17 +36,17 @@ HRESULT GetMetaDataFromTypeInfo (
   
 ## <a name="parameters"></a>Parametri  
  `pITI`  
- [in] Un puntatore a un `ITypeInfo` oggetto che fa riferimento alla libreria dei tipi.  
+ [in] A pointer to an `ITypeInfo` object that refers to the type library.  
   
  `ppMDI`  
- [out] Un puntatore a una posizione che riceve l'indirizzo del `IMetaDataImport` istanza che rappresenta la firma dei metadati.  
+ [out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

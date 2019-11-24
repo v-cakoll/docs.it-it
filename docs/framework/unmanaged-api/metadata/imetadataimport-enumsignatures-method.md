@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58fa2a6d34f1f3627378c1355a1a292b665899ee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dbbdcc9d0fb9f0a8d2a64edfa4a0ad92570933c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756405"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450011"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Metodo IMetaDataImport::EnumSignatures
 Enumera i token Signature che rappresentano le firme autonome nell'ambito corrente.  
@@ -40,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rSignatures`  
- [out] Matrice utilizzata per archiviare i token di firma.  
+ [out] The array used to store the Signature tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rSignatures`.  
   
  `pcSignatures`  
- [out] Il numero di token di firma restituita `rSignatures`.  
+ [out] The number of Signature tokens returned in `rSignatures`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In tal caso, `pcSignatures` è uguale a zero.|  
+|`S_OK`|`EnumSignatures` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
   
 ## <a name="remarks"></a>Note  
- I token di firma creati tramite il [GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) (metodo).  
+ The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

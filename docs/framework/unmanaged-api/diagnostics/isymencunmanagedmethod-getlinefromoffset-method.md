@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776889"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448647"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>Metodo ISymENCUnmanagedMethod::GetLineFromOffset
-Ottiene le informazioni della riga associate a un offset. Se il parametro offset (`dwOffset`) non è un punto di sequenza, questo metodo ottiene le informazioni della riga associate all'offset precedente.  
+Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parametri  
  `dwOffset`  
- [in] Oggetto `ULONG32` che contiene l'offset.  
+ [in] A `ULONG32` that contains the offset.  
   
  `pline`  
- [out] Un puntatore a un `ULONG32` che riceve la riga.  
+ [out] A pointer to a `ULONG32` that receives the line.  
   
  `pcolumn`  
- [out] Un puntatore a un `ULONG32` che riceve la colonna.  
+ [out] A pointer to a `ULONG32` that receives the column.  
   
  `pendLine`  
- [out] Un puntatore a un `ULONG32` che riceve la riga finale.  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
  `pendColumn`  
- [out] Un puntatore a un `ULONG32` che riceve la colonna finale.  
+ [out] A pointer to a `ULONG32` that receives the end column.  
   
  `pdwStartOffset`  
- [out] Un puntatore a un `ULONG32` che riceve il punto di sequenza associata.  
+ [out] A pointer to a `ULONG32` that receives the associated sequence point.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

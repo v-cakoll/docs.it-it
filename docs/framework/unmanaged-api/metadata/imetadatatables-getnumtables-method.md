@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb26a96c46b01a2981afba0ac6b405c0b50f6d9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab864b251a989056bc34b2c7c6658964556f9ac1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781425"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449508"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>Metodo IMetaDataTables::GetNumTables
-Ottiene il numero di tabelle nell'ambito dell'oggetto corrente `IMetaDataTables` istanza.  
+Gets the number of tables in the scope of the current `IMetaDataTables` instance.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +35,14 @@ HRESULT GetNumTables (
   
 ## <a name="parameters"></a>Parametri  
  `pcTables`  
- [out] Puntatore al numero di tabelle nell'ambito dell'istanza corrente.  
+ [out] A pointer to the number of tables in the current instance scope.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

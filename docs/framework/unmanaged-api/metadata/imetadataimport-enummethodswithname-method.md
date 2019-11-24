@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0817288040550b5f4c3c4ec063f6a7fdb004137
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779728"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450055"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>Metodo IMetaDataImport::EnumMethodsWithName
 Enumera i metodi che hanno il nome specificato e che sono definiti dal tipo a cui fa riferimento il token TypeDef specificato.  
@@ -42,39 +40,39 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in] Token TypeDef che rappresenta il tipo i cui metodi per enumerare.  
+ [in] A TypeDef token representing the type whose methods to enumerate.  
   
  `szName`  
- [in] Il nome che limita l'ambito dell'enumerazione.  
+ [in] The name that limits the scope of the enumeration.  
   
  `rMethods`  
- [out] Matrice utilizzata per archiviare i token MethodDef.  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMethods`.  
   
  `pcTokens`  
- [out] Il numero di token MethodDef restituiti in `rMethods`.  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo enumera i campi e metodi, ma non le proprietà o eventi. A differenza [EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` Elimina tutti i token che non è il nome specificato.  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In tal caso, `pcTokens` è uguale a zero.|  
+|`S_OK`|`EnumMethodsWithName` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

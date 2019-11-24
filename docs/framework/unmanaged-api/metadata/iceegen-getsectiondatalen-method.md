@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448084"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>Metodo ICeeGen::GetSectionDataLen
-Ottiene la lunghezza della sezione specificata.  
+Gets the length of the specified section.  
   
- Questo metodo è obsoleto e non deve essere utilizzato.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +38,20 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- [in] La sezione di dati verrà recuperata la cui lunghezza.  
+ [in] The data section whose length will be retrieved.  
   
  `dataLen`  
- [out] La lunghezza restituita della sezione specificata.  
+ [out] The returned length of the specified section.  
   
 ## <a name="remarks"></a>Note  
- Chiamare `GetSectionDataLen` solo se si hanno requisiti di sezione speciale che non sono gestiti tramite altri metodi.  
+ Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

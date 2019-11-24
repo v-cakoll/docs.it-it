@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b7a4c8dfc9e082b29d462b835886d6bf252bb39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2fe4735b7f218e89577702cde04d8d4f4de2a971
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753675"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447363"
 ---
-# <a name="corprfgcrootkind-enumeration"></a>Enumerazione COR_PRF_GC_ROOT_KIND
-Indica il tipo di radice di garbage collection che è esposto dal [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+# <a name="cor_prf_gc_root_kind-enumeration"></a>Enumerazione COR_PRF_GC_ROOT_KIND
+Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|La radice è una variabile nello stack.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|La radice è una voce nella coda del finalizzatore.|  
-|`COR_PRF_GC_ROOT_HANDLE`|La radice è un handle di garbage collection.|  
-|`COR_PRF_GC_ROOT_OTHER`|Il tipo di radice non è specificato.|  
+|`COR_PRF_GC_ROOT_STACK`|The root is a variable on the stack.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|The root is an entry in the finalizer queue.|  
+|`COR_PRF_GC_ROOT_HANDLE`|The root is a garbage collection handle.|  
+|`COR_PRF_GC_ROOT_OTHER`|The kind of root is unspecified.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

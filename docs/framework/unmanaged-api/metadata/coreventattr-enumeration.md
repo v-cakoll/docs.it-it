@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc2b3281-3820-487e-930d-350b66dc6417
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec2972605c40f4ba292f5a5f58d6d3efed53f966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781873"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443567"
 ---
 # <a name="coreventattr-enumeration"></a>Enumerazione CorEventAttr
 Contiene valori che descrivono i metadati di un evento.  
@@ -39,18 +37,18 @@ typedef enum CorEventAttr {
 } CorEventAttr;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`evSpecialName`|Specifica che l'evento è speciale e che il relativo nome viene descritto come.|  
-|`evReservedMask`|Riservato per uso interno da common language runtime.|  
-|`evRTSpecialName`|Specifica che common language runtime deve verificare la codifica il nome dell'evento.|  
+|`evSpecialName`|Specifies that the event is special, and that its name describes how.|  
+|`evReservedMask`|Reserved for internal use by the common language runtime.|  
+|`evRTSpecialName`|Specifies that the common language runtime should check the encoding of the event name.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

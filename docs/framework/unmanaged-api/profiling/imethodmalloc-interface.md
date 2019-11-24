@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935653"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447557"
 ---
 # <a name="imethodmalloc-interface"></a>Interfaccia IMethodMalloc
-Fornisce un metodo per allocare memoria per un nuovo corpo della funzione MSIL (Microsoft Intermediate Language).  
+Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
   
 > [!NOTE]
-> L' `IMethodMalloc` interfaccia è un semplice allocatore di memoria. Consente di allocare memoria, ma non di liberarla.  
+> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta di allocare una quantità specificata di memoria per un nuovo corpo della funzione MSIL.|  
+|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
   
 ## <a name="remarks"></a>Note  
- Ogni allocatore è specifico del modulo e garantisce che il corpo della funzione si trovi in corrispondenza di un offset positivo rispetto alla base del modulo. La memoria al di sopra della base di un modulo può essere preziosa, quindi l'allocatore deve essere usato per allocare memoria solo per il corpo di una funzione.  
+ Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf. idl, CorProf. h  
+ **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

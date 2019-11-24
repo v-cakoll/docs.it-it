@@ -2,12 +2,12 @@
 title: Isolamento rete per app di Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447425"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
 Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> possono essere usate per sviluppare app di Windows Store o app desktop. Quando vengono usate in un'app di Windows Store, le classi in questi spazi dei nomi sono interessate dall'isolamento rete, parte del modello di sicurezza delle applicazioni usato da [!INCLUDE[win8](../../../includes/win8-md.md)]. Le funzionalità di rete appropriate devono essere abilitate nel manifesto dell'app per un'app di Windows Store affinché il sistema consenta l'accesso alla rete.  
@@ -23,13 +23,13 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
   
 4. Distribuire ed eseguire l'app per testarla usando gli strumenti di isolamento rete forniti per la risoluzione dei problemi.  
   
- Per informazioni più dettagliate su come configurare le funzionalità di rete e gli strumenti di isolamento usati per la risoluzione dei problemi dell'isolamento rete, vedere [Come impostare le funzionalità di rete](https://go.microsoft.com/fwlink/?LinkID=228265) nella documentazione per gli sviluppatori di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Connecting to a web service](https://go.microsoft.com/fwlink/?LinkID=245696) (Connessione a servizi Web)
-- [Linee guida ed elenco di controllo per l'isolamento rete](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [Avvio rapido: Connecting using HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697) (Connessione tramite HttpClient)
-- [How to use HttpClient handlers](https://go.microsoft.com/fwlink/?LinkId=245699) (Come usare i gestori HttpClient)
-- [How to secure HttpClient connections](https://go.microsoft.com/fwlink/?LinkId=245698) (Come proteggere le connessioni HttpClient)
-- [HttpClient Sample](https://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)
+- [Connecting to a web service](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10)) (Connessione a servizi Web)
+- [Linee guida ed elenco di controllo per l'isolamento rete](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Quickstart: Connecting using HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10)) (Guida introduttiva: Connessione tramite HttpClient)
+- [How to use HttpClient handlers](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10)) (Come usare i gestori HttpClient)
+- [How to secure HttpClient connections](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10)) (Come proteggere le connessioni HttpClient)
+- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664) (Esempio con HttpClient)

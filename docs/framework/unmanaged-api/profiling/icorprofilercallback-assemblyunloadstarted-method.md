@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cfcf2c74a2a44bd0539bf78e237e42553696b16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762984"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445132"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Metodo ICorProfilerCallback::AssemblyUnloadStarted
-Notifica al profiler che un assembly è stato scaricato.  
+Notifies the profiler that an assembly is being unloaded.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +34,13 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Parametri  
  `assemblyId`  
- [in] Identifica l'assembly che sta per essere scaricato.  
+ [in] Identifies the assembly that is being unloaded.  
   
 ## <a name="remarks"></a>Note  
- Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo il `AssemblyUnloadStarted` restituzione del metodo, ovvero si tratta di completamento per ottenere informazioni relative a questo assembly.  
+ The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

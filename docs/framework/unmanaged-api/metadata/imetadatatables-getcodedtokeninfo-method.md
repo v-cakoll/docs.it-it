@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434064"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Metodo IMetaDataTables::GetCodedTokenInfo
-Ottiene un puntatore a una matrice dei token associato con l'indice di riga specificato.  
+Gets a pointer to an array of tokens associated with the specified row index.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Parametri  
  `ixCdTkn`  
- [in] Tipo di token codificato da restituire.  
+ [in] The kind of coded token to return.  
   
  `pcTokens`  
- [out] Un puntatore alla lunghezza di `ppTokens`.  
+ [out] A pointer to the length of `ppTokens`.  
   
  `ppTokens`  
- [out] Un puntatore a un puntatore a una matrice che contiene l'elenco dei token restituito.  
+ [out] A pointer to a pointer to an array that contains the list of returned tokens.  
   
  `ppName`  
- [out] Un puntatore a un puntatore al nome del token in `ixCdTkn`.  
+ [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

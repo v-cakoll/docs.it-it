@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964633"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445035"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>Metodo ICorProfilerCallback::COMClassicVTableDestroyed
-Notifica al profiler che un vtable di interoperabilità COM viene eliminato definitivamente.  
+Notifies the profiler that a COM interop vtable is being destroyed.  
   
 > [!NOTE]
-> Questo callback probabilmente non si verificherà mai, perché la distruzione di vtable si verifica molto vicino alla chiusura.  
+> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +39,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parametri  
  `wrappedClassId`  
- in ID della classe per cui è stato creato questo vtable.  
+ [in] The ID of the class for which this vtable was created.  
   
  `implementedIID`  
- in ID dell'interfaccia implementata dalla classe. Questo valore può essere NULL se l'interfaccia è solo interna.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- in Puntatore all'inizio di vtable.  
+ [in] A pointer to the start of the vtable.  
   
 ## <a name="remarks"></a>Note  
- Il profiler non deve bloccarsi nella sua implementazione di questo metodo perché lo stack potrebbe non trovarsi in uno stato che consente Garbage Collection e pertanto non è possibile abilitare il Garbage Collection preemptive. Se il profiler si blocca qui e si tenta di Garbage Collection, il runtime si bloccherà fino a quando questo callback non viene restituito.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- L'implementazione del profiler di questo metodo non deve chiamare nel codice gestito o in alcun modo causare un'allocazione della memoria gestita.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf. idl, CorProf. h  
+ **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

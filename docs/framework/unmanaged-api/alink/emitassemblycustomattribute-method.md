@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777448"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446512"
 ---
 # <a name="emitassemblycustomattribute-method"></a>Metodo EmitAssemblyCustomAttribute
-Chiamare per impostare gli attributi personalizzati a livello di assembly.  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,34 +41,34 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly.  
+ ID of the assembly.  
   
  `FileToken`  
- File che defilerà l'attributo. Può essere null se `AssemblyID` non indica un netmodule non associato.  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- Tipo dell'attributo personalizzato.  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- Dati del valore personalizzato.  
+ Custom value data.  
   
  `cbCustomValue`  
- Lunghezza dei dati del valore personalizzato.  
+ Length of custom value data.  
   
  `bSecurity`  
- TRUE se l'attributo personalizzato è correlato alla firma dell'assembly.  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- TRUE se devono essere emessi più attributi.  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

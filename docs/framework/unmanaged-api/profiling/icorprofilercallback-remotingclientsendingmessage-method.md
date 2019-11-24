@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782900"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445795"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Metodo ICorProfilerCallback::RemotingClientSendingMessage
-Notifica al profiler che il client stia inviando una richiesta al server.  
+Notifies the profiler that the client is sending a request to the server.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,21 +35,21 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parametri  
  `pCookie`  
- [in] Un valore che corrisponde al valore fornito [RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) in queste condizioni:  
+ [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
   
-- I cookie GUID di .NET Remoting sono attivi.  
+- Remoting GUID cookies are active.  
   
-- Il canale ha esito positivo la trasmissione del messaggio.  
+- The channel succeeds in transmitting the message.  
   
-- I cookie GUID sono attivi nel processo del lato server.  
+- GUID cookies are active on the server-side process.  
   
- Ciò consente l'associazione semplice delle chiamate remote e la creazione di uno stack di chiamate logici.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] Valore che rappresenta `true` se la chiamata è asincrona; in caso contrario, `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

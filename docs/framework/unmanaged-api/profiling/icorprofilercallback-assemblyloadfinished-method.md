@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763038"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445175"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>Metodo ICorProfilerCallback::AssemblyLoadFinished
-Notifica al profiler che un assembly ha terminato il caricamento.  
+Notifies the profiler that an assembly has finished loading.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Parametri  
  `assemblyId`  
- [in] Identifica l'assembly che è stato caricato.  
+ [in] Identifies the assembly that was loaded.  
   
  `hrStatus`  
- [in] HRESULT che indica se l'assembly è stato caricato correttamente.  
+ [in] An HRESULT that indicates whether the assembly finished loading successfully.  
   
 ## <a name="remarks"></a>Note  
- Il valore di `assemblyId` non è valido per una richiesta di informazioni finché non la `AssemblyLoadFinished` viene chiamato il metodo.  
+ The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
   
- Alcune parti del caricamento dell'assembly potrebbero continuare dopo il `AssemblyLoadFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte del caricamento dell'assembly ha avuto esito positivo.  
+ Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

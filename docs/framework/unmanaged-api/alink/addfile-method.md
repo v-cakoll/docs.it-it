@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787683"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446679"
 ---
 # <a name="addfile-method"></a>Metodo AddFile
-Aggiunge file all'assembly. Può essere usato anche per creare moduli non associati.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,28 +39,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID univoco dell'assembly da incrementare.  
+ Unique ID of the assembly to be augmented.  
   
  `pszFilename`  
- Nome completo del file da aggiungere.  
+ Fully qualified name of file to be added.  
   
  `dwFlags`  
- Flag FileDef com+, ad `ffContainsNoMetaData` esempio `ffWriteable`e. `dwFlags`viene passato al [Metodo DefineFile](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Interfaccia di [interfaccia IMetaDataEmit](../metadata/imetadataemit-interface.md) da usare per creare i metadati, se necessario.  
+ [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
   
  `pFileToken`  
- Puntatore alla posizione in cui verrà archiviato l'ID univoco del file aggiunto.  
+ Pointer to where the unique ID of the added file will be stored.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

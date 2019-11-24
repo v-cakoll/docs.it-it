@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54789003f7454a65449e55ea4d990edd672d9c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774691"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448998"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>Metodo ISymUnmanagedENCUpdate::UpdateMethodLines
-Consente di aggiornare le informazioni sulla riga per un metodo che non è stato ricompilato, ma le cui righe sono spostati in modo indipendente. Valore delta di ogni istruzione è consentito.  
+Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently. A delta for each statement is allowed.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +36,19 @@ HRESULT UpdateMethodLines(
   
 ## <a name="parameters"></a>Parametri  
  `mdMethodToken`  
- [in] I metadati del token del metodo.  
+ [in] The metadata of the method token.  
   
  `pDeltas`  
- [in] Matrice di `INT32` valori che indica i valori differenziali per ogni punto di sequenza nel metodo.  
+ [in] An array of `INT32` values that indicates deltas for each sequence point in the method.  
   
  `cDeltas`  
- [in] Oggetto `ULONG` che contiene la dimensione del `pDeltas` parametro.  
+ [in] A `ULONG` containing the size of the `pDeltas` parameter.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

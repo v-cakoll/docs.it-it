@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74e70f58600205d44a9ba052981b2cc67b3a44ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d01b864be231e5b0a3fd72dc2f3636a87c8cae83
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753817"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448636"
 ---
-# <a name="corprfgcgeneration-enumeration"></a>Enumerazione COR_PRF_GC_GENERATION
-Identifica una generazione di garbage collection.  
+# <a name="cor_prf_gc_generation-enumeration"></a>Enumerazione COR_PRF_GC_GENERATION
+Identifies a garbage-collection generation.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,24 +35,24 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|L'oggetto viene archiviato come generazione 0.|  
-|`COR_PRF_GC_GEN_1`|L'oggetto viene archiviato come generazione 1.|  
-|`COR_PRF_GC_GEN_2`|L'oggetto viene archiviato come generazione 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|L'oggetto viene archiviato nell'heap degli oggetti di grandi dimensioni.|  
+|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
+|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
+|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
   
 ## <a name="remarks"></a>Note  
- Il garbage collector consente di migliorare le prestazioni di gestione della memoria suddividendo gli oggetti in base all'età generazioni. Attualmente, il garbage collector Usa tre generazioni, numerate 0, 1 e 2, oltre a un segmento dell'heap speciale che viene utilizzato per oggetti di grandi dimensioni. Gli oggetti la cui dimensione è maggiore di un particolare valore vengono archiviati nell'heap degli oggetti di grandi dimensioni. Gli altri oggetti allocati iniziano appartengono alla generazione 0. Tutti gli oggetti esistenti dopo la garbage collection nella generazione 0 vengono promossi alla generazione 1. Gli oggetti che esistono dopo la garbage collection nella generazione 1 promossi alla generazione 2.  
+ The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
   
- L'uso di generazioni significa che il garbage collector deve usare solo un subset degli oggetti allocati in qualsiasi momento.  
+ The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
   
- Il `COR_PRF_GC_GENERATION` enumerazione viene utilizzata per il [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struttura.  
+ The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

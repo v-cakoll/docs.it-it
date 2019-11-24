@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0cd154ac90418dd0f6f476151686ff670c01c98c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632239"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448729"
 ---
 # <a name="enumimporttypes-method"></a>Metodo EnumImportTypes
 
-Enumera ogni tipo in ogni ambito.
+Enumerates each type in each scope.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,27 +40,27 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>Parametri
 
 `hEnum`\
-Handle per l'enumeratore.
+Handle for enumerator.
 
 `dwMax`\
-Numero massimo di tipi da recuperare.
+Maximum number of types to retrieve.
 
 `aTypeDefs`\
-Riceve i token dei tipi, non deve superare `dwMax`.
+Receives type tokens, not to exceed `dwMax`.
 
 `pdwCount`\
-Riceve il numero effettivo di tipo in `aTypeDefs`.
+Receives actual number of type in `aTypeDefs`.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK se il metodo ha esito positivo.
+Returns S_OK if the method succeeds.
 
 ## <a name="requirements"></a>Requisiti
 
-Richiede alink.h
+Requires alink.h
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

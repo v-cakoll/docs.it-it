@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446488"
 ---
 # <a name="emitmanifest-method"></a>Metodo EmitManifest
-Genera il manifesto finale. Chiamare questo metodo dopo l'importazione di tutti gli altri file e l'impostazione di tutte le opzioni. Non chiamare questo metodo per i moduli non associati.  
+Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +37,22 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly.  
+ ID of the assembly.  
   
  `pdwReserveSize`  
- Riceve le dimensioni da riservare nel file di assembly, recuperate dalla [funzione StrongNameSignatureSize](../strong-naming/strongnamesignaturesize-function.md).  
+ Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- Riceve facoltativamente il token del manifesto dell'assembly.  
+ Optionally receives the assembly manifest token.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

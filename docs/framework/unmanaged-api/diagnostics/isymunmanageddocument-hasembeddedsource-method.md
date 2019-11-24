@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 459a24e2ed9b97a67dc0266231fdfc32a9c853a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533d8a5481fe9ba7e7e65775229156a9cc3cf4d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776658"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449117"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Metodo ISymUnmanagedDocument::HasEmbeddedSource
-Restituisce `true` se il documento di origine è incorporata nei simboli di debug; in caso contrario, restituisce `false`.  
+Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +34,10 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] Un puntatore a una variabile che indica se il documento di origine è incorporata nei simboli di debug.  
+ [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo.  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Vedere anche
 

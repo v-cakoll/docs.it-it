@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446367"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Metodo ISymUnmanagedScope::GetChildren
-Ottiene gli elementi figlio di questo ambito.  
+Gets the children of this scope.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,19 +37,19 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parametri  
  `cChildren`  
- [in] Oggetto `ULONG32` che indica le dimensioni del `children` matrice.  
+ [in] A `ULONG32` that indicates the size of the `children` array.  
   
  `pcChildren`  
- [out] Un puntatore a un `ULONG32` che riceve le dimensioni del buffer necessaria per contenere gli elementi figlio.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
   
  `children`  
- [out] La matrice restituita di elementi figlio.  
+ [out] The returned array of children.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

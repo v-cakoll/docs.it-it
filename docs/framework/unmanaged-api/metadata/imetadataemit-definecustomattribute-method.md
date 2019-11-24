@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777684"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432646"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Metodo IMetaDataEmit::DefineCustomAttribute
-Crea una definizione per un attributo personalizzato con la firma dei metadati specificato, da associare all'oggetto specificato e ottiene un token per tale definizione di attributo personalizzato.  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,26 +39,26 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parametri  
  `tkObj`  
- [in] Il token per l'elemento proprietario.  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in] Il token che identifica l'attributo personalizzato.  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in] Un puntatore per l'attributo personalizzato.  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in] Il numero di byte in `pCustomAttribute`.  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out] Il `mdCustomAttribute` token assegnato.  
+ [out] The `mdCustomAttribute` token assigned.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

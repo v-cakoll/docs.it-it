@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: fc41b3eb775e80ae85026b226a60ce6a1d31c761
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9097fdcffb236d08264b881a171a86dcf8801133
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123105"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447937"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo DataItem
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per il tipo di controllo DataItem. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73123105"
   
 |Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> -Varia (0 o più, può essere strutturato in una gerarchia)|DataItem<br /><br /> -Varia (0 o più, può essere strutturato in una gerarchia)|  
+|DataItem<br /><br /> -   Varies (0 or more; can be structured in hierarchy)|DataItem<br /><br /> -   Varies (0 or more; can be structured in hierarchy)|  
   
  Un elemento dati in una griglia di dati può contenere vari tipi di oggetti, incluso un altro livello di elementi dati o specifici elementi di griglia quali testo, immagini o controlli di modifica. Se l'elemento dati dispone di un ruolo di oggetto specifico, l'elemento deve essere esposto come tipo di controllo specifico; ad esempio, un tipo di controllo ListItem per un elemento dati selezionabile della griglia.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73123105"
 ## <a name="working-with-data-items-in-large-lists"></a>Uso di elementi dati in elenchi di grandi dimensioni  
  Gli elenchi di grandi dimensioni sono spesso virtualizzati nei framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] per migliorare le prestazioni. Per questo motivo, un client di automazione interfaccia utente non può usare la funzionalità di query di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per cercare il contenuto dell'intero albero come avviene per altri contenitori di elementi. È necessario che un client scorra la visualizzazione dell'elemento (o che espanda il controllo in modo che vengano visualizzate tutte le opzioni rilevanti) prima di accedere al set completo di informazioni dell'elemento dati.  
   
- Quando si chiama `SetFocus` sull'elemento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per l'elemento dati, il caso di Esplora risorse di Microsoft Windows restituirà un risultato corretto e lo stato attivo verrà impostato sulla modifica all'interno del sottoalbero dell'elemento dati.  
+ When calling `SetFocus` on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element for the data item, the Microsoft Windows Explorer case will return successfully and cause focus to be set to the Edit within the data item subtree.  
   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
  La tabella seguente elenca gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] che devono essere supportati da tutti i controlli elemento dati. Per altre informazioni sugli eventi, vedere [UI Automation Events Overview](ui-automation-events-overview.md).  
@@ -90,13 +90,13 @@ ms.locfileid: "73123105"
 ## <a name="dataitem-control-type-example"></a>Esempio del tipo di controllo DataItem  
  Nell'immagine seguente viene illustrato un tipo di controllo DataItem in un controllo ListView che fornisce supporto per le informazioni dettagliate all'interno delle colonne.  
   
- ![Rappresentazione grafica di un controllo di visualizzazione elenco con due elementi di dati](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Graphic of a List View control with two data items](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  La visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relative al controllo elemento dati sono visualizzate di seguito. I pattern di controllo per ogni elemento di automazione sono indicati tra parentesi. Il gruppo "Contoso" fa inoltre parte della griglia del controllo host DataGrid.  
   
 |Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Gruppo "contoso" (tabella, griglia)<br />-DataItem "Accounts crediti. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts crediti. doc"<br />-Edit "Name" (TableItem, GridItem, value "Accounts crediti. doc")<br />-Modifica "Data modifica" (TableItem, GridItem, valore "8/25/2006 3:29 PM")<br />-Edit "size" (GridItem, TableItem, valore "11,0 KB)<br />-DataItem "Accounts Payable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Gruppo "contoso" (tabella, griglia)<br />-DataItem "Accounts crediti. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts crediti. doc"<br />-Edit "Name" (TableItem, GridItem, value "Accounts crediti. doc")<br />-Modifica "Data modifica" (TableItem, GridItem, valore "8/25/2006 3:29 PM")<br />-Edit "size" (GridItem, TableItem, valore "11,0 KB)<br />-DataItem "Accounts Payable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />- ...|  
+|-   Group "Contoso" (Table, Grid)<br />-   DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   Image "Accounts Receivable.doc"<br />-   Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-   Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-   Group "Contoso" (Table, Grid)<br />-   DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   Image "Accounts Receivable.doc"<br />-   Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-   Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
   
  Se una griglia rappresenta un elenco di elementi selezionabili, è possibile esporre gli elementi dell'interfaccia utente corrispondenti con il tipo di controllo ListItem anziché con DataItem. Nell'esempio precedente, gli elementi DataItem ("Accounts Receivable.doc" e "Accounts Payable.doc") in Group ("Contoso") possono essere migliorati esponendoli come tipi di controllo ListItem, poiché questo tipo già supporta il pattern di controllo SelectionItem.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff18d52091ca75152c20667d1ec1b024f44d6129
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782923"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445816"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Metodo ICorProfilerCallback::RemotingClientReceivingReply
-Notifica al profiler che la parte del server di una chiamata remota è stata completata e il client sta ricevendo ora e sta per elaborare la risposta.  
+Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,21 +35,21 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parametri  
  `pCookie`  
- [in] Un valore che corrisponde al valore fornito [RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) in queste condizioni:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
   
-- I cookie GUID di .NET Remoting sono attivi.  
+- Remoting GUID cookies are active.  
   
-- Il canale ha esito positivo la trasmissione del messaggio.  
+- The channel succeeds in transmitting the message.  
   
-- I cookie GUID sono attivi nel processo del lato server.  
+- GUID cookies are active on the server-side process.  
   
- Ciò consente l'associazione semplice delle chiamate remote.  
+ This allows easy pairing of remoting calls.  
   
  `fIsAsync`  
- [in] Valore che rappresenta `true` se la chiamata è asincrona; in caso contrario, `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

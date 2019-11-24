@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c394c2b17404351bd0813ab1eb21230a1edd9de
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aaa8eaa2c4eb927a817425611f71e51c9f3d37af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781098"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447573"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>Metodo ICorProfilerThreadEnum::Skip
 Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.  
@@ -36,21 +34,21 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] Il numero di elementi da ignorare.  
+ [in] The number of elements to be skipped.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`celt` gli elementi sono stati ignorati.|  
-|S_FALSE|Meno di `celt` elementi sono stati ignorati, che indica che non sono presenti più elementi.|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
 ## <a name="remarks"></a>Note  
- La nuova posizione del cursore dell'enumeratore, questa viene (posizione corrente) + `celt`.  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

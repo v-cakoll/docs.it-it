@@ -7,30 +7,28 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ff50994f707dbd7eb9a55c05fe2b4540759aac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756182"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448534"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumerazioni dell'archivio dei simboli di diagnostica
-Questo argomento descrive le enumerazioni non gestite usate dall'API dell'archivio di simboli di diagnostica.  
+This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Enumerazione CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indica il tipo di indirizzo di memoria.  
+ Indicates the type of memory address.  
   
  [Enumerazione CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifica i criteri da utilizzare quando si esegue una ricerca di un lettore di simboli.  
+ Specifies the policy to be used when doing a search for a symbol reader.  
   
  [Enumerazione CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indica se una variabile è generato dal compilatore.  
+ Indicates whether a variable is compiler-generated.  
   
  [Enumerazione NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifica i callback per le funzioni del debugger.  
+ Identifies callbacks for debugger functions.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

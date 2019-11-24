@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74f0e6e39f99c9e6981066e6a3171bb9508cf1a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7a25fce945504cff0d07f499ae4bb79378e9f3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449697"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Metodo ICorProfilerInfo3::GetFunctionTailcall3Info
-Fornisce lo stack frame della funzione da segnalare al profiler tramite la [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) (funzione). Questo metodo può essere chiamato solo durante il callback `FunctionTailcall3WithInfo`.  
+Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. Questo metodo può essere chiamato solo durante il callback `FunctionTailcall3WithInfo`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +36,10 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] Il `FunctionID` della funzione che restituisce.  
+ [in] The `FunctionID` of the function that is returning.  
   
  `eltInfo`  
- [in] Handle opaco che rappresenta le informazioni su un determinato stack frame. Il profiler deve fornire lo stesso `eltInfo` che è stato assegnato al profiler tramite la `FunctionTailcall3WithInfo` (funzione).  
+ [in] Handle opaco che rappresenta le informazioni su un determinato stack frame. The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
   
  `pFrameInfo`  
  [out] Handle opaco che rappresenta le informazioni sui generics relative a un determinato stack frame. Questo handle è valido solo durante il callback `FunctionTailcall3WithInfo` in cui il profiler ha chiamato il metodo `GetFunctionTailcall3Info`.  
@@ -49,7 +47,7 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

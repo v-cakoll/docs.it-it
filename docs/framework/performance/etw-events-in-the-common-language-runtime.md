@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ad58813da5b71b884ad55f796db3522b2f1920
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 83246f42275425bca48530915c7bf5c19f3b9f04
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046621"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447673"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventi ETW in Common Language Runtime
 Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Event Tracing for Windows) tramite svariati eventi di debug e profilatura. Gli eventi ETW di CLR sfruttano il sistema di traccia Windows ETW per migliorare il supporto esistente per la profilatura e il debug offerto da Common Language Runtime.  
   
- Per altre informazioni su ETW, vedere l'articolo [Improve Debugging and Performance Tuning with ETW](https://go.microsoft.com/fwlink/?LinkID=161142) (Migliorare il debug e l'ottimizzazione delle prestazioni con ETW) su MSDN. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
+ More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
   
- Il .NET Framework 4 o versione successiva è necessario per tutti gli eventi descritti negli argomenti dell'evento. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
+ The .NET Framework 4 or later is required for all the events described in the event topics. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Controllo della registrazione di .NET Framework](controlling-logging.md)  
  Descrive gli strumenti e i comandi per acquisire e visualizzare gli eventi ETW.  
   

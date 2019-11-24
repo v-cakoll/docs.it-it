@@ -6,19 +6,17 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f3e8cedcc498230311c0b52f7ecc1c2c4fc8ff1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000441"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447689"
 ---
 # <a name="profiling-structures"></a>Strutture di profilatura
 Questa sezione descrive le strutture non gestite usate dall'API di profilatura.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Struttura COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  Fornisce a Common Language Runtime le informazioni su un assembly di riferimento che deve considerare quando esegue un percorso di chiusura del riferimento ad assembly.  
   

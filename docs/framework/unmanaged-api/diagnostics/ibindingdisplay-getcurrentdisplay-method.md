@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d28eeea4-c4e0-40d4-91de-198d98cfa13c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d075aeeb904469613999829a1444511d069b9918
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9294dbf1caddd4b607185de54efd2b4764e6ca35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775972"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448501"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Metodo IBindingDisplay::GetCurrentDisplay
-Restituisce le informazioni di visualizzazione dell'associazione corrente.  
+Returns the current binding display information.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>Parametri  
  `display`  
- [out, retval] Un puntatore a un safearray contenente le informazioni di visualizzazione dell'associazione.  
+ [out, retval] A pointer to a safearray containing the binding display information.  
   
 ## <a name="remarks"></a>Note  
- Il [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) metodo deve avere in precedenza ha avuto esito positivo e il programma deve essere interrotto da un debugger.  
+ The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
   
- Il chiamante deve deallocare restituita `SAFEARRAY` memoria usando [routine](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **Libreria:** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

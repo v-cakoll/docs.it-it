@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 64971319f592ee097e45cff10ef46b76e8b3b0a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782843"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449912"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Metodo ICorProfilerCallback::JITCompilationFinished
-Notifica al profiler che il compilatore JIT just-in-time ha terminato la compilazione di una funzione.  
+Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +36,18 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione che è stata compilata.  
+ [in] The ID of the function that was compiled.  
   
  `hrStatus`  
- [in] Un valore che indica se la compilazione ha avuto esito positivo.  
+ [in] A value indicating whether compilation was successful.  
   
  `fIsSafeToBlock`  
- [in] Un valore che indica al profiler, se il blocco avrà effetto sul funzionamento del runtime. Il valore è `true` se il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; in caso contrario, `false`.  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- Anche se un valore di `true` non danneggerà la fase di esecuzione, possono distorcere i risultati della profilatura.  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044517"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449429"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Strumento per la generazione e la modifica di manifesti)
 
@@ -35,7 +35,7 @@ La tabella seguente illustra i comandi supportati da *Mage.exe*. Per altre infor
 |Comando|Descrizione|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Cancella il contenuto della cache di download di tutte le applicazioni solo online.|
-|**-n, -New** *fileType [newOptions]*|Crea un nuovo file del tipo specificato. I tipi validi sono:<br /><br /> -   `Deployment`: Crea un nuovo manifesto di distribuzione.<br />-   `Application`: Crea un nuovo manifesto di applicazione.<br /><br /> Se non si specificano parametri aggiuntivi con questo comando, verrà creato automaticamente un file del tipo appropriato, con gli adeguati tag e valori di attributo predefiniti.<br /><br /> Usare l'opzione **-ToFile** (vedere la tabella seguente) per specificare il nome e il percorso del nuovo file.<br /><br /> Usare l'opzione **-FromDirectory** (vedere la tabella seguente) per creare il manifesto di un'applicazione con tutti gli assembly dell'applicazione inclusi nella sezione \<dependency> del manifesto.|
+|**-n, -New** *fileType [newOptions]*|Crea un nuovo file del tipo specificato. I tipi validi sono:<br /><br /> -   `Deployment`: crea un nuovo manifesto di distribuzione.<br />-   `Application`: crea un nuovo manifesto di applicazione.<br /><br /> Se non si specificano parametri aggiuntivi con questo comando, verrà creato automaticamente un file del tipo appropriato, con gli adeguati tag e valori di attributo predefiniti.<br /><br /> Usare l'opzione **-ToFile** (vedere la tabella seguente) per specificare il nome e il percorso del nuovo file.<br /><br /> Usare l'opzione **-FromDirectory** (vedere la tabella seguente) per creare il manifesto di un'applicazione con tutti gli assembly dell'applicazione inclusi nella sezione \<dependency> del manifesto.|
 |**-u, -Update** *[filePath] [updateOptions]*|Esegue una o più modifiche in un file manifesto. Non è necessario specificare il tipo di file che si sta modificando. Mage.exe esaminerà il file utilizzando un set di regole euristiche per determinare se si tratta di un manifesto di distribuzione o di un manifesto di applicazione.<br /><br /> Se un file è già stato firmato con un certificato, **-Update** rimuoverà il blocco della firma con chiave. Questo è necessario perché la firma con chiave contiene un hash del file e la modifica di quest'ultimo rende l'hash non valido.<br /><br /> Usare l'opzione **-ToFile** (vedere la tabella seguente) per specificare un nuovo nome e percorso del file anziché sovrascrivere il file esistente.|
 |**-s, -Sign** `[signOptions]`|Utilizza una coppia di chiavi o il certificato X509 per firmare un file. Le firme vengono inserite nei file come elementi XML.<br /><br /> È necessario essere connessi a Internet quando si firma un manifesto che specifica un valore **-TimestampUri** .|
 |**-ver, -Verify** *[nomefile-manifesto]*|Verifica che il manifesto sia firmato correttamente. Non può essere combinato con altri comandi. <br/><br/>**Disponibile in .NET Framework 4.7 e versioni successive.**|
@@ -45,7 +45,7 @@ La tabella seguente illustra i comandi supportati da *Mage.exe*. Per altre infor
 
 La tabella seguente illustra le opzioni supportate dai comandi `-New` e `-Update`:
 
-|Opzioni|Default Value|Si applica a|DESCRIZIONE|
+|Opzioni|Valore predefinito|Si applica a|Descrizione|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Specifica l'algoritmo con cui generare i digest di dipendenza. Il valore deve essere "sha256RSA" o "sha1RSA".<br /><br /> Utilizzare con l'opzione "-Update". Questa opzione viene ignorata quando si utilizza l'opzione "-Sign".|
 |**-appc, -AppCodeBase** `manifestReference`||Manifesti di distribuzione.|Inserisce un riferimento a un URL o a percorso di file nel file manifesto dell'applicazione. Questo valore deve corrispondere al percorso completo del manifesto dell'applicazione.|
@@ -59,13 +59,13 @@ La tabella seguente illustra le opzioni supportate dai comandi `-New` e `-Update
 |**-i, -Install** `willInstall`|true|Manifesti di distribuzione.|Indica se installare o meno l'applicazione ClickOnce nel computer locale o se eseguirla dal Web. Se l'applicazione viene installata, nel menu **Start** di Windows verrà creato un collegamento corrispondente. I valori validi sono "true" (o "t") e "false" (o "f").<br /><br /> Se si specifica l'opzione **-MinVersion** e l'utente ha una versione precedente rispetto a **-MinVersion** , l'applicazione verrà sempre installata, indipendentemente dal valore passato a **-Install**.<br /><br /> Non è possibile usare questa opzione con l'opzione **-BrowserHosted** . Il tentativo di specificare entrambe le opzioni per lo stesso manifesto genera un errore.|
 |**-kc, -KeyContainer** `name`||Tutti i tipi di file.|Specifica il contenitore di chiavi che include il nome della chiave privata. È necessaria l'opzione **CryptoProvider**.<br/><br/>Questa opzione è disponibile a partire da .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|Versione indicata nel manifesto di distribuzione ClickOnce, come specificata dal flag **-Version** .|Manifesti di distribuzione.|Versione minima dell'applicazione che può essere eseguita da un utente. Il flag contrassegna la versione denominata dell'applicazione come aggiornamento obbligatorio. Se si rilascia una versione del prodotto contenente un aggiornamento relativo a una modifica importante o a una correzione di un difetto critico nella sicurezza, è possibile utilizzare tale flag per specificare che l'aggiornamento è obbligatorio e che l'utente non può continuare a eseguire versioni precedenti.<br /><br /> Il parametro`version` ha la stessa semantica dell'argomento del flag **-Version** .|
-|**-n, -Name** `nameString`|Distribuzione|Tutti i tipi di file.|Nome utilizzato per identificare l'applicazione. Questo nome verrà usato da ClickOnce per identificare l'applicazione nel menu **Start** (se l'applicazione è configurata per l'installazione) e nelle finestre di dialogo relative all'elevazione delle autorizzazioni. **Nota:**  se si sta aggiornando un manifesto esistente e non si specifica un nome di editore con questa opzione, *Mage.exe* aggiorna il manifesto con il nome dell'organizzazione definito nel computer. Per utilizzare un nome diverso, assicurarsi di utilizzare questa opzione e specificare il nome dell'editore desiderato.|
+|**-n, -Name** `nameString`|Distribuisci|Tutti i tipi di file.|Nome utilizzato per identificare l'applicazione. Questo nome verrà usato da ClickOnce per identificare l'applicazione nel menu **Start** (se l'applicazione è configurata per l'installazione) e nelle finestre di dialogo relative all'elevazione delle autorizzazioni. **Nota:** se si sta aggiornando un manifesto esistente e non si specifica un nome di editore con questa opzione, *Mage.exe* aggiorna il manifesto con il nome dell'organizzazione definito nel computer. Per utilizzare un nome diverso, assicurarsi di utilizzare questa opzione e specificare il nome dell'editore desiderato.|
 |**-pwd, -Password** `passwd`||Tutti i tipi di file.|Password utilizzata per firmare un manifesto con un certificato digitale. Questa opzione deve essere usata insieme a **-CertFile** .|
 |**-p, Processor** `processorValue`|Msil|Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Architettura del microprocessore sulla quale verrà eseguita la distribuzione. Questo valore è obbligatorio se si preparano installazioni con assembly precompilati per un microprocessore specifico. I valori validi includono `msil`, `x86`, `ia64`e `amd64`. `msil` sta per Microsoft Intermediate Language. Questo indica che tutti gli assembly sono indipendenti dalla piattaforma e verranno sottoposti a una compilazione JIT (just-in-time) in Common Language Runtime (CLR) alla prima esecuzione dell'applicazione.|
 |**-pu,** **-ProviderURL** `url`||Manifesti di distribuzione.|Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|
 |**-pub, -Publisher** `publisherName`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Aggiunge il nome dell'editore all'elemento di descrizione del manifesto di distribuzione o del manifesto dell'applicazione. Se usata sul manifesto di un'applicazione, l'opzione **-UseManifestForTrust** deve essere specificata anche con il valore "true" (o "t"). In caso contrario, il parametro genererà un errore.|
 |**-s, -SupportURL**  `url`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Specifica il collegamento visualizzato per l'applicazione ClickOnce in Installazione applicazioni.|
-|**-ti, -TimestampUri** `uri`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|URL di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Windows root certificate program members](https://go.microsoft.com/fwlink/?LinkId=159000)(Membri del programma Windows Root Certificate).|
+|**-ti, -TimestampUri** `uri`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|URL di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Windows root certificate program members](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))(Membri del programma Windows Root Certificate).|
 |**-t, -ToFile** `filePath`|-   Nuovo:<br />-   Distribuzione: deploy.application<br />-   Applicazione: application.exe.manifest<br />-   Aggiornamento:<br />-   File di input.|Tutti i tipi di file.|Specifica il percorso di output del file creato o modificato.<br /><br /> Se non si specifica **-ToFile** quando si usa **-New**, l'output viene scritto nella directory di lavoro corrente. Se non si specifica **-ToFile** quando si usa **-Update**, *Mage.exe* riscrive il file nel file di input.|
 |**-tr, -TrustLevel** `level`|Basato sulla zona in cui risiede l'URL dell'applicazione.|Manifesti di applicazione.|Livello di attendibilità da concedere all'applicazione nei computer client. I valori possibili sono "Internet","Intranet" e "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Manifesti di applicazione.|Specifica se la firma digitale del manifesto dell'applicazione verrà utilizzata per prendere decisioni di attendibilità quando l'applicazione è in esecuzione sul client. Se il valore è impostato su "true" (o "t"), il manifesto dell'applicazione viene utilizzato per prendere decisioni di attendibilità. Se il valore è impostato su "false" (o "f"), verrà utilizzata la firma del manifesto di distribuzione.|
@@ -121,23 +121,23 @@ Nelle tabelle seguenti vengono mostrate queste funzionalità e limitazioni:
 ||Chiudi|OK|OK|
 ||Salva|OK|OK|
 ||Ripetere la firma|OK|OK|
-||Nuovo|OK|Non supportate|
+||Nuovo|OK|Non supportato|
 ||Aggiornare (vedere di seguito)|OK|OK|
 |Manifesto per applicazioni destinate alla versione 4 di .NET Framework|Apri|OK|OK|
 ||Chiudi|OK|OK|
 ||Salva|OK|OK|
 ||Ripetere la firma|OK|OK|
-||Nuovo|Non supportate|OK|
-||Aggiornare (vedere di seguito)|Non supportate|OK|
+||Nuovo|Non supportato|OK|
+||Aggiornare (vedere di seguito)|Non supportato|OK|
 
 |Versione del manifesto|Dettagli dell'operazione di aggiornamento|Mage v2.0|Mage v4.0|
 |----------------------|------------------------------|---------------|---------------|
 |Manifesto per applicazioni destinate alla versione 2.0 o 3.x di .NET Framework|Modificare un assembly|OK|OK|
 ||Aggiungere un assembly|OK|OK|
 ||Rimuovere un assembly|OK|OK|
-|Manifesto per applicazioni destinate alla versione 4 di .NET Framework|Modificare un assembly|Non supportate|OK|
-||Aggiungere un assembly|Non supportate|OK|
-||Rimuovere un assembly|Non supportate|OK|
+|Manifesto per applicazioni destinate alla versione 4 di .NET Framework|Modificare un assembly|Non supportato|OK|
+||Aggiungere un assembly|Non supportato|OK|
+||Rimuovere un assembly|Non supportato|OK|
 
  I nuovi manifesti creati con Mage.exe vengono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Le applicazioni ClickOnce destinate a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] possono essere eseguite sia in [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] che nella versione completa di .NET Framework 4. Se l'applicazione è destinata alla versione completa di .NET Framework 4 e non può essere eseguita in [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], rimuovere l'elemento del client `<framework>` tramite un editor di testo e firmare nuovamente il manifesto.
 
@@ -220,7 +220,7 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 ## <a name="see-also"></a>Vedere anche
 
 - [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)
 - [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
 - [Prompt dei comandi](developer-command-prompt-for-vs.md)

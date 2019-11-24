@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953881"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445335"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>Metodo ICorProfilerCallback::ExceptionThrown
-Notifica al profiler che è stata generata un'eccezione.  
+Notifies the profiler that an exception has been thrown.  
   
 > [!NOTE]
-> Questa funzione viene chiamata solo se l'eccezione raggiunge il codice gestito.  
+> This function is called only if the exception reaches managed code.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,19 +37,19 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parametri  
  `thrownObjectId`  
- in ID dell'oggetto che ha causato la generazione dell'eccezione.  
+ [in] The ID of the object that caused the exception to be thrown.  
   
 ## <a name="remarks"></a>Note  
- Il profiler non deve bloccarsi nella sua implementazione di questo metodo perché lo stack potrebbe non trovarsi in uno stato che consente Garbage Collection e pertanto non è possibile abilitare il Garbage Collection preemptive. Se il profiler si blocca qui e si tenta di Garbage Collection, il runtime si bloccherà fino a quando questo callback non viene restituito.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- L'implementazione del profiler di questo metodo non deve chiamare nel codice gestito o in alcun modo causare un'allocazione della memoria gestita.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf. idl, CorProf. h  
+ **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
