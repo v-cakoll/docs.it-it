@@ -970,15 +970,15 @@
         - name: Impossibile creare il componente ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: Impossibile fare riferimento a '<name>' perché è un membro del campo di valori '<name>' della classe '<classname>' che ha 'System.MarshalByRefObject' come classe base
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: Impossibile fare riferimento a un membro di istanza di una classe all'interno di un metodo condiviso o di un inizializzatore di membri condivisi senza un'istanza esplicita della classe
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: Impossibile creare il file temporaneo necessario
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: Impossibile aprire '<filename>' per la scrittura.
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: Impossibile trovare la classe '<classname>'
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: La classe non supporta l'automazione o l'interfaccia prevista
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: L'istruzione 'Class' deve terminare con un 'End Class' corrispondente
