@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755347"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427305"
 ---
-# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="c7a64-102">Metodo IMetaDataImport2::GetGenericParamProps</span><span class="sxs-lookup"><span data-stu-id="c7a64-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
-<span data-ttu-id="c7a64-103">Ottiene i metadati associati al parametro generico rappresentato dal token specificato.</span><span class="sxs-lookup"><span data-stu-id="c7a64-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
+# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="ec719-102">Metodo IMetaDataImport2::GetGenericParamProps</span><span class="sxs-lookup"><span data-stu-id="ec719-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
+<span data-ttu-id="ec719-103">Gets the metadata associated with the generic parameter represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="ec719-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7a64-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c7a64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec719-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ec719-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGenericParamProps (  
@@ -42,41 +40,41 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7a64-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c7a64-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ec719-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ec719-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="c7a64-106">[in] Il token che rappresenta il parametro generico per il quale restituire i metadati.</span><span class="sxs-lookup"><span data-stu-id="c7a64-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
+ <span data-ttu-id="ec719-106">[in] The token that represents the generic parameter for which to return metadata.</span><span class="sxs-lookup"><span data-stu-id="ec719-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
   
  `pulParamSeq`  
- <span data-ttu-id="c7a64-107">[out] La posizione ordinale del `Type` parametro nel costruttore padre o nel metodo.</span><span class="sxs-lookup"><span data-stu-id="c7a64-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
+ <span data-ttu-id="ec719-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span><span class="sxs-lookup"><span data-stu-id="ec719-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
   
  `pdwParamFlags`  
- <span data-ttu-id="c7a64-108">[out] Valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il `Type` per il parametro generico.</span><span class="sxs-lookup"><span data-stu-id="c7a64-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
+ <span data-ttu-id="ec719-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="ec719-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
   
  `ptOwner`  
- <span data-ttu-id="c7a64-109">[out] Token TypeDef o MethodDef che rappresenta il proprietario del parametro.</span><span class="sxs-lookup"><span data-stu-id="c7a64-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
+ <span data-ttu-id="ec719-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span><span class="sxs-lookup"><span data-stu-id="ec719-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="c7a64-110">[out] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="c7a64-110">[out] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="ec719-110">[out] Reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="ec719-110">[out] Reserved for future extensibility.</span></span>  
   
  `wzName`  
- <span data-ttu-id="c7a64-111">[out] Il nome del parametro generico.</span><span class="sxs-lookup"><span data-stu-id="c7a64-111">[out] The name of the generic parameter.</span></span>  
+ <span data-ttu-id="ec719-111">[out] The name of the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="ec719-111">[out] The name of the generic parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="c7a64-112">[in] Le dimensioni del `wzName` buffer.</span><span class="sxs-lookup"><span data-stu-id="c7a64-112">[in] The size of the `wzName` buffer.</span></span>  
+ <span data-ttu-id="ec719-112">[in] The size of the `wzName` buffer.</span><span class="sxs-lookup"><span data-stu-id="ec719-112">[in] The size of the `wzName` buffer.</span></span>  
   
  `pchName`  
- <span data-ttu-id="c7a64-113">[out] Dimensioni restituite del nome, in caratteri "wide".</span><span class="sxs-lookup"><span data-stu-id="c7a64-113">[out] The returned size of the name, in wide characters.</span></span>  
+ <span data-ttu-id="ec719-113">[out] The returned size of the name, in wide characters.</span><span class="sxs-lookup"><span data-stu-id="ec719-113">[out] The returned size of the name, in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7a64-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c7a64-114">Requirements</span></span>  
- <span data-ttu-id="c7a64-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7a64-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec719-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ec719-114">Requirements</span></span>  
+ <span data-ttu-id="ec719-115">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec719-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7a64-116">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c7a64-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ec719-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ec719-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c7a64-117">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c7a64-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ec719-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ec719-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c7a64-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7a64-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ec719-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec719-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7a64-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c7a64-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec719-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ec719-119">See also</span></span>
 
-- [<span data-ttu-id="c7a64-120">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="c7a64-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="c7a64-121">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="c7a64-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ec719-120">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="ec719-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ec719-121">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="ec719-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e32c0ace5f999a75220d0d093b85e0cbbfc73889
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be4fb0b4b49408a97b318e0f54f5a753f3f24ef1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757577"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435805"
 ---
-# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="45c7a-102">Metodo IMetaDataEmit::SaveToMemory</span><span class="sxs-lookup"><span data-stu-id="45c7a-102">IMetaDataEmit::SaveToMemory Method</span></span>
-<span data-ttu-id="45c7a-103">Salva tutti i metadati nell'ambito corrente per l'area specificata di memoria.</span><span class="sxs-lookup"><span data-stu-id="45c7a-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
+# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="8f505-102">Metodo IMetaDataEmit::SaveToMemory</span><span class="sxs-lookup"><span data-stu-id="8f505-102">IMetaDataEmit::SaveToMemory Method</span></span>
+<span data-ttu-id="8f505-103">Saves all metadata in the current scope to the specified area of memory.</span><span class="sxs-lookup"><span data-stu-id="8f505-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45c7a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="45c7a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f505-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8f505-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToMemory (   
@@ -36,23 +34,23 @@ HRESULT SaveToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="45c7a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="45c7a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f505-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="8f505-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="45c7a-106">[out] L'indirizzo in corrispondenza del quale iniziare la scrittura dei metadati.</span><span class="sxs-lookup"><span data-stu-id="45c7a-106">[out] The address at which to begin writing metadata.</span></span>  
+ <span data-ttu-id="8f505-106">[out] The address at which to begin writing metadata.</span><span class="sxs-lookup"><span data-stu-id="8f505-106">[out] The address at which to begin writing metadata.</span></span>  
   
  `cbData`  
- <span data-ttu-id="45c7a-107">[in] Le dimensioni, in byte, della memoria allocata.</span><span class="sxs-lookup"><span data-stu-id="45c7a-107">[in] The size, in bytes, of the allocated memory.</span></span>  
+ <span data-ttu-id="8f505-107">[in] The size, in bytes, of the allocated memory.</span><span class="sxs-lookup"><span data-stu-id="8f505-107">[in] The size, in bytes, of the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45c7a-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="45c7a-108">Requirements</span></span>  
- <span data-ttu-id="45c7a-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45c7a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f505-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8f505-108">Requirements</span></span>  
+ <span data-ttu-id="8f505-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f505-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45c7a-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="45c7a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8f505-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8f505-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="45c7a-111">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="45c7a-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f505-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8f505-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="45c7a-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45c7a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8f505-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f505-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45c7a-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="45c7a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f505-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8f505-113">See also</span></span>
 
-- [<span data-ttu-id="45c7a-114">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="45c7a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="45c7a-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="45c7a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="8f505-114">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="8f505-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="8f505-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="8f505-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

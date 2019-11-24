@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781666"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436481"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="bdc22-102">Enumerazione CorPEKind</span><span class="sxs-lookup"><span data-stu-id="bdc22-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="bdc22-103">Contiene valori che descrivono un file eseguibile portabile (PE), come restituito da una chiamata a [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="bdc22-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="bbf97-102">Enumerazione CorPEKind</span><span class="sxs-lookup"><span data-stu-id="bbf97-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="bbf97-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="bbf97-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdc22-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bdc22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bbf97-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bbf97-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorPEKind {  
@@ -41,27 +39,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="bdc22-105">Members</span><span class="sxs-lookup"><span data-stu-id="bdc22-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bbf97-105">Members</span><span class="sxs-lookup"><span data-stu-id="bbf97-105">Members</span></span>  
   
-|<span data-ttu-id="bdc22-106">Member</span><span class="sxs-lookup"><span data-stu-id="bdc22-106">Member</span></span>|<span data-ttu-id="bdc22-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bdc22-107">Description</span></span>|  
+|<span data-ttu-id="bbf97-106">Member</span><span class="sxs-lookup"><span data-stu-id="bbf97-106">Member</span></span>|<span data-ttu-id="bbf97-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bbf97-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="bdc22-108">Indica che questo non è un file PE.</span><span class="sxs-lookup"><span data-stu-id="bdc22-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="bdc22-109">Indica che questo file PE contiene solo codice gestito.</span><span class="sxs-lookup"><span data-stu-id="bdc22-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="bdc22-110">Indica che questo file PE effettua le chiamate a Win32.</span><span class="sxs-lookup"><span data-stu-id="bdc22-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="bdc22-111">Indica che questo file PE viene eseguito su una piattaforma a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="bdc22-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="bdc22-112">Indica che il file PE sia codice nativo.</span><span class="sxs-lookup"><span data-stu-id="bdc22-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="bdc22-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="bdc22-113">pe32BitPreferred</span></span>|<span data-ttu-id="bdc22-114">Indica che il file PE è indipendente dalla piattaforma e preferite per poter essere caricato in un ambiente a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="bdc22-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="bbf97-108">Indicates that this is not a PE file.</span><span class="sxs-lookup"><span data-stu-id="bbf97-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="bbf97-109">Indicates that this PE file contains only managed code.</span><span class="sxs-lookup"><span data-stu-id="bbf97-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="bbf97-110">Indicates that this PE file makes Win32 calls.</span><span class="sxs-lookup"><span data-stu-id="bbf97-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="bbf97-111">Indicates that this PE file runs on a 64-bit platform.</span><span class="sxs-lookup"><span data-stu-id="bbf97-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="bbf97-112">Indicates that this PE file is native code.</span><span class="sxs-lookup"><span data-stu-id="bbf97-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="bbf97-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="bbf97-113">pe32BitPreferred</span></span>|<span data-ttu-id="bbf97-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span><span class="sxs-lookup"><span data-stu-id="bbf97-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bdc22-115">Note</span><span class="sxs-lookup"><span data-stu-id="bdc22-115">Remarks</span></span>  
- <span data-ttu-id="bdc22-116">Questi valori possono essere usati nelle combinazioni bit per bit.</span><span class="sxs-lookup"><span data-stu-id="bdc22-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bbf97-115">Note</span><span class="sxs-lookup"><span data-stu-id="bbf97-115">Remarks</span></span>  
+ <span data-ttu-id="bbf97-116">These values can be used in bitwise combinations.</span><span class="sxs-lookup"><span data-stu-id="bbf97-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bdc22-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bdc22-117">Requirements</span></span>  
- <span data-ttu-id="bdc22-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bdc22-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bbf97-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bbf97-117">Requirements</span></span>  
+ <span data-ttu-id="bbf97-118">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bbf97-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bdc22-119">**Intestazione:** CorHdr. H</span><span class="sxs-lookup"><span data-stu-id="bdc22-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="bbf97-119">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="bbf97-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="bdc22-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdc22-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bbf97-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bbf97-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdc22-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bdc22-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbf97-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bbf97-121">See also</span></span>
 
-- [<span data-ttu-id="bdc22-122">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="bdc22-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="bbf97-122">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="bbf97-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

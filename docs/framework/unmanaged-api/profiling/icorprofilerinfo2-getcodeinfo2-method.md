@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1acdc5d094fe93118e6cc62774f1cbf47a357dfc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751812"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433282"
 ---
-# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="3b282-102">Metodo ICorProfilerInfo2::GetCodeInfo2</span><span class="sxs-lookup"><span data-stu-id="3b282-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
-<span data-ttu-id="3b282-103">Ottiene gli ambiti del codice nativo associato al parametro `FunctionID` specificato.</span><span class="sxs-lookup"><span data-stu-id="3b282-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
+# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="d8b98-102">Metodo ICorProfilerInfo2::GetCodeInfo2</span><span class="sxs-lookup"><span data-stu-id="d8b98-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
+<span data-ttu-id="d8b98-103">Ottiene gli ambiti del codice nativo associato al parametro `FunctionID` specificato.</span><span class="sxs-lookup"><span data-stu-id="d8b98-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b282-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3b282-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8b98-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d8b98-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCodeInfo2(  
@@ -38,38 +36,38 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b282-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3b282-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8b98-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d8b98-105">Parameters</span></span>  
  `functionID`  
- <span data-ttu-id="3b282-106">[in] ID della funzione alla quale è associato il codice nativo.</span><span class="sxs-lookup"><span data-stu-id="3b282-106">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="d8b98-106">[in] ID della funzione alla quale è associato il codice nativo.</span><span class="sxs-lookup"><span data-stu-id="d8b98-106">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `cCodeInfos`  
- <span data-ttu-id="3b282-107">[in] Dimensione della matrice `codeInfos`.</span><span class="sxs-lookup"><span data-stu-id="3b282-107">[in] The size of the `codeInfos` array.</span></span>  
+ <span data-ttu-id="d8b98-107">[in] Dimensione della matrice `codeInfos`.</span><span class="sxs-lookup"><span data-stu-id="d8b98-107">[in] The size of the `codeInfos` array.</span></span>  
   
  `pcCodeInfos`  
- <span data-ttu-id="3b282-108">[out] Un puntatore al numero totale di [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) strutture disponibili.</span><span class="sxs-lookup"><span data-stu-id="3b282-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
+ <span data-ttu-id="d8b98-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span><span class="sxs-lookup"><span data-stu-id="d8b98-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
   
  `codeInfos`  
- <span data-ttu-id="3b282-109">[out] Buffer fornito dal chiamante.</span><span class="sxs-lookup"><span data-stu-id="3b282-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="3b282-110">Una volta completato, il metodo contiene una matrice di strutture `COR_PRF_CODE_INFO`, ognuna delle quali descrive un blocco di codice nativo.</span><span class="sxs-lookup"><span data-stu-id="3b282-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
+ <span data-ttu-id="d8b98-109">[out] Buffer fornito dal chiamante.</span><span class="sxs-lookup"><span data-stu-id="d8b98-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="d8b98-110">Una volta completato, il metodo contiene una matrice di strutture `COR_PRF_CODE_INFO`, ognuna delle quali descrive un blocco di codice nativo.</span><span class="sxs-lookup"><span data-stu-id="d8b98-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3b282-111">Note</span><span class="sxs-lookup"><span data-stu-id="3b282-111">Remarks</span></span>  
- <span data-ttu-id="3b282-112">Gli ambiti vengono ordinati in sequenza crescente in base all'offset MSIL (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="3b282-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8b98-111">Note</span><span class="sxs-lookup"><span data-stu-id="d8b98-111">Remarks</span></span>  
+ <span data-ttu-id="d8b98-112">Gli ambiti vengono ordinati in sequenza crescente in base all'offset MSIL (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="d8b98-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
   
- <span data-ttu-id="3b282-113">Dopo il completamento del metodo `GetCodeInfo2`, è necessario verificare che il buffer `codeInfos` sia abbastanza grande per contenere tutte le strutture `COR_PRF_CODE_INFO`.</span><span class="sxs-lookup"><span data-stu-id="3b282-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="3b282-114">A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`.</span><span class="sxs-lookup"><span data-stu-id="3b282-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="3b282-115">Se il valore `cCodeInfos`, diviso per la dimensione di una struttura `COR_PRF_CODE_INFO`, è inferiore a `pcCodeInfos`, allocare un buffer `codeInfos` più grande, aggiornare `cCodeInfos` con la nuova dimensione e chiamare nuovamente `GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="3b282-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="d8b98-113">Dopo il completamento del metodo `GetCodeInfo2`, è necessario verificare che il buffer `codeInfos` sia abbastanza grande per contenere tutte le strutture `COR_PRF_CODE_INFO`.</span><span class="sxs-lookup"><span data-stu-id="d8b98-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="d8b98-114">A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`.</span><span class="sxs-lookup"><span data-stu-id="d8b98-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="d8b98-115">Se il valore `cCodeInfos`, diviso per la dimensione di una struttura `COR_PRF_CODE_INFO`, è inferiore a `pcCodeInfos`, allocare un buffer `codeInfos` più grande, aggiornare `cCodeInfos` con la nuova dimensione e chiamare nuovamente `GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="d8b98-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
   
- <span data-ttu-id="3b282-116">In alternativa, è possibile chiamare innanzitutto `GetCodeInfo2` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette.</span><span class="sxs-lookup"><span data-stu-id="3b282-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="3b282-117">È quindi possibile impostare le dimensioni del buffer `codeInfos` sul valore restituito in `pcCodeInfos` moltiplicato per la dimensione di una struttura `COR_PRF_CODE_INFO` e chiamare di nuovo `GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="3b282-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="d8b98-116">In alternativa, è possibile chiamare innanzitutto `GetCodeInfo2` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette.</span><span class="sxs-lookup"><span data-stu-id="d8b98-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="d8b98-117">È quindi possibile impostare le dimensioni del buffer `codeInfos` sul valore restituito in `pcCodeInfos` moltiplicato per la dimensione di una struttura `COR_PRF_CODE_INFO` e chiamare di nuovo `GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="d8b98-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b282-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3b282-118">Requirements</span></span>  
- <span data-ttu-id="3b282-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b282-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8b98-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d8b98-118">Requirements</span></span>  
+ <span data-ttu-id="d8b98-119">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8b98-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b282-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3b282-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d8b98-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d8b98-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3b282-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b282-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d8b98-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8b98-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b282-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b282-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d8b98-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8b98-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b282-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3b282-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8b98-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d8b98-123">See also</span></span>
 
-- [<span data-ttu-id="3b282-124">Metodo GetCodeInfo3</span><span class="sxs-lookup"><span data-stu-id="3b282-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [<span data-ttu-id="3b282-125">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="3b282-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="3b282-126">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="3b282-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="3b282-127">Profilatura</span><span class="sxs-lookup"><span data-stu-id="3b282-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="d8b98-124">Metodo GetCodeInfo3</span><span class="sxs-lookup"><span data-stu-id="d8b98-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
+- [<span data-ttu-id="d8b98-125">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="d8b98-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="d8b98-126">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="d8b98-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="d8b98-127">Profilatura</span><span class="sxs-lookup"><span data-stu-id="d8b98-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
