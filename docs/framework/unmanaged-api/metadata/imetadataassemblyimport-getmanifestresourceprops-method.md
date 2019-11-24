@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e47b1807e51427487d6af2f96ff5af437c4653eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760954"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436326"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>Metodo IMetaDataAssemblyImport::GetManifestResourceProps
-Ottiene il set di proprietà della risorsa del manifesto con la firma dei metadati specificato.  
+Ottiene il set di proprietà della risorsa del manifesto con la firma dei metadati specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,32 +41,32 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametri  
  `mdmr`  
- [in] Un `mdManifestResource` token che rappresenta la risorsa per cui ottenere le proprietà.  
+ in Token `mdManifestResource` che rappresenta la risorsa per la quale ottenere le proprietà.  
   
  `szName`  
- [out] Il nome della risorsa.  
+ out Nome della risorsa.  
   
  `cchName`  
- [in] Le dimensioni, in caratteri wide, di `szName`.  
+ in Dimensione, in caratteri wide, di `szName`.  
   
  `pchName`  
- [out] Un puntatore al numero di caratteri wide effettivamente restituiti nella `szName`.  
+ out Puntatore al numero di caratteri wide effettivamente restituiti in `szName`.  
   
  `ptkImplementation`  
- [out] Un puntatore a un `mdFile` token o un `mdAssemblyRef` token che rappresenta il file o l'assembly, rispettivamente, che contiene la risorsa.  
+ out Puntatore a un token di `mdFile` o a un token di `mdAssemblyRef` che rappresenta il file o l'assembly, rispettivamente, che contiene la risorsa.  
   
  `pdwOffset`  
- [out] Puntatore a un valore che specifica l'offset all'inizio della risorsa all'interno del file.  
+ out Puntatore a un valore che specifica l'offset all'inizio della risorsa all'interno del file.  
   
  `pdwResourceFlags`  
- [out] Puntatore al flag che descrivono i metadati applicati a una risorsa. Il valore dei flag è una combinazione di uno o più [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) valori.  
+ out Puntatore ai flag che descrivono i metadati applicati a una risorsa. Il valore dei flag è una combinazione di uno o più valori [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

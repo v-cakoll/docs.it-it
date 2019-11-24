@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771834"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428612"
 ---
 # <a name="c-reference"></a>C#riferimento
 
@@ -27,7 +27,7 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [Operatori C#](./operators/index.md)  
  Fornisce collegamenti a informazioni su sintassi e operatori di C#.  
 
- [Caratteri speciali di C#](./tokens/index.md)  
+ [C# Special Characters](./tokens/index.md) (Caratteri speciali di C#)  
  Fornisce collegamenti a informazioni sui caratteri speciali contestuali di C# e sul relativo utilizzo.  
 
  [Direttive per il preprocessore C#](./preprocessor-directives/index.md)  
@@ -54,17 +54,14 @@ Le funzionalità che sono state implementate nelle versioni di C# successive all
  In C# 7.2 sono state aggiunte varie piccole funzionalità. È possibile passare argomenti per riferimento di sola lettura tramite la parola chiave `in`. Sono state introdotte numerose modifiche di basso livello per supportare la sicurezza in fase di compilazione per `Span` e i tipi correlati. È possibile usare argomenti denominati in cui gli argomenti successivi sono posizionali, in alcune situazioni. Il modificatore di accesso `private protected` consente di specificare che i chiamanti sono limitati ai tipi derivati implementati nello stesso assembly. L' operatore `?:` può essere risolto come riferimento a una variabile. È anche possibile formattare i numeri esadecimali e binari usando un separatore di cifra iniziale.
 
  [C#7,3 proposte specifiche](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C# 7.3 è un'altra versione secondaria che include numerosi piccoli aggiornamenti. È possibile usare nuovi vincoli per i parametri di tipo generico. Altre modifiche rendono più facile lavorare con i campi `fixed`, incluso l'uso delle allocazioni [`stackalloc`](./operators/stackalloc.md). Le variabili locali dichiarate con la parola chiave `ref` potrebbero essere riassegnate per fare riferimento alla nuova risorsa di archiviazione. È possibile posizionare attributi in proprietà implementate automaticamente destinate al campo di supporto generato dal compilatore. È possibile usare variabili di espressione negli inizializzatori. Le tuple possono essere confrontate per verificarne l'uguaglianza (o la disuguaglianza). Sono stati introdotti anche alcuni miglioramenti per la risoluzione dell'overload.
+ C# 7.3 è un'altra versione secondaria che include numerosi piccoli aggiornamenti. È possibile usare nuovi vincoli per i parametri di tipo generico. Altre modifiche rendono più facile lavorare con i campi `fixed`, incluso l'uso delle allocazioni [`stackalloc`](./operators/stackalloc.md). Le variabili locali dichiarate con la parola chiave `ref` possono essere riassegnate per fare riferimento a una nuova risorsa di archiviazione. È possibile posizionare attributi in proprietà implementate automaticamente destinate al campo di supporto generato dal compilatore. È possibile usare variabili di espressione negli inizializzatori. Le tuple possono essere confrontate per verificarne l'uguaglianza (o la disuguaglianza). Sono stati introdotti anche alcuni miglioramenti per la risoluzione dell'overload.
   
  [C#8,0 proposte specifiche](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C#8,0 è disponibile con .NET Core 3,0. Le funzionalità includono i tipi di riferimento Nullable, i criteri di ricerca ricorsivi, i metodi di interfaccia predefiniti, i flussi asincroni, gli intervalli e gli indici, il modello basato sull'utilizzo di dichiarazioni, l'assegnazione di Unione di valori null e i membri dell'istanza di sola lettura.
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
- [Guida a C#](../index.md)  
- Fornisce un portale per la documentazione di Visual C#.  
-  
- [Uso dell'ambiente di sviluppo di Visual Studio per C#](/visualstudio/get-started/csharp)  
+ [Using the Visual Studio Development Environment for C#](/visualstudio/get-started/csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
  Fornisce i collegamenti ad argomenti relativi a concetti e attività che descrivono IDE e l'editor.  
   
  [Guida per programmatori C#](../programming-guide/index.md)  

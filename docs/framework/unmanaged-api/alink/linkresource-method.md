@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776950"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445625"
 ---
 # <a name="linkresource-method"></a>Metodo LinkResource
 Collegamenti in una risorsa.  
@@ -46,13 +44,13 @@ HRESULT LinkResource(
  Nome del file.  
   
  `pszNewLocation`  
- Nuovo nome file facoltativo. Se diverso da null, `pszFileName` verrà copiato in pszNewLocation.  
+ Nuovo nome file facoltativo. Se non è NULL, `pszFileName` verrà copiato in pszNewLocation.  
   
  `pszResourceName`  
  Nome della risorsa.  
   
  `dwFlags`  
- Flag di accessibilità `mrPublic` , `mrPrivate`ad esempio e. Questo parametro può essere passato al [metodo DefineManifestResource](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Flag di accessibilità, ad esempio `mrPublic` e `mrPrivate`. Questo parametro può essere passato al [metodo DefineManifestResource](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  

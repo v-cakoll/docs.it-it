@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c6006c8892f650eec9528074d54f030d84ee8f88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750892"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432444"
 ---
 # <a name="imetadataemitsetparent-method"></a>Metodo IMetaDataEmit::SetParent
-Stabilisce che il membro specificato, come definito da una chiamata precedente a [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), è un membro del tipo specificato, come definito da una chiamata precedente a [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Stabilisce che il membro specificato, in base a quanto definito da una chiamata precedente a [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), è un membro del tipo specificato, in base a quanto definito da una chiamata precedente a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,17 +36,17 @@ HRESULT SetParent (
   
 ## <a name="parameters"></a>Parametri  
  `mr`  
- [in] Il `mdMemberRef` token per ricevere un nuovo elemento padre.  
+ in Token `mdMemberRef` per ricevere un nuovo elemento padre.  
   
  `tk`  
- [in] Il `mdToken` per il nuovo elemento padre.  
+ in `mdToken` per il nuovo elemento padre.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

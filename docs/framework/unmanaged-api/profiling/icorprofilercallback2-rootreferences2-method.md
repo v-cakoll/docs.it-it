@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779298"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439672"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>Metodo ICorProfilerCallback2::RootReferences2
-Notifica al profiler sui riferimenti principali dopo che si è verificata un'operazione di garbage collection. Questo metodo è un'estensione del [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) (metodo).  
+Notifica al profiler i riferimenti radice dopo che si è verificato un Garbage Collection. Questo metodo è un'estensione del metodo [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,33 +38,33 @@ HRESULT RootReferences2(
   
 ## <a name="parameters"></a>Parametri  
  `cRootRefs`  
- [in] Il numero di elementi nel `rootRefIds`, `rootKinds`, `rootFlags`, e `rootIds` matrici.  
+ in Il numero di elementi nelle matrici `rootRefIds`, `rootKinds`, `rootFlags`e `rootIds`.  
   
  `rootRefIds`  
- [in] Matrice di ID oggetto, ognuno dei quali fa riferimento a un oggetto statico o un oggetto nello stack. Gli elementi nel `rootKinds` matrice forniscono informazioni per classificare gli elementi corrispondenti nel `rootRefIds` matrice.  
+ in Matrice di ID oggetto, ognuno dei quali fa riferimento a un oggetto statico o a un oggetto nello stack. Gli elementi nella matrice di `rootKinds` forniscono informazioni per classificare gli elementi corrispondenti nella matrice di `rootRefIds`.  
   
  `rootKinds`  
- [in] Matrice di [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) valori che indicano il tipo di radice di garbage collection.  
+ in Matrice di valori di [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) che indicano il tipo di Garbage Collection radice.  
   
  `rootFlags`  
- [in] Matrice di [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) valori che descrivono le proprietà di una radice di garbage collection.  
+ in Matrice di valori [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) che descrivono le proprietà di un Garbage Collection radice.  
   
  `rootIds`  
- [in] Matrice di UINT_PTR valori che puntano a un integer che contiene informazioni aggiuntive sulla radice di garbage collection, in base al valore di `rootKinds` parametro.  
+ in Matrice di valori di UINT_PTR che punta a un Integer che contiene informazioni aggiuntive sulla radice Garbage Collection, a seconda del valore del parametro `rootKinds`.  
   
- Se il tipo dell'oggetto radice è uno stack, l'ID di radice è per la funzione che contiene la variabile. Se l'ID della radice è 0, la funzione è una funzione senza nome che è interna a CLR. Se il tipo dell'oggetto radice è un handle, l'ID di radice è per l'handle di garbage collection. Per altri tipi di primo livello, l'ID è un valore opaco e deve essere ignorato.  
+ Se il tipo della radice è uno stack, l'ID radice è per la funzione che contiene la variabile. Se l'ID radice è 0, la funzione è una funzione senza nome che è interna a CLR. Se il tipo della radice è un handle, l'ID radice è per il Garbage Collection handle. Per gli altri tipi radice, l'ID è un valore opaco e deve essere ignorato.  
   
 ## <a name="remarks"></a>Note  
- Il `rootRefIds`, `rootKinds`, `rootFlags`, e `rootIds` sono matrici parallele. Vale a dire `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, e `rootIds[i]` riguardano tutte la stessa radice.  
+ Le matrici `rootRefIds`, `rootKinds`, `rootFlags`e `rootIds` sono matrici parallele. Ovvero `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`e `rootIds[i]` tutti riguardano la stessa radice.  
   
- Entrambe `RootReferences` e `RootReferences2` vengono chiamati per notificare al profiler. I profiler in genere implementano un metodo o l'altro, ma non entrambi, poiché le informazioni inviate `RootReferences2` è un superset di che passato `RootReferences`.  
+ Per notificare al profiler vengono chiamati sia `RootReferences` che `RootReferences2`. I profiler in genere implementano un metodo o l'altro, ma non entrambi, perché le informazioni passate in `RootReferences2` sono un superset di passato in `RootReferences`.  
   
- È possibile che le voci in `rootRefIds` sia pari a zero, il che implica che il riferimento alla radice corrispondente è null e non fa riferimento a un oggetto nell'heap gestito.  
+ È possibile che le voci in `rootRefIds` siano pari a zero, il che significa che il riferimento radice corrispondente è null e non fa riferimento a un oggetto nell'heap gestito.  
   
- L'ID di oggetto restituito da `RootReferences2` nejsou platné durante il callback vero e proprio, perché l'operazione di garbage collection stia ancora spostando gli oggetti provenienti da indirizzi precedenti per i nuovi indirizzi. I profiler non devono quindi tentare di verificare gli oggetti durante una chiamata a `RootReferences2`. Quando [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) viene chiamato, tutti gli oggetti sono stati spostati nelle nuove posizioni e può essere controllati in modo sicuro.  
+ Gli ID oggetto restituiti da `RootReferences2` non sono validi durante il callback stesso, perché è possibile che il Garbage Collection stia spostando gli oggetti dagli indirizzi precedenti ai nuovi indirizzi. I profiler non devono quindi tentare di verificare gli oggetti durante una chiamata a `RootReferences2`. Quando viene chiamato [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) , tutti gli oggetti sono stati spostati nelle nuove posizioni e possono essere controllati in modo sicuro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
