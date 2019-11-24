@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c6006c8892f650eec9528074d54f030d84ee8f88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750892"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432444"
 ---
-# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="423ae-102">Metodo IMetaDataEmit::SetParent</span><span class="sxs-lookup"><span data-stu-id="423ae-102">IMetaDataEmit::SetParent Method</span></span>
-<span data-ttu-id="423ae-103">Stabilisce che il membro specificato, come definito da una chiamata precedente a [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), è un membro del tipo specificato, come definito da una chiamata precedente a [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="423ae-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="3a523-102">Metodo IMetaDataEmit::SetParent</span><span class="sxs-lookup"><span data-stu-id="3a523-102">IMetaDataEmit::SetParent Method</span></span>
+<span data-ttu-id="3a523-103">Stabilisce che il membro specificato, in base a quanto definito da una chiamata precedente a [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), è un membro del tipo specificato, in base a quanto definito da una chiamata precedente a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="3a523-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="423ae-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="423ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a523-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3a523-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetParent (   
@@ -36,23 +34,23 @@ HRESULT SetParent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="423ae-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="423ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a523-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3a523-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="423ae-106">[in] Il `mdMemberRef` token per ricevere un nuovo elemento padre.</span><span class="sxs-lookup"><span data-stu-id="423ae-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
+ <span data-ttu-id="3a523-106">in Token `mdMemberRef` per ricevere un nuovo elemento padre.</span><span class="sxs-lookup"><span data-stu-id="3a523-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
   
  `tk`  
- <span data-ttu-id="423ae-107">[in] Il `mdToken` per il nuovo elemento padre.</span><span class="sxs-lookup"><span data-stu-id="423ae-107">[in] The `mdToken` for the new parent.</span></span>  
+ <span data-ttu-id="3a523-107">in `mdToken` per il nuovo elemento padre.</span><span class="sxs-lookup"><span data-stu-id="3a523-107">[in] The `mdToken` for the new parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="423ae-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="423ae-108">Requirements</span></span>  
- <span data-ttu-id="423ae-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="423ae-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a523-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3a523-108">Requirements</span></span>  
+ <span data-ttu-id="3a523-109">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a523-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="423ae-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="423ae-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3a523-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="3a523-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="423ae-111">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="423ae-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3a523-111">**Libreria:** Usato come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="3a523-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="423ae-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="423ae-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3a523-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a523-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="423ae-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="423ae-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a523-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a523-113">See also</span></span>
 
-- [<span data-ttu-id="423ae-114">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="423ae-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="423ae-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="423ae-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="3a523-114">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="3a523-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3a523-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="3a523-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
