@@ -4,12 +4,12 @@ description: Informazioni sull'uso di .NET Core SDK e dei relativi strumenti nel
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299966"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428600"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso di .NET Core SDK e dei relativi strumenti in integrazione continua
 
@@ -34,7 +34,7 @@ Lo script di installazione viene automatizzato per essere eseguito all'inizio de
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../linux-prerequisites.md).
+> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="ci-setup-examples"></a>Esempi di installazione di CI
 
@@ -161,7 +161,7 @@ Per usare uno script di installazione manuale in Azure DevOps Services, creare u
 
    ![Aggiunta di un'istruzione di compilazione](./media/using-ci-with-cli/add-build-step.png)
 
-1. Viene visualizzato il **catalogo delle attività**. Il catalogo include le attività da usare nella compilazione. Dato che è disponibile uno script, selezionare il pulsante **Aggiungi** per **PowerShell: Consente di eseguire uno script PowerShell**.
+1. Viene visualizzato il **catalogo delle attività**. Il catalogo include le attività da usare nella compilazione. Poiché è disponibile uno script, selezionare il pulsante **Aggiungi** di **PowerShell: Consente di eseguire uno script PowerShell**.
 
    ![Aggiunta di un'istruzione di script di PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 

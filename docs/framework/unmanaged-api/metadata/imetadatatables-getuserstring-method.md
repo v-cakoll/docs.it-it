@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636940"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431427"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Metodo IMetaDataTables::GetUserString
 
-Ottiene la stringa a livello di codice in corrispondenza dell'indice specificato nella colonna stringa nell'ambito corrente.
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parametri
 
 `ixUserString`\
-[in] Il valore di indice da cui sarà possibile recuperare la stringa hardcoded.
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out] Un puntatore alla dimensione del `ppData`.
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out] Un puntatore a un puntatore alla stringa restituita.
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** Cor. h
+**Header:** Cor.h
 
-**Libreria:** Usato come risorsa in Mscoree. dll
+**Library:** Used as a resource in MsCorEE.dll
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

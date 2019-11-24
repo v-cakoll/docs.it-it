@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 46d118cc4dc54e34db0f964aa3f8d76f0ad67249
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0081463c0a99acc5cb4e02bb96e2218bbcf61131
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925988"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428620"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -23,21 +23,21 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 > - In Visual Studio per Mac scegliere **Aiuto** > **Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per la registrazione di un report sul bug. È possibile tenere traccia dei commenti e dei suggerimenti inviati nel portale della [community di sviluppatori](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web Developer Community di Visual Studio per Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- OpenSSL (se è in esecuzione .NET Core 1.1): Vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
+- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
 - [.NET Core SDK 1.1 o versione successiva](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Creazione di una libreria
 
-1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Selezionare **Avanti**.
+1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Scegliere **Avanti**.
 
    ![Finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Selezionare **Create**.
+1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Scegliere **Crea**.
 
    ![Opzioni della finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
@@ -75,7 +75,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 1. Aggiungere un riferimento al progetto `TextUtils` per consentire l'interazione tra la libreria di test e la classe `WordCount`. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse su **Dipendenze** in **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
 
-1. Nella finestra di dialogo **Modifica riferimenti** selezionare il progetto **TextUtils** nella scheda **Progetti**. Selezionare **OK**.
+1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
 
    ![Finestra di dialogo Modifica riferimenti di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -173,7 +173,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
    ![Finestra della console di Visual Studio per Mac con l'app in esecuzione](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
 
-1. Si esaminerà infine la funzionalità di debug con Visual Studio per Mac. Impostare un punto di interruzione nell'istruzione `Console.WriteLine`: selezionare il margine sinistro della riga 23. Verrà visualizzato un cerchio rosso accanto alla riga di codice. In alternativa, selezionare un punto qualsiasi nella riga di codice e scegliere **Esegui** > **Imposta/Rimuovi punto di interruzione** dal menu.
+1. Si esaminerà infine la funzionalità di debug con Visual Studio per Mac. Impostare un punto di interruzione nell'istruzione `Console.WriteLine` e selezionare il margine sinistro della riga 23. Verrà visualizzato un cerchio rosso accanto alla riga di codice. In alternativa, selezionare un punto qualsiasi nella riga di codice e scegliere **Esegui** > **Imposta/Rimuovi punto di interruzione** dal menu.
 
    ![Impostazione punto di interruzione in Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
 

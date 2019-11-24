@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745878"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426125"
 ---
 # <a name="iceegentruncatesection-method"></a>Metodo ICeeGen::TruncateSection
-Tronca la sezione di codice specificato per la lunghezza specificata.  
+Truncates the specified code section by the specified length.  
   
- Questo metodo è obsoleto e non deve essere utilizzato.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +38,20 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- [in] La sezione da troncare.  
+ [in] The section to truncate.  
   
  `len`  
- [in] La lunghezza, espressa in byte, da cui si desidera troncare la sezione.  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>Note  
- Chiamare `TruncateSection` solo se si hanno requisiti di sezione speciale che non sono gestiti tramite altri metodi.  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

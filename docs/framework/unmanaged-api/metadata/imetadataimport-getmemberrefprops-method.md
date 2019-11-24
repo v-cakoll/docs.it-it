@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fadc54d74ce6027bd021e148a14cb0c432eb41fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782348"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437484"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>Metodo IMetaDataImport::GetMemberRefProps
 Ottiene i metadati associati al membro a cui fa riferimento il token specificato.  
@@ -43,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `mr`  
- [in] Il token MemberRef per restituire i metadati associati.  
+ [in] The MemberRef token to return associated metadata for.  
   
  `ptk`  
- [out] Token TypeDef o TypeRef o TypeSpec che rappresenta la classe che dichiara il membro o un token ModuleRef che rappresenta la classe di modulo che dichiara il membro o un MethodDef che rappresenta il membro.  
+ [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
   
  `szMember`  
- [out] Un buffer di stringa per il nome del membro.  
+ [out] A string buffer for the member's name.  
   
  `cchMember`  
- [in] Le dimensioni richieste in caratteri wide di `szMember`.  
+ [in] The requested size in wide characters of `szMember`.  
   
  `pchMember`  
- [out] Le dimensioni restituite in caratteri wide di `szMember`.  
+ [out] The returned size in wide characters of `szMember`.  
   
  `ppvSibBlob`  
- [out] Un puntatore per la firma binaria dei metadati per il membro.  
+ [out] A pointer to the binary metadata signature for the member.  
   
  `pbSig`  
- [out] La dimensione in byte di `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

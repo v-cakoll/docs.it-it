@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777185"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432750"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Metodo IMetaDataEmit2::DefineMethodSpec
-Crea un'istanza generica di un metodo e ottiene un token per la definizione.  
+Creates a generic instance of a method, and gets a token to the definition.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +38,23 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Parametri  
  `tkParent`  
- [in] Un token per il metodo di cui creare l'istanza generica. Il token deve essere di tipo `mdMethodDef` o `mdMemberRef`.  
+ [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] Puntatore alla firma binaria COM+ del metodo.  
+ [in] A pointer to the binary COM+ signature of the method.  
   
  `cbSibBlob`  
- [in] Le dimensioni, in byte, di `pvSigBlob`.  
+ [in] The size, in bytes, of `pvSigBlob`.  
   
  `pmi`  
- [out] Un token per la definizione di firma dei metadati del metodo.  
+ [out] A token to the metadata signature definition of the method.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

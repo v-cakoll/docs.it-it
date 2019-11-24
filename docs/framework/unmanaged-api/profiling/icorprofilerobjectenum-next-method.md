@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775017"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428161"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Metodo ICorProfilerObjectEnum::Next
-Ottiene il numero specificato di oggetti contigui da una raccolta sequenziale di oggetti, a partire dalla posizione corrente dell'enumeratore nella sequenza.  
+Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +41,13 @@ HRESULT Next (
  [in] Numero di oggetti da recuperare.  
   
  `objects`  
- [out] Matrice di `ObjectID` valori, ognuno dei quali rappresenta un oggetto recuperato.  
+ [out] An array of `ObjectID` values, each of which represents a retrieved object.  
   
  `pceltFetched`  
  [out] Puntatore al numero di elementi effettivamente restituiti nella matrice `objects`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

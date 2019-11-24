@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777372"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428043"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Metodo ISymUnmanagedWriter::DefineField
-Definisce una singola variabile che non è incluso un metodo. Questo metodo è utilizzato per alcuni campi nelle classi, campi di bit e così via.  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] Il tipo di metadati o il metodo token.  
+ [in] The metadata type or method token.  
   
  `name`  
- [in] Il nome del campo.  
+ [in] The field name.  
   
  `attributes`  
- [in] Gli attributi di campo.  
+ [in] The field attributes.  
   
  `cSig`  
- [in] Oggetto `ULONG32` vale a dire le dimensioni, in caratteri, del buffer necessaria per contenere la firma del campo.  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in] Matrice di firme di campo.  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in] Il tipo di indirizzo.  
+ [in] The address type.  
   
  `addr1`  
- [in] Il primo indirizzo relativo al campo specificato.  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in] Il secondo indirizzo relativo al campo specificato.  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in] Terzo indirizzo relativo al campo specificato.  
+ [in] The third address for the field specification.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

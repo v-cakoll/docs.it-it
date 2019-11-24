@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777364"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430697"
 ---
 # <a name="getwin32resblob-method"></a>Metodo GetWin32ResBlob
-Recupera il BLOB di risorse Win32. Chiamare questo metodo dopo aver impostato le opzioni di assembly.  
+Retrieves Win32 resource blob. Call this method after setting assembly options.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,31 +39,31 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly.  
+ ID of the assembly.  
   
  `FileToken`  
- Token del file usato per recuperare il nome file da usare quando si costruisce la risorsa della versione Win32  
+ File token used to retrieve the filename to be used when constructing the Win32 Version resource  
   
  `fDll`  
- TRUE se il file è una DLL, false per un file EXE.  
+ TRUE if file is a DLL, false for an EXE.  
   
  `pszIconFile`  
- Icona facoltativa da inserire nel BLOB di risorse.  
+ Optional icon to insert into the resource blob.  
   
  `ppResBlob`  
- Riceve il BLOB di risorse.  
+ Receives the resource blob.  
   
  `pcbResBlob`  
- Riceve la dimensione del BLOB.  
+ Receives the size of the blob.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

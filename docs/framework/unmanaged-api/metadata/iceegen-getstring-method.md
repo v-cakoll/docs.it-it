@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce015713ca7ed26c97348aa39f8170a85c8aa93c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426166"
 ---
 # <a name="iceegengetstring-method"></a>Metodo ICeeGen::GetString
-Ottiene la stringa archiviata all'indirizzo virtuale relativo specificato.  
+Gets the string stored at the specified relative virtual address.  
   
- Questo metodo è obsoleto e non deve essere utilizzato.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,17 +38,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametri  
  `RVA`  
- [in] L'indirizzo virtuale relativo della stringa da restituire.  
+ [in] The relative virtual address of the string to return.  
   
  `lpString`  
- [out] La stringa restituita.  
+ [out] The returned string.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777672"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432559"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Metodo IMetaDataEmit::DefineEvent
-Crea una definizione per un evento con la firma dei metadati specificati e ottiene un token di definizione di tale evento.  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] Il token per la classe di destinazione o l'interfaccia. Questo è un `mdTypeDef` o `mdTypeDefNil` token.  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in] Il nome dell'evento.  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in] Flag dell'evento.  
+ [in] Event flags.  
   
  `tkEventType`  
- [in] Il token per la classe di evento. Si tratta di un `mdTypeDef`, una `mdTypeRef`, o un `mdTokenNil` token.  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in] Il metodo utilizzato per sottoscrivere l'evento, o null.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] Il metodo utilizzato per annullare la sottoscrizione per l'evento, o null.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] Il metodo utilizzato (da una classe derivata) per generare l'evento.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Matrice dei token per gli altri metodi associati all'evento. La matrice viene terminata con un `mdMethodDefNil` token.  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out] Il token di metadati assegnato all'evento.  
+ [out] The metadata token assigned to the event.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

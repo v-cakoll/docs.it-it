@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c1bf9e572ee88bd299f23ebb435c1b4d24ed717
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b78d604a28ffe01000a763f7e0dd3c1630e2c186
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435919"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Metodo ICorProfilerCallback::ClassUnloadFinished
-Notifica al profiler che ha terminato lo scaricamento di una classe.  
+Notifies the profiler that a class has finished unloading.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +35,16 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] Identifica la classe che è stata scaricata.  
+ [in] Identifies the class that was unloaded.  
   
  `hrStatus`  
- [in] HRESULT che indica se la classe è stata scaricata correttamente.  
+ [in] An HRESULT that indicates whether the class was unloaded successfully.  
   
 ## <a name="remarks"></a>Note  
- Alcune parti dello scaricamento della classe potrebbero continuare dopo il `ClassUnloadFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte dello scaricamento della classe ha avuto esito positivo.  
+ Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

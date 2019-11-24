@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6916e6344fe5c112b216ca753c372fa73a4d5af5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc30f9fb120db92ccfc1e7dd0560b3fe18c54b29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777709"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432738"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Metodo IMetaDataDispenserEx::SetOption
-Imposta l'opzione specificata in un determinato valore per l'ambito dei metadati corrente. L'opzione controlla la modalità di gestione delle chiamate all'ambito dei metadati corrente.  
+Sets the specified option to a given value for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,36 +36,36 @@ HRESULT SetOption (
   
 ## <a name="parameters"></a>Parametri  
  `optionId`  
- [in] Un puntatore a un GUID che specifica l'opzione da impostare.  
+ [in] A pointer to a GUID that specifies the option to be set.  
   
  `pValue`  
- [in] Il valore da usare per impostare l'opzione. Il tipo di questo valore deve essere una variante di tipo dell'opzione specificata.  
+ [in] The value to use to set the option. The type of this value must be a variant of the specified option's type.  
   
 ## <a name="remarks"></a>Note  
- La tabella seguente elenca i GUID disponibili che il `optionId` parametro può puntare a e i corrispondenti valori validi per il `pValue` parametro.  
+ The following table lists the available GUIDs that the `optionId` parameter can point to and the corresponding valid values for the `pValue` parameter.  
   
-|GUID|Descrizione|`pValue` Parametro|  
+|GUID|Descrizione|`pValue` Parameter|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Consente di controllare quali elementi vengono controllati i duplicati. Ogni volta che si chiama un' [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) metodo che crea un nuovo elemento, è possibile chiedere al metodo per verificare se l'elemento esiste già nell'ambito corrente. Ad esempio, è possibile controllare l'esistenza della `mdMethodDef` degli elementi; in questo caso, quando si chiama [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), verificherà che il metodo non esiste già nell'ambito corrente. Questo controllo Usa la chiave che identifica un metodo specifico: padre di tipo, nome e firma.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) enumerazione.|  
-|MetaDataRefToDefCheck|I controlli che fa riferimento a elementi vengono convertiti alle definizioni. Per impostazione predefinita, il motore dei metadati consente di ottimizzare il codice mediante la conversione di un elemento di cui si fa riferimento alla relativa definizione se l'elemento di riferimento viene effettivamente definita nell'ambito corrente.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) enumerazione.|  
-|MetaDataNotificationForTokenMovement|Determina quale token avvenuti durante un'unione di metadati generano i callback. Usare la [SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) metodo per stabilire le [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfaccia.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [CorNotificationForTokenMovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md) enumerazione.|  
-|MetaDataSetENC|Controlla il comportamento di modifica e continuazione (ENC). Solo una modalità di comportamento può essere impostata in un momento.|Deve essere una variante di tipo UI4 e deve contenere un valore di [CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md) enumerazione. Il valore non è una maschera di bit.|  
-|MetaDataErrorIfEmitOutOfOrder|Controlla gli errori generati out-ordine generano callback. Emissione di metadati non in ordine non è un errore irreversibile. Tuttavia, se si generano metadati in un ordine in cui viene accettato dal motore di metadati, i metadati sono più compatto e pertanto possono eseguire la ricerca in modo più efficiente. Usare la `IMetaDataEmit::SetHandler` metodo per stabilire il [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) interfaccia.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md) enumerazione.|  
-|MetaDataImportOption|Controlla quali tipi di elementi che sono stati eliminati durante un ENC vengono recuperati da un enumeratore.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [Enumerazione CorImportOptions](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md) enumerazione.|  
-|MetaDataThreadSafetyOptions|Controlla se il motore di metadati ottiene reader e writer blocchi, in modo da garantire la sicurezza dei thread. Per impostazione predefinita, il motore si presuppone che l'accesso a thread singolo dal chiamante, in modo che nessun blocco viene ottenuto. I client sono tenuti a mantenere la sincronizzazione dei thread appropriato quando si usa l'API dei metadati.|Deve essere una variante di tipo UI4 e deve contenere un valore di [CorThreadSafetyOptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md) enumerazione. Il valore non è una maschera di bit.|  
-|MetaDataGenerateTCEAdapters|Controlla se l'utilità di importazione della libreria di tipi deve generare le schede di evento fortemente accoppiata (TCE crittografia) per i contenitori di punto di connessione COM.|Deve essere una variante di tipo BOOL. Se `pValue` è impostata su `true`, l'utilità di importazione della libreria di tipi genera gli adapter TCE crittografia.|  
-|MetaDataTypeLibImportNamespace|Specifica uno spazio dei nomi non predefiniti per la libreria dei tipi da importare.|Deve essere un valore null o una variante di tipo BSTR. Se `pValue` è un valore null, lo spazio dei nomi corrente è impostato su null; in caso contrario, lo spazio dei nomi corrente viene impostato per la stringa contenuta nel tipo della variante BSTR.|  
-|MetaDataLinkerOptions|Controlla se il linker deve generare un assembly o un file di modulo .NET Framework.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md) enumerazione.|  
-|MetaDataRuntimeVersion|Specifica la versione di common language runtime rispetto a cui è stata compilata questa immagine. La versione viene archiviata sotto forma di stringa, ad esempio "v1.0.3705".|Deve essere un valore null, un valore VT_EMPTY o una variante di tipo BSTR. Se `pValue` è null, la versione del runtime è impostata su null. Se `pValue` è VT_EMPTY, la versione è impostata su un valore predefinito, che viene disegnato dalla versione di Mscorwks. dll all'interno del quale viene eseguito il codice di metadati. In caso contrario, la versione del runtime è impostata per la stringa contenuta nel tipo della variante BSTR.|  
-|MetaDataMergerOptions|Specifica le opzioni per l'unione dei metadati.|Deve essere una variante di tipo UI4 e deve contenere una combinazione dei valori del `MergeFlags` enumerazione, che è descritti nel file corhdr. H.|  
-|MetaDataPreserveLocalRefs|Disabilita l'ottimizzazione di riferimenti locali nelle definizioni.|Deve contenere una combinazione dei valori del [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) enumerazione.|  
+|MetaDataCheckDuplicatesFor|Controls which items are checked for duplicates. Each time you call an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) method that creates a new item, you can ask the method to check whether the item already exists in the current scope. For example, you can check for the existence of `mdMethodDef` items; in this case, when you call [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), it will check that the method does not already exist in the current scope. This check uses the key that uniquely identifies a given method: parent type, name, and signature.|Must be a variant of type UI4, and must contain a combination of the values of the [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) enumeration.|  
+|MetaDataRefToDefCheck|Controls which referenced items are converted to definitions. By default, the metadata engine will optimize the code by converting a referenced item to its definition if the referenced item is actually defined in the current scope.|Must be a variant of type UI4, and must contain a combination of the values of the [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) enumeration.|  
+|MetaDataNotificationForTokenMovement|Controls which token remaps occurring during a metadata merge generate callbacks. Use the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method to establish your [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface.|Must be a variant of type UI4, and must contain a combination of the values of the [CorNotificationForTokenMovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md) enumeration.|  
+|MetaDataSetENC|Controls the behavior of edit-and-continue (ENC). Only one mode of behavior can be set at a time.|Must be a variant of type UI4, and must contain a value of the [CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md) enumeration. The value is not a bitmask.|  
+|MetaDataErrorIfEmitOutOfOrder|Controls which emitted-out-of-order errors generate callbacks. Emitting metadata out of order is not fatal; however, if you emit metadata in an order that is favored by the metadata engine, the metadata is more compact and therefore can be more efficiently searched. Use the `IMetaDataEmit::SetHandler` method to establish your [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) interface.|Must be a variant of type UI4, and must contain a combination of the values of the [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md) enumeration.|  
+|MetaDataImportOption|Controls which kinds of items that were deleted during an ENC are retrieved by an enumerator.|Must be a variant of type UI4, and must contain a combination of the values of the [CorImportOptions Enumeration](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md) enumeration.|  
+|MetaDataThreadSafetyOptions|Controls whether the metadata engine obtains reader/writer locks, thereby ensuring thread safety. By default, the engine assumes that access is single-threaded by the caller, so no locks are obtained. Clients are responsible for maintaining proper thread synchronization when using the metadata API.|Must be a variant of type UI4, and must contain a value of the [CorThreadSafetyOptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md) enumeration. The value is not a bitmask.|  
+|MetaDataGenerateTCEAdapters|Controls whether the type library importer should generate the tightly coupled event (TCE) adapters for COM connection point containers.|Must be a variant of type BOOL. If `pValue` is set to `true`, the type library importer generates the TCE adapters.|  
+|MetaDataTypeLibImportNamespace|Specifies a non-default namespace for the type library that is being imported.|Must be either a null value or a variant of type BSTR. If `pValue` is a null value, the current namespace is set to null; otherwise, the current namespace is set to the string that is held in the variant's BSTR type.|  
+|MetaDataLinkerOptions|Controls whether the linker should generate an assembly or a .NET Framework module file.|Must be a variant of type UI4, and must contain a combination of the values of the [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md) enumeration.|  
+|MetaDataRuntimeVersion|Specifies the version of the common language runtime against which this image was built. The version is stored as a string, such as "v1.0.3705".|Must be a null value, a VT_EMPTY value, or a variant of type BSTR. If `pValue` is null, the runtime version is set to null. If `pValue` is VT_EMPTY, the version is set to a default value, which is drawn from the version of Mscorwks.dll within which the metadata code is running. Otherwise, the runtime version is set to the string that is held in the variant's BSTR type.|  
+|MetaDataMergerOptions|Specifies options for merging metadata.|Must be a variant of type UI4, and must contain a combination of the values of the `MergeFlags` enumeration, which is described in the CorHdr.h file.|  
+|MetaDataPreserveLocalRefs|Disables optimizing local references into definitions.|Must contain a combination of the values of the [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) enumeration.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

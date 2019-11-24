@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758155"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430100"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Metodo ICorProfilerCallback4::ReJITError
-Notifica al profiler che il compilatore di just-in-time (JIT) ha rilevato un errore nel processo di ricompilazione.  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] Il `ModuleID` in cui è stato effettuato il tentativo di ricompilazione non riuscita.  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in] Il `MethodDef` del metodo in cui è stato effettuato il tentativo di ricompilazione non riuscita.  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in] L'istanza della funzione che verrà ricompilata o contrassegnata per la ricompilazione. Questo valore può essere `NULL` se l'errore si è verificato su una base di ciascun metodo invece di base per istanza (ad esempio, se il profiler specificato un token di metadati non validi per il metodo di ricompilazione).  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in] HRESULT che indica la natura dell'errore. Vedere la sezione di HRESULT di stato per un elenco di valori.  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>Valore restituito  
  I valori restituiti da questo callback vengono ignorati.  
@@ -57,15 +55,15 @@ HRESULT ReJITError(
   
 |HRESULT matrice di stato|Descrizione|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|Il `moduleID` oppure `methodDef` token è `NULL`.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Il modulo non è ancora completamente caricato o è in fase di scaricamento.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Il modulo specificato è stato generato dinamicamente (ad esempio, da `Reflection.Emit`) e pertanto non è supportato da questo metodo.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Il metodo viene creata un'istanza in un assembly ritirabile e pertanto non può essere ricompilato. Si noti che i tipi e funzioni definite in un contesto non di reflection (ad esempio, `List<MyCollectibleStruct>`) è possibile creare istanze in un assembly ritirabile.|  
-|E_OUTOFMEMORY|Il CLR ha esaurito la memoria durante il tentativo di contrassegnare il metodo specificato per la ricompilazione JIT.|  
-|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Ad esempio, se una chiamata di sistema per modificare la protezione di accesso di una pagina di memoria ha esito negativo, viene visualizzato l'errore del sistema operativo.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

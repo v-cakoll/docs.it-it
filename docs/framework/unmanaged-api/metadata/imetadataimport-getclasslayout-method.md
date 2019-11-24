@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782451"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437776"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Metodo IMetaDataImport::GetClassLayout
 Ottiene le informazioni sul layout per la classe a cui fa riferimento il token TypeDef specificato.  
@@ -42,29 +40,29 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] Il token TypeDef per la classe con il layout da restituire.  
+ [in] The TypeDef token for the class with the layout to return.  
   
  `pdwPackSize`  
- [out] Uno dei valori 1, 2, 4, 8 o 16, che rappresenta la dimensione di compressione della classe.  
+ [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
   
  `rFieldOffset`  
- [out] Matrice di [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) valori.  
+ [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] Il numero di elementi restituiti nella `rFieldOffset`.  
+ [out] The number of elements returned in `rFieldOffset`.  
   
  `pulClassSize`  
- [out] La dimensione in byte della classe rappresentata da `td`.  
+ [out] The size in bytes of the class represented by `td`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

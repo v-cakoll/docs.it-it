@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c22e3c7c04a2b85723f1c0dba4543465faccab58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d8b408675127cde399a8346f2b9734a0e038cb5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427136"
 ---
-# <a name="corprftransitionreason-enumeration"></a>Enumerazione COR_PRF_TRANSITION_REASON
+# <a name="cor_prf_transition_reason-enumeration"></a>Enumerazione COR_PRF_TRANSITION_REASON
 Indica il motivo di una transizione da codice gestito a codice non gestito o viceversa.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,18 +33,18 @@ typedef enum {
 } COR_PRF_TRANSITION_REASON;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|La transizione è dovuto a una chiamata in una funzione.|  
-|`COR_PRF_TRANSITION_RETURN`|La transizione è dovuto a una restituzione da una funzione.|  
+|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
+|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
   
 ## <a name="remarks"></a>Note  
- Quando si verifica una transizione, il profiler riceve un' [ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) oppure [UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, ciascuno dei quali fornisce un valore di `COR_PRF_TRANSITION_REASON` enumerazione per indicare il motivo per la transizione.  
+ When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

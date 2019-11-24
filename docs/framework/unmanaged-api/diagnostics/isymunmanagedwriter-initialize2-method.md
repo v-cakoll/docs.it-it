@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777281"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427951"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>Metodo ISymUnmanagedWriter::Initialize2
-Imposta l'interfaccia di emissione dei metadati con il quale verrà associato questo writer e imposta il nome del file di output in cui verranno scritti i simboli di debug. Questo metodo consente inoltre di impostare la posizione finale del file di database (PDB) del programma.  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>Parametri  
  `emitter`  
- [in] Un puntatore all'interfaccia di emissione dei metadati.  
+ [in] A pointer to the metadata emitter interface.  
   
  `tempfilename`  
- [in] Un puntatore a un `WCHAR` che contiene il nome del file in cui vengono scritti i simboli di debug. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
+ [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
   
  `pIStream`  
- [in] Se specificato, il writer di simboli genera i simboli nel dato <xref:System.Runtime.InteropServices.ComTypes.IStream> invece che al file specificato nel `filename` parametro. Il parametro `pIStream` è facoltativo.  
+ [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. Il parametro `pIStream` è facoltativo.  
   
  `fFullBuild`  
- [in] `true` se si tratta di una ricompilazione completa. `false` se si tratta di una compilazione incrementale.  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
  `finalfilename`  
- [in] Un puntatore a un `WCHAR` vale a dire la stringa del percorso per la posizione finale del file PDB.  
+ [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

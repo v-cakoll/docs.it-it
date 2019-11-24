@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8025e04-f0e5-40c8-849c-8cd51323420e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 23f77f30b84622dffd8c76bb9302ad564f40ed41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6a6aa937078ed0627688a4eed3d9142a2e6e0ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778180"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428100"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>Metodo ISymUnmanagedWriter::CloseMethod
-Chiude il metodo corrente. Dopo che un metodo è stato chiuso, altri simboli non possono essere definiti all'interno di esso.  
+Chiude il metodo corrente. Once a method is closed, no more symbols can be defined within it.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +32,10 @@ HRESULT CloseMethod();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

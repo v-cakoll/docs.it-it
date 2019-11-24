@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cce59e1-80b9-4fc4-b3aa-126f1c5876bc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd601ac6041ca22d59d7467bafc7c1d87b21371f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778204"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428122"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>Metodo ISymUnmanagedWriter::Close
-Chiude il writer di simboli dopo il commit i simboli per l'archivio dei simboli.  
+Closes the symbol writer after committing the symbols to the symbol store.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +32,13 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Note  
- Dopo questa chiamata, il writer di simboli viene invalidato per altri aggiornamenti. Per chiudere il writer di simboli senza eseguire il commit i simboli, usare il [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) metodo invece.  
+ After this call, the symbol writer becomes invalid for further updates. To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774250"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436098"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Metodo IMetaDataTables::GetColumnInfo
-Ottiene i dati relativi alla colonna specificata nella tabella specificata.  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- in Indice della tabella desiderata.  
+ [in] The index of the desired table.  
   
  `ixCol`  
- in Indice della colonna desiderata.  
+ [in] The index of the desired column.  
   
  `poCol`  
- out Puntatore all'offset della colonna nella riga.  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- out Puntatore alla dimensione, in byte, della colonna.  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- out Puntatore al tipo dei valori nella colonna.  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- out Puntatore a un puntatore al nome della colonna.  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>Note
 
-Il tipo di colonna restituito rientra in un intervallo di valori:
+The returned column type falls within a range of values:
 
-| pType                    | Descrizione   | Funzione helper                   |
+| pType                    | Descrizione   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`.. `iRidMax`<br>(0.. 63)   | Sbarazzarsi           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`.. `iCodedTokenMax`<br>(64.. 95) | Token codificato | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -78,21 +76,21 @@ Il tipo di colonna restituito rientra in un intervallo di valori:
 | `iGUID` (102)            | GUID          | **IsHeapType**                    |
 | `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-I valori archiviati nell' *heap* (ovvero `IsHeapType == true`) possono essere letti utilizzando:
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`: **IMetadataTables. GetString**
-- `iGUID`: **IMetadataTables. GETguid**
-- `iBLOB`: **IMetadataTables. GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Per usare le costanti definite nella tabella precedente, includere la direttiva `#define _DEFINE_META_DATA_META_CONSTANTS` fornita dal file di intestazione *cor. h* .
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

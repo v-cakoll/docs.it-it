@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b4464c72e8d189cea4831cb641b9ff05063ce25
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57ad0bd3ed76376421d22a84c0863d36ec2707c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747224"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430273"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>Metodo ICorProfilerCallback::RuntimeThreadResumed
-Notifica al profiler che il thread specificato ha ripreso dopo una sospensione.  
+Notifies the profiler that the specified thread has resumed after being suspended.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +34,10 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>Parametri  
  `threadId`  
- [in] L'ID del thread che è stata ripresa.  
+ [in] The ID of the thread that has been resumed.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

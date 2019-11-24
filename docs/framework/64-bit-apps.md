@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120105"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429660"
 ---
 # <a name="64-bit-applications"></a>Applicazioni a 64 bit
 Quando si compila un'applicazione, è possibile specificare che deve essere eseguita in un sistema operativo Windows a 64 bit come applicazione nativa o in WOW64 (Windows a 32 bit in Windows a 64 bit). WOW64 è un ambiente di compatibilità che consente di eseguire in un sistema a 64 bit un'applicazione a 32 bit. WOW64 è incluso in tutte le versioni a 64 bit del sistema operativo Windows.  
@@ -41,11 +41,7 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
 ## <a name="general-64-bit-programming-information"></a>Informazioni generali sulla programmazione a 64 bit  
  Per informazioni generali sulla programmazione a 64 bit, vedere i seguenti documenti:  
   
-- Per altre informazioni sulla versione a 64 bit di CLR in un computer Windows a 64 bit, vedere la pagina relativa al [Centro per sviluppatori .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) sul sito Web di MSDN.  
-  
-- Nella documentazione di Windows SDK, vedere la sezione di [guida alla programmazione per Windows a 64 bit](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
-  
-- Per informazioni su come scaricare una versione a 64 bit di CLR, vedere la [pagina di download del Centro per sviluppatori .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) sul sito Web di MSDN.  
+- Nella documentazione di Windows SDK, vedere la sezione di [guida alla programmazione per Windows a 64 bit](/windows/win32/winprog64/programming-guide-for-64-bit-windows).  
   
 - Per informazioni sul supporto di Visual Studio per la creazione di applicazioni a 64 bit, vedere [Supporto a 64 bit per IDE di Visual Studio](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
@@ -54,9 +50,9 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
   
 |Compilatore|Opzione del compilatore|  
 |--------------|---------------------|  
-|Visual Basic|[-Platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (opzioni del compilatore C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|È possibile creare applicazioni Microsoft Intermediate Language (MSIL) indipendenti dalla piattaforma usando **/clr:safe**. Per ulteriori informazioni, vedere [-CLR (compilazione Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ include un compilatore separato per ogni sistema operativo a 64 bit. Per altre informazioni sull'uso di Visual C++ per creare applicazioni native eseguibili in un sistema operativo Windows a 64 bit, vedere [Programmazione a 64 bit con Visual C++](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
+|Visual C++|È possibile creare applicazioni Microsoft Intermediate Language (MSIL) indipendenti dalla piattaforma usando **/clr:safe**. For more information, see [-clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ include un compilatore separato per ogni sistema operativo a 64 bit. Per altre informazioni sull'uso di Visual C++ per creare applicazioni native eseguibili in un sistema operativo Windows a 64 bit, vedere [Programmazione a 64 bit con Visual C++](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinazione dello stato di un file EXE o di un file DLL  
  Per determinare se un file EXE o un file DLL deve essere eseguito solo su una piattaforma specifica o in WOW64, usare [CorFlags.exe (strumento di conversione CorFlags)](./tools/corflags-exe-corflags-conversion-tool.md) senza opzioni. È anche possibile usare CorFlags.exe per modificare lo stato della piattaforma di un file EXE o di un file DLL. Il numero di versione del runtime principale dell'intestazione CLR di un assembly di Visual Studio è impostato su 2, mentre quello secondario è impostato su 5. Le applicazioni con la versione di runtime secondaria impostata su 0 sono considerate applicazioni legacy e vengono sempre eseguite in WOW64.  

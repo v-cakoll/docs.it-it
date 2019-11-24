@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 125a63638a41707b8eed918253cb1f93abb907eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777399"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434331"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Metodo IMetaDataEmit::GetSaveSize
-Ottiene la dimensione stimata binaria dell'assembly e i relativi metadati nell'ambito corrente.  
+Gets the estimated binary size of the assembly and its metadata in the current scope.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,30 +36,30 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>Parametri  
  `fSave`  
- [in] Valore di [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumerazione che specifica se si desidera ottenere le dimensioni accurate o approssimative. Solo tre valori sono validi: cssAccurate, cssQuick cssDiscardTransientCAs e:  
+ [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
   
-- cssAccurate restituisce l'esatta dimensione di salvataggio, ma richiede più tempo per il calcolo.  
+- cssAccurate returns the exact save size but takes longer to calculate.  
   
-- cssQuick restituisce una dimensione, vengono aggiunti per sicurezza, ma richiede meno tempo per il calcolo.  
+- cssQuick returns a size, padded for safety, but takes less time to calculate.  
   
-- indica a cssDiscardTransientCAs `GetSaveSize` che possono essere generate da subito gli attributi personalizzati annullabile.  
+- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
   
  `pdwSaveSize`  
- [out] Un puntatore alla dimensione necessaria per salvare il file.  
+ [out] A pointer to the size that is required to save the file.  
   
 ## <a name="remarks"></a>Note  
- `GetSaveSize` Calcola lo spazio necessario, in byte, per salvare l'assembly e tutti i relativi metadati nell'ambito corrente. (Una chiamata per il [SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) metodo genererebbe il numero di byte.)  
+ `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
   
- Se il chiamante implementa il [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfaccia (tramite [SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) oppure [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` eseguirà due passaggi su tutti i metadati per ottimizzare e comprimerlo. In caso contrario, non verranno eseguite ottimizzazioni.  
+ If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
   
- Se l'ottimizzazione viene eseguita, il primo passaggio di ordina semplicemente le strutture di metadati per ottimizzare le prestazioni delle ricerche in fase di importazione. Questo passaggio determina in genere lo spostamento di record, con l'effetto collaterale che non sono più validi i token conservati dallo strumento per riferimento futuro. I metadati non informare il chiamante di queste modifiche dei token fino a dopo il secondo passaggio, tuttavia. Nel secondo passaggio, vengono eseguite diverse ottimizzazioni che consentono di ridurre le dimensioni complessive dei metadati, ad esempio ottimizzazione (associazione anticipata) `mdTypeRef` e `mdMemberRef` token quando il riferimento è relativo a un tipo o membro dichiarato nel ambito dei metadati corrente. In questo passaggio, si verifica un altro round di mapping dei token. Dopo questo passaggio, il motore di metadati notifica al chiamante, mediante il `IMapToken` interfaccia, di qualsiasi modificato i valori dei token.  
+ If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

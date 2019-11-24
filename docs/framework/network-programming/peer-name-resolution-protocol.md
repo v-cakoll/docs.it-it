@@ -2,12 +2,12 @@
 title: Protocollo PNRP (Peer Name Resolution Protocol)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047510"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428219"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
@@ -40,7 +40,7 @@ Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:
   
 - <xref:System.Net.PeerToPeer.PeerName>: definisce un nome di peer che può essere usato per registrare e risolvere successivamente un peer all'interno di un cloud.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: definisce il record nel cloud PNRP che contiene le informazioni di registrazione per un peer, inclusi gli endpoint di rete dove è possibile contattare il peer.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: definisce il record nel cloud PNRP che contiene le informazioni di registrazione per un peer, che include gli endpoint di rete in cui è possibile contattare il peer.  
   
 - <xref:System.Net.PeerToPeer.PeerNameRegistration>: definisce il processo di registrazione per un nome di peer, inclusi i metodi per avviare e arrestare la registrazione dei nomi di peer.  
   
@@ -51,4 +51,7 @@ Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [Esempi di programmazione di rete](network-programming-samples.md)
-- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)
+
+<!-- to-do: review sample links
+- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
+-->

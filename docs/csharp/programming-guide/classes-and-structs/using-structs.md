@@ -5,36 +5,36 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 8b2810af81a57cf21b9a2e2438f7f6aa2cb7a669
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772066"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429489"
 ---
-# <a name="using-structs-c-programming-guide"></a>Utilizzo di struct (C# guida per programmatori)
+# <a name="using-structs-c-programming-guide"></a>Using structs (C# Programming Guide)
 
-Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectangle`e `Color`. Sebbene sia altrettanto conveniente rappresentare un punto con una [classe](../../language-reference/keywords/class.md) con [proprietà implementate automaticamente](./auto-implemented-properties.md), lo [struct](../../language-reference/keywords/struct.md) potrebbe essere più efficiente in alcuni scenari. Ad esempio, se si dichiara una matrice di 1000 oggetti `Point` , verrà allocata memoria aggiuntiva per fare riferimento a ogni oggetto. In questo caso, lo struct risulterebbe meno costoso. Poiché il .NET Framework contiene un oggetto denominato <xref:System.Drawing.Point>, lo struct in questo esempio è denominato `Coords`.
+Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectangle`e `Color`. Sebbene sia altrettanto conveniente rappresentare un punto con una [classe](../../language-reference/keywords/class.md) con [proprietà implementate automaticamente](./auto-implemented-properties.md), lo [struct](../../language-reference/keywords/struct.md) potrebbe essere più efficiente in alcuni scenari. Ad esempio, se si dichiara una matrice di 1000 oggetti `Point` , verrà allocata memoria aggiuntiva per fare riferimento a ogni oggetto. In questo caso, lo struct risulterebbe meno costoso. Because .NET already contains an object called <xref:System.Drawing.Point>, the struct in this example is named `Coords` instead.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-È un errore definire un costruttore senza parametri per uno struct. È anche errato inizializzare un campo di istanza nel corpo di uno struct. È possibile inizializzare i membri dello struct accessibili dall'esterno solo usando un costruttore con parametri, il costruttore senza parametri implicito, un [inizializzatore di oggetto](object-and-collection-initializers.md) o accedendo ai membri singolarmente dopo la dichiarazione dello struct. I membri privati o altrimenti inaccessibili richiedono l'utilizzo di costruttori in modo esclusivo.
+It is an error to define a parameterless constructor for a struct. È anche errato inizializzare un campo di istanza nel corpo di uno struct. È possibile inizializzare i membri dello struct accessibili dall'esterno solo usando un costruttore con parametri, il costruttore senza parametri implicito, un [inizializzatore di oggetto](object-and-collection-initializers.md) o accedendo ai membri singolarmente dopo la dichiarazione dello struct. I membri privati o altrimenti inaccessibili richiedono l'utilizzo di costruttori in modo esclusivo.
 
 Quando si crea un oggetto struct mediante l'operatore [new](../../language-reference/operators/new-operator.md), questo viene creato e viene chiamato il costruttore appropriato in base alla [firma del costruttore](constructors.md#constructor-syntax). A differenza delle classi, è possibile creare istanze di struct senza usare l'operatore `new` . In tal caso, non vi è alcuna chiamata al costruttore, il che rende più efficiente l'allocazione. Tuttavia, i campi restano non assegnati e l'oggetto non può essere usato fino all'inizializzazione di tutti i campi. Ciò include l'impossibilità di ottenere o impostare valori tramite le proprietà.
 
-Se si crea un'istanza di un oggetto struct usando il costruttore senza parametri, tutti i membri vengono assegnati in base ai relativi [valori predefiniti](../../language-reference/keywords/default-values-table.md).
+If you instantiate a struct object using the parameterless constructor, all members are assigned according to their [default values](../../language-reference/keywords/default-values-table.md).
 
-Quando si scrive un costruttore con parametri per uno struct, è necessario inizializzare in modo esplicito tutti i membri. in caso contrario, uno o più membri rimangono non assegnati e non è possibile usare lo struct, generando l'errore del compilatore [CS0171](../../misc/cs0171.md).
+When writing a constructor with parameters for a struct, you must explicitly initialize all members; otherwise one or more members remain unassigned and the struct cannot be used, producing compiler error [CS0171](../../misc/cs0171.md).
 
 Per gli struct non è prevista la stessa ereditarietà delle classi. Uno struct non può ereditare da un altro struct o da una classe e non può essere la base di una classe. Gli struct, tuttavia, ereditano dalla classe base <xref:System.Object>. Uno struct può implementare interfacce esattamente come le classi.
 
-Non è possibile dichiarare una classe usando la parola chiave `struct`. In C# le classi e gli struct sono semanticamente diversi. Uno struct è un tipo di valore, mentre una classe è un tipo di riferimento. Per altre informazioni, vedere [tipi di valore](../../language-reference/keywords/value-types.md) e [tipi di riferimento](../../language-reference/keywords/reference-types.md).
+Non è possibile dichiarare una classe usando la parola chiave `struct`. In C# le classi e gli struct sono semanticamente diversi. Uno struct è un tipo di valore, mentre una classe è un tipo di riferimento. For more information, see [Value types](../../language-reference/keywords/value-types.md) and [Reference types](../../language-reference/keywords/reference-types.md).
 
 A meno che non sia richiesta una semantica tipo-riferimento, una classe piccola può essere gestita in modo più efficiente dal sistema se dichiarata come uno struct.
 
 ## <a name="example-1"></a>Esempio 1
 
-In questo esempio viene illustrata `struct` inizializzazione utilizzando i costruttori senza parametri e con parametri.
+This example demonstrates `struct` initialization using both parameterless and parameterized constructors.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

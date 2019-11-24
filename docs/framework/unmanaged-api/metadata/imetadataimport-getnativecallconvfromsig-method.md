@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b5dfb31cfe0364a745b729018be536f6be9aac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778963"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437248"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Metodo IMetaDataImport::GetNativeCallConvFromSig
 Ottiene la convenzione di chiamata nativa per il metodo rappresentato dal puntatore a firma specificato.  
@@ -39,20 +37,20 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parametri  
  `pvSig`  
- [in] Puntatore alla firma del metodo per restituire la convenzione di chiamata per i metadati.  
+ [in] A pointer to the metadata signature of the method to return the calling convention for.  
   
  `cbSig`  
- [in] La dimensione in byte di `pvSig`.  
+ [in] The size in bytes of `pvSig`.  
   
  `pCallConv`  
- [out] Puntatore alla convenzione di chiamata nativa.  
+ [out] A pointer to the native calling convention.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

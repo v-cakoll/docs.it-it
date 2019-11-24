@@ -9,16 +9,16 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422769"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428511"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
 
-La clausola `group` restituisce una sequenza di oggetti <xref:System.Linq.IGrouping%602> che contengono zero o più elementi corrispondenti al valore chiave per il gruppo. Ad esempio, è possibile raggruppare una sequenza di stringhe in base alla prima lettera di ogni stringa. In questo caso, la prima lettera è la chiave con tipo [char](char.md) e viene archiviata nella proprietà `Key` di ogni oggetto <xref:System.Linq.IGrouping%602>. Il compilatore deduce automaticamente il tipo della chiave.
+La clausola `group` restituisce una sequenza di oggetti <xref:System.Linq.IGrouping%602> che contengono zero o più elementi corrispondenti al valore chiave per il gruppo. Ad esempio, è possibile raggruppare una sequenza di stringhe in base alla prima lettera di ogni stringa. In questo caso, la prima lettera è la chiave con tipo [char](../builtin-types/char.md) e viene archiviata nella proprietà `Key` di ogni oggetto <xref:System.Linq.IGrouping%602>. Il compilatore deduce automaticamente il tipo della chiave.
 
 È possibile terminare un'espressione di query con una clausola `group`, come illustrato nell'esempio seguente:
 
@@ -66,7 +66,7 @@ Usare una chiave composta se si vuole raggruppare gli elementi in base a più di
 group person by new {name = person.surname, city = person.city};
 ```
 
-Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. Per altre informazioni, vedere [Procedura: Implementare una classe leggera con proprietà implementate automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Procedura: Eseguire una query per trovare i file duplicati in un albero di directory](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
+Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. For more information see [How to implement a lightweight class with auto-implemented properties](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) and [How to: Query for Duplicate Files in a Directory Tree](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
 
 ## <a name="example"></a>Esempio
 

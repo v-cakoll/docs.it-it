@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772318"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432769"
 ---
 # <a name="corsetenc-enumeration"></a>Enumerazione CorSetENC
 Contiene valori usati per influenzare il comportamento durante la generazione di metadati.  
@@ -44,23 +42,23 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleta.|  
 |`MDSetENCOff`|Obsoleta.|  
-|`MDUpdateENC`|Indica che, mentre i metadati possono essere aggiornati, i token non è possibile spostare.|  
-|`MDUpdateFull`|Indica che i token possono essere spostati durante gli aggiornamenti.|  
-|`MDUpdateExtension`|Indica che gli aggiornamenti possono essere costituito solo da aggiunte. Token non possono essere spostati.|  
-|`MDUpdateIncremental`|Indica che la compilazione incrementale.|  
-|`MDUpdateDelta`|Indica che solo i metadati modificati devono essere salvati.|  
-|`MDUpdateMask`|Include `MDUpdateENC`, `MDUpdateFull` e `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

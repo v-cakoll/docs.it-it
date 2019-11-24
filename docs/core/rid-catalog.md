@@ -2,12 +2,12 @@
 title: Catalogo dei RID (Runtime IDentifier) di .NET Core
 description: Informazioni sull'identificatore di runtime (RID) e su come vengono usati i RID in .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100915"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428747"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -108,7 +108,7 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `win10-arm`
   - `win10-arm64`
 
-Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](windows-prerequisites.md).
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
 
 ## <a name="linux-rids"></a>RID Linux
 
@@ -126,7 +126,7 @@ Sono elencati solo i valori comuni. Per la versione più recente e completa, ved
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](linux-prerequisites.md).
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
 
 ## <a name="macos-rids"></a>RID macOS
 
@@ -145,7 +145,7 @@ I RID macOS usano la personalizzazione "OSX" precedente. Sono elencati solo i va
 - macOS 10.14 Mojave (.NET Core 1.1 o versioni successive)
   - `osx.10.14-x64`
 
-Per altre informazioni, vedere [Prerequisiti per .NET Core in macOS](macos-prerequisites.md).
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
 
 ## <a name="see-also"></a>Vedere anche
 

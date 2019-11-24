@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779022"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437327"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Metodo IMetaDataImport::GetModuleRefProps
 Ottiene il nome del modulo a cui fa riferimento il token di metadati specificato.  
@@ -40,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `mur`  
- [in] Il token di metadati ModuleRef che fa riferimento al modulo per ottenere informazioni sui metadati.  
+ [in] The ModuleRef metadata token that references the module to get metadata information for.  
   
  `szName`  
- [out] Un buffer contenente il nome del modulo.  
+ [out] A buffer to hold the module name.  
   
  `cchName`  
- [in] La dimensione richiesta del `szName` in caratteri "wide".  
+ [in] The requested size of `szName` in wide characters.  
   
  `pchName`  
- [out] Le dimensioni restituite del `szName` in caratteri "wide".  
+ [out] The returned size of `szName` in wide characters.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

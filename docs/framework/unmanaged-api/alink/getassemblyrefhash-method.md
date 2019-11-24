@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777201"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433881"
 ---
 # <a name="getassemblyrefhash-method"></a>Metodo GetAssemblyRefHash
-Recupera un blob hash per un determinato assembly.  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,22 +36,22 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parametri  
  `FileToken`  
- ID dell'assembly a cui si riferisce l'hash.  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- Riceve il blob hash risultante.  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- Riceve le dimensioni, in byte, del blob hash.  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

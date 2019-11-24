@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751891"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436037"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Metodo ICorProfilerInfo2::GetArrayObjectInfo
-Ottiene informazioni dettagliate su un oggetto matrice.  
+Gets detailed information about an array object.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,25 +38,25 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parametri  
  `objectId`  
- [in] L'ID di un oggetto matrice valida.  
+ [in] The ID of a valid array object.  
   
  `cDimensions`  
- [in] La classificazione (numero di dimensioni) della matrice.  
+ [in] The rank (number of dimensions) of the array.  
   
  `pDimensionSizes`  
- [out] Matrice che contiene numeri interi, ognuno dei quali rappresenta la dimensione di una dimensione della matrice.  
+ [out] An array that contains integers, each representing the size of a dimension of the array.  
   
  `pDimensionLowerBounds`  
- [out] Matrice che contiene numeri interi, ognuno dei quali rappresenta minore associato di una dimensione della matrice.  
+ [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
   
  `ppData`  
- [out] Un puntatore all'indirizzo del buffer non elaborato per la matrice, che è disposto in base al C++ convenzione.  
+ [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
   
 ## <a name="remarks"></a>Note  
- Il `pDimensionSizes` e `pDimensionLowerBounds` sono matrici parallele, in modo che gli elementi che si trova in corrispondenza dell'indice stesso in ogni matrice sono illustrate le caratteristiche della stessa entità.  
+ The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

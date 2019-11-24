@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776981"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426743"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>Metodo ISymUnmanagedReader::GetMethodFromDocumentPosition
-Restituisce il metodo che contiene il punto di interruzione in corrispondenza della posizione specificata in un documento.  
+Returns the method that contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] Il documento specificato.  
+ [in] The specified document.  
   
  `line`  
- [in] La riga del documento specificato.  
+ [in] The line of the specified document.  
   
  `column`  
- [in] La colonna del documento specificato.  
+ [in] The column of the specified document.  
   
  `pRetVal`  
- [out] Un puntatore all'indirizzo di un [interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) oggetto che rappresenta il metodo che contiene il punto di interruzione.  
+ [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

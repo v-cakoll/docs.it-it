@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771858"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428517"
 ---
 # <a name="enum-c-reference"></a>enum (Riferimenti per C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 In questa enumerazione la sequenza di elementi viene forzata a iniziare da `1` anziché da `0`. Tuttavia, si consiglia di includere una costante con valore pari a 0. Per altre informazioni, vedere [Tipi di enumerazione](../../programming-guide/enumeration-types.md).
 
-Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](char.md) non può essere un tipo sottostante di un'enumerazione. Il tipo sottostante predefinito degli elementi dell'enumerazione è [int](../builtin-types/integral-numeric-types.md). Per dichiarare un'enumerazione di un altro tipo integrale, ad esempio [byte](../builtin-types/integral-numeric-types.md), usare i due punti dopo l'identificatore seguito dal tipo, come illustrato nell'esempio seguente.
+Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](../builtin-types/char.md) non può essere un tipo sottostante di un'enumerazione. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428498"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -43,10 +43,10 @@ L'espressione di ricerca fornisce il valore da confrontare con i modelli nelle e
 
 In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espressione che restituisce un valore dei tipi seguenti:
 
-- un [char](char.md).
+- un [char](../builtin-types/char.md).
 - una [string](../builtin-types/reference-types.md).
 - un [bool](bool.md).
-- un valore integrale, ad esempio un [int](../builtin-types/integral-numeric-types.md) o un [long](../builtin-types/integral-numeric-types.md).
+- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
 - un valore [enum](enum.md).
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "il controllo non può passare da un'etichetta case (\<etichetta case >) a un'altra".
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
 
 ```csharp
 switch (caseSwitch)
@@ -121,10 +121,10 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
 dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
 - Un valore letterale [bool](bool.md), ad esempio `true` o `false`.
-- Qualsiasi costante integrale, ad esempio un [int](../builtin-types/integral-numeric-types.md), un [long](../builtin-types/integral-numeric-types.md) o un [byte](../builtin-types/integral-numeric-types.md).
+- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
-- Un valore letterale [char](char.md).
+- Un valore letterale [char](../builtin-types/char.md).
 - Un valore letterale [string](../builtin-types/reference-types.md).
 
 L'espressione costante viene valutata nel modo seguente:

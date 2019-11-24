@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d1db08dfcd2adf1247dd717d6c826bce4726b8a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777047"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429752"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Metodo ISymUnmanagedReader::GetVariables
-Restituisce una variabile non locale, padre e al nome.  
+Returns a non-local variable, given its parent and name.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] L'elemento padre della variabile.  
+ [in] The parent of the variable.  
   
  `cVars`  
  [in] Dimensione della matrice `pVars`.  
   
  `pcVars`  
- [out] Un puntatore alla variabile che riceve il numero di variabili restituite in `pVars`.  
+ [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
   
  `pVars`  
- [out] Puntatore alla variabile che riceve le variabili.  
+ [out] A pointer to the variable that receives the variables.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

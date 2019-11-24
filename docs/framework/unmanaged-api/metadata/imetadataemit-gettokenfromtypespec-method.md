@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770741"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434294"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>Metodo IMetaDataEmit::GetTokenFromTypeSpec
-Ottiene i metadati di un token per il tipo con la firma dei metadati specificato.  
+Gets a metadata token for the type with the specified metadata signature.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>Parametri  
  `pvSig`  
- [in] La firma definita.  
+ [in] The signature being defined.  
   
  `cbSig`  
- [in] Il numero di byte in `pvSig`.  
+ [in] The count of bytes in `pvSig`.  
   
  `ptypespec`  
- [out] Il `mdTypeSpec` token assegnato.  
+ [out] The `mdTypeSpec` token assigned.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

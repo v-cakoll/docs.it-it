@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039109"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428444"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
-Gli operatori seguenti eseguono operazioni di spostamento or bit per bit con operandi dei [tipi numerici integrali](../builtin-types/integral-numeric-types.md) o del tipo [char](../keywords/char.md) :
+The following operators perform bitwise or shift operations with operands of the [integral numeric types](../builtin-types/integral-numeric-types.md) or the [char](../builtin-types/char.md) type:
 
 - Operatore unario [`~` (complemento bit per bit)](#bitwise-complement-operator-)
 - Operatori di scorrimento binari [`<<` (scorrimento a sinistra)](#left-shift-operator-) e [`>>` (scorrimento a destra)](#right-shift-operator-)
@@ -46,7 +46,7 @@ Gli operatori seguenti eseguono operazioni di spostamento or bit per bit con ope
 
 Questi operatori sono definiti per i tipi `int`, `uint`, `long` e `ulong`. Quando entrambi gli operandi sono di altri tipi integrali (`sbyte`, `byte`, `short`, `ushort` o `char`), i relativi valori vengono convertiti nel tipo `int`, che è anche il tipo di risultato di un'operazione. Quando gli operandi sono di tipi integrali diversi, i relativi valori vengono convertiti nel tipo integrale più vicino. Per altre informazioni, vedere la sezione [Promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
-Gli operatori `&`, `|`e `^` sono definiti anche per gli operandi del tipo di `bool`. Per altre informazioni, vedere [Operatori logici booleani](boolean-logical-operators.md).
+The `&`, `|`, and `^` operators are also defined for operands of the `bool` type. Per altre informazioni, vedere [Operatori logici booleani](boolean-logical-operators.md).
 
 Le operazioni di scorrimento non causano mai overflow e producono gli stessi risultati nei contesti [Checked e Unchecked](../keywords/checked-and-unchecked.md).
 
@@ -82,11 +82,11 @@ L'operazione di scorrimento a destra rimuove i bit meno significativi, come illu
 
 Le posizioni dei bit vuoti più significativi vengono impostate in base al tipo dell'operando di sinistra come segue:
 
-- Se l'operando sinistro è di tipo `int` o `long`, l'operatore di spostamento a destra esegue un turno *aritmetico* : il valore del bit più significativo (il bit di segno) dell'operando di sinistra viene propagato nelle posizioni di bit vuote di ordine superiore. Vale a dire, le posizioni dei bit vuoti più significativi vengono impostate su zero se l'operando di sinistra è un valore non negativo e impostate su uno se è negativo.
+- If the left-hand operand is of type `int` or `long`, the right-shift operator performs an *arithmetic* shift: the value of the most significant bit (the sign bit) of the left-hand operand is propagated to the high-order empty bit positions. Vale a dire, le posizioni dei bit vuoti più significativi vengono impostate su zero se l'operando di sinistra è un valore non negativo e impostate su uno se è negativo.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Se l'operando sinistro è di tipo `uint` o `ulong`, l'operatore di spostamento a destra esegue un spostamento *logico* : le posizioni dei bit vuote di ordine superiore sono sempre impostate su zero.
+- If the left-hand operand is of type `uint` or `ulong`, the right-shift operator performs a *logical* shift: the high-order empty bit positions are always set to zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ L'operatore `&` calcola l'AND logico bit per bit dei relativi operandi:
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-Per `bool` operandi, l'operatore di `&` calcola l'operatore [and logico](boolean-logical-operators.md#logical-and-operator-) degli operandi. L'operatore unario `&` è l'[operatore address-of](pointer-related-operators.md#address-of-operator-).
+For `bool` operands, the `&` operator computes the [logical AND](boolean-logical-operators.md#logical-and-operator-) of its operands. L'operatore unario `&` è l'[operatore address-of](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operatore OR esclusivo logico: ^
 
@@ -106,7 +106,7 @@ L'operatore `^` calcola l'OR esclusivo logico bit per bit, chiamato anche XOR lo
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-Per `bool` operandi, l'operatore di `^` calcola l' [OR esclusivo logico](boolean-logical-operators.md#logical-exclusive-or-operator-) degli operandi.
+For `bool` operands, the `^` operator computes the [logical exclusive OR](boolean-logical-operators.md#logical-exclusive-or-operator-) of its operands.
 
 ## <a name="logical-or-operator-"></a>Operatore OR logico |
 
@@ -114,7 +114,7 @@ L'operatore `|` calcola l'OR logico bit per bit dei relativi operandi:
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-Per `bool` operandi, l'operatore `|` calcola l' [OR logico](boolean-logical-operators.md#logical-or-operator-) degli operandi.
+For `bool` operands, the `|` operator computes the [logical OR](boolean-logical-operators.md#logical-or-operator-) of its operands.
 
 ## <a name="compound-assignment"></a>Assegnazione composta
 
@@ -154,17 +154,17 @@ Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla pre
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Per l'elenco completo degli C# operatori ordinati in base al livello di precedenza, vedere la sezione [precedenza](index.md#operator-precedence) degli [ C# operatori](index.md) dell'articolo operatori.
+For the complete list of C# operators ordered by precedence level, see the [Operator precedence](index.md#operator-precedence) section of the [C# operators](index.md) article.
 
 ## <a name="shift-count-of-the-shift-operators"></a>Conteggio degli scorrimenti degli operatori di scorrimento
 
-Per gli operatori shift `<<` e `>>`, il tipo dell'operando destro deve essere `int` o un tipo con una [conversione numerica implicita predefinita](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) in `int`.
+For the shift operators `<<` and `>>`, the type of the right-hand operand must be `int` or a type that has a [predefined implicit numeric conversion](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) to `int`.
 
 Per le espressioni `x << count` e `x >> count`, il conteggio effettivo degli scorrimenti varia a seconda del tipo di `x` come segue:
 
-- Se il tipo di `x` è `int` o `uint`, il conteggio dello spostamento viene definito dai *cinque* bit di ordine inferiore dell'operando destro. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x1F` (o `count & 0b_1_1111`).
+- If the type of `x` is `int` or `uint`, the shift count is defined by the low-order *five* bits of the right-hand operand. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x1F` (o `count & 0b_1_1111`).
 
-- Se il tipo di `x` è `long` o `ulong`, il conteggio dello spostamento viene definito dai *sei* bit di ordine inferiore dell'operando destro. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x3F` (o `count & 0b_11_1111`).
+- If the type of `x` is `long` or `ulong`, the shift count is defined by the low-order *six* bits of the right-hand operand. Vale a dire, il conteggio degli scorrimenti viene calcolato da `count & 0x3F` (o `count & 0b_11_1111`).
 
 L'esempio seguente illustra questo comportamento:
 
@@ -172,7 +172,7 @@ L'esempio seguente illustra questo comportamento:
 
 ## <a name="enumeration-logical-operators"></a>Operatori logici di enumerazione
 
-Gli operatori `~`, `&`, `|`e `^` sono supportati anche da qualsiasi tipo di [enumerazione](../keywords/enum.md) . Per gli operandi dello stesso tipo di enumerazione, viene eseguita un'operazione logica sui valori corrispondenti del tipo integrale sottostante. Ad esempio, per qualsiasi `x` e `y` di un tipo di enumerazione `T` con un tipo sottostante `U`, l'espressione `x & y` produce lo stesso risultato dell'espressione `(T)((U)x & (U)y)`.
+The `~`, `&`, `|`, and `^` operators are also supported by any [enumeration](../keywords/enum.md) type. For operands of the same enumeration type, a logical operation is performed on the corresponding values of the underlying integral type. Ad esempio, per qualsiasi `x` e `y` di un tipo di enumerazione `T` con un tipo sottostante `U`, l'espressione `x & y` produce lo stesso risultato dell'espressione `(T)((U)x & (U)y)`.
 
 Gli operatori logici bit per bit vengono in genere usati con un tipo di enumerazione definito con l'attributo [Flags](xref:System.FlagsAttribute). Per altre informazioni, vedere la sezione [Tipi di enumerazione come flag di bit](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) dell'articolo [Tipi di enumerazione](../../programming-guide/enumeration-types.md).
 

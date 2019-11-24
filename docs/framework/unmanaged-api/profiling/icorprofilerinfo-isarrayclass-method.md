@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772259"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438714"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Metodo ICorProfilerInfo::IsArrayClass
-Determina se la classe specificata è una classe di matrici.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +37,22 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] L'ID della classe da esaminare.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] Puntatore a un valore dell'enumerazione CorElementType che indica il tipo degli elementi della matrice.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] Un puntatore all'ID di classe degli elementi della matrice, se disponibile.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] Puntatore a un intero che indica il numero di dimensioni (vale a dire, numero di dimensioni) della matrice.  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>Note  
- Se la classe specificata è una classe di matrici, il `IsArrayClass` metodo viene restituito un HRESULT S_OK e i valori per parametri di output diverso da null. In caso contrario, restituisce S_FALSE.  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

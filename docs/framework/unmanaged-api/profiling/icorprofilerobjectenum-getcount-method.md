@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08b3d9634362d47615fe14287ab9ec35e78ee65
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775051"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428254"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Metodo ICorProfilerObjectEnum::GetCount
-Ottiene il numero totale di oggetti bloccati nella raccolta.  
+Gets the total number of frozen objects in the collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parametri  
  `pcelt`  
- [out] Puntatore al numero di oggetti bloccati nella raccolta.  
+ [out] A pointer to the number of frozen objects in the collection.  
   
- Questo metodo restituirà sempre uguale a zero in .NET Framework versione 3.5 Service Pack 1 (SP1) e versioni successive.  
+ This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

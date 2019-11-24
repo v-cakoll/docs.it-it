@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704d19f1-bdef-4745-af8c-6476eb246fb3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7dd59c1e0e8b28c557910da3fd9c6489370cc62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0adf4f91e1bc7bfb72f634cb3bf038710198b74f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778959"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437134"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>Metodo IMetaDataImport::GetNestedClassProps
-Ottiene il token TypeDef per l'elemento padre <xref:System.Type> specificato tipo annidato.  
+Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,17 +36,17 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>Parametri  
  `tdNestedClass`  
- [in] Token TypeDef che rappresentano il <xref:System.Type> per restituire la classe padre per token.  
+ [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
   
  `ptdEnclosingClass`  
- [out] Un puntatore al token TypeDef per il <xref:System.Type> che `tdNestedClass` è annidato all'interno.  
+ [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

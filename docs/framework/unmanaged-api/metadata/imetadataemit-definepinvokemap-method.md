@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c6421ca47c3439d94c1ae86caaf2198298872d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777528"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431483"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Metodo IMetaDataEmit::DefinePinvokeMap
-Imposta le funzionalità di firma PInvoke del metodo a cui fa riferimento il token specificato.  
+Sets features of the PInvoke signature of the method referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +38,23 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token per il metodo di destinazione.  
+ [in] The token for the target method.  
   
  `dwMappingFlags`  
- [in] Flag utilizzate da PInvoke per eseguire il mapping.  
+ [in] Flags used by PInvoke to do the mapping.  
   
  `szImportName`  
- [in] Nome della destinazione di esportazione metodo in una DLL non gestita.  
+ [in] The name of the target export method in an unmanaged DLL.  
   
  `mrImportDLL`  
- [in] Il token per la destinazione di DLL native.  
+ [in] The token for the target native DLL.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
