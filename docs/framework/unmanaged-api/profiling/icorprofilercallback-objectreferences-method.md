@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782967"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445883"
 ---
-# <a name="icorprofilercallbackobjectreferences-method"></a><span data-ttu-id="40935-102">Metodo ICorProfilerCallback::ObjectReferences</span><span class="sxs-lookup"><span data-stu-id="40935-102">ICorProfilerCallback::ObjectReferences Method</span></span>
-<span data-ttu-id="40935-103">Notifica al profiler sugli oggetti in memoria a cui fa riferimento l'oggetto specificato.</span><span class="sxs-lookup"><span data-stu-id="40935-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span></span>  
+# <a name="icorprofilercallbackobjectreferences-method"></a><span data-ttu-id="4aa06-102">Metodo ICorProfilerCallback::ObjectReferences</span><span class="sxs-lookup"><span data-stu-id="4aa06-102">ICorProfilerCallback::ObjectReferences Method</span></span>
+<span data-ttu-id="4aa06-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span><span class="sxs-lookup"><span data-stu-id="4aa06-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40935-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="40935-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4aa06-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4aa06-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ObjectReferences(  
@@ -37,37 +35,37 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40935-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="40935-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4aa06-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4aa06-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="40935-106">[in] L'ID dell'oggetto a cui fa riferimento a oggetti.</span><span class="sxs-lookup"><span data-stu-id="40935-106">[in] The ID of the object that is referencing objects.</span></span>  
+ <span data-ttu-id="4aa06-106">[in] The ID of the object that is referencing objects.</span><span class="sxs-lookup"><span data-stu-id="4aa06-106">[in] The ID of the object that is referencing objects.</span></span>  
   
  `classId`  
- <span data-ttu-id="40935-107">[in] L'ID della classe che l'oggetto specificato è un'istanza di.</span><span class="sxs-lookup"><span data-stu-id="40935-107">[in] The ID of the class that the specified object is an instance of.</span></span>  
+ <span data-ttu-id="4aa06-107">[in] The ID of the class that the specified object is an instance of.</span><span class="sxs-lookup"><span data-stu-id="4aa06-107">[in] The ID of the class that the specified object is an instance of.</span></span>  
   
  `cObjectRefs`  
- <span data-ttu-id="40935-108">[in] Il numero di oggetti a cui fa riferimento l'oggetto specificato (ovvero, il numero di elementi nel `objectRefIds` matrice).</span><span class="sxs-lookup"><span data-stu-id="40935-108">[in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).</span></span>  
+ <span data-ttu-id="4aa06-108">[in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).</span><span class="sxs-lookup"><span data-stu-id="4aa06-108">[in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).</span></span>  
   
  `objectRefIds`  
- <span data-ttu-id="40935-109">[in] Matrice di ID di oggetti a cui fa riferimento `objectId`.</span><span class="sxs-lookup"><span data-stu-id="40935-109">[in] An array of IDs of objects that are being referenced by `objectId`.</span></span>  
+ <span data-ttu-id="4aa06-109">[in] An array of IDs of objects that are being referenced by `objectId`.</span><span class="sxs-lookup"><span data-stu-id="4aa06-109">[in] An array of IDs of objects that are being referenced by `objectId`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="40935-110">Note</span><span class="sxs-lookup"><span data-stu-id="40935-110">Remarks</span></span>  
- <span data-ttu-id="40935-111">Il `ObjectReferences` viene chiamato per ogni oggetto rimane nell'heap dopo un'operazione di garbage collection è stata completata.</span><span class="sxs-lookup"><span data-stu-id="40935-111">The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed.</span></span> <span data-ttu-id="40935-112">Se il profiler restituisce un errore da questo callback, i servizi di profilatura non richiameranno questo callback finché la successiva garbage collection.</span><span class="sxs-lookup"><span data-stu-id="40935-112">If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4aa06-110">Note</span><span class="sxs-lookup"><span data-stu-id="4aa06-110">Remarks</span></span>  
+ <span data-ttu-id="4aa06-111">The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed.</span><span class="sxs-lookup"><span data-stu-id="4aa06-111">The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed.</span></span> <span data-ttu-id="4aa06-112">If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.</span><span class="sxs-lookup"><span data-stu-id="4aa06-112">If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.</span></span>  
   
- <span data-ttu-id="40935-113">Il `ObjectReferences` callback può essere usato in combinazione con il [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback per creare un grafico di riferimento di oggetto completo per il runtime.</span><span class="sxs-lookup"><span data-stu-id="40935-113">The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime.</span></span> <span data-ttu-id="40935-114">Common language runtime (CLR) garantisce che ogni riferimento all'oggetto viene segnalato una sola volta per il `ObjectReferences` (metodo).</span><span class="sxs-lookup"><span data-stu-id="40935-114">The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.</span></span>  
+ <span data-ttu-id="4aa06-113">The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime.</span><span class="sxs-lookup"><span data-stu-id="4aa06-113">The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime.</span></span> <span data-ttu-id="4aa06-114">The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.</span><span class="sxs-lookup"><span data-stu-id="4aa06-114">The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.</span></span>  
   
- <span data-ttu-id="40935-115">L'ID di oggetto restituito da `ObjectReferences` nejsou platné durante il callback vero e proprio, perché l'operazione di garbage collection stia ancora spostando gli oggetti.</span><span class="sxs-lookup"><span data-stu-id="40935-115">The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects.</span></span> <span data-ttu-id="40935-116">Pertanto, profiler non deve tentare di controllare gli oggetti durante una `ObjectReferences` chiamare.</span><span class="sxs-lookup"><span data-stu-id="40935-116">Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call.</span></span> <span data-ttu-id="40935-117">Quando [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) viene chiamato, l'operazione di garbage collection è stata completata e ispezione può essere eseguita in modo sicuro.</span><span class="sxs-lookup"><span data-stu-id="40935-117">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.</span></span>  
+ <span data-ttu-id="4aa06-115">The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects.</span><span class="sxs-lookup"><span data-stu-id="4aa06-115">The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects.</span></span> <span data-ttu-id="4aa06-116">Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call.</span><span class="sxs-lookup"><span data-stu-id="4aa06-116">Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call.</span></span> <span data-ttu-id="4aa06-117">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.</span><span class="sxs-lookup"><span data-stu-id="4aa06-117">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.</span></span>  
   
- <span data-ttu-id="40935-118">Un valore null `ClassId` indica che `objectId` dispone di un tipo che lo scaricamento.</span><span class="sxs-lookup"><span data-stu-id="40935-118">A null `ClassId` indicates that `objectId` has a type that is unloading.</span></span>  
+ <span data-ttu-id="4aa06-118">A null `ClassId` indicates that `objectId` has a type that is unloading.</span><span class="sxs-lookup"><span data-stu-id="4aa06-118">A null `ClassId` indicates that `objectId` has a type that is unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40935-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="40935-119">Requirements</span></span>  
- <span data-ttu-id="40935-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40935-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4aa06-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4aa06-119">Requirements</span></span>  
+ <span data-ttu-id="4aa06-120">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4aa06-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40935-121">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="40935-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4aa06-121">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4aa06-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="40935-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40935-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4aa06-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4aa06-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="40935-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40935-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4aa06-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4aa06-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40935-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="40935-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4aa06-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4aa06-124">See also</span></span>
 
-- [<span data-ttu-id="40935-125">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="40935-125">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4aa06-125">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="4aa06-125">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

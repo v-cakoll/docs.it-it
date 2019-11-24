@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771124"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433218"
 ---
-# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="d180c-102">Metodo ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs</span><span class="sxs-lookup"><span data-stu-id="d180c-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
-<span data-ttu-id="d180c-103">Ottiene il `FunctionID` di una funzione usando il token di metadati specificato, contenente (classe), e `ClassID` valori di qualsiasi tipo di argomenti.</span><span class="sxs-lookup"><span data-stu-id="d180c-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
+# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="765fc-102">Metodo ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs</span><span class="sxs-lookup"><span data-stu-id="765fc-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
+<span data-ttu-id="765fc-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span><span class="sxs-lookup"><span data-stu-id="765fc-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d180c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d180c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="765fc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="765fc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
@@ -39,42 +37,42 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
     [out] FunctionID* pFunctionID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d180c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d180c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="765fc-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="765fc-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="d180c-106">[in] L'ID del modulo in cui risiede la funzione.</span><span class="sxs-lookup"><span data-stu-id="d180c-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="765fc-106">[in] The ID of the module in which the function resides.</span><span class="sxs-lookup"><span data-stu-id="765fc-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `funcDef`  
- <span data-ttu-id="d180c-107">[in] Un `mdMethodDef` token di metadati che fa riferimento alla funzione.</span><span class="sxs-lookup"><span data-stu-id="d180c-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
+ <span data-ttu-id="765fc-107">[in] An `mdMethodDef` metadata token that references the function.</span><span class="sxs-lookup"><span data-stu-id="765fc-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
   
  `classId`  
- <span data-ttu-id="d180c-108">[in] ID della classe contenitore della funzione.</span><span class="sxs-lookup"><span data-stu-id="d180c-108">[in] The ID of the function's containing class.</span></span>  
+ <span data-ttu-id="765fc-108">[in] The ID of the function's containing class.</span><span class="sxs-lookup"><span data-stu-id="765fc-108">[in] The ID of the function's containing class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="d180c-109">[in] Il numero di parametri di tipo per la funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="d180c-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="d180c-110">Questo valore deve essere zero per le funzioni non generica.</span><span class="sxs-lookup"><span data-stu-id="d180c-110">This value must be zero for non-generic functions.</span></span>  
+ <span data-ttu-id="765fc-109">[in] The number of type parameters for the given function.</span><span class="sxs-lookup"><span data-stu-id="765fc-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="765fc-110">This value must be zero for non-generic functions.</span><span class="sxs-lookup"><span data-stu-id="765fc-110">This value must be zero for non-generic functions.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="d180c-111">[in] Matrice di `ClassID` valori, ognuno dei quali è un argomento della funzione.</span><span class="sxs-lookup"><span data-stu-id="d180c-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="d180c-112">Il valore di `typeArgs` può essere NULL se `cTypeArgs` è impostato su zero.</span><span class="sxs-lookup"><span data-stu-id="d180c-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
+ <span data-ttu-id="765fc-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span><span class="sxs-lookup"><span data-stu-id="765fc-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="765fc-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span><span class="sxs-lookup"><span data-stu-id="765fc-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
   
  `pFunctionID`  
- <span data-ttu-id="d180c-113">[out] Un puntatore al `FunctionID` della funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="d180c-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
+ <span data-ttu-id="765fc-113">[out] A pointer to the `FunctionID` of the specified function.</span><span class="sxs-lookup"><span data-stu-id="765fc-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d180c-114">Note</span><span class="sxs-lookup"><span data-stu-id="d180c-114">Remarks</span></span>  
- <span data-ttu-id="d180c-115">Chiama il `GetFunctionFromTokenAndTypeArgs` metodo con un `mdMethodRef` metadati anziché un `mdMethodDef` token di metadati possono produrre risultati imprevisti.</span><span class="sxs-lookup"><span data-stu-id="d180c-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="d180c-116">I chiamanti devono risolvere le `mdMethodRef` a un `mdMethodDef` quando viene passato.</span><span class="sxs-lookup"><span data-stu-id="d180c-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="765fc-114">Note</span><span class="sxs-lookup"><span data-stu-id="765fc-114">Remarks</span></span>  
+ <span data-ttu-id="765fc-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span><span class="sxs-lookup"><span data-stu-id="765fc-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="765fc-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span><span class="sxs-lookup"><span data-stu-id="765fc-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
   
- <span data-ttu-id="d180c-117">Se la funzione non è già stata caricata, la chiamata `GetFunctionFromTokenAndTypeArgs` causerà il caricamento si verifichi, ovvero un'operazione pericolosa in molti contesti.</span><span class="sxs-lookup"><span data-stu-id="d180c-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="d180c-118">Ad esempio, chiama questo metodo durante il caricamento di moduli o tipi di provocare un ciclo infinito come il runtime tenta di caricare in modo circolare le cose.</span><span class="sxs-lookup"><span data-stu-id="d180c-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
+ <span data-ttu-id="765fc-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span><span class="sxs-lookup"><span data-stu-id="765fc-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="765fc-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span><span class="sxs-lookup"><span data-stu-id="765fc-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
   
- <span data-ttu-id="d180c-119">In generale, usare di `GetFunctionFromTokenAndTypeArgs` è sconsigliata.</span><span class="sxs-lookup"><span data-stu-id="d180c-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="d180c-120">Se profiler sono interessati agli eventi per una particolare funzione, devono archiviare il `ModuleID` e `mdMethodDef` di tale funzione e utilizzo [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) per verificare se un determinato `FunctionID` è quello della funzione desiderata.</span><span class="sxs-lookup"><span data-stu-id="d180c-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
+ <span data-ttu-id="765fc-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span><span class="sxs-lookup"><span data-stu-id="765fc-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="765fc-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span><span class="sxs-lookup"><span data-stu-id="765fc-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d180c-121">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d180c-121">Requirements</span></span>  
- <span data-ttu-id="d180c-122">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d180c-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="765fc-121">Requisiti</span><span class="sxs-lookup"><span data-stu-id="765fc-121">Requirements</span></span>  
+ <span data-ttu-id="765fc-122">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="765fc-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d180c-123">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d180c-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="765fc-123">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="765fc-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d180c-124">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d180c-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="765fc-124">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="765fc-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d180c-125">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d180c-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="765fc-125">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="765fc-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d180c-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d180c-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="765fc-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="765fc-126">See also</span></span>
 
-- [<span data-ttu-id="d180c-127">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="d180c-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="d180c-128">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="d180c-128">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="765fc-127">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="765fc-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="765fc-128">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="765fc-128">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
