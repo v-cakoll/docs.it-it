@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70ab6a94d19f1411e1f79a9f3912158ec02059ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780225"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448181"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Metodo ICorProfilerInfo::GetAppDomainInfo
 Accetta un ID del dominio dell'applicazione. Restituisce il nome di un domino applicazione e l'ID del processo che lo contiene.  
@@ -61,7 +59,7 @@ HRESULT GetAppDomainInfo(
  In alternativa, è possibile chiamare innanzitutto `GetAppDomainInfo` con un buffer `szName` di lunghezza zero per ottenere le dimensioni del buffer corrette. È quindi possibile impostare le dimensioni del buffer sul valore restituito nel parametro `pcchName` e chiamare nuovamente `GetAppDomainInfo`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

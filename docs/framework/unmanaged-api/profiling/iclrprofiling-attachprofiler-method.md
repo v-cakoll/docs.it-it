@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc097fd9b4da668aafce90ce601a3143ea57dc7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763165"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445959"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Metodo ICLRProfiling::AttachProfiler
 Connette il profiler specificato al processo specificato.  
@@ -53,7 +51,7 @@ HRESULT AttachProfiler(
  [in] Percorso completo del file DLL del profiler da caricare. Questa stringa deve contenere al massimo 260 caratteri, compreso il terminatore null. Se `wszProfilerPath` è null o una stringa vuota, Common Language Runtime (CLR) tenterà di determinare il percorso del file DLL del profiler cercando nel Registro di sistema il CLSID a cui `pClsidProfiler` punta.  
   
  `pvClientData`  
- [in] Un puntatore ai dati da passare al profiler tramite la [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) (metodo). Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).  
+ [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).  
   
  `cbClientData`  
  [in] Dimensioni in byte dei dati a cui `pvClientData` punta.  
@@ -74,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Si è verificato il timeout prima dell'inizio del caricamento del profiler. È possibile ritentare l'operazione di connessione. I timeout si verificano quando un finalizzatore nel processo di destinazione viene eseguito per un tempo maggiore del valore di timeout.|  
 |E_INVALIDARG|Uno o più parametri presentano valori non validi.|  
 |E_FAIL|Si è verificato un errore non specificato di altro tipo.|  
-|Altri codici di errore|Se il profiler [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) metodo restituisce un HRESULT che indica un errore, `AttachProfiler` restituisce lo stesso HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Altri codici di errore|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -82,7 +80,7 @@ HRESULT AttachProfiler(
  In conformità alle convenzioni COM, il chiamante di `AttachProfiler` (ad esempio, il codice del trigger creato dallo sviluppatore del profiler) è responsabile dell'allocazione e della deallocazione della memoria dei dati a cui punta il parametro `pvClientData`. Quando CLR esegue la chiamata a `AttachProfiler` fa una copia della memoria a cui `pvClientData` punta e la trasmette al processo di destinazione. Quando il runtime CLR nel processo di destinazione riceve la propria copia del blocco `pvClientData` lo passa al profiler tramite il metodo `InitializeForAttach`, quindi dealloca la propria copia del blocco `pvClientData` dal processo di destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

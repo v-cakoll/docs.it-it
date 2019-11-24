@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f182dad17e28cc5d19393bb4e13d747e34249fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1b1c557eea62cae6d2ad09303441e4635abc899
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782473"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437847"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>Metodo IMetaDataImport::FindTypeDefByName
-Ottiene un puntatore ai metadati TypeDef token per il <xref:System.Type> con il nome specificato.  
+Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +37,20 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- [in] Il nome del tipo per cui ottenere il token TypeDef.  
+ [in] The name of the type for which to get the TypeDef token.  
   
  `tkEnclosingClass`  
- [in] Token TypeRef o (typedef) che rappresenta la classe che lo contiene. Se il tipo da trovare non è una classe annidata, impostare questo valore su NULL.  
+ [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
   
  `ptd`  
- [out] Puntatore al token TypeDef corrispondenti.  
+ [out] A pointer to the matching TypeDef token.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

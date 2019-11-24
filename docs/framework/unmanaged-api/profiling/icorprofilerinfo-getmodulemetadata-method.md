@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782782"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439836"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Metodo ICorProfilerInfo::GetModuleMetaData
-Ottiene un'istanza di interfaccia di metadati che esegue il mapping per il modulo specificato.  
+Gets a metadata interface instance that maps to the specified module.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,24 +37,24 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] L'ID del modulo a cui verrà mappato l'istanza dell'interfaccia.  
+ [in] The ID of the module to which the interface instance will be mapped.  
   
  `dwOpenFlags`  
- [in] Valore di [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumerazione che specifica la modalità di apertura dei file manifesto. Solo le `ofRead`, `ofWrite` e `ofNoTransform` bits sono validi.  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
   
  `riid`  
- [in] Il riferimento all'ID (GUID) dell'interfaccia di metadati la cui istanza verrà recuperato. Visualizzare [interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) per un elenco delle interfacce.  
+ [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
   
  `ppOut`  
- [out] Un puntatore all'indirizzo dell'istanza di interfaccia di metadati.  
+ [out] A pointer to the address of the metadata interface instance.  
   
 ## <a name="remarks"></a>Note  
- È possibile richiedere i metadati da aprire in modalità lettura/scrittura, ma ciò comporterà rallenterà l'esecuzione del programma, perché le modifiche apportate per i metadati non possono essere ottimizzato come avveniva dal compilatore.  
+ You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
   
- Alcuni moduli (ad esempio, i moduli delle risorse) non hanno metadati. In questi casi `GetModuleMetaData` restituirà un valore HRESULT di S_FALSE e un valore null in *`ppOut`.  
+ Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

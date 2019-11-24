@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781917"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447377"
 ---
-# <a name="corprffunctionargumentinfo-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_INFO
+# <a name="cor_prf_function_argument_info-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_INFO
 Rappresenta gli argomenti di una funzione, in ordine da sinistra a destra.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,25 +34,25 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`numRanges`|Il numero di blocchi di argomenti. Vale a dire, questo valore è il numero di [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) le strutture nel `ranges` matrice.|  
-|`totalArgumentSize`|Le dimensioni totali di tutti gli argomenti. In altre parole, questo valore è la somma delle lunghezze degli argomenti.|  
-|`ranges`|Matrice di `COR_PRF_FUNCTION_ARGUMENT_RANGE` strutture, ognuno dei quali rappresenta un blocco di argomenti della funzione.|  
+|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
+|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
+|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
   
 ## <a name="remarks"></a>Note  
- Una funzione può avere un numero di argomenti. Tali argomenti non possono essere archiviati in modo contiguo nella memoria. Potrebbe essere un blocco di tre argomenti in un'unica posizione, un blocco di due argomenti in un'altra posizione e un blocco finale di un argomento in una posizione diversa. Questi argomenti sono tutti della stessa funzione; sono semplicemente archiviati in posizioni diverse.  
+ A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
   
- Il `COR_PRF_FUNCTION_ARGUMENT_INFO` struttura rappresenta tutti gli argomenti di una singola funzione. Usa una matrice per fare riferimento a tutti i blocchi degli argomenti della funzione. Per una singola funzione, non sarà pertanto necessario un unico `COR_PRF_FUNCTION_ARGUMENT_INFO` struttura, a cui fa riferimento a più `COR_PRF_FUNCTION_ARGUMENT_RANGE` strutture, ognuno dei quali punta a uno o più argomenti di funzione.  
+ The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
   
- Gli argomenti che vengono archiviati nei registri sono stati distribuiti in memoria per compilare le strutture.  
+ Arguments that are stored in registers are spilled into memory to build the structures.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Libreria:** CorGuids.lib  
   

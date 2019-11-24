@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c4e39fdbb400475d1b14639114325309ddb7597
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d3c820975488fa722e7af6070611ba7e9686ce8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751035"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445451"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>Metodo IMetaDataEmit::SetModuleProps
-Aggiorna i riferimenti a un modulo definito da una chiamata precedente a [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
+Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +35,14 @@ HRESULT SetModuleProps (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] Il nome del modulo in formato Unicode. Si tratta solo il nome del file e non il nome e percorso completo.  
+ [in] The module name in Unicode. This is the file name only and not the full path name.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

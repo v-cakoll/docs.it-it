@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782120"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450040"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>Metodo IMetaDataImport::EnumModuleRefs
 Enumera i token ModuleRef che rappresentano i moduli importati.  
@@ -40,30 +38,30 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rModuleRefs`  
- [out] Matrice utilizzata per archiviare i token ModuleRef.  
+ [out] The array used to store the ModuleRef tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rModuleRefs`.  
   
  `pcModuleRefs`  
- [out] Il numero di token ModuleRef restituiti in `rModuleRefs`.  
+ [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In tal caso, `pcModuleRefs` è uguale a zero.|  
+|`S_OK`|`EnumModuleRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

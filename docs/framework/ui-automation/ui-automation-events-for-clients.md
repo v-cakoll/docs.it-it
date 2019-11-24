@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441513"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventi di automazione interfaccia utente per i client
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
   
  Questo argomento descrive come gli eventi di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] vengono usati dai client di automazione interfaccia utente.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "71042289"
 > [!NOTE]
 > Non presupporre che tutti i possibili eventi vengano generati da un provider di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Ad esempio, non per tutte le modifiche di proprietà vengono generati eventi dai provider proxy standard per i controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
   
- Per una visualizzazione più ampia degli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eventi, vedere [Panoramica degli eventi di automazione interfaccia utente](ui-automation-events-overview.md).  
+ For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Sottoscrizione di eventi  
@@ -48,18 +48,18 @@ ms.locfileid: "71042289"
   
  All'arresto o quando gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non interessano più l'applicazione, i client di automazione interfaccia utente devono chiamare uno dei metodi seguenti.  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Annulla la registrazione di tutti i gestori eventi registrati.|  
   
- Per un esempio di codice, vedere [sottoscrivere eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md).  
+ For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Sottoscrivere gli eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md)
 - [Panoramica degli eventi di automazione interfaccia utente](ui-automation-events-overview.md)
 - [Panoramica delle proprietà di automazione interfaccia utente](ui-automation-properties-overview.md)
-- [Esempio TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

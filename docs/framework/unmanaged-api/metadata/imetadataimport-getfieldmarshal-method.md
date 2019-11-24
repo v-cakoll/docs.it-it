@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d1817b9eb7f341899efddb469c7fa17a8f8c0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782399"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437574"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Metodo IMetaDataImport::GetFieldMarshal
-Ottiene un puntatore al tipo nativo non gestito del campo rappresentato dal token di metadati specificato.  
+Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +37,20 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token di metadati che rappresenta il campo per ottenere le informazioni di marshalling di interoperabilità.  
+ [in] The metadata token that represents the field to get interop marshaling information for.  
   
  `ppvNativeType`  
- [out] Un puntatore per la firma dei metadati di tipo nativo del campo.  
+ [out] A pointer to the metadata signature of the field's native type.  
   
  `pcbNativeType`  
- [out] La dimensione in byte di `ppvNativeType`.  
+ [out] The size in bytes of `ppvNativeType`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952895"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440822"
 ---
 # <a name="functionenter-function"></a>Funzione FunctionEnter
-Notifica al profiler che il controllo viene passato a una funzione.  
+Notifies the profiler that control is being passed to a function.  
   
 > [!NOTE]
-> La `FunctionEnter` funzione è deprecata nel .NET Framework versione 2,0 e il suo utilizzo comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
+> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parametri  
  `funcID`  
- in Identificatore della funzione a cui viene passato il controllo.  
+ [in] The identifier of the function to which control is passed.  
   
 ## <a name="remarks"></a>Note  
- La `FunctionEnter` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec`attributo`naked`della classe di archiviazione ().  
+ The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
+ The execution engine does not save any registers before calling this function.  
   
-- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- L'implementazione di `FunctionEnter` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si `FunctionEnter` bloccherà fino a quando non viene restituito.  
+ The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
   
- Inoltre, la `FunctionEnter` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
+ Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **Libreria** CorGuids.lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni .NET Framework:** 1,1, 1,0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Vedere anche
 

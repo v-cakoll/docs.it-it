@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780918"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443877"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumerazione CorAttributeTargets
 Specifica gli elementi dell'applicazione ai quali è valido applicare un attributo.  
@@ -60,36 +58,36 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`catAssembly`|Attributo può essere applicato a un assembly.|  
-|`catModule`|Attributo può essere applicato a un modulo (con estensione dll o .exe) eseguibile portabile.|  
-|`catClass`|Attributo può essere applicato a una classe.|  
-|`catStruct`|Attributo può essere applicato a una struttura; vale a dire, digitare un valore.|  
-|`catEnum`|Attributo può essere applicato a un'enumerazione.|  
-|`catConstructor`|Attributo può essere applicato a un costruttore.|  
-|`catMethod`|Attributo può essere applicato a un metodo.|  
-|`catProperty`|Attributo può essere applicato a una proprietà.|  
-|`catField`|Attributo può essere applicato a un campo.|  
-|`catEvent`|Attributo può essere applicato a un evento.|  
-|`catInterface`|Attributo può essere applicato a un'interfaccia.|  
-|`catParameter`|Attributo può essere applicato a un parametro.|  
-|`catDelegate`|Attributo può essere applicato a un delegato.|  
-|`catGenericParameter`|Attributo può essere applicato a un parametro generico.|  
-|`catAll`|Attributo può essere applicato a qualsiasi elemento dell'applicazione.|  
-|`catClassMembers`|Attributo può essere applicato a un membro di una classe.|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
 ## <a name="remarks"></a>Note  
- Il `CorAttributeTargets` valori di enumerazione possono essere combinati con un'operazione OR bit per bit per ottenere la combinazione desiderata.  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- Il `CorAttributeTargets` Affianca managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumerazione.  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

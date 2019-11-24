@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da6bbc75-94d1-4354-9722-0d455b4428fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d34bcaf1ef00806e3883996804336bd22b9b634f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d1ee82f24e1908af1998e424006415af3134456
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777851"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446277"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>Metodo ISymUnmanagedScope::GetStartOffset
-Ottiene l'offset iniziale per l'ambito corrente.  
+Gets the start offset for this scope.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +34,13 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] Un puntatore a un `ULONG32` che contiene l'offset iniziale.  
+ [out] A pointer to a `ULONG32` that contains the starting offset.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

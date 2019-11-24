@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25e35fd9afd2ce4dc60e23ccd64e0630a008bf39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777430"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450183"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Metodo IMetaDataEmit::DefineUserString
-Ottiene i metadati di un token per la stringa letterale specificata.  
+Gets a metadata token for the specified literal string.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +37,20 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Parametri  
  `szString`  
- [in] Stringa utente da archiviare.  
+ [in] The user string to store.  
   
  `cchString`  
- [in] Il numero di caratteri "wide" in `szString`.  
+ [in] The count of wide characters in `szString`.  
   
  `pstk`  
- [out] Il token di stringa assegnato.  
+ [out] The string token assigned.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

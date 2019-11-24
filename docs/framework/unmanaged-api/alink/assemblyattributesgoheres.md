@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e817f35-a2bc-4403-9e6f-f731e6b9fe23
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 135938c4ed91423145ca46b743620f4236f7f818
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 128268bab77c8be5dc809eaa6d2548fc34f13cbd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742252"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446615"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
@@ -40,7 +38,7 @@ I riferimenti a questo tipo potrebbero essere incorporati in netmodule le cui or
 
 I riferimenti a questo tipo indicano gli attributi personalizzati che sono correlati alla sicurezza e non sono multiuso.
 
-Questi tipi sono contrassegnati come "interni" all'interno di .NET Framework e si trovano nel <xref:System.Runtime.CompilerServices> dello spazio dei nomi.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Requisiti
 

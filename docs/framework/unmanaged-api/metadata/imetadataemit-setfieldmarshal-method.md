@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a55a8575a3f8ae04bcc4a148b588cd2361f81cf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442268"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Metodo IMetaDataEmit::SetFieldMarshal
-Imposta i PInvoke informazioni di marshalling per il parametro di metodo viene restituito, campo o metodo fa riferimento il token specificato.  
+Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +37,20 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token per l'elemento di dati di destinazione. Questo è un `mdFieldDef` o un `mdParamDef` token.  
+ [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
   
  `pvNativeType`  
- [in] La firma per il tipo non gestito.  
+ [in] The signature for unmanaged type.  
   
  `cbNativeType`  
- [in] Il numero di byte in `pvNativeType`.  
+ [in] The count of bytes in `pvNativeType`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

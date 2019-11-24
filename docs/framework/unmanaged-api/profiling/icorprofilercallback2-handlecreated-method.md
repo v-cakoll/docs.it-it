@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 594d970dbe0a176a5ec49015e105f89ff64bdfac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779329"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439769"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>Metodo ICorProfilerCallback2::HandleCreated
-Notifica al profiler di codice che è stato creato l'handle di garbage collection.  
+Notifies the code profiler that a garbage collection handle has been created.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Parametri  
  `handleId`  
- [in] L'ID dell'handle di garbage collection.  
+ [in] The ID of the handle for the garbage collection.  
   
  `initialObjectId`  
- [in] L'ID dell'oggetto per cui è stato creato l'handle di garbage collection.  
+ [in] The ID of the object for which the garbage collection handle was created.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

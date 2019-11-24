@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dcfdb417cb43c819f21f66611129135ad0beb42b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746908"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439855"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Metodo ICorProfilerCallback2::FinalizeableObjectQueued
-Notifica al profiler di codice che un oggetto con un finalizzatore è stato accodato al thread del finalizzatore per l'esecuzione del relativo `Finalize` (metodo).  
+Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +35,13 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Parametri  
  `finalizerFlags`  
- [in] Valore di [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumerazione che descrive gli aspetti del finalizzatore.  
+ [in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.  
   
  `objectID`  
- [in] L'ID dell'oggetto che è stata accodata.  
+ [in] The ID of the object that has been queued.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

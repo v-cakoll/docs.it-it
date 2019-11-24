@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781991"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442446"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumerazione CorUnmanagedCallingConvention
-Specifica le convenzioni di chiamata per codice non gestito.  
+Specifies the calling conventions for unmanaged code.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,26 +42,26 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|La convenzione di chiamata del linguaggio C.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|La convenzione di chiamata standard.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" convenzione di chiamata.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|La convenzione di chiamata "veloce".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Non usato.|  
   
 ## <a name="remarks"></a>Note  
- CLR non supporta la convenzione di chiamata "veloce" in .NET Framework versione 1.0.  
+ The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

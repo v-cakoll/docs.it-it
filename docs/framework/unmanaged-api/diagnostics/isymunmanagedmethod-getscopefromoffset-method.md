@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d540318dabd55e9a520aedde371e0a83d612721e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759496"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448906"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>Metodo ISymUnmanagedMethod::GetScopeFromOffset
-Ottiene l'ambito lessicale di maggiore inclusione all'interno di questo metodo che racchiude l'offset specificato. Ciò consente di avviare le ricerche di variabili locali.  
+Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +35,16 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Parametri  
  `offset`  
- [in] Oggetto `ULONG` che contiene l'offset.  
+ [in] A `ULONG` that contains the offset.  
   
  `pRetVal`  
- [out] Un puntatore che viene impostato sull'oggetto restituito [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interfaccia.  
+ [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

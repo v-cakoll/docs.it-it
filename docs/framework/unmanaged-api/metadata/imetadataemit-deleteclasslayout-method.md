@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84de8e3c688a23198762fca5219d317fabb69c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 00f2aa3364b8b707d4100f8d2574ff3765d106da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777463"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450159"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>Metodo IMetaDataEmit::DeleteClassLayout
-Elimina definitivamente la firma dei metadati di layout di classe per il tipo rappresentato dal token specificato.  
+Destroys the class layout metadata signature for the type represented by the specified token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +35,14 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] Un `mdTypeDef` token di metadati che rappresenta il tipo per il quale verrà eliminato il layout della classe.  
+ [in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

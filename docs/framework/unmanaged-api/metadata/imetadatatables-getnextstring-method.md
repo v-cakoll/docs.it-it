@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c2008556ebf1b1961aef7dc0f24fd0a3161d06e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781455"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443441"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Metodo IMetaDataTables::GetNextString
-Ottiene l'indice della stringa successiva nella colonna della tabella corrente.  
+Gets the index of the next string in the current table column.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,17 +36,17 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parametri  
  `ixString`  
- [in] Il valore di indice da una colonna di tabella di stringhe.  
+ [in] The index value from a string table column.  
   
  `pNext`  
- [out] Un puntatore all'indice della stringa nella colonna successiva.  
+ [out] A pointer to the index of the next string in the column.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

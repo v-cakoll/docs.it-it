@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c99ddc66cca0a0d0083cfa19cfca34a1e557d4e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0000e9b063022e828e52b9b940ec6f4e0ce4165
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769154"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445899"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>Metodo ICorProfilerCallback::ModuleUnloadStarted
-Notifica al profiler che un modulo verrà scaricato.  
+Notifies the profiler that a module is being unloaded.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +34,13 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] L'ID del modulo che sta per essere scaricato.  
+ [in] The ID of the module that is being unloaded.  
   
 ## <a name="remarks"></a>Note  
- Il valore di `moduleId` non è valido per una richiesta di informazioni dopo il `ModuleUnloadStarted` restituzione del metodo, ovvero si tratta di completamento per ottenere informazioni su questo modulo.  
+ The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

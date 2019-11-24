@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e631b0a90498ea1299d9448507014081bd2d3018
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d310ad49debf69d1139f2286cb76e51e9b622ea9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756051"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445337"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFunctionEnter
-Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha iniziato la ricerca di una funzione per trovare un gestore per l'eccezione corrente.  
+Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +34,10 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione che è stata immessa.  
+ [in] The ID of the function that has been entered.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

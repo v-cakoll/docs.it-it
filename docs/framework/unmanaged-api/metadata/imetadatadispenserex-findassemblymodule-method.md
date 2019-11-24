@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1fb65e1-7e19-4513-85b1-44f87c294d3e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f6b38cefa1c9b36a660559c1d97fc88f7dbddc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e73c95d8c720ed3263d6a66c48bdb5b5582eb686
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777761"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442188"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>Metodo IMetaDataDispenserEx::FindAssemblyModule
-Questo metodo non è implementato. Se chiamato, viene restituito E_NOTIMPL.  
+Questo metodo non è implementato. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,35 +42,35 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>Parametri  
  `szAppBase`  
- [in] Non utilizzato.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] Non utilizzato.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] Non utilizzato.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] Il nome del modulo.  
+ [in] The name of the module.  
   
  `szModuleName`  
- [in] L'assembly da trovare.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] Il nome semplice dell'assembly.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Le dimensioni, in byte, di `szName`.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] Il numero di caratteri effettivamente restituiti nella `szName`.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

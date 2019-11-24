@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85f788ec61cc441e7271fb7a8aba843f37d20a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6320d6d962e40acf494acbb5c95adda62d1461
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782718"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445293"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>Metodo ICorProfilerCallback::ExceptionUnwindFunctionEnter
-Notifica al profiler che ha iniziato la fase di rimozione della gestione delle eccezioni per la rimozione di una funzione.  
+Notifies the profiler that the unwind phase of exception handling has begun to unwind a function.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,15 +34,15 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione che viene rimossa.  
+ [in] The ID of the function that is being unwound.  
   
 ## <a name="remarks"></a>Note  
- Il profiler non deve bloccare nella propria implementazione di questo metodo perché lo stack potrebbe non essere in uno stato che consente operazioni di garbage collection e pertanto non è possibile abilitare preemptive operazione di garbage collection. Se il profiler si blocca qui e viene tentata la garbage collection, il runtime si bloccherà fino a quando non viene restituito questo callback.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Implementazione del profiler di questo metodo non deve chiamare codice gestito o in qualsiasi modo causa un'allocazione di memoria gestita.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

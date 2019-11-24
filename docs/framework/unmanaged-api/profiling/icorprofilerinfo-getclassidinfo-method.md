@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e93b99e-5aca-415c-8e37-7f33753b612d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 232b5f4560fd62113a93d279683f3236e755e076
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3b1bdac8ccd37cf2f6aac5073def313f04acf28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780193"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439239"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>Metodo ICorProfilerInfo::GetClassIDInfo
-Ottiene l'elemento padre nel modulo e il token di metadati per la classe specificata.  
+Gets the parent module and the metadata token for the specified class.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,21 +36,21 @@ HRESULT GetClassIDInfo(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] L'ID della classe per cui ottenere le informazioni.  
+ [in] The ID of the class for which to get the information.  
   
  `pModuleId`  
- [out] Un puntatore all'ID del modulo padre della classe.  
+ [out] A pointer to the ID of the parent module of the class.  
   
  `pTypeDefToken`  
- [out] Puntatore al token di metadati per la classe.  
+ [out] A pointer to the metadata token for the class.  
   
 ## <a name="remarks"></a>Note  
- Il codice del profiler può chiamare [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) per ottenere un'interfaccia di metadati per un determinato modulo. Il token di metadati restituito al percorso a cui viene fatto riferimento tramite `pTypeDefToken` può quindi essere usato per accedere ai metadati per la classe.  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. Il token di metadati restituito al percorso a cui viene fatto riferimento tramite `pTypeDefToken` può quindi essere usato per accedere ai metadati per la classe.  
   
- Per ottenere altre informazioni per i tipi generici, usare [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
+ To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

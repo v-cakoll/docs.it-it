@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951875"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431467"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Metodo IMetaDataImport::ResolveTypeRef
-Risolve un <xref:System.Type> riferimento rappresentato dal token TypeRef specificato.  
+Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,32 +38,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametri  
  `tr`  
- in Token di metadati TypeRef per cui restituire le informazioni sul tipo a cui si fa riferimento.  
+ [in] The TypeRef metadata token to return the referenced type information for.  
   
  `riid`  
- in IID dell'interfaccia da restituire in `ppIScope`. Si tratta in genere di IID_IMetaDataImport.  
+ [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
   
  `ppIScope`  
- out Interfaccia per l'ambito del modulo in cui è definito il tipo a cui si fa riferimento.  
+ [out] An interface to the module scope in which the referenced type is defined.  
   
  `ptd`  
- out Puntatore a un token TypeDef che rappresenta il tipo a cui si fa riferimento.  
+ [out] A pointer to a TypeDef token that represents the referenced type.  
   
 ## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
-> Non usare questo metodo se vengono caricati più domini applicazione. Il metodo non rispetta i limiti del dominio applicazione. Se vengono caricate più versioni di un assembly e contengono lo stesso tipo con lo stesso spazio dei nomi, il metodo restituisce l'ambito del modulo del primo tipo trovato.  
+> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
   
- Il `ResolveTypeRef` metodo cerca la definizione del tipo in altri moduli. Se viene trovata la definizione del tipo `ResolveTypeRef` , restituisce un'interfaccia a tale ambito del modulo e il token typedef per il tipo.  
+ The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
   
- Se il riferimento al tipo da risolvere ha un ambito di risoluzione di AssemblyRef, `ResolveTypeRef` il metodo cerca una corrispondenza solo negli ambiti dei metadati già aperti con le chiamate al metodo [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) o [ Metodo IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Ciò è dovuto `ResolveTypeRef` al fatto che non è in grado di determinare solo dall'ambito AssemblyRef in cui è archiviato l'assembly su disco o nel Global assembly cache.  
+ If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria** Incluso come risorsa in MsCorEE. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

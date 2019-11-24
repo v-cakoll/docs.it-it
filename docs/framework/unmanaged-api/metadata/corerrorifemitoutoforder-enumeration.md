@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781977"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443589"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Enumerazione CorErrorIfEmitOutOfOrder
 Contiene valori di flag che indicano in quali condizioni è necessario generare un messaggio di errore per notificare che i metadati sono stati emessi senza ordine.  
@@ -43,23 +41,23 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Indica il comportamento predefinito, che non genera messaggi di errore.|  
-|`MDErrorOutOfOrderNone`|Indica che il compilatore non deve generare i messaggi di errore.|  
-|`MDErrorOutOfOrderAll`|Indica che il compilatore deve generare un messaggio di errore quando un campo, proprietà, eventi, metodo o parametro viene generato nell'ordine errato.|  
-|`MDMethodOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un metodo viene generato nell'ordine errato.|  
-|`MDFieldOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un campo viene generato nell'ordine errato.|  
-|`MDParamOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un parametro viene generato nell'ordine errato.|  
-|`MDPropertyOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando una proprietà viene emessa fuori sequenza.|  
-|`MDEventOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando viene generato un evento non in ordine.|  
+|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
+|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
+|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
+|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
+|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
+|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
+|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
+|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

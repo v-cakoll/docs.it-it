@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4d35179b8ae35c03370cc3798609d6ed430cde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d3fe6691a2d9989de002bad09c2e8f66a094f56
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782858"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448441"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>Metodo ICorProfilerCallback::JITCachedFunctionSearchStarted
-Notifica al profiler che ha avviato una ricerca per una funzione che è stata compilata in precedenza usando il generatore di immagini Native (NGen.exe).  
+Notifies the profiler that a search has started for a function that was compiled previously using the Native Image Generator (NGen.exe).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +35,22 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione per cui la ricerca viene eseguita.  
+ [in] The ID of the function for which the search is being performed.  
   
  `pbUseCachedFunction`  
- [out] `true` se il motore di esecuzione deve usare la versione memorizzata nella cache di una funzione (se disponibile); in caso contrario `false`. Se il valore è `false`, l'esecuzione motore JIT compila la funzione invece di usare una versione che non è compilato tramite JIT.  
+ [out] `true` if the execution engine should use the cached version of a function (if available); otherwise `false`. If the value is `false`, the execution engine JIT-compiles the function instead of using a version that is not JIT-compiled.  
   
 ## <a name="remarks"></a>Note  
- In .NET Framework versione 2.0, il `JITCachedFunctionSearchStarted` e [JITCachedFunctionSearchFinished (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) callback non verranno effettuati per tutte le funzioni nelle immagini NGen normali. Solo le immagini NGen ottimizzate per un profilo genererà i callback per tutte le funzioni nell'immagine. Tuttavia, a causa del sovraccarico aggiuntivo, un profiler deve richiedere immagini NGen ottimizzata su profiler solo se intende usare questi callback per forzare una funzione di essere compilati just-in-time (JIT). In caso contrario, il profiler deve usare una strategia lazy per raccogliere informazioni sulle funzioni.  
+ In the .NET Framework version 2.0, the `JITCachedFunctionSearchStarted` and [ICorProfilerCallback::JITCachedFunctionSearchFinished Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) callbacks will not be made for all functions in regular NGen images. Only NGen images optimized for a profile will generate callbacks for all functions in the image. However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT). Otherwise, the profiler should use a lazy strategy for gathering function information.  
   
- I profiler devono supportare i casi in cui più thread di un'applicazione profilata chiamano il metodo di stesso contemporaneamente. Ad esempio, il thread chiama `JITCachedFunctionSearchStarted` e il profiler risponde impostando *pbUseCachedFunction*su FALSE per forzare la compilazione JIT. Thread chiama quindi i metodi [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) e [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ Profilers must support cases where multiple threads of a profiled application are calling the same method simultaneously. For example, thread A calls `JITCachedFunctionSearchStarted` and the profiler responds by setting *pbUseCachedFunction*to FALSE to force JIT compilation. Thread A then calls [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- Ora il thread B chiama `JITCachedFunctionSearchStarted` per la stessa funzione. Anche se il profiler ha indicato la propria intenzione di compilazione JIT la funzione, il profiler riceve il callback secondo perché il thread B invia la richiamata prima che il profiler ha risposto alla chiamata del thread a `JITCachedFunctionSearchStarted`. L'ordine in cui i thread di effettuano chiamate dipende dal modo in cui il thread viene pianificata.  
+ Now thread B calls `JITCachedFunctionSearchStarted` for the same function. Even though the profiler has stated its intention to JIT-compile the function, the profiler receives the second callback because thread B sends the callback before the profiler has responded to thread A's call to `JITCachedFunctionSearchStarted`. The order in which the threads make calls depends on how the threads are scheduled.  
   
- Quando il profiler riceve i callback duplicati, è necessario impostare il valore a cui fanno riferimento `pbUseCachedFunction` sullo stesso valore per tutte le richiamate duplicate. Ovvero, quando `JITCachedFunctionSearchStarted` viene chiamato più volte con lo stesso `functionId` valore, il profiler deve rispondere lo stesso ogni volta.  
+ When the profiler receives duplicate callbacks, it must set the value referenced by `pbUseCachedFunction` to the same value for all the duplicate callbacks. That is, when `JITCachedFunctionSearchStarted` is called multiple times with the same `functionId` value, the profiler must respond the same each time.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

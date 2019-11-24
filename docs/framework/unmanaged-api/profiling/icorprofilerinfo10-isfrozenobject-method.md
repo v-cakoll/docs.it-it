@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d212c06c7ddc9f22095c0b95f19fd1083482435c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449833"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>Metodo ICorProfilerInfo10:: IsFrozenObject
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
 
-Dato un ObjectID, determina se l'oggetto si trova in un segmento di sola lettura.
+Given an ObjectID, determines whether the object is in a read-only segment.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>Parametri
 
 `objectId` \
-in Oggetto da esaminare.
+[in] The object to examine.
 
 `pbFrozen` \
-out Valore `BOOL` che indica se l'oggetto si trova in un segmento di sola lettura.
+[out] A `BOOL` indicating if the object is in a read-only segment.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [sistemi operativi supportati da .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Intestazione:** CorProf. idl, CorProf. h
+**Intestazione:** CorProf.idl, CorProf.h
 
-**Libreria** CorGuids.lib
+**Libreria:** CorGuids.lib
 
-**Versioni di .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

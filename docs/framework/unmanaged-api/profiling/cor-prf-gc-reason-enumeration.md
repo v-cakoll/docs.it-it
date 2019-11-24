@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f5a596608719889e6440e5cd42dafb82abaa074
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f10ec279e67b86448298745a488f5b3e833e8c39
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753718"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447366"
 ---
-# <a name="corprfgcreason-enumeration"></a>Enumerazione COR_PRF_GC_REASON
+# <a name="cor_prf_gc_reason-enumeration"></a>Enumerazione COR_PRF_GC_REASON
 Indica il motivo per cui è in corso la Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,15 +33,15 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|L'operazione di garbage collection è stata causata da un <xref:System.GC.Collect%2A> (metodo).|  
-|`COR_PRF_GC_OTHER`|Il motivo è specificato.|  
+|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
+|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

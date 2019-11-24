@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045227"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442472"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Enumerazione CorThreadSafetyOptions
 
@@ -37,19 +35,19 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 |Member|Descrizione|
 |------------|-----------------|
 |`MDThreadSafetyDefault`|Valore predefinito. Uguale a `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Indica che non è possibile impostare un blocco di lettura/scrittura.|
-|`MDThreadSafetyOn`|Indica che è possibile impostare un blocco di lettura/scrittura.|
+|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
+|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** CorHdr. H
+**Header:** CorHdr.h
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

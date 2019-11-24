@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737220"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441769"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Metodo IMetaDataEmit::SetClassLayout
-Completa il layout dei campi per una classe che è stato definito da una chiamata precedente a [metodo DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,32 +38,32 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] Un `mdTypeDef` token che specifica la classe disposizione.  
+ [in] An `mdTypeDef` token that specifies the class to be laid out.  
   
  `dwPackSize`  
- [in] La dimensione di compressione: 1, 2, 4, 8 o 16 byte. La dimensione di compressione è il numero di byte tra i campi adiacenti.  
+ [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
   
  `rFieldOffsets`  
- [in] Matrice di [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) strutture, ognuno dei quali specifica un campo della classe e il campo dell'offset all'interno della classe. Terminare la matrice con `mdTokenNil`.  
+ [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
   
  `ulClassSize`  
- [in] Le dimensioni, in byte, della classe.  
+ [in] The size, in bytes, of the class.  
   
 ## <a name="remarks"></a>Note  
- La classe viene definita inizialmente chiamando il [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) metodo e specificando uno dei tre layout per i campi della classe: automatici, sequenziale o esplicito. In genere, di usare un layout automatico e consentire il runtime di scegliere il modo migliore per disporre i campi.  
+ The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
   
- Tuttavia, è possibile che i campi disposti in base alla disposizione che non gestiti di codice viene utilizzato. In questo caso, scegliere il layout sequenziale o esplicito e chiamata `SetClassLayout` per completare il layout dei campi:  
+ However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
   
-- Layout sequenziale: Specificare la dimensione di compressione. Un campo è allineato in base alle dimensioni naturali o la dimensione di compressione, qualunque sia il risultati in più piccoli offset del campo. Impostare `rFieldOffsets` e `ulClassSize` su zero.  
+- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
   
-- Layout esplicito: Specificare l'offset di ogni campo o specificare le dimensioni di classe e la dimensione di compressione.  
+- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

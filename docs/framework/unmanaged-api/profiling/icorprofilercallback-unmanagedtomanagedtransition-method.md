@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fa7dfe101b07ae6eb8d58daad85954f0ce29b02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c4e132b90fa1f51bc6f858d75c159af212ec019
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747048"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439901"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>Metodo ICorProfilerCallback::UnmanagedToManagedTransition
-Notifica al profiler che si è verificata una transizione da codice non gestito a codice gestito.  
+Notifies the profiler that a transition from unmanaged code to managed code has occurred.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +35,18 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] L'ID della funzione che viene chiamata.  
+ [in] The ID of the function that is being called.  
   
  `reason`  
- [in] Valore di [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumerazione che indica se si è verificata la transizione a causa di una chiamata al codice gestito dal codice non gestito o a causa la restituzione da una funzione non gestita chiamata da un equivalente gestito.  
+ [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.  
   
 ## <a name="remarks"></a>Note  
- Se il valore di `reason` è COR_PRF_TRANSITION_RETURN e `functionId` è non null, la funzione ID è quello della funzione non gestita e non sarà mai stato compilato utilizzando il compilatore just-in-time (JIT). Funzioni non gestite avere alcune informazioni di base associate, ad esempio un nome e alcuni metadati.  
+ If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler. Unmanaged functions have some basic information associated with them, such as a name and some metadata.  
   
- Se il valore di `reason` è COR_PRF_TRANSITION_CALL, è possibile che la funzione chiamata (vale a dire, la funzione gestita) non è ancora stato compilato tramite JIT.  
+ If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

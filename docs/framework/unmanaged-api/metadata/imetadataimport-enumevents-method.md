@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780703"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440017"
 ---
 # <a name="imetadataimportenumevents-method"></a>Metodo IMetaDataImport::EnumEvents
 Enumera i token di definizione di evento per il token TypeDef specificato.  
@@ -41,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Il token TypeDef le cui definizioni di evento devono essere enumerati.  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out] Matrice di eventi restituiti.  
+ [out] The array of returned events.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rEvents`.  
   
  `pcEvents`  
- [out] Il numero effettivo di eventi restituiti `rEvents`.  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|DESCRIZIONE|  
+|HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti eventi da enumerare. In tal caso, `pcEvents` è uguale a zero.|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

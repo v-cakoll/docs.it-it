@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981048c10be27900f011afeab55d1c5eb523f734
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ecbb56ab32ac8381a4864acd5fd40741786d30
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776675"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449143"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Metodo ISymUnmanagedDocument::GetSourceRange
-Restituisce l'intervallo specificato dell'origine incorporata al buffer specificato. Il buffer deve essere sufficientemente grande da contenere l'origine.  
+Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>Parametri  
  `startLine`  
- [in] La riga iniziale del documento corrente.  
+ [in] The starting line in the current document.  
   
  `startColumn`  
- [in] La colonna iniziale del documento corrente.  
+ [in] The starting column in the current document.  
   
  `endLine`  
- [in] La riga finale nel documento corrente.  
+ [in] The final line in the current document.  
   
  `endColumn`  
- [in] La colonna finale del documento corrente.  
+ [in] The final column in the current document.  
   
  `cSourceBytes`  
- [in] Le dimensioni dell'origine, in byte.  
+ [in] The size of the source, in bytes.  
   
  `pcSourceBytes`  
- [out] Puntatore a una variabile che riceve le dimensioni di origine.  
+ [out] A pointer to a variable that receives the source size.  
   
  `source`  
- [out] Le dimensioni e la lunghezza dell'intervallo specificato del documento di origine, in byte.  
+ [out] The size and length of the specified range of the source document, in bytes.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo.  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Vedere anche
 

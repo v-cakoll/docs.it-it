@@ -6,21 +6,21 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042772"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446853"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
 
 In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.
 
-L'implementazione per gli elementi Windows Presentation Foundation (WPF) e non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gli elementi (come quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) è fondamentalmente diversa. Gli elementi[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto tramite implementazioni di interfacce del provider.
+The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. Gli elementi[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto tramite implementazioni di interfacce del provider.
 
 <a name="Security_Considerations"></a>
 
@@ -115,7 +115,7 @@ I provider per i controlli basati su HWND in genere non richiedono di specificar
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per altre informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per ulteriori informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deve essere restituito per i provider ospitati in un controllo [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
 >

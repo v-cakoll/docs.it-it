@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 66bd56a332dc34fd35f3129256cc0e3d6c5d4508
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636694"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447563"
 ---
 # <a name="imethodmallocalloc-method"></a>Metodo IMethodMalloc::Alloc
 
-Tenta di allocare una quantità di memoria specificata per un nuovo corpo di funzione Microsoft intermediate language (MSIL).
+Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,16 +37,16 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parametri
 
 `cb`\
-[in] Il numero di byte da allocare per il corpo del metodo.
+[in] The number of bytes to allocate for the method body.
 
 ## <a name="remarks"></a>Note
 
- La memoria allocata inizierà con un indirizzo maggiore l'indirizzo di base del modulo che è associato questo allocatore. In altre parole, ogni allocatore viene creato per un modulo specifico e tenterà di allocare memoria in corrispondenza di un offset positivi dal relativo indirizzo di base. Se `Alloc` non riesce ad allocare il numero richiesto di byte in corrispondenza di un indirizzo maggiore l'indirizzo di base del modulo, viene restituito E_OUTOFMEMORY, indipendentemente dalla quantità effettiva di spazio di memoria disponibile.
+ The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
 
- Il `Alloc` metodo deve essere usato in combinazione con il [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) (metodo).
+ The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
 
 ## <a name="requirements"></a>Requisiti
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
  **Intestazione:** CorProf.idl, CorProf.h
 

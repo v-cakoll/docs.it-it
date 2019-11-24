@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f25b294-72b6-4882-a49b-6c9d364b6008
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 463416165d2dbd7724d5cf0d29e40d8243ade34b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 794615994cd11ee00c2a381b9ba883cebb8233a0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778312"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446117"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>Metodo ISymUnmanagedVariable::GetAddressField2
-Ottiene il secondo campo dell'indirizzo di questa variabile. Il significato dipende dal tipo di indirizzo.  
+Gets the second address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField2(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] Un puntatore a un `ULONG32` che riceve il secondo campo dell'indirizzo.  
+ [out] A pointer to a `ULONG32` that receives the second address field.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

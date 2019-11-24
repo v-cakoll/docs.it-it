@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0c9f104329818f47597e8735389e5e6205ca617
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440444"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>Metodo IMetaDataEmit2::SetGenericParamProps
-Imposta i valori di proprietà per la definizione di parametro generico a cui fanno riferimento al token specificato.  
+Sets property values for the generic parameter definition referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parametri  
  `gp`  
- [in] Il token per la definizione di parametro generico per il quale impostare i valori.  
+ [in] The token for the generic parameter definition for which to set values.  
   
  `dwParamFlags`  
- [in] Valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il tipo parametro generico.  
+ [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
   
  `szName`  
- [in] Facoltativo. Il nome del parametro per cui impostare i valori.  
+ [in] Facoltativo. The name of the parameter for which to set values.  
   
  `reserved`  
- [in] Riservato per un'estendibilità futura.  
+ [in] Reserved for future extensibility.  
   
  `rtkConstraints`  
- [in] Facoltativo. Una matrice con terminazione zero di vincoli di tipo. I membri della matrice devono essere un' `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token di metadati.  
+ [in] Facoltativo. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

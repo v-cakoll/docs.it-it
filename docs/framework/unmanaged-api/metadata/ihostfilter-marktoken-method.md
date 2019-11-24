@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f486ffd1206dd30fa29d3f07c8c5b738cc207db0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6f8df824ed36b7793d5f07e5b5cf51f65f9c8e24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745866"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432236"
 ---
 # <a name="ihostfiltermarktoken-method"></a>Metodo IHostFilter::MarkToken
-Indica che il token di metadati specificato verrà elaborato.  
+Indicates that the specified metadata token will be processed.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token di metadati da elaborare.  
+ [in] The metadata token to be processed.  
   
 ## <a name="remarks"></a>Note  
- In genere, si vuole che un token per l'elaborazione se presente nell'ambito dei metadati. Il `MarkToken` viene passato al motore di metadati tramite il [SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) (metodo).  
+ Typically, you want a token to be processed if it is in the metadata scope. The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

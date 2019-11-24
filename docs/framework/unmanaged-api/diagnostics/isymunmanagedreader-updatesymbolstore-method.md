@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938999"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446462"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Metodo ISymUnmanagedReader::UpdateSymbolStore
-Aggiorna l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo viene usato negli scenari di modifica e continuazione per aggiornare l'archivio simboli in modo che corrisponda ai Delta al file eseguibile portabile originale (PE).  
+Aggiorna l'archivio dei simboli esistente con un archivio dei simboli delta. This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
   
 > [!NOTE]
-> È necessario specificare solo uno dei `filename` parametri o `pIStream` , non entrambi. Se `filename` si specifica, l'archivio dei simboli verrà aggiornato con i simboli presenti in tale file. Se `pIStream` si specifica, l'archivio verrà aggiornato con i dati <xref:System.Runtime.InteropServices.ComTypes.IStream>del.  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +38,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parametri  
  `filename`  
- in Nome del file che contiene l'archivio dei simboli.  
+ [in] The name of the file that contains the symbol store.  
   
  `pIStream`  
- in Flusso di file, usato come alternativa al `filename` parametro.  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

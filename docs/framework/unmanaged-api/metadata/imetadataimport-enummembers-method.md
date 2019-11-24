@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758842"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447650"
 ---
 # <a name="imetadataimportenummembers-method"></a>Metodo IMetaDataImport::EnumMembers
 Enumera i token MemberDef che rappresentano i membri del tipo specificato.  
@@ -41,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Token TypeDef che rappresenta il tipo i cui membri sono da enumerare.  
+ [in] A TypeDef token representing the type whose members are to be enumerated.  
   
  `rMembers`  
- [out] Matrice usata per contenere i token MemberDef.  
+ [out] The array used to hold the MemberDef tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMembers`.  
   
  `pcTokens`  
- [out] Il numero effettivo di token MemberDef restituiti in `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token MemberDef per enumerare. In tal caso, `pcTokens` è uguale a zero.|  
+|`S_OK`|`EnumMembers` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Note  
- Durante l'enumerazione delle raccolte di membri per una classe `EnumMembers` restituisce solo i membri (campi e metodi, ma **non** eventi o proprietà) definiti direttamente nella classe. Non restituisce tutti i membri che eredita la classe, anche se la classe fornisce un'implementazione per i membri ereditati. Per enumerare i membri ereditati, il chiamante deve verificare in modo esplicito la catena di ereditarietà. Si noti che le regole per la catena di ereditarietà possono variare a seconda del linguaggio o un compilatore che ha creato i metadati originali.
+ When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
  
- Proprietà ed eventi non sono enumerati dal `EnumMembers`. Per enumerare quelli, usare [EnumProperties](imetadataimport-enumproperties-method.md) oppure [EnumEvents](imetadataimport-enumevents-method.md).
+ Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

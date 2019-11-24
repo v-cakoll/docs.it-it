@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b42c7ed5614f5f436559ce4af462ff16896a89c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17fdddbcc9d49d5b5b1aed01b1dc2e4c0424e3f3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746147"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435025"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>Metodo ICeeGen::GetIMapTokenIface
-Ottiene l'interfaccia fa riferimento il token specificato.  
+Gets the interface referenced by the specified token.  
   
- Questo metodo è obsoleto e non deve essere utilizzato.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,14 +37,14 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>Parametri  
  `pIMapToken`  
- [in, out] Il token di metadati per l'interfaccia da restituire.  
+ [in, out] The metadata token for the interface to be returned.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

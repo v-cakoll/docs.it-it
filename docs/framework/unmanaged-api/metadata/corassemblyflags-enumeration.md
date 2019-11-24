@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780924"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443916"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumerazione CorAssemblyFlags
 Contiene valori che descrivono i metadati applicati alla compilazione di un assembly.  
@@ -55,33 +53,33 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`afPublicKey`|Indica che il riferimento all'assembly contiene la chiave pubblica completa, senza hash.|  
-|`afPA_None`|Indica che l'architettura del processore non è specificata.|  
-|`afPA_MSIL`|Indica che l'architettura del processore è neutra (PE32).|  
-|`afPA_x86`|Indica che l'architettura del processore x86 (PE32).|  
-|`afPA_IA64`|Indica che l'architettura del processore Itanium (PE32 +).|  
-|`afPA_AMD64`|Indica che l'architettura del processore AMD X64 (PE32 +).|  
-|`afPA_ARM`|Indica che l'architettura del processore ARM (PE32).|  
-|`afPA_NoPlatform`|Indica che l'assembly è un assembly di riferimento. vale a dire, si applica a qualsiasi architettura, ma non è possibile eseguire su qualsiasi architettura. Di conseguenza, il flag è identico `afPA_Mask`.|  
-|`afPA_Specified`|Indica che il flag di architettura del processore deve essere propagato al `AssemblyRef` record.|  
-|`afPA_Mask`|Maschera che descrive l'architettura del processore.|  
-|`afPA_FullMask`|Specifica che la descrizione dell'architettura del processore è inclusa.|  
-|`afPA_Shift`|Indica un conteggio dello spostamento nei flag di architettura di processore da e verso l'indice.|  
-|`afEnableJITcompileTracking`|Indica il valore corrispondente dal <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indica il valore corrispondente dal <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indica che l'assembly può essere ridestinato in fase di esecuzione a un assembly da un autore diverso.|  
-|`afContentType_Mask`|Maschera che descrive il tipo di contenuto.|  
-|`afContentType_Default`|Indica il tipo di contenuto predefinito.|  
-|`afContentType_WindowsRuntime`|Indica il tipo di contenuto di Windows Runtime.|  
+|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
+|`afPA_None`|Indicates that the processor architecture is unspecified.|  
+|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
+|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
+|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
+|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
+|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
+|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
+|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
+|`afPA_Mask`|A mask that describes the processor architecture.|  
+|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
+|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
+|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
+|`afContentType_Mask`|A mask that describes the content type.|  
+|`afContentType_Default`|Indicates the default content type.|  
+|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H  
+ **Header:** CorHdr.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

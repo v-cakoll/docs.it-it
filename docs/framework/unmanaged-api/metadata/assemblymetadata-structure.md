@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24ec1f7d553a59425f7eb02af8e91010d940eb07
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776382"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444263"
 ---
 # <a name="assemblymetadata-structure"></a>Struttura ASSEMBLYMETADATA
-Contiene informazioni sull'assembly di riferimento, inclusi la versione e del relativo livello di supporto per le impostazioni locali, processori e sistemi operativi.  
+Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,27 +41,27 @@ typedef struct {
 } ASSEMBLYMETADATA;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`usMajorVersion`|Il numero di versione principale dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMajorVersion` vengono impostate, la versione principale non è specificata.|  
-|`usMinorVersion`|Il numero di versione secondaria dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMinorVersion` vengono impostate, la versione secondaria non è specificata.|  
-|`usBuildNumber`|Il numero di build dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usBuildNumber` vengono impostate, il numero di build non è specificato.|  
-|`usRevisionNumber`|Il numero di revisione dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usRevisionNumber` vengono impostate, il numero di revisione non è specificato.|  
-|`szLocale`|Elenco di nomi delle impostazioni locali conforme alla specifica RFC1766, separata da punti e virgola, che specifica le impostazioni locali supportate dall'assembly cui viene fatto riferimento. Un valore null indica l'indipendenza dalle impostazioni locali. **Nota:**  In .NET Framework versione 1.0 non è possibile specificare più di una delle impostazioni locali.|  
-|`cbLocale`|La dimensione in caratteri "wide" di `szLocale`.|  
-|`rdwProcessor`|Matrice di identificatori, come definito in Winnt. h, per i tipi di processore supportati da assembly di riferimento. Un valore NULL indica l'indipendenza del processore.|  
-|`ulProcessor`|La lunghezza del `rdwProcessor` matrice.|  
-|`rOS`|Matrice di [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) istanze che specifica i sistemi operativi supportati da assembly di riferimento. Un valore NULL indica l'indipendenza del sistema operativo.|  
-|`ulOS`|La lunghezza del `rOS` matrice.|  
+|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
+|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
+|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
+|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
+|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
+|`cbLocale`|The size in wide characters of `szLocale`.|  
+|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
+|`ulProcessor`|The length of the `rdwProcessor` array.|  
+|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
+|`ulOS`|The length of the `rOS` array.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

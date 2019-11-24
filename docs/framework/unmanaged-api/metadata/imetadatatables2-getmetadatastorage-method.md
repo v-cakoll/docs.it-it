@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667a6d1e-753d-4ea2-8fd8-a8337d1bb9cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd75fa12a95478a65d93eb07a32acf4cfd8b9632
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302e9db3bc683eaa2b65e0b0479de721e07d56db
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782087"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442646"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>Metodo IMetaDataTables2::GetMetaDataStorage
-Ottiene le dimensioni e il contenuto dei metadati archiviati nella sezione specificata.  
+Gets the size and contents of the metadata stored in the specified section.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,17 +36,17 @@ HRESULT GetMetaDataStorage (
   
 ## <a name="parameters"></a>Parametri  
  `ppvMd`  
- [in, out] Puntatore a una sezione di metadati.  
+ [in, out] A pointer to a metadata section.  
   
  `pcbMd`  
- [out] Le dimensioni del flusso di metadati.  
+ [out] The size of the metadata stream.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

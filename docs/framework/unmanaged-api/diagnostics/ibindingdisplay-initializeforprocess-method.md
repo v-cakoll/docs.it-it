@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c19b49e9e9d4e388706a96ff54d588d5aeff99b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775956"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448490"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Metodo IBindingDisplay::InitializeForProcess
-Inizializza la [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) oggetto.  
+Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>Parametri  
  `pid`  
- [in] L'identificatore di processo.  
+ [in] The process identifier.  
   
 ## <a name="remarks"></a>Note  
- Il debugger chiama il `InitializeForProcess` metodo in fase di creazione per inizializzare la visualizzazione delle associazioni. `InitializeForProcess` deve essere chiamato in fase di creazione della prima di qualsiasi altro metodo su `IBindingDisplay` viene chiamato.  
+ The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **Libreria:** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757650"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448034"
 ---
 # <a name="imetadataemitmergeend-method"></a>Metodo IMetaDataEmit::MergeEnd
 
-Unisce in corrente ambito tutti gli ambiti di metadati specificati da uno o più chiamate precedenti al [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,41 +34,41 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Parametri
 
-Questo metodo non accetta parametri.
+This method takes no parameters.
 
 ## <a name="remarks"></a>Note
 
-Questa routine genera l'unione effettiva dei metadati, di tutti gli ambiti specificati dalle precedenti chiamate a importare `IMetaDataEmit::Merge`, nell'ambito di output corrente.
+This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
 
-Per l'unione si applicano condizioni speciali seguenti:
+The following special conditions apply to the merge:
 
-- Un identificatore di versione del modulo (MVID, Module) non viene mai importato, perché è univoco per i metadati nell'ambito di importazione.
+- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
 
-- Nessuna proprietà a livello di modulo esistente viene sovrascritti.
+- No existing module-wide properties are overwritten.
 
-  Se le proprietà dei moduli sono già state impostate per l'ambito corrente, non le proprietà dei moduli vengono importati. Tuttavia, se le proprietà dei moduli non sono state impostate nell'ambito corrente, vengono importati solo una volta, quando vengono rilevati prima di tutto. Se le proprietà del modulo vengono rilevati anche in questo caso, vengono duplicati. Se vengono confrontati i valori di tutte le proprietà di modulo (eccetto MVID) e non vengono trovati duplicati, viene generato un errore.
+  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
 
-- Per le definizioni dei tipi (`TypeDef`), duplicati non vengono uniti nell'ambito corrente. `TypeDef` gli oggetti vengono controllati per rilevare eventuali duplicati *nome completo dell'oggetto* + *GUID* + *numero di versione*. Se viene trovata una corrispondenza nel nome o GUID e uno degli altri due elementi è diverso, viene generato un errore. In caso contrario, se corrisponde a tutti i tre elementi, `MergeEnd` esegue un controllo superficiale per assicurarsi che le voci sono effettivamente duplicati; in caso contrario, viene generato un errore. Questo controllo superficiale Cerca:
+- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
 
-  - Le stesse dichiarazioni di membro, che si verificano nello stesso ordine. I membri contrassegnati come `mdPrivateScope` (vedere la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumerazione) non sono inclusi in questo controllo; vengono unite in modo speciale.
+  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
 
-  - Il layout della classe stessa.
+  - The same class layout.
 
-  Ciò significa che un `TypeDef` oggetto deve essere sempre completamente e coerente definito in tutti gli ambiti di metadati in cui è dichiarata; se le implementazioni di membri (per una classe) vengono distribuite tra più unità di compilazione, la definizione completa viene considerato uguale a presente in tutti gli ambiti e non incrementale per ogni ambito. Ad esempio, se i nomi dei parametri sono rilevanti per il contratto, essi devono essere inviati allo stesso modo in ogni ambito. Se non sono rilevanti, essi non deve essere generati nei metadati.
+  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
 
-  L'eccezione è che un `TypeDef` oggetto può avere membri incrementali contrassegnati come `mdPrivateScope`. Quando viene rilevato, `MergeEnd` in modo incrementale li aggiunge all'ambito corrente senza tener conto per i duplicati. Poiché il compilatore riconosce l'ambito privato, il compilatore deve essere responsabile per l'applicazione di regole.
+  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
 
-- Indirizzi virtuali relativi (RVA) non vengono importati o uniti. è previsto il compilatore di generare nuovamente tali informazioni.
+- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
 
-- Gli attributi personalizzati vengono uniti solo quando l'elemento a cui sono associati viene unito. Attributi personalizzati associati a una classe vengono uniti, ad esempio, quando la classe viene prima rilevata. Se gli attributi personalizzati sono associati a un `TypeDef` o `MemberDef` specifico all'unità di compilazione (ad esempio, il timestamp di una compilazione di membri), non vengono unite e spetta al compilatore di rimuovere o aggiornare tali metadati.
+- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** Cor. h
+**Header:** Cor.h
 
-**Libreria:** Usato come risorsa in Mscoree. dll
+**Library:** Used as a resource in MSCorEE.dll
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

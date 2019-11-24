@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737232"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440146"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>Metodo ISymUnmanagedReader::GetSymAttribute
-Ottiene un attributo personalizzato in base al relativo nome. A differenza dei metadati di attributi personalizzati, questi attributi personalizzati vengono mantenuti nell'archivio simboli.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] Il token di metadati per l'oggetto per cui è richiesto l'attributo.  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in] Puntatore alla variabile che indica l'attributo da recuperare.  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
  [in] Dimensione della matrice `buffer`.  
   
  `pcBuffer`  
- [out] Puntatore alla variabile che riceve la lunghezza dei dati dell'attributo.  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out] Puntatore alla variabile che riceve i dati dell'attributo.  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

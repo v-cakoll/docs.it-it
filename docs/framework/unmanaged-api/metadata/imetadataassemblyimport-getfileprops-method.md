@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760147"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447220"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Metodo IMetaDataAssemblyImport::GetFileProps
-Ottiene le proprietà del file con la firma dei metadati specificato.  
+Gets the properties of the file with the specified metadata signature.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parametri  
  `mdf`  
- [in] Il `mdFile` token di metadati che rappresenta il file per cui ottenere le proprietà.  
+ [in] The `mdFile` metadata token that represents the file for which to get the properties.  
   
  `szName`  
- [out] Il nome semplice del file.  
+ [out] The simple name of the file.  
   
  `cchName`  
- [in] Le dimensioni, in caratteri wide, di `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Numero di caratteri wide effettivamente restituiti nella `szName`.  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `ppbHashValue`  
- [out] Puntatore al valore hash. Questo è l'hash, usando l'algoritmo SHA-1, del file.  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
   
  `pcbHashValue`  
- [out] Il numero di caratteri wide nel valore restituito di hash.  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwFileFlags`  
- [out] Puntatore al flag che descrivono i metadati applicati a un file. Il valore dei flag è una combinazione di uno o più [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valori.  
+ [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

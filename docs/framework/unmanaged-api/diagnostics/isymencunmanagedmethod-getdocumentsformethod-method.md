@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8b329d096a23df673de038036fa5ea196cbe0eac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49023424c21fced1c49b16ecdbea93c654b5e883
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736066"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448379"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethod
-Ottiene i documenti che questo metodo è incluse righe.  
+Gets the documents that this method has lines in.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +36,19 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parametri  
  `cDocs`  
- [in] La lunghezza del buffer a cui punta `pcDocs`.  
+ [in] The length of the buffer pointed to by `pcDocs`.  
   
  `pcDocs`  
- [out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere i documenti.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
   
  `documents`  
- [in] Buffer che contiene i documenti.  
+ [in] The buffer that contains the documents.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

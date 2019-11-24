@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d164676-0ee9-4f67-a8ea-cb474db09053
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 468c5b28bb5a574aacf623196f0c516992473707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e54f87f5f02a1857fd9b7639d00d4bcb976665b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756235"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445412"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>Metodo ICorProfilerCallback::ExceptionOSHandlerLeave
-Non implementato. Un profiler che richiede informazioni sull'eccezione non gestita è necessario ottenere queste informazioni tramite altri mezzi.  
+Non implementato. A profiler that needs unmanaged exception information must obtain this information through other means.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +33,7 @@ HRESULT ExceptionOSHandlerLeave(
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

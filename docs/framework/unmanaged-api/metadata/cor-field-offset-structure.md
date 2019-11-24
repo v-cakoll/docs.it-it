@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767057"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443959"
 ---
-# <a name="corfieldoffset-structure"></a>Struttura COR_FIELD_OFFSET
+# <a name="cor_field_offset-structure"></a>Struttura COR_FIELD_OFFSET
 Archivia l'offset del campo specificato all'interno di una classe.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,20 +33,20 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`ridOfField`|Un `mdFieldDef` token di metadati che rappresenta il campo.|  
-|`ulOffset`|Offset del campo nella relativa classe.|  
+|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
+|`ulOffset`|The field's offset within its class.|  
   
 ## <a name="remarks"></a>Note  
- [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) e [SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) metodi accettano un parametro di tipo `COR_FIELD_OFFSET`.  
+ [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorHdr. H, Corprof. idl  
+ **Header:** CorHdr.h, CorProf.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4229332ef3a079a5a294e27b624dde0e1fb46691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782960"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445865"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>Metodo ICorProfilerCallback::ObjectsAllocatedByClass
-Notifica al profiler sul numero di istanze di ogni classe specificata che sono stati creati dopo l'ultima garbage collection.  
+Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +36,23 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>Parametri  
  `cClassCount`  
- [in] Le dimensioni dei `classIds` e `cObjects` matrici.  
+ [in] The size of the `classIds` and `cObjects` arrays.  
   
  `classIds`  
- [in] Matrice di ID, dove ogni ID specifica una classe con una o più istanze di classe.  
+ [in] An array of class IDs, where each ID specifies a class with one or more instances.  
   
  `cObjects`  
- [in] Matrice di interi, in cui ogni integer che specifica il numero di istanze per la classe corrispondente nel `classIds` matrice.  
+ [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
   
 ## <a name="remarks"></a>Note  
- Il `classIds` e `cObjects` sono matrici parallele. Ad esempio, `classIds[i]` e `cObjects[i]` fare riferimento alla classe stessa. Se non è stata creata alcuna istanza di una classe dopo la precedente di garbage collection, la classe viene omesso. Il `ObjectsAllocatedByClass` callback non segnalerà gli oggetti allocati nell'heap oggetto grande.  
+ The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
   
- I numeri di segnalati da `ObjectsAllocatedByClass` sono solo una stima. Per i conteggi esatti, utilizzare [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- Il `classIds` matrice può contenere una o più voci null se il corrispondente `cObjects` matrice dispone di tipi in fase di scaricamento.  
+ The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

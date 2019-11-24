@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042002"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441218"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
   
  Questo argomento contiene informazioni sul supporto di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per i controlli standard in applicazioni sviluppate per i framework [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] .  
   
@@ -34,19 +34,19 @@ ms.locfileid: "71042002"
 |----------------|------------------|  
 |Button|Button|  
 |Button|RadioButton|  
-|Button|Group|  
+|Button|Raggruppa|  
 |Button|CheckBox|  
 |Button|Hyperlink|  
 |Button|SplitButton|  
 |Button|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Edit|Documento|  
+|Edit|Document|  
 |Edit|Edit|  
 |SysLink|Hyperlink|  
-|statico|Text|  
-|statico|Image|  
-|SysIPAddress32|Custom|  
+|Static|Testo|  
+|Static|Immagine|  
+|SysIPAddress32|Custom (Personalizzati)|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|List|  
@@ -56,47 +56,47 @@ ms.locfileid: "71042002"
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
 |RichEdit|Document Vedere la nota.|  
-|RichEdit20A|Documento|  
+|RichEdit20A|Document|  
 |RichEdit20W|Document|  
-|RichEdit50W|Documento|  
+|RichEdit50W|Document|  
 |ScrollBar|Slider|  
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|TAB|  
+|SysTabControl32|Scheda|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
 |ToolbarWindow32|Button|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|Separatore|  
-|tooltips_class32|Descrizione comando|  
-|#32774|Descrizione comando|  
+|ToolbarWindow32|Separator|  
+|tooltips_class32|ToolTip|  
+|#32774|ToolTip|  
 |ReBarWindow32|ToolBar|  
 |SysTreeView32|Struttura ad albero|  
 |SysTreeView32|TreeItem|  
   
- **Nota** Il controllo RichEdit è supportato solo per le versioni fornite con [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] (in Riched20.dll versione 3.1 e successive e MsftEdit.dll versione 4.1 e successive).  
+ **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
   
  I controlli seguenti non sono supportati.  
   
 |Nome di classe|Tipo di controllo|  
 |----------------|------------------|  
-|SysAnimate32|Image|  
+|SysAnimate32|Immagine|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Personalizzato|  
+|SysDateTimePick32|Custom (Personalizzati)|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
 |VBBubble|ToolTip|  
 |ScrollBar (se usato come controllo autonomo)|Slider|  
-|SuperGrid|Personalizzato|  
+|SuperGrid|Custom (Personalizzati)|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controlli per Windows Form  
- Windows Forms controlli sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tramite provider lato client in UIAutomationClientsideProviders. dll. Questo assembly viene automaticamente registrato per l'uso con applicazioni client di automazione interfaccia utente.  
+ Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. Questo assembly viene automaticamente registrato per l'uso con applicazioni client di automazione interfaccia utente.  
   
- In genere, Windows Forms controlli che sono wrapper gestiti per [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i controlli comuni sono supportati [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]da. I controlli seguenti sono supportati.  
+ Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. I controlli seguenti sono supportati.  
   
 |Nome di classe|  
 |----------------|  
@@ -130,13 +130,13 @@ ms.locfileid: "71042002"
 |TextBox|  
 |Timer|  
 |ToolBar|  
-|Descrizione comando|  
+|ToolTip|  
 |Trackbar|  
 |TreeView|  
 |VscrollBar|  
 |WebBrowser|  
   
- I controlli seguenti sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] solo tramite il supporto di Microsoft Active Accessibility. Alcune funzionalità potrebbero non essere disponibili.  
+ The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Alcune funzionalità potrebbero non essere disponibili.  
   
 |Nome controllo|  
 |------------------|  

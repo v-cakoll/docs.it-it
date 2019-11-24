@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777384"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446424"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>Metodo ISymUnmanagedReader2::GetSymAttributePreRemap
-Ottiene un attributo personalizzato in base al relativo nome. A differenza dei metadati di attributi personalizzati, questi attributi sono contenuti nell'archivio simboli.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] Il token di metadati dell'elemento padre.  
+ [in] The metadata token of the parent.  
   
  `name`  
- [in] Un puntatore a un `WCHAR` che contiene il nome.  
+ [in] A pointer to a `WCHAR` that contains the name.  
   
  `cBuffer`  
- [in] Oggetto `ULONG32` che indica le dimensioni del `buffer` matrice.  
+ [in] A `ULONG32` that indicates the size of the `buffer` array.  
   
  `pcBuffer`  
- [out] Un puntatore a un `ULONG32` che riceve le dimensioni del buffer necessaria per contenere i byte di attributo.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
   
  `buffer`  
- [out] Puntatore al buffer che riceve i byte di attributo.  
+ [out] A pointer to the buffer that receives the attribute bytes.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

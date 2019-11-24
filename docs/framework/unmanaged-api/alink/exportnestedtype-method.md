@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777271"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438429"
 ---
 # <a name="exportnestedtype-method"></a>Metodo ExportNestedType
-Specifica i tipi annidati come esportabili. Il [Metodo ExportType](exporttype-method.md) può anche esportare tipi annidati, ma questo metodo è più veloce.  
+Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,34 +41,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly da cui eseguire l'esportazione.  
+ ID of assembly to export from.  
   
  `FileToken`  
- Token del file o assembly del file che definisce il tipo da rendere esportabile.  
+ File token or Assembly of file that defines the type to be made exportable.  
   
  `TypeToken`  
- Token di tipo di tipo da rendere esportabile.  
+ Type token of type to be made exportable.  
   
  `ParentType`  
- Token del tipo padre.  
+ Token of parent type.  
   
  `pszTypename`  
- Nome completo del tipo da esportare.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`flag come `tdPublic` o `tdNested`. Questo valore può essere passato al [Metodo DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Riceve il token per il tipo esportato.  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se il metodo ha esito positivo.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [Alink (API)](index.md)
+- [API ALink](index.md)

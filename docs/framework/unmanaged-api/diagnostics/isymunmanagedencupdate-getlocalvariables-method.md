@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48e359f8ed4d52de1cff7ca46a523f4eb80ec4c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776899"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449036"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>Metodo ISymUnmanagedENCUpdate::GetLocalVariables
-Ottiene le variabili locali.  
+Gets the local variables.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,22 +38,22 @@ HRESULT GetLocalVariables(
   
 ## <a name="parameters"></a>Parametri  
  `mdMethodToken`  
- [in] Il token di metadati del metodo.  
+ [in] The metadata token of the method.  
   
  `cLocals`  
- [in] Oggetto `ULONG` che indica le dimensioni del `rgLocals` parametro.  
+ [in] A `ULONG` that indicates the size of the `rgLocals` parameter.  
   
  `rgLocals`  
- [out] La matrice restituita di [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) istanze.  
+ [out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
   
  `pceltFetched`  
- [out] Un puntatore a un `ULONG` che riceve le dimensioni del `rgLocals` buffer necessario per contenere variabili locali.  
+ [out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
 

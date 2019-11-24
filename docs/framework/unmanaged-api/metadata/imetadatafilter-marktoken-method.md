@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd492834-6529-4d39-b93d-f8cdbd3e297f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08340c82acb8eff2ce5b778c719f350b58b51fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae105a60969e819f7974735ed8f075c60ba93916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757527"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440352"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>Metodo IMetaDataFilter::MarkToken
-Imposta un valore che indica che il token di metadati specificato è stato elaborato.  
+Sets a value indicating that the specified metadata token has been processed.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +35,14 @@ HRESULT MarkToken (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token da contrassegnare come elaborato.  
+ [in] The token to mark as processed.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

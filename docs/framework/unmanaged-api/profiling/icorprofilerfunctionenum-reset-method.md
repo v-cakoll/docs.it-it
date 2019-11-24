@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80046b2e-55b7-40a2-9adf-cf2763ee59c8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98809ff5424e1da468e70d34cbb9214c1d3248f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd3a848e5c9ac04f7c52db8d6c70e3028fe8ead6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780299"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447778"
 ---
 # <a name="icorprofilerfunctionenumreset-method"></a>Metodo ICorProfilerFunctionEnum::Reset
 Sposta il cursore dell'enumeratore nella posizione iniziale della sequenza.  
@@ -34,7 +32,7 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

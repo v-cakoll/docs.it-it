@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130241"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446791"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Creazione di assembly e metodi dinamici
 
@@ -34,7 +34,7 @@ La reflection emit offre le funzionalità seguenti:
   
 Oltre ai tipi gestiti dello spazio dei nomi <xref:System.Reflection.Emit>, sono disponibili interfacce di metadati non gestite, descritte nella documentazione di riferimento per le [interfacce di metadati](../unmanaged-api/metadata/metadata-interfaces.md). La reflection emit gestita garantisce un controllo degli errori semantici più completo e un livello di astrazione dei metadati più alto rispetto alle interfacce di metadati non gestite.  
   
-Un'altra risorsa per l'uso di metadati e codice MSIL è la documentazione CLI (Common Language Infrastructure), in particolare la seconda e la terza parte, relative rispettivamente alla semantica e alla definizione dei metadati e all'insieme di istruzioni. La documentazione è disponibile online su [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) e sul [sito Web di ECMA](https://go.microsoft.com/fwlink/?LinkId=116487).  
+Un'altra risorsa per l'uso di metadati e codice MSIL è la documentazione CLI (Common Language Infrastructure), in particolare la seconda e la terza parte, relative rispettivamente alla semantica e alla definizione dei metadati e all'insieme di istruzioni. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione
   
@@ -53,7 +53,7 @@ Illustra le procedure di creazione, emit e richiamo di un metodo generico sempli
 [Assembly ritirabili per la generazione di tipi dinamici](collectible-assemblies.md)   
 Offre un'introduzione degli assembly ritirabili, ovvero assembly dinamici che possono essere scaricati senza scaricare il dominio dell'applicazione in cui sono stati creati.
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Cataloga i codici di istruzioni MSIL che è possibile usare per compilare i corpi dei metodi.  

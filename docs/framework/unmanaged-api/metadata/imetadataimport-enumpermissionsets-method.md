@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756537"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450052"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>Metodo IMetaDataImport::EnumPermissionSets
 Enumera le autorizzazioni per gli oggetti in un ambito dei metadati specificato.  
@@ -42,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `tk`  
- [in] Token di metadati che limita l'ambito della ricerca, o NULL per la ricerca nell'ambito più ampio possibile.  
+ [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
   
  `dwActions`  
- [in] Flag che rappresenta il <xref:System.Security.Permissions.SecurityAction> valori da includere in `rPermission`, oppure zero per restituire tutte le azioni.  
+ [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
   
  `rPermission`  
- [out] Matrice utilizzata per archiviare i token di autorizzazione.  
+ [out] The array used to store the Permission tokens.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rPermission`.  
   
  `pcTokens`  
- [out] Il numero di token di autorizzazione restituiti in `rPermission`.  
+ [out] The number of Permission tokens returned in `rPermission`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token da enumerare. In tal caso, `pcTokens` è uguale a zero.|  
+|`S_OK`|`EnumPermissionSets` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

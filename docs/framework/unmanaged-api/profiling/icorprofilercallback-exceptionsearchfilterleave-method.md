@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c71eb61dba5b62fcfed21d3500df70c1a699d42c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70573164baf6839b5ae701c645526e8b1507ad35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756090"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445361"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFilterLeave
-Notifica al profiler che un filtro utente appena terminata l'esecuzione.  
+Notifies the profiler that a user filter has just finished executing.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +32,7 @@ HRESULT ExceptionSearchFilterLeave();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

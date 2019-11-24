@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782500"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437960"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Metodo IMetaDataImport::FindMemberRef
-Ottiene un riferimento che è un puntatore al token MemberRef per il membro racchiusi specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.  
+Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] Il token TypeRef per la classe o interfaccia che racchiude il riferimento al membro da cercare. Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale o un riferimento alla funzione globale.  
+ [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
   
  `szName`  
- [in] Il nome del riferimento al membro da cercare.  
+ [in] The name of the member reference to search for.  
   
  `pvSigBlob`  
- [in] Un puntatore per la firma binaria dei metadati del riferimento al membro.  
+ [in] A pointer to the binary metadata signature of the member reference.  
   
  `cbSigBlob`  
- [in] La dimensione in byte di `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmr`  
- [out] Puntatore al token MemberRef corrispondente.  
+ [out] A pointer to the matching MemberRef token.  
   
 ## <a name="remarks"></a>Note  
- Si specifica il membro utilizzando la classe o interfaccia contenitore (`td`), il relativo nome (`szName`) e facoltativamente la firma (`pvSigBlob`).  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- La firma è passato a `FindMemberRef` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito. Una firma possibile incorporare un token che identifica il tipo di classe o valore di inclusione. Il token è un indice nella tabella di TypeDef locale. Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e usare tale firma come input per `FindMemberRef`.  
+ The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
   
- `FindMemberRef` Trova solo i riferimenti di membro che sono stati definiti direttamente nella classe o interfaccia. non trova riferimenti ai membri ereditati.  
+ `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cor. h  
+ **Header:** Cor.h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
