@@ -1,26 +1,26 @@
 ---
-title: Attributi (Visual Basic)
+title: Attributi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: 1a734823d1fedbbd7bb8196c501ac2ee149f3098
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 226187fc183b12055e9a67a8fdef0178edb317d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869050"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347864"
 ---
 # <a name="attributes-visual-basic"></a>Attributi (Visual Basic)
 
-Visual Basic offre diversi attributi che consentono agli oggetti di interagire con codice non gestito e un attributo che consente l'accesso ai membri del modulo senza il nome del modulo. Nella tabella seguente sono elencati gli attributi utilizzati da Visual Basic.  
+Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name. The following table lists the attributes used by Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilatore di aggiungere metadati che consentono di esporre una classe come oggetto COM.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Consente l'accesso ai membri del modulo usando solo la qualifica necessaria per il modulo.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indica che una matrice in una struttura o una variabile non locale deve essere considerata come una matrice a lunghezza fissa.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica che una stringa deve essere considerata come se fosse a lunghezza fissa.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instructs the compiler to add metadata that allows a class to be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows the module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indicates that a string should be treated as if it were fixed length.|
   
 ## <a name="see-also"></a>Vedere anche
 

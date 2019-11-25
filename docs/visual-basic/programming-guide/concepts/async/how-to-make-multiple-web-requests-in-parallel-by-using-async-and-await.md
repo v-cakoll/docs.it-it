@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: effettuare più richieste Web in parallelo tramite Async e await (Visual Basic)'
+title: 'Procedura: effettuare più richieste Web in parallelo tramite Async e Await'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 9241a54b4b0d1a8871ef496d44e1e6db5581af7b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 616efca79312883f17ba837d17a5ee9c97d15b34
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583159"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346142"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: effettuare più richieste Web in parallelo tramite Async e await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)
 
-In un metodo asincrono le attività vengono avviate al momento della creazione. L'operatore [await](../../../../visual-basic/language-reference/operators/await-operator.md) viene applicato all'attività nel punto del metodo in cui l'elaborazione non può continuare finché l'attività non viene completata. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.
+In un metodo asincrono le attività vengono avviate al momento della creazione. The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,25 +39,25 @@ Il programma seguente avvia tre download Web asincroni e quindi li mette in atte
 > [!NOTE]
 > Per completare il progetto, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.
 
-Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [procedura: estendere la procedura dettagliata asincrona tramite Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 È possibile scaricare il codice per l'esempio da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Esempi di codice per sviluppatori).
 
 ### <a name="to-set-up-the-project"></a>Per impostare il progetto
 
-1. Per configurare un'applicazione WPF, completare i passaggi seguenti. Per istruzioni dettagliate su questa procedura, vedere [procedura dettagliata: accesso al Web tramite Async e await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Per configurare un'applicazione WPF, completare i passaggi seguenti. You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.
 
     - Aggiunge un riferimento a <xref:System.Net.Http>.
 
-    - Nel file MainWindow. XAML. vb aggiungere un'istruzione `Imports` per `System.Net.Http`.
+    - In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.
 
 ### <a name="to-add-the-code"></a>Per aggiungere il codice
 
-1. Nella finestra di progettazione MainWindow. XAML fare doppio clic sul pulsante per creare il gestore dell'evento `startButton_Click` in MainWindow. XAML. vb.
+1. In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
 
-2. Copiare il codice seguente e incollarlo nel corpo di `startButton_Click` in MainWindow. XAML. vb.
+2. Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.
 
     ```vb
     resultsTextBox.Clear()
@@ -73,7 +73,7 @@ Per un altro esempio in cui vengono avviate più attività contemporaneamente, v
 
     - `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.
 
-     Copiare i metodi seguenti e incollarli dopo il gestore dell'evento `startButton_Click` in MainWindow. XAML. vb.
+     Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)

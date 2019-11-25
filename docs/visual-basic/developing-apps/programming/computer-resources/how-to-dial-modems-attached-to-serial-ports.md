@@ -1,19 +1,20 @@
 ---
-title: 'Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic'
+title: 'Procedura: comporre numeri con modem collegati a porte seriali'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345632"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: comporre numeri con modem collegati a porte seriali in Visual Basic
+
 Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con modem in Visual Basic.  
   
  In genere, il modem è collegato a una delle porte seriali del computer. Affinché l'applicazione comunichi con il modem, è necessario inviare i comandi alla porta seriale appropriata.  
@@ -24,7 +25,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con
   
 2. Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     Il blocco `Using` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.  
+     Il blocco `Using` consente all'applicazione di chiudere la porta seriale, anche se viene generata un'eccezione. Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.  
   
      [!code-vb[VbVbalrMyComputer#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#28)]  
   
@@ -37,14 +38,17 @@ Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con
      [!code-vb[VbVbalrMyComputer#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>Esempio  
+
  [!code-vb[VbVbalrMyComputer#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#27)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
+
  Nell'esempio è richiesto un riferimento allo spazio dei nomi <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Nell'esempio si presuppone che il modem sia collegato a COM1. È consigliabile che il codice consenta all'utente di selezionare la porta seriale desiderata da un elenco di porte disponibili. Per altre informazioni, vedere [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
  Questo esempio usa un blocco `Using` per verificare che l'applicazione chiuda la porta anche se viene generata un'eccezione. Per altre informazioni, vedere [Istruzione using](../../../../visual-basic/language-reference/statements/using-statement.md).  

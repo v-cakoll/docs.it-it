@@ -1,15 +1,15 @@
 ---
-title: "Procedura: trovare l'elemento radice (XPath-LINQ to XML) (Visual Basic)"
+title: "Procedura: trovare l'elemento radice (XPath-LINQ to XML)"
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: d8ac28b698b0c61a4d9e3beea61ff8a8e1074b88
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0e381c074a935a0cda5bd74bc456b8d7d9a495a8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320589"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344605"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare l'elemento radice (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>How to: Find the Root Element (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere l'elemento radice con XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  L'espressione XPath è:  
@@ -47,4 +47,4 @@ PurchaseOrders
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

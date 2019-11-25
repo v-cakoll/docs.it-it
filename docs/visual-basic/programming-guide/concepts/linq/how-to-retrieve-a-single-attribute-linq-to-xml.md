@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: recuperare un singolo attributo (LINQ to XML) (Visual Basic)'
+title: 'Procedura: recuperare un singolo attributo (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321321"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347556"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedura: recuperare un singolo attributo (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome. Questa procedura è utile per la scrittura di espressioni di query in cui si desidera trovare un elemento con un attributo specifico.  
   
  Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> della classe <xref:System.Xml.Linq.XElement> restituisce l'attributo <xref:System.Xml.Linq.XAttribute> con il nome specificato.  
@@ -63,7 +63,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornisce operatori di cast espliciti per la classe <xref:System.Xml.Linq.XAttribute> in `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` e `GUID?`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato lo stesso codice per un attributo all'interno di uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente viene illustrato lo stesso codice per un attributo all'interno di uno spazio dei nomi. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

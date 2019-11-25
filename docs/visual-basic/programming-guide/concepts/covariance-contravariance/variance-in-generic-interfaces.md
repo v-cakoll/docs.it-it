@@ -1,15 +1,15 @@
 ---
-title: Varianza nelle interfacce generiche (Visual Basic)
+title: Varianza nelle interfacce generiche
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 5e849d59148e83b76da56ed6105a31a6077a3d70
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 1f6913b322e2d3d9ec2234e556e63d67324277e5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583333"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348985"
 ---
-# <a name="variance-in-generic-interfaces-visual-basic"></a>Varianza nelle interfacce generiche (Visual Basic)
+# <a name="variance-in-generic-interfaces-visual-basic"></a>Variance in Generic Interfaces (Visual Basic)
 
 In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. Le interfacce seguenti sono ora varianti:
 
@@ -34,7 +34,7 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-Nelle versioni precedenti del .NET Framework, questo codice causa un errore di compilazione Visual Basic con `Option Strict On`. Ora è invece possibile usare `strings` anziché `objects`, come illustrato nell'esempio precedente, poiché l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> è covariante.
+In earlier versions of the .NET Framework, this code causes a compilation error in Visual Basic with `Option Strict On`. Ora è invece possibile usare `strings` anziché `objects`, come illustrato nell'esempio precedente, poiché l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> è covariante.
 
 La controvarianza consente a un metodo di avere tipi di argomenti meno derivati rispetto a quelli specificati dal parametro generico dell'interfaccia. Per illustrare la controvarianza, si supponga di aver creato una classe `BaseComparer` per confrontare le istanze della classe `BaseClass`. La classe `BaseComparer` implementa l'interfaccia `IEqualityComparer(Of BaseClass)`. Poiché l'interfaccia `BaseClass` è ora controvariante, è possibile usare <xref:System.Collections.Generic.IEqualityComparer%601> per confrontare le istanze delle classi che ereditano la classe `BaseComparer`. Queste operazioni sono illustrate nell'esempio di codice riportato di seguito.
 
@@ -70,7 +70,7 @@ Sub Test()
 End Sub
 ```
 
-Per altri esempi, vedere [uso della varianza nelle interfacce per le raccolte generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
+For more examples, see [Using Variance in Interfaces for Generic Collections (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
 
 La varianza nelle interfacce generiche è supportata solo per i tipi di riferimento. I tipi di valore non supportano la varianza. Ad esempio, non è possibile convertire `IEnumerable(Of Integer)` in modo implicito in `IEnumerable(Of Object)` perché i valori integer sono rappresentati da un tipo di valore.
 

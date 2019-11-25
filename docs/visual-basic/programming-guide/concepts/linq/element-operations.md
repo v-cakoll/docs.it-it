@@ -1,22 +1,22 @@
 ---
-title: Operazioni sugli elementi (Visual Basic)
+title: Operazioni sugli elementi
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d54e870e538be5960097778ba28f65178a2e4bc6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977574"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354197"
 ---
-# <a name="element-operations-visual-basic"></a>Operazioni sugli elementi (Visual Basic)
+# <a name="element-operations-visual-basic"></a>Element Operations (Visual Basic)
 Le operazioni sugli elementi restituiscono un singolo elemento specifico di una sequenza.  
   
  La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni sugli elementi.  
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |ElementAt|Restituisce l'elemento in corrispondenza dell'indice specificato in una Collection.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|Restituisce l'elemento in corrispondenza di un indice specificato in una Collection o un valore predefinito se l'indice è esterno all'intervallo.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
@@ -31,4 +31,4 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
 
 - <xref:System.Linq>
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Procedura: Eseguire una query per i File più grande o in un albero di Directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

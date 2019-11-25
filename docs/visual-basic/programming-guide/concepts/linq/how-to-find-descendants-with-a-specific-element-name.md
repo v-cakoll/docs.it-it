@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare i discendenti con un nome di elemento specifico (Visual Basic)'
+title: 'Procedura: trovare discendenti con un nome di elemento specifico'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249688"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344400"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Procedura: Trovare i discendenti con un nome di elemento specifico (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
 Talvolta si desidera individuare tutti i discendenti con un determinato nome. È possibile scrivere codice per scorrere tutti i discendenti, tuttavia è più agevole usare l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -103,4 +103,4 @@ Some text that is broken up into multiple segments.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

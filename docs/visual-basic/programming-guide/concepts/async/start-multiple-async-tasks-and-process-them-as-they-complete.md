@@ -1,15 +1,15 @@
 ---
-title: Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)
+title: Avviare più attività asincrone ed elaborarle quando vengono completate
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b103f385c804061c4df99dc9d1fdd54c7876151a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5293c2f6e1a17d3645fd1ce5a4ba61eac4d8b3a2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928462"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346672"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, è possibile avviare più attività contemporaneamente ed elaborarle una ad una quando vengono completate, invece che nell'ordine in cui vengono avviate.  
   
  Nell'esempio seguente viene usata una query per creare una Collection di attività. Ogni attività scarica il contenuto di un sito Web specificato. In ogni iterazione di un ciclo while, una chiamata attesa a `WhenAny` restituisce l'attività nella Collection di attività che completa per prima il download. Questa attività viene rimossa dalla Collection ed elaborata. Il ciclo si ripete finché la Collection non contiene più attività.  
@@ -18,7 +18,7 @@ Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
 > Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.  
   
 ## <a name="downloading-the-example"></a>Download dell'esempio  
- È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.  
+ È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.  
   
 1. Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -37,7 +37,7 @@ Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
  Se non si vuole scaricare il progetto, è possibile esaminare il file MainWindow.xaml.vb alla fine di questo argomento.  
   
 ## <a name="building-the-example"></a>Compilazione dell'esempio  
- Questo esempio aggiunge al codice sviluppato in [Annulla le attività asincrone rimanenti dopo che ne è stata completata una (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) e usa la stessa interfaccia utente.  
+ This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) and uses the same UI.  
   
  Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAfterOneTask** come **progetto di avvio**. Aggiungere le modifiche in questo argomento al metodo `AccessTheWebAsync` in tale progetto. Le modifiche sono contrassegnate con asterischi.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- Nel file MainWindow. XAML. vb del progetto apportare le modifiche seguenti al `AccessTheWebAsync` metodo.  
+ In the MainWindow.xaml.vb file of the  project, make the following changes to the `AccessTheWebAsync` method.  
   
 - Eseguire la query applicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anziché <xref:System.Linq.Enumerable.ToArray%2A>.  
   
@@ -87,7 +87,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
- È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione).  
+ È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -210,4 +210,4 @@ End Class
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

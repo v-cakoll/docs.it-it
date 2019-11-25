@@ -1,5 +1,5 @@
 ---
-title: -refonly (Visual Basic)
+title: -refonly
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b906178abf8d159083d95e41448596d512e857de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775559"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348570"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-L'opzione **-refonly** indica che l'output primario della compilazione deve essere un assembly di riferimento invece di un assembly di implementazione. Il parametro `-refonly` disabilita automaticamente l'output dei file PDB poiché non è possibile eseguire gli assembly di riferimento.
+The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. Il parametro `-refonly` disabilita automaticamente l'output dei file PDB poiché non è possibile eseguire gli assembly di riferimento.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,9 +28,9 @@ L'opzione **-refonly** indica che l'output primario della compilazione deve esse
 
 ## <a name="remarks"></a>Note
 
-Visual Basic supporta l'opzione di `-refonly` a partire dalla versione 15,3.
+Visual Basic supports the `-refonly` switch starting with version 15.3.
 
-Gli assembly di riferimento sono un tipo speciale di assembly che contiene solo la quantità minima di metadati necessaria per rappresentare la superficie dell'API pubblica della libreria. Sono incluse le dichiarazioni per tutti i membri significativi quando si fa riferimento a un assembly negli strumenti di compilazione, ma si escludono tutte le implementazioni e le dichiarazioni dei membri privati che non hanno alcun impatto osservabile sul contratto API. Per ulteriori informazioni, vedere [assembly di riferimento](../../../standard/assembly/reference-assemblies.md) nella Guida di .NET.
+Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
 
 Le opzioni `-refonly` e [`-refout`](refout-compiler-option.md) si escludono reciprocamente.
 

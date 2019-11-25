@@ -1,20 +1,20 @@
 ---
-title: Rimozione di elementi, attributi e nodi da un albero XML (Visual Basic)
+title: Rimozione di elementi, attributi e nodi da una struttura ad albero XML
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: 85a7a3b4047e269c562177cfa045b952472aaac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cce1eff469c1f737e18b88cce30155547d9f11b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787070"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348958"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Rimozione di elementi, attributi e nodi da un albero XML (Visual Basic)
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)
 È possibile modificare un albero XML, rimuovendo elementi, attributi e altri tipi di nodi.  
   
  La rimozione di un singolo elemento o di un singolo attributo da un documento XML è un processo semplice. Tuttavia, quando si rimuovono raccolte di elementi o attributi, è necessario innanzitutto materializzare una raccolta in un elenco e quindi eliminare gli elementi o gli attributi dall'elenco. L'approccio più efficace prevede l'uso del metodo di estensione <xref:System.Xml.Linq.Extensions.Remove%2A>, che consente di ottenere questi risultati.  
   
- Il motivo principale per cui scegliere questo approccio è che la maggior parte delle raccolte recuperate da un albero XML viene restituita tramite esecuzione posticipata. Se le raccolte non vengono dapprima materializzate in un elenco o se non vengono usati i metodi di estensione, è possibile riscontrare una determinata categoria di bug. Per altre informazioni, vedere [mista dichiarativa/bug nel codice imperativo (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ Il motivo principale per cui scegliere questo approccio è che la maggior parte delle raccolte recuperate da un albero XML viene restituita tramite esecuzione posticipata. Se le raccolte non vengono dapprima materializzate in un elenco o se non vengono usati i metodi di estensione, è possibile riscontrare una determinata categoria di bug. For more information, see [Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
  I metodi seguenti consentono di rimuovere nodi e attributi da un albero XML.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61787070"
 ### <a name="description"></a>Descrizione  
  In questo esempio sono illustrati tre approcci per la rimozione di elementi. Con il primo viene rimosso un singolo elemento. Con il secondo viene recuperata una raccolta di elementi, che viene materializzata tramite l'operatore <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e quindi viene rimossa. Infine, viene recuperata una raccolta di elementi che viene rimossa tramite il metodo di estensione <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
- Per altre informazioni sul <xref:System.Linq.Enumerable.ToList%2A> operatore, vedere [conversione dei tipi di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ For more information on the <xref:System.Linq.Enumerable.ToList%2A> operator, see [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
   
 ### <a name="code"></a>Codice  
   
@@ -63,7 +63,7 @@ root.<Child3>.Elements().Remove()
 Console.WriteLine(root)  
 ```  
   
-### <a name="comments"></a>Commenti  
+### <a name="comments"></a>Comments  
  L'output del codice è il seguente:  
   
 ```xml  
@@ -81,4 +81,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifica degli alberi XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

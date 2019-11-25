@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: elencare tutti i nodi in un albero (Visual Basic)'
+title: 'Procedura: Elencare tutti i nodi in un albero'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ea968298d49397f493cf0963db1214915c2e3822
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320542"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336132"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedura: elencare tutti i nodi in un albero (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>How to: List All Nodes in a Tree (Visual Basic)
 A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero. Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.  
   
  Non risulta particolarmente utile eseguire espressioni XPath tramite [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Le espressioni XPath hanno prestazioni inferiori rispetto alle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono molto più potenti. Tuttavia, XPath è efficace per identificare i nodi nell'albero XML.  
@@ -265,4 +265,4 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tecniche di query avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

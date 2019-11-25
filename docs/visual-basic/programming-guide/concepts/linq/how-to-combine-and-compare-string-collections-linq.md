@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)'
+title: 'Procedura: combinare e confrontare raccolte di stringhe (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352888"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348433"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

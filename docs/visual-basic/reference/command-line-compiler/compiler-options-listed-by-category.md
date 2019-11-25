@@ -1,22 +1,22 @@
 ---
-title: Opzioni del compilatore Visual Basic elencate per categoria
+title: Opzioni del compilatore elencate per categoria
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b6c142041024e672fe42c8c6f2d3ebe7b07cd65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182561"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344800"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic opzioni del compilatore elencate per categoria
-Il Visual Basic compilatore della riga di comando viene fornito come alternativa alla compilazione di programmi dall'interno di Visual Studio Integrated Development Environment (IDE). Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando Visual Basic ordinate in base alla categoria funzionale.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
+The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Output del compilatore  
+## <a name="compiler-output"></a>Compiler output  
   
 |Opzione|Scopo|  
 |---|---|  
@@ -39,13 +39,13 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Elabora commenti per la documentazione in un file XML.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Fa sì che l'output del compilatore sia un assembly il cui contenuto binario è identico in tutte le compilazioni se gli input sono identici.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Imposta il compilatore in modo che abbia come destinazione la .NET Compact Framework.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Specifica un file di output.|  
-|[/refonly](refonly-compiler-option.md)|Restituisce solo un assembly di riferimento.|
-|[/refout](refout-compiler-option.md)|Specifica il percorso di output di un assembly di riferimento.|
+|[/refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
+|[/refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifica il formato dell'output.|  
   
-## <a name="net-assemblies"></a>Assembly .NET  
+## <a name="net-assemblies"></a>.NET assemblies  
   
 |Opzione|Scopo|  
 |---|---|  
@@ -54,13 +54,13 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importa uno spazio dei nomi dall'assembly specificato.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Specifica un file contenente una chiave o una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifica il percorso degli assembly a cui fa riferimento l'opzione [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importa metadati da un assembly.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Specifica il nome dell'assembly che conterrà un modulo.|  
 |`-analyzer`|Esegue gli analizzatori da questo assembly (forma breve: -a)|  
 |`-additionalfile`|Assegna un nome ad altri file che non influiscono direttamente sulla generazione del codice, ma possono essere usati dagli analizzatori per produrre errori o avvisi.|  
   
-## <a name="debuggingerror-checking"></a>Debug/controllo degli errori  
+## <a name="debuggingerror-checking"></a>Debugging/error checking  
   
 |Opzione|Scopo|  
 |---|---|  
@@ -79,11 +79,11 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Visualizza le opzioni del compilatore. Questo comando ha la stessa funzione dell'opzione `-help`. Non viene effettuata alcuna compilazione.|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Visualizza le opzioni del compilatore. Questo comando ha la stessa funzione dell'opzione `-?`. Non viene effettuata alcuna compilazione.|  
   
-## <a name="language"></a>Linguaggio  
+## <a name="language"></a>Language  
   
 |Opzione|Scopo|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specificare la versione del linguaggio: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Richiede la dichiarazione esplicita delle variabili.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Attiva la semantica dei tipi rigorosa.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifica se il confronto si verifica tra stringhe di tipo binario oppure se usare una semantica basata sul testo specifica delle impostazioni locali definite.|  
@@ -111,9 +111,9 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |[@ (Specifica di un file di risposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Specifica un file di risposta.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Specifica l'indirizzo di base di una DLL.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifica il modo in cui il compilatore di Visual Basic deve segnalare gli errori interni del compilatore.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indica al kernel di Windows se un particolare eseguibile supporta ASLR (Address Space Layout Randomization) a entropia elevata.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifica la classe che contiene la `Sub Main` procedura da utilizzare all'avvio.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|La compilazione non viene eseguita con Vbc.rsp|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Indica al compilatore di non fare riferimento alle librerie standard.|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Indica al compilatore di non incorporare un manifesto dell'applicazione nel file eseguibile.|  
@@ -124,7 +124,7 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Indica che il compilatore deve compilare senza un riferimento alla libreria di runtime di Visual Basic oppure con un riferimento a una libreria di runtime specifica.|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifica un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file eseguibile di tipo PE di un progetto.|  
 |`-parallel[+&#124;-]`|Specifica se usare la compilazione simultanea (+).|  
-|`-checksumalgorithm:<alg>`|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256. <br>A causa di problemi di collisione con SHA1, Microsoft consiglia di SHA256 o meglio.|  
+|`-checksumalgorithm:<alg>`|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256. <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
   
 ## <a name="see-also"></a>Vedere anche
 

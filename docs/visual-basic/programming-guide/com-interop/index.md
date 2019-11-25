@@ -1,21 +1,21 @@
 ---
-title: Interoperabilità COM (Visual Basic)
+title: Interoperabilità COM
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627078"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347998"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
-Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. In questa sezione vengono illustrati alcuni dei problemi associati alla creazione e all'utilizzo di oggetti COM con Visual Basic.  
+Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Offre una panoramica dell'interoperabilità COM.  
   
@@ -23,12 +23,12 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  Spiega come aggiungere riferimenti agli oggetti COM con librerie dei tipi.  
   
  [Procedura: Utilizzare i controlli ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Viene illustrato come utilizzare i controlli ActiveX esistenti per aggiungere funzionalità alla casella degli strumenti di Visual Studio.  
+ Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
   
  [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Descrive i passaggi della procedura di chiamata delle API che fanno parte del sistema operativo Windows.  
   
- [Procedura: Chiamare le API di Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [Procedura: Chiamare API di Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  Illustra come definire e chiamare la funzione `MessageBox` in User32.dll.  
   
  [Procedura: Chiamare una funzione Windows che accetta tipi senza segno](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Copiare una directory in un'altra directory di Visual Basic"
+title: "Procedura: copiare una directory in un'altra directory"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: d8f32da0f4b701d745cd5f70feb7cc461a09842f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039460"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348856"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Procedura: Copiare una directory in un'altra directory di Visual Basic
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Procedura: copiare una directory in un'altra directory di Visual Basic
 
 Usare il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> per copiare una directory in un'altra directory. Questo metodo consente di copiare il contenuto della directory nonché la directory stessa. Se la directory di destinazione non esiste, viene creata. Se è presente una directory con lo stesso nome nel percorso di destinazione e `overwrite` è impostato su `False`, il contenuto delle due directory viene unito. È possibile specificare un nuovo nome per la directory durante l'operazione.
 
@@ -26,7 +26,7 @@ Quando si copiano file in una directory, è possibile che vengano generate eccez
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella casella di selezione dei frammenti di codice si trova in **File system - Elaborazione di unità, cartelle e file**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).
+    Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella casella di selezione dei frammenti di codice si trova in **File system - Elaborazione di unità, cartelle e file**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
@@ -65,5 +65,5 @@ Le seguenti condizioni possono generare un'eccezione:
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [Procedura: Trovare sottodirectory con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Procedura: Ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Procedura: cercare sottodirectory con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Procedura: ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

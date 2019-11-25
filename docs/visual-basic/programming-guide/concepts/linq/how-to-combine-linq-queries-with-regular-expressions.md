@@ -1,21 +1,24 @@
 ---
-title: 'Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)'
+title: How to combine LINQ queries with regular expressions
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: cdcd4d604f36ec8ed4211d90c976ff8b35d4a0dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524191"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348425"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>How to combine LINQ queries with regular expressions (Visual Basic)
 
 In questo esempio viene illustrato come usare la classe <xref:System.Text.RegularExpressions.Regex> per creare un'espressione regolare per una corrispondenza più complessa nelle stringhe di testo. La query LINQ consente di filtrare esattamente i file che si vuole cercare tramite l'espressione regolare e di dare forma ai risultati.
 
 ## <a name="example"></a>Esempio
 
 ```vb
+Imports System.IO
+Imports System.Text.RegularExpressions
+
 Class LinqRegExVB
 
     Shared Sub Main()
@@ -27,11 +30,10 @@ Class LinqRegExVB
         'Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
 
         ' Take a snapshot of the file system.
-        Dim fileList As IEnumerable(Of System.IO.FileInfo) = GetFiles(startFolder)
+        Dim fileList As IEnumerable(Of FileInfo) = GetFiles(startFolder)
 
         ' Create a regular expression to find all things "Visual".
-        Dim searchTerm As System.Text.RegularExpressions.Regex =
-            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|Studio)")
+        Dim searchTerm As New Regex("Visual (Basic|C#|C\+\+|Studio)")
 
         ' Search the contents of each .htm file.
         ' Remove the where clause to find even more matches!
@@ -42,11 +44,11 @@ Class LinqRegExVB
         ' generic IEnumerable collection.
         Dim queryMatchingFiles = From afile In fileList
                                 Where afile.Extension = ".htm"
-                                Let fileText = System.IO.File.ReadAllText(afile.FullName)
+                                Let fileText = File.ReadAllText(afile.FullName)
                                 Let matches = searchTerm.Matches(fileText)
                                 Where (matches.Count > 0)
                                 Select Name = afile.FullName,
-                                       Matches = From match As System.Text.RegularExpressions.Match In matches
+                                       Matches = From match As Match In matches
                                                  Select match.Value
 
         ' Execute the query.
@@ -71,10 +73,10 @@ Class LinqRegExVB
 
     ' Function to retrieve a list of files. Note that this is a copy
     ' of the file information.
-    Shared Function GetFiles(ByVal root As String) As IEnumerable(Of System.IO.FileInfo)
+    Shared Function GetFiles(root As String) As IEnumerable(Of FileInfo)
         Return From file In My.Computer.FileSystem.GetFiles(
                    root, FileIO.SearchOption.SearchAllSubDirectories, "*.*")
-               Select New System.IO.FileInfo(file)
+               Select New FileInfo(file)
     End Function
 
 End Class
@@ -84,9 +86,9 @@ Si noti che è anche possibile eseguire una query sull'oggetto <xref:System.Text
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

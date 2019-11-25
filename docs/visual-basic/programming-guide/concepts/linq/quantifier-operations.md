@@ -1,15 +1,15 @@
 ---
-title: Operazioni del quantificatore (Visual Basic)
+title: Operazioni del quantificatore
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5b98ec09405ca4b8c715dc7da342e66a5d434d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766557"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346590"
 ---
-# <a name="quantifier-operations-visual-basic"></a>Operazioni del quantificatore (Visual Basic)
+# <a name="quantifier-operations-visual-basic"></a>Quantifier Operations (Visual Basic)
 Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, che indica se alcuni o tutti gli elementi di una sequenza soddisfano una condizione.  
   
  La figura seguente illustra due diverse operazioni del quantificatore in due diverse sequenze di origine. La prima operazione chiede se uno o più elementi sono il carattere "A" e il risultato è `true`. La seconda operazione chiede se tutti gli elementi sono il carattere "A" e il risultato è `true`.  
@@ -20,20 +20,20 @@ Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, 
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Tutti|Determina se tutti gli elementi di una sequenza soddisfano una condizione.|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|All|Determina se tutti gli elementi di una sequenza soddisfano una condizione.|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
 |Qualsiasi|Determina se alcuni elementi di una sequenza soddisfano una condizione.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
 |Contiene|Determina se una sequenza contiene un elemento specifico.|Non applicabile.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
- Questi esempi usano il `Aggregate` clausola in Visual Basic come parte della condizione di filtro in una query LINQ.  
+ These examples use the `Aggregate` clause in Visual Basic as part of the filtering condition in a LINQ query.  
   
- L'esempio seguente usa il `Aggregate` clausola e <xref:System.Linq.Enumerable.All%2A> metodo di estensione per restituire da una raccolta le persone cui animali domestici tutto antecedenti a un periodo di validità specificato.  
+ The following example uses the `Aggregate` clause and the <xref:System.Linq.Enumerable.All%2A> extension method to return from a collection those people whose pets are all older than a specified age.  
   
  [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
- L'esempio seguente usa il `Aggregate` clausola e <xref:System.Linq.Enumerable.Any%2A> metodo di estensione per restituire da una raccolta di coloro che hanno almeno un animale che è precedente rispetto a un periodo di validità specificato.  
+ The next example uses the `Aggregate` clause and the <xref:System.Linq.Enumerable.Any%2A> extension method to return from a collection those people who have at least one pet that is older than a specified age.  
   
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
@@ -42,4 +42,4 @@ Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, 
 - <xref:System.Linq>
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Clausola Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Procedura: Eseguire una query per trovare frasi che contengono un Set specificato di parole (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+- [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)

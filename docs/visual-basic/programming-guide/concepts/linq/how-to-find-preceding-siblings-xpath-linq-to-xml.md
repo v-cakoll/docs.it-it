@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trova elementi di pari livello precedenti (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: trovare pari livello precedenti XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250080"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344684"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Procedura: Trova elementi di pari livello precedenti (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)
 Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> dell'elemento figlio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  L'espressione XPath è:  
@@ -21,7 +21,7 @@ Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:Sys
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercato l'elemento `FullAddress` e quindi vengono recuperati gli elementi precedenti usando l'asse `preceding-sibling`.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -57,4 +57,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

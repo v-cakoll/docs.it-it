@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Trovare sottodirectory con un criterio specifico in Visual Basic'
+title: 'Procedura: cercare sottodirectory con un modello specifico'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 96ae5c5c44263a47343058012d8b8aa064d9cd92
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8e13598080139cafabffb2e17d0a3b99c37dc5d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039446"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348766"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procedura: Trovare sottodirectory con un criterio specifico in Visual Basic
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procedura: cercare sottodirectory con un modello specifico in Visual Basic
 
 Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> restituisce una raccolta di stringhe di sola lettura che rappresentano i nomi di percorso per le sottodirectory di una directory. È possibile usare il parametro `wildCards` per specificare un criterio specifico. Se si vogliono includere i contenuti delle sottodirectory nella ricerca, impostare il parametro `searchType` su `SearchOption.SearchAllSubDirectories`.
 
@@ -49,4 +49,4 @@ Le seguenti condizioni possono generare un'eccezione:
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [Procedura: Trovare file con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Procedura: trovare file con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

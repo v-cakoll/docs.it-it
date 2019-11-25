@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Istruzioni Label (Visual Basic)'
+title: 'Procedura: etichettare le istruzioni'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054047"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347374"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Procedura: Istruzioni Label (Visual Basic)
+# <a name="how-to-label-statements-visual-basic"></a>Procedura: etichettare le istruzioni (Visual Basic)
 
-I blocchi di istruzioni sono costituiti da righe di codice delimitate da due punti. Le righe di codice precedute da una stringa di identificazione o un numero intero sono *denominate etichettate*. Le etichette di istruzione vengono utilizzate per contrassegnare una riga di codice per identificarla per l'utilizzo `On Error Goto`con istruzioni quali.
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-Le etichette possono essere identificatori Visual Basic validi, ad esempio quelli che identificano gli elementi di programmazione, o valori letterali integer. Un'etichetta deve essere visualizzata all'inizio di una riga di codice sorgente e deve essere seguita da due punti, indipendentemente dal fatto che sia seguita da un'istruzione nella stessa riga.
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-Il compilatore identifica le etichette controllando se l'inizio della riga corrisponde a qualsiasi identificatore già definito. In caso contrario, il compilatore presuppone che si tratta di un'etichetta.
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-Le etichette hanno uno spazio di dichiarazione e non interferiscono con altri identificatori. L'ambito di un'etichetta è il corpo del metodo. La dichiarazione di etichetta ha la precedenza in qualsiasi situazione ambigua.
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> Le etichette possono essere utilizzate solo su istruzioni eseguibili all'interno di metodi.
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>Per etichettare una riga di codice
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-Posizionare un identificatore, seguito da due punti, all'inizio della riga del codice sorgente.
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-Ad esempio, le righe di codice seguenti sono etichettate rispettivamente `Jump` con `120`e:
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

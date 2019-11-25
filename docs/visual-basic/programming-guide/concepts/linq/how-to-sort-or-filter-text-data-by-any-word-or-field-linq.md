@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)'
+title: 'Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524121"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341522"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ L'esempio seguente illustra come ordinare righe di testo strutturato, ad esempio
 
 ### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contenga i dati
 
-Copiare i dati scores. csv dall'argomento [procedura: aggiungere contenuto da file non analoghi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvarlo nella cartella della soluzione.
+Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
 
 ## <a name="example"></a>Esempio
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-Questo esempio illustra anche come restituire una variabile di query da una funzione.
+This example also demonstrates how to return a query variable from a Function.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

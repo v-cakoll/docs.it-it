@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire una query per i file con un attributo specificato o un nome (Visual Basic)'
+title: 'Procedura: eseguire una query per trovare i file con un attributo o un nome specifico'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586495"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347694"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Procedura: Eseguire una query per i file con un attributo specificato o un nome (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
 In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato. Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.  
   
 ## <a name="example"></a>Esempio  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
-Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Vedere anche
 

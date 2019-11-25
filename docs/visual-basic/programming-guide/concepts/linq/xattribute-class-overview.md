@@ -1,15 +1,15 @@
 ---
-title: Panoramica della classe XAttribute (Visual Basic)
+title: Panoramica della classe XAttribute
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 6b24f429a69067f6af1a61efe4102a5638db3031
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907452"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349331"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>Panoramica della classe XAttribute (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
   
 ## <a name="overview"></a>Panoramica  
@@ -25,7 +25,7 @@ Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:S
 |`XAttribute(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XAttribute>. L'argomento `name` specifica il nome dell'attributo, mentre `content` ne specifica il contenuto.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Creazione di un elemento con un attributo  
- Il codice seguente illustra un elemento che contiene un attributo usando i valori letterali XML in Visual Basic:  
+ The following code shows an element that contains an attribute using XML literals in Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -76,4 +76,4 @@ Console.WriteLine(c)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML Panoramica della programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: eseguire una query per i caratteri in una stringa (LINQ) (Visual Basic)'
+title: 'Procedura: eseguire una query per trovare caratteri in una stringa (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: f2102a8cb149fa9c7886826e509bf254fad5eb95
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582717"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347714"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Procedura: eseguire una query per i caratteri in una stringa (LINQ) (Visual Basic)
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>How to: Query for Characters in a String (LINQ) (Visual Basic)
 
 Poiché la classe <xref:System.String> implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire una query su qualsiasi stringa come una sequenza di caratteri. Tuttavia, questo uso di LINQ non è comune. Per le operazioni con criteri di ricerca complessi, usare la classe <xref:System.Text.RegularExpressions.Regex>.
 
@@ -58,9 +58,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [Procedura: combinare query LINQ con espressioni regolari (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [How to combine LINQ queries with regular expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)

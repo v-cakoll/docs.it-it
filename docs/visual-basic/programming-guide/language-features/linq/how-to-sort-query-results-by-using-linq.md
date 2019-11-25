@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ordina i risultati di Query utilizzando LINQ (Visual Basic)'
+title: 'How to: Sort Query Results by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,67 +11,67 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: d2114e908077ec947164a28f48841282abefda2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 020e4a3800515329b29e2941baf50d3d8add4605
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053743"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354161"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Procedura: Ordina i risultati di Query utilizzando LINQ (Visual Basic)
-Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query.  
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Procedura: ordinare i risultati di query utilizzando LINQ (Visual Basic)
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.  
   
- Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server e ordina i risultati per più campi usando la `Order By` clausola. L'ordinamento per ogni campo può essere ordine crescente o decrescente. Per altre informazioni, vedere [Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ The following example shows how to create a new application that performs queries against a SQL Server database and sorts the results by multiple fields by using the `Order By` clause. The sort order for each field can be ascending order or descending order. For more information, see [Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Gli esempi in questo argomento usano il database di esempio Northwind. Se non è questo database nel computer di sviluppo, è possibile scaricarlo da Microsoft Download Center. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>Per creare una connessione a un database  
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
   
-1. In Visual Studio, aprire **Esplora Server**/**Database Explorer** facendo **Esplora Server**/**Database Esplora** nella **visualizzazione** menu.  
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
   
-2. Fare doppio clic su **connessioni dati** nelle **Esplora Server**/**Esplora Database** e quindi fare clic su **Aggiungi connessione**.  
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
   
-3. Specificare una connessione valida al database di esempio Northwind.  
+3. Specify a valid connection to the Northwind sample database.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Per aggiungere un progetto che contiene un file LINQ to SQL  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
   
-1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Selezionare Visual Basic **Windows Forms Application** come tipo di progetto.  
+1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Select Visual Basic **Windows Forms Application** as the project type.  
   
-2. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare il **classi LINQ to SQL** modello di elemento.  
+2. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Select the **LINQ to SQL Classes** item template.  
   
-3. Denominare il file `northwind.dbml`. Fare clic su **Aggiungi**. Viene aperto il Object Relational Designer (O/R Designer) per il file Northwind. dbml.  
+3. Denominare il file `northwind.dbml`. Fare clic su **Aggiungi**. The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>Per aggiungere tabelle a query a O/R Designer  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
   
-1. Nelle **Esplora Server**/**Esplora Database**, espandere la connessione al database Northwind. Espandere la **tabelle** cartella.  
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
   
-     Se è stato chiuso O/R Designer, è possibile riaprirlo facendo doppio clic sul file Northwind. dbml aggiunti in precedenza.  
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
   
-2. Fare clic nella tabella Customers e trascinarla nel riquadro sinistro della finestra di progettazione. Fare clic nella tabella Orders e trascinarla nel riquadro sinistro della finestra di progettazione.  
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.  
   
-     La finestra di progettazione crea nuovi `Customer` e `Order` oggetti per il progetto. Si noti che la finestra di progettazione automaticamente rileva le relazioni tra le tabelle e crea figlio le proprietà per gli oggetti correlati. Ad esempio, IntelliSense mostrerà che il `Customer` oggetto ha un `Orders` proprietà per tutti gli ordini correlati a tale cliente.  
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.  
   
-3. Salvare le modifiche e chiudere la finestra di progettazione.  
+3. Save your changes and close the designer.  
   
 4. Salvare il progetto.  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Per aggiungere il codice per eseguire query sul database e visualizzare i risultati  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
   
-1. Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.DataGridView> controllo nel Form di Windows predefinito per il progetto, Form1.  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
   
-2. Fare doppio clic su Form1 per aggiungere il codice per il `Load` eventi del form.  
+2. Double-click Form1 to add code to the `Load` event of the form.  
   
-3. Quando si aggiungono tabelle alla finestra di Progettazione relazionale oggetti, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext> oggetti al progetto. Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle e per accedere ai singoli oggetti e raccolte per ogni tabella. Il <xref:System.Data.Linq.DataContext> oggetto per il progetto viene denominato in base al nome del file. dbml. Per questo progetto, il <xref:System.Data.Linq.DataContext> oggetto è denominato `northwindDataContext`.  
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains the code that you must have to access those tables, and to access individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
   
-     È possibile creare un'istanza di <xref:System.Data.Linq.DataContext> nel codice e query nelle tabelle specificate dalla finestra di Progettazione relazionale oggetti.  
+     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
   
-     Aggiungere il codice seguente per il `Load` eventi per le tabelle che vengono esposte come proprietà del contesto dati e ordinare i risultati di query. La query ordina i risultati in base al numero di ordini dei clienti, in ordine decrescente. I clienti che hanno lo stesso numero di ordini vengono ordinati in base al nome di società in modo crescente (impostazione predefinita).  
+     Add the following code to the `Load` event to query the tables that are exposed as properties of your data context and sort the results. The query sorts the results by the number of customer orders, in descending order. Customers that have the same number of orders are ordered by company name in ascending order (the default).  
   
      [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
-4. Premere F5 per eseguire il progetto e visualizzare i risultati.  
+4. Press F5 to run your project and view the results.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,19 +1,20 @@
 ---
-title: 'Procedura: Trovare file con un modello specifico in Visual Basic'
+title: 'Procedura: trovare file con un modello specifico'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914723"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348763"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Procedura: Trovare file con un modello specifico in Visual Basic
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Procedura: trovare file con un modello specifico in Visual Basic
+
 Il metodo <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> restituisce una raccolta di stringhe di sola lettura che rappresentano i nomi di percorso per i file. È possibile usare il parametro `wildCards` per specificare un criterio specifico. Se si vuole includere le sottodirectory nella ricerca, impostare il parametro `searchType` su `SearchOption.SearchAllSubDirectories`.  
   
  Se non vengono trovati file corrispondenti al criterio specificato, verrà restituita una raccolta vuota.  
@@ -28,6 +29,7 @@ Il metodo <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+
  Le seguenti condizioni possono generare un'eccezione:  
   
 - Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
@@ -49,6 +51,6 @@ Il metodo <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Procedura: Trovare sottodirectory con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Risoluzione dei problemi: Lettura e scrittura nei file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Procedura: Ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Procedura: cercare sottodirectory con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Risoluzione dei problemi: lettura e scrittura nei file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Procedura: ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

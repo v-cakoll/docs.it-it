@@ -1,5 +1,5 @@
 ---
-title: Costanti ed enumerazioni in Visual Basic
+title: Costanti ed enumerazioni
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858f22df26d44f47848921ee862c1d4c1ca1fc60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907296"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353980"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Costanti ed enumerazioni in Visual Basic
 Le costanti consentono di usare nomi significativi al posto di un valore che non cambia. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. È possibile usare le costanti per specificare nomi descrittivi, anziché numeri, rendendo il codice più leggibile.  
   
  Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Termine|Definizione|  
 |---|---|  

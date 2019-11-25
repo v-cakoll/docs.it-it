@@ -1,5 +1,5 @@
 ---
-title: Widening (Visual Basic)
+title: Widening
 ms.date: 07/20/2015
 f1_keywords:
 - vb.widening
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: d7d43d4f5f931881d5c8b663c719fe7f92559799
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c9aa78549ca6e41c9fe54c12e0aaec8e7cc30cb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778664"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347836"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indica che un operatore di conversione (`CType`) converte una classe o struttura in un tipo che può contenere tutti i possibili valori della classe o struttura originale.  
+Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
   
-## <a name="converting-with-the-widening-keyword"></a>La conversione con la parola chiave Widening  
- Routine di conversione deve specificare `Public Shared` oltre a `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
+ The conversion procedure must specify `Public Shared` in addition to `Widening`.  
   
- Le conversioni di ampliamento sempre eseguite correttamente in fase di esecuzione e non comportano perdita di dati. Sono esempi `Single` al `Double`, `Char` a `String`e un tipo derivato al tipo di base. Questa conversione ultimo è grande perché il tipo derivato contiene tutti i membri del tipo di base e pertanto rappresenta un'istanza del tipo di base.  
+ Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
   
- Il codice consumer non deve utilizzare `CType` per la conversione di ampliamento, anche se `Option Strict` è `On`.  
+ The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
   
- Il `Widening` parola chiave può essere usata in questo contesto:  
+ The `Widening` keyword can be used in this context:  
   
  [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- Ad esempio le definizioni di ampliamento e restrizione gli operatori di conversione, vedere [come: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

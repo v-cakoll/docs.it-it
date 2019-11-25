@@ -1,5 +1,5 @@
 ---
-title: Clausola Handles (Visual Basic)
+title: Clausola Handles
 ms.date: 07/20/2015
 f1_keywords:
 - Handles
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: ae05e77515e4e2b50cdf5f9a1908375fa311c3a3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2fecad919722f3da25c48f133a9c92b5e683d5e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581805"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345916"
 ---
 # <a name="handles-clause-visual-basic"></a>Clausola Handles (Visual Basic)
 Dichiara che una routine gestisce un evento specificato.  
@@ -33,9 +33,9 @@ proceduredeclaration Handles eventlist
 ## <a name="remarks"></a>Note  
  Usare la parola chiave `Handles` alla fine di una dichiarazione di routine per fare in modo che la routine gestisca eventi generati da una variabile oggetto dichiarata con la parola chiave `WithEvents` . La parola chiave `Handles` può anche essere usata in una classe derivata per gestire eventi da una classe base.  
   
- La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Per ulteriori informazioni, vedere l' [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
@@ -45,7 +45,7 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente sono contenuti due gestori di eventi Button per un progetto di **applicazione WPF** .  
+ The following example contains two button event handlers for a **WPF Application** project.  
   
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   

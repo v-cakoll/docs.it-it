@@ -1,5 +1,5 @@
 ---
-title: Istruzione Delegate (Visual Basic)
+title: Istruzione Delegate
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 662d2c3c0767adfe406e0a6f1b1e6dccd704e795
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583453"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354080"
 ---
 # <a name="delegate-statement"></a>Istruzione Delegate
-Utilizzato per dichiarare un delegato. Un delegato è un tipo di riferimento che fa riferimento a un metodo di `Shared` di un tipo o a un metodo di istanza di un oggetto. Per creare un'istanza di questa classe delegata è possibile utilizzare qualsiasi routine con tipi restituiti e parametri corrispondenti. La stored procedure può quindi essere richiamata in un secondo momento tramite l'istanza del delegato.  
+Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,20 +28,20 @@ Utilizzato per dichiarare un delegato. Un delegato è un tipo di riferimento che
   
 |Termine|Definizione|  
 |---|---|  
-|`attrlist`|Parametro facoltativo. Elenco degli attributi che si applicano a questo delegato. Gli attributi sono separati da una virgola. È necessario racchiudere l' [elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi angolari ("`<`" e "`>`").|  
-|`accessmodifier`|Parametro facoltativo. Specifica il codice che può accedere al delegato. Può essere uno dei seguenti:<br /><br /> - [public](../../../visual-basic/language-reference/modifiers/public.md). Qualsiasi codice in grado di accedere all'elemento che dichiara il delegato può accedervi.<br />-   [protetto](../../../visual-basic/language-reference/modifiers/protected.md). Solo il codice all'interno della classe del delegato o di una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Solo il codice all'interno dello stesso assembly può accedere al delegato.<br />- [privato](../../../visual-basic/language-reference/modifiers/private.md). Solo il codice all'interno dell'elemento che dichiara il delegato può accedervi.<br /><br /> -  solo codice[Friend protetto](../../language-reference/modifiers/protected-friend.md) nella classe del delegato, una classe derivata o lo stesso assembly può accedere al delegato. <br />-  codice[privato protetto](../../language-reference/modifiers/private-protected.md) solo all'interno della classe del delegato o in una classe derivata nello stesso assembly può accedere al delegato. |  
-|`Shadows`|Parametro facoltativo. Indica che questo delegato dichiara e nasconde un elemento di programmazione con nome identico o un set di elementi di overload in una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Se, ad esempio, un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe di base.|  
-|`Sub`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Dichiara questa procedura come delegato `Sub` routine che non restituisce un valore.|  
-|`Function`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Dichiara questa routine come delegato `Function` routine che restituisce un valore.|  
-|`name`|Obbligatorio. Nome del tipo delegato. segue le convenzioni di denominazione delle variabili standard.|  
-|`typeparamlist`|Parametro facoltativo. Elenco di parametri di tipo per questo delegato. Più parametri di tipo sono separati da virgole. Facoltativamente, ogni parametro di tipo può essere dichiarato Variant usando `In` e `Out` modificatori generici. È necessario racchiudere l' [elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md) tra parentesi e introducerlo con la parola chiave `Of`.|  
-|`parameterlist`|Parametro facoltativo. Elenco di parametri passati alla procedura quando viene chiamato. È necessario racchiudere l' [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`type`|Obbligatorio se si specifica una procedura `Function`. Tipo di dati del valore restituito.|  
+|`attrlist`|Parametro facoltativo. List of attributes that apply to this delegate. Gli attributi sono separati da una virgola. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|Parametro facoltativo. Specifies what code can access the delegate. Può essere uno dei seguenti:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
+|`Shadows`|Parametro facoltativo. Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
+|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
+|`name`|Obbligatorio. Name of the delegate type; follows standard variable naming conventions.|  
+|`typeparamlist`|Parametro facoltativo. List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
+|`parameterlist`|Parametro facoltativo. List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
+|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
   
 ## <a name="remarks"></a>Note  
- L'istruzione `Delegate` definisce il parametro e i tipi restituiti di una classe delegata. Per creare un'istanza di questa classe delegata è possibile utilizzare qualsiasi routine con i tipi restituiti e i parametri corrispondenti. La stored procedure può quindi essere richiamata per mezzo dell'istanza del delegato, chiamando il metodo `Invoke` del delegato.  
+ The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
   
- I delegati possono essere dichiarati a livello di spazio dei nomi, modulo, classe o struttura, ma non all'interno di una routine.  
+ Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
   
  Ogni classe delegata definisce un costruttore a cui viene passata la specifica di un metodo dell'oggetto. Un argomento di un costruttore di delegati deve essere un riferimento a un metodo o a un'espressione lambda.  
   
@@ -60,7 +60,7 @@ Utilizzato per dichiarare un delegato. Un delegato è un tipo di riferimento che
  Per altre informazioni sui delegati, vedere [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata l'istruzione `Delegate` per dichiarare un delegato per l'utilizzo di due numeri e la restituzione di un numero. Il metodo `DelegateTest` accetta un'istanza di un delegato di questo tipo e lo usa per operare su coppie di numeri.  
+ The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   

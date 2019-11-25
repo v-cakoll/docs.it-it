@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Calcolare valori numerici (Visual Basic)'
+title: 'Procedura: calcolare valori numerici'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649737"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348959"
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>Procedura: Calcolare valori numerici (Visual Basic)
-È possibile calcolare valori numerici tramite l'utilizzo di espressioni numeriche. Oggetto *espressione numerica* è un'espressione che contiene i valori letterali, costanti e variabili che rappresentano valori numerici e operatori che agiscono su quei valori.  
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>Procedura: calcolare valori numerici (Visual Basic)
+You can calculate numeric values through the use of numeric expressions. A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.  
   
-## <a name="calculating-numeric-values"></a>Calcolo dei valori numerici  
+## <a name="calculating-numeric-values"></a>Calculating Numeric Values  
   
-#### <a name="to-calculate-a-numeric-value"></a>Per calcolare un valore numerico  
+#### <a name="to-calculate-a-numeric-value"></a>To calculate a numeric value  
   
-- Combinare uno o più valori letterali, costanti e variabili in un'espressione numerica. Nell'esempio seguente mostra alcune espressioni numerici validi.  
+- Combine one or more numeric literals, constants, and variables into a numeric expression. The following example shows some valid numeric expressions.  
   
      `93.217`  
   
@@ -35,32 +35,32 @@ ms.locfileid: "64649737"
   
      `4 * (67 + i)`  
   
-     Le prime tre righe mostrano un valore letterale, una costante e una variabile. Ognuno di essi costituisce un'espressione numerica valida da solo. L'ultima riga mostra una combinazione di una variabile con due valori letterali.  
+     The first three lines show a literal, a constant, and a variable. Each one forms a valid numeric expression by itself. The final line shows a combination of a variable with two literals.  
   
-     Si noti che un'espressione numerica non formano un'istruzione completa di Visual Basic da solo. È necessario utilizzare l'espressione come parte di un'istruzione completa.  
+     Note that a numeric expression does not form a complete Visual Basic statement by itself. You must use the expression as part of a complete statement.  
   
-#### <a name="to-store-a-numeric-value"></a>Per archiviare un valore numerico  
+#### <a name="to-store-a-numeric-value"></a>To store a numeric value  
   
-- È possibile usare un'istruzione di assegnazione per assegnare il valore rappresentato da un'espressione numerica per una variabile, come illustrato nell'esempio seguente.  
+- You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     Nell'esempio precedente, il valore dell'espressione sul lato destro dell'operatore uguale (`=`) viene assegnato alla variabile `j` sul lato sinistro dell'operatore, in modo `j` 276 viene valutata.  
+     In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.  
   
      Per altre informazioni, vedere [Istruzioni](../../../../visual-basic/language-reference/statements/index.md).  
   
-## <a name="multiple-operators"></a>Più operatori  
- Se l'espressione numerica contiene più di un operatore, l'ordine in cui vengono valutati è determinato dalle regole di precedenza degli operatori. Per ignorare le regole di precedenza degli operatori, racchiudere le espressioni tra parentesi, come illustrato nell'esempio riportato sopra; le espressioni racchiuse tra parentesi vengono valutate per primi.  
+## <a name="multiple-operators"></a>Multiple Operators  
+ If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence. To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.  
   
-#### <a name="to-override-normal-operator-precedence"></a>Eseguire l'override di precedenza degli operatori normale  
+#### <a name="to-override-normal-operator-precedence"></a>To override normal operator precedence  
   
-- Utilizzare le parentesi per racchiudere le operazioni che si desidera venga eseguita per prima. Nell'esempio seguente mostra due risultati diversi con gli stessi operandi e operatori.  
+- Use parentheses to enclose the operations you want to be performed first. The following example shows two different results with the same operands and operators.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     Nell'esempio precedente, il calcolo `j` esegue l'operatore di addizione (`+`) prima perché le parentesi che racchiudono `(67 + i)` esegue l'override della precedenza normale e il valore assegnato a `j` è 276 (4 tentativi 69). Il calcolo `k` esegue gli operatori nella relativa priorità normale (`*` prima `+`) e il valore assegnato a `k` 270 (268 + 2).  
+     In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69). The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).  
   
-     Per altre informazioni, vedere [precedenza degli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

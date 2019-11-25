@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (Visual Basic)'
+title: 'Procedura: recuperare un singolo elemento figlio (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-ms.openlocfilehash: a1b4e5e0a6668258cef7b474c416fc572bdf2625
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 2e89df700c505eca9d1c91634e4cce8594a1d599
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710505"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347552"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come recuperare un singolo elemento figlio, dato il relativo nome. Quando si conosce il nome dell'elemento figlio e si ha la certezza che ne esista solo uno con tale nome, può risultare utile recuperare un singolo elemento, anziché una raccolta.  
   
  Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce il primo elemento <xref:System.Xml.Linq.XElement> figlio con l'oggetto <xref:System.Xml.Linq.XName> specificato.  
@@ -21,7 +21,7 @@ In questo argomento viene illustrato come recuperare un singolo elemento figlio,
   
  Nell'esempio di Visual Basic viene illustrato l'uso della notazione dell'indicizzatore di matrice per recuperare un singolo elemento.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -36,9 +36,9 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato lo stesso codice per XML all'interno di uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente viene illustrato lo stesso codice per XML all'interno di uno spazio dei nomi. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordine di acquisto tipico in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

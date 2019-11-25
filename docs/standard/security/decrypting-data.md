@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353856"
 ---
 # <a name="decrypting-data"></a>Decrittografia di dati
 
@@ -43,12 +43,11 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(K
 L'esempio seguente illustra l'intero processo di creazione di un flusso, decrittografia del flusso, lettura dal flusso e chiusura dei flussi. Viene creato un oggetto <xref:System.Net.Sockets.TcpListener> che inizializza un flusso di rete quando viene stabilita una connessione all'oggetto in ascolto. Il flusso di rete viene quindi decrittografato mediante la classe **CryptoStream** e la classe **RijndaelManaged** . Questo esempio presuppone che il valore della chiave e il valore di inizializzazione siano stati trasferiti correttamente o siano stati concordati in precedenza. Non mostra il codice necessario per crittografare e trasferire questi valori.
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -175,9 +174,9 @@ Per permettere il funzionamento dell'esempio precedente, è necessario stabilire
 
 ## <a name="asymmetric-decryption"></a>Decrittografia asimmetrica
 
-In genere, una parte (parte A) genera la sia la chiave pubblica che quella privata e archivia la chiave in memoria o in un contenitore di chiavi crittografiche. La parte A invia quindi la chiave pubblica a un'altra parte (parte B). Usando la chiave pubblica, la parte B crittografa i dati e invia i dati a terze parti. Dopo aver ricevuto i dati, parte A li decrittografa usando la chiave privata corrispondente. La decrittografia avrà esito positivo solo se la parte A usa la chiave privata corrispondente alla chiave pubblica usata dalla parte B per crittografare i dati.
+In genere, una parte (parte A) genera la sia la chiave pubblica che quella privata e archivia la chiave in memoria o in un contenitore di chiavi crittografiche. La parte A invia quindi la chiave pubblica a un'altra parte (parte B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. La decrittografia avrà esito positivo solo se la parte A usa la chiave privata corrispondente alla chiave pubblica usata dalla parte B per crittografare i dati.
 
-Per informazioni su come archiviare una chiave asimmetrica nel contenitore protetto di chiavi crittografico e su come recuperare in seguito la chiave asimmetrica, vedere [come: Store Asymmetric Keys in un contenitore di chiavi](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Per informazioni su come archiviare una chiave asimmetrica in un contenitore protetto di chiavi crittografiche e su come recuperare in seguito la chiave asimmetrica, vedere [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
 L'esempio seguente illustra la decrittografia di due matrici di byte che rappresentano una chiave simmetrica e il valore di inizializzazione. Per informazioni su come estrarre la chiave pubblica simmetrica dall'oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> in un formato facilmente inviabile a terze parti, vedere [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
 
@@ -209,4 +208,4 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 - [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)

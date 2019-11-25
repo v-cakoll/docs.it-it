@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire una query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)'
+title: 'Procedura: eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 4e69acbd42e703cdaca1d91f4597c980e6fd8508
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b926a3e0ed973f449718ca5883aeabc0bfcf7b91
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593274"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347641"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Procedura: Eseguire una query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)
 Questo esempio illustra come recuperare il numero totale di byte usati da tutti i file in una cartella specificata e in tutte le relative sottocartelle.  
   
 ## <a name="example"></a>Esempio  
@@ -72,7 +72,7 @@ End Module
  La query effettua una chiamata a un metodo separato per ottenere la lunghezza del file. Questa operazione viene eseguita per gestire la possibile eccezione che viene generata nel caso in cui il file sia stato eliminato in un altro thread dopo la creazione dell'oggetto <xref:System.IO.FileInfo> nella chiamata a `GetFiles`. Anche se l'oggetto <xref:System.IO.FileInfo> è già stato creato, è possibile che si verifichi un'eccezione perché un oggetto <xref:System.IO.FileInfo> tenterà di aggiornare la relativa proprietà <xref:System.IO.FileInfo.Length%2A> usando la lunghezza più recente quando viene eseguito per la prima volta l'accesso alla proprietà. Inserendo questa operazione in un blocco try/catch all'esterno della query, si evita di eseguire operazioni nelle query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante la gestione delle eccezioni per assicurarsi che un'applicazione non venga lasciata in uno stato sconosciuto.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
-Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Vedere anche
 

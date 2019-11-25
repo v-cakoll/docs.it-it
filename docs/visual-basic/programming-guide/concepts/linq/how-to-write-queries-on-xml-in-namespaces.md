@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)'
+title: 'Procedura: scrivere query in XML negli spazi dei nomi'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 496cf8daf5136e8aafff000312bbd730a5152e9f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835001"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344464"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>How to: Write Queries on XML in Namespaces (Visual Basic)
 Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  
   
  In Visual Basic, l'approccio più comune consiste nel definire uno spazio dei nomi globale, quindi usare valori letterali e proprietà XML che usano lo spazio dei nomi globale. È possibile definire uno spazio dei nomi globale predefinito, nel qual caso gli elementi dei valori letterali XML saranno inclusi nello spazio dei nomi per impostazione predefinita. In alternativa, è possibile definire uno spazio dei nomi globale con un prefisso e quindi usare il prefisso come richiesto nei valori letterali e nelle proprietà XML. Come con altri tipi di XML, gli attributi non sono mai inclusi in alcuno spazio dei nomi per impostazione predefinita.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

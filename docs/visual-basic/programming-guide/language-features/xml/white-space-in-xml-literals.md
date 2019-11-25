@@ -1,42 +1,42 @@
 ---
-title: Spazi vuoti nei valori letterali XML (Visual Basic)
+title: Spazi vuoti nei valori letterali XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56ededeb12d07e979bc86b03924e1ae0f0432822
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939218"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336001"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Spazi vuoti nei valori letterali XML (Visual Basic)
-Il compilatore Visual Basic incorpora solo gli spazi vuoti significativi da un valore letterale XML durante la creazione di un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto. Gli spazi vuoti non significativi non sono incorporati.  
+The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
   
-## <a name="significant-and-insignificant-white-space"></a>Spazi vuoti significativi e non significativi  
- Gli spazi vuoti nei valori letterali XML sono significativi solo in tre aree:  
+## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
+ White space characters in XML literals are significant in only three areas:  
   
-- Quando si trovano in un valore di attributo.  
+- When they are in an attribute value.  
   
-- Quando fanno parte del contenuto di testo di un elemento e il testo contiene anche altri caratteri.  
+- When they are part of an element's text content and the text also contains other characters.  
   
-- Quando si trovano in un'espressione incorporata per il contenuto di testo di un elemento.  
+- When they are in an embedded expression for an element's text content.  
   
- In caso contrario, il compilatore considera gli spazi vuoti come insignificanti e non include quindi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nell'oggetto per il valore letterale.  
+ Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
   
- Per includere spazi vuoti non significativi in un valore letterale XML, utilizzare un'espressione incorporata contenente un valore letterale stringa con lo spazio vuoto.  
+ To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
   
 > [!NOTE]
-> Se l' `xml:space` attributo viene visualizzato in un valore letterale elemento XML, il compilatore Visual Basic include l' <xref:System.Xml.Linq.XElement> attributo nell'oggetto, ma l'aggiunta di questo attributo non modifica la modalità con cui il compilatore considera gli spazi vuoti.  
+> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente sono contenuti due elementi XML, outer e Inner. Entrambi gli elementi contengono spazi vuoti nel contenuto di testo. Gli spazi vuoti nell'elemento esterno non sono significativi perché contengono solo spazi vuoti e un elemento XML. Lo spazio vuoto nell'elemento interno è significativo perché contiene spazi vuoti e testo.  
+ The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- Quando viene eseguito, questo codice Visualizza il testo seguente.  
+ When run, this code displays the following text.  
   
 ```xml  
 <outer>  
