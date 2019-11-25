@@ -1,26 +1,26 @@
 ---
-title: Oggetto My. computer (Visual Basic)
+title: Oggetto My.Computer
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d6113872f2196f2db4ac1849222cd69f95ffd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031083"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332120"
 ---
 # <a name="mycomputer-object"></a>Oggetto My.Computer
 Specifica le proprietà per la modifica dei componenti del computer, ad esempio audio, orologio, tastiera, file system e così via.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer` , vedere <xref:Microsoft.VisualBasic.Devices.Computer>. La classe di base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornisce i membri che sono disponibili in tutti i progetti.  
+ Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer` , vedere <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.Devices.Computer> (la classe di base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornisce i membri che sono disponibili in tutti i progetti).  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
   
  **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   

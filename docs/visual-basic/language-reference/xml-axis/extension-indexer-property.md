@@ -1,5 +1,5 @@
 ---
-title: Proprietà dell'indicizzatore di estensione (Visual Basic)
+title: Proprietà dell'indicizzatore di estensione
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyExtensionIndexer
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f91dc8a6b1a0d82daa4891cf826c16e2716839f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582192"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352691"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Proprietà dell'indicizzatore di estensione (Visual Basic)
 Fornisce l'accesso ai singoli elementi di una raccolta.  
@@ -29,25 +29,25 @@ object(index)
   
 |Termine|Definizione|  
 |---|---|  
-|`object`|Obbligatorio. Raccolta Queryable. Ovvero una raccolta che implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.|  
-|(|Obbligatorio. Indica l'inizio della proprietà dell'indicizzatore.|  
-|`index`|Obbligatorio. Espressione Integer che specifica la posizione in base zero di un elemento della raccolta.|  
-|)|Obbligatorio. Indica la fine della proprietà dell'indicizzatore.|  
+|`object`|Obbligatorio. A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
+|(|Obbligatorio. Denotes the start of the indexer property.|  
+|`index`|Obbligatorio. An integer expression that specifies the zero-based position of an element of the collection.|  
+|)|Obbligatorio. Denotes the end of the indexer property.|  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto dalla posizione specificata nella raccolta o `Nothing` se l'indice non è compreso nell'intervallo.  
+ The object from the specified location in the collection, or `Nothing` if the index is out of range.  
   
 ## <a name="remarks"></a>Note  
- È possibile usare la proprietà dell'indicizzatore di estensione per accedere ai singoli elementi di una raccolta. Questa proprietà dell'indicizzatore viene in genere utilizzata nell'output delle proprietà Axis XML. Le proprietà dell'asse XML figlio e XML discendente restituiscono raccolte di oggetti <xref:System.Xml.Linq.XElement> o un valore di attributo.  
+ You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
   
- Il compilatore Visual Basic converte le proprietà dell'indicizzatore di estensione in chiamate al metodo `ElementAtOrDefault`. Diversamente da un indicizzatore di matrici, il metodo `ElementAtOrDefault` restituisce `Nothing` se l'indice non è compreso nell'intervallo. Questo comportamento è utile quando non è possibile determinare facilmente il numero di elementi in una raccolta.  
+ The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
   
- Questa proprietà dell'indicizzatore è simile a una proprietà di estensione per le raccolte che implementano <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>: viene utilizzata solo se la raccolta non dispone di un indicizzatore o di una proprietà predefinita.  
+ This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
   
- Per accedere al valore del primo elemento in una raccolta di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, è possibile utilizzare la proprietà `Value` XML. Per ulteriori informazioni, vedere [proprietà del valore XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'indicizzatore di estensione per accedere al secondo nodo figlio in una raccolta di oggetti <xref:System.Xml.Linq.XElement>. È possibile accedere alla raccolta utilizzando la proprietà Axis figlio, che ottiene tutti gli elementi figlio denominati `phone` nell'oggetto `contact`.  
+ The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

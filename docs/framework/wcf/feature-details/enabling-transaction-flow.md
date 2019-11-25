@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 2443e82dd9c6d8b5447c2fa16b537a9feed8ddaf
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8aff6afb09c97d7d01f5e7b7f1b92ae24bb99fb7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895160"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141760"
 ---
 # <a name="enabling-transaction-flow"></a>Attivazione del flusso delle transazioni
 Windows Communication Foundation (WCF) fornisce opzioni estremamente flessibili per il controllo del flusso delle transazioni. Le impostazioni del flusso delle transazioni di un servizio possono essere espresse con una determinata combinazione di attributi e configurazione.  
@@ -33,25 +33,25 @@ Windows Communication Foundation (WCF) fornisce opzioni estremamente flessibili 
   
 |TransactionFlow<br /><br /> binding|Proprietà di associazione TransactionFlow|Proprietà di associazione TransactionFlowProtocol|Tipo del flusso delle transazioni|  
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
-|Mandatory|true|WS-AT|La transazione deve essere propagata nel formato WS-AT interoperativo.|  
-|Mandatory|true|OleTransactions|La transazione deve essere propagata nel formato WCF OleTransactions.|  
-|Mandatory|false|Non applicabile|Non applicabile perché questa configurazione non è valida.|  
+|Obbligatorio|true|WS-AT|La transazione deve essere propagata nel formato WS-AT interoperativo.|  
+|Obbligatorio|true|OleTransactions|La transazione deve essere propagata nel formato WCF OleTransactions.|  
+|Obbligatorio|False|Non applicabile|Non applicabile perché questa configurazione non è valida.|  
 |Allowed|true|WS-AT|La transazione può essere propagata nel formato WS-AT interoperativo.|  
 |Allowed|true|OleTransactions|La transazione può essere propagata nel formato WCF OleTransactions.|  
-|Allowed|false|Qualsiasi valore|Una transazione non è propagata.|  
+|Allowed|False|Qualsiasi valore|Una transazione non è propagata.|  
 |NotAllowed|Qualsiasi valore|Qualsiasi valore|Una transazione non è propagata.|  
   
  Nella tabella seguente viene fornito un riepilogo del risultato di elaborazione dei messaggi.  
   
 |Messaggio in arrivo.|Impostazioni di TransactionFlow|Intestazione della transazione|Risultato di elaborazione del messaggio|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|La transazione corrisponde al formato previsto del protocollo|Consentito o obbligatorio|`MustUnderstand` è uguale a `true`.|Process|  
-|La transazione non corrisponde al formato previsto del protocollo|Mandatory|`MustUnderstand` è uguale a `false`.|Rifiutato perché una transazione è obbligatoria|  
+|La transazione corrisponde al formato previsto del protocollo|Consentito o obbligatorio|`MustUnderstand` è uguale a `true`.|Processo|  
+|La transazione non corrisponde al formato previsto del protocollo|Obbligatorio|`MustUnderstand` è uguale a `false`.|Rifiutato perché una transazione è obbligatoria|  
 |La transazione non corrisponde al formato previsto del protocollo|Allowed|`MustUnderstand` è uguale a `false`.|Rifiutato perché l'intestazione non è compresa|  
 |Transazione che utilizza qualsiasi formato di protocollo|NotAllowed|`MustUnderstand` è uguale a `false`.|Rifiutato perché l'intestazione non è compresa|  
-|Nessuna transazione|Mandatory|N/D|Rifiutato perché una transazione è obbligatoria|  
-|Nessuna transazione|Allowed|N/D|Process|  
-|Nessuna transazione|NotAllowed|N/D|Process|  
+|Nessuna transazione|Obbligatorio|N/D|Rifiutato perché una transazione è obbligatoria|  
+|Nessuna transazione|Allowed|N/D|Processo|  
+|Nessuna transazione|NotAllowed|N/D|Processo|  
   
  Mentre ogni metodo di un contratto può disporre di requisiti diversi per il flusso delle transazioni, l'impostazione del protocollo relativo al flusso delle transazioni è limitato all'ambito del livello dell'associazione. Tutti i metodi che condividono lo stesso endpoint, e di conseguenza la stessa associazione, condividono inoltre lo stesso criterio che ammette o richiede un flusso di transazioni, nonché, se opportuno, lo stesso protocollo di transazione.  
   
@@ -59,17 +59,17 @@ Windows Communication Foundation (WCF) fornisce opzioni estremamente flessibili 
  I requisiti del flusso delle transazioni non sono sempre gli stessi per tutti i metodi di un contratto di servizio. WCF fornisce pertanto anche un meccanismo basato su attributi che consente di esprimere le preferenze del flusso delle transazioni di ciascun metodo. <xref:System.ServiceModel.TransactionFlowAttribute>, infatti, consente di specificare il livello al quale un'operazione del servizio accetta un'intestazione di transazione. Se si desidera attivare il flusso delle transazioni, è necessario contrassegnare i metodi del contratto di servizio con questo attributo. L'attributo accetta uno dei valori dell'enumerazione <xref:System.ServiceModel.TransactionFlowOption>, in cui il valore predefinito è <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>. Se si specifica qualsiasi valore ad eccezione di <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>, è necessario che il metodo non sia unidirezionale. Gli sviluppatori possono utilizzare questo attributo per specificare i requisiti del flusso delle transazioni a livello di metodo o i vincoli in fase di progettazione.  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>Attivazione del flusso delle transazioni a livello di endpoint  
- Oltre all'impostazione del flusso delle transazioni a livello di metodo <xref:System.ServiceModel.TransactionFlowAttribute> fornita dall'attributo, WCF fornisce un'impostazione a livello di endpoint per il flusso delle transazioni che consente agli amministratori di controllare il flusso delle transazioni a un livello superiore.  
+ Oltre all'impostazione del flusso delle transazioni a livello di metodo fornita dall'attributo <xref:System.ServiceModel.TransactionFlowAttribute>, WCF fornisce un'impostazione a livello di endpoint per il flusso delle transazioni che consente agli amministratori di controllare il flusso delle transazioni a un livello superiore.  
   
  Questa possibilità è data da <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, che consente di attivare o disattivare il flusso delle transazioni in arrivo nelle impostazioni di associazione di un endpoint, nonché di specificare il formato del protocollo di transazione desiderato per le transazioni in arrivo.  
   
  Se nell'associazione il flusso delle transazioni è disattivato ma una delle operazioni di un contratto di servizio richiede una transazione in arrivo, in fase di avvio del servizio viene generata un'eccezione di convalida.  
   
- La maggior parte delle associazioni permanenti fornite da WCF `transactionFlow` contiene `transactionProtocol` gli attributi e per consentire la configurazione dell'associazione specifica in modo da accettare le transazioni in ingresso. Per ulteriori informazioni sull'impostazione degli elementi di configurazione, vedere [ \<binding >](../../../../docs/framework/misc/binding.md).  
+ La maggior parte delle associazioni permanenti fornite da WCF contiene gli attributi `transactionFlow` e `transactionProtocol` per consentire la configurazione dell'associazione specifica in modo che accetti le transazioni in ingresso. Per ulteriori informazioni sull'impostazione degli elementi di configurazione, vedere [\<binding >](../../configure-apps/file-schema/wcf/bindings.md).  
   
  Gli amministratori o i distributori possono avvalersi del flusso delle transazioni a livello di endpoint per configurare i requisiti del flusso o i vincoli in fase di distribuzione utilizzando il file di configurazione.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per garantire la protezione e l'integrità del sistema, è necessario proteggere gli scambi di messaggi durante la propagazione delle transazioni tra applicazioni. È necessario non propagare o divulgare dettagli delle transazioni ad applicazioni non autorizzate a partecipare alla stessa transazione.  
   
  Quando si generano client WCF in servizi Web sconosciuti o non attendibili tramite lo scambio di metadati, le chiamate alle operazioni su questi servizi Web devono impedire la transazione corrente, se possibile. Nell'esempio riportato di seguito viene illustrato come procedere.  

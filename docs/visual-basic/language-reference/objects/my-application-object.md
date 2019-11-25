@@ -1,32 +1,32 @@
 ---
-title: Oggetto My. Application (Visual Basic)
+title: Oggetto My.Application
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 1de3696226185d483b7c6bb1d9460949b2df2f5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8a0eef4aa685a255a5e1d852e440f8de2f70370
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633306"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350730"
 ---
 # <a name="myapplication-object"></a>Oggetto My.Application
-Fornisce proprietà, metodi ed eventi correlati all'applicazione corrente.  
+Provides properties, methods, and events related to the current application.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Application` oggetti, vedere le risorse seguenti:  
+ For information about the methods and properties of the `My.Application` object, see the following resources:  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> per i membri che sono disponibili in tutti i progetti.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> per i membri che sono disponibili nelle applicazioni Windows Forms.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> per i membri che sono disponibili in applicazioni console.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (la classe di base <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fornisce i membri disponibili nelle applicazioni console e la relativa classe base <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fornisce i membri che sono disponibili in tutti i progetti)  
+ **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
   
  **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   

@@ -1,5 +1,5 @@
 ---
-title: Optional (Visual Basic)
+title: Optional
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 3758f17634395236abf2cd7059418bf6f8b6c062
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a16dae35bf4bc84d95501624c4f023f390a8dda8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630928"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351430"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
-Specifica che un argomento di routine può essere omesso quando viene chiamata la stored procedure.
+Specifies that a procedure argument can be omitted when the procedure is called.
 
 ## <a name="remarks"></a>Note
 
-Per ogni parametro facoltativo, è necessario specificare un'espressione costante come valore predefinito del parametro. Se l'espressione restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), il valore predefinito del tipo di dati value viene utilizzato come valore predefinito del parametro.
+For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
 
-Se l'elenco di parametri contiene un parametro facoltativo, anche ogni parametro che lo segue deve essere facoltativo.
+If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
 
 Il modificatore `Optional` può essere usato nei contesti seguenti:
 
@@ -36,14 +36,14 @@ Il modificatore `Optional` può essere usato nei contesti seguenti:
 - [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> Quando si chiama una routine con o senza parametri facoltativi, è possibile passare gli argomenti in base alla posizione o al nome. Per ulteriori informazioni, vedere [passaggio di argomenti in base alla posizione e al nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
 
 > [!NOTE]
-> È anche possibile definire una routine con parametri facoltativi tramite l'overload. Se si dispone di un parametro facoltativo, è possibile definire due versioni di overload della stored procedure, una che accetta il parametro e l'altra. Per altre informazioni, vedere [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. Per altre informazioni, vedere [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene definita una routine con un parametro facoltativo.
+The following example defines a procedure that has an optional parameter.
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come chiamare una stored procedure con argomenti passati in base alla posizione e con argomenti passati in base al nome. La procedura include due parametri facoltativi.
+The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 

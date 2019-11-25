@@ -1,5 +1,5 @@
 ---
-title: Espressioni incorporate in XML (Visual Basic)
+title: Espressioni incorporate in XML
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cdb960160457108ddf18c554dae5f5993269833
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922626"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332345"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Espressioni incorporate in XML (Visual Basic)
-Le espressioni incorporate consentono di creare valori letterali XML contenenti espressioni che vengono valutate in fase di esecuzione. La sintassi per un'espressione incorporata `<%=` è `expression` `%>`, che corrisponde alla sintassi utilizzata in ASP.NET.  
+Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time. The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in ASP.NET.  
   
- È ad esempio possibile creare un valore letterale elemento XML, combinando espressioni incorporate con contenuto di testo letterale.  
+ For example, you can create an XML element literal, combining embedded expressions with literal text content.  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- Se `isbnNumber` contiene l'intero 12345 e `modifiedDate` contiene la data 3/5/2006, quando viene eseguito questo codice, il valore di `book` è:  
+ If `isbnNumber` contains the integer 12345 and `modifiedDate` contains the date 3/5/2006, when this code executes, the value of `book` is:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ Le espressioni incorporate consentono di creare valori letterali XML contenenti 
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Posizione e convalida dell'espressione incorporata  
- Le espressioni incorporate possono essere visualizzate solo in determinate posizioni all'interno di espressioni letterali XML. Il percorso dell'espressione controlla i tipi che l'espressione può restituire `Nothing` e il modo in cui viene gestito. Nella tabella seguente vengono descritti i percorsi e i tipi di espressioni incorporate consentiti.  
+## <a name="embedded-expression-location-and-validation"></a>Embedded Expression Location and Validation  
+ Embedded expressions can appear only at certain locations within XML literal expressions. The expression location controls which types the expression can return and how `Nothing` is handled. The following table describes the allowed locations and types of embedded expressions.  
   
-|Posizione nel valore letterale|Tipo di espressione|Gestione di`Nothing`|  
+|Location in literal|Type of expression|Handling of `Nothing`|  
 |---|---|---|  
-|Nome elemento XML|<xref:System.Xml.Linq.XName>|Errore|  
-|Contenuto elemento XML|`Object`o matrice di`Object`|Ignorato|  
-|Nome attributo elemento XML|<xref:System.Xml.Linq.XName>|Errore, a meno che anche il valore dell'attributo non sia`Nothing`|  
-|Valore dell'attributo dell'elemento XML|`Object`|Dichiarazione di attributo ignorata|  
-|Attributo elemento XML|<xref:System.Xml.Linq.XAttribute>o una raccolta di<xref:System.Xml.Linq.XAttribute>|Ignorato|  
-|Elemento radice del documento XML|<xref:System.Xml.Linq.XElement>o una raccolta di <xref:System.Xml.Linq.XElement> un oggetto e un numero arbitrario di <xref:System.Xml.Linq.XProcessingInstruction> oggetti e <xref:System.Xml.Linq.XComment>|Ignorato|  
+|XML element name|<xref:System.Xml.Linq.XName>|Error|  
+|XML element content|`Object` or array of `Object`|Ignorato|  
+|XML element attribute name|<xref:System.Xml.Linq.XName>|Error, unless the attribute value is also `Nothing`|  
+|XML element attribute value|`Object`|Attribute declaration ignored|  
+|XML element attribute|<xref:System.Xml.Linq.XAttribute> or a collection of <xref:System.Xml.Linq.XAttribute>|Ignorato|  
+|XML document root element|<xref:System.Xml.Linq.XElement> or a collection of one <xref:System.Xml.Linq.XElement> object and an arbitrary number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects|Ignorato|  
   
-- Esempio di espressione incorporata in un nome di elemento XML:  
+- Example of an embedded expression in an XML element name:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- Esempio di espressione incorporata nel contenuto di un elemento XML:  
+- Example of an embedded expression in the content of an XML element:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- Esempio di espressione incorporata in un nome di attributo dell'elemento XML:  
+- Example of an embedded expression in an XML element attribute name:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- Esempio di espressione incorporata in un valore di attributo dell'elemento XML:  
+- Example of an embedded expression in an XML element attribute value:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- Esempio di espressione incorporata in un attributo dell'elemento XML:  
+- Example of an embedded expression in an XML element attribute:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- Esempio di espressione incorporata in un elemento radice di un documento XML:  
+- Example of an embedded expression in an XML document root element:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- Se si abilita `Option Strict`, il compilatore verifica che il tipo di ogni espressione incorporata venga ampliato al tipo richiesto. L'unica eccezione riguarda l'elemento radice di un documento XML, che viene verificato quando viene eseguito il codice. Se si compila senza `Option Strict`, è possibile incorporare espressioni di `Object` tipo e il relativo tipo viene verificato in fase di esecuzione.  
+ If you enable `Option Strict`, the compiler checks that the type of each embedded expression widens to the required type. The only exception is for the root element of an XML document, which is verified when the code runs. If you compile without `Option Strict`, you can embed expressions of type `Object` and their type is verified at run time.  
   
- Nelle posizioni in cui il contenuto è facoltativo, le espressioni `Nothing` incorporate che contengono vengono ignorate. Ciò significa che non è necessario verificare che il contenuto dell'elemento, i valori di attributo e gli elementi `Nothing` della matrice non siano prima di usare un valore letterale XML. I valori obbligatori, ad esempio i nomi degli elementi e `Nothing`degli attributi, non possono essere.  
+ In locations where content is optional, embedded expressions that contain `Nothing` are ignored. This means you do not have to check that element content, attribute values, and array elements are not `Nothing` before you use an XML literal. Required values, such as element and attribute names, cannot be `Nothing`.  
   
- Per ulteriori informazioni sull'utilizzo di un'espressione incorporata in un particolare tipo di valore letterale, vedere valore letterale [documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ For more information about using an embedded expression in a particular type of literal, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Regole di ambito  
- Il compilatore converte ogni valore letterale XML in una chiamata del costruttore per il tipo di valore letterale appropriato. Il contenuto letterale e le espressioni incorporate in un valore letterale XML vengono passati come argomenti al costruttore. Ciò significa che tutte le Visual Basic gli elementi di programmazione disponibili per un valore letterale XML sono disponibili anche per le espressioni incorporate.  
+ The compiler converts each XML literal into a constructor call for the appropriate literal type. The literal content and embedded expressions in an XML literal are passed as arguments to the constructor. This means that all Visual Basic programming elements available to an XML literal are also available to its embedded expressions.  
   
- All'interno di un valore letterale XML è possibile accedere ai prefissi degli spazi `Imports` dei nomi XML dichiarati con l'istruzione. È possibile dichiarare un nuovo prefisso dello spazio dei nomi XML o ombreggiare un prefisso dello spazio dei nomi XML esistente in `xmlns` un elemento usando l'attributo. Il nuovo spazio dei nomi è disponibile per i nodi figlio dell'elemento, ma non per i valori letterali XML nelle espressioni incorporate.  
+ Within an XML literal, you can access the XML namespace prefixes declared with the `Imports` statement. You can declare a new XML namespace prefix, or shadow an existing XML namespace prefix, in an element by using the `xmlns` attribute. The new namespace is available to the child nodes of that element, but not to XML literals in embedded expressions.  
   
 > [!NOTE]
-> Quando si dichiara un prefisso dello spazio dei nomi XML `xmlns` usando l'attributo Namespace, il valore dell'attributo deve essere una stringa costante. In questo senso, l'utilizzo `xmlns` dell'attributo è simile all' `Imports` utilizzo dell'istruzione per dichiarare uno spazio dei nomi XML. Non è possibile usare un'espressione incorporata per specificare il valore dello spazio dei nomi XML.  
+> When you declare an XML namespace prefix by using the `xmlns` namespace attribute, the attribute value must be a constant string. In this regard, using the `xmlns` attribute is like using the `Imports` statement to declare an XML namespace. You cannot use an embedded expression to specify the XML namespace value.  
   
 ## <a name="see-also"></a>Vedere anche
 

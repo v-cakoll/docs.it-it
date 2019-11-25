@@ -1,29 +1,29 @@
 ---
-title: Riepilogo degli elementi finanziari (Visual Basic)
+title: Riepilogo degli elementi finanziari
 ms.date: 07/20/2015
 helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: 5a7c256b95994db703343338069d7eae3515369c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0a930d4d39ea55feaa9f6cdb799717b7e98019b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349816"
 ---
 # <a name="financial-summary-visual-basic"></a>Riepilogo degli elementi finanziari (Visual Basic)
-Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
 |Operazione|Elemento di linguaggio|  
 |------------|----------------------|  
-|Calcola l'ammortamento del bene.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calcolare il valore futuro.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calcola il tasso di interesse.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Quale calcolare il tasso di rendimento interno.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calcolare il numero di periodi.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calcolare i pagamenti.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calcolare il valore attuale.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,37 +1,37 @@
 ---
-title: Riepilogo di directory e file (Visual Basic)
+title: Riepilogo di directory e file
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c7e1ef37b8abffee89c207ac1dcfb5cbef25c29
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802954"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349831"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Riepilogo di directory e file (Visual Basic)
-Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
- Uso di `My` funzionalità offre maggiore produttività e prestazioni migliori nelle operazioni dei / o file rispetto all'uso di questi membri. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
 |**Azione**|**Elemento di linguaggio**|  
 |----------------|--------------------------|  
-|Modifica di una directory o cartella.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Cambiare l'unità.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copiare un file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Creare una directory o cartella.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Rimuovere una directory o cartella.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Rinominare un file, directory o cartella.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Restituisce il percorso corrente.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Restituire l'indicatore di data e ora del file.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Restituisce i file, directory o attributi di etichetta.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Restituisce la lunghezza del file.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Restituisce l'etichetta di volume o nome del file.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Impostare le informazioni sugli attributi per un file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
 

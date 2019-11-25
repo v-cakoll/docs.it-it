@@ -1,5 +1,5 @@
 ---
-title: Istruzione Stop (Visual Basic)
+title: Istruzione Stop
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Stop
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: e9382ee34842fc3a3b4b23f71848bda602c99780
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583227"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346472"
 ---
 # <a name="stop-statement-visual-basic"></a>Istruzione Stop (Visual Basic)
-Sospende l'esecuzione.  
+Suspends execution.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Note  
- Per sospendere l'esecuzione, è possibile inserire `Stop` istruzioni in qualsiasi punto delle procedure. L'utilizzo dell'istruzione `Stop` è simile all'impostazione di un punto di interruzione nel codice.  
+ You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
   
- L'istruzione `Stop` sospende l'esecuzione, ma a differenza di `End` non chiude alcun file né cancella alcuna variabile, a meno che non venga rilevata in un file eseguibile compilato (exe).  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
 > [!NOTE]
-> Se l'istruzione `Stop` viene rilevata nel codice in esecuzione all'esterno del Integrated Development Environment (IDE), il debugger viene richiamato. Questo vale indipendentemente dal fatto che il codice sia stato compilato in modalità debug o al dettaglio.  
+> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene utilizzata l'istruzione `Stop` per sospendere l'esecuzione per ogni iterazione nel ciclo di `For...Next`.  
+ This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

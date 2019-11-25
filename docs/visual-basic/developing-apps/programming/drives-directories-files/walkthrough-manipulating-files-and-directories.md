@@ -1,5 +1,5 @@
 ---
-title: Modifica di file e directory in Visual Basic
+title: Modifica di file e directory
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314685"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333813"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: Modifica di file e directory in Visual Basic
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
+
 Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in Visual Basic. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
   
  In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in Visual Basic. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
@@ -33,7 +34,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1. Scegliere **Nuovo progetto** dal menu **File**.  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
   
 2. Nel riquadro **Modelli installati** espandere **Visual Basic**, quindi fare clic su **Windows**. Nel riquadro **Modelli** al centro scegliere **Windows Forms Application**.  
   
@@ -43,13 +44,13 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-    |Control|Proprietà|Value|  
+    |Control|proprietà|Value|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Pulsante**|**Name**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Name**<br /><br /> **per**|`examineButton`<br /><br /> **Esaminare**|  
-    |**CheckBox**|**Name**<br /><br /> **per**|`saveCheckBox`<br /><br /> **Salva risultati**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Nome**|`filesListBox`|  
+    |**Pulsante**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esaminare**|  
+    |**CheckBox**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
   
@@ -150,11 +151,13 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
 6. Eseguire l'applicazione. La casella di controllo **Salva risultati** e il pulsante **Esaminare** sono disabilitati se non è selezionato un elemento in `ListBox`.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>Esempio completo di uso di My.Computer.FileSystem  
+
  Di seguito è riportato l'esempio completo.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Esempio completo usando System.IO  
+
  Nel seguente esempio equivalente vengono usate le classi dello spazio dei nomi <xref:System.IO> anziché gli oggetti `My.Computer.FileSystem`.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
@@ -164,4 +167,4 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Procedura dettagliata: Modifica di file con i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

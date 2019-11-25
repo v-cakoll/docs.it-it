@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Creazione di oggetti COM con Visual Basic'
+title: 'Walkthrough: Creating COM Objects'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -8,87 +8,87 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 39012ebdd8946f707fe459cb09bb2bbfc8e50088
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958273"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338612"
 ---
-# <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Procedura dettagliata: Creazione di oggetti COM con Visual Basic
-Quando si creano nuovi componenti o applicazioni, è consigliabile creare .NET Framework assembly. Tuttavia, Visual Basic facilita anche l'esposizione di un componente .NET Framework a COM. In questo modo è possibile fornire nuovi componenti per i gruppi di applicazioni precedenti che richiedono componenti COM. In questa procedura dettagliata viene illustrato come utilizzare Visual Basic per esporre .NET Framework oggetti come oggetti COM, sia con sia senza il modello di classe COM.  
+# <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Procedura dettagliata: creazione di oggetti COM con Visual Basic
+When creating new applications or components, it is best to create .NET Framework assemblies. However, Visual Basic also makes it easy to expose a .NET Framework component to COM. This enables you to provide new components for earlier application suites that require COM components. This walkthrough demonstrates how to use Visual Basic to expose .NET Framework objects as COM objects, both with and without the COM class template.  
   
- Il modo più semplice per esporre oggetti COM consiste nell'usare il modello di classe COM. Il modello di classe COM crea una nuova classe e quindi configura il progetto per generare la classe e il livello di interoperabilità come oggetto COM e registrarlo nel sistema operativo.  
+ The easiest way to expose COM objects is by using the COM class template. The COM class template creates a new class, and then configures your project to generate the class and interoperability layer as a COM object and register it with the operating system.  
   
 > [!NOTE]
-> Sebbene sia anche possibile esporre una classe creata in Visual Basic come oggetto COM per il codice non gestito da usare, non è un vero oggetto COM e non può essere usata da Visual Basic. Per ulteriori informazioni, vedere [interoperabilità com nelle applicazioni .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Although you can also expose a class created in Visual Basic as a COM object for unmanaged code to use, it is not a true COM object and cannot be used by Visual Basic. For more information, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>Per creare un oggetto COM utilizzando il modello di classe COM  
+### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>To create a COM object by using the COM class template  
   
-1. Aprire un nuovo progetto di applicazione Windows dal menu **file** facendo clic su **nuovo progetto**.  
+1. Open a new Windows Application project from the **File** menu by clicking **New Project**.  
   
-2. Nella finestra di dialogo **nuovo progetto** , sotto il campo **Tipi progetto** , verificare che sia selezionata l'opzione Windows. Selezionare **libreria di classi** dall'elenco **modelli** , quindi fare clic su **OK**. Verrà visualizzato il nuovo progetto.  
+2. In the **New Project** dialog box under the **Project Types** field, check that Windows is selected. Select **Class Library** from the **Templates** list, and then click **OK**. The new project is displayed.  
   
-3. Scegliere **Aggiungi nuovo elemento** dal menu **progetto** . Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
+3. Select **Add New Item** from the **Project** menu. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-4. Selezionare **classe com** dall'elenco **modelli** , quindi fare clic su **Aggiungi**. Visual Basic aggiunge una nuova classe e configura il nuovo progetto per l'interoperabilità COM.  
+4. Select **COM Class** from the **Templates** list, and then click **Add**. Visual Basic adds a new class and configures the new project for COM interop.  
   
-5. Aggiungere codice come proprietà, metodi ed eventi alla classe COM.  
+5. Add code such as properties, methods, and events to the COM class.  
   
-6. Scegliere **Compila ClassLibrary1** dal menu **Compila** . Visual Basic compila l'assembly e registra l'oggetto COM con il sistema operativo.  
+6. Select **Build ClassLibrary1** from the **Build** menu. Visual Basic builds the assembly and registers the COM object with the operating system.  
   
-## <a name="creating-com-objects-without-the-com-class-template"></a>Creazione di oggetti COM senza il modello di classe COM  
- È inoltre possibile creare manualmente una classe COM anziché utilizzare il modello di classe COM. Questa procedura è utile quando si utilizza la riga di comando o quando si desidera un maggiore controllo sulla modalità di definizione degli oggetti COM.  
+## <a name="creating-com-objects-without-the-com-class-template"></a>Creating COM Objects without the COM Class Template  
+ You can also create a COM class manually instead of using the COM class template. This procedure is helpful when you are working from the command line or when you want more control over how COM objects are defined.  
   
-#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Per configurare il progetto per generare un oggetto COM  
+#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>To set up your project to generate a COM object  
   
-1. Aprire un nuovo progetto di applicazione Windows dal menu **file** facendo clic su **NewProject**.  
+1. Open a new Windows Application project from the **File** menu by clicking **NewProject**.  
   
-2. Nella finestra di dialogo **nuovo progetto** , sotto il campo **Tipi progetto** , verificare che sia selezionata l'opzione Windows. Selezionare **libreria di classi** dall'elenco **modelli** , quindi fare clic su **OK**. Verrà visualizzato il nuovo progetto.  
+2. In the **New Project** dialog box under the **Project Types** field, check that Windows is selected. Select **Class Library** from the **Templates** list, and then click **OK**. The new project is displayed.  
   
-3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Verrà visualizzato **Progettazione progetti** .  
+3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. The **Project Designer** is displayed.  
   
 4. Fare clic sulla scheda **Compila**.  
   
-5. Selezionare la casella **di controllo registra per interoperabilità COM** .  
+5. Select the **Register for COM Interop** check box.  
   
-#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Per configurare il codice nella classe per creare un oggetto COM  
+#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>To set up the code in your class to create a COM object  
   
-1. In **Esplora soluzioni**fare doppio clic su **Class1. vb** per visualizzarne il codice.  
+1. In **Solution Explorer**, double-click **Class1.vb** to display its code.  
   
 2. Rinominare la classe come `ComClass1`.  
   
-3. Aggiungere le costanti seguenti a `ComClass1`. Verranno archiviate le costanti identificatore univoco globale (GUID) che devono essere presenti negli oggetti COM.  
+3. Add the following constants to `ComClass1`. They will store the Globally Unique Identifier (GUID) constants that the COM objects are required to have.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4. Scegliere **Crea GUID** dal menu **Strumenti**. Nella finestra di dialogo **Crea GUID** fare clic su **Formato del Registro di sistema** e quindi fare clic su **Copia**. Fare clic su **Esci**.  
   
-5. Sostituire la stringa vuota per `ClassId` con il GUID, rimuovendo le parentesi graffe iniziali e finali. Se, ad esempio, il GUID fornito da Guidgen `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` è, il codice dovrebbe essere simile al seguente.  
+5. Replace the empty string for the `ClassId` with the GUID, removing the leading and trailing braces. For example, if the GUID provided by Guidgen is `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` then your code should appear as follows.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Ripetere i passaggi precedenti per le `InterfaceId` costanti `EventsId` e, come nell'esempio seguente.  
+6. Repeat the previous steps for the `InterfaceId` and `EventsId` constants, as in the following example.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
-    > Verificare che i GUID siano nuovi e univoci. in caso contrario, il componente COM potrebbe essere in conflitto con altri componenti COM.  
+    > Make sure that the GUIDs are new and unique; otherwise, your COM component could conflict with other COM components.  
   
-7. Aggiungere l' `ComClass` attributo a `ComClass1`, specificando i GUID per l'ID di classe, l'ID di interfaccia e l'ID degli eventi come nell'esempio seguente:  
+7. Add the `ComClass` attribute to `ComClass1`, specifying the GUIDs for the Class ID, Interface ID, and Events ID as in the following example:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8. Le classi com devono avere un `Public Sub New()` costruttore senza parametri o la classe non sarà registrata correttamente. Aggiungere un costruttore senza parametri alla classe:  
+8. COM classes must have a parameterless `Public Sub New()` constructor, or the class will not register correctly. Add a parameterless constructor to the class:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. Aggiungere proprietà, metodi ed eventi alla classe, terminando con un' `End Class` istruzione. Scegliere **Compila soluzione** dal menu **Compila** . Visual Basic compila l'assembly e registra l'oggetto COM con il sistema operativo.  
+9. Add properties, methods, and events to the class, ending it with an `End Class` statement. Select **Build Solution** from the **Build** menu. Visual Basic builds the assembly and registers the COM object with the operating system.  
   
     > [!NOTE]
-    > Gli oggetti COM generati con Visual Basic non possono essere utilizzati da altre applicazioni Visual Basic perché non sono veri oggetti COM. I tentativi di aggiungere riferimenti a tali oggetti COM genereranno un errore. Per informazioni dettagliate, vedere interoperabilità [com nelle applicazioni .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > The COM objects you generate with Visual Basic cannot be used by other Visual Basic applications because they are not true COM objects. Attempts to add references to such COM objects will raise an error. For details, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

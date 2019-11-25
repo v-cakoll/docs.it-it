@@ -1,34 +1,34 @@
 ---
-title: Sub o Function non definita (Visual Basic)
+title: Sub o Function non definita
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 3a56d5596c79900bb5818a6ed7f8736859b5ea15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593192"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349572"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function non definita (Visual Basic)
-Oggetto `Sub` o `Function` deve essere definito per essere chiamati. Alcune cause possibili di questo errore sono:  
+A `Sub` or `Function` must be defined in order to be called. Alcune cause possibili di questo errore sono:  
   
-- Errore di ortografia il nome della routine.  
+- Misspelling the procedure name.  
   
-- Tentativo di chiamare una routine da un altro progetto senza aggiungere in modo esplicito un riferimento al progetto nella **riferimenti** nella finestra di dialogo.  
+- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
   
-- Specifica una routine che non è visibile alla routine chiamante.  
+- Specifying a procedure that is not visible to the calling procedure.  
   
-- Dichiara una routine di libreria a collegamento dinamico (DLL) Windows o routine Macintosh risorsa codice che non si trova la risorsa di libreria o codice specificata.  
+- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Assicurarsi che il nome della routine sia digitato correttamente.  
+1. Make sure that the procedure name is spelled correctly.  
   
-2. Trovare il nome del progetto contenente le procedure da chiamare **riferimenti** nella finestra di dialogo. Se non viene visualizzato, scegliere il **esplorare** pulsante per eseguire la ricerca. Selezionare la casella di controllo a sinistra del nome del progetto e quindi fare clic su **OK**.  
+2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
   
-3. Controllare il nome della routine.  
+3. Check the name of the routine.  
   
 ## <a name="see-also"></a>Vedere anche
 

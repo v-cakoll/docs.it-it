@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970120"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204509"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opzioni del compilatore C#)
 L'opzione del compilatore **-target** può essere specificata in una delle quattro forme seguenti:  
   
  [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- Per creare un file con estensione exe per le applicazioni [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
+ To create an .exe file for Windows 8.x Store apps.  
   
  [/target:exe](./target-exe-compiler-option.md)  
  Per creare un file con estensione exe.  
@@ -37,7 +37,7 @@ L'opzione del compilatore **-target** può essere specificata in una delle quatt
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Per creare un file con estensione winmdobj intermedio.  
   
- Se non si specifica **-target:module**, **-target** provoca l'inserimento di un manifesto dell'assembly di .NET Framework in un file di output. Per altre informazioni, vedere [assembly in .NET](../../../standard/assembly/index.md) e [attributi comuni](../../programming-guide/concepts/attributes/common-attributes.md).  
+ Se non si specifica **-target:module**, **-target** provoca l'inserimento di un manifesto dell'assembly di .NET Framework in un file di output. For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  Il manifesto dell'assembly viene inserito nel primo file di output con estensione .exe della compilazione o nel primo DLL, se non esiste alcun file di output .exe. Ad esempio, nella riga di comando seguente il manifesto verrà inserito in `1.exe`:  
   

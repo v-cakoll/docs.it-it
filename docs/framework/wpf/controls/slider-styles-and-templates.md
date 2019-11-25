@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 334cb4a44788980262110eadac3305283bb61a92
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f533142d5ba202bd4aaf628487eaaa2a18a535d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458400"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283381"
 ---
 # <a name="slider-styles-and-templates"></a>Stili e modelli di Slider
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Slider>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Slider>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="slider-parts"></a>Parti del dispositivo di scorrimento  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Slider>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Contenitore per l'elemento che indica la posizione del <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Elemento che visualizza un intervallo di selezione lungo il <xref:System.Windows.Controls.Slider>.  L'intervallo di selezione è visibile solo se la proprietà <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> è `true`.|  
@@ -30,7 +30,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="slider-states"></a>Stati del dispositivo di scorrimento  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Slider>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
@@ -59,4 +59,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

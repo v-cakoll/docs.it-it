@@ -1,5 +1,5 @@
 ---
-title: Interfacce (Visual Basic)
+title: Interfacce
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, interfaces
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956289"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345047"
 ---
 # <a name="interfaces-visual-basic"></a>Interfacce (Visual Basic)
 Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi possono implementare. Le interfacce consentono di definire funzionalità come piccoli gruppi di proprietà, metodi ed eventi strettamente correlati fra loro. In questo modo si riducono i problemi di compatibilità, grazie alla possibilità di sviluppare implementazioni migliorate per le interfacce senza compromettere il codice esistente. È possibile aggiungere nuove funzionalità in qualsiasi momento, sviluppando interfacce e implementazioni aggiuntive.  
@@ -40,13 +40,13 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementazione di interfacce  
- La parola `Implements` riservata Visual Basic viene usata in due modi. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
+ The Visual Basic reserved word `Implements` is used in two ways. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
   
 ### <a name="implements-statement"></a>Istruzione Implements  
  Se una classe o una struttura implementa una o più interfacce, deve includere l'istruzione `Implements` immediatamente dopo l'istruzione `Class` o `Structure`. L'istruzione `Implements` richiede un elenco separato da virgole di interfacce implementate da una classe. La classe o la struttura deve implementare tutti i membri di interfaccia mediante la parola chiave `Implements`.  
   
 ### <a name="implements-keyword"></a>Parola chiave Implements  
- La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. Il nome di un membro che implementa un membro di interfaccia può usare qualsiasi identificatore valido e non è limitato `InterfaceName_MethodName` alla convenzione usata nelle versioni precedenti di Visual Basic.  
+ La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
   
  Il codice seguente, ad esempio, illustra come dichiarare una subroutine denominata `Sub1` che implementa un metodo di un'interfaccia:  
   

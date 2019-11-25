@@ -5,16 +5,16 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774336"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348171"
 ---
 # <a name="friend-assemblies"></a>Assembly Friend
 
-Un *assembly Friend* può accedere ai tipi e ai membri [internal](../../csharp/language-reference/keywords/internal.md) (C#) o [Friend](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) di un altro assembly. Se un assembly viene riconosciuto di tipo Friend, non è più necessario contrassegnare tipi e membri come pubblici perché altri assembly possano accedervi. Questo metodo è particolarmente utile negli scenari seguenti:
+A *friend assembly* is an assembly that can access another assembly's [internal](../../csharp/language-reference/keywords/internal.md) (C#) or [Friend](../../visual-basic/language-reference/modifiers/friend.md) (Visual Basic) types and members. Se un assembly viene riconosciuto di tipo Friend, non è più necessario contrassegnare tipi e membri come pubblici perché altri assembly possano accedervi. Questo metodo è particolarmente utile negli scenari seguenti:
 
 - Durante il testing unità, quando il codice di test viene eseguito in un assembly separato ma richiede l'accesso ai membri dell'assembly sottoposto a test che sono contrassegnati come `internal` in C# o come `Friend` in Visual Basic.
 
@@ -22,10 +22,10 @@ Un *assembly Friend* può accedere ai tipi e ai membri [internal](../../csharp/l
 
 ## <a name="remarks"></a>Note
 
-È possibile usare l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per identificare uno o più assembly Friend per un determinato assembly. Nell'esempio seguente viene usato l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> nell' *assembly a* e viene specificato *AssemblyB* dell'assembly come assembly Friend. In questo modo l'assembly *AssemblyB* l'accesso a tutti i tipi e membri nell' *assembly a* contrassegnati come C# `internal` in o `Friend` Visual Basic.
+È possibile usare l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per identificare uno o più assembly Friend per un determinato assembly. The following example uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute in *Assembly A* and specifies assembly *AssemblyB* as a friend assembly. This gives assembly *AssemblyB* access to all types and members in *Assembly A* that are marked as `internal` in C# or `Friend` in Visual Basic.
 
 > [!NOTE]
-> Quando si compila un assembly come *AssemblyB* che accederà ai tipi interni o ai membri interni di un altro assembly come *assembly A*, è necessario specificare in modo esplicito il nome del file di output (con*estensione exe* o *dll*) **tramite il** opzione del compilatore. Il compilatore non ha infatti ancora generato il nome dell'assembly in fase di compilazione quando crea l'associazione a riferimenti esterni. Per ulteriori informazioni, vedere [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> When you compile an assembly like *AssemblyB* that will access internal types or internal members of another assembly like *Assembly A*, you must explicitly specify the name of the output file ( *.exe* or *.dll*) by using the **-out** compiler option. Il compilatore non ha infatti ancora generato il nome dell'assembly in fase di compilazione quando crea l'associazione a riferimenti esterni. For more information, see [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -55,7 +55,6 @@ public class ClassWithFriendMethod
 
 ```vb
 Imports System.Runtime.CompilerServices
-Imports System
 <Assembly: InternalsVisibleTo("AssemblyB")>
 
 ' Friend class.
@@ -73,34 +72,34 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-Solo gli assembly specificati in modo esplicito come amici possono accedere aiC#tipi e ai membri di `internal` () o `Friend` (Visual Basic). Ad esempio, se *AssemblyB* è un elemento Friend dell' *assembly a* e l' *assembly c* fa riferimento a *AssemblyB*, l' *assembly c* non haC#accesso ai tipi `internal` () o `Friend` (Visual Basic) nell' *assembly a*.
+Only assemblies that you explicitly specify as friends can access `internal` (C#) or `Friend` (Visual Basic) types and members. For example, if *AssemblyB* is a friend of *Assembly A* and *Assembly C* references *AssemblyB*, *Assembly C* does not have access to `internal` (C#) or `Friend` (Visual Basic) types in *Assembly A*.
 
-Il compilatore esegue alcune operazioni di convalida di base del nome dell'assembly Friend che viene passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Se l' *assembly A* dichiara *AssemblyB* come assembly Friend, le regole di convalida sono le seguenti:
+Il compilatore esegue alcune operazioni di convalida di base del nome dell'assembly Friend che viene passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. If *Assembly A* declares *AssemblyB* as a friend assembly, the validation rules are as follows:
 
-- Se *l'assembly A* è con nome sicuro, *AssemblyB* deve anche essere con nome sicuro. Il nome dell'assembly Friend che viene passato all'attributo deve essere costituito dal nome dell'assembly e dalla chiave pubblica della chiave con nome sicuro usata per firmare *AssemblyB*.
+- If *Assembly A* is strong named, *AssemblyB* must also be strong named. The friend assembly name that is passed to the attribute must consist of the assembly name and the public key of the strong-name key that is used to sign *AssemblyB*.
 
-     Il nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> non può essere il nome sicuro *AssemblyB*. Non includere la versione, le impostazioni cultura, l'architettura o il token di chiave pubblica dell'assembly.
+     The friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute cannot be the strong name of *AssemblyB*. Don't include the assembly version, culture, architecture, or public key token.
 
-- Se l' *assembly A* non è con nome sicuro, il nome dell'assembly Friend deve essere costituito solo dal nome dell'assembly. Per altre informazioni, vedere [procedura: creare assembly Friend non firmati](create-unsigned-friend.md).
+- If *Assembly A* is not strong named, the friend assembly name should consist of only the assembly name. For more information, see [How to: Create unsigned friend assemblies](create-unsigned-friend.md).
 
-- Se *AssemblyB* è un nome sicuro, è necessario specificare la chiave con nome sicuro per *AssemblyB* usando l'impostazione del progetto o la riga di comando `/keyfile` opzione del compilatore. Per altre informazioni, vedere [procedura: creare assembly Friend firmati](create-signed-friend.md).
+- If *AssemblyB* is strong named, you must specify the strong-name key for *AssemblyB* by using the project setting or the command-line `/keyfile` compiler option. For more information, see [How to: Create signed friend assemblies](create-signed-friend.md).
 
  La classe <xref:System.Security.Permissions.StrongNameIdentityPermission> consente anche la condivisione dei tipi, con le differenze seguenti:
 
 - <xref:System.Security.Permissions.StrongNameIdentityPermission> si applica a un singolo tipo, mentre un assembly Friend si applica all'intero assembly.
 
-- Se sono presenti centinaia di tipi nell' *assembly a* che si desidera condividere con *AssemblyB*, è necessario aggiungere <xref:System.Security.Permissions.StrongNameIdentityPermission> a tutti. Se invece si usa un assembly Friend, è sufficiente dichiarare una volta che si tratta di una relazione di tipo Friend.
+- If there are hundreds of types in *Assembly A* that you want to share with *AssemblyB*, you have to add <xref:System.Security.Permissions.StrongNameIdentityPermission> to all of them. Se invece si usa un assembly Friend, è sufficiente dichiarare una volta che si tratta di una relazione di tipo Friend.
 
-- Se si usa <xref:System.Security.Permissions.StrongNameIdentityPermission>, i tipi da condividere devono essere dichiarati come pubblici. Se si usa un assembly Friend, i tipi condivisi vengono dichiarati comeC#`internal` () o `Friend` (Visual Basic).
+- Se si usa <xref:System.Security.Permissions.StrongNameIdentityPermission>, i tipi da condividere devono essere dichiarati come pubblici. If you use a friend assembly, the shared types are declared as `internal` (C#) or `Friend` (Visual Basic).
 
-Per informazioni su come accedere ai tipi e ai metodi diC#un assembly `internal` () o `Friend` (Visual Basic) da un file di modulo (un file con estensione *netmodule* ), vedere [-moduleassemblynameC#()](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) o [-moduleassemblyname ( Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+For information about how to access an assembly's `internal` (C#) or `Friend` (Visual Basic) types and methods from a module file (a file with the *.netmodule* extension), see [-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) or [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [Procedura: creare assembly Friend non firmati](create-unsigned-friend.md)
-- [Procedura: creare assembly Friend firmati](create-signed-friend.md)
+- [How to: Create unsigned friend assemblies](create-unsigned-friend.md)
+- [How to: Create signed friend assemblies](create-signed-friend.md)
 - [Assembly in .NET](index.md)
 - [Guida per programmatori C#](../../csharp/programming-guide/index.md)
-- [Concetti di programmazione (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
+- [Programming concepts (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

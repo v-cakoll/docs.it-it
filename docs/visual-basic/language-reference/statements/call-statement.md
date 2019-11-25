@@ -1,5 +1,5 @@
 ---
-title: Istruzione Call (Visual Basic)
+title: Istruzione Call
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Call
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: a04ebddc7db176188876da1082e1e6946e1e8eec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7de194ea23827e08c49f4519c1000708a4bd91b4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005163"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350167"
 ---
 # <a name="call-statement-visual-basic"></a>Istruzione Call (Visual Basic)
 
-Trasferisce il controllo a una procedura di libreria a collegamento dinamico (DLL) `Function`, `Sub` o.  
+Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,21 +29,21 @@ Trasferisce il controllo a una procedura di libreria a collegamento dinamico (DL
 
 |||
 |---|---|
-|`procedureName`|Obbligatorio. Nome della procedura da chiamare.|
-|`argumentList`|facoltativo. Elenco di variabili o espressioni che rappresentano gli argomenti passati alla routine quando viene chiamato. Più argomenti sono separati da virgole. Se si include `argumentList`, è necessario racchiuderlo tra parentesi.|
+|`procedureName`|Obbligatorio. Name of the procedure to call.|
+|`argumentList`|Parametro facoltativo. List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
 |||
   
 ## <a name="remarks"></a>Note
 
- È possibile utilizzare la parola chiave `Call` quando si chiama una routine. Per la maggior parte delle chiamate di procedura, non è necessario usare questa parola chiave.
+ You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
 
- In genere si usa la parola chiave `Call` quando l'espressione chiamata non inizia con un identificatore. Non è consigliabile usare la parola chiave `Call` per altri usi.
+ You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
 
- Se la procedura restituisce un valore, l'istruzione `Call` lo ignora.
+ If the procedure returns a value, the `Call` statement discards it.
 
 ## <a name="example"></a>Esempio
 
- Nel codice seguente vengono illustrati due esempi in cui la parola chiave `Call` è necessaria per chiamare una routine. In entrambi gli esempi, l'espressione chiamata non inizia con un identificatore.
+ The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

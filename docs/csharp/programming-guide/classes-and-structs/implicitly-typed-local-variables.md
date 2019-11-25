@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419383"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141597"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -30,13 +30,13 @@ Gli esempi seguenti illustrano svariati modi in cui le variabili locali possono 
 - In un'istruzione di inizializzazione [for](../../language-reference/keywords/for.md).
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - In un'istruzione di inizializzazione [foreach](../../language-reference/keywords/foreach-in.md).
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - In un'istruzione [using](../../language-reference/keywords/using-statement.md).
@@ -45,7 +45,7 @@ Gli esempi seguenti illustrano svariati modi in cui le variabili locali possono 
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Per altre informazioni, vedere [Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Per ulteriori informazioni, vedere [come utilizzare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>var e tipi anonimi
 
@@ -63,7 +63,7 @@ Alle dichiarazioni di variabili tipizzate in modo implicito si applicano le rest
 
 - Non è possibile usare `var` nei campi nell'ambito della classe.
 
-- Le variabili dichiarate tramite `var` non possono essere usate nell'espressione di inizializzazione. In altre parole, questa espressione è valida: `: int i = (i = 20);`. Questa invece genera un errore in fase di compilazione: `var i = (i = 20);`
+- Le variabili dichiarate tramite `var` non possono essere usate nell'espressione di inizializzazione. In altre parole, questa espressione è valida: `int i = (i = 20);` ma questa espressione genera un errore in fase di compilazione: `var i = (i = 20);`
 
 - Non è possibile inizializzare più variabili tipizzate in modo implicito nella stessa istruzione.
 
@@ -95,7 +95,7 @@ L'uso di `var`, tuttavia, può quanto meno rendere più difficoltosa la comprens
 
 - [Riferimenti per C#](../../language-reference/index.md)
 - [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md)
-- [Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Come usare le matrici e le variabili locali tipizzate in modo implicito in un'espressione di query](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Tipi anonimi](anonymous-types.md)
 - [Inizializzatori di oggetto e di raccolta](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

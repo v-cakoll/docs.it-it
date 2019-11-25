@@ -1,5 +1,5 @@
 ---
-title: Istruzione Erase (Visual Basic)
+title: Istruzione Erase
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Erase
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6d2052ceccbecd772c4e4bb18052aed74223a36e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583393"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343706"
 ---
 # <a name="erase-statement-visual-basic"></a>Istruzione Erase (Visual Basic)
-Usato per rilasciare le variabili di matrice e deallocare la memoria usata per i relativi elementi.  
+Used to release array variables and deallocate the memory used for their elements.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -25,15 +25,15 @@ Erase arraylist
   
 ## <a name="parts"></a>Parti  
  `arraylist`  
- Obbligatorio. Elenco di variabili di matrice da cancellare. Nel caso di più variabili, è possibile separarle mediante virgole.  
+ Obbligatorio. List of array variables to be erased. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
 ## <a name="remarks"></a>Note  
- L'istruzione `Erase` può essere visualizzata solo a livello di routine. Ciò significa che è possibile rilasciare matrici all'interno di una routine ma non a livello di classe o di modulo.  
+ The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
   
- L'istruzione `Erase` equivale a assegnare `Nothing` a ogni variabile di matrice.  
+ The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata l'istruzione `Erase` per cancellare due matrici e liberare la relativa memoria (rispettivamente gli elementi di archiviazione 1000 e 100). L'istruzione `ReDim` assegna quindi una nuova istanza di matrice alla matrice tridimensionale.  
+ The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

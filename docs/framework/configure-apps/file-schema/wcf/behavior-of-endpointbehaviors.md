@@ -2,21 +2,21 @@
 title: <behavior> di <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 81c9ec7bd82fa0b947e438632b293ab9110067f5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 489678a5adeae3965acae90a847c4b087478354d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398244"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140804"
 ---
-# <a name="behavior-of-endpointbehaviors"></a>\<comportamento > di \<endpointBehaviors >
-L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento di un endpoint. Ogni comportamento è indicizzato in base al relativo `name`. Gli endpoint possono essere collegati a ciascun comportamento tramite questo nome. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="behavior-of-endpointbehaviors"></a>comportamento \<> di \<endpointBehaviors >
+L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento di un endpoint. Ogni comportamento è indicizzato in base al relativo `name`. Gli endpoint possono essere collegati a ciascun comportamento tramite questo nome. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comportamento >**  
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**comportamenti**](behaviors.md)\<\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**endpointBehaviors**](endpointbehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **&nbsp;&nbsp;\<**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,27 +37,27 @@ L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|name|Stringa univoca che contiene il nome di configurazione del comportamento. Questo valore è una stringa definita dall'utente che deve essere univoca in quanto funge da stringa di identificazione dell'elemento. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Stringa univoca che contiene il nome di configurazione del comportamento. Questo valore è una stringa definita dall'utente che deve essere univoca in quanto funge da stringa di identificazione dell'elemento. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<clientCredentials>](clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso un servizio.|  
-|[\<callbackDebug>](callbackdebug.md)|Specifica il debug del servizio per un oggetto callback di Windows Communication Foundation (WCF).|  
-|[\<callbackTimeouts>](callbacktimeouts.md)|Specifica il timeout per il callback client.|  
-|[\<clientVia>](clientvia.md)|Specifica la route che un messaggio deve prendere.|  
-|[\<dataContractSerializer>](datacontractserializer.md)|Contiene i dati di configurazione per DataContractSerializer.|  
-|[\<dispatcherSynchronization>](dispatchersynchronization.md)|Specifica un comportamento dell'endpoint che consente a un servizio di inviare risposte in modo asincrono.|  
-|[\<enableWebScript>](enablewebscript.md)|Abilita il comportamento dell'endpoint che rende possibile l'uso del servizio da pagine Web ASP.NET AJAX. Il comportamento deve essere usato solo in combinazione con l' \<associazione WebHttpBinding > standard o con l' \<elemento di associazione > webMessageEncoding.|  
-|[\<endpointDiscovery>](endpointdiscovery.md)|Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.|  
-|[\<soapProcessing>](soapprocessing.md)|Definisce il comportamento dell'endpoint client usato per effettuare il marshalling dei messaggi tra versioni del messaggio e tipi di associazione diversi.|  
-|[\<synchronousReceive>](synchronousreceive-element.md)|Specifica il comportamento di run-time per la ricezione di messaggi in un'applicazione client o di servizio. Non prevede attributi o elementi figlio.|  
-|[\<transactedBatching>](transactedbatching.md)|Specifica se il batch delle transazioni è supportato per le operazioni di ricezione.|  
-|[\<webHttp>](webhttp.md)|Specifica il WebHttpBehavior in un endpoint tramite configurazione. Questo comportamento, se usato insieme \<a WebHttpBinding > associazione standard, Abilita il modello di programmazione Web per un servizio WCF.|  
+|[\<clientCredentials >](clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso un servizio.|  
+|[\<callbackDebug >](callbackdebug.md)|Specifica il debug del servizio per un oggetto callback di Windows Communication Foundation (WCF).|  
+|[\<callbackTimeouts >](callbacktimeouts.md)|Specifica il timeout per il callback client.|  
+|[\<clientVia >](clientvia.md)|Specifica la route che un messaggio deve prendere.|  
+|[\<dataContractSerializer >](datacontractserializer.md)|Contiene i dati di configurazione per DataContractSerializer.|  
+|[\<dispatcherSynchronization >](dispatchersynchronization.md)|Specifica un comportamento dell'endpoint che consente a un servizio di inviare risposte in modo asincrono.|  
+|[\<enableWebScript >](enablewebscript.md)|Abilita il comportamento dell'endpoint che rende possibile l'uso del servizio da pagine Web ASP.NET AJAX. Il comportamento deve essere usato solo in combinazione con l'associazione standard \<WebHttpBinding > o l'elemento di associazione > \<webMessageEncoding.|  
+|[\<endpointDiscovery >](endpointdiscovery.md)|Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.|  
+|[\<soapProcessing >](soapprocessing.md)|Definisce il comportamento dell'endpoint client usato per effettuare il marshalling dei messaggi tra versioni del messaggio e tipi di associazione diversi.|  
+|[\<synchronousReceive >](synchronousreceive-element.md)|Specifica il comportamento di run-time per la ricezione di messaggi in un'applicazione client o di servizio. Non prevede attributi o elementi figlio.|  
+|[\<transactedBatching >](transactedbatching.md)|Specifica se il batch delle transazioni è supportato per le operazioni di ricezione.|  
+|[\<> WebHttp](webhttp.md)|Specifica il WebHttpBehavior in un endpoint tramite configurazione. Questo comportamento, se utilizzato insieme a \<WebHttpBinding > associazione standard, Abilita il modello di programmazione Web per un servizio WCF.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<endpointBehaviors>](endpointbehaviors.md)|Raccolta di elementi di comportamento dell'endpoint.|
+|[\<endpointBehaviors >](endpointbehaviors.md)|Raccolta di elementi di comportamento dell'endpoint.|

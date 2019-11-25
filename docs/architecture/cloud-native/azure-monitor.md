@@ -2,12 +2,12 @@
 title: Monitoraggio di Azure
 description: L'uso di monitoraggio di Azure per ottenere visibilità sul sistema è in esecuzione.
 ms.date: 09/23/2019
-ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27503627217c71e4090674945830f6332b202a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087688"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281641"
 ---
 # <a name="azure-monitor"></a>Monitoraggio di Azure
 
@@ -34,7 +34,7 @@ Non è stata completata alcuna applicazione moderna senza alcuna intelligenza ar
 
 Application Insights fornisce un linguaggio di query avanzato denominato kusto che può essere usato per trovare i record, riepilogarli e persino tracciare grafici. Questa query, ad esempio, consente di individuare tutti i record per il mese di novembre 2007, di raggrupparli in base allo stato e di tracciare i primi 10 come grafico a torta.
 
-```
+```kusto
 StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State

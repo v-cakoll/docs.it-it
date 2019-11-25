@@ -1,51 +1,51 @@
 ---
-title: Valori restituiti Ref (Visual Basic)
+title: Ref Return Values
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: 7401fdd0fa876d21a87dbe9faf9d979e6b3bdc5c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2d2a302a899fbde549161469f281d3e580bcb71f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352546"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Supporto per i valori restituiti di riferimento (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Support for reference return values (Visual Basic)
 
-A partire C# da 7,0, C# il linguaggio supporta i *valori restituiti di riferimento*. Un modo per comprendere i valori restituiti di riferimento è che si tratta del contrario degli argomenti passati per riferimento a un metodo. Quando viene modificato un argomento passato per riferimento, le modifiche vengono riflesse nel valore della variabile nel chiamante. Quando un metodo fornisce un valore restituito di riferimento a un chiamante, le modifiche apportate al valore restituito di riferimento dal chiamante vengono riflesse nei dati del metodo chiamato.
+Starting with C# 7.0, the C# language supports *reference return values*. One way to understand reference return values is that they are the opposite of arguments that are passed by reference to a method. When an argument passed by reference is modified, the changes are reflected in value of the variable on the caller. When an method provides a reference return value to a caller, modifications made to the reference return value by the caller are reflected in the called method's data.
 
-Visual Basic non consente di creare metodi con valori restituiti di riferimento, ma consente di utilizzare valori restituiti di riferimento. In altre parole, è possibile chiamare un metodo con un valore restituito di riferimento e modificare il valore restituito e le modifiche apportate al valore restituito di riferimento vengono riflesse nei dati del metodo chiamato.
+Visual Basic does not allow you to author methods with reference return values, but it does allow you to consume reference return values. In other words, you can call a method with a reference return value and modify that return value, and changes to the reference return value are reflected in the called method's data.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Modifica diretta del valore restituito Ref
+## <a name="modifying-the-ref-return-value-directly"></a>Modifying the ref return value directly
 
-Per i metodi che hanno sempre esito positivo e non hanno parametri di `ByRef`, è possibile modificare direttamente il valore restituito di riferimento. A tale scopo, assegnare il nuovo valore alle espressioni che restituiscono il valore restituito di riferimento.
+For methods that always succeed and have no `ByRef` parameters, you can modify the reference return value directly. You do this by assigning the new value to the expressions that returns the reference return value.
 
-Nell'esempio C# seguente viene definito un metodo di `NumericValue.IncrementValue` che incrementa un valore interno e lo restituisce come valore restituito di riferimento.
+The following C# example defines a `NumericValue.IncrementValue` method that increments an internal value and returns it as a reference return value.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-Il valore restituito di riferimento viene quindi modificato dal chiamante nell'esempio di Visual Basic seguente. Si noti che la riga con la chiamata al metodo `NumericValue.IncrementValue` non assegna un valore al metodo. Assegna invece un valore al valore restituito di riferimento restituito dal metodo.
+The reference return value is then modified by the caller in the following Visual Basic example. Note that the line with the `NumericValue.IncrementValue` method call does not assign a value to the method. Instead, it assigns a value to the reference return value returned by the method.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Uso di un metodo helper
+## <a name="using-a-helper-method"></a>Using a helper method
 
-In altri casi, la modifica del valore restituito di riferimento di una chiamata al metodo può non essere sempre auspicabile. Un metodo di ricerca che restituisce una stringa, ad esempio, potrebbe non essere sempre in grado di trovare una corrispondenza. In tal caso, si desidera modificare il valore restituito di riferimento solo se la ricerca ha esito positivo.
+In other cases, modifying the reference return value of a method call directly may not always be desirable. For example, a search method that returns a string may not always find a match. In that case, you want to modify the reference return value only if the search is successful.
 
-Nell'esempio C# seguente viene illustrato questo scenario. Definisce una classe `Sentence` scritta in C# include un metodo `FindNext` che trova la parola successiva in una frase che inizia con una sottostringa specificata. La stringa viene restituita come valore di riferimento restituito. Una variabile `Boolean` passata dal riferimento al metodo indica se la ricerca ha avuto esito positivo. Il valore restituito di riferimento indica che il chiamante non solo può leggere il valore restituito. può anche modificarla e tale modifica viene riflessa nei dati contenuti internamente nella classe `Sentence`.
+The following C# example illustrates this scenario. It defines a `Sentence` class written in C# includes a `FindNext` method that finds the next word in a sentence that begins with a specified substring. La stringa viene restituita come valore di riferimento restituito. Una variabile `Boolean` passata dal riferimento al metodo indica se la ricerca ha avuto esito positivo. The reference return value indicates that the caller can not only read the returned value; he or she can also modify it, and that modification is reflected in the data contained internally in the `Sentence` class.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-La modifica diretta del valore restituito di riferimento in questo caso non è affidabile, perché la chiamata al metodo potrebbe non riuscire a trovare una corrispondenza e restituire la prima parola nella frase. In tal caso, il chiamante modificherà inavvertitamente la prima parola della frase. Questa operazione può essere impedita dal chiamante che restituisce una `null` (o `Nothing` in Visual Basic). In tal caso, tuttavia, il tentativo di modificare una stringa il cui valore è `Nothing` genera un'<xref:System.NullReferenceException>. Se può essere impedito anche dal chiamante che restituisce <xref:System.String.Empty?displayProperty=nameWithType>, ma ciò richiede che il chiamante definisca una variabile di stringa il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>. Sebbene il chiamante possa modificare tale stringa, la modifica non ha alcun effetto, perché la stringa modificata non ha alcuna relazione con le parole nella frase archiviata dalla classe `Sentence`.
+Directly modifying the reference return value in this case is not reliable, since the method call may fail to find a match and return the first word in the sentence. In that case, the caller will inadvertently modify the first word of the sentence. This could be prevented by the caller returning a `null` (or `Nothing` in Visual Basic). But in that case, attempting to modify a string whose value is `Nothing` throws a <xref:System.NullReferenceException>. If could also be prevented by the caller returning <xref:System.String.Empty?displayProperty=nameWithType>, but this requires that the caller define a string variable whose value is <xref:System.String.Empty?displayProperty=nameWithType>. While the caller can modify that string, the modification itself serves no purpose, since the modified string has no relationship to the words in the sentence stored by the `Sentence` class.
 
-Il modo migliore per gestire questo scenario è passare il valore restituito di riferimento per riferimento a un metodo helper. Il metodo helper contiene quindi la logica per determinare se la chiamata al metodo ha avuto esito positivo e, in caso affermativo, per modificare il valore restituito di riferimento. Nell'esempio seguente viene fornita un'implementazione possibile.
+The best way to handle this scenario is to pass the reference return value by reference to a helper method. The helper method then contains the logic to determine whether the method call succeeded and, if it did, to modify the reference return value. The following example provides a possible implementation.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Passaggio di argomenti per valore e per riferimento](passing-arguments-by-value-and-by-reference.md)
+- [Passing arguments by value and by reference](passing-arguments-by-value-and-by-reference.md)
 - [Routine in Visual Basic](index.md)

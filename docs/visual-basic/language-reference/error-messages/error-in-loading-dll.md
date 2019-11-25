@@ -1,36 +1,36 @@
 ---
-title: Errore di caricamento della DLL (Visual Basic)
+title: Errore di caricamento della DLL
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659606"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329551"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Errore di caricamento della DLL (Visual Basic)
-Una libreria di collegamento dinamico (DLL) è una libreria specificata nel `Lib` clausola di un `Declare` istruzione. Possibili cause di questo errore includono:  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- Il file non è un eseguibile DLL.  
+- The file is not DLL executable.  
   
-- Il file non è una DLL di Microsoft Windows.  
+- The file is not a Microsoft Windows DLL.  
   
-- La DLL fa riferimento a un'altra DLL che non è presente.  
+- The DLL references another DLL that is not present.  
   
-- La DLL o cui si fa riferimento non è in una directory specificata nel percorso.  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Se il file è un file di testo di origine e pertanto non eseguibile DLL, deve essere compilato e collegato a un modulo DLL-file eseguibile.  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- Se il file non è una DLL di Microsoft Windows, ottenere l'equivalente di Windows Microsoft.  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- Se la DLL fa riferimento a un'altra DLL che non è presente, ottenere la DLL di cui viene fatto riferimento e renderlo disponibile.  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- Se la DLL o cui si fa riferimento non è in una directory specificata dal percorso, spostare la DLL in una directory di cui viene fatto riferimento.  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
 ## <a name="see-also"></a>Vedere anche
 

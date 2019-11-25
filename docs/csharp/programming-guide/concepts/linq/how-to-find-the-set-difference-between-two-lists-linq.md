@@ -2,19 +2,19 @@
 title: 'Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: decdbe45afd12581a53ed70ec843ee72f54f0409
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 9e2a42a466a71d4e351df89398be197197a54042
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593348"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140997"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)
 In questo esempio viene illustrato come usare LINQ per confrontare due elenchi di stringhe e restituire le righe presenti in names1.txt ma non in names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
   
-1. Copiare names1.txt e names2.txt nella cartella della soluzione come illustrato in [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).  
+1. Copiare names1. txt e names2. txt nella cartella della soluzione, come illustrato in [come combinare e confrontare raccolte di stringhe (LINQ)C#()](./how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Esempio  
   

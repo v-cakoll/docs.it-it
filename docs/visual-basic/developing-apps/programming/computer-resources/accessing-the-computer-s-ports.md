@@ -1,21 +1,23 @@
 ---
-title: Accesso alle porte del computer (Visual Basic)
+title: Accesso alle porte del computer
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589336"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329589"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Accesso alle porte del computer (Visual Basic)
+
 L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a porte seriali del computer.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
+
  [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Illustra come visualizzare le porte seriali disponibili.  
   
@@ -31,7 +33,8 @@ L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a p
  [Operazioni sulle porte in .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  Illustra come usare .NET Framework durante l'esecuzione di operazioni sulle porte.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
+
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Illustra l'oggetto `My.Computer.Ports` e i suoi membri.  
   
@@ -42,5 +45,6 @@ L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a p
  Illustra il metodo `OpenSerialPort` che crea e apre un oggetto <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
+
  <xref:System.IO.Ports.SerialPort>  
  Descrive la classe <xref:System.IO.Ports.SerialPort> di .NET Framework.

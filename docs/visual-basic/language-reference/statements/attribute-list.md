@@ -1,19 +1,19 @@
 ---
-title: Elenco degli attributi (Visual Basic)
+title: Elenco degli attributi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 771757afe214919649e13fda3990e1154be8e1e1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9332f52622551bb6b944242f71bd80f439982e9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004522"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354056"
 ---
 # <a name="attribute-list-visual-basic"></a>Elenco degli attributi (Visual Basic)
-Specifica gli attributi da applicare a un elemento di programmazione dichiarato. Gli attributi sono separati da una virgola. Di seguito è riportata la sintassi per un attributo.  
+Specifies the attributes to be applied to a declared programming element. Gli attributi sono separati da una virgola. Following is the syntax for one attribute.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -24,34 +24,34 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
 ## <a name="parts"></a>Parti  
 |||
 |---|---|
-|`attributemodifier`|Obbligatorio per gli attributi applicati all'inizio di un file di origine. Può essere un [assembly](../../../visual-basic/language-reference/modifiers/assembly.md) o un [modulo](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
+|`attributemodifier`|Required for attributes applied at the beginning of a source file. Can be [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) or [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
 |`attributename`| Obbligatorio. Nome dell'attributo.|
-|`attributearguments`|facoltativo. Elenco di argomenti posizionali per questo attributo. Più argomenti sono separati da virgole.|
-|`attributeinitializer`|facoltativo. Elenco di inizializzatori di proprietà o di variabili per l'attributo. Più inizializzatori sono separati da virgole.|
+|`attributearguments`|Parametro facoltativo. List of positional arguments for this attribute. Multiple arguments are separated by commas.|
+|`attributeinitializer`|Parametro facoltativo. List of variable or property initializers for this attribute. Multiple initializers are separated by commas.|
   
 ## <a name="remarks"></a>Note  
- È possibile applicare uno o più attributi a quasi tutti gli elementi di programmazione (tipi, procedure, proprietà e così via). Gli attributi vengono visualizzati nei metadati dell'assembly e consentono di annotare il codice o di specificare come usare un particolare elemento di programmazione. È possibile applicare gli attributi definiti da Visual Basic e .NET Framework ed è possibile definire attributi personalizzati.  
+ You can apply one or more attributes to nearly any programming element (types, procedures, properties, and so forth). Attributes appear in your assembly's metadata, and they can help you annotate your code or specify how to use a particular programming element. You can apply attributes defined by Visual Basic and the .NET Framework, and you can define your own attributes.  
 
- Per altre informazioni su quando usare gli attributi, vedere [Cenni preliminari sugli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md). Per informazioni sui nomi di attributo, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ For more information on when to use attributes, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md). For information on attribute names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="rules"></a>Regole  
   
-- **Posizionamento.** È possibile applicare gli attributi agli elementi di programmazione più dichiarati. Per applicare uno o più attributi, inserire un *blocco di attributi* all'inizio della dichiarazione dell'elemento. Ogni voce nell'elenco di attributi specifica un attributo che si vuole applicare e il modificatore e gli argomenti usati per la chiamata dell'attributo.  
+- **Placement.** You can apply attributes to most declared programming elements. To apply one or more attributes, you place an *attribute block* at the beginning of the element declaration. Each entry in the attribute list specifies an attribute you wish to apply, and the modifier and arguments you are using for this invocation of the attribute.  
   
-- **Parentesi angolari.** Se si specifica un elenco di attributi, è necessario racchiuderlo tra parentesi angolari ("`<`" e "`>`").  
+- **Angle Brackets.** If you supply an attribute list, you must enclose it in angle brackets ("`<`" and "`>`").  
   
-- **Parte della dichiarazione.** L'attributo deve essere parte della dichiarazione di elemento, non di un'istruzione separata. È possibile usare la sequenza di continuazione di riga ("`_`") per estendere l'istruzione di dichiarazione su più righe del codice sorgente.  
+- **Part of the Declaration.** The attribute must be part of the element declaration, not a separate statement. You can use the line-continuation sequence (" `_`") to extend the declaration statement onto multiple source-code lines.  
   
-- **Modificatori.** Per ogni attributo applicato a un elemento di programmazione all'inizio di un file di origine è necessario un modificatore di attributo (`Assembly` o `Module`). I modificatori di attributo non sono consentiti per gli attributi applicati a elementi che non si trovano all'inizio di un file di origine.  
+- **Modifiers.** An attribute modifier (`Assembly` or `Module`) is required on every attribute applied to a programming element at the beginning of a source file. Attribute modifiers are not allowed on attributes applied to elements that are not at the beginning of a source file.  
   
-- **Argomenti.** Tutti gli argomenti posizionali per un attributo devono precedere qualsiasi inizializzatore di proprietà o variabile.  
+- **Arguments.** All positional arguments for an attribute must precede any variable or property initializers.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene applicato l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> a una definizione di scheletro di una procedura `Function`.  
+ The following example applies the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to a skeleton definition of a `Function` procedure.  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> indica che la procedura con attributi rappresenta un punto di ingresso in una libreria di collegamento dinamico (DLL) non gestita. L'attributo fornisce il nome della DLL come argomento posizionale e le altre informazioni come inizializzatori di variabile.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> indicates that the attributed procedure represents an entry point in an unmanaged dynamic-link library (DLL). The attribute supplies the DLL name as a positional argument and the other information as variable initializers.  
   
 ## <a name="see-also"></a>Vedere anche
 

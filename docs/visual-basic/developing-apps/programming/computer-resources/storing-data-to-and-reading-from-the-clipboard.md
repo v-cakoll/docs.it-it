@@ -1,5 +1,5 @@
 ---
-title: Archiviazione e lettura di dati negli Appunti (Visual Basic)
+title: Storing data to and reading from the Clipboard
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -9,22 +9,24 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: d7693f6b5dc74e17686cd7d2667f32adbde9df80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 243fb237f3f9ba53f8b29079df08531c102c78dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916509"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349737"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Archiviazione e lettura di dati negli Appunti (Visual Basic)
+
 Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immagini. Poiché gli Appunti sono condivisi tra tutti i processi attivi, possono essere usati per trasferire dati tra di essi. L'oggetto `My.Computer.Clipboard` consente di accedere facilmente agli Appunti per leggere e scrivere.  
   
 ## <a name="reading-from-the-clipboard"></a>Lettura dagli Appunti  
+
  Usare il metodo <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> per leggere il testo negli Appunti. Il codice seguente legge il testo e lo visualizza in una finestra di messaggio. Per far funzionare l'esempio, gli Appunti devono contenere testo archiviato.  
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Appunti**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Appunti**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
  Usare il metodo <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> per recuperare un'immagine dagli Appunti. Questo esempio verifica se è disponibile un'immagine negli Appunti prima di tentarne il recupero e assegnarlo a `PictureBox1`.  
   
@@ -35,6 +37,7 @@ Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immag
  Gli elementi inseriti negli Appunti verranno mantenuti anche dopo l'arresto dell'applicazione.  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Determinazione del tipo di file archiviati negli Appunti  
+
  I dati contenuti negli Appunti potrebbero avere diverse forme, ad esempio testo, file audio o immagine. Per determinare il tipo di file negli Appunti, è possibile usare metodi quali <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> e <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. Il metodo <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> può essere usato nel caso in cui si voglia controllare un formato personalizzato.  
   
  Usare la funzione `ContainsImage` per determinare se i dati contenuti negli Appunti costituiscono un'immagine. Il codice seguente consente di controllare se i dati costituiscono un'immagine e invia una segnalazione in merito.  
@@ -42,6 +45,7 @@ Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immag
  [!code-vb[VbResourceTasks#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#13)]  
   
 ## <a name="clearing-the-clipboard"></a>Cancellazione degli Appunti  
+
  Il metodo <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> cancella il contenuto degli Appunti. Poiché gli Appunti sono condivisi da altri processi, la cancellazione può avere conseguenze su tali processi.  
   
  Nell'esempio di codice seguente viene illustrato come utilizzare il metodo `Clear`.  
@@ -49,6 +53,7 @@ Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immag
  [!code-vb[VbVbcnMyClipboard#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#3)]  
   
 ## <a name="writing-to-the-clipboard"></a>Scrittura negli Appunti  
+
  Usare il metodo <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> per scrivere testo negli Appunti. Il codice seguente scrive la stringa "Questa è una stringa di prova" negli Appunti.  
   
  [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  

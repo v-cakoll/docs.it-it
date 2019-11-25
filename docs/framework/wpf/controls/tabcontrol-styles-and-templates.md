@@ -9,20 +9,20 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: 32ee86e2388808739a2c2ff5a02bb40fc641129b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c1410714660eb1dd867428b85a7cfacc881e5e56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460544"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283710"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Stili e modelli di TabControl
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TabControl>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TabControl>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="tabcontrol-parts"></a>Parti TabControl  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TabControl>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Oggetto che mostra il contenuto del <xref:System.Windows.Controls.TabItem>attualmente selezionato.|  
   
@@ -31,7 +31,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tabcontrol-states"></a>Stati di TabControl  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TabControl>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
@@ -45,14 +45,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tabitem-states"></a>Stati di TabItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TabItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
-|Selezionati|SelectionStates|Il controllo è selezionato.|  
+|Selezionato|SelectionStates|Il controllo è selezionato.|  
 |Deselezionato|SelectionStates|Il controllo non è selezionato.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -76,4 +76,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

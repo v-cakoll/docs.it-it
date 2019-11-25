@@ -1,24 +1,25 @@
 ---
-title: Argomento non facoltativo (Visual Basic)
+title: Argomento non facoltativo
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 043d126b07838f1a98788021048e5f22e3bc42ed
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751579"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353906"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argomento non facoltativo (Visual Basic)
-Il numero e tipi di argomenti devono corrispondere a quelle previste. È un numero errato di argomenti o un argomento omesso non è facoltativo. Un argomento può essere omesso da una chiamata a una procedura definita dall'utente solo se è stato dichiarato `Optional` nella definizione della procedura.  
+
+The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Specificare tutti gli argomenti necessari.  
+1. Supply all necessary arguments.  
   
-2. Assicurarsi che gli argomenti omessi sono facoltativi. Se non lo sono, fornire l'argomento nella chiamata o dichiarare il parametro `Optional` nella definizione.  
+2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
   
 ## <a name="see-also"></a>Vedere anche
 

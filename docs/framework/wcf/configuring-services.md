@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320656"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141593"
 ---
 # <a name="configuring-wcf-services"></a>Configurazione dei servizi WCF
 
@@ -19,7 +19,7 @@ Dopo aver progettato e implementato il contratto di servizio, è possibile confi
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Configurazione semplificata](simplified-configuration.md)  
- A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornita con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione di WCF. Se non si fornisce alcuna configurazione WCF per un determinato servizio, il runtime configura automaticamente il servizio con endpoint, associazioni e comportamenti predefiniti.  
+ A partire da .NET Framework 4, WCF viene fornita con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione di WCF. Se non si fornisce alcuna configurazione WCF per un determinato servizio, il runtime configura automaticamente il servizio con endpoint, associazioni e comportamenti predefiniti.  
   
  [Configurazione dei servizi tramite file di configurazione](configuring-services-using-configuration-files.md)  
  Un servizio Windows Communication Foundation (WCF) è configurabile mediante la tecnologia di configurazione .NET Framework. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare i dettagli, ad esempio gli indirizzi dell'endpoint (gli indirizzi effettivi usati per comunicare con il servizio) per i singoli computer.  

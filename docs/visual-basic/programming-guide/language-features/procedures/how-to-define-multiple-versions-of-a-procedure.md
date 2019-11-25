@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Definire più versioni di una routine (Visual Basic)'
+title: 'Procedura: definire più versioni di una routine'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e96e271f6613aa325d59a0ca2fce9fc69fe059
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863831"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350483"
 ---
-# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: Definire più versioni di una routine (Visual Basic)
-È possibile definire una procedura in più versioni da *overload* utilizzando lo stesso nome ma un elenco di parametri diversi per ogni versione. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome.  
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: definire più versioni di una routine (Visual Basic)
+You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.  
   
  Per altre informazioni, vedere [Procedure Overloading](./procedure-overloading.md).  
   
-### <a name="to-define-multiple-versions-of-a-procedure"></a>Per definire più versioni di una stored procedure  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>To define multiple versions of a procedure  
   
-1. Scrivere un `Sub` o `Function` istruzione di dichiarazione per ciascuna versione della procedura di cui si vuole definire. Usare il nome della routine stessa in ogni dichiarazione.  
+1. Write a `Sub` or `Function` declaration statement for each version of the procedure you want to define. Use the same procedure name in every declaration.  
   
-2. Far precedere il `Sub` o `Function` parola chiave in ogni dichiarazione con la [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave). Facoltativamente, è possibile omettere `Overloads` nelle dichiarazioni, ma se si include in una qualsiasi delle dichiarazioni, è necessario includerlo in ogni dichiarazione.  
+2. Precede the `Sub` or `Function` keyword in each declaration with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword. You can optionally omit `Overloads` in the declarations, but if you include it in any of the declarations, you must include it in every declaration.  
   
-3. Dopo ogni istruzione di dichiarazione, scrivere il codice delle procedure per gestire il caso specifico in cui il codice chiamante fornisca gli argomenti corrispondenti elenco di parametri di tale versione. Non è necessario testare per i parametri che ha fornito il codice chiamante. Visual Basic passa il controllo per la versione corrispondente di routine.  
+3. Following each declaration statement, write procedure code to handle the specific case where the calling code supplies arguments matching that version's parameter list. You do not have to test for which parameters the calling code has supplied. Visual Basic passes control to the matching version of your procedure.  
   
-4. Terminare ogni versione della routine con la `End Sub` o `End Function` istruzione nel modo appropriato.  
+4. Terminate each version of the procedure with the `End Sub` or `End Function` statement as appropriate.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente definisce un `Sub` procedure per inserire una transazione al saldo di un cliente. Usa il `Overloads` parola chiave per definire due versioni della routine, uno che accetta il cliente per nome e l'altro per numero di account.  
+ The following example defines a `Sub` procedure to post a transaction against a customer's balance. It uses the `Overloads` keyword to define two versions of the procedure, one that accepts the customer by name and the other by account number.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- Il codice chiamante può ottenere l'identificazione del cliente come un `String` o un `Integer`e quindi usare la stessa istruzione di chiamata in entrambi i casi.  
+ The calling code can obtain the customer identification as either a `String` or an `Integer`, and then use the same calling statement in either case.  
   
- Per informazioni su come chiamare queste versioni del `post` procedure, vedere [come: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md).  
+ For information on how to call these versions of the `post` procedure, see [How to: Call an Overloaded Procedure](./how-to-call-an-overloaded-procedure.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Assicurarsi che ognuna delle versioni di overload con lo stesso nome di procedura ma un elenco di parametri diverso.  
+ Make sure each of your overloaded versions has the same procedure name but a different parameter list.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
 - [Risoluzione dell'overload](./overload-resolution.md)

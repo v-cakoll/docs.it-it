@@ -1,5 +1,5 @@
 ---
-title: Caratteristiche di elementi dichiarati (Visual Basic)
+title: Caratteristiche di elementi dichiarati
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
@@ -13,53 +13,53 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912981"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331632"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caratteristiche di elementi dichiarati (Visual Basic)
-Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle caratteristiche seguenti associate:  
+A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
   
-- *Tipo di dati* , ovvero i valori che può contenere l'elemento e modalità di archiviazione di tali valori. Per altre informazioni, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Data type* — the values the element can hold, and how it stores those values. Per altre informazioni, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
   
-- *Durata* , ovvero il periodo di tempo di esecuzione durante il quale l'elemento è disponibile per l'uso. Per altre informazioni, vedere [durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- *Ambito* , ovvero il set di tutto il codice che può fare riferimento all'elemento senza il nome completo. Per altre informazioni, vedere [Procedura: Controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
-- *Livello di accesso* , ovvero l'autorizzazione per il codice all'utilizzo dell'elemento. Per altre informazioni, vedere [Procedura: Controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
-## <a name="characteristics-of-the-elements"></a>Caratteristiche degli elementi  
- La tabella seguente illustra gli elementi dichiarati e le caratteristiche che si applicano a ognuno di essi.  
+## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
+ The following table shows the declared elements and the characteristics that apply to each one.  
   
-|Elemento|Tipo di dati|Durata|Scope <sup>1</sup>|Livello di accesso|  
+|Elemento|Tipo di dati|Durata|Scope <sup>1</sup>|Access Level|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |Variabile|Yes|Yes|Yes|Yes|  
 |Costante|Yes|No|Yes|Yes|  
 |Enumerazione|Yes|No|Yes|Yes|  
 |Struttura|No|No|Yes|Yes|  
-|Proprietà|Yes|Yes|Yes|Yes|  
+|proprietà|Yes|Yes|Yes|Yes|  
 |Metodo|No|Yes|Yes|Yes|  
-|Procedure (`Sub` o `Function`)|No|Yes|Yes|Yes|  
+|Procedure (`Sub` or `Function`)|No|Yes|Yes|Yes|  
 |Parametro di routine|Yes|Yes|Yes|No|  
-|Restituito dalla funzione|Yes|Yes|Yes|No|  
-|Operatore|Yes|No|Yes|Yes|  
+|Function return|Yes|Yes|Yes|No|  
+|??|Yes|No|Yes|Yes|  
 |Interfaccia|No|No|Yes|Yes|  
-|Classe|No|No|Yes|Yes|  
+|Class|No|No|Yes|Yes|  
 |event|No|No|Yes|Yes|  
 |delegato|No|No|Yes|Yes|  
   
- <sup>1</sup> ambito è talvolta detta *visibilità*.  
+ <sup>1</sup> Scope is sometimes referred to as *visibility*.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

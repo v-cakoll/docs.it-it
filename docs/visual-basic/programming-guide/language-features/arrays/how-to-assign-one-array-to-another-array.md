@@ -1,27 +1,27 @@
 ---
-title: "Procedura: Assegnare una matrice a un'altra matrice (Visual Basic)"
+title: "Procedura: assegnare una matrice a un'altra matrice"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858875"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351896"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: Assegnare una matrice a un'altra matrice (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: assegnare una matrice a un'altra matrice (Visual Basic)
 
-Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di assegnazione, come altri tipi di oggetto. Una variabile di matrice contiene un puntatore ai dati che costituiscono gli elementi della matrice e le informazioni di classificazione e la lunghezza e un'assegnazione di copia solo questo puntatore.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>Per assegnare una matrice a un'altra matrice
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. Assicurarsi che le due matrici hanno la stessa classificazione (numero di dimensioni) e tipi di dati compatibile.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. Utilizzare un'istruzione di assegnazione standard per assegnare l'array di origine nella matrice di destinazione. Non seguire i nomi delle matrici tra parentesi.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,23 +29,23 @@ Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di ass
     controlArray = formArray
     ```
 
-Quando si assegna una matrice a un altro, si applicano le regole seguenti:
+When you assign one array to another, the following rules apply:
 
-- **Numeri di dimensioni uguali.** La classificazione (numero di dimensioni) della matrice di destinazione deve essere uguale a quello della matrice di origine.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  Le classificazioni delle due matrici sono uguali, le dimensioni non sono necessario essere uguali. Il numero di elementi in una determinata dimensione può cambiare durante l'assegnazione.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **Tipi di elemento.** Devono disporre di entrambe le matrici *tipo di riferimento* devono avere entrambe le matrici o gli elementi *tipo di valore* elementi. Per altre informazioni, vedere [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Per altre informazioni, vedere [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - Se entrambe le matrici sono elementi di tipo valore, i tipi di dati elemento devono essere esattamente lo stesso. L'unica eccezione è che è possibile assegnare una matrice di `Enum` elementi in una matrice del tipo di base di tale `Enum`.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - Se entrambe le matrici hanno riferimenti a elementi di tipo, il tipo di elemento di origine deve derivare dal tipo di elemento di destinazione. In questo caso, le due matrici hanno la stessa relazione di ereditarietà dei rispettivi elementi. Questa operazione viene definita *covarianza di matrici*.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-Il compilatore segnala un errore se le regole precedenti vengono violate, ad esempio se i tipi di dati non sono compatibili o le classificazioni non sono uguali. È possibile aggiungere al codice per assicurarsi che le matrici sono compatibili prima di tentare un'assegnazione di gestione degli errori. È anche possibile usare la [operatore TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) parola chiave se si desidera evitare di generare un'eccezione.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

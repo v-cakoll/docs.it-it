@@ -1,44 +1,44 @@
 ---
-title: 'Procedura: Dichiarare enumerazioni (Visual Basic)'
+title: 'How to: Declare Enumerations'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c74b75adf0f56dd198375cb1ff24656d39ec074c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 042aea045313bcaf3832274acf1000f87a084b72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610571"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354053"
 ---
-# <a name="how-to-declare-enumerations-visual-basic"></a>Procedura: Dichiarare enumerazioni (Visual Basic)
-Per creare un'enumerazione con i `Enum` istruzione nella sezione delle dichiarazioni di una classe o modulo. È possibile dichiarare un'enumerazione all'interno di un metodo. Per specificare il livello di accesso appropriato, usare `Private`, `Protected`, `Friend`, o `Public`.  
+# <a name="how-to-declare-enumerations-visual-basic"></a>Procedura: dichiarare enumerazioni (Visual Basic)
+You create an enumeration with the `Enum` statement in the declarations section of a class or module. You cannot declare an enumeration within a method. To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.  
   
- Un `Enum` tipo ha un nome di un tipo sottostante e un set di campi, ognuno dei quali rappresenta una costante. Il nome deve essere un qualificatore di Visual Basic .NET valido. Il tipo sottostante deve essere uno dei tipi di numero intero, ovvero`Byte`, `Short`, `Long` o `Integer`. `Integer` è il valore predefinito. Le enumerazioni sono sempre fortemente tipizzate e non sono intercambiabili tra tipi numerici integer.  
+ An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant. The name must be a valid Visual Basic .NET qualifier. The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`. Il valore predefinito è `Integer`. Enumerations are always strongly typed and are not interchangeable with integer number types.  
   
- Le enumerazioni non possono avere valori a virgola mobile. Se l'enumerazione viene assegnata un valore a virgola mobile con `Option Strict On`, si verificherà un errore del compilatore. Se `Option Strict` viene `Off`, il valore viene convertito automaticamente nel `Enum` tipo.  
+ Enumerations cannot have floating-point values. If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results. If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.  
   
- Per informazioni sui nomi e su come usare il `Imports` istruzione per rendere la qualificazione di nomi non necessari, vedere [qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
-### <a name="to-declare-an-enumeration"></a>Per dichiarare un'enumerazione  
+### <a name="to-declare-an-enumeration"></a>To declare an enumeration  
   
-1. Scrivere una dichiarazione che include un livello di accesso di codice, il `Enum` parola chiave e un nome valido, come negli esempi seguenti, ognuno dei quali viene dichiarato un diverso `Enum`.  
+1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Definire le costanti nell'enumerazione. Per impostazione predefinita, la prima costante di enumerazione viene inizializzata a `0`, e le costanti successive vengono inizializzate sul valore uno oltre la costante precedente. Ad esempio, l'enumerazione seguente `Days`, contiene una costante denominata `Sunday` con il valore `0`, una costante denominata `Monday` con il valore `1`, una costante denominata `Tuesday` con il valore di `2`e così via.  
+2. Define the constants in the enumeration. By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant. For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. In modo esplicito, è possibile assegnare valori alle costanti di enumerazione utilizzando un'istruzione di assegnazione. È possibile assegnare qualsiasi valore intero, inclusi i numeri negativi. Ad esempio, è possibile che le costanti con i valori minori di zero per rappresentare le condizioni di errore. Nell'enumerazione seguente, la costante `Invalid` viene assegnato in modo esplicito il valore `–1`e la costante `Sunday` viene assegnato il valore `0`. Perché è la prima costante nell'enumerazione `Saturday` viene inoltre inizializzata sul valore `0`. Il valore di `Monday` viene `1` (uno oltre il valore di `Sunday`); il valore di `Tuesday` è `2`e così via.  
+3. You can explicitly assign values to constants in an enumeration by using an assignment statement. You can assign any integer value, including negative numbers. For example, you may want constants with values less than zero to represent error conditions. In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`. Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`. The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Per dichiarare un'enumerazione come un tipo esplicito  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>To declare an enumeration as an explicit type  
   
-- Specificare il tipo di enumerazione utilizzando il `As` clausola, come illustrato nell'esempio seguente.  
+- Specify the type of the enum by using the `As` clause, as shown in the following example.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
@@ -46,7 +46,7 @@ Per creare un'enumerazione con i `Enum` istruzione nella sezione delle dichiaraz
 
 - [Qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Procedura: Fare riferimento a un membro di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [Procedura: Scorrere un'enumerazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Procedura: Determinare la stringa associata a un valore di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Quando usare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Cenni preliminari sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

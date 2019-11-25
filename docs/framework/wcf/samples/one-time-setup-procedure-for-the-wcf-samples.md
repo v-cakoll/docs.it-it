@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424922"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141850"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 
@@ -22,7 +22,7 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
 
 1. Verificare che ASP.NET sia configurato. Per ulteriori informazioni su come configurare ASP.NET, vedere istruzioni per l' [hosting di Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).
 
-2. Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Eseguire una ricerca nella directory seguente per la versione 4.0 (o versione successiva): **\Windows\Microsoft.NET\Framework**
+2. Verificare che sia installato .NET Framework 4. Eseguire una ricerca nella directory seguente per la versione 4.0 (o versione successiva): **\Windows\Microsoft.NET\Framework**
 
 3. Se Visual Studio 2012 non è installato e il sistema operativo in uso non è Windows Server 2008 SP2 o versione successiva, installare l' [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
 
@@ -37,15 +37,15 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
     ```
 
     > [!WARNING]
-    > Eseguendo il comando `aspnet_regiis –i –enable` il pool di applicazioni predefinito viene eseguito utilizzando [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], che può produrre problemi di incompatibilità per altre applicazioni nello stesso computer.
+    > Eseguendo il comando `aspnet_regiis –i –enable` l'esecuzione del pool di applicazioni predefinito viene eseguita utilizzando .NET Framework 4, che può produrre problemi di incompatibilità per altre applicazioni nello stesso computer.
 
 5. Seguire le [istruzioni del firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) per abilitare le porte usate dagli esempi.
 
-6. Verificare la directory predefinita seguente: \<Unitàinstallazione >: **\WF_WCF_Samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.
+6. Verificare la directory predefinita seguente: \<Unitàinstallazione >: **\ WF_WCF_Samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.
 
 7. Se gli esempi non sono installati, installarli dal percorso di download degli esempi [C#](https://go.microsoft.com/fwlink/?LinkId=190939)per.
 
-8. Dopo aver installato gli esempi, passare a: \<Unitàinstallazione >: **\WF_WCF_Samples\WCF\Setup\\**
+8. Dopo aver installato gli esempi, passare a: \<Unitàinstallazione >: **\ WF_WCF_Samples \wcf\setup\\**
 
 9. Eseguire il file batch **Setupvroot. bat** . Vengono eseguiti i passaggi seguenti.
 
@@ -65,7 +65,7 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
 
 11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]e Windows Server 2008 R2, questo account è **servizio di rete**. Per [!INCLUDE[lserver](../../../../includes/lserver-md.md)], l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], l'account è ASPNET.
 
-12. Eseguire il file Setupcerttool.bat. Questo file si trova nella cartella \<InstallPath > \WF_WCF_Samples\WCF\Setup\.  Tramite questo script verranno eseguite le attività seguenti:
+12. Eseguire il file Setupcerttool.bat. Questo file si trova nella cartella \<InstallPath > \ WF_WCF_Samples \WCF\Setup\  Tramite questo script verranno eseguite le attività seguenti:
 
     - Compilazione dello strumento FindPrivateKey.
 

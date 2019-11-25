@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460193"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283627"
 ---
 # <a name="treeview-styles-and-templates"></a>Stili e modelli di TreeView
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TreeView>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TreeView>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="treeview-parts"></a>Parti TreeView  
  Il controllo <xref:System.Windows.Controls.TreeView> non dispone di parti denominate.  
@@ -27,7 +27,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="treeview-states"></a>Stati di TreeView  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TreeView>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -36,14 +36,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="treeviewitem-parts"></a>Parti TreeViewItem  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Elemento visivo che contiene il contenuto dell'intestazione del controllo <xref:System.Windows.Controls.TreeView>.|  
   
 ## <a name="treeviewitem-states"></a>Stati di TreeViewItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.TreeViewItem>.|  
@@ -54,7 +54,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 |Collapsed|ExpansionStates|Il controllo <xref:System.Windows.Controls.TreeViewItem> è compresso.|  
 |HasItems|HasItemsStates|Il <xref:System.Windows.Controls.TreeViewItem> contiene elementi.|  
 |Noitems|HasItemsStates|Il <xref:System.Windows.Controls.TreeViewItem> non contiene elementi.|  
-|Selezionati|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato.|  
+|Selezionato|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato.|  
 |SelectedInactive|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato ma non attivo.|  
 |Deselezionato|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> non è selezionato.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
@@ -79,4 +79,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

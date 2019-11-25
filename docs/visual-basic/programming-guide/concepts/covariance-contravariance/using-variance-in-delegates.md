@@ -1,21 +1,21 @@
 ---
-title: Uso della varianza nei delegati (Visual Basic)
+title: Utilizzo della varianza nei delegati
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169075"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349036"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Uso della varianza nei delegati (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
 
 Quando si assegna un metodo a un delegato, *covarianza* e *controvarianza* offrono flessibilità per la corrispondenza di un tipo delegato con una firma di metodo. La covarianza consente a un metodo di avere un tipo restituito più derivato di quello definito nel delegato. La controvarianza consente un metodo con tipi di parametro meno derivati rispetto a quelli del tipo delegato.
 
-## <a name="example-1-covariance"></a>Esempio 1: Covarianza
+## <a name="example-1-covariance"></a>Esempio 1: covarianza
 
-### <a name="description"></a>DESCRIZIONE
+### <a name="description"></a>Descrizione
 
 In questo esempio viene illustrato in che modo si possono usare i delegati con i metodi che hanno tipi restituiti derivati dal tipo restituito nella firma del delegato. Il tipo di dati restituito da `DogsHandler` è di tipo `Dogs`, che deriva dal tipo `Mammals` definito nel delegato.
 
@@ -44,25 +44,25 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>Esempio 2: Controvarianza
+## <a name="example-2-contravariance"></a>Esempio 2: controvarianza
 
 ### <a name="description"></a>Descrizione
 
-Questo esempio illustra come usare i delegati con i metodi che hanno parametri i cui tipi sono tipi di base del tipo di parametro della firma del delegato. Con la controvarianza è possibile usare un solo gestore eventi anziché gestori separati. Nell'esempio seguente vengono usati due delegati:
+In questo esempio viene illustrato in che modo si possono usare i delegati con i metodi che hanno parametri i cui tipi rappresentano tipi di base del tipo di parametro della firma del delegato. Con la controvarianza è possibile usare un solo gestore eventi anziché gestori separati. Nell'esempio seguente vengono usati due delegati:
 
-- Delegato che definisce la firma dell'evento [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler> La firma è:
+- Un delegato <xref:System.Windows.Forms.KeyEventHandler> che definisce la firma dell'evento [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown). La firma è:
 
    ```vb
    Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
    ```
 
-- Delegato che definisce la firma dell'evento [Button. Click](xref:System.Windows.Forms.Control.MouseDown) -through. <xref:System.Windows.Forms.MouseEventHandler> La firma è:
+- Un delegato <xref:System.Windows.Forms.MouseEventHandler> che definisce la firma dell'evento [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown). La firma è:
 
    ```vb
    Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
    ```
 
-Nell'esempio viene definito un gestore eventi con <xref:System.EventArgs> un parametro e viene utilizzato per gestire `Button.KeyDown` gli eventi `Button.MouseClick` e. Questa operazione può essere eseguita <xref:System.EventArgs> perché è un tipo di base <xref:System.Windows.Forms.KeyEventArgs> sia <xref:System.Windows.Forms.MouseEventArgs>di che di.
+Nell'esempio viene definito un gestore eventi con un parametro <xref:System.EventArgs> e viene usato per gestire entrambi gli eventi `Button.KeyDown` e `Button.MouseClick`. Ciò è possibile perché <xref:System.EventArgs> è un tipo di base sia di <xref:System.Windows.Forms.KeyEventArgs> che di <xref:System.Windows.Forms.MouseEventArgs>.
 
 ### <a name="code"></a>Codice
 

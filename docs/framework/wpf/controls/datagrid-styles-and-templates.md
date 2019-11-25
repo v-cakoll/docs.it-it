@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460398"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283797"
 ---
 # <a name="datagrid-styles-and-templates"></a>Stili e modelli di DataGrid
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DataGrid>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DataGrid>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>Parti DataGrid  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.DataGrid>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Riga che contiene le intestazioni di colonna.|  
   
@@ -33,7 +33,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagrid-states"></a>Stati DataGrid  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.DataGrid>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
@@ -47,7 +47,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcell-states"></a>Stati di DataGridCell  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridCell>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla cella.|  
@@ -55,9 +55,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 |Con stato non attivo|FocusStates|La cella non ha lo stato attivo|  
 |Corrente|CurrentStates|La cella è la cella corrente.|  
 |Regular|CurrentStates|La cella non è la cella corrente.|  
-|Visualizzazione|InteractionStates|La cella è in modalità di visualizzazione.|  
+|Display|InteractionStates|La cella è in modalità di visualizzazione.|  
 |Modifica|InteractionStates|La cella è in modalità di modifica.|  
-|Selezionati|SelectionStates|La cella è selezionata.|  
+|Selezionato|SelectionStates|La cella è selezionata.|  
 |Deselezionato|SelectionStates|La cella non è selezionata.|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
@@ -69,7 +69,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrow-states"></a>Stati di DataGridRow  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridRow>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla riga.|  
@@ -89,7 +89,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrowheader-parts"></a>Parti DataGridRowHeader  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte superiore.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte inferiore.|  
@@ -97,7 +97,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrowheader-states"></a>Stati DataGridRowHeader  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla riga.|  
@@ -122,14 +122,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Parti DataGridColumnHeadersPresenter  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Segnaposto per le intestazioni di colonna.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>Stati DataGridColumnHeadersPresenter  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
@@ -138,7 +138,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheader-parts"></a>Parti DataGridColumnHeader  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna da sinistra.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna da destra.|  
@@ -146,7 +146,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheader-states"></a>Stati DataGridColumnHeader  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
@@ -176,4 +176,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

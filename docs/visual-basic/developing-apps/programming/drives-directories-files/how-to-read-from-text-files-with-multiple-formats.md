@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Leggere da file di testo con più formati in Visual Basic'
+title: 'How to: Read from text files with multiple formats'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: dc726f7648c1c0a564594331023f03d20569d766
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736816"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334576"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedura: Leggere i file FEXT con più formati in Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>How to: Read from fext files with multiple formats in Visual Basic
 
 L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Per analizzare un file di testo con più formati
 
-1. Aggiungere un file di testo denominato *TestFile. txt* al progetto. Aggiungere il contenuto seguente al file di testo:
+1. Add a text file named *testfile.txt* to your project. Add the following content to the text file:
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analiz
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato l'esempio completo che legge dal file `testfile.txt`:
+The following is the complete example that reads from the file `testfile.txt`:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
@@ -75,6 +75,6 @@ Le seguenti condizioni possono generare un'eccezione:
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Procedura: Leggere da file di testo con valori delimitati da virgole](how-to-read-from-comma-delimited-text-files.md)
-- [Procedura: Leggere da file di testo a larghezza fissa](how-to-read-from-fixed-width-text-files.md)
+- [Procedura: leggere da file di testo delimitati da virgola](how-to-read-from-comma-delimited-text-files.md)
+- [Procedura: leggere da file di testo a larghezza fissa](how-to-read-from-fixed-width-text-files.md)
 - [Analisi dei file di testo con l'oggetto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)

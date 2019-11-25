@@ -1,5 +1,5 @@
 ---
-title: Overloads (Visual Basic)
+title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 838207fe3ac5b8f57d030617546b9b7fa25dc939
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663533"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351414"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
@@ -23,15 +23,15 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
 ## <a name="remarks"></a>Note
 
-*L'overload* è la pratica di fornire più di una definizione per un determinato nome di proprietà o routine nello stesso ambito. La ridichiarazione di una proprietà o routine con una firma diversa viene talvolta chiamata *nascondere con la firma*.
+*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
 
 ## <a name="rules"></a>Regole
 
-- **Contesto della dichiarazione.** È possibile usare `Overloads` solo in un'istruzione per la dichiarazione di proprietà o routine.
+- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
 
-- **Modificatori combinati.** Non è possibile specificare `Overloads` assieme [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.
+- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
 
-- **Differenze necessarie.** Il *firma* in questa dichiarazione deve essere diverso dalla firma di tutte le proprietà o routine che esegue l'overload. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:
+- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:
 
   - numero dei parametri
 
@@ -45,7 +45,7 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
   Tutti gli overload devono avere lo stesso nome, ma ognuno deve essere diverso da tutti gli altri per uno o più elementi tra quelli elencati in precedenza. Questo consente al compilatore di distinguere la versione da usare quando il codice chiama la proprietà o la routine.
 
-- **Differenze non consentite.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:
+- **Disallowed Differences.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:
 
   - la capacità di restituire un valore (per una routine)
 
@@ -59,9 +59,9 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
   - e parole chiave di modificatori di proprietà o di routine (ad esempio `Public` o `Shared`)
 
-- **Modificatore facoltativo.** Non è necessario usare il modificatore `Overloads` quando si definiscono più proprietà o routine in overload nella medesima classe. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.
+- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.
 
-- **Shadowing e overload.** `Overloads` è anche utilizzabile per nascondere un membro esistente o un set di membri in overload, in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.
+- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.
 
 Se si usa `Overrides`, il compilatore aggiunge implicitamente `Overloads` in modo che le API della libreria funzionino più facilmente con C#.
 

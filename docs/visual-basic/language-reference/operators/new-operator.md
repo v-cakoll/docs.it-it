@@ -1,5 +1,5 @@
 ---
-title: Operatore New (Visual Basic)
+title: Operatore New
 ms.date: 07/20/2015
 f1_keywords:
 - vb.new
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: c0870f4b056658a22928769c369024cdda24f354
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 27b5b4516ef729045036c36fedc24b6c576a4f61
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799044"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348310"
 ---
 # <a name="new-operator-visual-basic"></a>Operatore New (Visual Basic)
 
-Introduce una clausola `New` per creare una nuova istanza dell'oggetto, specifica un vincolo del costruttore in un parametro di tipo o identifica una routine `Sub` come costruttore di classe.
+Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
 
 ## <a name="remarks"></a>Note
 
-In una dichiarazione o un'istruzione di assegnazione, una clausola `New` deve specificare una classe definita dalla quale è possibile creare l'istanza. Questo significa che la classe deve esporre uno o più costruttori a cui il codice chiamante può accedere.
+In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
 
-È possibile utilizzare una clausola `New` in un'istruzione di dichiarazione o un'istruzione di assegnazione. Quando l'istruzione viene eseguita, viene chiamato il costruttore appropriato della classe specificata, passando gli argomenti specificati. Nell'esempio seguente viene illustrato questo problema creando istanze di una classe `Customer` con due costruttori, uno che non accetta parametri e uno che accetta un parametro di stringa:
+You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-Poiché le matrici sono classi, `New` possibile creare una nuova istanza di matrice, come illustrato nell'esempio seguente:
+Since arrays are classes, `New` can create a new array instance, as shown in the following example:
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-Il Common Language Runtime (CLR) genera un errore di <xref:System.OutOfMemoryException> se la memoria disponibile non è sufficiente per creare la nuova istanza.
+The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
 
 > [!NOTE]
-> La parola chiave `New` viene utilizzata anche negli elenchi di parametri di tipo per specificare che il tipo fornito deve esporre un costruttore senza parametri accessibile. Per ulteriori informazioni sui parametri e i vincoli di tipo, vedere [Type list](../statements/type-list.md).
+> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
 
-Per creare una routine del costruttore per una classe, impostare il nome di una routine `Sub` sulla parola chiave `New`. Per altre informazioni, vedere [durata degli oggetti: come creare ed eliminare definitivamente oggetti](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 È possibile usare la parola chiave `New` nei contesti seguenti:
 

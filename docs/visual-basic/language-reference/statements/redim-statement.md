@@ -1,5 +1,5 @@
 ---
-title: Istruzione ReDim (Visual Basic)
+title: Istruzione ReDim
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346743"
 ---
 # <a name="redim-statement-visual-basic"></a>Istruzione ReDim (Visual Basic)
 Rialloca lo spazio di archiviazione per una variabile di matrice.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Regole  
   
-- **Più variabili.** È possibile ridimensionare diverse variabili di matrice nella stessa istruzione di dichiarazione e specificare il `name` e `boundlist` le parti per ogni variabile. Nel caso di più variabili, è possibile separarle mediante virgole.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
-- **Limiti della matrice.** Ogni voce in `boundlist` può specificare i limiti inferiore e superiore della dimensione. Il limite inferiore è sempre pari a 0 (zero). Il limite superiore rappresenta il valore di indice più alto possibile per la dimensione, non la lunghezza della dimensione (vale a dire, il limite superiore più uno). L'indice di ogni dimensione può variare tra 0 e il relativo valore di limite superiore.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. Il limite inferiore è sempre pari a 0 (zero). Il limite superiore rappresenta il valore di indice più alto possibile per la dimensione, non la lunghezza della dimensione (vale a dire, il limite superiore più uno). L'indice di ogni dimensione può variare tra 0 e il relativo valore di limite superiore.  
   
      Il numero di dimensioni in `boundlist` deve corrispondere al numero originale di dimensioni (livello) della matrice.  
   
-- **Tipi di dati.** L'istruzione `ReDim` non può modificare il tipo di dati di una variabile di matrice o dei relativi elementi.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **Inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **Rank.** L'istruzione `ReDim` non può modificare il rango (numero di dimensioni) della matrice.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Ridimensionamento con Preserve.** Se si utilizza `Preserve`, è possibile ridimensionare solo l'ultima dimensione della matrice. Per ogni dimensione, è necessario specificare il limite della matrice esistente.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. Per ogni dimensione, è necessario specificare il limite della matrice esistente.  
   
      Ad esempio, se la matrice contiene solo una dimensione, è possibile ridimensionarla e mantenere tutto il contenuto della matrice, poiché si sta modificando l'ultima e unica dimensione. Tuttavia, se la matrice dispone di due o più dimensioni e si utilizza `Preserve`, è possibile modificare i valori soltanto per l'ultima dimensione.  
   
-- **Proprietà.** È possibile utilizzare `ReDim` su una proprietà che include una matrice di valori.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Sostituzione di matrici.** `ReDim` rilascia la matrice esistente e crea una nuova matrice con lo stesso rango. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
   
-- **Inizializzazione senza Preserve.** Se non si specifica `Preserve`, `ReDim` Inizializza gli elementi della nuova matrice utilizzando il valore predefinito per il tipo di dati.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Inizializzazione con Preserve.** Se si specifica `Preserve`, Visual Basic copia gli elementi dalla matrice esistente alla nuova matrice.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene aumentata la grandezza dell'ultima dimensione di una matrice dinamica senza perdere i dati presenti nella matrice; in seguito, viene ridotta la dimensione con perdita di dati parziali. Infine, viene ridotta la dimensione del relativo valore originale e vengono inizializzati di nuovo tutti gli elementi della matrice.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  La terza `ReDim` crea una nuova matrice e rimuove altre cinque colonne dalla fine di ogni riga relativa a ogni livello. Questa volta non copia gli elementi esistenti. Questa istruzione consente di ripristinare le dimensioni originali della matrice. Dal momento che l'istruzione non include il modificatore `Preserve`, imposta i valori predefiniti originali di tutti gli elementi della matrice.  
   
- Per altri esempi, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
