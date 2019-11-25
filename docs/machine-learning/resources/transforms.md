@@ -4,12 +4,12 @@ description: Esplorare i componenti di progettazione delle funzionalità support
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929248"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977242"
 ---
 # <a name="data-transformations"></a>Trasformazioni dati
 
@@ -21,7 +21,7 @@ Le trasformazioni dati vengono usate per:
 
 Le trasformazioni in questa guida restituiscono classi che implementano l'interfaccia [IEstimator](xref:Microsoft.ML.IEstimator%601). Le trasformazioni dati possono essere concatenate. Ogni trasformazione prevede e produce dati di determinati tipi e formati, che vengono specificati nella documentazione di riferimento collegata.
 
-Alcune trasformazioni dati richiedono dati di training per calcolare i relativi parametri. Ad esempio, il trasformatore <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcola la media e la varianza dei dati di training durante l'operazione `Fit()` e usa tali parametri nell'operazione `Transform()`. 
+Alcune trasformazioni dati richiedono dati di training per calcolare i relativi parametri. Ad esempio, il trasformatore <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcola la media e la varianza dei dati di training durante l'operazione `Fit()` e usa tali parametri nell'operazione `Transform()`.
 
 Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasformazione <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> può eseguire l'operazione `Transform()` senza la necessità di dati di training durante l'operazione `Fit()`.
 
@@ -62,7 +62,7 @@ Altre trasformazioni dati non richiedono dati di training. Ad esempio, la trasfo
 
 | Transform | Definizione |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Trasformare una colonna di testo in una matrice float di conteggi normalizzati di n-grammi e char-grammi | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Trasformare una colonna di testo in una matrice float di conteggi normalizzati di n-grammi e char-grammi |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Suddividere una o più colonne di testo in singole parole |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Suddividere una o più colonne di testo in float di caratteri singoli in un set di argomenti |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Cambiare l'uso di maiuscole/minuscole, rimuovere segni diacritici, segni di punteggiatura e numeri |

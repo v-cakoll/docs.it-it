@@ -2,12 +2,12 @@
 title: Controlli messaggi
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424144"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977303"
 ---
 # <a name="message-inspectors"></a>Controlli messaggi
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
@@ -19,7 +19,7 @@ In questo esempio viene illustrato come implementare e configurare i controlli m
 ## <a name="message-inspector"></a>Controllo messaggi  
  I controlli messaggi del client implementano l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>, e i controlli messaggi del servizio implementano l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Le implementazioni possono essere combinate in una sola classe per formare un controllo messaggi che funzioni per entrambi lati. Questo esempio implementa questo controllo messaggi combinato. Il controllo viene generato tramite il passaggio di un set di schemi con cui vengono confrontati i messaggi in ingresso e in uscita e consente allo sviluppatore di specificare se i messaggi in ingresso o in uscita sono convalidati e se il controllo si trova in modalità client o di distribuzione, cosa che influisce sulla gestione degli errori illustrata in un secondo momento in questo argomento.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  La classe `SchemaValidationBehavior` seguente rappresenta il comportamento utilizzato per aggiungere il controllo messaggi di questo esempio alla fase di esecuzione del client o della distribuzione. L'implementazione è piuttosto semplice in entrambi casi. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> e <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, il controllo messaggi viene creato e aggiunto alla raccolta <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> della rispettiva fase di esecuzione.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Il metodo `CreateBehavior` sottoposto a override trasforma i dati di configurazione in un oggetto di comportamento quando la fase di esecuzione valuta i dati di configurazione mentre compila un client o un endpoint.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

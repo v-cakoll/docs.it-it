@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: d89a77107e7aff65b007a69c23af34771146570c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: eb3e9cf4a6d138998cfde865cda8ed4146be26d0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697332"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088988"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>Elemento > \<add per \<listeners > per \<trace >
+# <a name="add-element-for-listeners-for-trace"></a>\<aggiungere > elemento per \<listener > per \<traccia >
 Aggiunge un listener alla raccolta **Listeners** .  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**Trace**](trace-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**listener**](listeners-element-for-trace.md)\<
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**aggiungi >**
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -59,12 +59,12 @@ Aggiunge un listener alla raccolta **Listeners** .
 |`trace`|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  
   
 ## <a name="remarks"></a>Note  
- Le classi <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> condividono la stessa raccolta **Listeners** . Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizzerà lo stesso listener. Le classi listener derivano da <xref:System.Diagnostics.TraceListener>.  
+ Le classi <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> condividono la stessa raccolta **Listeners** . Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizzerà lo stesso listener. Le classi listener derivano dalla <xref:System.Diagnostics.TraceListener>.  
   
  Se non si specifica l'attributo `name` del listener di traccia, il <xref:System.Diagnostics.TraceListener.Name%2A> del listener di traccia viene impostato come valore predefinito su una stringa vuota (""). Se l'applicazione dispone di un solo listener, è possibile aggiungerlo senza specificare un nome e rimuoverlo specificando una stringa vuota per il nome. Tuttavia, se l'applicazione ha più di un listener, è necessario specificare nomi univoci per ogni listener di traccia, che consente di identificare e gestire i singoli listener di traccia all'interno delle raccolte <xref:System.Diagnostics.Debug.Listeners%2A> e <xref:System.Diagnostics.Trace.Listeners%2A>.  
   
 > [!NOTE]
-> L'aggiunta di più di un listener di traccia dello stesso tipo e con lo stesso nome comporta l'aggiunta di un solo listener di traccia di quel tipo e del nome alla raccolta `Listeners`. Tuttavia, è possibile aggiungere a livello di codice più listener identici alla raccolta `Listeners`.  
+> L'aggiunta di più listener di traccia dello stesso tipo e con lo stesso nome comporta l'aggiunta di un solo listener di traccia di quel tipo e del nome alla raccolta `Listeners`. Tuttavia, è possibile aggiungere a livello di codice più listener identici alla raccolta di `Listeners`.  
   
  Il valore dell'attributo **initializeData** dipende dal tipo di listener creato. Non tutti i listener di traccia richiedono che venga specificato **initializeData**.  
   
@@ -75,15 +75,15 @@ Aggiunge un listener alla raccolta **Listeners** .
   
 |Classe listener di traccia|valore dell'attributo initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Valore `useErrorStream` per il costruttore <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Impostare l'attributo `initializeData` su "`true`" per scrivere l'output di traccia ed eseguire il debug in <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" per scrivere <xref:System.Console.Out%2A?displayProperty=nameWithType>.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Nome del file in cui viene scritto <xref:System.Diagnostics.DelimitedListTraceListener>.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Valore `useErrorStream` per il costruttore di <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Impostare l'attributo `initializeData` su "`true`" per scrivere l'output di traccia e di debug in <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" per scrivere <xref:System.Console.Out%2A?displayProperty=nameWithType>.|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Nome del file in cui viene scritto il <xref:System.Diagnostics.DelimitedListTraceListener>.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Nome del nome di un'origine del log eventi esistente.|  
 |<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Nome del file in cui viene scritto il <xref:System.Diagnostics.EventSchemaTraceListener>.|  
 |<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Nome del file in cui viene scritto il <xref:System.Diagnostics.TextWriterTraceListener>.|  
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Nome del file in cui viene scritto il <xref:System.Diagnostics.XmlWriterTraceListener>.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare gli elementi **> \<ADD** per aggiungere i listener `MyListener` e `MyEventListener` alla raccolta **Listeners** . `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. `MyEventListener` crea una voce nel registro eventi.  
+ Nell'esempio seguente viene illustrato come utilizzare **\<aggiungere >** elementi per aggiungere i listener `MyListener` e `MyEventListener` alla raccolta **Listeners** . `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. `MyEventListener` crea una voce nel registro eventi.  
   
 ```xml  
 <configuration>  

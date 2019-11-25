@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119066"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088706"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<elemento clear > per NameValueSectionHandler e DictionarySectionHandler
 
 Cancella tutte le impostazioni definite in precedenza in una sezione.
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)\
+&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<cancella >**
 
 ## <a name="syntax"></a>Sintassi

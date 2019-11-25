@@ -1,13 +1,13 @@
 ---
 title: Convenzioni di codifica F#
 description: Informazioni su linee guida generali e idiomi F# per la scrittura di codice.
-ms.date: 10/22/2019
-ms.openlocfilehash: 6700f64aa61308cbfc0b7a38724d69a281a088db
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.date: 11/04/2019
+ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799108"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978220"
 ---
 # <a name="f-coding-conventions"></a>Convenzioni di codifica F#
 
@@ -172,8 +172,8 @@ In alternativa, è sufficiente usare una classe semplice per mantenere le dipend
 
 ```fsharp
 type MyParametricApi(dep1, dep2, dep3) =
-    member __.Function1 arg1 = doStuffWith dep1 dep2 dep3 arg1
-    member __.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
+    member _.Function1 arg1 = doStuffWith dep1 dep2 dep3 arg1
+    member _.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
 ```
 
 Ciò consente quanto segue:
@@ -373,7 +373,7 @@ module Transactions =
         ...
 
 type Transactor(ctx, currentBalance) =
-    member __.ExecuteTransaction(txnType) =
+    member _.ExecuteTransaction(txnType) =
         Transactions.doTransaction ctx txtType currentBalance
         ...
 ```
@@ -401,8 +401,8 @@ open TransactionsTestingUtil.TransactionsTestable
 
 let testableContext =
     { new ITransactionContext with
-        member __.TheFirstMember() = ...
-        member __.TheSecondMember() = ... }
+        member _.TheFirstMember() = ...
+        member _.TheSecondMember() = ... }
 
 let transactionRoutine = getTestableTransactionRoutine testableContext
 
@@ -437,7 +437,7 @@ L'inferenza del tipo può evitare di digitare una grande quantità di standard. 
 
 * Prendere in considerazione la denominazione di parametri di tipo generico con PascalCase.
 
-    Questo è il modo generale per eseguire operazioni in .NET, quindi è consigliabile usare PascalCase invece di snake_case o camelCase.
+    Questo è il modo generale per eseguire operazioni in .NET, quindi è consigliabile usare PascalCase anziché snake_case o camelCase.
 
 Infine, la generalizzazione automatica non è sempre un vantaggio per gli utenti che non F# hanno familiarità con o con una codebase di grandi dimensioni. L'utilizzo di componenti generici comporta un sovraccarico cognitivo. Inoltre, se le funzioni generalizzate automaticamente non vengono usate con tipi di input diversi (indipendentemente dal fatto che siano destinate a essere usate come tali), non vi è alcun vantaggio reale che sia generico in quel momento. Tenere sempre presente che il codice che si sta scrivendo trarrà vantaggio dal fatto che sia generico.
 
@@ -495,15 +495,15 @@ open System.Collections.Generic
 type Closure1Table() =
     let t = Dictionary<Item0, HashSet<TerminalIndex>>()
 
-    member __.Add(key, value) =
+    member _.Add(key, value) =
         if not (t.ContainsKey(key)) then
             t.Add(key, value)
         else
             t.[key] <- value
 
-    member __.Count = t.Count
+    member _.Count = t.Count
 
-    member __.Contains(key, value) =
+    member _.Contains(key, value) =
         match t.TryGetValue(key) with
         | (true, v) -> v.Equals(value)
         | (false, _) -> false

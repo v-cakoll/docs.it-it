@@ -4,12 +4,12 @@ description: Informazioni su come scegliere un algoritmo ML.NET per il modello d
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972080"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976694"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Come scegliere un algoritmo ML.NET
 
@@ -19,9 +19,9 @@ Gli algoritmi operano sulle **caratteristiche**. Le caratteristiche sono valori 
 
 ## <a name="trainer--algorithm--task"></a>Algoritmo di training = algoritmo + attività
 
-Un algoritmo è la formula matematica che viene eseguita per produrre un **modello**. Algoritmi diversi producono modelli con caratteristiche diverse. 
+Un algoritmo è la formula matematica che viene eseguita per produrre un **modello**. Algoritmi diversi producono modelli con caratteristiche diverse.
 
-Con ML.NET è possibile applicare lo stesso algoritmo ad attività diverse. Ad esempio, Stochastic Dual Coordinated Ascent può essere usato per Classificazione binaria, Classificazione multiclasse e Regressione. La differenza sta nell'interpretazione dell'output dell'algoritmo per la corrispondenza con l'attività. 
+Con ML.NET è possibile applicare lo stesso algoritmo ad attività diverse. Ad esempio, Stochastic Dual Coordinated Ascent può essere usato per Classificazione binaria, Classificazione multiclasse e Regressione. La differenza sta nell'interpretazione dell'output dell'algoritmo per la corrispondenza con l'attività.
 
 Per ogni combinazione algoritmo/attività, ML.NET include un componente che esegue l'algoritmo di training e l'interpretazione. Questi componenti sono detti algoritmi di training. Ad esempio <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa l'algoritmo **StochasticDualCoordinatedAscent** applicato all'attività **Regressione**.
 

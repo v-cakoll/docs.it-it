@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697686"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089110"
 ---
-# <a name="settings-element-network-settings"></a>Elemento > \<settings (impostazioni di rete)
+# <a name="settings-element-network-settings"></a>\<Impostazioni > elemento (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;**impostazioni di\<&nbsp;**
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -40,7 +40,7 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -48,11 +48,11 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
 |-------------|-----------------|  
 |[httpListener](httplistener-element-network-settings.md)|Personalizza i parametri utilizzati dalla classe <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Personalizza i parametri della richiesta Web.|  
-|[ipv6](ipv6-element-network-settings.md)|Abilita il supporto protocollo Internet versione 6 (IPv6).|  
-|[Elemento > \<performanceCounter (impostazioni di rete)](performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
+|[IPv6](ipv6-element-network-settings.md)|Abilita il supporto protocollo Internet versione 6 (IPv6).|  
+|[Elemento \<performanceCounter > (impostazioni di rete)](performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Configura le connessioni alle risorse di rete.|  
-|[socket](socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
-|[Elemento > \<webProxyScript (impostazioni di rete)](webproxyscript-element-network-settings.md)|Configura le caratteristiche dello script utilizzato per individuare i proxy Web.|  
+|[presa](socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
+|[\<elemento > webProxyScript (impostazioni di rete)](webproxyscript-element-network-settings.md)|Configura le caratteristiche dello script utilizzato per individuare i proxy Web.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

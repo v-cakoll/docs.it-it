@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 052f7eef30500d37389585956728250a46b718a3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698394"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087504"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>Elemento > \<clear per authenticationModules (impostazioni di rete)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<elemento clear > per authenticationModules (impostazioni di rete)
 Cancella tutti i moduli di autenticazione dall'applicazione.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<AuthenticationModules**](authenticationmodules-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Cancella** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -35,10 +35,10 @@ Cancella tutti i moduli di autenticazione dall'applicazione.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

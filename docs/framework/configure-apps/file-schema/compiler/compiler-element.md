@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168947"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088049"
 ---
-# <a name="compiler-element"></a>\<Elemento > del compilatore
+# <a name="compiler-element"></a>Elemento > del compilatore \<
 
 Specifica gli attributi di configurazione del compilatore per un provider del linguaggio.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<compilatori >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> del compilatore**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. codedom >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**compilatori**](compilers-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**del compilatore** >
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,7 +46,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|`compilerOptions`|Attributo facoltativo.<br /><br /> Specifica argomenti aggiuntivi specifici del compilatore per la compilazione. I valori per l' `compilerOptions` attributo sono in genere elencati in un argomento delle opzioni del compilatore per il compilatore.|
+|`compilerOptions`|Attributo facoltativo.<br /><br /> Specifica argomenti aggiuntivi specifici del compilatore per la compilazione. I valori per l'attributo `compilerOptions` vengono in genere elencati in un argomento delle opzioni del compilatore per il compilatore.|
 |`extension`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punti e virgola delle estensioni di file utilizzate dai file di origine per il provider del linguaggio. Ad esempio, ". cs".|
 |`language`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punti e virgola di nomi di lingua supportati dal provider del linguaggio. Ad esempio, "c#; cs; csharp".|
 |`type`|Attributo obbligatorio.<br /><br /> Specifica il nome del tipo del provider del linguaggio, incluso il nome dell'assembly che contiene l'implementazione del provider. Il nome del tipo deve soddisfare i requisiti definiti nella [specifica di nomi di tipo completi](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|
@@ -56,19 +56,19 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<Elemento > providerOption](provideroption-element.md)|Specifica gli attributi della versione del compilatore per un provider di linguaggio.|
+|[\<elemento > providerOption](provideroption-element.md)|Specifica gli attributi della versione del compilatore per un provider di linguaggio.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
 |Elemento|Descrizione|
 |-------------|-----------------|
 |[Elemento \<configuration>](../configuration-element.md)|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
-|[\<Elemento > System. CodeDom](system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|
-|[\<compilatori > elemento](compilers-element.md)|Contenitore per gli elementi di configurazione del compilatore; contiene zero o più `<compiler>` elementi.|
+|[Elemento \<System. CodeDom >](system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|
+|[\<> elemento compilatori](compilers-element.md)|Contenitore per gli elementi di configurazione del compilatore; contiene zero o più elementi `<compiler>`.|
 
 ## <a name="remarks"></a>Note
 
-Ogni `<compiler>` elemento specifica gli attributi di configurazione del compilatore per un provider di linguaggio specifico. Il provider estende la <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> classe per un linguaggio specifico. l' `<compiler>` elemento definisce le impostazioni del compilatore e del generatore di codice per il provider del linguaggio.
+Ogni elemento `<compiler>` specifica gli attributi di configurazione del compilatore per un provider di linguaggio specifico. Il provider estende la classe <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> per una lingua specifica. l'elemento `<compiler>` definisce le impostazioni del compilatore e del generatore di codice per il provider del linguaggio.
 
 .NET Framework definisce le impostazioni del compilatore iniziali nel file di configurazione del computer (Machine.config). Gli sviluppatori e i fornitori di compilatori possono aggiungere impostazioni di configurazione per una nuova implementazione di <xref:System.CodeDom.Compiler.CodeDomProvider>. Usare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> per enumerare a livello di codice le impostazioni di configurazione dei provider di linguaggi e di configurazione del compilatore in un computer.
 
@@ -105,6 +105,6 @@ Nell'esempio seguente viene illustrato un tipico elemento di configurazione del 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schema dei file di configurazione](../index.md)
-- [\<compilatori > elemento](compilers-element.md)
+- [\<> elemento compilatori](compilers-element.md)
 - [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)
 - [Elemento Compiler per compilers per compilation (schema delle impostazioni ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

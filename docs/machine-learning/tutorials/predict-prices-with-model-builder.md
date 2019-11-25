@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459191"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977351"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Esercitazione: stimare i prezzi usando la regressione con generatore di modelli
 
@@ -126,7 +126,7 @@ Il risultato del processo di training sarà la creazione di due progetti.
     using TaxiFarePredictionML.Model;
     ```
 
-1. Per eseguire una stima sui nuovi dati utilizzando il modello, creare una nuova istanza della classe `ModelInput` all'interno del metodo `Main` dell'applicazione. Si noti che l'importo della tariffa non fa parte dell'input, perché il modello genererà la stima per tale importo. 
+1. Per eseguire una stima sui nuovi dati utilizzando il modello, creare una nuova istanza della classe `ModelInput` all'interno del metodo `Main` dell'applicazione. Si noti che l'importo della tariffa non fa parte dell'input, perché il modello genererà la stima per tale importo.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ Il risultato del processo di training sarà la creazione di due progetti.
     };
     ```
 
-1. Usare il metodo `Predict` dalla classe `ConsumeModel`. Il metodo `Predict` carica il modello sottoposto a training, crea una [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e la utilizza per eseguire stime sui nuovi dati. 
+1. Usare il metodo `Predict` dalla classe `ConsumeModel`. Il metodo `Predict` carica il modello sottoposto a training, crea una [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e la utilizza per eseguire stime sui nuovi dati.
 
     ```csharp
     // Make prediction

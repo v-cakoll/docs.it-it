@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b6e42480075666ce9f7e8fc6966bd4bb6b888a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054380"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977320"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>«\<attributo >' non può essere applicato perché il formato del GUID '\<numero >' non è corretto
-Oggetto `COMClassAttribute` blocco di attributi specifica un identificatore univoco globale (GUID) che non corrisponde al formato corretto per un GUID. `COMClassAttribute` Usa i GUID per identificare in modo univoco la classe, l'interfaccia e l'evento di creazione.  
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>non è possibile applicare '\<attribute >' perché il formato del GUID '\<number >' non è corretto
+
+Un blocco di attributi `COMClassAttribute` specifica un identificatore univoco globale (GUID) che non è conforme al formato appropriato per un GUID. `COMClassAttribute` usa i GUID per identificare in modo univoco la classe, l'interfaccia e l'evento di creazione.  
   
- Un GUID è composto da 16 byte (otto byte numerici seguiti da otto byte binari). È generato da utilità Microsoft quali uuidgen.exe ed è sicuramente univoco nello spazio e tempo.  
+ Un GUID è composto da 16 byte (otto byte numerici seguiti da otto byte binari). Viene generato da utilità Microsoft, ad esempio uuidgen. exe, ed è sicuramente univoco nello spazio e nel tempo.  
   
  **ID errore:** BC32500  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Determinare il GUID corretto o il GUID necessarie per identificare l'oggetto COM.  
+1. Determinare il GUID o i GUID corretti necessari per identificare l'oggetto COM.  
   
 2. Verificare che le stringhe GUID presentate al blocco di attributi `COMClassAttribute` siano copiate correttamente.  
   

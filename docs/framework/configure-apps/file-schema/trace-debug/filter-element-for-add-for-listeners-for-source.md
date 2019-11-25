@@ -9,24 +9,24 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697167"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088899"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>Elemento > \<filter per \<ADD > per @no__t > 2listeners per \<source >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<elemento > Filter per \<aggiungere > per \<listener > per \<origine >
 Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2add >** ](add-element-for-listeners-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**origini**](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**origine**](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**listener**](listeners-element-for-source.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**aggiungi >** ](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filtro** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -46,7 +46,7 @@ Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di tr
 |`initializeData`|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe di filtro specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,7 +60,7 @@ Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di tr
 |`add`|Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento `<filter>` deve essere contenuto in un elemento `<add>` per un listener di origine di traccia che specifica il tipo del listener, non solo il nome di un listener definito in una [> \<sharedListeners](sharedlisteners-element.md). Se il listener è definito in una [> \<sharedListeners](sharedlisteners-element.md), il filtro per il listener deve essere definito in tale elemento.  
+ L'elemento `<filter>` deve essere contenuto in un elemento `<add>` per un listener di origine di traccia che specifica il tipo del listener, non solo il nome di un listener definito in un [\<sharedListeners >](sharedlisteners-element.md). Se il listener è definito in un [\<> sharedListeners](sharedlisteners-element.md), il filtro per il listener deve essere definito in tale elemento.  
   
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   

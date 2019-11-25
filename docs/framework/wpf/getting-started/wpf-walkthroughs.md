@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920406"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977026"
 ---
 # <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF
 Le procedure dettagliate forniscono istruzioni dettagliate per gli scenari comuni. Ciò le rende un ottimo strumento per iniziare a capire il funzionamento del prodotto o di una particolare area di funzionalità.
@@ -21,11 +21,11 @@ Le procedure dettagliate forniscono istruzioni dettagliate per gli scenari comun
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedura dettagliata: compilazione di un'applicazione WPF semplice con WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Viene illustrato come compilare una semplice applicazione WPF con la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|
+|[Procedura dettagliata: compilazione di un'applicazione WPF semplice con WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Viene illustrato come compilare una semplice applicazione WPF con WPF Designer.|
 |[Procedura dettagliata: creazione di un layout dinamico](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Viene illustrata la creazione di un layout dinamico utilizzando un controllo Panel <xref:System.Windows.Controls.Grid>.|
 |[Procedura dettagliata: creazione di un'applicazione ridimensionabile mediante WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Viene illustrato come creare layout di finestra ridimensionabili dall'utente in fase di esecuzione.|
-|[Procedura dettagliata: creazione di un'associazione dati tramite la finestra di progettazione WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni dati che connettono i dati a un controllo.|
-|[Procedura dettagliata: uso di un DesignInstance per l'associazione ai dati nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni dati in fase di progettazione per un contesto dati assegnato in fase di esecuzione.|
+|[Procedura dettagliata: creazione di un'associazione dati tramite la finestra di progettazione WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Viene illustrato come utilizzare la finestra di progettazione WPF per creare associazioni dati che connettono i dati a un controllo.|
+|[Procedura dettagliata: uso di un DesignInstance per l'associazione ai dati nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Viene illustrato come utilizzare la finestra di progettazione WPF per creare associazioni dati in fase di progettazione per un contesto dati assegnato in fase di esecuzione.|
 
 ## <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF
 
