@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: trovare il nome completo di un assembly'
+title: "How to: Find an assembly's fully qualified name"
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,24 +10,24 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740494"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348203"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="88cb1-102">Procedura: trovare il nome completo di un assembly</span><span class="sxs-lookup"><span data-stu-id="88cb1-102">How to: Find an assembly's fully qualified name</span></span>
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="1cd3d-102">How to: Find an assembly's fully qualified name</span><span class="sxs-lookup"><span data-stu-id="1cd3d-102">How to: Find an assembly's fully qualified name</span></span>
 
-<span data-ttu-id="88cb1-103">Per individuare il nome completo di un assembly .NET Framework nella Global Assembly Cache, usare lo strumento Global Assembly Cache ([gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span><span class="sxs-lookup"><span data-stu-id="88cb1-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="88cb1-104">Vedere [procedura: visualizzare il contenuto del Global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="88cb1-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
+<span data-ttu-id="1cd3d-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span><span class="sxs-lookup"><span data-stu-id="1cd3d-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="1cd3d-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="1cd3d-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
 
-<span data-ttu-id="88cb1-105">Per gli assembly .NET Core e per gli assembly .NET Framework che non sono inclusi nella Global Assembly Cache, è possibile ottenere il nome completo dell'assembly in diversi modi:</span><span class="sxs-lookup"><span data-stu-id="88cb1-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
+<span data-ttu-id="1cd3d-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span><span class="sxs-lookup"><span data-stu-id="1cd3d-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
 
-- <span data-ttu-id="88cb1-106">È possibile utilizzare il codice per restituire le informazioni alla console o a una variabile oppure è possibile utilizzare [Ildasm. exe (DISASSEMBLER il)](../../framework/tools/ildasm-exe-il-disassembler.md) per esaminare i metadati dell'assembly, che contengono il nome completo.</span><span class="sxs-lookup"><span data-stu-id="88cb1-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="1cd3d-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-- <span data-ttu-id="88cb1-107">Se l'assembly è già stato caricato dall'applicazione, è possibile recuperare il valore della proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> per ottenere il nome completo.</span><span class="sxs-lookup"><span data-stu-id="88cb1-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="88cb1-108">È possibile utilizzare la proprietà <xref:System.Type.Assembly> di un <xref:System.Type> definito in tale assembly per recuperare un riferimento all'oggetto <xref:System.Reflection.Assembly>.</span><span class="sxs-lookup"><span data-stu-id="88cb1-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="88cb1-109">Nell'esempio viene illustrata una situazione di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="88cb1-109">The example provides an illustration.</span></span>
+- <span data-ttu-id="1cd3d-107">Se l'assembly è già stato caricato dall'applicazione, è possibile recuperare il valore della proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> per ottenere il nome completo.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="1cd3d-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="1cd3d-109">Nell'esempio viene illustrata una situazione di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-109">The example provides an illustration.</span></span>
 
-- <span data-ttu-id="88cb1-110">Se si conosce il percorso di file system dell'assembly, è possibile chiamare il metodoC#`static` () o `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> per ottenere il nome completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="88cb1-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="88cb1-111">Di seguito è riportato un semplice esempio.</span><span class="sxs-lookup"><span data-stu-id="88cb1-111">The following is a simple example.</span></span>
+- <span data-ttu-id="1cd3d-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="1cd3d-111">Di seguito è riportato un semplice esempio.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-111">The following is a simple example.</span></span>
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ ms.locfileid: "73740494"
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- <span data-ttu-id="88cb1-112">È possibile usare [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) per esaminare i metadati dell'assembly che contengono il nome completo.</span><span class="sxs-lookup"><span data-stu-id="88cb1-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="1cd3d-112">È possibile usare [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) per esaminare i metadati dell'assembly che contengono il nome completo.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-<span data-ttu-id="88cb1-113">Per ulteriori informazioni sull'impostazione degli attributi dell'assembly, ad esempio la versione, la lingua e il nome dell'assembly, vedere [impostare gli attributi](set-attributes.md)dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="88cb1-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="88cb1-114">Per altre informazioni su come assegnare un nome sicuro a un assembly, vedere [creare e usare assembly con nome sicuro](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="88cb1-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
+<span data-ttu-id="1cd3d-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="1cd3d-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="1cd3d-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="1cd3d-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="88cb1-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="88cb1-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1cd3d-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="1cd3d-115">Example</span></span>
 
-<span data-ttu-id="88cb1-116">Nell'esempio seguente viene illustrato come visualizzare il nome completo di un assembly contenente una classe specificata nella console.</span><span class="sxs-lookup"><span data-stu-id="88cb1-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="88cb1-117">Usa la proprietà <xref:System.Type.Assembly?displayProperty=nameWithType> per recuperare un riferimento a un assembly da un tipo definito in tale assembly.</span><span class="sxs-lookup"><span data-stu-id="88cb1-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
+<span data-ttu-id="1cd3d-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="1cd3d-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span><span class="sxs-lookup"><span data-stu-id="1cd3d-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
 
 ```cpp
 #using <System.dll>
@@ -106,7 +106,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname
@@ -119,10 +118,10 @@ Class asmname
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="88cb1-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88cb1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cd3d-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1cd3d-118">See also</span></span>
 
-- [<span data-ttu-id="88cb1-119">Nomi degli assembly</span><span class="sxs-lookup"><span data-stu-id="88cb1-119">Assembly names</span></span>](names.md)
-- [<span data-ttu-id="88cb1-120">Creazione di assembly</span><span class="sxs-lookup"><span data-stu-id="88cb1-120">Create assemblies</span></span>](create.md)
-- [<span data-ttu-id="88cb1-121">Creazione e utilizzo di assembly con nome sicuro</span><span class="sxs-lookup"><span data-stu-id="88cb1-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="88cb1-122">Assembly Cache globale</span><span class="sxs-lookup"><span data-stu-id="88cb1-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
-- [<span data-ttu-id="88cb1-123">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="88cb1-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="1cd3d-119">Assembly names</span><span class="sxs-lookup"><span data-stu-id="1cd3d-119">Assembly names</span></span>](names.md)
+- [<span data-ttu-id="1cd3d-120">Create assemblies</span><span class="sxs-lookup"><span data-stu-id="1cd3d-120">Create assemblies</span></span>](create.md)
+- [<span data-ttu-id="1cd3d-121">Create and use strong-named assemblies</span><span class="sxs-lookup"><span data-stu-id="1cd3d-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="1cd3d-122">Global assembly cache</span><span class="sxs-lookup"><span data-stu-id="1cd3d-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
+- [<span data-ttu-id="1cd3d-123">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="1cd3d-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)

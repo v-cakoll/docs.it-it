@@ -1,19 +1,19 @@
 ---
-title: Clonazione e Connessione (Visual Basic)
+title: Clonazione e collegamento
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352961"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345687"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="e55a2-102">Clonazione e Connessione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e55a2-102">Cloning vs. Attaching (Visual Basic)</span></span>
-<span data-ttu-id="e55a2-103">Se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un nuovo albero XML, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero.</span><span class="sxs-lookup"><span data-stu-id="e55a2-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="e55a2-104">Se il nuovo contenuto include già elementi padre e fa parte di un altro albero XML viene duplicato.</span><span class="sxs-lookup"><span data-stu-id="e55a2-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="e55a2-105">Il nuovo contesto duplicato viene quindi collegato all'albero XML.</span><span class="sxs-lookup"><span data-stu-id="e55a2-105">The newly cloned content is then attached to the XML tree.</span></span>  
+# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="9e03d-102">Cloning vs. Attaching (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e03d-102">Cloning vs. Attaching (Visual Basic)</span></span>
+<span data-ttu-id="9e03d-103">Se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un nuovo albero XML, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero.</span><span class="sxs-lookup"><span data-stu-id="9e03d-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="9e03d-104">Se il nuovo contenuto include già elementi padre e fa parte di un altro albero XML viene duplicato.</span><span class="sxs-lookup"><span data-stu-id="9e03d-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="9e03d-105">Il nuovo contesto duplicato viene quindi collegato all'albero XML.</span><span class="sxs-lookup"><span data-stu-id="9e03d-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e55a2-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="e55a2-106">Example</span></span>  
- <span data-ttu-id="e55a2-107">Nel codice seguente viene illustrato il diverso comportamento relativo all'aggiunta di un elemento con o senza elemento padre a una struttura ad albero.</span><span class="sxs-lookup"><span data-stu-id="e55a2-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="9e03d-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="9e03d-106">Example</span></span>  
+ <span data-ttu-id="9e03d-107">Nel codice seguente viene illustrato il diverso comportamento relativo all'aggiunta di un elemento con o senza elemento padre a una struttura ad albero.</span><span class="sxs-lookup"><span data-stu-id="9e03d-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -43,13 +43,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- <span data-ttu-id="e55a2-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="e55a2-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="9e03d-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="9e03d-108">This example produces the following output:</span></span>  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e55a2-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e55a2-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e03d-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9e03d-109">See also</span></span>
 
-- [<span data-ttu-id="e55a2-110">Creazione di strutture ad albero XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e55a2-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="9e03d-110">Creating XML Trees (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e03d-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
