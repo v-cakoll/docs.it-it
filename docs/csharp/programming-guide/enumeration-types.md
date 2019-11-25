@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3573959a1e10b475a9867631767de5d10a08b9ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590552"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969770"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipi di enumerazione (Guida per programmatori C#)
 
@@ -84,9 +84,9 @@ Tutti gli enum sono istanze del tipo <xref:System.Enum?displayProperty=nameWithT
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Per altre informazioni, vedere <xref:System.Enum?displayProperty=nameWithType>.
+Per ulteriori informazioni, vedere <xref:System.Enum?displayProperty=nameWithType>.
 
-È anche possibile creare un nuovo metodo per un enum tramite un metodo di estensione. Per altre informazioni, vedere [Procedura: Creare un nuovo metodo per un'enumerazione](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+È anche possibile creare un nuovo metodo per un enum tramite un metodo di estensione. Per ulteriori informazioni, vedere [come creare un nuovo metodo per un'enumerazione](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Vedere anche
 

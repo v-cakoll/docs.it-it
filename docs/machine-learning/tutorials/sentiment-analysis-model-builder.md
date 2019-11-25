@@ -1,19 +1,19 @@
 ---
-title: 'Esercitazione: Analizzare i sentimenti-classificazione binaria'
+title: 'Esercitazione: analizzare i sentimenti-classificazione binaria'
 description: Questa esercitazione illustra come creare un'applicazione Razor Pages che classifica i sentimenti dai commenti del sito Web ed esegue l'azione appropriata. Il classificatore dei sentimenti binari usa il generatore di modelli in Visual Studio.
 ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180275"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974802"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: Analizzare i sentimenti dei commenti del sito Web in un'applicazione Web usando il generatore di modelli ML.NET
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: analizzare i sentimenti dei commenti del sito Web in un'applicazione Web usando il generatore di modelli ML.NET
 
 Informazioni su come analizzare i sentimenti dai commenti in tempo reale all'interno di un'applicazione Web.
 
@@ -75,7 +75,7 @@ Per eseguire il training del modello, è necessario scegliere uno scenario di Ma
 
 ## <a name="load-the-data"></a>Caricare i dati
 
-Il generatore di modelli accetta dati da due origini, un database SQL Server o un file locale nel formato `csv` o `tsv`.
+Il generatore di modelli accetta dati da due origini, un database SQL Server o un file locale in formato `csv` o `tsv`.
 
 1. Nel passaggio relativo ai dati dello strumento generatore di modelli selezionare **File** dall'elenco a discesa delle origini dati.
 1. Selezionare il pulsante accanto alla casella di testo **selezionare un file** e usare Esplora file per cercare e selezionare il file *Wikipedia-Detox-250-line-data. TSV* .
@@ -117,14 +117,14 @@ Il risultato del processo di training sarà la creazione di due progetti.
 
     I progetti seguenti dovrebbero essere visualizzati nella **Esplora soluzioni**:
 
-    - *SentimentRazorML. ConsoleApp*: Applicazione console .NET Core che contiene il codice di training e di stima del modello.
-    - *SentimentRazorML. Model*: Una libreria di classi .NET Standard contenente i modelli di dati che definiscono lo schema dei dati del modello di input e di output, nonché la versione salvata del modello che esegue le prestazioni migliori durante il training.
+    - *SentimentRazorML. ConsoleApp*: applicazione console .NET Core che contiene il codice di training e di stima del modello.
+    - *SentimentRazorML. Model*: una libreria di classi .NET standard contenente i modelli di dati che definiscono lo schema dei dati del modello di input e di output, nonché la versione salvata del modello con le prestazioni migliori durante il training.
 
     Per questa esercitazione viene usato solo il progetto *SentimentRazorML. Model* , perché le stime verranno effettuate nell'applicazione Web *SentimentRazor* anziché nella console. Sebbene *SentimentRazorML. ConsoleApp* non venga usato per l'assegnazione dei punteggi, può essere usato per ripetere il training del modello usando nuovi dati in un secondo momento. Tuttavia, la ripetizione del training esula dall'ambito di questa esercitazione.
 
 ### <a name="configure-the-predictionengine-pool"></a>Configurare il pool di PredictionEngine
 
-Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. Inoltre, è necessario crearne un'istanza ovunque sia necessario all'interno dell'applicazione. Con la crescita dell'applicazione, questo processo può diventare non gestibile. Per migliorare le prestazioni e thread safety, usare una combinazione di inserimento delle dipendenze e il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione.
+Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. Inoltre, è necessario crearne un'istanza ovunque sia necessario all'interno dell'applicazione. Con la crescita dell'applicazione, questo processo può diventare non gestibile. Per migliorare le prestazioni e thread safety, utilizzare una combinazione di inserimento delle dipendenze e il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per l'utilizzo nell'applicazione.
 
 1. Installare il pacchetto NuGet *Microsoft.Extensions.ml* :
 
@@ -160,7 +160,7 @@ Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xre
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
 1. Usare il metodo `GetAbsolutePath` nel costruttore della classe `Startup` per impostare il `_modelPath`.
@@ -169,7 +169,7 @@ Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xre
     _modelPath = GetAbsolutePath("MLModel.zip");
     ```
 
-1. Configurare il `PredictionEnginePool` per l'applicazione nel metodo `ConfigureServices`:
+1. Configurare la `PredictionEnginePool` per l'applicazione nel metodo `ConfigureServices`:
 
     ```csharp
     services.AddPredictionEnginePool<ModelInput, ModelOutput>()
@@ -178,7 +178,7 @@ Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xre
 
 ### <a name="create-sentiment-analysis-handler"></a>Crea gestore analisi dei sentimenti
 
-Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto, un metodo che accetta l'input dell'utente e utilizza il `PredictionEnginePool` per restituire una stima deve essere aggiunta.
+Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto, un metodo che accetta l'input dell'utente e utilizza la `PredictionEnginePool` per restituire una stima deve essere aggiunta.
 
 1. Aprire il file *index.cshtml.cs* che si trova nella directory *pages* e aggiungere le istruzioni using seguenti:
 
@@ -187,9 +187,9 @@ Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto
     using SentimentRazorML.Model;
     ```
 
-    Per usare il `PredictionEnginePool` configurato nella classe `Startup`, è necessario inserirlo nel costruttore del modello in cui si vuole usarlo.
+    Per utilizzare la `PredictionEnginePool` configurata nella classe `Startup`, è necessario inserirla nel costruttore del modello in cui si desidera utilizzarla.
 
-1. Aggiungere una variabile per fare riferimento a `PredictionEnginePool` all'interno della classe `IndexModel`.
+1. Aggiungere una variabile per fare riferimento al `PredictionEnginePool` all'interno della classe `IndexModel`.
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
@@ -201,12 +201,12 @@ Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
-1. Creare un gestore metodo che utilizza il `PredictionEnginePool` per eseguire stime dall'input dell'utente ricevuto dalla pagina Web.
+1. Creare un gestore di metodo che usa il `PredictionEnginePool` per eseguire stime dall'input dell'utente ricevuto dalla pagina Web.
 
-    1. Sotto il metodo `OnGet`, creare un nuovo metodo denominato `OnGetAnalyzeSentiment`
+    1. Sotto il metodo `OnGet` creare un nuovo metodo denominato `OnGetAnalyzeSentiment`
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -233,7 +233,7 @@ Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. Convertire il valore `bool` stimato in tossico o non tossico con il codice seguente.
+    1. Convertire il valore di `bool` stimato in tossico o non tossico con il codice seguente.
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
@@ -259,11 +259,11 @@ I risultati restituiti dal `OnGetAnalyzeSentiment` verranno visualizzati dinamic
 
 1. Successivamente, aggiungere il codice per inviare input dalla pagina Web al gestore `OnGetAnalyzeSentiment`.
 
-    1. Nel file *site. js* che si trova nella directory *wwwroot\js* creare una funzione denominata `getSentiment` per eseguire una richiesta GET HTTP con l'input dell'utente al gestore `OnGetAnalyzeSentiment`.
+    1. Nel file *site. js* che si trova nella directory *wwwroot\js* creare una funzione denominata `getSentiment` per effettuare una richiesta GET HTTP con l'input dell'utente al gestore `OnGetAnalyzeSentiment`.
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. Di seguito, aggiungere un'altra funzione denominata `updateMarker` per aggiornare in modo dinamico la posizione del marcatore nella pagina Web in modo che il sentimento venga stimato.
+    1. Di seguito, aggiungere un'altra funzione denominata `updateMarker` per aggiornare dinamicamente la posizione del marcatore nella pagina Web in modo che il sentimento venga stimato.
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
@@ -283,7 +283,7 @@ Quando l'applicazione viene avviata, immettere *Generatore di modelli è interes
 
 ![Finestra in esecuzione con la finestra dei sentimenti stimata](./media/sentiment-analysis-model-builder/web-app.png)
 
-Se è necessario fare riferimento ai progetti generati dal generatore di modelli in un secondo momento all'interno di un'altra soluzione, è possibile trovarli nella directory `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
+Se è necessario fare riferimento ai progetti generati dal generatore di modelli in un momento successivo all'interno di un'altra soluzione, è possibile trovarli nella directory `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

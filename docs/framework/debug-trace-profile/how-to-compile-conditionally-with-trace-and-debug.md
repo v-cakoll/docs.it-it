@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Compilare in modo condizionale con traccia e debug'
+title: 'Procedura: compilare in modo condizionale con traccia e debug'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052757"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975575"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: Compilare in modo condizionale con traccia e debug
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
   
  Sia i metodi di debug che di tracciatura sono dotati di attributi condizionali associati. Ad esempio, se l'attributo condizionale per la traccia è **true**, tutte le istruzioni di traccia verranno incluse all'interno di un assembly, ovvero un file EXE o DLL compilato. Se l'attributo condizionale **Trace** è **false**, le istruzioni di traccia non verranno incluse.  
   
- In una build è possibile attivare uno degli attributi condizionali **Trace** o **Debug**, entrambi gli attributi o nessuno. Sono pertanto disponibili quattro tipi di compilazione: **Debug**, **Trace**, both o nessuno di essi. Alcune build di rilascio per la distribuzione della produzione non contengono alcun attributo.  
+ In una build è possibile attivare uno degli attributi condizionali **Trace** o **Debug**, entrambi gli attributi o nessuno. Esistono quindi quattro tipi di build: **Debug**, **Trace**, entrambi o nessuno. Alcune build di rilascio per la distribuzione della produzione non contengono alcun attributo.  
   
  Le impostazioni del compilatore per l'applicazione possono essere specificate in diversi modi:  
   
@@ -73,7 +73,7 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 1. Digitare l'istruzione adatta per il linguaggio di programmazione usato all'inizio del file di codice sorgente.  
   
-    |Linguaggio|Istruzione|Risultato|  
+    |Language|Istruzione|Risultato|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Abilita la traccia|  
     ||**#CONST TRACE = false**|Disabilita la traccia|  
@@ -101,6 +101,6 @@ Impostare come commento la direttiva del compilatore.
 - [Procedura: Creare, inizializzare e configurare opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md)
 - [Opzioni di traccia](trace-switches.md)
 - [Listener di traccia](trace-listeners.md)
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
-- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Procedura: Richiamare il compilatore da riga di comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
+- [Come impostare le variabili di ambiente per la riga di comando di Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Procedura:Richiamare il compilatore da riga di comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

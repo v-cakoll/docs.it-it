@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216233"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973307"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Esposizione di componenti .NET Core a COM
 
@@ -23,7 +23,7 @@ In .NET Core, il processo di esposizione degli oggetti .NET a COM è stato signi
 - Generare un server COM nell'ambito della creazione della libreria .NET Core.
 - Generare automaticamente un manifesto del server affiancato per COM senza Registro di sistema.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Installare [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
 
@@ -39,7 +39,7 @@ Il primo passaggio consiste nel creare la libreria.
 
 2. Aprire `Class1.cs`.
 3. Aggiungere `using System.Runtime.InteropServices;` all'inizio del file.
-4. Creare un'interfaccia denominata `IServer`. Ad esempio:
+4. Creare un'interfaccia denominata `IServer`. Esempio:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
@@ -76,6 +76,6 @@ L'output risultante includerà ora anche un file `ProjectName.X.manifest`. Quest
 
 ## <a name="additional-notes"></a>Note aggiuntive
 
-Diversamente da .NET Framework, in .NET Core non è disponibile alcun supporto per la generazione di una libreria dei tipi COM (TLB) da un assembly .NET Core. Sarà necessario scrivere manualmente un file IDL o un'intestazione C++ per le dichiarazioni native delle interfacce.
+Diversamente da .NET Framework, in .NET Core non è disponibile alcun supporto per la generazione di una libreria dei tipi COM (TLB) da un assembly .NET Core. Le linee guida consentono di scrivere manualmente un file IDL o un'intestazione CC++ /per le dichiarazioni native delle interfacce com.
 
-Inoltre, il caricamento di .NET Framework e .NET Core nello stesso processo non è supportato e, di conseguenza, il caricamento di un server COM .NET Core in un processo client COM .NET Framework o viceversa non è supportato.
+Inoltre, il caricamento di .NET Framework e .NET Core nello stesso processo ha limitazioni di diagnostica. Il limite principale è il debug dei componenti gestiti, poiché non è possibile eseguire contemporaneamente il debug di .NET Framework e .NET Core. Inoltre, le due istanze di runtime non condividono assembly gestiti. Ciò significa che non è possibile condividere i tipi .NET effettivi tra i due runtime, ma tutte le interazioni devono essere limitate ai contratti di interfaccia COM esposti.

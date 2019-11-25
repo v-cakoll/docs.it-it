@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: cc0e8a5e7d254fc4b34566d2252869a2da4af3db
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894291"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975159"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Esecuzione di query sul servizio dati (WCF Data Services)
 
@@ -24,7 +24,7 @@ La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)
 
 La classe generica <xref:System.Data.Services.Client.DataServiceQuery%601> rappresenta una query che restituisce una raccolta di zero o più istanze di tipi di entità. Una query sul servizio dati appartiene sempre a un contesto del servizio dati esistente. Il contesto gestisce l'URI del servizio e le informazioni sui metadati necessarie per comporre ed eseguire la query.
 
-Quando si usa la finestra di dialogo **Aggiungi riferimento al servizio** per aggiungere un servizio dati a un'applicazione client basata su .NET Framework, viene creata una classe contenitore di entità che <xref:System.Data.Services.Client.DataServiceContext> eredita dalla classe. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
+Quando si usa la finestra di dialogo **Aggiungi riferimento al servizio** per aggiungere un servizio dati a un'applicazione client basata su .NET Framework, viene creata una classe contenitore di entità che eredita dalla classe <xref:System.Data.Services.Client.DataServiceContext>. Tale classe include proprietà che restituiscono istanze della classe <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzate. Esiste una proprietà per ogni set di entità esposto dal servizio dati. Tali proprietà semplificano la creazione di un'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> tipizzata.
 
 Una query viene eseguita negli scenari seguenti:
 
@@ -43,13 +43,13 @@ La query seguente, al termine dell'esecuzione, restituisce tutte le entità `Cus
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Per altre informazioni, vedere [Procedura: Eseguire query](how-to-execute-data-service-queries-wcf-data-services.md)sul servizio dati.
+Per altre informazioni, vedere [procedura: eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il C#tipo *dinamico* in. Tuttavia, per preservare le prestazioni, è necessario comporre sempre query fortemente tipizzate per il servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
+Il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il C#tipo dinamico in. Tuttavia, per preservare le prestazioni, è necessario comporre sempre query fortemente tipizzate per il servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
 
 ## <a name="linq-queries"></a>Query LINQ
 
-Poiché la <xref:System.Data.Services.Client.DataServiceQuery%601> classe implementa l' <xref:System.Linq.IQueryable%601> interfaccia definita da LINQ, la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata rispetto a un servizio dati risorse. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
+Poiché la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, la libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata in base a una risorsa del servizio dati. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -77,7 +77,7 @@ Le query del servizio dati supportano tutte le opzioni di query fornite da [!INC
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-È possibile chiamare consecutivamente il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per costruire espressioni di query complesse. Per altre informazioni, vedere [Procedura: Aggiungere opzioni di query a una query](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)del servizio dati.
+È possibile chiamare consecutivamente il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per costruire espressioni di query complesse. Per altre informazioni, vedere [procedura: aggiungere opzioni di query a una query del servizio dati](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).
 
 Le opzioni di query costituiscono un altro modo per esprimere i componenti sintattici di una query LINQ. Per ulteriori informazioni, vedere [considerazioni su LINQ](linq-considerations-wcf-data-services.md).
 
@@ -93,7 +93,7 @@ Il client esegue una query in due parti. Ogni qualvolta possibile, le espression
 [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]
 [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]
 
-In questo esempio, l'espressione `(basePrice – (basePrice * discount))` viene valutata sul client. Di conseguenza, l'URI di query effettivo `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` che viene inviato al servizio dati contiene il valore decimale già calcolato `90` nella clausola di filtro. Le altre parti dell'espressione dei filtri, compresa l'espressione della sottostringa, vengono valutate dal servizio dati. Le espressioni valutate sul client seguono la semantica di Common Language Runtime (CLR), mentre le espressioni inviate al servizio dati si basano sull'implementazione del servizio dati del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. È anche necessario tenere presente scenari in cui questa valutazione separata può provocare risultati imprevisti, ad esempio quando il client e il servizio eseguono valutazioni basate sull'ora in fusi orari diversi.
+In questo esempio, l'espressione `(basePrice – (basePrice * discount))` viene valutata sul client. Di conseguenza, l'URI di query effettivo `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` che viene inviato al servizio dati contiene il valore decimale già calcolato `90` nella clausola di filtro. Le altre parti dell'espressione dei filtri, compresa l'espressione della sottostringa, vengono valutate dal servizio dati. Le espressioni valutate sul client seguono Common Language Runtime semantica (CLR), mentre le espressioni inviate al servizio dati si basano sull'implementazione del servizio dati del protocollo OData. È anche necessario tenere presente scenari in cui questa valutazione separata può provocare risultati imprevisti, ad esempio quando il client e il servizio eseguono valutazioni basate sull'ora in fusi orari diversi.
 
 ## <a name="query-responses"></a>Risposte alle query
 
@@ -118,7 +118,7 @@ Le istanze del tipo di entità che rappresentano entità nel servizio dati vengo
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>: restituisce un oggetto <xref:System.Data.Services.Client.DataServiceQueryContinuation> che contiene l'URI della pagina di risultati successiva.
 
-Per impostazione predefinita [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , restituisce solo i dati selezionati in modo esplicito dall'URI della query. Ciò consente di caricare in modo esplicito dati aggiuntivi dal servizio dati, quando necessario. Una richiesta viene inviata al servizio dati ogni volta che vengono caricati in modo esplicito dati dal servizio dati. I dati che possono essere caricati in modo esplicito comprendono entità correlate, dati di risposta di paging e flussi di dati binari.
+Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] restituisce solo i dati selezionati esplicitamente dall'URI della query. Ciò consente di caricare in modo esplicito dati aggiuntivi dal servizio dati, quando necessario. Una richiesta viene inviata al servizio dati ogni volta che vengono caricati in modo esplicito dati dal servizio dati. I dati che possono essere caricati in modo esplicito comprendono entità correlate, dati di risposta di paging e flussi di dati binari.
 
 > [!NOTE]
 > Poiché un servizio dati può restituire una risposta di paging, si consiglia di gestire una risposta del servizio dati sottoposta a paging tramite un modello di programmazione dell'applicazione. Per ulteriori informazioni, vedere [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).
@@ -129,9 +129,9 @@ Per impostazione predefinita [!INCLUDE[ssAstoria](../../../../includes/ssastoria
 
 In alcuni scenari è utile conoscere il numero complessivo di entità contenute in un set di entità e non soltanto il numero restituito dalla query. Chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> in <xref:System.Data.Services.Client.DataServiceQuery%601> per richiedere che nel risultato della query venga incluso il conteggio totale delle entità presenti nel set. In questo caso la proprietà <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> dell'oggetto <xref:System.Data.Services.Client.QueryOperationResponse%601> restituito contiene il numero totale di entità nel set.
 
-È anche possibile ottenere solo il conteggio totale delle entità nel set come valore <xref:System.Int32> o <xref:System.Int64> chiamando rispettivamente i metodi <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.LongCount%2A>. Quando vengono chiamati questi metodi, viene restituito solo il valore del conteggio senza <xref:System.Data.Services.Client.QueryOperationResponse%601>. Per altre informazioni, vedere [Procedura: Determinare il numero di entità restituite da una](number-of-entities-returned-by-a-query-wcf.md)query.
+È anche possibile ottenere solo il conteggio totale delle entità nel set come valore <xref:System.Int32> o <xref:System.Int64> chiamando rispettivamente i metodi <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.LongCount%2A>. Quando vengono chiamati questi metodi, viene restituito solo il valore del conteggio senza <xref:System.Data.Services.Client.QueryOperationResponse%601>. Per altre informazioni, vedere [procedura: determinare il numero di entità restituite da una query](number-of-entities-returned-by-a-query-wcf.md).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Proiezioni di query](query-projections-wcf-data-services.md)
 
@@ -139,17 +139,17 @@ In alcuni scenari è utile conoscere il numero complessivo di entità contenute 
 
 - [Considerazioni su LINQ](linq-considerations-wcf-data-services.md)
 
-- [Procedura: Esecuzione di query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Procedura: Eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Procedura: Aggiungere opzioni di query a una query del servizio dati](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Procedura: aggiungere opzioni di query a una query del servizio dati](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Procedura: Determinare il numero di entità restituite da una query](number-of-entities-returned-by-a-query-wcf.md)
+- [Procedura: determinare il numero di entità restituite da una query](number-of-entities-returned-by-a-query-wcf.md)
 
-- [Procedura: Specificare le credenziali client per una richiesta del servizio dati](specify-client-creds-for-a-data-service-request-wcf.md)
+- [Procedura: specificare le credenziali del client per una richiesta del servizio dati](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [Procedura: Impostare le intestazioni nella richiesta client](how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [Procedura: impostare le intestazioni nella richiesta del client](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Procedura: Risultati query progetto](how-to-project-query-results-wcf-data-services.md)
+- [Procedura: proiettare risultati di query](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>Vedere anche
 

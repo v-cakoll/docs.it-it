@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039862"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968413"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni Entity Framework. È inoltre consigliabile seguire le indicazioni per la creazione di applicazioni .NET Framework protette. Per altre informazioni, vedere [Panoramica della sicurezza](../security-overview.md).  
@@ -119,11 +119,11 @@ In questo argomento vengono descritte considerazioni sulla sicurezza specifiche 
  Evitare di restituire tipi <xref:System.Linq.IQueryable%601> dai metodi esposti a chiamanti potenzialmente non attendibili per i motivi seguenti:  
   
 - Un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe chiamare metodi sul risultato che espongono dati sicuri o aumentano la dimensione del set di risultati. Si consideri ad esempio la firma del metodo riportata di seguito:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Un utente di questa query potrebbe chiamare `.Include("Orders")` sul tipo `IQueryable<Customer>` restituito per recuperare dati che la query non dovrebbe esporre. È possibile evitare questa situazione impostando il tipo restituito del metodo su <xref:System.Collections.Generic.IEnumerable%601> e chiamando un metodo (quale `.ToList()`) che materializza i risultati.  
   
 - Poiché le query <xref:System.Linq.IQueryable%601> vengono eseguite quando viene eseguita un'iterazione dei risultati, un utente di una query che espone un tipo <xref:System.Linq.IQueryable%601> potrebbe intercettare le eccezioni generate. Le eccezioni potrebbero contenere informazioni non destinate all'utente.  

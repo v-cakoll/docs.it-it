@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bf0b4e5f85da48ad5d7cb08efd09ff925b6b04d9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739576"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975534"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 
@@ -64,7 +64,7 @@ Nella tabella le versioni di .NET Framework installate nelle versioni dei sistem
   > [!NOTE]
   > .NET framework 4.5.1 e .NET Framework 4.5 vengono usati qui solo come esempi. Il principio descritto si applica a qualsiasi app destinata a una versione successiva del .NET Framework rispetto a quella installata nel sistema in cui è in esecuzione.  
   
-Alcune modifiche apportate all'.NET Framework possono richiedere modifiche al codice dell'app. Se si sta eseguendo un'app esistente in .NET Framework 4,5 o versione successiva, vedere [compatibilità delle applicazioni](application-compatibility.md). Per informazioni sull'installazione della versione corrente, vedere [Install the .NET Framework for Developers](../install/guide-for-developers.md). Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework) nel sito Web del supporto tecnico Microsoft.  
+Alcune modifiche in .NET Framework possono richiedere modifiche al codice dell'app. Vedere [Compatibilità delle applicazioni](application-compatibility.md) prima di eseguire le app esistenti con .NET Framework 4.5 o versioni successive. Per altre informazioni sull'installazione della versione corrente, vedere [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md). Per informazioni sul supporto per la .NET Framework, vedere [.NET Framework i criteri di supporto ufficiale](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) nel sito Web .NET.
   
 ## <a name="target-and-run-apps-for-older-versions"></a>Destinazione ed esecuzione di app per versioni precedenti  
 
@@ -85,5 +85,5 @@ Se inoltre l'app è destinata alla versione 2.0, 3.0 o 3.5, agli utenti potrebbe
 ## <a name="see-also"></a>Vedere anche
 
 - [Compatibilità tra versioni](version-compatibility.md)
-- [Criteri del ciclo di vita del supporto di Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+- [.NET Framework criteri di supporto ufficiale](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

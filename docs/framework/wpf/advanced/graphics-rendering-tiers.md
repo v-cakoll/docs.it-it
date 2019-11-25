@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937525"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974008"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -40,7 +40,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
 - **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di DirectX è maggiore o uguale alla versione 9,0.  
   
- La <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> proprietà consente di recuperare il livello di rendering in fase di esecuzione dell'applicazione. Il livello di rendering consente di determinare se il dispositivo supporta determinate funzionalità grafiche con accelerazione hardware. L'applicazione può quindi usare percorsi di codice diversi in fase di esecuzione a seconda del livello di rendering supportato dal dispositivo.  
+ La proprietà <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> consente di recuperare il livello di rendering in fase di esecuzione dell'applicazione. Il livello di rendering consente di determinare se il dispositivo supporta determinate funzionalità grafiche con accelerazione hardware. L'applicazione può quindi usare percorsi di codice diversi in fase di esecuzione a seconda del livello di rendering supportato dal dispositivo.  
   
 ### <a name="rendering-tier-0"></a>Livello di rendering 0  
  Il valore 0 del livello di rendering indica che l'accelerazione hardware grafico non è disponibile per l'applicazione sul dispositivo. A questo livello, si deve presupporre che il rendering tutta la grafica verrà eseguito dal software senza accelerazione hardware. Questa funzionalità del livello corrisponde a una versione di DirectX inferiore a 9,0.  
@@ -69,8 +69,8 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Rendering 2D|È supportata la maggior parte del rendering 2D.|  
 |Rasterizzazione 3D|È supportata la maggior parte delle rasterizzazioni 3D.|  
 |Filtro anisotropico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il filtro anisotropico quando viene eseguito il rendering del contenuto 3D. Il filtro anisotropico consente di migliorare la qualità delle trame di un'immagine su superfici lontane e molto inclinate rispetto alla fotocamera.|  
-|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Il mapping MIP migliora la qualità del rendering della trama quando una trama occupa un campo di visualizzazione più <xref:System.Windows.Controls.Viewport3D>piccolo in un oggetto.|  
-|Sfumature radiali|Sebbene supportato, evitare l'utilizzo di <xref:System.Windows.Media.RadialGradientBrush> su oggetti di grandi dimensioni.|  
+|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Il mapping MIP migliora la qualità del rendering della trama quando una trama occupa un campo di visualizzazione più piccolo in una <xref:System.Windows.Controls.Viewport3D>.|  
+|Sfumature radiali|Sebbene sia supportato, evitare l'uso di <xref:System.Windows.Media.RadialGradientBrush> su oggetti di grandi dimensioni.|  
 |Calcoli per l'illuminazione 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esegue l'illuminazione per vertice, in cui l'intensità della luce deve essere calcolata in ogni vertice per ogni materiale applicato a un mesh.|  
 |Rendering del testo|Il rendering dei tipi di carattere a livello di sub-pixel usa i pixel shader disponibili nell'hardware grafico.|  
   
@@ -78,18 +78,18 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
 |Funzionalità|Note|  
 |-------------|-----------|  
-|Anti-aliasing 3D|L'anti-aliasing 3D è supportato solo nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Anti-aliasing 3D|l'anti-aliasing 3D è supportato solo nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
  Le funzionalità e capacità seguenti sono **senza** accelerazione hardware:  
   
 |Funzionalità|Note|  
 |-------------|-----------|  
 |Contenuti stampati|Il rendering di tutto il contenuto stampato viene eseguito con la pipeline software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenuto rasterizzato che usa<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto di cui viene eseguito <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> il rendering <xref:System.Windows.Media.Imaging.RenderTargetBitmap>tramite il metodo di.|  
-|Contenuto affiancato che usa<xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui <xref:System.Windows.Media.TileBrush.TileMode%2A> la proprietà <xref:System.Windows.Media.TileBrush> di è impostata su <xref:System.Windows.Media.TileMode.Tile>.|  
+|Contenuto rasterizzato che usa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto di cui viene eseguito il rendering tramite il metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> di <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenuto affiancato che usa <xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> del <xref:System.Windows.Media.TileBrush> è impostata su <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfici che superano le dimensioni massime della trama dell'hardware grafico|Per la maggior parte dell'hardware grafico, le superfici di grandi dimensioni sono pari a 2048x2048 o 4096x4096 pixel.|  
 |Qualsiasi operazione il cui requisito per la RAM video supera la memoria dell'hardware grafico|È possibile monitorare l'utilizzo della RAM video dell'applicazione usando lo strumento Perforator incluso nella [famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) in Windows SDK.|  
-|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in impostando le <xref:System.Windows.Window> proprietà seguenti:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando le proprietà <xref:System.Windows.Window> seguenti:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Altre risorse  
@@ -98,7 +98,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ### <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per controllare il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Impostazione|Descrizione|  
+|Impostazioni|Descrizione|  
 |-------------|-----------------|  
 |**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
 |**Valore massimo di multicampionamento**|Specifica il grado di campionamento multiplo per l'anti-aliasing del contenuto 3D.|  
@@ -124,7 +124,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  Quando si esegue lo strumento di diagnostica DirectX, la finestra principale contiene un set di schede che consentono di visualizzare e diagnosticare le informazioni correlate a DirectX. Ad esempio, la scheda **sistema** fornisce informazioni di sistema sul computer e specifica la versione di DirectX installata nel computer.  
   
- ![Screenshot Strumento]di diagnostica DirectX(./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenshot: Strumento di diagnostica DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Finestra principale dello strumento di diagnostica DirectX  
   
 ## <a name="see-also"></a>Vedere anche

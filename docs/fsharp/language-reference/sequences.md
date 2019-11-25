@@ -1,20 +1,20 @@
 ---
 title: Sequenze
 description: Informazioni su come utilizzare F# le sequenze, quando si dispone di una raccolta di dati di grandi dimensioni ordinata, ma non si prevede necessariamente di utilizzare tutti gli elementi.
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424973"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971437"
 ---
 # <a name="sequences"></a>Sequenze
 
 > [!NOTE]
 > I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
-Una *sequenza* è una serie logica di elementi di un solo tipo. Le sequenze sono particolarmente utili quando si dispone di una raccolta di dati grande e ordinata, ma non necessariamente si prevede di usare tutti gli elementi. I singoli elementi di sequenza vengono calcolati solo se necessario, pertanto una sequenza può offrire prestazioni migliori rispetto a un elenco in situazioni in cui non vengono utilizzati tutti gli elementi. Le sequenze sono rappresentate dal tipo di `seq<'T>`, che è un alias per `System.Collections.Generic.IEnumerable`. Pertanto, qualsiasi tipo di .NET Framework che implementi `System.IEnumerable` può essere utilizzato come sequenza. Il [modulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornisce supporto per le modifiche che coinvolgono sequenze.
+Una *sequenza* è una serie logica di elementi di un solo tipo. Le sequenze sono particolarmente utili quando si dispone di una raccolta di dati grande e ordinata, ma non necessariamente si prevede di usare tutti gli elementi. I singoli elementi di sequenza vengono calcolati solo se necessario, pertanto una sequenza può offrire prestazioni migliori rispetto a un elenco in situazioni in cui non vengono utilizzati tutti gli elementi. Le sequenze sono rappresentate dal tipo di `seq<'T>`, che è un alias per <xref:System.Collections.Generic.IEnumerable%601>. Pertanto, qualsiasi tipo .NET che implementa <xref:System.Collections.Generic.IEnumerable%601> interfaccia può essere utilizzato come sequenza. Il [modulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornisce supporto per le modifiche che coinvolgono sequenze.
 
 ## <a name="sequence-expressions"></a>Espressioni di sequenza
 
@@ -22,17 +22,17 @@ Un' *espressione di sequenza* è un'espressione che restituisce una sequenza. Le
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Le espressioni di sequenza sono costituite da F# espressioni che producono valori della sequenza. Possono usare la parola chiave `yield` per produrre valori che diventano parte della sequenza.
-
-Di seguito è riportato un esempio.
+Le espressioni di sequenza sono costituite da F# espressioni che producono valori della sequenza. È anche possibile generare valori a livello di codice:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-È possibile usare l'operatore `->` anziché `yield`, nel qual caso è possibile omettere la parola chiave `do`, come illustrato nell'esempio seguente.
+Nell'esempio precedente viene usato l'operatore `->`, che consente di specificare un'espressione il cui valore diventerà parte della sequenza. È possibile usare solo `->` se ogni parte del codice che segue restituisce un valore.
+
+In alternativa, è possibile specificare la parola chiave `do` con un `yield` facoltativo che segue:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-Il codice seguente genera un elenco di coppie di coordinate insieme a un indice in una matrice che rappresenta la griglia.
+Il codice seguente genera un elenco di coppie di coordinate insieme a un indice in una matrice che rappresenta la griglia. Si noti che la prima espressione `for` richiede la specifica di un `do`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ Un'espressione `if` utilizzata in una sequenza è un filtro. Ad esempio, per gen
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-Quando si usa `yield` o `->` in un'iterazione, ogni iterazione dovrebbe generare un singolo elemento della sequenza. Se ogni iterazione produce una sequenza di elementi, utilizzare `yield!`. In tal caso, gli elementi generati a ogni iterazione vengono concatenati per produrre la sequenza finale.
+Come indicato in precedenza, `do` è necessario in questo caso, perché non esiste un ramo `else` che viene utilizzato con il `if`. Se si tenta di usare `->`, viene restituito un errore che informa che non tutti i rami restituiscono un valore.
 
-È possibile combinare più espressioni in un'espressione di sequenza. Gli elementi generati da ogni espressione vengono concatenati insieme. Per un esempio, vedere la sezione "esempi" di questo argomento.
+## <a name="the-yield-keyword"></a>Parola chiave `yield!`
+
+In alcuni casi può essere utile includere una sequenza di elementi in un'altra sequenza. Per includere una sequenza in un'altra sequenza, è necessario usare la parola chiave `yield!`:
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+Un altro modo per considerare `yield!` è che rende flat una sequenza interna e quindi lo include nella sequenza che lo contiene.
+
+Quando si usa `yield!` in un'espressione, tutti gli altri valori singoli devono usare la parola chiave `yield`:
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+Se si specifica solo `x` nell'esempio precedente, la sequenza non genera alcun valore.
 
 ## <a name="examples"></a>Esempi
 
@@ -50,7 +75,7 @@ Nel primo esempio viene utilizzata un'espressione di sequenza contenente un'iter
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-Il codice seguente usa `yield` per creare una tabella di moltiplicazione costituita da tuple di tre elementi, ognuno dei quali è costituito da due fattori e dal prodotto.
+Nell'esempio seguente viene creata una tabella di moltiplicazione costituita da tuple di tre elementi, ognuno costituito da due fattori e dal prodotto:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ Nell'esempio seguente viene illustrato l'utilizzo di `yield!` per combinare sing
 
 Le sequenze supportano molte delle stesse funzioni degli [elenchi](lists.md). Le sequenze supportano anche operazioni quali il raggruppamento e il conteggio tramite funzioni di generazione di chiavi. Le sequenze supportano anche funzioni più diverse per l'estrazione di sottosequenze.
 
-Molti tipi di dati, ad esempio elenchi, matrici, set e mappe, sono sequenze implicite perché sono raccolte enumerabili. Una funzione che accetta una sequenza come argomento funziona con uno qualsiasi dei tipi di F# dati comuni, oltre a qualsiasi tipo di dati .NET Framework che implementi `System.Collections.Generic.IEnumerable<'T>`. A differenza di una funzione che accetta un elenco come argomento, che può solo prendere elenchi. Il tipo `seq<'T>` è un'abbreviazione di tipo per `IEnumerable<'T>`. Ciò significa che qualsiasi tipo che implementa il `System.Collections.Generic.IEnumerable<'T>`generico, che include matrici, elenchi, set e mappe in F#e la maggior parte dei .NET Framework tipi di raccolta, è compatibile con il tipo di `seq` e può essere usato ovunque sia prevista una sequenza.
+Molti tipi di dati, ad esempio elenchi, matrici, set e mappe, sono sequenze implicite perché sono raccolte enumerabili. Una funzione che accetta una sequenza come argomento funziona con uno qualsiasi dei tipi di F# dati comuni, oltre a qualsiasi tipo di dati .NET che implementa `System.Collections.Generic.IEnumerable<'T>`. A differenza di una funzione che accetta un elenco come argomento, che può solo prendere elenchi. Il tipo `seq<'T>` è un'abbreviazione di tipo per `IEnumerable<'T>`. Ciò significa che qualsiasi tipo che implementa l'`System.Collections.Generic.IEnumerable<'T>`generica, che include matrici, elenchi, set e mappe in F#e anche la maggior parte dei tipi di raccolte .NET, è compatibile con il tipo di `seq` e può essere usato ovunque sia prevista una sequenza.
 
 ## <a name="module-functions"></a>Funzioni di modulo
 

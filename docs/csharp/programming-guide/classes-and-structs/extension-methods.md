@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970916"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971059"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -44,7 +44,7 @@ int i = s.WordCount();
   
  Nel codice si richiama il metodo di estensione con la sintassi del metodo di istanza. Microsoft Intermediate Language (IL) generato dal compilatore converte tuttavia il codice in una chiamata sul metodo statico. Il principio di incapsulamento non viene pertanto realmente violato. Infatti, i metodi di estensione non possono accedere a variabili private nel tipo che stanno estendendo.  
   
- Per altre informazioni, vedere [Procedura: Implementare e chiamare un metodo di estensione personalizzato](./how-to-implement-and-call-a-custom-extension-method.md).  
+ Per ulteriori informazioni, vedere [come implementare e chiamare un metodo di estensione personalizzato](./how-to-implement-and-call-a-custom-extension-method.md).
   
  In generale, è molto più frequente chiamare i metodi di estensione che implementarne di personalizzati. Perché i metodi di estensione vengono chiamati utilizzando la sintassi del metodo di istanza, non è necessaria alcuna particolare conoscenza per utilizzarli dal codice client. Per abilitare i metodi di estensione per un particolare tipo, aggiungere una direttiva `using` per lo spazio dei nomi nel quale sono definiti i metodi. Per utilizzare ad esempio gli operatori query standard, aggiungere questa direttiva `using` al codice:  
   
@@ -52,7 +52,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- Può inoltre essere necessario aggiungere un riferimento a System.Core.dll. Si noterà che gli operatori query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei tipi <xref:System.Collections.Generic.IEnumerable%601>.  
+ Potrebbe anche essere necessario aggiungere un riferimento a System. Core. dll. Si noterà che gli operatori di query standard vengono ora visualizzati in IntelliSense come metodi aggiuntivi disponibili per la maggior parte dei tipi di <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Associazione di metodi di estensione in fase di compilazione  
  È possibile utilizzare metodi di estensione per estendere una classe o un'interfaccia, ma non per eseguirne l'override. Un metodo di estensione con lo stesso nome e la stessa firma di un metodo di interfaccia o di classe non verrà mai chiamato. In fase di compilazione, i metodi di estensione hanno sempre una priorità più bassa dei metodi di istanza definiti nel tipo stesso. In altre parole, se un tipo dispone di un metodo denominato `Process(int i)` e si dispone di un metodo di estensione con la stessa firma, il compilatore eseguirà sempre l'associazione al metodo di istanza. Quando il compilatore rileva una chiamata al metodo, cerca innanzitutto una corrispondenza nei metodi di istanza del tipo. Se non viene trovata alcuna corrispondenza, cercherà eventuali metodi di estensione definiti per il tipo ed eseguirà l'associazione al primo metodo di estensione trovato. Nell'esempio seguente viene dimostrato come il compilatore determina a quale metodo di estensione o metodo di istanza eseguire l'associazione.  
@@ -66,7 +66,7 @@ using System.Linq;
   
  [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
-## <a name="general-guidelines"></a>Linee guida generali  
+## <a name="general-guidelines"></a>Indicazioni generali  
  In generale, si consiglia di implementare i metodi di estensione sporadicamente e solo se necessario. Se possibile, è opportuno che il codice client che deve estendere un tipo esistente esegua questa operazione creando un nuovo tipo derivato dal tipo esistente. Per altre informazioni, vedere [Ereditarietà](./inheritance.md).  
   
  Quando si utilizza un metodo di estensione per estendere un tipo di cui non è possibile modificare il codice sorgente, si corre il rischio che una modifica nell'implementazione del tipo provochi l'interruzione del metodo di estensione.  

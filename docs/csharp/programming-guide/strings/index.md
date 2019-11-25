@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423147"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969723"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -37,7 +37,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Per altre informazioni su come creare nuove stringhe basate su modifiche quali operazioni di ricerca e sostituzione sulla stringa originale, vedere [Procedura: modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
+ Per ulteriori informazioni su come creare nuove stringhe basate su modifiche come le operazioni di ricerca e sostituzione sulla stringa originale, vedere [come modificare il contenuto di una stringa](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Valori letterali stringa normali e verbatim  
  Usare valori letterali stringa normali quando è necessario incorporare caratteri di escape forniti da C#, come mostrato nell'esempio seguente:  
@@ -91,7 +91,7 @@ Usare l'interpolazione di stringhe per migliorare la leggibilità e la gestibili
 Per altre informazioni sulla formattazione dei tipi .NET, vedere [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Sottostringhe  
- Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: Cercare stringhe](../../how-to/search-strings.md) e [Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
+ Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per ulteriori informazioni, vedere [come](../../how-to/search-strings.md) eseguire la ricerca di stringhe e [come modificare il contenuto](../../how-to/modify-string-contents.md)di una stringa.
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
-|[Procedura: Confrontare stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
-|[Procedura: Concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)|Illustra vari modi per unire più stringhe in una.|
-|[Procedura: Analizzare le stringhe con String.Split](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
-|[Procedura: Cercare stringhe](../../how-to/search-strings.md)|Spiega come eseguire la ricerca di testo specifico o di motivi nelle stringhe.|  
-|[Procedura: Determinare se una stringa rappresenta un valore numerico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
+|[Come modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
+|[Come confrontare le stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
+|[Come concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)|Illustra vari modi per unire più stringhe in una.|
+|[Come analizzare le stringhe con String. Split](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
+|[Come cercare stringhe](../../how-to/search-strings.md)|Spiega come eseguire la ricerca di testo specifico o di motivi nelle stringhe.|  
+|[Come determinare se una stringa rappresenta un valore numerico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Interpolazione di stringhe](../../language-reference/tokens/interpolated.md)|Descrive la funzionalità di interpolazione di stringhe che offre una sintassi efficiente per formattare le stringhe.|
 |[Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
 |[Analisi di stringhe](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  

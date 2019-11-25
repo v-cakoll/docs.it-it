@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874939"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975002"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 
@@ -24,19 +24,19 @@ I contratti di codice includono classi che consentono di contrassegnare il codic
 
 I vantaggi dei contratti di codice includono:
 
-- Test migliorati: I contratti di codice offrono verifica statica, il controllo di runtime e la generazione di documentazione.
+- Test migliorati: i contratti di codice consentono la verifica statica, il controllo di runtime e la generazione di documentazione.
 
-- Strumenti di test automatico: È possibile usare i contratti di codice per generare unit test più significativi, filtrando gli argomenti di test inutili che non soddisfano le precondizioni.
+- Strumenti di test automatici: è possibile usare i contratti di codice per generare unit test più significativi eliminando gli argomenti di test inutili che non soddisfano le precondizioni.
 
-- Verifica statica: Il controllo statico può decidere se sono presenti eventuali violazioni dei contratti senza eseguire il programma. Verifica la presenza di contratti impliciti, ad esempio dereferenziazioni null e limiti di matrici, e di contratti espliciti.
+- Verifica statica: lo strumento di controllo statico può rilevare eventuali violazioni dei contratti senza eseguire il programma. Verifica la presenza di contratti impliciti, ad esempio dereferenziazioni null e limiti di matrici, e di contratti espliciti.
 
-- Documentazione di riferimento: Il generatore di documentazione integra i file di documentazione XML esistenti con le informazioni del contratto. Sono anche presenti fogli di stile utilizzabili con [Sandcastle](https://github.com/EWSoftware/SHFB) in modo che nelle pagine della documentazione generate siano contenute sezioni relative ai contratti.
+- Documentazione di riferimento: il generatore di documentazione integra i file di documentazione XML esistenti con le informazioni sul contratto. Sono anche presenti fogli di stile utilizzabili con [Sandcastle](https://github.com/EWSoftware/SHFB) in modo che nelle pagine della documentazione generate siano contenute sezioni relative ai contratti.
 
 I contratti possono essere usati immediatamente da tutti i linguaggi di .NET Framework; non è necessario scrivere un parser o un compilatore speciale. Un componente aggiuntivo di Visual Studio consente di specificare il livello di analisi dei contratti di codice da eseguire. Gli analizzatori possono confermare che i contratti sono formalmente corretti (controllo del tipo e risoluzione dei nomi) e possono produrre un form compilato dei contratti nel formato MSIL (Microsoft Intermediate Language). La funzionalità di creazione dei contratti in Visual Studio consente di usare IntelliSense standard fornito dallo strumento.
 
 La maggior parte dei metodi nella classe dei contratti sono compilati in modo condizionale; in altre parole, il compilatore genera chiamate a questi metodi solo quando si definisce un simbolo speciale, CONTRACTS_FULL, tramite la direttiva `#define`. CONTRACTS_FULL consente di scrivere contratti nel codice senza usare le direttive `#ifdef`; è possibile produrre build diverse, alcune con contratti e altre senza.
 
-Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [Code Contracts](https://go.microsoft.com/fwlink/?LinkId=152461)(Contratti di codice) nel sito Web MSDN DevLabs.
+Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [contratti di codice](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET) nel sito di Visual Studio Marketplace.
 
 ## <a name="preconditions"></a>Precondizioni
 
@@ -69,7 +69,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-La condizione nel test precedente è una precondizione negata. La precondizione effettiva sarebbe `x != null`. Una precondizione negata è altamente limitata: Deve essere scritta come mostrato nell'esempio precedente; vale a dire, quindi non deve contenere `else` clausole e il corpo del `then` clausola deve essere un singolo `throw` istruzione. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.
+La condizione nel test precedente è una precondizione negata. La precondizione effettiva verrebbe `x != null`. Una precondizione negata è altamente limitata: deve essere scritta come mostrato nell'esempio precedente; ovvero non deve contenere clausole `else` e il corpo della clausola `then` deve essere una singola istruzione `throw`. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.
 
 ## <a name="postconditions"></a>Postconditions
 
@@ -101,11 +101,11 @@ Alcuni tipi di eccezione sono difficili da usare in una postcondizione ecceziona
 
 I seguenti metodi possono essere usati solo all'interno di postcondizioni:
 
-- È possibile fare riferimento ai valori restituiti dai metodi nelle postcondizioni usando l'espressione `Contract.Result<T>()`, dove `T` viene sostituito dal tipo restituito del metodo. Quando il compilatore non è in grado di dedurre il tipo, è necessario fornirlo in modo esplicito. Ad esempio, il C# compilatore è in grado di dedurre i tipi per i metodi che non accettano argomenti, è necessaria la seguente postcondizione: `Contract.Ensures(0 <Contract.Result<int>())` I metodi con tipo restituito `void` non può fare riferimento a `Contract.Result<T>()` nelle relative postcondizioni.
+- È possibile fare riferimento ai valori restituiti dai metodi nelle postcondizioni usando l'espressione `Contract.Result<T>()`, dove `T` viene sostituito dal tipo restituito del metodo. Quando il compilatore non è in grado di dedurre il tipo, è necessario fornirlo in modo esplicito. Il compilatore C#, ad esempio, non è in grado di dedurre i tipi per i metodi che non accettano argomenti, pertanto richiede la seguente postcondizione: `Contract.Ensures(0 <Contract.Result<int>())`. I metodi con un tipo restituito `void` non possono fare riferimento a `Contract.Result<T>()` nelle relative postcondizioni.
 
-- Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Il compilatore C#, ad esempio, deduce sempre il tipo poiché accetta un argomento. Esistono diverse restrizioni relative a quanto può accadere in `e` e i contesti nei quali può essere visualizzata un'espressione Old. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.
+- Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Ad esempio, il C# compilatore deduce sempre il tipo perché accetta un argomento. Esistono diverse restrizioni su ciò che può verificarsi in `e` e i contesti in cui può essere visualizzata un'espressione precedente. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.
 
-  - Il valore deve esistere nello stato di precondizione del metodo. Per fare riferimento a un campo in un oggetto, le precondizioni devono garantire che l'oggetto è sempre non null.
+  - Il valore deve esistere nello stato di precondizione del metodo. Per fare riferimento a un campo in un oggetto, le precondizioni devono garantire che l'oggetto sia sempre non null.
 
   - Non è possibile fare riferimento al valore restituito del metodo in un'espressione Old:
 
@@ -165,7 +165,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Gli invarianti non vengono verificati per il finalizzatore di un oggetto e un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementazione.
+Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Gli invarianti non vengono controllati per un finalizzatore di oggetti e un'implementazione di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
 
 <a name="usage_guidelines"></a>
 
@@ -208,7 +208,7 @@ Gli strumenti dei contratti di codice presuppongono che i seguenti elementi di c
 
 ### <a name="visibility"></a>Visibility
 
-Tutti i membri menzionati in un contratto devono essere visibili almeno quanto il metodo in cui vengono visualizzati.  Un campo privato, ad esempio, non può essere menzionato in una precondizione per un metodo pubblico; i client non possono convalidare un simile contratto prima di chiamare il metodo. Tuttavia, se il campo è contrassegnato con <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, è esente da queste regole.
+Tutti i membri menzionati in un contratto devono essere visibili almeno quanto il metodo in cui vengono visualizzati. Un campo privato, ad esempio, non può essere menzionato in una precondizione per un metodo pubblico; i client non possono convalidare un simile contratto prima di chiamare il metodo. Tuttavia, se il campo è contrassegnato con <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, è esente da queste regole.
 
 ## <a name="example"></a>Esempio
 

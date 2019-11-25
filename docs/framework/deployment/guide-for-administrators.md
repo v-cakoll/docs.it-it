@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052149"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975564"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 
@@ -21,7 +21,7 @@ Questo articolo dettagliato descrive come un amministratore di sistema può dist
 > [!NOTE]
 > Il software a cui si fa riferimento nel presente documento, inclusi in via esemplificativa .NET Framework 4.5, System Center Configuration Manager e Active Directory sono soggetti ai termini e alle condizioni di licenza. Queste istruzioni presuppongono che tali condizioni di licenza siano state riviste e accettate dai licenziatari del software e non derogano ad alcuna condizione di tali contratti di licenza.
 >
-> Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) nel sito Web del supporto tecnico Microsoft.
+> Per informazioni sul supporto per la .NET Framework, vedere [.NET Framework i criteri di supporto ufficiale](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) nel sito web di supporto tecnico Microsoft.
 
 Di seguito sono elencate le diverse sezioni di questo argomento:
 
@@ -55,7 +55,7 @@ Se si dispone dell'infrastruttura di supporto sul posto, è possibile usare Syst
 
 ## <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 
-È possibile usare System Center Configuration Manager 2012 per distribuire un'installazione invisibile all'utente di .NET Framework 4.5 in cui gli utenti non interagiscono con il processo di installazione. A tale scopo, seguire questa procedura:
+È possibile usare System Center Configuration Manager 2012 per distribuire un'installazione invisibile all'utente di .NET Framework 4.5 in cui gli utenti non interagiscono con il processo di installazione. Attenersi ai passaggi riportati di seguito.
 
 1. [Creare una raccolta](#creating_a_collection).
 
@@ -123,7 +123,7 @@ Per creare un pacchetto:
 
     2. **Riga di comando:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (le opzioni della riga di comando sono descritte nella tabella che segue questi passaggi)
 
-    3. **Esegui:** scegliere **Nascosto**.
+    3. **Esegui:** Scegliere **Nascosto**.
 
     4. **Requisiti per esecuzione programma:** scegliere l'opzione che specifica che il programma può essere eseguito indipendentemente dal fatto che un utente sia connesso o meno.
 
@@ -131,13 +131,13 @@ Per creare un pacchetto:
 
 Nella tabella seguente vengono descritte le opzioni della riga di comando specificate nel passaggio 7.
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |------------|-----------------|
 |**/q**|Imposta la modalità non interattiva. Nessun input utente viene richiesto e nessun output viene visualizzato.|
 |**/norestart**|Impedisce il riavvio automatico del programma di installazione. Se si usa questa opzione, il riavvio del computer deve essere gestito da Configuration Manager.|
-|**/chainingpackage** *NomePacchetto*|Specifica il nome del pacchetto che esegue il concatenamento. Questa informazione viene riportata insieme alle altre informazioni sulla sessione di installazione per coloro sono registrati in [Programma Analisi utilizzo software (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Applicazione di concatenamento"** .|
+|**/chainingpackage** *NomePacchetto*|Specifica il nome del pacchetto che esegue il concatenamento. Queste informazioni vengono segnalate con altre informazioni sulla sessione di installazione per coloro che hanno effettuato l'iscrizione a Microsoft Analisi utilizzo software (analisi utilizzo software). Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Applicazione di concatenamento"** .|
 
-Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile, gli utenti non interagiscono con il processo d'installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio. Vedere [Getting Progress Information from an Installation Package](https://go.microsoft.com/fwlink/?LinkId=179606) (Ottenere informazioni di stato da un pacchetto di installazione).
+Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile, gli utenti non interagiscono con il processo d'installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio. Vedere [Getting Progress Information from an Installation Package](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)) (Ottenere informazioni di stato da un pacchetto di installazione).
 
 <a name="select_dist_point"></a>
 
@@ -230,7 +230,7 @@ Per altre informazioni riguardanti l'infrastruttura per testare la distribuzione
 
 <a name="troubleshooting"></a>
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 ### <a name="log-file-locations"></a>Percorsi dei file di log
 
@@ -253,7 +253,7 @@ Nella tabella seguente vengono elencati i codici più comuni restituiti dal prog
 
 Per collegamenti a informazioni dettagliate, vedere la sezione successiva, [Scaricare i codici di errore](#additional_error_codes).
 
-|Codice restituito|Description|
+|Codice restituito|Descrizione|
 |-----------------|-----------------|
 |0|Installazione completata.|
 |1602|Installazione annullata dall'utente.|

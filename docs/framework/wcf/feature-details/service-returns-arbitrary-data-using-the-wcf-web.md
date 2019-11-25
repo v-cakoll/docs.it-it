@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: Creare un servizio per restituire dati arbitrari usando il modello di programmazione HTTP Web WCF'
+title: 'Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586249"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976096"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: Creare un servizio per restituire dati arbitrari usando il modello di programmazione HTTP Web WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò avviene quando un'operazione del servizio deve restituire i dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo il modello di programmazione WCF WEB HTTP per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Questa situazione si verifica quando un'operazione del servizio deve restituire dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP WEB WCF per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
   
 ### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
 1. Definire il contratto di servizio. Il contratto viene denominato `IImageServer` e dispone di un metodo chiamato `GetImage` che restituisce <xref:System.IO.Stream>.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IImageServer  
         {  
@@ -25,41 +25,41 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
         }  
     ```  
   
-     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF si presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e viene non applicata alcuna formattazione ai dati restituiti.  
+     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e non applica la formattazione ai dati restituiti.  
   
 2. Implementare il contratto di servizio Il contratto ha una sola operazione (`GetImage`). Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg. L'operazione restituisce quindi il flusso al chiamante.  
   
-    ```  
-    public class Service : IImageServer  
-       {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
-       }  
+    ```csharp
+    public class Service : IImageServer
+    {
+        public Stream GetImage(int width, int height)
+        {
+            Bitmap bitmap = new Bitmap(width, height);
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);
+                }
+            }
+            MemoryStream ms = new MemoryStream();
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ms.Position = 0;
+            WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";
+            return ms;
+        }
+    }
     ```  
   
      Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Questo imposta l'intestazione content-type su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
+     Questa operazione consente di impostare l'intestazione del tipo di contenuto su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
 ### <a name="to-host-the-service"></a>Per ospitare il servizio  
   
 1. Creare un'applicazione console per ospitare il servizio.  
   
-    ```  
+    ```csharp
     class Program  
     {  
         static void Main(string[] args)  
@@ -70,31 +70,31 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
 2. Creare una variabile per contenere l'indirizzo di base per il servizio all'interno del metodo `Main`.  
   
-    ```  
+    ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
 3. Creare un'istanza di <xref:System.ServiceModel.ServiceHost> per il servizio specificando la classe e l'indirizzo di base del servizio.  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
 4. Aggiungere un endpoint utilizzando <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
-    ```  
+    ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
 5. Aprire l’host del servizio.  
   
-    ```  
-    host.Open()  
+    ```csharp  
+    host.Open();  
     ```  
   
 6. Attendere che l'utente prema INVIO prima di terminare il servizio.  
   
-    ```  
+    ```csharp
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
@@ -110,7 +110,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo del codice per questo argomento.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

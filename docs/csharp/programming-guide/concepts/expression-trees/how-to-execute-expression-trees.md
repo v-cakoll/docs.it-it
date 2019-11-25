@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire alberi delle espressioni (C#)'
+title: Come eseguire gli alberi delle espressioniC#()
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924364"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969886"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Procedura: Eseguire alberi delle espressioni (C#)
+# <a name="how-to-execute-expression-trees-c"></a>Come eseguire gli alberi delle espressioniC#()
 In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
   
  Possono essere eseguite solo gli alberi delle espressioni che rappresentano espressioni lambda. Gli alberi delle espressioni che rappresentano espressioni lambda sono di tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Per eseguire gli alberi delle espressioni, chiamare il metodo <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> per creare un delegato eseguibile e quindi richiamare il delegato.  
@@ -49,4 +49,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>Vedere anche
 
 - [Alberi delle espressioni (C#)](./index.md)
-- [Procedura: Modificare alberi delle espressioni (C#)](./how-to-modify-expression-trees.md)
+- [Come modificare gli alberi delle espressioniC#()](./how-to-modify-expression-trees.md)

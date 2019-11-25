@@ -7,23 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d09b5b76c39f33848d44beb43d9b09c5e6ed13b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046168"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974873"
 ---
 # <a name="security-etw-events"></a>Eventi ETW di sicurezza
-<a name="top"></a> Gli eventi di sicurezza vengono generati durante la verifica del nome sicuro e la verifica Authenticode.  
-  
- Questa categoria include i seguenti eventi:  
-  
-- [Eventi StrongNameVerificationStart_V1 e StrongNameVerificationStop_V1](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
-  
-- [Eventi AuthenticodeVerificationStart_V1 e AuthenticodeVerificationStop_V1](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
-  
-<a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
+
+Gli eventi di sicurezza vengono generati durante la verifica del nome sicuro e la verifica Authenticode.  
+
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>Eventi StrongNameVerificationStart_V1 e StrongNameVerificationStop_V1  
  La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
@@ -40,16 +34,13 @@ ms.locfileid: "71046168"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |VerificationFlags|win:UInt32|Flag di verifica.|  
 |ErrorCode|win:UInt32|Codice errore HResult.|  
 |FullyQualifiedAssemblyName|win:UnicodeString|Nome completo dell'assembly.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
+
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>Eventi AuthenticodeVerificationStart_V1 e AuthenticodeVerificationStop_V1  
  La tabella seguente illustra la parola chiave e il livello  
   
@@ -66,7 +57,7 @@ ms.locfileid: "71046168"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |VerificationFlags|win:UInt32|Flag di verifica.|  
 |ErrorCode|win:UInt32|Codice errore HResult.|  

@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121725"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972107"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 
-<a name="Top"></a> Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
+Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
 |Membro RegexOptions|Carattere inline|Effetto|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|Non disponibile|Usare il comportamento predefinito. Per altre informazioni, vedere [Opzioni predefinite](#Default).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Usa la corrispondenza che non fa distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [Corrispondenza senza distinzione tra maiuscole e minuscole](#Case).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Usare la modalità multiriga, in cui `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input. Per altre informazioni, vedere [Modalità multiriga](#Multiline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Usa la modalità a riga singola, in cui il punto (.) corrisponde a qualsiasi carattere anziché a tutti i caratteri tranne `\n`. Per altre informazioni, vedere [Modalità a riga singola](#Singleline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Non acquisire gruppi senza nome. Le uniche acquisizioni valide sono i gruppi denominati o numerati in modo esplicito in formato `(?<`*nome*`>` *sottoespressione*`)`. Per altre informazioni, vedere [Solo acquisizioni esplicite](#Explicit).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Non disponibile|Compila l'espressione regolare in un assembly. Per altre informazioni, vedere [Espressioni regolari compilate](#Compiled).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Esclude gli spazi vuoti senza caratteri di escape nel criterio e abilita i commenti dopo un simbolo di cancelletto (`#`). Per altre informazioni, vedere [Ignora spazi vuoti](#Whitespace).|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Non disponibile|Modifica la direzione di ricerca. La ricerca viene eseguita da destra verso sinistra, anziché da sinistra verso destra. Per altre informazioni, vedere [Modalità da destra a sinistra](#RightToLeft).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Non disponibile|Abilita un comportamento conforme a ECMAScript per l'espressione. Per altre informazioni, vedere [Comportamento di corrispondenza ECMAScript](#ECMAScript).|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Non disponibile|Ignora le differenze di cultura nella lingua. Per altre informazioni, vedere [Confronto usando la lingua inglese](#Invariant).|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|Non disponibile|Usare il comportamento predefinito. Per altre informazioni, vedere [Opzioni predefinite](#default-options).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Usa la corrispondenza che non fa distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [Corrispondenza senza distinzione tra maiuscole e minuscole](#case-insensitive-matching).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Usare la modalità multiriga, in cui `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input. Per altre informazioni, vedere [Modalità multiriga](#multiline-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Usa la modalità a riga singola, in cui il punto (.) corrisponde a qualsiasi carattere anziché a tutti i caratteri tranne `\n`. Per altre informazioni, vedere [modalità a riga singola](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Non acquisire gruppi senza nome. Le uniche acquisizioni valide sono i gruppi denominati o numerati in modo esplicito in formato `(?<`*nome*`>` *sottoespressione*`)`. Per altre informazioni, vedere [Solo acquisizioni esplicite](#explicit-captures-only).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Non disponibile|Compila l'espressione regolare in un assembly. Per altre informazioni, vedere [Espressioni regolari compilate](#compiled-regular-expressions).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Esclude gli spazi vuoti senza caratteri di escape nel criterio e abilita i commenti dopo un simbolo di cancelletto (`#`). Per altre informazioni, vedere [Ignora spazi vuoti](#ignore-white-space).|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Non disponibile|Modifica la direzione di ricerca. La ricerca viene eseguita da destra verso sinistra, anziché da sinistra verso destra. Per altre informazioni, vedere [Modalità da destra a sinistra](#right-to-left-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Non disponibile|Abilita un comportamento conforme a ECMAScript per l'espressione. Per altre informazioni, vedere [Comportamento di corrispondenza ECMAScript](#ecmascript-matching-behavior).|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Non disponibile|Ignora le differenze di cultura nella lingua. Per altre informazioni, vedere [Confronto usando la lingua inglese](#comparison-using-the-invariant-culture).|
 
 ## <a name="specifying-the-options"></a>Specifica delle opzioni
 
@@ -108,8 +108,6 @@ Per testare <xref:System.Text.RegularExpressions.RegexOptions.None?displayProper
 
 Nelle sezioni seguenti sono riportate le opzioni supportate dalle espressioni regolari in .NET.
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>Opzioni predefinite
 
 L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> indica che non sono state specificate opzioni e che il motore delle espressioni regolari usa il comportamento predefinito. Il comportamento predefinito include quanto segue:
@@ -135,10 +133,6 @@ L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty
 
 Poiché l'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>rappresenta il comportamento predefinito del motore delle espressioni regolari, raramente viene specificata in modo esplicito in una chiamata a metodo. Viene invece chiamato un costruttore o un metodo statico dei criteri di ricerca senza un parametro `options`.
 
-[Torna all'inizio](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>Corrispondenza senza distinzione tra maiuscole e minuscole
 
 L'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>, o l'opzione inline `i`, fornisce la corrispondenza senza distinzione tra maiuscole e minuscole. Per impostazione predefinita, vengono usate le convenzioni sulla combinazione di maiuscole e minuscole delle impostazioni cultura correnti.
@@ -152,10 +146,6 @@ L'esempio seguente modifica il criterio di ricerca di espressioni regolari dell'
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[Torna all'inizio](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>Modalità multiriga
 
@@ -184,10 +174,6 @@ L'esempio di seguito equivale al precedente, tranne il fatto che viene usata l'o
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[Torna all'inizio](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>Modalità a riga singola.
 
 L'opzione <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>, o l'opzione inline `s`, consente al motore delle espressioni regolari di gestire la stringa di input come se fosse composta da una sola riga. Lo fa modificando il comportamento dell'elemento di linguaggio punto (`.`) in modo che corrisponda a qualsiasi carattere anziché a qualsiasi carattere ad eccezione del carattere di nuova riga `\n` o \u000A.
@@ -201,10 +187,6 @@ L'esempio di seguito equivale al precedente, tranne il fatto che viene usata l'o
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[Torna all'inizio](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>Solo acquisizioni esplicite
 
@@ -244,10 +226,6 @@ Infine, si può usare l'elemento di gruppo inline `(?n:)` per disattivare le acq
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[Torna all'inizio](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>Espressioni regolari compilate
 
 Per impostazione predefinita, le espressioni regolari in .NET vengono interpretate. Quando viene creata un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o viene chiamato un metodo <xref:System.Text.RegularExpressions.Regex> statico, il criterio di ricerca di espressioni regolari viene convertito in un set di codici operativi personalizzati, che vengono usati da un interprete per eseguire l'espressione regolare. Questo comporta un compromesso: il tempo di inizializzazione del motore delle espressioni regolari viene ridotto al minimo, a scapito delle prestazioni in fase di esecuzione.
@@ -269,10 +247,6 @@ Il miglioramento delle prestazioni, tuttavia, si verifica solo in presenza delle
 
 > [!NOTE]
 > L'opzione <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> non è correlata al metodo <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>, che crea un assembly speciale che contiene espressioni regolari compilate predefinite.
-
-[Torna all'inizio](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>Ignora spazi vuoti
 
@@ -302,7 +276,7 @@ L'esempio di seguito definisce il criterio di ricerca di espressioni regolari se
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-Questo criterio è simile a quello definito nella sezione [Solo acquisizioni esplicite](#Explicit), ad eccezione del fatto che usa l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> per ignorare lo spazio vuoto del criterio.
+Questo criterio è simile a quello definito nella sezione [Solo acquisizioni esplicite](#explicit-captures-only), ad eccezione del fatto che usa l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> per ignorare lo spazio vuoto del criterio.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ L'esempio seguente usa l'opzione inline `(?x)` per ignorare lo spazio vuoto del 
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[Torna all'inizio](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>Modalità da destra a sinistra
 
@@ -342,10 +312,6 @@ Il criterio di ricerca di espressioni regolari è definito nel modo illustrato n
 |`,?`|Trova la corrispondenza di una o nessuna virgola.|
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|
 |`\d{4}`|Trova la corrispondenza con quattro cifre decimali.|
-
-[Torna all'inizio](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>Comportamento di corrispondenza ECMAScript
 
@@ -386,10 +352,6 @@ Il comportamento di ECMAScript e quello delle espressioni regolari canoniche dif
   |`\0` seguito da cifre ottali comprese tra 0 e 2|Interpretare come un ottale. Ad esempio, `\044` viene sempre interpretato come un valore ottale e significa "$".|Stesso comportamento.|
   |`\` seguito da una cifra compresa tra 1 e 9, quindi da nessuna cifra decimale aggiuntiva|Interpretare come un backreference. Ad esempio, `\9` rappresenta sempre un backreference 9, anche se il nono gruppo di acquisizione non esiste. Se il gruppo di acquisizione non esiste, il parser dell'espressione regolare genera un'eccezione <xref:System.ArgumentException>.|Se esiste un gruppo di acquisizione di una singola cifra decimale, il carattere viene considerato un backreference di tale cifra. Altrimenti il valore viene interpretato come un valore letterale.|
   |`\` seguito da una cifra compresa tra 1 e 9, quindi da ulteriori cifre decimali|Interpretare le cifre come un valore decimale. Se tale gruppo di acquisizione esiste, l'espressione viene interpretata come un backreference.<br /><br /> In caso contrario, interpretare le cifre ottali iniziali fino all'ottale 377, ovvero considerare solo gli 8 bit inferiori del valore. Interpretare le cifre restanti come valori letterali. Ad esempio, nell'espressione `\3000`, se il gruppo di acquisizione 300 esiste, l'espressione viene interpretata come un backreference 300; se il gruppo di acquisizione 300 non esiste, viene interpretata come ottale 300 seguito da 0.|Interpretare come un backreference convertendo il maggior numero possibile di cifre a un valore decimale che si può riferire a un'acquisizione. Se non è possibile convertire alcuna cifra, interpretare il carattere come un ottale usando le cifre ottali iniziali fino all'ottale 377.|
-
-[Torna all'inizio](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>Confronto usando la lingua inglese
 

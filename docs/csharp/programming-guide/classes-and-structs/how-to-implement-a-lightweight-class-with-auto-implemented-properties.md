@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Implementare una classe leggera con proprietà implementate automaticamente - Guida per programmatori C#'
+title: Come implementare una classe Lightweight con proprietà implementate automaticamente- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926763"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970914"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedura: Implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Come implementare una classe Lightweight con proprietà implementate automaticamente (C# guida per programmatori)
 
 Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.
 

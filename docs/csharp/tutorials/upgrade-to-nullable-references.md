@@ -4,12 +4,12 @@ description: Questa esercitazione avanzata fornisce un'introduzione ai tipi rife
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039682"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969353"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: eseguire la migrazione di codice esistente con tipi di riferimento Nullable
 
@@ -32,7 +32,7 @@ Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e 
 
 ## <a name="explore-the-sample-application"></a>Esplorare l'applicazione di esempio
 
-L'applicazione di esempio di cui verrà eseguita la migrazione è un'app Web lettore di feed RSS. L'app consente di leggere da un singolo feed RSS e visualizzare riassunti per gli articoli più recenti. È possibile fare clic su uno degli articoli per visitare il sito. L'applicazione è relativamente nuova, ma è stata scritta prima che diventassero disponibili i tipi riferimento nullable. Pur essendo rappresentative di solidi principi, le decisioni di progettazione non sfruttano questa importante funzionalità del linguaggio.
+L'applicazione di esempio di cui verrà eseguita la migrazione è un'app Web lettore di feed RSS. L'app consente di leggere da un singolo feed RSS e visualizzare riassunti per gli articoli più recenti. È possibile selezionare uno degli articoli per visitare il sito. L'applicazione è relativamente nuova, ma è stata scritta prima che diventassero disponibili i tipi riferimento nullable. Pur essendo rappresentative di solidi principi, le decisioni di progettazione non sfruttano questa importante funzionalità del linguaggio.
 
 L'applicazione di esempio include una libreria di unit test che convalida le funzionalità principali dell'app. Tale progetto renderà più facile eseguire l'aggiornamento in modo sicuro, se si modifica qualsiasi implementazione in base agli avvisi generati. È possibile scaricare il codice iniziale dal repository GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start).
 

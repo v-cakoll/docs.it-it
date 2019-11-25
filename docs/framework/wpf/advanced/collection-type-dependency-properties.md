@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458472"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974161"
 ---
 # <a name="collection-type-dependency-properties"></a>Proprietà di dipendenza di tipo raccolta
 Questo argomento include linee guida e modelli consigliati per l'implementazione di una proprietà di dipendenza in cui la proprietà è di tipo raccolta.  
@@ -28,8 +28,11 @@ Questo argomento include linee guida e modelli consigliati per l'implementazione
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inizializzazione della raccolta oltre il valore predefinito  
  Quando si crea una proprietà di dipendenza, non si specifica il valore predefinito della proprietà come valore iniziale del campo. Al contrario, viene specificato il valore predefinito tramite i metadati della proprietà di dipendenza. Se la proprietà è un tipo di riferimento, il valore predefinito specificato nei metadati della proprietà di dipendenza non è un valore predefinito per istanza, ma un valore predefinito che viene applicato a tutte le istanze del tipo. Pertanto, è necessario prestare attenzione a non usare la singola raccolta statica definita dai metadati della proprietà della raccolta come valore di lavoro predefinito per le istanze del tipo appena create. È invece necessario assicurarsi di impostare deliberatamente il valore della raccolta su un'unica raccolta (istanza), come parte della logica del costruttore di classi. In caso contrario, verrà creata una classe Singleton non intenzionale.  
   
- Si osservi l'esempio riportato di seguito. La sezione seguente dell'esempio descrive la definizione di una classe `Aquarium`. La classe definisce la proprietà di dipendenza del tipo di raccolta `AquariumObjects`, che usa il tipo di <xref:System.Collections.Generic.List%601> generico con un vincolo di tipo <xref:System.Windows.FrameworkElement>. Nella chiamata <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> per la proprietà di dipendenza, i metadati stabiliscono il valore predefinito come nuovo <xref:System.Collections.Generic.List%601>generico.  
-  
+ Si osservi l'esempio riportato di seguito. Nella sezione seguente dell'esempio viene illustrata la definizione di una classe `Aquarium`, che contiene un difetto con il valore predefinito. La classe definisce la proprietà di dipendenza del tipo di raccolta `AquariumObjects`, che usa il tipo di <xref:System.Collections.Generic.List%601> generico con un vincolo di tipo <xref:System.Windows.FrameworkElement>. Nella chiamata <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> per la proprietà di dipendenza, i metadati stabiliscono il valore predefinito come nuovo <xref:System.Collections.Generic.List%601>generico.
+
+> [!WARNING]
+> Il codice seguente non si comporta correttamente.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

@@ -7,24 +7,23 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046193"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974861"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
-<a name="top"></a> Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
+Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
   
  Esistono due gruppi di eventi del pool di thread:  
   
-- [Eventi del pool di thread di lavoro](#worker), che forniscono informazioni su come un'applicazione usa il pool di thread e l'effetto dei carichi di lavoro sul controllo della concorrenza.  
+- [Eventi del pool di thread di lavoro](#worker-thread-pool-events), che forniscono informazioni su come un'applicazione usa il pool di thread e l'effetto dei carichi di lavoro sul controllo della concorrenza.  
   
-- [Eventi del pool di thread di I/O](#io), che forniscono informazioni sui thread di I/O che vengono creati, ritirati, non ritirati o terminati nel pool di thread.  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Eventi del pool di thread di lavoro  
+- [Eventi del pool di thread di I/O](#io-thread-events), che forniscono informazioni sui thread di I/O che vengono creati, ritirati, non ritirati o terminati nel pool di thread.  
+
+## <a name="worker-thread-pool-events"></a>Eventi del pool di thread di lavoro
  Questi eventi sono correlati al pool di thread di lavoro del runtime e forniscono notifiche per gli eventi thread (ad esempio, quando un thread viene creato o arrestato). Il pool di thread di lavoro usa un algoritmo adattivo per il controllo della concorrenza, dove il numero di thread viene calcolato in base alla velocità effettiva misurata. Gli eventi di pool del thread di lavoro possono essere usati per comprendere come un'applicazione usa il pool di thread e l'effetto che alcuni carichi di lavoro possono avere sul controllo della concorrenza.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart e ThreadPoolWorkerThreadStop  
@@ -83,7 +82,7 @@ ms.locfileid: "71046193"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|DESCRIZIONE|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra una modifica nel controllo, quando l'algoritmo di inserimento thread (spostamento verso l’alto) determina che una modifica nel livello di concorrenza è attiva.|  
   
@@ -93,7 +92,7 @@ ms.locfileid: "71046193"
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Velocità effettiva Media di un campione di misurazioni.|  
 |NewWorkerThreadCount|win:UInt32|Nuovo numero di thread di lavoro attivi.|  
-|`Reason`|win:UInt32|Motivo della modifica.<br /><br /> 0x00 - Riscaldamento.<br /><br /> 0x01 - Inizializzazione test in corso.<br /><br /> 0x02 - Spostamento casuale.<br /><br /> 0x03 - Spostamento verso l’alto.<br /><br /> 0x04 - Modificare il punto.<br /><br /> 0x05 - Stabilizzazione.<br /><br /> 0x06 - Esaurimento delle risorse.<br /><br /> 0x07 - Timeout del thread.|  
+|Motivo|win:UInt32|Motivo della modifica.<br /><br /> 0x00 - Riscaldamento.<br /><br /> 0x01 - Inizializzazione test in corso.<br /><br /> 0x02 - Spostamento casuale.<br /><br /> 0x03 - Spostamento verso l’alto.<br /><br /> 0x04 - Modificare il punto.<br /><br /> 0x05 - Stabilizzazione.<br /><br /> 0x06 - Esaurimento delle risorse.<br /><br /> 0x07 - Timeout del thread.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -111,7 +110,7 @@ ms.locfileid: "71046193"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Durata|win:Double|Quantità di tempo, espresso in secondi, durante il quale sono state raccolte queste statistiche.|  
 |Velocità effettiva|win:Double|Numero medio di completamenti al secondo durante questo intervallo.|  
@@ -124,10 +123,7 @@ ms.locfileid: "71046193"
 |NewcontrolSetting|win:Double|Il numero di thread di lavoro attivi che verrà utilizzato come base per le variazioni future nel conteggio dei thread attivi.|  
 |NewThreadWaveMagnitude|win:UInt16|La grandezza delle variazioni future nel conteggio dei thread attivi.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>Eventi dei Thread di I/O  
  Questi eventi si verificano per i thread nel pool di thread di I/O (porte di completamento), che è asincrono.  
   
@@ -146,7 +142,7 @@ ms.locfileid: "71046193"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
 |NumRetired|win:UInt64|Numero di thread di lavoro ritirato.|  
@@ -188,7 +184,7 @@ ms.locfileid: "71046193"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |Conteggio|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  

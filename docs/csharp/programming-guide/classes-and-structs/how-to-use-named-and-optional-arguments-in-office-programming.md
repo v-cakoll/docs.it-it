@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office - Guida per programmatori C#'
+title: Come usare gli argomenti denominati e facoltativi nella C# Guida alla programmazione di Office
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002798"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970503"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office (Guida per programmatori C#)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Come usare argomenti denominati e facoltativi nella programmazioneC# di Office (Guida per programmatori)
 
 Gli argomenti denominati e gli argomenti facoltativi, introdotti in C# 4, migliorano la praticità, la flessibilità e la leggibilità nella programmazione C#. Queste funzionalità, poi, semplificano notevolmente l'accesso alle interfacce COM, quali le API di automazione di Microsoft Office.
 
@@ -54,7 +54,7 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *Program.cs* e quindi fare clic su **Visualizza codice**.
 
-2. Aggiungere le seguenti direttive `using` all'inizio del file di codice:
+2. Aggiungere le seguenti direttive di `using` all'inizio del file di codice:
 
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]
 
@@ -94,11 +94,11 @@ Per eseguire queste procedure, Microsoft Office Word deve essere installato.
 
 ## <a name="to-experiment-with-other-parameters"></a>Per provare a usare altri parametri
 
-1. Per modificare la tabella in modo che contenga una colonna e tre righe, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi digitare <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
+1. Per modificare la tabella in modo che contenga una colonna e tre righe, sostituire l'ultima riga di `DisplayInWord` con l'istruzione seguente, quindi premere <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 
-2. Per specificare un formato predefinito per la tabella, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi digitare <kbd>CTRL</kbd>+<kbd>F5</kbd>. Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).
+2. Per specificare un formato predefinito per la tabella, sostituire l'ultima riga di `DisplayInWord` con l'istruzione seguente, quindi premere <kbd>CTRL</kbd>+<kbd>F5</kbd>. Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).
 
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]
 

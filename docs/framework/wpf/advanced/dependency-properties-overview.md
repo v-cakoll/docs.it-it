@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458948"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973982"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
 
@@ -168,7 +168,7 @@ L'esempio seguente descrive un'associazione e imposta la proprietà <xref:System
 Per altre informazioni, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>Integrazione di WPF Designer
-Un controllo personalizzato con proprietà implementate come proprietà di dipendenza riceverà un supporto appropriato di [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]. Un esempio è rappresentato dalla capacità di modificare proprietà di dipendenza dirette e associate tramite la finestra **Proprietà**. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).
+Un controllo personalizzato con proprietà implementate come proprietà di dipendenza riceverà la finestra di progettazione WPF appropriata per il supporto di Visual Studio. Un esempio è rappresentato dalla capacità di modificare proprietà di dipendenza dirette e associate tramite la finestra **Proprietà**. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 Quando si ottiene il valore di una proprietà di dipendenza, si ottiene potenzialmente un valore impostato per tale proprietà tramite uno qualsiasi degli altri input basati su proprietà che fanno parte del sistema di proprietà WPF. La precedenza del valore della proprietà di dipendenza consente interazioni prevedibili per un'ampia gamma di scenari relativi al modo in cui le proprietà ottengono i rispettivi valori.

@@ -7,16 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206050"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975521"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -24,16 +22,6 @@ La sicurezza implica tre meccanismi che interagiscono tra loro: il sandboxing, l
 
 > [!IMPORTANT]
 > I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire da .NET Framework 4, i criteri di sicurezza sono obsoleti. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [compatibilità e migrazione dei criteri di sicurezza dall'accesso di codice](code-access-security-policy-compatibility-and-migration.md).
-
-In questo argomento viene descritto il modello di trasparenza in maggiore dettaglio. Include le sezioni seguenti:
-
-- [Scopo del modello di trasparenza](#purpose)
-
-- [Specifica del livello di trasparenza](#level)
-
-- [Imposizione della trasparenza](#enforcement)
-
-<a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>Scopo del modello di trasparenza
 
@@ -48,10 +36,6 @@ La trasparenza è stata introdotta in .NET Framework versione 2.0 per semplifica
 
 > [!NOTE]
 > Quando si sviluppa un'applicazione parzialmente attendibile, è necessario tenere presenti i requisiti di autorizzazione per gli host di destinazione. È possibile sviluppare un'applicazione che usa risorse il cui uso non è consentito in alcuni host. Tale applicazione verrà compilata senza errori, ma non verrà eseguita correttamente quando verrà caricata nell'ambiente di hosting. Se l'applicazione è stata sviluppata con Visual Studio, è possibile attivare il debug in un ambiente parzialmente attendibile o in un set di autorizzazioni limitato dall'ambiente di sviluppo. Per altre informazioni, vedere [Procedura: Eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La funzionalità Elabora autorizzazioni fornita per le applicazioni ClickOnce è anche disponibile per le applicazioni parzialmente attendibili.
-
-[Torna all'inizio](#top)
-
-<a name="level"></a>
 
 ## <a name="specifying-the-transparency-level"></a>Specifica del livello di trasparenza
 
@@ -107,10 +91,6 @@ Il modello di trasparenza di livello 1 presenta le limitazioni seguenti:
 - Le regole di ereditarietà non vengono applicate.
 
 - Esiste la possibilità che il codice Transparent esegua operazioni dannose quando viene eseguito con attendibilità totale.
-
-[Torna all'inizio](#top)
-
-<a name="enforcement"></a>
 
 ## <a name="transparency-enforcement"></a>Imposizione della trasparenza
 

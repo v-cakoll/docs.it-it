@@ -7,26 +7,19 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046423"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975506"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
-<a name="top"></a> Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.  
-  
- Gli eventi di tracciatura JIT sono costituiti dalle due categorie riportate di seguito:  
-  
-- [Eventi di incorporamento JIT](#jit_inlining_events)  
-  
-- [Eventi delle chiamate tail JIT](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>Eventi di incorporamento JIT  
-  
-### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed  
+Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.
+
+## <a name="jit-inlining-events"></a>Eventi di incorporamento JIT
+
+### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
 |Parola chiave per la generazione dell'evento|Level|  
@@ -71,7 +64,7 @@ ms.locfileid: "71046423"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -83,10 +76,7 @@ ms.locfileid: "71046423"
 |InlineeName|win:UnicodeString|Metodo che il compilatore sta provando a incorporare (anziché generare una chiamata a tale metodo).|  
 |InlineeNameSignature|win:UnicodeString|Firma dell'entità incorporata.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>Eventi delle chiamate tail JIT  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed Event  
@@ -104,7 +94,7 @@ ms.locfileid: "71046423"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  

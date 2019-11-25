@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Confrontare stringhe (Guida a C#)'
+title: Come confrontare le stringhe- C# Guida
 description: Informazioni su come confrontare e ordinare i valori stringa, con o senza maiuscole, con o senza ordinamento specifico delle impostazioni cultura
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395452"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973330"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 

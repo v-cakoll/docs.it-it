@@ -2,12 +2,12 @@
 title: Utilizzo del canale client di individuazione
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 3b6bb38298b47b822a15fee92038a1d6beb15df3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05ca54d62179d024e619bc5c9c70a4e08b9dd62f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045242"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975945"
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilizzo del canale client di individuazione
 In fase di scrittura di un'applicazione client WCF è necessario conoscere l'indirizzo endpoint del servizio che si sta chiamando. In molti casi l'indirizzo endpoint di un servizio non è noto in anticipo o l'indirizzo del servizio cambia con il tempo. Il canale client di individuazione consente di scrivere un'applicazione client WCF, descrivere il servizio che si desidera chiamare e il canale client invia automaticamente una richiesta del probe. Quando un servizio risponde, il canale client di individuazione recupera l'indirizzo endpoint per il servizio dalla risposta del probe e lo utilizza per chiamare il servizio.  
@@ -22,7 +22,7 @@ In fase di scrittura di un'applicazione client WCF è necessario conoscere l'ind
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, utilizzata per descrivere il servizio che si desidera chiamare.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>che specifica l'endpoint di individuazione a cui inviare i messaggi di individuazione.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> che specifica l'endpoint di individuazione a cui inviare i messaggi di individuazione.  
   
  La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> consente di specificare il contratto di servizio cercato, qualsiasi URI di ambito obbligatorio e il numero massimo di tentativi di aprire il canale. Il tipo di contratto viene specificato chiamando il costruttore <xref:System.ServiceModel.Discovery.FindCriteria>. È possibile aggiungere gli URI di ambito alla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La proprietà <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> consente di specificare il numero massimo di risultati a cui il client tenta di connettersi. Se viene ricevuta una risposta del probe, il client tenta di aprire il canale utilizzando l'indirizzo endpoint dalla risposta del probe. Se si verifica un'eccezione, il client passa alla risposta del probe successivo, in attesa di ricezione di più risposte, se necessario. Questo schema continua finché il canale non viene aperto o viene raggiunto il numero massimo di risultati. Per ulteriori informazioni su queste impostazioni, vedere <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
@@ -32,7 +32,7 @@ In fase di scrittura di un'applicazione client WCF è necessario conoscere l'ind
   
  Una volta aggiunto l'elemento <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> all'associazione e dopo averne eseguito la configurazione, è possibile creare un'istanza della classe client WCF, aprirla e chiamare i relativi metodi. Nell'esempio seguente viene utilizzato il canale client di individuazione per individuare un servizio WCF che implementa la classe `ICalculator` (utilizzata nell'esercitazione WCF della Guida introduttiva) e chiama il relativo metodo `Add`.  
   
-```  
+```csharp
 // Create the DiscoveryClientBindingElement  
 DiscoveryClientBindingElement bindingElement = new DiscoveryClientBindingElement();  
 // Search for a service that implements the ICalculator interface, attempting to open  

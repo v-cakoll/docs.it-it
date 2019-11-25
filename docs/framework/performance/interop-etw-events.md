@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046432"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974925"
 ---
 # <a name="interop-etw-events"></a>Eventi ETW di interoperabilità
-<a name="top"></a> Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di stub e la memorizzazione nella cache di Microsoft Intermediate Language (MSIL).  
-  
- Questa categoria include i seguenti eventi:  
-  
-- [Evento ILStubGenerated](#ilstubgenerated_event)  
-  
-- [Evento ILStubCacheHit](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated  
- La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
+Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di stub e la memorizzazione nella cache di Microsoft Intermediate Language (MSIL).  
+
+## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated
+
+La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
 |Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
@@ -53,11 +47,9 @@ ms.locfileid: "71046432"
 |StubMethodILCode|win:UnicodeString|Il codice MSIL per il metodo stub.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
- [Torna all'inizio](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>Evento ILStubCacheHit  
- La tabella seguente illustra la parola chiave e il livello  
+
+La tabella seguente illustra la parola chiave e il livello  
   
 |Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
@@ -80,8 +72,6 @@ ms.locfileid: "71046432"
 |ManagedInteropMethodName|win:UnicodeString|Il nome per il metodo di interoperabilità gestito.|  
 |ManagedInteropMethodSignature|win:UnicodeString|La firma per il metodo di interoperabilità gestito.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
   
 ## <a name="see-also"></a>Vedere anche
 

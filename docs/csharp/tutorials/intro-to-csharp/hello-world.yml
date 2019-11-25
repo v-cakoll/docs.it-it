@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850793"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969415"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Eseguire il primo programma C#
   durationInMinutes: 2
   content: >
-    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    Fare clic su **Esegui** di nuovo per visualizzare i risultati.
+    Selezionare **Esegui** di nuovo per visualizzare i risultati.
 
 
     Finora è stato usato `+` per creare nuove stringhe da stringhe **variabili** e **costanti**. Esiste un modo migliore.
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Fare clic su **Esegui** di nuovo per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
+    Selezionare **Esegui** di nuovo per visualizzare i risultati. Anziché "Hello {aFriend}", il messaggio deve essere "Hello Maira".
 
 
     > [!NOTE]
@@ -296,7 +296,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione introduttiva "Hello C#". Fare clic sul collegamento **Numeri in C#** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito di .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione introduttiva "Hello C#". È possibile selezionare i **numeri nel C# ** collegamento seguente per avviare la successiva esercitazione interattiva. in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e rimanere codificati. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Altre informazioni sul tipo `string`:

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le intestazioni nella richiesta client (WCF Data Services)'
+title: 'Procedura: impostare le intestazioni nella richiesta del client (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 42987b1a855589954d45dae13b70ffc056c35f3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 420b13df0cc9d3f89087e18b58a2b416ce0bab7f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790464"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975256"
 ---
-# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Procedura: Impostare le intestazioni nella richiesta client (WCF Data Services)
-Quando si usa libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per accedere a un servizio dati che supporta [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], la libreria client imposta automaticamente le intestazioni HTTP richieste nei messaggi di richiesta inviati al servizio dati. Tuttavia, tramite la libreria client non vengono impostate le intestazioni del messaggio richieste in determinati casi, ad esempio quando il servizio dati richiede l'autenticazione basata sulle attestazioni o i cookie. Per altre informazioni, vedere [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). In questi casi, è necessario impostare manualmente le intestazioni nel messaggio di richiesta prima che venga inviato. L'esempio in questo argomento illustra come gestire l'evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> per aggiungere una nuova intestazione al messaggio di richiesta prima che venga inviato al servizio dati.  
+# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Procedura: impostare le intestazioni nella richiesta del client (WCF Data Services)
+Quando si utilizza la libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per accedere a un servizio dati che supporta il Open Data Protocol (OData), la libreria client imposta automaticamente le intestazioni HTTP necessarie nei messaggi di richiesta inviati al servizio dati. Tuttavia, tramite la libreria client non vengono impostate le intestazioni del messaggio richieste in determinati casi, ad esempio quando il servizio dati richiede l'autenticazione basata sulle attestazioni o i cookie. Per altre informazioni, vedere [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). In questi casi, è necessario impostare manualmente le intestazioni nel messaggio di richiesta prima che venga inviato. L'esempio in questo argomento illustra come gestire l'evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> per aggiungere una nuova intestazione al messaggio di richiesta prima che venga inviato al servizio dati.  
   
- Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md). È inoltre possibile utilizzare il [servizio dati Northwind di esempio](https://go.microsoft.com/fwlink/?LinkId=187426) pubblicato sul [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sito Web. questo servizio dati di esempio è di sola lettura e il tentativo di salvare le modifiche restituisce un errore. Il servizio dati di esempio nel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sito Web consente l'autenticazione anonima.  
+ Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md). È inoltre possibile utilizzare il [servizio dati di esempio Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) pubblicato sul sito Web OData. Questo servizio dati di esempio è di sola lettura e il tentativo di salvare le modifiche restituisce un errore. I servizi dati di esempio nel sito Web OData consentono l'autenticazione anonima.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene registrato un gestore per l'evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest>, quindi viene eseguita una query sul servizio dati.  

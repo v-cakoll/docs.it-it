@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774109"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969618"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- Il linguaggio C# offre l'operatore [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) che consente di testare la compatibilità prima di eseguire effettivamente un cast. Per altre informazioni, vedere [Procedura: Eseguire il cast sicuro tramite i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ Il linguaggio C# offre l'operatore [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) che consente di testare la compatibilità prima di eseguire effettivamente un cast. Per ulteriori informazioni, vedere [come eseguire il cast sicuro usando i criteri di ricerca e gli operatori As e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

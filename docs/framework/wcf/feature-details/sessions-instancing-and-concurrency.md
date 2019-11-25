@@ -2,12 +2,12 @@
 title: Sessioni, istanze e concorrenza
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: d780488f7bb0bd46a22ef205b3954b6b4614cae0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8c0b40ca67de92f4f1b481298a8a26d96e887d4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969205"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976087"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -27,7 +27,7 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
 - Nessun archivio dati generale associato a una sessione WCF.  
   
- Se si ha familiarità con <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> la classe nelle applicazioni ASP.NET e con la funzionalità fornita, è possibile notare le differenze seguenti tra questo tipo di sessione e le sessioni WCF:  
+ Se si ha familiarità con la classe <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> nelle applicazioni ASP.NET e la funzionalità fornita, è possibile notare le differenze seguenti tra questo tipo di sessione e le sessioni WCF:  
   
 - Le sessioni ASP.NET sono sempre avviate dal server.  
   
@@ -42,15 +42,15 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Sono disponibili le modalità di istanza seguenti:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Viene creato <xref:System.ServiceModel.InstanceContext> un nuovo (e di conseguenza l'oggetto servizio) per ogni richiesta del client.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: viene creato un nuovo <xref:System.ServiceModel.InstanceContext> (e di conseguenza l'oggetto servizio) per ogni richiesta client.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Viene creato <xref:System.ServiceModel.InstanceContext> un nuovo (e di conseguenza l'oggetto servizio) per ogni nuova sessione client e mantenuto per la durata di tale sessione (è necessaria un'associazione che supporta le sessioni).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: viene creato un nuovo <xref:System.ServiceModel.InstanceContext> (e di conseguenza l'oggetto servizio) per ogni sessione client nuova e viene mantenuto per la durata di quella sessione (è necessaria un'associazione che supporti sessioni).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Un singolo <xref:System.ServiceModel.InstanceContext> oggetto (e di conseguenza l'oggetto servizio) gestisce tutte le richieste client per la durata dell'applicazione.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: un unico <xref:System.ServiceModel.InstanceContext> (e di conseguenza l'oggetto servizio) gestisce tutte le richieste client per la durata dell'applicazione.  
   
  Nell'esempio di codice seguente viene illustrato il valore <xref:System.ServiceModel.InstanceContextMode> predefinito, con <xref:System.ServiceModel.InstanceContextMode.PerSession> impostato esplicitamente su una classe del servizio.  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]   
 public class CalculatorService : ICalculatorInstance   
 {   
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Servizi Singleton noti  
  Una variazione su oggetti servizio di una singola istanza può a volte essere utile. È infatti possibile creare un oggetto servizio e quindi creare l'host del servizio tramite quell'oggetto. A tale scopo, è necessario impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.InstanceContextMode.Single> , in caso contrario verrà generata un'eccezione quando l'host del servizio viene aperto.  
   
- Utilizzare il costruttore <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> per creare tale servizio. Fornisce un'alternativa all'implementazione di un'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizzata quando si desidera fornire un'istanza specifica dell'oggetto utilizzabile da un servizio singleton. Questo overload può risultare utile quando il tipo di implementazione del servizio è di difficile costruzione, ad esempio se non implementa alcun costruttore pubblico predefinito privo di parametri.  
+ Utilizzare il costruttore <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> per creare tale servizio. Fornisce un'alternativa all'implementazione di un'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizzata quando si desidera fornire un'istanza specifica dell'oggetto utilizzabile da un servizio singleton. È possibile utilizzare questo overload quando il tipo di implementazione del servizio è difficile da costruire, ad esempio se non implementa un costruttore pubblico senza parametri.  
   
  Si noti che quando un oggetto viene fornito a questo costruttore, alcune funzionalità relative al comportamento di creazione delle istanze di Windows Communication Foundation (WCF) funzionano in modo diverso. La chiamata, ad esempio, di <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> non ha effetto quando viene fornita l'istanza di un oggetto Singleton. Analogamente, qualsiasi altro meccanismo di rilascio delle istanze viene ignorato. L'host <xref:System.ServiceModel.ServiceHost> si comporta sempre come se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> fosse impostata su <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> per tutte le operazioni.  
   
@@ -75,20 +75,20 @@ public class CalculatorService : ICalculatorInstance
   
  Sono disponibili le tre modalità di concorrenza seguenti:  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Single>: Ogni contesto dell'istanza può avere al massimo un thread per l'elaborazione dei messaggi nel contesto dell'istanza alla volta. Altri thread che devono utilizzare lo stesso contesto dell'istanza, devono restare bloccati fino alla chiusura del thread originale dal contesto dell'istanza.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: ogni contesto dell'istanza può avere al massimo un thread alla volta per l'elaborazione dei messaggi nel contesto dell'istanza. Altri thread che devono utilizzare lo stesso contesto dell'istanza, devono restare bloccati fino alla chiusura del thread originale dal contesto dell'istanza.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Ogni istanza del servizio può disporre di più thread per l'elaborazione simultanea dei messaggi. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: ogni istanza del servizio può avere contemporaneamente più thread per l'elaborazione messaggi. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Ogni istanza del servizio elabora un messaggio alla volta, ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando viene chiamato tramite un oggetto client WCF.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: ogni istanza del servizio elabora un messaggio alla volta ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando viene chiamato tramite un oggetto client WCF.  
   
 > [!NOTE]
-> Può essere difficile comprendere, scrivere correttamente e sviluppare codice che utilizza in modo sicuro più di un thread. Prima di utilizzare valori <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , verificare che il servizio sia progettato correttamente per queste modalità. Per altre informazioni, vedere <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+> Può essere difficile comprendere, scrivere correttamente e sviluppare codice che utilizza in modo sicuro più di un thread. Prima di utilizzare valori <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , verificare che il servizio sia progettato correttamente per queste modalità. Per ulteriori informazioni, vedere <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
- L'uso della concorrenza è correlato alla modalità di istanza. Nelle <xref:System.ServiceModel.InstanceContextMode.PerCall> istanze <xref:System.ServiceModel.InstanceContext> la<xref:System.ServiceModel.InstanceContext>concorrenza non è pertinente perché ogni messaggio viene elaborato da un nuovo e, pertanto, non è mai presente più di un thread attivo in.  
+ L'uso della concorrenza è correlato alla modalità di istanza. In <xref:System.ServiceModel.InstanceContextMode.PerCall> istanze la concorrenza non è pertinente, perché ogni messaggio viene elaborato da un nuovo <xref:System.ServiceModel.InstanceContext> e, di conseguenza, non è mai attivo più di un thread nella <xref:System.ServiceModel.InstanceContext>.  
   
  Nell'esempio di codice seguente viene illustrata l'impostazione della proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> su <xref:System.ServiceModel.ConcurrencyMode.Multiple>.  
   
-```  
+```csharp
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]   
 public class CalculatorService : ICalculatorConcurrency   
 {   
@@ -103,9 +103,9 @@ public class CalculatorService : ICalculatorConcurrency
   
 |Valore InstanceContextMode|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-Comportamento con il canale con sessione: Una sessione e <xref:System.ServiceModel.InstanceContext> per ogni chiamata.<br />-Comportamento con canale senza sessione: Viene generata un'eccezione.|-Comportamento con il canale con sessione: Una sessione e <xref:System.ServiceModel.InstanceContext> per ogni chiamata.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|-Comportamento con il canale con sessione: Viene generata un'eccezione.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|  
-|PerSession|-Comportamento con il canale con sessione: Una sessione e <xref:System.ServiceModel.InstanceContext> per ogni canale.<br />-Comportamento con canale senza sessione: Viene generata un'eccezione.|-Comportamento con il canale con sessione: Una sessione e <xref:System.ServiceModel.InstanceContext> per ogni canale.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|-Comportamento con il canale con sessione: Viene generata un'eccezione.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|  
-|Single|-Comportamento con il canale con sessione: Una sessione e l' <xref:System.ServiceModel.InstanceContext> altra per tutte le chiamate.<br />-Comportamento con canale senza sessione: Viene generata un'eccezione.|-Comportamento con il canale con sessione: Una sessione e <xref:System.ServiceModel.InstanceContext> per il singleton creato o specificato dall'utente.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per il singleton creato o specificato dall'utente.|-Comportamento con il canale con sessione: Viene generata un'eccezione.<br />-Comportamento con canale senza sessione: Oggetto <xref:System.ServiceModel.InstanceContext> per ogni singleton creato o per il singleton specificato dall'utente.|  
+|PerCall|-Comportamento con il canale con sessione: una sessione e un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.<br />-Comportamento con canale senza sessione: viene generata un'eccezione.|-Comportamento con il canale con sessione: una sessione e un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|-Comportamento con il canale con sessione: viene generata un'eccezione.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|  
+|PerSession|-Comportamento con canale con sessione: una sessione e un <xref:System.ServiceModel.InstanceContext> per ogni canale.<br />-Comportamento con canale senza sessione: viene generata un'eccezione.|-Comportamento con canale con sessione: una sessione e un <xref:System.ServiceModel.InstanceContext> per ogni canale.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|-Comportamento con il canale con sessione: viene generata un'eccezione.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per ogni chiamata.|  
+|Single|-Comportamento con il canale con sessione: una sessione e una <xref:System.ServiceModel.InstanceContext> per tutte le chiamate.<br />-Comportamento con canale senza sessione: viene generata un'eccezione.|-Comportamento con canale con sessione: una sessione e un <xref:System.ServiceModel.InstanceContext> per il singleton creato o specificato dall'utente.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per il singleton creato o specificato dall'utente.|-Comportamento con il canale con sessione: viene generata un'eccezione.<br />-Comportamento con canale senza sessione: un <xref:System.ServiceModel.InstanceContext> per ogni singleton creato o per il singleton specificato dall'utente.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -114,4 +114,4 @@ public class CalculatorService : ICalculatorConcurrency
 - [Procedura: Controllare le istanze del servizio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Creazione di istanze](../../../../docs/framework/wcf/samples/instancing.md)
-- [Sessione](../../../../docs/framework/wcf/samples/session.md)
+- [Session](../../../../docs/framework/wcf/samples/session.md)

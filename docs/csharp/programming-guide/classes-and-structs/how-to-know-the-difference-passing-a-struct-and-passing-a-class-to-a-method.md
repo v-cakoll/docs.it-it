@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Differenza tra il passaggio a un metodo di uno struct e di un riferimento a una classe - Guida per programmatori C#'
+title: Come distinguere la differenza tra il passaggio di uno struct e il passaggio di un riferimento a una C# classe a un metodo-Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 09b40a1ee8ab57a4b8a641acae49ab31a14d3d5b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9bacc7b3913a6e353e39f1e45fa99ea2dcdbe668
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893147"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970549"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Procedura: Differenza tra il passaggio a un metodo di uno struct e di un riferimento a una classe (Guida per programmatori C#)
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Come distinguere la differenza tra il passaggio di uno struct e il passaggio di un riferimento a unaC# classe a un metodo (Guida per programmatori)
 L'esempio seguente mostra la differenza tra passare uno [struct](../../language-reference/keywords/struct.md) a un metodo e passare un'istanza di una [classe](../../language-reference/keywords/class.md) a un metodo. Nell'esempio entrambi gli argomenti (struct e istanza di classe) vengono passati in base al valore ed entrambi i metodi modificano il valore di un campo dell'argomento. I risultati dei due metodi non sono tuttavia uguali perché ciò che viene passato quando si passa uno struct è diverso da ciò che viene passato quando si passa un'istanza di una classe.  
   
  Poiché uno struct è un [tipo valore](../../language-reference/keywords/value-types.md), quando si [passa uno struct in base al valore](./passing-value-type-parameters.md) a un metodo, il metodo riceve una copia dell'argomento dello struct, su cui opera. Il metodo non ha accesso allo struct originale nella chiamata e quindi non può modificarlo in alcun modo. Il metodo può modificare solo la copia.  

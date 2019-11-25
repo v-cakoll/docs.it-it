@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216326"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973282"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop Windows Forms in .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Come trasferire un'app desktop Windows Forms a .NET Core
 
 Questo articolo descrive come convertire un'app desktop basata su Windows Forms da .NET Framework a .NET Core 3.0. .NET Core SDK 3.0 include il supporto per le applicazioni Windows Forms. Windows Forms è ancora un framework solo per Windows e supporta l'esecuzione solo in Windows. Questo esempio usa l'interfaccia della riga di comando di .NET Core SDK per creare e gestire il progetto.
 
@@ -25,7 +25,7 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
 | **MyFormsCore.csproj** | Nome del nuovo progetto .NET Core creato. |
 | **MyAppCore.exe** | Eseguibile dell'app Windows Forms .NET Core. |
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) per tutte le operazioni di progettazione che si vogliono eseguire.
 

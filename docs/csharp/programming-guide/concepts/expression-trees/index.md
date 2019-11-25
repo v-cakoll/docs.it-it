@@ -2,17 +2,17 @@
 title: Alberi delle espressioni (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 7e63bf28f10070daa9624daa67bd5118fa67874d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e1ba2ac9107b5c0ab4547bd8cc5f23ca84753951
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926721"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969851"
 ---
 # <a name="expression-trees-c"></a>Alberi delle espressioni (C#)
 Gli alberi delle espressioni rappresentano codice in una struttura dei dati simile a un albero, dove ogni nodo è un'espressione, ad esempio una chiamata al metodo o un'operazione binaria come `x < y`.  
   
- È possibile compilare ed eseguire codice rappresentato dagli alberi delle espressioni. In questo modo è possibile modificare dinamicamente codice eseguibile, eseguire query LINQ in vari database e creare query dinamiche. Per altre informazioni sulle strutture ad albero in LINQ, vedere [Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ È possibile compilare ed eseguire codice rappresentato dagli alberi delle espressioni. In questo modo è possibile modificare dinamicamente codice eseguibile, eseguire query LINQ in vari database e creare query dinamiche. Per ulteriori informazioni sugli alberi delle espressioni in LINQ, vedere [come utilizzare gli alberi delle espressioni per la compilazioneC#di query dinamiche ()](./how-to-use-expression-trees-to-build-dynamic-queries.md).
   
  Gli alberi delle espressioni sono anche usati in Dynamic Language Runtime (DLR) per fornire interoperabilità tra linguaggi dinamici e .NET Framework e per consentire ai writer dei compilatori di creare alberi delle espressioni invece di codice MSIL (Microsoft Intermediate Language). Per altre informazioni su DLR, vedere [Dynamic Language Runtime Overview](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime).  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Non modificabilità degli alberi delle espressioni  
- Gli alberi delle espressioni devono essere non modificabili. Ciò significa che per modificare un albero delle espressioni è necessario costruirne uno nuovo copiando quello esistente e sostituendone i nodi. È possibile usare un visitatore dell'albero delle espressioni per attraversare l'albero delle espressioni esistente. Per altre informazioni, vedere [Procedura: Modificare alberi delle espressioni (C#)](./how-to-modify-expression-trees.md).  
+ Gli alberi delle espressioni devono essere non modificabili. Ciò significa che per modificare un albero delle espressioni è necessario costruirne uno nuovo copiando quello esistente e sostituendone i nodi. È possibile usare un visitatore dell'albero delle espressioni per attraversare l'albero delle espressioni esistente. Per ulteriori informazioni, vedere [come modificare alberi delle espressioni (C#)](./how-to-modify-expression-trees.md).
   
 ## <a name="compiling-expression-trees"></a>Compilazione degli alberi delle espressioni  
  Il tipo <xref:System.Linq.Expressions.Expression%601> fornisce il metodo <xref:System.Linq.Expressions.Expression%601.Compile%2A> che compila il codice rappresentato da un albero delle espressioni in un delegato eseguibile.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Per altre informazioni, vedere [Procedura: Eseguire alberi delle espressioni (C#)](./how-to-execute-expression-trees.md).  
+ Per ulteriori informazioni, vedere [How to Execute Expression TreesC#()](./how-to-execute-expression-trees.md).
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq.Expressions>
-- [Procedura: Eseguire alberi delle espressioni (C#)](./how-to-execute-expression-trees.md)
-- [Procedura: Modificare alberi delle espressioni (C#)](./how-to-modify-expression-trees.md)
+- [Come eseguire gli alberi delle espressioniC#()](./how-to-execute-expression-trees.md)
+- [Come modificare gli alberi delle espressioniC#()](./how-to-modify-expression-trees.md)
 - [Espressioni lambda](../../statements-expressions-operators/lambda-expressions.md)
 - [Dynamic Language Runtime Overview](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime)
 - [Nozioni di base sulla programmazione (C#)](../index.md)

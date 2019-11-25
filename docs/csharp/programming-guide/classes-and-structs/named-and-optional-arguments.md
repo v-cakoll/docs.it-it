@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772118"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970512"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -113,7 +113,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Per altre informazioni ed esempi, vedere [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../interop/how-to-access-office-onterop-objects.md).  
+ Per altre informazioni ed esempi, vedere [come usare gli argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [procedura: accedere agli oggetti di C# interoperabilità di Office usando le funzionalità visive](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:  
@@ -129,7 +129,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Procedura: usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Uso del tipo dinamico](../types/using-type-dynamic.md)
 - [Uso dei costruttori](./using-constructors.md)
 - [Uso degli indicizzatori](../indexers/using-indexers.md)

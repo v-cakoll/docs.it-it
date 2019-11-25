@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779826"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975178"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 
-La proiezione fornisce un meccanismo in [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per ridurre la quantità di dati nel feed restituiti da una query specificando che nella risposta vengono restituite solo determinate proprietà di un'entità. Per ulteriori informazioni, vedere [OData: Selezionare l'opzione query di sistema (](https://go.microsoft.com/fwlink/?LinkId=186076)$Select).
+La proiezione fornisce un meccanismo nel Open Data Protocol (OData) per ridurre la quantità di dati nel feed restituiti da una query specificando che nella risposta vengono restituite solo determinate proprietà di un'entità. Per ulteriori informazioni, vedere [OData: opzione query di sistema SELECT ($Select)](https://go.microsoft.com/fwlink/?LinkId=186076).
 
 In questo argomento viene descritto come definire una proiezione di query e quali sono i requisiti per i tipi di entità e non entità. Viene inoltre illustrato come eseguire gli aggiornamenti dei risultati proiettati e creare i tipi proiettati e vengono elencate alcune considerazioni sulla proiezione.
 
 ## <a name="defining-a-query-projection"></a>Definizione di una proiezione di query
 
-È possibile aggiungere una clausola di proiezione a una query usando l' `$select` opzione query in un URI o usando la clausola [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. I dati di entità restituiti possono essere proiettati in tipi di entità o non entità sul client. Negli esempi di questo argomento viene illustrato l'uso della clausola `select` in una query LINQ.
+È possibile aggiungere una clausola di proiezione a una query usando l'opzione query `$select` in un URI o usando la clausola [Select](../../../csharp/language-reference/keywords/select-clause.md) ([SELECT](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. I dati di entità restituiti possono essere proiettati in tipi di entità o non entità sul client. Negli esempi di questo argomento viene illustrato l'uso della clausola `select` in una query LINQ.
 
 > [!IMPORTANT]
 > Quando si salvano gli aggiornamenti apportati ai tipi proiettati, potrebbe verificarsi una perdita di dati nel servizio dati. Per altre informazioni, vedere [considerazioni sulla proiezione](#considerations).
@@ -38,7 +38,7 @@ I tipi di entità devono disporre di una o più proprietà Identity che costitui
 
 - Tramite la proprietà `ID` del tipo.
 
-- Quando il tipo dispone di una proprietà denominata *Type*`ID`, dove *Type* è il nome del tipo.
+- Quando il tipo dispone di una proprietà denominata *type*`ID`, dove *Type* è il nome del tipo.
 
 Per impostazione predefinita, quando si proiettano i risultati delle query in un tipo definito nel client, le proprietà richieste nella proiezione devono esistere nel tipo di client. Tuttavia, quando si specifica un valore `true` per la proprietà <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> di <xref:System.Data.Services.Client.DataServiceContext>, non è necessario che le proprietà specificate nella proiezione siano presenti nel tipo di client.
 
@@ -70,9 +70,9 @@ Di seguito vengono descritti i comportamenti quando si proiettano i risultati in
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
-- Tipo di entità: Supportato
+- Tipo di entità: supportato
 
-- Tipo non entità: Supportato
+- Tipo non entità: supportato
 
 **Creazione di una nuova istanza proiettata tramite costruttori**
 
@@ -81,9 +81,9 @@ Di seguito vengono descritti i comportamenti quando si proiettano i risultati in
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- Tipo di entità: Viene generato un oggetto <xref:System.NotSupportedException>.
+- Tipo di entità: viene generato un <xref:System.NotSupportedException>.
 
-- Tipo non entità: Supportato
+- Tipo non entità: supportato
 
 **Uso della proiezione per trasformare un valore di proprietà**
 
@@ -92,9 +92,9 @@ Di seguito vengono descritti i comportamenti quando si proiettano i risultati in
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- Tipo di entità: Questa trasformazione non è supportata per i tipi di entità perché può generare confusione e la potenziale sovrascrittura dei dati nell'origine dati appartenenti a un'altra entità. Viene generato un oggetto <xref:System.NotSupportedException>.
+- Tipo di entità: questa trasformazione non è supportata per i tipi di entità perché può causare confusione e potenzialmente sovrascrivere i dati nell'origine dati appartenente a un'altra entità. Viene generato un oggetto <xref:System.NotSupportedException>.
 
-- Tipo non entità: Supportato
+- Tipo non entità: supportato
 
 <a name="considerations"></a>
 
@@ -114,7 +114,7 @@ Alla definizione di una proiezione di query si applicano le considerazioni aggiu
 
 - Le proiezioni di query eseguite nel client vengono convertite per l'uso dell'opzione query `$select` nell'URI della richiesta. Se una query con proiezione viene eseguita su una versione precedente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che non supporta l'opzione query `$select`, viene restituito un errore. Questa situazione può inoltre verificarsi quando <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> di <xref:System.Data.Services.DataServiceBehavior> per il servizio dati viene impostato su un valore pari a <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](data-service-versioning-wcf-data-services.md).
 
-Per altre informazioni, vedere [Procedura: Risultati](how-to-project-query-results-wcf-data-services.md)della query di progetto.
+Per altre informazioni, vedere [procedura: proiettare risultati di query](how-to-project-query-results-wcf-data-services.md).
 
 ## <a name="see-also"></a>Vedere anche
 

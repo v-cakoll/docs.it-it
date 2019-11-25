@@ -2,15 +2,15 @@
 title: Uso di un resolver del contratto dati
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9082d2979cf9bd0837635af567d69ef34c2e312
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918567"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975965"
 ---
 # <a name="using-a-data-contract-resolver"></a>Uso di un resolver del contratto dati
-Un resolver del contratto dati consente di configurare tipi noti in modo dinamico. I tipi noti sono necessari se si serializza o deserializza un tipo non previsto da un contratto dati. Per altre informazioni sui tipi noti, vedere [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). I tipi noti vengono in genere specificati in modo statico. Ciò significa che è necessario conoscere tutti i tipi possibili che un'operazione può ricevere durante l'implementazione dell'operazione. Poiché in alcuni scenari tale condizione non è possibile, è importante specificare i tipi noti in modo dinamico.  
+Un resolver del contratto dati consente di configurare tipi noti in modo dinamico. I tipi noti sono necessari se si serializza o deserializza un tipo non previsto da un contratto dati. Per ulteriori informazioni sui tipi noti, vedere [tipi noti del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). I tipi noti vengono in genere specificati in modo statico. Ciò significa che è necessario conoscere tutti i tipi possibili che un'operazione può ricevere durante l'implementazione dell'operazione. Poiché in alcuni scenari tale condizione non è possibile, è importante specificare i tipi noti in modo dinamico.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Creazione di un resolver del contratto dati  
  La creazione di un resolver del contratto dati prevede l'implementazione di due metodi, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> e <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Questi due metodi implementano callback utilizzati rispettivamente durante la serializzazione e la deserializzazione. Il metodo <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> viene richiamato durante la serializzazione, utilizza un tipo di contratto dati e ne esegue il mapping a un nome e a uno spazio dei nomi `xsi:type`. Il metodo <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> viene richiamato durante la deserializzazione, utilizza un nome e uno spazio dei nomi `xsi:type` e lo risolve in un tipo di contratto dati. Entrambi questi metodi dispongono di un parametro `knownTypeResolver` che può essere impiegato per utilizzare il resolver del tipo noto predefinito nell'implementazione.  
@@ -51,13 +51,13 @@ public class MyCustomerResolver : DataContractResolver
   
  Una volta definito un <xref:System.Runtime.Serialization.DataContractResolver>, è possibile utilizzarlo passandolo al costruttore <xref:System.Runtime.Serialization.DataContractSerializer>, come indicato nell'esempio seguente.  
   
-```  
+```csharp
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
  È possibile specificare un <xref:System.Runtime.Serialization.DataContractResolver> in una chiamata ai metodi <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> o <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>, come indicato nell'esempio seguente.  
   
-```  
+```csharp
 MemoryStream ms = new MemoryStream();  
 DataContractSerializer serializer = new DataContractSerializer(typeof(Customer));  
 XmlDictionaryWriter writer = XmlDictionaryWriter.CreateDictionaryWriter(XmlWriter.Create(ms));  
@@ -69,7 +69,7 @@ Console.WriteLine(((Customer)serializer.ReadObject(XmlDictionaryReader.CreateDic
   
  È in alternativa possibile impostarlo su <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, come indicato nell'esempio seguente.  
   
-```  
+```csharp
 ServiceHost host = new ServiceHost(typeof(MyService));  
   
 ContractDescription cd = host.Description.Endpoints[0].Contract;  
@@ -85,7 +85,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- È possibile specificare in modo dichiarativo un resolver del contratto dati implementando un attributo che possa essere applicato a un servizio.  Per altre informazioni, vedere la [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) esempio. Questo esempio viene implementato un attributo denominato "KnownAssembly" che aggiunge un resolver del contratto dati personalizzati per il comportamento del servizio.  
+ È possibile specificare in modo dichiarativo un resolver del contratto dati implementando un attributo che possa essere applicato a un servizio.  Per ulteriori informazioni, vedere l'esempio [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) . Questo esempio implementa un attributo denominato "KnownAssembly" che aggiunge un resolver del contratto dati personalizzato al comportamento del servizio.  
   
 ## <a name="see-also"></a>Vedere anche
 

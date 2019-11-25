@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151769"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972733"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
 
@@ -48,7 +48,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |-incremental|Abilita la compilazione incrementale [obsoleto]|
 |[-keycontainer](keycontainer-compiler-option.md)|Specifica un contenitore di chiavi con nome sicuro.|
 |[-keyfile](keyfile-compiler-option.md)|Specifica un file di chiave con nome sicuro.|
-|[-langversion:\<stringa>](langversion-compiler-option.md)|Specificare la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
+|[-langversion:\<stringa>](langversion-compiler-option.md)|Specifica la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
 |[/lib](lib-compiler-option.md)|Specifica directory aggiuntive in cui cercare i riferimenti.|
 |[-link](link-compiler-option.md)|Rende disponibili per il progetto le informazioni sui tipi COM negli assembly specificati.|
 |[-linkresource](linkresource-compiler-option.md)|Collega la risorsa specificata all'assembly.|
@@ -90,5 +90,5 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 
 - [Opzioni del compilatore C#](index.md)
 - [Opzioni del compilatore C# elencate per categoria](listed-by-category.md)
-- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Come impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)

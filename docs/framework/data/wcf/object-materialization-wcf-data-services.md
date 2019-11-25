@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790398"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975184"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materializzazione di oggetti (WCF Data Services)
 
-Quando si utilizza la finestra di dialogo **Aggiungi riferimento al servizio** per [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] utilizzare un feed in un'applicazione client basata su .NET Framework, vengono generate classi di dati equivalenti per ogni tipo di entità nel modello di dati esposto dal feed. Per ulteriori informazioni, vedere [generazione della libreria client del servizio dati](generating-the-data-service-client-library-wcf-data-services.md). I dati di entità restituiti da una query vengono materializzati in un'istanza di una delle classi del servizio dati client generate. Per informazioni sulle opzioni di merge e sulla risoluzione di identità per gli oggetti rilevati, vedere [gestione del contesto del servizio dati](managing-the-data-service-context-wcf-data-services.md).
+Quando si utilizza la finestra di dialogo **Aggiungi riferimento al servizio** per utilizzare un feed di Open Data Protocol (OData) in un'applicazione client basata su .NET Framework, vengono generate classi di dati equivalenti per ogni tipo di entità nel modello di dati esposto dal feed. Per ulteriori informazioni, vedere [generazione della libreria client del servizio dati](generating-the-data-service-client-library-wcf-data-services.md). I dati di entità restituiti da una query vengono materializzati in un'istanza di una delle classi del servizio dati client generate. Per informazioni sulle opzioni di merge e sulla risoluzione di identità per gli oggetti rilevati, vedere [gestione del contesto del servizio dati](managing-the-data-service-context-wcf-data-services.md).
 
-Anziché usare le classi di dati generate dallo strumento, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire classi personalizzate del servizio dati client. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si utilizzano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di <xref:System.Data.Services.Common.DataServiceKeyAttribute> dati <xref:System.Data.Services.Common.DataServiceEntityAttribute> a o e assicurarsi che i nomi dei tipi nel client corrispondano ai nomi dei tipi nel modello di dati del servizio dati.
+Anziché usare le classi di dati generate dallo strumento, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire classi personalizzate del servizio dati client. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si utilizzano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di dati con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> e assicurarsi che i nomi dei tipi nel client corrispondano ai nomi dei tipi nel modello di dati del servizio dati.
 
-Dopo la ricezione del messaggio di risposta alla query, la libreria materializza i dati restituiti dal [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in istanze di classi del servizio dati client di tipo della query. Di seguito viene descritto il processo generale di materializzazione di tali oggetti.
+Dopo la ricezione del messaggio di risposta alla query, la libreria materializza i dati restituiti dal feed OData in istanze di classi del servizio dati client di tipo della query. Di seguito viene descritto il processo generale di materializzazione di tali oggetti.
 
 1. La libreria client legge il tipo serializzato dall'elemento `entry` nel feed del messaggio di risposta e tenta di creare una nuova istanza del tipo corretto usando uno dei modi riportati di seguito.
 

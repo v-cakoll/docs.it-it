@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597093"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971100"
 ---
 # <a name="constructors-c-programming-guide"></a>Costruttori (Guida per programmatori C#)
 
@@ -46,7 +46,7 @@ L'esempio seguente usa un costruttore statico per inizializzare un campo statico
 
 Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Uso dei costruttori](./using-constructors.md)  
   
  [Costruttori di istanza](./instance-constructors.md)  
@@ -55,7 +55,7 @@ Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).
   
  [Costruttori statici](./static-constructors.md)  
   
- [Procedura: Scrivere un costruttore di copia](./how-to-write-a-copy-constructor.md)  
+ [Come scrivere un costruttore di copia](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -63,4 +63,4 @@ Per altre informazioni, vedere [Costruttori statici](./static-constructors.md).
 - [Classi e struct](./index.md)
 - [Finalizzatori](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [Perché gli inizializzatori vengono eseguiti nell'ordine inverso dei costruttori? Prima parte](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [Perché gli inizializzatori vengono eseguiti nell'ordine opposto come costruttori? Parte 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

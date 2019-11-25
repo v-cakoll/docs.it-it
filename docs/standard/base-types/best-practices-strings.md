@@ -19,12 +19,12 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.custom: seodec18
-ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120631"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973950"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 
@@ -340,7 +340,7 @@ Per specificare in modo esplicito che una stringa deve essere formattata usando 
 L'esempio seguente illustra la limitazione della portabilità causata dall'uso della formattazione con distinzione delle impostazioni cultura per la persistenza dei dati. L'esempio salva una matrice di valori di data e ora in un file. Questi vengono formattati usando le convenzioni delle impostazioni cultura per la lingua inglese (Stati Uniti) . Quando l'applicazione modifica le impostazioni cultura del thread corrente in francese (Svizzera), tenta di leggere i valori salvati usando le convenzioni di formattazione delle impostazioni cultura correnti. Il tentativo di lettura di due elementi di dati genera un'eccezione <xref:System.FormatException> , quindi la matrice di date conterrà due elementi non corretti uguali a <xref:System.DateTime.MinValue>.
 
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
- [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
+[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
 Tuttavia, se si sostituisce la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> con <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nelle chiamate a <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, i dati di data e ora salvati vengono ripristinati correttamente, come illustrato nell'output seguente:
 

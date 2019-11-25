@@ -13,28 +13,28 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122489"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972056"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
-<a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
+Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
   
  .NET Framework definisce gli elementi di sostituzione elencati nella tabella riportata di seguito.  
   
 |Substitution|Descrizione|  
 |------------------|-----------------|  
-|$  *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#Numbered).|  
-|${ *nome* }|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).|  
-|$$|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#DollarSign).|  
-|$&|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#EntireMatch).|  
-|$\`|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#BeforeMatch).|  
-|$'|Include nella stringa di sostituzione tutto il testo della stringa di input successivo alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo dopo la corrispondenza](#AfterMatch).|  
-|$+|Include nella stringa di sostituzione l'ultimo gruppo acquisito. Per ulteriori informazioni, vedere [Sostituzione dell'ultimo gruppo acquisito](#LastGroup).|  
-|$_|Include l'intera stringa di input nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera stringa di input](#EntireString).|  
+|$  *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#substituting-a-numbered-group).|  
+|${ *nome* }|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).|  
+|$$|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#substituting-a--character).|  
+|$&|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#substituting-the-entire-match).|  
+|$\`|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#substituting-the-text-before-the-match).|  
+|$'|Include nella stringa di sostituzione tutto il testo della stringa di input successivo alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo dopo la corrispondenza](#substituting-the-text-after-the-match).|  
+|$+|Include nella stringa di sostituzione l'ultimo gruppo acquisito. Per ulteriori informazioni, vedere [Sostituzione dell'ultimo gruppo acquisito](#substituting-the-last-captured-group).|  
+|$\_|Include l'intera stringa di input nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera stringa di input](#substituting-the-entire-input-string).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementi di sostituzione e criteri di sostituzione  
  Le sostituzioni sono gli unici costrutti speciali riconosciuti in un criterio di sostituzione. Nessuno degli altri elementi del linguaggio delle espressioni regolari, compresi i caratteri di escape e il punto (`.`), che corrispondono a qualsiasi carattere, è supportato. Analogamente, gli elementi del linguaggio di sostituzione sono riconosciuti solo nei criteri di sostituzione e non sono mai validi nei modelli di espressioni regolari.  
@@ -43,12 +43,11 @@ ms.locfileid: "73122489"
   
 > [!NOTE]
 > Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
-  
-<a name="Numbered"></a>   
+
 ## <a name="substituting-a-numbered-group"></a>Sostituzione di un gruppo numerato  
  L'elemento di linguaggio `$`*numero* include l'ultima sottostringa corrispondente al gruppo di acquisizione *numero* nella stringa di sostituzione, dove *numero* è l'indice del gruppo di acquisizione. Ad esempio, il criterio di sostituzione `$1` indica che la sottostringa corrispondente deve essere sostituita dal primo gruppo acquisito. Per altre informazioni sui gruppi di acquisizione numerati, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Tutte le cifre che seguono `$` vengono interpretate come appartenenti al gruppo *numero* . Se questa non è la propria intenzione, è possibile sostituire un gruppo denominato invece. Ad esempio, è possibile utilizzare la stringa di sostituzione `${1}1` anziché `$11` per definire la stringa di sostituzione come la validità del gruppo innanzitutto acquisito con il numero "1 ". Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).  
+ Tutte le cifre che seguono `$` vengono interpretate come appartenenti al gruppo *numero* . Se questa non è la propria intenzione, è possibile sostituire un gruppo denominato invece. Ad esempio, è possibile utilizzare la stringa di sostituzione `${1}1` anziché `$11` per definire la stringa di sostituzione come la validità del gruppo innanzitutto acquisito con il numero "1 ". Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#substituting-a-named-group).  
   
  I gruppi di acquisizione a cui non sono stati assegnati nomi in modo esplicito tramite la sintassi `(?<`*nome*`>)` vengono numerati da sinistra verso destra a partire da uno. I gruppi denominati sono anche numerati da sinistra a destra, a partire dall'indice dell'ultimo gruppo senza nome più uno. Ad esempio, nell'espressione regolare `(\w)(?<digit>\d)`l'indice del gruppo denominato `digit` è 2.  
   
@@ -69,10 +68,7 @@ ms.locfileid: "73122489"
 |`[.,]?`|Trova la corrispondenza con zero o con un punto o una virgola.|  
 |`\d*`|Ricerca la corrispondenza di zero o di più cifre decimali.|  
 |`(\s?\d+[.,]?\d*)`|Corrisponde a uno spazio vuoto seguito da una o più cifre decimali, seguite da zero o un punto o una virgola, seguita da zero o più cifre decimali. Equivale al primo gruppo di acquisizione. Poiché il criterio di sostituzione è `$1`, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sostituisce la sottostringa corrispondente intera con questo gruppo acquisito.|  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="Named"></a>   
+
 ## <a name="substituting-a-named-group"></a>Sostituzione di un gruppo denominato  
  L'elemento di linguaggio `${`*nome*`}` sostituisce l'ultima sottostringa corrispondente al gruppo di acquisizione *nome* , dove *nome* è il nome di un gruppo di acquisizione definito dall'elemento di linguaggio `(?<`*nome*`>)` . Per altre informazioni sui gruppi di acquisizione denominati, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
@@ -95,10 +91,7 @@ ms.locfileid: "73122489"
 |`[.,]?`|Trova la corrispondenza con zero o con un punto o una virgola.|  
 |`\d*`|Ricerca la corrispondenza di zero o di più cifre decimali.|  
 |`(?<amount>\s?\d[.,]?\d*)`|Corrisponde a uno spazio vuoto seguito da una o più cifre decimali, seguite da zero o un punto o una virgola, seguita da zero o più cifre decimali. Questo è il gruppo di acquisizione denominato `amount`. Poiché il criterio di sostituzione è `${amount}`, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sostituisce la sottostringa corrispondente intera con questo gruppo acquisito.|  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="DollarSign"></a>   
+
 ## <a name="substituting-a--character"></a>Sostituzione di un carattere "$"  
  La sostituzione `$$` inserisce un carattere "$" letterale nella stringa sostituita.  
   
@@ -116,8 +109,7 @@ ms.locfileid: "73122489"
 |`\.`|Trovare la corrispondenza con un punto (ovvero il separatore decimale).|  
 |`(\d+)`|Trova la corrispondenza con una o più cifre decimali. Equivale al terzo gruppo di acquisizione.|  
 |`(\.(\d+))?`|Trovare la corrispondenza con zero o una occorrenza di un punto seguito da una o più cifre decimali. Equivale al secondo gruppo di acquisizione.|  
-  
-<a name="EntireMatch"></a>   
+
 ## <a name="substituting-the-entire-match"></a>Sostituzione dell'intera corrispondenza  
  La sostituzione `$&` include l'intera corrispondenza nella stringa di sostituzione. Spesso viene utilizzata per aggiungere una sottostringa all'inizio o alla fine della stringa corrispondente. Ad esempio, il criterio di sostituzione `($&)` aggiunge parentesi all'inizio e alla fine di ogni corrispondenza. Se non esiste alcuna corrispondenza, la sostituzione `$&` non ha alcun effetto.  
   
@@ -135,10 +127,7 @@ ms.locfileid: "73122489"
 |`$`|Trova la corrispondenza con la fine della stringa di input.|  
   
  Il criterio di sostituzione `"$&"` aggiunge le virgolette letterali all'inizio e alla fine di ogni corrispondenza.  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="BeforeMatch"></a>   
+
 ## <a name="substituting-the-text-before-the-match"></a>Sostituzione del testo prima della corrispondenza  
  La sostituzione ``$` `` sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(nell'esempio viene illustrato.\) se non esiste alcuna corrispondenza, la sostituzione ``$` `` non ha alcun effetto.  
   
@@ -155,11 +144,8 @@ ms.locfileid: "73122489"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3\.|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="AfterMatch"></a>   
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+
 ## <a name="substituting-the-text-after-the-match"></a>Sostituzione del testo dopo la corrispondenza  
  La sostituzione `$'` sostituisce la stringa corrispondente con l'intera stringa di input dopo la corrispondenza. Ovvero, duplica la stringa di input dopo la corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che precede il testo corrispondente resta invariato nella stringa di risultato. Se non esiste alcuna corrispondenza, la sostituzione  `$'` non ha alcun effetto.  
   
@@ -177,10 +163,7 @@ ms.locfileid: "73122489"
 |3\.|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="LastGroup"></a>   
+
 ## <a name="substituting-the-last-captured-group"></a>Sostituzione dell'ultimo gruppo acquisito  
  La sostituzione `$+` sostituisce la stringa corrispondente con l'ultimo gruppo acquisito. Se non esistono gruppi acquisiti o se il valore dell'ultimo gruppo acquisito è <xref:System.String.Empty?displayProperty=nameWithType>, la sostituzione `$+` non ha effetto.  
   
@@ -198,10 +181,7 @@ ms.locfileid: "73122489"
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|  
 |`\1`|Trovare la corrispondenza con il primo gruppo acquisito.|  
 |`\b`|Termina la corrispondenza sul confine di parola.|  
-  
- [Torna all'inizio](#Top)  
-  
-<a name="EntireString"></a>   
+
 ## <a name="substituting-the-entire-input-string"></a>Sostituzione dell'intera stringa di input  
  La sostituzione `$_` sostituisce la stringa corrispondente con l'intera stringa di input. Ovvero, rimuove il testo corrispondente e lo sostituisce con la stringa intera, compreso il testo corrispondente.  
   

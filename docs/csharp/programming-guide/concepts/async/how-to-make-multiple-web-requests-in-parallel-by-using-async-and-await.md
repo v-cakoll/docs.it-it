@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)'
+title: Come eseguire più richieste Web in parallelo tramite Async e await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168387"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969957"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Come eseguire più richieste Web in parallelo tramite Async e await (C#)
 In un metodo asincrono le attività vengono avviate al momento della creazione. L'operatore [await](../../../language-reference/operators/await.md) viene applicato all'attività in un punto del metodo in cui è impossibile continuare l'elaborazione finché l'attività non è terminata. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
   
 ```csharp  
@@ -37,13 +37,13 @@ var result = await myTask;
 > [!NOTE]
 > Per completare il progetto, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
   
- Per un altro esempio che avvii più operazioni contemporaneamente, vedere [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Per un altro esempio in cui vengono avviate più attività contemporaneamente, vedere [come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  È possibile scaricare il codice per l'esempio da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Esempi di codice per sviluppatori).  
   
 ### <a name="to-set-up-the-project"></a>Per impostare il progetto  
   
-1. Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per questi passaggi in [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per i passaggi in [Procedura dettagliata: Accesso al Web tramite async e await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     - Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
   
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con Async e Await (C#)](./index.md)
-- [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Come estendere la procedura dettagliata asincrona tramite Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

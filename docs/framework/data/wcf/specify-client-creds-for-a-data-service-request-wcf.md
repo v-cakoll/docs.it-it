@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare le credenziali client per una richiesta del servizio dati (WCF Data Services)'
+title: 'Procedura: specificare le credenziali del client per una richiesta del servizio dati (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790331"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975144"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Procedura: Specificare le credenziali client per una richiesta del servizio dati (WCF Data Services)
-Per impostazione predefinita, la libreria client non fornisce le credenziali quando viene inviata una richiesta a un servizio [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Tuttavia, è possibile specificare che le credenziali vengano inviate per autenticare richieste al servizio dati fornendo un elemento <xref:System.Net.NetworkCredential> per la proprietà <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> di <xref:System.Data.Services.Client.DataServiceContext>. Per altre informazioni, vedere [Securing WCF Data Services](securing-wcf-data-services.md). Nell'esempio in questo argomento viene illustrato come fornire in modo esplicito le credenziali che vengono usate dal client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per richiedere i dati dal servizio dati.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Procedura: specificare le credenziali del client per una richiesta del servizio dati (WCF Data Services)
+Per impostazione predefinita, la libreria client non fornisce le credenziali quando invia una richiesta a un servizio OData. Tuttavia, è possibile specificare che le credenziali vengano inviate per autenticare richieste al servizio dati fornendo un elemento <xref:System.Net.NetworkCredential> per la proprietà <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> di <xref:System.Data.Services.Client.DataServiceContext>. Per altre informazioni, vedere [Securing WCF Data Services](securing-wcf-data-services.md). Nell'esempio in questo argomento viene illustrato come fornire in modo esplicito le credenziali che vengono usate dal client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per richiedere i dati dal servizio dati.  
   
- Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md). È inoltre possibile utilizzare il [servizio dati Northwind di esempio](https://go.microsoft.com/fwlink/?LinkId=187426) pubblicato sul [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sito Web. questo servizio dati di esempio è di sola lettura e il tentativo di salvare le modifiche restituisce un errore. Il servizio dati di esempio nel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sito Web consente l'autenticazione anonima.  
+ Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md). È inoltre possibile utilizzare il [servizio dati di esempio Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) pubblicato sul sito Web OData. Questo servizio dati di esempio è di sola lettura e il tentativo di salvare le modifiche restituisce un errore. I servizi dati di esempio nel sito Web OData consentono l'autenticazione anonima.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente è dalla pagina code-behind per un file di Extensible Application Markup Language (XAML) che è la pagina principale dell'applicazione Windows Presentation Framework. In questo esempio viene visualizzata un'istanza di `LoginWindow` per raccogliere le credenziali di autenticazione dall'utente e usare quindi queste credenziali per una richiesta al servizio dati.  

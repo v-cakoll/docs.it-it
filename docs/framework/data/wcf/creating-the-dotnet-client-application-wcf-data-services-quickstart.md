@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4beaba24e42b15ebc45ece6e5319a2b14df54ab6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790957"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975387"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Creazione dell'applicazione client .NET Framework (Guida rapida di WCF Data Services)
 
-Questa è l'attività finale della Guida introduttiva WCF Data Services. In questa attività si aggiungerà un'applicazione console alla soluzione, si aggiungerà un riferimento al [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in questa nuova applicazione client e si accederà al feed OData dall'applicazione client utilizzando le classi del servizio dati client e le librerie client generate. .
+Questa è l'attività finale della Guida introduttiva WCF Data Services. In questa attività si aggiungerà un'applicazione console alla soluzione, si aggiungerà un riferimento al feed di Open Data Protocol (OData) in questa nuova applicazione client e si accederà al feed OData dall'applicazione client utilizzando le classi e il client del servizio dati client generato. librerie.
 
 > [!NOTE]
 > Per accedere a un feed di dati non è necessario disporre di un'applicazione client basata su .NET Framework. Il servizio dati può accedere a qualsiasi componente dell'applicazione che utilizza un feed OData. Per ulteriori informazioni, vedere [utilizzo di un servizio dati in un'applicazione client](using-a-data-service-in-a-client-application-wcf-data-services.md).
@@ -33,7 +33,7 @@ Questa è l'attività finale della Guida introduttiva WCF Data Services. In ques
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>Per aggiungere un riferimento al servizio dati nel progetto
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto NorthwindClient, scegliere **Aggiungi** > **riferimento al servizio**, quindi fare clic su **individua**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto NorthwindClient, scegliere **Aggiungi** > **riferimento al servizio**e quindi fare clic su **individua**.
 
      Verrà visualizzato il servizio dati Northwind creato nella prima attività.
 
@@ -47,7 +47,7 @@ Questa è l'attività finale della Guida introduttiva WCF Data Services. In ques
 
 2. Nella finestra di dialogo **Aggiungi riferimento** fare clic sulla scheda **.NET** , selezionare l'assembly System. Data. Services. client. dll, quindi fare clic su **OK**.
 
-3. In **Esplora soluzioni** in **NorthwindClient**aprire la tabella codici per il file MainWindow. XAML e aggiungere l'istruzione seguente `using` (`Imports` in Visual Basic).
+3. In **Esplora soluzioni** in **NorthwindClient**aprire la tabella codici per il file MainWindow. XAML e aggiungere la seguente istruzione `using` (`Imports` in Visual Basic).
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
@@ -80,7 +80,7 @@ Questa è l'attività finale della Guida introduttiva WCF Data Services. In ques
     > [!NOTE]
     > Questa versione dell'applicazione NorthwindClient non supporta l'aggiunta e l'eliminazione di entità.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 È stata creata correttamente l'applicazione client che accede al feed OData di esempio Northwind. È stata anche completata la Guida introduttiva WCF Data Services.
 

@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Raccolta di elenchi
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179876"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969420"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Prendere decisioni usando l'istruzione if
   durationInMinutes: 4
   content: >
-    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Fare di nuovo clic sul pulsante **Esegui**. Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
+    Selezionare di nuovo il pulsante **Esegui** . Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
 
 
     > [!TIP]
@@ -221,7 +221,7 @@ items:
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: La procedura è stata completata.
   content: >-
-    È stata completata l'esercitazione interattiva "Rami e cicli". Fare clic sul collegamento **raccolte di elenchi** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Rami e cicli". È possibile selezionare il collegamento **elenco raccolta** seguente per avviare la successiva esercitazione interattiva. in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e rimanere codificati. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Maggiori informazioni su questi concetti sono disponibili in questi argomenti:

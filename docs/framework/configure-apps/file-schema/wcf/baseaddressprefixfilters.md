@@ -2,23 +2,23 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: a22623c0856dd6d9b7c8c75e0b3feccc2d9350bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: cdf3264d1631db8e61bbcc4f6febd7008099251b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850196"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968722"
 ---
-# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
+# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters >
 Rappresenta una raccolta di elementi di configurazione che specificano filtri pass-through che forniscono un meccanismo per scegliere le associazioni Internet Information Services (IIS) appropriate quando ospitano l'applicazione Windows Communication Foundation (WCF) in IIS.  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters > non riconosce "localhost"; usare invece il nome completo del computer.  
+> \<> baseAddressPrefixFilters non riconosce "localhost"; usare invece il nome completo del computer.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> baseAddressPrefixFilters**  
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ServiceHostingEnvironment**](servicehostingenvironment.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<baseAddressPrefixFilters** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,19 +34,19 @@ Rappresenta una raccolta di elementi di configurazione che specificano filtri pa
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<add>](add-of-baseaddressprefixfilter.md)|Aggiunge un elemento di configurazione che specifica un filtro di prefisso per gli indirizzi di base usati dall'host del servizio.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto.|  
+|[\<serviceHostingEnvironment >](servicehostingenvironment.md)|Definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto.|  
   
 ## <a name="remarks"></a>Note  
  Un filtro dei prefissi fornisce ai provider di hosting condiviso una modalità per specificare quali URI devono essere usati dal servizio. Consente agli host condivisi di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema nello stesso sito.  
@@ -55,9 +55,9 @@ Rappresenta una raccolta di elementi di configurazione che specificano filtri pa
   
  IIS supporta la definizione di più associazioni IIS per ogni sito, che si traduce in più indirizzi di base per ogni schema. Poiché un servizio WCF ospitato in un sito consente l'associazione a un solo indirizzo di base per ogni schema, è possibile utilizzare la funzionalità filtro prefisso per selezionare l'indirizzo di base necessario per il servizio ospitato. Gli indirizzi di base in ingresso forniti da IIS sono filtrati in base all'elenco di prefissi facoltativo.  
   
- Un sito può ad esempio contenere gli indirizzi di base seguenti.  
+ Ad esempio, il sito può contenere gli indirizzi di base seguenti:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

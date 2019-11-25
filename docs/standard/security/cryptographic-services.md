@@ -26,44 +26,22 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663992"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975832"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 
-<a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.
+Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.
 
 In .NET Framework le classi dello spazio dei nomi <xref:System.Security.Cryptography?displayProperty=nameWithType> gestiscono automaticamente molti dettagli della crittografia. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Non è necessario essere esperti di crittografia per usare queste classi. Quando si crea una nuova istanza di una delle classi dell'algoritmo di crittografia, le chiavi vengono generate automaticamente per semplificare l'uso e le proprietà predefinite offrono la maggiore sicurezza possibile.
 
-Questa panoramica offre un riepilogo dei metodi di crittografia e delle procedure supportati da .NET Framework, inclusi i manifesti ClickOnce, Suite B e il supporto di Cryptography Next Generation (CNG) introdotto in .NET Framework 3.5.
-
-In questa panoramica sono incluse le sezioni seguenti:
-
-- [Primitive di crittografia](#primitives)
-
-- [Crittografia a chiave segreta](#secret_key)
-
-- [Crittografia a chiave pubblica](#public_key)
-
-- [Digital Signatures](#digital_signatures)
-
-- [Valore hash](#hash_values)
-
-- [Random Number Generation](#random_numbers)
-
-- [Manifesti ClickOnce](#clickonce)
-
-- [Supporto per Suite B](#suite_b)
-
-- [Argomenti correlati](#related_topics)
+Questa panoramica offre un riepilogo dei metodi e delle procedure di crittografia supportati dal .NET Framework, inclusi i manifesti ClickOnce, Suite B e il supporto CNG (Cryptography Next Generation) introdotti nella .NET Framework 3,5.
 
 Per altre informazioni sulla crittografia e sui servizi, i componenti e gli strumenti Microsoft che permettono l'aggiunta di sicurezza crittografica alle applicazioni, vedere la sezione di questo documento relativa allo sviluppo e alla sicurezza Win32 e COM.
-
-<a name="primitives"></a>
 
 ## <a name="cryptographic-primitives"></a>Primitive di crittografia
 
@@ -71,13 +49,13 @@ In una situazione tipica in cui si usa la crittografia, due parti (Alice e Bob) 
 
 La crittografia permette di realizzare gli obiettivi seguenti:
 
-- Riservatezza: Per impedire la lettura di dati o identità dell'utente.
+- Riservatezza: aiuta a proteggere l'identità o i dati di un utente dalla lettura.
 
-- Integrità dei dati: Per proteggere i dati dalla modifica.
+- Integrità dei dati: aiuta a proteggere i dati dalla modifica.
 
-- Autenticazione: Per garantire che i dati provengono da una parte specifica.
+- Autenticazione: assicura che i dati provengano da una parte specifica.
 
-- Il non ripudio: Per impedire una parte specifica di negare di aver inviato un messaggio.
+- Non ripudio: impedisce a una parte specifica di negare di avere inviato un messaggio.
 
 Per realizzare questi obiettivi, è possibile usare una combinazione di algoritmi e procedure nota come primitive di crittografia per creare uno schema crittografico. La tabella seguente elenca le primitive di crittografia e il rispettivo uso.
 
@@ -87,10 +65,6 @@ Per realizzare questi obiettivi, è possibile usare una combinazione di algoritm
 |Crittografia a chiave pubblica (crittografia asimmetrica)|Esegue una trasformazione sui dati per impedirne la lettura da terze parti. Questo tipo di crittografia usa una coppia di chiavi pubblica/privata per crittografare e decrittografare i dati.|
 |Firme di crittografia|Aiuta a verificare che i dati provengano da una parte specifica, tramite la creazione di una firma digitale univoca per tale parte. Questo processo usa anche funzioni hash.|
 |Hash di crittografia|Mappa i dati di qualsiasi lunghezza a una sequenza di byte a lunghezza fissa. Gli hash sono statisticamente univoci. Una sequenza di due byte diversa non avrà come risultato hash con lo stesso valore.|
-
-[Torna all'inizio](#top)
-
-<a name="secret_key"></a>
 
 ## <a name="secret-key-encryption"></a>Crittografia a chiave segreta
 
@@ -110,31 +84,27 @@ Un modo per compromettere dati crittografati con la modalità CBC consiste nell'
 
 Lo svantaggio della crittografia a chiave segreta consiste nel fatto che presuppone che le due parti si siano accordate su una chiave e un vettore di inizializzazione e che abbiano comunicato i rispettivi valori. Il vettore di inizializzazione non è considerato segreto e può essere trasmesso in testo normale con il messaggio. La chiave deve essere tuttavia mantenuta segreta agli utenti non autorizzati. A causa di questi problemi, la crittografia a chiave segreta viene usata spesso insieme alla crittografia a chiave pubblica per comunicare in modo privato i valori della chiave e del vettore di inizializzazione.
 
-Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, è possibile usare crittografia a chiave segreta come indicato di seguito: Alice e Bob decidono di usare un algoritmo specifico (ad esempio, AES) con una chiave e un vettore di Inizializzazione. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o rete posta elettronica) su cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.
+Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, potranno usare la crittografia a chiave segreta nel modo seguente: Alice e Bob decidono di usare un algoritmo specifico, ad esempio AES, con una chiave e un vettore di inizializzazione specifici. Alice compone un messaggio e crea un flusso di rete (ad esempio un named pipe o un indirizzo di posta elettronica di rete) su cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.
 
-.NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave segreta:
+Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave segreta:
 
-- <xref:System.Security.Cryptography.AesManaged> (introdotta in .NET Framework 3.5).
+- <xref:System.Security.Cryptography.AesManaged> (introdotto nel .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.HMACSHA1> : si tratta tecnicamente di un algoritmo a chiave segreta in quanto rappresenta il codice di autenticazione del messaggio calcolato usando una funzione hash di crittografia combinata con una chiave segreta. Vedere [Valori hash](#hash_values)più avanti in questo argomento.
+- <xref:System.Security.Cryptography.HMACSHA1> : si tratta tecnicamente di un algoritmo a chiave segreta in quanto rappresenta il codice di autenticazione del messaggio calcolato usando una funzione hash di crittografia combinata con una chiave segreta. Vedere [Valori hash](#hash-values)più avanti in questo argomento.
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.RijndaelManaged>.
+- <xref:System.Security.Cryptography.RijndaelManaged>
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
-
-[Torna all'inizio](#top)
-
-<a name="public_key"></a>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
 
 ## <a name="public-key-encryption"></a>Crittografia a chiave pubblica
 
 a crittografia a chiave pubblica usa una chiave privata che deve essere tenuta segreta agli utenti non autorizzati e una chiave pubblica che può essere resa pubblica a tutti. La chiave pubblica e la chiave privata sono collegate matematicamente. I dati crittografati con la chiave pubblica possono essere decrittografati solo con la chiave privata e i dati firmati con la chiave privata possono essere verificati solo con la chiave pubblica. La chiave pubblica può essere distribuita a tutti in quanto viene usata per crittografare i dati da inviare a chi detiene la chiave privata. Gli algoritmi di crittografia a chiave pubblica sono noti anche come algoritmi asimmetrici, poiché per crittografare e successivamente decrittografare i dati è necessario usare due chiavi diverse. Una regola di crittografia di base proibisce il riutilizzo di chiavi ed entrambe le chiavi devono essere univoche per ogni sessione di comunicazione. In pratica, tuttavia, le chiavi asimmetriche sono in genere di lunga durata.
 
-Due parti (Alice e Bob) possono utilizzare crittografia a chiave pubblica come indicato di seguito: In primo luogo, Alice genera una coppia di chiavi pubblica/privata. Se Bob vuole inviare ad Alice un messaggio crittografato, le chiede la chiave pubblica. Alice invia a Bob la chiave pubblica su una rete non sicura e Bob la usa per crittografare un messaggio. Bob invia il messaggio crittografato ad Alice, che lo decrittografa usando la sua chiave privata. Se Bob ha ricevuto la chiave di Alice su un canale non sicuro, ad esempio una rete pubblica, sarà esposto a un attacco di tipo man-in-the-middle. Bob deve quindi verificare con Alice che la copia a sua disposizione della chiave pubblica sia corretta.
+Le due parti, Alice e Bob, possono usare la crittografia a chiave pubblica come illustrato di seguito. Alice genera prima di tutto una coppia di chiavi pubblica/privata. Se Bob vuole inviare ad Alice un messaggio crittografato, le chiede la chiave pubblica. Alice invia a Bob la chiave pubblica su una rete non sicura e Bob la usa per crittografare un messaggio. Bob invia il messaggio crittografato ad Alice, che lo decrittografa usando la sua chiave privata. Se Bob ha ricevuto la chiave di Alice su un canale non sicuro, ad esempio una rete pubblica, sarà esposto a un attacco di tipo man-in-the-middle. Bob deve quindi verificare con Alice che la copia a sua disposizione della chiave pubblica sia corretta.
 
 Durante la trasmissione della chiave pubblica di Alice, una persona non autorizzata potrebbe intercettare la chiave. La stessa persona potrebbe intercettare anche il messaggio crittografato da Bob. Tale persona, tuttavia, non potrà decrittografare il messaggio con la chiave pubblica. Il messaggio può essere decrittografato solo con la chiave privata di Alice che non è stata trasmessa. Alice non usa la propria chiave privata per crittografare un messaggio di risposta a Bob, poiché chiunque sia in possesso della chiave pubblica potrebbe decrittografare il messaggio. Se Alice vuole inviare un messaggio a Bob, gli chiede la chiave pubblica e crittografa il suo messaggio usando quella chiave. Bob decrittografa quindi il messaggio usando la sua chiave privata associata.
 
@@ -154,7 +124,7 @@ L'elenco seguente offre un confronto tra algoritmi di crittografia a chiave pubb
 
 - Gli algoritmi a chiave pubblica sono molto lenti rispetto a quelli a chiave segreta e non sono destinati alla crittografia di grandi quantità di dati. Risultano utili solo per il trasferimento di piccole quantità di dati. Generalmente la crittografia a chiave pubblica viene usata per crittografare una chiave e un vettore di inizializzazione utilizzabili da un algoritmo a chiave segreta. Dopo il trasferimento della chiave e del vettore di inizializzazione, la crittografia a chiave segreta viene usata per il resto della sessione.
 
-.NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave pubblica:
+Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di crittografia a chiave pubblica:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -172,10 +142,6 @@ L'elenco seguente offre un confronto tra algoritmi di crittografia a chiave pubb
 
 RSA consente sia la crittografia sia la firma, mentre DSA può essere usato solo per la firma e Diffie-Hellman solo per la generazione di chiavi. In genere, gli algoritmi a chiave pubblica sono più limitati nell'utilizzo rispetto a quelli a chiave privata.
 
-[Torna all'inizio](#top)
-
-<a name="digital_signatures"></a>
-
 ## <a name="digital-signatures"></a>firme digitali
 
 Gli algoritmi a chiave pubblica possono essere usati per formare firme digitali, il cui obiettivo è l'autenticazione dell'identità di un mittente, se la chiave pubblica di quest'ultimo viene considerata attendibile, e la protezione dell'integrità dei dati. Attraverso una chiave pubblica generata da Alice, il destinatario dei suoi dati può verificare che siano stati inviati effettivamente da lei confrontando la firma digitale sui dati e la chiave pubblica di Alice.
@@ -185,7 +151,7 @@ Per apporre una firma digitale a un messaggio usando la crittografia a chiave pu
 > [!NOTE]
 > Chiunque può verificare una firma, poiché la chiave pubblica del mittente è di pubblico dominio e generalmente viene inclusa nel formato della firma digitale. Questo metodo non mantiene la segretezza del messaggio. Perché possa essere segreto, anche il messaggio deve essere crittografato.
 
-.NET Framework fornisce le classi seguenti che implementano gli algoritmi di firma digitale:
+Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di firma digitale:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -195,10 +161,6 @@ Per apporre una firma digitale a un messaggio usando la crittografia a chiave pu
 
 - <xref:System.Security.Cryptography.ECDsaCng>
 
- [Torna all'inizio](#top)
-
-<a name="hash_values"></a>
-
 ## <a name="hash-values"></a>Valore hash
 
 Gli algoritmi hash associano valori binari di lunghezza arbitraria a piccoli valori binari di lunghezza fissa, noti come valori hash. Per valore hash si intende una rappresentazione numerica di una porzione di dati. Se si inserisce un hash in un paragrafo di testo non crittografato e si modifica anche una sola lettera del paragrafo, un hash successivo produrrà un valore diverso. Se l'hash è basato su una crittografia avanzata, il relativo valore verrà modificato in modo significativo. Se ad esempio viene modificato un singolo bit di un messaggio, una funzione hash sicura può produrre un output che si differenzia del 50%. Molti valori di input possono avere hash dello stesso valore di output. Dal punto di vista del calcolo, tuttavia, è impossibile trovare due input di versi che forniscono come risultato un hash con lo stesso valore.
@@ -207,7 +169,7 @@ Due parti (Alice e Bob) sono riuscite a usare una funzione hash per garantire l'
 
 - Alice invia il messaggio come testo normale e il messaggio con hash (firma digitale) a Bob. Bob riceve il messaggio, ne esegue l'hashing, quindi confronta il proprio valore hash con quello che ha ricevuto da Alice. Se i valori hash corrispondono, il messaggio non è stato alterato. Se invece i valori non corrispondono, il messaggio è stato alterato dopo essere stato scritto da Alice.
 
-  Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere [esempio di comunicazioni protette con Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere [esempio di comunicazione protetta di Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice invia il messaggio come testo normale a Bob tramite un canale pubblico non protetto. Invia il messaggio con hash a Bob su un canale privato protetto. Bob riceve il messaggio in testo normale, ne esegue l'hashing, quindi confronta il valore hash con quello scambiato privatamente. Se i valori corrispondono, Bob può accertare quanto segue:
 
@@ -223,23 +185,23 @@ Due parti (Alice e Bob) sono riuscite a usare una funzione hash per garantire l'
 
 Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perché vengono trasmessi come testo normale. Una soluzione di sicurezza completa richiede le firme digitali (firma dei messaggi) e la crittografia.
 
-.NET Framework fornisce le classi seguenti che implementano gli algoritmi di hash:
+Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di hash:
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.HMACSHA1>
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.MACTripleDES>
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
+- <xref:System.Security.Cryptography.RIPEMD160>
 
-- <xref:System.Security.Cryptography.SHA1Managed>.
+- <xref:System.Security.Cryptography.SHA1Managed>
 
-- <xref:System.Security.Cryptography.SHA256Managed>.
+- <xref:System.Security.Cryptography.SHA256Managed>
 
-- <xref:System.Security.Cryptography.SHA384Managed>.
+- <xref:System.Security.Cryptography.SHA384Managed>
 
-- <xref:System.Security.Cryptography.SHA512Managed>.
+- <xref:System.Security.Cryptography.SHA512Managed>
 
 - Varianti HMAC di tutti gli algoritmi SHA (Secure Hash Algorithm), MD5 (Message Digest 5) e RIPEMD-160.
 
@@ -250,23 +212,15 @@ Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perch�
 > [!NOTE]
 > I difetti di progettazione di MD5 sono stati individuati nel 1996 e SHA-1 è stato consigliato in sostituzione. Nel 2004 sono stati individuati altri difetti e l'algoritmo MD5 non è più considerato sicuro. Anche l'algoritmo SHA-1 si è rivelato non sicuro e attualmente è consigliato l'algoritmo SHA-2.
 
-[Torna all'inizio](#top)
-
-<a name="random_numbers"></a>
-
 ## <a name="random-number-generation"></a>generazione casuale di numeri
 
-La generazione di numeri casuali è integrata in molte operazioni di crittografia. Le chiavi di crittografia, ad esempio, devono essere il più casuali possibile in modo che non sia possibile riprodurle. I generatori di numeri casuali di crittografia devono generare output che sia impossibile da prevedere con una probabilità superiore al 50%. Pertanto, qualsiasi metodo di previsione del bit di output successivo non deve avere una prestazione migliore della previsione casuale. Le classi in .NET Framework usano i generatori di numeri casuali per generare le chiavi di crittografia.
+La generazione di numeri casuali è integrata in molte operazioni di crittografia. Le chiavi di crittografia, ad esempio, devono essere il più casuali possibile in modo che non sia possibile riprodurle. I generatori di numeri casuali di crittografia devono generare output che sia impossibile da prevedere con una probabilità superiore al 50%. Pertanto, qualsiasi metodo di previsione del bit di output successivo non deve avere una prestazione migliore della previsione casuale. Le classi nella .NET Framework utilizzano generatori di numeri casuali per generare chiavi crittografiche.
 
 La classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider> è un'implementazione di un algoritmo di generazione di numeri casuali.
 
-[Torna all'inizio](#top)
-
-<a name="clickonce"></a>
-
 ## <a name="clickonce-manifests"></a>Manifesti ClickOnce
 
-In .NET Framework 3.5, le classi di crittografia seguenti consentono di ottenere e verificare informazioni sulle firme del manifesto per le applicazioni che vengono distribuite mediante [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
+Nella .NET Framework 3,5, le classi di crittografia seguenti consentono di ottenere e verificare le informazioni sulle firme del manifesto per le applicazioni distribuite tramite la [tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - La classe <xref:System.Security.Cryptography.ManifestSignatureInformation> ottiene informazioni su una firma del manifesto quando si usano i relativi overload del metodo <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -284,13 +238,9 @@ In .NET Framework 3.5, le classi di crittografia seguenti consentono di ottenere
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> fornisce un modo semplice per controllare se una firma Authenticode è attendibile.
 
-[Torna all'inizio](#top)
-
-<a name="suite_b"></a>
-
 ## <a name="suite-b-support"></a>Supporto per Suite B
 
-.NET Framework 3.5 supporta il set B Suite di algoritmi di crittografia pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](https://www.nsa.gov/what-we-do/information-assurance/).
+Il .NET Framework 3,5 supporta la Suite B set di algoritmi di crittografia pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Sono inclusi gli algoritmi seguenti:
 
@@ -304,27 +254,19 @@ Sono inclusi gli algoritmi seguenti:
 
 Nelle nuove classi <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>e <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> sono disponibili wrapper del codice gestito per le implementazioni certificate da FIPS (Federal Information Processing Standard) delle implementazioni AES, SHA-256, SHA-384 e SHA-512.
 
-[Torna all'inizio](#top)
-
-<a name="cng"></a>
-
 ## <a name="cryptography-next-generation-cng-classes"></a>Classi Cryptography Next Generation (CNG)
 
-Le classi Cryptography Next Generation (CNG) forniscono un wrapper gestito intorno alle funzioni CNG native. CNG sostituisce CryptoAPI. Il nome di queste classi contiene "Cng". Elemento centrale delle classi wrapper CNG è la classe del contenitore di chiavi <xref:System.Security.Cryptography.CngKey> che astrae l'archiviazione e l'utilizzo delle chiavi CNG. Questa classe consente di archiviare in modo sicuro una coppia di chiavi o una chiave pubblica e fare riferimento a tale chiave usando un semplice nome di stringa. La classe di firma basata su curva ellittica <xref:System.Security.Cryptography.ECDsaCng> e la classe di crittografia <xref:System.Security.Cryptography.ECDiffieHellmanCng> possono usare oggetti <xref:System.Security.Cryptography.CngKey> .
+Le classi Cryptography Next Generation (CNG) forniscono un wrapper gestito intorno alle funzioni CNG native. CNG è la sostituzione di CryptoAPI. Queste classi hanno "CNG" come parte del nome. Elemento centrale delle classi wrapper CNG è la classe del contenitore di chiavi <xref:System.Security.Cryptography.CngKey> che astrae l'archiviazione e l'utilizzo delle chiavi CNG. Questa classe consente di archiviare in modo sicuro una coppia di chiavi o una chiave pubblica e fare riferimento a tale chiave usando un semplice nome di stringa. La classe di firma basata su curva ellittica <xref:System.Security.Cryptography.ECDsaCng> e la classe di crittografia <xref:System.Security.Cryptography.ECDiffieHellmanCng> possono usare oggetti <xref:System.Security.Cryptography.CngKey> .
 
 La classe <xref:System.Security.Cryptography.CngKey> viene usata per una varietà di operazioni aggiuntive, incluse l'apertura, la creazione, l'eliminazione e l'esportazione di chiavi. Fornisce inoltre l'accesso all'handle di chiave sottostante da usare quando le funzioni native vengono chiamate direttamente.
 
-.NET Framework 3.5 include anche varie classi CNG, ad esempio di supporto:
+Il .NET Framework 3,5 include anche un'ampia gamma di classi CNG di supporto, come le seguenti:
 
 - <xref:System.Security.Cryptography.CngProvider> gestisce un provider di archiviazione chiavi.
 
 - <xref:System.Security.Cryptography.CngAlgorithm> gestisce un algoritmo CNG.
 
 - <xref:System.Security.Cryptography.CngProperty> gestisce proprietà di chiave usate frequentemente.
-
-[Torna all'inizio](#top)
-
-<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>Argomenti correlati
 

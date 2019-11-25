@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: a553d24a12b7ea227325a76d255e2ad53ada716f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739616"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974962"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>Eseguire la migrazione dalla .NET Framework 1,1
 
@@ -56,9 +56,9 @@ Tuttavia, in alcuni casi, potrebbe essere necessario modificare il codice sorgen
 
 Per stimare l'impatto di possibili modifiche di interruzione sull'applicazione, è necessario rivedere i seguenti elenchi di modifiche:
 
-- Modifiche ai documenti relative alle [Modifiche sostanziali in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) in .NET Framework 2.0 SP1 che possono interessare un'applicazione destinata a .NET Framework 1.1.
+- Modifiche ai documenti relative alle [Modifiche sostanziali in .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) in .NET Framework 2.0 SP1 che possono interessare un'applicazione destinata a .NET Framework 1.1.
 
-- In [Modifiche in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) sono documentate le modifiche tra .NET Framework 3.5 e .NET Framework 3.5 SP1.
+- In [Modifiche in .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) sono documentate le modifiche tra .NET Framework 3.5 e .NET Framework 3.5 SP1.
 
 - In [Problemi di migrazione di .NET Framework 4](net-framework-4-migration-issues.md) sono documentate le modifiche tra .NET Framework 3.5 SP1 e .NET Framework 4.
 

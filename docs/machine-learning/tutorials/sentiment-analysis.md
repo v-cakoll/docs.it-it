@@ -4,12 +4,12 @@ description: In questa esercitazione viene illustrato come creare un'applicazion
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774411"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974770"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Esercitazione: analizzare i sentimenti dei commenti del sito Web con classificazione binaria in ML.NET
 
@@ -80,12 +80,13 @@ In questa esercitazione si imparerà a:
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>Come sono stati preparati i dati
+
 La classe di set di dati di input, `SentimentData`, dispone di un `string` per i commenti utente (`SentimentText`) e di un valore `bool` (`Sentiment`) pari a 1 (positivo) o 0 (negativo) per la valutazione. Entrambi i campi hanno attributi [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) associati, che descrivono l'ordine di file di dati di ogni campo.  Inoltre, la proprietà `Sentiment` include un attributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) per designarlo come campo `Label`. Il file di esempio seguente non ha una riga di intestazione e ha l'aspetto seguente:
 
 |SentimentText                         |Valutazione (etichetta) |
 |--------------------------------------|----------|
 |La cameriera era un po' lenta a servire.|    0     |
-|Lo strato esterno non è buono.                    |    0     |
+|Crust is not good.                    |    0     |
 |Wow... Questo posto è stato apprezzato.              |    1     |
 |Il servizio è stato molto rapido.              |    1     |
 
@@ -96,6 +97,7 @@ La classe di output `SentimentPrediction` contiene altre due proprietà calcolat
 Per questa esercitazione la proprietà più importante è `Prediction`.
 
 ## <a name="load-the-data"></a>Caricare i dati
+
 I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` è un modo flessibile ed efficiente di descrivere i dati tabulari (numerici e di testo). È possibile caricare dati da un file di testo o in tempo reale, ad esempio da un database SQL o file di log, in un oggetto `IDataView`.
 
 La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro di creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
@@ -178,7 +180,7 @@ Quando si prepara un modello, usare parte del set di dati per il training e part
     |SentimentText                         |Valutazione |Funzionalità              |
     |--------------------------------------|----------|----------------------|
     |La cameriera era un po' lenta a servire.|    0     |[0.76, 0.65, 0.44, …] |
-    |Lo strato esterno non è buono.                    |    0     |[0.98, 0.43, 0.54, …] |
+    |Crust is not good.                    |    0     |[0.98, 0.43, 0.54, …] |
     |Wow... Questo posto è stato apprezzato.              |    1     |[0.35, 0.73, 0.46, …] |
     |Il servizio è stato molto rapido.              |    1     |[0.39, 0, 0.75, …]    |
 

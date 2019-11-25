@@ -2,12 +2,12 @@
 title: Valutare le modifiche che causano un'interruzione - .NET Core
 description: Informazioni sui modi in cui .NET Core tenta di garantire la compatibilità tra le versioni di .NET per sviluppatori.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739344"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973655"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Valutare le modifiche che causano un'interruzione
 
@@ -103,7 +103,7 @@ Le modifiche di questa categoria *interessano* la superficie di attacco pubblica
 
   Si noti che, se si introduce un override, i consumer precedenti potrebbero ignorare l'override quando eseguono la chiamata a [base](../../csharp/language-reference/keywords/base.md).
 
-- **✔️ Aggiunta di un costruttore a una classe, insieme a un costruttore predefinito (senza parametri), se in precedenza la classe era priva di costruttori**
+- **✔️ l'aggiunta di un costruttore a una classe, insieme a un costruttore senza parametri se la classe non ha in precedenza costruttori**
 
    Non è tuttavia consentita l'aggiunta di un costruttore a una classe che in precedenza era priva di costruttori *senza* aggiungere il costruttore senza parametri.
 

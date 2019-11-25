@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935317"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968232"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Attributo '\<NomeAttributo >' non può essere applicato più volte
-L'attributo può essere applicato una sola volta. Il `AttributeUsage` attributo determina se un attributo può essere applicato più volte.  
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Impossibile applicare più volte l'attributo '\<AttributeName >'
+
+L'attributo può essere applicato una sola volta. L'attributo `AttributeUsage` determina se un attributo può essere applicato più di una volta.  
   
  **ID errore:** BC30663  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Assicurarsi che l'attributo viene applicato una sola volta.  
+1. Verificare che l'attributo venga applicato una sola volta.  
   
-2. Se si usano attributi personalizzati, è possibile modificare i `AttributeUsage` attributo per consentire l'utilizzo di più attributi, come con l'esempio seguente.  
+2. Se si usano attributi personalizzati sviluppati, provare a modificare l'attributo `AttributeUsage` per consentire l'utilizzo di più attributi, come nell'esempio seguente.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

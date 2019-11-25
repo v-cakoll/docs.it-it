@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115205"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968902"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<elemento > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode elemento >
 
 Determina se il runtime conserva il comportamento legacy nelle operazioni di formattazione con valori <xref:System.TimeSpan?displayProperty=nameWithType>.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp; **&nbsp;&nbsp;\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -75,13 +75,13 @@ Nell'esempio seguente viene creata un'istanza di un oggetto <xref:System.TimeSpa
 
 Quando si esegue l'esempio in .NET Framework 3,5 o in una versione precedente, viene visualizzato l'output seguente:
 
-```
+```console
 12:30:45
 ```
 
 Questa operazione è notevolmente diversa rispetto all'output se si esegue l'esempio in .NET Framework 4 o versione successiva:
 
-```
+```console
 Invalid Format
 ```
 

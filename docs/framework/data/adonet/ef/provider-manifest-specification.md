@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040485"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973878"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Uso di un token del manifesto del provider  
  Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. Il linguaggio SSDL consente di specificare un ProviderManifestToken (vedere [elemento schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) per ulteriori informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: 7623c2b743d6a61362c8cf0e1228b4663c9e7d48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e4f887ebf467c967b8b72c19deafed2c9759e4ed
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780384"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975346"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Provider di servizi dati (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]supporta più modelli di provider per l' [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] esposizione di dati come feed. In questo argomento vengono fornite le informazioni che consentono di scegliere il provider di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] più adatto all'origine dati usata.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta più modelli di provider per l'esposizione di dati come feed di Open Data Protocol (OData). In questo argomento vengono fornite le informazioni che consentono di scegliere il provider di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] più adatto all'origine dati usata.  
   
 ## <a name="data-source-providers"></a>Provider di origini dati  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]supporta i provider seguenti per la definizione del modello di dati di un servizio dati.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta i provider seguenti per la definizione del modello di dati di un servizio dati.  
   
 |Provider|Descrizione|  
 |--------------|-----------------|  
@@ -24,7 +24,7 @@ ms.locfileid: "70780384"
 |Provider di servizi dati personalizzati|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un set di provider che consentono di definire in modo dinamico un modello di dati basato su tipi di dati ad associazione tardiva. È necessario implementare queste interfacce quando i dati esposti non sono noti al momento della progettazione dell'applicazione o quando il provider di reflection o il provider di Entity Framework non è sufficiente. Per ulteriori informazioni, vedere [provider di servizi dati personalizzati](custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Altri provider di servizi dati  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]dispone del provider di servizi dati aggiuntivo seguente che migliora le prestazioni di un'origine dati definita utilizzando uno degli altri provider.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dispone del provider di servizi dati aggiuntivo seguente che migliora le prestazioni di un'origine dati definita utilizzando uno degli altri provider.  
   
 |Provider|Descrizione|  
 |--------------|-----------------|  

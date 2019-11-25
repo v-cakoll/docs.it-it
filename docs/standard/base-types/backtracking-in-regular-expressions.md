@@ -18,30 +18,19 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.custom: seodec18
-ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140524"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968249"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
-<a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
+Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) facoltativi e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
   
 > [!NOTE]
 > In generale, un motore NFA (Nondeterministic Finite Automaton) come il motore delle espressioni regolari .NET affida la responsabilità della creazione di espressioni regolari efficienti e veloci allo sviluppatore.  
-  
- Di seguito sono elencate le diverse sezioni di questo argomento:  
-  
-- [Confronto lineare senza backtracking](#linear_comparison_without_backtracking)  
-  
-- [Backtracking con quantificatori facoltativi o costrutti di alternanza](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
-  
-- [Backtracking con quantificatori facoltativi annidati](#backtracking_with_nested_optional_quantifiers)  
-  
-- [Controllo del backtracking](#controlling_backtracking)  
-  
-<a name="linear_comparison_without_backtracking"></a>   
+
 ## <a name="linear-comparison-without-backtracking"></a>Confronto lineare senza backtracking  
  Se un modello di espressione regolare non contiene quantificatori facoltativi o costrutti di alternanza, il motore delle espressioni regolari viene eseguito in un tempo lineare, ovvero dopo che il motore delle espressioni regolari trova una corrispondenza tra il primo elemento del linguaggio del modello e il testo della stringa di input, prova a trovare una corrispondenza tra l'elemento del linguaggio successivo del modello e il carattere o il gruppo di caratteri successivi della stringa di input. Il processo continua finché la ricerca della corrispondenza non avrà esito positivo o negativo. In entrambi i casi, il motore delle espressioni regolari avanza di un carattere alla volta nella stringa di input.  
   
@@ -74,11 +63,8 @@ ms.locfileid: "73140524"
 |18|\w|"d" (indice 13)|Possibile corrispondenza.|  
 |19|\b|"" (indice 14)|Corrispondenza.|  
   
- Se un modello di espressione regolare non include quantificatori facoltativi o costrutti di alternanza, il numero massimo di confronti necessari per trovare una corrispondenza tra il modello di espressione regolare e la stringa di input equivale approssimativamente al numero di caratteri della stringa di input. In questo caso, l'espressione regolare utilizza 19 confronti per identificare le possibili corrispondenze nella stringa di 13 caratteri.  In altre parole, il motore delle espressioni regolari viene eseguito in un tempo quasi lineare se non contiene quantificatori facoltativi o costrutti di alternanza.  
-  
- [Torna all'inizio](#top)  
-  
-<a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
+ Se un modello di espressione regolare non include quantificatori facoltativi o costrutti di alternanza, il numero massimo di confronti necessari per trovare una corrispondenza tra il modello di espressione regolare e la stringa di input equivale approssimativamente al numero di caratteri della stringa di input. In questo caso, l'espressione regolare utilizza 19 confronti per identificare le possibili corrispondenze nella stringa di 13 caratteri.  In altre parole, il motore delle espressioni regolari viene eseguito in un tempo quasi lineare se non contiene quantificatori facoltativi o costrutti di alternanza.   
+
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Backtracking con quantificatori facoltativi o costrutti di alternanza  
  Quando un'espressione regolare include quantificatori facoltativi o costrutti di alternanza, la valutazione della stringa di input non è più lineare. La corrispondenza dei modelli con un motore NFA è determinata dagli elementi del linguaggio nell'espressione regolare e non dai caratteri con cui trovare una corrispondenza nella stringa di input. Il motore delle espressioni regolari prova pertanto a trovare una piena corrispondenza con le sottoespressioni facoltative o alternative. Quando avanza all'elemento del linguaggio successivo nella sottoespressione e la corrispondenza ha esito negativo, il motore delle espressioni regolari può abbandonare una parte della corrispondenza esatta e tornare a uno stato salvato in precedenza al fine di trovare una corrispondenza tra l'intera espressione regolare e la stringa di input. Questo processo di tornare a uno stato salvato in precedenza per trovare una corrispondenza è noto come backtracking.  
   
@@ -99,11 +85,8 @@ ms.locfileid: "73140524"
   
 - Confronta la "s" nel modello con la "s" che segue il carattere "e" corrispondente (la prima "s" in "expressions"). La corrispondenza ha esito positivo.  
   
- Quando si utilizza il backtracking, la ricerca di una corrispondenza tra il modello di espressione regolare e la stringa di input, con una lunghezza pari a 55 caratteri, richiede 67 operazioni di confronto. In genere, se un modello di espressione regolare include un singolo costrutto di alternanza o un singolo quantificatore facoltativo, il numero di operazioni di confronto necessarie per trovare una corrispondenza del modello è più del doppio rispetto al numero di caratteri della stringa di input.  
-  
- [Torna all'inizio](#top)  
-  
-<a name="backtracking_with_nested_optional_quantifiers"></a>   
+ Quando si utilizza il backtracking, la ricerca di una corrispondenza tra il modello di espressione regolare e la stringa di input, con una lunghezza pari a 55 caratteri, richiede 67 operazioni di confronto. In genere, se un modello di espressione regolare include un singolo costrutto di alternanza o un singolo quantificatore facoltativo, il numero di operazioni di confronto necessarie per trovare una corrispondenza del modello è più del doppio rispetto al numero di caratteri della stringa di input.   
+
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Backtracking con quantificatori facoltativi annidati  
  Il numero di operazioni di confronto necessarie per trovare una corrispondenza di un modello di espressione regolare può aumentare in modo esponenziale se il modello include un numero elevato di costrutti di alternanza, se include costrutti di alternanza annidati o se include sopratutto quantificatori facoltativi annidati. Il modello di espressione regolare `^(a+)+$` , ad esempio, è progettato per cercare una corrispondenza con una stringa completa contenente uno o più caratteri "a". Nell'esempio vengono fornite due stringhe di input di lunghezza identica, ma solo la prima stringa corrisponde al modello. La classe <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> viene utilizzata per determinare il tempo richiesto dall'operazione di corrispondenza.  
   
@@ -118,15 +101,11 @@ ms.locfileid: "73140524"
   
 - Torna alla corrispondenza 3 salvata in precedenza. Determina che esistono sono altri due caratteri "a" da assegnare a un gruppo acquisito aggiuntivo. Tuttavia, il test di fine della stringa ha esito negativo. Torna quindi alla corrispondenza 3 e tenta di trovare una corrispondenza degli altri due caratteri "a" nei due gruppi acquisiti aggiuntivi. Il test di fine della stringa ha ancora esito negativo. Le corrispondenza non riuscite richiedono 12 confronti. Fino a questo punto, sono stati eseguiti complessivamente 25 confronti.  
   
- Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O(2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri all'interno della stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare.  
-  
- [Torna all'inizio](#top)  
-  
-<a name="controlling_backtracking"></a>   
+ Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O(2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri all'interno della stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare. 
+
 ## <a name="controlling-backtracking"></a>Controllo del backtracking  
- Il backtracking consente di creare espressioni regolari potenti e flessibili. Tuttavia, come illustrato nella sezione precedente, insieme a questi vantaggi si ottiene una notevole riduzione delle prestazioni. Per evitare un utilizzo eccessivo del backtracking, è necessario definire un intervallo di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o si chiama un metodo di espressione regolare statica corrispondente. Questo è discusso nella sezione seguente. .NET supporta anche tre elementi del linguaggio delle espressioni regolari che limitano o evitano del tutto l'uso del backtracking e che supportano espressioni regolari complesse senza o con una minima riduzione delle prestazioni: [sottoespressioni non di backtracking](#Nonbacktracking), [asserzioni lookbehind](#Lookbehind) e [asserzioni lookahead](#Lookahead). Per altre informazioni su ogni elemento del linguaggio, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
-  
-<a name="Timeout"></a>   
+ Il backtracking consente di creare espressioni regolari potenti e flessibili. Tuttavia, come illustrato nella sezione precedente, insieme a questi vantaggi si ottiene una notevole riduzione delle prestazioni. Per evitare un utilizzo eccessivo del backtracking, è necessario definire un intervallo di timeout quando si crea un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> o si chiama un metodo di espressione regolare statica corrispondente. Questo è discusso nella sezione seguente. .NET supporta anche tre elementi del linguaggio delle espressioni regolari che limitano o evitano del tutto l'uso del backtracking e che supportano espressioni regolari complesse senza o con una minima riduzione delle prestazioni: [sottoespressioni non di backtracking](#nonbacktracking-subexpression), [asserzioni lookbehind](#lookbehind-assertions) e [asserzioni lookahead](#lookahead-assertions). Per altre informazioni su ogni elemento del linguaggio, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+
 ### <a name="defining-a-time-out-interval"></a>Definizione di un intervallo di timeout  
  A partire da .NET Framework 4.5, è possibile impostare un valore di timeout che rappresenta l'intervallo più lungo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima di abbandonare il tentativo e generare un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Specificare l'intervallo di timeout fornendo un valore <xref:System.TimeSpan> al costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> per instanziare espressioni regolari. Inoltre, ogni metodo statico di criteri di ricerca ha un overload con un parametro <xref:System.TimeSpan> che consente di specificare un valore di timeout. Per impostazione predefinita, l'intervallo di timeout viene impostato su <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> e il motore delle espressioni regolari non ha timeout.  
   
@@ -139,8 +118,7 @@ ms.locfileid: "73140524"
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
-  
-<a name="Nonbacktracking"></a>   
+
 ### <a name="nonbacktracking-subexpression"></a>Sottoespressione non di backtracking  
  L'elemento del linguaggio `(?>` *sottoespressione*`)` evita l'uso del backtracking in una sottoespressione. È utile per non incorrere nei problemi di prestazioni associati alle corrispondenze non riuscite.  
   
@@ -148,8 +126,7 @@ ms.locfileid: "73140524"
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
-  
-<a name="Lookbehind"></a>   
+
 ### <a name="lookbehind-assertions"></a>asserzioni lookbehind  
  .NET include due elementi del linguaggio, `(?<=`*sottoespressione*`)` e `(?<!`*sottoespressione*`)`, che trovano il carattere o i caratteri precedenti nella stringa di input. Entrambi gli elementi del linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che precedono immediatamente il carattere corrente possono essere trovati da *sottoespressione*, senza avanzamento o backtracking.  
   
@@ -180,8 +157,7 @@ ms.locfileid: "73140524"
 |`[-.\w]*`|Trova la corrispondenza di zero o più occorrenze di un trattino, un punto o un carattere alfanumerico.|  
 |`(?<=[0-9A-Z])`|Esegue la ricerca dell'ultimo carattere corrispondente e continua la ricerca della corrispondenza se si tratta di un carattere alfanumerico. Si noti che i caratteri alfanumerici sono un subset del set costituito da punti, trattini e tutti i caratteri alfanumerici.|  
 |`@`|Trova la corrispondenza di una chiocciola ("\@").|  
-  
-<a name="Lookahead"></a>   
+
 ### <a name="lookahead-assertions"></a>asserzioni lookahead  
  .NET include due elementi di linguaggio, `(?=`*sottoespressione*`)` e `(?!`*sottoespressione*`)`, che trovano il carattere o i caratteri successivi nella stringa di input. Entrambi gli elementi del linguaggio sono asserzioni di larghezza zero, ovvero determinano se il carattere o i caratteri che seguono immediatamente il carattere corrente possono essere trovati da *sottoespressione*, senza avanzamento o backtracking.  
   
@@ -212,8 +188,6 @@ ms.locfileid: "73140524"
 |`((?=[A-Z])\w+\.)*`|Trova la corrispondenza del modello di uno o più caratteri alfanumerici seguiti da un punto zero o più volte. Il carattere alfanumerico iniziale deve essere alfabetico.|  
 |`[A-Z]\w*`|Trova la corrispondenza di un carattere alfabetico seguito da zero o più caratteri alfanumerici.|  
 |`$`|Termina la ricerca della corrispondenza alla fine della stringa di input.|  
-  
- [Torna all'inizio](#top)  
   
 ## <a name="see-also"></a>Vedere anche
 

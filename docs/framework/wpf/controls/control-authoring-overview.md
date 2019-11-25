@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460788"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975722"
 ---
 # <a name="control-authoring-overview"></a>Panoramica della creazione di controlli
 
@@ -36,7 +36,7 @@ In precedenza, per ottenere un'esperienza personalizzata da un controllo esisten
   > [!NOTE]
   > Sebbene un <xref:System.Windows.Controls.RadioButton> possa usare una <xref:System.Windows.DataTemplate>, in questo esempio una <xref:System.Windows.DataTemplate> non è sufficiente.  Il <xref:System.Windows.DataTemplate> definisce l'aspetto del contenuto di un controllo. Nel caso di un <xref:System.Windows.Controls.RadioButton>, il contenuto è quello visualizzato a destra del cerchio che indica se il <xref:System.Windows.Controls.RadioButton> è selezionato.  Nell'esempio del semaforo il pulsante di opzione deve essere costituito semplicemente da un cerchio in grado di "illuminarsi". Poiché il requisito di aspetto per il semaforo è così diverso dall'aspetto predefinito del <xref:System.Windows.Controls.RadioButton>, è necessario ridefinire l'<xref:System.Windows.Controls.ControlTemplate>.  In generale, una <xref:System.Windows.DataTemplate> viene utilizzata per definire il contenuto (o i dati) di un controllo e viene utilizzata una <xref:System.Windows.Controls.ControlTemplate> per definire la struttura di un controllo.
 
-- **Trigger.** Un <xref:System.Windows.Trigger> consente di modificare dinamicamente l'aspetto e il comportamento di un controllo senza creare un nuovo controllo. Si supponga, ad esempio, di avere più controlli <xref:System.Windows.Controls.ListBox> nell'applicazione e che gli elementi in ogni <xref:System.Windows.Controls.ListBox> siano in grassetto e rossi quando vengono selezionati. Il primo istinto potrebbe consistere nel creare una classe che eredita da <xref:System.Windows.Controls.ListBox> ed eseguire l'override del metodo <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> per modificare l'aspetto dell'elemento selezionato, ma un approccio migliore consiste nell'aggiungere un trigger a uno stile di un <xref:System.Windows.Controls.ListBoxItem> che modifica l'aspetto dell'elemento selezionato . Un trigger consente di modificare i valori delle proprietà o di eseguire determinate azioni in base al valore di una proprietà. Un <xref:System.Windows.EventTrigger> consente di intraprendere le azioni quando si verifica un evento.
+- **Trigger.** Un <xref:System.Windows.Trigger> consente di modificare dinamicamente l'aspetto e il comportamento di un controllo senza creare un nuovo controllo. Si supponga, ad esempio, di avere più controlli <xref:System.Windows.Controls.ListBox> nell'applicazione e che gli elementi in ogni <xref:System.Windows.Controls.ListBox> siano in grassetto e rossi quando vengono selezionati. Il primo istinto potrebbe consistere nel creare una classe che eredita da <xref:System.Windows.Controls.ListBox> ed eseguire l'override del metodo <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> per modificare l'aspetto dell'elemento selezionato, ma un approccio migliore consiste nell'aggiungere un trigger a uno stile di un <xref:System.Windows.Controls.ListBoxItem> che modifica l'aspetto dell'elemento selezionato. Un trigger consente di modificare i valori delle proprietà o di eseguire determinate azioni in base al valore di una proprietà. Un <xref:System.Windows.EventTrigger> consente di intraprendere le azioni quando si verifica un evento.
 
 Per altre informazioni su stili, modelli e trigger, vedere [Applicazione di stili e modelli](styling-and-templating.md).
 
@@ -187,7 +187,7 @@ Per altre informazioni sul data binding, vedere [Panoramica sul data binding](..
 
 ### <a name="design-for-designers"></a>Progettare le finestre di progettazione
 
-Per ottenere supporto per i controlli WPF personalizzati in [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)], ad esempio per la modifica delle proprietà con la finestra Proprietà, attenersi alle linee guida riportate di seguito.  Per altre informazioni sullo sviluppo per la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], vedere [progettazione di XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Per ricevere il supporto per i controlli WPF personalizzati in WPF Designer per Visual Studio (ad esempio, la modifica delle proprietà con la Finestra Proprietà), seguire queste linee guida.  Per ulteriori informazioni sullo sviluppo per WPF Designer, vedere [progettazione di XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Proprietà di dipendenza
 

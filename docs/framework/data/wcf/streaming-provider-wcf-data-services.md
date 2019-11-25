@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854105"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975129"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 
-Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché questo tipo di caricamento e serializzazione di dati binari di grandi dimensioni può influire sulle prestazioni, definisce un meccanismo per il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] recupero di dati binari indipendentemente dall'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.
+Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché questo tipo di caricamento e serializzazione di dati binari di grandi dimensioni può influire sulle prestazioni, il Open Data Protocol (OData) definisce un meccanismo per il recupero di dati binari indipendentemente dall'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.
 
 - Risorsa multimediale: dati binari che appartengono a un'entità, quali una risorsa video, audio, immagine o altri tipi di flusso di risorse multimediali.
 
 - Elemento entry di collegamento multimediale: entità che presenta un riferimento a un flusso di risorse multimediali correlato.
 
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] si definisce un flusso di risorse binarie implementando un provider di dati di flusso. L'implementazione del provider di flusso fornisce al servizio dati il flusso di risorse multimediali associato a un'entità specifica <xref:System.IO.Stream> come oggetto. Questa implementazione consente al servizio dati di accettare e restituire risorse multimediali tramite HTTP sotto forma di flussi di dati binari di un tipo MIME specificato.
+Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] si definisce un flusso di risorse binarie implementando un provider di dati di flusso. L'implementazione del provider di flusso fornisce al servizio dati il flusso di risorse multimediali associato a un'entità specifica come oggetto <xref:System.IO.Stream>. Questa implementazione consente al servizio dati di accettare e restituire risorse multimediali tramite HTTP sotto forma di flussi di dati binari di un tipo MIME specificato.
 
 La configurazione di un servizio dati per supportare il flusso di dati binari richiede l'esecuzione dei passaggi seguenti:
 
@@ -39,7 +39,7 @@ La configurazione di un servizio dati per supportare il flusso di dati binari ri
 
 5. Abilitare accesso alle risorse binarie sul server o in un'origine dati.
 
-Gli esempi in questo argomento sono basati su un servizio foto di streaming di esempio, illustrato in dettaglio nella serie del [provider di flusso post Data Services: Implementazione di un provider di flusso (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1). Il codice sorgente per questo servizio di esempio è disponibile nella [pagina di esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) in MSDN Code Gallery.
+Gli esempi in questo argomento sono basati su un servizio di foto di streaming di esempio, illustrato in dettaglio nella [serie di provider di streaming Post Data Services: implementazione di un provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Il codice sorgente per questo servizio di esempio è disponibile nella [pagina di esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) in MSDN Code Gallery.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definizione di un elemento entry di collegamento multimediale nel modello di dati
 
@@ -53,7 +53,7 @@ Per indicare che un'entità è un elemento entry di collegamento multimediale, a
 
 È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.
 
-Per un esempio di un servizio dati che usa il provider di Entity Framework ed espone una risorsa multimediale, vedere la [serie di provider di streaming Post Data Services: Implementazione di un provider di flusso (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1).
+Per un esempio di un servizio dati che usa il provider di Entity Framework ed espone una risorsa multimediale, vedere la [serie di provider di flusso post Data Services: implementazione di un provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
 
 **Provider di reflection**
 
@@ -91,11 +91,11 @@ Per informazioni generali su come creare un servizio dati, vedere [configurazion
 Quando si crea un servizio dati in un'applicazione Web ASP.NET, viene utilizzato Windows Communication Foundation (WCF) per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, WCF limita la dimensione dei messaggi HTTP a soli 65.000 byte. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:
 
 > [!NOTE]
-> È necessario utilizzare una <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modalità di trasferimento per garantire che i dati binari in entrambi i messaggi di richiesta e risposta vengano trasmessi e non memorizzati nel buffer da WCF.
+> È necessario utilizzare una modalità di trasferimento <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> per assicurarsi che i dati binari in entrambi i messaggi di richiesta e risposta vengano trasmessi e non memorizzati nel buffer da WCF.
 
 Per ulteriori informazioni, vedere [trasmissione di flussi di messaggi](../../wcf/feature-details/streaming-message-transfer.md) e [quote di trasporto](../../wcf/feature-details/transport-quotas.md).
 
-Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per consentire al servizio dati di ricevere flussi di dimensioni superiori a 4 MB durante l' `maxRequestLength` `<system.web />` esecuzione in IIS, è necessario impostare anche l'attributo dell' [elemento httpRuntime (schema delle impostazioni ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) nella sezione di configurazione, come illustrato di seguito. esempio
+Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per consentire al servizio dati di ricevere flussi di dimensioni superiori a 4 MB durante l'esecuzione in IIS, è necessario impostare anche l'attributo `maxRequestLength` dell' [elemento httpRuntime (schema delle impostazioni ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) nella sezione `<system.web />` configurazione, come illustrato nell'esempio seguente:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Utilizzo dei flussi di dati in un'applicazione client
 
@@ -131,9 +131,9 @@ Quando si implementa un provider di flusso e si accede alle risorse multimediali
 
 ## <a name="versioning-requirements"></a>Requisiti di versione
 
-Il provider di flusso prevede i seguenti requisiti di versione del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]:
+Il provider di flusso presenta i requisiti di controllo delle versioni del protocollo OData seguenti:
 
-- Il provider di flusso richiede che il servizio dati supporti la versione 2.0 del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e versioni successive.
+- Il provider di flusso richiede che il servizio dati supporti la versione 2,0 del protocollo OData e versioni successive.
 
 Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](data-service-versioning-wcf-data-services.md).
 

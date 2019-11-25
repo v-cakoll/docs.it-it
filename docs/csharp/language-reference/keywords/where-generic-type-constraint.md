@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253919"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972719"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (vincolo di tipo generico) (Riferimenti per C#)
 
@@ -33,10 +33,10 @@ La clausola `where` può specificare che il tipo è un oggetto `class` o `struct
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-La `where` clausola può includere il `notnull` vincolo. Il `notnull` vincolo limita il parametro di tipo ai tipi che non ammettono valori null. Il tipo può essere un [tipo di valore](struct.md) o un tipo di riferimento non nullable. Il `notnull` vincolo è disponibile a partire C# da 8,0 per il codice compilato in un [ `nullable enable` contesto](../../nullable-references.md#nullable-contexts). Diversamente da altri vincoli, se un argomento di tipo viola il `notnull` vincolo, il compilatore genera un avviso anziché un errore. Gli avvisi vengono generati solo in `nullable enable` un contesto. 
+La clausola `where` può includere il vincolo `notnull`. Il vincolo `notnull` limita il parametro di tipo ai tipi che non ammettono valori null. Il tipo può essere un [tipo di valore](struct.md) o un tipo di riferimento non nullable. Il vincolo `notnull` è disponibile a partire C# da 8,0 per il codice compilato in un [contesto di`nullable enable`](../../nullable-references.md#nullable-contexts). Diversamente da altri vincoli, se un argomento di tipo viola il vincolo di `notnull`, il compilatore genera un avviso anziché un errore. Gli avvisi vengono generati solo in un contesto di `nullable enable`. 
 
 > [!IMPORTANT]
-> Le dichiarazioni generiche che includono `notnull` il vincolo possono essere utilizzate in un contesto ignaro Nullable, ma il compilatore non impone il vincolo.
+> Le dichiarazioni generiche che includono il vincolo `notnull` possono essere utilizzate in un contesto ignaro Nullable, ma il compilatore non impone il vincolo.
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
@@ -44,7 +44,7 @@ La clausola `where` può anche includere un vincolo `unmanaged`. Il vincolo `unm
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo new()](new-constraint.md) consente al compilatore di sapere che ogni argomento di tipo specificato deve usare un costruttore accessibile senza parametri o predefinito. Ad esempio:
+La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo New ()](new-constraint.md) consente al compilatore di verificare che qualsiasi argomento di tipo fornito disponga di un costruttore senza parametri accessibile. Esempio:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138626"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972301"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
-<a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
+Quando si compila un assembly, è possibile specificare l'insieme di autorizzazioni che verranno richieste per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
   
  Le evidenze vengono utilizzate in due modi diversi:  
   

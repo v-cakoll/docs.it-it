@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: fbd4df8820073a3cdf2a8d5aad9c56bd7ca751df
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460524"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974676"
 ---
 # <a name="documents-in-wpf"></a>Documenti in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un'ampia gamma di funzionalità dei documenti che consentono la creazione di contenuto ad alta fedeltà progettato per essere più facilmente accessibile e leggibile rispetto alle generazioni precedenti di Windows. Oltre a caratteristiche avanzate in termini di funzionalità e qualità, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assicura servizi integrati per la visualizzazione, la creazione di pacchetti e la sicurezza dei documenti. Questo argomento costituisce un'introduzione ai tipi di documenti e alla creazione di pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -125,13 +125,13 @@ ms.locfileid: "73460524"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>Documenti XPS  
- Il documento XPS (XML Paper Specification) è un pacchetto che contiene uno o più documenti fissi insieme a tutte le risorse e le informazioni necessarie per il rendering.  XPS è anche il formato nativo del file dello spooler di stampa [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Un <xref:System.Windows.Xps.Packaging.XpsDocument> viene archiviato nel set di dati ZIP standard e può includere una combinazione di componenti XML e binari, ad esempio file di immagine e di tipi di carattere. Gli oggetti [PackageRelationship](#PackageRelationships) vengono usati per definire le dipendenze tra il contenuto e le risorse necessarie per eseguire il rendering completo del documento.  La progettazione di <xref:System.Windows.Xps.Packaging.XpsDocument> offre un'unica soluzione di documento ad alta fedeltà che supporta più utilizzi:  
+ Il documento XPS (XML Paper Specification) è un pacchetto che contiene uno o più documenti fissi insieme a tutte le risorse e le informazioni necessarie per il rendering.  XPS è anche il formato nativo di file spooler di stampa di Windows Vista.  Un <xref:System.Windows.Xps.Packaging.XpsDocument> viene archiviato nel set di dati ZIP standard e può includere una combinazione di componenti XML e binari, ad esempio file di immagine e di tipi di carattere. Gli oggetti [PackageRelationship](#PackageRelationships) vengono usati per definire le dipendenze tra il contenuto e le risorse necessarie per eseguire il rendering completo del documento.  La progettazione di <xref:System.Windows.Xps.Packaging.XpsDocument> offre un'unica soluzione di documento ad alta fedeltà che supporta più utilizzi:  
   
 - Lettura, scrittura e archiviazione del contenuto di documenti statici e risorse come un file singolo, portabile e facile da distribuire.  
   
 - Visualizzazione di documenti con l'applicazione XPS Viewer.  
   
-- Produzione di documenti nel formato di output nativo dello spool di stampa di [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
+- Output dei documenti nel formato di output dello spooler di stampa nativo di Windows Vista.  
   
 - Routing di documenti direttamente a una stampante compatibile con XPS.  
   

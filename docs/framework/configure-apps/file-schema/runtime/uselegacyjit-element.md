@@ -2,12 +2,12 @@
 title: <useLegacyJit> Elemento
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: 47aacb629dc234d9aeaab1ef6e6844fbbe5dbfdb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115101"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968849"
 ---
 # <a name="uselegacyjit-element"></a>Elemento \<useLegacyJit>
 
@@ -66,7 +66,7 @@ Invece di usare un'impostazione del file di configurazione, è possibile abilita
 
   Impostare la variabile di ambiente `COMPLUS_useLegacyJit` su `0` (usare il nuovo compilatore JIT a 64 bit) o `1` (usare il compilatore JIT a 64 bit precedente):
   
-  ```  
+  ```env  
   COMPLUS_useLegacyJit=0|1  
   ```  
   

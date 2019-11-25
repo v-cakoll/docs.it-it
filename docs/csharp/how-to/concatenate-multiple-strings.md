@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Concatenare più stringhe (Guida di C#)'
+title: Come concatenare più stringhe (C# guida)
 description: Esistono diversi modi per concatenare le stringhe in C#. Di seguito sono descritte le opzioni e le motivazioni delle diverse scelte.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 2e443030445d2817c8f53a044a261edd22eeb26e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710417"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973278"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Procedura: Concatenare più stringhe (Guida di C#)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Come concatenare più stringhe (C# guida)
 
 La *concatenazione* è il processo di aggiunta di una stringa alla fine di un'altra stringa. Le stringhe vengono concatenate usando l'operatore `+`. Per i valori letterali e le costanti di stringa, la concatenazione viene eseguita in fase di compilazione; non viene eseguita alcuna concatenazione in fase di esecuzione. Per le variabili di stringa, la concatenazione viene eseguita solo in fase di esecuzione.
 

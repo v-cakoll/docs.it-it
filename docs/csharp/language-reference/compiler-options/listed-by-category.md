@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606737"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972709"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opzioni del compilatore C# elencate per categoria
 
@@ -96,7 +96,7 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |[-codepage](codepage-compiler-option.md)|Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.|
 |[-help](help-compiler-option.md)|Elenca le opzioni del compilatore in stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Specifica che il file eseguibile supporta ASLR (Address Space Layout Randomization).|
-|[-langversion](langversion-compiler-option.md)|Specificare la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
+|[-langversion](langversion-compiler-option.md)|Specifica la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
 |[-main](main-compiler-option.md)|Specifica il percorso del metodo **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilatore di non eseguire la compilazione con csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Elimina i messaggi informativi del compilatore.|
@@ -117,4 +117,4 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 
 - [Opzioni del compilatore C#](index.md)
 - [Opzioni del compilatore C# in ordine alfabetico](listed-alphabetically.md)
-- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Come impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

@@ -7,38 +7,26 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834556"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974921"
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 
-<a name="top"></a> Questi eventi raccolgono informazioni specifiche dei metodi. Il payload di questi eventi è necessario per la risoluzione dei simboli. Questi eventi forniscono inoltre informazioni utili, ad esempio il numero di volte in cui un metodo è stato chiamato.
+Questi eventi raccolgono informazioni specifiche dei metodi. Il payload di questi eventi è necessario per la risoluzione dei simboli. Questi eventi forniscono inoltre informazioni utili, ad esempio il numero di volte in cui un metodo è stato chiamato.
 
 Tutti gli eventi dei metodi hanno un livello "Informativo (4)". Tutti gli eventi dettagliati dei metodi hanno un livello "Dettagliato (5)".
 
 Tutti gli eventi dei metodi vengono generati dalla parola chiave `JITKeyword` (0x10) o `NGenKeyword` (0x20) nel provider di runtime oppure da `JitRundownKeyword` (0x10) o `NGENRundownKeyword` (0x20) nel provider di rundown.
 
-Gli eventi dei metodi CLR sono suddivisi ulteriormente in:
-
-- [Eventi dei metodi CLR](#clr_method_events)
-
-- [Eventi marcatori dei metodi CLR](#clr_method_marker_events)
-
-- [Eventi dettagliati dei metodi CLR](#clr_method_verbose_events)
-
-- [Evento MethodJittingStarted](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
-
 ## <a name="clr-method-events"></a>Eventi dei metodi CLR
 
 La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [parole chiave e livelli ETW di CLR](clr-etw-keywords-and-levels.md).
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Informativo (4)|
 |`NGenKeyword` (0x20) nel provider di runtime|Informativo (4)|
@@ -63,12 +51,8 @@ La tabella seguente mostra i dati dell'evento:
 |MethodStartAddress|win:UInt64|Indirizzo iniziale del metodo.|
 |MethodSize|win:UInt32|Dimensioni del metodo.|
 |MethodToken|win:UInt32|0 per metodi dinamici e helper JIT.|
-|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4 Metodo di codice con compilazione JIT (in caso contrario, codice immagine nativa NGEN).<br /><br /> 0x8 Metodo Helper.|
+|MethodFlags|win:UInt32|0x1: metodo dinamico.<br /><br /> 0x2: metodo generico.<br /><br /> 0x4: metodo del codice con compilazione JIT (in caso contrario, codice di un'immagine nativa NGEN).<br /><br /> 0x8: metodo helper.|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
-
-[Torna all'inizio](#top)
-
-<a name="clr_method_marker_events"></a>
 
 ## <a name="clr-method-marker-events"></a>Eventi marcatori dei metodi CLR
 
@@ -76,7 +60,7 @@ Questi eventi vengono generati solo nel provider di rundown. Indicano la fine de
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) nel provider di rundown|Informativo (4)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|
@@ -97,15 +81,11 @@ La tabella seguente mostra i dati dell'evento:
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 
-[Torna all'inizio](#top)
-
-<a name="clr_method_verbose_events"></a>
-
 ## <a name="clr-method-verbose-events"></a>Eventi dettagliati dei metodi CLR
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
@@ -130,21 +110,17 @@ La tabella seguente mostra i dati dell'evento:
 |MethodStartAddress|win:UInt64|Indirizzo iniziale.|
 |MethodSize|win:UInt32|Lunghezza del metodo.|
 |MethodToken|win:UInt32|0 per metodi dinamici e helper JIT.|
-|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4 Metodo compilato tramite JIT (in caso contrario, generato da NGen. exe)<br /><br /> 0x8 Metodo Helper.|
+|MethodFlags|win:UInt32|0x1: metodo dinamico.<br /><br /> 0x2: metodo generico.<br /><br /> 0x4: metodo con compilazione JIT (in caso contrario, generato da NGen.exe)<br /><br /> 0x8: metodo helper.|
 |MethodNameSpace|win:UnicodeString|Nome completo dello spazio dei nomi associato al metodo.|
 |MethodName|win:UnicodeString|Nome completo della classe associata al metodo.|
 |MethodSignature|win:UnicodeString|Firma del metodo (elenco con valori delimitati da virgole di nomi di tipo).|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 
-[Torna all'inizio](#top)
-
-<a name="methodjittingstarted_event"></a>
-
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|

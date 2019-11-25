@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3a04d07f90ea9e1e536082f2cf0151555305d9e6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924523"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971049"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -21,11 +21,11 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
   
  Di solito i campi archiviano dati che devono essere accessibili a più metodi della classe e devono essere archiviati per un tempo maggiore rispetto alla durata di ogni singolo metodo. Ad esempio, una classe che rappresenta una data di calendario potrebbe contenere tre campi interi: uno per il mese, uno per il giorno e uno per l'anno. Le variabili che vengono usate solo all'interno dell'ambito di un singolo metodo devono essere dichiarate come *variabili locali* all'interno del corpo del metodo stesso.  
   
- I campi vengono dichiarati nel blocco della classe, specificando il livello di accesso del campo, seguito dal tipo di campo e poi dal nome del campo. Ad esempio:  
+ I campi vengono dichiarati nel blocco della classe, specificando il livello di accesso del campo, seguito dal tipo di campo e poi dal nome del campo. Esempio:  
   
  [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
- Per accedere a un campo in un oggetto, aggiungere un punto dopo il nome dell'oggetto, seguito dal nome del campo, come in `objectname.fieldname`. Ad esempio:  
+ Per accedere a un campo in un oggetto, aggiungere un punto dopo il nome dell'oggetto, seguito dal nome del campo, come in `objectname.fieldname`. Esempio:  
   
  [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   

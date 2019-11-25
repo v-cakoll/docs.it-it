@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779996"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975225"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (noto in precedenza come "ADO.NET Data Services") è un componente del .NET Framework che consente di creare servizi che utilizzano [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per esporre e utilizzare dati sul Web o su Intranet tramite la semantica dello stato di [rappresentazione Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Per accedere ai dati e apportarvi modifiche è possibile utilizzare i verbi HTTP standard GET, PUT, POST e DELETE. OData utilizza le convenzioni entità-relazione del [Entity Data Model](../adonet/entity-data-model.md) per esporre le risorse come set di entità correlate da associazioni.
+WCF Data Services (precedentemente noto come "ADO.NET Data Services") è un componente del .NET Framework che consente di creare servizi che utilizzano il Open Data Protocol (OData) per esporre e utilizzare dati sul Web o su Intranet tramite la semantica [Rest (Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Per accedere ai dati e apportarvi modifiche è possibile utilizzare i verbi HTTP standard GET, PUT, POST e DELETE. OData utilizza le convenzioni entità-relazione del [Entity Data Model](../adonet/entity-data-model.md) per esporre le risorse come set di entità correlate da associazioni.
 
-WCF Data Services USA il protocollo OData per l'indirizzamento e l'aggiornamento delle risorse. In questo modo, è possibile accedere a questi servizi da qualsiasi client che supporti OData. OData consente di richiedere e scrivere dati nelle risorse usando formati di trasferimento noti: Atom, un set di standard per lo scambio e l'aggiornamento di dati come XML e JavaScript Object Notation (JSON), un formato di scambio di dati basato su testo ampiamente utilizzato nelle applicazioni AJAX.
+WCF Data Services USA il protocollo OData per l'indirizzamento e l'aggiornamento delle risorse. In questo modo, è possibile accedere a questi servizi da qualsiasi client che supporti OData. OData consente di richiedere e scrivere dati nelle risorse usando formati di trasferimento noti, ovvero Atom, un set di standard per lo scambio e l'aggiornamento di dati come XML e JavaScript Object Notation (JSON), un formato di scambio di dati basato su testo ampiamente usato in AJAX applicazioni.
 
 WCF Data Services possibile esporre i dati originati da varie origini come feed OData. Gli strumenti di Visual Studio semplificano la creazione di un servizio basato su OData tramite un modello di dati ADO.NET Entity Framework. È anche possibile creare feed OData in base a classi Common Language Runtime (CLR) e anche a dati ad associazione tardiva o non tipizzati.
 
@@ -40,19 +40,19 @@ Mostra solo codice...
 
 - [Guida rapida](quickstart-wcf-data-services.md)
 
-- [Procedura: Esecuzione di query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Procedura: Eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
 
 - [Procedura: Associare dati a elementi Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 Desidero saperne di più su OData...
 
-- [Whitepaper Introduzione a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Whitepaper: Introduzione a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Sito Web Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [OData domande frequenti](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData: Domande frequenti](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Desidero guardare alcuni video...
 
@@ -60,7 +60,7 @@ Desidero guardare alcuni video...
 
 - [Video per sviluppatori di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [OData Sito Web per sviluppatori](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData: Sito Web degli sviluppatori](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Si desidera visualizzare gli esempi end-to-end...
 
@@ -68,7 +68,7 @@ Si desidera visualizzare gli esempi end-to-end...
 
 - [Altri esempi di WCF Data Services nella raccolta di esempi MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 Integrazione con Visual Studio
 
@@ -82,7 +82,7 @@ Attività possibili
 
 - [Panoramica](wcf-data-services-overview.md)
 
-- [Whitepaper Introduzione a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Whitepaper: Introduzione a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Scenari di applicazione](application-scenarios-wcf-data-services.md)
 
@@ -100,7 +100,7 @@ Si vuole usare LINQ...
 
 - [Considerazioni su LINQ](linq-considerations-wcf-data-services.md)
 
-- [Procedura: Esecuzione di query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Procedura: Eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md)
 
 Ho ancora bisogno di altre informazioni...
 
@@ -112,7 +112,7 @@ Ho ancora bisogno di altre informazioni...
 
 - [Sito Web Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Panoramica](wcf-data-services-overview.md)
 

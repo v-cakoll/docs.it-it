@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Definire proprietà astratte - Guida per programmatori C#'
+title: Come definire le proprietà astratte C# -Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970892"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970995"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedura: Definire proprietà astratte (Guida per programmatori C#)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Come definire le proprietà astratteC# (Guida per programmatori)
 L'esempio seguente mostra come definire proprietà di tipo [abstract](../../language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
   
  L'esempio include tre file, ognuno dei quali viene compilato singolarmente e al cui assembly risultante viene fatto riferimento nella compilazione successiva:  
@@ -35,7 +35,7 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../lang
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. Ad esempio:  
+- I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. Esempio:  
   
     ```csharp  
     public abstract double Area  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117686"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969261"
 ---
 # <a name="compatsortnlsversion-element"></a>\<elemento > CompatSortNLSVersion
 Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si eseguono confronti di stringhe.  
@@ -55,7 +55,7 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- Poiché le operazioni di confronto tra stringhe, ordinamento e maiuscole e minuscole eseguite dalla classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> nel .NET Framework 4 sono conformi allo standard Unicode 5,1, i risultati dei metodi di confronto tra stringhe, ad esempio <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>, possono differire dalle versioni precedenti di .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare le regole di ordinamento e confronto delle stringhe utilizzate nel .NET Framework 3,5 e nelle versioni precedenti includendo l'elemento `<CompatSortNLSVersion>` nel file di configurazione dell'applicazione.  
+ Poiché le operazioni di confronto tra stringhe, ordinamento e maiuscole e minuscole eseguite dalla classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> nel .NET Framework 4 sono conformi allo standard Unicode 5,1, i risultati dei metodi di confronto tra stringhe, ad esempio <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>, possono differire dalle versioni precedenti del .NET Framework. Se l'applicazione dipende dal comportamento legacy, è possibile ripristinare le regole di ordinamento e confronto delle stringhe utilizzate nel .NET Framework 3,5 e nelle versioni precedenti includendo l'elemento `<CompatSortNLSVersion>` nel file di configurazione dell'applicazione.  
   
 > [!IMPORTANT]
 > Per il ripristino del confronto di stringhe legacy e delle regole di ordinamento è necessaria inoltre la disponibilità della libreria di collegamento dinamico sort00001000.dll nel sistema locale.  
@@ -68,15 +68,15 @@ Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si 
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Quando si esegue l'esempio in .NET Framework 4, viene visualizzato l'output seguente.  
+ Quando si esegue l'esempio in .NET Framework 4, viene visualizzato l'output seguente:
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- Questo è completamente diverso dall'output visualizzato quando si esegue l'esempio in .NET Framework 3,5.  
+ Questo è completamente diverso dall'output visualizzato quando si esegue l'esempio nella .NET Framework 3,5:
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   

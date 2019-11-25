@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962592"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974361"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
-Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono cartelle a <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> una raccolta. I GUID di cartella noti non fanno distinzione tra maiuscole e minuscole e sono definiti nel file KnownFolders. h nella Windows SDK.  
+È possibile utilizzare un <xref:System.Guid> per specificare una cartella nota di Windows Vista quando si aggiungono cartelle a una raccolta di <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>. I GUID di cartella noti non fanno distinzione tra maiuscole e minuscole e sono definiti nel file KnownFolders. h nella Windows SDK.  
   
 > [!NOTE]
-> In alcuni casi, una cartella nota aggiunta a <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verrà visualizzata nell'area **collegamenti preferiti** . Se, ad esempio, la cartella nota specificata non è presente nel computer in cui è in esecuzione l'applicazione, la cartella nota non viene visualizzata.  
+> In alcuni casi, una cartella nota aggiunta al <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verrà visualizzata nell'area **collegamenti preferiti** . Se, ad esempio, la cartella nota specificata non è presente nel computer in cui è in esecuzione l'applicazione, la cartella nota non viene visualizzata.  
   
 ## <a name="list-of-guids"></a>Elenco di GUID  
- Nella tabella seguente sono [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] elencate le cartelle note e <xref:System.Guid>il relativo oggetto associato.  
+ Nella tabella seguente sono elencate le cartelle note di Windows Vista e i <xref:System.Guid>associati.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -61,10 +61,10 @@ Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../
  Computer  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Conflitto  
+ conflitto  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
- connessioni  
+ Connessioni  
  6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD  
   
  Contatti  
@@ -106,7 +106,7 @@ Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../
  InternetCache  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
- Collegamenti  
+ collegamenti  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
   
  LocalAppData  
@@ -262,7 +262,7 @@ Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
- Sistema  
+ System  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
  SystemX86  
@@ -283,10 +283,10 @@ Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../
  Video  
  18989B1D-99B5-455B-841C-AB7C74E4DDFC  
   
- Windows  
+ WINDOWS  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Procedura: Aggiungere una posizione personalizzata a una finestra di dialogo file](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File](how-to-add-a-custom-place-to-a-file-dialog-box.md)

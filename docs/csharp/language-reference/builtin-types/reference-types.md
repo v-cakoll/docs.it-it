@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604207"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973010"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipi di riferimento predefiniti (riferimenti per C#)
 
@@ -39,7 +39,7 @@ Il tipo `object` è un alias per <xref:System.Object?displayProperty=nameWithTyp
 
 Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode. `string` è un alias per <xref:System.String?displayProperty=nameWithType> in .NET.
 
-Sebbene `string` sia un tipo riferimento, gli [operatori di uguaglianza`==` e `!=`](../operators/equality-operators.md#string-equality) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti. In questo modo il test di uguaglianza delle stringhe è più intuitivo. Ad esempio:
+Sebbene `string` sia un tipo riferimento, gli [operatori di uguaglianza`==` e `!=`](../operators/equality-operators.md#string-equality) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti. In questo modo il test di uguaglianza delle stringhe è più intuitivo. Esempio:
 
 ```csharp-interactive
 string a = "hello";
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Il codice di escape `\udddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U+`dddd`. Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.
 
-I [valori letterali della stringa verbatim](../tokens/verbatim.md) iniziano con `@` e sono anche racchiusi tra virgolette doppie. Ad esempio:
+I [valori letterali della stringa verbatim](../tokens/verbatim.md) iniziano con `@` e sono anche racchiusi tra virgolette doppie. Esempio:
 
 ```csharp
 @"good morning"  // a string literal
@@ -178,7 +178,7 @@ Nell'esempio seguente viene usato `dynamic` in diverse dichiarazioni. Il metodo 
 - [Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)
 - [Creazione di nuove stringhe](../../../standard/base-types/creating-new.md)
 - [Operatori di cast e di test del tipo](../operators/type-testing-and-cast.md)
-- [Procedura: Eseguire il cast sicuro con i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Come eseguire il cast sicuro usando i criteri di ricerca e gli operatori As e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

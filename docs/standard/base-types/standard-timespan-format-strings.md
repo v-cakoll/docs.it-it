@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121687"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972099"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
-<a name="Top"></a> Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+
+Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md) e [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121687"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
+Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
   
 |Identificatore di formato|Name|Descrizione|Esempi|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Formato di costante (invariante)|Questo identificatore non è dipendente dalle impostazioni cultura. Assume il formato `[-][d'.']hh':'mm':'ss['.'fffffff]`<br /><br /> (le stringhe di formato "t" e "T" producono gli stessi risultati).<br /><br /> Altre informazioni: [Identificatore di formato di costante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie. È basato sulle impostazioni cultura e assume il formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato breve generale ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Formato esteso generale|Questo identificatore restituisce sempre giorni e sette cifre frazionarie. È basato sulle impostazioni cultura e assume il formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Altre informazioni: [Identificatore di formato esteso generale ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|"c"|Formato di costante (invariante)|Questo identificatore non è dipendente dalle impostazioni cultura. Assume il formato `[-][d'.']hh':'mm':'ss['.'fffffff]`<br /><br /> (le stringhe di formato "t" e "T" producono gli stessi risultati).<br /><br /> Altre informazioni: [Identificatore di formato di costante ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie. È basato sulle impostazioni cultura e assume il formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato breve generale ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Formato esteso generale|Questo identificatore restituisce sempre giorni e sette cifre frazionarie. È basato sulle impostazioni cultura e assume il formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Altre informazioni: [Identificatore di formato esteso generale ("G")](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>Identificatore di formato di costante ("C").  
  L'identificatore di formato "c" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> nel formato seguente:  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121687"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [Torna alla tabella](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>Identificatore di formato generale ("g")  
  L'identificatore di formato <xref:System.TimeSpan> "g" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato compresso includendo solo gli elementi necessari. Ha il formato seguente:  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121687"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [Torna alla tabella](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>Identificatore di formato esteso generale ("G")  
  L'identificatore di formato <xref:System.TimeSpan> "G" restituisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> in un formato esteso che include sempre sia i giorni sia le frazioni di secondo. La stringa risultante dall'identificatore di formato standard "G" ha il seguente formato:  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121687"
  Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato. In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "G". Inoltre, formatta il valore <xref:System.TimeSpan> usando le convenzioni di formattazione della lingua corrente del sistema (ovvero, in questo caso, Inglese - Stati Uniti o en-US) e il Francese - Francia (fr-FR).  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [Torna alla tabella](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>Vedere anche
 

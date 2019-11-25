@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922078"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970347"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -58,7 +58,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- I membri nascosti della classe base sono comunque accessibili dal codice client se si esegue il cast di un'istanza della classe derivata in un'istanza della classe base. Ad esempio:  
+ I membri nascosti della classe base sono comunque accessibili dal codice client se si esegue il cast di un'istanza della classe derivata in un'istanza della classe base. Esempio:  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
@@ -87,13 +87,13 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 > [!NOTE]
 > Nell'implementazione dei membri virtuali è consigliabile l'uso della parola chiave `base` per le chiamate all'implementazione della classe base di tali membri. In questo modo, nella classe derivata sarà possibile definire la sola implementazione del comportamento specifico per tale classe. Se l'implementazione della classe base non viene chiamata, spetterà alla classe derivata rendere il proprio comportamento compatibile con quello della classe base.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 - [Controllo delle versioni con le parole chiave Override e New](./versioning-with-the-override-and-new-keywords.md)  
   
 - [Sapere quando usare le parole chiave Override e New](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Procedura: Eseguire l'override del metodo ToString](./how-to-override-the-tostring-method.md)  
+- [Come eseguire l'override del metodo ToString](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>Vedere anche
 

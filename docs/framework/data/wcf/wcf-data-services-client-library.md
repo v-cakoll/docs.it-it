@@ -6,23 +6,23 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 545442b0086361c8ce8c0482801afc10b1fee96e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e078ba07072f71332aa2f19681b142df946ec391
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779673"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975068"
 ---
 # <a name="wcf-data-services-client-library"></a>Libreria client WCF Data Services
-Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] quando è in grado di inviare una richiesta HTTP e di elaborare il feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] restituito da un servizio dati. Questa interoperabilità consente di accedere ai servizi basati su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] da un'ampia gamma di applicazioni Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]include librerie client che forniscono un'esperienza di programmazione più completa quando si [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] utilizzano i feed da applicazioni .NET Framework o basate su Silverlight.  
+Qualsiasi applicazione può interagire con un servizio dati basato su Open Data Protocol (OData) se può inviare una richiesta HTTP ed elaborare il feed OData restituito da un servizio dati. Questa interoperabilità consente di accedere ai servizi basati su OData da un'ampia gamma di applicazioni abilitate per il Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include librerie client che forniscono un'esperienza di programmazione più completa quando si utilizzano feed OData da .NET Framework o da applicazioni basate su Silverlight.  
   
- Le due classi principali della libreria client sono <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. La classe <xref:System.Data.Services.Client.DataServiceContext> incapsula operazioni supportate su un servizio dati specificato. Sebbene i servizi [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] siano senza stato, non lo è il contesto. Pertanto, è possibile utilizzare la <xref:System.Data.Services.Client.DataServiceContext> classe per mantenere lo stato sul client tra le interazioni con il servizio dati per supportare funzionalità quali la gestione delle modifiche. Questa classe consente inoltre di gestire le identità e di rilevare le modifiche. La classe <xref:System.Data.Services.Client.DataServiceQuery%601> rappresenta una query su un set di entità specifico.  
+ Le due classi principali della libreria client sono <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. La classe <xref:System.Data.Services.Client.DataServiceContext> incapsula operazioni supportate su un servizio dati specificato. Sebbene i servizi OData siano senza stato, il contesto non lo è. Pertanto, è possibile utilizzare la classe <xref:System.Data.Services.Client.DataServiceContext> per mantenere lo stato sul client tra le interazioni con il servizio dati per supportare funzionalità quali la gestione delle modifiche. Questa classe consente inoltre di gestire le identità e di rilevare le modifiche. La classe <xref:System.Data.Services.Client.DataServiceQuery%601> rappresenta una query su un set di entità specifico.  
   
- Questa sezione descrive come usare le librerie client per accedere ai dati di un'applicazione client .NET Framework e modificarli. Per ulteriori informazioni sull'utilizzo della [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client con un'applicazione basata su Silverlight, vedere [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Sono disponibili altre librerie client che consentono di utilizzare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in altri tipi di applicazioni. Per ulteriori informazioni, vedere [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Questa sezione descrive come usare le librerie client per accedere ai dati di un'applicazione client .NET Framework e modificarli. Per ulteriori informazioni sull'utilizzo della [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client con un'applicazione basata su Silverlight, vedere [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Sono disponibili altre librerie client che consentono di utilizzare un feed OData in altri tipi di applicazioni. Per ulteriori informazioni, vedere [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Generazione della libreria client del servizio dati](generating-the-data-service-client-library-wcf-data-services.md)  
- Viene descritto come generare una libreria client e le classi del servizio dati client basate su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.  
+ Viene descritto come generare una libreria client e le classi del servizio dati client basate su feed OData.  
   
  [Esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md)  
  Viene descritto come eseguire una query su un servizio dati da un'applicazione basata su Framework .NET usando le librerie client.  
@@ -40,7 +40,7 @@ Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssOData
  Viene descritto come inviare più richieste al servizio dati in un unico batch usando le librerie client.  
   
  [Associazione di dati a controlli](binding-data-to-controls-wcf-data-services.md)  
- Viene descritto come associare controlli a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed restituito da un servizio dati.  
+ Viene descritto come associare controlli a un feed OData restituito da un servizio dati.  
   
  [Operazioni del servizio di chiamata](calling-service-operations-wcf-data-services.md)  
  Viene descritto come usare la libreria client per chiamare le operazioni del servizio.  

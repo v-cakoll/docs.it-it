@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: eseguire il cast sicuro con i criteri di ricerca e gli operatori is e as'
+title: Come eseguire il cast in modo sicuro usando i criteri di ricerca e gli operatori is e As
 description: Informazioni su come usare le tecniche dei criteri di ricerca per eseguire il cast sicuro di variabili in un tipo diverso. È possibile usare i criteri di ricerca, nonché gli operatori is e as per convertire in modo sicuro i tipi.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739691"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973084"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Procedura: eseguire il cast sicuro con i criteri di ricerca e gli operatori is e as
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Come eseguire il cast in modo sicuro usando i criteri di ricerca e gli operatori is e As
 
 Poiché gli oggetti sono polimorfici, è possibile che una variabile di un tipo di classe di base contenga un [tipo](../programming-guide/types/index.md) derivato. Per accedere ai membri dell'istanza del tipo derivato, è necessario eseguire nuovamente il [cast](../programming-guide/types/casting-and-type-conversions.md) del valore al tipo derivato. Tuttavia, un cast crea il rischio di generare un <xref:System.InvalidCastException>. C# offre istruzioni sui [criteri di ricerca](../pattern-matching.md) che eseguono un cast in modo condizionale solo quando ha esito positivo. C# offre anche gli operatori [is](../language-reference/operators/type-testing-and-cast.md#is-operator) e [as](../language-reference/operators/type-testing-and-cast.md#as-operator) per verificare se il valore è di un determinato tipo.
 

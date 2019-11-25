@@ -4,12 +4,12 @@ description: Installazione e utilizzo dello strumento da riga di comando DotNet-
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321596"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973449"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Dump Collection and Analysis Utility (`dotnet-dump`)
 
@@ -75,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  Specifica il tipo muto, che determina i tipi di informazioni raccolte dal processo. Esistono due tipi:
+  Specifica il tipo di dump, che determina i tipi di informazioni raccolte dal processo. Esistono due tipi:
 
   - `Heap`: un dump di grandi dimensioni e relativamente completo che contiene elenchi di moduli, elenchi di thread, tutti gli stack, informazioni sulle eccezioni, informazioni sulla gestione e tutta la memoria eccetto le immagini mappate.
   - `Mini`: un piccolo dump contenente elenchi di moduli, elenchi di thread, informazioni sulle eccezioni e tutti gli stack.
@@ -88,7 +88,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Se non è specificato:
 
-  - Il valore predefinito è *.\dump_YYYYMMDD_HHMMSS.dmp* in Windows.
+  - Il valore predefinito è *. \ dump_YYYYMMDD_HHMMSS. dmp* in Windows.
   - Il valore predefinito è *./core_YYYYMMDD_HHMMSS* in Linux.
 
   AAAAMMGG è anno/mese/giorno e HHMMSS è ora/minuto/secondo.

@@ -7,32 +7,19 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046398"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974599"
 ---
 # <a name="loader-etw-events"></a>Eventi ETW del caricatore
-<a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
+Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
   
  Tutti gli eventi del caricatore vengono generati con la parola chiave `LoaderKeyword` (0x8). Gli eventi `DCStart` e `DCEnd` vengono generati in `LoaderRundownKeyword` (0x8) con `StartRundown`/`EndRundown` abilitato. Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
-  
- Gli eventi del caricatore sono suddivisi in:  
-  
-- [Eventi del dominio applicazioni](#application_domain_events)  
-  
-- [Eventi assembly del caricatore CLR](#clr_loader_assembly_events)  
-  
-- [Eventi modulo](#module_events)  
-  
-- [Eventi modulo del dominio CLR](#clr_domain_module_events)  
-  
-- [Eventi di intervallo modulo](#module_range_events)  
-  
-<a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>Eventi del dominio applicazioni  
+
+## <a name="application-domain-events"></a>Eventi del dominio applicazioni
  La tabella seguente illustra la parola chiave e il livello  
   
 |Parola chiave per la generazione dell'evento|event|Level|  
@@ -55,14 +42,11 @@ ms.locfileid: "71046398"
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificatore univoco per un dominio applicazioni.|  
-|AppDomainFlags|win:UInt32|0x1: Dominio predefinito.<br /><br /> 0x2: Eseguibile.<br /><br /> 0x4 Dominio applicazione, bit 28-31: Criteri di condivisione del dominio.<br /><br /> 0: Un dominio condiviso.|  
+|AppDomainFlags|win:UInt32|0x1: dominio predefinito.<br /><br /> 0x2: eseguibile.<br /><br /> 0x4: dominio applicazioni, bit 28-31: condivisione dei criteri di questo dominio.<br /><br /> 0: dominio condiviso.|  
 |AppDomainName|win:UnicodeString|Nome descrittivo del dominio applicazioni. Può cambiare nel corso del processo.|  
 |AppDomainIndex|win:UInt32|Indice di questo dominio applicazioni.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="clr_loader_assembly_events"></a>   
+
 ## <a name="clr-loader-assembly-events"></a>Eventi assembly del caricatore CLR  
  La tabella seguente illustra la parola chiave e il livello  
   
@@ -83,19 +67,16 @@ ms.locfileid: "71046398"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|DESCRIZIONE|  
+|Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AssemblyID|win:UInt64|ID univoco per l'assembly.|  
 |AppDomainID|win:UInt64|ID del dominio dell'assembly.|  
 |BindingID|win:UInt64|ID che identifica univocamente l'associazione di assembly.|  
-|AssemblyFlags|win:UInt32|0x1: Assembly indipendente dal dominio.<br /><br /> 0x2: Assembly dinamico.<br /><br /> 0x4 L'assembly dispone di un'immagine nativa.<br /><br /> 0x8 Assembly ritirabile.|  
+|AssemblyFlags|win:UInt32|0x1: assembly indipendente dal dominio.<br /><br /> 0x2: assembly dinamico.<br /><br /> 0x4: assembly con immagine nativa.<br /><br /> 0x8: assembly ritirabile.|  
 |AssemblyName|win:UnicodeString|Nome completo dell'assembly.|  
-|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="module_events"></a>   
-## <a name="module-events"></a>Eventi modulo  
+|ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|   
+
+## <a name="module-events"></a>Eventi modulo
  La tabella seguente illustra la parola chiave e il livello  
   
 |Parola chiave per la generazione dell'evento|event|Level|  
@@ -107,7 +88,7 @@ ms.locfileid: "71046398"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|DESCRIZIONE|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Generato se un modulo viene caricato nel corso di un processo.|  
 |`ModuleUnload_V2`|153|Generato se un modulo viene scaricato nel corso di un processo.|  
@@ -120,7 +101,7 @@ ms.locfileid: "71046398"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID univoco per il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
-|ModuleFlags|win:UInt32|0x1: Modulo indipendente dal dominio.<br /><br /> 0x2: Il modulo dispone di un'immagine nativa.<br /><br /> 0x4 Modulo dinamico.<br /><br /> 0x8 Modulo del manifesto.|  
+|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
 |Reserved1|win:UInt32|Campo riservato.|  
 |ModuleILPath|win:UnicodeString|Percorso dell'immagine Microsoft Intermediate Language (MSIL) per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null).|  
 |ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
@@ -139,11 +120,8 @@ ms.locfileid: "71046398"
 - I nomi dei campi che iniziano con "ManagedPdb" fanno riferimento al PDB gestito che corrisponde al modulo MSIL generato dal compilatore gestito (ad esempio, il compilatore C# o Visual Basic). Questo PDB usa il formato PDB gestito e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi MSIL compilati nel form MSIL.  
   
 - I nomi dei campi che iniziano con "NativePdb" fanno riferimento al PDB di NGen generato chiamando `NGEN createPDB`. Questo PDB usa il formato PDB nativo e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi nativi compilati nel modulo NGen.  
-  
- [Torna all'inizio](#top)  
-  
-<a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>Eventi modulo del dominio CLR  
+
+## <a name="clr-domain-module-events"></a>Eventi modulo del dominio CLR
  La tabella seguente illustra la parola chiave e il livello  
   
 |Parola chiave per la generazione dell'evento|event|Level|  
@@ -154,7 +132,7 @@ ms.locfileid: "71046398"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|DESCRIZIONE|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Generato quando un modulo viene caricato per un dominio applicazioni.|  
 |`DomainModuleDCStart_V1`|151|Enumera i moduli caricati per un dominio applicazioni durante un rundown di avvio e viene registrato per tutti i domini applicazioni.|  
@@ -167,19 +145,16 @@ ms.locfileid: "71046398"
 |ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
 |AppDomainID|win:UInt64|ID del dominio applicazioni in cui viene usato il modulo.|  
-|ModuleFlags|win:UInt32|0x1: Modulo indipendente dal dominio.<br /><br /> 0x2: Il modulo dispone di un'immagine nativa.<br /><br /> 0x4 Modulo dinamico.<br /><br /> 0x8 Modulo del manifesto.|  
+|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
 |Reserved1|win:UInt32|Campo riservato.|  
 |ModuleILPath|win:UnicodeString|Percorso dell'immagine MSIL per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null)|  
 |ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
-  
- [Torna all'inizio](#top)  
-  
-<a name="module_range_events"></a>   
-## <a name="module-range-events"></a>Eventi di intervallo modulo  
+
+## <a name="module-range-events"></a>Eventi di intervallo modulo
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|event|Livello|  
+|Parola chiave per la generazione dell'evento|event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  

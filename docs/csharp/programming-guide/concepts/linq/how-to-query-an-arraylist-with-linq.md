@@ -2,17 +2,17 @@
 title: 'Procedura: Eseguire una query su un ArrayList con LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 51c42296b8acb6be1c9c4505f9af3d6fbaf248ce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c22cd6ef22b5ca182266c1e8db10151e07567fc6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253443"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969816"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Procedura: Eseguire una query su un ArrayList con LINQ (C#)
 Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Ad esempio, con un <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola from](../../../language-reference/keywords/from-clause.md) sarà simile alla seguente:  
   
-```csharp  
+```csharp
 var query = from Student s in arrList  
 //...
 ```  
