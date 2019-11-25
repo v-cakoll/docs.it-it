@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966974"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969435"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Creare una stringa interpolata
   durationInMinutes: 2
   content: >
-    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il codice nella finestra interattiva (sostituire `<name>` con il proprio nome) e selezionare **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva (sostituire `<name>` con il proprio nome) e selezionare **Esegui**:
 
 
     ```csharp

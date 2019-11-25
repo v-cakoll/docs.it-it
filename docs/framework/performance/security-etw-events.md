@@ -7,72 +7,63 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d09b5b76c39f33848d44beb43d9b09c5e6ed13b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046168"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974873"
 ---
-# <a name="security-etw-events"></a><span data-ttu-id="b3dfc-102">Eventi ETW di sicurezza</span><span class="sxs-lookup"><span data-stu-id="b3dfc-102">Security ETW Events</span></span>
-<a name="top"></a> <span data-ttu-id="b3dfc-103">Gli eventi di sicurezza vengono generati durante la verifica del nome sicuro e la verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
-  
- <span data-ttu-id="b3dfc-104">Questa categoria include i seguenti eventi:</span><span class="sxs-lookup"><span data-stu-id="b3dfc-104">This category consists of the following events:</span></span>  
-  
-- [<span data-ttu-id="b3dfc-105">Eventi StrongNameVerificationStart_V1 e StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="b3dfc-105">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
-  
-- [<span data-ttu-id="b3dfc-106">Eventi AuthenticodeVerificationStart_V1 e AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="b3dfc-106">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
-  
-<a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
-## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a><span data-ttu-id="b3dfc-107">Eventi StrongNameVerificationStart_V1 e StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="b3dfc-107">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>  
- <span data-ttu-id="b3dfc-108">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="b3dfc-108">The following table shows the keyword and level.</span></span> <span data-ttu-id="b3dfc-109">Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="b3dfc-109">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
-  
-|<span data-ttu-id="b3dfc-110">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="b3dfc-110">Keyword for raising the event</span></span>|<span data-ttu-id="b3dfc-111">Level</span><span class="sxs-lookup"><span data-stu-id="b3dfc-111">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="b3dfc-112">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="b3dfc-112">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="b3dfc-113">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="b3dfc-113">Informational(4)</span></span>|  
-  
- <span data-ttu-id="b3dfc-114">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-114">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="b3dfc-115">event</span><span class="sxs-lookup"><span data-stu-id="b3dfc-115">Event</span></span>|<span data-ttu-id="b3dfc-116">ID evento</span><span class="sxs-lookup"><span data-stu-id="b3dfc-116">Event ID</span></span>|<span data-ttu-id="b3dfc-117">Generato quando</span><span class="sxs-lookup"><span data-stu-id="b3dfc-117">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`StrongNameVerificationStart_V1`|<span data-ttu-id="b3dfc-118">181</span><span class="sxs-lookup"><span data-stu-id="b3dfc-118">181</span></span>|<span data-ttu-id="b3dfc-119">Inizio della verifica del nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-119">Start of strong name verification.</span></span>|  
-|`StrongNameVerificationStop_V1`|<span data-ttu-id="b3dfc-120">182</span><span class="sxs-lookup"><span data-stu-id="b3dfc-120">182</span></span>|<span data-ttu-id="b3dfc-121">Fine della verifica del nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-121">End of strong name verification.</span></span>|  
-  
- <span data-ttu-id="b3dfc-122">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-122">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="b3dfc-123">Nome campo</span><span class="sxs-lookup"><span data-stu-id="b3dfc-123">Field name</span></span>|<span data-ttu-id="b3dfc-124">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="b3dfc-124">Data type</span></span>|<span data-ttu-id="b3dfc-125">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="b3dfc-125">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="b3dfc-126">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="b3dfc-126">VerificationFlags</span></span>|<span data-ttu-id="b3dfc-127">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b3dfc-127">win:UInt32</span></span>|<span data-ttu-id="b3dfc-128">Flag di verifica.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-128">The verification flags.</span></span>|  
-|<span data-ttu-id="b3dfc-129">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="b3dfc-129">ErrorCode</span></span>|<span data-ttu-id="b3dfc-130">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b3dfc-130">win:UInt32</span></span>|<span data-ttu-id="b3dfc-131">Codice errore HResult.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-131">The HResult error code.</span></span>|  
-|<span data-ttu-id="b3dfc-132">FullyQualifiedAssemblyName</span><span class="sxs-lookup"><span data-stu-id="b3dfc-132">FullyQualifiedAssemblyName</span></span>|<span data-ttu-id="b3dfc-133">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b3dfc-133">win:UnicodeString</span></span>|<span data-ttu-id="b3dfc-134">Nome completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-134">The fully qualified assembly name.</span></span>|  
-|<span data-ttu-id="b3dfc-135">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b3dfc-135">ClrInstanceID</span></span>|<span data-ttu-id="b3dfc-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b3dfc-136">win:UInt16</span></span>|<span data-ttu-id="b3dfc-137">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-137">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="b3dfc-138">Torna all'inizio</span><span class="sxs-lookup"><span data-stu-id="b3dfc-138">Back to top</span></span>](#top)  
-  
-<a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
-## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a><span data-ttu-id="b3dfc-139">Eventi AuthenticodeVerificationStart_V1 e AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="b3dfc-139">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>  
- <span data-ttu-id="b3dfc-140">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="b3dfc-140">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="b3dfc-141">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="b3dfc-141">Keyword for raising the event</span></span>|<span data-ttu-id="b3dfc-142">Level</span><span class="sxs-lookup"><span data-stu-id="b3dfc-142">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="b3dfc-143">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="b3dfc-143">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="b3dfc-144">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="b3dfc-144">Informational(4)</span></span>|  
-  
- <span data-ttu-id="b3dfc-145">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-145">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="b3dfc-146">event</span><span class="sxs-lookup"><span data-stu-id="b3dfc-146">Event</span></span>|<span data-ttu-id="b3dfc-147">ID evento</span><span class="sxs-lookup"><span data-stu-id="b3dfc-147">Event ID</span></span>|<span data-ttu-id="b3dfc-148">Generato quando</span><span class="sxs-lookup"><span data-stu-id="b3dfc-148">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`AuthenticodeVerificationStart_V1`|<span data-ttu-id="b3dfc-149">183</span><span class="sxs-lookup"><span data-stu-id="b3dfc-149">183</span></span>|<span data-ttu-id="b3dfc-150">Inizio della verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-150">Start of Authenticode verification.</span></span>|  
-|`AuthenticodeVerificationStop_V1`|<span data-ttu-id="b3dfc-151">184</span><span class="sxs-lookup"><span data-stu-id="b3dfc-151">184</span></span>|<span data-ttu-id="b3dfc-152">Fine della verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-152">End of Authenticode verification.</span></span>|  
-  
- <span data-ttu-id="b3dfc-153">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-153">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="b3dfc-154">Nome campo</span><span class="sxs-lookup"><span data-stu-id="b3dfc-154">Field name</span></span>|<span data-ttu-id="b3dfc-155">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="b3dfc-155">Data type</span></span>|<span data-ttu-id="b3dfc-156">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="b3dfc-156">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="b3dfc-157">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="b3dfc-157">VerificationFlags</span></span>|<span data-ttu-id="b3dfc-158">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b3dfc-158">win:UInt32</span></span>|<span data-ttu-id="b3dfc-159">Flag di verifica.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-159">The verification flags.</span></span>|  
-|<span data-ttu-id="b3dfc-160">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="b3dfc-160">ErrorCode</span></span>|<span data-ttu-id="b3dfc-161">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="b3dfc-161">win:UInt32</span></span>|<span data-ttu-id="b3dfc-162">Codice errore HResult.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-162">The HResult error code.</span></span>|  
-|<span data-ttu-id="b3dfc-163">ModulePath</span><span class="sxs-lookup"><span data-stu-id="b3dfc-163">ModulePath</span></span>|<span data-ttu-id="b3dfc-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="b3dfc-164">win:UnicodeString</span></span>|<span data-ttu-id="b3dfc-165">Percorso del modulo.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-165">The module path.</span></span>|  
-|<span data-ttu-id="b3dfc-166">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="b3dfc-166">ClrInstanceID</span></span>|<span data-ttu-id="b3dfc-167">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="b3dfc-167">win:UInt16</span></span>|<span data-ttu-id="b3dfc-168">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="b3dfc-168">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="b3dfc-169">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b3dfc-169">See also</span></span>
+# <a name="security-etw-events"></a><span data-ttu-id="05afe-102">Eventi ETW di sicurezza</span><span class="sxs-lookup"><span data-stu-id="05afe-102">Security ETW Events</span></span>
 
-- [<span data-ttu-id="b3dfc-170">Eventi ETW di CLR</span><span class="sxs-lookup"><span data-stu-id="b3dfc-170">CLR ETW Events</span></span>](clr-etw-events.md)
+<span data-ttu-id="05afe-103">Gli eventi di sicurezza vengono generati durante la verifica del nome sicuro e la verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="05afe-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
+
+## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a><span data-ttu-id="05afe-104">Eventi StrongNameVerificationStart_V1 e StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="05afe-104">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>  
+ <span data-ttu-id="05afe-105">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="05afe-105">The following table shows the keyword and level.</span></span> <span data-ttu-id="05afe-106">Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="05afe-106">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
+  
+|<span data-ttu-id="05afe-107">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="05afe-107">Keyword for raising the event</span></span>|<span data-ttu-id="05afe-108">Level</span><span class="sxs-lookup"><span data-stu-id="05afe-108">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="05afe-109">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="05afe-109">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="05afe-110">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="05afe-110">Informational(4)</span></span>|  
+  
+ <span data-ttu-id="05afe-111">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="05afe-111">The following table shows the event information.</span></span>  
+  
+|<span data-ttu-id="05afe-112">event</span><span class="sxs-lookup"><span data-stu-id="05afe-112">Event</span></span>|<span data-ttu-id="05afe-113">ID evento</span><span class="sxs-lookup"><span data-stu-id="05afe-113">Event ID</span></span>|<span data-ttu-id="05afe-114">Generato quando</span><span class="sxs-lookup"><span data-stu-id="05afe-114">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`StrongNameVerificationStart_V1`|<span data-ttu-id="05afe-115">181</span><span class="sxs-lookup"><span data-stu-id="05afe-115">181</span></span>|<span data-ttu-id="05afe-116">Inizio della verifica del nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="05afe-116">Start of strong name verification.</span></span>|  
+|`StrongNameVerificationStop_V1`|<span data-ttu-id="05afe-117">182</span><span class="sxs-lookup"><span data-stu-id="05afe-117">182</span></span>|<span data-ttu-id="05afe-118">Fine della verifica del nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="05afe-118">End of strong name verification.</span></span>|  
+  
+ <span data-ttu-id="05afe-119">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="05afe-119">The following table shows the event data.</span></span>  
+  
+|<span data-ttu-id="05afe-120">Nome campo</span><span class="sxs-lookup"><span data-stu-id="05afe-120">Field name</span></span>|<span data-ttu-id="05afe-121">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="05afe-121">Data type</span></span>|<span data-ttu-id="05afe-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="05afe-122">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="05afe-123">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="05afe-123">VerificationFlags</span></span>|<span data-ttu-id="05afe-124">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="05afe-124">win:UInt32</span></span>|<span data-ttu-id="05afe-125">Flag di verifica.</span><span class="sxs-lookup"><span data-stu-id="05afe-125">The verification flags.</span></span>|  
+|<span data-ttu-id="05afe-126">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="05afe-126">ErrorCode</span></span>|<span data-ttu-id="05afe-127">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="05afe-127">win:UInt32</span></span>|<span data-ttu-id="05afe-128">Codice errore HResult.</span><span class="sxs-lookup"><span data-stu-id="05afe-128">The HResult error code.</span></span>|  
+|<span data-ttu-id="05afe-129">FullyQualifiedAssemblyName</span><span class="sxs-lookup"><span data-stu-id="05afe-129">FullyQualifiedAssemblyName</span></span>|<span data-ttu-id="05afe-130">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="05afe-130">win:UnicodeString</span></span>|<span data-ttu-id="05afe-131">Nome completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="05afe-131">The fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="05afe-132">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="05afe-132">ClrInstanceID</span></span>|<span data-ttu-id="05afe-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="05afe-133">win:UInt16</span></span>|<span data-ttu-id="05afe-134">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="05afe-134">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+
+## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a><span data-ttu-id="05afe-135">Eventi AuthenticodeVerificationStart_V1 e AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="05afe-135">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>  
+ <span data-ttu-id="05afe-136">La tabella seguente illustra la parola chiave e il livello</span><span class="sxs-lookup"><span data-stu-id="05afe-136">The following table shows the keyword and level.</span></span>  
+  
+|<span data-ttu-id="05afe-137">Parola chiave per la generazione dell'evento</span><span class="sxs-lookup"><span data-stu-id="05afe-137">Keyword for raising the event</span></span>|<span data-ttu-id="05afe-138">Level</span><span class="sxs-lookup"><span data-stu-id="05afe-138">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="05afe-139">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="05afe-139">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="05afe-140">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="05afe-140">Informational(4)</span></span>|  
+  
+ <span data-ttu-id="05afe-141">La tabella seguente mostra le informazioni sull'evento.</span><span class="sxs-lookup"><span data-stu-id="05afe-141">The following table shows the event information.</span></span>  
+  
+|<span data-ttu-id="05afe-142">event</span><span class="sxs-lookup"><span data-stu-id="05afe-142">Event</span></span>|<span data-ttu-id="05afe-143">ID evento</span><span class="sxs-lookup"><span data-stu-id="05afe-143">Event ID</span></span>|<span data-ttu-id="05afe-144">Generato quando</span><span class="sxs-lookup"><span data-stu-id="05afe-144">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`AuthenticodeVerificationStart_V1`|<span data-ttu-id="05afe-145">183</span><span class="sxs-lookup"><span data-stu-id="05afe-145">183</span></span>|<span data-ttu-id="05afe-146">Inizio della verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="05afe-146">Start of Authenticode verification.</span></span>|  
+|`AuthenticodeVerificationStop_V1`|<span data-ttu-id="05afe-147">184</span><span class="sxs-lookup"><span data-stu-id="05afe-147">184</span></span>|<span data-ttu-id="05afe-148">Fine della verifica Authenticode.</span><span class="sxs-lookup"><span data-stu-id="05afe-148">End of Authenticode verification.</span></span>|  
+  
+ <span data-ttu-id="05afe-149">La tabella seguente mostra i dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="05afe-149">The following table shows the event data.</span></span>  
+  
+|<span data-ttu-id="05afe-150">Nome campo</span><span class="sxs-lookup"><span data-stu-id="05afe-150">Field name</span></span>|<span data-ttu-id="05afe-151">Tipo di dati</span><span class="sxs-lookup"><span data-stu-id="05afe-151">Data type</span></span>|<span data-ttu-id="05afe-152">Descrizione</span><span class="sxs-lookup"><span data-stu-id="05afe-152">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="05afe-153">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="05afe-153">VerificationFlags</span></span>|<span data-ttu-id="05afe-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="05afe-154">win:UInt32</span></span>|<span data-ttu-id="05afe-155">Flag di verifica.</span><span class="sxs-lookup"><span data-stu-id="05afe-155">The verification flags.</span></span>|  
+|<span data-ttu-id="05afe-156">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="05afe-156">ErrorCode</span></span>|<span data-ttu-id="05afe-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="05afe-157">win:UInt32</span></span>|<span data-ttu-id="05afe-158">Codice errore HResult.</span><span class="sxs-lookup"><span data-stu-id="05afe-158">The HResult error code.</span></span>|  
+|<span data-ttu-id="05afe-159">ModulePath</span><span class="sxs-lookup"><span data-stu-id="05afe-159">ModulePath</span></span>|<span data-ttu-id="05afe-160">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="05afe-160">win:UnicodeString</span></span>|<span data-ttu-id="05afe-161">Percorso del modulo.</span><span class="sxs-lookup"><span data-stu-id="05afe-161">The module path.</span></span>|  
+|<span data-ttu-id="05afe-162">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="05afe-162">ClrInstanceID</span></span>|<span data-ttu-id="05afe-163">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="05afe-163">win:UInt16</span></span>|<span data-ttu-id="05afe-164">ID univoco per l'istanza di CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="05afe-164">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="05afe-165">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="05afe-165">See also</span></span>
+
+- [<span data-ttu-id="05afe-166">Eventi ETW di CLR</span><span class="sxs-lookup"><span data-stu-id="05afe-166">CLR ETW Events</span></span>](clr-etw-events.md)

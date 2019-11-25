@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Rami e cicli in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774006"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969361"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Esplorare le operazioni matematiche su interi
   durationInMinutes: 4
   content: >
-    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:
+    Eseguire il codice seguente nella finestra interattiva. Selezionare il pulsante **Attiva modalità messa a fuoco** . Quindi, digitare il blocco di codice seguente nella finestra interattiva e selezionare **Esegui**:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > In tutte le parti di questa esercitazione interattiva è possibile esplorare liberamente i contenuti modificando il codice scritto nella finestra interattiva. Questa esercitazione offre esempi che è possibile provare a ogni passaggio.
 
 
-    Per iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, fare clic sul pulsante **Esegui**.
+    Per iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, selezionare il pulsante **Esegui** .
 
 
     Sottrazione:
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Fare clic su **Esegui** di nuovo per visualizzare i risultati.
+    Selezionare **Esegui** di nuovo per visualizzare i risultati.
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione interattiva "Numeri in C#". Fare clic sul collegamento **Rami e cicli** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Numeri in C#". Per avviare la prossima esercitazione interattiva, è possibile selezionare il collegamento **rami e cicli** . in alternativa, è possibile visitare il [sito .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare il .NET Core SDK, creare un progetto nel computer e seguire la codifica. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
