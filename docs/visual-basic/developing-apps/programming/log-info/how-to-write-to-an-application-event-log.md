@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Scrivere nel log eventi di un'applicazione (Visual Basic)"
+title: "Procedura: scrivere nel log eventi di un'applicazione"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054137"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352040"
 ---
-# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Procedura: Scrivere nel log eventi di un'applicazione (Visual Basic)
+# <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Procedura: scrivere nel log eventi di un'applicazione (Visual Basic)
 
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per scrivere informazioni sugli eventi che si verificano nell'applicazione. L'esempio seguente mostra come configurare un listener di log eventi in modo che `My.Application.Log` scriva le informazioni di traccia nel log eventi dell'applicazione.
 
@@ -59,11 +59,11 @@ Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visual
     Sostituire `APPLICATION_NAME` con il nome dell'applicazione.
 
     > [!NOTE]
-    > In genere, nel log eventi vengono scritti solo gli errori. Per informazioni sull'applicazione dei filtri all'output dei log, vedere [Procedura dettagliata: Filtro dell'output di My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+    > In genere, nel log eventi vengono scritti solo gli errori. Per informazioni sull'applicazione dei filtri all'output dei log, vedere [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
 ## <a name="to-write-event-information-to-the-event-log"></a>Per scrivere informazioni sugli eventi nel log eventi
 
-Usare il metodo `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` per scrivere le informazioni nel log eventi. Per altre informazioni, vedere [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Usare il metodo `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` per scrivere le informazioni nel log eventi. Per altre informazioni, vedere [Procedura: Scrivere messaggi di log ](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
 Dopo aver configurato il listener del log eventi per un assembly, vengono ricevuti tutti i messaggi che `My.Application.Log` scrive da tale assembly.
 

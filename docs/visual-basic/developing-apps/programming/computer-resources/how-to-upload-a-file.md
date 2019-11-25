@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Caricare un file in Visual Basic'
+title: 'Procedura: caricare un file'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: b2c313078e3438c84068b6cc54d787b567a768b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662707"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345565"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Procedura: Caricare un file in Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Procedura: caricare un file in Visual Basic
+
 Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di caricare un file e archiviarlo in un percorso remoto. Se il parametro `ShowUI` è impostato su `True`, viene visualizzata una finestra di dialogo che mostra lo stato di avanzamento del processo di caricamento e consente agli utenti di annullare l'operazione.  
   
 ### <a name="to-upload-a-file"></a>Per caricare un file  
@@ -37,6 +38,7 @@ Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Le condizioni seguenti possono generare un'eccezione:  
   
 - Il percorso file locale non è valido (<xref:System.ArgumentException>).  
@@ -49,5 +51,5 @@ Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Procedura: Scaricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-- [Procedura: Analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Procedura: Scaricare file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

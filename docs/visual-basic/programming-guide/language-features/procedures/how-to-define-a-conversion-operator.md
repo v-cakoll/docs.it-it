@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Definire un operatore di conversione (Visual Basic)'
+title: 'Procedura: definire un operatore di conversione'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ff95390206947e5a28f7a5b85547b496746a9cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863714"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344891"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procedura: Definire un operatore di conversione (Visual Basic)
-Se è stato definito una classe o struttura, è possibile definire un operatore di conversione di tipi tra il tipo di classe o struttura e un altro tipo di dati (ad esempio `Integer`, `Double`, o `String`).  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procedura: definire un operatore di conversione (Visual Basic)
+If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
   
- Definire la conversione del tipo come un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure all'interno della classe o struttura. Tutte le routine di conversione devono essere `Public Shared`, e ognuno di essi è necessario specificare [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) oppure [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- La definizione di un operatore in una classe o struttura viene definita anche *overload* l'operatore.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente definisce gli operatori di conversione tra una struttura definita `digit` e un `Byte`.  
+ The following example defines conversion operators between a structure called `digit` and a `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- È possibile testare la struttura `digit` con il codice seguente.  
+ You can test the structure `digit` with the following code.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   

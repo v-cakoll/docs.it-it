@@ -1,18 +1,19 @@
 ---
-title: 'Procedura: Ottenere la raccolta di file di una directory in Visual Basic'
+title: 'Procedura: ottenere la raccolta di file di una directory'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: 546fbe4a340cceed29c9350754ffc50096e7d37a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: bb07ae25b413334f94456b378f0a2339402ac668
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623284"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335342"
 ---
-# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Procedura: Ottenere la raccolta di file di una directory in Visual Basic
+# <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Procedura: ottenere la raccolta di file di una directory in Visual Basic
+
 Gli overload del metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=nameWithType> restituiscono una raccolta di stringhe di sola lettura che rappresenta i nomi dei file contenuti in una directory:  
   
 - Usare l'overload <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> per eseguire una ricerca di file semplice in una directory specificata senza cercare nelle sottodirectory.  
@@ -28,6 +29,7 @@ Gli overload del metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2
      [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Le seguenti condizioni possono generare un'eccezione:  
   
 - Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
@@ -49,5 +51,5 @@ Gli overload del metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
-- [Procedura: Trovare file con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
-- [Procedura: Trovare sottodirectory con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Procedura: trovare file con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Procedura: cercare sottodirectory con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

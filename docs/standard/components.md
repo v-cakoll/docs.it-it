@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835274"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283925"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -30,7 +30,7 @@ Ogni implementazione di .NET include i componenti seguenti:
 
 - Uno o più runtime. Esempi: CLR per .NET Framework, CoreCLR e CoreRT per .NET Core.
 - Una libreria di classi che implementa .NET Standard e può implementare API aggiuntive. Esempi: libreria di classi base .NET Framework, libreria di classi base .NET Core.
-- Facoltativamente, uno o più framework applicazione. Esempi: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sono inclusi in .NET Framework e .NET Core.
+- Facoltativamente, uno o più framework applicazione. Esempi: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md)e [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sono inclusi nei .NET Framework e in .NET Core.
 - Facoltativamente, strumenti di sviluppo. Alcuni strumenti di sviluppo sono condivisi tra più implementazioni.
 
 Microsoft sviluppa e gestisce attivamente quattro implementazioni di .NET principali, ovvero .NET Core, .NET Framework, Mono e piattaforma UWP.
@@ -67,7 +67,7 @@ Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattafo
 
 ## <a name="net-runtimes"></a>Runtime .NET
 
-Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime di .NET:
+Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime .NET. Ecco alcuni esempi di runtime .NET:
 
 - CRL (Common Language Runtime) per .NET Framework
 - CoreCLR (Core Common Language Runtime) per .NET Core
@@ -95,13 +95,13 @@ Le revisioni successive degli standard sono state sviluppate dai gruppi di attiv
 I documenti ECMA ufficiali seguenti sono disponibili per [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) e l' [interfaccia](http://www.ecma-international.org/publications/standards/Ecma-335.htm) della riga di comando ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
 - **Standard C# del linguaggio (versione 5,0)** : [ECMA-334. pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Il Common Language Infrastructure**: Disponibile in formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e modulo [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
-- **Informazioni derivate dal file XML della partizione IV**: Questa operazione è disponibile nei formati [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
+- **Il Common Language Infrastructure**: è disponibile in formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e modulo [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
+- **Informazioni derivate dal file XML della partizione IV**: disponibile nei formati [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
  
 I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [disponibili pubblicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/) . Questi collegamenti sono diretti da questa pagina:
 
 - **Information Technology-linguaggi di programmazione C#-** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **Information Technology-partizioni di Common Language Infrastructure (CLI) I a vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Information Technology-Common Language Infrastructure (CLI) partizioni da I a vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Information Technology-Common Language Infrastructure (CLI)-report tecnico sulle informazioni derivate dal file XML della partizione IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Vedere anche
@@ -110,6 +110,6 @@ I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [di
 - [.NET Standard](net-standard.md)
 - [Guida a .NET Core](../core/index.md)
 - [Guida a .NET Framework](../framework/index.md)
-- [Guida a C#](../csharp/index.md)
+- [Guida a C#](../csharp/index.yml)
 - [Guida a F#](../fsharp/index.md)
 - [Guida a VB.NET](../visual-basic/index.md)

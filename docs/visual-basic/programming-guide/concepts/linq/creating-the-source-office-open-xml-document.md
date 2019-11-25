@@ -1,15 +1,15 @@
 ---
-title: Creazione del documento Office Open XML di origine (Visual Basic)
+title: Creazione del documento Office Open XML di origine
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352954"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346423"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creazione del documento Office Open XML di origine (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
 In questo argomento viene illustrato come creare il documento WordprocessingML di Office Open XML usato in altri esempi di questa esercitazione. Seguendo queste istruzioni, l'output ottenuto sarà uguale a quello indicato in ogni esempio.  
   
  Tuttavia, gli esempi presentati in questa esercitazione funzioneranno con qualsiasi documento WordprocessingML valido.  
@@ -44,7 +44,7 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
   
 3. Formattare la prima riga con lo stile "Intestazione 1".  
   
-4. Selezionare le righe che contengono il codice Visual Basic. La prima riga inizia con la parola chiave `Imports`. L'ultima riga è "End Class". Formattare le righe con il tipo di carattere Courier. Formattarle con un nuovo stile, da denominare "Code".  
+4. Select the lines that contain the Visual Basic code. La prima riga inizia con la parola chiave `Imports`. The last line is "End Class". Formattare le righe con il tipo di carattere Courier. Formattarle con un nuovo stile, da denominare "Code".  
   
 5. Infine, selezionare l'intera riga che contiene l'output e formattarla con lo stile `Code`.  
   
@@ -55,4 +55,4 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,5 +1,5 @@
 ---
-title: Istruzione GoTo (Visual Basic)
+title: Istruzione GoTo
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 4b7a5cce56dfdd2bdc7e068aadbc18b92bba269d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581822"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351079"
 ---
 # <a name="goto-statement"></a>Istruzione GoTo
-Viene diramato in modo incondizionato a una riga specificata in una procedura.  
+Branches unconditionally to a specified line in a procedure.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,33 +31,33 @@ GoTo line
   
 ## <a name="part"></a>Parte  
  `line`  
- Obbligatorio. Qualsiasi etichetta di riga.  
+ Obbligatorio. Any line label.  
   
 ## <a name="remarks"></a>Note  
- L'istruzione `GoTo` può creare branch solo per le righe della procedura in cui viene visualizzata. La riga deve avere un'etichetta di linea a cui `GoTo` può fare riferimento. Per altre informazioni, vedere [How to: Label statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> le istruzioni `GoTo` possono rendere difficile la lettura e la gestione del codice. Quando possibile, usare invece una struttura di controllo. Per altre informazioni, vedere [flusso di controllo](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- Non è possibile usare un'istruzione `GoTo` per creare un ramo dall'esterno di un `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, 0... 1 o 2... 3 costruzione in un'etichetta all'interno di.  
+ You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
   
-## <a name="branching-and-try-constructions"></a>Creazione di rami e tentativi di costruzione  
- All'interno di un `Try`... `Catch`... `Finally` costruzione, le regole seguenti si applicano alla diramazione con l'istruzione `GoTo`.  
+## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
+ Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
   
-|Blocco o area|Diramazione in dall'esterno|Diramazione dall'interno|  
+|Block or region|Branching in from outside|Branching out from inside|  
 |---------------------|-------------------------------|-------------------------------|  
-|blocco `Try`|Solo da un blocco `Catch` della stessa costruzione <sup>1</sup>|Solo all'esterno dell'intera costruzione|  
-|blocco `Catch`|Mai consentito|Solo all'esterno dell'intera costruzione o al blocco `Try` della stessa costruzione <sup>1</sup>|  
-|blocco `Finally`|Mai consentito|Mai consentito|  
+|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
+|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
+|`Finally` block|Never allowed|Never allowed|  
   
- <sup>1</sup> se una `Try`... `Catch`... `Finally` costruzione è annidata all'interno di un'altra, un blocco di `Catch` può creare rami nel blocco `Try` a livello di annidamento, ma non in altri blocchi `Try`. @No__t_0 annidato... `Catch`... la costruzione di `Finally` deve essere completamente inclusa in un blocco `Try` o `Catch` della costruzione all'interno della quale è annidata.  
+ <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
   
- Nella figura seguente viene illustrato un `Try` costruzione annidata all'interno di un altro. Vari rami tra i blocchi delle due costruzioni sono indicati come validi o non validi.  
+ The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
   
  ![Diagramma grafico dei rami in costruzioni Try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata l'istruzione `GoTo` per creare rami di etichette di riga in una procedura.  
+ The following example uses the `GoTo` statement to branch to line labels in a procedure.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

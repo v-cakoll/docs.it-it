@@ -1,18 +1,19 @@
 ---
-title: 'Procedura: Rinominare un file in Visual Basic'
+title: 'Procedura: rinominare un file'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623244"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334547"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: Rinominare un file in Visual Basic
+# <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: rinominare un file in Visual Basic
+
 Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominare un file fornendo la posizione corrente, il nome file attuale e il nuovo nome file. Questo metodo non può essere usato per spostare un file. Per spostare e rinominare un file, usare il metodo `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Per rinominare un file  
@@ -21,9 +22,10 @@ Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominar
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella casella di selezione dei frammenti di codice il frammento si trova in **File system - Elaborazione di unità, cartelle e file**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella casella di selezione dei frammenti di codice il frammento si trova in **File system - Elaborazione di unità, cartelle e file**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Le seguenti condizioni possono generare un'eccezione:  
   
 - Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
@@ -49,7 +51,7 @@ Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominar
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [Procedura: Spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
+- [Procedura: spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
 - [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [Procedura: Creare una copia di un file nella stessa directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Procedura: Creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedura: creare una copia di un file nella stessa directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati String (Visual Basic)
+title: Tipo di dati String
 ms.date: 07/20/2015
 f1_keywords:
 - vb.String
@@ -18,28 +18,32 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 6d2fd226735622de5cd7197060c05b8ac12b69f1
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c2c6f9632646c432abb7b6da8887253e526cc994
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696834"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343903"
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo di dati String (Visual Basic)
-Include sequenze di punti di codice senza segno a 16 bit (2 byte) che variano da 0 a 65535. Ogni *punto di codice*, o codice carattere, rappresenta un singolo carattere Unicode. Una stringa può contenere da 0 a circa 2 miliardi (2 ^ 31) caratteri Unicode.  
+
+Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
   
 ## <a name="remarks"></a>Note  
- Usare il tipo di dati `String` per mantenere più caratteri senza l'overhead di gestione della matrice di `Char()`, una matrice di elementi `Char`.  
+
+ Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
   
- Il valore predefinito di `String` è `Nothing` (un riferimento null). Si noti che non corrisponde alla stringa vuota (valore `""`).  
+ The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
   
 ## <a name="unicode-characters"></a>Caratteri Unicode  
- I primi 128 punti di codice (0-127) di Unicode corrispondono a lettere e simboli in una tastiera standard degli Stati Uniti. Questi primi 128 punti di codice corrispondono a quelli definiti dal set di caratteri ASCII. I due punti di codice 128 (128-255) rappresentano caratteri speciali, ad esempio lettere di alfabeto latino, accenti, simboli di valuta e frazioni. Unicode usa i punti di codice rimanenti (256-65535) per un'ampia gamma di simboli. Sono inclusi i caratteri testuali, i segni diacritici e i simboli matematici e tecnici in tutto il mondo.  
+
+ The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
   
- È possibile utilizzare metodi quali <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> per un singolo carattere in una variabile `String` per determinare la relativa classificazione Unicode.  
+ You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
   
 ## <a name="format-requirements"></a>Requisiti di formato  
- È necessario racchiudere un valore letterale `String` racchiuso tra virgolette (`" "`). Se è necessario includere una virgoletta come uno dei caratteri nella stringa, è possibile utilizzare due virgolette contigue (`""`). Questa condizione è illustrata nell'esempio seguente.  
+
+ You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -51,12 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Si noti che le virgolette contigue che rappresentano le virgolette nella stringa sono indipendenti dalle virgolette che iniziano e terminano il valore letterale `String`.  
+ Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
   
-## <a name="string-manipulations"></a>Modifiche delle stringhe  
- Una volta assegnata una stringa a una variabile `String`, tale stringa non è *modificabile*e pertanto non è possibile modificarne la lunghezza o il contenuto. Quando si modifica una stringa in qualsiasi modo, Visual Basic crea una nuova stringa e abbandona quella precedente. La variabile `String` fa quindi riferimento alla nuova stringa.  
+## <a name="string-manipulations"></a>String Manipulations  
+
+ Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
   
- È possibile modificare il contenuto di una variabile `String` usando un'ampia gamma di funzioni di stringa. Nell'esempio seguente viene illustrata la funzione <xref:Microsoft.VisualBasic.Strings.Left%2A>  
+ You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
   
 ```vb  
 Dim S As String = "Database"  
@@ -64,19 +69,19 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Una stringa creata da un altro componente potrebbe essere riempita con spazi iniziali o finali. Se si riceve una stringa di questo tipo, è possibile usare le funzioni <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A> e <xref:Microsoft.VisualBasic.Strings.RTrim%2A> per rimuovere questi spazi.  
+ A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
   
- Per ulteriori informazioni sulle modifiche delle stringhe, vedere [stringhe](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
-- **Numeri negativi.** Tenere presente che i caratteri contenuti in `String` non sono firmati e non possono rappresentare valori negativi. In ogni caso, è consigliabile non utilizzare `String` per mantenere i valori numerici.  
+- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
   
-- **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i caratteri stringa hanno una larghezza dati diversa (8 bit) in altri ambienti. Se si passa un argomento di stringa di caratteri a 8 bit a tale componente, dichiararlo come `Byte()`, una matrice di elementi `Byte`, invece di `String` nel nuovo codice Visual Basic.  
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
   
-- **Digitare i caratteri.** L'aggiunta del carattere di tipo identificatore `$` a qualsiasi identificatore forza il tipo di dati `String`. `String` non contiene alcun carattere di tipo letterale. Tuttavia, il compilatore considera i valori letterali racchiusi tra virgolette (`" "`) come `String`.  
+- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
   
-- **Tipo di Framework.** Il tipo corrispondente nella .NET Framework è la classe <xref:System.String?displayProperty=nameWithType>.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
   
 ## <a name="see-also"></a>Vedere anche
 

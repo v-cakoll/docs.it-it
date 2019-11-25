@@ -1,5 +1,5 @@
 ---
-title: Sviluppo con My (Visual Basic)
+title: Sviluppo con My
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -9,23 +9,25 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014182"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330281"
 ---
 # <a name="development-with-my-visual-basic"></a>Sviluppo con My (Visual Basic)
+
 Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni che migliorano la produttività e aumentano la facilità d'uso, garantendo al tempo stesso maggiore potenza. Una di queste funzionalità, denominata `My`, consente di accedere a informazioni e istanze di oggetti predefinite correlate all'applicazione e al relativo ambiente di run-time. Queste informazioni sono organizzate in un formato riconoscibile tramite IntelliSense e delineato in modo logico in base all'uso.  
   
  I membri di `My` di primo livello sono esposti come oggetti. Ogni oggetto si comporta in modo analogo a uno spazio dei nomi o a una classe con membri `Shared` ed espone un set di membri correlati.  
   
  Questa tabella mostra gli oggetti `My` di primo livello e le relazioni tra tali oggetti.  
   
- ![Il diagramma mostra il modello a oggetti per My.](./media/index/my-object-model-relationships.gif)  
+ ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
+
  [Esecuzione di attività mediante My.Application, My.Computer e My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  Vengono descritti i tre principali oggetti `My`, `My.Application`, `My.Computer` e `My.User`, che consentono di accedere a informazioni e funzionalità.  
   
@@ -36,7 +38,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  Vengono descritti gli oggetti `My.Resources` e `My.Settings`, che consentono di accedere alle risorse e alle impostazioni di un'applicazione.  
   
  [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Descrive il modello di avvio/arresto dell'applicazione Visual Basic.  
+ Describes the Visual Basic Application Startup/Shutdown model.  
   
  [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  

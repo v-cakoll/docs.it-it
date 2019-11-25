@@ -1,15 +1,15 @@
 ---
-title: Operazioni di proiezione (Visual Basic)
+title: Operazioni di proiezione
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 9db8284d59baa764a5509b1acef0c4d315fb28a7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524097"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346623"
 ---
-# <a name="projection-operations-visual-basic"></a>Operazioni di proiezione (Visual Basic)
+# <a name="projection-operations-visual-basic"></a>Projection Operations (Visual Basic)
 
 La proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuovo form costituito spesso solo dalle proprietà che verranno usate successivamente. Utilizzando la proiezione, è possibile costruire un nuovo tipo compilato in base a ogni oggetto. È possibile proiettare una proprietà ed eseguirvi una funzione matematica. È anche possibile proiettare l'oggetto originale senza modificarlo.
 
@@ -17,7 +17,7 @@ Nella sezione seguente sono elencati i metodi dell'operatore query standard che 
 
 ## <a name="methods"></a>Metodi
 
-|Nome metodo|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|
+|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Seleziona|Proietta i valori che si basano su una funzione di trasformazione.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|Proietta le sequenze di valori che si basano su una funzione di trasformazione semplificandoli in un'unica sequenza.|Usare più clausole `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-Nell'esempio seguente vengono usate più clausole `From` per proiettare ogni parola da ogni stringa in un elenco di stringhe.
+The following example uses multiple `From` clauses to project each word from each string in a list of strings.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -181,6 +181,6 @@ End Sub
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md)
 - [Procedura: Combinare dati utilizzando join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Procedura: Restituire un risultato di query LINQ come tipo specifico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Procedura: suddividere un file in molti file usando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

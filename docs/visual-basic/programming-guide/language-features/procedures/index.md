@@ -1,5 +1,5 @@
 ---
-title: Routine in Visual Basic
+title: Procedure
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635622"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345986"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
-Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
 ## <a name="calling-a-procedure"></a>Chiamata di una routine  
  Una routine viene richiamata da altre parti del codice. Questa operazione è nota come *chiamata di routine*. Al termine dell'esecuzione della routine, il controllo viene restituito al codice che ha richiamato la routine, noto come *codice chiamante*. Il codice chiamante è un'istruzione o un'espressione all'interno di un'istruzione, che specifica la routine tramite nome e le trasferisce il controllo.  
@@ -34,7 +34,7 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
  Nella maggior parte dei casi, una routine deve usare dati diversi ogni volta che viene chiamata. È possibile passare queste informazioni alla routine come parte della chiamata di routine. La routine definisce zero o più *parametri*, ognuno dei quali rappresenta un valore necessario da passare alla routine. A ogni parametro della definizione della routine corrisponde un *argomento* nella chiamata di routine. Un argomento rappresenta il valore passato al parametro corrispondente in una chiamata di routine specifica.  
   
 ## <a name="types-of-procedures"></a>Tipi di routine  
- Visual Basic Usa diversi tipi di routine:  
+ Visual Basic uses several types of procedures:  
   
 - Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
   
@@ -63,7 +63,7 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare una stored Procedure](./how-to-create-a-procedure.md)
+- [Procedura: Creare una routine](./how-to-create-a-procedure.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
 - [Routine Property](./property-procedures.md)

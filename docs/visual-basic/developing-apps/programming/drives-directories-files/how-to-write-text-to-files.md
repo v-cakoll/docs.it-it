@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scrivere testo in file in Visual Basic'
+title: 'Procedura: scrivere testo in file'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 7f9702469afbe9fdaa9bf727f5f70459ce884d6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623266"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334466"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>Procedura: Scrivere testo in file in Visual Basic
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>Procedura: scrivere testo in file in Visual Basic
+
 Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> può essere usato per scrivere testo nei file. Se il file specificato non esiste, viene creato.  
   
 ## <a name="procedure"></a>Routine  
@@ -34,6 +35,7 @@ Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> può es
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Le seguenti condizioni possono generare un'eccezione:  
   
 - Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
@@ -58,4 +60,4 @@ Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> può es
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Procedura: Leggere da file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Procedura: leggere da file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

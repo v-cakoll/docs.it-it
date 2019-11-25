@@ -4,22 +4,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
-ms.translationtype: HT
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348006"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348922"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
+
 Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .NET Framework, suddivisi in classi I/O di file, classi usate per la creazione di flussi e classi usate per leggere e scrivere nei flussi.  
   
 Per un elenco più completo, vedere [Panoramica della libreria di classi](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classi di I/O di base per file, unità e directory  
+
  La tabella seguente elenca e descrive le principali classi usate nell'I/O di file.  
   
-|Classe|DESCRIZIONE|  
+|Class|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Offre metodi statici per creare, spostare ed enumerare directory e sottodirectory.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Offre metodi di istanza per creare, spostare ed enumerare directory e sottodirectory.|  
@@ -34,9 +36,10 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controlla se è possibile accedere ai file e alle cartelle definendo le autorizzazioni <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> e <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Classi usate per creare flussi  
+
  La tabella seguente elenca e descrive le principali classi usate per creare flussi.  
   
-|Classe|DESCRIZIONE|  
+|Class|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Aggiunge un livello di buffer per operazioni di lettura e scrittura in un altro flusso.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Supporta l'accesso casuale ai file tramite il metodo <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> apre file simultaneamente per impostazione predefinita, ma supporta anche operazioni asincrone.|  
@@ -45,6 +48,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Definisce un flusso che collega i flussi di dati alle trasformazioni crittografiche.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Classi usate per leggere e scrivere nei flussi  
+
  La tabella seguente illustra le classi specifiche usate per leggere e scrivere in file con flussi.  
   
 |**Classe**|**Descrizione**|  

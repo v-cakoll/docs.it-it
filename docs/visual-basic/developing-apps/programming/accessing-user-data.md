@@ -1,5 +1,5 @@
 ---
-title: Accesso ai dati utente (Visual Basic)
+title: Accesso ai dati utente
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -11,21 +11,22 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: e5d18adcb331162a72da0adb4018d1d59ecc072e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825300"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349209"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Accesso ai dati utente (Visual Basic)
+
 Questa sezione contiene argomenti relativi all'oggetto `My.User` e alle attività che tale oggetto consente di eseguire.  
   
  L'oggetto `My.User` consente di accedere alle informazioni sull'utente connesso restituendo un oggetto in grado di implementare l'interfaccia <xref:System.Security.Principal.IPrincipal>.  
   
 ## <a name="tasks"></a>Attività  
   
-|A|Vedere|  
+|Per|Vedere|  
 |--------|---------|  
 |Ottenere il nome dell'account di accesso dell'utente|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |Ottenere il nome di dominio dell'utente se l'applicazione usa l'autenticazione di Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  

@@ -1,29 +1,29 @@
 ---
-title: 'Procedura: Dichiarare eventi personalizzati per evitare il blocco (Visual Basic)'
+title: 'Procedura: dichiarare eventi personalizzati per evitare il blocco'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051897"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345144"
 ---
-# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Procedura: Dichiarare eventi personalizzati per evitare il blocco (Visual Basic)
-Esistono diversi casi quando è importante che un gestore eventi non bloccano i gestori eventi successivi. Eventi personalizzati consentono di chiamare i relativi gestori eventi in modo asincrono l'evento.  
+# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Procedura: dichiarare eventi personalizzati per evitare il blocco (Visual Basic)
+There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
   
- Per impostazione predefinita, il campo di archivio di backup per una dichiarazione di evento è un delegato multicast che combina in modo seriale tutti i gestori eventi. Ciò significa che se un singolo gestore richiede molto tempo per il completamento, si blocca altri gestori fino al completamento. (I gestori eventi ben progettate devono evitare di eseguire operazioni di lunga durate o potenzialmente di blocco.)  
+ By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
   
- Invece di usare l'implementazione predefinita di eventi disponibili in Visual Basic, è possibile usare un evento personalizzato da eseguire in modo asincrono i gestori di eventi.  
+ Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio, il `AddHandler` della funzione di accesso aggiunge il delegato per ogni gestore del `Click` evento a un <xref:System.Collections.ArrayList> archiviati nel `EventHandlerList` campo.  
+ In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
   
- Quando il codice genera il `Click` evento, il `RaiseEvent` funzione di accesso richiama tutti i delegati del gestore eventi in modo asincrono utilizzando il <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> (metodo). Tale metodo richiama ciascun gestore su un thread di lavoro e restituisce immediatamente, in modo che i gestori non blocchino reciprocamente.  
+ When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   

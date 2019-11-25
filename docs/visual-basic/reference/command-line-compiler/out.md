@@ -1,17 +1,17 @@
 ---
-title: -out (Visual Basic)
+title: -out
 ms.date: 07/20/2015
 helpviewer_keywords:
 - /out compiler option [Visual Basic]
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 6b005ac26e3fffad350cb4ce52f7757c9fff2ac1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 67366e13e4dceea4772d0730222413cb25b4e8b7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005339"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352379"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Specifica il nome del file di output.  
@@ -22,23 +22,23 @@ Specifica il nome del file di output.
 -out:filename  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
-|`filename`|Obbligatorio. Nome del file di output creato dal compilatore. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
+|`filename`|Obbligatorio. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
   
 ## <a name="remarks"></a>Note  
- Specificare il nome completo e l'estensione del file da creare. In caso contrario, il file con estensione exe prende il nome dal file del codice sorgente contenente la procedura `Sub Main` e il nome del file con estensione dll viene preso dal primo file di codice sorgente.  
+ Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
   
- Se si specifica un nome di file senza estensione exe o dll, il compilatore aggiunge automaticamente l'estensione, a seconda del valore specificato per l'opzione del compilatore `-target`.  
+ If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
   
-|Per impostare il Integrated Development Environment in Visual Studio|  
+|To set -out in the Visual Studio integrated development environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Applicazione** .<br />3.  Modificare il valore nella casella **nome assembly** .|  
+|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila `T2.vb` e crea il file di output `T2.exe`.  
+ The following code compiles `T2.vb` and creates output file `T2.exe`.  
   
 ```console
 vbc t2.vb -out:t3.exe  

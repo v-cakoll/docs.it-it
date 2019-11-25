@@ -1,5 +1,5 @@
 ---
-title: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
+title: Individuazione della posizione di inserimento delle informazioni con My.Application.Log
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object, output location
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912561"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353611"
 ---
-# <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
+# <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 
 L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener di log. I listener di log sono configurati dal file di configurazione del computer ed è possibile eseguirne l'override con il file di configurazione di un'applicazione. Questo argomento descrive le impostazioni predefinite e illustra come determinare le impostazioni dell'applicazione.
 

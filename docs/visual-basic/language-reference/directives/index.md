@@ -1,31 +1,33 @@
 ---
-title: Direttive (Visual Basic)
+title: Direttive
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directives, Visual Basic compiler
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: d76e10ad5ce8ad3accdc84f97146e0816048d8f3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268201"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343809"
 ---
 # <a name="directives-visual-basic"></a>Direttive (Visual Basic)
+
 Gli argomenti in questa sezione descrivono le direttive del compilatore del codice sorgente di Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [#Const (direttiva)](../../../visual-basic/language-reference/directives/const-directive.md) : definire una costante del compilatore  
+## <a name="in-this-section"></a>Contenuto della sezione  
+
+ [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
   
- [Direttiva #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) : indica un mapping tra le righe di origine e il testo esterno al codice sorgente  
+ [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
   
- [#If... .. Then #Else direttive](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : la compilazione di blocchi di codice selezionati  
+ [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
   
- [Direttiva #Region](../../../visual-basic/language-reference/directives/region-directive.md) - comprime e nasconde sezioni di codice nell'editor di Visual Studio  
+ [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
   
- **#Disable, #Enable** - disabilitano e abilitano avvisi specifici per le aree di codice.  
+ **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  
@@ -38,6 +40,7 @@ Gli argomenti in questa sezione descrivono le direttive del compilatore del codi
  È anche possibile disabilitare e abilitare un elenco di codici di avviso delimitato da virgole.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
+
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

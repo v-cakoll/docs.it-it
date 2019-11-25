@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare una copia di un file nella stessa directory in Visual Basic'
+title: 'Procedura: creare una copia di un file nella stessa directory'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 747d985cbd9e2f2cc7f9b07f5723455a63a87b8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348827"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Procedura: Creare una copia di un file nella stessa directory in Visual Basic
+# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Procedura: creare una copia di un file nella stessa directory in Visual Basic
+
 Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametri consentono di sovrascrivere file esistenti, rinominare il file, visualizzare lo stato di avanzamento dell'operazione e permettere all'utente di annullare l'operazione.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Per creare una copia di un file nella stessa directory  
@@ -32,6 +33,7 @@ Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametr
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Le condizioni seguenti possono generare un'eccezione:  
   
 - Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).  
@@ -67,7 +69,7 @@ Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametr
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Procedura: Copiare file con un criterio specifico in una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Procedura: Creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Procedura: Copiare una directory in un'altra directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
-- [Procedura: Rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Procedura: copiare file con un criterio specifico in una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedura: copiare una directory in un'altra directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
+- [Procedura: rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (Visual Basic)'
+title: 'Procedura: popolare raccolte di oggetti da più origini (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 21474758cffd15c0cb4193cdb2a7bc33c981c938
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346970"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come unire dati da origini diverse in una sequenza di tipi nuovi.
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come unire dati da origini diverse in una seq
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-- Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-Nel [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md) clausola, un inizializzatore di oggetto viene utilizzata per creare un'istanza di ogni nuovo `Student` oggetto utilizzando i dati dalle due origini.
+In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
 
 Se non è necessario archiviare i risultati della query, può essere più utile usare i tipi anonimi rispetto ai tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi anziché i tipi denominati:
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

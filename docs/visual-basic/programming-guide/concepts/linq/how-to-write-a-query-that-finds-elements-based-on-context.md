@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Scrivere una query per trovare elementi in base al contesto (Visual Basic)'
+title: 'Procedura: scrivere una query per trovare elementi in base al contesto'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d25c6d47eee2ae092c84c3db3c08c3e21e7d98d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835038"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346210"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Procedura: Scrivere una query per trovare elementi in base al contesto (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>How to: Write a Query that Finds Elements Based on Context (Visual Basic)
 A volte può essere necessario scrivere una query per selezionare gli elementi in base al contesto. In questo caso è anche possibile scegliere un filtro basato sugli elementi di pari livello precedenti o successivi oppure sugli elementi figlio o sui predecessori.  
   
  Per ottenere questo risultato, scrivere una query e usare i relativi risultati nella clausola `where`. Se è necessario verificare innanzitutto la presenza di valori Null e quindi testare il valore, è preferibile eseguire la query in una clausola `let` e poi usare i risultati nella clausola `where`.  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -112,4 +112,4 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,13 +1,13 @@
 ---
-title: Elementi dichiarati in Visual Basic
+title: Elementi dichiarati
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61ba32e2235bfb6a2112a28f1de7479ca82556c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639180"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345339"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementi dichiarati in Visual Basic
 Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione. Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.  
@@ -42,7 +42,7 @@ Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzi
   
 - [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  Viene descritto come denominare gli elementi e usare le maiuscole.  
   

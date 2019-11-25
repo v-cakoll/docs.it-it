@@ -1,28 +1,28 @@
 ---
-title: 'Procedura: Creare valori letterali XML (Visual Basic)'
+title: 'Procedura: creare valori letterali XML'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3af5185d2c2106e6a696a6569ef59897d0f1fe1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598533"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332998"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Procedura: Creare valori letterali XML (Visual Basic)
-È possibile creare un documento, frammento o elemento XML direttamente nel codice usando un valore letterale XML. Gli esempi in questo argomento illustrano come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.  
+# <a name="how-to-create-xml-literals-visual-basic"></a>Procedura: creare valori letterali XML (Visual Basic)
+You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
   
- È anche possibile usare la [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API per creare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Per ulteriori informazioni, vedere <xref:System.Xml.Linq.XElement>.  
   
-### <a name="to-create-an-xml-element"></a>Per creare un elemento XML  
+### <a name="to-create-an-xml-element"></a>To create an XML element  
   
-- Creare il XML inline usando la sintassi dei valori letterali XML, che corrisponde alla sintassi XML effettivo.  
+- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     Eseguire il codice. L'output di questo codice è:  
+     Eseguire il codice. The output of this code is:  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "64598533"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>Per creare un documento XML  
+### <a name="to-create-an-xml-document"></a>To create an XML document  
   
-- Creare il documento XML inline. Il codice seguente crea un documento XML con sintassi del valore letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
+- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     Eseguire il codice. L'output di questo codice è:  
+     Eseguire il codice. The output of this code is:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

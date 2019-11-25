@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: unire contenuto da file non analoghi (LINQ) (Visual Basic)'
+title: 'Procedura: unire contenuto da file dissimili (LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: f5bdfecc91f5b2f0ed3764d0f38dee99570d66d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6528f623d084003bb85dc5bae784b8d96c84d02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524202"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344558"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: unire contenuto da file non analoghi (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.
 
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

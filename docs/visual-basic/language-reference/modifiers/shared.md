@@ -1,5 +1,5 @@
 ---
-title: Shared (Visual Basic)
+title: Shared
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,44 +11,44 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: fd43ef7cb5c16995fff87a65fc0f0974d8f4a47d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98fa25d2283408dfb80e82fbc620a1b284e5c530
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647700"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349122"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Specifica che uno o più elementi di programmazione dichiarati sono associati a una classe o struttura in generale e non a una specifica istanza della classe o struttura.  
+Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.  
   
 ## <a name="remarks"></a>Note  
   
-## <a name="when-to-use-shared"></a>Quando usare condivisi  
- Quando un membro di una classe o struttura rende disponibili per ogni istanza, anziché *condiviso*, in cui ogni istanza mantiene la propria copia. Ciò è utile, ad esempio, se il valore di una variabile si applica all'intera applicazione. Se si dichiara la variabile `Shared`, quindi tutte le istanze di accederanno al percorso di archiviazione stesso e, se un'istanza viene modificato il valore della variabile, tutte le istanze di accederanno il valore aggiornato.  
+## <a name="when-to-use-shared"></a>When to Use Shared  
+ Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy. This is useful, for example, if the value of a variable applies to the entire application. If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.  
   
- La condivisione non modifica il livello di accesso di un membro. Ad esempio, un membro di classe può essere condivisi e privati (accessibili solo dall'interno della classe), o non condivisa e pubblici. Per altre informazioni, vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Sharing does not alter the access level of a member. For example, a class member can be shared and private (accessible only from within the class), or nonshared and public. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regole  
   
-- **Contesto della dichiarazione.** Si può usare `Shared` solo a livello di modulo. Ciò significa che il contesto della dichiarazione per un `Shared` elemento deve essere una classe o struttura e non può essere un file di origine, lo spazio dei nomi o procedure.  
+- **Declaration Context.** Si può usare `Shared` solo a livello di modulo. This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.  
   
-- **Modificatori combinati.** Non è possibile specificare `Shared` assieme [esegue l'override](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), o [ Statico](../../../visual-basic/language-reference/modifiers/static.md) nella stessa dichiarazione.  
+- **Combined Modifiers.** You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.  
   
-- **Accessing.** Accedere a un elemento condiviso, qualificarlo con il nome di classe o struttura, non con il nome della variabile di un'istanza specifica della relativa classe o struttura. Anche insufficienti creare un'istanza di una classe o struttura per accedere ai relativi membri condivisi.  
+- **Accessing.** You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure. You do not even have to create an instance of a class or structure to access its shared members.  
   
-     L'esempio seguente chiama la routine condivisa <xref:System.Double.IsNaN%2A> esposti dal <xref:System.Double> struttura.  
+     The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
-- **Condivisione implicita.** Non è possibile usare la `Shared` modificatore in un [istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md), ma le costanti vengono condivisi in modo implicito. Analogamente, non è possibile dichiarare un membro di un modulo o un'interfaccia come `Shared`, ma vengono condivisi in modo implicito.  
+- **Implicit Sharing.** You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared. Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Spazio di archiviazione.** Una variabile condivisa o un evento viene archiviato in memoria solo una volta, indipendentemente dal numero di istanze è creare della relativa classe o struttura. Analogamente, una routine condivisa o una proprietà contiene un solo set di variabili locali.  
+- **Storage.** A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure. Similarly, a shared procedure or property holds only one set of local variables.  
   
-- **L'accesso tramite una variabile di istanza.** È possibile accedere a un elemento condiviso da qualificarlo con il nome di una variabile che contiene una specifica istanza della classe o struttura. Sebbene questo solitamente funziona come previsto, il compilatore genera un messaggio di avviso ed effettua l'accesso tramite il nome della classe o struttura anziché la variabile.  
+- **Accessing through an Instance Variable.** It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure. Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.  
   
-- **L'accesso tramite un'espressione dell'istanza.** Se si accede a un elemento condiviso tramite un'espressione che restituisce un'istanza della classe o struttura, il compilatore effettua l'accesso mediante il nome di classe o struttura anziché la valutazione dell'espressione. Ciò produce risultati imprevisti se si prevede l'espressione per eseguire altre azioni, oltre a restituire l'istanza. Questa condizione è illustrata nell'esempio seguente.  
+- **Accessing through an Instance Expression.** If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression. This produces unexpected results if you intended the expression to perform other actions as well as returning the instance. Questa condizione è illustrata nell'esempio seguente.  
   
     ```vb
     Sub main()  
@@ -76,7 +76,7 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
     End Class  
     ```  
   
-     Nell'esempio precedente, il compilatore genera un messaggio di avviso entrambi volte il codice accede alla variabile condivisa `total` tramite un'istanza. In ogni caso effettua l'accesso direttamente tramite la classe `shareTotal` e non viene utilizzata alcuna istanza. Nel caso della chiamata alla routine `returnClass`, questo significa che non genera anche una chiamata a `returnClass`, pertanto non viene eseguita l'azione aggiuntiva di visualizzazione "Funzione returnClass () denominato".  
+     In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance. In each case it makes the access directly through the class `shareTotal` and does not make use of any instance. In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.  
   
  Il modificatore `Shared` può essere usato nei contesti seguenti:  
   
@@ -96,7 +96,7 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Durata in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

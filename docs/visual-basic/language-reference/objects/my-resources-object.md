@@ -1,5 +1,5 @@
 ---
-title: Oggetto My (Visual Basic)
+title: Oggetto My.Resources
 ms.date: 07/20/2015
 f1_keywords:
 - My.Resources
@@ -8,72 +8,72 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 02e29b17404da0e868973364b0b17b5c4ca418c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f5d81194123ad2151a494a3cb79aa1955e0fdad
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350333"
 ---
 # <a name="myresources-object"></a>Oggetto My.Resources
-Fornisce proprietà e classi per l'accesso alle risorse dell'applicazione.  
+Provides properties and classes for accessing the application's resources.  
   
 ## <a name="remarks"></a>Note  
- Il `My.Resources` oggetto consente di accedere alle risorse dell'applicazione e consente in modo dinamico di recuperare le risorse per l'applicazione. Per altre informazioni, vedere [gestione delle applicazioni alle risorse (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
- Il `My.Resources` oggetto espone solo le risorse globali. Non fornisce accesso ai file di risorse associati ai form. È necessario accedere alle risorse form dal form.  
+ The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
   
- È possibile accedere i file di risorse specifiche delle impostazioni cultura dell'applicazione dal `My.Resources` oggetto. Per impostazione predefinita, il `My.Resources` oggetto cerca le risorse dal file di risorse che corrisponde alla lingua nel <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> proprietà. Tuttavia, è possibile eseguire l'override di questo comportamento e specificare determinate impostazioni cultura da utilizzare per le risorse. Per altre informazioni, vedere [Risorse nelle applicazioni desktop](../../../framework/resources/index.md).  
+ You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. Per altre informazioni, vedere [Risorse nelle applicazioni desktop](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Proprietà  
- Le proprietà del `My.Resources` oggetto forniscono accesso in lettura alle risorse dell'applicazione. Per aggiungere o rimuovere le risorse, usare il **Progettazione progetti**. È possibile accedere alle risorse aggiunte tramite il **creazione progetti** utilizzando `My.Resources.` *resourceName*.  
+ The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
   
- È anche possibile aggiungere o rimuovere i file di risorse, selezionare il progetto in **Esplora soluzioni** e facendo clic su **Aggiungi nuovo elemento** oppure **Aggiungi elemento esistente** dal  **Progetto** menu. È possibile accedere alle risorse aggiunte in questo modo tramite `My.Resources.` *resourceFileName*`.`*resourceName*.  
+ You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
   
- Ogni risorsa ha un nome, categoria e valore, e queste impostazioni determinano come la proprietà per accedere alla risorsa viene visualizzata nel `My.Resources` oggetto. Per le risorse aggiunte nel **Progettazione progetti**:  
+ Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
   
-- Il nome determina il nome della proprietà,  
+- The name determines the name of the property,  
   
-- I dati della risorsa sono il valore della proprietà,  
+- The resource data is the value of the property,  
   
-- La categoria determina il tipo della proprietà:  
+- The category determines the type of the property:  
   
-|Category|Tipo di dati proprietà|  
+|Category|Property data type|  
 |---|---|  
 |**Stringhe**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**Immagini**|<xref:System.Drawing.Bitmap>|  
 |**Icone**|<xref:System.Drawing.Icon>|  
-|**Audio**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> Il <xref:System.IO.UnmanagedMemoryStream> deriva dalla classe la <xref:System.IO.Stream> classe, in modo che può essere utilizzato con i metodi che accettano i flussi, ad esempio il <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> (metodo).|  
-|**File**|-   [Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) per file di testo.<br />-   <xref:System.Drawing.Bitmap> per i file di immagine.<br />-   <xref:System.Drawing.Icon> per i file di icona.<br />-   <xref:System.IO.UnmanagedMemoryStream> per i file audio.|  
-|**Altro**|Determinata dalle informazioni nella finestra di progettazione **tipo** colonna.|  
+|**Audio**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
+|**File**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
+|**Altro**|Determined by the information in the designer's **Type** column.|  
   
 ## <a name="classes"></a>Classi  
- Il `My.Resources` oggetto espone ogni file di risorse come una classe con le proprietà condivise. Il nome della classe è identico al nome del file di risorse. Come descritto nella sezione precedente, le risorse in un file di risorse sono esposte come proprietà nella classe.  
+ The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio imposta il titolo di un form per la risorsa stringa denominata `Form1Title` nel file di risorse dell'applicazione. Per l'esempio funzioni, l'applicazione deve avere una stringa denominata `Form1Title` nel relativo file di risorse.  
+ This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio imposta l'icona del form per l'icona denominato `Form1Icon` che viene archiviato nel file di risorse dell'applicazione. Affinché l'esempio funzioni, l'applicazione deve contenere un'icona denominata `Form1Icon` nel relativo file di risorse.  
+ This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio imposta l'immagine di sfondo di un form per la risorsa di immagine denominata `Form1Background`, ovvero in file di risorse dell'applicazione. Per questo esempio funzioni, l'applicazione deve avere una risorsa immagine denominata `Form1Background` nel relativo file di risorse.  
+ This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio riproduce il suono archiviata come una risorsa audio denominata `Form1Greeting` nel file di risorse dell'applicazione. Per l'esempio funzioni, l'applicazione deve avere una risorsa audio denominata `Form1Greeting` nel relativo file di risorse. Il `My.Computer.Audio.Play` metodo è disponibile solo per le applicazioni Windows Form.  
+ This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio recupera la versione in lingua francese di una risorsa di stringa dell'applicazione. La risorsa è denominata `Message`. Per modificare le impostazioni cultura che il `My.Resources` utilizzata dall'oggetto, l'esempio Usa <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
+ This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
- Per questo esempio funzioni, l'applicazione deve avere una stringa denominata `Message` nella relativa risorsa file e l'applicazione devono avere la versione in lingua francese del file di risorse, Resources.fr-FR. resx. Se l'applicazione non ha la versione in lingua francese del file di risorse, il `My.Resource` oggetto recupera le risorse dal file di risorse di impostazioni cultura predefinite.  
+ For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   

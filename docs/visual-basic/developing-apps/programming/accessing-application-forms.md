@@ -1,5 +1,5 @@
 ---
-title: Accesso ai form di un'applicazione (Visual Basic)
+title: Accesso ai form di un'applicazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -8,20 +8,22 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 85de915f4dc9a79e0161411951062afbeb764513
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821686"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349232"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Accesso ai form di un'applicazione (Visual Basic)
+
 L'oggetto `My.Forms` rappresenta un modo semplice di accedere a un'istanza di ogni Windows Form dichiarato nel progetto dell'applicazione. È anche possibile usare le proprietà dell'oggetto `My.Application` per visualizzare la schermata iniziale e il modulo principale dell'applicazione e per ottenere un elenco dei moduli aperti dell'applicazione.  
   
 ## <a name="tasks"></a>Attività  
+
  La tabella seguente elenca esempi che illustrano come accedere ai moduli di un'applicazione.  
   
-|A|Vedere|  
+|Per|Vedere|  
 |---|---|  
 |Accedere a un modulo da un altro modulo di un'applicazione.|[Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |Visualizzare i titoli di tutti i moduli aperti dell'applicazione.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

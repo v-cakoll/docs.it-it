@@ -1,5 +1,5 @@
 ---
-title: Oggetto My. computer. FileSystem (Visual Basic)
+title: Oggetto My.Computer.FileSystem
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 311f605d3f4e77ac2828b8851cbf318da1a0e582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 958483be7eb200b5f3d3b46738df0a3c50c4f3c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963699"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347231"
 ---
 # <a name="mycomputerfilesystem-object"></a>Oggetto My.Computer.FileSystem
 Specifica proprietà e metodi per l'uso di unità, file e directory.  
@@ -25,17 +25,17 @@ Specifica proprietà e metodi per l'uso di unità, file e directory.
 ## <a name="remarks"></a>Note  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.FileSystem` , vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- Per ulteriori informazioni, vedere [accesso ai file con Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> È anche possibile usare le classi nello <xref:System.IO?displayProperty=nameWithType> spazio dei nomi per lavorare con unità, file e directory.  
+> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Classe:** (fornisce l'accesso <xref:Microsoft.VisualBasic.FileIO.FileSystem>a) <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>  
+ **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

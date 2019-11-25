@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Chiamare un servizio Web in modo asincrono (Visual Basic)'
+title: 'Procedura: chiamare un servizio Web in modo asincrono'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 01d2fad6be94f23457ba37cbb15521765e0bea17
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376204"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352127"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Procedura: Chiamare un servizio Web in modo asincrono (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Procedura: chiamare un servizio Web in modo asincrono (Visual Basic)
 
 Questo esempio associa un gestore a un evento gestore asincrono di un servizio Web in modo che possa recuperare il risultato di una chiamata di metodo sincrono. L'esempio usa il servizio Web DemoTemperatureService disponibile all'indirizzo `http://www.xmethods.net`.
 

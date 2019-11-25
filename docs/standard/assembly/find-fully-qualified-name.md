@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: trovare il nome completo di un assembly'
+title: "How to: Find an assembly's fully qualified name"
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,24 +10,24 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740494"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348203"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Procedura: trovare il nome completo di un assembly
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>How to: Find an assembly's fully qualified name
 
-Per individuare il nome completo di un assembly .NET Framework nella Global Assembly Cache, usare lo strumento Global Assembly Cache ([gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)). Vedere [procedura: visualizzare il contenuto del Global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
+To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)). See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
-Per gli assembly .NET Core e per gli assembly .NET Framework che non sono inclusi nella Global Assembly Cache, è possibile ottenere il nome completo dell'assembly in diversi modi:
+For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:
 
-- È possibile utilizzare il codice per restituire le informazioni alla console o a una variabile oppure è possibile utilizzare [Ildasm. exe (DISASSEMBLER il)](../../framework/tools/ildasm-exe-il-disassembler.md) per esaminare i metadati dell'assembly, che contengono il nome completo.
+- You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.
 
-- Se l'assembly è già stato caricato dall'applicazione, è possibile recuperare il valore della proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> per ottenere il nome completo. È possibile utilizzare la proprietà <xref:System.Type.Assembly> di un <xref:System.Type> definito in tale assembly per recuperare un riferimento all'oggetto <xref:System.Reflection.Assembly>. Nell'esempio viene illustrata una situazione di questo tipo.
+- Se l'assembly è già stato caricato dall'applicazione, è possibile recuperare il valore della proprietà <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> per ottenere il nome completo. You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object. Nell'esempio viene illustrata una situazione di questo tipo.
 
-- Se si conosce il percorso di file system dell'assembly, è possibile chiamare il metodoC#`static` () o `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> per ottenere il nome completo dell'assembly. Di seguito è riportato un semplice esempio.
+- If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name. Di seguito è riportato un semplice esempio.
 
   ```csharp
   using System;
@@ -58,11 +58,11 @@ Per gli assembly .NET Core e per gli assembly .NET Framework che non sono inclus
 
 - È possibile usare [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) per esaminare i metadati dell'assembly che contengono il nome completo.
 
-Per ulteriori informazioni sull'impostazione degli attributi dell'assembly, ad esempio la versione, la lingua e il nome dell'assembly, vedere [impostare gli attributi](set-attributes.md)dell'assembly. Per altre informazioni su come assegnare un nome sicuro a un assembly, vedere [creare e usare assembly con nome sicuro](create-use-strong-named.md).
+For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md). For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come visualizzare il nome completo di un assembly contenente una classe specificata nella console. Usa la proprietà <xref:System.Type.Assembly?displayProperty=nameWithType> per recuperare un riferimento a un assembly da un tipo definito in tale assembly.
+The following example shows how to display the fully qualified name of an assembly containing a specified class to the console. It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.
 
 ```cpp
 #using <System.dll>
@@ -106,7 +106,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname
@@ -121,8 +120,8 @@ End Class
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Nomi degli assembly](names.md)
-- [Creazione di assembly](create.md)
-- [Creazione e utilizzo di assembly con nome sicuro](create-use-strong-named.md)
-- [Assembly Cache globale](../../framework/app-domains/gac.md)
+- [Assembly names](names.md)
+- [Create assemblies](create.md)
+- [Create and use strong-named assemblies](create-use-strong-named.md)
+- [Global assembly cache](../../framework/app-domains/gac.md)
 - [Come il runtime individua gli assembly](../../framework/deployment/how-the-runtime-locates-assemblies.md)

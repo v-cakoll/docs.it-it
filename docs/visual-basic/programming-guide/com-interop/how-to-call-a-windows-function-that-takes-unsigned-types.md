@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)'
+title: 'Procedura: chiamare una funzione Windows che accetta tipi senza segno'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053318"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348725"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: Chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
 
-Se si utilizza una classe, un modulo o una struttura con membri di tipi di Unsigned Integer, è possibile accedere a questi membri con Visual Basic.
+If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Per chiamare una funzione Windows che accetta un tipo senza segno
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>To call a Windows function that takes an unsigned type
 
-1. Utilizzare un' [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) per indicare Visual Basic quale libreria include la funzione, il nome della libreria, il tipo di sequenza chiamante e come convertire le stringhe quando viene chiamato.
+1. Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.
 
-2. `UInteger`Nell'istruzione usare ,`ULong` ,o`Byte` come appropriato per ogni parametro con un tipo senza segno. `UShort` `Declare`
+2. In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.
 
-3. Consultare la documentazione per la funzione di Windows che si sta chiamando per trovare i nomi e i valori delle costanti che usa. Molti di questi vengono definiti nel file WinUser. h.
+3. Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses. Many of these are defined in the WinUser.h file.
 
-4. Dichiarare le costanti necessarie nel codice. Molte costanti di Windows sono valori senza segno a 32 bit ed è necessario dichiararle `As UInteger`.
+4. Declare the necessary constants in your code. Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.
 
-5. Chiamare la funzione in modo normale. Nell'esempio seguente viene chiamata la funzione `MessageBox`di Windows, che accetta un argomento Unsigned Integer.
+5. Call the function in the normal way. The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ Se si utilizza una classe, un modulo o una struttura con membri di tipi di Unsig
     End Class
     ```
 
-     È possibile testare la funzione `messageThroughWindows` con il codice seguente.
+     You can test the function `messageThroughWindows` with the following code.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ Se si utilizza una classe, un modulo o una struttura con membri di tipi di Unsig
     ```
 
     > [!CAUTION]
-    > I tipi `ULong`di dati, `SByte` , `UShort`e non fanno parte dell' [indipendenza del linguaggio e dei componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) , pertanto il `UInteger`codice conforme a CLS non può utilizzare un componente che li utilizza.
+    > The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.
 
     > [!IMPORTANT]
-    > Effettuando una chiamata a codice non gestito, ad esempio Windows Application Programming Interface (API), il codice viene esposto a potenziali rischi per la sicurezza.
+    > Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.
 
     > [!IMPORTANT]
-    > Per chiamare l'API Windows è necessaria l'autorizzazione per il codice non gestito, che può influire sulla sua esecuzione in situazioni di attendibilità parziale. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [autorizzazioni di accesso al codice](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations. For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Vedere anche
 

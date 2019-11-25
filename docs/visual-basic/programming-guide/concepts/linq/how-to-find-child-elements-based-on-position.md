@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trova elementi figlio in base alla posizione (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: trovare elementi figlio in base alla posizione (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 11a9fdd7ed8565c38b0527d266af75b8fb611a20
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: c3062963c6144dfafed8b49410208f480c273ec9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249699"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349078"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Procedura: Trova elementi figlio in base alla posizione (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>How to: Find Child Elements Based on Position (XPath-LINQ to XML) (Visual Basic)
 Talvolta si desidera individuare elementi in base alla posizione, ad esempio il secondo elemento oppure dal terzo al quinto elemento.  
   
  L'espressione XPath è:  
@@ -21,7 +21,7 @@ Talvolta si desidera individuare elementi in base alla posizione, ad esempio il 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati gli elementi `Test` compresi tra il secondo e il quarto. Il risultato è una raccolta di elementi.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -80,4 +80,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

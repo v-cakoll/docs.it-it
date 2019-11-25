@@ -1,5 +1,5 @@
 ---
-title: Definizione di classi (Visual Basic)
+title: Definizione delle classi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - execution [Visual Basic], ending
@@ -15,69 +15,69 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: 679f4fd55f142c2c4bb63a556feb95c074960b12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd3f6e5cff41551240d9904ab93af8758eb104d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914739"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346079"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>Procedura dettagliata: Definizione di classi (Visual Basic)
+# <a name="walkthrough-defining-classes-visual-basic"></a>Procedura dettagliata: definizione delle classi (Visual Basic)
 
-In questa procedura dettagliata viene illustrato come definire le classi, che è possibile utilizzare per creare oggetti. Viene inoltre illustrato come aggiungere proprietà e metodi alla nuova classe e viene illustrato come inizializzare un oggetto.  
+This walkthrough demonstrates how to define classes, which you can then use to create objects. It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-a-class"></a>Per definire una classe
+## <a name="to-define-a-class"></a>To define a class
   
-1. Per creare un progetto, fare clic su **nuovo progetto** dal menu **file** . Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+1. Create a project by clicking **New Project** on the **File** menu. Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
   
-2. Selezionare applicazione Windows dall'elenco dei modelli di progetto Visual Basic per visualizzare il nuovo progetto.  
+2. Select Windows Application from the list of Visual Basic project templates to display the new project.  
   
-3. Per aggiungere una nuova classe al progetto, fare clic su **Aggiungi classe** dal menu **progetto** . Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
+3. Add a new class to the project by clicking **Add Class** on the **Project** menu. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-4. Selezionare il modello di **classe** .  
+4. Select the **Class** template.  
   
-5. Assegnare un nome alla `UserNameInfo.vb`nuova classe e quindi fare clic su **Aggiungi** per visualizzare il codice per la nuova classe.  
+5. Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    > È possibile usare l' **editor di codice** Visual Basic per aggiungere una classe al form di avvio digitando la `Class` parola chiave seguita dal nome della nuova classe. L' **editor di codice** fornisce un' `End Class` istruzione corrispondente.  
+    > You can use the Visual Basic **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class. The **Code Editor** provides a corresponding `End Class` statement for you.  
   
-6. Definire un campo privato per la classe aggiungendo il codice seguente tra le `Class` istruzioni e: `End Class`  
+6. Define a private field for the class by adding the following code between the `Class` and `End Class` statements:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     Dichiarare il campo come `Private` significa che può essere utilizzato solo all'interno della classe. È possibile rendere disponibili i campi dall'esterno di una classe usando i modificatori di `Public` accesso, ad esempio, che forniscono maggiore accesso. Per altre informazioni, vedere [livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Declaring the field as `Private` means it can be used only within the class. You can make fields available from outside a class by using access modifiers such as `Public` that provide more access. For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-7. Definire una proprietà per la classe aggiungendo il codice seguente:  
+7. Define a property for the class by adding the following code:  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8. Definire un metodo per la classe aggiungendo il codice seguente:  
+8. Define a method for the class by adding the following code:  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. Definire un costruttore con parametri per la nuova classe aggiungendo una procedura denominata `Sub New`:  
+9. Define a parameterized constructor for the new class by adding a procedure named `Sub New`:  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     Il `Sub New` costruttore viene chiamato automaticamente quando viene creato un oggetto basato su questa classe. Questo costruttore imposta il valore del campo che contiene il nome utente.  
+     The `Sub New` constructor is called automatically when an object based on this class is created. This constructor sets the value of the field that holds the user name.  
   
-## <a name="to-create-a-button-to-test-the-class"></a>Per creare un pulsante per testare la classe
+## <a name="to-create-a-button-to-test-the-class"></a>To create a button to test the class
   
-1. Modificare il modulo di avvio in modalità progettazione facendo clic con il pulsante destro del mouse sul nome in **Esplora soluzioni** e quindi scegliendo **Visualizza finestra di progettazione**. Per impostazione predefinita, il form di avvio per i progetti di applicazioni Windows è denominato Form1. vb. Verrà visualizzato il form principale.  
+1. Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**. By default, the startup form for Windows Application projects is named Form1.vb. The main form will then appear.  
   
-2. Aggiungere un pulsante al form principale e fare doppio clic su di esso per visualizzare il codice per `Button1_Click` il gestore eventi. Aggiungere il codice seguente per chiamare la procedura di test:  
+2. Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler. Add the following code to call the test procedure:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
 ## <a name="to-run-your-application"></a>Per eseguire l'applicazione
   
-1. Eseguire l'applicazione premendo F5. Fare clic sul pulsante nel form per chiamare la procedura di test. Viene visualizzato un messaggio che informa che l'originale `UserName` è "Moore, Bobby", perché la procedura ha chiamato `Capitalize` il metodo dell'oggetto.  
+1. Run your application by pressing F5. Click the button on the form to call the test procedure. It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.  
   
-2. Fare clic su **OK** per chiudere la finestra del messaggio. La `Button1 Click` stored procedure modifica il valore `UserName` della proprietà e visualizza un messaggio che informa che il nuovo valore di `UserName` è "worden, Joe".  
+2. Fare clic su **OK** per chiudere la finestra del messaggio. The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".  
   
 ## <a name="see-also"></a>Vedere anche
 

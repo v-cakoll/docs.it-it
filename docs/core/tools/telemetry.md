@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria degli strumenti di .
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133691"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281779"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -57,13 +57,13 @@ La funzionalità di telemetria raccoglie i dati seguenti:
 
 | Versioni dell'SDK | Dati |
 |--------------|------|
-| Tutti          | Timestamp della chiamata. |
-| Tutti          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
-| Tutti          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
-| Tutti          | Sistema operativo e versione. |
-| Tutti          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
-| Tutti          | Versione di .NET Core SDK. |
-| Tutti          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
+| All          | Timestamp della chiamata. |
+| All          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
+| All          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
+| All          | Sistema operativo e versione. |
+| All          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
+| All          | Versione di .NET Core SDK. |
+| All          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
 | >=2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
 | >=2.0         | Se il SDK è in esecuzione in un contenitore. |
 | >=2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
@@ -114,7 +114,7 @@ L'interfaccia della riga di comando di .NET Core raccoglie informazioni solo per
 
 L'esempio seguente mostra il tipo di dati raccolti:
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

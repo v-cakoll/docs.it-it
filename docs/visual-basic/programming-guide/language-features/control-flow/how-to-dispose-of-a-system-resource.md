@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eliminare una risorsa di sistema (Visual Basic)'
+title: 'Procedura: eliminare una risorsa di sistema'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583138"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353949"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: eliminare una risorsa di sistema (Visual Basic)
-È possibile usare un blocco di `Using` per garantire che il sistema elimini una risorsa quando il codice esce dal blocco. Questa opzione è utile se si usa una risorsa di sistema che usa una quantità elevata di memoria o che anche altri componenti desiderano usare.  
+You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Per eliminare una connessione al database al termine del codice  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
   
-1. Assicurarsi di includere l' [istruzione Imports appropriata (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
+1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
   
-2. Creare un blocco di `Using` con le istruzioni `Using` e `End Using`. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
+2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
   
-3. Dichiarare la connessione e crearne un'istanza come parte dell'istruzione `Using`.  
+3. Declare the connection and create an instance of it as part of the `Using` statement.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ ms.locfileid: "72583138"
     End Sub  
     ```  
   
-     Il sistema elimina la risorsa indipendentemente dal modo in cui si esce dal blocco, incluso il caso di un'eccezione non gestita.  
+     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
   
-     Si noti che non è possibile accedere a `sqc` dall'esterno del blocco `Using`, perché il relativo ambito è limitato al blocco.  
+     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
   
-     È possibile utilizzare la stessa tecnica in una risorsa di sistema, ad esempio un handle di file o un wrapper COM. Utilizzare un blocco di `Using` quando si desidera assicurarsi di lasciare la risorsa disponibile per altri componenti dopo aver terminato il blocco `Using`.  
+     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,29 +1,29 @@
 ---
-title: 'Procedura: Dichiarare eventi personalizzati per proteggere la memoria (Visual Basic)'
+title: 'Procedura: dichiarare eventi personalizzati per proteggere la memoria'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3cc2d3ea57f1a8daf704c2c929baf3f2acf78c17
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973160"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345136"
 ---
-# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procedura: Dichiarare eventi personalizzati per proteggere la memoria (Visual Basic)
-Esistono diversi casi quando è importante che un'applicazione mantenere ridotto l'utilizzo della memoria. Eventi personalizzati consentono all'applicazione di utilizzo della memoria solo per gli eventi che gestisce.  
+# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procedura: dichiarare eventi personalizzati per proteggere la memoria (Visual Basic)
+There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
   
- Per impostazione predefinita, quando una classe dichiara un evento, il compilatore alloca memoria per un campo archiviare le informazioni sull'evento. Se una classe dispone di molti eventi inutilizzati, inutilmente occupano memoria.  
+ By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
   
- Invece di usare l'implementazione predefinita di eventi disponibili in Visual Basic, è possibile utilizzare gli eventi personalizzati per gestire l'utilizzo della memoria più attentamente.  
+ Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio, la classe usa un'istanza del <xref:System.ComponentModel.EventHandlerList> (classe), archiviate nel `Events` campo, per archiviare le informazioni sugli eventi in uso. Il <xref:System.ComponentModel.EventHandlerList> è una classe di elenco ottimizzata progettata per contenere i delegati.  
+ In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
   
- Tutti gli eventi della classe utilizzano il `Events` campo per tenere traccia di quali metodi sono la gestione di ogni evento.  
+ All events in the class use the `Events` field to keep track of what methods are handling each event.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

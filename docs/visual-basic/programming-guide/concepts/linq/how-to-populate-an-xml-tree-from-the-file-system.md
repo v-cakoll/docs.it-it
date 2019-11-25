@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Popolare un albero XML dal File System (Visual Basic)'
+title: 'Procedura: popolare una struttura ad albero XML dal file system'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789064"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344482"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Procedura: Popolare un albero XML dal File System (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>How to: Populate an XML Tree from the File System (Visual Basic)
 Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico. È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla. In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti. L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.  
   
 ## <a name="example"></a>Esempio  
@@ -116,4 +116,4 @@ Total File Size:59089
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query tecniche avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

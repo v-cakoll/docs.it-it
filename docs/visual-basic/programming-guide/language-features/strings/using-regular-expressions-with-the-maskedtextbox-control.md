@@ -1,59 +1,59 @@
 ---
-title: Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic
+title: Uso di espressioni regolari con il controllo MaskedTextBox
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12d500fa0ff4945dcf2d5009bdba6d337834707e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024508"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346256"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic
-In questo esempio viene illustrato come eseguire la conversione di espressioni regolari semplice da utilizzare con il <xref:System.Windows.Forms.MaskedTextBox> controllo.  
+This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
   
-## <a name="description-of-the-masking-language"></a>Descrizione del linguaggio di definizione della maschera  
- Lo standard <xref:System.Windows.Forms.MaskedTextBox> maschera language è basata su quello utilizzato dal `Masked Edit` controllare in Visual Basic 6.0 e deve essere noto agli utenti di eseguire la migrazione di questa piattaforma.  
+## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
+ The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
   
- Il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà del <xref:System.Windows.Forms.MaskedTextBox> controllo specifica la maschera di input da usare. La maschera deve essere una stringa composta da uno o più degli elementi della maschera dalla tabella seguente.  
+ The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
   
-|Elemento di mascheramento|Descrizione|Elemento di espressione regolare|  
+|Masking element|Descrizione|Regular expression element|  
 |---------------------|-----------------|--------------------------------|  
-|0|Qualsiasi cifra singola compreso tra 0 e 9. Immettere i dati.|\d|  
-|9|Cifra o lo spazio. Voce facoltativa.|[\d]?|  
-|#|Cifra o lo spazio. Voce facoltativa. Se questa posizione viene lasciata vuota nella maschera, verrà visualizzata come spazio. Segno più (+) e meno (-) sono consentiti i segni.|[ \d+-]?|  
-|L|Lettera ASCII. Immettere i dati.|[a-zA-Z]|  
-|?|Lettera ASCII. Voce facoltativa.|[a-zA-Z]?|  
-|&|Carattere. Immettere i dati.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Carattere. Voce facoltativa.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|Alfanumerico. Voce facoltativa.|\W|  
-|.|Impostazioni cultura appropriata segnaposto decimale.|Non disponibile.|  
-|,|Impostazioni cultura appropriata migliaia segnaposto.|Non disponibile.|  
-|:|Separatore appropriato per la lingua dell'ora.|Non disponibile.|  
-|/|Separatore appropriato per la lingua della data.|Non disponibile.|  
-|$|Simbolo della valuta appropriato delle impostazioni cultura.|Non disponibile.|  
-|\<|Converte tutti i caratteri che seguono in caratteri minuscoli.|Non disponibile.|  
-|>|Converte tutti i caratteri che seguono in maiuscolo.|Non disponibile.|  
-|&#124;|Annulla un cambiamento precedente backup oppure spostare verso il basso.|Non disponibile.|  
-|&#92;|Esegue l'escape di un carattere della maschera, trasformandolo in un valore letterale. "\\\\" è la sequenza di escape per una barra rovesciata.|&#92;|  
-|Tutti gli altri caratteri.|Valori letterali. Verranno visualizzati tutti gli elementi non maschera se stessi all'interno di <xref:System.Windows.Forms.MaskedTextBox>.|Tutti gli altri caratteri.|  
+|0|Any single digit between 0 and 9. Entry required.|\d|  
+|9|Digit or space. Entry optional.|[ \d]?|  
+|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
+|L|ASCII letter. Entry required.|[a-zA-Z]|  
+|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
+|&|Carattere. Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|Carattere. Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|Alphanumeric. Entry optional.|\W|  
+|.|Culture-appropriate decimal placeholder.|Non disponibile.|  
+|,|Culture-appropriate thousands placeholder.|Non disponibile.|  
+|:|Culture-appropriate time separator.|Non disponibile.|  
+|/|Culture-appropriate date separator.|Non disponibile.|  
+|$|Culture-appropriate currency symbol.|Non disponibile.|  
+|\<|Converts all characters that follow to lowercase.|Non disponibile.|  
+|>|Converts all characters that follow to uppercase.|Non disponibile.|  
+|&#124;|Undoes a previous shift up or shift down.|Non disponibile.|  
+|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
+|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
   
- Numero decimale (.), migliaia (,), tempi (:), data (/) e predefinito di simboli di valuta ($) i simboli di base a quanto definito dalle impostazioni cultura dell'applicazione. È possibile imporre loro di visualizzare i simboli delle altre impostazioni cultura usando le <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> proprietà.  
+ The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
   
-## <a name="regular-expressions-and-masks"></a>Le espressioni regolari e maschere  
- Sebbene sia possibile utilizzare le espressioni regolari e maschere per convalidare l'input dell'utente, non sono completamente equivalenti. Le espressioni regolari possono esprimere schemi più complessi rispetto alle maschere, ma possono esprimere le stesse informazioni più conciso e in un formato culturalmente pertinente.  
+## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
+ Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
   
- La tabella seguente confronta le espressioni regolari quattro e la maschera equivalente per ognuna.  
+ The following table compares four regular expressions and the equivalent mask for each.  
   
 |Espressione regolare|Maschera|Note|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|Il `/` carattere della maschera è un separatore di data logica, e verrà visualizzato all'utente come separatore della data appropriato alle impostazioni cultura correnti dell'applicazione.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Una data (giorno abbreviazione del mese e anno) nel formato di Stati Uniti in cui l'abbreviazione di tre lettere mese viene visualizzato con una lettera iniziale maiuscola seguita da due lettere minuscole.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Numero di telefono Stati Uniti, indicativo di località facoltativo. Se l'utente non desidera immettere i caratteri facoltativi, Anna può immettere gli spazi o posizionare il puntatore del mouse direttamente in corrispondenza della posizione della maschera rappresentato dal primo 0.|  
-|`$\d{6}.00`|`$999,999.00`|Valore di valuta compreso nell'intervallo tra 0 e 999999. La valuta, millesimo e caratteri decimali verranno sostituiti in fase di esecuzione con i relativi equivalenti specifici delle impostazioni cultura.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
+|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
   
 ## <a name="see-also"></a>Vedere anche
 

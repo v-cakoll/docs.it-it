@@ -1,15 +1,15 @@
 ---
-title: Esempio di esecuzione posticipata (Visual Basic)
+title: Esempio di esecuzione posticipata
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583327"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354233"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Esempio di esecuzione posticipata (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
 
 In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.
 
@@ -63,4 +63,4 @@ L'intera matrice di stringhe non viene convertita in lettere maiuscole prima del
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: esecuzione posticipata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

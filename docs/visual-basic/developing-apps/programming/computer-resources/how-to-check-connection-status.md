@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Controllare lo stato di connessione in Visual Basic'
+title: 'Procedura: controllare lo stato di connessione'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620680"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345889"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Procedura: Controllare lo stato di connessione in Visual Basic
+# <a name="how-to-check-connection-status-in-visual-basic"></a>Procedura: controllare lo stato di connessione in Visual Basic
+
 Per determinare se il computer ha una rete o una connessione Internet funzionante, è possibile usare la proprietà <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -25,7 +26,7 @@ Per determinare se il computer ha una rete o una connessione Internet funzionant
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+     Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>Vedere anche
 

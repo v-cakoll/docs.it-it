@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421581"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283888"
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 
@@ -29,7 +29,7 @@ Per informazioni su come configurare un ambiente di sviluppo all'interno del qua
 
 Microsoft sviluppa e supporta attivamente tre linguaggi .NET: C#, F# e Visual Basic (VB). 
 
-* C# è un linguaggio semplice, potente, indipendente dai tipi e orientato agli oggetti che mantiene al tempo stesso l'espressività e l'eleganza tipiche dei linguaggi di tipo C. Gli sviluppatori che hanno familiarità con C e linguaggi simili si adattano con facilità a C#. Per altre informazioni su C#, vedere [Guida a C#](../csharp/index.md).
+* C# è un linguaggio semplice, potente, indipendente dai tipi e orientato agli oggetti che mantiene al tempo stesso l'espressività e l'eleganza tipiche dei linguaggi di tipo C. Gli sviluppatori che hanno familiarità con C e linguaggi simili si adattano con facilità a C#. Per altre informazioni su C#, vedere [Guida a C#](../csharp/index.yml).
 
 * F# è un linguaggio di programmazione multipiattaforma e funzionale che supporta anche la programmazione tradizionale imperativa e orientata agli oggetti. Per altre informazioni su F#, vedere [Guida a F#](../fsharp/index.md).
 
@@ -59,7 +59,7 @@ In .NET gli oggetti che fanno riferimento a risorse non gestite implementano l'i
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Dopo che il blocco `using` è stato completato, il runtime di .NET chiama automaticamente il metodo <xref:System.IDisposable.Dispose> dell'oggetto `stream`, che rilascia l'handle di file. Il runtime esegue questa operazione anche se un'eccezione fa sì che il controllo lasci il blocco.
+Dopo che il blocco `using` è stato completato, il runtime di .NET chiama automaticamente il metodo `stream` dell'oggetto <xref:System.IDisposable.Dispose>, che rilascia l'handle di file. Il runtime esegue questa operazione anche se un'eccezione fa sì che il controllo lasci il blocco.
 
 Per informazioni dettagliate, vedere gli argomenti seguenti:
 

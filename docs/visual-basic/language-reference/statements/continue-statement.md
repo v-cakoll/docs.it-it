@@ -1,5 +1,5 @@
 ---
-title: Istruzione Continue (Visual Basic)
+title: Istruzione Continue
 ms.date: 07/20/2015
 f1_keywords:
 - vb.continue
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 9ee5fb19db6eafeb7e4bed12935d0b950d6368d6
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 20140cafb68c7e5518bf3d5fa80e56ca1c1de2c6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005111"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354116"
 ---
 # <a name="continue-statement-visual-basic"></a>Istruzione Continue (Visual Basic)
-Trasferisce immediatamente il controllo all'iterazione successiva di un ciclo.  
+Transfers control immediately to the next iteration of a loop.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -24,18 +24,18 @@ Continue { Do | For | While }
 ```  
   
 ## <a name="remarks"></a>Note  
- È possibile trasferire dall'interno di un ciclo `Do`, `For` o `While` alla successiva iterazione del ciclo. Il controllo passa immediatamente al test della condizione del ciclo, che equivale a trasferire l'istruzione `For` o `While` o all'istruzione `Do` o `Loop` che contiene la clausola `Until` o `While`.  
+ You can transfer from inside a `Do`, `For`, or `While` loop to the next iteration of that loop. Control passes immediately to the loop condition test, which is equivalent to transferring to the `For` or `While` statement, or to the `Do` or `Loop` statement that contains the `Until` or `While` clause.  
   
- È possibile utilizzare `Continue` in qualsiasi posizione del ciclo che consente i trasferimenti. Le regole che consentono il trasferimento del controllo sono le stesse dell' [istruzione goto](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ You can use `Continue` at any location in the loop that allows transfers. The rules allowing transfer of control are the same as with the [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Se, ad esempio, un ciclo è interamente contenuto all'interno di un blocco `Try`, un blocco `Catch` o un blocco `Finally`, è possibile utilizzare `Continue` per trasferire il ciclo. Se, invece, la struttura `Try`... `End Try` è contenuta all'interno del ciclo, non è possibile usare `Continue` per trasferire il controllo dal blocco `Finally` ed è possibile usarlo per trasferire fuori da un blocco `Try` o `Catch` solo se si trasferisce completamente dal @no_ struttura _T-6... `End Try`.  
+ For example, if a loop is totally contained within a `Try` block, a `Catch` block, or a `Finally` block, you can use `Continue` to transfer out of the loop. If, on the other hand, the `Try`...`End Try` structure is contained within the loop, you cannot use `Continue` to transfer control out of the `Finally` block, and you can use it to transfer out of a `Try` or `Catch` block only if you transfer completely out of the `Try`...`End Try` structure.  
   
- Se si dispone di cicli annidati dello stesso tipo, ad esempio un ciclo `Do` in un altro ciclo `Do`, un'istruzione `Continue Do` passa alla successiva iterazione del ciclo `Do` più interno che lo contiene. Non è possibile usare `Continue` per passare all'iterazione successiva di un ciclo contenitore dello stesso tipo.  
+ If you have nested loops of the same type, for example a `Do` loop within another `Do` loop, a `Continue Do` statement skips to the next iteration of the innermost `Do` loop that contains it. You cannot use `Continue` to skip to the next iteration of a containing loop of the same type.  
   
- Se sono presenti cicli annidati di tipi diversi, ad esempio un ciclo `Do` all'interno di un ciclo `For`, è possibile passare all'iterazione successiva di uno dei due cicli usando `Continue Do` o `Continue For`.  
+ If you have nested loops of different types, for example a `Do` loop within a `For` loop, you can skip to the next iteration of either loop by using either `Continue Do` or `Continue For`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice seguente viene utilizzata l'istruzione `Continue While` per passare alla colonna successiva di una matrice se il divisore è zero. Il `Continue While` si trova all'interno di un ciclo `For`. Trasferisce all'istruzione `While col < lastcol`, ovvero l'iterazione successiva del ciclo `While` più interno che contiene il ciclo `For`.  
+ The following code example uses the `Continue While` statement to skip to the next column of an array if a divisor is zero. The `Continue While` is inside a `For` loop. It transfers to the `While col < lastcol` statement, which is the next iteration of the innermost `While` loop that contains the `For` loop.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   

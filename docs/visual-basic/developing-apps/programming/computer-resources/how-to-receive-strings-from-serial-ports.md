@@ -1,19 +1,20 @@
 ---
-title: 'Procedura: Ricevere stringhe da porte seriali in Visual Basic'
+title: 'Procedura: ricevere stringhe da porte seriali'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296719"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345603"
 ---
-# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: Ricevere stringhe da porte seriali in Visual Basic
+# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: ricevere stringhe da porte seriali in Visual Basic
+
 Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe dalle porte seriali del computer in Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Per ricevere stringhe dalla porta seriale  
@@ -26,7 +27,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
   
 3. Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     Il blocco `Try...Catch...Finally` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice per la modifica della porta seriale deve essere contenuto all'interno di questo blocco.  
+     Il blocco `Try...Catch...Finally` consente all'applicazione di chiudere la porta seriale, anche se viene generata un'eccezione. Tutto il codice per la modifica della porta seriale deve essere contenuto all'interno di questo blocco.  
   
      [!code-vb[VbVbalrMyComputer#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#39)]  
   
@@ -51,14 +52,17 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   
 ## <a name="example"></a>Esempio  
+
  [!code-vb[VbVbalrMyComputer#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#37)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
+
  Questo esempio presuppone l'uso della porta `COM1`.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Questo esempio presuppone l'uso della porta `COM1`. Per garantire una maggiore flessibilità, il codice deve consentire all'utente di selezionare la porta seriale desiderata da un elenco di porte disponibili. Per altre informazioni, vedere [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
  Questo esempio usa un blocco `Try...Catch...Finally` per verificare che l'applicazione chiuda la porta e per rilevare tutte le eccezioni di timeout. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  

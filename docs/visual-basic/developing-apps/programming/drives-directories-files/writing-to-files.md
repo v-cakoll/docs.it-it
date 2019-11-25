@@ -1,5 +1,5 @@
 ---
-title: Scrittura su file in Visual Basic
+title: Scrittura su file
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588119"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352134"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Scrittura su file in Visual Basic
+
 Questa sezione spiega come eseguire attività che riguardano la scrittura su file.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
+
  [Procedura: scrivere testo in file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  Illustra come scrivere testo in file di testo.  
   
@@ -34,7 +36,8 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
  [Procedura: scrivere testo in file con un oggetto StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Descrive l'oggetto `My.Computer.FileSystem`, i relativi metodi e proprietà.  
   
@@ -48,6 +51,7 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
  Descrive il metodo `WriteAllText`.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
+
  [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Spiega come eseguire le attività che implicano la lettura da file.  
   

@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)'
+title: 'Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58bc76e6f2a269b0baac009f1247d5e94d508cbd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344501"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>How to: Perform Streaming Transform of Large XML Documents (Visual Basic)
 A volte è necessario trasformare file XML di grandi dimensioni e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML molto grande, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
  Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza. Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto per l'applicazione.  
   
- Anche se si usa la tecnica descritta in [Procedura: Stream frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, utilizzo della memoria sarà eccessivo.  
+ Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.  
   
  Sono disponibili due approcci principali: il primo consiste nell'usare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>. L'altro prevede la creazione di un oggetto <xref:System.Xml.XmlWriter> e l'uso delle funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in un oggetto <xref:System.Xml.XmlWriter>. In questo argomento vengono descritti entrambi gli approcci.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente si basa sull'esempio riportato in [Procedura: Stream frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  In questo esempio vengono usate le funzionalità di esecuzione posticipata di <xref:System.Xml.Linq.XStreamingElement> per generare il flusso di output. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
   
@@ -246,7 +246,7 @@ End Class
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente si basa anche sull'esempio riportato in [Procedura: Stream frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  In questo esempio viene usata la funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in <xref:System.Xml.XmlWriter>. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
   
@@ -441,4 +441,4 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

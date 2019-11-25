@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Leggere un valore da una chiave del Registro di sistema in Visual Basic'
+title: 'Procedura: leggere un valore da una chiave del Registro di sistema'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662758"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345609"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: Leggere un valore da una chiave del Registro di sistema in Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: leggere un valore da una chiave del Registro di sistema in Visual Basic
+
 Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per leggere i valori nel Registro di sistema di Windows.  
   
  Se la chiave, "Software\MyApp" nell'esempio seguente, non esiste, viene generata un'eccezione. Se `ValueName`,  "Name" nell'esempio seguente, non esiste, viene restituito `Nothing`.  
@@ -30,7 +31,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento si trova in **Sistema operativo Windows > Registro di sistema**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento si trova in **Sistema operativo Windows > Registro di sistema**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets).  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Per determinare se esiste un valore in una chiave del Registro di sistema  
   
@@ -39,6 +40,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
+
  Nel Registro di sistema sono contenute chiavi di primo livello, o radice, usate per memorizzare i dati. Ad esempio, la chiave radice HKEY_LOCAL_MACHINE è usata per memorizzare le impostazioni a livello di computer usate da tutti gli utenti, mentre la chiave HKEY_CURRENT_USER viene usata per memorizzare i dati specifici di un singolo utente.  
   
  Le seguenti condizioni possono generare un'eccezione:  
@@ -50,6 +52,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
 - Il nome della chiave supera il limite di 255 caratteri (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+
  Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche

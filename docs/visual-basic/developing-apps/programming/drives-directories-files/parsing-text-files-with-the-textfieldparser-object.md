@@ -1,22 +1,24 @@
 ---
-title: Analisi dei file di testo con l'oggetto TextFieldParser (Visual Basic)
+title: Parsing text files with the TextFieldParser object
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 70848e2d53ec4bdb031f73286f2c5be9a7e19387
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813496"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333851"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analisi dei file di testo con l'oggetto TextFieldParser (Visual Basic)
+
 L'oggetto `TextFieldParser` consente di analizzare ed elaborare file di grandi dimensioni strutturati come colonne di testo a larghezza delimitata, ad esempio i file di log e le informazioni sul database legacy. L'analisi di un file di testo con `TextFieldParser` è simile all'esecuzione di un'iterazione di un file di testo, mentre l'uso del metodo di analisi per l'estrazione dei campi di testo è analogo ai metodi di modifica delle stringhe usati per rappresentare in formato tokene le stringhe delimitate.  
   
 ## <a name="parsing-different-types-of-text-files"></a>Analisi dei diversi tipi di file di testo  
+
  I file di testo possono contenere campi di larghezza diversa delimitati da caratteri, ad esempio da una virgola o da uno spazio di tabulazione. Definire `TextFieldType` e il delimitatore, come illustrato nell'esempio seguente, dove viene usato il metodo `SetDelimiters` per definire un file di testo delimitato da tabulazioni:  
   
  [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
@@ -30,6 +32,7 @@ L'oggetto `TextFieldParser` consente di analizzare ed elaborare file di grandi d
  Se un campo non corrisponde al formato specificato viene generata l'eccezione <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>. Quando vengono generate eccezioni di questo genere, le proprietà `ErrorLine` e `ErrorLineNumber` contengono il testo che genera l'eccezione e il numero di riga corrispondente.  
   
 ## <a name="parsing-files-with-multiple-formats"></a>Analisi dei file con più formati  
+
  Il metodo `PeekChars` dell'oggetto `TextFieldParser` può essere usato per controllare ogni campo prima che venga letto, consentendo così di definire più formati per i campi e reagire di conseguenza. Per altre informazioni, vedere [Procedura: Leggere da file di testo con più formati](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Vedere anche

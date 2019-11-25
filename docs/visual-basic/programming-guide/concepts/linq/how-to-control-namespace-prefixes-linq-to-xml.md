@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Prefissi dello spazio dei nomi del controllo (Visual Basic) (LINQ to XML)'
+title: 'How to: Control Namespace Prefixes (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709827"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348381"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedura: Prefissi dello spazio dei nomi del controllo (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedura: controllare i prefissi dello spazio dei nomi (Visual Basic) (LINQ to XML)
 In questo argomento viene descritto come controllare i prefissi di spazio dei nomi.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>DESCRIZIONE  
- In questo esempio vengono dichiarati due spazi dei nomi. Specifica `http://www.adventure-works.com` che lo spazio dei nomi ha il `aw`prefisso e che lo `www.fourthcoffee.com` spazio dei nomi ha il `fc`prefisso.  
+### <a name="description"></a>Descrizione  
+ In questo esempio vengono dichiarati due spazi dei nomi. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
   
 ### <a name="code"></a>Codice  
   
@@ -40,7 +40,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Commenti  
+### <a name="comments"></a>Comments  
  Questo esempio produce il seguente output:  
   
 ```xml  
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

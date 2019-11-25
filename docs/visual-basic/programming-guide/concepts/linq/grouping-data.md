@@ -1,31 +1,31 @@
 ---
-title: Raggruppamento dei dati (Visual Basic)
+title: Raggruppamento dei dati
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e84ccfbd6a2193ac5ab368d7526da2de29a3c47
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754470"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353379"
 ---
-# <a name="grouping-data-visual-basic"></a>Raggruppamento dei dati (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
 Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
   
  Nella figura seguente vengono illustrati i risultati del raggruppamento di una sequenza di caratteri. La chiave di ogni gruppo è il carattere.  
   
- ![Diagramma che mostra un'operazione di raggruppamento LINQ.](./media/grouping-data/linq-group-operation.png)  
+ ![Diagramma che illustra un'operazione di raggruppamento LINQ.](./media/grouping-data/linq-group-operation.png)  
   
  Nella sezione seguente vengono elencati i metodi degli operatori query standard che eseguono il raggruppamento degli elementi di dati.  
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|Raggruppa gli elementi che condividono un attributo comune. Ogni gruppo è rappresentato da un oggetto <xref:System.Linq.IGrouping%602>.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Inserisce gli elementi in un oggetto <xref:System.Linq.Lookup%602>, un dizionario uno-a-molti, sulla base di una funzione del selettore di chiavi.|Non applicabile.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
+## <a name="query-expression-syntax-example"></a>Esempi di sintassi delle espressioni di query  
  Nell'esempio di codice seguente viene illustrato come usare la clausola `Group By` per raggruppare i numeri interi in un elenco a seconda che siano numeri pari o numeri dispari.  
   
 ```vb  
@@ -68,5 +68,5 @@ MsgBox(sb.ToString())
 - <xref:System.Linq>
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Clausola Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [Procedura: Raggruppa file per estensione (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Procedura: Suddividere un File in molti file usando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

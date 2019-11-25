@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11181bacdb919693ffc82c48c061357463a6343b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969089"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336756"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-`ShouldSerialize`e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non dispone di un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è necessario applicare <xref:System.ComponentModel.DefaultValueAttribute> e fornire il valore predefinito al costruttore della classe Attribute. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:
+`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value. If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead. Either of these mechanisms enables the following features in the designer:
 
-- La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stata modificata rispetto al valore predefinito.
+- The property provides visual indication in the property browser if it has been modified from its default value.
 
-- L'utente può fare clic con il pulsante destro del mouse sulla proprietà e scegliere **Reimposta** per ripristinare il valore predefinito della proprietà.
+- The user can right-click on the property and choose **Reset** to restore the property to its default value.
 
-- La finestra di progettazione genera codice più efficiente.
+- The designer generates more efficient code.
 
     > [!NOTE]
-    > Applicare o fornire <xref:System.ComponentModel.DefaultValueAttribute> `Reset`i metodi *PropertyName* e `ShouldSerialize` *PropertyName* . Non usare entrambi.
+    > Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods. Do not use both.
 
- Il `Reset`metodo *PropertyName* imposta una proprietà sul relativo valore predefinito, come illustrato nel frammento di codice seguente.
+ The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
-> Se una proprietà non dispone di un `Reset` metodo, non è contrassegnata con <xref:System.ComponentModel.DefaultValueAttribute>un oggetto e non dispone di un valore predefinito specificato nella relativa dichiarazione, `Reset` l'opzione per tale proprietà è disabilitata nel menu di scelta rapida della finestra **Proprietà** di Progettazione Windows Form in Visual Studio.
+> If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.
 
- Le finestre di progettazione, ad esempio `ShouldSerialize`Visual Studio, usano il metodo *PropertyName* per verificare se una proprietà è cambiata rispetto al valore predefinito e scrivere codice nel form solo se una proprietà viene modificata, consentendo così una generazione di codice più efficiente. Ad esempio:
+ Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation. Esempio:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,15 +62,14 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Di seguito è riportato un esempio di codice completo.
+ A complete code example follows.
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports System
-Imports System.Windows.Forms
 Imports System.Drawing
+Imports System.Windows.Forms
 
 Public Class MyControl
    Inherits Control
@@ -109,8 +108,8 @@ End Class
 
 ```csharp
 using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 public class MyControl : Control {
    // Declare an instance of the Font class
@@ -141,7 +140,7 @@ public class MyControl : Control {
 }
 ```
 
- In questo caso, anche quando il valore della variabile privata a cui si accede `MyFont` tramite la `null`proprietà è, il Visualizzatore proprietà non `null`viene visualizzato; in caso contrario <xref:System.Windows.Forms.Control.Font%2A> , Visualizza la proprietà dell'elemento padre, in `null`caso contrario. o il valore <xref:System.Windows.Forms.Control.Font%2A> predefinito definito in <xref:System.Windows.Forms.Control>. Pertanto, il valore predefinito `MyFont` di non può essere semplicemente impostato e <xref:System.ComponentModel.DefaultValueAttribute> non è possibile applicare un oggetto a questa proprietà. Al contrario, `ShouldSerialize` è `Reset` necessario implementare i metodi e per `MyFont` la proprietà.
+ In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>. Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property. Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.
 
 ## <a name="see-also"></a>Vedere anche
 

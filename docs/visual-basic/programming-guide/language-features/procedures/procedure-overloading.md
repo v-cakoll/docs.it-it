@@ -1,5 +1,5 @@
 ---
-title: Overload della routine (Visual Basic)
+title: Overload della routine
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures
@@ -17,74 +17,74 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 91e76e8c051b1d6f8b6fc1604018a26b23b4945b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663299"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352592"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
 
-*L'overload* significa che una routine di definirla in più versioni, usando lo stesso nome ma gli elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome. Eseguire questa operazione modificando l'elenco di parametri.
+*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
 
-## <a name="overloading-rules"></a>Regole di overload
+## <a name="overloading-rules"></a>Overloading Rules
 
-Quando si esegue l'overload di una procedura, si applicano le regole seguenti:
+When you overload a procedure, the following rules apply:
 
-- **Stesso nome**. Ogni versione di overload debba usare lo stesso nome di procedura.
+- **Same Name**. Each overloaded version must use the same procedure name.
 
-- **Firma diversa**. Ogni versione di overload deve essere diversa da tutte le altre versioni di overload in almeno uno dei seguenti:
+- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
 
-  - Numero di parametri
+  - Number of parameters
 
-  - Ordine dei parametri
+  - Order of the parameters
 
-  - Tipi di dati dei parametri
+  - Data types of the parameters
 
-  - Numero di parametri di tipo (per una routine generica)
+  - Number of type parameters (for a generic procedure)
 
-  - Tipo restituito (solo per un operatore di conversione)
+  - Return type (only for a conversion operator)
 
-  Con il nome della routine, degli elementi precedenti vengono collettivamente definiti il *firma* della procedura. Quando si chiama una routine di overload, il compilatore Usa la firma per verificare che la chiamata corrisponda in modo corretto la definizione.
+  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
 
-- **Elementi che non fanno parte della firma**. È possibile eseguire l'overload di una procedura senza modificare la firma. In particolare, è possibile eseguire l'overload di una procedura variando solo uno o più dei seguenti elementi:
+- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
 
-  - Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`
+  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
 
-  - Nomi dei parametri di parametro o tipo
+  - Parameter or type parameter names
 
-  - Vincoli del parametro (per una routine generica)
+  - Type parameter constraints (for a generic procedure)
 
-  - Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`
+  - Parameter modifier keywords, such as `ByRef` and `Optional`
 
-  - Se viene restituito un valore
+  - Whether it returns a value
 
-  - il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)
+  - The data type of the return value (except for a conversion operator)
 
-  Gli elementi nell'elenco precedente non fanno parte della firma. Anche se non possono essere utilizzati per distinguere le versioni di overload, è possibile variare tra le versioni di overload che si differenziano in modo corretto per le firme.
+  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
 
-- **Associazione tardiva argomenti**. Se si prevede di passare una variabile di oggetto associato ad associazione tardiva a una versione di overload, è necessario dichiarare il parametro appropriato come <xref:System.Object>.
+- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>Più versioni di una stored Procedure
+## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
 
-Si supponga che si sta scrivendo un `Sub` procedure per inserire una transazione con saldo di un cliente e si desidera essere in grado di fare riferimento al cliente in base al nome o dal numero di account. Di conseguenza, è possibile definire due diversi `Sub` procedure, come nell'esempio seguente:
+Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Versioni di overload
+### <a name="overloaded-versions"></a>Overloaded Versions
 
-In alternativa è possibile eseguire l'overload di un singolo nome di routine. È possibile usare la [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) parola chiave per definire una versione della procedura per ogni elenco di parametri, come indicato di seguito:
+An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Overload aggiuntivi
+#### <a name="additional-overloads"></a>Additional Overloads
 
-Se si vuole accettare un importo di transazione in uno `Decimal` oppure `Single`, è possibile eseguire l'overload ulteriormente `post` per consentire questa variazione. Se viene eseguita questa operazione per ogni overload nell'esempio precedente, sarebbe necessario quattro `Sub` procedure, tutte con lo stesso nome ma con quattro firme diverse.
+If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
 
-## <a name="advantages-of-overloading"></a>Vantaggi dell'overload
+## <a name="advantages-of-overloading"></a>Advantages of Overloading
 
-Il vantaggio di overload di una routine è la flessibilità della chiamata. Usare la `post` routine dichiarata nell'esempio precedente, il codice chiamante può ottenere l'identificazione del cliente come un `String` o un `Integer`, quindi chiamare la stessa procedura in entrambi i casi. Questa condizione è illustrata nell'esempio che segue.
+The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. Questa condizione è illustrata nell'esempio che segue.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -93,9 +93,9 @@ Il vantaggio di overload di una routine è la flessibilità della chiamata. Usar
 ## <a name="see-also"></a>Vedere anche
 
 - [Routine](./index.md)
-- [Procedura: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
-- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
 - [Risoluzione dell'overload](./overload-resolution.md)

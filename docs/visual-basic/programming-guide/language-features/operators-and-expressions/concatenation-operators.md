@@ -1,5 +1,5 @@
 ---
-title: Operatori di concatenazione in Visual Basic
+title: Operatori di concatenazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 789478cafc4ed7506d34fb4198531d437683075d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583304"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353684"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatori di concatenazione in Visual Basic
 
@@ -32,9 +32,9 @@ Questi operatori possono concatenare anche variabili di tipo `String`, come nell
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>Differenze tra i due operatori di concatenazione
 
-L' [operatore +](../../../../visual-basic/language-reference/operators/addition-operator.md) ha lo scopo principale di aggiungere due numeri. Questo operatore consente però anche di concatenare operandi numerici con operandi stringa. L'operatore `+` include un insieme complesso di regole che determinano se aggiungere, concatenare, segnalare un errore del compilatore oppure generare un'eccezione <xref:System.InvalidCastException> in fase di esecuzione.
+The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers. Questo operatore consente però anche di concatenare operandi numerici con operandi stringa. L'operatore `+` include un insieme complesso di regole che determinano se aggiungere, concatenare, segnalare un errore del compilatore oppure generare un'eccezione <xref:System.InvalidCastException> in fase di esecuzione.
 
-L' [operatore &](../../../../visual-basic/language-reference/operators/concatenation-operator.md) viene definito solo per gli operandi `String` ed estende sempre gli operandi a `String`, indipendentemente dall'impostazione di `Option Strict`. L'operatore `&` rappresenta la scelta consigliata per la concatenazione delle stringhe poiché viene definito solo per le stringhe e riduce la possibilità di generare conversioni non intenzionali.
+The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`. L'operatore `&` rappresenta la scelta consigliata per la concatenazione delle stringhe poiché viene definito solo per le stringhe e riduce la possibilità di generare conversioni non intenzionali.
 
 ## <a name="performance-string-and-stringbuilder"></a>Prestazioni: String e StringBuilder
 
@@ -43,7 +43,7 @@ Se una stringa subisce numerose manipolazioni, ad esempio concatenazioni, elimin
 ## <a name="see-also"></a>Vedere anche
 
 - [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Tipi di metodi di manipolazione delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Operatori aritmetici in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

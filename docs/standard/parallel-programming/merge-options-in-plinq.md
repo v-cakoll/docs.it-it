@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129014"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203991"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
 Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza di origine in modo che più thread possano operare simultaneamente su parti diverse, in genere su thread separati. Se i risultati devono essere utilizzati in un unico thread, ad esempio in un ciclo `foreach` (`For Each` in Visual Basic), i risultati di ogni thread devono essere nuovamente uniti in un'unica sequenza. Il tipo di merge che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine nei risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dal punto di vista del thread consumer (che è anche quello dell'utente dell'applicazione), una query completamente memorizzata nel buffer potrebbe essere eseguita per un periodo considerevole di tempo prima che produca il primo risultato. Gli altri operatori, per impostazione predefinita, sono parzialmente memorizzati nel buffer e generano i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, non è memorizzato nel buffer per impostazione predefinita. Genera immediatamente tutti gli elementi di tutti i thread.  
@@ -32,7 +32,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 - `Not Buffered`  
   
-     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche se `NotBuffered` inizia a generare i risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere tuttavia più lungo che usando una delle altre opzioni di merge.  
+     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Although `NotBuffered` starts yielding results as soon as they're available, the total time to produce all the results might still be longer than using one of the other merge options.  
   
 - `Auto Buffered`  
   
