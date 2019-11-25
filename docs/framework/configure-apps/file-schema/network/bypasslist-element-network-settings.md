@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699547"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087516"
 ---
-# <a name="bypasslist-element-network-settings"></a>Elemento > \<bypasslist (impostazioni di rete)
+# <a name="bypasslist-element-network-settings"></a>\<elemento > di bypass (impostazioni di rete)
 Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy**](defaultproxy-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<di **bypass** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -34,7 +34,7 @@ Fornisce un set di espressioni regolari che descrivono gli indirizzi che non uti
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -51,9 +51,9 @@ Fornisce un set di espressioni regolari che descrivono gli indirizzi che non uti
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
   
 ## <a name="remarks"></a>Note  
- L'elenco di bypass contiene espressioni regolari che descrivono gli URI che <xref:System.Net.WebRequest> istanze di accedono direttamente anziché tramite il server proxy.  
+ L'elenco di bypass contiene espressioni regolari che descrivono gli URI che <xref:System.Net.WebRequest>no l'accesso diretto alle istanze anziché tramite il server proxy.  
   
- È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] + @no__t -0.contoso\\.com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\. contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza con un solo host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] +\\. contoso\\. com $".  
   
  Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../standard/base-types/regular-expressions.md).  
   

@@ -1,13 +1,13 @@
 ---
 title: Riferimento per parole chiave
 description: Trovare collegamenti a informazioni su tutte le F# parole chiave del linguaggio.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425077"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976613"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -87,7 +87,7 @@ Nella tabella seguente vengono illustrate tutte le F# parole chiave in ordine al
 |`when`|[Vincoli](./generics/constraints.md)|Usato per le condizioni booleane (*When guardes*) sulle corrispondenze del criterio e per introdurre una clausola di vincolo per un parametro di tipo generico.|
 |`while`|[Cicli: espressione `while...do`](loops-while-do-expression.md)|Introduce un costrutto di ciclo.|
 |`with`|[Espressioni match](match-expressions.md)<br /><br />[Espressioni di oggetto](object-expressions.md)<br /><br />[Copiare e aggiornare espressioni di record](copy-and-update-record-expressions.md)<br /><br />[Estensioni di tipo](type-extensions.md)<br /><br />[Eccezioni: espressione `try...with`](./exception-handling/the-try-with-expression.md)|Utilizzato insieme alla parola chiave `match` nelle espressioni di criteri di ricerca. Utilizzato anche nelle espressioni di oggetto, nella copia di record e nelle estensioni di tipo per introdurre le definizioni dei membri e per introdurre gestori di eccezioni.|
-|`yield`|[Sequenze](sequences.md)|Utilizzato in un'espressione di sequenza per produrre un valore per una sequenza.|
+|`yield`|[Elenchi](lists.md), [matrici](arrays.md), [sequenze](sequences.md)|Utilizzato in un elenco, una matrice o un'espressione di sequenza per produrre un valore per una sequenza. In genere può essere omesso perché è implicito nella maggior parte delle situazioni.|
 |`yield!`|[Espressioni di calcolo](computation-expressions.md)<br /><br />[Flussi di lavoro asincroni](asynchronous-workflows.md)|Utilizzato in un'espressione di calcolo per accodare il risultato di un'espressione di calcolo specificata a una raccolta di risultati per l'espressione di calcolo contenitore.|
 
 I token seguenti sono riservati in F# perché sono parole chiave nel linguaggio OCaml:

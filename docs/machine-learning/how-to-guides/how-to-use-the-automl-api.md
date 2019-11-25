@@ -1,14 +1,14 @@
 ---
 title: Come usare l'API di Machine Learning automatizzato per ML.NET
 description: L'API di Machine Learning automatizzato per ML.NET consente di automatizzare il processo di compilazione del modello e genera un modello pronto per la distribuzione. Sono disponibili varie opzioni per configurare attività di Machine Learning automatizzato.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774556"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977126"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
 
@@ -32,6 +32,7 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Selezionare il tipo di attività di apprendimento automatico
+
 Prima di creare un esperimento, determinare il tipo di problema di apprendimento automatico da risolvere. Il Machine Learning automatizzato supporta le seguenti attività di apprendimento automatico:
 
 * Classificazione binaria
@@ -62,7 +63,7 @@ Creare le impostazioni dell'esperimento per il tipo specifico di attività di ap
 
 ## <a name="configure-experiment-settings"></a>Configurare le impostazioni dell'esperimento
 
-Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) per un elenco completo delle impostazioni di configurazione.
+Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) per un elenco completo delle impostazioni di configurazione.
 
 Di seguito sono riportati alcuni esempi:
 

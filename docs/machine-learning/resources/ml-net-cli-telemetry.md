@@ -4,12 +4,12 @@ description: Informazioni sulle funzionalità di telemetria dell'interfaccia del
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929273"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977257"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
@@ -17,15 +17,15 @@ L'[interfaccia della riga di comando di ML.NET](https://aka.ms/mlnet-cli) includ
 
 ## <a name="how-microsoft-uses-the-data"></a>Come Microsoft usa i dati
 
-Il team di prodotto usa i dati di telemetria dell'interfaccia della riga di comando di ML.NET per capire come migliorare gli strumenti che propone. Se i clienti utilizzano raramente una particolare attività di Machine Learning, ad esempio, il team di prodotto indaga sul motivo e usa i risultati per stabilire le priorità delle funzionalità da sviluppare in futuro. I dati di telemetria dell'interfaccia della riga di comando di ML.NET sono utili anche per il debug dei problemi, ad esempio gli arresti anomali del sistema e le anomalie di codice. 
+Il team di prodotto usa i dati di telemetria dell'interfaccia della riga di comando di ML.NET per capire come migliorare gli strumenti che propone. Se i clienti utilizzano raramente una particolare attività di Machine Learning, ad esempio, il team di prodotto indaga sul motivo e usa i risultati per stabilire le priorità delle funzionalità da sviluppare in futuro. I dati di telemetria dell'interfaccia della riga di comando di ML.NET sono utili anche per il debug dei problemi, ad esempio gli arresti anomali del sistema e le anomalie di codice.
 
 Nonostante il team di prodotto gradisca disporre di questo tipo di informazioni, Microsoft è consapevole che non tutti gli utenti sono disposti a inviare i dati. [Informazioni su come disabilitare i dati di telemetria.](#opt-out-of-data-collection)
 
-## <a name="scope"></a>Ambito
+## <a name="scope"></a>Scope
 
 Il comando `mlnet` avvia l'interfaccia della riga di comando di ML.NET, ma non raccoglie i dati di telemetria.
 
-La funzionalità di telemetria *non è abilitata* quando si esegue il comando `mlnet` con nessun altro comando collegato. Ad esempio:
+La funzionalità di telemetria *non è abilitata* quando si esegue il comando `mlnet` con nessun altro comando collegato. Esempio:
 
 - `mlnet`
 - `mlnet --help`
@@ -51,12 +51,13 @@ La funzionalità raccoglie i dati seguenti:
 - Nome di file del set di dati con hash
 - Bucket delle dimensioni di file del set di dati
 - Sistema operativo e versione
-- Valore del parametro --task: Valori di categorie, ad esempio `regression`, `binary-classification` e `multiclass-classification`
+- Valore di--parametro attività: valori categorici, ad esempio `regression`, `binary-classification`e `multiclass-classification`
 - Versione dell'interfaccia della riga di comando ML.NET (0.3.27703.4)
 
 I dati vengono inviati ai server Microsoft in modalità protetta grazie alla tecnologia [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), conservati con accesso limitato e usati in base a severi controlli di sicurezza da parte di sistemi di [archiviazione di Azure](https://azure.microsoft.com/services/storage/).
 
 ### <a name="data-points-not-collected"></a>Punti dati non raccolti
+
 La funzionalità di telemetria *non* raccoglie:
 
 - dati personali, ad esempio i nomi utente
@@ -67,7 +68,7 @@ Se si sospetta che la funzionalità di telemetria dell'interfaccia della riga di
 
 ## <a name="license"></a>Licenza
 
-La distribuzione dell'interfaccia della riga di comando di ML.NET da parte di Microsoft è concessa secondo le [Condizioni di licenza software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula). Per informazioni dettagliate sulla raccolta e l'elaborazione dei dati, vedere la sezione intitolata "DATA".
+La distribuzione Microsoft dell'interfaccia della riga di comando di ML.NET è concessa in licenza con le [condizioni di licenza software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula). Per informazioni dettagliate sulla raccolta e l'elaborazione dei dati, vedere la sezione intitolata "DATA".
 
 ## <a name="disclosure"></a>Divulgazione
 
@@ -76,6 +77,6 @@ Quando si esegue un [comando dell'interfaccia della riga di comando di ML.NET](.
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimento interfaccia della riga di comando](../reference/ml-net-cli-reference.md)
-- [Condizioni di licenza software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula)
+- [Condizioni di licenza software Microsoft: libreria Microsoft .NET](https://aka.ms/dotnet-core-eula)
 - [Privacy at Microsoft](https://www.microsoft.com/trustcenter/privacy/) (La privacy in Microsoft)
 - [Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement)

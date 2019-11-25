@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
-ms.openlocfilehash: 2bbae640ca65c95411cae24a9506fe2076b62cba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 301f249e6222c929d2c513964ecbb21df5fbc47f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751644"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976184"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>Non è stato specificato un form di avvio
-L'applicazione usa il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe ma non specificano il form di avvio.  
+
+L'applicazione usa la classe <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> ma non specifica il modulo di avvio.  
   
- Ciò può verificarsi se il **Abilita framework applicazione** casella di controllo è selezionata in Creazione progetti, ma il **form di avvio** non è specificato. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Questa situazione può verificarsi se la casella di controllo **Abilita framework applicazione** è selezionata in Progettazione progetti, ma il **modulo di avvio** non è specificato. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
@@ -22,7 +23,7 @@ L'applicazione usa il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFor
   
      Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-2. Eseguire l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> per impostare il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà al form di avvio.  
+2. Eseguire l'override del metodo <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> per impostare la proprietà <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> sul form di avvio.  
   
 ## <a name="see-also"></a>Vedere anche
 

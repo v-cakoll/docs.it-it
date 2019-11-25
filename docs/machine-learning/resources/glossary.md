@@ -4,12 +4,12 @@ description: Glossario dei principali termini relativi all'apprendimento automat
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180178"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977291"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -29,15 +29,15 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 ## <a name="calibration"></a>Calibrazione
 
-La calibrazione è il processo di mapping di un punteggio non elaborato a un'appartenenza di classe, per la classificazione binaria e multiclasse. Alcuni formatori ML.NET hanno un suffisso `NonCalibrated`. Questi algoritmi producono un punteggio non elaborato che deve quindi essere mappato a una probabilità di classe. 
+La calibrazione è il processo di mapping di un punteggio non elaborato a un'appartenenza di classe, per la classificazione binaria e multiclasse. Alcuni formatori ML.NET hanno un suffisso `NonCalibrated`. Questi algoritmi producono un punteggio non elaborato che deve quindi essere mappato a una probabilità di classe.
 
-## <a name="catalog"></a>Catalog 
+## <a name="catalog"></a>Catalog
 
 In ML.NET un catalogo è una raccolta di funzioni di estensione, raggruppate in base a uno scopo comune.
 
 Ad esempio, ogni attività di apprendimento automatico (classificazione binaria, regressione, ranking e così via) include un catalogo di algoritmi di apprendimento automatico disponibili (formatori). Il catalogo per i formatori di classificazione binaria è: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>classificazione
+## <a name="classification"></a>Classificazione
 
 Quando i dati vengono usati per stimare una categoria, l'attività di [apprendimento automatico con supervisione](#supervised-machine-learning) viene denominata classificazione. Il termine [classificazione binaria](#binary-classification) fa riferimento alla stima di due sole categorie (ad esempio, la classificazione di un'immagine come un'immagine di un "gatto" o un "cane"). Il termine [classificazione multiclasse](#multiclass-classification) fa riferimento alla stima di più categorie (ad esempio, la classificazione di un'immagine come un'immagine di una specifica razza di cani).
 
@@ -45,7 +45,7 @@ Quando i dati vengono usati per stimare una categoria, l'attività di [apprendim
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione che indica il livello di adattamento dei dati a un modello. È compreso tra 0 e 1. Un valore pari a 0 indica che i dati sono casuali o non possono essere adattati al modello. Un valore pari a 1 indica che il modello corrisponde esattamente ai dati. È noto anche come r<sup>2</sup>, R<sup>2</sup> o r al quadrato.
 
-## <a name="data"></a>Data
+## <a name="data"></a>Dati
 
 I dati sono fondamentali per qualsiasi applicazione di apprendimento automatico. In ML.NET i dati sono rappresentati da oggetti <xref:Microsoft.ML.IDataView>. Gli oggetti di visualizzazione dei dati:
 
@@ -170,7 +170,7 @@ Il processo di identificazione di un [modello](#model) per un determinato traini
 
 Classe ML.NET che implementa l'interfaccia <xref:Microsoft.ML.ITransformer>.
 
-Un trasformatore consente di trasformare un oggetto <xref:Microsoft.ML.IDataView> in un altro. Viene creato eseguendo il training di uno [strumento di stima](#estimator) o di una pipeline di strumenti di stima. 
+Un trasformatore consente di trasformare un oggetto <xref:Microsoft.ML.IDataView> in un altro. Viene creato eseguendo il training di uno [strumento di stima](#estimator) o di una pipeline di strumenti di stima.
 
 ## <a name="unsupervised-machine-learning"></a>Apprendimento automatico senza supervisione
 

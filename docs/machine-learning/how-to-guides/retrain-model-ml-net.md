@@ -5,18 +5,18 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397706"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976958"
 ---
 # <a name="re-train-a-model"></a>Ripetere il training di un modello
 
 Informazioni su come ripetere il training di un modello di Machine Learning in ML.NET.
 
-Il mondo e i dati presenti in ogni sua parte cambiano a un ritmo costante. Di conseguenza, è necessario modificare e aggiornare anche i modelli. ML.NET offre funzionalità per ripetere il training dei modelli usando i parametri del modello appreso come punto di partenza per continuare a sfruttare le esperienze precedenti anziché iniziare ogni volta da zero.  
+Il mondo e i dati presenti in ogni sua parte cambiano a un ritmo costante. Di conseguenza, è necessario modificare e aggiornare anche i modelli. ML.NET offre funzionalità per ripetere il training dei modelli usando i parametri del modello appreso come punto di partenza per continuare a sfruttare le esperienze precedenti anziché iniziare ogni volta da zero.
 
 In ML.NET è possibile ripetere il training degli algoritmi seguenti:
 
@@ -33,7 +33,7 @@ In ML.NET è possibile ripetere il training degli algoritmi seguenti:
 
 ## <a name="load-pre-trained-model"></a>Caricare il modello con training preliminare
 
-Caricare prima il modello con training preliminare nell'applicazione. Per altre informazioni su come caricare pipeline e modelli di training, vedere il relativo [articolo sulla procedura](./consuming-model-ml-net.md).
+Caricare prima il modello con training preliminare nell'applicazione. Per altre informazioni sul caricamento di pipeline e modelli di training, vedere [salvare e caricare un modello](save-load-machine-learning-models-ml-net.md)sottoposto a training.
 
 ```csharp
 // Create MLContext
@@ -55,13 +55,13 @@ Dopo aver caricato il modello, estrarre i parametri del modello appreso accedend
 
 ```csharp
 // Extract trained model parameters
-LinearRegressionModelParameters originalModelParameters = 
+LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
 ## <a name="re-train-model"></a>Ripetere il training del modello
 
-Il processo di ripetizione del training di un modello non è diverso da quello di training di un modello. L'unica differenza sta nel fatto che oltre ai dati, il metodo [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) acquisisce come input anche i parametri del modello appreso originale e li usa come punto di partenza nel processo di ripetizione del training.  
+Il processo di ripetizione del training di un modello non è diverso da quello di training di un modello. L'unica differenza sta nel fatto che oltre ai dati, il metodo [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) acquisisce come input anche i parametri del modello appreso originale e li usa come punto di partenza nel processo di ripetizione del training.
 
 ```csharp
 // New Data
@@ -94,7 +94,7 @@ IDataView newData = mlContext.Data.LoadFromEnumerable<HousingData>(housingData);
 IDataView transformedNewData = dataPrepPipeline.Transform(newData);
 
 // Retrain model
-RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel = 
+RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel =
     mlContext.Regression.Trainers.OnlineGradientDescent()
         .Fit(transformedNewData, originalModelParameters);
 ```
@@ -108,7 +108,7 @@ Come si può verificare che il training sia stato effettivamente ripetuto? Un mo
 LinearRegressionModelParameters retrainedModelParameters = retrainedModel.Model as LinearRegressionModelParameters;
 
 // Inspect Change in Weights
-var weightDiffs = 
+var weightDiffs =
     originalModelParameters.Weights.Zip(
         retrainedModelParameters.Weights, (original, retrained) => original - retrained).ToArray();
 
@@ -119,7 +119,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-La tabella seguente illustra il possibile output. 
+La tabella seguente illustra il possibile output.
 
 |Originale | Training ripetuto | Differenza |
 |---|---|---|

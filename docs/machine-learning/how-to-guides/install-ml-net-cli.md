@@ -3,12 +3,12 @@ title: Come installare lo strumento dell'interfaccia della riga di comando (CLI)
 description: Panoramica e installazione dello strumento dell'interfaccia della riga di comando (CLI) di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117997"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977086"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
 
@@ -25,11 +25,11 @@ L'interfaccia della riga di comando di ML.NET è uno strumento che può essere e
 
 È possibile eseguire i progetti in codice C# generati con F5 in Visual Studio o con `dotnet run` (interfaccia della riga di comando di .NET Core).
 
-Nota: Se dopo l'installazione di [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) il comando `dotnet tool` non funziona, disconnettersi da Windows ed eseguire di nuovo l'accesso.
+Nota: se dopo l'installazione di [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) il comando `dotnet tool` non funziona, disconnettersi da Windows ed eseguire di nuovo l'accesso.
 
 ## <a name="install"></a>Installazione di
 
-L'interfaccia della riga di comando di ML.NET viene installata come gli altri strumenti globali dotnet. Usare il comando dell'interfaccia della riga di comando di .NET Core `dotnet tool install`. 
+L'interfaccia della riga di comando di ML.NET viene installata come gli altri strumenti globali dotnet. Usare il comando dell'interfaccia della riga di comando di .NET Core `dotnet tool install`.
 
 L'esempio seguente illustra come installare l'interfaccia della riga di comando di ML.NET nel percorso del feed NuGet predefinito:
 
@@ -112,7 +112,7 @@ Nel computer in cui si vuole abilitare il completamento, è necessario eseguire 
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (Per le altre shell, [ricercare](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) o aprire un [problema](https://github.com/dotnet/System.CommandLine/issues)).
 
@@ -120,7 +120,7 @@ Nel computer in cui si vuole abilitare il completamento, è necessario eseguire 
 
 L'interfaccia della riga di comando di ML.NET può essere installata nella directory predefinita o in un percorso specifico. Le directory predefinite sono:
 
-| Sistema operativo          | Path                          |
+| Sistema operativo          | Percorso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
@@ -136,5 +136,5 @@ In questo caso l'interfaccia della riga di comando di .NET Core non aggiunge aut
 
 - [Esercitazione dell'introduzione allo strumento dell'interfaccia della riga di comando di ML.NET CLI](../tutorials/mlnet-cli.md)
 - [Come eseguire automaticamente il training dei modelli con lo strumento dell'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
-- [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando di ML.NET](../reference/ml-net-cli-reference.md) 
-- [Telemetria nell'interfaccia della riga di comando di ML.NET](../resources/ml-net-cli-telemetry.md)
+- [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando ML.NET](../reference/ml-net-cli-reference.md)
+- [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)

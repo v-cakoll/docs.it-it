@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698323"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088434"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>Elemento > \<defaultFtpCachePolicy (impostazioni di rete)
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<elemento > defaultFtpCachePolicy (impostazioni di rete)
 Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<RequestCaching**](requestcaching-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<DefaultFtpCachePolicy** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -54,7 +54,7 @@ Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di 
 |`Revalidate`|Soddisfa una richiesta utilizzando la copia memorizzata nella cache della risorsa se il timestamp corrisponde al timestamp della risorsa nel server. in caso contrario, la risorsa viene scaricata dal server, presentata al chiamante e archiviata nella cache.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -65,7 +65,7 @@ Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di 
 ## <a name="remarks"></a>Note  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare un criterio di memorizzazione nella cache FTP `NoCacheNoStore`.  
+ Nell'esempio seguente viene illustrato come specificare un criterio di memorizzazione nella cache FTP per `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  

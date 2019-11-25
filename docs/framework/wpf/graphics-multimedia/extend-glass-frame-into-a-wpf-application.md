@@ -10,19 +10,19 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039839"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977013"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
 
-In questo argomento viene illustrato come estendere [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] il frame glass all'area client di un'applicazione Windows Presentation Foundation (WPF).
+In questo argomento viene illustrato come estendere il frame vetro di Windows Vista nell'area client di un'applicazione Windows Presentation Foundation (WPF).
 
 > [!NOTE]
-> Questo esempio funziona solo su un computer [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] che esegue Gestione finestre desktop (DWM) con l'effetto cristallo abilitato. Home Basic edition di [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] non supporta la trasparenza effetto cristallo. Le aree che avrebbero una trasparenza effetto cristallo nelle altre versioni di [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] risultano opache.
+> Questo esempio funziona solo su un computer con Windows Vista che esegue lo Gestione finestre desktop (DWM) con Glass abilitato. Windows Vista Home Basic Edition non supporta l'effetto cristallo trasparente. Le aree che in genere eseguono il rendering con effetto cristallo trasparente sulle altre edizioni di Windows Vista vengono rese opache.
 
 ## <a name="example"></a>Esempio
 
@@ -30,7 +30,7 @@ Nell'immagine seguente viene illustrato il frame di vetro esteso nella barra deg
 
 ![Screenshot che mostra la cornice a cristallino esteso dietro la barra degli indirizzi IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Per estendere il frame di vetro in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] un'applicazione, è necessario l'accesso all'API non gestita. Nell'esempio di codice seguente viene eseguita una PInvoke (Platform Invoke) per le due API necessarie per estendere il frame nell'area client. Ognuna di queste API viene dichiarata in una classe denominata **NonClientRegionAPI**.
+Per estendere il frame di vetro in un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario l'accesso all'API non gestita. Nell'esempio di codice seguente viene eseguita una PInvoke (Platform Invoke) per le due API necessarie per estendere il frame nell'area client. Ognuna di queste API viene dichiarata in una classe denominata **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Esempio
 
-Per usare la funzione [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), è necessario ottenere un punto di controllo di finestra. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]è possibile ottenere l'handle della finestra <xref:System.Windows.Interop.HwndSource.Handle%2A> dalla proprietà di un oggetto <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente il frame viene esteso all'area <xref:System.Windows.FrameworkElement.Loaded> client nell'evento della finestra.
+Per usare la funzione [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), è necessario ottenere un punto di controllo di finestra. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'handle di finestra può essere ottenuto dalla proprietà <xref:System.Windows.Interop.HwndSource.Handle%2A> di un <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente il frame viene esteso all'area client nell'evento <xref:System.Windows.FrameworkElement.Loaded> della finestra.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramma viene esteso all'area client. Il frame viene esteso dietro il bordo superiore che contiene i due <xref:System.Windows.Controls.TextBox> oggetti.
+Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramma viene esteso all'area client. Il frame viene esteso dietro il bordo superiore che contiene i due oggetti <xref:System.Windows.Controls.TextBox>.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,7 +145,7 @@ Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramm
 </Window>
 ```
 
-Nell'immagine seguente viene illustrato il frame di vetro esteso in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] un'applicazione:
+Nell'immagine seguente viene illustrato il frame di vetro esteso in un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
 
 ![Screenshot che mostra un frame di vetro esteso in un'applicazione WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

@@ -1,42 +1,48 @@
 ---
 title: Che cos'è ML.NET e come funziona?
 description: ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete per usare ML.NET. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592044"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976730"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
-ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
+ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione.
+
+Central per ML.NET è un **modello**di machine learning. Il modello specifica i passaggi necessari per trasformare i dati di input in una stima. Con ML.NET è possibile eseguire il training di un modello personalizzato specificando un algoritmo oppure è possibile importare modelli TensorFlow e ONNX con training preliminare.
+
+Quando si dispone di un modello, è possibile aggiungerlo all'applicazione per eseguire le stime.
 
 ML.NET viene eseguito in Windows, Linux e macOS con .NET Core o Windows con .NET Framework. 64 bit è supportato in tutte le piattaforme. 32 bit è supportato in Windows, ad eccezione delle funzionalità correlate a TensorFlow, LightGBM e ONNX.
 
-Esempi del tipo di stime che è possibile eseguire con ML.NET:
+Esempi del tipo di stime che è possibile apportare con ML.NET:
 
 |||
 |-|-|
 |Classificazione/categorizzazione|Suddivisione automatica del feedback dei clienti in categorie positive e negative|
 |Regressione/stima di valori continui|Stimare il prezzo di unità immobiliari sulla base di dimensioni e posizione|
 |Rilevamento anomalie|Rilevare le transazioni bancarie illecite |
-|Consigli|Suggerire prodotti che possono risultare interessanti agli acquirenti online sulla base dei loro acquisti precedenti|
+|Suggerimenti|Suggerire prodotti che possono risultare interessanti agli acquirenti online sulla base dei loro acquisti precedenti|
+|Serie temporali/dati sequenziali|Prevedere le vendite Meteo/prodotto|
+|Classificazione immagini|Categorizzare le patologie nelle immagini medicali|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET. Questo esempio crea un modello di regressione lineare per stimare i prezzi di unità immobiliari usando i dati delle dimensioni e del prezzo dell'unità immobiliare. Nelle applicazioni reali, i dati e il modello saranno molto più complessi.
+Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET. Questo esempio crea un modello di regressione lineare per stimare i prezzi di unità immobiliari usando i dati delle dimensioni e del prezzo dell'unità immobiliare. 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,7 +84,7 @@ Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
 ## <a name="code-workflow"></a>Flusso di lavoro del codice
@@ -93,7 +99,7 @@ Il diagramma seguente rappresenta la struttura del codice dell'applicazione e il
 - Caricare il modello in un oggetto **ITransformer**
 - Eseguire stime chiamando **CreatePredictionEngine.Predict()**
 
-![Flusso di sviluppo dell'applicazione ML.NET che include componenti per la generazione dei dati, sviluppo di pipeline, training del modello, valutazione del modello e uso del modello](./media/mldotnet-annotated-workflow.png) 
+![Flusso di sviluppo dell'applicazione ML.NET che include componenti per la generazione dei dati, sviluppo di pipeline, training del modello, valutazione del modello e uso del modello](./media/mldotnet-annotated-workflow.png)
 
 Ora si approfondiranno questi concetti.
 
@@ -103,7 +109,7 @@ Un modello ML.NET è un oggetto che contiene le trasformazioni da eseguire sui d
 
 ### <a name="basic"></a>Basic
 
-Il modello più semplice è la regressione lineare bidimensionale, in cui una quantità continua è proporzionale a un'altra, come illustrato nell'esempio di prezzi di unità immobiliari precedente. 
+Il modello più semplice è la regressione lineare bidimensionale, in cui una quantità continua è proporzionale a un'altra, come illustrato nell'esempio di prezzi di unità immobiliari precedente.
 
 ![Modello di regressione lineare con parametri di distorsione e peso](./media/linear-regression-model.svg)
 
@@ -113,7 +119,7 @@ Il modello è semplicemente: $Price = b + Size * w$. I parametri $b$ e $w$ vengo
 
 Un modello più complesso classifica le transazioni finanziarie in categorie usando la descrizione di testo della transazione.
 
-Ogni descrizione di transazione è suddivisa in un set di caratteristiche, tramite la rimozione delle parole e dei caratteri ridondanti e il conteggio delle combinazioni di parole e caratteri. Il set di caratteristiche è usato per il training di un modello lineare sulla base del set di categorie nei dati di training. Più una nuova descrizione è simile a quelle del training set, maggiore è la probabilità che sia assegnata alla stessa categoria. 
+Ogni descrizione di transazione è suddivisa in un set di caratteristiche, tramite la rimozione delle parole e dei caratteri ridondanti e il conteggio delle combinazioni di parole e caratteri. Il set di caratteristiche è usato per il training di un modello lineare sulla base del set di categorie nei dati di training. Più una nuova descrizione è simile a quelle del training set, maggiore è la probabilità che sia assegnata alla stessa categoria.
 
 ![Modello di classificazione del testo](./media/text-classification-model.svg)
 
@@ -131,7 +137,7 @@ Un'appendice con tutte le [trasformazioni](./resources/transforms.md) è disponi
 
 ## <a name="model-evaluation"></a>Valutazione del modello
 
-Dopo aver eseguito il training del modello, come si sa se le stime future verranno eseguite correttamente? Con ML.NET è possibile valutare il modello rispetto a nuovi dati di test. 
+Dopo aver eseguito il training del modello, come si sa se le stime future verranno eseguite correttamente? Con ML.NET è possibile valutare il modello rispetto a nuovi dati di test.
 
 Ogni tipo di attività di apprendimento automatico dispone di metriche che vengono usate per valutare l'accuratezza e la precisione del modello rispetto al set di dati di test.
 
@@ -148,7 +154,7 @@ Per l'esempio di definizione dei prezzi di unità immobiliari è stata usata l'a
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -225,7 +231,7 @@ L'oggetto modello risultante implementa l'interfaccia <xref:Microsoft.ML.ITransf
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
+
 Il metodo `CreatePredictionEngine()` accetta una classe di input e una classe di output. I nomi di campo e/o gli attributi di codice determinano i nomi delle colonne di dati usate durante il training del modello e la stima. Per altre informazioni vedere [How to make a single prediction](./how-to-guides/single-predict-model-ml-net.md) (Come eseguire una stima singola) nella sezione Procedure.
 
 ### <a name="data-models-and-schema"></a>Modelli di dati e schema
@@ -254,7 +260,7 @@ Tutti gli algoritmi creano a loro volta nuove colonne dopo che hanno eseguito un
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
 Per altre informazioni sulle colonne di output delle diverse attività di apprendimento automatico, vedere [Attività di apprendimento automatico](resources/tasks.md).
 
@@ -270,14 +276,14 @@ Una proprietà importante degli oggetti DataView è che vengono valutati **in mo
 
 Nelle applicazioni reali il codice di training e valutazione del modello è separato dalla stima. Di fatto, queste due attività vengono spesso eseguite da team separati. Il team di sviluppo del modello può salvare il modello per l'uso nell'applicazione di stima.
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
-È possibile imparare come compilare applicazioni tramite attività di apprendimento automatico diverse con set di dati più realistici nelle [esercitazioni](./tutorials/index.md).
+* Informazioni su come creare applicazioni usando diverse attività di Machine Learning con set di dati più realistici nelle [esercitazioni](./tutorials/index.md).
 
-Oppure è possibile approfondire argomenti specifici nelle [guide alle procedure](./how-to-guides/index.md).
+* Per informazioni dettagliate sugli argomenti specifici, vedere la [Guida alle procedure](./how-to-guides/index.md).
 
-In alternativa è possibile passare direttamente alla [documentazione di riferimento per le API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Se si è molto appassionati, è possibile passare direttamente alla [documentazione di riferimento delle API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).

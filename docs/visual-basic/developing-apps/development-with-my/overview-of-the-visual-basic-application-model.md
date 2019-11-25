@@ -5,54 +5,58 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622799"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976466"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Cenni preliminari sul modello di applicazione Visual Basic
-Visual Basic fornisce un modello ben definito per il controllo del comportamento delle applicazioni Windows Forms: il modello di applicazione Visual Basic. Questo modello include gli eventi per la gestione dell'applicazione avvio e arresto, nonché gli eventi per intercettare eccezioni non gestite. Fornisce inoltre il supporto per lo sviluppo di applicazioni a istanza singola. Il modello applicativo è estensibile, in modo che gli sviluppatori che devono esercitare un controllo più possono personalizzare i relativi metodi sottoponibili a override.  
+
+Visual Basic fornisce un modello ben definito per controllare il comportamento delle applicazioni Windows Forms: il modello di applicazione Visual Basic. Questo modello include gli eventi per gestire l'avvio e l'arresto dell'applicazione, nonché gli eventi per intercettare le eccezioni non gestite. Fornisce inoltre il supporto per lo sviluppo di applicazioni a istanza singola. Il modello applicativo è estendibile, quindi gli sviluppatori che necessitano di un maggior controllo possono personalizzare i metodi sottoponibili a override.  
   
-## <a name="uses-for-the-application-model"></a>Viene utilizzato per il modello di applicazione  
- Una tipica applicazione deve eseguire le attività quando viene avviato e arrestato. Ad esempio, all'avvio, l'applicazione può visualizzare una schermata, stabilire connessioni al database, caricare uno stato salvato e così via. Quando l'applicazione viene arrestata, è possibile chiudere le connessioni al database, salvare lo stato corrente e così via. Inoltre, l'applicazione può eseguire codice specifico quando l'applicazione venga interrotto improvvisamente, ad esempio durante un'eccezione non gestita.  
+## <a name="uses-for-the-application-model"></a>Usi per il modello di applicazione  
+
+ Un'applicazione tipica deve eseguire attività quando viene avviata e arrestata. Ad esempio, all'avvio, l'applicazione può visualizzare una schermata iniziale, stabilire connessioni al database, caricare uno stato salvato e così via. Quando l'applicazione viene arrestata, è possibile chiudere le connessioni di database, salvare lo stato corrente e così via. Inoltre, l'applicazione può eseguire codice specifico quando l'applicazione si arresta in modo imprevisto, ad esempio durante un'eccezione non gestita.  
   
- Il modello di applicazione Visual Basic semplifica creare un *a istanza singola* dell'applicazione. Un'applicazione a istanza singola è diverso da una normale applicazione in cui è possibile essere in esecuzione solo un'istanza dell'applicazione alla volta. Un tentativo di avviare un'altra istanza di un'applicazione a istanza singola risulta nell'istanza originale, inviare una notifica, ovvero per mezzo del `StartupNextInstance` eventi, che è stato effettuato un altro tentativo di avvio. La notifica include argomenti della riga di comando dell'istanza successiva. L'istanza successiva dell'applicazione viene quindi chiusa prima di poter eseguire qualsiasi inizializzazione.  
+ Il modello di applicazione Visual Basic semplifica la creazione di un'applicazione a *istanza singola* . Un'applicazione a istanza singola è diversa da un'applicazione normale, in quanto è possibile eseguire una sola istanza dell'applicazione alla volta. Il tentativo di avviare un'altra istanza di un'applicazione a istanza singola comporta la notifica dell'istanza originale, tramite l'evento `StartupNextInstance`, che è stato effettuato un altro tentativo di avvio. La notifica include gli argomenti della riga di comando dell'istanza successiva. L'istanza successiva dell'applicazione viene quindi chiusa prima che possa verificarsi un'inizializzazione.  
   
- Un'applicazione a istanza singola viene avviato e verifica se si tratta della prima istanza o un'istanza successiva dell'applicazione:  
+ Viene avviata un'applicazione a istanza singola e viene verificato se si tratta della prima istanza o di un'istanza successiva dell'applicazione:  
   
-- Se è la prima istanza, inizia come di consueto.  
+- Se è la prima istanza, viene avviata come di consueto.  
   
-- Ogni successivo tentativo di avviare l'applicazione, mentre la prima istanza è in esecuzione, comporta un comportamento molto diverso. Il tentativo successivo notifica la prima istanza sugli argomenti della riga di comando e quindi chiude immediatamente. La prima istanza gestisce il `StartupNextInstance` individuare gli argomenti della riga di comando dell'istanza successiva e continua l'esecuzione dell'evento.  
+- Ogni tentativo successivo di avviare l'applicazione, mentre viene eseguita la prima istanza, comporta un comportamento molto diverso. Il tentativo successivo invia una notifica alla prima istanza sugli argomenti della riga di comando e quindi si chiude immediatamente. La prima istanza gestisce l'evento `StartupNextInstance` per determinare quali sono gli argomenti della riga di comando dell'istanza successiva e continuano a essere eseguiti.  
   
-     Questo diagramma mostra come un'istanza successiva segnala la prima istanza:  
+     Questo diagramma mostra il modo in cui un'istanza successiva segnala la prima istanza:  
   
-     ![Diagramma che mostra l'immagine di un'applicazione di istanza singola.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
+     ![Diagramma che mostra un'immagine dell'applicazione a istanza singola.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
- Gestendo i `StartupNextInstance` evento, è possibile controllare il comportamento dell'applicazione a istanza singola. Ad esempio, Microsoft Outlook in genere viene eseguito come un'applicazione a istanza singola. Quando Outlook è in esecuzione e si prova ad avviare Outlook anche in questo caso, lo stato attivo passa all'istanza originale ma non si apre un'altra istanza.  
+ Gestendo l'evento `StartupNextInstance`, è possibile controllare il comportamento dell'applicazione a istanza singola. Microsoft Outlook, ad esempio, viene in genere eseguito come applicazione a istanza singola. Quando Outlook è in esecuzione e si tenta di riavviare Outlook, lo stato attivo passa all'istanza originale, ma non viene aperta un'altra istanza.  
   
-## <a name="events-in-the-application-model"></a>Eventi nel modello di applicazione  
- Gli eventi seguenti sono disponibili nel modello di applicazione:  
+## <a name="events-in-the-application-model"></a>Eventi nel modello applicativo  
+
+ Nel modello di applicazione sono disponibili gli eventi seguenti:  
   
-- **Avvio dell'applicazione**. L'applicazione genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventi all'avvio. Se si gestisce questo evento, è possibile aggiungere il codice che inizializza l'applicazione prima del caricamento del form principale. Il `Startup` eventi consente anche di annullare l'esecuzione dell'applicazione durante tale fase del processo di avvio, se necessario.  
+- **Avvio dell'applicazione**. L'applicazione genera l'evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> all'avvio. Gestendo questo evento, è possibile aggiungere il codice che Inizializza l'applicazione prima che venga caricato il form principale. L'evento `Startup` fornisce anche l'annullamento dell'esecuzione dell'applicazione durante la fase del processo di avvio, se necessario.  
   
-     È possibile configurare l'applicazione per visualizzare una schermata mentre è in esecuzione il codice di avvio dell'applicazione. Per impostazione predefinita, il modello di applicazione elimina la schermata iniziale dello schermo quando sia la `/nosplash` o `-nosplash` viene utilizzato l'argomento della riga di comando.  
+     È possibile configurare l'applicazione in modo da visualizzare una schermata iniziale mentre viene eseguito il codice di avvio dell'applicazione. Per impostazione predefinita, il modello di applicazione elimina la schermata iniziale quando viene usato l'argomento della riga di comando `/nosplash` o `-nosplash`.  
   
-- **Le applicazioni a istanza singola**. Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> evento viene generato quando viene avviata una seconda istanza di un'applicazione a istanza singola. L'evento passa gli argomenti della riga di comando dell'istanza successiva.  
+- **Applicazioni a istanza singola**. L'evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> viene generato quando viene avviata un'istanza successiva di un'applicazione a istanza singola. L'evento passa gli argomenti della riga di comando dell'istanza successiva.  
   
-- **Le eccezioni non gestite**. Se l'applicazione rileva un'eccezione non gestita, genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento. Il gestore dell'evento è possibile esaminare l'eccezione e stabilire se continuare l'esecuzione.  
+- **Eccezioni non gestite**. Se l'applicazione rileva un'eccezione non gestita, genera l'evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>. Il gestore per l'evento può esaminare l'eccezione e determinare se continuare l'esecuzione.  
   
-     Il `UnhandledException` evento non viene generato in alcune circostanze. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     In alcune circostanze, l'evento `UnhandledException` non viene generato. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Modifiche di connettività di rete**. Se viene modificata la disponibilità della rete del computer, l'applicazione genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> evento.  
+- **Modifiche della connettività di rete**. Se la disponibilità di rete del computer viene modificata, l'applicazione genera l'evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-     Il `NetworkAvailabilityChanged` evento non viene generato in alcune circostanze. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     In alcune circostanze, l'evento `NetworkAvailabilityChanged` non viene generato. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-- **Chiusura dell'applicazione**. L'applicazione fornisce il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento per segnalare quando sta per arrestare. In tal caso, gestore di è possibile assicurarsi che le operazioni dell'applicazione deve eseguire, ovvero la chiusura e il salvataggio, ad esempio, vengono completate. È possibile configurare l'applicazione arresta alla chiusura del form principale, o per arrestare solo quando tutti i form chiuso.  
+- L'applicazione è stata **arrestata**. L'applicazione fornisce l'evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> per segnalare quando sta per essere arrestato. In tale gestore eventi, è possibile verificare che le operazioni che l'applicazione deve eseguire, ad esempio la chiusura e il salvataggio, siano completate. È possibile configurare l'applicazione in modo che venga arrestata quando il form principale viene chiuso o per arrestarsi solo quando tutti i form si chiudono.  
   
 ## <a name="availability"></a>Disponibilità  
- Per impostazione predefinita, il modello di applicazione Visual Basic è disponibile per i progetti Windows Form. Se si configura l'applicazione per usare un oggetto di avvio diverse o avviare il codice dell'applicazione con una classe personalizzata `Sub Main`, oggetto o alla classe potrebbe essere necessario fornire un'implementazione del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe da utilizzare il modello di applicazione. Per informazioni sulla modifica dell'oggetto di avvio, vedere [pagina dell'applicazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+
+ Per impostazione predefinita, il modello di applicazione Visual Basic è disponibile per i progetti Windows Forms. Se si configura l'applicazione in modo che usi un oggetto di avvio diverso o si avvia il codice dell'applicazione con un `Sub Main`personalizzato, tale oggetto o classe potrebbe dover fornire un'implementazione della classe <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> per usare il modello di applicazione. Per informazioni sulla modifica dell'oggetto di avvio, vedere [pagina applicazione, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Vedere anche
 

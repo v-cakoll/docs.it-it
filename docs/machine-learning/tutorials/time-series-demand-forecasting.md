@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740544"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978195"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Esercitazione: prevedere la richiesta del servizio di noleggio biciclette con l'analisi delle serie temporali e ML.NET
 
@@ -37,9 +37,9 @@ Questo esempio è un'  **C# applicazione console .NET Core** che prevede la rich
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
-Per eseguire un'operazione efficiente, gestione inventario gioca un ruolo fondamentale. La presenza di una quantità eccessiva di prodotti in magazzino significa che i prodotti non venduti seduti sugli scaffali non generano ricavi. Il fatto di avere un prodotto troppo piccolo porta a perdere le vendite e i clienti che acquistano da concorrenti. Quindi, la domanda costante è, qual è la quantità ottimale di inventario da usare? L'analisi delle serie temporali consente di fornire una risposta a queste domande osservando i dati cronologici, identificando i modelli e usando queste informazioni per prevedere i valori in futuro. 
+Per eseguire un'operazione efficiente, gestione inventario gioca un ruolo fondamentale. La presenza di una quantità eccessiva di prodotti in magazzino significa che i prodotti non venduti seduti sugli scaffali non generano ricavi. Il fatto di avere un prodotto troppo piccolo porta a perdere le vendite e i clienti che acquistano da concorrenti. Quindi, la domanda costante è, qual è la quantità ottimale di inventario da usare? L'analisi delle serie temporali consente di fornire una risposta a queste domande osservando i dati cronologici, identificando i modelli e usando queste informazioni per prevedere i valori in futuro.
 
-La tecnica per analizzare i dati usati in questa esercitazione è l'analisi della serie temporale univariata. L'analisi della serie temporale univariata esamina un'unica osservazione numerica in un periodo di tempo a intervalli specifici, ad esempio le vendite mensili. 
+La tecnica per analizzare i dati usati in questa esercitazione è l'analisi della serie temporale univariata. L'analisi della serie temporale univariata esamina un'unica osservazione numerica in un periodo di tempo a intervalli specifici, ad esempio le vendite mensili.
 
 L'algoritmo usato in questa esercitazione è [Single Spectrum Analysis (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). La funzione SSA scompone una serie temporale in un set di componenti principali. Questi componenti possono essere interpretati come parti di un segnale che corrispondono a tendenze, rumore, stagionalità e molti altri fattori. Quindi, questi componenti vengono ricostruiti e usati per prevedere i valori in futuro.
 
@@ -62,7 +62,7 @@ L'algoritmo usato in questa esercitazione è [Single Spectrum Analysis (SSA)](ht
 > [!NOTE]
 > I dati usati in questa esercitazione provengono dal set di dati [UCI bike sharing](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Federico-T, Hadi e Gama, Joao,' Event Labeling combining Ensemble Detectors and background Knowledge ', Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [collegamento Web](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
-Il set di dati originale contiene diverse colonne che corrispondono a stagionalità e meteo. Per brevità e perché l'algoritmo usato in questa esercitazione richiede solo i valori di una singola colonna numerica, il set di dati originale è stato condensato in modo da includere solo le colonne seguenti:  
+Il set di dati originale contiene diverse colonne che corrispondono a stagionalità e meteo. Per brevità e perché l'algoritmo usato in questa esercitazione richiede solo i valori di una singola colonna numerica, il set di dati originale è stato condensato in modo da includere solo le colonne seguenti:
 
 - **dteday**: data dell'osservazione.
 - **year**: anno codificato dell'osservazione (0 = 2011, 1 = 2012).
@@ -94,7 +94,7 @@ Di seguito è riportato un esempio dei dati:
 
 1. Creare `ModelInput` classe. Sotto la classe `Program` aggiungere il codice seguente.
 
-    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]    
+    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
     La classe `ModelInput` contiene le colonne seguenti:
 
@@ -134,7 +134,7 @@ Di seguito è riportato un esempio dei dati:
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    Gli algoritmi ML.NET prevedono che i dati siano di tipo [`Single`](xref:System.Single). Pertanto, i valori numerici provenienti dal database che non sono di tipo [`Real`](xref:System.Data.SqlDbType), un valore a virgola mobile e precisione singola, devono essere convertiti in [`Real`](xref:System.Data.SqlDbType). 
+    Gli algoritmi ML.NET prevedono che i dati siano di tipo [`Single`](xref:System.Single). Pertanto, i valori numerici provenienti dal database che non sono di tipo [`Real`](xref:System.Data.SqlDbType), un valore a virgola mobile e precisione singola, devono essere convertiti in [`Real`](xref:System.Data.SqlDbType).
 
     Le colonne `Year` e `TotalRental` sono entrambi tipi integer nel database. Utilizzando la `CAST` funzione predefinita, viene eseguito il cast a `Real`.
 
@@ -146,7 +146,7 @@ Di seguito è riportato un esempio dei dati:
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. Il set di dati contiene due anni di dati. Solo i dati del primo anno vengono utilizzati per il training, il secondo anno viene considerato per confrontare i valori effettivi rispetto alla previsione prodotta dal modello. Filtrare i dati utilizzando la trasformazione [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) . 
+1. Il set di dati contiene due anni di dati. Solo i dati del primo anno vengono utilizzati per il training, il secondo anno viene considerato per confrontare i valori effettivi rispetto alla previsione prodotta dal modello. Filtrare i dati utilizzando la trasformazione [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) .
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -158,7 +158,7 @@ Di seguito è riportato un esempio dei dati:
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    Il `forecastingPipeline` accetta 365 punti dati per il primo anno ed esempi oppure suddivide il set di dati di serie temporali in intervalli di 30 giorni (mensili) come specificato dal parametro `seriesLength`. Ognuno di questi esempi viene analizzato tramite una finestra settimanale o di 7 giorni. Quando si determina il valore previsto per il periodo di tempo successivo, vengono utilizzati i valori dei sette giorni precedenti per eseguire una stima. Il modello è impostato in modo da prevedere sette periodi nel futuro in base a quanto definito dal parametro `horizon`. Poiché una previsione è un'ipotesi informata, non è sempre accurata al 100%. È quindi opportuno conoscere l'intervallo di valori negli scenari migliori e peggiori in base a quanto definito dai limiti superiore e inferiore. In questo caso, il livello di confidenza per i limiti inferiore e superiore è impostato su 95%. Il livello di confidenza può essere aumentato o diminuito di conseguenza. Maggiore è il valore, più ampio è l'intervallo tra i limiti superiore e inferiore per raggiungere il livello di confidenza desiderato. 
+    Il `forecastingPipeline` accetta 365 punti dati per il primo anno ed esempi oppure suddivide il set di dati di serie temporali in intervalli di 30 giorni (mensili) come specificato dal parametro `seriesLength`. Ognuno di questi esempi viene analizzato tramite una finestra settimanale o di 7 giorni. Quando si determina il valore previsto per il periodo di tempo successivo, vengono utilizzati i valori dei sette giorni precedenti per eseguire una stima. Il modello è impostato in modo da prevedere sette periodi nel futuro in base a quanto definito dal parametro `horizon`. Poiché una previsione è un'ipotesi informata, non è sempre accurata al 100%. È quindi opportuno conoscere l'intervallo di valori negli scenari migliori e peggiori in base a quanto definito dai limiti superiore e inferiore. In questo caso, il livello di confidenza per i limiti inferiore e superiore è impostato su 95%. Il livello di confidenza può essere aumentato o diminuito di conseguenza. Maggiore è il valore, più ampio è l'intervallo tra i limiti superiore e inferiore per raggiungere il livello di confidenza desiderato.
 
 1. Utilizzare il metodo [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) per eseguire il training del modello e adattare i dati al `forecastingPipeline`definito in precedenza.
 
@@ -173,7 +173,7 @@ Valutare le prestazioni del modello tramite la previsione dei dati dell'anno suc
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
     {
-        
+
     }
     ```
 
@@ -200,7 +200,7 @@ Valutare le prestazioni del modello tramite la previsione dei dati dell'anno suc
     Per valutare le prestazioni, vengono usate le metriche seguenti:
 
     - **Errore assoluto medio**: misura il modo in cui le stime di chiusura corrispondono al valore effettivo. Questo valore è compreso tra 0 e infinito. Più vicino a 0, più è alta la qualità del modello.
-    - **Radice errore quadratico medio**: riepiloga l'errore thhe nel modello. Questo valore è compreso tra 0 e infinito. Più vicino a 0, più è alta la qualità del modello.
+    - **Radice errore quadratico medio**: riepiloga l'errore nel modello. Questo valore è compreso tra 0 e infinito. Più vicino a 0, più è alta la qualità del modello.
 
 1. Inviare le metriche alla console.
 
@@ -278,7 +278,7 @@ L'ispezione dei valori effettivi e previsti Mostra le relazioni seguenti:
 
 ![Confronto tra previsioni effettive di Visual Studio](./media/time-series-demand-forecasting/forecast.png)
 
-Sebbene i valori previsti non prevedano il numero esatto di affitti, forniscono un intervallo più limitato di valori che consentono a un'operazione di ottimizzare l'uso delle risorse. 
+Sebbene i valori previsti non prevedano il numero esatto di affitti, forniscono un intervallo più limitato di valori che consentono a un'operazione di ottimizzare l'uso delle risorse.
 
 La procedura è stata completata. A questo punto è stato creato un modello di Machine Learning di serie temporali per prevedere la richiesta di noleggio di biciclette.
 

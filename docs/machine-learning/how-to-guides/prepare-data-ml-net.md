@@ -5,22 +5,22 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e9bfad4724b353b0f3bfc615a40f1d72b80a2cd4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929363"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976972"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Preparare i dati per la creazione di un modello
 
 Informazioni su come usare ML.NET per preparare i dati per un'ulteriore elaborazione o creazione di un modello.
 
-I dati sono spesso sparsi e non puliti. Gli algoritmi di Machine Learning ML.NET prevedono che l'input o le funzionalità siano in un singolo vettore numerico. Analogamente, il valore da stimare (etichetta), soprattutto quando si tratta di dati categorici, deve essere codificato. Uno degli obiettivi della preparazione dei dati, pertanto, è conferire ai dati il formato previsto dagli algoritmi di ML.NET. 
+I dati sono spesso sparsi e non puliti. Gli algoritmi di Machine Learning ML.NET prevedono che l'input o le funzionalità siano in un singolo vettore numerico. Analogamente, il valore da stimare (etichetta), soprattutto quando si tratta di dati categorici, deve essere codificato. Uno degli obiettivi della preparazione dei dati, pertanto, è conferire ai dati il formato previsto dagli algoritmi di ML.NET.
 
 ## <a name="filter-data"></a>Filtrare i dati
 
-In alcuni casi, non tutti i dati in un set di dati sono rilevanti per l'analisi. Un modo per rimuovere i dati irrilevanti da un set di dati consiste nell'applicare dei filtri. La classe [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) contiene un set di operazioni di filtro che esaminano un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) che contiene tutti i dati e restituiscono un'interfaccia [IDataView](xref:Microsoft.ML.IDataView) contenente solo i punti dati di interesse. È importante notare che, poiché non sono di tipo [`IEstimator`](xref:Microsoft.ML.IEstimator%601) e neppure [`ITransformer`](xref:Microsoft.ML.ITransformer) come quelle disponibili nella classe [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog), le operazioni di filtro non possono essere incluse in una pipeline di preparazione dei dati [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) o [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601). 
+In alcuni casi, non tutti i dati in un set di dati sono rilevanti per l'analisi. Un modo per rimuovere i dati irrilevanti da un set di dati consiste nell'applicare dei filtri. La classe [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) contiene un set di operazioni di filtro che esaminano un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) che contiene tutti i dati e restituiscono un'interfaccia [IDataView](xref:Microsoft.ML.IDataView) contenente solo i punti dati di interesse. È importante notare che, poiché non sono di tipo [`IEstimator`](xref:Microsoft.ML.IEstimator%601) e neppure [`ITransformer`](xref:Microsoft.ML.ITransformer) come quelle disponibili nella classe [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog), le operazioni di filtro non possono essere incluse in una pipeline di preparazione dei dati [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) o [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601).
 
 Usando i dati di input seguenti che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView):
 
@@ -56,7 +56,7 @@ L'esempio precedente considera le righe del set di dati con un prezzo compreso t
 
 ## <a name="replace-missing-values"></a>Sostituire valori mancanti
 
-I valori mancanti sono un evento comune nei set di dati. Un modo per gestire i valori mancanti consiste nel sostituirli con il valore predefinito, qualora esistesse per il tipo specificato, oppure con un altro valore significativo, ad esempio il valore medio dei dati. 
+I valori mancanti sono un evento comune nei set di dati. Un modo per gestire i valori mancanti consiste nel sostituirli con il valore predefinito, qualora esistesse per il tipo specificato, oppure con un altro valore significativo, ad esempio il valore medio dei dati.
 
 Usando i dati di input seguenti che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView):
 
@@ -98,11 +98,11 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-ML.NET supporta varie [modalità sostituzione](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). L'esempio precedente usa la modalità sostituzione `Mean` che inserirà il valore medio della colonna per sopperire al valore mancante. Il risultato della sostituzione completa la proprietà `Price` dell'ultimo elemento di dati con il valore 200.000 perché è la media fra 100.000 e 300.000. 
+ML.NET supporta varie [modalità sostituzione](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). L'esempio precedente usa la modalità sostituzione `Mean` che inserirà il valore medio della colonna per sopperire al valore mancante. Il risultato della sostituzione completa la proprietà `Price` dell'ultimo elemento di dati con il valore 200.000 perché è la media fra 100.000 e 300.000.
 
 ## <a name="use-normalizers"></a>Usare i normalizzatori
 
-La [normalizzazione](https://en.wikipedia.org/wiki/Feature_scaling) è una tecnica usata nella pre-elaborazione dei dati per standardizzare le caratteristiche che non condividono la stessa scala e, pertanto, aiutare gli algoritmi a convergere più velocemente. Gli intervalli di valori di età e reddito, ad esempio, variano in modo significativo perché l'età è generalmente compresa nell'intervallo da 0 a 100 e il reddito nell'intervallo da 0 a diverse migliaia. Visitare la pagina [Trasformazioni dati](../resources/transforms.md) per un elenco e una descrizione più dettagliati delle trasformazioni di normalizzazione. 
+La [normalizzazione](https://en.wikipedia.org/wiki/Feature_scaling) è una tecnica usata nella pre-elaborazione dei dati per standardizzare le caratteristiche che non condividono la stessa scala e, pertanto, aiutare gli algoritmi a convergere più velocemente. Gli intervalli di valori di età e reddito, ad esempio, variano in modo significativo perché l'età è generalmente compresa nell'intervallo da 0 a 100 e il reddito nell'intervallo da 0 a diverse migliaia. Visitare la pagina [Trasformazioni dati](../resources/transforms.md) per un elenco e una descrizione più dettagliati delle trasformazioni di normalizzazione.
 
 ### <a name="min-max-normalization"></a>Normalizzazione min-max
 
@@ -142,7 +142,7 @@ I valori di prezzo originali `[200000,100000]` vengono convertiti in `[ 1, 0.5 ]
 
 ### <a name="binning"></a>Binning
 
-Il processo di [binning](https://en.wikipedia.org/wiki/Data_binning) converte valori continui in una rappresentazione discreta dell'input. Si supponga, ad esempio, che una delle caratteristiche sia l'età. Invece di usare il valore effettivo dell'età, per tale valore il processo di binning crea intervalli. 0-18 potrebbe essere un intervallo, 19-35 potrebbe essere un altro intervallo e così via. 
+Il processo di [binning](https://en.wikipedia.org/wiki/Data_binning) converte valori continui in una rappresentazione discreta dell'input. Si supponga, ad esempio, che una delle caratteristiche sia l'età. Invece di usare il valore effettivo dell'età, per tale valore il processo di binning crea intervalli. 0-18 potrebbe essere un intervallo, 19-35 potrebbe essere un altro intervallo e così via.
 
 Usando i dati di input seguenti che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView):
 
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalizzare i dati in contenitori usando il metodo [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*). Il parametro `maximumBinCount` consente di specificare il numero di contenitori necessari per classificare i dati. In questo esempio i dati verranno inseriti in due contenitori.  
+Normalizzare i dati in contenitori usando il metodo [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*). Il parametro `maximumBinCount` consente di specificare il numero di contenitori necessari per classificare i dati. In questo esempio i dati verranno inseriti in due contenitori.
 
 ```csharp
 // Define binning estimator
@@ -185,12 +185,12 @@ Il risultato del processo di binning è la creazione di limiti per i contenitori
 
 ## <a name="work-with-categorical-data"></a>Usare dati di categorie
 
-I dati di categorie non numerici devono essere convertiti in numeri prima di poter essere usati per creare un modello di Machine Learning. 
+I dati di categorie non numerici devono essere convertiti in numeri prima di poter essere usati per creare un modello di Machine Learning.
 
 Usando i dati di input seguenti che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ```csharp
-CarData[] cars = new CarData[] 
+CarData[] cars = new CarData[]
 {
     new CarData
     {
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-La proprietà di categoria `VehicleType` può essere convertita in un numero utilizzando il metodo [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*). 
+La proprietà di categoria `VehicleType` può essere convertita in un numero utilizzando il metodo [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*).
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-La trasformazione risultante converte il valore di testo in un numero `VehicleType`. Quando viene applicata la trasformazione, le voci della colonna `VehicleType` diventano le seguenti: 
+La trasformazione risultante converte il valore di testo in un numero `VehicleType`. Quando viene applicata la trasformazione, le voci della colonna `VehicleType` diventano le seguenti:
 
 ```text
 [
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-Il passaggio minimo per convertire il testo in un vettore numerico consiste nell'usare il metodo [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*). La trasformazione [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) applica una serie di trasformazioni alla colonna di testo di input restituendo come risultato un vettore numerico che rappresenta la parola a cui è stata applicata lp-norm e gli n-grammi dei caratteri. 
+Il passaggio minimo per convertire il testo in un vettore numerico consiste nell'usare il metodo [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*). La trasformazione [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) applica una serie di trasformazioni alla colonna di testo di input restituendo come risultato un vettore numerico che rappresenta la parola a cui è stata applicata lp-norm e gli n-grammi dei caratteri.
 
 ```csharp
 // Define text transform estimator
@@ -288,11 +288,11 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator` contiene un sottoinsieme di operazioni eseguite tramite il metodo [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*). Il vantaggio che offre l'uso di una pipeline più complessa è la visibilità e il controllo sulle trasformazioni applicate ai dati. 
+`textEstimator` contiene un sottoinsieme di operazioni eseguite tramite il metodo [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*). Il vantaggio che offre l'uso di una pipeline più complessa è la visibilità e il controllo sulle trasformazioni applicate ai dati.
 
 Usando la prima voce come esempio, la descrizione dettagliata dei risultati generati dai passaggi di trasformazione definiti da `textEstimator` sarebbe:
 
-**Testo originale: This is a good product**
+**Testo originale: si tratta di un prodotto valido**
 
 |Transform | Descrizione | Risultato
 |--|--|--|

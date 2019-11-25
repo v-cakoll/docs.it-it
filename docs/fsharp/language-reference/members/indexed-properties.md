@@ -1,17 +1,17 @@
 ---
 title: Proprietà indicizzate
 description: Informazioni sulle proprietà indicizzate in F#, che consentono l'accesso di tipo matrice ai dati ordinati.
-ms.date: 10/17/2018
-ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: f6cf3bfa737d2bf458e379594be5884696cee3e1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627561"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976605"
 ---
 # <a name="indexed-properties"></a>Proprietà indicizzate
 
-Quando si definisce una classe che astrae i dati ordinati, a volte può essere utile fornire l'accesso indicizzato a tali dati senza esporre l'implementazione sottostante. Questa operazione viene eseguita con `Item` il membro.
+Quando si definisce una classe che astrae i dati ordinati, a volte può essere utile fornire l'accesso indicizzato a tali dati senza esporre l'implementazione sottostante. Questa operazione viene eseguita con il membro `Item`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,11 +36,11 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Note
 
-Nei form della sintassi precedente viene illustrato come definire le proprietà indicizzate che dispongono sia di `get` un `set` metodo che di un metodo `get` , solo un metodo o solo `set` un metodo. È anche possibile combinare la sintassi mostrata solo per Get e la sintassi mostrata solo per set e produrre una proprietà con Get e set. Quest'ultimo formato consente di inserire modificatori e attributi di accessibilità diversi nei metodi get e set.
+I formati della sintassi precedente illustrano come definire le proprietà indicizzate che hanno un metodo di `get` e un `set`, avere solo un metodo di `get` o avere un solo metodo `set`. È anche possibile combinare la sintassi mostrata solo per Get e la sintassi mostrata solo per set e produrre una proprietà con Get e set. Quest'ultimo formato consente di inserire modificatori e attributi di accessibilità diversi nei metodi get e set.
 
-Utilizzando il nome `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Una *proprietà indicizzata predefinita* è una proprietà a cui è possibile accedere utilizzando la sintassi di tipo matrice nell'istanza dell'oggetto. Se `o` , ad esempio, è un oggetto del tipo che definisce questa proprietà, viene utilizzata `o.[index]` la sintassi per accedere alla proprietà.
+Utilizzando il nome `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Una *proprietà indicizzata predefinita* è una proprietà a cui è possibile accedere utilizzando la sintassi di tipo matrice nell'istanza dell'oggetto. Se, ad esempio, `o` è un oggetto del tipo che definisce questa proprietà, viene utilizzata la sintassi `o.[index]` per accedere alla proprietà.
 
-La sintassi per l'accesso a una proprietà indicizzata non predefinita consiste nel fornire il nome della proprietà e l'indice tra parentesi, come un membro normale. Se, ad esempio, viene chiamata `o` `Ordinal`la proprietà su, si `o.Ordinal(index)` scrive per accedervi.
+La sintassi per l'accesso a una proprietà indicizzata non predefinita consiste nel fornire il nome della proprietà e l'indice tra parentesi, come un membro normale. Se, ad esempio, la proprietà `o` viene chiamata `Ordinal`, è possibile scrivere `o.Ordinal(index)` per accedervi.
 
 Indipendentemente dal formato utilizzato, è consigliabile utilizzare sempre il modulo sottoposto a currying per il metodo set su una proprietà indicizzata. Per informazioni sulle funzioni sottoposte a currying, vedere [funzioni](../functions/index.md).
 
@@ -70,7 +70,7 @@ open System.Collections.Generic
 /// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
-    member __.Item
+    member _.Item
         // Because the key is comprised of two values, 'get' has two index values
         with get(key1, key2) = table.[(key1, key2)]
 

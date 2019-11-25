@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582754"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976855"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 
@@ -82,6 +82,7 @@ Se l'applicazione è un'applicazione normale (applicazione a più istanze) o la 
  Il costruttore <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> chiama la proprietà <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> per determinare quale motore di rendering del testo utilizzare per i moduli dell'applicazione. Per impostazione predefinita, la proprietà <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> restituisce `False`, che indica che viene utilizzato il motore di rendering del testo GDI, che è l'impostazione predefinita in Visual Basic 2005 e versioni successive. È possibile eseguire l'override della proprietà <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> per restituire `True`, che indica che viene utilizzato il motore di rendering del testo GDI+, che è l'impostazione predefinita in Visual Basic .NET 2002 e Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Configurazione dell'applicazione
+
  Come parte del modello di applicazione Visual Basic, la classe <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> fornisce proprietà protette per la configurazione dell'applicazione. Queste proprietà devono essere impostate nel costruttore della classe di implementazione.
 
  In un progetto Windows Forms predefinito, **Progettazione progetti** crea codice per impostare le proprietà con le impostazioni della finestra di progettazione. Le proprietà vengono usate solo quando l'applicazione viene avviata; l'impostazione dopo l'avvio dell'applicazione non ha alcun effetto.

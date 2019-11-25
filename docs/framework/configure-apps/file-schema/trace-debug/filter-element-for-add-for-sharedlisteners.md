@@ -10,22 +10,22 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697316"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088874"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>Elemento > \<filter per \<ADD > per \<sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<elemento > Filter per \<Aggiungi > per \<sharedListeners >
 Aggiunge un filtro a un listener nella raccolta `sharedListeners`.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedListeners >** ](sharedlisteners-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sharedListeners**](sharedlisteners-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**aggiungi >** ](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filtro** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -40,11 +40,11 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro. È possibile utilizzare solo il nome completo del tipo (nel formato della proprietà <xref:System.Type.FullName%2A?displayProperty=nameWithType>), oppure è possibile utilizzare il nome completo del tipo, incluse le informazioni sull'assembly (nel formato della proprietà <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>). Per informazioni sulla creazione di un nome di tipo completo, vedere [specifica di nomi di tipo](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)completi.|  
+|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro. È possibile utilizzare solo il nome completo del tipo (nel formato della proprietà <xref:System.Type.FullName%2A?displayProperty=nameWithType>) oppure è possibile utilizzare il nome completo del tipo, incluse le informazioni sull'assembly, nel formato della proprietà <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>. Per informazioni sulla creazione di un nome di tipo completo, vedere [specifica di nomi di tipo](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)completi.|  
 |**initializeData**|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -56,7 +56,7 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
 |`add`|Aggiunge un listener alla raccolta **sharedListeners** .|  
   
 ## <a name="remarks"></a>Note  
- Se un listener viene definito in un elemento `<add>` dell'elemento `<sharedListeners>`, il filtro per il listener deve essere definito in un elemento `<filter>` che è figlio dell'elemento `<add>`.  
+ Se un listener viene definito in un elemento `<add>` dell'elemento `<sharedListeners>`, il filtro per il listener deve essere definito in un elemento `<filter>` figlio dell'elemento `<add>`.  
   
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   

@@ -3,12 +3,12 @@ title: Introduzione a Docker
 description: Questo articolo fornisce un'introduzione e una panoramica di Docker nel contesto di un'applicazione .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416653"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087393"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduzione a .NET e Docker
 
@@ -61,7 +61,7 @@ Consente di distribuire API o app Web usando contenitori Linux in un ambiente Pa
 - [Istanze di Azure Container](https://azure.microsoft.com/services/container-instances/)\
 Consentono di ospitare il contenitore nel cloud senza servizi di gestione di livello superiore.
 
- [Azure Batch](https://azure.microsoft.com/services/batch/)\
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Consente di eseguire processi di calcolo ripetitivi usando contenitori.
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\

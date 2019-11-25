@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699738"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088543"
 ---
-# <a name="oidentry-element"></a>Elemento > \<oidEntry
+# <a name="oidentry-element"></a>\<elemento > oidEntry
 Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descrittivo.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings**](cryptographysettings-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**oidMap**](oidmap-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidEntry** >
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -38,10 +38,10 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**OID**|Attributo obbligatorio.<br /><br /> Specifica l'OID ASN. 1 corrispondente all'algoritmo implementato dalla classe.|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nel tag di [> \<nameEntry](nameentry-element.md) .|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nel tag [\<> nameEntry](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -49,14 +49,14 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
-|`mscorlib`|Contiene l' `cryptographySettings` elemento.|  
+|`mscorlib`|Contiene l'elemento `cryptographySettings`.|  
 |`oidMap`|Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.|  
   
 ## <a name="remarks"></a>Note  
  Gli identificatori di oggetto ASN. 1 identificano gli algoritmi in alcuni formati crittografici. Eseguire il mapping degli identificatori di oggetto ai nomi descrittivi per gli algoritmi che si desidera identificare.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il **\<oidEntry >** elemento per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<oidEntry >** per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo hash.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
 
 - [Schema dei file di configurazione](../index.md)
 - [Schema delle impostazioni di crittografia](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Servizi di crittografia](../../../../standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)
 - [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../map-object-identifiers-to-cryptography-algorithms.md)

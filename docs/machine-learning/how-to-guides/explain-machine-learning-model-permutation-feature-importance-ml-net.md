@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736877"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976678"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Descrivere le previsioni del modello con Permutation Feature Importance
 
@@ -18,19 +18,19 @@ Di seguito viene illustrato come descrivere le previsioni del modello di Machine
 
 I modelli di Machine Learning sono spesso considerati black box che accettano gli input e generano un output. I passaggi intermedi o le interazioni tra le caratteristiche che influenzano l'output vengono riconosciute raramente. Poiché il Machine Learning viene ora applicato a più aspetti delle attività quotidiane, ad esempio nel settore sanitario, è di importanza fondamentale comprenderne in che modo un modello di Machine Learning prende le decisioni. Ad esempio, se le diagnosi vengono effettuate tramite un modello di Machine Learning, i professionisti del settore sanitario necessitano di un modo per esaminare i fattori che hanno contribuito alle diagnosi. Una diagnosi corretta può fare una grande differenza nella velocità di recupero di un paziente. Più è dettagliato il livello di descrizione di un modello, maggiore sarà la fiducia dei professionisti del settore sanitario nell'accettare o rifiutare le decisioni prese dal modello.
 
-Per descrivere i modelli vengono usate tecniche diverse, tra cui PFI. PFI è una tecnica usata per illustrare i modelli di classificazione e regressione ispirati al [documento sulle *foreste casuali* di Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (vedere la sezione 10). A livello generale, il funzionamento è basato sulla selezione in ordine casuale dei dati una caratteristica alla volta per l'intero set di dati e sul calcolo della diminuzione della metrica delle prestazioni dell'interesse. Maggiore è la modifica, maggiore è l'importanza della funzionalità. 
+Per descrivere i modelli vengono usate tecniche diverse, tra cui PFI. PFI è una tecnica usata per illustrare i modelli di classificazione e regressione ispirati al [documento sulle *foreste casuali* di Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (vedere la sezione 10). A livello generale, il funzionamento è basato sulla selezione in ordine casuale dei dati una caratteristica alla volta per l'intero set di dati e sul calcolo della diminuzione della metrica delle prestazioni dell'interesse. Maggiore è la modifica, maggiore è l'importanza della funzionalità.
 
 Inoltre, evidenziando le funzionalità più importanti, i generatori di modelli possono concentrarsi sull'uso di un subset di funzionalità più significative che possono potenzialmente ridurre il rumore e i tempi di training.
 
 ## <a name="load-the-data"></a>Caricare i dati
 
-Le funzionalità del set di dati usate per questo esempio si trovano dalla colonna 1 alla colonna 12. L'obiettivo consiste nella previsione di `Price`. 
+Le funzionalità del set di dati usate per questo esempio si trovano dalla colonna 1 alla colonna 12. L'obiettivo consiste nella previsione di `Price`.
 
-| Colonna | Funzionalità | Descrizione 
+| Colonna | Funzionalità | Descrizione
 | --- | --- | --- |
 | 1 | CrimeRate | Tasso di criminalità pro capite
 | 2 | ResidentialZones | Zone residenziali della città
-| 3 | CommercialZones | Zone non residenziali della città
+| 3\. | CommercialZones | Zone non residenziali della città
 | 4 | NearWater | Prossimità al corpo idrico
 | 5 | ToxicWasteLevels | Livelli di tossicità (PPM)
 | 6 | AverageRoomNumber | Numero medio di locali di un'abitazione
@@ -103,7 +103,7 @@ L'esempio di codice seguente illustra il processo di training di un modello di r
 
 ```csharp
 // 1. Get the column name of input features.
-string[] featureColumnNames = 
+string[] featureColumnNames =
     data.Schema
         .Select(column => column.Name)
         .Where(columnName => columnName != "Label").ToArray();
@@ -131,7 +131,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 In ML.NET usare il metodo [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) per la rispettiva attività.
 
 ```csharp
-ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
+ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
     mlContext
         .Regression
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
@@ -139,7 +139,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
 
 Se viene usato [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) nel training set, viene restituita una [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) di oggetti [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics). [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) fornisce statistiche di riepilogo come la media e la deviazione standard per più osservazioni di [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)corrispondente al numero di permutazioni specificate dal parametro `permutationCount`.
 
-L'importanza, o in questo caso la diminuzione della media assoluta nella metrica R quadrato calcolata da [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), può quindi essere ordinata dalla più importante alla meno importante.  
+L'importanza, o in questo caso la diminuzione della media assoluta nella metrica R quadrato calcolata da [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), può quindi essere ordinata dalla più importante alla meno importante.
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-La stampa dei valori di ogni funzionalità in `featureImportanceMetrics` genererà un output simile al seguente. Tenere presente che probabilmente verranno visualizzati risultati diversi poiché questi valori variano in base ai dati ricevuti.  
+La stampa dei valori di ogni funzionalità in `featureImportanceMetrics` genererà un output simile al seguente. Tenere presente che probabilmente verranno visualizzati risultati diversi poiché questi valori variano in base ai dati ricevuti.
 
 | Funzionalità | Modifica in R quadrato |
 |:--|:--:|

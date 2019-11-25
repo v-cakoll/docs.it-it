@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697198"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088926"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>Elemento > \<clear per \<listeners > per \<source >
+# <a name="clear-element-for-listeners-for-source"></a>\<elemento clear > per \<listeners > per \<origine >
 Cancella la raccolta `Listeners` per un'origine di traccia.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**origini**](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**origine**](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**listener**](listeners-element-for-source.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**clear >**
+
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -34,10 +34,10 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- No.  
+ Nessuna.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- No.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,13 +50,13 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
 |`listeners`|Specifica i listener che raccolgono, archiviano e indirizzano i messaggi.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento `<clear>` rimuove tutti i listener dalla raccolta `Listeners` per un'origine di traccia, incluso il <xref:System.Diagnostics.DefaultTraceListener>. È possibile utilizzare l'elemento `<clear>` prima di utilizzare l'elemento `<add>` per assicurarsi che non siano presenti altri listener attivi nella raccolta.  
+ L'elemento `<clear>` rimuove tutti i listener dalla raccolta `Listeners` per un'origine di traccia, incluso il <xref:System.Diagnostics.DefaultTraceListener>. È possibile utilizzare l'elemento `<clear>` prima di utilizzare l'elemento `<add>` per verificare che non siano presenti altri listener attivi nella raccolta.  
   
 ## <a name="configuration-file"></a>File di configurazione  
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento `<clear>` prima di utilizzare gli elementi `<add>` per aggiungere i listener `console` e `textListener` alla raccolta `Listeners` per l'origine di traccia `TraceSourceApp`.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<clear>` prima di utilizzare gli elementi `<add>` per aggiungere i listener `console` e `textListener` alla raccolta di `Listeners` per l'origine di traccia `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

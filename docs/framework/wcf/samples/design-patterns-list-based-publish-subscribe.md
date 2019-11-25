@@ -1,15 +1,15 @@
 ---
-title: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
+title: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928831"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978217"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi
+# <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Il servizio usa un evento .NET Framework come meccanismo per informare tutti i sottoscrittori dell'esistenza di nuove informazioni. L'aggiunta di un client al servizio tramite una chiamata a Subscribe determina la disponibilità di un gestore eventi. La rimozione di un client dal servizio determina l'annullamento della sottoscrizione del relativo gestore eventi. Quando un'origine dati chiama il servizio per segnalare la modifica di un prezzo, il servizio genera l'evento, che a sua volta chiama ogni istanza del servizio, una per ogni client che ha effettuato la sottoscrizione, e causa l'esecuzione dei relativi gestori eventi. Ogni gestore eventi passa le informazioni al client corrispondente tramite la relativa funzione di callback.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1. Verificare che sia possibile accedere al servizio utilizzando un browser immettendo l'indirizzo seguente `http://localhost/servicemodelsamples/service.svc`:. In risposta, viene visualizzata un pagina di conferma.  
+1. Verificare che sia possibile accedere al servizio utilizzando un browser immettendo l'indirizzo seguente: `http://localhost/servicemodelsamples/service.svc`. In risposta, viene visualizzata un pagina di conferma.  
   
 2. Eseguire client. exe da \client\bin\\\, dalla cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
