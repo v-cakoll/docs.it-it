@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Trovare i discendenti di un elemento figlio (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: trovare discendenti di un elemento figlio (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291667"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344678"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="aa2db-102">Procedura: Trovare i discendenti di un elemento figlio (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa2db-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="aa2db-103">In questo argomento viene illustrato come ottenere gli elementi discendenti di un elemento figlio con un determinato nome.</span><span class="sxs-lookup"><span data-stu-id="aa2db-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="0453a-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0453a-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0453a-103">In questo argomento viene illustrato come ottenere gli elementi discendenti di un elemento figlio con un determinato nome.</span><span class="sxs-lookup"><span data-stu-id="0453a-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="aa2db-104">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="aa2db-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="0453a-104">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="0453a-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="aa2db-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="aa2db-105">Example</span></span>  
- <span data-ttu-id="aa2db-106">In questo esempio sono simulati i problemi di estrazione di testo da una rappresentazione XML di un documento di elaborazione testi.</span><span class="sxs-lookup"><span data-stu-id="aa2db-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="aa2db-107">Vengono dapprima selezionati tutti gli elementi `Paragraph` e quindi tutti gli elementi discendenti `Text` di ogni elemento `Paragraph`.</span><span class="sxs-lookup"><span data-stu-id="aa2db-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="aa2db-108">Gli elementi discendenti `Text` dell'elemento `Comment` non vengono selezionati.</span><span class="sxs-lookup"><span data-stu-id="aa2db-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="0453a-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="0453a-105">Example</span></span>  
+ <span data-ttu-id="0453a-106">In questo esempio sono simulati i problemi di estrazione di testo da una rappresentazione XML di un documento di elaborazione testi.</span><span class="sxs-lookup"><span data-stu-id="0453a-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="0453a-107">Vengono dapprima selezionati tutti gli elementi `Paragraph` e quindi tutti gli elementi discendenti `Text` di ogni elemento `Paragraph`.</span><span class="sxs-lookup"><span data-stu-id="0453a-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="0453a-108">Gli elementi discendenti `Text` dell'elemento `Comment` non vengono selezionati.</span><span class="sxs-lookup"><span data-stu-id="0453a-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -62,13 +62,13 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- <span data-ttu-id="aa2db-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="aa2db-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="0453a-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0453a-109">This example produces the following output:</span></span>  
   
 ```console  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa2db-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa2db-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0453a-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0453a-110">See also</span></span>
 
-- [<span data-ttu-id="aa2db-111">LINQ to XML per gli utenti di XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa2db-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="0453a-111">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0453a-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
