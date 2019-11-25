@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)'
+title: Come trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 1adbbb6dd074ffcb39269a800024e444cf8791d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253755"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141116"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Come trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)
 Talvolta si desidera individuare elementi in base alla posizione, ad esempio il secondo elemento oppure dal terzo al quinto elemento.  
   
  L'espressione XPath è:  
@@ -21,7 +21,7 @@ Talvolta si desidera individuare elementi in base alla posizione, ad esempio il 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati gli elementi `Test` compresi tra il secondo e il quarto. Il risultato è una raccolta di elementi.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  

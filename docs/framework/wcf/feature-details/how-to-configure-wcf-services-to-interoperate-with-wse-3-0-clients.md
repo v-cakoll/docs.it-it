@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Configurare servizi WCF per interagire con client WSE 3.0'
+title: 'Procedura: configurare i servizi WCF per interagire con i client WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 0349c9ba76b3f240bf98daa0e095b415bc98a87c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd9f2bec94ca45f76590f64366428a00edd5d6ea
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045943"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141739"
 ---
-# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Procedura: Configurare servizi WCF per interagire con client WSE 3.0
+# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Procedura: configurare i servizi WCF per interagire con i client WSE 3.0
 
 I servizi Windows Communication Foundation (WCF) sono compatibili a livello di rete con i miglioramenti dei servizi Web 3,0 per i client di Microsoft .NET (WSE) quando i servizi WCF sono configurati per l'utilizzo della versione agosto 2004 della specifica WS-Addressing.
 
@@ -19,13 +19,13 @@ I servizi Windows Communication Foundation (WCF) sono compatibili a livello di r
 
     Per specificare l'utilizzo della versione dell'agosto 2004 della specifica WS-Addressing per la codifica dei messaggi, è necessario creare un'associazione personalizzata.
 
-    1. Aggiungere un [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) [ >CustomBindingfiglioalleassociazioni>delfilediconfigurazionedelservizio.\<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+    1. Aggiungere un elemento figlio [\<custombinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) al [\<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) del file di configurazione del servizio.
 
-    2. Specificare un nome per l'associazione, aggiungendo un `name` [ \<binding](../../../../docs/framework/misc/binding.md) [ \<> al > CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e impostando l'attributo.
+    2. Specificare un nome per l'associazione, aggiungendo un' [associazione\<](../../configure-apps/file-schema/wcf/bindings.md) al [\<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e impostando l'attributo `name`.
 
-    3. Specificare una modalità di autenticazione e la versione delle specifiche WS-Security utilizzate per proteggere i messaggi compatibili con WSE 3,0, aggiungendo un [ \<](../../../../docs/framework/misc/binding.md) [ \<> di sicurezza](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) figlio al > di associazione.
+    3. Specificare una modalità di autenticazione e la versione delle specifiche WS-Security utilizzate per proteggere i messaggi compatibili con WSE 3,0, aggiungendo una [> di sicurezza\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) figlio al [Binding\<](../../configure-apps/file-schema/wcf/bindings.md).
 
-        Per impostare la modalità `authenticationMode` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)di autenticazione, impostare l'attributo del > di sicurezza. Una modalità di autenticazione è più o meno equivalente a un'asserzione di sicurezza turnkey in WSE 3.0. Nella tabella seguente viene eseguito il mapping delle modalità di autenticazione in WCF alle asserzioni di sicurezza chiavi in mano in WSE 3,0.
+        Per impostare la modalità di autenticazione, impostare l'attributo `authenticationMode` del [> di sicurezza\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Una modalità di autenticazione è più o meno equivalente a un'asserzione di sicurezza turnkey in WSE 3.0. Nella tabella seguente viene eseguito il mapping delle modalità di autenticazione in WCF alle asserzioni di sicurezza chiavi in mano in WSE 3,0.
 
         |Modalità di autenticazione WCF|Asserzione di sicurezza turnkey WSE 3.0|
         |-----------------------------|----------------------------------------|
@@ -36,20 +36,20 @@ I servizi Windows Communication Foundation (WCF) sono compatibili a livello di r
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|
 
-        \*Una delle principali differenze tra le `mutualCertificate10Security` asserzioni di sicurezza di e `mutualCertificate11Security` chiavi in mano è la versione della specifica WS-Security utilizzata da WSE per proteggere i messaggi SOAP. Per `mutualCertificate10Security` viene utilizzata la versione WS-Security 1.0, mentre per `mutualCertificate11Security` viene utilizzata la versione WS-Security 1.1. Per WCF, la versione della specifica WS-Security viene specificata nell' `messageSecurityVersion` attributo [ \<della > di sicurezza](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).
+        \* una delle principali differenze tra le asserzioni di sicurezza `mutualCertificate10Security` e `mutualCertificate11Security` chiavi in mano è la versione della specifica WS-Security utilizzata da WSE per proteggere i messaggi SOAP. Per `mutualCertificate10Security` viene utilizzata la versione WS-Security 1.0, mentre per `mutualCertificate11Security` viene utilizzata la versione WS-Security 1.1. Per WCF, la versione della specifica WS-Security viene specificata nell'attributo `messageSecurityVersion` del [> di sicurezza\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).
 
-        Per impostare la versione della specifica WS-Security utilizzata per proteggere i messaggi SOAP, impostare l' `messageSecurityVersion` attributo [ \<del > di sicurezza](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Per interagire con WSE 3.0, impostare il valore dell'attributo `messageSecurityVersion` su <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>.
+        Per impostare la versione della specifica WS-Security utilizzata per proteggere i messaggi SOAP, impostare l'attributo `messageSecurityVersion` del [> di sicurezza\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Per interagire con WSE 3.0, impostare il valore dell'attributo `messageSecurityVersion` su <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>.
 
-    4. Specificare che la versione agosto 2004 della specifica WS-Addressing viene utilizzata da WCF mediante l'aggiunta di un [ \<> textMessageEncoding](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) e l'impostazione del <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A> `messageVersion` valore su.
+    4. Specificare che la versione agosto 2004 della specifica WS-Addressing viene utilizzata da WCF aggiungendo un [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) e impostare il `messageVersion` sul relativo valore su <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.
 
         > [!NOTE]
         > Quando si utilizza SOAP 1.2, impostare l'attributo `messageVersion` su <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.
 
 2. Specificare l'utilizzo dell'associazione personalizzata da parte del servizio.
 
-    1. Impostare l' `binding` attributo `customBinding` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) dell'elemento > dell'endpoint su.
+    1. Impostare l'attributo `binding` dell'elemento [\<endpoint](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) su `customBinding`.
 
-    2. Impostare l' `bindingConfiguration` attributo dell'`name`elemento > dell' [ endpointsulvalorespecificatonell'attributodell'associazione>perl'associazionepersonalizzata.\<](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) [ \<](../../../../docs/framework/misc/binding.md)
+    2. Impostare l'attributo `bindingConfiguration` dell'elemento [\<endpoint](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) sul valore specificato nell'attributo `name` del [\<di associazione >](../../configure-apps/file-schema/wcf/bindings.md) per l'associazione personalizzata.
 
 ## <a name="example"></a>Esempio
 
@@ -94,4 +94,4 @@ Nell'esempio di codice seguente viene specificato che `Service.HelloWorldService
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [Procedura: Personalizzare un'associazione specificata dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

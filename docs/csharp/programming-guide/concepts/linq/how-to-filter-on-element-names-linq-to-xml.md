@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Filtrare in base a nomi di elementi (LINQ to XML) (C#)'
+title: Come filtrare i nomi di elemento (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253815"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141258"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Procedura: Filtrare in base a nomi di elementi (LINQ to XML) (C#)
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Come filtrare i nomi di elemento (LINQ to XML) (C#)
 Quando si chiama uno dei metodi che restituisce l'oggetto <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, è possibile filtrare in base al nome dell'elemento.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperata una raccolta di discendenti filtrata in maniera tale da includere solo i discendenti con il nome specificato.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -52,7 +52,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto in uno spazio dei nomi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordine di acquisto tipico in uno spazio dei nomi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

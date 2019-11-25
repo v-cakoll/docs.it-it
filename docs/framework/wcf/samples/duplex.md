@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: b00f5dd31ba572a2c8fb5301cc7ae9ddda77f0e5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b5d839bb4a678f105e128671fbda729e2c730b7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045043"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141796"
 ---
 # <a name="duplex"></a>Duplex
 
@@ -171,7 +171,7 @@ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client
 3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Quando si esegue il client in una configurazione a più computer, assicurarsi di sostituire "localhost" sia `address` nell'attributo `clientBaseAddress` [ \<dell'endpoint > dell' \<elemento client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo del [ binding\<>](../../../../docs/framework/misc/binding.md) elemento [ dell'elementowsDualHttpBinding>conilnomedelcomputerappropriato,comeillustratonell'esempioseguente:\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+    > Quando si esegue il client in una configurazione a più computer, assicurarsi di sostituire "localhost" sia nell'attributo `address` dell' [endpoint\<> dell'elemento \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo `clientBaseAddress` dell'elemento\<[Binding](../../configure-apps/file-schema/wcf/bindings.md) > dell'elemento\<[WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con il nome del computer appropriato, come illustrato nell'esempio seguente:
 
     ```xml
     <client>
@@ -191,6 +191,6 @@ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`

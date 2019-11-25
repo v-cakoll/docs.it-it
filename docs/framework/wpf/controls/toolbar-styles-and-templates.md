@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: b782e62500edd14b40b1267c3b7f92758210a5c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a984311234386cb205d5db35f18a743ca535ff05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458216"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283662"
 ---
 # <a name="toolbar-styles-and-templates"></a>Stili e modelli di ToolBar
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ToolBar>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ToolBar>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="toolbar-parts"></a>Parti della barra degli strumenti  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.ToolBar>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Oggetto che contiene i controlli nella <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Oggetto che contiene i controlli che si trovano nell'area di overflow del <xref:System.Windows.Controls.ToolBar>.|  
@@ -32,7 +32,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="toolbar-states"></a>Stati della barra degli strumenti  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ToolBar>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -56,4 +56,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

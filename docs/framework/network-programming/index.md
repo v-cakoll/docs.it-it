@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 230825c5259807cf693179878a45aeb3fdcbf0ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047999"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204686"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmazione di rete in .NET Framework
 Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, estendibile e gestita, di servizi Internet che possono essere integrati nelle applicazioni in modo rapido e semplice. Le applicazioni di rete possono essere compilate su protocolli modulari per usufruire automaticamente di nuovi protocolli Internet oppure possono utilizzare un'implementazione gestita dell'interfaccia Windows Sockets per utilizzare la rete a livello di socket.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
 
  [Introduzione ai protocolli di collegamento](introducing-pluggable-protocols.md)  
  Viene descritto come accedere a una risorsa Internet indipendentemente dal protocollo di accesso richiesto.  
@@ -80,12 +80,12 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  Vengono descritti i miglioramenti aggiunti agli spazi dei nomi <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>e <xref:System.Net.Sockets?displayProperty=nameWithType> per il supporto dell'attraversamento NAT tramite IPv6 e Teredo.  
   
  [Network Isolation for Windows Store Apps](network-isolation-for-windows-store-apps.md) (Isolamento rete per app di Windows Store)  
- Viene descritto l'impatto dell'isolamento di rete quando le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> sono utilizzate nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] .  
+ Describes the impact of network isolation when classes in the <xref:System.Net>, <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces are used in Windows 8.x Store apps.  
   
  [Esempi di programmazione di rete](network-programming-samples.md)  
  Collegamenti a esempi scaricabili di programmazione di rete che utilizzano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.Net?displayProperty=nameWithType>  
  Fornisce una semplice interfaccia di programmazione per molti dei protocolli attualmente usati per le reti. Le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> in questo spazio dei nomi sono la base dei protocolli modulari.  
   

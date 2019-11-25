@@ -3,12 +3,12 @@ title: Introduzione agli eventi
 description: Questa panoramica offre informazioni sugli eventi di .NET Core e sugli obiettivi di progettazione del linguaggio per gli eventi.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771910"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138524"
 ---
 # <a name="introduction-to-events"></a>Introduzione agli eventi
 
@@ -26,18 +26,18 @@ La sottoscrizione di un evento crea anche un accoppiamento tra due oggetti, l'or
 
 ## <a name="design-goals-for-event-support"></a>Obiettivi di progettazione per il supporto degli eventi
 
-Per quanto riguarda gli eventi, la progettazione di un linguaggio deve avere gli obiettivi seguenti.
+La progettazione del linguaggio per gli eventi è destinata a questi obiettivi:
 
-Prima di tutto consentire il minimo accoppiamento possibile tra un'origine evento e un sink di evento. È possibile che questi due componenti non siano stati scritti dalla stessa organizzazione. È persino possibile che l'aggiornamento di questi componenti avvenga secondo pianificazioni completamente diverse.
+- Abilita l'accoppiamento minimo tra un'origine evento e un sink di evento. È possibile che questi due componenti non siano stati scritti dalla stessa organizzazione. È persino possibile che l'aggiornamento di questi componenti avvenga secondo pianificazioni completamente diverse.
 
-In secondo luogo, la sottoscrizione di un evento e l'annullamento di tale sottoscrizione devono essere molto semplici.
+- Dovrebbe essere molto semplice sottoscrivere un evento e annullare la sottoscrizione dello stesso evento.
 
-Infine, le origini evento devono supportare più sottoscrittori di eventi, nonché la completa mancanza di sottoscrittori associati.
+- Le origini eventi devono supportare più sottoscrittori di eventi. nonché la completa mancanza di sottoscrittori associati.
 
 Come si può notare, gli obiettivi per gli eventi sono molto simili agli obiettivi per i delegati.
 Ecco perché il supporto del linguaggio per gli eventi si basa sul supporto del linguaggio per i delegati.
 
-## <a name="language-support-for-events"></a>Supporto del linguaggio per gli eventi
+## <a name="language-support-for-events"></a>Supporto delle lingue per gli eventi
 
 La sintassi per la definizione di eventi e la sottoscrizione o l'annullamento della sottoscrizione di eventi è un'estensione della sintassi per i delegati.
 
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-Il metodo del gestore, in genere, corrisponde al prefisso 'On' seguito dal nome dell'evento, come illustrato in precedenza.
+Il metodo del gestore ha in genere il prefisso ' on ' seguito dal nome dell'evento, come illustrato in precedenza.
 
 Per annullare la sottoscrizione si usa l'operatore `-=`:
 

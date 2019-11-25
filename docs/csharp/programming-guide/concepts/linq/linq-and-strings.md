@@ -2,12 +2,12 @@
 title: LINQ e stringhe (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744622"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140904"
 ---
 # <a name="linq-and-strings-c"></a>LINQ e stringhe (C#)
 
@@ -21,7 +21,7 @@ Gli esempi di questa sezione sono suddivisi in due categorie:
 
 È possibile eseguire query, analizzare e modificare blocchi di testo suddividendoli in una matrice di stringhe più piccole sottoponibile a query usando il metodo <xref:System.String.Split%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType>. È possibile suddividere il testo di origine in parole, frasi, paragrafi, pagine o altri criteri e quindi eseguire altre suddivisioni se richieste nella query.
 
-- [Procedura: Contare le occorrenze di una parola in una stringa (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+- [Come contare le occorrenze di una parola in una stringa (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
   Descrive come usare LINQ per eseguire query semplici nel testo.
 
 - [Procedura: Eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
@@ -32,7 +32,7 @@ Gli esempi di questa sezione sono suddivisi in due categorie:
 
   Dimostra che una stringa è un tipo sottoponibile a query.
 
-- [Procedura: Combinare query LINQ con espressioni regolari (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [Come combinare query LINQ con espressioni regolari (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
 
   Descrive come usare le espressioni regolari nelle query LINQ per un modello complesso corrispondente ai risultati della query filtrati.
 
@@ -52,7 +52,7 @@ Numerosi tipi di file di testo sono costituiti da una serie di righe, spesso con
 
   Descrive come riordinare i campi in una riga in un file con estensione csv.
 
-- [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
+- [Procedura: combinare e confrontare raccolte di stringhe (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
 
   Descrive come combinare elenchi di stringhe in diversi modi.
 
@@ -68,11 +68,11 @@ Numerosi tipi di file di testo sono costituiti da una serie di righe, spesso con
   
   Descrive come creare file nuovi usando un singolo file come origine dati.
 
-- [Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Come calcolare i valori di colonna in un file di testo CSV (LINQ)C#()](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
   Descrive come eseguire calcoli matematici in dati di testo in file con estensione csv.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Language-Integrated Query (LINQ) (C#)](index.md)
-- [Procedura: Generare XML da file CSV](how-to-generate-xml-from-csv-files.md)
+- [Procedura: generare XML da file CSV](how-to-generate-xml-from-csv-files.md)

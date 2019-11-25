@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 64cb62a3459a3eeea6aa5e91b433a58a88ab08ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460934"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283549"
 ---
 # <a name="calendar-styles-and-templates"></a>Stili e modelli di Calendar
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Calendar>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Calendar>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="calendar-parts"></a>Parti del calendario  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Calendar>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Mese o anno attualmente visualizzato nel <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Pannello che contiene il <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -30,7 +30,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendar-states"></a>Stati del calendario  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Calendar>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -39,7 +39,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendaritem-parts"></a>Parti CalendarItem  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Radice del controllo.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Pulsante che visualizza la pagina precedente del calendario quando viene selezionato.|  
@@ -53,7 +53,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendaritem-states"></a>Stati CalendarItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Stato normale|CommonStates|Lo stato predefinito.|  
 |Stato disabilitato|CommonStates|Stato del calendario quando la proprietà <xref:System.Windows.UIElement.IsEnabled%2A> è `false`.|  
@@ -70,13 +70,13 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendardaybutton-states"></a>Stati CalendarDayButton  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarDayButton>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.CalendarDayButton> è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Premuto|CommonStates|Viene premuto il <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Selezionati|SelectionStates|Il pulsante è selezionato.|  
+|Selezionato|SelectionStates|Il pulsante è selezionato.|  
 |Deselezionato|SelectionStates|Il pulsante non è selezionato.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Il pulsante ha lo stato attivo.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Il pulsante non ha lo stato attivo.|  
@@ -98,13 +98,13 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendarbutton-states"></a>Stati CalendarButton  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarButton>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.CalendarButton> è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Premuto|CommonStates|Viene premuto il <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Selezionati|SelectionStates|Il pulsante è selezionato.|  
+|Selezionato|SelectionStates|Il pulsante è selezionato.|  
 |Deselezionato|SelectionStates|Il pulsante non è selezionato.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Il pulsante ha lo stato attivo.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Il pulsante non ha lo stato attivo.|  
@@ -134,4 +134,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

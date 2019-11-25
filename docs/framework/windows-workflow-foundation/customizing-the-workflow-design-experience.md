@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 41be55391ae9481f6c2e4feb76443f7fb676b69d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637234"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141933"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Personalizzazione della fase di progettazione del flusso di lavoro
 
-In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli scenari per progettare le attività personalizzate e riallocare [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Pertanto lo sviluppo e la distribuzione sono più semplici e più flessibili. La modifica infrastrutturale principale prevede che il nuovo modello di programmazione della finestra di progettazione attività viene compilato su Windows Presentation Foundation (WPF). In questo modo è possibile definire in modo dichiarativo gli ActivityDesigner e riallocare [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in altre applicazioni in modo semplice. In caso di riallocazione, è possibile sviluppare un editor di espressioni personalizzato per supportare IntelliSense o un dominio di espressioni semplificato. L'integrazione con Windows Communication Foundation (WCF) è diventato più semplice grazie all'uso dei servizi del flusso di lavoro. Gli ActivityDesigner personalizzati e l'albero degli elementi del modello possono essere usati per migliorare le esperienze in fase di progettazione nelle progettazioni flussi di lavoro riallocate.
+The scenarios for designing custom activities and for rehosting the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] have been greatly simplified in .NET Framework 4. Pertanto lo sviluppo e la distribuzione sono più semplici e più flessibili. The key infrastructural change is that the new activity designer programming model is built upon Windows Presentation Foundation (WPF). In questo modo è possibile definire in modo dichiarativo gli ActivityDesigner e riallocare [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in altre applicazioni in modo semplice. In caso di riallocazione, è possibile sviluppare un editor di espressioni personalizzato per supportare IntelliSense o un dominio di espressioni semplificato. The integration with Windows Communication Foundation (WCF) has become more seamless with use of workflow services. Gli ActivityDesigner personalizzati e l'albero degli elementi del modello possono essere usati per migliorare le esperienze in fase di progettazione nelle progettazioni flussi di lavoro riallocate.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
  [Uso di finestre di progettazione e modelli di attività personalizzati](using-custom-activity-designers-and-templates.md)
 
@@ -23,13 +23,13 @@ In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli sc
 
  [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
 
- Viene descritto come riallocare la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di Visual Studio e come visualizzare gli errori di convalida.
+ Describes how to re-host the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] outside of Visual Studio and how to display validation errors.
 
  [Uso di un editor di espressioni personalizzato](using-a-custom-expression-editor.md)
 
- Viene descritto come implementare un editor di espressioni personalizzato da usare con le finestre di progettazione del flusso di lavoro riallocate all'esterno di Visual Studio 2010.
+ Describes how to implement a custom expression editor to use with workflow designers rehosted outside of Visual Studio 2010.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 <xref:System.Activities.Presentation.ActivityDesigner>
 

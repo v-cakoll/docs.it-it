@@ -2,38 +2,38 @@
 title: Compatibilità con ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: e9566c24756afef98c8594c8d7b542bd2ad1e5b5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: af03b16081f0e33764d3ef83519f6e50e6b97152
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045176"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141814"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilità con ASP.NET
 
-In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). I servizi in esecuzione in modalità di compatibilità ASP.NET partecipano completamente alla pipeline dell'applicazione ASP.NET e possono usare le funzionalità di ASP.NET, ad esempio l'autorizzazione file/URL <xref:System.Web.HttpContext> , lo stato della sessione e la classe. La <xref:System.Web.HttpContext> classe consente l'accesso a cookie, sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.
+In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). I servizi in esecuzione in modalità di compatibilità ASP.NET partecipano completamente alla pipeline dell'applicazione ASP.NET e possono usare le funzionalità di ASP.NET, ad esempio l'autorizzazione file/URL, lo stato della sessione e la classe <xref:System.Web.HttpContext>. La classe <xref:System.Web.HttpContext> consente l'accesso a cookie, sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.
 
 In questo esempio, il client è un'applicazione console (un file eseguibile) e il servizio è ospitato da Internet Information Services (IIS).
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
-Per eseguire questo esempio è necessario un pool di applicazioni di [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Per creare un nuovo pool di applicazioni o modificare il pool di applicazioni predefinito, attenersi alla procedura seguente.
+Per l'esecuzione di questo esempio è necessario un pool di applicazioni .NET Framework 4. Per creare un nuovo pool di applicazioni o modificare il pool di applicazioni predefinito, attenersi alla procedura seguente.
 
 1. Aprire il **Pannello di controllo**.  Aprire l'applet **strumenti di amministrazione** sotto l'intestazione **sistema e sicurezza** . Aprire l'applet **gestione Internet Information Services (IIS)** .
 
 2. Espandere TreeView nel riquadro **connessioni** . Selezionare il nodo **pool di applicazioni** .
 
-3. Per impostare il pool di applicazioni predefinito per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] l'utilizzo di (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare clic con il pulsante destro del mouse sull'elemento dell'elenco **DefaultAppPool** e selezionare **impostazioni di base.** Impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive).
+3. Per impostare il pool di applicazioni predefinito per l'utilizzo di .NET Framework 4 (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare clic con il pulsante destro del mouse sull'elemento dell'elenco **DefaultAppPool** e selezionare **impostazioni di base.** Impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive).
 
-4. Per creare un nuovo pool di applicazioni che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] usi (per mantenere la compatibilità per altre applicazioni), fare clic con il pulsante destro del mouse sul nodo **pool di applicazioni** e scegliere **Aggiungi pool di applicazioni.** Assegnare un nome al nuovo pool di applicazioni e impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive). Dopo aver eseguito la procedura di installazione riportata di seguito, fare clic con il pulsante destro del mouse sull'applicazione **servicemodelsamples** e scegliere **Gestisci applicazione**, **Impostazioni avanzate.** Impostare il **pool di applicazioni** sul nuovo pool di applicazioni.
+4. Per creare un nuovo pool di applicazioni che usi .NET Framework 4 (per mantenere la compatibilità per altre applicazioni), fare clic con il pulsante destro del mouse sul nodo **pool di applicazioni** e scegliere **Aggiungi pool di applicazioni.** Assegnare un nome al nuovo pool di applicazioni e impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive). Dopo aver eseguito la procedura di installazione riportata di seguito, fare clic con il pulsante destro del mouse sull'applicazione **servicemodelsamples** e scegliere **Gestisci applicazione**, **Impostazioni avanzate.** Impostare il **pool di applicazioni** sul nuovo pool di applicazioni.
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`
 

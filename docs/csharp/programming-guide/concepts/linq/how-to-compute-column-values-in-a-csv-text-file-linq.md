@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)'
+title: Come calcolare i valori di colonna in un file di testo CSV (LINQ)C#()
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594015"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141365"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Come calcolare i valori di colonna in un file di testo CSV (LINQ)C#()
 In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
   
 ## <a name="to-create-the-source-file"></a>Per creare il file di origine  

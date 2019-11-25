@@ -2,12 +2,12 @@
 title: Esempio di integrazione di SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 032be700beaa38ed6c08ed1940aab558b2106591
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: def876b13fdc938970e02d63febedf39a240ebac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964487"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141840"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Esempio di integrazione di SystemWebRouting
 In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. L'utilizzo del routing Web consente allo sviluppatore di creare indirizzi virtuali per HTTP di cui viene quindi eseguito il mapping ai servizi WCF effettivi. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. 
@@ -15,7 +15,7 @@ In questo esempio viene descritta l'integrazione del livello di hosting con le c
 > [!NOTE]
 > Le classi nello spazio dei nomi <xref:System.Web.Routing> possono essere usate solo per i servizi ospitati su HTTP.  
   
-Questo esempio USA WCF per creare due feed RSS: un `movies` feed e un `channels` feed. Gli URL per l'attivazione dei servizi non contengono un'estensione e vengono registrati nel `Application_Start` metodo `Global` della classe derivata dalla <xref:System.Web.HttpApplication> classe.  
+Questo esempio USA WCF per creare due feed RSS: un feed di `movies` e un feed di `channels`. Gli URL per l'attivazione dei servizi non contengono un'estensione e vengono registrati nel metodo `Application_Start` della classe `Global` derivata dalla classe <xref:System.Web.HttpApplication>.  
   
 > [!NOTE]
 > Questo esempio funziona solo in Internet Information Services (IIS) 7,0 e versioni successive, perché IIS 6,0 usa un metodo diverso per supportare URL senza estensione.  
@@ -26,7 +26,7 @@ Questo esempio può essere già installato nel computer. Verificare la directory
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+ Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -38,7 +38,7 @@ Questo esempio può essere già installato nel computer. Verificare la directory
   
      Verrà aperta la visualizzazione directory per l'esempio. Si noti che non sono presenti file con l'estensione di file svc.  
   
-3. Nella barra degli indirizzi aggiungere `movies` all'URL, in modo che legga `http://localhost:[port]/movies` e premi INVIO.  
+3. Nella barra degli indirizzi aggiungere `movies` all'URL, in modo che legga `http://localhost:[port]/movies` e premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
@@ -81,7 +81,7 @@ Questo esempio può essere già installato nel computer. Verificare la directory
  In questo esempio illustrato come il livello di hosting sia in grado di interagire con le classi nello spazio dei nomi <xref:System.Web.Routing> per l'indirizzamento delle richieste dei servizi ospitati su HTTP.  
   
 > [!NOTE]
-> È necessario aggiornare la versione del pool di applicazioni [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] predefinito a se è impostata sulla versione 2.  
+> È necessario aggiornare la versione predefinita del pool di applicazioni a .NET Framework 4 se è impostata sulla versione 2.  
   
 ## <a name="see-also"></a>Vedere anche
 

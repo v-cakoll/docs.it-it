@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare un discendente singolo con il metodo Descendants (C#)'
+title: Come trovare un singolo discendente con il metodo Descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253803"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141194"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedura: Trovare un discendente singolo con il metodo Descendants (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Come trovare un singolo discendente con il metodo Descendants (C#)
 È possibile usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per scrivere rapidamente codice per trovare un singolo elemento con un nome univoco. Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi fino all'elemento desiderato, ma risulta in genere più veloce e semplice scrivere il codice usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Esempio  

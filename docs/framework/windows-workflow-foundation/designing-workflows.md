@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
-ms.openlocfilehash: a6624b06d9bdb4523cec5c98a199835bf55d9fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c774161fb5adbc5fc8e44b22d994d15fa0d2e489
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774036"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141913"
 ---
 # <a name="designing-workflows"></a>Progettazione di flussi di lavoro
 Negli argomenti di questa sezione vengono descritti i paradigmi di controllo del flusso usati nello sviluppo del flusso di lavoro.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Flussi di lavoro del diagramma di flusso](flowchart-workflows.md)  
  Viene illustrato come creare flussi di lavoro usando il paradigma del diagramma di flusso comune.  
   
@@ -22,7 +22,7 @@ Negli argomenti di questa sezione vengono descritti i paradigmi di controllo del
  Viene illustrato come creare flussi di lavoro usando un paradigma di esecuzione sequenziale, di base.  
   
  [Flussi di lavoro della macchina a stati](state-machine-workflows.md)  
- Viene illustrato come usare i flussi di lavoro del diagramma di flusso per implementare i flussi di lavoro basati sugli eventi in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], come sostituzione del modello di macchina a stati usato nelle versioni precedenti.  
+ Discusses how to use Flowchart workflows to implement event-driven workflows in .NET Framework 4, as a replacement for the State Machine model used in previous versions.  
   
  [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  Viene illustrato come creare un flusso di lavoro con codice imperativo.

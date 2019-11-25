@@ -3,41 +3,40 @@ title: Novità di .NET Core 3.0
 description: Informazioni sulle nuove funzionalità in .NET Core 3.0.
 dev_langs:
 - csharp
-- vb
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: dcbf1073c12650101efdcf6022db0b29ace2eb3f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420763"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140677"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
-Questo articolo descrive le novità di .NET Core 3,0. Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+This article describes what is new in .NET Core 3.0. Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o successive, [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview) o versioni successive o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**più recente.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. It's highly recommended that you use [Visual Studio 2019 version 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) or newer, [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview) or newer, or [Visual Studio Code](https://code.visualstudio.com/) with the latest **C# extension**.
 
-[Scarica e inizia subito a usare .NET Core 3,0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
+[Download and get started with .NET Core 3.0](https://aka.ms/netcore3download) right now on Windows, macOS, or Linux.
 
-Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+For more information about the release, see the [.NET Core 3.0 announcement](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
-.NET Core RC1 è stato considerato pronto per la produzione da Microsoft ed è stato completamente supportato. Se si usa una versione di anteprima, è necessario passare alla versione RTM per il supporto continuo.
+.NET Core RC1 was considered production ready by Microsoft and was fully supported. If you're using a preview release, you must move to the RTM version for continued support.
 
-## <a name="language-improvements-c-80"></a>Miglioramenti C# della lingua 8,0
+## <a name="language-improvements-c-80"></a>Language improvements C# 8.0
 
-C#8,0 fa anche parte di questa versione, che include la funzionalità dei [tipi di riferimento Nullable](../../csharp/tutorials/nullable-reference-types.md) , i [flussi asincroni](../../csharp/tutorials/generate-consume-asynchronous-stream.md)e [altri modelli](../../csharp/tutorials/pattern-matching.md). Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
+C# 8.0 is also part of this release, which includes the [nullable reference types](../../csharp/tutorials/nullable-reference-types.md) feature, [async streams](../../csharp/tutorials/generate-consume-asynchronous-stream.md), and [more patterns](../../csharp/tutorials/pattern-matching.md). Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
 
-Sono stati aggiunti miglioramenti alla lingua per supportare le seguenti funzionalità API descritte di seguito:
+Language enhancements were added to support the following API features detailed below:
 
-- [Intervalli e indici](#ranges-and-indices)
-- [Flussi asincroni](#async-streams)
+- [Ranges and indices](#ranges-and-indices)
+- [Async streams](#async-streams)
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET Core 3,0 implementa **.NET Standard 2,1**. Tuttavia, il modello di `dotnet new classlib` predefinito genera un progetto che è ancora destinato **.NET Standard 2,0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
+.NET Core 3.0 implements **.NET Standard 2.1**. However, the default `dotnet new classlib` template generates a project that still targets **.NET Standard 2.0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -51,7 +50,7 @@ Sono stati aggiunti miglioramenti alla lingua per supportare le seguenti funzion
 
 Se si usa Visual Studio, è necessario [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) perché Visual Studio 2017 non supporta **.NET Standard 2.1** o **.NET Core 3.0**.
 
-## <a name="compiledeploy"></a>Compilazione/distribuzione
+## <a name="compiledeploy"></a>Compile/Deploy
 
 ### <a name="default-executables"></a>File eseguibili predefiniti
 
@@ -89,7 +88,7 @@ Per altre informazioni sulla pubblicazione di file singolo, vedere il [documento
 
 Le app autonome includono tutti gli elementi necessari per eseguire il codice, senza richiedere l'installazione di .NET nel computer host. Tuttavia, per il funzionamento dell'app è spesso sufficiente un piccolo subset del framework, mentre altre librerie inutilizzate possono essere rimosse.
 
-.NET Core include ora un'impostazione che consente l'uso dello strumento [IL Linker](https://github.com/mono/linker) per analizzare il linguaggio intermedio dell'app. Questo strumento rileva il codice necessario e quindi Elimina le librerie inutilizzate. Può quindi ridurre notevolmente le dimensioni di distribuzione di alcune app.
+.NET Core include ora un'impostazione che consente l'uso dello strumento [IL Linker](https://github.com/mono/linker) per analizzare il linguaggio intermedio dell'app. This tool detects what code is required, and then trims unused libraries. Può quindi ridurre notevolmente le dimensioni di distribuzione di alcune app.
 
 Per abilitare questo strumento, aggiungere l'impostazione `<PublishTrimmed>` nel progetto e pubblicare un'app autonoma:
 
@@ -117,19 +116,32 @@ Per impostazione predefinita, con .NET Core 3.0 la [compilazione a livelli](http
 
 Il vantaggio principale della compilazione a livelli (TC) consiste nell'abilitazione di metodi di ricompilazione JIT con un livello lower-quality-but-faster (di minore qualità ma più veloce) o higher-quality-but-slower (di migliore qualità ma più lento). In questo modo è possibile migliorare le prestazioni di un'applicazione nelle sue vari fasi di esecuzione, dall'avvio allo stato stabile. Ciò si differenzia dall'approccio che non usa la compilazione a livelli. In questo caso ogni metodo viene compilato in un solo modo (come per il livello alta qualità), che dà priorità allo stato stabile piuttosto che alle prestazioni all'avvio.
 
-Per abilitare la compilazione JIT rapida (codice JIT livello 0), usare questa impostazione nel file di progetto:
+When TC is enabled, during startup for a method that is called:
+
+- If the method has AOT-compiled code (ReadyToRun), the pregenerated code will be used.
+- Otherwise, the method will be jitted. Typically, these methods currently are generics over value types.
+  - Quick JIT produces lower-quality code more quickly. Quick JIT is enabled by default in .NET Core 3.0 for methods that do not contain loops and is preferred during startup.
+  - The fully-optimizing JIT produces higher-quality code more slowly. For methods where Quick JIT would not be used (for example, if the method is attributed with `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), the fully-optimizing JIT is used.
+
+Eventually, after methods are called a number of times, they are re-jitted with the fully-optimizing JIT in the background.
+
+Code generated by Quick JIT may run slower, allocate more memory, or use more stack space. If there are issues, Quick JIT may be disabled using this setting in your project file:
 
 ```xml
 <PropertyGroup>
-  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
 </PropertyGroup>
 ```
 
 Per disabilitare completamente la compilazione a livelli, usare questa impostazione nel file di progetto:
 
 ```xml
-<TieredCompilation>false</TieredCompilation>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
+
+Any changes to the above settings in the project file may require a clean build to be reflected (delete the `obj` and `bin` directories and rebuild).
 
 ### <a name="readytorun-images"></a>Immagini ReadyToRun
 
@@ -139,7 +151,7 @@ I file binari R2R migliorano le prestazioni di avvio riducendo la quantità di l
 
 Per compilare il progetto come ReadyToRun, seguire questa procedura:
 
-01. Aggiungere l'impostazione `<PublishReadyToRun>` al progetto:
+01. Add the `<PublishReadyToRun>` setting to your project:
 
     ```xml
     <PropertyGroup>
@@ -261,7 +273,7 @@ I valori possibili per `highDpiMode`, espressi dall'enumerazione <xref:System.Wi
 
 Per altre informazioni sulle modalità con valori DPI alti, vedere [Sviluppo di applicazioni desktop con valori DPI alti in Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="create-com-components"></a>Creazione di componenti COM
+### <a name="create-com-components"></a>Create COM components
 
 In Windows è ora possibile creare componenti gestiti COM-Callable. Questa funzionalità è essenziale per usare .NET Core con modelli del componente aggiuntivo COM e anche per assicurare parità con .NET Framework.
 
@@ -273,7 +285,7 @@ Per un esempio su come creare e usare un componente COM, vedere la [demo COM](ht
 
 Windows offre un'API nativa completa, sotto forma di API C semplici, COM e WinRT. Mentre .NET Core supporta **P/Invoke**, .NET Core 3.0 aggiunge la possibilità di **generare contestualmente API COM** e di **attivare API WinRT**. Per un esempio di codice, vedere la [demo Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
-### <a name="msix-deployment"></a>Distribuzione di MSIX
+### <a name="msix-deployment"></a>MSIX Deployment
 
 [MSIX](https://docs.microsoft.com/windows/msix/) è un nuovo formato di pacchetto di applicazioni Windows. Può essere usato per distribuire applicazioni desktop di .NET Core 3.0 in Windows 10.
 
@@ -285,7 +297,7 @@ Il file di progetto .NET Core deve specificare i runtime supportati nella propri
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="linux-improvements"></a>Miglioramenti per Linux
+## <a name="linux-improvements"></a>Linux improvements
 
 ### <a name="serialport-for-linux"></a>SerialPort per Linux
 
@@ -297,7 +309,7 @@ Per altre informazioni sul supporto limitato per la porta seriale in Linux, vede
 
 ### <a name="docker-and-cgroup-memory-limits"></a>Docker e limiti di memoria cgroup
 
-L'esecuzione di .NET Core 3,0 in Linux con Docker funziona meglio con i limiti di memoria cgroup. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
+Running .NET Core 3.0 on Linux with Docker works better with cgroup memory limits. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
 
 - Dimensioni heap predefinite del Garbage Collector: massimo 20 MB o il 75% del limite di memoria nel contenitore.
 - È possibile impostare dimensioni esplicite come numero assoluto o percentuale di un limite cgroup.
@@ -332,12 +344,12 @@ Sono disponibili [immagini Docker per .NET Core in ARM64](https://hub.docker.com
 
 Quando è disponibile, .NET Core 3.0 usa **OpenSSL 1.1.1**, **OpenSSL 1.1.0** o **OpenSSL 1.0.2** in un sistema Linux. Quando **OpenSSL 1.1.1** è disponibile, entrambi i tipi <xref:System.Net.Security.SslStream?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> useranno **TLS 1.3**, supponendo che sia il client sia il server supportino **TLS 1.3**.
 
->[!IMPORTANT]
->Windows e macOS non supportano ancora **TLS 1.3**. .NET Core 3.0 supporterà **TLS 1.3** in questi sistemi operativi quando il supporto sarà disponibile.
+> [!IMPORTANT]
+> Windows e macOS non supportano ancora **TLS 1.3**. .NET Core 3.0 supporterà **TLS 1.3** in questi sistemi operativi quando il supporto sarà disponibile.
 
 L'esempio seguente di C# 8.0 illustra .NET Core 3.0 in Ubuntu 18.10 che si connette a <https://www.cloudflare.com>:
 
-[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Crittografia
 
@@ -345,7 +357,7 @@ L'esempio seguente di C# 8.0 illustra .NET Core 3.0 in Ubuntu 18.10 che si conne
 
 Il codice seguente illustra l'uso della crittografia `AesGcm` per crittografare e decrittografare dati casuali.
 
-[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>Importazione/Esportazione di chiavi crittografiche
 
@@ -370,11 +382,11 @@ Le chiavi RSA supportano anche i tipi seguenti:
 
 I metodi di esportazione generano dati binari con codifica DER e i metodi di importazione prevedono lo stesso tipo di comportamento. Se una chiave viene archiviata nel formato PEM per il testo, il chiamante dovrà applicare la decodifica Base 64 al contenuto prima di chiamare un metodo di importazione.
 
-[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
 I file **PKCS#8** possono essere esaminati con la classe <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> e i file **PFX/PKCS#12** possono essere esaminati con la classe <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. I file **PFX/PKCS#12** possono essere modificati con la classe <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
-## <a name="net-core-30-api-changes"></a>Modifiche all'API di .NET Core 3,0
+## <a name="net-core-30-api-changes"></a>.NET Core 3.0 API changes
 
 ### <a name="ranges-and-indices"></a>Gli intervalli e indici
 
@@ -415,9 +427,9 @@ Oltre a poter usare `await foreach`, è anche possibile creare iteratori asincro
 
 Per altre informazioni, vedere l'[esercitazione sui flussi asincroni](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
 
-### <a name="ieee-floating-point"></a>Virgola mobile IEEE
+### <a name="ieee-floating-point"></a>IEEE Floating-point
 
-È in corso l'aggiornamento di API virgola mobile per conformità alla [revisione IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). L'obiettivo di queste modifiche consiste nell'esporre tutte le operazioni **necessarie** e garantire che siano conformi alla specifica IEEE. Per altre informazioni sui miglioramenti a virgola mobile, vedere il post di Blog relativo all' [analisi a virgola mobile e alla formattazione in .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
+È in corso l'aggiornamento di API virgola mobile per conformità alla [revisione IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). The goal of these changes is to expose all **required** operations and ensure that they're behaviorally compliant with the IEEE spec. For more information about floating-point improvements, see the [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) blog post.
 
 Di seguito sono riportate le correzioni per analisi e formattazione:
 
@@ -487,7 +499,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 Gli utenti .NET si sono ampiamente basati su [**Json.NET**](https://www.newtonsoft.com/json) e altre librerie JSON molto diffuse, che rimangono sempre scelte valide. Come tipo di dati di base, **Json.NET** usa le stringhe .NET, che in realtà sono UTF-16.
 
-Il nuovo supporto JSON predefinito offre prestazioni elevate, bassa allocazione ed è basato su `Span<byte>`. Per altre informazioni sullo spazio dei nomi e sui tipi di <xref:System.Text.Json>, vedere [serializzazione JSON in .NET-Panoramica](../../standard/serialization/system-text-json-overview.md). Per esercitazioni sugli scenari comuni di serializzazione JSON, vedere [come serializzare e deserializzare JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
+Il nuovo supporto JSON predefinito offre prestazioni elevate, bassa allocazione ed è basato su `Span<byte>`. For more information about the <xref:System.Text.Json> namespace and types, see [JSON serialization in .NET - overview](../../standard/serialization/system-text-json-overview.md). For tutorials on common JSON serialization scenarios, see [How to serialize and deserialize JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
 
 ### <a name="http2-support"></a>Supporto per HTTP/2
 
@@ -495,17 +507,17 @@ Il tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> supporta 
 
 Il protocollo predefinito rimane HTTP/1.1, anche se HTTP/2 può essere abilitato in due modi diversi. In primo luogo, è possibile impostare il messaggio di richiesta HTTP per usare HTTP/2:
 
-[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
 
 In secondo luogo, è possibile modificare <xref:System.Net.Http.HttpClient> in modo da usare HTTP/2 per impostazione predefinita:
 
-[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
 Molto spesso, quando si sviluppa un'applicazione, si vuole usare una connessione non crittografata. Se si è a conoscenza del fatto che l'endpoint di destinazione userà HTTP/2, è possibile attivare connessioni non crittografate per HTTP/2. Per attivare queste connessioni è possibile impostare la variabile di ambiente `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` su `1` o abilitarla nel contesto dell'app:
 
-[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esaminare le modifiche di rilievo tra .NET Core 2,2 e 3,0.](../compatibility/2.2-3.0.md)
-- [Esaminare le modifiche di rilievo tra .NET Framework e .NET Core 3,0.](../compatibility/framework-core.md)
+- [Review the breaking changes between .NET Core 2.2 and 3.0.](../compatibility/2.2-3.0.md)
+- [Review the breaking changes between .NET Framework and .NET Core 3.0.](../compatibility/framework-core.md)

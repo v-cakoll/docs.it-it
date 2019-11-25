@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460941"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138919"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Procedura dettagliata: stile contenuto WPF
 
@@ -61,7 +61,7 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 
    `UserControl1` viene aperto in WPF Designer.
 
-1. Nella visualizzazione XAML inserire il seguente codice XAML dopo il tag di apertura `<UserControl>`. Questo codice XAML crea una sfumatura con un bordo sfumato a contrasto. Quando si fa clic sul controllo, le sfumature vengono modificate per generare l'aspetto di un pulsante premuto. Per altre informazioni, vedere [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md).
+1. Nella visualizzazione XAML inserire il seguente codice XAML dopo il tag di apertura `<UserControl>`. Questo codice XAML crea una sfumatura con un bordo sfumato a contrasto. Quando si fa clic sul controllo, le sfumature vengono modificate per generare l'aspetto di un pulsante premuto. Per altre informazioni, vedere [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ Dopo avere aggiunto un tipo di controllo WPF al progetto, è possibile inserirlo
 - [Uso di controlli WPF](using-wpf-controls.md)
 - [Progettare XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Cenni preliminari su XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Applicazione di stili e modelli](../../wpf/controls/styling-and-templating.md)
+- [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

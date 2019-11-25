@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 5de7e565560928b1867ba96c8937fd354c276806
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a5707e8cfff11dd9d27fffc9deb41662fb2c4460
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774126"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281759"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() e argomenti della riga di comando (Guida per programmatori C#)
 
@@ -34,7 +34,20 @@ Il metodo `Main` è il punto di ingresso di un'applicazione C#. Le librerie e i 
 - `Main` viene dichiarato in una classe o in un tipo struct. `Main` deve essere [static](../../language-reference/keywords/static.md) e non [public](../../language-reference/keywords/public.md). Nell'esempio precedente riceve l'accesso predefinito di [private](../../language-reference/keywords/private.md). La classe o lo struct contenitore non deve essere statico.
 - Il tipo restituito da `Main` può essere `void`, `int` o, a partire da C# 7.1, `Task` o `Task<int>`.
 - Se e solo se `Main` restituisce `Task` o `Task<int>`, la dichiarazione di `Main` può includere il modificatore [`async`](../../language-reference/keywords/async.md). Si noti che questo esclude specificamente un metodo `async void Main`.
-- Il metodo `Main` può essere dichiarato con o senza un parametro `string[]` contenente argomenti della riga di comando. Quando si usa Visual Studio per creare applicazioni Windows, è possibile aggiungere il parametro manualmente, altrimenti usare il metodo <xref:System.Environment.GetCommandLineArgs> per ottenere gli [argomenti della riga di comando](command-line-arguments.md). I parametri vengono letti come argomenti della riga di comando a indice zero. Diversamente da C e C++, il nome del programma non viene trattato come primo argomento della riga di comando nella matrice di`args`, ma è il primo elemento del metodo<xref:System.Environment.GetCommandLineArgs>.
+- Il metodo `Main` può essere dichiarato con o senza un parametro `string[]` contenente argomenti della riga di comando. Quando si usa Visual Studio per creare applicazioni Windows, è possibile aggiungere il parametro manualmente, altrimenti usare il metodo <xref:System.Environment.GetCommandLineArgs> per ottenere gli [argomenti della riga di comando](command-line-arguments.md). I parametri vengono letti come argomenti della riga di comando a indice zero. Diversamente da C e C++, il nome del programma non viene trattato come primo argomento della riga di comando nella matrice di `args`, ma è il primo elemento del metodo <xref:System.Environment.GetCommandLineArgs>.
+
+Di seguito è riportato un elenco di firme di `Main` valide:
+
+```csharp
+public static void Main() { }
+public static int Main() { }
+public static void Main(string[] args) { }
+public static int Main(string[] args) { }
+public static async Task Main() { }
+public static async Task<int> Main() { }
+public static async Task Main(string[] args) { }
+public static async Task<int> Main(string[] args) { }
+```
 
 L'aggiunta dei tipi restituiti `async`, `Task` e `Task<int>` semplifica il codice del programma quando è necessario avviare le applicazioni console e per operazioni asincrone `await` in `Main`.
 

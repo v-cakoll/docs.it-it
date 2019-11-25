@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)'
+title: Come trovare nodi di pari livello (XPath-LINQ to XML)C#()
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 6c7509ea0667bb84d62ee804f4d232d74fa7f6e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253618"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141019"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Come trovare nodi di pari livello (XPath-LINQ to XML)C#()
 Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ Può essere necessario trovare tutti i gli elementi di pari livello di un nodo c
 ## <a name="example"></a>Esempio  
  In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`. La raccolta risultante include il nodo di contesto.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

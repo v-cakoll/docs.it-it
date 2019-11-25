@@ -9,22 +9,22 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 4ba90182468466773644c7375059f0cc01675b33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458831"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283470"
 ---
 # <a name="passwordbox-styles-and-templates"></a>Stili e modelli di PasswordBox
 
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.PasswordBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.PasswordBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="passwordbox-parts"></a>Parti PasswordBox
 
 Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
-|Parte|Digitare|Descrizione|
+|Parte|Digitare|description|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.PasswordBox> viene visualizzato in questo elemento.|
 
@@ -32,7 +32,7 @@ Nella tabella seguente sono elencate le parti denominate per il controllo <xref:
 
 Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
-|Nome VisualState|Nome VisualStateGroup|Descrizione|
+|Nome VisualState|Nome VisualStateGroup|description|
 |-|-|-|
 |Normale|CommonStates|Lo stato predefinito.|
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|
@@ -62,4 +62,4 @@ Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemp
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

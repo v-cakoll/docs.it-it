@@ -4,12 +4,12 @@ description: Informazioni su come documentare il codice con commenti della docum
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037658"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140660"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -21,21 +21,21 @@ I commenti in formato documentazione XML, come tutti gli altri commenti, vengono
 
 È possibile generare il file XML in fase di compilazione eseguendo una delle operazioni seguenti:
 
-- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un [elemento DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) alla sezione `<PropertyGroup>` del file di progetto csproj. L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice dell'assembly:
+- If you are developing an application with .NET Core from the command line, you can add a `GenerateDocumentationFile` element to the `<PropertyGroup>` section of your .csproj project file. You can also specify the path to the documentation file directly using [`DocumentationFile` element](/visualstudio/msbuild/common-msbuild-project-properties). L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice dell'assembly:
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   L'espressione equivale alla seguente:
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-   È anche possibile specificare l'esatto percorso assoluto o relativo e il nome del file XML. L'esempio seguente genera il file XML nella stessa directory della versione di debug di un'applicazione:
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
-   ```
-
 - Se si sviluppa un'applicazione tramite Visual Studio, fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Nella finestra di dialogo Proprietà selezionare la scheda **Genera** e controllare **File di documentazione XML**. È anche possibile modificare il percorso in cui il compilatore scrive il file.
 
-- Se si compila un'applicazione .NET Framework dalla riga di comando, aggiungere l'opzione del [compilatore-doc](language-reference/compiler-options/doc-compiler-option.md) durante la compilazione.  
+- If you are compiling a .NET Framework application from the command line, add the [-doc compiler option](language-reference/compiler-options/doc-compiler-option.md) when compiling.  
 
 I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di commento in formato XML. Esempio:
 

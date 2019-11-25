@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424323"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142062"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -103,7 +103,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementazione del modello Dispose per una classe derivata
 
-Una classe derivata da una classe che implementa l'interfaccia <xref:System.IDisposable> non deve implementare <xref:System.IDisposable>, poiché l'implementazione della classe di base di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> viene ereditata dalle classi derivate. Al contrario, per implementare il modello Dispose per una classe derivata, è necessario predisporre quanto segue:  
+Una classe derivata da una classe che implementa l'interfaccia <xref:System.IDisposable> non deve implementare <xref:System.IDisposable>, poiché l'implementazione della classe di base di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> viene ereditata dalle classi derivate. Per rilasciare le risorse di una classe derivata, è invece necessario specificare quanto segue:  
   
 - Un metodo `protected Dispose(Boolean)` che esegua l'override del metodo della classe di base ed esegua l'effettiva operazione di rilascio delle risorse della classe derivata. Questo metodo deve anche chiamare il metodo `Dispose(Boolean)` della classe di base e passarne lo stato di eliminazione per l'argomento.  
   

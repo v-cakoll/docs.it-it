@@ -1,15 +1,15 @@
 ---
-title: "Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)"
+title: Come concatenare le chiamate al metodo dell'asseC#(LINQ to XML) ()
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418403"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141428"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Come concatenare le chiamate al metodo dell'asseC#(LINQ to XML) ()
 Uno schema comune da usare nel codice consiste nel chiamare un metodo dell'asse e quindi chiamare uno degli assi del metodo di estensione.  
   
  Sono disponibili due assi denominati `Elements` che restituiscono una raccolta di elementi: il metodo <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e il metodo <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>. È possibile combinare questi due assi per individuare tutti gli elementi con un nome specificato a una data profondità dell'albero.  

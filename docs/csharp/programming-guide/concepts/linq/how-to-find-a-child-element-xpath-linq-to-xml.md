@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare un elemento figlio (XPath-LINQ to XML) (C#)'
+title: Come trovare un elemento figlio (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: bf0eac1e6d3a5c1c80269cb5bf3502ca51a4a6b0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253869"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141242"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Procedura: Trovare un elemento figlio (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Come trovare un elemento figlio (XPath-LINQ to XML) (C#)
 Questo argomento confronta l'asse degli elementi figlio XPath con il metodo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  
   
  L'espressione XPath è `DeliveryNotes`.  
@@ -17,7 +17,7 @@ Questo argomento confronta l'asse degli elementi figlio XPath con il metodo [!IN
 ## <a name="example"></a>Esempio  
  In questo esempio viene trovato l'elemento figlio `DeliveryNotes`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

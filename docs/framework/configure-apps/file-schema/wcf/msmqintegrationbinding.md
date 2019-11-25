@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 95942e9818eccc018c123148949c6f2dee4fa6e0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736631"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140776"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding >
 Definisce un'associazione che fornisce supporto per l'accodamento mediante il routing dei messaggi tramite MSMQ.  
@@ -62,7 +62,7 @@ Definisce un'associazione che fornisce supporto per l'accodamento mediante il ro
 |exactlyOnce|Valore booleano che indica se ogni messaggio viene recapitato una sola volta. Il mittente riceverà quindi una notifica degli errori di recapito. Quando `durable` è `false`, questo attributo viene ignorato e i messaggi vengono trasferiti senza garanzia di recapito. Il valore predefinito è `true`. Per ulteriori informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Numero intero positivo che definisce la dimensione massima del messaggio, in byte, comprese le intestazioni, elaborate da questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536. Questo vincolo alla dimensione dei messaggi limita l'esposizione agli attacchi di tipo Denial of Service (DoS).|  
 |maxRetryCycles|Numero intero che indica il numero di cicli di ripetizione usati dalla funzionalità di rilevazione dei messaggi non elaborabili. Un messaggio diventa non elaborabile quando falliscono tutti i tentativi di recapito di tutti i cicli. Il valore predefinito è 2. Per ulteriori informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |receiveErrorHandling|Valore <xref:System.ServiceModel.ReceiveErrorHandling> che specifica come vengono gestiti i messaggi non elaborabili e non distribuibili.|  
 |receiveRetryCount|Numero intero che specifica il numero massimo di tentativi immediati che Gestione code deve tentare se la trasmissione di un messaggio dalla coda dell'applicazione all'applicazione non riesce.<br /><br /> Se viene raggiunto il numero massimo di tentativi di recapito senza che l'applicazione acceda al messaggio, il messaggio viene inviato a una coda di tentativi per essere inviato nuovamente in seguito. Il periodo di tempo prima che il messaggio venga trasferito di nuovo alla coda di invio è controllato dall'elemento `retryCycleDelay`. Se i cicli di ripetizione raggiungono il valore `maxRetryCycles`, il messaggio viene inviato alla coda dei messaggi non elaborabili oppure viene inviato al mittente un messaggio di non riconoscimento.|  
@@ -89,13 +89,13 @@ Definisce un'associazione che fornisce supporto per l'accodamento mediante il ro
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security >](security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[> di sicurezza \<](security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[associazioni di \<](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di associazione può essere utilizzato per abilitare le applicazioni Windows Communication Foundation (WCF) per l'invio e la ricezione di messaggi da applicazioni MSMQ esistenti che utilizzano COM, API native MSMQ o i tipi definiti nello spazio dei nomi <xref:System.Messaging?displayProperty=nameWithType> che è possibile utilizzare Questo elemento di configurazione consente di specificare le modalità di indirizzamento della coda, le garanzie di trasferimento, se i messaggi devono essere archiviati in modo durevole e come proteggere e autenticare i messaggi. Per altre informazioni, vedere [procedura: scambiare messaggi con endpoint WCF e applicazioni di Accodamento messaggi](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -137,7 +137,7 @@ Definisce un'associazione che fornisce supporto per l'accodamento mediante il ro
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<binding >](bindings.md)
+- [Binding \<](bindings.md)
 - [Associazioni](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)

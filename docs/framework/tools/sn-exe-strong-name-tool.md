@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104360"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138958"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../standard/assembly/strong-named.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|Estrae la chiave pubblica da *FileIn* e la archivia in un file CSV. I byte della chiave pubblica sono separati da virgole. Questo formato è utile per gestire i riferimenti hardcoded alle chiavi sotto forma di matrici inizializzate nel codice sorgente. Se non si specifica un *FileOut*, questa opzione inserirà l'output negli Appunti. **Nota:** questa opzione non verifica se l'input è solo una chiave pubblica. Se in `infile` è contenuta una coppia di chiavi con una chiave privata, verrà estratta anche la chiave privata.|  
 |`-p infile outfile [hashalg]`|Estrae la chiave pubblica dalla coppia di chiavi in *FileIn* e la archivia in *FileOut*, eventualmente usando l'algoritmo RSA specificato da *algoritmohash*. È possibile usare questa chiave pubblica per ritardare la firma di un assembly tramite le opzioni **/delaysign+** e **/keyfile** di [Assembly Linker (Al.exe)](al-exe-assembly-linker.md). Quando per un assembly è impostata la firma ritardata, in fase di compilazione viene impostata solo la chiave pubblica e nel file viene riservato spazio per la firma che verrà aggiunta in un secondo momento, quando sarà nota la chiave privata.|  
 |`-pc container outfile [hashalg]`|Estrae la chiave pubblica dalla coppia di chiavi in *contenitore* e la archivia in *FileOut*. Se si usa l'opzione *algoritmohash*, viene usato l'algoritmo RSA per estrarre la chiave pubblica.|  
-|`-Pb [y &#124; n]`|Specifica se sono applicati i criteri per ignorare i nomi sicuri. Se si specifica *y*, i nomi sicuri per gli assembly con attendibilità totale non vengono convalidati se caricati in <xref:System.AppDomain> con attendibilità totale. Se si specifica *n*, i nomi sicuri vengono convalidati per verificare se sono corretti, ma non per individuare un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermission> non ha effetto sugli assembly con attendibilità totale. È necessario eseguire un controllo manuale per rilevare una corrispondenza di nomi sicuri.<br /><br /> Se non si specifica né `y` né `n`, questa opzione visualizzerà l'impostazione corrente. Il valore predefinito è `y`. **Nota:** nei computer a 64 bit è necessario impostare questo parametro nelle istanze di Sn.exe a 32 bit e a 64 bit.|  
+|`-Pb [y|n]`|Specifica se sono applicati i criteri per ignorare i nomi sicuri. Se si specifica *y*, i nomi sicuri per gli assembly con attendibilità totale non vengono convalidati se caricati in <xref:System.AppDomain> con attendibilità totale. Se si specifica *n*, i nomi sicuri vengono convalidati per verificare se sono corretti, ma non per individuare un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermission> non ha effetto sugli assembly con attendibilità totale. È necessario eseguire un controllo manuale per rilevare una corrispondenza di nomi sicuri.<br /><br /> Se non si specifica né `y` né `n`, questa opzione visualizzerà l'impostazione corrente. Il valore predefinito è `y`. **Nota:** nei computer a 64 bit è necessario impostare questo parametro nelle istanze di Sn.exe a 32 bit e a 64 bit.|  
 |`-q[uiet]`|Specifica la modalità non interattiva. Evita la visualizzazione dei messaggi di esito positivo.|  
 |`-R[a] assembly infile`|Firma nuovamente un assembly firmato in precedenza o con firma ritardata con la coppia di chiavi presente in *FileIn*.<br /><br /> Se si usa **-Ra**, vengono ricalcolati gli hash per tutti i file nell'assembly.|  
 |`-Rc[a] assembly container`|Firma nuovamente un assembly firmato in precedenza o con firma ritardata con la coppia di chiavi presente in *contenitore*.<br /><br /> Se si usa **-Rca**, vengono ricalcolati gli hash per tutti i file nell'assembly.|  

@@ -1,5 +1,5 @@
 ---
-title: Clausola As (Visual Basic)
+title: Clausola As
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945093"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350179"
 ---
 # <a name="as-clause-visual-basic"></a>Clausola As (Visual Basic)
-Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di dichiarazione o un elenco di vincoli in un parametro di tipo generico.  
+Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
   
 ## <a name="remarks"></a>Note  
  È possibile usare la parola chiave `As` nei contesti seguenti:  
@@ -37,9 +37,9 @@ Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di di
   
  [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Per... Istruzioni Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each... Istruzioni Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di di
   
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try... Catch... Istruzioni finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

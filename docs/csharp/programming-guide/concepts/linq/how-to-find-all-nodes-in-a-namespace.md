@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)'
+title: Come trovare tutti i nodi in uno spazio deiC#nomi ()
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253779"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141190"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Come trovare tutti i nodi in uno spazio deiC#nomi ()
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  
   
 ## <a name="example"></a>Esempio  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Esempio  
  Il file XML cui accede la seguente query contiene gli ordini di acquisto in due spazi dei nomi diversi. Con la query viene creato un nuovo albero contenente solo gli elementi di uno degli spazi dei nomi.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordini di acquisto consolidati](./sample-xml-file-consolidated-purchase-orders.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: ordini di acquisto consolidati](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

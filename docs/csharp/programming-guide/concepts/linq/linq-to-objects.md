@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b0cc47604b65a5883643d61b44b1e9878ec4b1bf
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418169"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140884"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con qualsiasi raccolta <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, senza l'utilizzo di un'API o un provider LINQ intermedio, come per [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) o [LINQ to XML](./linq-to-xml-overview.md). È possibile usare LINQ per eseguire una query su qualsiasi raccolta enumerabile, ad esempio <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>. La raccolta può essere definita dall'utente o restituita da un'API di .NET Framework.  
@@ -39,7 +39,7 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
  [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
  Viene illustrato come eseguire una query su un oggetto ArrayList in C#.  
   
- [Procedura: Aggiungere metodi personalizzati per le query LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
+ [Come aggiungere metodi personalizzati per le query LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  Spiega come estendere il set di metodi utilizzabili per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.  
   
  [Language-Integrated Query (LINQ) (C#)](./index.md)  

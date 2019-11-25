@@ -1,16 +1,16 @@
 ---
-title: Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)
+title: Uso degli spazi dei nomi globali (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582351"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350987"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)
-Una delle funzionalità chiave dei valori letterali XML in Visual Basic è la possibilità di dichiarare gli spazi dei nomi XML utilizzando l'istruzione `Imports`. Tramite questa funzionalità, è possibile dichiarare uno spazio dei nomi XML che usa un prefisso oppure uno spazio dei nomi XML predefinito.  
+One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Tramite questa funzionalità, è possibile dichiarare uno spazio dei nomi XML che usa un prefisso oppure uno spazio dei nomi XML predefinito.  
   
  Questa funzionalità risulta utile in due situazioni. Innanzitutto gli spazi dei nomi dichiarati in valori letterali XML non vengono trasferiti nelle espressioni incorporate. La dichiarazione di spazi dei nomi globali riduce il numero di operazioni che è necessario eseguire per usare le espressioni incorporate con gli spazi dei nomi. In secondo luogo, è necessario dichiarare spazi dei nomi globali al fine di usare gli spazi dei nomi con le proprietà XML.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

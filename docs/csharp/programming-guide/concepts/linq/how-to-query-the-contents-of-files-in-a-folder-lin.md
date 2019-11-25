@@ -2,15 +2,15 @@
 title: 'Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: ad0be3b4206d0aca649987bc3fbbc26102de77c4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 41be9aadcea3999cb7ea8c01460e72ff99e01765
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592674"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140949"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)
-Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per altre informazioni, vedere [Procedura: Combinare query LINQ con espressioni regolari (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
+Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per ulteriori informazioni, vedere [come combinare query LINQ con espressioni regolari (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Stream frammenti XML con accesso a informazioni di intestazione (Visual Basic)'
+title: 'Procedura: flusso di frammenti XML con accesso a informazioni di intestazione'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614647"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332459"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Procedura: Stream frammenti XML con accesso a informazioni di intestazione (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>How to: Stream XML Fragments with Access to Header Information (Visual Basic)
 A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
- Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per eseguire una query nell'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per altre informazioni, vedere [Procedura: Scrivere un LINQ al metodo Axis XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per eseguire una query nell'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Per scrivere metodo dell'asse, scrivere un piccolo metodo che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse. Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML. È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
   
@@ -232,4 +232,4 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

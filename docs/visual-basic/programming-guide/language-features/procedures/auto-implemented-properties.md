@@ -1,5 +1,5 @@
 ---
-title: Proprietà implementate automaticamente (Visual Basic)
+title: Proprietà implementate automaticamente
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AutoProperty
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b322bd2215c95298be0a33ace1f3590a63878e24
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254024"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350378"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Proprietà implementate automaticamente (Visual Basic)
-Le *proprietà implementate automaticamente* consentono di specificare rapidamente una proprietà di una classe senza dover scrivere codice in `Get` e `Set` la proprietà. Quando si scrive il codice per una proprietà implementata automaticamente, il compilatore Visual Basic crea automaticamente un campo privato per archiviare la variabile della proprietà oltre a creare le routine `Get` e `Set` associate.  
+*Auto-implemented properties* enable you to quickly specify a property of a class without having to write code to `Get` and `Set` the property. Quando si scrive il codice per una proprietà implementata automaticamente, il compilatore Visual Basic crea automaticamente un campo privato per archiviare la variabile della proprietà oltre a creare le routine `Get` e `Set` associate.  
   
  Con le proprietà implementate automaticamente, una proprietà, incluso un valore predefinito, può essere dichiarata in una sola riga. L'esempio seguente illustra tre dichiarazioni di proprietà.  
   
@@ -47,7 +47,7 @@ End Class
  È possibile assegnare alla proprietà con espressioni di inizializzazione, come illustrato nell'esempio, oppure nel costruttore del tipo contenitore.  È possibile assegnare ai campi sottostanti delle proprietà di sola lettura in qualsiasi momento.  
   
 ## <a name="backing-field"></a>Campo sottostante  
- Quando si dichiara una proprietà implementata automaticamente, Visual Basic crea automaticamente un campo privato nascosto denominato *campo* sottostante per contenere il valore della proprietà. Il nome del campo sottostante è il nome della proprietà implementata automaticamente preceduto da un carattere di sottolineatura (_). Ad esempio, se si dichiara una proprietà implementata automaticamente denominata `ID`, il campo sottostante viene denominato `_ID`. Se si include un membro della classe con il medesimo nome `_ID`, si produce un conflitto di denominazione e in Visual Basic viene segnalato un errore del compilatore.  
+ When you declare an auto-implemented property, Visual Basic automatically creates a hidden private field called the *backing field* to contain the property value. Il nome del campo sottostante è il nome della proprietà implementata automaticamente preceduto da un carattere di sottolineatura (_). Ad esempio, se si dichiara una proprietà implementata automaticamente denominata `ID`, il campo sottostante viene denominato `_ID`. Se si include un membro della classe con il medesimo nome `_ID`, si produce un conflitto di denominazione e in Visual Basic viene segnalato un errore del compilatore.  
   
  Il campo sottostante presenta inoltre le caratteristiche seguenti:  
   
@@ -73,7 +73,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Definizioni di proprietà che richiedono la sintassi standard  
- Le proprietà implementate automaticamente sono semplici da usare e supportano molti scenari di programmazione. Tuttavia, esistono situazioni in cui non è possibile usare una proprietà implementata automaticamente e deve invece usare la sintassi di proprietà standard o *Expanded*.  
+ Le proprietà implementate automaticamente sono semplici da usare e supportano molti scenari di programmazione. However, there are situations in which you cannot use an auto-implemented property and must instead use standard, or *expanded*, property syntax.  
   
  È necessario usare la sintassi di definizione della proprietà espansa se si vuole eseguire una delle operazioni seguenti:  
   
@@ -90,11 +90,11 @@ End Class
 - Fornire commenti XML per il campo sottostante.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Espansione di una proprietà implementata automaticamente  
- Se è necessario convertire una proprietà implementata automaticamente in una proprietà espansa contenente una routine `Get` o `Set`, l'editor di codice di Visual Basic può generare automaticamente le routine `Get` e `Set` e l'istruzione `End Property` per la proprietà. Il codice viene generato se si inserisce il cursore su una riga vuota che segue `Property` l'istruzione, si `G` digita un `Get`(per) `S` o un `Set`(per) e si preme INVIO. L'editor di codice di Visual Basic genera automaticamente la routine `Get` o `Set` per le proprietà di sola lettura e di sola scrittura quando si preme INVIO alla fine di un'istruzione `Property`.  
+ Se è necessario convertire una proprietà implementata automaticamente in una proprietà espansa contenente una routine `Get` o `Set`, l'editor di codice di Visual Basic può generare automaticamente le routine `Get` e `Set` e l'istruzione `End Property` per la proprietà. The code is generated if you put the cursor on a blank line following the `Property` statement, type a `G` (for `Get`) or an `S` (for `Set`) and press ENTER. L'editor di codice di Visual Basic genera automaticamente la routine `Get` o `Set` per le proprietà di sola lettura e di sola scrittura quando si preme INVIO alla fine di un'istruzione `Property`.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)

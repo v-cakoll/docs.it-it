@@ -2,12 +2,12 @@
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 0a5090166efd90efa7537f87d5fa47b8c9d078cb
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 20ba643fddbac8a488e5457f0195cc253d4d23f7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735765"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74139322"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding >
 
@@ -71,7 +71,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |`maxBufferPoolSize`|Dimensione massima del pool di buffer dell'associazione. Il valore predefinito è 524.288 byte (512 * 1024). Molte parti di Windows Communication Foundation (WCF) usano buffer. La creazione e l'eliminazione definitiva dei buffer a ogni uso sono operazioni onerose, analogamente a quelle di Garbage Collection dei buffer. Quando si usa un pool di buffer è possibile prelevare un buffer dal pool, usarlo e, al termine delle operazioni, riporlo nel pool. In questo modo è possibile evitare il sovraccarico dovuto alla creazione e all'eliminazione definitiva dei buffer.|
 |`maxReceivedMessageSize`|Dimensione massima del messaggio, incluse le intestazioni, che può essere ricevuto in un canale configurato con questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536.|
 |`messageEncoding`|Definisce il codificatore usato per codificare il messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -Text: usa un codificatore di messaggi di testo.<br />-MTOM: usare un codificatore Message Transmission Organization Mechanism 1,0 (MTOM).<br /><br /> L'impostazione predefinita è Text.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.WSMessageEncoding>.|
-|`name`|Nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|`name`|Nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |`openTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|
 |`privacyNoticeAt`|URI presso cui si trova l'informativa sulla privacy.|
 |`privacyNoticeVersion`|Versione dell'informativa sulla privacy corrente.|
@@ -86,7 +86,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<security >](security-of-wsfederationhttpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
+|[> di sicurezza \<](security-of-wsfederationhttpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|
 |[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Specifica se vengono stabilite sessioni affidabili tra endpoint del canale.|
 
@@ -94,7 +94,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<bindings >](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
+|[associazioni di \<](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
 
 ## <a name="remarks"></a>Note
 
@@ -141,4 +141,4 @@ La federazione è la possibilità di condividere le identità di autenticazione 
 - [Associazioni](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [Binding \<](bindings.md)

@@ -6,74 +6,55 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121604"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281816"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>Contatori di prestazioni in .NET Framework
+# <a name="performance-counters-in-the-net-framework"></a>Contatori delle prestazioni nel .NET Framework
+
 In questo argomento viene fornito un elenco di contatori delle prestazioni che è possibile trovare in [Performance Monitor di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
-  
-- [Contatori delle prestazioni per le eccezioni](#exception)  
-  
-- [Contatori delle prestazioni per l'interoperabilità](#interop)  
-  
-- [Contatori delle prestazioni JIT](#jit)  
-  
-- [Contatori delle prestazioni di caricamento](#loading)  
-  
-- [Contatori delle prestazioni di blocchi e thread](#lockthread)  
-  
-- [Contatori delle prestazioni di memoria](#memory)  
-  
-- [Contatori delle prestazioni della rete](#networking)  
-  
-- [Contatori delle prestazioni di sicurezza](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>Contatori delle prestazioni per le eccezioni  
  La categoria delle eccezioni CLR .NET della console Prestazioni include contatori che forniscono informazioni sulle eccezioni generate dall'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Eccezioni**|Visualizza il numero totale di eccezioni generate dall'avvio dell'applicazione. Include sia le eccezioni .NET che quelle non gestite convertite in eccezioni .NET. Ad esempio, HRESULT restituito dal codice non gestito viene convertito in un eccezione nel codice gestito.<br /><br /> Questo contatore include sia le eccezioni gestite che non gestite. Le eccezioni rigenerate vengono conteggiate di nuovo.|  
 |**Eccezioni/sec**|Visualizza il numero di eccezioni generate al secondo. Include sia le eccezioni .NET che quelle non gestite convertite in eccezioni .NET. Ad esempio, HRESULT restituito dal codice non gestito viene convertito in un eccezione nel codice gestito.<br /><br /> Questo contatore include sia le eccezioni gestite che non gestite. Non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni. Questo contatore è un indicatore di potenziali problemi di prestazioni se viene generata una grande quantità di eccezioni (> centinaia).|  
 |**Filtri/sec**|Visualizza il numero di filtri eccezioni .NET eseguiti al secondo. Un filtro eccezioni esegue la valutazione a prescindere che l'eccezione sia gestita o meno.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Blocchi finally/sec**|Visualizza il numero di blocchi finally eseguiti al secondo. Un blocco finally viene eseguito in qualsiasi caso, a prescindere dal modo in cui è stato terminato il blocco try.  Vengono conteggiati solo i blocchi finally eseguiti per un'eccezione. I blocchi finally nei normali percorsi di codice non vengono conteggiati da questo contatore.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Frame da generato a gestito/sec**|Visualizza il numero di stack frame attraversati al secondo, dal frame che ha generato l'eccezione al frame che l'ha gestita. Il contatore viene reimpostato su zero quando viene immesso un gestore di eccezioni, quindi le eccezioni annidate visualizzano la profondità di stack da gestore a gestore.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>Contatori delle prestazioni per l'interoperabilità  
  La categoria di interoperabilità CLR .NET della console Prestazioni include contatori che forniscono informazioni sull'interazione dell'applicazione con i componenti COM, i servizi COM+ e le librerie dei tipi esterne. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**CCW**|Visualizza il numero corrente di COM Callable Wrapper (CCW). Un CCW è un proxy per un oggetto gestito a cui fa riferimento un client COM non gestito. Questo contatore indica il numero di oggetti gestiti a cui fa riferimento un codice COM non gestito.|  
 |**Marshalling**|Visualizza il numero totale di volte in cui è stato effettuato il marshalling di argomenti e valori restituiti dal codice gestito a quello non gestito e viceversa dall'avvio dell'applicazione. Questo contatore non viene incrementato se gli stub vengono impostati come inline. Gli stub sono responsabili del marshalling degli argomenti e dei valori restituiti. In genere gli stub vengono impostati come inline se il sovraccarico del marshalling è ridotto.|  
 |**Stub**|Visualizza il numero corrente di stub creati da Common Language Runtime. Gli stub sono responsabili del marshalling di argomenti e valori restituiti dal codice gestito a quello non gestito e viceversa durante una chiamata di interoperabilità COM o una chiamata di pInvoke.|  
 |**Esportazioni TLB/sec**|Riservato per usi futuri.|  
 |**Importazioni TLB/sec**|Riservato per usi futuri.|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>JIT (contatori di prestazioni)  
  La categoria JIT CLR .NET della console Prestazioni include contatori che forniscono informazioni sul codice con compilazione JIT. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
-|**Byte IL compilati Just-In-Time**|Visualizza il numero totale di byte Microsoft Intermediate Language (MSIL) compilati dal compilatore Just-In-Time (JIT) dall'avvio dell'applicazione. Questo contatore è equivalente al contatore **Totale byte IL compilati Just-In-Time**.|  
+|**Byte IL compilati Just-In-Time**|Visualizza il numero totale di byte Microsoft Intermediate Language (MSIL) compilati dal compilatore Just-In-Time (JIT) dall'avvio dell'applicazione. Questo contatore è equivalente al contatore **N. totale di byte IL compilati Just-In-Time**.|  
 |**Metodi compilati Just-In-Time**|Visualizza il numero totale di metodi con compilazione JIT dall'avvio dell'applicazione. Questo contatore non include metodi con precompilazione JIT.|  
 |**Percentuale tempo in JIT**|Visualizza la percentuale di tempo trascorso nella compilazione JIT dall'ultima fase di compilazione JIT. Questo contatore viene aggiornato alla fine di ogni fase di compilazione JIT. Una fase di compilazione JIT si verifica quando viene compilato un metodo e le relative dipendenze.|  
 |**Byte IL compilati Just-In-Time/sec**|Visualizza il numero di byte MSIL con compilazione JIT al secondo. Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Errori JIT standard**|Visualizza il numero massimo di metodi che il compilatore JIT non è riuscito a compilare dall'avvio dell'applicazione. Questo errore può verificarsi se non è possibile verificare MSIL o se si verifica un errore interno del compilatore JIT.|  
 |**Totale byte IL compilati Just-In-Time**|Visualizza i byte MSIL totali con compilazione JIT dall'avvio dell'applicazione. Questo contatore è equivalente al contatore **Byte IL compilati Just-In-Time**.|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>Contatori delle prestazioni di caricamento  
  La categoria di caricamento CLR .NET della console Prestazioni include contatori che forniscono informazioni su assembly, classi e domini applicazione caricati. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Percentuale tempo di caricamento**|Riservato per usi futuri.|  
 |**Lunghezza ricerca assembly**|Riservato per usi futuri.|  
@@ -91,12 +72,11 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 |**Totale domini applicazioni scaricati**|Visualizza il numero totale di domini applicazione scaricati dall'avvio dell'applicazione. Se un dominio applicazione viene caricato e scaricato più volte, questo contatore viene incrementato ogni volta che viene scaricato il dominio applicazione.|  
 |**Totale assembly**|Visualizza il numero totale di assembly caricati dall'avvio dell'applicazione. Se l'assembly viene caricato come indipendente dal dominio da più domini applicazione, questo contatore viene incrementato una sola volta.|  
 |**Totale classi caricate**|Visualizza il numero cumulativo di classi caricate in tutti gli assembly dall'avvio dell'applicazione.|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>Contatori delle prestazioni di blocchi e thread  
  La categoria LocksAndThreads CLR .NET della console Prestazioni include contatori che forniscono informazioni sui blocchi e i thread gestiti usati da un'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Thread logici attuali**|Visualizza il numero di oggetti thread attualmente gestiti nell'applicazione. Questo contatore mantiene il conteggio sia dei thread in esecuzione che di quelli arrestati. Questo contatore non rappresenta una media nel tempo, ma visualizza solo l'ultimo valore osservato.|  
 |**Thread fisici attuali**|Visualizza il numero di thread del sistema operativo nativo creati e posseduti da Common Language Runtime usati come thread sottostanti per gli oggetti thread gestiti. Il valore di questo contatore non include thread usati dal runtime durante le operazioni interne. Si tratta di un sottoinsieme dei thread nel processo del sistema operativo.|  
@@ -108,12 +88,11 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 |**Lunghezza massima coda**|Visualizza il numero totale di thread in attesa di acquisire un blocco gestito dall'avvio dell'applicazione.|  
 |**Thread riconosciuti/sec**|Visualizza il numero di thread al secondo riconosciuto dal runtime. Questi thread sono associati a un oggetto thread gestito corrispondente. Il runtime non crea questi thread che, tuttavia, sono stati eseguiti almeno una volta all'interno del runtime.<br /><br /> Vengono rilevati solo i thread univoci. I thread con lo stesso ID immessi di nuovo nel runtime o ricreati dopo la chiusura del thread non vengono conteggiati due volte.<br /><br /> Questo contatore non rappresenta una media del tempo, ma visualizza la differenza tra i valori osservati per gli ultimi due campioni divisa per la durata dell'intervallo dei campioni.|  
 |**Totale conflitti**|Visualizza il numero totale di volte in cui i thread nel runtime hanno tentato di acquisire un blocco gestito senza riuscirci.|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>Contatori delle prestazioni di memoria  
  La categoria di memoria CLR .NET della console Prestazioni include contatori che forniscono informazioni sul Garbage Collector. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Byte in tutti gli heap**|Visualizza la somma dei contatori **Dimensione heap di generazione 1**, **Dimensione heap di generazione 2**, **Dimensione heap oggetti grandi**. Questo contatore indica la memoria corrente allocata in byte sugli heap di Garbage Collection.|  
 |**Handle GC**|Visualizza il numero corrente di handle di Garbage Collection in uso. Gli handle di Garbage Collection sono handle di risorse esterne a Common Language Runtime e all'ambiente gestito.|  
@@ -133,17 +112,17 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
 |**Dimensione heap di generazione 1**|Visualizza il numero corrente di byte nella generazione 1. Questo contatore non visualizza la dimensione massima della generazione 1. Gli oggetti non vengono allocati direttamente in questa generazione, ma vengono promossi dalle Garbage Collection di generazione 0. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
 |**Byte di generazione 1 promossi/sec**|Visualizza il numero di byte al secondo promossi dalla generazione 1 alla generazione 2. In questo contatore non sono inclusi gli oggetti promossi solo perché in attesa di essere finalizzati.<br /><br /> La memoria viene promossa quando non è raccolta dalla Garbage Collection. Nessun elemento viene promosso dalla generazione 2 perché è quella meno recente. Questo contatore è un indicatore degli oggetti di durata molto lunga creati al secondo.<br /><br /> Questo contatore visualizza la differenza tra i valori osservati negli ultimi due esempi divisa per la durata dell'intervallo di campionamento.|  
 |**Dimensione heap di generazione 2**|Visualizza il numero corrente di byte nella generazione 2. Gli oggetti non vengono allocati direttamente in questa generazione, ma vengono promossi dalla generazione 1 durante le Garbage Collection di generazione 1 precedenti. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
-|**Dimensione heap oggetti grandi**|Visualizza le dimensioni correnti in byte dell'heap oggetti grandi. Gli oggetti che superano circa 85.000 byte sono considerati oggetti di grandi dimensioni dal Garbage Collector e vengono allocati direttamente in un heap speciale; non vengono promossi da una generazione all'altra. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
+|**Dimensione heap oggetti grandi**|Consente di visualizzare le dimensioni correnti, in byte, dell'heap oggetti grandi. Gli oggetti che sono maggiori di circa 85.000 byte vengono trattati come oggetti di grandi dimensioni dal Garbage Collector e vengono allocati direttamente in un heap speciale. Non vengono promossi attraverso le generazioni. Questo contatore viene aggiornato alla fine di una Garbage Collection, non a ogni allocazione.|  
 |**ID processo**|Viene visualizzato l'ID processo dell'istanza del processo CLR in fase di monitoraggio.|  
 |**Memoria di completamento promossa dalla generazione 0**|Visualizza i byte di memoria promossi dalla generazione 0 alla generazione 1 solo perché in attesa di essere completati. Questo contatore non è cumulativo, ma visualizza il valore rilevato al termine dell'ultima Garbage Collection.|  
 |**Memoria promossa dalla generazione 0**|Visualizza i byte di memoria non raccolti dalla Garbage Collection e promossi dalla generazione 0 alla generazione 1. In questo contatore non sono inclusi gli oggetti promossi solo perché in attesa di essere finalizzati. Questo contatore non è cumulativo, ma visualizza il valore rilevato al termine dell'ultima Garbage Collection.|  
 |**Memoria promossa dalla generazione 1**|Visualizza i byte di memoria non raccolti dalla Garbage Collection e promossi dalla generazione 1 alla generazione 2. In questo contatore non sono inclusi gli oggetti promossi solo perché in attesa di essere finalizzati. Questo contatore non è cumulativo, ma visualizza il valore rilevato al termine dell'ultima Garbage Collection. Questo contatore viene reimpostato su 0 se l'ultima Garbage Collection è stata solo di generazione 0.|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>Contatori delle prestazioni della rete  
- La categoria di rete CLR .NET della console Prestazioni include contatori che forniscono informazioni sui dati che un'applicazione invia e riceve in rete. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
+
+La categoria di rete CLR .NET della console Prestazioni include contatori che forniscono informazioni sui dati che un'applicazione invia e riceve in rete. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Byte ricevuti**|Il totale cumulativo di byte ricevuti da tutti gli oggetti <xref:System.Net.Sockets.Socket> all'interno di <xref:System.AppDomain> dall'avvio del processo. Questo numero include i dati e le informazioni sul protocollo non definiti da TCP/IP.|  
 |**Byte inviati**|Il numero cumulativo di byte inviati da tutti gli oggetti <xref:System.Net.Sockets.Socket> all'interno di <xref:System.AppDomain> dall'avvio del processo. Questo numero include i dati e le informazioni sul protocollo non definiti da TCP/IP.|  
@@ -167,7 +146,7 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
   
 - I contatori per ogni intervallo che misurano il numero di oggetti che stanno effettuando una particolare transizione per intervallo (in genere al secondo).  
   
- I contatori delle prestazioni della rete per gli eventi includono quanto segue:  
+I contatori delle prestazioni della rete per gli eventi includono quanto segue:  
   
 - **Connessioni stabilite**  
   
@@ -209,9 +188,9 @@ In questo argomento viene fornito un elenco di contatori delle prestazioni che �
   
 - **Oggetti HttpWebRequests non completati al secondo**  
   
- Per il contatore **Oggetti HttpWebRequests interrotti al secondo** vengono conteggiate anche le chiamate interne a <xref:System.Net.HttpWebRequest.Abort%2A>. Queste chiamate interne sono generalmente causate dai timeout che un'applicazione desidera misurare.  
+ Per il contatore **HttpWebRequest interrotti/sec.** , vengono conteggiate anche le chiamate interne a <xref:System.Net.HttpWebRequest.Abort%2A>. Queste chiamate interne sono generalmente causate dai timeout che un'applicazione desidera misurare.  
   
- Il contatore **Oggetti HttpWebRequests non completati al secondo** contiene il numero di oggetti <xref:System.Net.HttpWebRequest> che hanno ricevuto un codice di stato di errore dal server al secondo. Ciò significa che il codice di stato ricevuto dal server Http alla fine della richiesta non era compreso tra 200 e 299. L'esito dei codici di stato che vengono gestiti e restituiscono una nuova richiesta (ad esempio, molti dei codici di stato Unauthorized 401) dipende dal risultato del tentativo. Se l'applicazione rileva un errore basato sul tentativo, questo contatore viene incrementato.  
+ Il contatore **HttpWebRequest non riusciti/sec.** contiene il numero di oggetti <xref:System.Net.HttpWebRequest> che hanno ricevuto un codice di stato di errore dal server al secondo. Ciò significa che il codice di stato ricevuto dal server Http alla fine della richiesta non era compreso tra 200 e 299. L'esito dei codici di stato che vengono gestiti e restituiscono una nuova richiesta (ad esempio, molti dei codici di stato Unauthorized 401) dipende dal risultato del tentativo. Se l'applicazione rileva un errore basato sul tentativo, questo contatore viene incrementato.  
   
  L'accesso e la gestione dei contatori delle prestazioni della rete possono essere eseguite con <xref:System.Diagnostics.PerformanceCounter> e le classi correlate nello spazio dei nomi <xref:System.Diagnostics>. I contatori delle prestazioni di rete possono essere visualizzati anche nella console di Windows Performance Monitor.  
   
@@ -236,12 +215,11 @@ for (int i = 0; i < Array.Length; i++)
 - ".NET CLR Networking 4.0.0.0": tutti i contatori socket sopra indicati più i nuovi contatori delle prestazioni supportati in .NET Framework versione 4 e versioni successive. Questi nuovi contatori forniscono informazioni sulle prestazioni degli oggetti <xref:System.Net.HttpWebRequest>.  
   
  Per altre informazioni sull'accesso e la gestione dei contatori delle prestazioni in un'applicazione, vedere [Contatori delle prestazioni](performance-counters.md).  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>Contatori delle prestazioni di sicurezza  
  La categoria di sicurezza CLR .NET della console Prestazioni include contatori che forniscono informazioni sui controlli di sicurezza eseguiti da Common Language Runtime per un'applicazione. Nella tabella che segue vengono descritti tali contatori di prestazioni.  
   
-|Contatore delle prestazioni|Descrizione|  
+|Contatore delle prestazioni|description|  
 |-------------------------|-----------------|  
 |**Controlli Linktime**|Visualizza il numero totale di controlli di sicurezza per l'accesso di codice in fase di collegamento dall'avvio dell'applicazione. I controlli di sicurezza per l'accesso di codice in fase di collegamento vengono eseguiti quando un chiamante richiede una particolare autorizzazione in fase di compilazione Just-In-Time (JIT). Un controllo in fase di collegamento viene eseguito una sola volta per ogni chiamante. Questo conteggio non segnala problemi gravi relativi alle prestazioni, ma indica solo l'attività del sistema di sicurezza.|  
 |**Percentuale tempo impiegato in controlli runtime**|Visualizza la percentuale di tempo impiegato per eseguire i controlli di sicurezza per l'accesso di codice di runtime dall'ultimo campionamento. Questo contatore viene aggiornato alla fine di un controllo di sicurezza di .NET Framework. Non rappresenta una media, ma l'ultimo valore osservato.|  
@@ -251,5 +229,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Contatori delle prestazioni](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [Runtime Profiling](runtime-profiling.md) (Profilatura di runtime)

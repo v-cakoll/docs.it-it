@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119784"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204567"
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 
 La creazione di copie shadow consente di aggiornare gli assembly usati in un dominio applicazione senza scaricare quest'ultimo. Ciò è particolarmente utile per le applicazioni che devono essere disponibili in modo continuo, ad esempio siti ASP.NET.
 
 > [!IMPORTANT]
-> La copia shadow non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 Common Language Runtime blocca un file di assembly quando l'assembly è caricato, in modo che non sia possibile aggiornare il file finché l'assembly non sarà stato scaricato. L'unico modo per scaricare un assembly da un dominio applicazione consiste nello scaricare il dominio applicazione; pertanto, in circostanze normali, non è possibile aggiornare un assembly su disco fino a quando tutti i domini applicazione che lo usano non saranno stati scaricati.
 

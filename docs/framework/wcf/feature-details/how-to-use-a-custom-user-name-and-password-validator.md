@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare un validator di nome utente e password personalizzato'
+title: 'Procedura: usare un validator di nome utente e password personalizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 98ffad7e717aac949509fa701c77d8ba2b80a695
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3d01a29671f42e80fdb7ca45223007aa60273ba9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834700"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283251"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: Usare un validator di nome utente e password personalizzato
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: usare un validator di nome utente e password personalizzato
 
 Per impostazione predefinita, quando si usa un nome utente e una password per l'autenticazione, Windows Communication Foundation (WCF) usa Windows per convalidare il nome utente e la password. Tuttavia, WCF consente schemi di autenticazione con nome utente e password personalizzati, noti anche come *validator*. Per incorporare un validator personalizzato di nome utente e password, creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configurarla.
 
@@ -40,32 +40,32 @@ Per un'applicazione di esempio, vedere [validator nome utente password](../sampl
 
 1. Configurare un'associazione che utilizza meccanismi di sicurezza a livello di messaggio su qualsiasi trasporto o meccanismi di sicurezza a livello di trasporto su HTTP(S).
 
-    Quando si utilizza la sicurezza dei messaggi, aggiungere una delle associazioni fornite dal sistema, ad esempio un [> \<wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), o un [> \<customBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) che supporta la sicurezza dei messaggi e il tipo di credenziale `UserName`.
+    Quando si utilizza la sicurezza dei messaggi, aggiungere una delle associazioni fornite dal sistema, ad esempio un [\<wshttpbinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)o un [\<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) che supporta la sicurezza dei messaggi e il tipo di credenziale `UserName`.
 
-    Quando si usa la sicurezza a livello di trasporto su HTTP (S), aggiungere il [\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) o [\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md), un @no__t > [-5netTcpBinding](../../configure-apps/file-schema/wcf/nettcpbinding.md) o un @no__t > [-7customBinding](../../configure-apps/file-schema/wcf/custombinding.md) che usa http (s) e il schema di autenticazione `Basic`.
+    Quando si utilizza la sicurezza a livello di trasporto su HTTP (S), aggiungere il [\<wshttpbinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) o [\<BasicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md), un\<[NetTcpBinding](../../configure-apps/file-schema/wcf/nettcpbinding.md) > oppure un\<[customBinding](../../configure-apps/file-schema/wcf/custombinding.md) > che utilizza http (s) e lo schema di autenticazione di `Basic`.
 
     > [!NOTE]
-    > Quando si utilizza [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] o versioni successive, è possibile utilizzare un validator di nome utente e password personalizzato con modalità di sicurezza dei messaggi e del trasporto. Con WinFX, un validator personalizzato di nome utente e password può essere utilizzato solo con la sicurezza dei messaggi.
+    > Quando si usa .NET Framework 3,5 o versioni successive, è possibile usare un validator personalizzato di nome utente e password con la sicurezza dei messaggi e del trasporto. Con WinFX, un validator personalizzato di nome utente e password può essere utilizzato solo con la sicurezza dei messaggi.
 
     > [!TIP]
-    > Per ulteriori informazioni sull'utilizzo di \<netTcpBinding > in questo contesto, vedere [\<security >](../../configure-apps/file-schema/wcf/security-of-nettcpbinding.md).
+    > Per ulteriori informazioni sull'utilizzo di \<NetTcpBinding > in questo contesto, vedere [\<security >](../../configure-apps/file-schema/wcf/security-of-nettcpbinding.md).
 
-    1. Nel file di configurazione, sotto l'elemento [\<system. serviceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) aggiungere un elemento [> @no__t 3bindings](../../configure-apps/file-schema/wcf/bindings.md) .
+    1. Nel file di configurazione, sotto l'elemento [\<System. serviceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) aggiungere un elemento [\<bindings >](../../configure-apps/file-schema/wcf/bindings.md) .
 
-    2. Aggiungere un elemento [\<wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) o [\<basicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md) alla sezione Bindings. Per ulteriori informazioni sulla creazione di un elemento di associazione WCF, vedere [How per: Specificare un'associazione al servizio nella](../how-to-specify-a-service-binding-in-configuration.md)configurazione.
+    2. Aggiungere un [\<wshttpbinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) o [\<elemento BasicHttpBinding >](../../configure-apps/file-schema/wcf/basichttpbinding.md) alla sezione Bindings. Per ulteriori informazioni sulla creazione di un elemento di associazione WCF, vedere [procedura: specificare un'associazione al servizio nella configurazione](../how-to-specify-a-service-binding-in-configuration.md).
 
-    3. Impostare l'attributo `mode` del [> \<Security](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) o [\<security >](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) su `Message`, `Transport` o `TransportWithMessageCredential`.
+    3. Impostare l'attributo `mode` del [> di sicurezza\<](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) o [\<> di sicurezza](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) su `Message`, `Transport`o `TransportWithMessageCredential`.
 
-    4. Impostare l'attributo `clientCredentialType` del [> \<message](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) o [\<transport >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).
+    4. Impostare l'attributo `clientCredentialType` del [messaggio di\<>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) o [\<> di trasporto](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).
 
-        Quando si usa la sicurezza del messaggio, impostare l'attributo `clientCredentialType` del [> \<message](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) su `UserName`.
+        Quando si utilizza la sicurezza del messaggio, impostare l'attributo `clientCredentialType` del [messaggio di\<>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) `UserName`.
 
-        Quando si utilizza la sicurezza a livello di trasporto su HTTP (S), impostare l'attributo `clientCredentialType` del [> \<transport](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) o [\<transport >](../../configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) su `Basic`.
+        Quando si utilizza la sicurezza a livello di trasporto su HTTP (S), impostare l'attributo `clientCredentialType` del [> di trasporto\<](../../configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) o [\<> del trasporto](../../configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) su `Basic`.
 
         > [!NOTE]
-        > Quando un servizio WCF è ospitato in Internet Information Services (IIS) utilizzando la sicurezza a livello di trasporto e la proprietà <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> è impostata su <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, lo schema di autenticazione personalizzato utilizza un subset dell'autenticazione di Windows. Ciò è dovuto al fatto che in questo scenario IIS esegue l'autenticazione di Windows prima che WCF richiami l'autenticatore personalizzato.
+        > Quando un servizio WCF è ospitato in Internet Information Services (IIS) utilizzando la sicurezza a livello di trasporto e la proprietà <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> è impostata su <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, lo schema di autenticazione personalizzato utilizza un subset di autenticazione di Windows. Ciò è dovuto al fatto che in questo scenario IIS esegue l'autenticazione di Windows prima che WCF richiami l'autenticatore personalizzato.
 
-    Per ulteriori informazioni sulla creazione di un elemento di associazione WCF, vedere [How per: Specificare un'associazione al servizio nella](../how-to-specify-a-service-binding-in-configuration.md)configurazione.
+    Per ulteriori informazioni sulla creazione di un elemento di associazione WCF, vedere [procedura: specificare un'associazione al servizio nella configurazione](../how-to-specify-a-service-binding-in-configuration.md).
 
     Nell'esempio seguente viene illustrato il codice di configurazione per l'associazione:
 
@@ -85,15 +85,15 @@ Per un'applicazione di esempio, vedere [validator nome utente password](../sampl
 
 2. Configurare un comportamento che specifica che un validator personalizzato di nome utente e password viene utilizzato per convalidare coppie di nome utente e password per i token di sicurezza <xref:System.IdentityModel.Tokens.UserNameSecurityToken> in arrivo.
 
-    1. Come elemento figlio dell'elemento [> \<system. ServiceModel](../../configure-apps/file-schema/wcf/system-servicemodel.md) , aggiungere un elemento [> @no__t 3behaviors](../../configure-apps/file-schema/wcf/behaviors.md) .
+    1. Come elemento figlio dell'elemento [\<System. serviceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) , aggiungere un elemento [\<> dei comportamenti](../../configure-apps/file-schema/wcf/behaviors.md) .
 
-    2. Aggiungere un [> \<serviceBehaviors](../../configure-apps/file-schema/wcf/servicebehaviors.md) all'elemento [\<behaviors >](../../configure-apps/file-schema/wcf/behaviors.md) .
+    2. Aggiungere un [\<serviceBehaviors >](../../configure-apps/file-schema/wcf/servicebehaviors.md) all'elemento [\<behaviors >](../../configure-apps/file-schema/wcf/behaviors.md) .
 
-    3. Aggiungere un elemento [> \<behavior](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) e impostare l'attributo `name` su un valore appropriato.
+    3. Aggiungere un [\<comportamento >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento e impostare l'attributo `name` su un valore appropriato.
 
-    4. Aggiungere un [> \<serviceCredentials](../../configure-apps/file-schema/wcf/servicecredentials.md) all'elemento [\<behavior >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) .
+    4. Aggiungere un [> di\<ServiceCredentials](../../configure-apps/file-schema/wcf/servicecredentials.md) all'elemento [> del comportamento\<](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) .
 
-    5. Aggiungere un [> \<userNameAuthentication](../../configure-apps/file-schema/wcf/usernameauthentication.md) al [> @no__t 3serviceCredentials](../../configure-apps/file-schema/wcf/servicecredentials.md).
+    5. Aggiungere un [\<> UserNameAuthentication](../../configure-apps/file-schema/wcf/usernameauthentication.md) al [>\<ServiceCredentials](../../configure-apps/file-schema/wcf/servicecredentials.md).
 
     6. Impostare `userNamePasswordValidationMode` su `Custom`.
 
@@ -102,7 +102,7 @@ Per un'applicazione di esempio, vedere [validator nome utente password](../sampl
 
     7. Impostare `customUserNamePasswordValidatorType` sul tipo che rappresenta il validator personalizzato di nome utente e password.
 
-    Nell'esempio seguente viene illustrato il frammento `<serviceCredentials>` fino a questo punto:
+    Nell'esempio seguente viene illustrato il frammento di `<serviceCredentials>` fino a questo punto:
 
     ```xml
     <serviceCredentials>
@@ -122,5 +122,5 @@ Nel codice di esempio seguente viene dimostrato come creare un validator persona
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [Procedura: Usare il provider di appartenenze ASP.NET @ no__t-0
+- [Procedura: Usare provider di appartenenza ASP.NET](how-to-use-the-aspnet-membership-provider.md)
 - [Autenticazione](authentication-in-wcf.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare elementi correlati (XPath-LINQ to XML) (C#)'
+title: Come trovare elementi correlati (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253636"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141028"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi correlati (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Come trovare elementi correlati (XPath-LINQ to XML) (C#)
 In questo argomento viene illustrato come ottenere un elemento selezionando un attributo cui viene fatto riferimento dal valore di un altro elemento.  
   
  L'espressione XPath è:  
@@ -21,7 +21,7 @@ In questo argomento viene illustrato come ottenere un elemento selezionando un a
   
  Notare che in .NET l'indicizzazione in un elenco è basata su "zero". L'indicizzazione in una raccolta di nodi di un predicato XPath è basata su 'uno'. L'esempio rispecchia questa differenza.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: a5668d36e972699218633d8b8630d38a5c7cc9a3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 630ab717e44d72de248bb0f0b1abf3d781d26a93
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853882"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204733"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installare .NET Framework in Windows Vista e Windows Server 2008
 
@@ -28,7 +28,7 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-È possibile installare [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) in Windows Vista.
+È possibile installare [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) in Windows Vista.
 
 .NET Framework 3.5 supporta le app create per .NET Framework da 1.0 a 3.5.
 

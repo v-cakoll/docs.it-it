@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774294"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283276"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 
@@ -72,7 +72,7 @@ I certificati digitali vengono usati per autenticare un'entità basandosi su una
 
 Quando si crea un nuovo servizio è possibile che si utilizzi un certificato che non è stato rilasciato tramite un certificato radice attendibile oppure che il certificato emittente non sia contenuto nell'archivio Autorità di certificazione radice attendibili. In questo caso, e solo per scopi di sviluppo, è possibile disabilitare temporaneamente il meccanismo che verifica la catena di trust di un certificato. A tale scopo, impostare la proprietà `CertificateValidationMode` su `PeerTrust` oppure su `PeerOrChainTrust`. Queste modalità specificano rispettivamente che il certificato può essere autocertificato (trust peer) o appartenere a una catena di trust. Questa proprietà può essere impostata in una qualsiasi delle classi seguenti:
 
-|Class|proprietà|
+|Classe|Proprietà|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -141,7 +141,7 @@ La modalità può inoltre essere impostata nella configurazione tramite l'attrib
 
 In WCF spesso occorre specificare un certificato o un set di certificati che un servizio o un client deve usare per autenticare, crittografare o firmare digitalmente un messaggio. Questa operazione può essere eseguita a livello di programmazione mediante il metodo `SetCertificate` di varie classi che rappresentano i certificati X.509. Le classi seguenti utilizzano il metodo `SetCertificate` per specificare un certificato.
 
-|Class|Metodo|
+|Classe|Metodo|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -168,7 +168,7 @@ Una funzionalità di IIS e di Active Directory è la possibilità di eseguire il
 
 Per altre informazioni sull'uso della funzionalità di mapping di Active Directory, vedere [Mapping di certificati client con il mapping del servizio directory](https://go.microsoft.com/fwlink/?LinkId=88918).
 
-Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> della classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> su `true`. Nella configurazione è possibile impostare su `true` l'attributo `mapClientCertificateToWindowsAccount` dell'elemento [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md), come mostrato nel codice seguente.
+Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> della classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> su `true`. Nella configurazione è possibile impostare su `mapClientCertificateToWindowsAccount` l'attributo [ dell'elemento \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)authentication>`true`, come mostrato nel codice seguente.
 
 ```xml
 <serviceBehaviors>
@@ -184,7 +184,7 @@ Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:
 
 L'esecuzione del mapping di un certificato X.509 al token che rappresenta un account utente di Windows è considerata un'elevazione dei privilegi perché, una volta eseguito tale mapping, il token di Windows può essere utilizzato per accedere alle risorse protette. Pertanto, il criterio del dominio richiede che il certificato X.509 sia conforme al proprio criterio prima di eseguire il mapping. Il pacchetto di sicurezza *SChannel* applica questo requisito.
 
-Quando si usa [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] o versioni successive, WCF garantisce che il certificato sia conforme al criterio di dominio prima che venga mappato a un account di Windows.
+Quando si usa .NET Framework 3,5 o versioni successive, WCF garantisce che il certificato sia conforme ai criteri di dominio prima di eseguirne il mapping a un account di Windows.
 
 Nella prima versione di WCF il mapping viene eseguito senza prendere in considerazione il criterio del dominio. È pertanto possibile che le applicazioni che funzionano correttamente con la prima versione presentano problemi se il mapping viene abilitato e il certificato X.509 non soddisfa il criterio del dominio.
 
@@ -194,4 +194,4 @@ Nella prima versione di WCF il mapping viene eseguito senza prendere in consider
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

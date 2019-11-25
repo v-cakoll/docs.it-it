@@ -3,14 +3,14 @@ title: Creare tipi mixin usando metodi di interfaccia predefiniti
 description: Utilizzando i membri di interfaccia predefiniti è possibile estendere le interfacce con implementazioni predefinite facoltative per gli implementatori.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039279"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140851"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Esercitazione: combinare la funzionalità quando si creano classi usando le interfacce con i metodi di interfaccia predefiniti
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Esercitazione: combinare le funzionalità in durante la creazione di classi mediante interfacce con metodi di interfaccia predefiniti
 
 A partire da C# 8.0 su .NET Core 3.0 è possibile definire un'implementazione quando si dichiara un membro di un'interfaccia. Questa funzionalità fornisce nuove funzionalità in cui è possibile definire le implementazioni predefinite per le funzionalità dichiarate nelle interfacce. Le classi possono scegliere quando eseguire l'override della funzionalità, quando utilizzare la funzionalità predefinita e quando non dichiarare il supporto per le funzionalità discrete.
 

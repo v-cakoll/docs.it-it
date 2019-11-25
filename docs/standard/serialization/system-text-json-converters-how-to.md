@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 361818a0bda8863f8878b86e5fb377dc0faf5246
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 33d1cd7764e71d9e2fa382c9f3c5feb77e8defb4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73741892"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283342"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>Come scrivere convertitori personalizzati per la serializzazione JSON in .NET
 
@@ -53,176 +53,13 @@ Il modello di base crea una classe in grado di gestire un tipo. Il modello facto
 
 L'esempio seguente è un convertitore che esegue l'override della serializzazione predefinita per un tipo di dati esistente. Il convertitore usa il formato mm/gg/aaaa per le proprietà `DateTimeOffset`.
 
-```csharp
-private class ExampleDateTimeOffsetConverter : JsonConverter<DateTimeOffset>
-{
-    public override DateTimeOffset Read(
-        ref Utf8JsonReader reader, 
-        Type typeToConvert, 
-        JsonSerializerOptions options)
-    {
-        return DateTimeOffset.ParseExact(reader.GetString(), 
-            "MM/dd/yyyy", CultureInfo.InvariantCulture);
-    }
-
-    public override void Write(
-        Utf8JsonWriter writer, 
-        DateTimeOffset value, 
-        JsonSerializerOptions options)
-    {
-        writer.WriteStringValue(value.ToString(
-            "MM/dd/yyyy", CultureInfo.InvariantCulture));
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetConverter.cs)]
 
 ## <a name="sample-factory-pattern-converter"></a>Convertitore di modelli Factory di esempio
 
 Il codice seguente illustra un convertitore personalizzato che funziona con `Dictionary<Enum,TValue>`. Il codice segue il modello Factory perché il primo parametro di tipo generico è `Enum` e il secondo è aperto. Il metodo `CanConvert` restituisce `true` solo per un `Dictionary` con due parametri generici, il primo dei quali è un tipo `Enum`. Il convertitore interno ottiene un convertitore esistente per gestire qualsiasi tipo fornito in fase di esecuzione per `TValue`. 
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace SystemTextJsonSamples
-{
-    public class ConverterDictionaryTKeyEnumTValue : JsonConverterFactory
-    {
-        public override bool CanConvert(Type typeToConvert)
-        {
-            if (!typeToConvert.IsGenericType)
-            {
-                return false;
-            }
-
-            if (typeToConvert.GetGenericTypeDefinition() != typeof(Dictionary<,>))
-            {
-                return false;
-            }
-
-            return typeToConvert.GetGenericArguments()[0].IsEnum;
-        }
-
-        public override JsonConverter CreateConverter(
-            Type type, 
-            JsonSerializerOptions options)
-        {
-            Type keyType = type.GetGenericArguments()[0];
-            Type valueType = type.GetGenericArguments()[1];
-
-            JsonConverter converter = (JsonConverter)Activator.CreateInstance(
-                typeof(DictionaryEnumConverterInner<,>).MakeGenericType(
-                    new Type[] { keyType, valueType }),
-                BindingFlags.Instance | BindingFlags.Public,
-                binder: null,
-                args: new object[] { options },
-                culture: null);
-
-            return converter;
-        }
-
-        private class DictionaryEnumConverterInner<TKey, TValue> : 
-            JsonConverter<Dictionary<TKey, TValue>> where TKey : struct, Enum
-        {
-            private readonly JsonConverter<TValue> _valueConverter;
-            private Type _keyType;
-            private Type _valueType;
-
-            public DictionaryEnumConverterInner(JsonSerializerOptions options)
-            {
-                // For performance, use the existing converter if available.
-                _valueConverter = (JsonConverter<TValue>)options
-                    .GetConverter(typeof(TValue));
-
-                // Cache the key and value types.
-                _keyType = typeof(TKey);
-                _valueType = typeof(TValue);
-            }
-
-            public override Dictionary<TKey, TValue> Read(
-                ref Utf8JsonReader reader, 
-                Type typeToConvert, 
-                JsonSerializerOptions options)
-            {
-                if (reader.TokenType != JsonTokenType.StartObject)
-                {
-                    throw new JsonException();
-                }
-
-                Dictionary<TKey, TValue> value = new Dictionary<TKey, TValue>();
-
-                while (reader.Read())
-                {
-                    if (reader.TokenType == JsonTokenType.EndObject)
-                    {
-                        return value;
-                    }
-
-                    // Get the key.
-                    if (reader.TokenType != JsonTokenType.PropertyName)
-                    {
-                        throw new JsonException();
-                    }
-
-                    string propertyName = reader.GetString();
-
-                    // For performance, parse with ignoreCase:false first.
-                    if (!Enum.TryParse(propertyName, ignoreCase: false, out TKey key) &&
-                        !Enum.TryParse(propertyName, ignoreCase: true, out key))
-                    {
-                        throw new JsonException(
-                            $"Unable to convert \"{propertyName}\" to Enum \"{_keyType}\".");
-                    }
-
-                    // Get the value.
-                    TValue v;
-                    if (_valueConverter != null)
-                    {
-                        reader.Read();
-                        v = _valueConverter.Read(ref reader, _valueType, options);
-                    }
-                    else
-                    {
-                        v = JsonSerializer.Deserialize<TValue>(ref reader, options);
-                    }
-
-                    // Add to dictionary.
-                    value.Add(key, v);
-                }
-
-                throw new JsonException();
-            }
-
-            public override void Write(
-                Utf8JsonWriter writer, 
-                Dictionary<TKey, TValue> value, 
-                JsonSerializerOptions options)
-            {
-                writer.WriteStartObject();
-
-                foreach (KeyValuePair<TKey, TValue> kvp in value)
-                {
-                    writer.WritePropertyName(kvp.Key.ToString());
-
-                    if (_valueConverter != null)
-                    {
-                        _valueConverter.Write(writer, kvp.Value, options);
-                    }
-                    else
-                    {
-                        JsonSerializer.Serialize(writer, kvp.Value, options);
-                    }
-                }
-
-                writer.WriteEndObject();
-            }
-        }
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 Il codice precedente è identico a quello visualizzato nel [dizionario di supporto con chiave non stringa](#support-dictionary-with-non-string-key) più avanti in questo articolo.
 
@@ -254,13 +91,13 @@ Il tipo di `Enum` è simile a un tipo generico aperto: un convertitore per `Enum
 
 Se è necessario generare un'eccezione nel codice di gestione degli errori, provare a generare un <xref:System.Text.Json.JsonException> senza un messaggio. Questo tipo di eccezione crea automaticamente un messaggio che include il percorso della parte di JSON che ha causato l'errore. Ad esempio, l'istruzione `throw new JsonException();` genera un messaggio di errore simile all'esempio seguente:
 
-```text
+```
 Unhandled exception. System.Text.Json.JsonException: 
 The JSON value could not be converted to System.Object. 
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-Se si fornisce un messaggio, ad esempio `throw new JsonException("Error occurred)`, l'eccezione fornisce ancora il percorso nella proprietà <xref:System.Text.Json.JsonException.Path>.
+Se si fornisce un messaggio, ad esempio `throw new JsonException("Error occurred")`, l'eccezione fornisce ancora il percorso nella proprietà <xref:System.Text.Json.JsonException.Path>.
 
 ## <a name="register-a-custom-converter"></a>Registrare un convertitore personalizzato
 
@@ -272,132 +109,55 @@ Se si fornisce un messaggio, ad esempio `throw new JsonException("Error occurred
 
 ## <a name="registration-sample---converters-collection"></a>Esempio di registrazione-raccolta Converters 
 
-Di seguito è riportato un esempio che rende il `ExampleDateTimeOffsetConverter` il valore predefinito per le proprietà di tipo `DateTimeOffset`:
+Di seguito è riportato un esempio che rende il <xref:System.ComponentModel.DateTimeOffsetConverter> il valore predefinito per le proprietà di tipo <xref:System.DateTimeOffset>:
 
-```csharp
-//...
-JsonSerializerOptions options = new JsonSerializerOptions();
-options.Converters.Add(new ExampleDateTimeOffsetConverter());
-string json = JsonSerializer.Serialize(weatherForecast, options);
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
 
-Si supponga di serializzare il tipo seguente:
+Si supponga di serializzare un'istanza del tipo seguente:
 
-```csharp
-class WeatherForecast
-{
-    public DateTimeOffset Date { get; set; }
-    public int TemperatureC { get; set; }
-    public string Summary { get; set; }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 Di seguito è riportato un esempio di output JSON che mostra il convertitore personalizzato usato:
 
 ```json
 {
   "Date": "08/01/2019",
-  "TemperatureC": 25,
+  "TemperatureCelsius": 25,
   "Summary": "Hot"
 }
 ```
 
 Il codice seguente usa lo stesso approccio per deserializzare usando il convertitore di `DateTimeOffset` personalizzato:
 
-```csharp
-//...
-JsonSerializerOptions options = new JsonSerializerOptions();
-options.Converters.Add(new ExampleDateTimeOffsetConverter());
-weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json, options);
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>Esempio di registrazione-[JsonConverter] in una proprietà
 
 Il codice seguente consente di selezionare un convertitore personalizzato per la proprietà `Date`:
 
-```csharp
-class WeatherForecastWithConverter
-{
-    [JsonConverter(typeof(ExampleDateTimeOffsetConverter))]
-    public DateTimeOffset Date { get; set; }
-    public int TemperatureC { get; set; }
-    public string Summary { get; set; }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
 
-Il codice per serializzare e deserializzare `WeatherForecastWithConverter` non richiede l'uso di `JsonSerializeOptions.Converters`:
+Il codice per serializzare `WeatherForecastWithConverterAttribute` non richiede l'uso di `JsonSerializeOptions.Converters`:
 
-```csharp
-string json = JsonSerializer.Serialize(weatherForecastWithConverter);
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
 
-```csharp
-weatherForecast = JsonSerializer.Deserialize<WeatherForecastWithConverter>(json);
-```
+Anche il codice da deserializzare non richiede l'uso di `Converters`:
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>Esempio di registrazione-[JsonConverter] in un tipo
 
 Di seguito è riportato il codice che consente di creare uno struct e di applicare l'attributo `[JsonConverter]`:
 
-```csharp
-[JsonConverter(typeof(TemperatureConverter))]
-public struct Temperature
-{
-    public Temperature(int degrees, bool celsius)
-    {
-        _degrees = degrees;
-        _isCelsius = celsius;
-    }
-    private bool _isCelsius;
-    private int _degrees;
-    public int Degrees => _degrees;
-    public bool IsCelsius => _isCelsius; 
-    public bool IsFahrenheit => !_isCelsius;
-    public override string ToString() =>
-        $"{_degrees.ToString()}{(_isCelsius ? "C" : "F")}";
-    public static Temperature Parse(string input)
-    {
-        int degrees = int.Parse(input.Substring(0, input.Length - 1));
-        bool celsius = (input.Substring(input.Length - 1) == "C");
-        return new Temperature(degrees, celsius);
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Temperature.cs)]
 
 Ecco il convertitore personalizzato per lo struct precedente:
 
-```csharp
-public class TemperatureConverter : JsonConverter<Temperature>
-{
-    public override Temperature Read(
-        ref Utf8JsonReader reader,
-        Type typeToConvert,
-        JsonSerializerOptions options)
-    {
-        Debug.Assert(typeToConvert == typeof(Temperature));
-        return Temperature.Parse(reader.GetString());
-    }
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/TemperatureConverter.cs)]
 
-    public override void Write(
-        Utf8JsonWriter writer,
-        Temperature value,
-        JsonSerializerOptions options)
-    {
-        writer.WriteStringValue(value.ToString());
-    }
-}
-```
+L'attributo `[JsonConvert]` nello struct registra il convertitore personalizzato come valore predefinito per le proprietà di tipo `Temperature`. Il convertitore viene usato automaticamente nella proprietà `TemperatureCelsius` del tipo seguente quando viene serializzato o deserializzato:
 
-L'attributo `[JsonConvert]` nello struct registra il convertitore personalizzato come valore predefinito per le proprietà di tipo `Temperature`. Il convertitore viene usato automaticamente nella proprietà `TemperatureC` del tipo seguente quando viene serializzato o deserializzato:
-
-```csharp
-class WeatherForecastWithTemperatureStruct
-{
-    public DateTimeOffset Date { get; set; }
-    public Temperature TemperatureC { get; set; }
-    public string Summary { get; set; }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
 
 ## <a name="converter-registration-precedence"></a>Precedenza di registrazione del convertitore
 
@@ -415,6 +175,10 @@ Un convertitore predefinito viene scelto solo se non è registrato alcun convert
 
 Le sezioni seguenti forniscono esempi di convertitore che affrontano alcuni scenari comuni non gestiti dalla funzionalità incorporata.
 
+* [Deserializzare i tipi dedotti nelle proprietà dell'oggetto](#deserialize-inferred-types-to-object-properties)
+* [Dizionario di supporto con chiave non di stringa](#support-dictionary-with-non-string-key)
+* [Supportare la deserializzazione polimorfica](#support-polymorphic-deserialization)
+
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Deserializzare i tipi dedotti nelle proprietà dell'oggetto
 
 Quando si esegue la deserializzazione in una proprietà di tipo `Object`, viene creato un oggetto `JsonElement`. Il motivo è che il deserializzatore non conosce il tipo CLR da creare e non tenta di indovinare. Se, ad esempio, una proprietà JSON ha "true", il deserializzatore non deduce che il valore è un `Boolean`e se un elemento ha "01/01/2019", il deserializzatore non deduce che si tratta di un `DateTime`.
@@ -429,94 +193,22 @@ Per gli scenari che richiedono l'inferenza del tipo, nel codice seguente viene i
 * Stringhe da `string`
 * Tutti gli altri elementi da `JsonElement`
 
-```csharp
-using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace SystemTextJsonSamples
-{
-    public class ObjectToInferredTypesConverter
-        : JsonConverter<object>
-    {
-        public override object Read(
-            ref Utf8JsonReader reader,
-            Type typeToConvert,
-            JsonSerializerOptions options)
-        {
-            if (reader.TokenType == JsonTokenType.True)
-            {
-                return true;
-            }
-
-            if (reader.TokenType == JsonTokenType.False)
-            {
-                return false;
-            }
-
-            if (reader.TokenType == JsonTokenType.Number)
-            {
-                if (reader.TryGetInt64(out long l))
-                {
-                    return l;
-                }
-
-                return reader.GetDouble();
-            }
-
-            if (reader.TokenType == JsonTokenType.String)
-            {
-                if (reader.TryGetDateTime(out DateTime datetime))
-                {
-                    return datetime;
-                }
-
-                return reader.GetString();
-            }
-
-            // Use JsonElement as fallback.
-            // Newtonsoft uses JArray or JObject.
-            using (JsonDocument document = JsonDocument.ParseValue(ref reader))
-            {
-                return document.RootElement.Clone();
-            }
-        }
-
-        public override void Write(
-            Utf8JsonWriter writer,
-            object value,
-            JsonSerializerOptions options)
-        {
-            throw new InvalidOperationException("Should not get here.");
-        }
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ObjectToInferredTypesConverter.cs)]
 
 Il codice seguente registra il convertitore:
 
-```csharp
-options = new JsonSerializerOptions();
-options.Converters.Add(new ObjectToInferredTypesConverter());
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
 
-Di seguito è riportato un esempio di tipo con una proprietà dell'oggetto:
+Di seguito è riportato un esempio di tipo con proprietà `Object`:
 
-```csharp
-public class WeatherForecastWithObjectProperties
-{
-    public object Date { get; set; }
-    public object TemperatureC { get; set; }
-    public object Summary { get; set; }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
 L'esempio seguente di JSON da deserializzare contiene valori che verranno deserializzati come `DateTime`, `long`e `string`:
 
 ```json
 {
   "Date": "2019-08-01T00:00:00-07:00",
-  "TemperatureC": 25,
+  "TemperatureCelsius": 25,
   "Summary": "Hot",
 }
 ```
@@ -531,181 +223,22 @@ Il supporto incorporato per le raccolte di dizionari è per `Dictionary<string, 
 
 Il codice seguente illustra un convertitore personalizzato che funziona con `Dictionary<Enum,TValue>`:
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace SystemTextJsonSamples
-{
-    public class ConverterDictionaryTKeyEnumTValue : JsonConverterFactory
-    {
-        public override bool CanConvert(Type typeToConvert)
-        {
-            if (!typeToConvert.IsGenericType)
-            {
-                return false;
-            }
-
-            if (typeToConvert.GetGenericTypeDefinition() != typeof(Dictionary<,>))
-            {
-                return false;
-            }
-
-            return typeToConvert.GetGenericArguments()[0].IsEnum;
-        }
-
-        public override JsonConverter CreateConverter(
-            Type type, 
-            JsonSerializerOptions options)
-        {
-            Type keyType = type.GetGenericArguments()[0];
-            Type valueType = type.GetGenericArguments()[1];
-
-            JsonConverter converter = (JsonConverter)Activator.CreateInstance(
-                typeof(DictionaryEnumConverterInner<,>).MakeGenericType(
-                    new Type[] { keyType, valueType }),
-                BindingFlags.Instance | BindingFlags.Public,
-                binder: null,
-                args: new object[] { options },
-                culture: null);
-
-            return converter;
-        }
-
-        private class DictionaryEnumConverterInner<TKey, TValue> : 
-            JsonConverter<Dictionary<TKey, TValue>> where TKey : struct, Enum
-        {
-            private readonly JsonConverter<TValue> _valueConverter;
-            private Type _keyType;
-            private Type _valueType;
-
-            public DictionaryEnumConverterInner(JsonSerializerOptions options)
-            {
-                // For performance, use the existing converter if available.
-                _valueConverter = (JsonConverter<TValue>)options
-                    .GetConverter(typeof(TValue));
-
-                // Cache the key and value types.
-                _keyType = typeof(TKey);
-                _valueType = typeof(TValue);
-            }
-
-            public override Dictionary<TKey, TValue> Read(
-                ref Utf8JsonReader reader, 
-                Type typeToConvert, 
-                JsonSerializerOptions options)
-            {
-                if (reader.TokenType != JsonTokenType.StartObject)
-                {
-                    throw new JsonException();
-                }
-
-                Dictionary<TKey, TValue> value = new Dictionary<TKey, TValue>();
-
-                while (reader.Read())
-                {
-                    if (reader.TokenType == JsonTokenType.EndObject)
-                    {
-                        return value;
-                    }
-
-                    // Get the key.
-                    if (reader.TokenType != JsonTokenType.PropertyName)
-                    {
-                        throw new JsonException();
-                    }
-
-                    string propertyName = reader.GetString();
-
-                    // For performance, parse with ignoreCase:false first.
-                    if (!Enum.TryParse(propertyName, ignoreCase: false, out TKey key) &&
-                        !Enum.TryParse(propertyName, ignoreCase: true, out key))
-                    {
-                        throw new JsonException(
-                            $"Unable to convert \"{propertyName}\" to Enum \"{_keyType}\".");
-                    }
-
-                    // Get the value.
-                    TValue v;
-                    if (_valueConverter != null)
-                    {
-                        reader.Read();
-                        v = _valueConverter.Read(ref reader, _valueType, options);
-                    }
-                    else
-                    {
-                        v = JsonSerializer.Deserialize<TValue>(ref reader, options);
-                    }
-
-                    // Add to dictionary.
-                    value.Add(key, v);
-                }
-
-                throw new JsonException();
-            }
-
-            public override void Write(
-                Utf8JsonWriter writer, 
-                Dictionary<TKey, TValue> value, 
-                JsonSerializerOptions options)
-            {
-                writer.WriteStartObject();
-
-                foreach (KeyValuePair<TKey, TValue> kvp in value)
-                {
-                    writer.WritePropertyName(kvp.Key.ToString());
-
-                    if (_valueConverter != null)
-                    {
-                        _valueConverter.Write(writer, kvp.Value, options);
-                    }
-                    else
-                    {
-                        JsonSerializer.Serialize(writer, kvp.Value, options);
-                    }
-                }
-
-                writer.WriteEndObject();
-            }
-        }
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 Il codice seguente registra il convertitore:
 
-```csharp
-var serializeOptions = new JsonSerializerOptions();
-serializeOptions.Converters.Add(new ConverterDictionaryTKeyEnumTValue());
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 Il convertitore è in grado di serializzare e deserializzare la proprietà `TemperatureRanges` della classe seguente che usa i `Enum`seguenti:
 
-```csharp
-public class WeatherForecastWithEnumDictionary
-{
-    public DateTimeOffset Date { get; set; }
-    public int TemperatureC { get; set; }
-    public string Summary { get; set; }
-    public Dictionary<SummaryWordsEnum, int> TemperatureRanges { get; set; }
-}
-
-public enum SummaryWordsEnum
-{
-    Cold, Hot
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
 
 L'output JSON dalla serializzazione è simile all'esempio seguente:
 
 ```json
 {
-
   "Date": "2019-08-01T00:00:00-07:00",
-  "TemperatureC": 25,
+  "TemperatureCelsius": 25,
   "Summary": "Hot",
   "TemperatureRanges": {
     "Cold": 20,
@@ -724,145 +257,13 @@ Si supponga, ad esempio, di disporre di una classe di base astratta `Person`, co
 
 Nel codice seguente viene illustrata una classe di base, due classi derivate e un convertitore personalizzato. Il convertitore usa una proprietà discriminatore per eseguire la deserializzazione polimorfica. Il discriminatore di tipo non è incluso nelle definizioni di classe ma viene creato durante la serializzazione e viene letto durante la deserializzazione.
 
-```csharp
-public class Person
-{
-    public string Name { get; set; }
-}
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Person.cs?name=SnippetPerson)]
 
-public class Customer : Person
-{
-    public decimal CreditLimit { get; set; }
-}
-
-public class Employee : Person
-{
-    public string OfficeNumber { get; set; }
-}
-```
-
-```csharp
-using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace SystemTextJsonSamples
-{
-    public class PersonConverterWithTypeDiscriminator : JsonConverter<Person>
-    {
-        enum TypeDiscriminator
-        {
-            Customer = 1,
-            Employee = 2
-        }
-
-        public override bool CanConvert(Type typeToConvert)
-        {
-            return typeof(Person).IsAssignableFrom(typeToConvert);
-        }
-
-        public override Person Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            if (reader.TokenType != JsonTokenType.StartObject)
-            {
-                throw new JsonException();
-            }
-
-            reader.Read();
-            if (reader.TokenType != JsonTokenType.PropertyName)
-            {
-                throw new JsonException();
-            }
-
-            string propertyName = reader.GetString();
-            if (propertyName != "TypeDiscriminator")
-            {
-                throw new JsonException();
-            }
-
-            reader.Read();
-            if (reader.TokenType != JsonTokenType.Number)
-            {
-                throw new JsonException();
-            }
-
-            Person value;
-            TypeDiscriminator typeDiscriminator = (TypeDiscriminator)reader.GetInt32();
-            switch (typeDiscriminator)
-            {
-                case TypeDiscriminator.Customer:
-                    value = new Customer();
-                    break;
-
-                case TypeDiscriminator.Employee:
-                    value = new Employee();
-                    break;
-
-                default:
-                    throw new JsonException();
-            }
-
-            while (reader.Read())
-            {
-                if (reader.TokenType == JsonTokenType.EndObject)
-                {
-                    return value;
-                }
-
-                if (reader.TokenType == JsonTokenType.PropertyName)
-                {
-                    propertyName = reader.GetString();
-                    reader.Read();
-                    switch (propertyName)
-                    {
-                        case "CreditLimit":
-                            decimal creditLimit = reader.GetDecimal();
-                            ((Customer)value).CreditLimit = creditLimit;
-                            break;
-                        case "OfficeNumber":
-                            string officeNumber = reader.GetString();
-                            ((Employee)value).OfficeNumber = officeNumber;
-                            break;
-                        case "Name":
-                            string name = reader.GetString();
-                            value.Name = name;
-                            break;
-                    }
-                }
-            }
-
-            throw new JsonException();
-        }
-
-        public override void Write(Utf8JsonWriter writer, Person value, JsonSerializerOptions options)
-        {
-            writer.WriteStartObject();
-
-            if (value is Customer customer)
-            {
-                writer.WriteNumber("TypeDiscriminator", (int)TypeDiscriminator.Customer);
-                writer.WriteNumber("CreditLimit", customer.CreditLimit);
-            }
-            else if (value is Employee employee)
-            {
-                writer.WriteNumber("TypeDiscriminator", (int)TypeDiscriminator.Employee);
-                writer.WriteString("OfficeNumber", employee.OfficeNumber);
-            }
-
-            writer.WriteString("Name", value.Name);
-
-            writer.WriteEndObject();
-        }
-    }
-}
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/PersonConverterWithTypeDiscriminator.cs)]
 
 Il codice seguente registra il convertitore:
 
-```csharp
-options = new JsonSerializerOptions();
-options.Converters.Add(new PersonConverterWithTypeDiscriminator());
-```
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
 
 Il convertitore può deserializzare JSON creato con lo stesso convertitore da serializzare, ad esempio:
 

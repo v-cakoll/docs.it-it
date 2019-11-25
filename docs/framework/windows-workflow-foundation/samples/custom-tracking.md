@@ -2,28 +2,28 @@
 title: Rilevamento personalizzato
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5b6bcee2e889a7f7e64eb83155a92e5b4c27d719
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989405"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141964"
 ---
 # <a name="custom-tracking"></a>Rilevamento personalizzato
 Nell'esempio viene illustrato come creare un partecipante di rilevamento personalizzato e scrivere il contenuto dei dati di rilevamento nella console. Nell'esempio viene inoltre illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> popolati con dati definiti dall'utente. Il partecipante di rilevamento basato su console filtra gli oggetti <xref:System.Activities.Tracking.TrackingRecord> generati dal flusso di lavoro usando un oggetto profilo di rilevamento creato nel codice.
 
 ## <a name="sample-details"></a>Dettagli dell'esempio
- Windows Workflow Foundation (WF) fornisce un'infrastruttura di rilevamento per tenere traccia dell'esecuzione di un'istanza del flusso di lavoro. Il runtime di rilevamento implementa un'istanza del flusso di lavoro per generare eventi correlati al ciclo di vita del flusso di lavoro, eventi da attività del flusso di lavoro ed eventi personalizzati. Nella tabella seguente sono indicati in dettaglio i componenti primari dell'infrastruttura di rilevamento.
+ Windows Workflow Foundation (WF) provides a tracking infrastructure to track execution of a workflow instance. Il runtime di rilevamento implementa un'istanza del flusso di lavoro per generare eventi correlati al ciclo di vita del flusso di lavoro, eventi da attività del flusso di lavoro ed eventi personalizzati. Nella tabella seguente sono indicati in dettaglio i componenti primari dell'infrastruttura di rilevamento.
 
 |Componente|Descrizione|
 |---------------|-----------------|
 |Esecuzione del rilevamento|Fornisce l'infrastruttura per la creazione dei record di rilevamento.|
-|Partecipanti del rilevamento|Usa i record di rilevamento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] viene fornito con un partecipante del rilevamento che scrive record di rilevamento come eventi ETW (Traccia eventi per Windows).|
+|Partecipanti del rilevamento|Usa i record di rilevamento. .NET Framework 4 ships with a tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.|
 |Profilo di rilevamento|Meccanismo di filtro che consente a un partecipante del rilevamento di sottoscrivere un subset dei record di rilevamento creati da un'istanza del flusso di lavoro.|
 
  Nella tabella seguente vengono indicati in dettaglio i record di rilevamento creati dall'esecuzione del flusso di lavoro.
 
-|Record di rilevamento|DESCRIZIONE|
+|Record di rilevamento|Descrizione|
 |---------------------|-----------------|
 |Record di rilevamento dell'istanza del flusso di lavoro.|Descrivono il ciclo di vita dell'istanza del flusso di lavoro. Ad esempio un record di istanza viene creato quando viene avviato o completato il flusso di lavoro.|
 |Record di rilevamento dello stato dell'attività.|Illustrano in dettaglio l'esecuzione dell'attività. Questi record indicano lo stato di un'attività del flusso di lavoro, ad esempio quando un'attività viene pianificata, quando viene completata o quando viene generato un errore.|
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Il partecipante di rilevamento completo viene implementato nel file ConsoleTrackingParticipant.cs. L'esempio di codice seguente è <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> il metodo per il partecipante del rilevamento personalizzato.
+ The complete tracking participant is implemented in the ConsoleTrackingParticipant.cs file. The following code example is the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method for the custom tracking participant.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - Gli oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> vengono creati e popolati con dati definiti dall'utente che si desidera vengano generati con il record.
 
-- Viene emesso chiamando il metodo Track dell'oggetto <xref:System.Activities.ActivityContext>. <xref:System.Activities.Tracking.CustomTrackingRecord>
+- The <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted by calling the track method of the <xref:System.Activities.ActivityContext>.
 
  Nell'esempio seguente viene illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> all'interno di un'attività personalizzata.
 
@@ -133,7 +133,7 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Con Visual Studio 2010 aprire il file della soluzione CustomTrackingSample. sln.
+1. Using Visual Studio 2010, open the CustomTrackingSample.sln solution file.
 
 2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
@@ -144,10 +144,10 @@ context.Track(customRecord);
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Monitoring Samples](https://go.microsoft.com/fwlink/?LinkId=193959)

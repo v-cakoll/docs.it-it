@@ -2,21 +2,22 @@
 title: Prestazioni di Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c656d1e23c7314cfd7b772faef842296d03e4af1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9a7e1dd2c5ab92ace955aa3b3095f2ed04ee3272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "70989576"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283231"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] include una revisione principale del Windows Workflow Foundation (WF) con notevoli investimenti nelle prestazioni.  Questa nuova revisione introduce modifiche significative in termini di progettazione rispetto alle versioni precedenti di [!INCLUDE[wf1](../../../includes/wf1-md.md)], fornite insieme a .NET Framework 3.0 e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. L'architettura del modello di programmazione, del runtime e degli strumenti è stata completamente riprogettata al fine di migliorare notevolmente prestazioni e usabilità. In questo argomento vengono illustrate le principali caratteristiche delle prestazioni di tali revisioni confrontandole con quelle della versione precedente.
+ .NET Framework 4 include una revisione principale del Windows Workflow Foundation (WF) con notevoli investimenti nelle prestazioni. Questa nuova revisione introduce modifiche di progettazione significative rispetto alle versioni precedenti di [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornite come parte di .NET Framework 3,0 e .NET Framework 3,5. L'architettura del modello di programmazione, del runtime e degli strumenti è stata completamente riprogettata al fine di migliorare notevolmente prestazioni e usabilità. In questo argomento vengono illustrate le principali caratteristiche delle prestazioni di tali revisioni confrontandole con quelle della versione precedente.
 
  Le prestazioni dei singoli componenti del flusso di lavoro sono notevolmente aumentate in WF4 rispetto a WF3.  In questo modo, il gap tra i servizi di Windows Communication Foundation (WCF) codificati manualmente e i servizi flusso di lavoro WCF è molto ridotto.  La latenza del flusso di lavoro è stata notevolmente ridotta in WF4.  Le prestazioni della persistenza sono aumentate di un fattore di 2,5 - 3,0.  Il sovraccarico del monitoraggio dell'integrità tramite il rilevamento del flusso di lavoro è stato notevolmente ridotto.  Questi sono i principali motivi per cui è consigliabile eseguire la migrazione a WF4 o adottarlo nelle applicazioni.
 
 ## <a name="terminology"></a>Terminologia
- La versione di [!INCLUDE[wf1](../../../includes/wf1-md.md)] introdotta in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] verrà denominata WF4 nella parte restante di questo argomento.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato introdotto in .NET 3,0 e ha avuto alcune revisioni secondarie attraverso [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. La versione [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] di Workflow Foundation verrà denominata WF3 nella parte restante di questo argomento. WF3 viene fornito con [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] insieme a WF4. Per ulteriori informazioni sulla migrazione di elementi WF3 a WF4, vedere la [Guida alla migrazione Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
+
+ La versione di [!INCLUDE[wf1](../../../includes/wf1-md.md)] introdotta in .NET Framework 4 verrà denominata WF4 nella parte restante di questo argomento. [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato introdotto in .NET Framework 3,0 e ha avuto alcune revisioni secondarie fino a .NET Framework 3,5 SP1. La versione .NET Framework 3,5 di Workflow Foundation verrà denominata WF3 nella parte restante di questo argomento. WF3 viene fornito in .NET Framework 4 side-by-side con WF4. Per ulteriori informazioni sulla migrazione di elementi WF3 a WF4, vedere la [Guida alla migrazione Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313).
 
  Windows Communication Foundation (WCF) è il modello di programmazione unificato di Microsoft per la creazione di applicazioni orientate ai servizi. È stata introdotta per la prima volta come parte di .NET 3,0 insieme a WF3 e ora è uno dei componenti chiave del .NET Framework.
 
@@ -54,7 +55,7 @@ ms.locfileid: "70989576"
  La pipeline di elaborazione dei messaggi unificata fornita in WCF in .NET 4 consente ai servizi WF4 di ottenere prestazioni e scalabilità significativamente migliori rispetto a WF3. WF4 fornisce anche un supporto più completo alla programmazione della messaggistica, in grado di definire modelli di scambio dei messaggi (MEP, Message Exchange Pattern) più complessi. Gli sviluppatori possono usare contratti di servizio tipizzati per semplificare la programmazione oppure contratti di servizio non tipizzati per ottenere prestazioni migliori senza sostenere i costi della serializzazione. In WF4 il supporto alla memorizzazione canali nella cache lato client tramite la classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> consente agli sviluppatori di compilare applicazioni veloci con il minimo sforzo. Per ulteriori informazioni, vedere [modifica dei livelli di condivisione della cache per le attività Send](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Programmazione dichiarativa
- WF4 fornisce un framework di programmazione dichiarativa semplice e ben definito per modellare i processi e i servizi aziendali. Il modello di programmazione supporta la composizione completamente dichiarativa delle attività, senza code-beside, semplificando notevolmente la creazione dei flussi di lavoro. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], il framework di programmazione dichiarativa basato su XAML è stato unificato in un singolo assembly System.Xaml.dll per supportare sia WPF sia WF.
+ WF4 fornisce un framework di programmazione dichiarativa semplice e ben definito per modellare i processi e i servizi aziendali. Il modello di programmazione supporta la composizione completamente dichiarativa delle attività, senza code-beside, semplificando notevolmente la creazione dei flussi di lavoro. In .NET Framework 4, il Framework di programmazione dichiarativo basato su XAML è stato unificato nel singolo assembly System. XAML. dll per supportare sia WPF che WF.
 
  In WF4 il linguaggio XAML fornisce un'esperienza realmente dichiarativa e consente di definire completamente il flusso di lavoro nel markup XML, facendo riferimento alle attività e ai tipi compilati tramite .NET. Questa operazione risultava difficile in WF3 con il formato XOML senza usare una logica code-behind personalizzata. Il nuovo stack XAML in .NET 4 offre prestazioni migliori per la serializzazione/deserializzazione degli elementi del flusso di lavoro e rende la programmazione dichiarativa più accattivante e solida.
 
@@ -104,7 +105,7 @@ ms.locfileid: "70989576"
  Il flusso di lavoro in sequenza contiene un'attività <xref:System.Activities.Statements.While> con un'attività figlio nel ciclo che non esegue alcun lavoro.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Confronto tra Replicator e ParallelForEach
- In WF3 <xref:System.Workflow.Activities.ReplicatorActivity> offre modalità di esecuzione sequenziali e parallele.  In modalità sequenziale, le prestazioni dell'attività sono simili a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> è più utile per l'esecuzione parallela.  In WF4 l'attività analoga è <xref:System.Activities.Statements.ParallelForEach%601>.
+ <xref:System.Workflow.Activities.ReplicatorActivity> in WF3 ha modalità di esecuzione sequenziali e parallele.  In modalità sequenziale, le prestazioni dell'attività sono simili a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> è più utile per l'esecuzione parallela.  In WF4 l'attività analoga è <xref:System.Activities.Statements.ParallelForEach%601>.
 
  Nel diagramma seguente vengono mostrati i flussi di lavoro usati per questo test. Il flusso di lavoro di WF3 è a sinistra e il flusso di lavoro di WF4 è a destra.
 
@@ -179,7 +180,7 @@ Il diagramma seguente illustra il flusso di lavoro di compensazione di base. Il 
 ### <a name="online-store-service"></a>Servizio di negozio online
  Uno dei punti di forza di Windows Workflow Foundation è la possibilità di comporre processi usando più servizi.  Per questo esempio, supponiamo che ci sia un servizio di negozio online che orchestra due chiamate del servizio per l'acquisto di un ordine.  Il primo passaggio è convalidare l'ordine usando un servizio di convalida dell'ordine.  Il secondo passaggio è compilare l'ordine usando un servizio magazzino.
 
- I due servizi di back-end, ovvero il servizio di convalida dell'ordine e il servizio magazzino, rimangono invariati per entrambi i test.  La parte che cambia è il servizio di negozio online che esegue l'orchestrazione.  In un caso, il servizio viene codificato a mano come servizio WCF.  Per l'altro caso, il servizio viene scritto come servizio flusso di lavoro WCF in WF4. Durante l'esecuzione del test, le funzionalità specifiche di [!INCLUDE[wf1](../../../includes/wf1-md.md)], ad esempio il rilevamento e la persistenza, sono disattivate.
+ I due servizi di back-end, ovvero il servizio di convalida dell'ordine e il servizio magazzino, rimangono invariati per entrambi i test.  La parte che cambia è il servizio di negozio online che esegue l'orchestrazione.  In un caso, il servizio viene codificato a mano come servizio WCF.  Per l'altro caso, il servizio viene scritto come servizio flusso di lavoro WCF in WF4. per questo test sono disattivate funzionalità specifiche di [!INCLUDE[wf1](../../../includes/wf1-md.md)]come il rilevamento e la persistenza.
 
 ### <a name="environment"></a>Ambiente
 ![Impostazione dell'ambiente per la misurazione delle prestazioni](./media/performance/performance-test-environment.gif)
@@ -302,7 +303,7 @@ Il diagramma seguente illustra il flusso di lavoro di compensazione di base. Il 
 ### <a name="multiple-workflow-definitions-test"></a>Test delle definizioni multiple di un flusso di lavoro
  La misurazione della memoria per definizione del flusso di lavoro è suddivisa in due test diversi a causa delle opzioni disponibili per l'hosting dei flussi di lavoro in WF3 e WF4.  I test vengono eseguiti in modo diverso rispetto al test di complessità del flusso di lavoro: viene generata l'istanza di un determinato flusso di lavoro, che viene poi eseguita solo una volta per definizione.  Questo comportamento è dovuto al fatto che la definizione di flusso di lavoro e il suo host rimangono in memoria per tutta la durata dell'AppDomain.  La memoria usata durante l'esecuzione di una determinata istanza del flusso di lavoro deve essere pulita durante la procedura di Garbage Collection.  Il materiale sussidiario sulla migrazione di WF4 contiene informazioni più dettagliate sulle opzioni di hosting. Per ulteriori informazioni, vedere Guida di riferimento alla [migrazione di WF: hosting del flusso di lavoro](https://go.microsoft.com/fwlink/?LinkID=153313).
 
- È possibile creare le diverse definizioni di un flusso di lavoro per un test della definizione del flusso di lavoro in vari modi.  Ad esempio, è possibile usare la generazione di codice per creare un set di 1000 flussi di lavoro identici tranne che per il nome e salvarli ognuno in file distinti.  Questo è l'approccio seguito per il test ospitato dalla console.  In WF3 è stata usata la classe <xref:System.Workflow.Runtime.WorkflowRuntime> per eseguire le definizioni del flusso di lavoro.  In WF4 è possibile usare <xref:System.Activities.WorkflowApplication> per creare una singola istanza del flusso di lavoro o usare direttamente <xref:System.Activities.WorkflowInvoker> per eseguire l'attività come se fosse una chiamata al metodo.  <xref:System.Activities.WorkflowApplication> è un host di una singola istanza del flusso di lavoro e ha una maggiore analogia funzionale con <xref:System.Workflow.Runtime.WorkflowRuntime> nel modo in cui è stato usato nel test.
+ È possibile creare le diverse definizioni di un flusso di lavoro per un test della definizione del flusso di lavoro in vari modi.  Ad esempio, è possibile usare la generazione di codice per creare un set di 1000 flussi di lavoro identici tranne che per il nome e salvarli ognuno in file distinti.  Questo è l'approccio seguito per il test ospitato dalla console.  In WF3 è stata usata la classe <xref:System.Workflow.Runtime.WorkflowRuntime> per eseguire le definizioni del flusso di lavoro.  In WF4 è possibile usare <xref:System.Activities.WorkflowApplication> per creare una singola istanza del flusso di lavoro o usare direttamente <xref:System.Activities.WorkflowInvoker> per eseguire l'attività come se fosse una chiamata al metodo.  <xref:System.Activities.WorkflowApplication> è un host di una singola istanza del flusso di lavoro e ha una parità di funzionalità più vicina a <xref:System.Workflow.Runtime.WorkflowRuntime>, in modo che sia stato usato in questo test.
 
  Quando si ospitano i flussi di lavoro in IIS, è possibile usare un <xref:System.Web.Hosting.VirtualPathProvider> per creare un nuovo <xref:System.ServiceModel.WorkflowServiceHost> anziché generare tutti i file XAMLX o XOML.  Il <xref:System.Web.Hosting.VirtualPathProvider> gestisce la richiesta in ingresso e risponde con un "file virtuale" che può essere caricato da un database o, in questo caso, generato in tempo reale.  Non è quindi necessario creare 1000 file fisici.
 
@@ -376,13 +377,13 @@ public class Workflow1 : Activity
 
  Notare che il provider di persistenza SQL di WF4 esegue più lavoro nel livello del database.  Il database SQL può diventare un collo di bottiglia, quindi è importante esaminare la CPU e l'uso del disco.  Quando si esegue il test delle prestazioni delle applicazioni flusso di lavoro, verificare che vengano inclusi i seguenti contatori delle prestazioni:
 
-- PhysicalDisk \\% tempo di lettura disco
+- PhysicalDisk\\% tempo di lettura disco
 
-- PhysicalDisk \\% tempo disco
+- PhysicalDisk\\% tempo disco
 
-- PhysicalDisk \\% tempo scrittura disco
+- PhysicalDisk\\% tempo scrittura disco
 
-- PhysicalDisk \\% media coda del disco
+- PhysicalDisk\\% media coda del disco
 
 - Lunghezza coda di lettura del disco Disco fisico\Media
 
@@ -390,7 +391,7 @@ public class Workflow1 : Activity
 
 - PhysicalDisk\Lunghezza corrente coda su disco
 
-- Informazioni processore \\% tempo processore
+- Informazioni processore\\% tempo processore
 
 - SQLServer:Latch\Tempo medio attesa latch (ms)
 

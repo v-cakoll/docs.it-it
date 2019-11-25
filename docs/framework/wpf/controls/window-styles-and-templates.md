@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Window [WPF], styles and templates
 - states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
-ms.openlocfilehash: 48fe5887ebad86efad1b1aae39ba03a26fda3bd8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01233c5d0179e1a6f9bed651cd1f18058bfac168
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460023"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283604"
 ---
 # <a name="window-styles-and-templates"></a>Stili e modelli di Window
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Window>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Window>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="window-parts"></a>Parti della finestra  
  Il controllo <xref:System.Windows.Window> non dispone di parti denominate.  
@@ -25,7 +25,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="window-states"></a>Stati della finestra  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Window>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -50,4 +50,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

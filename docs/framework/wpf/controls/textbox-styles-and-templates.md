@@ -9,27 +9,27 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 7c4680a3ea9352e94d628e786fc8e4fd71018d00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 41e390c261836909240cc146a48729d48c4a410e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458247"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283693"
 ---
 # <a name="textbox-styles-and-templates"></a>Stili e modelli di TextBox
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TextBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.TextBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="textbox-parts"></a>Parti casella di testo  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TextBox>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
   
 ## <a name="textbox-states"></a>Stati TextBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TextBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
@@ -59,4 +59,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

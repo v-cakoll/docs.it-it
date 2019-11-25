@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Convalida utilizzando XSD (LINQ to XML) (Visual Basic)'
+title: 'Procedura: eseguire la convalida tramite XSD (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 07a5df7af5512bb3db2dfd48a71e1ef07bbc7446
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835059"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332392"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Procedura: Convalida utilizzando XSD (LINQ to XML) (Visual Basic)
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>How to: Validate Using XSD (LINQ to XML) (Visual Basic)
 Lo spazio dei nomi <xref:System.Xml.Schema> contiene metodi di estensione che semplificano la convalida di un albero XML rispetto a un file XSD (Schema Definition Language). Per altre informazioni, vedere la documentazione del metodo <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -77,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene verificato che il documento XML del [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) sia valido per lo schema del [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Viene quindi modificato il documento XML di origine. Viene cambiato l'attributo `CustomerID` sul primo cliente. Dopo la modifica, gli ordini faranno riferimento a un cliente che non esiste, quindi il documento XML non verrà più convalidato.  
+ L'esempio seguente verifica che il documento XML di [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) sia valido per lo schema di [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Viene quindi modificato il documento XML di origine. Viene cambiato l'attributo `CustomerID` sul primo cliente. Dopo la modifica, gli ordini faranno riferimento a un cliente che non esiste, quindi il documento XML non verrà più convalidato.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- L'esempio usa lo schema XSD seguente: [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ Questo esempio usa lo schema XSD seguente: [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -125,4 +125,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Creazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

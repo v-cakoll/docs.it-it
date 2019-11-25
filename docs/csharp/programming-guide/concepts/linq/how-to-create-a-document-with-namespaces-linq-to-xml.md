@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Creare un documento con spazi dei nomi (C#) (LINQ to XML)'
+title: Come creare un documento con spazi dei nomi (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593890"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141330"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedura: Creare un documento con spazi dei nomi (C#) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Come creare un documento con spazi dei nomi (C#) (LINQ to XML)
 In questo argomento viene illustrato come creare documenti con spazi dei nomi.  
   
 ## <a name="example"></a>Esempio  

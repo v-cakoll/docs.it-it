@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455526"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089325"
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 
@@ -60,7 +60,7 @@ Lo scenario più comune in cui WPF definisce una proprietà associata è quando 
 
 ## Proprietà associate nel codice<a name="attached_properties_code"></a>
 
-Le proprietà associate in WPF non dispongono dei tipici metodi "wrapper" di CLR per un accesso semplice di tipo get/set. Ciò è dovuto al fatto che la proprietà associata non appartiene necessariamente allo spazio dei nomi CLR per le istanze in cui è impostata la proprietà. Tuttavia, un processore XAML deve essere in grado di impostare tali valori quando il codice XAML viene analizzato. Per supportare un utilizzo efficace delle proprietà associate, il tipo di proprietario della proprietà associata deve implementare i metodi delle funzioni di accesso dedicate nel formato **Get_PropertyName_** e **Set_PropertyName_** . Questi metodi della funzione di accesso dedicati sono anche utili per ottenere o impostare la proprietà associata nel codice. Dal punto di vista del codice, una proprietà associata è simile a un campo sottostante che dispone di funzioni di accesso ai metodi anziché di funzioni di accesso alle proprietà e tale campo sottostante può trovarsi in qualsiasi oggetto senza che sia necessario definirlo in modo specifico.
+Le proprietà associate in WPF non dispongono dei tipici metodi "wrapper" di CLR per un accesso semplice di tipo get/set. Ciò è dovuto al fatto che la proprietà associata non appartiene necessariamente allo spazio dei nomi CLR per le istanze in cui è impostata la proprietà. Tuttavia, un processore XAML deve essere in grado di impostare tali valori quando il codice XAML viene analizzato. Per supportare un utilizzo efficace delle proprietà associate, il tipo di proprietario della proprietà associata deve implementare metodi delle funzioni di accesso dedicate nel formato **Get_PropertyName_** e **Set_PropertyName_** . Questi metodi della funzione di accesso dedicati sono anche utili per ottenere o impostare la proprietà associata nel codice. Dal punto di vista del codice, una proprietà associata è simile a un campo sottostante che dispone di funzioni di accesso ai metodi anziché di funzioni di accesso alle proprietà e tale campo sottostante può trovarsi in qualsiasi oggetto senza che sia necessario definirlo in modo specifico.
 
 L'esempio seguente illustra come impostare una proprietà associata nel codice. In questo esempio `myCheckBox` è un'istanza della classe <xref:System.Windows.Controls.CheckBox>.
 
@@ -91,7 +91,7 @@ Come indicato in precedenza, è necessario eseguire la registrazione come propri
 
 Se la classe definisce la proprietà associata esclusivamente per l'uso in altri tipi, la classe non deve derivare da <xref:System.Windows.DependencyObject>. Tuttavia, è necessario derivare da <xref:System.Windows.DependencyObject> se si segue il modello WPF generale di che la proprietà associata sia anche una proprietà di dipendenza.
 
-Definire la proprietà associata come proprietà di dipendenza dichiarando un campo `public static readonly` di tipo <xref:System.Windows.DependencyProperty>. Questo campo viene definito usando il valore restituito del metodo <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. Il nome del campo deve corrispondere al nome della proprietà associata, aggiunto con la stringa `Property`, per seguire il modello WPF stabilito di denominazione dei campi di identificazione rispetto alle proprietà che rappresentano. Il provider di proprietà associate deve fornire anche metodi **Get_PropertyName_** e **Set_PropertyName_** statici come funzioni di accesso per la proprietà associata. in caso contrario, il sistema di proprietà non potrà utilizzare la proprietà associata.
+Definire la proprietà associata come proprietà di dipendenza dichiarando un campo `public static readonly` di tipo <xref:System.Windows.DependencyProperty>. Questo campo viene definito usando il valore restituito del metodo <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. Il nome del campo deve corrispondere al nome della proprietà associata, aggiunto con la stringa `Property`, per seguire il modello WPF stabilito di denominazione dei campi di identificazione rispetto alle proprietà che rappresentano. Il provider di proprietà associate deve fornire anche metodi di **Get_PropertyName_** e **Set_PropertyName_** statici come funzioni di accesso per la proprietà associata. in caso contrario, il sistema di proprietà non potrà utilizzare la proprietà associata.
 
 > [!NOTE]
 > Se si omette la funzione di accesso get della proprietà associata, data binding nella proprietà non funzionerà negli strumenti di progettazione, ad esempio Visual Studio e Blend per Visual Studio.
@@ -123,7 +123,7 @@ Nell'esempio seguente viene illustrata la registrazione della proprietà di dipe
 
 #### <a name="attached-property-attributes"></a>Attributi delle proprietà associate
 
-WPF definisce diversi [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] progettati per fornire informazioni sulle proprietà associate ai processi di reflection e per gli utenti tipici delle informazioni di reflection e proprietà, ad esempio le finestre di progettazione. Dato che le proprietà associate hanno un tipo con ambito illimitato, le finestre di progettazione devono disporre di un modo per evitare di sopraffare gli utenti con un elenco globale di tutte le proprietà associate definite in una particolare implementazione della tecnologia che usa XAML. Il [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] definito da WPF per le proprietà associate può essere utilizzato per definire l'ambito delle situazioni in cui una determinata proprietà associata deve essere visualizzata in una finestra delle proprietà. È possibile prendere in considerazione l'applicazione di questi attributi anche per le proprietà associate personalizzate. Lo scopo e la sintassi degli [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] vengono descritti nelle relative pagine di riferimento:
+WPF definisce diversi attributi .NET che hanno lo scopo di fornire informazioni sulle proprietà associate ai processi di reflection e agli utenti tipici delle informazioni sulla reflection e sulle proprietà, ad esempio le finestre di progettazione. Dato che le proprietà associate hanno un tipo con ambito illimitato, le finestre di progettazione devono disporre di un modo per evitare di sopraffare gli utenti con un elenco globale di tutte le proprietà associate definite in una particolare implementazione della tecnologia che usa XAML. Gli attributi .NET definiti da WPF per le proprietà associate possono essere utilizzati per definire l'ambito delle situazioni in cui una determinata proprietà associata deve essere visualizzata in una finestra delle proprietà. È possibile prendere in considerazione l'applicazione di questi attributi anche per le proprietà associate personalizzate. Lo scopo e la sintassi degli attributi .NET sono descritti nelle pagine di riferimento appropriate:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

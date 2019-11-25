@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738829"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140743"
 ---
 # <a name="netmsmqbinding"></a>\<NetMsmqBinding >
 Definisce un'associazione in coda adatta per la comunicazione fra computer.  
@@ -75,7 +75,7 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 |`maxBufferPoolSize`|Numero intero che specifica la dimensione del pool di buffer massima per questa associazione. Il valore predefinito è 8.|  
 |`maxReceivedMessageSize`|Numero intero positivo che definisce la dimensione massima del messaggio, in byte, comprese le intestazioni, elaborate da questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536. Questo vincolo alla dimensione dei messaggi limita l'esposizione agli attacchi di tipo Denial of Service (DoS).|  
 |`maxRetryCycles`|Numero intero che indica il numero di cicli di ripetizione usati dalla funzionalità di rilevazione dei messaggi non elaborabili. Un messaggio diventa non elaborabile quando falliscono tutti i tentativi di recapito di tutti i cicli. Il valore predefinito è 3. Per ulteriori informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Attributo obbligatorio. Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Attributo obbligatorio. Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |`QueueTransferProtocol`|Valore <xref:System.ServiceModel.QueueTransferProtocol> valido che specifica il trasporto del canale di comunicazione in coda usato da questa associazione. MSMQ non supporta l'indirizzamento di Active Directory in caso di utilizzo di SOAP Reliable Messaging Protocol. Pertanto, è consigliabile non impostare questo attributo su `Srmp` o `Srmps` quando l'attributo `useActiveDirectory` è impostato su `true`.|  
 |`receiveErrorHandling`|Valore <xref:System.ServiceModel.ReceiveErrorHandling> che specifica come vengono gestiti i messaggi non elaborabili e non distribuibili.|  
@@ -93,13 +93,13 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<security >](security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[> di sicurezza \<](security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[associazioni di \<](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  L'associazione `netMsmqBinding` fornisce il supporto per la gestione tramite coda basata sul sistema di accodamento dei messaggi MSMQ come trasporto. Tale associazione fornisce inoltre il supporto per le applicazioni a regime di controllo libero, per l'isolamento degli errori, per la distribuzione ottimale dei carichi e per le operazioni disconnesse. Per una descrizione di queste funzionalità, vedere [code in WCF](../../../wcf/feature-details/queues-in-wcf.md).  
@@ -142,7 +142,7 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
-- [\<binding >](bindings.md)
+- [Binding \<](bindings.md)
 - [Associazioni](../../../wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)

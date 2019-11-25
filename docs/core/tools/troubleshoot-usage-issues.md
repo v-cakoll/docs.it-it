@@ -3,12 +3,12 @@ title: Risolvere i problemi di utilizzo degli strumenti .NET Core
 description: Individuare i problemi comuni quando si eseguono gli strumenti di .NET Core e le possibili soluzioni.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318297"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282506"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Risolvere i problemi di utilizzo degli strumenti .NET Core
 
@@ -25,7 +25,7 @@ Quando si verifica un errore di esecuzione di uno strumento .NET Core, è molto 
 
 Se il file eseguibile non viene trovato, verrà visualizzato un messaggio simile al seguente:
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -44,7 +44,7 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
 
     Gli strumenti globali possono essere installati nella directory predefinita o in una posizione specifica. Le directory predefinite sono:
 
-    | Sistema operativo          | Percorso                          |
+    | Sistema operativo          | Path                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
@@ -101,7 +101,7 @@ Se si installa il .NET Core SDK in un percorso non predefinito, è necessario im
 
 Esistono diversi motivi per cui l'installazione di uno strumento .NET Core globale o locale potrebbe non riuscire. Quando l'installazione dello strumento non riesce, verrà visualizzato un messaggio simile a quello riportato di seguito:
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.

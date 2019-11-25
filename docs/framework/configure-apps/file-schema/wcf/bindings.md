@@ -2,16 +2,16 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: cd4c4cd4c1bfe7920c438eddc15aba00d995b8cb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe8f620668e35183890b8bba1f254a74c962f8d3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039613"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74139670"
 ---
 # <a name="bindings"></a>associazioni di \<
 
-È possibile utilizzare l'elemento `bindings` per configurare una raccolta di associazioni standard e personalizzate per Windows Communication Foundation (WCF). Ogni voce è un elemento `binding` che può essere identificato dal relativo `name` univoco. I servizi usano le associazioni collegandole mediante l'oggetto `name`. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
+È possibile utilizzare l'elemento `bindings` per configurare una raccolta di associazioni standard e personalizzate per Windows Communication Foundation (WCF). Ogni voce è un elemento `binding` che può essere identificato dal relativo `name` univoco. I servizi usano le associazioni collegandole mediante l'oggetto `name`. A partire da .NET Framework 4, le associazioni e i comportamenti non devono avere un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema
 

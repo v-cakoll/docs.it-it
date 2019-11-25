@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Creare e applicare uno stile
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Creare e applicare un modello
+              href: themes/how-to-create-apply-template.md
     - name: Uso dei dati
       items:
         - name: Panoramica del data binding

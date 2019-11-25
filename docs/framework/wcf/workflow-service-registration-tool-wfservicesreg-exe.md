@@ -2,12 +2,12 @@
 title: Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425293"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281676"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe) è un strumento autonomo che può essere utilizzato per aggiungere, rimuovere o ripristinare gli elementi di configurazione per i servizi Windows Workflow Foundation (WF).  
@@ -18,12 +18,12 @@ Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Note  
- Lo strumento si trova nel percorso di installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], in modo specifico, %windir%\Microsoft.NET\Framework\v3.5, o %windir%\Microsoft.NET\Framework64\v3.5 in computer a 64 bit.  
+## <a name="remarks"></a>Osservazioni  
+ Lo strumento si trova nel percorso di installazione di .NET Framework 3,5, in particolare%windir%\Microsoft.NET\Framework\v3.5 o in%windir%\Microsoft.NET\Framework64\v3.5 in computer a 64 bit.  
   
  Nelle tabelle riportate di seguito vengono illustrate le opzioni che è possibile utilizzare con lo strumento di registrazione dei servizi di Windows Workflow.  
   
-|Opzione|Descrizione|  
+|Opzione|description|  
 |------------|-----------------|  
 |`/c`|Configura i servizi di Windows Workflow. Utilizzato in scenari di installazione e ripristino.|  
 |`/r`|Rimuove la configurazione dei servizi di Windows Workflow.|  
@@ -34,7 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>Registrazione  
  Lo strumento controlla il file Web.config e registra gli elementi seguenti:  
   
-- Assembly di riferimento di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
+- .NET Framework 3,5 assembly di riferimento.  
   
 - Provider di compilazione per i file .xoml.  
   
@@ -70,7 +70,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Utilizzo di scenari  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installazione di IIS dopo l'installazione di .NET Framework 3.5  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] viene completata senza installare scriptmap .xoml e .rules.  
+ In un computer [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .NET Framework 3,5 viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di .NET Framework 3,5 riesce senza installare gli scriptmap. xoml e. Rules.  
   
  Al termine dell'installazione di IIS, è possibile utilizzare lo strumento WFServicesReg.exe con l'opzione `/c` per installare questi scriptmap specifici.  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  Per ripristinare i gestori eliminati per un particolare sito Web, è necessario eseguire "WFServicesReg. exe/r" per rimuovere i gestori da tutti i siti Web, quindi eseguire "WFServicesReg. exe/c" per creare i gestori appropriati per tutti i siti Web.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>Configurazione dei gestori dopo il cambio di modalità di IIS  
- Quando IIS è in modalità di configurazione condivisa e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] è installato, la metabase IIS viene configurata in un percorso condiviso. Se si passa IIS a una modalità di configurazione non-condivisa, la metabase locale non conterrà i gestori necessari. Per configurare correttamente la metabase locale, è possibile importare la metabase condivisa in locale oppure eseguire "WFServicesReg. exe/c", che configura la metabase locale.
+ Quando IIS è in modalità di configurazione condivisa e viene installato .NET Framework 3,5, la metabase IIS viene configurata in un percorso condiviso. Se si passa IIS a una modalità di configurazione non-condivisa, la metabase locale non conterrà i gestori necessari. Per configurare correttamente la metabase locale, è possibile importare la metabase condivisa in locale oppure eseguire "WFServicesReg. exe/c", che configura la metabase locale.

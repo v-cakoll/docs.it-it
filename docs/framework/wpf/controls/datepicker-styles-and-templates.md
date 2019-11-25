@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 323768b6221061d46446ab18f85555f5f7415e74
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 002d1c3271827239dcd3a319621f66fb5bc68d4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460375"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283779"
 ---
 # <a name="datepicker-styles-and-templates"></a>Stili e modelli di DatePicker
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DatePicker>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DatePicker>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datepicker-parts"></a>Parti DatePicker  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.DatePicker>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|Radice del controllo.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|Pulsante che consente di aprire e chiudere la <xref:System.Windows.Controls.Calendar>.|  
@@ -32,7 +32,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepicker-states"></a>Stati DatePicker  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.DatePicker>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.DatePicker> è disabilitato.|  
@@ -43,7 +43,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepickertextbox-parts"></a>Parti DatePickerTextBox  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Parte|Digitare|Descrizione|  
+|Parte|Digitare|description|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|Elemento contenente il testo iniziale nel <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
@@ -51,7 +51,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepickertextbox-states"></a>Stati DatePickerTextBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|Nome VisualState|Nome VisualStateGroup|description|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.DatePickerTextBox> è disabilitato.|  
@@ -83,4 +83,4 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 - [Stili e modelli di Control](control-styles-and-templates.md)
 - [Personalizzazione dei controlli](control-customization.md)
 - [Applicazione di stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df5601fb0dbf088bd28da91f7279a330f2bb3494
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170690"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204785"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
 
 > [!IMPORTANT]
-> Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
+> Isolated storage is not available for Windows 8.x Store apps. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
 
 Di seguito sono elencate le diverse sezioni di questo argomento:
 
@@ -51,7 +51,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 - [Argomenti correlati](#related_topics)
 
-- [Riferimento](#reference)
+- [Reference](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -164,7 +164,7 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|DESCRIZIONE|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[Tipi di isolamento](../../../docs/standard/io/types-of-isolation.md)|Vengono descritti i vari tipi di isolamento.|
 |[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Viene fornito un esempio di utilizzo della classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> per ottenere uno spazio di memorizzazione isolato in base all'utente e all'assembly.|
@@ -179,7 +179,7 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

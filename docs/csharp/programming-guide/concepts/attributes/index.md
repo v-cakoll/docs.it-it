@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374375"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141561"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -25,7 +25,7 @@ Di seguito sono riportate le proprietà degli attributi:
 
 Nell'esempio seguente l'attributo <xref:System.SerializableAttribute> viene usato per applicare una caratteristica specifica a una classe:
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> è dichiarato come nell'esempio seguente:
 
@@ -33,12 +33,12 @@ Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribut
 
 In una dichiarazione è possibile inserire più attributi, come illustrato nell'esempio seguente:
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 Alcuni attributi possono essere specificati più volte per una stessa entità. Un esempio di attributo multiuso è <xref:System.Diagnostics.ConditionalAttribute>:
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > Per convenzione tutti i nomi di attributo terminano con la parola "Attribute", in modo che sia possibile distinguerli da altri elementi delle librerie .NET. Tuttavia, quando gli attributi vengono usati nel codice, non è necessario specificare il suffisso Attribute. Ad esempio `[DllImport]` è equivalente a `[DllImportAttribute]`, mentre `DllImportAttribute` è il nome effettivo dell'attributo nella libreria di classi .NET Framework.
@@ -75,7 +75,7 @@ Nella tabella seguente sono elencati i possibili valori di `target`.
 |`event`|event|
 |`method`|Metodo o funzioni di accesso alle proprietà `get` e `set`|
 |`param`|Parametri del metodo o parametri della funzione di accesso alla proprietà `set`|
-|`property`|Proprietà|
+|`property`|proprietà|
 |`return`|Valore restituito di un metodo, un indicizzatore di proprietà o una funzione di accesso alla proprietà `get`|
 |`type`|Struct, classe, interfaccia, enumeratore o delegato|
 
@@ -101,8 +101,8 @@ Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, pa
 
 Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:
 
-- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
-- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per ulteriori informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
+- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Descrizione delle proprietà COM per classi, metodi e interfacce.
 - Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.
@@ -119,7 +119,7 @@ Per altre informazioni, vedere:
 
 - [Creazione di attributi personalizzati (C#)](creating-custom-attributes.md)  
 - [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))  
-- [Procedura: Creare un'unione C-C++ tramite attributi (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Come creare un'Unione C/C++ Unione usando gli attributi (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Attributi comuni (C#)](common-attributes.md)  
 - [Informazioni sul chiamante (C#)](../caller-information.md)  
 

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Filtrare in base a un elemento facoltativo (C#)'
+title: Come filtrare in un elemento facoltativo (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253825"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141248"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Procedura: Filtrare in base a un elemento facoltativo (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>Come filtrare in un elemento facoltativo (C#)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
   
 ## <a name="example"></a>Esempio  

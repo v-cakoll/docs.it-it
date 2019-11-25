@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ad4e953941e189e6ed9baefb6cb07e7955000c7f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739199"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283107"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 
@@ -44,7 +44,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Delegati](./delegates/index.md)  
 
- [Array](./arrays/index.md)  
+ [Matrici](./arrays/index.md)  
   
  [Stringhe](./strings/index.md)  
   
@@ -76,7 +76,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Attributi](./concepts/attributes/index.md)  
   
- [raccolte](./concepts/collections.md)  
+ [Raccolte](./concepts/collections.md)  
   
  [Eccezioni e gestione delle eccezioni](./exceptions/index.md)  
   
@@ -89,4 +89,3 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../language-reference/index.md)
-- [C#](../index.md)
