@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9113811557ded3a580a0bbacb24f2fe7e8d05ccf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114776"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089010"
 ---
-# <a name="sectiongroup-element-for-configsections"></a><span data-ttu-id="8fcdf-102">\<elemento > sectionGroup per \<configSections ></span><span class="sxs-lookup"><span data-stu-id="8fcdf-102">\<sectionGroup> element for \<configSections></span></span>
+# <a name="sectiongroup-element-for-configsections"></a><span data-ttu-id="c007b-102">\<elemento > sectionGroup per \<configSections ></span><span class="sxs-lookup"><span data-stu-id="c007b-102">\<sectionGroup> element for \<configSections></span></span>
 
-<span data-ttu-id="8fcdf-103">Definisce uno spazio dei nomi per le sezioni di configurazione.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-103">Defines a namespace for configuration sections.</span></span>
+<span data-ttu-id="c007b-103">Definisce uno spazio dei nomi per le sezioni di configurazione.</span><span class="sxs-lookup"><span data-stu-id="c007b-103">Defines a namespace for configuration sections.</span></span>
 
-<span data-ttu-id="8fcdf-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="8fcdf-104">[**\<configuration>**](configuration-element.md) </span></span>  
-<span data-ttu-id="8fcdf-105">&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="8fcdf-105">&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="8fcdf-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="8fcdf-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**</span></span>
+<span data-ttu-id="c007b-104">[ **\<configuration>** ](configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="c007b-104">[**\<configuration>**](configuration-element.md)</span></span>\
+<span data-ttu-id="c007b-105">&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="c007b-105">&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)</span></span>\
+<span data-ttu-id="c007b-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="c007b-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="8fcdf-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8fcdf-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c007b-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c007b-107">Syntax</span></span>
 
 ```xml
 <sectionGroup name="section group name">
@@ -32,31 +32,31 @@ ms.locfileid: "73114776"
 </sectionGroup>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="8fcdf-108">Attributo</span><span class="sxs-lookup"><span data-stu-id="8fcdf-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="c007b-108">Attributo</span><span class="sxs-lookup"><span data-stu-id="c007b-108">Attribute</span></span>
 
-|           | <span data-ttu-id="8fcdf-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fcdf-109">Description</span></span> |
+|           | <span data-ttu-id="c007b-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c007b-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="8fcdf-110">**name**</span><span class="sxs-lookup"><span data-stu-id="8fcdf-110">**name**</span></span>  | <span data-ttu-id="8fcdf-111">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-111">Required attribute.</span></span><br><br><span data-ttu-id="8fcdf-112">Specifica il nome del gruppo di sezioni da definire.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-112">Specifies the name of the section group you are defining.</span></span> |
+| <span data-ttu-id="c007b-110">**name**</span><span class="sxs-lookup"><span data-stu-id="c007b-110">**name**</span></span>  | <span data-ttu-id="c007b-111">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="c007b-111">Required attribute.</span></span><br><br><span data-ttu-id="c007b-112">Specifica il nome del gruppo di sezioni da definire.</span><span class="sxs-lookup"><span data-stu-id="c007b-112">Specifies the name of the section group you are defining.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="8fcdf-113">Elemento padre</span><span class="sxs-lookup"><span data-stu-id="8fcdf-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="c007b-113">Elemento padre</span><span class="sxs-lookup"><span data-stu-id="c007b-113">Parent element</span></span>
 
-|     | <span data-ttu-id="8fcdf-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fcdf-114">Description</span></span> |
+|     | <span data-ttu-id="c007b-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c007b-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8fcdf-115"> **\<configSections >** Elemento</span><span class="sxs-lookup"><span data-stu-id="8fcdf-115">**\<configSections>** Element</span></span>](configsections-element-for-configuration.md) | <span data-ttu-id="8fcdf-116">Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="c007b-115"> **\<configSections >** Elemento</span><span class="sxs-lookup"><span data-stu-id="c007b-115">**\<configSections>** Element</span></span>](configsections-element-for-configuration.md) | <span data-ttu-id="c007b-116">Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="c007b-116">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="8fcdf-117">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="8fcdf-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="c007b-117">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="c007b-117">Child elements</span></span>
 
-|     | <span data-ttu-id="8fcdf-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8fcdf-118">Description</span></span> |
+|     | <span data-ttu-id="c007b-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c007b-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8fcdf-119"> **\<sezione >** </span><span class="sxs-lookup"><span data-stu-id="8fcdf-119">**\<section>**</span></span>](section-element.md) | <span data-ttu-id="8fcdf-120">Contiene una dichiarazione della sezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-120">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="c007b-119"> **\<sezione >** </span><span class="sxs-lookup"><span data-stu-id="c007b-119">**\<section>**</span></span>](section-element.md) | <span data-ttu-id="c007b-120">Contiene una dichiarazione della sezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="c007b-120">Contains a configuration section declaration.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="8fcdf-121">Note</span><span class="sxs-lookup"><span data-stu-id="8fcdf-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c007b-121">Note</span><span class="sxs-lookup"><span data-stu-id="c007b-121">Remarks</span></span>
 
-<span data-ttu-id="8fcdf-122">Se si dichiara un gruppo di sezioni, viene creato un tag del contenitore per le sezioni di configurazione e si garantisce che non vi siano conflitti di denominazione con le sezioni di configurazione definite da un altro utente.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-122">Declaring a section group creates a container tag for configuration sections and ensures that there are no naming conflicts with configuration sections defined by someone else.</span></span> <span data-ttu-id="8fcdf-123">È possibile annidare\<elementi di **> sectionGroup** all'interno dell'altro.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-123">You can nest **\<sectionGroup>** elements within each other.</span></span>
+<span data-ttu-id="c007b-122">Se si dichiara un gruppo di sezioni, viene creato un tag del contenitore per le sezioni di configurazione e si garantisce che non vi siano conflitti di denominazione con le sezioni di configurazione definite da un altro utente.</span><span class="sxs-lookup"><span data-stu-id="c007b-122">Declaring a section group creates a container tag for configuration sections and ensures that there are no naming conflicts with configuration sections defined by someone else.</span></span> <span data-ttu-id="c007b-123">È possibile annidare\<elementi di **> sectionGroup** all'interno dell'altro.</span><span class="sxs-lookup"><span data-stu-id="c007b-123">You can nest **\<sectionGroup>** elements within each other.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8fcdf-124">Esempio</span><span class="sxs-lookup"><span data-stu-id="8fcdf-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c007b-124">Esempio</span><span class="sxs-lookup"><span data-stu-id="c007b-124">Example</span></span>
 
-<span data-ttu-id="8fcdf-125">Nell'esempio seguente viene illustrato come dichiarare un gruppo di sezioni e dichiarare le sezioni all'interno di un gruppo di sezioni:</span><span class="sxs-lookup"><span data-stu-id="8fcdf-125">The following example shows how to declare a section group and declare sections within a section group:</span></span>
+<span data-ttu-id="c007b-125">Nell'esempio seguente viene illustrato come dichiarare un gruppo di sezioni e dichiarare le sezioni all'interno di un gruppo di sezioni:</span><span class="sxs-lookup"><span data-stu-id="c007b-125">The following example shows how to declare a section group and declare sections within a section group:</span></span>
 
 ```xml
 <configuration>
@@ -74,10 +74,10 @@ ms.locfileid: "73114776"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="8fcdf-126">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="8fcdf-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="c007b-126">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="c007b-126">Configuration file</span></span>
 
-<span data-ttu-id="8fcdf-127">Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="8fcdf-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="c007b-127">Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c007b-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8fcdf-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8fcdf-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c007b-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c007b-128">See also</span></span>
 
-- [<span data-ttu-id="8fcdf-129">Schema del file di configurazione per il .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8fcdf-129">Configuration file schema for the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="c007b-129">Schema del file di configurazione per il .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c007b-129">Configuration file schema for the .NET Framework</span></span>](index.md)
