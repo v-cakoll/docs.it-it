@@ -1,8 +1,10 @@
-- name: Sicurezza
+- name: Security
   href: index.md
   items:
     - name: Concetti principali sulla sicurezza
       href: key-security-concepts.md
+    - name: Conformità FIPS di .NET Core
+      href: fips-compliance.md
     - name: Sicurezza basata sui ruoli
       href: role-based-security.md
       items:

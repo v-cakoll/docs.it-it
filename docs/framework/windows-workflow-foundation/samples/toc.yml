@@ -24,9 +24,7 @@
               href: fault-handling-in-a-flowchart-activity-using-trycatch.md
             - name: Caricare da XAML
               href: load-from-xaml.md
-            - name: Uso dell'attività InvokeMethod
-              href: using-the-invokemethod-activity.md
-            - name: Utilizzo dell'attività Pick
+            - name: Usare l'attività di selezione
               href: using-the-pick-activity.md
         - name: Attività personalizzate
           href: custom-activities.md
