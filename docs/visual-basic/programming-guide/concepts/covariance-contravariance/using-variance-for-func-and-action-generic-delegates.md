@@ -1,23 +1,23 @@
 ---
-title: Uso della varianza per i delegati generici Func e Action (Visual Basic)
+title: Utilizzo della varianza per i delegati generici Func e Action
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349039"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="0ba0c-102">Uso della varianza per i delegati generici Func e Action (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ba0c-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="42dab-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42dab-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
 
-<span data-ttu-id="0ba0c-103">In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>
+<span data-ttu-id="42dab-103">In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.</span><span class="sxs-lookup"><span data-stu-id="42dab-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>
 
-<span data-ttu-id="0ba0c-104">Per ulteriori informazioni sulla covarianza e la controvarianza, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="0ba0c-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>
+<span data-ttu-id="42dab-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="42dab-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>
 
-## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="0ba0c-105">Uso dei delegati con parametri di tipo covariante</span><span class="sxs-lookup"><span data-stu-id="0ba0c-105">Using Delegates with Covariant Type Parameters</span></span>
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="42dab-105">Uso dei delegati con parametri di tipo covariante</span><span class="sxs-lookup"><span data-stu-id="42dab-105">Using Delegates with Covariant Type Parameters</span></span>
 
-<span data-ttu-id="0ba0c-106">L'esempio seguente illustra i vantaggi del supporto di covarianza nei delegati generici `Func`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="0ba0c-107">Il metodo `FindByTitle` accetta un parametro di tipo `String` e restituisce un oggetto di tipo `Employee`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="0ba0c-108">Tuttavia, è possibile assegnare questo metodo al delegato `Func(Of String, Person)` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="42dab-106">L'esempio seguente illustra i vantaggi del supporto di covarianza nei delegati generici `Func`.</span><span class="sxs-lookup"><span data-stu-id="42dab-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="42dab-107">Il metodo `FindByTitle` accetta un parametro di tipo `String` e restituisce un oggetto di tipo `Employee`.</span><span class="sxs-lookup"><span data-stu-id="42dab-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="42dab-108">Tuttavia, è possibile assegnare questo metodo al delegato `Func(Of String, Person)` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="42dab-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -54,9 +54,9 @@ Class Finder
 End Class
 ```
 
-## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="0ba0c-109">Uso dei delegati con parametri di tipo controvariante</span><span class="sxs-lookup"><span data-stu-id="0ba0c-109">Using Delegates with Contravariant Type Parameters</span></span>
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="42dab-109">Uso dei delegati con parametri di tipo controvariante</span><span class="sxs-lookup"><span data-stu-id="42dab-109">Using Delegates with Contravariant Type Parameters</span></span>
 
-<span data-ttu-id="0ba0c-110">L'esempio seguente illustra i vantaggi del supporto di controvarianza nei delegati generici `Action`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="0ba0c-111">Il metodo `AddToContacts` accetta un parametro di tipo `Person`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="0ba0c-112">Tuttavia, è possibile assegnare questo metodo al delegato `Action(Of Employee)` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="0ba0c-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="42dab-110">L'esempio seguente illustra i vantaggi del supporto di controvarianza nei delegati generici `Action`.</span><span class="sxs-lookup"><span data-stu-id="42dab-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="42dab-111">Il metodo `AddToContacts` accetta un parametro di tipo `Person`.</span><span class="sxs-lookup"><span data-stu-id="42dab-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="42dab-112">Tuttavia, è possibile assegnare questo metodo al delegato `Action(Of Employee)` perché `Employee` eredita `Person`.</span><span class="sxs-lookup"><span data-stu-id="42dab-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>
 
 ```vb
 Public Class Person
@@ -92,7 +92,7 @@ Class AddressBook
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0ba0c-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0ba0c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42dab-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="42dab-113">See also</span></span>
 
-- [<span data-ttu-id="0ba0c-114">Covarianza e controvarianza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ba0c-114">Covariance and Contravariance (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [<span data-ttu-id="0ba0c-115">Generics</span><span class="sxs-lookup"><span data-stu-id="0ba0c-115">Generics</span></span>](../../../../standard/generics/index.md)
+- [<span data-ttu-id="42dab-114">Covarianza e controvarianza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42dab-114">Covariance and Contravariance (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [<span data-ttu-id="42dab-115">Generics</span><span class="sxs-lookup"><span data-stu-id="42dab-115">Generics</span></span>](../../../../standard/generics/index.md)

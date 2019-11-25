@@ -1,85 +1,85 @@
 ---
-title: 'Procedura: Accedere ai membri di un oggetto (Visual Basic)'
+title: 'Procedura: accedere ai membri di un oggetto'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 882046b829ade2da7c10b3db4c0d6c9ca9f3d579
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d44b538e8413eb1412e937375e9bca77600a29b7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630839"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348660"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a><span data-ttu-id="2d71b-102">Procedura: Accedere ai membri di un oggetto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d71b-102">How to: Access Members of an Object (Visual Basic)</span></span>
+# <a name="how-to-access-members-of-an-object-visual-basic"></a><span data-ttu-id="b383c-102">Procedura: accedere ai membri di un oggetto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b383c-102">How to: Access Members of an Object (Visual Basic)</span></span>
 
-<span data-ttu-id="2d71b-103">Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, spesso si desidera lavorare con i membri di tale oggetto, ad esempio i metodi, le proprietà, i campi e gli eventi.</span><span class="sxs-lookup"><span data-stu-id="2d71b-103">When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events.</span></span> <span data-ttu-id="2d71b-104">Ad esempio, dopo aver creato un nuovo <xref:System.Windows.Forms.Form> oggetto, potrebbe essere necessario impostare la relativa <xref:System.Windows.Forms.Control.Text%2A> proprietà o chiamarne il <xref:System.Windows.Forms.Control.Focus%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="2d71b-104">For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.</span></span>
+<span data-ttu-id="b383c-103">When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events.</span><span class="sxs-lookup"><span data-stu-id="b383c-103">When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events.</span></span> <span data-ttu-id="b383c-104">For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.</span><span class="sxs-lookup"><span data-stu-id="b383c-104">For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.</span></span>
 
-## <a name="accessing-members"></a><span data-ttu-id="2d71b-105">Accesso ai membri</span><span class="sxs-lookup"><span data-stu-id="2d71b-105">Accessing Members</span></span>
+## <a name="accessing-members"></a><span data-ttu-id="b383c-105">Accessing Members</span><span class="sxs-lookup"><span data-stu-id="b383c-105">Accessing Members</span></span>
 
-<span data-ttu-id="2d71b-106">È possibile accedere ai membri di un oggetto tramite la variabile che vi fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="2d71b-106">You access an object's members through the variable that refers to it.</span></span>
+<span data-ttu-id="b383c-106">You access an object's members through the variable that refers to it.</span><span class="sxs-lookup"><span data-stu-id="b383c-106">You access an object's members through the variable that refers to it.</span></span>
 
-#### <a name="to-access-members-of-an-object"></a><span data-ttu-id="2d71b-107">Per accedere ai membri di un oggetto</span><span class="sxs-lookup"><span data-stu-id="2d71b-107">To access members of an object</span></span>
+#### <a name="to-access-members-of-an-object"></a><span data-ttu-id="b383c-107">To access members of an object</span><span class="sxs-lookup"><span data-stu-id="b383c-107">To access members of an object</span></span>
 
-- <span data-ttu-id="2d71b-108">Utilizzare l'operatore di accesso ai membri`.`() tra il nome della variabile oggetto e il nome del membro.</span><span class="sxs-lookup"><span data-stu-id="2d71b-108">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
+- <span data-ttu-id="b383c-108">Use the member-access operator (`.`) between the object variable name and the member name.</span><span class="sxs-lookup"><span data-stu-id="b383c-108">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
 
     ```vb
     currentText = newForm.Text
     ```
 
-    <span data-ttu-id="2d71b-109">Se il membro è [condiviso](../../../../visual-basic/language-reference/modifiers/shared.md), non è necessaria una variabile per accedervi.</span><span class="sxs-lookup"><span data-stu-id="2d71b-109">If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.</span></span>
+    <span data-ttu-id="b383c-109">If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.</span><span class="sxs-lookup"><span data-stu-id="b383c-109">If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.</span></span>
 
-## <a name="accessing-members-of-an-object-of-known-type"></a><span data-ttu-id="2d71b-110">Accesso ai membri di un oggetto di tipo noto</span><span class="sxs-lookup"><span data-stu-id="2d71b-110">Accessing Members of an Object of Known Type</span></span>
+## <a name="accessing-members-of-an-object-of-known-type"></a><span data-ttu-id="b383c-110">Accessing Members of an Object of Known Type</span><span class="sxs-lookup"><span data-stu-id="b383c-110">Accessing Members of an Object of Known Type</span></span>
 
-<span data-ttu-id="2d71b-111">Se si conosce il tipo di un oggetto in fase di compilazione, è possibile usare l' *associazione anticipata* per una variabile che vi fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="2d71b-111">If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.</span></span>
+<span data-ttu-id="b383c-111">If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.</span><span class="sxs-lookup"><span data-stu-id="b383c-111">If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.</span></span>
 
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a><span data-ttu-id="2d71b-112">Per accedere ai membri di un oggetto per il quale si conosce il tipo in fase di compilazione</span><span class="sxs-lookup"><span data-stu-id="2d71b-112">To access members of an object for which you know the type at compile time</span></span>
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a><span data-ttu-id="b383c-112">To access members of an object for which you know the type at compile time</span><span class="sxs-lookup"><span data-stu-id="b383c-112">To access members of an object for which you know the type at compile time</span></span>
 
-1. <span data-ttu-id="2d71b-113">Dichiarare la variabile oggetto in modo che sia del tipo dell'oggetto che si intende assegnare alla variabile.</span><span class="sxs-lookup"><span data-stu-id="2d71b-113">Declare the object variable to be of the type of the object you intend to assign to the variable.</span></span>
+1. <span data-ttu-id="b383c-113">Declare the object variable to be of the type of the object you intend to assign to the variable.</span><span class="sxs-lookup"><span data-stu-id="b383c-113">Declare the object variable to be of the type of the object you intend to assign to the variable.</span></span>
 
     ```vb
     Dim extraForm As System.Windows.Forms.Form
     ```
 
-    <span data-ttu-id="2d71b-114">Con `Option Strict On`è possibile assegnare solo <xref:System.Windows.Forms.Form> oggetti (o oggetti di un tipo derivato da <xref:System.Windows.Forms.Form>) a `extraForm`.</span><span class="sxs-lookup"><span data-stu-id="2d71b-114">With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`.</span></span> <span data-ttu-id="2d71b-115">Se è stata definita una classe o una struttura con una `CType` conversione verso un tipo di <xref:System.Windows.Forms.Form>dati più ampio, è anche possibile assegnare `extraForm`tale classe o struttura a.</span><span class="sxs-lookup"><span data-stu-id="2d71b-115">If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.</span></span>
+    <span data-ttu-id="b383c-114">With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`.</span><span class="sxs-lookup"><span data-stu-id="b383c-114">With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`.</span></span> <span data-ttu-id="b383c-115">If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.</span><span class="sxs-lookup"><span data-stu-id="b383c-115">If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.</span></span>
 
-2. <span data-ttu-id="2d71b-116">Utilizzare l'operatore di accesso ai membri`.`() tra il nome della variabile oggetto e il nome del membro.</span><span class="sxs-lookup"><span data-stu-id="2d71b-116">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
+2. <span data-ttu-id="b383c-116">Use the member-access operator (`.`) between the object variable name and the member name.</span><span class="sxs-lookup"><span data-stu-id="b383c-116">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
 
     ```vb
     extraForm.Show()
     ```
 
-    <span data-ttu-id="2d71b-117">È possibile accedere a tutti i metodi e le proprietà specifici della <xref:System.Windows.Forms.Form> classe, a prescindere dall' `Option Strict` impostazione.</span><span class="sxs-lookup"><span data-stu-id="2d71b-117">You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.</span></span>
+    <span data-ttu-id="b383c-117">You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.</span><span class="sxs-lookup"><span data-stu-id="b383c-117">You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.</span></span>
 
-## <a name="accessing-members-of-an-object-of-unknown-type"></a><span data-ttu-id="2d71b-118">Accesso ai membri di un oggetto di tipo sconosciuto</span><span class="sxs-lookup"><span data-stu-id="2d71b-118">Accessing Members of an Object of Unknown Type</span></span>
+## <a name="accessing-members-of-an-object-of-unknown-type"></a><span data-ttu-id="b383c-118">Accessing Members of an Object of Unknown Type</span><span class="sxs-lookup"><span data-stu-id="b383c-118">Accessing Members of an Object of Unknown Type</span></span>
 
-<span data-ttu-id="2d71b-119">Se non si conosce il tipo di un oggetto in fase di compilazione, è necessario usare l' *associazione tardiva* per qualsiasi variabile che vi faccia riferimento.</span><span class="sxs-lookup"><span data-stu-id="2d71b-119">If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.</span></span>
+<span data-ttu-id="b383c-119">If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.</span><span class="sxs-lookup"><span data-stu-id="b383c-119">If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.</span></span>
 
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a><span data-ttu-id="2d71b-120">Per accedere ai membri di un oggetto per il quale non si conosce il tipo in fase di compilazione</span><span class="sxs-lookup"><span data-stu-id="2d71b-120">To access members of an object for which you do not know the type at compile time</span></span>
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a><span data-ttu-id="b383c-120">To access members of an object for which you do not know the type at compile time</span><span class="sxs-lookup"><span data-stu-id="b383c-120">To access members of an object for which you do not know the type at compile time</span></span>
 
-1. <span data-ttu-id="2d71b-121">Dichiarare la variabile oggetto in modo che sia del [tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="2d71b-121">Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="2d71b-122">(Dichiarando una variabile `Object` come la dichiarata <xref:System.Object?displayProperty=nameWithType>come).</span><span class="sxs-lookup"><span data-stu-id="2d71b-122">(Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)</span></span>
+1. <span data-ttu-id="b383c-121">Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="b383c-121">Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="b383c-122">(Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)</span><span class="sxs-lookup"><span data-stu-id="b383c-122">(Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)</span></span>
 
     ```vb
     Dim someControl As Object
     ```
 
-    <span data-ttu-id="2d71b-123">Con `Option Strict On`, è possibile accedere solo ai membri definiti <xref:System.Object> nella classe.</span><span class="sxs-lookup"><span data-stu-id="2d71b-123">With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.</span></span>
+    <span data-ttu-id="b383c-123">With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.</span><span class="sxs-lookup"><span data-stu-id="b383c-123">With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.</span></span>
 
-2. <span data-ttu-id="2d71b-124">Utilizzare l'operatore di accesso ai membri`.`() tra il nome della variabile oggetto e il nome del membro.</span><span class="sxs-lookup"><span data-stu-id="2d71b-124">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
+2. <span data-ttu-id="b383c-124">Use the member-access operator (`.`) between the object variable name and the member name.</span><span class="sxs-lookup"><span data-stu-id="b383c-124">Use the member-access operator (`.`) between the object variable name and the member name.</span></span>
 
     ```vb
     someControl.GetType()
     ```
 
-    <span data-ttu-id="2d71b-125">Per poter accedere ai membri di qualsiasi oggetto assegnato alla variabile oggetto, è necessario impostare `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="2d71b-125">To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`.</span></span> <span data-ttu-id="2d71b-126">Quando si esegue questa operazione, il compilatore non può garantire che un determinato membro venga esposto dall'oggetto assegnato alla variabile.</span><span class="sxs-lookup"><span data-stu-id="2d71b-126">When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable.</span></span> <span data-ttu-id="2d71b-127">Se l'oggetto non espone un membro a cui si tenta di accedere, <xref:System.MemberAccessException> si verificherà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="2d71b-127">If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.</span></span>
+    <span data-ttu-id="b383c-125">To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="b383c-125">To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`.</span></span> <span data-ttu-id="b383c-126">When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable.</span><span class="sxs-lookup"><span data-stu-id="b383c-126">When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable.</span></span> <span data-ttu-id="b383c-127">If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.</span><span class="sxs-lookup"><span data-stu-id="b383c-127">If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2d71b-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2d71b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b383c-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b383c-128">See also</span></span>
 
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>
-- [<span data-ttu-id="2d71b-129">Variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="2d71b-129">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="2d71b-130">Dichiarazione di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="2d71b-130">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="2d71b-131">Tipo di dati Object</span><span class="sxs-lookup"><span data-stu-id="2d71b-131">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="2d71b-132">Istruzione Option Strict</span><span class="sxs-lookup"><span data-stu-id="2d71b-132">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="b383c-129">Variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="b383c-129">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="b383c-130">Dichiarazione di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="b383c-130">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="b383c-131">Tipo di dati Object</span><span class="sxs-lookup"><span data-stu-id="b383c-131">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="b383c-132">Istruzione Option Strict</span><span class="sxs-lookup"><span data-stu-id="b383c-132">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
