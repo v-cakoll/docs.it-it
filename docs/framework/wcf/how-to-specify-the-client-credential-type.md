@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321292"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138569"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Procedura: Specificare il tipo di credenziali client
 Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è possibile impostare il tipo di credenziali client. Questa proprietà specifica il tipo di credenziali che il client deve fornire al servizio per l'autenticazione. Per ulteriori informazioni sull'impostazione della modalità di sicurezza (un passaggio necessario prima di impostare il tipo di credenziale client), vedere [How: Impostare la modalità di sicurezza ](how-to-set-the-security-mode.md).  
@@ -37,11 +37,11 @@ Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è poss
   
 3. Aggiungere un'associazione appropriata. Questo esempio usa l'elemento [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .  
   
-4. Aggiungere un elemento [\<binding >](../misc/binding.md) e impostare l'attributo `name` su un valore appropriato. In questo esempio viene utilizzato il nome "SecureBinding."  
+4. Aggiungere un elemento [\<binding >](../configure-apps/file-schema/wcf/bindings.md) e impostare l'attributo `name` su un valore appropriato. In questo esempio viene utilizzato il nome "SecureBinding."  
   
 5. Aggiungere un'associazione `<security>`. Impostare l'attributo `mode` su un valore appropriato. In questo esempio viene impostato su `"Message"`.  
   
-6. Aggiungere un elemento &lt;transport&gt; o`<message>`, come determinato dalla modalità di sicurezza. Impostare l'attributo `clientCredentialType` su un valore appropriato. In questo esempio viene usato `"Windows"`.  
+6. Aggiungere un `<message>` o `<transport>` elemento, come determinato dalla modalità di sicurezza. Impostare l'attributo `clientCredentialType` su un valore appropriato. In questo esempio viene usato `"Windows"`.  
   
     ```xml  
     <system.serviceModel>  
