@@ -1,5 +1,5 @@
 ---
-title: "Procedura: utilizzare strutture ad albero dell'espressione per la compilazione di query dinamiche"
+title: "Procedura: Usare strutture ad albero dell'espressione per la compilazione di query dinamiche"
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
@@ -9,9 +9,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344709"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedura: usare alberi delle espressioni per la compilazione di query dinamiche (Visual Basic)
 
-In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.
+In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore Visual Basic Compila query destinate a tali origini dati in codice che compila un albero delle espressioni in fase di esecuzione. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.
 
 Gli alberi delle espressioni vengono usati in LINQ anche per rappresentare espressioni lambda assegnate a variabili di tipo <xref:System.Linq.Expressions.Expression%601>.
 
@@ -103,13 +103,13 @@ Questo codice usa un numero fisso di espressioni nel predicato passato al metodo
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-- Creare un nuovo progetto **applicazione console**.
+- Creare un nuovo progetto **Applicazione console**.
 
 - Includere lo spazio dei nomi System.Linq.Expressions.
 
-- Copy the code from the example and paste it into the `Main` `Sub` procedure.
+- Copiare il codice dall'esempio e incollarlo nella procedura `Main` `Sub`.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

@@ -14,13 +14,13 @@ Il modello di programmazione HTTP WEB Windows Communication Foundation (WCF) for
   
 - URI **e elaborazione URI** Gli URI svolgono un ruolo centrale nella progettazione di servizi HTTP WEB. Il modello di programmazione HTTP WEB WCF utilizza le classi <xref:System.UriTemplate> e <xref:System.UriTemplateTable> per fornire funzionalità di elaborazione URI.  
   
-- **Supporto per operazioni GET e POST** I servizi HTTP Web si avvalgono del verbo GET per recuperare i dati, oltre a numerosi verbi di chiamata per modificare i dati e per chiamate remote. Il modello di programmazione HTTP WEB WCF usa il <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> per associare le operazioni del servizio con i verbi GET e altri verbi HTTP, ad esempio PUT, POST e DELETE.  
+- **Supporto per operazioni get e post** I servizi HTTP WEB usano il verbo GET per il recupero dei dati, oltre a diversi verbi Invoke per la modifica dei dati e la chiamata remota. Il modello di programmazione HTTP WEB WCF usa il <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> per associare le operazioni del servizio con i verbi GET e altri verbi HTTP, ad esempio PUT, POST e DELETE.  
   
-- **Più formati di dati** Oltre ai messaggi SOPA, i servizi Web consentono di elaborare numerosi tipi di dati. Il modello di programmazione HTTP WEB WCF usa il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> per supportare molti formati di dati diversi, tra cui documenti XML, oggetto dati JSON e flussi di contenuto binario, ad esempio immagini, file video o testo normale.  
+- **Più formati di dati** I servizi Web elaborano molti tipi di dati oltre ai messaggi SOAP. Il modello di programmazione HTTP WEB WCF usa il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior> per supportare molti formati di dati diversi, tra cui documenti XML, oggetto dati JSON e flussi di contenuto binario, ad esempio immagini, file video o testo normale.  
   
  Il modello di programmazione HTTP WEB WCF amplia la portata di WCF per coprire scenari di tipo Web che includono servizi HTTP WEB, servizi AJAX e JSON e feed di diffusione (ATOM/RSS). Per altre informazioni sui servizi AJAX e JSON, vedere [Integrazione AJAX e supporto JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Per ulteriori informazioni sulla diffusione, vedere [Cenni preliminari sulla diffusione di WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Non sono previste restrizioni aggiuntive sui tipi di dati che possono essere restituiti da un servizio HTTP Web. Qualsiasi tipo serializzabile può essere restituito da un'operazione del servizio HTTP Web. Poiché le operazioni del servizio HTTP Web possono essere richiamate da un Web browser, esiste una limitazione per i tipi di dati che possono essere specificati in un URL. Per ulteriori informazioni sui tipi supportati per impostazione predefinita, vedere la sezione relativa a **URL e parametri della stringa di query di UriTemplate** riportata di seguito. È possibile modificare il comportamento predefinito fornendo l'implementazione T:System.ServiceModel.Dispatcher.QueryStringConverter che specifica come convertire i parametri specificati in un URL nel tipo di parametro effettivo. Per altre informazioni, vedere <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
+ Non sono previste restrizioni aggiuntive sui tipi di dati che possono essere restituiti da un servizio HTTP Web. Qualsiasi tipo serializzabile può essere restituito da un'operazione del servizio HTTP Web. Poiché le operazioni del servizio HTTP Web possono essere richiamate da un Web browser, esiste una limitazione per i tipi di dati che possono essere specificati in un URL. Per ulteriori informazioni sui tipi supportati per impostazione predefinita, vedere la sezione **URL e parametri della stringa di query di UriTemplate** riportata di seguito. È possibile modificare il comportamento predefinito fornendo l'implementazione T:System.ServiceModel.Dispatcher.QueryStringConverter che specifica come convertire i parametri specificati in un URL nel tipo di parametro effettivo. Per altre informazioni, vedere <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
   
 > [!CAUTION]
 > I servizi scritti con il modello di programmazione HTTP WEB WCF non utilizzano messaggi SOAP. Poiché SOAP non viene utilizzato, non è possibile utilizzare le funzionalità di sicurezza fornite da WCF. È tuttavia possibile implementare la sicurezza basata sul trasporto ospitando il servizio con HTTPS. Per ulteriori informazioni sulla sicurezza di WCF, vedere [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md) .  
@@ -45,7 +45,7 @@ Il modello di programmazione HTTP WEB Windows Communication Foundation (WCF) for
   
  In .NET Framework è disponibile un'API da utilizzare con i modelli URI denominata <xref:System.UriTemplate>. `UriTemplates` consentono di eseguire le operazioni seguenti:  
   
-- È possibile chiamare uno dei metodi `Bind` con un set di parametri per produrre un *URI completamente chiuso* che corrisponde al modello. Ciò significa che tutte le variabili all'interno del modello URI vengono sostituite con i valori effettivi.  
+- È possibile chiamare uno dei metodi di `Bind` con un set di parametri per produrre un *URI completamente chiuso* che corrisponde al modello. Ciò significa che tutte le variabili all'interno del modello URI vengono sostituite con i valori effettivi.  
   
 - È possibile chiamare `Match`() con un URI candidato che utilizza un modello per suddividere un URI candidato nelle sue parti costitutive e restituisce un dizionario che contiene le varie parti dell'URI etichettate in base alle variabili nel modello.  
   
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>Nome del parametro della stringa di query UriTemplate e URL.  
  I servizi Web possono essere chiamati da un browser Web digitando un URL associato a un'operazione del servizio. Queste operazioni del servizio possono accettare parametri della stringa di query che devono essere specificati in un formato stringa all'interno dell'URL. Nella tabella seguente vengono illustrati i tipi che è possibile passare all'interno di un URL e il formato utilizzato.  
   
-|Digitare|Formato|  
+|Type|Formato|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -117,7 +117,7 @@ interface ICustomer
 |<xref:System.Decimal>|Qualsiasi numero decimale in notazione standard (nessun esponente)|  
 |<xref:System.Boolean>|True o False (senza distinzione maiuscole/minuscole)|  
 |<xref:System.String>|Qualsiasi stringa (la stringa null non è supportata e non viene effettuata alcuna operazione di escape)|  
-|<xref:System.DateTime>|MM/GG/AAAA<br /><br /> MM/GG/AAAA HH: MM: SS [AM&#124;PM]<br /><br /> Mese Giorno Anno<br /><br /> Mese giorno anno HH: MM: SS [AM&#124;PM]|  
+|<xref:System.DateTime>|GG/MM/AAAA<br /><br /> MM/GG/AAAA HH: MM: SS [AM&#124;PM]<br /><br /> Mese Giorno Anno<br /><br /> Mese giorno anno HH: MM: SS [AM&#124;PM]|  
 |<xref:System.TimeSpan>|GG.HH:MM:SS<br /><br /> Dove GG = Giorni, HH = Ore, MM = Minuti, SS = Secondi|  
 |<xref:System.Guid>|Un GUID, ad esempio:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/GG/AAAA HH:MM:SS MM:SS<br /><br /> Dove GG = Giorni, HH = Ore, MM = Minuti, SS = Secondi|  

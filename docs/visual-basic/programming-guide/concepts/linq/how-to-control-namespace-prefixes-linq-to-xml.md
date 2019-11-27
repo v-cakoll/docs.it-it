@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: 'Procedura: controllare i prefissi degli spazi dei nomi (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ In questo argomento viene descritto come controllare i prefissi di spazio dei no
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- In questo esempio vengono dichiarati due spazi dei nomi. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ In questo esempio vengono dichiarati due spazi dei nomi. Specifica che lo spazio dei nomi `http://www.adventure-works.com` ha il prefisso `aw`e che lo spazio dei nomi `www.fourthcoffee.com` ha il prefisso `fc`.  
   
 ### <a name="code"></a>Codice  
   
@@ -40,7 +40,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>Commenti  
  Questo esempio produce il seguente output:  
   
 ```xml  
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

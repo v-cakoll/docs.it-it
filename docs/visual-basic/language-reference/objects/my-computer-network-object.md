@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332280"
 ---
 # <a name="mycomputernetwork-object"></a>Oggetto My.Computer.Network
-Provides a property, event, and methods for interacting with the network to which the computer is connected.  
+Fornisce una proprietà, un evento e i metodi per l'interazione con la rete a cui è connesso il computer.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Network` , vedere <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Per ulteriori informazioni, vedere [esecuzione di operazioni di rete](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

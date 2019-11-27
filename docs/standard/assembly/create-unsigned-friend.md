@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create unsigned friend assemblies'
+title: 'Procedura: creare assembly Friend non firmati'
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
@@ -12,15 +12,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352442"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>How to: Create unsigned friend assemblies
+# <a name="how-to-create-unsigned-friend-assemblies"></a>Procedura: creare assembly Friend non firmati
 
 In questo esempio viene illustrato come usare assembly Friend e assembly non firmati.
 
-## <a name="create-an-assembly-and-a-friend-assembly"></a>Create an assembly and a friend assembly
+## <a name="create-an-assembly-and-a-friend-assembly"></a>Creare un assembly e un assembly Friend
 
 1. Aprire un prompt dei comandi.
 
-2. Create a C# or Visual Basic file named *friend_unsigned_A* that contains the following code. The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_unsigned_B* as a friend assembly.
+2. Creare un C# file o Visual Basic denominato *friend_unsigned_A* contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare *friend_unsigned_B* come assembly Friend.
 
    ```csharp
    // friend_unsigned_A.cs
@@ -73,7 +73,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
    End Class
    ```
 
-3. Compile and sign *friend_unsigned_A* by using the following command:
+3. Compilare e firmare *friend_unsigned_A* usando il comando seguente:
 
    ```csharp
    csc /target:library friend_unsigned_A.cs
@@ -83,7 +83,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. Create a C# or Visual Basic file named *friend_unsigned_B* that contains the following code. Because *friend_unsigned_A* specifies *friend_unsigned_B* as a friend assembly, the code in *friend_unsigned_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_unsigned_A*.
+4. Creare un C# file o Visual Basic denominato *friend_unsigned_B* contenente il codice seguente. Poiché *friend_unsigned_A* specifica *friend_unsigned_B* come assembly Friend, il codice in *friend_unsigned_B* può accedere ai tipi eC#ai membri `internal` () o `Friend` (Visual Basic) da *friend_unsigned_A*.
 
    ```csharp
    // friend_unsigned_B.cs
@@ -125,7 +125,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
    End Module
    ```
 
-5. Compile *friend_unsigned_B* by using the following command.
+5. Compilare *friend_unsigned_B* usando il comando seguente.
 
    ```csharp
    csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs
@@ -135,21 +135,21 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. You must explicitly specify the name of the output assembly ( *.exe* or *.dll*) by using the `-out` compiler option. For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
+   Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con*estensione exe* o *dll*) utilizzando l'opzione del compilatore `-out`. Per ulteriori informazioni, vedere [-out (C# opzioni del compilatore)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
-6. Run the *friend_unsigned_B.exe* file.
+6. Eseguire il file *friend_unsigned_B. exe* .
 
-   The program outputs two strings: **Class1.Test** and **Class2.Test**.
+   Il programma restituisce due stringhe: **Class1. test** e **Class2. test**.
 
 ## <a name="net-security"></a>Protezione .NET
 
-Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal`  or `Friend` (Visual Basic) types and members.
+Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale consiste nel fatto che <xref:System.Security.Permissions.StrongNameIdentityPermission> possibile richiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei tipi e dei membri `internal` o `Friend` (Visual Basic).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assembly in .NET](index.md)
-- [Friend assemblies](friend.md)
-- [How to: Create signed friend assemblies](create-signed-friend.md)
+- [Assembly Friend](friend.md)
+- [Procedura: creare assembly Friend firmati](create-signed-friend.md)
 - [Guida per programmatori C#](../../csharp/programming-guide/index.md)
-- [Programming concepts (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
+- [Concetti di programmazione (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

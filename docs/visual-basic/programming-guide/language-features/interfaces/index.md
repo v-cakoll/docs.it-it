@@ -40,13 +40,13 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementazione di interfacce  
- The Visual Basic reserved word `Implements` is used in two ways. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
+ Il Visual Basic `Implements` di parole riservate viene usato in due modi. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
   
 ### <a name="implements-statement"></a>Istruzione Implements  
  Se una classe o una struttura implementa una o più interfacce, deve includere l'istruzione `Implements` immediatamente dopo l'istruzione `Class` o `Structure`. L'istruzione `Implements` richiede un elenco separato da virgole di interfacce implementate da una classe. La classe o la struttura deve implementare tutti i membri di interfaccia mediante la parola chiave `Implements`.  
   
 ### <a name="implements-keyword"></a>Parola chiave Implements  
- La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+ La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. Il nome di un membro che implementa un membro di interfaccia può usare qualsiasi identificatore valido e non è limitato alla convenzione `InterfaceName_MethodName` usata nelle versioni precedenti di Visual Basic.  
   
  Il codice seguente, ad esempio, illustra come dichiarare una subroutine denominata `Sub1` che implementa un metodo di un'interfaccia:  
   

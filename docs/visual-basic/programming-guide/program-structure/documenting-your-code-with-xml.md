@@ -15,29 +15,29 @@ ms.locfileid: "74347446"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentazione del codice tramite XML (Visual Basic)
 
-In Visual Basic, you can document your code using XML
+In Visual Basic è possibile documentare il codice usando XML
 
 ## <a name="xml-documentation-comments"></a>Commenti relativi alla documentazione XML
 
-Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. Per altre informazioni, vedere [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic fornisce un modo semplice per creare automaticamente la documentazione XML per i progetti. È possibile generare automaticamente uno scheletro XML per i tipi e i membri, quindi fornire riepiloghi, documentazione descrittiva per ogni parametro e altre osservazioni. Con la configurazione appropriata, la documentazione XML viene emessa automaticamente in un file XML con lo stesso nome del progetto e dell'estensione XML. Per altre informazioni, vedere [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
+Il file XML può essere utilizzato o modificato in altro modo come XML. Questo file si trova nella stessa directory del file con estensione exe o dll di output del progetto.
 
-XML documentation starts with `'''`. L'elaborazione di questi commenti presenta alcune restrizioni:
+La documentazione XML inizia con `'''`. L'elaborazione di questi commenti presenta alcune restrizioni:
 
-- La documentazione deve essere in codice XML ben formato. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
+- La documentazione deve essere in codice XML ben formato. Se il formato XML non è corretto, viene generato un avviso e il file di documentazione contiene un commento che informa che si è verificato un errore.
 
-- Gli sviluppatori sono liberi di creare set di tag personalizzati. There is a recommended set of tags (see "Related Sections" in this topic). Alcuni tag consigliati hanno un significato speciale:
+- Gli sviluppatori sono liberi di creare set di tag personalizzati. È disponibile un set di tag consigliato (vedere "sezioni correlate" in questo argomento). Alcuni tag consigliati hanno un significato speciale:
 
-  - Il tag \< viene usato per descrivere i parametri. Se usato, il compilatore verifica che il parametro esista e che tutti i parametri siano descritti nella documentazione. If the verification fails, the compiler issues a warning.
+  - Il tag \< viene usato per descrivere i parametri. Se usato, il compilatore verifica che il parametro esista e che tutti i parametri siano descritti nella documentazione. Se la verifica ha esito negativo, il compilatore genera un avviso.
 
-  - L'attributo `cref` può essere associato a qualsiasi tag per fornire un riferimento a un elemento del codice. Il compilatore verifica l'esistenza di questo elemento. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
+  - L'attributo `cref` può essere associato a qualsiasi tag per fornire un riferimento a un elemento del codice. Il compilatore verifica l'esistenza di questo elemento. Se la verifica ha esito negativo, il compilatore genera un avviso. Il compilatore rispetta anche le istruzioni `Imports` quando si cerca un tipo descritto nell'attributo `cref`.
 
-  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
+  - Il tag di riepilogo > \<viene usato da IntelliSense in Visual Studio per visualizzare informazioni aggiuntive su un tipo o un membro.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-For details on creating an XML file with documentation comments, see the following topics:
+Per informazioni dettagliate sulla creazione di un file XML con i commenti relativi alla documentazione, vedere gli argomenti seguenti:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 

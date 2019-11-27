@@ -1,6 +1,6 @@
 ---
 title: Caricare i dati da file e altre origini
-description: Learn how to load data for processing and training into ML.NET using the API. Data is stored in files, databases, JSON, XML or in-memory collections.
+description: Informazioni su come caricare i dati per l'elaborazione e il training in ML.NET usando l'API. I dati vengono archiviati in file, database, JSON, XML o raccolte in memoria.
 ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
@@ -14,9 +14,9 @@ ms.locfileid: "74344751"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Caricare i dati da file e altre origini
 
-Learn how to load data for processing and training into ML.NET using the API. I dati vengono inizialmente archiviati nei file o in altre origini dati, ad esempio database, JSON, XML o raccolte in memoria.
+Informazioni su come caricare i dati per l'elaborazione e il training in ML.NET usando l'API. I dati vengono inizialmente archiviati nei file o in altre origini dati, ad esempio database, JSON, XML o raccolte in memoria.
 
-If you're using Model Builder, see [Load training data into Model Builder](load-data-model-builder.md).
+Se si usa generatore di modelli, vedere [caricare i dati di training in Generatore di modelli](load-data-model-builder.md).
 
 ## <a name="create-the-data-model"></a>Creare il modello di dati
 
@@ -107,14 +107,14 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-relational-database"></a>Load data from a relational database
+## <a name="load-data-from-a-relational-database"></a>Caricare dati da un database relazionale
 
-ML.NET supports loading data from a variety of relational databases supported by [`System.Data`](xref:System.Data) that include SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2, and many more.
+ML.NET supporta il caricamento di dati da un'ampia gamma di database relazionali supportati da [`System.Data`](xref:System.Data) che includono SQL Server, database SQL di Azure, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 e molti altri.
 
 > [!NOTE]
-> To use `DatabaseLoader`, reference the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet package.
+> Per usare `DatabaseLoader`, fare riferimento al pacchetto NuGet [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) .
 
-Given a database with a table named `House` and the following schema:
+Dato un database con una tabella denominata `House` e lo schema seguente:
 
 ```SQL
 CREATE TABLE [House] (
@@ -139,7 +139,7 @@ public class HouseData
 }
 ```
 
-Then, inside of your application, create a `DatabaseLoader`.
+Quindi, all'interno dell'applicazione, creare un `DatabaseLoader`.
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -147,7 +147,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Define your connection string as well as the SQL command to be executed on the database and create a `DatabaseSource` instance. This sample uses a LocalDB SQL Server database with a file path. However, DatabaseLoader supports any other valid connection string for databases on-premises and in the cloud.
+Definire la stringa di connessione, nonché il comando SQL da eseguire nel database e creare un'istanza di `DatabaseSource`. In questo esempio viene utilizzato un database SQL Server database locale con un percorso di file. Tuttavia, DatabaseLoader supporta qualsiasi altra stringa di connessione valida per i database in locale e nel cloud.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -157,9 +157,9 @@ string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM Hou
 DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Numerical data that is not of type [`Real`](xref:System.Data.SqlDbType) has to be converted to [`Real`](xref:System.Data.SqlDbType). The [`Real`](xref:System.Data.SqlDbType) type is represented as a single-precision floating-point value or [`Single`](xref:System.Single), the input type expected by ML.NET algorithms. In this sample, the `NumBed` column is an integer in the database. Using the `CAST` built-in function, it's converted to [`Real`](xref:System.Data.SqlDbType). Because the `Price` property is already of type [`Real`](xref:System.Data.SqlDbType) it is loaded as is.
+I dati numerici che non sono di tipo [`Real`](xref:System.Data.SqlDbType) devono essere convertiti in [`Real`](xref:System.Data.SqlDbType). Il tipo di [`Real`](xref:System.Data.SqlDbType) è rappresentato come valore a virgola mobile e precisione singola o [`Single`](xref:System.Single), il tipo di input previsto dagli algoritmi ml.NET. In questo esempio, la colonna `NumBed` è un numero intero nel database. Utilizzando la funzione incorporata `CAST`, viene convertito in [`Real`](xref:System.Data.SqlDbType). Poiché la proprietà `Price` è già di tipo [`Real`](xref:System.Data.SqlDbType) viene caricata così com'è.
 
-Use the `Load` method to load the data into an [`IDataView`](xref:Microsoft.ML.IDataView).
+Usare il metodo `Load` per caricare i dati in un [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -215,5 +215,5 @@ IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollecti
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- To clean or otherwise process data, see [Prepare data for building a model](prepare-data-ml-net.md).
-- When you're ready to build a model, see [Train and evaluate a model](train-machine-learning-model-ml-net.md).
+- Per pulire o in altro modo elaborare i dati, vedere [preparare i dati per la compilazione di un modello](prepare-data-ml-net.md).
+- Quando si è pronti per compilare un modello, vedere eseguire il [training e valutare un modello](train-machine-learning-model-ml-net.md).

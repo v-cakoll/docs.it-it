@@ -14,60 +14,60 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346160"
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenzioni di codifica di Visual Basic
-Microsoft develops samples and documentation that follow the guidelines in this topic. If you follow the same coding conventions, you may gain the following benefits:  
+Microsoft sviluppa esempi e documentazione che seguono le linee guida in questo argomento. Se si seguono le stesse convenzioni di codifica, è possibile ottenere i vantaggi seguenti:  
   
-- Your code will have a consistent look, so that readers can better focus on content, not layout.  
+- Il codice avrà un aspetto coerente, in modo che i lettori possano concentrarsi meglio sul contenuto, non sul layout.  
   
-- Readers understand your code more quickly because they can make assumptions based on previous experience.  
+- I reader comprendono il codice più rapidamente, perché possono creare presupposti in base all'esperienza precedente.  
   
-- You can copy, change, and maintain the code more easily.  
+- È possibile copiare, modificare e gestire il codice più facilmente.  
   
-- You help ensure that your code demonstrates "best practices" for Visual Basic.  
+- È possibile assicurarsi che il codice consenta di illustrare "procedure consigliate" per Visual Basic.  
   
 ## <a name="naming-conventions"></a>Convenzioni di denominazione  
   
-- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
+- Per informazioni sulle linee guida per la denominazione, vedere l'argomento [linee guida](../../../standard/design-guidelines/naming-guidelines.md) per la denominazione.  
   
-- Do not use "My" or "my" as part of a variable name. This practice creates confusion with the `My` objects.  
+- Non usare "My" o "My" come parte del nome di una variabile. Questa procedura consente di creare confusione con gli oggetti `My`.  
   
-- You do not have to change the names of objects in auto-generated code to make them fit the guidelines.  
+- Non è necessario modificare i nomi degli oggetti nel codice generato automaticamente per adattarli alle linee guida.  
   
 ## <a name="layout-conventions"></a>Convenzioni di layout  
   
-- Insert tabs as spaces, and use smart indenting with four-space indents.  
+- Inserire le schede come spazi e utilizzare i rientri intelligenti con rientri di quattro spazi.  
   
-- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Usare un **elenco semplice (riformattazione) del codice** per riformattare il codice nell'editor di codice. Per ulteriori informazioni, vedere [Opzioni, editor di testo, di base (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
-- Use only one statement per line. Don't use the Visual Basic line separator character (:).  
+- Usare una sola istruzione per riga. Non usare il carattere separatore di riga Visual Basic (:).  
   
-- Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.  
+- Evitare di usare il carattere di continuazione di riga esplicito "_" a favore della continuazione di riga implicita laddove il linguaggio lo consente.  
   
-- Use only one declaration per line.  
+- Usare una sola dichiarazione per riga.  
   
-- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. However, always left-align items in a list.  
+- Se l' **elenco (riformattazione) del codice** non formatta automaticamente le righe di continuazione, rientrare manualmente le righe di continuazione una tabulazione. Tuttavia, allinea sempre gli elementi in un elenco.  
   
     ```vb  
     a As Integer,  
     b As Integer  
     ```  
   
-- Add at least one blank line between method and property definitions.  
+- Aggiungere almeno una riga vuota tra le definizioni di metodo e proprietà.  
   
 ## <a name="commenting-conventions"></a>Convenzioni relative ai commenti  
   
-- Put comments on a separate line instead of at the end of a line of code.  
+- Inserire i commenti su una riga separata anziché alla fine di una riga di codice.  
   
-- Start comment text with an uppercase letter, and end comment text with a period.  
+- Inizia il testo del commento con una lettera maiuscola e termina il testo del commento con un punto.  
   
-- Insert one space between the comment delimiter (') and the comment text.  
+- Inserire uno spazio tra il delimitatore di commento (') e il testo del commento.  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- Do not surround comments with formatted blocks of asterisks.  
+- Non racchiudere i commenti con blocchi formattati di asterischi.  
   
 ## <a name="program-structure"></a>Struttura del programma  
   
-- When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.  
+- Quando si utilizza il metodo `Main`, utilizzare il costrutto predefinito per le nuove applicazioni console e utilizzare `My` per gli argomenti della riga di comando.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,129 +81,129 @@ Microsoft develops samples and documentation that follow the guidelines in this 
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- To append strings in loops, use the <xref:System.Text.StringBuilder> object.  
+- Per accodare stringhe nei cicli, utilizzare l'oggetto <xref:System.Text.StringBuilder>.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>Relaxed Delegates in Event Handlers  
- Do not explicitly qualify the arguments (Object and EventArgs) to event handlers. If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:  
+### <a name="relaxed-delegates-in-event-handlers"></a>Delegati rilassati nei gestori eventi  
+ Non qualificare in modo esplicito gli argomenti (oggetto e EventArgs) per i gestori eventi. Se non si utilizzano gli argomenti dell'evento passati a un evento, ad esempio Sender come oggetto, e come EventArgs, utilizzare delegati rilassati e lasciare gli argomenti dell'evento nel codice:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>Tipi di dati non firmati  
   
-- Use `Integer` rather than unsigned types, except where they are necessary.  
+- Utilizzare `Integer` anziché tipi non firmati, tranne nei casi in cui sono necessari.  
   
-### <a name="arrays"></a>Array  
+### <a name="arrays"></a>Matrici  
   
-- Use the short syntax when you initialize arrays on the declaration line. For example, use the following syntax.  
+- Utilizzare la sintassi breve quando si inizializzano le matrici nella riga della dichiarazione. Ad esempio, usare la sintassi seguente.  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     Do not use the following syntax.  
+     Non utilizzare la sintassi seguente.  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- Put the array designator on the type, not on the variable. For example, use the following syntax:  
+- Inserire l'indicatore di matrice sul tipo, non sulla variabile. Usare, ad esempio, la sintassi seguente:  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     Do not use the following syntax:  
+     Non usare la sintassi seguente:  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- Use the { } syntax when you declare and initialize arrays of basic data types. For example, use the following syntax:  
+- Utilizzare la sintassi {} quando si dichiarano e inizializzano matrici di tipi di dati di base. Usare, ad esempio, la sintassi seguente:  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     Do not use the following syntax:  
+     Non usare la sintassi seguente:  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a>Use the With Keyword  
- When you make a series of calls to one object, consider using the `With` keyword:  
+### <a name="use-the-with-keyword"></a>Usare la parola chiave with  
+ Quando si esegue una serie di chiamate a un oggetto, provare a usare la parola chiave `With`:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Use the Try...Catch and Using Statements when you use Exception Handling  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Usa il try... Intercettare e utilizzare le istruzioni quando si utilizza la gestione delle eccezioni  
  Non usare la proprietà `On Error Goto`.  
   
-### <a name="use-the-isnot-keyword"></a>Use the IsNot Keyword  
- Use the `IsNot` keyword instead of `Not...Is Nothing`.  
+### <a name="use-the-isnot-keyword"></a>Usare la parola chiave non  
+ Usare la parola chiave `IsNot` anziché `Not...Is Nothing`.  
   
-### <a name="new-keyword"></a>New Keyword  
+### <a name="new-keyword"></a>Nuova parola chiave  
   
-- Use short instantiation. For example, use the following syntax:  
+- Usare la creazione di un'istanza breve. Usare, ad esempio, la sintassi seguente:  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     The preceding line is equivalent to this:  
+     La riga precedente è equivalente alla seguente:  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- Use object initializers for new objects instead of the parameterless constructor:  
+- Usare gli inizializzatori di oggetto per i nuovi oggetti anziché il costruttore senza parametri:  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>Gestione di eventi  
   
-- Use `Handles` rather than `AddHandler`:  
+- Usare `Handles` anziché `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Use `AddressOf`, and do not instantiate the delegate explicitly:  
+- Usare `AddressOf`e non creare un'istanza del delegato in modo esplicito:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- When you define an event, use the short syntax, and let the compiler define the delegate:  
+- Quando si definisce un evento, usare la sintassi abbreviata e consentire al compilatore di definire il delegato:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method. `RaiseEvent` checks for `Nothing` before it raises the event.  
+- Non verificare se un evento è `Nothing` (null) prima di chiamare il metodo `RaiseEvent`. `RaiseEvent` controlla la presenza di `Nothing` prima che venga generato l'evento.  
   
-### <a name="using-shared-members"></a>Using Shared Members  
- Call `Shared` members by using the class name, not from an instance variable.  
+### <a name="using-shared-members"></a>Uso di membri condivisi  
+ Chiamare `Shared` membri utilizzando il nome della classe, non da una variabile di istanza.  
   
-### <a name="use-xml-literals"></a>Use XML Literals  
- XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform). When you develop with XML, follow these guidelines:  
+### <a name="use-xml-literals"></a>Usare valori letterali XML  
+ I valori letterali XML semplificano le attività più comuni che si verificano quando si lavora con XML (ad esempio, caricamento, query e trasformazione). Quando si sviluppa con XML, attenersi alle seguenti linee guida:  
   
-- Use XML literals to create XML documents and fragments instead of calling XML APIs directly.  
+- Usare valori letterali XML per creare documenti e frammenti XML anziché chiamare direttamente le API XML.  
   
-- Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.  
+- Importare gli spazi dei nomi XML a livello di file o di progetto per sfruttare le ottimizzazioni delle prestazioni per i valori letterali XML.  
   
-- Use the XML axis properties to access elements and attributes in an XML document.  
+- Utilizzare le proprietà dell'asse XML per accedere a elementi e attributi in un documento XML.  
   
-- Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:  
+- Usare espressioni incorporate per includere valori e per creare codice XML da valori esistenti anziché usare chiamate API, ad esempio il metodo `Add`:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>Query LINQ  
   
-- Use meaningful names for query variables:  
+- Usare nomi significativi per le variabili di query:  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:  
+- Fornire nomi per gli elementi in una query per assicurarsi che i nomi delle proprietà dei tipi anonimi siano correttamente in maiuscolo con la combinazione di maiuscole e minuscole Pascal:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- Rinominare le proprietà quando i nomi delle proprietà nel risultato potrebbero risultare ambigui. For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:  
+- Rinominare le proprietà quando i nomi delle proprietà nel risultato potrebbero risultare ambigui. Se, ad esempio, la query restituisce un nome cliente e un ID ordine, rinominarli anziché lasciarli come `Name` e `ID` nel risultato:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- Use type inference in the declaration of query variables and range variables:  
+- Usare l'inferenza del tipo nella dichiarazione di variabili di query e variabili di intervallo:  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Align query clauses under the `From` statement:  
+- Allineare le clausole di query sotto l'istruzione `From`:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:  
+- Usare le clausole `Where` prima di altre clausole di query in modo che le clausole di query successive funzionino sul set di dati filtrato:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:  
+- Utilizzare la clausola `Join` per definire in modo esplicito un'operazione di join anziché utilizzare la clausola `Where` per definire in modo implicito un'operazione di join:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

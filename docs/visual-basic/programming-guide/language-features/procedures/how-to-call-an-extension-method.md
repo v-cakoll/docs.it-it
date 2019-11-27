@@ -14,9 +14,9 @@ ms.locfileid: "74340403"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Procedura: chiamare un metodo di estensione (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
+I metodi di estensione consentono di aggiungere metodi a una classe esistente. Dopo che un metodo di estensione è stato dichiarato e introdotto nell'ambito, è possibile chiamarlo come metodo di istanza del tipo che estende. Per ulteriori informazioni su come scrivere un metodo di estensione, vedere [procedura: scrivere un metodo di estensione](./how-to-write-an-extension-method.md).
 
- The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
+ Le istruzioni seguenti fanno riferimento al metodo di estensione `PrintAndPunctuate`, che visualizzerà l'istanza di stringa che la richiama, seguito da qualsiasi valore inviato per il secondo parametro, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-The method must be in scope when it is called.
+Il metodo deve essere nell'ambito quando viene chiamato.
 
-### <a name="to-call-an-extension-method"></a>To call an extension method
+### <a name="to-call-an-extension-method"></a>Per chiamare un metodo di estensione
 
-1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
+1. Dichiarare una variabile con il tipo di dati del primo parametro del metodo di estensione. Per `PrintAndPunctuate`, è necessaria una variabile <xref:System.String>:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
+2. Tale variabile richiamerà il metodo di estensione e il relativo valore verrà associato al primo parametro, `aString`. L'istruzione chiamante seguente visualizzerà `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
+     Si noti che la chiamata a questo metodo di estensione è simile a una chiamata a uno dei metodi di istanza di <xref:System.String> che richiedono un solo parametro:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Declare another string variable and call the method again to see that it works with any string.
+3. Dichiarare un'altra variabile di stringa e chiamare di nuovo il metodo per verificare che funzioni con qualsiasi stringa.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     The result this time is: `or not!!!`.
+     Il risultato è questa volta: `or not!!!`.
 
 ## <a name="example"></a>Esempio
- The following code is a complete example of the creation and use of a simple extension method.
+ Il codice seguente è un esempio completo della creazione e dell'uso di un semplice metodo di estensione.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -99,4 +99,4 @@ End Module
 
 - [Procedura: Scrivere un metodo di estensione](./how-to-write-an-extension-method.md)
 - [Metodi di estensione](./extension-methods.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

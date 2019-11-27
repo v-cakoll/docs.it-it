@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350781"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>La matrice è fissa o temporaneamente bloccata (Visual Basic)
-This error has the following possible causes:  
+Questo errore presenta le possibili cause seguenti:  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- Utilizzo di `ReDim` per modificare il numero di elementi di una matrice di dimensioni fisse.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Ridimensionamento di una matrice dinamica a livello di modulo, in cui un elemento è stato passato come argomento a una routine. Se viene passato un elemento, la matrice viene bloccata per impedire la deallocazione della memoria per il parametro Reference all'interno della procedura.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- Tentativo di assegnare un valore a una variabile `Variant` contenente una matrice, ma il `Variant` è attualmente bloccato.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. Rendere dinamica la matrice originale anziché fissa dichiarando l'oggetto con `ReDim` (se la matrice è dichiarata all'interno di una routine) o dichiarando il numero di elementi (se la matrice viene dichiarata a livello di modulo.  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. Determinare se è effettivamente necessario passare l'elemento, perché è visibile all'interno di tutte le routine del modulo.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. Determinare gli elementi che bloccano il `Variant` e risolvere il problema.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)

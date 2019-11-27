@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344305"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Introduzione alle stringhe in Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+In questa sezione vengono descritti i concetti di base relativi all'utilizzo di stringhe in Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Nozioni fondamentali sulle stringhe](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Introduce i concetti di base relativi all'uso di stringhe e variabili di stringa.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Tipi di metodi di manipolazione delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ In sono stati introdotti diversi modi per analizzare e modificare le stringhe.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Effetti delle impostazioni cultura sulle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Viene illustrato il modo in cui Visual Basic utilizza le informazioni sulle impostazioni cultura per eseguire confronti e conversioni di stringa.  
   
 ## <a name="see-also"></a>Vedere anche
 

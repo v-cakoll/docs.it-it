@@ -24,7 +24,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 
 Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
-|Parte|Digitare|description|
+|Parte|Type|Descrizione|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.PasswordBox> viene visualizzato in questo elemento.|
 
@@ -32,7 +32,7 @@ Nella tabella seguente sono elencate le parti denominate per il controllo <xref:
 
 Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.PasswordBox>.
 
-|Nome VisualState|Nome VisualStateGroup|description|
+|Nome VisualState|Nome VisualStateGroup|Descrizione|
 |-|-|-|
 |Normale|CommonStates|Lo stato predefinito.|
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|

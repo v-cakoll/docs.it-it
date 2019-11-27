@@ -20,26 +20,26 @@ ms.locfileid: "74348310"
 ---
 # <a name="new-operator-visual-basic"></a>Operatore New (Visual Basic)
 
-Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
+Introduce una clausola `New` per creare una nuova istanza dell'oggetto, specifica un vincolo del costruttore in un parametro di tipo o identifica una routine `Sub` come costruttore di classe.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
+In una dichiarazione o un'istruzione di assegnazione, una clausola `New` deve specificare una classe definita dalla quale è possibile creare l'istanza. Questo significa che la classe deve esporre uno o più costruttori a cui il codice chiamante può accedere.
 
-You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
+È possibile utilizzare una clausola `New` in un'istruzione di dichiarazione o un'istruzione di assegnazione. Quando l'istruzione viene eseguita, viene chiamato il costruttore appropriato della classe specificata, passando gli argomenti specificati. Nell'esempio seguente viene illustrato questo problema creando istanze di una classe `Customer` con due costruttori, uno che non accetta parametri e uno che accetta un parametro di stringa:
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-Since arrays are classes, `New` can create a new array instance, as shown in the following example:
+Poiché le matrici sono classi, `New` possibile creare una nuova istanza di matrice, come illustrato nell'esempio seguente:
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
+Il Common Language Runtime (CLR) genera un errore di <xref:System.OutOfMemoryException> se la memoria disponibile non è sufficiente per creare la nuova istanza.
 
 > [!NOTE]
-> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
+> La parola chiave `New` viene utilizzata anche negli elenchi di parametri di tipo per specificare che il tipo fornito deve esporre un costruttore senza parametri accessibile. Per ulteriori informazioni sui parametri e i vincoli di tipo, vedere [Type list](../statements/type-list.md).
 
-To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Per creare una routine del costruttore per una classe, impostare il nome di una routine `Sub` sulla parola chiave `New`. Per altre informazioni, vedere [durata degli oggetti: come creare ed eliminare definitivamente oggetti](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 È possibile usare la parola chiave `New` nei contesti seguenti:
 
@@ -52,5 +52,5 @@ To create a constructor procedure for a class, set the name of a `Sub` procedure
 - <xref:System.OutOfMemoryException>
 - [Parole chiave](../keywords/index.md)
 - [Elenco dei tipi](../statements/type-list.md)
-- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Tipi generici in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Durata degli oggetti: come creare e distruggere oggetti](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

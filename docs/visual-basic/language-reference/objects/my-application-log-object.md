@@ -14,10 +14,10 @@ ms.locfileid: "74344129"
 # <a name="myapplicationlog-object"></a>My.Application.Log (oggetto)
 Fornisce una proprietà e i metodi per scrivere le informazioni relative a eventi ed eccezioni nei listener di log dell'applicazione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Application.Log` , vedere <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Per ulteriori informazioni, vedere [registrazione di informazioni dall'applicazione](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
 > È anche possibile usare le classi in .NET Framework per registrare informazioni dall'applicazione. Per altre informazioni, vedere [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
@@ -27,7 +27,7 @@ Fornisce una proprietà e i metodi per scrivere le informazioni relative a event
   
  **Classe:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

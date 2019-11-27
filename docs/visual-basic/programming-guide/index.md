@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345438"
 ---
 # <a name="visual-basic-programming-guide"></a>Guida per programmatori Visual Basic
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+Come per qualsiasi linguaggio di programmazione moderno, Visual Basic supporta molti costrutti di programmazione ed elementi di linguaggio comuni. Questa guida descrive tutti gli elementi principali della programmazione con Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Struttura del programma e convenzioni di scrittura del codice](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ Contiene la documentazione sulla struttura di base e sulle convenzioni di codice di Visual Basic, ad esempio le convenzioni di denominazione, i commenti nel codice e le limitazioni all'interno Visual Basic.  
   
  [Funzionalità del linguaggio Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
  Sono disponibili collegamenti ad argomenti che presentano e illustrano funzionalità importanti di Visual Basic, inclusi LINQ e valori letterali XML.  
@@ -28,7 +28,7 @@ As with any modern programming language, Visual Basic supports many common progr
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Vengono fornite informazioni di riferimento su vari aspetti della programmazione Visual Basic.  
   
  [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ Vengono fornite informazioni sull'utilizzo del Visual Basic compilatore da riga di comando, sulle opzioni del compilatore e sullo strumento di aggiornamento delle parole chiave.

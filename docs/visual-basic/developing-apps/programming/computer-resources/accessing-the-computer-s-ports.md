@@ -33,7 +33,7 @@ L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a p
  [Operazioni sulle porte in .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  Illustra come usare .NET Framework durante l'esecuzione di operazioni sulle porte.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Illustra l'oggetto `My.Computer.Ports` e i suoi membri.  

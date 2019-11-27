@@ -1,5 +1,5 @@
 ---
-title: Impostazione predefinita
+title: Default
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351574"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Identifies a property as the default property of its class, structure, or interface.  
+Identifica una proprietà come proprietà predefinita della relativa classe, struttura o interfaccia.  
   
-## <a name="remarks"></a>Note  
- A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
+## <a name="remarks"></a>Osservazioni  
+ Una classe, una struttura o un'interfaccia può definire al massimo una delle proprietà come *proprietà predefinita*, purché la proprietà accetti almeno un parametro. Se il codice fa riferimento a una classe o a una struttura senza specificare un membro, Visual Basic risolve il riferimento alla proprietà predefinita.  
   
- Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
+ Le proprietà predefinite possono causare una riduzione ridotta dei caratteri di codice sorgente, ma possono rendere il codice più difficile da leggere. Se il codice chiamante non ha familiarità con la classe o la struttura, quando fa riferimento al nome della classe o della struttura, non può essere certo se il riferimento accede alla classe o alla struttura o a una proprietà predefinita. Questo può causare errori del compilatore o errori di logica di run-time sottili.  
   
- You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
+ È possibile ridurre in qualche modo la probabilità di errori di proprietà predefiniti usando sempre l' [istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) per impostare il controllo dei tipi del compilatore su `On`.  
   
- If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
+ Se si prevede di usare una classe o una struttura predefinita nel codice, è necessario determinare se dispone di una proprietà predefinita e, in caso affermativo, il nome.  
   
- Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
+ A causa di questi svantaggi, è consigliabile non definire le proprietà predefinite. Per la leggibilità del codice, è consigliabile considerare sempre il riferimento a tutte le proprietà in modo esplicito, anche le proprietà predefinite.  
   
- The `Default` modifier can be used in this context:  
+ Il modificatore `Default` può essere usato in questo contesto:  
   
  [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

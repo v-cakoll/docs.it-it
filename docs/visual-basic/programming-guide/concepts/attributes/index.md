@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: Cenni preliminari sugli attributi
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:
 
-- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per ulteriori informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
+- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
 
-- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 
 - Descrizione delle proprietà COM per classi, metodi e interfacce.
 

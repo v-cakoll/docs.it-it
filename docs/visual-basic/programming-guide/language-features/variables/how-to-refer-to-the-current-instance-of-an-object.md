@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346888"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Procedura: fare riferimento all'istanza corrente di un oggetto (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+L' *istanza corrente* di un oggetto è l'istanza di in cui è attualmente in esecuzione il codice.  
   
- You use the `Me` keyword to refer to the current instance.  
+ Usare la parola chiave `Me` per fare riferimento all'istanza corrente.  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>Per fare riferimento all'istanza corrente  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- Usare la parola chiave `Me` dove normalmente si usa il nome di una variabile oggetto.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     Sebbene `Me` si comportano come una variabile oggetto, non è possibile dichiararla o assegnarvi alcun elemento. `Me` fa sempre riferimento all'istanza corrente.  
   
 ## <a name="see-also"></a>Vedere anche
 

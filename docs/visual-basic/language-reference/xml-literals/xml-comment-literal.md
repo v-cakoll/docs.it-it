@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349392"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Valore letterale di commento XML (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XComment> object.  
+Valore letterale che rappresenta un oggetto <xref:System.Xml.Linq.XComment>.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,29 +29,29 @@ A literal representing an <xref:System.Xml.Linq.XComment> object.
   
 |Termine|Definizione|  
 |---|---|  
-|`<!--`|Obbligatorio. Denotes the start of the XML comment.|  
-|`content`|Obbligatorio. Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
-|`-->`|Obbligatorio. Denotes the end of the XML comment.|  
+|`<!--`|Obbligatoria. Indica l'inizio del commento XML.|  
+|`content`|Obbligatoria. Testo da visualizzare nel commento XML. Non può contenere una serie di due trattini (--) o terminare con un trattino adiacente al tag di chiusura.|  
+|`-->`|Obbligatoria. Indica la fine del commento XML.|  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto <xref:System.Xml.Linq.XComment>.  
   
-## <a name="remarks"></a>Note  
- XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
+## <a name="remarks"></a>Osservazioni  
+ I valori letterali del commento XML non contengono contenuto del documento; contengono informazioni sul documento. La sezione del commento XML termina con la sequenza "-->". Questo implica i seguenti punti:  
   
-- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
+- Non è possibile usare un'espressione incorporata in un valore letterale di commento XML perché i delimitatori di espressioni incorporati sono contenuti di commenti XML validi.  
   
-- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
+- Le sezioni di commento XML non possono essere annidate, perché `content` non può contenere il valore "-->".  
   
- You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
+ È possibile assegnare un valore letterale di commento XML a una variabile oppure è possibile includerlo in un valore letterale elemento XML.  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Un valore letterale XML può estendersi su più righe senza usare caratteri di continuazione di riga. Questa funzionalità consente di copiare il contenuto da un documento XML e incollarlo direttamente in un programma Visual Basic.  
   
- The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ Il compilatore Visual Basic converte il valore letterale del commento XML in una chiamata al costruttore di <xref:System.Xml.Linq.XComment.%23ctor%2A>.  
   
 ## <a name="example"></a>Esempio  
- The following example creates an XML comment that contains the text "This is a comment".  
+ Nell'esempio seguente viene creato un commento XML che contiene il testo "questo è un commento".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

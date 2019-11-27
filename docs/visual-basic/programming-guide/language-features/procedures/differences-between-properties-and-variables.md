@@ -22,27 +22,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341218"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Differenze tra proprietà e variabili in Visual Basic
-Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
+Le variabili e le proprietà rappresentano entrambi i valori a cui è possibile accedere. Tuttavia, esistono differenze nell'archiviazione e nell'implementazione.  
   
 ## <a name="variables"></a>Variabili  
- A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
+ Una *variabile* corrisponde direttamente a una posizione di memoria. Si definisce una variabile con un'unica istruzione di dichiarazione. Una variabile può essere una *variabile locale*, definita all'interno di una routine e disponibile solo all'interno di tale procedura, oppure può essere una *variabile membro*, definita in un modulo, una classe o una struttura, ma non all'interno di alcuna routine. Una variabile membro viene anche chiamata *campo*.  
   
 ## <a name="properties"></a>Proprietà  
- A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
+ Una *Proprietà* è un elemento dati definito in un modulo, una classe o una struttura. Si definisce una proprietà con un blocco di codice tra le istruzioni `Property` e `End Property`. Il blocco di codice contiene una routine di `Get`, una `Set` o entrambi. Queste procedure sono denominate *routine di proprietà* o *funzioni di accesso alle proprietà*. Oltre a recuperare o archiviare il valore della proprietà, possono anche eseguire azioni personalizzate, ad esempio l'aggiornamento di un contatore di accesso.  
   
-## <a name="differences"></a>Differences  
- The following table shows some important differences between variables and properties.  
+## <a name="differences"></a>Differenze  
+ Nella tabella seguente vengono illustrate alcune differenze importanti tra le variabili e le proprietà.  
   
-|Point of difference|Variabile|proprietà|  
+|Punto di differenza|Variable|Proprietà|  
 |-------------------------|--------------|--------------|  
-|Dichiarazione|Single declaration statement|Series of statements in a code block|  
-|Implementazione|Single storage location|Executable code (property procedures)|  
-|Archiviazione|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
-|Executable code|Nessuno|Must have at least one procedure|  
-|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
-|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
+|Dichiarazione|Singola istruzione di dichiarazione|Serie di istruzioni in un blocco di codice|  
+|Implementazione|Posizione di archiviazione singola|Codice eseguibile (routine Property)|  
+|Archiviazione|Associato direttamente al valore della variabile|In genere l'archiviazione interna non è disponibile all'esterno della classe o del modulo contenitore della proprietà<br /><br /> Il valore della proprietà può essere o meno esistere come elemento archiviato <sup>1</sup>|  
+|Codice eseguibile|nessuno|Deve avere almeno una procedura|  
+|Accesso in lettura e scrittura|Lettura/scrittura o sola lettura|Lettura/scrittura, di sola lettura o di sola scrittura|  
+|Azioni personalizzate (oltre all'accettazione o alla restituzione di un valore)|Non possibile|Può essere eseguita come parte dell'impostazione o del recupero del valore della proprietà|  
   
- <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
+ <sup>1</sup> diversamente da una variabile, il valore di una proprietà potrebbe non corrispondere direttamente a un singolo elemento di archiviazione. Lo spazio di archiviazione può essere suddiviso in parti per comodità o sicurezza oppure il valore può essere archiviato in formato crittografato. In questi casi, la procedura `Get` assemblare le parti o decrittografare il valore archiviato e la procedura `Set` crittografa il nuovo valore o lo suddivide nella risorsa di archiviazione costituente. Il valore di una proprietà può essere effimero, ad esempio l'ora del giorno, nel qual caso la routine `Get` lo calcolerà al volo ogni volta che si accede alla proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -53,6 +53,6 @@ Variables and properties both represent values that you can access. However, the
 - [Procedura: Creare una proprietà](./how-to-create-a-property.md)
 - [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)
 - [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)

@@ -28,7 +28,7 @@ Questa sezione descrive il flusso di lavoro di sviluppo a *ciclo interno* per ap
 Un'applicazione è costituita da servizi e raccolte aggiuntive, ossia dipendenze. Di seguito sono indicati i passaggi di base che si eseguono in genere quando si compila un'applicazione Docker, come illustrato nella figura 5-1.
 
 :::image type="complex" source="./media/docker-app-development-workflow/life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che illustra i 7 passaggi necessari per creare un'app in contenitori.":::
-Il processo di sviluppo per le app docker: 1-codice dell'app, 2-scrittura Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7- Push nel repository e ripetizione.
+Il processo di sviluppo per le app docker: 1-scrivere il codice dell'app, 2-scrivere Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7 push nel repository e ripetere.
 :::image-end:::
 
 **Figura 5-1.** Flusso di lavoro passo per passo per lo sviluppo di applicazioni Docker in contenitori
@@ -543,7 +543,7 @@ Se si sviluppa usando l'approccio editor/CLI, eseguire il debug dei contenitori 
 Il flusso di lavoro quando si usa Visual Studio è molto più semplice rispetto all'uso dell'approccio editor/CLI. La maggior parte dei passaggi richiesti da Docker correlati ai file Dockerfile e docker-compose.yml sono nascosti o semplificati da Visual Studio, come illustrato nella figura 5-15.
 
 :::image type="complex" source="./media/docker-app-development-workflow/simplified-life-cycle-containerized-apps-docker-cli.png" alt-text="Diagramma che illustra i cinque passaggi semplificati necessari per creare un'app.":::
-Il processo di sviluppo per le app docker: 1-codice dell'app, 2-scrittura Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7- Push nel repository e ripetizione.
+Il processo di sviluppo per le app docker: 1-scrivere il codice dell'app, 2-scrivere Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7 push nel repository e ripetere.
 :::image-end:::
 
 **Figura 5-15**. Flusso di lavoro semplificato per lo sviluppo con Visual Studio

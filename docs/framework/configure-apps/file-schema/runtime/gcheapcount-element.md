@@ -28,27 +28,27 @@ Specifica il numero di heap/thread da usare per il Garbage Collection server.
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
+Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|description|
+|Attributo|Descrizione|
 |---------------|-----------------|
 |`enabled`|Attributo obbligatorio.<br /><br />Specifica il numero di heap da usare per il Garbage Collection server. Il numero effettivo di heap è il numero minimo di heap specificato e il numero di processori che il processo è autorizzato a utilizzare. |
 
 #### <a name="enabled-attribute"></a>attributo enabled
 
-|Value|description|
+|Value|Descrizione|
 |-----------|-----------------|
 |`nn`|Numero di heap da utilizzare per GC del server.|
 
-### <a name="child-elements"></a>Elementi figlio
+### <a name="child-elements"></a>Elemento figlio
 
 Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|description|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|

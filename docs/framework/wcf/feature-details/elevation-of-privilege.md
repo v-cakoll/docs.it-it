@@ -72,7 +72,7 @@ L' *elevazione dei privilegi* risulta da concedere a un utente malintenzionato a
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>Il servizio utilizza un certificato diverso da quello previsto dal client  
  In certe condizioni, un client può firmare digitalmente un messaggio con un certificato X.509 e far sì che il servizio recuperi un certificato diverso da quello previsto.  
   
- Ciò può verificarsi nelle circostanze seguenti:  
+ Ciò può verificarsi nelle seguenti circostanze:  
   
 - Il client firma digitalmente un messaggio utilizzando un certificato X.509 e non allega il certificato X.509 al messaggio, ma fa semplicemente riferimento al certificato utilizzando il suo identificatore chiave del soggetto.  
   

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350440"
 ---
 # <a name="let-clause-visual-basic"></a>Clausola Let (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Calcola un valore e lo assegna a una nuova variabile all'interno della query.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |Termine|Definizione|  
 |---|---|  
-|`variable`|Obbligatorio. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Obbligatorio. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Obbligatoria. Alias che può essere utilizzato per fare riferimento ai risultati dell'espressione fornita.|  
+|`expression`|Obbligatoria. Espressione che verrà valutata e assegnata alla variabile specificata.|  
   
-## <a name="remarks"></a>Note  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+## <a name="remarks"></a>Osservazioni  
+ La clausola `Let` consente di calcolare i valori per ogni risultato della query e di farvi riferimento tramite un alias. L'alias può essere utilizzato in altre clausole, ad esempio la clausola `Where`. La clausola `Let` consente di creare un'istruzione di query più semplice da leggere, in quanto è possibile specificare un alias per una clausola Expression inclusa nella query e sostituire l'alias ogni volta che viene utilizzata la clausola Expression.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ Nella clausola `Let` è possibile includere un numero qualsiasi di assegnazioni di `variable` e di `expression`. Separare ogni assegnazione con una virgola (,).  
   
 ## <a name="example"></a>Esempio  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ Nell'esempio di codice seguente viene usata la clausola `Let` per calcolare uno sconto del 10% sui prodotti.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

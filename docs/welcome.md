@@ -56,7 +56,7 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 
 È anche possibile esplorare i [riferimenti alle API .NET](/dotnet/api).
 
-## <a name="videos"></a>Video
+## <a name="videos"></a>Videos
 
 Esplora i video su Web, dispositivi mobili, C#desktop, Machine Learning, contenitori/Docker, accesso ai dati e altro ancora:
 

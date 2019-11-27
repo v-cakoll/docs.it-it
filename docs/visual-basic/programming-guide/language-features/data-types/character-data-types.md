@@ -16,35 +16,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346386"
 ---
 # <a name="character-data-types-visual-basic"></a>Dati di tipo carattere (Visual Basic)
-Visual Basic provides *character data types* to deal with printable and displayable characters. While they both deal with Unicode characters, `Char` holds a single character whereas `String` contains an indefinite number of characters.  
+Visual Basic fornisce *tipi di dati di tipo carattere* per gestire i caratteri stampabili e visualizzabili. Mentre entrambi gestiscono caratteri Unicode, `Char` contiene un solo carattere, mentre `String` contiene un numero indefinito di caratteri.  
   
- For a table that displays a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Per una tabella in cui viene visualizzato un confronto affiancato dei tipi di dati Visual Basic, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="char-type"></a>Char Type  
- The `Char` data type is a single two-byte (16-bit) Unicode character. If a variable always stores exactly one character, declare it as `Char`. Esempio:  
+## <a name="char-type"></a>Tipo char  
+ Il tipo di dati `Char` è un singolo carattere Unicode a due byte (a 16 bit). Se una variabile archivia sempre esattamente un carattere, dichiararlo come `Char`. Di seguito è riportato un esempio:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Each possible value in a `Char` or `String` variable is a *code point*, or character code, in the Unicode character set. Unicode characters include the basic ASCII character set, various other alphabet letters, accents, currency symbols, fractions, diacritics, and mathematical and technical symbols.  
+ Ogni valore possibile in una variabile `Char` o `String` è un *punto di codice*, o codice carattere, nel set di caratteri Unicode. I caratteri Unicode includono il set di caratteri ASCII di base, diverse altre lettere di alfabeto, accenti, simboli di valuta, frazioni, segni diacritici e simboli matematici e tecnici.  
   
 > [!NOTE]
-> The Unicode character set reserves the code points D800 through DFFF (55296 through 55551 decimal) for *surrogate pairs*, which require two 16-bit values to represent a single code point. A `Char` variable cannot hold a surrogate pair, and a `String` uses two positions to hold such a pair.  
+> Il set di caratteri Unicode riserva i punti di codice da D800 a DFFF (da 55296 a 55551 Decimal) per le *coppie di surrogati*, che richiedono valori 2 16 bit per rappresentare un singolo punto di codice. Una variabile `Char` non può avere una coppia di surrogati e una `String` usa due posizioni per mantenere tale coppia.  
   
- For more information, see [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
+ Per altre informazioni, vedere [tipo di dati char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
-## <a name="string-type"></a>String Type  
- The `String` data type is a sequence of zero or more two-byte (16-bit) Unicode characters. If a variable can contain an indefinite number of characters, declare it as `String`. Esempio:  
+## <a name="string-type"></a>Tipo stringa  
+ Il tipo di dati `String` è una sequenza di zero o più caratteri Unicode a 2 byte (a 16 bit). Se una variabile può contenere un numero indefinito di caratteri, dichiararla come `String`. Di seguito è riportato un esempio:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- For more information, see [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Per ulteriori informazioni, vedere [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

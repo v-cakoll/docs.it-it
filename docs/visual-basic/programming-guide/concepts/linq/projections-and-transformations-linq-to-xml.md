@@ -9,22 +9,22 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346618"
 ---
-# <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Projections and Transformations (LINQ to XML) (Visual Basic)
+# <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)
 Questa sezione riporta esempi di proiezioni e trasformazioni di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[How to: Work with Dictionaries Using LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Viene illustrato come trasformare dizionari in codice XML e viceversa.|  
-|[How to: Transform the Shape of an XML Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|Viene illustrato come trasformare la forma di un documento XML.|  
-|[How to: Control the Type of a Projection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)|Viene illustrato come controllare il tipo di una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[How to: Project a New Type (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md)|Viene illustrato come proiettare una raccolta di tipo definito dall'utente da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[How to: Project an Object Graph (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-object-graph.md)|Viene illustrato come proiettare un oggetto grafico più complesso da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[How to: Project an Anonymous Type (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-anonymous-type.md)|Viene illustrato come proiettare una raccolta di oggetti anonimi da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[How to: Generate Text Files from XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Viene illustrato come trasformare un file XML in un file di testo non XML.|  
-|[How to: Generate XML from CSV Files (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Viene spiegato come usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per analizzare un file CSV e generare codice XML da esso.|  
+|[Procedura: utilizzare i dizionari utilizzando LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Viene illustrato come trasformare dizionari in codice XML e viceversa.|  
+|[Procedura: trasformare la forma di un albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|Viene illustrato come trasformare la forma di un documento XML.|  
+|[Procedura: controllare il tipo di una proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)|Viene illustrato come controllare il tipo di una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Procedura: proiettare un nuovo tipo (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md)|Viene illustrato come proiettare una raccolta di tipo definito dall'utente da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Procedura: proiettare un oggetto grafico (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-object-graph.md)|Viene illustrato come proiettare un oggetto grafico più complesso da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Procedura: proiettare un tipo anonimo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-anonymous-type.md)|Viene illustrato come proiettare una raccolta di oggetti anonimi da una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Procedura: generare file di testo da XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Viene illustrato come trasformare un file XML in un file di testo non XML.|  
+|[Procedura: generare XML da file CSV (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Viene spiegato come usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per analizzare un file CSV e generare codice XML da esso.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Esecuzione di query su strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -20,7 +20,7 @@ ms.locfileid: "74346750"
 ---
 # <a name="property-statement"></a>Property Statement
 
-Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
+Dichiara il nome di una proprietà e le routine della proprietà usate per archiviare e recuperare il valore della proprietà.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,15 +45,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  Parametro facoltativo. List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
+  Facoltativa. Elenco degli attributi che si applicano a questa proprietà o `Get` o `Set` routine. Vedere [elenco attributi](attribute-list.md).
 
 - `Default`
 
-  Parametro facoltativo. Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
+  Facoltativa. Specifica che questa proprietà è la proprietà predefinita della classe o della struttura in cui è definita. Le proprietà predefinite devono accettare parametri e possono essere impostate e recuperate senza specificare il nome della proprietà. Se si dichiara la proprietà come `Default`, non è possibile utilizzare `Private` sulla proprietà o su una delle relative routine di proprietà.
 
 - `accessmodifier`
 
-  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. Può essere uno dei seguenti:
+  Facoltativo nell'istruzione `Property` e al massimo una delle istruzioni `Get` e `Set`. Può essere uno dei collegamenti seguenti:
 
   - [Public](../modifiers/public.md)
 
@@ -71,9 +71,9 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `propertymodifiers`
 
-  Parametro facoltativo. Può essere uno dei seguenti:
+  Facoltativa. Può essere uno dei collegamenti seguenti:
 
-  - [Overload](../modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
@@ -89,43 +89,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  Parametro facoltativo. See [Shared](../modifiers/shared.md).
+  Facoltativa. Vedere [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Parametro facoltativo. See [Shadows](../modifiers/shadows.md).
+  Facoltativa. Vedere [Shadows](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  Parametro facoltativo. See [ReadOnly](../modifiers/readonly.md).
+  Facoltativa. Vedere [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  Parametro facoltativo. See [WriteOnly](../modifiers/writeonly.md).
+  Facoltativa. Vedere [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  Parametro facoltativo. See [Iterator](../modifiers/iterator.md).
+  Facoltativa. Vedere [iteratore](../modifiers/iterator.md).
 
 - `name`
 
-  Obbligatorio. Nome della proprietà. Vedere [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).
+  Obbligatoria. Nome della proprietà. Vedere [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `parameterlist`
 
-  Parametro facoltativo. List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
+  Facoltativa. Elenco di nomi di variabili locali che rappresentano i parametri di questa proprietà e possibili parametri aggiuntivi della procedura `Set`. Vedere [elenco di parametri](parameter-list.md).
 
 - `returntype`
 
-  Required if `Option Strict` is `On`. Data type of the value returned by this property.
+  Obbligatorio se `Option Strict` è `On`. Tipo di dati del valore restituito da questa proprietà.
 
 - `Implements`
 
-  Parametro facoltativo. Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
+  Facoltativa. Indica che questa proprietà implementa una o più proprietà, ognuna delle quali è definita in un'interfaccia implementata dalla classe o dalla struttura contenitore di questa proprietà. Vedere [istruzione Implements](implements-statement.md).
 
 - `implementslist`
 
-  Necessario se si fornisce `Implements`. List of properties being implemented.
+  Necessario se si fornisce `Implements`. Elenco delle proprietà implementate.
 
   `implementedproperty [ , implementedproperty ... ]`
 
@@ -135,70 +135,70 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   |Parte|Descrizione|
   |---|---|
-  |`interface`|Obbligatorio. Name of an interface implemented by this property's containing class or structure.|
-  |`definedname`|Obbligatorio. Name by which the property is defined in `interface`.|
+  |`interface`|Obbligatoria. Nome di un'interfaccia implementata dalla classe o dalla struttura contenitore di questa proprietà.|
+  |`definedname`|Obbligatoria. Nome in base al quale la proprietà è definita in `interface`.|
 
 - `Get`
 
-  Parametro facoltativo. Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  Facoltativa. Obbligatorio se la proprietà è contrassegnata come `ReadOnly`. Avvia una routine della proprietà `Get` utilizzata per restituire il valore della proprietà.  L'istruzione `Get` non viene utilizzata con le [proprietà implementate automaticamente](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `statements`
 
-  Parametro facoltativo. Block of statements to run within the `Get` or `Set` procedure.
+  Facoltativa. Blocco di istruzioni da eseguire all'interno della procedura `Get` o `Set`.
 
 - `End Get`
 
-  Terminates the `Get` property procedure.
+  Termina la routine della proprietà `Get`.
 
 - `Set`
 
-  Parametro facoltativo. Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  Facoltativa. Obbligatorio se la proprietà è contrassegnata come `WriteOnly`. Avvia una routine della proprietà `Set` utilizzata per archiviare il valore della proprietà.  L'istruzione `Set` non viene utilizzata con le [proprietà implementate automaticamente](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `End Set`
 
-  Terminates the `Set` property procedure.
+  Termina la routine della proprietà `Set`.
 
 - `End Property`
 
-  Terminates the definition of this property.
+  Termina la definizione di questa proprietà.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. Per altre informazioni, vedere [Proprietà implementate automaticamente](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+L'istruzione `Property` introduce la dichiarazione di una proprietà. Una proprietà può avere una routine `Get` (sola lettura), una routine di `Set` (solo scrittura) o entrambe (lettura/scrittura). Quando si usa una proprietà implementata automaticamente, è possibile omettere il `Get` e `Set` procedura. Per altre informazioni, vedere [Proprietà implementate automaticamente](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
-You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](declaration-contexts-and-default-access-levels.md).
+È possibile utilizzare `Property` solo a livello di classe. Ciò significa che il *contesto di dichiarazione* per una proprietà deve essere una classe, una struttura, un modulo o un'interfaccia e non può essere un file di origine, uno spazio dei nomi, una procedura o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](declaration-contexts-and-default-access-levels.md).
 
-By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
+Per impostazione predefinita, le proprietà usano l'accesso pubblico. È possibile modificare il livello di accesso di una proprietà con un modificatore di accesso nell'istruzione `Property` ed è possibile modificare facoltativamente una delle routine di proprietà a un livello di accesso più restrittivo.
 
-Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
+Visual Basic passa un parametro alla routine `Set` durante le assegnazioni di proprietà. Se non si specifica un parametro per `Set`, l'Integrated Development Environment (IDE) utilizza un parametro implicito denominato `value`. Questo parametro include il valore da assegnare alla proprietà. Questo valore viene in genere archiviato in una variabile locale privata e restituito ogni volta che viene chiamata la procedura `Get`.
 
 ## <a name="rules"></a>Regole
 
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
+- **Livelli di accesso misti.** Se si definisce una proprietà di lettura/scrittura, è possibile specificare facoltativamente un livello di accesso diverso per la procedura `Get` o per la `Set`, ma non per entrambi. In tal caso, il livello di accesso della routine deve essere più restrittivo del livello di accesso della proprietà. Se, ad esempio, la proprietà viene dichiarata `Friend`, è possibile dichiarare la routine `Set` `Private`, ma non `Public`.
 
-  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
+  Se si definisce una proprietà `ReadOnly` o `WriteOnly`, la routine di proprietà singola (rispettivamente`Get` o `Set`) rappresenta tutta la proprietà. Non è possibile dichiarare un livello di accesso diverso per una procedura di questo tipo, perché imposta due livelli di accesso per la proprietà.
 
-- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
+- **Tipo restituito.** L'istruzione `Property` può dichiarare il tipo di dati del valore restituito. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia.
 
-  If you do not specify `returntype`, the property returns `Object`.
+  Se non si specifica `returntype`, la proprietà restituisce `Object`.
 
-- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
+- **Implementazione.** Se questa proprietà utilizza la parola chiave `Implements`, la classe o la struttura che lo contiene deve disporre di un'istruzione `Implements` immediatamente dopo la relativa istruzione `Class` o `Structure`. L'istruzione `Implements` deve includere ogni interfaccia specificata nel `implementslist`. Tuttavia, il nome con cui un'interfaccia definisce il `Property` (in `definedname`) non deve corrispondere al nome di questa proprietà (in `name`).
 
 ## <a name="behavior"></a>Comportamento
 
-- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
+- **Restituzione da una routine di proprietà.** Quando la procedura di `Get` o `Set` restituisce il codice chiamante, l'esecuzione continua con l'istruzione che segue l'istruzione che lo ha richiamato.
 
-  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
+  Le istruzioni `Exit Property` e `Return` generano un'uscita immediata da una routine Property. Un numero qualsiasi di istruzioni `Exit Property` e `Return` può essere visualizzato in qualsiasi punto della procedura ed è possibile combinare `Exit Property` e `Return` istruzioni.
 
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
+- **Valore restituito.** Per restituire un valore da una routine di `Get`, è possibile assegnare il valore al nome della proprietà o includerlo in un'istruzione `Return`. Nell'esempio seguente viene assegnato il valore restituito al nome della proprietà `quoteForTheDay`, quindi viene utilizzata l'istruzione `Exit Property` per restituire.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
+  Se si utilizza `Exit Property` senza assegnare un valore a `name`, la routine `Get` restituisce il valore predefinito per il tipo di dati della proprietà.
 
-  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
+  L'istruzione `Return` allo stesso tempo assegna il valore restituito della routine `Get` e chiude la procedura. Nell'esempio seguente viene illustrato questo.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,7 +206,7 @@ Visual Basic passes a parameter to the `Set` procedure during property assignmen
 
 ## <a name="example"></a>Esempio
 
-The following example declares a property in a class.
+Nell'esempio seguente viene dichiarata una proprietà in una classe.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
