@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433198"
 ---
-# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="fed22-102">Metodo ICorProfilerInfo2::GetContextStaticAddress</span><span class="sxs-lookup"><span data-stu-id="fed22-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
-<span data-ttu-id="fed22-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span><span class="sxs-lookup"><span data-stu-id="fed22-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
+# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="4bb20-102">Metodo ICorProfilerInfo2::GetContextStaticAddress</span><span class="sxs-lookup"><span data-stu-id="4bb20-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
+<span data-ttu-id="4bb20-103">Ottiene l'indirizzo per il campo statico del contesto specificato nell'ambito del contesto specificato.</span><span class="sxs-lookup"><span data-stu-id="4bb20-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fed22-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fed22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bb20-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4bb20-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContextStaticAddress(  
@@ -35,38 +35,38 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fed22-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fed22-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bb20-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4bb20-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="fed22-106">[in] The ID of the class that contains the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="fed22-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
+ <span data-ttu-id="4bb20-106">in ID della classe che contiene il campo statico di contesto richiesto.</span><span class="sxs-lookup"><span data-stu-id="4bb20-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="fed22-107">[in] The metadata token for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="fed22-107">[in] The metadata token for the requested context-static field.</span></span>  
+ <span data-ttu-id="4bb20-107">in Token di metadati per il campo statico di contesto richiesto.</span><span class="sxs-lookup"><span data-stu-id="4bb20-107">[in] The metadata token for the requested context-static field.</span></span>  
   
  `contextId`  
- <span data-ttu-id="fed22-108">[in] The ID of the context that is the scope for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="fed22-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
+ <span data-ttu-id="4bb20-108">in ID del contesto che rappresenta l'ambito per il campo statico del contesto richiesto.</span><span class="sxs-lookup"><span data-stu-id="4bb20-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="fed22-109">[out] A pointer to the address of the static field that is within the specified context.</span><span class="sxs-lookup"><span data-stu-id="fed22-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
+ <span data-ttu-id="4bb20-109">out Puntatore all'indirizzo del campo statico che si trova all'interno del contesto specificato.</span><span class="sxs-lookup"><span data-stu-id="4bb20-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fed22-110">Note</span><span class="sxs-lookup"><span data-stu-id="fed22-110">Remarks</span></span>  
- <span data-ttu-id="fed22-111">The `GetContextStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="fed22-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bb20-110">Note</span><span class="sxs-lookup"><span data-stu-id="4bb20-110">Remarks</span></span>  
+ <span data-ttu-id="4bb20-111">Il metodo `GetContextStaticAddress` può restituire uno dei seguenti elementi:</span><span class="sxs-lookup"><span data-stu-id="4bb20-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="fed22-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="fed22-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="4bb20-112">CORPROF_E_DATAINCOMPLETE HRESULT se al campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.</span><span class="sxs-lookup"><span data-stu-id="4bb20-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="fed22-113">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="fed22-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="fed22-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="fed22-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="4bb20-113">Indirizzi degli oggetti che possono trovarsi nell'heap Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="4bb20-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="4bb20-114">Questi indirizzi potrebbero non essere più validi dopo Garbage Collection, quindi, dopo Garbage Collection, i profiler non devono presupporre che siano validi.</span><span class="sxs-lookup"><span data-stu-id="4bb20-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="fed22-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="fed22-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="4bb20-115">Prima che il costruttore della classe di una classe venga completato, `GetContextStaticAddress` restituirà CORPROF_E_DATAINCOMPLETE per tutti i campi statici, anche se alcuni dei campi statici potrebbero essere già inizializzati e vengono radicati Garbage Collection oggetti.</span><span class="sxs-lookup"><span data-stu-id="4bb20-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fed22-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fed22-116">Requirements</span></span>  
- <span data-ttu-id="fed22-117">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fed22-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bb20-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4bb20-116">Requirements</span></span>  
+ <span data-ttu-id="4bb20-117">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bb20-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fed22-118">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fed22-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4bb20-118">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4bb20-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fed22-119">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fed22-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4bb20-119">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bb20-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fed22-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fed22-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4bb20-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bb20-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fed22-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fed22-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bb20-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4bb20-121">See also</span></span>
 
-- [<span data-ttu-id="fed22-122">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="fed22-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="fed22-123">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="fed22-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="4bb20-122">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="4bb20-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="4bb20-123">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="4bb20-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

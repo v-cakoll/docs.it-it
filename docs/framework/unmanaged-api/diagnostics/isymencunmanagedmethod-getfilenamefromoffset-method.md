@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448663"
 ---
-# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="ad09e-102">Metodo ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="ad09e-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
-<span data-ttu-id="ad09e-103">Gets the file name for the line associated with an offset.</span><span class="sxs-lookup"><span data-stu-id="ad09e-103">Gets the file name for the line associated with an offset.</span></span>  
+# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="30e72-102">Metodo ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="30e72-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
+<span data-ttu-id="30e72-103">Ottiene il nome file per la riga associata a un offset.</span><span class="sxs-lookup"><span data-stu-id="30e72-103">Gets the file name for the line associated with an offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad09e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ad09e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30e72-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="30e72-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFileNameFromOffset(  
@@ -36,25 +36,25 @@ HRESULT GetFileNameFromOffset(
        length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad09e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ad09e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30e72-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="30e72-105">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="ad09e-106">[in] A `ULONG32` that contains the offset.</span><span class="sxs-lookup"><span data-stu-id="ad09e-106">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="30e72-106">in `ULONG32` che contiene l'offset.</span><span class="sxs-lookup"><span data-stu-id="30e72-106">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `cchName`  
- <span data-ttu-id="ad09e-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="ad09e-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="30e72-107">in `ULONG32` che indica le dimensioni del buffer di `szName`.</span><span class="sxs-lookup"><span data-stu-id="30e72-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="ad09e-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span><span class="sxs-lookup"><span data-stu-id="ad09e-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
+ <span data-ttu-id="30e72-108">out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere i nomi file.</span><span class="sxs-lookup"><span data-stu-id="30e72-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
   
  `szName`  
- <span data-ttu-id="ad09e-109">[out] The buffer that contains the file names.</span><span class="sxs-lookup"><span data-stu-id="ad09e-109">[out] The buffer that contains the file names.</span></span>  
+ <span data-ttu-id="30e72-109">out Buffer contenente i nomi dei file.</span><span class="sxs-lookup"><span data-stu-id="30e72-109">[out] The buffer that contains the file names.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad09e-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ad09e-110">Return Value</span></span>  
- <span data-ttu-id="ad09e-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ad09e-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="30e72-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="30e72-110">Return Value</span></span>  
+ <span data-ttu-id="30e72-111">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="30e72-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad09e-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ad09e-112">Requirements</span></span>  
- <span data-ttu-id="ad09e-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ad09e-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30e72-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="30e72-112">Requirements</span></span>  
+ <span data-ttu-id="30e72-113">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="30e72-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad09e-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad09e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30e72-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="30e72-114">See also</span></span>
 
-- [<span data-ttu-id="ad09e-115">Interfaccia ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="ad09e-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="30e72-115">Interfaccia ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="30e72-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

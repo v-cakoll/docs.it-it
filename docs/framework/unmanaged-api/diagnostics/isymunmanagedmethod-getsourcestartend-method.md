@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448868"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="725c0-102">Metodo ISymUnmanagedMethod::GetSourceStartEnd</span><span class="sxs-lookup"><span data-stu-id="725c0-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="725c0-103">Gets the start and end document positions for the source of this method.</span><span class="sxs-lookup"><span data-stu-id="725c0-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="725c0-104">The first array position is the start, and the second array position is the end.</span><span class="sxs-lookup"><span data-stu-id="725c0-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="3a316-102">Metodo ISymUnmanagedMethod::GetSourceStartEnd</span><span class="sxs-lookup"><span data-stu-id="3a316-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="3a316-103">Ottiene le posizioni del documento iniziale e finale per l'origine di questo metodo.</span><span class="sxs-lookup"><span data-stu-id="3a316-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="3a316-104">La prima posizione della matrice è l'inizio e la seconda posizione della matrice è la fine.</span><span class="sxs-lookup"><span data-stu-id="3a316-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="725c0-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="725c0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a316-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3a316-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceStartEnd(  
@@ -35,25 +35,25 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="725c0-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="725c0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a316-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="3a316-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="725c0-107">[in] The starting and ending source documents.</span><span class="sxs-lookup"><span data-stu-id="725c0-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="3a316-107">in Documenti di origine iniziale e finale.</span><span class="sxs-lookup"><span data-stu-id="3a316-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="725c0-108">[in] The starting and ending lines in the corresponding source documents.</span><span class="sxs-lookup"><span data-stu-id="725c0-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="3a316-108">in Righe iniziali e finali dei documenti di origine corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="3a316-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="725c0-109">[in] The starting and ending columns in the corresponding source documents.</span><span class="sxs-lookup"><span data-stu-id="725c0-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="3a316-109">in Colonne iniziali e finali dei documenti di origine corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="3a316-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="725c0-110">[out] `true` if positions were defined; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="725c0-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="3a316-110">[out] `true` se le posizioni sono state definite; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="3a316-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="725c0-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="725c0-111">Return Value</span></span>  
- <span data-ttu-id="725c0-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="725c0-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a316-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3a316-111">Return Value</span></span>  
+ <span data-ttu-id="3a316-112">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="3a316-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="725c0-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="725c0-113">Requirements</span></span>  
- <span data-ttu-id="725c0-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="725c0-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a316-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3a316-113">Requirements</span></span>  
+ <span data-ttu-id="3a316-114">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="3a316-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="725c0-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="725c0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a316-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a316-115">See also</span></span>
 
-- [<span data-ttu-id="725c0-116">Interfaccia ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="725c0-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="3a316-116">Interfaccia ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="3a316-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

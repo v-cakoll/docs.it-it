@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445011"
 ---
-# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="96d95-102">Metodo ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="96d95-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
-<span data-ttu-id="96d95-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span><span class="sxs-lookup"><span data-stu-id="96d95-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
+# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="a76a7-102">Metodo ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="a76a7-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
+<span data-ttu-id="a76a7-103">Notifica al profiler che il controllo viene passato al blocco `catch` appropriato.</span><span class="sxs-lookup"><span data-stu-id="a76a7-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96d95-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="96d95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a76a7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a76a7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCatcherEnter(  
@@ -33,30 +33,30 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96d95-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="96d95-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a76a7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a76a7-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="96d95-106">[in] The identifier of the function containing the `catch` block.</span><span class="sxs-lookup"><span data-stu-id="96d95-106">[in] The identifier of the function containing the `catch` block.</span></span>  
+ <span data-ttu-id="a76a7-106">in Identificatore della funzione che contiene il blocco `catch`.</span><span class="sxs-lookup"><span data-stu-id="a76a7-106">[in] The identifier of the function containing the `catch` block.</span></span>  
   
  `objectId`  
- <span data-ttu-id="96d95-107">[in] The identifier of the exception being handled.</span><span class="sxs-lookup"><span data-stu-id="96d95-107">[in] The identifier of the exception being handled.</span></span>  
+ <span data-ttu-id="a76a7-107">in Identificatore dell'eccezione gestita.</span><span class="sxs-lookup"><span data-stu-id="a76a7-107">[in] The identifier of the exception being handled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="96d95-108">Note</span><span class="sxs-lookup"><span data-stu-id="96d95-108">Remarks</span></span>  
- <span data-ttu-id="96d95-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span><span class="sxs-lookup"><span data-stu-id="96d95-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="96d95-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span><span class="sxs-lookup"><span data-stu-id="96d95-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="96d95-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span><span class="sxs-lookup"><span data-stu-id="96d95-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a76a7-108">Note</span><span class="sxs-lookup"><span data-stu-id="a76a7-108">Remarks</span></span>  
+ <span data-ttu-id="a76a7-109">Il metodo `ExceptionCatcherEnter` viene chiamato solo se il punto di recupero è nel codice compilato con il compilatore JIT (just-in-Time).</span><span class="sxs-lookup"><span data-stu-id="a76a7-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="a76a7-110">Un'eccezione rilevata nel codice non gestito o nel codice interno del runtime non chiamerà questa notifica.</span><span class="sxs-lookup"><span data-stu-id="a76a7-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="a76a7-111">Il valore `objectId` viene nuovamente passato perché un Garbage Collection potrebbe avere spostato l'oggetto dopo la notifica di `ExceptionThrown`.</span><span class="sxs-lookup"><span data-stu-id="a76a7-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
   
- <span data-ttu-id="96d95-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span><span class="sxs-lookup"><span data-stu-id="96d95-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="96d95-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span><span class="sxs-lookup"><span data-stu-id="96d95-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="a76a7-112">Il profiler non deve bloccarsi nella sua implementazione di questo metodo perché lo stack potrebbe non trovarsi in uno stato che consente Garbage Collection e pertanto non è possibile abilitare il Garbage Collection preemptive.</span><span class="sxs-lookup"><span data-stu-id="a76a7-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="a76a7-113">Se il profiler si blocca qui e si tenta di Garbage Collection, il runtime si bloccherà fino a quando questo callback non viene restituito.</span><span class="sxs-lookup"><span data-stu-id="a76a7-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="96d95-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span><span class="sxs-lookup"><span data-stu-id="96d95-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="a76a7-114">L'implementazione del profiler di questo metodo non deve chiamare nel codice gestito o in alcun modo causare un'allocazione della memoria gestita.</span><span class="sxs-lookup"><span data-stu-id="a76a7-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96d95-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="96d95-115">Requirements</span></span>  
- <span data-ttu-id="96d95-116">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96d95-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a76a7-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a76a7-115">Requirements</span></span>  
+ <span data-ttu-id="a76a7-116">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a76a7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96d95-117">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="96d95-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a76a7-117">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a76a7-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="96d95-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96d95-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a76a7-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a76a7-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="96d95-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96d95-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a76a7-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a76a7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96d95-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="96d95-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a76a7-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a76a7-120">See also</span></span>
 
-- [<span data-ttu-id="96d95-121">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="96d95-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="96d95-122">Metodo ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="96d95-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+- [<span data-ttu-id="a76a7-121">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="a76a7-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a76a7-122">Metodo ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="a76a7-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

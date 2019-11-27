@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438131"
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="0a453-102">Metodo ISymUnmanagedWriter3::OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="0a453-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="0a453-103">Opens a method and provides its real section offset in the image.</span><span class="sxs-lookup"><span data-stu-id="0a453-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="d18ca-102">Metodo ISymUnmanagedWriter3::OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="d18ca-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="d18ca-103">Apre un metodo e fornisce la relativa offset della sezione reale nell'immagine.</span><span class="sxs-lookup"><span data-stu-id="d18ca-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a453-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0a453-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d18ca-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d18ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenMethod2(   
@@ -34,23 +34,23 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a453-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0a453-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d18ca-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d18ca-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="0a453-106">[in] The metadata token for the method to be opened.</span><span class="sxs-lookup"><span data-stu-id="0a453-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="d18ca-106">in Token di metadati per il metodo da aprire.</span><span class="sxs-lookup"><span data-stu-id="d18ca-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="0a453-107">[in] The section offset in the image.</span><span class="sxs-lookup"><span data-stu-id="0a453-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="d18ca-107">in Offset della sezione nell'immagine.</span><span class="sxs-lookup"><span data-stu-id="d18ca-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="0a453-108">[in] The offset in the image.</span><span class="sxs-lookup"><span data-stu-id="0a453-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="d18ca-108">in Offset nell'immagine.</span><span class="sxs-lookup"><span data-stu-id="d18ca-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0a453-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="0a453-109">Return Value</span></span>  
- <span data-ttu-id="0a453-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="0a453-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d18ca-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d18ca-109">Return Value</span></span>  
+ <span data-ttu-id="d18ca-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="d18ca-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a453-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0a453-111">Requirements</span></span>  
- <span data-ttu-id="0a453-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0a453-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d18ca-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d18ca-111">Requirements</span></span>  
+ <span data-ttu-id="d18ca-112">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="d18ca-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a453-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0a453-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d18ca-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d18ca-113">See also</span></span>
 
-- [<span data-ttu-id="0a453-114">Interfaccia ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="0a453-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [<span data-ttu-id="0a453-115">Metodo OpenMethod</span><span class="sxs-lookup"><span data-stu-id="0a453-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [<span data-ttu-id="d18ca-114">Interfaccia ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="d18ca-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="d18ca-115">Metodo OpenMethod</span><span class="sxs-lookup"><span data-stu-id="d18ca-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

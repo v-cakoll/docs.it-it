@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435961"
 ---
-# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="d79c6-102">Metodo INotifySource2::SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="d79c6-102">INotifySource2::SetNotifyFilter Method</span></span>
-<span data-ttu-id="d79c6-103">Assigns a notification filter for use with this source.</span><span class="sxs-lookup"><span data-stu-id="d79c6-103">Assigns a notification filter for use with this source.</span></span>  
+# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="53215-102">Metodo INotifySource2::SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="53215-102">INotifySource2::SetNotifyFilter Method</span></span>
+<span data-ttu-id="53215-103">Assegna un filtro di notifica per l'utilizzo con questa origine.</span><span class="sxs-lookup"><span data-stu-id="53215-103">Assigns a notification filter for use with this source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d79c6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d79c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53215-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="53215-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetNotifyFilter  
@@ -35,21 +35,21 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d79c6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d79c6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53215-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="53215-105">Parameters</span></span>  
  `in_NotifyFilter`  
- <span data-ttu-id="d79c6-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span><span class="sxs-lookup"><span data-stu-id="d79c6-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
+ <span data-ttu-id="53215-106">in Combinazione bit per bit dei valori di enumerazione [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) che identificano i callback per l'API del debugger.</span><span class="sxs-lookup"><span data-stu-id="53215-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
   
  `in_pUserThreadFilter`  
- <span data-ttu-id="d79c6-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span><span class="sxs-lookup"><span data-stu-id="d79c6-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
+ <span data-ttu-id="53215-107">in Puntatore a una struttura [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) che identifica i thread per l'API del debugger.</span><span class="sxs-lookup"><span data-stu-id="53215-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d79c6-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d79c6-108">Return Value</span></span>  
- <span data-ttu-id="d79c6-109">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="d79c6-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="53215-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="53215-108">Return Value</span></span>  
+ <span data-ttu-id="53215-109">S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="53215-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d79c6-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d79c6-110">Requirements</span></span>  
- <span data-ttu-id="d79c6-111">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="d79c6-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53215-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="53215-110">Requirements</span></span>  
+ <span data-ttu-id="53215-111">**Intestazione:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="53215-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d79c6-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d79c6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53215-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="53215-112">See also</span></span>
 
-- [<span data-ttu-id="d79c6-113">Interfaccia INotifySource2</span><span class="sxs-lookup"><span data-stu-id="d79c6-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="d79c6-114">Interfaccia INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="d79c6-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="d79c6-115">Interfaccia INotifySink2</span><span class="sxs-lookup"><span data-stu-id="d79c6-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="53215-113">Interfaccia INotifySource2</span><span class="sxs-lookup"><span data-stu-id="53215-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="53215-114">Interfaccia INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="53215-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="53215-115">Interfaccia INotifySink2</span><span class="sxs-lookup"><span data-stu-id="53215-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
