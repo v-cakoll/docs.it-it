@@ -11,19 +11,19 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347207"
 ---
-# <a name="mycomputerinfo-object"></a><span data-ttu-id="fc4fe-102">Oggetto My.Computer.Info</span><span class="sxs-lookup"><span data-stu-id="fc4fe-102">My.Computer.Info Object</span></span>
-<span data-ttu-id="fc4fe-103">Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="fc4fe-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
+# <a name="mycomputerinfo-object"></a><span data-ttu-id="44122-102">Oggetto My.Computer.Info</span><span class="sxs-lookup"><span data-stu-id="44122-102">My.Computer.Info Object</span></span>
+<span data-ttu-id="44122-103">Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="44122-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fc4fe-104">Note</span><span class="sxs-lookup"><span data-stu-id="fc4fe-104">Remarks</span></span>  
- <span data-ttu-id="fc4fe-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span><span class="sxs-lookup"><span data-stu-id="fc4fe-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="44122-104">Note</span><span class="sxs-lookup"><span data-stu-id="44122-104">Remarks</span></span>  
+ <span data-ttu-id="44122-105">Per informazioni sulle proprietà dell'oggetto `My.Computer.Info`, vedere <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span><span class="sxs-lookup"><span data-stu-id="44122-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc4fe-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fc4fe-106">Requirements</span></span>  
- <span data-ttu-id="fc4fe-107">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="fc4fe-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="44122-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="44122-106">Requirements</span></span>  
+ <span data-ttu-id="44122-107">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="44122-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="fc4fe-108">**Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="fc4fe-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
+ <span data-ttu-id="44122-108">**Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="44122-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
   
- <span data-ttu-id="fc4fe-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="fc4fe-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="44122-109">**Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="44122-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc4fe-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fc4fe-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44122-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="44122-110">See also</span></span>
 
-- [<span data-ttu-id="fc4fe-111">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="fc4fe-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="44122-111">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="44122-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

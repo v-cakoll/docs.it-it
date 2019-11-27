@@ -13,45 +13,45 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346033"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a><span data-ttu-id="b78a5-102">Procedura: restituire un valore da una routine (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b78a5-102">How to: Return a Value from a Procedure (Visual Basic)</span></span>
-<span data-ttu-id="b78a5-103">A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.</span><span class="sxs-lookup"><span data-stu-id="b78a5-103">A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.</span></span>  
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a><span data-ttu-id="c71b6-102">Procedura: restituire un valore da una routine (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c71b6-102">How to: Return a Value from a Procedure (Visual Basic)</span></span>
+<span data-ttu-id="c71b6-103">Una routine `Function` restituisce un valore al codice chiamante eseguendo un'istruzione `Return` o rilevando un'istruzione `Exit Function` o `End Function`.</span><span class="sxs-lookup"><span data-stu-id="c71b6-103">A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.</span></span>  
   
-### <a name="to-return-a-value-using-the-return-statement"></a><span data-ttu-id="b78a5-104">To return a value using the Return statement</span><span class="sxs-lookup"><span data-stu-id="b78a5-104">To return a value using the Return statement</span></span>  
+### <a name="to-return-a-value-using-the-return-statement"></a><span data-ttu-id="c71b6-104">Per restituire un valore utilizzando l'istruzione return</span><span class="sxs-lookup"><span data-stu-id="c71b6-104">To return a value using the Return statement</span></span>  
   
-1. <span data-ttu-id="b78a5-105">Put a `Return` statement at the point where the procedure's task is completed.</span><span class="sxs-lookup"><span data-stu-id="b78a5-105">Put a `Return` statement at the point where the procedure's task is completed.</span></span>  
+1. <span data-ttu-id="c71b6-105">Inserire un'istruzione `Return` nel punto in cui è stata completata l'attività della stored procedure.</span><span class="sxs-lookup"><span data-stu-id="c71b6-105">Put a `Return` statement at the point where the procedure's task is completed.</span></span>  
   
-2. <span data-ttu-id="b78a5-106">Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.</span><span class="sxs-lookup"><span data-stu-id="b78a5-106">Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.</span></span>  
+2. <span data-ttu-id="c71b6-106">Seguire la parola chiave `Return` con un'espressione che restituisce il valore che si vuole restituire al codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="c71b6-106">Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.</span></span>  
   
-3. <span data-ttu-id="b78a5-107">Una routine può includere più di un'istruzione `Return`.</span><span class="sxs-lookup"><span data-stu-id="b78a5-107">You can have more than one `Return` statement in the same procedure.</span></span>  
+3. <span data-ttu-id="c71b6-107">Una routine può includere più di un'istruzione `Return`.</span><span class="sxs-lookup"><span data-stu-id="c71b6-107">You can have more than one `Return` statement in the same procedure.</span></span>  
   
-     <span data-ttu-id="b78a5-108">The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.</span><span class="sxs-lookup"><span data-stu-id="b78a5-108">The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.</span></span>  
+     <span data-ttu-id="c71b6-108">Con la seguente procedura `Function` viene calcolato il lato più lungo, o ipotenusa, di un triangolo rettangolo, che viene quindi restituito al codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="c71b6-108">The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.</span></span>  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     <span data-ttu-id="b78a5-109">The following example shows a typical call to `hypotenuse`, which stores the returned value.</span><span class="sxs-lookup"><span data-stu-id="b78a5-109">The following example shows a typical call to `hypotenuse`, which stores the returned value.</span></span>  
+     <span data-ttu-id="c71b6-109">Nell'esempio seguente viene illustrata una tipica chiamata a `hypotenuse`, che archivia il valore restituito.</span><span class="sxs-lookup"><span data-stu-id="c71b6-109">The following example shows a typical call to `hypotenuse`, which stores the returned value.</span></span>  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a><span data-ttu-id="b78a5-110">To return a value using Exit Function or End Function</span><span class="sxs-lookup"><span data-stu-id="b78a5-110">To return a value using Exit Function or End Function</span></span>  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a><span data-ttu-id="c71b6-110">Per restituire un valore utilizzando la funzione Exit o end</span><span class="sxs-lookup"><span data-stu-id="c71b6-110">To return a value using Exit Function or End Function</span></span>  
   
-1. <span data-ttu-id="b78a5-111">In at least one place in the `Function` procedure, assign a value to the procedure's name.</span><span class="sxs-lookup"><span data-stu-id="b78a5-111">In at least one place in the `Function` procedure, assign a value to the procedure's name.</span></span>  
+1. <span data-ttu-id="c71b6-111">In almeno una posizione nella procedura `Function` assegnare un valore al nome della stored procedure.</span><span class="sxs-lookup"><span data-stu-id="c71b6-111">In at least one place in the `Function` procedure, assign a value to the procedure's name.</span></span>  
   
-2. <span data-ttu-id="b78a5-112">When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.</span><span class="sxs-lookup"><span data-stu-id="b78a5-112">When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.</span></span>  
+2. <span data-ttu-id="c71b6-112">Quando si esegue un'istruzione `Exit Function` o `End Function`, Visual Basic restituisce il valore assegnato più di recente al nome della stored procedure.</span><span class="sxs-lookup"><span data-stu-id="c71b6-112">When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.</span></span>  
   
-3. <span data-ttu-id="b78a5-113">Una routine può includere più di un'istruzione `Exit Function` ed è possibile combinare istruzioni `Return` e `Exit Function` nella stessa routine.</span><span class="sxs-lookup"><span data-stu-id="b78a5-113">You can have more than one `Exit Function` statement in the same procedure, and you can mix `Return` and `Exit Function` statements in the same procedure.</span></span>  
+3. <span data-ttu-id="c71b6-113">Una routine può includere più di un'istruzione `Exit Function` ed è possibile combinare istruzioni `Return` e `Exit Function` nella stessa routine.</span><span class="sxs-lookup"><span data-stu-id="c71b6-113">You can have more than one `Exit Function` statement in the same procedure, and you can mix `Return` and `Exit Function` statements in the same procedure.</span></span>  
   
-4. <span data-ttu-id="b78a5-114">You can have only one `End Function` statement in a `Function` procedure.</span><span class="sxs-lookup"><span data-stu-id="b78a5-114">You can have only one `End Function` statement in a `Function` procedure.</span></span>  
+4. <span data-ttu-id="c71b6-114">In una procedura `Function` è possibile disporre di una sola istruzione `End Function`.</span><span class="sxs-lookup"><span data-stu-id="c71b6-114">You can have only one `End Function` statement in a `Function` procedure.</span></span>  
   
-     <span data-ttu-id="b78a5-115">For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).</span><span class="sxs-lookup"><span data-stu-id="b78a5-115">For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).</span></span>  
+     <span data-ttu-id="c71b6-115">Per ulteriori informazioni e un esempio, vedere "valore restituito" nell' [istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md).</span><span class="sxs-lookup"><span data-stu-id="c71b6-115">For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b78a5-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b78a5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c71b6-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c71b6-116">See also</span></span>
 
-- [<span data-ttu-id="b78a5-117">Routine</span><span class="sxs-lookup"><span data-stu-id="b78a5-117">Procedures</span></span>](./index.md)
-- [<span data-ttu-id="b78a5-118">Routine Sub</span><span class="sxs-lookup"><span data-stu-id="b78a5-118">Sub Procedures</span></span>](./sub-procedures.md)
-- [<span data-ttu-id="b78a5-119">Routine Property</span><span class="sxs-lookup"><span data-stu-id="b78a5-119">Property Procedures</span></span>](./property-procedures.md)
-- [<span data-ttu-id="b78a5-120">Routine di operatore</span><span class="sxs-lookup"><span data-stu-id="b78a5-120">Operator Procedures</span></span>](./operator-procedures.md)
-- [<span data-ttu-id="b78a5-121">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="b78a5-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="b78a5-122">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="b78a5-122">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="b78a5-123">Istruzione Return</span><span class="sxs-lookup"><span data-stu-id="b78a5-123">Return Statement</span></span>](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [<span data-ttu-id="b78a5-124">Procedura: Creare una routine che restituisce un valore</span><span class="sxs-lookup"><span data-stu-id="b78a5-124">How to: Create a Procedure that Returns a Value</span></span>](./how-to-create-a-procedure-that-returns-a-value.md)
-- [<span data-ttu-id="b78a5-125">Procedura: Chiamare una routine che restituisce un valore</span><span class="sxs-lookup"><span data-stu-id="b78a5-125">How to: Call a Procedure That Returns a Value</span></span>](./how-to-call-a-procedure-that-returns-a-value.md)
+- [<span data-ttu-id="c71b6-117">Routine</span><span class="sxs-lookup"><span data-stu-id="c71b6-117">Procedures</span></span>](./index.md)
+- [<span data-ttu-id="c71b6-118">Routine Sub</span><span class="sxs-lookup"><span data-stu-id="c71b6-118">Sub Procedures</span></span>](./sub-procedures.md)
+- [<span data-ttu-id="c71b6-119">Routine Property</span><span class="sxs-lookup"><span data-stu-id="c71b6-119">Property Procedures</span></span>](./property-procedures.md)
+- [<span data-ttu-id="c71b6-120">Routine di operatore</span><span class="sxs-lookup"><span data-stu-id="c71b6-120">Operator Procedures</span></span>](./operator-procedures.md)
+- [<span data-ttu-id="c71b6-121">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="c71b6-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="c71b6-122">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="c71b6-122">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="c71b6-123">Istruzione Return</span><span class="sxs-lookup"><span data-stu-id="c71b6-123">Return Statement</span></span>](../../../../visual-basic/language-reference/statements/return-statement.md)
+- [<span data-ttu-id="c71b6-124">Procedura: Creare una routine che restituisce un valore</span><span class="sxs-lookup"><span data-stu-id="c71b6-124">How to: Create a Procedure that Returns a Value</span></span>](./how-to-create-a-procedure-that-returns-a-value.md)
+- [<span data-ttu-id="c71b6-125">Procedura: Chiamare una routine che restituisce un valore</span><span class="sxs-lookup"><span data-stu-id="c71b6-125">How to: Call a Procedure That Returns a Value</span></span>](./how-to-call-a-procedure-that-returns-a-value.md)
