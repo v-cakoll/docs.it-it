@@ -1,6 +1,6 @@
 ---
-title: Language Walkthroughs
-description: Step-by-step instructions for common scenarios in Visual Basic development
+title: Procedure dettagliate relative alla lingua
+description: Istruzioni dettagliate per gli scenari comuni di sviluppo Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -79,5 +79,5 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
 - [Persistenza di un oggetto in Visual Basic](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Viene illustrato come creare un oggetto semplice e rendere persistenti i relativi dati in un file.
 
-- [Procedura dettagliata: supporto test preliminare con la funzionalità di generazione dall'utilizzo](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
+- [Procedura dettagliata: supporto test preliminare con la funzionalità di generazione dall'uso](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Spiega come eseguire uno sviluppo con test preliminare, in cui prima si scrivono gli unit test e successivamente il codice sorgente in modo che il test abbia esito positivo.

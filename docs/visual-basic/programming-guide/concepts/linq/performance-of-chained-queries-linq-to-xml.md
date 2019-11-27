@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353128"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Performance of Chained Queries (LINQ to XML) (Visual Basic)
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Prestazioni delle query concatenate (LINQ to XML) (Visual Basic)
 
 Uno dei più importanti vantaggi di LINQ (e di LINQ to XML) consiste nel fatto che le query concatenate possono offrire le stesse prestazioni di una singola query di dimensioni maggiori e più complessa.
 
@@ -47,4 +47,4 @@ Questa query concatenata offre lo stesso profilo di prestazioni dell'iterazione 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Prestazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
