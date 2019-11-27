@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447878"
 ---
-# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="a5d6b-102">Metodo IMetaDataEmit2::SaveDeltaToStream</span><span class="sxs-lookup"><span data-stu-id="a5d6b-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
-<span data-ttu-id="a5d6b-103">Saves changes from the current edit-and-continue session to the specified stream.</span><span class="sxs-lookup"><span data-stu-id="a5d6b-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
+# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="5829f-102">Metodo IMetaDataEmit2::SaveDeltaToStream</span><span class="sxs-lookup"><span data-stu-id="5829f-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
+<span data-ttu-id="5829f-103">Salva le modifiche dalla sessione di modifica e continuazione corrente nel flusso specificato.</span><span class="sxs-lookup"><span data-stu-id="5829f-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5d6b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a5d6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5829f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5829f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
@@ -34,23 +34,23 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5d6b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a5d6b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5829f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5829f-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="a5d6b-106">[in] An interface pointer to the writable stream to which to save changes.</span><span class="sxs-lookup"><span data-stu-id="a5d6b-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
+ <span data-ttu-id="5829f-106">in Puntatore di interfaccia al flusso scrivibile nel quale salvare le modifiche.</span><span class="sxs-lookup"><span data-stu-id="5829f-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="a5d6b-107">[in] Riservato.</span><span class="sxs-lookup"><span data-stu-id="a5d6b-107">[in] Reserved.</span></span> <span data-ttu-id="a5d6b-108">This value must be zero.</span><span class="sxs-lookup"><span data-stu-id="a5d6b-108">This value must be zero.</span></span>  
+ <span data-ttu-id="5829f-107">[in] Riservato.</span><span class="sxs-lookup"><span data-stu-id="5829f-107">[in] Reserved.</span></span> <span data-ttu-id="5829f-108">Questo valore deve essere zero.</span><span class="sxs-lookup"><span data-stu-id="5829f-108">This value must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5d6b-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a5d6b-109">Requirements</span></span>  
- <span data-ttu-id="a5d6b-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5d6b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5829f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5829f-109">Requirements</span></span>  
+ <span data-ttu-id="5829f-110">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5829f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5d6b-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a5d6b-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5829f-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5829f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a5d6b-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a5d6b-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5829f-112">**Libreria:** Usato come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5829f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a5d6b-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5d6b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5829f-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5829f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5d6b-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5d6b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5829f-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5829f-114">See also</span></span>
 
-- [<span data-ttu-id="a5d6b-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="a5d6b-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="a5d6b-116">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="a5d6b-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5829f-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="5829f-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5829f-116">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="5829f-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

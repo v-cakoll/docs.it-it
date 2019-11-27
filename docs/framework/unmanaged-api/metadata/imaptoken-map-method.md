@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432144"
 ---
-# <a name="imaptokenmap-method"></a><span data-ttu-id="6ff2c-102">Metodo IMapToken::Map</span><span class="sxs-lookup"><span data-stu-id="6ff2c-102">IMapToken::Map Method</span></span>
-<span data-ttu-id="6ff2c-103">Maps a relationship between the assemblies using metadata signatures.</span><span class="sxs-lookup"><span data-stu-id="6ff2c-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
+# <a name="imaptokenmap-method"></a><span data-ttu-id="58d8c-102">Metodo IMapToken::Map</span><span class="sxs-lookup"><span data-stu-id="58d8c-102">IMapToken::Map Method</span></span>
+<span data-ttu-id="58d8c-103">Esegue il mapping di una relazione tra gli assembly utilizzando le firme dei metadati.</span><span class="sxs-lookup"><span data-stu-id="58d8c-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ff2c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6ff2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58d8c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="58d8c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Map (  
@@ -34,25 +34,25 @@ HRESULT Map (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6ff2c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6ff2c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58d8c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="58d8c-105">Parameters</span></span>  
  `tkImp`  
- <span data-ttu-id="6ff2c-106">[in] The metadata token that represents the imported code object.</span><span class="sxs-lookup"><span data-stu-id="6ff2c-106">[in] The metadata token that represents the imported code object.</span></span>  
+ <span data-ttu-id="58d8c-106">in Token di metadati che rappresenta l'oggetto di codice importato.</span><span class="sxs-lookup"><span data-stu-id="58d8c-106">[in] The metadata token that represents the imported code object.</span></span>  
   
  `tkEmit`  
- <span data-ttu-id="6ff2c-107">[in] The metadata token that represents the emitted code object.</span><span class="sxs-lookup"><span data-stu-id="6ff2c-107">[in] The metadata token that represents the emitted code object.</span></span>  
+ <span data-ttu-id="58d8c-107">in Token di metadati che rappresenta l'oggetto di codice emesso.</span><span class="sxs-lookup"><span data-stu-id="58d8c-107">[in] The metadata token that represents the emitted code object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ff2c-108">Note</span><span class="sxs-lookup"><span data-stu-id="6ff2c-108">Remarks</span></span>  
- <span data-ttu-id="6ff2c-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span><span class="sxs-lookup"><span data-stu-id="6ff2c-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58d8c-108">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="58d8c-108">Remarks</span></span>  
+ <span data-ttu-id="58d8c-109">Quando il mapping del token viene eseguito durante un'operazione di merge, il token originale viene definito nell'ambito dei metadati importati (di origine) e l'ambito del nuovo token viene definito nell'ambito dei metadati generato (destinazione).</span><span class="sxs-lookup"><span data-stu-id="58d8c-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ff2c-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6ff2c-110">Requirements</span></span>  
- <span data-ttu-id="6ff2c-111">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ff2c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58d8c-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="58d8c-110">Requirements</span></span>  
+ <span data-ttu-id="58d8c-111">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58d8c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ff2c-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6ff2c-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="58d8c-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="58d8c-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6ff2c-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6ff2c-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="58d8c-113">**Libreria:** Usato come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="58d8c-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6ff2c-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ff2c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="58d8c-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58d8c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ff2c-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6ff2c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58d8c-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="58d8c-115">See also</span></span>
 
-- [<span data-ttu-id="6ff2c-116">Interfaccia IMapToken</span><span class="sxs-lookup"><span data-stu-id="6ff2c-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [<span data-ttu-id="58d8c-116">Interfaccia IMapToken</span><span class="sxs-lookup"><span data-stu-id="58d8c-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

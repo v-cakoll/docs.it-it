@@ -22,27 +22,27 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446293"
 ---
-# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="f4548-102">Metodo ISymUnmanagedScope::GetParent</span><span class="sxs-lookup"><span data-stu-id="f4548-102">ISymUnmanagedScope::GetParent Method</span></span>
-<span data-ttu-id="f4548-103">Gets the parent scope of this scope.</span><span class="sxs-lookup"><span data-stu-id="f4548-103">Gets the parent scope of this scope.</span></span>  
+# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="082ee-102">Metodo ISymUnmanagedScope::GetParent</span><span class="sxs-lookup"><span data-stu-id="082ee-102">ISymUnmanagedScope::GetParent Method</span></span>
+<span data-ttu-id="082ee-103">Ottiene l'ambito padre di questo ambito.</span><span class="sxs-lookup"><span data-stu-id="082ee-103">Gets the parent scope of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4548-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f4548-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="082ee-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="082ee-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetParent(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f4548-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f4548-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="082ee-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="082ee-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f4548-106">[out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="f4548-106">[out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="082ee-106">out Puntatore all'interfaccia [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) restituita.</span><span class="sxs-lookup"><span data-stu-id="082ee-106">[out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f4548-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f4548-107">Return Value</span></span>  
- <span data-ttu-id="f4548-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f4548-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="082ee-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="082ee-107">Return Value</span></span>  
+ <span data-ttu-id="082ee-108">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="082ee-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4548-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f4548-109">Requirements</span></span>  
- <span data-ttu-id="f4548-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f4548-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="082ee-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="082ee-109">Requirements</span></span>  
+ <span data-ttu-id="082ee-110">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="082ee-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4548-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f4548-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="082ee-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="082ee-111">See also</span></span>
 
-- [<span data-ttu-id="f4548-112">Interfaccia ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="f4548-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="f4548-113">Metodo GetChildren</span><span class="sxs-lookup"><span data-stu-id="f4548-113">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)
+- [<span data-ttu-id="082ee-112">Interfaccia ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="082ee-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="082ee-113">Metodo GetChildren</span><span class="sxs-lookup"><span data-stu-id="082ee-113">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)

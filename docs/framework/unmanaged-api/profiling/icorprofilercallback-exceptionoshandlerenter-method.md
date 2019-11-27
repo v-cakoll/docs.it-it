@@ -22,25 +22,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444907"
 ---
-# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="6a5e8-102">Metodo ICorProfilerCallback::ExceptionOSHandlerEnter</span><span class="sxs-lookup"><span data-stu-id="6a5e8-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
-<span data-ttu-id="6a5e8-103">Non implementato.</span><span class="sxs-lookup"><span data-stu-id="6a5e8-103">Not implemented.</span></span> <span data-ttu-id="6a5e8-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span><span class="sxs-lookup"><span data-stu-id="6a5e8-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
+# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="277b6-102">Metodo ICorProfilerCallback::ExceptionOSHandlerEnter</span><span class="sxs-lookup"><span data-stu-id="277b6-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
+<span data-ttu-id="277b6-103">Non implementato.</span><span class="sxs-lookup"><span data-stu-id="277b6-103">Not implemented.</span></span> <span data-ttu-id="277b6-104">Un profiler che necessita di informazioni sulle eccezioni non gestite deve ottenere tali informazioni tramite altri mezzi.</span><span class="sxs-lookup"><span data-stu-id="277b6-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a5e8-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6a5e8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="277b6-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="277b6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionOSHandlerEnter(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6a5e8-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6a5e8-106">Requirements</span></span>  
- <span data-ttu-id="6a5e8-107">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a5e8-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="277b6-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="277b6-106">Requirements</span></span>  
+ <span data-ttu-id="277b6-107">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="277b6-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a5e8-108">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a5e8-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="277b6-108">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="277b6-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6a5e8-109">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a5e8-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="277b6-109">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="277b6-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a5e8-110">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a5e8-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="277b6-110">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="277b6-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a5e8-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a5e8-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="277b6-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="277b6-111">See also</span></span>
 
-- [<span data-ttu-id="6a5e8-112">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="6a5e8-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="277b6-112">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="277b6-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

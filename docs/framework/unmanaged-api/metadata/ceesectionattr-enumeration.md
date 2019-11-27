@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444256"
 ---
-# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="c684f-102">Enumerazione CeeSectionAttr</span><span class="sxs-lookup"><span data-stu-id="c684f-102">CeeSectionAttr Enumeration</span></span>
-<span data-ttu-id="c684f-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="c684f-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="08607-102">Enumerazione CeeSectionAttr</span><span class="sxs-lookup"><span data-stu-id="08607-102">CeeSectionAttr Enumeration</span></span>
+<span data-ttu-id="08607-103">Fornisce valori che specificano gli attributi di una sezione per l'utilizzo da parte dell'interfaccia [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="08607-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c684f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c684f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08607-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="08607-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  {  
@@ -37,24 +37,24 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c684f-105">Members</span><span class="sxs-lookup"><span data-stu-id="c684f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="08607-105">Membri</span><span class="sxs-lookup"><span data-stu-id="08607-105">Members</span></span>  
   
-|<span data-ttu-id="c684f-106">Member</span><span class="sxs-lookup"><span data-stu-id="c684f-106">Member</span></span>|<span data-ttu-id="c684f-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c684f-107">Description</span></span>|  
+|<span data-ttu-id="08607-106">Membro</span><span class="sxs-lookup"><span data-stu-id="08607-106">Member</span></span>|<span data-ttu-id="08607-107">description</span><span class="sxs-lookup"><span data-stu-id="08607-107">Description</span></span>|  
 |------------|-----------------|  
-|`sdNone`|<span data-ttu-id="c684f-108">Section has no attributes.</span><span class="sxs-lookup"><span data-stu-id="c684f-108">Section has no attributes.</span></span>|  
-|`sdReadOnly`|<span data-ttu-id="c684f-109">Section contains initialized data that can be only read, not updated.</span><span class="sxs-lookup"><span data-stu-id="c684f-109">Section contains initialized data that can be only read, not updated.</span></span>|  
-|`sdReadWrite`|<span data-ttu-id="c684f-110">Section contains initialized data that can be read or updated.</span><span class="sxs-lookup"><span data-stu-id="c684f-110">Section contains initialized data that can be read or updated.</span></span>|  
-|`sdExecute`|<span data-ttu-id="c684f-111">Section contains executable code that is allowed to be read and executed.</span><span class="sxs-lookup"><span data-stu-id="c684f-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
+|`sdNone`|<span data-ttu-id="08607-108">La sezione non ha attributi.</span><span class="sxs-lookup"><span data-stu-id="08607-108">Section has no attributes.</span></span>|  
+|`sdReadOnly`|<span data-ttu-id="08607-109">La sezione contiene dati inizializzati che possono essere letti solo e non aggiornati.</span><span class="sxs-lookup"><span data-stu-id="08607-109">Section contains initialized data that can be only read, not updated.</span></span>|  
+|`sdReadWrite`|<span data-ttu-id="08607-110">La sezione contiene dati inizializzati che è possibile leggere o aggiornare.</span><span class="sxs-lookup"><span data-stu-id="08607-110">Section contains initialized data that can be read or updated.</span></span>|  
+|`sdExecute`|<span data-ttu-id="08607-111">La sezione contiene codice eseguibile che può essere letto ed eseguito.</span><span class="sxs-lookup"><span data-stu-id="08607-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c684f-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c684f-112">Requirements</span></span>  
- <span data-ttu-id="c684f-113">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c684f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08607-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="08607-112">Requirements</span></span>  
+ <span data-ttu-id="08607-113">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08607-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c684f-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c684f-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="08607-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="08607-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c684f-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c684f-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="08607-115">**Libreria:** Incluso come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="08607-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c684f-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c684f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="08607-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08607-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c684f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c684f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08607-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08607-117">See also</span></span>
 
-- [<span data-ttu-id="c684f-118">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="c684f-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="08607-118">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="08607-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

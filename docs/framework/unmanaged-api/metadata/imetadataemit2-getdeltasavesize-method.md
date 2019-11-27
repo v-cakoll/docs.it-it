@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440478"
 ---
-# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="bcd89-102">Metodo IMetaDataEmit2::GetDeltaSaveSize</span><span class="sxs-lookup"><span data-stu-id="bcd89-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
-<span data-ttu-id="bcd89-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span><span class="sxs-lookup"><span data-stu-id="bcd89-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
+# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="d062a-102">Metodo IMetaDataEmit2::GetDeltaSaveSize</span><span class="sxs-lookup"><span data-stu-id="d062a-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
+<span data-ttu-id="d062a-103">Ottiene un valore che indica qualsiasi modifica alle dimensioni dei metadati risultante dalla sessione di modifica e continuazione corrente.</span><span class="sxs-lookup"><span data-stu-id="d062a-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bcd89-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bcd89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d062a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d062a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDeltaSaveSize (  
@@ -34,23 +34,23 @@ HRESULT GetDeltaSaveSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bcd89-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bcd89-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d062a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d062a-105">Parameters</span></span>  
  `fSave`  
- <span data-ttu-id="bcd89-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span><span class="sxs-lookup"><span data-stu-id="bcd89-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="bcd89-107">For the .NET Framework version 2.0, this parameter is ignored.</span><span class="sxs-lookup"><span data-stu-id="bcd89-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
+ <span data-ttu-id="d062a-106">in Uno dei valori di [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) , che indica il livello di precisione desiderato.</span><span class="sxs-lookup"><span data-stu-id="d062a-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="d062a-107">Per la versione .NET Framework 2,0, questo parametro viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="d062a-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
   
  `pdwSaveSize`  
- <span data-ttu-id="bcd89-108">[out] The change in the size of the metadata.</span><span class="sxs-lookup"><span data-stu-id="bcd89-108">[out] The change in the size of the metadata.</span></span>  
+ <span data-ttu-id="d062a-108">out Modifica delle dimensioni dei metadati.</span><span class="sxs-lookup"><span data-stu-id="d062a-108">[out] The change in the size of the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bcd89-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bcd89-109">Requirements</span></span>  
- <span data-ttu-id="bcd89-110">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcd89-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d062a-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d062a-109">Requirements</span></span>  
+ <span data-ttu-id="d062a-110">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d062a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bcd89-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bcd89-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d062a-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="d062a-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bcd89-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bcd89-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d062a-112">**Libreria:** Usato come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="d062a-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bcd89-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcd89-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d062a-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d062a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bcd89-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bcd89-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d062a-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d062a-114">See also</span></span>
 
-- [<span data-ttu-id="bcd89-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="bcd89-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="bcd89-116">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="bcd89-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="d062a-115">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="d062a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="d062a-116">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="d062a-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

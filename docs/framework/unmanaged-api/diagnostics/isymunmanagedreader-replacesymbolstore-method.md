@@ -22,13 +22,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445730"
 ---
-# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="f371f-102">Metodo ISymUnmanagedReader::ReplaceSymbolStore</span><span class="sxs-lookup"><span data-stu-id="f371f-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
-<span data-ttu-id="f371f-103">Sostituisce l'archivio dei simboli esistente con un archivio dei simboli delta.</span><span class="sxs-lookup"><span data-stu-id="f371f-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="f371f-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span><span class="sxs-lookup"><span data-stu-id="f371f-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
+# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="a5ade-102">Metodo ISymUnmanagedReader::ReplaceSymbolStore</span><span class="sxs-lookup"><span data-stu-id="a5ade-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
+<span data-ttu-id="a5ade-103">Sostituisce l'archivio dei simboli esistente con un archivio dei simboli delta.</span><span class="sxs-lookup"><span data-stu-id="a5ade-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="a5ade-104">Questo metodo è simile al metodo [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) , ad eccezione del fatto che il delta specificato funge da sostituzione completa anziché da un aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="a5ade-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f371f-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span><span class="sxs-lookup"><span data-stu-id="f371f-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="f371f-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span><span class="sxs-lookup"><span data-stu-id="f371f-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="f371f-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="f371f-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
+> <span data-ttu-id="a5ade-105">È necessario specificare solo uno dei parametri `filename` o `pIStream`, non entrambi.</span><span class="sxs-lookup"><span data-stu-id="a5ade-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="a5ade-106">Se viene specificato `filename`, l'archivio dei simboli verrà aggiornato con i simboli presenti in tale file.</span><span class="sxs-lookup"><span data-stu-id="a5ade-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="a5ade-107">Se `pIStream` viene specificato, l'archivio verrà aggiornato con i dati del <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="a5ade-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f371f-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f371f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5ade-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a5ade-108">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReplaceSymbolStore (  
@@ -36,19 +36,19 @@ HRESULT ReplaceSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f371f-109">Parametri</span><span class="sxs-lookup"><span data-stu-id="f371f-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5ade-109">Parametri</span><span class="sxs-lookup"><span data-stu-id="a5ade-109">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="f371f-110">[in] The name of the file containing the symbol store.</span><span class="sxs-lookup"><span data-stu-id="f371f-110">[in] The name of the file containing the symbol store.</span></span>  
+ <span data-ttu-id="a5ade-110">in Nome del file contenente l'archivio dei simboli.</span><span class="sxs-lookup"><span data-stu-id="a5ade-110">[in] The name of the file containing the symbol store.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="f371f-111">[in] The file stream, used as an alternative to the `filename` parameter.</span><span class="sxs-lookup"><span data-stu-id="f371f-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
+ <span data-ttu-id="a5ade-111">in Il flusso di file, usato come alternativa al parametro `filename`.</span><span class="sxs-lookup"><span data-stu-id="a5ade-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f371f-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f371f-112">Return Value</span></span>  
- <span data-ttu-id="f371f-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f371f-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5ade-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a5ade-112">Return Value</span></span>  
+ <span data-ttu-id="a5ade-113">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="a5ade-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f371f-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f371f-114">Requirements</span></span>  
- <span data-ttu-id="f371f-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f371f-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5ade-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a5ade-114">Requirements</span></span>  
+ <span data-ttu-id="a5ade-115">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="a5ade-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f371f-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f371f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5ade-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5ade-116">See also</span></span>
 
-- [<span data-ttu-id="f371f-117">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="f371f-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="a5ade-117">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="a5ade-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -22,26 +22,26 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446346"
 ---
-# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="c388b-102">Metodo ISymUnmanagedScope::GetLocalCount</span><span class="sxs-lookup"><span data-stu-id="c388b-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
-<span data-ttu-id="c388b-103">Gets a count of the local variables defined within this scope.</span><span class="sxs-lookup"><span data-stu-id="c388b-103">Gets a count of the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="dc7c6-102">Metodo ISymUnmanagedScope::GetLocalCount</span><span class="sxs-lookup"><span data-stu-id="dc7c6-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
+<span data-ttu-id="dc7c6-103">Ottiene un conteggio delle variabili locali definite in questo ambito.</span><span class="sxs-lookup"><span data-stu-id="dc7c6-103">Gets a count of the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c388b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c388b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc7c6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dc7c6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c388b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c388b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dc7c6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="dc7c6-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="c388b-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span><span class="sxs-lookup"><span data-stu-id="c388b-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
+ <span data-ttu-id="dc7c6-106">out Puntatore a un `ULONG32` che riceve il conteggio delle variabili locali.</span><span class="sxs-lookup"><span data-stu-id="dc7c6-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c388b-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c388b-107">Return Value</span></span>  
- <span data-ttu-id="c388b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c388b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dc7c6-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="dc7c6-107">Return Value</span></span>  
+ <span data-ttu-id="dc7c6-108">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="dc7c6-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c388b-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c388b-109">Requirements</span></span>  
- <span data-ttu-id="c388b-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c388b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc7c6-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dc7c6-109">Requirements</span></span>  
+ <span data-ttu-id="dc7c6-110">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="dc7c6-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c388b-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c388b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc7c6-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dc7c6-111">See also</span></span>
 
-- [<span data-ttu-id="c388b-112">Interfaccia ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="c388b-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="dc7c6-112">Interfaccia ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="dc7c6-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

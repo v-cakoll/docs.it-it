@@ -12,21 +12,21 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344110"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="10e14-102">Oggetto My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="10e14-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="10e14-103">Specifica i metodi per la riproduzione di suoni.</span><span class="sxs-lookup"><span data-stu-id="10e14-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="28051-102">Oggetto My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="28051-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="28051-103">Specifica i metodi per la riproduzione di suoni.</span><span class="sxs-lookup"><span data-stu-id="28051-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="10e14-104">Note</span><span class="sxs-lookup"><span data-stu-id="10e14-104">Remarks</span></span>  
- <span data-ttu-id="10e14-105">Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Audio` , vedere <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="10e14-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28051-104">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="28051-104">Remarks</span></span>  
+ <span data-ttu-id="28051-105">Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Audio` , vedere <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="28051-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="10e14-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="10e14-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="28051-106">Per ulteriori informazioni, vedere [riproduzione di suoni](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="28051-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10e14-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="10e14-107">Requirements</span></span>  
- <span data-ttu-id="10e14-108">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="10e14-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="28051-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="28051-107">Requirements</span></span>  
+ <span data-ttu-id="28051-108">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="28051-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="10e14-109">**Classe:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="10e14-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="28051-109">**Classe:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="28051-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="10e14-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="10e14-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="28051-110">**Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="28051-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10e14-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10e14-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28051-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="28051-111">See also</span></span>
 
-- [<span data-ttu-id="10e14-112">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="10e14-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="28051-112">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="28051-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

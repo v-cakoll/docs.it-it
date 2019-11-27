@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436037"
 ---
-# <a name="icorprofilerinfo2getarrayobjectinfo-method"></a><span data-ttu-id="5dc78-102">Metodo ICorProfilerInfo2::GetArrayObjectInfo</span><span class="sxs-lookup"><span data-stu-id="5dc78-102">ICorProfilerInfo2::GetArrayObjectInfo Method</span></span>
-<span data-ttu-id="5dc78-103">Gets detailed information about an array object.</span><span class="sxs-lookup"><span data-stu-id="5dc78-103">Gets detailed information about an array object.</span></span>  
+# <a name="icorprofilerinfo2getarrayobjectinfo-method"></a><span data-ttu-id="8b5c1-102">Metodo ICorProfilerInfo2::GetArrayObjectInfo</span><span class="sxs-lookup"><span data-stu-id="8b5c1-102">ICorProfilerInfo2::GetArrayObjectInfo Method</span></span>
+<span data-ttu-id="8b5c1-103">Ottiene informazioni dettagliate su un oggetto Array.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-103">Gets detailed information about an array object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5dc78-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5dc78-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b5c1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8b5c1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetArrayObjectInfo(  
@@ -36,35 +36,35 @@ HRESULT GetArrayObjectInfo(
     [out] BYTE **ppData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5dc78-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5dc78-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b5c1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="8b5c1-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="5dc78-106">[in] The ID of a valid array object.</span><span class="sxs-lookup"><span data-stu-id="5dc78-106">[in] The ID of a valid array object.</span></span>  
+ <span data-ttu-id="8b5c1-106">in ID di un oggetto matrice valido.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-106">[in] The ID of a valid array object.</span></span>  
   
  `cDimensions`  
- <span data-ttu-id="5dc78-107">[in] The rank (number of dimensions) of the array.</span><span class="sxs-lookup"><span data-stu-id="5dc78-107">[in] The rank (number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="8b5c1-107">in Rango (numero di dimensioni) della matrice.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-107">[in] The rank (number of dimensions) of the array.</span></span>  
   
  `pDimensionSizes`  
- <span data-ttu-id="5dc78-108">[out] An array that contains integers, each representing the size of a dimension of the array.</span><span class="sxs-lookup"><span data-stu-id="5dc78-108">[out] An array that contains integers, each representing the size of a dimension of the array.</span></span>  
+ <span data-ttu-id="8b5c1-108">out Matrice contenente Integer, ognuno dei quali rappresenta la dimensione di una dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-108">[out] An array that contains integers, each representing the size of a dimension of the array.</span></span>  
   
  `pDimensionLowerBounds`  
- <span data-ttu-id="5dc78-109">[out] An array that contains integers, each representing the lower bound of a dimension of the array.</span><span class="sxs-lookup"><span data-stu-id="5dc78-109">[out] An array that contains integers, each representing the lower bound of a dimension of the array.</span></span>  
+ <span data-ttu-id="8b5c1-109">out Matrice contenente Integer, ognuno dei quali rappresenta il limite inferiore di una dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-109">[out] An array that contains integers, each representing the lower bound of a dimension of the array.</span></span>  
   
  `ppData`  
- <span data-ttu-id="5dc78-110">[out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.</span><span class="sxs-lookup"><span data-stu-id="5dc78-110">[out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.</span></span>  
+ <span data-ttu-id="8b5c1-110">out Puntatore all'indirizzo del buffer non elaborato per la matrice, disposto in base alla C++ convenzione.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-110">[out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5dc78-111">Note</span><span class="sxs-lookup"><span data-stu-id="5dc78-111">Remarks</span></span>  
- <span data-ttu-id="5dc78-112">The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.</span><span class="sxs-lookup"><span data-stu-id="5dc78-112">The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b5c1-111">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="8b5c1-111">Remarks</span></span>  
+ <span data-ttu-id="8b5c1-112">I `pDimensionSizes` e `pDimensionLowerBounds` sono matrici parallele, pertanto gli elementi che si trovano nello stesso indice in ogni matrice sono caratteristiche della stessa entità.</span><span class="sxs-lookup"><span data-stu-id="8b5c1-112">The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5dc78-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5dc78-113">Requirements</span></span>  
- <span data-ttu-id="5dc78-114">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5dc78-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b5c1-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8b5c1-113">Requirements</span></span>  
+ <span data-ttu-id="8b5c1-114">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b5c1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5dc78-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5dc78-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8b5c1-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8b5c1-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5dc78-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5dc78-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b5c1-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b5c1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5dc78-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5dc78-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b5c1-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b5c1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5dc78-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5dc78-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b5c1-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8b5c1-118">See also</span></span>
 
-- [<span data-ttu-id="5dc78-119">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="5dc78-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="5dc78-120">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="5dc78-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="8b5c1-119">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="8b5c1-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8b5c1-120">Interfaccia ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="8b5c1-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
