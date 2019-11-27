@@ -13,30 +13,30 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444611"
 ---
-# <a name="metadata-structures"></a><span data-ttu-id="8c91f-102">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="8c91f-102">Metadata Structures</span></span>
-<span data-ttu-id="8c91f-103">Questa sezione descrive le strutture non gestite usate dall'API dei metadati.</span><span class="sxs-lookup"><span data-stu-id="8c91f-103">This section describes the unmanaged structures that the metadata API uses.</span></span>  
+# <a name="metadata-structures"></a><span data-ttu-id="a3094-102">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="a3094-102">Metadata Structures</span></span>
+<span data-ttu-id="a3094-103">Questa sezione descrive le strutture non gestite usate dall'API dei metadati.</span><span class="sxs-lookup"><span data-stu-id="a3094-103">This section describes the unmanaged structures that the metadata API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8c91f-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="8c91f-104">In This Section</span></span>  
- <span data-ttu-id="8c91f-105">ASSEMBLYMETADATA</span><span class="sxs-lookup"><span data-stu-id="8c91f-105">ASSEMBLYMETADATA</span></span>  
- <span data-ttu-id="8c91f-106">Archivia i metadati dell'assembly per un uso successivo.</span><span class="sxs-lookup"><span data-stu-id="8c91f-106">Stores assembly metadata for later use.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a3094-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="a3094-104">In This Section</span></span>  
+ <span data-ttu-id="a3094-105">ASSEMBLYMETADATA</span><span class="sxs-lookup"><span data-stu-id="a3094-105">ASSEMBLYMETADATA</span></span>  
+ <span data-ttu-id="a3094-106">Archivia i metadati dell'assembly per un uso successivo.</span><span class="sxs-lookup"><span data-stu-id="a3094-106">Stores assembly metadata for later use.</span></span>  
   
- [<span data-ttu-id="8c91f-107">Struttura COR_FIELD_OFFSET</span><span class="sxs-lookup"><span data-stu-id="8c91f-107">COR_FIELD_OFFSET Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
- <span data-ttu-id="8c91f-108">Archivia l'offset del campo specificato all'interno di una classe.</span><span class="sxs-lookup"><span data-stu-id="8c91f-108">Stores the offset, within a class, of the specified field.</span></span>  
+ [<span data-ttu-id="a3094-107">Struttura COR_FIELD_OFFSET</span><span class="sxs-lookup"><span data-stu-id="a3094-107">COR_FIELD_OFFSET Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ <span data-ttu-id="a3094-108">Archivia l'offset del campo specificato all'interno di una classe.</span><span class="sxs-lookup"><span data-stu-id="a3094-108">Stores the offset, within a class, of the specified field.</span></span>  
   
- [<span data-ttu-id="8c91f-109">Struttura COR_NATIVE_LINK</span><span class="sxs-lookup"><span data-stu-id="8c91f-109">COR_NATIVE_LINK Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
- <span data-ttu-id="8c91f-110">Contiene informazioni usate per collegare il codice nativo.</span><span class="sxs-lookup"><span data-stu-id="8c91f-110">Contains information that is used to link native code.</span></span>  
+ [<span data-ttu-id="a3094-109">Struttura COR_NATIVE_LINK</span><span class="sxs-lookup"><span data-stu-id="a3094-109">COR_NATIVE_LINK Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
+ <span data-ttu-id="a3094-110">Contiene informazioni usate per collegare il codice nativo.</span><span class="sxs-lookup"><span data-stu-id="a3094-110">Contains information that is used to link native code.</span></span>  
   
- [<span data-ttu-id="8c91f-111">Struttura CVStruct</span><span class="sxs-lookup"><span data-stu-id="8c91f-111">CVStruct Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
- <span data-ttu-id="8c91f-112">Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.</span><span class="sxs-lookup"><span data-stu-id="8c91f-112">Contains information that is used when installing a module or a composite image.</span></span>  
+ [<span data-ttu-id="a3094-111">Struttura CVStruct</span><span class="sxs-lookup"><span data-stu-id="a3094-111">CVStruct Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
+ <span data-ttu-id="a3094-112">Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.</span><span class="sxs-lookup"><span data-stu-id="a3094-112">Contains information that is used when installing a module or a composite image.</span></span>  
   
- [<span data-ttu-id="8c91f-113">Struttura OSINFO</span><span class="sxs-lookup"><span data-stu-id="8c91f-113">OSINFO Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
- <span data-ttu-id="8c91f-114">Contiene informazioni sul sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8c91f-114">Contains information about the operating system.</span></span>  
+ [<span data-ttu-id="a3094-113">Struttura OSINFO</span><span class="sxs-lookup"><span data-stu-id="a3094-113">OSINFO Structure</span></span>](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
+ <span data-ttu-id="a3094-114">Contiene informazioni sul sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="a3094-114">Contains information about the operating system.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="8c91f-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="8c91f-115">Related Sections</span></span>  
- [<span data-ttu-id="8c91f-116">Interfacce di metadati</span><span class="sxs-lookup"><span data-stu-id="8c91f-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="a3094-115">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a3094-115">Related Sections</span></span>  
+ [<span data-ttu-id="a3094-116">Interfacce di metadati</span><span class="sxs-lookup"><span data-stu-id="a3094-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [<span data-ttu-id="8c91f-117">Funzioni statiche globali dei metadati</span><span class="sxs-lookup"><span data-stu-id="8c91f-117">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [<span data-ttu-id="a3094-117">Funzioni statiche globali dei metadati</span><span class="sxs-lookup"><span data-stu-id="a3094-117">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [<span data-ttu-id="8c91f-118">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="8c91f-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [<span data-ttu-id="a3094-118">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="a3094-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [<span data-ttu-id="8c91f-119">Unioni di metadati</span><span class="sxs-lookup"><span data-stu-id="8c91f-119">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [<span data-ttu-id="a3094-119">Unioni di metadati</span><span class="sxs-lookup"><span data-stu-id="a3094-119">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

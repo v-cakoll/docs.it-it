@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450379"
 ---
-# <a name="cor_prf_runtime_type-enumeration"></a><span data-ttu-id="453d1-102">Enumerazione COR_PRF_RUNTIME_TYPE</span><span class="sxs-lookup"><span data-stu-id="453d1-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
-<span data-ttu-id="453d1-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="453d1-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
+# <a name="cor_prf_runtime_type-enumeration"></a><span data-ttu-id="71cf7-102">Enumerazione COR_PRF_RUNTIME_TYPE</span><span class="sxs-lookup"><span data-stu-id="71cf7-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
+<span data-ttu-id="71cf7-103">Contiene valori che indicano la versione di Common Language Runtime (CLR): desktop o CoreCLR, utilizzata in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="71cf7-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="453d1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="453d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71cf7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="71cf7-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -34,24 +34,24 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="453d1-105">Members</span><span class="sxs-lookup"><span data-stu-id="453d1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="71cf7-105">Members</span><span class="sxs-lookup"><span data-stu-id="71cf7-105">Members</span></span>  
   
-|<span data-ttu-id="453d1-106">Member</span><span class="sxs-lookup"><span data-stu-id="453d1-106">Member</span></span>|<span data-ttu-id="453d1-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="453d1-107">Description</span></span>|  
+|<span data-ttu-id="71cf7-106">Membro</span><span class="sxs-lookup"><span data-stu-id="71cf7-106">Member</span></span>|<span data-ttu-id="71cf7-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="71cf7-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="453d1-108">The desktop version of the CLR.</span><span class="sxs-lookup"><span data-stu-id="453d1-108">The desktop version of the CLR.</span></span>|  
-|`COR_PRF_CORE_CLR`|<span data-ttu-id="453d1-109">The core version of the CLR, used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="453d1-109">The core version of the CLR, used in Silverlight.</span></span>|  
+|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="71cf7-108">Versione desktop di CLR.</span><span class="sxs-lookup"><span data-stu-id="71cf7-108">The desktop version of the CLR.</span></span>|  
+|`COR_PRF_CORE_CLR`|<span data-ttu-id="71cf7-109">Versione principale di CLR, utilizzata in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="71cf7-109">The core version of the CLR, used in Silverlight.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="453d1-110">Note</span><span class="sxs-lookup"><span data-stu-id="453d1-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71cf7-110">Note</span><span class="sxs-lookup"><span data-stu-id="71cf7-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="453d1-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="453d1-111">Requirements</span></span>  
- <span data-ttu-id="453d1-112">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="453d1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71cf7-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="71cf7-111">Requirements</span></span>  
+ <span data-ttu-id="71cf7-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71cf7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="453d1-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="453d1-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="71cf7-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="71cf7-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="453d1-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="453d1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="71cf7-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71cf7-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="453d1-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="453d1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="71cf7-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71cf7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="453d1-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="453d1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71cf7-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71cf7-116">See also</span></span>
 
-- [<span data-ttu-id="453d1-117">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="453d1-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="71cf7-117">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="71cf7-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

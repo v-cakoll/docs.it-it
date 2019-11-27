@@ -22,24 +22,24 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445778"
 ---
-# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="dde28-102">Metodo ICorProfilerCallback::RemotingServerInvocationReturned</span><span class="sxs-lookup"><span data-stu-id="dde28-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
-<span data-ttu-id="dde28-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span><span class="sxs-lookup"><span data-stu-id="dde28-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="5cf8a-102">Metodo ICorProfilerCallback::RemotingServerInvocationReturned</span><span class="sxs-lookup"><span data-stu-id="5cf8a-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
+<span data-ttu-id="5cf8a-103">Notifica al profiler che il processo ha completato la chiamata a un metodo in risposta a una richiesta di chiamata al metodo remoto.</span><span class="sxs-lookup"><span data-stu-id="5cf8a-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dde28-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dde28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cf8a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5cf8a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingServerInvocationReturned();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dde28-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dde28-105">Requirements</span></span>  
- <span data-ttu-id="dde28-106">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dde28-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cf8a-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5cf8a-105">Requirements</span></span>  
+ <span data-ttu-id="5cf8a-106">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5cf8a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dde28-107">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dde28-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5cf8a-107">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5cf8a-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dde28-108">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dde28-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5cf8a-108">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cf8a-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dde28-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dde28-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5cf8a-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cf8a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dde28-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dde28-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5cf8a-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cf8a-110">See also</span></span>
 
-- [<span data-ttu-id="dde28-111">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="dde28-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="5cf8a-111">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="5cf8a-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
