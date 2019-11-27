@@ -14,19 +14,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351729"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Creazione di XML in Visual Basic
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic consente di usare i *valori letterali XML* direttamente nel codice. La sintassi dei valori letterali XML rappresenta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti ed è simile alla sintassi XML 1,0. In questo modo è più semplice creare elementi, documenti e frammenti XML a livello di codice, perché il codice ha la stessa struttura del codice XML finale.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Termine|Definizione|  
 |---|---|  
-|[Cenni preliminari sui valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Espressioni incorporate in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[Procedura: Creare valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[Spazi vuoti nei valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[Valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[Procedura: Incorporare espressioni nei valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[Nomi di elementi e attributi XML dichiarati](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[Cenni preliminari sui valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduzione ai valori letterali XML e alla relativa correlazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Espressioni incorporate in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Viene descritto come utilizzare le espressioni incorporate nei valori letterali XML.|  
+|[Procedura: Creare valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Viene descritto come creare un elemento XML nel codice usando un valore letterale XML.|  
+|[Spazi vuoti nei valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Viene descritto il modo in cui Visual Basic considera gli spazi vuoti nei valori letterali XML.|  
+|[Valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Viene descritto il modo in cui la sintassi dei valori letterali XML in Visual Basic è correlata alla specifica XML 1,0.|  
+|[Procedura: Incorporare espressioni nei valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Viene descritto come utilizzare le espressioni incorporate nei valori letterali XML per creare contenuto in fase di esecuzione.|  
+|[Nomi di elementi e attributi XML dichiarati](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Vengono descritte le linee guida per la denominazione di elementi e attributi XML.|  
   
 ## <a name="see-also"></a>Vedere anche
 

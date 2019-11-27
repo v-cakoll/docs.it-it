@@ -32,41 +32,41 @@ ms.locfileid: "74343873"
 ---
 # <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
 
-Holds data in a format you define. The `Structure` statement defines the format.
+Include i dati in un formato definito dall'utente. L'istruzione `Structure` definisce il formato.
 
-Previous versions of Visual Basic support the user-defined type (UDT). The current version expands the UDT to a *structure*. A structure is a concatenation of one or more *members* of various data types. Visual Basic treats a structure as a single unit, although you can also access its members individually.
+Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente (UDT). La versione corrente espande il tipo definito dall'utente a una *struttura*. Una struttura è una concatenazione di uno o più *membri* di diversi tipi di dati. Visual Basic considera una struttura come una singola unità, sebbene sia anche possibile accedere singolarmente ai relativi membri.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.
+Definire e usare un tipo di dati di struttura quando è necessario combinare diversi tipi di dati in una singola unità o quando nessuno dei tipi di dati elementari soddisfa le proprie esigenze.
 
-The default value of a structure data type consists of the combination of the default values of each of its members.
+Il valore predefinito di un tipo di dati della struttura è costituito dalla combinazione dei valori predefiniti di ognuno dei relativi membri.
 
-## <a name="declaration-format"></a>Declaration Format
+## <a name="declaration-format"></a>Formato della dichiarazione
 
-A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End Structure` statement. The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining. Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.
+Una dichiarazione di struttura inizia con l' [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con l'istruzione `End Structure`. L'istruzione `Structure` fornisce il nome della struttura, che è anche l'identificatore del tipo di dati che la struttura sta definendo. Altre parti del codice possono usare questo identificatore per dichiarare variabili, parametri e valori restituiti della funzione in modo che siano del tipo di dati della struttura.
 
-The declarations between the `Structure` and `End Structure` statements define the members of the structure.
+Le dichiarazioni tra le istruzioni `Structure` e `End Structure` definiscono i membri della struttura.
 
-## <a name="member-access-levels"></a>Member Access Levels
+## <a name="member-access-levels"></a>Livelli di accesso ai membri
 
-You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md). If you use a `Dim` statement, the access level defaults to public.
+È necessario dichiarare ogni membro usando un' [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../visual-basic/language-reference/modifiers/private.md). Se si usa un'istruzione `Dim`, il livello di accesso predefinito è public.
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **Consumo di memoria.** Come per tutti i tipi di dati compositi, non è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura aggiungendo le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile presupporre in modo sicuro che l'ordine di archiviazione in memoria sia uguale all'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> all'istruzione `Structure`.
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.
+- **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic tipi di struttura.
 
-- **Widening.** There is no automatic conversion to or from any structure data type. You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.
+- **Conversioni.** Non viene eseguita alcuna conversione automatica da o verso qualsiasi tipo di dati della struttura. È possibile definire gli operatori di conversione sulla struttura usando l' [istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)ed è possibile dichiarare ogni operatore di conversione come `Widening` o `Narrowing`.
 
-- **Type Characters.** Structure data types have no literal type character or identifier type character.
+- **Digitare i caratteri.** I tipi di dati della struttura non hanno un carattere di tipo letterale o un carattere di tipo identificatore.
 
-- **Framework Type.** There is no corresponding type in the .NET Framework. All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.
+- **Tipo di Framework.** Nessun tipo corrispondente nell'.NET Framework. Tutte le strutture ereditano dalla classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessuna struttura specifica corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Esempio
 
-The following paradigm shows the outline of the declaration of a structure.
+Nel paradigma seguente viene illustrato il contorno della dichiarazione di una struttura.
 
 ```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
@@ -81,7 +81,7 @@ End Structure
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345986"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
-A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
+Una *routine* è un blocco di istruzioni Visual Basic racchiuso tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e una dichiarazione di `End` corrispondente. Tutte le istruzioni eseguibili in Visual Basic devono essere incluse in alcune procedure.  
   
 ## <a name="calling-a-procedure"></a>Chiamata di una routine  
  Una routine viene richiamata da altre parti del codice. Questa operazione è nota come *chiamata di routine*. Al termine dell'esecuzione della routine, il controllo viene restituito al codice che ha richiamato la routine, noto come *codice chiamante*. Il codice chiamante è un'istruzione o un'espressione all'interno di un'istruzione, che specifica la routine tramite nome e le trasferisce il controllo.  
@@ -34,7 +34,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
  Nella maggior parte dei casi, una routine deve usare dati diversi ogni volta che viene chiamata. È possibile passare queste informazioni alla routine come parte della chiamata di routine. La routine definisce zero o più *parametri*, ognuno dei quali rappresenta un valore necessario da passare alla routine. A ogni parametro della definizione della routine corrisponde un *argomento* nella chiamata di routine. Un argomento rappresenta il valore passato al parametro corrispondente in una chiamata di routine specifica.  
   
 ## <a name="types-of-procedures"></a>Tipi di routine  
- Visual Basic uses several types of procedures:  
+ Visual Basic usa diversi tipi di procedure:  
   
 - Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
   

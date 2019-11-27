@@ -15,7 +15,7 @@ L'esempio seguente illustra come ordinare righe di testo strutturato, ad esempio
 
 ### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contenga i dati
 
-Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
+Copiare i dati scores. csv dall'argomento [procedura: aggiungere contenuto da file non analoghi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvarlo nella cartella della soluzione.
 
 ## <a name="example"></a>Esempio
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-This example also demonstrates how to return a query variable from a Function.
+Questo esempio illustra anche come restituire una variabile di query da una funzione.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -35,15 +35,15 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`startAddress`|The starting address of the contiguous block of code.|  
-|`size`|The size of the block.|  
+|`startAddress`|Indirizzo iniziale del blocco di codice contiguo.|  
+|`size`|Dimensioni del blocco.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   

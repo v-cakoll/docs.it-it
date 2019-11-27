@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445189"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Metodo ICorProfilerCallback::AppDomainShutdownStarted
-Notifies the profiler that an application domain is being unloaded from a process.  
+Notifica al profiler che un dominio applicazione viene scaricato da un processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parametri  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ in Identifica il dominio in cui sono archiviati gli assembly dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
+ Il valore di `appDomainId` non è valido per tutte le richieste di informazioni dopo la restituzione del metodo `AppDomainShutdownStarted`, ovvero l'ultima possibilità del profiler di ottenere informazioni sul dominio applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

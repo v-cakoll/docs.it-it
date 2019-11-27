@@ -14,18 +14,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441788"
 ---
 # <a name="ialink3-interface"></a>Interfaccia IALink3
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+Fornisce un solo metodo, `SetManifestFile`, che consente di specificare o reimpostare il file manifesto che verrà utilizzato dal linker durante la creazione di un assembly.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Metodo SetManifestFile](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ Consente di specificare o reimpostare il file manifesto che verrà utilizzato dal linker durante la creazione dell'assembly.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [API ALink](index.md)  
+ [Alink (API)](index.md)  
  Supporta la creazione di moduli non associati e assembly .NET Framework.  
   
  [Interfaccia IALink](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ Consente di costruire assembly .NET Framework.  
   
  [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ Genera un file con un manifesto dell'assembly da uno o più file che sono moduli o file di risorse.

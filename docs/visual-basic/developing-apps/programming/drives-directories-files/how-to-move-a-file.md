@@ -49,7 +49,7 @@ Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una 
   
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   
-- L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vedere anche
 

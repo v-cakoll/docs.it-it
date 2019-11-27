@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343706"
 ---
 # <a name="erase-statement-visual-basic"></a>Istruzione Erase (Visual Basic)
-Used to release array variables and deallocate the memory used for their elements.  
+Usato per rilasciare le variabili di matrice e deallocare la memoria usata per i relativi elementi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -25,15 +25,15 @@ Erase arraylist
   
 ## <a name="parts"></a>Parti  
  `arraylist`  
- Obbligatorio. List of array variables to be erased. Nel caso di più variabili, è possibile separarle mediante virgole.  
+ Obbligatorio. Elenco di variabili di matrice da cancellare. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
-## <a name="remarks"></a>Note  
- The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
+## <a name="remarks"></a>Osservazioni  
+ L'istruzione `Erase` può essere visualizzata solo a livello di routine. Ciò significa che è possibile rilasciare matrici all'interno di una routine ma non a livello di classe o di modulo.  
   
- The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
+ L'istruzione `Erase` equivale a assegnare `Nothing` a ogni variabile di matrice.  
   
 ## <a name="example"></a>Esempio  
- The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
+ Nell'esempio seguente viene utilizzata l'istruzione `Erase` per cancellare due matrici e liberare la relativa memoria (rispettivamente gli elementi di archiviazione 1000 e 100). L'istruzione `ReDim` assegna quindi una nuova istanza di matrice alla matrice tridimensionale.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

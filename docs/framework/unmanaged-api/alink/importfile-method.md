@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446988"
 ---
 # <a name="importfile-method"></a>Metodo ImportFile
-Imports assemblies and unbound modules.  
+Importa assembly e moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +39,31 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Fully qualified name of file to be imported.  
+ Nome completo del file da importare.  
   
  `pszTargetName`  
- Optional output file name that can be used to rename the file as it is linked into the assembly.  
+ Nome del file di output facoltativo che può essere usato per rinominare il file mentre è collegato nell'assembly.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `pImportToken`  
- Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
+ Puntatore al token in cui verrà archiviato un ID file univoco. Il file può essere un assembly o un file.  
   
  `ppAssemblyScope`  
- Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
+ Riceve il puntatore all' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Può essere NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Pointer to the count of files and/or scopes that have been imported.  
+ Puntatore al conteggio dei file e/o degli ambiti che sono stati importati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

@@ -30,10 +30,10 @@ Questo articolo riepiloga le nuove funzionalità e i principali miglioramenti ap
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Non vengono fornite informazioni complete su ogni nuova funzionalità e l'articolo è soggetto a modifiche. Per informazioni generali su .NET Framework, vedere [Introduzione a .NET Framework](../get-started/index.md). Per le piattaforme supportate, vedere [Requisiti di sistema](../get-started/system-requirements.md). Per i collegamenti per il download e le istruzioni di installazione, vedere [Guida all'installazione](../install/guide-for-developers.md).
+Non vengono fornite informazioni complete su ogni nuova funzionalità e l'articolo è soggetto a modifiche. Per informazioni generali su .NET Framework, vedere [Introduzione a .NET Framework](../get-started/index.md). Per informazioni sulle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](../get-started/system-requirements.md). Per i collegamenti per il download e le istruzioni di installazione, vedere [Guida all'installazione](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](../get-started/the-net-framework-and-out-of-band-releases.md).
+> Il team di .NET Framework rilascia anche funzionalità fuori programma con NuGet per espandere il supporto per piattaforme e introdurre nuove funzionalità, ad esempio raccolte non modificabili e tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](../get-started/the-net-framework-and-out-of-band-releases.md).
 > Vedere un [elenco completo dei pacchetti NuGet](https://www.nuget.org/profiles/dotnetframework) per .NET Framework.
 
 <a name="v48" />
@@ -102,7 +102,7 @@ Gli endpoint di integrità vengono ampiamente usati tramite gli strumenti di orc
 
 Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazioni di integrità del servizio WCF:
 
-- Tramite codice. Di seguito è riportato un esempio:
+- Tramite codice. Ad esempio:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Tramite un file di configurazione. Di seguito è riportato un esempio:
+- Tramite un file di configurazione. Ad esempio:
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
   </behaviors>
   ```
 
-È possibile eseguire una query sullo stato di integrità di un servizio usando i parametri di query, ad esempio `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`. Un codice di risposta HTTP può inoltre essere specificato per ogni parametro di query. Se si omette il codice di risposta HTTP per un parametro di query, per impostazione predefinita viene usato un codice di risposta HTTP 503. Di seguito è riportato un esempio:
+È possibile eseguire una query sullo stato di integrità di un servizio usando i parametri di query, ad esempio `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`. Un codice di risposta HTTP può inoltre essere specificato per ogni parametro di query. Se si omette il codice di risposta HTTP per un parametro di query, per impostazione predefinita viene usato un codice di risposta HTTP 503. Ad esempio:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-I metodi <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> consentono di generare nuove chiavi <xref:System.Security.Cryptography.DSA> o <xref:System.Security.Cryptography.RSA> con dimensioni chiave specifiche. Di seguito è riportato un esempio:
+I metodi <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> consentono di generare nuove chiavi <xref:System.Security.Cryptography.DSA> o <xref:System.Security.Cryptography.RSA> con dimensioni chiave specifiche. Ad esempio:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -434,7 +434,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472" />
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 **Implementazione di proprietà HttpClientHandler**
 
@@ -467,7 +467,7 @@ NET Framework 4.7.2 aggiunge il supporto per Always Encrypted basato su enclave.
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, che specifica i parametri di attestazione usati da SQL Server per ottenere le informazioni necessarie per l'esecuzione di un protocollo di attestazione particolare.
 
-Il file di configurazione dell'applicazione specifica quindi un'implementazione concreta della classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> astratta, che offre la funzionalità per il provider dell'enclave. Di seguito è riportato un esempio:
+Il file di configurazione dell'applicazione specifica quindi un'implementazione concreta della classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> astratta, che offre la funzionalità per il provider dell'enclave. Ad esempio:
 
 ```xml
 <configuration>
@@ -630,7 +630,7 @@ Le modifiche apportate a Garbage Collection (GC) in .NET Framework 4.7.1 miglior
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 **Supporto di SHA-2 per Message.HashAlgorithm**
 
@@ -650,7 +650,7 @@ ASP.NET elabora le richieste in una pipeline predefinita che include 23 eventi. 
 
 **Opzioni di hash SHA-2 per le credenziali di autenticazione di ASP.NET Forms**
 
-In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori di archiviare le credenziali utente con password con hash in file di configurazione usando MD5 o SHA1. A partire da .NET Framework 4.7.1, ASP.NET supporta anche nuove opzioni di hash SHA-2 sicure come SHA256, SHA384 e SHA512. SHA1 resta l'opzione predefinita ed è possibile definire un algoritmo hash non predefinito nel file di configurazione Web. Di seguito è riportato un esempio:
+In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori di archiviare le credenziali utente con password con hash in file di configurazione usando MD5 o SHA1. A partire da .NET Framework 4.7.1, ASP.NET supporta anche nuove opzioni di hash SHA-2 sicure come SHA256, SHA384 e SHA512. SHA1 resta l'opzione predefinita ed è possibile definire un algoritmo hash non predefinito nel file di configurazione Web. Ad esempio:
 
 ```xml
 <system.web>
@@ -699,7 +699,7 @@ In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSe
 
 <a name="net47" />
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 .NET Framework 4.7 aggiunge la funzionalità seguente relativa alla rete:
 
@@ -816,7 +816,7 @@ I validator di annotazione dei dati consentono di eseguire la convalida aggiunge
 
 2. Il file di risorse è archiviato nella cartella App_LocalResources.
 
-3. Il nome del file di risorse localizzate ha il formato `DataAnnotation.Localization.{`*name*`}.resx`, dove *name* è un nome di impostazioni cultura nel formato *codiceLingua*`-`*codicePaese/regione* o *codiceLingua*.
+3. Il nome del file di risorse localizzato ha il formato `DataAnnotation.Localization.{`*nome*`}.resx`, dove *nome* è il nome delle impostazioni cultura con il formato *codicelingua*`-`*codicepaese/area geografica* o *codicelingua*.
 
 4. Il nome della chiave della risorsa è la stringa assegnata all'attributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> e il relativo valore è il messaggio di errore localizzato.
 
@@ -841,7 +841,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| nome                                 | Value                                     |
+| Name                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -955,7 +955,7 @@ End Function
 
 Per gestire questo aspetto in .NET Framework 4.6.2 sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo chiaro le routine di funzione di derivazione chiave e i rispettivi input:
 
-|Metodo ECDiffieHellman|description|
+|Metodo ECDiffieHellman|Descrizione|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
@@ -965,7 +965,7 @@ Per gestire questo aspetto in .NET Framework 4.6.2 sono stati aggiunti i tre met
 
 La libreria di crittografia di Windows (CNG) ha aggiunto il supporto per l'archiviazione delle chiavi simmetriche persistenti e l'uso delle chiavi simmetriche archiviate nell'hardware e .NET Framework 4.6.2 ha reso possibile l'uso di questa funzionalità da parte degli sviluppatori.  Poiché le nozioni di nome della chiave e provider di chiavi sono specifiche dell'implementazione, questa funzionalità richiede l'uso del costruttore dei tipi di implementazione concreti anziché della modalità factory preferita, ad esempio la chiamata a `Aes.Create`.
 
-Il supporto per la crittografia simmetrica con chiave persistente esiste per gli algoritmi AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Di seguito è riportato un esempio:
+Il supporto per la crittografia simmetrica con chiave persistente esiste per gli algoritmi AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Ad esempio:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1198,7 +1198,7 @@ In .NET Framework 4.6.2, Windows Workflow Foundation è stato ottimizzato nell'a
 
 A partire da .NET Framework 4.5, WF supporta le espressioni C# sia nella progettazione di Visual Studio che nei flussi di lavoro di codice. La riallocazione della progettazione del flusso di lavoro è una funzionalità chiave di WF che consente di usare la finestra di progettazione del flusso di lavoro in un'applicazione esterna a Visual Studio, ad esempio WPF.  Windows Workflow Foundation offre la possibilità di supportare le espressioni C# e IntelliSense nell'utilità di progettazione del flusso di lavoro riallocata. Per altre informazioni, vedere il [blog di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nelle versioni di .NET Framework precedenti a .NET Framework 4.6.2 l'esecuzione di IntelliSense viene interrotta nella progettazione del flusso di lavoro quando un cliente ricompila un progetto di flusso di lavoro da Visual Studio. Anche se la compilazione del progetto ha esito positivo, i tipi di flusso di lavoro non vengono trovati nell'utilità di progettazione e vengono visualizzati avvisi di IntelliSense per i tipi di flusso di lavoro mancanti nella finestra **Elenco errori**. .NET Framework 4.6.2 risolve questo problema e rende disponibile IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nelle versioni di .NET Framework precedenti a .NET Framework 4.6.2 l'esecuzione di IntelliSense viene interrotta nella progettazione del flusso di lavoro quando un cliente ricompila un progetto di flusso di lavoro da Visual Studio. Anche se la compilazione del progetto ha esito positivo, i tipi di flusso di lavoro non vengono trovati nell'utilità di progettazione e vengono visualizzati alcuni avvisi di IntelliSense per i tipi di flusso di lavoro mancanti nella finestra **Elenco errori**. .NET Framework 4.6.2 risolve questo problema e rende disponibile IntelliSense.
 
 **Le applicazioni flusso di lavoro versione 1 con tracciabilità del flusso di lavoro vengono ora eseguite in modalità FIPS**
 
@@ -1238,9 +1238,9 @@ Le applicazioni desktop convertite ottengono un'identità di applicazione simile
 
 L'*API di debug non gestito* è stata ottimizzata in .NET Framework 4.6.2 per l'esecuzione di un'ulteriore analisi quando viene generata un'eccezione <xref:System.NullReferenceException>, in modo che sia possibile determinare quale variabile in una singola riga di codice sorgente è `null`.   A supporto di questo scenario, le API seguenti sono state aggiunte all'API di debug non gestito.
 
-- Le interfacce [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) e [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), che espongono le posizioni native delle variabili gestite. Questo consente ai debugger di effettuare alcune analisi del flusso di codice quando si verifica un <xref:System.NullReferenceException> e di lavorare con le versioni precedenti per determinare la variabile gestita che corrisponde alla posizione nativa che era `null`.
+- Interfacce [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) e [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), che espongono le posizioni native delle variabili gestite. Questo consente ai debugger di effettuare alcune analisi del flusso di codice quando si verifica un <xref:System.NullReferenceException> e di lavorare con le versioni precedenti per determinare la variabile gestita che corrisponde alla posizione nativa che era `null`.
 
-- Il metodo [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) fornisce un mapping per ICorDebugType a [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), che permette al debugger di ottenere un oggetto [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) senza un'istanza di ICorDebugType. Le API esistenti in [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) possono quindi essere usate per determinare il layout della classe del tipo.
+- Il metodo [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) fornisce un mapping per ICorDebugType a [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), che permette al debugger di ottenere un oggetto [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) senza un'istanza di ICorDebugType. È quindi possibile usare le API esistenti in [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) per determinare il layout di classe del tipo.
 
 <a name="v461" />
 
@@ -1343,7 +1343,7 @@ Nelle versioni precedenti di WPF, i dizionari personalizzati non riconoscono le 
 > [!NOTE]
 > Questi nuovi formati di file non sono supportati direttamente dalle API di controllo ortografico WPF e i dizionari personalizzati forniti a WPF nelle applicazioni devono continuare a usare i file con estensione lex.
 
-**Samples**
+**Esempi**
 
 Sono disponibili numerosi esempi di WPF nel repository GitHub [Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples). Per aiutare Microsoft a migliorare gli esempi, inviare una richiesta di pull o segnalare un [problema di GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
@@ -1381,7 +1381,7 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
 - Strumentazione migliore con l'interfaccia ICorProfiler.
 
-  I profiler che usano la funzionalità ReJit dell'API `ICorProfiler` per la strumentazione dinamica ora possono modificare alcuni metadati. In precedenza quegli strumenti potevano instrumentare IL in qualsiasi momento, ma i metadati potevano essere modificati solo in fase di caricamento del modulo. Poiché IL fa riferimento ai metadati, questo limitava i tipi di strumentazione possibile. Alcuni di questi limiti sono stati innalzati aggiungendo il metodo [ICorProfilerInfo7::ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) per supportare un sottoinsieme di modifiche ai metadati dopo il caricamento del modulo, in particolare aggiungendo nuovi record `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` e `UserString`. Questa modifica rende possibile una gamma più ampia di strumentazioni immediate.
+  I profiler che usano la funzionalità ReJit dell'API `ICorProfiler` per la strumentazione dinamica ora possono modificare alcuni metadati. In precedenza quegli strumenti potevano instrumentare IL in qualsiasi momento, ma i metadati potevano essere modificati solo in fase di caricamento del modulo. Poiché IL fa riferimento ai metadati, questo limitava i tipi di strumentazione possibile. Alcuni di questi limiti sono stati innalzati aggiungendo il metodo [ICorProfilerInfo7::ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) per supportare un subset di modifiche ai metadati dopo il caricamento del modulo, in particolare aggiungendo nuovi record `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` e `UserString`. Questa modifica rende possibile una gamma più ampia di strumentazioni immediate.
 
 <a name="NGEN461" />
 
@@ -1719,7 +1719,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
     - Il valore di enumerazione <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
-    - La proprietà <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType>.
+    - Proprietà <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType>.
 
     Per impostazione predefinita, la proprietà <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> è `false`, a meno che il valore `HWRPortReuseOnSocketBind` della chiave del registro di sistema `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` sia impostato su 0x1. Per abilitare il riutilizzo delle porte locali su connessioni HTTP, impostare la proprietà <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> su `true`. In questo modo tutte le connessioni socket TCP in uscita da <xref:System.Net.Http.HttpClient> e <xref:System.Net.HttpWebRequest> usano la nuova opzione di socket di Windows 10, [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options), che consente il riutilizzo delle porte locali.
 
@@ -1729,7 +1729,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
     Una nuova proprietà, <xref:System.Uri.IdnHost%2A>, è stata aggiunta alla classe <xref:System.Uri> per migliorare il supporto dei nomi di dominio internazionali e di PunyCode.
 
-- **Ridimensionamento nei controlli Windows Form.**
+- **Ridimensionamento nei controlli Windows Form**
 
   Questa funzionalità è stata estesa in .NET Framework 4.6 per includere i tipi <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.ToolStripSplitButton>, nonché il rettangolo specificato dalla proprietà <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> usato per disegnare un oggetto <xref:System.Drawing.Design.UITypeEditor>.
 
@@ -1747,7 +1747,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **.NET Native**
 
-  Le app di Windows per Windows 10 destinate a .NET Core e scritte in C# o Visual Basic ora possono avvalersi di una nuova tecnologia che compila le app in codice nativo anziché IL. Producono app caratterizzate da maggiore rapidità di avvio ed esecuzione. Per altre informazioni, vedere [Compilazione di app con .NET Native](../net-native/index.md). Per una panoramica di .NET Native con la descrizione delle differenze rispetto alla compilazione JIT e NGEN e il vantaggio che ne deriva per il codice, vedere [Compilazione e .NET Native](../net-native/net-native-and-compilation.md).
+  Le app di Windows per Windows 10 destinate a .NET Core e scritte in C# o Visual Basic ora possono avvalersi di una nuova tecnologia che compila le app in codice nativo anziché IL. Producono app caratterizzate da maggiore rapidità di avvio ed esecuzione. Per altre informazioni, vedere [Compilazione di app con .NET Native](../net-native/index.md). Per una panoramica di .NET Native che esamina le differenze rispetto alla compilazione JIT e NGEN e descrive tutti i vantaggi per il codice, vedere [Compilazione e .NET Native](../net-native/net-native-and-compilation.md).
 
   Le app vengono compilate in codice nativo per impostazione predefinita quando si compilano con Visual Studio 2015 o versione successiva. Per altre informazioni, vedere [Introduzione a .NET Native](../net-native/getting-started-with-net-native.md).
 
@@ -1761,13 +1761,13 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 ## <a name="whats-new-in-net-framework-452"></a>Novità di .NET Framework 4.5.2
 
-- **Nuove API per app ASP.NET.** I nuovi metodi <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> e <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> consentono di esaminare e modificare le intestazioni di risposta e il codice di stato mentre la risposta viene scaricata sull'app client. Considerare l'uso di questi metodi invece degli eventi <xref:System.Web.HttpApplication.PreSendRequestHeaders> e <xref:System.Web.HttpApplication.PreSendRequestContent>, poiché sono più efficienti e affidabili.
+- **Nuove API per app ASP.NET** I nuovi metodi <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> e <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> consentono di esaminare e modificare le intestazioni di risposta e il codice di stato mentre la risposta viene scaricata sull'app client. Considerare l'uso di questi metodi invece degli eventi <xref:System.Web.HttpApplication.PreSendRequestHeaders> e <xref:System.Web.HttpApplication.PreSendRequestContent>, poiché sono più efficienti e affidabili.
 
   Il metodo <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> consente di pianificare piccoli elementi di lavoro in background. ASP.NET tiene traccia di questi elementi e impedisce a IIS di chiudere improvvisamente il processo di lavoro finché non saranno stati completati tutti gli elementi di lavoro in background. Non è possibile chiamare questo metodo all'esterno del dominio dell'app gestita di ASP.NET.
 
   Le nuove proprietà <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> e <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> restituiscono valori booleani che indicano che le intestazioni di risposta sono state scritte. È possibile usare queste proprietà per accertarsi che le chiamate alle API come <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (che genera eccezioni se le intestazioni sono state scritte) abbiano esito positivo.
 
-- **Ridimensionamento nei controlli Windows Form.** Questa funzionalità è stata ampliata. È ora possibile usare l'impostazione DPI di sistema per ridimensionare i componenti dei seguenti controlli aggiuntivi (ad esempio, la freccia a discesa nelle caselle combinate):
+- **Ridimensionamento nei controlli Windows Form** Questa funzionalità è stata ampliata. È ora possibile usare l'impostazione DPI di sistema per ridimensionare i componenti dei seguenti controlli aggiuntivi (ad esempio, la freccia a discesa nelle caselle combinate):
 
   - <xref:System.Windows.Forms.ComboBox>
   - <xref:System.Windows.Forms.ToolStripComboBox>
@@ -1784,7 +1784,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
   </appSettings>
   ```
 
-- **Nuova funzionalità di flusso di lavoro.** Una funzionalità di gestione risorse che usa il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (e che quindi implementa l'interfaccia <xref:System.Transactions.IPromotableSinglePhaseNotification>) può usare il nuovo metodo <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> per richiedere quanto segue:
+- **Nuova funzionalità per il flusso di lavoro** Una funzionalità di gestione risorse che usa il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (e che quindi implementa l'interfaccia <xref:System.Transactions.IPromotableSinglePhaseNotification>) può usare il nuovo metodo <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> per richiedere quanto segue:
 
   - Promuova la transazione in transazione MSDTC (Microsoft Distributed Transaction Coordinator).
 
@@ -1792,7 +1792,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
   È possibile eseguire questa operazione nello stesso dominio dell'app; inoltre, non è necessario altro codice non gestito che interagisca con MSDTC per eseguire la promozione. Questo nuovo metodo può essere chiamato solo quando esiste una chiamata in attesa da <xref:System.Transactions?displayProperty=nameWithType> al metodo <xref:System.Transactions.IPromotableSinglePhaseNotification> di `Promote` implementata dall'integrazione promuovibile.
 
-- **Miglioramenti della profilatura.** Le seguenti nuove API di profilatura non gestite offrono funzioni di profilatura più solide:
+- **Miglioramenti apportati alla profilatura** Le seguenti nuove API di profilatura non gestite offrono funzioni di profilatura più solide:
 
   - [Struttura COR_PRF_ASSEMBLY_REFERENCE_INFO](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
   - [Enumerazione COR_PRF_HIGH_MONITOR](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
@@ -1803,7 +1803,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
   Le precedenti implementazioni di `ICorProfiler` supportavano il caricamento differito degli assembly dipendenti. Le nuove API di profilatura richiedono assembly dipendenti inseriti dal profiler per il caricamento immediato, invece di essere caricato dopo la completa inizializzazione dell'app. Questa modifica non incide sugli utenti delle API `ICorProfiler` esistenti.
 
-- **Miglioramenti apportati al debug.** Le seguenti nuove API di debug non gestite offrono una migliore integrazione con un profiler. È ora possibile accedere ai metadati inseriti dal profiler oltre alle variabili e al codice locali prodotti dalle richieste ReJIT del compilatore durante il debug di dump.
+- **Miglioramenti apportati al debug** Le seguenti nuove API di debug non gestite offrono una migliore integrazione con un profiler. È ora possibile accedere ai metadati inseriti dal profiler oltre alle variabili e al codice locali prodotti dalle richieste ReJIT del compilatore durante il debug di dump.
 
   - [Metodo SetWriteableMetadataUpdateMode](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
   - [Metodo EnumerateLocalVariablesEx](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
@@ -1812,7 +1812,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
   - [Metodo GetActiveReJitRequestILCode](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
   - [Metodo GetInstrumentedILMap](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
-- **Modifiche della traccia eventi.** .NET Framework 4.5.2 consente di eseguire attività out-of-process basate su Event Tracing for Windows (ETW) per una superficie di attacco maggiore. Ciò consente ai fornitori di Advanced Power Management (APM) di offrire strumenti semplici che tengono accuratamente traccia dei costi delle singole richieste e attività cross-thread.  Questi eventi vengono generati solo quando sono abilitati dai controller ETW; di conseguenza, le modifiche non influiscono sul codice ETW scritto in precedenza oppure sul codice eseguito con ETW disattivato.
+- **Modifiche apportate alla traccia eventi** .NET Framework 4.5.2 consente di eseguire attività out-of-process basate su Event Tracing for Windows (ETW) per una superficie di attacco maggiore. Ciò consente ai fornitori di Advanced Power Management (APM) di offrire strumenti semplici che tengono accuratamente traccia dei costi delle singole richieste e attività cross-thread.  Questi eventi vengono generati solo quando sono abilitati dai controller ETW; di conseguenza, le modifiche non influiscono sul codice ETW scritto in precedenza oppure sul codice eseguito con ETW disattivato.
 
 - **Promozione di una transazione e relativa conversione in integrazione durevole**
 
@@ -1920,7 +1920,7 @@ Per le nuove funzionalità in ASP.NET 4.5.1, vedere [Note sulla versione di ASP.
 
 - Supporto per il controllo delle versioni dei dati di confronto e ordinamento delle stringhe di impostazioni cultura. Vedere la classe <xref:System.Globalization.SortVersion>.
 
-- Miglioramento delle prestazioni in fase di recupero di risorse. Vedere [Creazione del package e distribuzione delle risorse](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
+- Miglioramento delle prestazioni in fase di recupero di risorse. Vedere [Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop](../resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
 - Miglioramenti delle compressioni ZIP per ridurre la dimensione di un file compresso. Vedere lo spazio dei nomi <xref:System.IO.Compression?displayProperty=nameWithType>.
 
@@ -1932,7 +1932,7 @@ Per le nuove funzionalità in ASP.NET 4.5.1, vedere [Note sulla versione di ASP.
 
 - Possibilità di calcolare i codici hash per le stringhe in base al dominio dell'applicazione. Vedere [\<Elemento UseRandomizedStringHashAlgorithm>](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- Il supporto per la reflection dei tipi è stato suddiviso tra le classi <xref:System.Type> e <xref:System.Reflection.TypeInfo>. Vedere [Reflection in .NET Framework per applicazioni Windows Store](../reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Il supporto per la reflection dei tipi è stato suddiviso tra le classi <xref:System.Type> e <xref:System.Reflection.TypeInfo>. Vedere [Reflection in .NET Framework per app di Windows Store](../reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -1944,7 +1944,7 @@ In .NET Framework 4.5 la libreria Managed Extensibility Framework (MEF) offre le
 
 - Più ambiti.
 
-- Subset di MEF che è possibile usare in fase di creazione delle app di Windows 8.x Store. Questo subset è disponibile come [pacchetto scaricabile](https://go.microsoft.com/fwlink/?LinkId=256238) dalla raccolta NuGet. Per installare il pacchetto, aprire il progetto in Visual Studio, scegliere **Gestisci pacchetti NuGet** dal menu **Progetto** ed eseguire la ricerca online del pacchetto `Microsoft.Composition`.
+- Subset di MEF che è possibile usare in fase di creazione delle app di Windows 8.x Store. Questo subset è disponibile come [pacchetto scaricabile](https://go.microsoft.com/fwlink/?LinkId=256238) dalla raccolta NuGet. Per installare il pacchetto, aprire il progetto in Visual Studio, scegliere **Gestisci pacchetti NuGet** dal menu **Progetto** ed eseguire una ricerca online del pacchetto `Microsoft.Composition`.
 
 Per altre informazioni, vedere [Managed Extensibility Framework (MEF)](../mef/index.md).
 
@@ -1958,7 +1958,7 @@ In .NET Framework 4.5 sono state aggiunte nuove funzionalità asincrone nei ling
 
 In .NET Framework 4.5 il generatore di file di risorse (Resgen.exe) consente di creare un file con estensione resw per l'uso nelle app di Windows 8.x Store da un file con estensione resources incorporato in un assembly .NET Framework. Per altre informazioni, vedere [Resgen.exe (generatore di file di risorse)](../tools/resgen-exe-resource-file-generator.md).
 
-L'ottimizzazione PGO gestita (Mpgo.exe) consente di migliorare i tempi di avvio delle applicazioni, l'uso della memoria (dimensione del working set) e la velocità effettiva attraverso l'ottimizzazione degli assembly di immagini nativi. Lo strumento da riga di comando genera dati di profilo per assembly di applicazioni di immagini nativi. Vedere [Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). A partire da Visual Studio 2013, è possibile usare Mpgo.exe per ottimizzare le app di Windows 8.x Store e quelle desktop.
+L'ottimizzazione PGO gestita (Mpgo.exe) consente di migliorare i tempi di avvio delle applicazioni, l'uso della memoria (dimensione del working set) e la velocità effettiva attraverso l'ottimizzazione degli assembly di immagini nativi. Lo strumento da riga di comando genera dati di profilo per assembly di applicazioni di immagini nativi. Vedere [Strumento Mpgo.exe (Managed Profile Guided Optimization)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). A partire da Visual Studio 2013, è possibile usare Mpgo.exe per ottimizzare le app di Windows 8.x Store e quelle desktop.
 
 <a name="parallel" />
 
@@ -1970,7 +1970,7 @@ In .NET Framework 4.5 vengono forniti diversi miglioramenti e nuove funzionalit�
 
 ### <a name="web"></a>Web
 
-In ASP.NET 4.5 e 4.5.1 vengono aggiunti associazione di modelli per Web Form, supporto di WebSocket, gestori asincroni, miglioramenti delle prestazioni e molte altre funzionalità. Per altre informazioni, vedere le seguenti risorse:
+In ASP.NET 4.5 e 4.5.1 vengono aggiunti associazione di modelli per Web Form, supporto di WebSocket, gestori asincroni, miglioramenti delle prestazioni e molte altre funzionalità. Per ulteriori informazioni, vedere le seguenti risorse:
 
 - [ASP.NET 4.5 e Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -2078,13 +2078,13 @@ In .NET Framework 4.5 sono state introdotte numerose nuove funzionalità in Wind
 
 - Funzionalità avanzate di Workflow Designer, tra cui:
 
-  - Funzionalità avanzate di ricerca dei flussi di lavoro in Visual Studio, incluse **Ricerca veloce** e **Cerca nei file**.
+  - Funzionalità avanzate di ricerca di flussi di lavoro in Visual Studio, tra cui **Ricerca veloce** e **Cerca nei file**.
 
   - Possibilità di creare automaticamente un'attività Sequence quando viene aggiunta una seconda attività figlio a un'attività del contenitore e di includere entrambe le attività nell'attività Sequence.
 
   - Supporto per panoramica, che consente di modificare la parte visibile di un flusso di lavoro senza ricorrere a barre di scorrimento.
 
-  - Una nuova visualizzazione **Struttura documento** che mostra i componenti di un flusso di lavoro in una visualizzazione in stile albero e consente di selezionare un componente nella visualizzazione **Struttura documento**.
+  - Nuova visualizzazione **Struttura documento** che mostra i componenti di un flusso di lavoro in una visualizzazione in stile albero e permette di selezionare un componente nella visualizzazione **Struttura documento**.
 
   - Possibilità di aggiungere annotazioni alle attività.
 

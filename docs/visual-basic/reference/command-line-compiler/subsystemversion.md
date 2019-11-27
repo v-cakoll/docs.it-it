@@ -40,7 +40,7 @@ Nella tabella seguente sono elencate le versioni comuni del sottosistema di Wind
 
 |Versione di Windows|Versione del sottosistema|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
+|Windows 2000|5,00|
 |Windows XP|5.01|
 |Windows Server 2003|5.02|
 |Windows Vista|6.00|
@@ -66,7 +66,7 @@ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende
 
 ## <a name="setting-this-option"></a>Impostazione di questa opzione
 
-To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
+Per impostare l'opzione del compilatore **-SubsystemVersion** in Visual Studio, è necessario aprire il file con estensione vbproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Vedere anche
 

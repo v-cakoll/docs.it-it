@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 In questa enumerazione la sequenza di elementi viene forzata a iniziare da `1` anziché da `0`. Tuttavia, si consiglia di includere una costante con valore pari a 0. Per altre informazioni, vedere [Tipi di enumerazione](../../programming-guide/enumeration-types.md).
 
-Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](../builtin-types/char.md) non può essere un tipo sottostante di un'enumerazione. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
+Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](../builtin-types/char.md) non può essere un tipo sottostante di un'enumerazione. Il tipo sottostante predefinito degli elementi dell'enumerazione è [int](../builtin-types/integral-numeric-types.md). Per dichiarare un'enumerazione di un altro tipo integrale, ad esempio [byte](../builtin-types/integral-numeric-types.md), usare i due punti dopo l'identificatore seguito dal tipo, come illustrato nell'esempio seguente.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

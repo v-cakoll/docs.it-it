@@ -36,7 +36,7 @@ Questa sezione descrive le interfacce non gestite che forniscono l'accesso ai me
  Fornisce metodi per eseguire il mapping delle librerie dei tipi alle relative firme di metadati e per eseguire la conversione da una all'altra.  
   
  [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` è obsoleto. In alternativa, utilizzare `IMetaDataDispenserEx`.  
+ `IMetaDataDispenser` è obsoleto. In alternativa, usare `IMetaDataDispenserEx` .  
   
  [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  Fornisce metodi che eseguono il mapping di aree di memoria per la creazione o modifica dei metadati.  

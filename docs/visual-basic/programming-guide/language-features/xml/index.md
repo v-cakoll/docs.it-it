@@ -1,6 +1,6 @@
 ---
 title: XML
-description: Learn how to use XML and LINQ to XML features in your Visual Basic code.
+description: Informazioni su come usare le funzionalità XML e LINQ to XML nel codice di Visual Basic.
 ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
@@ -14,7 +14,7 @@ ms.locfileid: "74330796"
 ---
 # <a name="xml-in-visual-basic"></a>XML in Visual Basic
 
-Visual Basic provides integrated language support that enables it to interact with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic fornisce il supporto del linguaggio integrato che consente di interagire con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
 
@@ -22,7 +22,7 @@ Visual Basic provides integrated language support that enables it to interact wi
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Describes how Visual Basic supports [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Viene descritto il modo in cui Visual Basic supporta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|Descrive come creare oggetti valore letterale XML usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Modifica di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Descrive come caricare e analizzare codice XML usando Visual Basic.|  
 |[Accesso a XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Descrive le proprietà Axis XML e i metodi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per l'accesso a elementi e attributi XML.|  

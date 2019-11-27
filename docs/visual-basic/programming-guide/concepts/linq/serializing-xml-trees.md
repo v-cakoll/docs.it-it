@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351041"
 ---
-# <a name="serializing-xml-trees-visual-basic"></a>Serializing XML Trees (Visual Basic)
+# <a name="serializing-xml-trees-visual-basic"></a>Serializzazione di strutture ad albero XML (Visual Basic)
 Per serializzazione di un albero XML si intende la generazione di codice XML dall'albero XML. È possibile eseguire la serializzazione in un file, in un'implementazione concreta della classe <xref:System.IO.TextWriter> o in un'implementazione concreta di un oggetto <xref:System.Xml.XmlWriter>.  
   
  È possibile controllare vari aspetti della serializzazione, ad esempio se impostare i rientri per il codice XML serializzato e se scrivere una dichiarazione XML.  
@@ -19,10 +19,10 @@ Per serializzazione di un albero XML si intende la generazione di codice XML dal
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Conservazione di spazi vuoti durante la serializzazione](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Viene descritto come controllare il comportamento dello spazio vuoto durante la serializzazione di strutture ad albero XML.|  
-|[Serializing with an XML Declaration (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Viene descritto come serializzare una struttura ad albero XML che include una dichiarazione XML.|  
+|[Serializzazione con una dichiarazione XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Viene descritto come serializzare una struttura ad albero XML che include una dichiarazione XML.|  
 |[Serializzazione in base a File, TextWriter e XmlWriter](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Viene descritto come serializzare un documento in un oggetto <xref:System.IO.File>, <xref:System.IO.TextWriter> o <xref:System.Xml.XmlWriter>.|  
-|[Serializing to an XmlReader (Invoking XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Viene descritto come creare un oggetto <xref:System.Xml.XmlReader> che consente a un altro modulo di leggere il contenuto di un albero XML.|  
+|[Serializzazione in un XmlReader (richiamo di XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Viene descritto come creare un oggetto <xref:System.Xml.XmlReader> che consente a un altro modulo di leggere il contenuto di un albero XML.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

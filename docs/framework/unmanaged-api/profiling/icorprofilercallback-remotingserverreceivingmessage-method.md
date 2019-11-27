@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445753"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Metodo ICorProfilerCallback::RemotingServerReceivingMessage
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Notifica al profiler che il processo ha ricevuto una chiamata al metodo remoto o una richiesta di attivazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,24 +35,24 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parametri  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ in Valore che corrisponderà al valore fornito in [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) in queste condizioni:  
   
-- Remoting GUID cookies are active.  
+- I cookie GUID di comunicazione remota sono attivi.  
   
-- The channel succeeds in transmitting the message.  
+- Il canale riesce a trasmettere il messaggio.  
   
-- GUID cookies are active on the client-side process.  
+- I cookie GUID sono attivi sul processo sul lato client.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Questo consente di associare facilmente le chiamate remote e la creazione di uno stack di chiamate logico.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ in Valore `true` se la chiamata è asincrona. in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ Se la richiesta di messaggio è asincrona, la richiesta può essere gestita da qualsiasi thread arbitrario.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

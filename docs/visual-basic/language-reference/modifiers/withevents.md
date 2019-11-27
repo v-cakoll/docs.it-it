@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350747"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+Specifica che una o più variabili membro dichiarate fanno riferimento a un'istanza di una classe che può generare eventi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+Quando una variabile viene definita utilizzando `WithEvents`, è possibile specificare in modo dichiarativo che un metodo gestisce gli eventi della variabile utilizzando la parola chiave `Handles`.
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+È possibile usare `WithEvents` solo a livello di classe o di modulo. Ciò significa che il contesto di dichiarazione per una variabile di `WithEvents` deve essere una classe o un modulo e non può essere un file di origine, uno spazio dei nomi, una struttura o una procedura.
 
-You cannot use `WithEvents` on a structure member.
+Non è possibile usare `WithEvents` per un membro di struttura.
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+È possibile dichiarare solo singole variabili, non matrici, con `WithEvents`.
 
 ## <a name="rules"></a>Regole
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**Tipi di elemento.** È necessario dichiarare le variabili di `WithEvents` come variabili oggetto in modo che possano accettare istanze di classe. Non è tuttavia possibile dichiararli come `Object`. È necessario dichiararli come la classe specifica che può generare gli eventi.
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+Il modificatore `WithEvents` può essere usato in questo contesto: [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Esempio
 

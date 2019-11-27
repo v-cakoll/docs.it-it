@@ -21,7 +21,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
  La tabella seguente elenca e descrive le principali classi usate nell'I/O di file.  
   
-|Class|Descrizione|  
+|Classe|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Offre metodi statici per creare, spostare ed enumerare directory e sottodirectory.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Offre metodi di istanza per creare, spostare ed enumerare directory e sottodirectory.|  
@@ -39,7 +39,7 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
  La tabella seguente elenca e descrive le principali classi usate per creare flussi.  
   
-|Class|Descrizione|  
+|Classe|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Aggiunge un livello di buffer per operazioni di lettura e scrittura in un altro flusso.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Supporta l'accesso casuale ai file tramite il metodo <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> apre file simultaneamente per impostazione predefinita, ma supporta anche operazioni asincrone.|  
@@ -64,5 +64,5 @@ Per un elenco più completo, vedere [Panoramica della libreria di classi](../../
 
 - [Composizione dei flussi](../../../../standard/io/composing-streams.md)
 - [I/O di file e di flussi](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

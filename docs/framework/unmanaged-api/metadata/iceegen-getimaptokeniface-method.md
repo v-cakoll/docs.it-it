@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435025"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>Metodo ICeeGen::GetIMapTokenIface
-Gets the interface referenced by the specified token.  
+Ottiene l'interfaccia a cui fa riferimento il token specificato.  
   
- This method is obsolete and should not be used.  
+ Questo metodo è obsoleto e non deve essere utilizzato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +37,14 @@ HRESULT GetIMapTokenIface (
   
 ## <a name="parameters"></a>Parametri  
  `pIMapToken`  
- [in, out] The metadata token for the interface to be returned.  
+ [in, out] Token di metadati per l'interfaccia da restituire.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

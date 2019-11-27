@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427846"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Metodo ISymUnmanagedWriter::SetSymAttribute
-Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
+Definisce un attributo personalizzato in base al nome. Questi attributi sono conservati nell'archivio simboli, a differenza degli attributi personalizzati dei metadati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +37,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] The metadata token for which the attribute is being defined.  
+ in Token di metadati per il quale viene definito l'attributo.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the attribute name.  
+ in Puntatore a un `WCHAR` che contiene il nome dell'attributo.  
   
  `cData`  
- [in] A `ULONG32` that indicates the size of the `data` array.  
+ in `ULONG32` che indica le dimensioni della matrice di `data`.  
   
  `data`  
- [in] The attribute value.  
+ in Valore dell'attributo.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

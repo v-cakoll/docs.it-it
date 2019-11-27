@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436046"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Metodo ICorProfilerInfo2::EnumModuleFrozenObjects
-Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.  
+Ottiene un enumeratore che consente l'iterazione sugli oggetti bloccati nel modulo specificato. Questo metodo è obsoleto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,19 +35,19 @@ HRESULT EnumModuleFrozenObjects(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] The ID of the module that contains the frozen objects to be enumerated.  
+ in ID del modulo che contiene gli oggetti bloccati da enumerare.  
   
  `ppEnum`  
- [out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.  
+ out Puntatore all'indirizzo di un'interfaccia [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) , che enumera gli oggetti bloccati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
+ **Versioni .NET Framework:** 3,5, 3,0 sp1, 3,0, 2,0 SP1, 2,0  
   
 ## <a name="see-also"></a>Vedere anche
 

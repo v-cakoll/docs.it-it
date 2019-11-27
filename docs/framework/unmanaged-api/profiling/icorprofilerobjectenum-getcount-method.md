@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428254"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Metodo ICorProfilerObjectEnum::GetCount
-Gets the total number of frozen objects in the collection.  
+Ottiene il numero totale di oggetti bloccati nella raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parametri  
  `pcelt`  
- [out] A pointer to the number of frozen objects in the collection.  
+ out Puntatore al numero di oggetti bloccati nella raccolta.  
   
- This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
+ Questo metodo restituirà sempre zero in .NET Framework versione 3,5 Service Pack 1 (SP1) e versioni successive.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

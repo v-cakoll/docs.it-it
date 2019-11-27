@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346996"
 ---
 # <a name="permission-denied-visual-basic"></a>Autorizzazione negata (Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+È stato effettuato un tentativo di scrittura in un disco protetto da scrittura o di accesso a un file bloccato.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. Per aprire un file protetto da scrittura, modificare l'attributo di protezione da scrittura del file.  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. Verificare che il file non sia bloccato da un altro processo e attendere che venga aperto il file fino a quando non viene rilasciato da un altro processo.  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. Per accedere al registro di sistema, verificare che le autorizzazioni utente includano questo tipo di accesso al registro di sistema.  
   
 ## <a name="see-also"></a>Vedere anche
 

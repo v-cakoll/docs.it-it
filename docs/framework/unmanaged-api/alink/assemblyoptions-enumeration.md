@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446592"
 ---
 # <a name="assemblyoptions-enumeration"></a>Enumerazione AssemblyOptions
-Enumerates the assembly options.  
+Enumera le opzioni dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,35 +52,35 @@ typedef enum _AssemblyOptions {
 }   AssemblyOptions;  
 ```  
   
-## <a name="fields"></a>Campi  
+## <a name="fields"></a>Fields  
   
 |Campo|Descrizione|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String: rappresenta il titolo dell'assembly.|  
+|optAssemDescription|String: contiene la descrizione dell'assembly.|  
+|optAssemConfig|Stringa: contiene la configurazione dell'assembly.|  
+|optAssemOS|Codificata come stringa: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|Stringa: contiene le impostazioni locali dell'assembly.|  
+|optAssemVersion|Codificata come stringa: "Major. minor. Build. Revision".|  
+|optAssemCompany|Stringa: contiene l'azienda.|  
+|optAssemProduct|Stringa: contiene il nome del prodotto.|  
+|optAssemProductVersion|Stringa (nota anche come InformationalVersion).|  
+|optAssemCopyright|Stringa: contiene le informazioni sul copyright.|  
+|optAssemTrademark|Stringa: contiene le informazioni sul marchio.|  
+|optAssemKeyFile|Stringa (nome file).|  
+|optAssemKeyName|Stringa (il nome della chiave).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool (noto anche come DelaySign).|  
+|optAssemFileVersion|Codificata in formato stringa come "Major. minor. Build. Revision", uguale a ProductVersion.|  
+|optAssemSatelliteVer|Codificata in formato stringa come "Major. minor. Build. Revision".|  
+|optLastAssemOption|Contatore del numero di elementi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** alink.h  
+ **Intestazione:** ALink. h  
   
- **Library**: alink.dll  
+ **Libreria**: ALink. dll  
   
 ## <a name="see-also"></a>Vedere anche
 

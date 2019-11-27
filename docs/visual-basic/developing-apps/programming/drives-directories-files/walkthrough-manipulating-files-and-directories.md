@@ -34,7 +34,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1. Scegliere **Nuovo progetto** dal menu **File**.  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
+     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
 2. Nel riquadro **Modelli installati** espandere **Visual Basic**, quindi fare clic su **Windows**. Nel riquadro **Modelli** al centro scegliere **Windows Forms Application**.  
   
@@ -44,12 +44,12 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 4. Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-    |Control|proprietà|Value|  
+    |Controllo|Proprietà|Value|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esaminare**|  
-    |**CheckBox**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**Pulsante**|**Nome**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Nome**<br /><br /> **per**|`examineButton`<br /><br /> **Esaminare**|  
+    |**CheckBox**|**Nome**<br /><br /> **per**|`saveCheckBox`<br /><br /> **Salva risultati**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  

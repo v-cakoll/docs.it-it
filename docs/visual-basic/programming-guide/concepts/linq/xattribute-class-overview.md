@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349331"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>Panoramica della classe XAttribute (Visual Basic)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
   
 ## <a name="overview"></a>Panoramica  
@@ -20,12 +20,12 @@ Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:S
 ## <a name="the-xattribute-constructor"></a>Costruttore XAttribute  
  Il seguente costruttore della classe <xref:System.Xml.Linq.XAttribute> è quello usato più comunemente:  
   
-|Costruttore|Descrizione|  
+|Costruttore|description|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XAttribute>. L'argomento `name` specifica il nome dell'attributo, mentre `content` ne specifica il contenuto.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Creazione di un elemento con un attributo  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+ Il codice seguente illustra un elemento che contiene un attributo che usa valori letterali XML in Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -76,4 +76,4 @@ Console.WriteLine(c)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Panoramica della programmazione LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

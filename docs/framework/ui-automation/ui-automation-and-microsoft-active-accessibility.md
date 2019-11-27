@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 99909f29e3228e7bc140ebdc888d4663bcbca0b5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040524"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436646"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automazione interfaccia utente e Microsoft Active Accessibility
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per le informazioni più aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere API di automazione [Windows: ](https://go.microsoft.com/fwlink/?LinkID=156746)di automazione interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  Microsoft Active Accessibility era la soluzione precedente per rendere accessibili le applicazioni. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è il nuovo modello di accessibilità per Microsoft Windows ed è progettato per soddisfare le esigenze dei prodotti Assistive Technology e degli strumenti di test automatizzati. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] offre molti miglioramenti rispetto a Active Accessibility.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73040524"
   
  Lo spostamento tra elementi, in Active Accessibility, è spaziale (ad esempio, lo spostamento all'elemento che si trova a sinistra sullo schermo), logico (ad esempio, passare alla voce di menu successiva o all'elemento successivo nell'ordine di tabulazione in una finestra di dialogo) o gerarchico ( ad esempio, lo sposti del primo elemento figlio in un contenitore o dall'elemento figlio al relativo padre. Lo spostamento gerarchico è complicato dal fatto che gli elementi figlio non sono sempre oggetti che implementano `IAccessible`.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tutti gli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sono oggetti <xref:System.Windows.Automation.AutomationElement> che supportano la stessa funzionalità di base. Dal punto di vista del provider, si tratta di oggetti che implementano un'interfaccia ereditata da <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Lo spostamento è prevalentemente gerarchico: dagli elementi padre agli elementi figlio e da un elemento di pari livello al successivo. Lo spostamento tra elementi di pari livello include un elemento logico, in quanto può seguire l'ordine di tabulazione. È possibile spostarsi da qualsiasi punto iniziale, usando qualsiasi visualizzazione filtrata della struttura ad albero, usando la classe <xref:System.Windows.Automation.TreeWalker>. È inoltre possibile spostarsi su determinati elementi figlio o discendenti tramite <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> e <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; ad esempio, è estremamente facile recuperare tutti gli elementi di una finestra di dialogo che supportano un pattern di controllo specificato.  
+ In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tutti gli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sono oggetti <xref:System.Windows.Automation.AutomationElement> che supportano la stessa funzionalità di base. Dal punto di vista del provider, si tratta di oggetti che implementano un'interfaccia ereditata da <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. La navigazione è principalmente gerarchica: dagli elementi padre agli elementi figlio e da un elemento di pari livello a quello successivo. (Lo spostamento tra gli elementi di pari livello ha un elemento logico, in quanto può seguire l'ordine di tabulazione). È possibile spostarsi da qualsiasi punto iniziale, usando qualsiasi visualizzazione filtrata della struttura ad albero, usando la classe <xref:System.Windows.Automation.TreeWalker>. È inoltre possibile spostarsi su determinati elementi figlio o discendenti tramite <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> e <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; ad esempio, è estremamente facile recuperare tutti gli elementi di una finestra di dialogo che supportano un pattern di controllo specificato.  
   
  La navigazione in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è più coerente rispetto a Active Accessibility. Alcuni elementi, ad esempio elenchi a discesa e finestre popup, vengono visualizzati due volte nella struttura ad albero Active Accessibility e la navigazione da essi può produrre risultati imprevisti. In realtà non è possibile implementare correttamente Active Accessibility per un controllo Rebar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] consente l'assegnazione di nuovi elementi padre e il riposizionamento, pertanto un elemento può essere posizionato in qualsiasi punto dell'albero nonostante la gerarchia imposta dalla proprietà delle finestre.  
   
@@ -70,22 +70,22 @@ ms.locfileid: "73040524"
   
 |Ruolo Active Accessibility|Tipo di controllo di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|ROLE_SYSTEM_PUSHBUTTON|Button|  
+|ROLE_SYSTEM_PUSHBUTTON|Pulsante|  
 |ROLE_SYSTEM_CLIENT|Calendar|  
 |ROLE_SYSTEM_CHECKBUTTON|Casella di controllo|  
 |ROLE_SYSTEM_COMBOBOX|Casella combinata|  
-|ROLE_SYSTEM_CLIENT|Personalizzato|  
+|ROLE_SYSTEM_CLIENT|Personalizzata|  
 |ROLE_SYSTEM_LIST|Griglia dei dati|  
 |ROLE_SYSTEM_LISTITEM|Elemento dei dati|  
-|ROLE_SYSTEM_DOCUMENT|Document|  
+|ROLE_SYSTEM_DOCUMENT|Documento|  
 |ROLE_SYSTEM_TEXT|Edit|  
-|ROLE_SYSTEM_GROUPING|Raggruppa|  
+|ROLE_SYSTEM_GROUPING|Gruppo|  
 |ROLE_SYSTEM_LIST|Intestazione|  
 |ROLE_SYSTEM_COLUMNHEADER|Voce di intestazione|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
-|ROLE_SYSTEM_GRAPHIC|Image|  
-|ROLE_SYSTEM_LIST|List|  
-|ROLE_SYSTEM_LISTITEM|Elemento dell'elenco|  
+|ROLE_SYSTEM_GRAPHIC|Immagine|  
+|ROLE_SYSTEM_LIST|Elenco|  
+|ROLE_SYSTEM_LISTITEM|Elemento di elenco|  
 |ROLE_SYSTEM_MENUPOPUP|Menu|  
 |ROLE_SYSTEM_MENUBAR|Barra dei menu|  
 |ROLE_SYSTEM_MENUITEM|Voce di menu|  
@@ -94,15 +94,15 @@ ms.locfileid: "73040524"
 |ROLE_SYSTEM_RADIOBUTTON|Pulsante di opzione|  
 |ROLE_SYSTEM_SCROLLBAR|Barra di scorrimento|  
 |ROLE_SYSTEM_SEPARATOR|Separatore|  
-|ROLE_SYSTEM_SLIDER|Slider|  
+|ROLE_SYSTEM_SLIDER|Dispositivo di scorrimento|  
 |ROLE_SYSTEM_SPINBUTTON|Spinner|  
 |ROLE_SYSTEM_SPLITBUTTON|Pulsante di menu combinato|  
 |ROLE_SYSTEM_STATUSBAR|Barra di stato|  
-|ROLE_SYSTEM_PAGETABLIST|TAB|  
+|ROLE_SYSTEM_PAGETABLIST|Tab|  
 |ROLE_SYSTEM_PAGETAB|Voce di scheda|  
 |ROLE_SYSTEM_TABLE|Tabella|  
 |ROLE_SYSTEM_STATICTEXT|Testo|  
-|ROLE_SYSTEM_INDICATOR|Thumb|  
+|ROLE_SYSTEM_INDICATOR|Visualizzazione di anteprima|  
 |ROLE_SYSTEM_TITLEBAR|Barra del titolo|  
 |ROLE_SYSTEM_TOOLBAR|Barra degli strumenti|  
 |ROLE_SYSTEM_TOOLTIP|Descrizione comando|  
@@ -189,7 +189,7 @@ ms.locfileid: "73040524"
 |WinEvent|Identificatore di evento di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |--------------|--------------------------------------------------------------------------------------------|  
 |EVENT_OBJECT_ACCELERATORCHANGE|Modifica della proprietà<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|  
-|EVENT_OBJECT_CONTENTSCROLLED|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o  sulle barre di scorrimento associate|  
+|EVENT_OBJECT_CONTENTSCROLLED|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> sulle barre di scorrimento associate|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|Nessun equivalente|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|Nessun equivalente esatto; forse modifica della proprietà <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> o della proprietà <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|  
@@ -226,8 +226,8 @@ ms.locfileid: "73040524"
 |EVENT_SYSTEM_MINIMIZESTART|Modifica della proprietà<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
 |EVENT_SYSTEM_MOVESIZEEND|Modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
 |EVENT_SYSTEM_MOVESIZESTART|Modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
-|EVENT_SYSTEM_SCROLLINGEND|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o|  
-|EVENT_SYSTEM_SCROLLINGSTART|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o|  
+|EVENT_SYSTEM_SCROLLINGEND|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|EVENT_SYSTEM_SCROLLINGSTART|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
 |EVENT_SYSTEM_SOUND|Nessun equivalente|  
 |EVENT_SYSTEM_SWITCHEND|Nessun equivalente, ma un evento <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> segnala che una nuova applicazione ha ricevuto lo stato attivo|  
 |EVENT_SYSTEM_SWITCHSTART|Nessun equivalente|  
@@ -244,7 +244,7 @@ ms.locfileid: "73040524"
 |Nessun equivalente|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Alcuni scenari di personalizzazione di `IAccessible` richiedono il wrapping di un oggetto `IAccessible` di base e la chiamata a tale oggetto. Questa operazione ha implicazioni per la sicurezza, in quanto un componente parzialmente attendibile non deve essere un intermediario in un percorso di codice.  
   
  Il modello di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] rimuove la necessità che i provider effettuino chiamate ad altro codice di provider. Tutta l'aggregazione necessaria viene completata dal servizio di base di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  

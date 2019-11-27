@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438736"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>Metodo ICorProfilerInfo::GetTokenAndMetadataFromFunction
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+Ottiene il token di metadati e un'istanza dell'interfaccia di metadati che possono essere utilizzati per il token per la funzione specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ in ID della funzione per la quale ottenere il token di metadati e l'interfaccia dei metadati.  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ in ID di riferimento dell'interfaccia dei metadati per cui ottenere l'istanza di.  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ out Puntatore all'indirizzo dell'istanza dell'interfaccia dei metadati che può essere utilizzato per il token per la funzione specificata.  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ out Puntatore al token di metadati per la funzione specificata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

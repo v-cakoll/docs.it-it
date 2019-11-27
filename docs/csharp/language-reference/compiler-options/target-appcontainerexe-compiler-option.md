@@ -10,7 +10,7 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204529"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (opzioni del compilatore C#)
-Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore crea un file eseguibile Windows (con estensione exe) che deve essere eseguito in un contenitore di app. This option is equivalent to [-target:winexe](./target-winexe-compiler-option.md) but is designed for Windows 8.x Store apps.  
+Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore crea un file eseguibile Windows (con estensione exe) che deve essere eseguito in un contenitore di app. Questa opzione equivale a [-target: winexe](./target-winexe-compiler-option.md) , ma è progettata per le app di Windows 8. x Store.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -18,7 +18,7 @@ Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore 
 -target:appcontainerexe  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per richiedere che l'app venga eseguita in un contenitore di app, questa opzione imposta un bit nel file [eseguibile di tipo PE](/windows/desktop/Debug/pe-format). Quando questo bit è impostato, viene generato un errore se il metodo CreateProcess tenta di avviare il file eseguibile all'esterno di un contenitore di app.  
   
  A meno che non si usi l'opzione [-out](./out-compiler-option.md), il nome del file di output corrisponderà al nome del file di input contenente il metodo [Main](../../programming-guide/main-and-command-args/index.md).  
@@ -31,7 +31,7 @@ Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore 
   
 2. Nell'elenco **Tipo di output** della scheda **Applicazione** scegliere **Applicazione Windows Store**.  
   
-     This option is available only for Windows 8.x Store app templates.  
+     Questa opzione è disponibile solo per i modelli di app di Windows 8. x Store.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

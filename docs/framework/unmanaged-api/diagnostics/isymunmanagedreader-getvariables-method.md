@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429752"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Metodo ISymUnmanagedReader::GetVariables
-Returns a non-local variable, given its parent and name.  
+Restituisce una variabile non locale, data l'elemento padre e il nome.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] The parent of the variable.  
+ in Elemento padre della variabile.  
   
  `cVars`  
  [in] Dimensione della matrice `pVars`.  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ out Puntatore alla variabile che riceve il numero di variabili restituite in `pVars`.  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ out Puntatore alla variabile che riceve le variabili.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

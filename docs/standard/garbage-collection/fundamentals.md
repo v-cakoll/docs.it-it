@@ -20,9 +20,9 @@ ms.locfileid: "74330423"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 
-In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. offrendo i seguenti vantaggi:
+Nel Common Language Runtime (CLR), il Garbage Collector (GC) funge da gestore di memoria automatico. offrendo i seguenti vantaggi:
 
-- Enables you to develop your application without having to manually free memory.
+- Consente di sviluppare l'applicazione senza dover liberare manualmente la memoria.
 
 - Alloca gli oggetti nell'heap gestito in maniera efficiente.
 
@@ -30,19 +30,19 @@ In the common language runtime (CLR), the garbage collector (GC) serves as an au
 
 - Garantisce protezione per la memoria assicurando che un oggetto non possa usare il contenuto di un altro oggetto.
 
-This article describes the core concepts of garbage collection.
+Questo articolo descrive i concetti di base di Garbage Collection.
 
 ## <a name="fundamentals-of-memory"></a>Nozioni fondamentali sulla memoria
 
 Nell'elenco seguente sono riepilogati concetti importanti relativi alla memoria CLR.
 
-- Ogni processo dispone di un proprio spazio degli indirizzi virtuali distinto. All processes on the same computer share the same physical memory and the page file, if there is one.
+- Ogni processo dispone di un proprio spazio degli indirizzi virtuali distinto. Tutti i processi nello stesso computer condividono la stessa memoria fisica e il file di paging, se presente.
 
 - Per impostazione predefinita, nei computer a 32 bit ogni processo dispone di uno spazio degli indirizzi virtuali in modalità utente da 2 GB.
 
 - Uno sviluppatore di applicazioni usa solo lo spazio degli indirizzi virtuali e non modifica mai direttamente la memoria fisica. Il Garbage Collector alloca e libera automaticamente la memoria virtuale nell'heap gestito.
 
-  If you are writing native code, you use Windows functions to work with the virtual address space. Queste funzioni allocano e liberano automaticamente la memoria virtuale negli heap nativi.
+  Se si scrive codice nativo, si usano le funzioni di Windows per lavorare con lo spazio degli indirizzi virtuali. Queste funzioni allocano e liberano automaticamente la memoria virtuale negli heap nativi.
 
 - La memoria virtuale può trovarsi in tre stati:
 
@@ -54,19 +54,19 @@ Nell'elenco seguente sono riepilogati concetti importanti relativi alla memoria 
 
 - Lo spazio degli indirizzi virtuali può diventare frammentato. Ciò significa che sono presenti blocchi liberi, noti anche come buchi, nello spazio degli indirizzi. Quando viene richiesta un'allocazione della memoria virtuale, il gestore di memoria virtuale deve trovare un singolo blocco libero con dimensioni sufficienti per soddisfare la richiesta di allocazione. Anche se si hanno 2 GB di spazio disponibile, l'allocazione che richiede 2 GB avrà esito negativo a meno che tutto lo spazio disponibile si trovi in un unico blocco di indirizzi.
 
-- You can run out of memory if there isn't enough virtual address space to reserve or physical space to commit.
+- Se lo spazio degli indirizzi virtuali da riservare o lo spazio fisico di cui eseguire il commit non è sufficiente, è possibile che si esaurisca la memoria.
 
-  The page file is used even if physical memory pressure (that is, demand for physical memory) is low. The first time physical memory pressure is high, the operating system must make room in physical memory to store data, and it backs up some of the data that is in physical memory to the page file. That data is not paged until it's needed, so it's possible to encounter paging in situations where the physical memory pressure is low.
+  Il file di paging viene utilizzato anche se la pressione della memoria fisica (ovvero la richiesta di memoria fisica) è bassa. La prima volta che la quantità di memoria fisica è elevata, il sistema operativo deve fare spazio nella memoria fisica per archiviare i dati e quindi eseguire il backup di alcuni dei dati presenti nella memoria fisica nel file di paging. I dati non vengono sottoposto a paging fino a quando non sono necessari, quindi è possibile che si verifichi il paging in situazioni in cui la pressione della memoria fisica è insufficiente.
 
 ## <a name="conditions-for-a-garbage-collection"></a>Condizioni per un'operazione di Garbage Collection
 
 Le operazioni di Garbage Collection vengono eseguite in presenza di una delle seguenti condizioni:
 
-- La memoria fisica del sistema è insufficiente. This is detected by either the low memory notification from the OS or low memory as indicated by the host.
+- La memoria fisica del sistema è insufficiente. Questa condizione viene rilevata dalla notifica di memoria insufficiente dal sistema operativo o da una memoria insufficiente come indicato dall'host.
 
 - La memoria usata dagli oggetti allocati nell'heap gestito supera una soglia accettabile. Questa soglia viene continuamente modificata durante l'esecuzione del processo.
 
-- Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> . Nella quasi totalità dei casi non è necessario chiamare questo metodo, in quanto il Garbage Collector viene eseguito senza interruzioni. Il metodo viene usato principalmente in situazioni eccezionali e per scopi di test.
+- Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType>. Nella quasi totalità dei casi non è necessario chiamare questo metodo, in quanto il Garbage Collector viene eseguito senza interruzioni. Il metodo viene usato principalmente in situazioni eccezionali e per scopi di test.
 
 ## <a name="the-managed-heap"></a>Heap gestito
 
@@ -74,7 +74,7 @@ Dopo essere stato inizializzato da CLR, il Garbage Collector alloca un segmento 
 
 Per ogni processo gestito esiste un heap gestito. Tutti i thread nel processo allocano memoria per gli oggetti sullo stesso heap.
 
-To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) function and reserves one segment of memory at a time for managed applications. The garbage collector also reserves segments, as needed, and releases segments back to the operating system (after clearing them of any objects) by calling the Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) function.
+Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) di Windows e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti, se necessario, e rilascia i segmenti al sistema operativo (dopo aver cancellato tutti gli oggetti) chiamando la funzione [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) di Windows.
 
 > [!IMPORTANT]
 > La dimensione dei segmenti allocati dal Garbage Collector è specifica dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.
@@ -90,7 +90,7 @@ L'heap può essere considerato l'insieme di due heap: l'[heap degli oggetti gran
 L'[heap degli oggetti grandi](large-object-heap.md) contiene oggetti molto grandi di dimensioni pari o superiori a 85.000 byte. Gli oggetti sull'heap oggetti grandi sono in genere matrici. È raro che un oggetto istanza sia particolarmente grande.
 
 > [!TIP]
-> You can [configure the threshold size](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) for objects to go on the large object heap.
+> È possibile [configurare le dimensioni della soglia](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) per gli oggetti da usare nell'heap degli oggetti grandi.
 
 ## <a name="generations"></a>Generazioni
 
@@ -98,21 +98,21 @@ L'heap è organizzato in generazioni, così da poter gestire oggetti di lunga du
 
 - **Generazione 0**. È la generazione più recente e contiene oggetti di breve durata. Un esempio di oggetto di breve durata è una variabile temporanea. Le operazioni di Garbage Collection vengono eseguite il più delle volte in questa generazione.
 
-  Newly allocated objects form a new generation of objects and are implicitly generation 0 collections. However, if they are large objects, they go on the large object heap in a generation 2 collection.
+  Gli oggetti appena allocati formano una nuova generazione di oggetti e sono implicitamente raccolte di generazione 0. Tuttavia, se si tratta di oggetti di grandi dimensioni, vengono inseriti nell'heap degli oggetti grandi in una raccolta di generazione 2.
 
   Gran parte degli oggetti vengono recuperati tramite Garbage Collection nella generazione 0 e non passano alla generazione successiva.
 
 - **Generazione 1**. Questa generazione contiene oggetti di breve durata e funge da buffer tra gli oggetti di breve durata e gli oggetti di lunga durata.
 
-- **Generazione 2**. Questa generazione contiene oggetti di lunga durata. An example of a long-lived object is an object in a server application that contains static data that's live for the duration of the process.
+- **Generazione 2**. Questa generazione contiene oggetti di lunga durata. Un esempio di oggetto di lunga durata è un oggetto in un'applicazione server contenente dati statici attivi per tutta la durata del processo.
 
 Le operazioni di Garbage Collection vengono eseguite in generazioni specifiche a seconda delle condizioni. Raccogliere una generazione significa raccogliere gli oggetti in quella generazione e in tutte le generazioni più recenti. Un'operazione di Garbage Collection di generazione 2 viene definita completa, in quanto recupera tutti gli oggetti in tutte le generazioni, vale a dire tutti gli oggetti nell'heap gestito.
 
 ### <a name="survival-and-promotions"></a>Esclusione e promozioni
 
-Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation. Gli oggetti esclusi da un'operazione di Garbage Collection di generazione 0 vengono promossi alla generazione 1; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 1 vengono promossi alla generazione 2; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 2 restano nella generazione 2.
+Gli oggetti che non vengono recuperati in una Garbage Collection sono noti come superstiti e vengono promossi alla generazione successiva. Gli oggetti esclusi da un'operazione di Garbage Collection di generazione 0 vengono promossi alla generazione 1; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 1 vengono promossi alla generazione 2; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 2 restano nella generazione 2.
 
-When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
+Quando il Garbage Collector rileva che il tasso di sopravvivenza è elevato in una generazione, aumenta la soglia delle allocazioni per tale generazione. La raccolta successiva ottiene una dimensione sostanziale della memoria recuperata. CLR bilancia continuamente due priorità: non consentire a un working set di un'applicazione di essere troppo grande ritardando Garbage Collection e non consentendo l'esecuzione troppo frequente dei Garbage Collection.
 
 ### <a name="ephemeral-generations-and-segments"></a>Generazioni e segmenti temporanei
 
@@ -120,7 +120,7 @@ Poiché gli oggetti nelle generazioni 0 e 1 sono di breve durata, queste vengono
 
 Le generazioni temporanee devono essere allocate nel segmento di memoria noto come segmento temporaneo. Ogni nuovo segmento acquisito dal Garbage Collector diventa il nuovo segmento temporaneo e contiene gli oggetti esclusi da un'operazione di Garbage Collection di generazione 0. Il segmento temporaneo precedente diventa il nuovo segmento di generazione 2.
 
-The size of the ephemeral segment varies depending on whether a system is 32-bit or 64-bit, and on the type of garbage collector it is running. Nella tabella che segue sono riportati i valori predefiniti.
+La dimensione del segmento temporaneo varia a seconda che un sistema sia a 32 bit o a 64 bit e sul tipo di Garbage Collector in esecuzione. Nella tabella che segue sono riportati i valori predefiniti.
 
 ||32 bit|64 bit|
 |-|-------------|-------------|
@@ -145,14 +145,14 @@ Un'operazione di Garbage Collection si compone delle seguenti fasi:
 
   Poiché le raccolte di generazione 2 possono occupare più segmenti, gli oggetti promossi alla generazione 2 possono essere spostati in un segmento meno recente. Gli oggetti esclusi di generazione 1 e 2 possono essere spostati in un segmento diverso, in quanto vengono promossi alla generazione 2.
 
-  Ordinarily, the large object heap (LOH) is not compacted, because copying large objects imposes a performance penalty. However, in .NET Core and in .NET Framework 4.5.1 and later, you can use the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to compact the large object heap on demand. In addition, the LOH is automatically compacted when a hard limit is set by specifying either:
+  In genere, l'heap degli oggetti grandi (LOH) non viene compattato, perché la copia di oggetti di grandi dimensioni impone una riduzione delle prestazioni. Tuttavia, in .NET Core e in .NET Framework 4.5.1 e versioni successive, è possibile usare la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> per comprimere l'heap oggetti grandi su richiesta. Inoltre, l'heap oggetti grandi viene compattato automaticamente quando si imposta un limite rigido specificando uno dei seguenti valori:
 
-  - a memory limit on a container, or
-  - the [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) or [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) run-time configuration options
+  - un limite di memoria per un contenitore o
+  - opzioni di configurazione della fase di esecuzione [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) o [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)
 
 Per stabilire se gli oggetti sono attivi, il Garbage Collector usa le seguenti informazioni:
 
-- **Radici dello stack**. Variabili dello stack fornite dal compilatore JIT e dal percorso di chiamate nello stack. JIT optimizations can lengthen or shorten regions of code within which stack variables are reported to the garbage collector.
+- **Radici dello stack**. Variabili dello stack fornite dal compilatore JIT e dal percorso di chiamate nello stack. Le ottimizzazioni JIT possono allungare o ridurre le aree di codice in cui vengono segnalate le variabili dello stack al Garbage Collector.
 
 - **Handle di Garbage Collection**. Handle che puntano agli oggetti gestiti e che possono essere allocati mediante codice utente o Common Language Runtime.
 
@@ -164,41 +164,41 @@ Nell'illustrazione seguente viene illustrato un thread che attiva un'operazione 
 
 ![Thread che attiva un'operazione di Garbage Collection](./media/gc-triggered.png)
 
-## <a name="manipulate-unmanaged-resources"></a>Manipulate unmanaged resources
+## <a name="manipulate-unmanaged-resources"></a>Modificare le risorse non gestite
 
-If managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because the garbage collector only tracks memory on the managed heap.
+Se gli oggetti gestiti fanno riferimento a oggetti non gestiti tramite i relativi handle di file nativi, è necessario liberare in modo esplicito gli oggetti non gestiti, perché il Garbage Collector tiene traccia solo della memoria nell'heap gestito.
 
-Users of the managed object may not dispose the native resources used by the object. To perform the cleanup, you can make the managed object finalizable. Finalization consists of cleanup actions that execute when the object is no longer in use. When the managed object dies, it performs cleanup actions that are specified in its finalizer method.
+È possibile che gli utenti dell'oggetto gestito non eliminino le risorse native utilizzate dall'oggetto. Per eseguire la pulizia, è possibile rendere l'oggetto gestito finalizzabile. La finalizzazione consiste in azioni di pulizia eseguite quando l'oggetto non è più in uso. Quando l'oggetto gestito si interrompe, esegue azioni di pulizia specificate nel metodo del finalizzatore.
 
 Quando viene individuato un oggetto finalizzabile inutilizzato, il relativo finalizzatore viene inserito in una coda in modo che vengano eseguite le azioni di pulizia, mentre l'oggetto stesso viene promosso alla generazione successiva. Sarà pertanto necessario attendere l'operazione di Garbage Collection successiva eseguita in tale generazione, che non sarà necessariamente l'operazione immediatamente successiva, per stabilire se l'oggetto è stato recuperato.
 
-For more information about finalization, see <xref:System.Object.Finalize?displayProperty=nameWithType>.
+Per ulteriori informazioni sulla finalizzazione, vedere <xref:System.Object.Finalize?displayProperty=nameWithType>.
 
 ## <a name="workstation-and-server-garbage-collection"></a>Operazione di Garbage Collection per workstation e server
 
-Il Garbage Collector si regola da sé e può funzionare in un'ampia varietà di scenari. You can use a [configuration file setting](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) to set the type of garbage collection based on the characteristics of the workload. CLR fornisce i seguenti tipi di Garbage Collection:
+Il Garbage Collector si regola da sé e può funzionare in un'ampia varietà di scenari. È possibile utilizzare un' [impostazione del file di configurazione](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) per impostare il tipo di Garbage Collection in base alle caratteristiche del carico di lavoro. CLR fornisce i seguenti tipi di Garbage Collection:
 
-- Workstation garbage collection (GC) is designed for client apps. It is the default GC flavor for standalone apps. For hosted apps, for example, those hosted by ASP.NET, the host determines the default GC flavor.
+- Workstation Garbage Collection (GC) è progettato per le app client. Si tratta della versione GC predefinita per le app autonome. Per le app ospitate, ad esempio quelle ospitate da ASP.NET, l'host determina la versione predefinita del catalogo globale.
 
-  Le operazioni di Garbage Collection per workstation possono essere eseguite in modalità simultanea o non simultanea. La modalità simultanea consente ai thread gestiti di continuare le operazioni durante un'operazione di Garbage Collection. [Background garbage collection](#background-workstation-garbage-collection) replaces [concurrent garbage collection](#concurrent-garbage-collection) in .NET Framework 4 and later versions.
+  Le operazioni di Garbage Collection per workstation possono essere eseguite in modalità simultanea o non simultanea. La modalità simultanea consente ai thread gestiti di continuare le operazioni durante un'operazione di Garbage Collection. [Garbage Collection in background](#background-workstation-garbage-collection) sostituisce [Garbage Collection simultanee](#concurrent-garbage-collection) in .NET Framework 4 e versioni successive.
 
 - Garbage Collection per server, per le applicazioni server che richiedono scalabilità e velocità effettiva elevata.
 
-  - In .NET Core, server garbage collection can be non-concurrent or background.
+  - In .NET Core, il Garbage Collection server può essere non simultaneo o in background.
 
-  - In .NET Framework 4.5 and later versions, server garbage collection can be non-concurrent or background (background garbage collection replaces concurrent garbage collection). In .NET Framework 4 and previous versions, server garbage collection is non-concurrent.
+  - In .NET Framework 4,5 e versioni successive, il server Garbage Collection può essere non simultaneo o uno sfondo (Garbage Collection in background sostituisce Garbage Collection simultanei). In .NET Framework 4 e versioni precedenti, Garbage Collection server non è simultaneo.
 
-The following illustration shows the dedicated threads that perform the garbage collection on a server:
+Nella figura seguente vengono illustrati i thread dedicati che eseguono il Garbage Collection in un server:
 
 ![Thread di Garbage Collection server](./media/gc-server.png)
 
-### <a name="compare-workstation-and-server-garbage-collection"></a>Compare workstation and server garbage collection
+### <a name="compare-workstation-and-server-garbage-collection"></a>Confrontare Garbage Collection workstation e server
 
 Di seguito sono riportate alcune considerazioni su threading e prestazioni per l'operazione di Garbage Collection per workstation:
 
-- La raccolta viene eseguita nel thread dell'utente che ha attivato l'operazione di Garbage Collection e mantiene la stessa priorità. Poiché i thread dell'utente vengono in genere eseguiti con priorità normale, il Garbage Collector (eseguito in un thread con priorità normale) deve competere con altri thread per il tempo CPU. (Threads that run native code are not suspended on either server or workstation garbage collection.)
+- La raccolta viene eseguita nel thread dell'utente che ha attivato l'operazione di Garbage Collection e mantiene la stessa priorità. Poiché i thread dell'utente vengono in genere eseguiti con priorità normale, il Garbage Collector (eseguito in un thread con priorità normale) deve competere con altri thread per il tempo CPU. I thread che eseguono codice nativo non vengono sospesi sul server o sulla workstation Garbage Collection.
 
-- Workstation garbage collection is always used on a computer that has only one processor, regardless of the [configuration setting](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- La workstation Garbage Collection viene sempre utilizzata in un computer con un solo processore, indipendentemente dall' [impostazione di configurazione](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 Di seguito sono riportate alcune considerazioni su threading e prestazioni per l'operazione di Garbage Collection per server:
 
@@ -208,26 +208,26 @@ Di seguito sono riportate alcune considerazioni su threading e prestazioni per l
 
 - Grazie all'utilizzo congiunto di più thread di Garbage Collection, le operazioni di Garbage Collection per server saranno più veloci delle operazioni per workstation in un heap di pari dimensioni.
 
-- I segmenti di Garbage Collection per server sono spesso di dimensioni maggiori. However, this is only a generalization: segment size is implementation-specific and is subject to change. Don't make assumptions about the size of segments allocated by the garbage collector when tuning your app.
+- I segmenti di Garbage Collection per server sono spesso di dimensioni maggiori. Tuttavia, questa è solo una generalizzazione: le dimensioni del segmento sono specifiche dell'implementazione ed è soggetta a modifiche. Non fare supposizioni sulle dimensioni dei segmenti allocati dal Garbage Collector durante l'ottimizzazione dell'app.
 
-- Le operazioni di Garbage Collection per server possono richiedere un utilizzo di risorse elevato. For example, imagine that there are 12 processes that use server GC running on a computer that has 4 processors. If all the processes happen to collect garbage at the same time, they would interfere with each other, as there would be 12 threads scheduled on the same processor. If the processes are active, it's not a good idea to have them all use server GC.
+- Le operazioni di Garbage Collection per server possono richiedere un utilizzo di risorse elevato. Si supponga, ad esempio, che siano presenti 12 processi che utilizzano il GC server in esecuzione in un computer con 4 processori. Se tutti i processi si verificano per la raccolta di Garbage Collection allo stesso tempo, interferiscono tra loro, perché sono presenti 12 thread pianificati nello stesso processore. Se i processi sono attivi, non è consigliabile che tutti usino il GC del server.
 
-If you're running hundreds of instances of an application, consider using workstation garbage collection with concurrent garbage collection disabled. Si avranno meno cambi di contesto e un possibile miglioramento delle prestazioni.
+Se si eseguono centinaia di istanze di un'applicazione, è consigliabile usare Garbage Collection workstation con Garbage Collection simultanee disabilitate. Si avranno meno cambi di contesto e un possibile miglioramento delle prestazioni.
 
 ## <a name="background-workstation-garbage-collection"></a>Garbage Collection della workstation in background
 
-In background workstation garbage collection, ephemeral generations (0 and 1) are collected as needed while the collection of generation 2 is in progress. Background workstation garbage collection is performed on a dedicated thread and applies only to generation 2 collections.
+Nel Garbage Collection della workstation in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. Il Garbage Collection della workstation in background viene eseguito su un thread dedicato e si applica solo alle raccolte di generazione 2.
 
-Background garbage collection is enabled by default and can be enabled or disabled with the [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration setting in .NET Framework apps or the [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) setting in .NET Core apps.
+Il Garbage Collection in background è abilitato per impostazione predefinita e può essere abilitato o disabilitato con l'impostazione di configurazione [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) nell'impostazione app .NET Framework o [System. GC. Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) nelle app .NET Core.
 
 > [!NOTE]
-> Background garbage collection replaces [concurrent garbage collection](#concurrent-garbage-collection) and is available in .NET Framework 4 and later versions. In .NET Framework 4, it's supported only for workstation garbage collection. Starting with .NET Framework 4.5, background garbage collection is available for both workstation and server garbage collection.
+> In background Garbage Collection sostituisce [Garbage Collection simultanei](#concurrent-garbage-collection) ed è disponibile in .NET Framework 4 e versioni successive. In .NET Framework 4 è supportato solo per Garbage Collection workstation. A partire da .NET Framework 4,5, Garbage Collection in background è disponibile sia per la workstation che per il Garbage Collection server.
 
 Una raccolta nelle generazioni temporanee durante un'operazione in background è definita Garbage Collection in primo piano. Durante l'esecuzione di un'operazione di Garbage Collection in primo piano, tutti i thread gestiti vengono sospesi.
 
-When background garbage collection is in progress and you've allocated enough objects in generation 0, the CLR performs a generation 0 or generation 1 foreground garbage collection. Il thread di Garbage Collection in background dedicato esegue controlli in corrispondenza di punti sicuri frequenti per stabilire se vi sia una richiesta di Garbage Collection in primo piano. In caso affermativo, la raccolta in background si autosospende in modo che possa essere eseguita l'operazione in primo piano. Una volta completata tale operazione, si ha la ripresa del thread di Garbage Collection in background dedicato e dei thread dell'utente.
+Quando lo sfondo Garbage Collection è in corso ed è stato allocato un numero sufficiente di oggetti nella generazione 0, CLR esegue una Garbage Collection di primo piano di generazione 0 o 1. Il thread di Garbage Collection in background dedicato esegue controlli in corrispondenza di punti sicuri frequenti per stabilire se vi sia una richiesta di Garbage Collection in primo piano. In caso affermativo, la raccolta in background si autosospende in modo che possa essere eseguita l'operazione in primo piano. Una volta completata tale operazione, si ha la ripresa del thread di Garbage Collection in background dedicato e dei thread dell'utente.
 
-La modalità in background elimina le restrizioni di allocazione imposte dalla modalità simultanea, dal momento che durante un'operazione di Garbage Collection in background è possibile eseguire operazioni temporanee. Background garbage collection can remove dead objects in ephemeral generations. It can also expand the heap if needed during a generation 1 garbage collection.
+La modalità in background elimina le restrizioni di allocazione imposte dalla modalità simultanea, dal momento che durante un'operazione di Garbage Collection in background è possibile eseguire operazioni temporanee. In background Garbage Collection possibile rimuovere gli oggetti inattivi in generazioni effimere. Può anche espandere l'heap, se necessario, durante un Garbage Collection di generazione 1.
 
 La figura seguente illustra l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato su una workstation:
 
@@ -235,11 +235,11 @@ La figura seguente illustra l'esecuzione in background di un'operazione di Garba
 
 ### <a name="background-server-garbage-collection"></a>Garbage Collection del server in background
 
-Starting with .NET Framework 4.5, background server garbage collection is the default mode for server garbage collection.
+A partire da .NET Framework 4,5, il server in background Garbage Collection è la modalità predefinita per Garbage Collection server.
 
-Background server garbage collection functions similarly to background workstation garbage collection, described in the previous section, but there are a few differences:
+Il server in background Garbage Collection funziona in modo analogo alla Garbage Collection workstation in background, descritto nella sezione precedente, ma esistono alcune differenze:
 
-- Background workstation garbage collection uses one dedicated background garbage collection thread, whereas background server garbage collection uses multiple threads. Typically, there's a dedicated thread for each logical processor.
+- Garbage Collection workstation in background usa uno sfondo dedicato Garbage Collection thread, mentre il server in background Garbage Collection usa più thread. In genere è presente un thread dedicato per ogni processore logico.
 
 - A differenza del thread di Garbage Collection in background per workstation, questi thread non scadono.
 
@@ -250,14 +250,14 @@ La figura seguente illustra l'esecuzione in background di un'operazione di Garba
 ## <a name="concurrent-garbage-collection"></a>Garbage Collection contemporanea
 
 > [!TIP]
-> This section applies to:
+> Questa sezione si applica a:
 >
-> - .NET Framework 3.5 and earlier for workstation garbage collection
-> - .NET Framework 4 and earlier for server garbage collection
+> - .NET Framework 3,5 e versioni precedenti per la workstation Garbage Collection
+> - .NET Framework 4 e versioni precedenti per Garbage Collection server
 >
-> Concurrent garbage is replaced by [background garbage collection](#background-workstation-garbage-collection) in later versions.
+> Il Garbage Collector simultaneo viene sostituito da [Garbage Collection in background](#background-workstation-garbage-collection) nelle versioni successive.
 
-In workstation or server garbage collection, you can [enable concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection. Questa opzione riguarda solo le operazioni di Garbage Collection nella generazione 2; le generazioni 0 e 1 sono sempre non simultanee in quanto terminano molto velocemente.
+In workstation o server Garbage Collection è possibile [abilitare la Garbage Collection simultanea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), che consente di eseguire i thread contemporaneamente a un thread dedicato che esegue l'Garbage Collection per la maggior parte della durata della raccolta. Questa opzione riguarda solo le operazioni di Garbage Collection nella generazione 2; le generazioni 0 e 1 sono sempre non simultanee in quanto terminano molto velocemente.
 
 La modalità simultanea consente alle applicazioni interattive una maggiore efficienza di risposta riducendo al minimo le pause di una raccolta. È possibile continuare a eseguire i thread gestiti per la maggior parte del tempo in cui viene eseguito il thread di Garbage Collection in modalità simultanea. Il risultato saranno pause più brevi durante l'esecuzione di un'operazione di Garbage Collection.
 
@@ -269,5 +269,5 @@ Nell'illustrazione riportata di seguito viene mostrata l'esecuzione simultanea d
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Configuration options for GC](../../core/run-time-config/garbage-collector.md)
+- [Opzioni di configurazione per GC](../../core/run-time-config/garbage-collector.md)
 - [Garbage collection](index.md)

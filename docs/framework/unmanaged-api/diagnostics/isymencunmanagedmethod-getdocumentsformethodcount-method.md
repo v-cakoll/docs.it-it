@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448665"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethodCount
-Gets the number of documents that this method has lines in.  
+Ottiene il numero di documenti in cui questo metodo contiene righe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.  
+ out Puntatore a un `ULONG32` che riceve le dimensioni del buffer necessarie per contenere i documenti.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Accesso ai form di un'applicazione
+title: Accesso ai moduli dell'applicazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -23,7 +23,7 @@ L'oggetto `My.Forms` rappresenta un modo semplice di accedere a un'istanza di og
 
  La tabella seguente elenca esempi che illustrano come accedere ai moduli di un'applicazione.  
   
-|Per|Vedere|  
+|A|Vedere|  
 |---|---|  
 |Accedere a un modulo da un altro modulo di un'applicazione.|[Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |Visualizzare i titoli di tutti i moduli aperti dell'applicazione.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

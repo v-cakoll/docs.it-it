@@ -26,7 +26,7 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) supporta le applicazioni create per .NET Framework da 4.0 a 4.6.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 È possibile installare [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) in Windows Vista.
 

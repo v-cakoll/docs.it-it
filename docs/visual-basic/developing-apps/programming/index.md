@@ -1,5 +1,5 @@
 ---
-title: Programming
+title: Programmazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
@@ -33,7 +33,7 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
  [Accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Include documentazione sulla modalità di accesso ai servizi Web a cui fa riferimento l'applicazione mediante l'oggetto `My.WebServices`.  
   
- [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Include documentazione sull'accesso alle impostazioni di un'applicazione mediante l'oggetto `My.Settings`.  
   
  [Elaborazione di unità, directory e file](drives-directories-files/index.md)  
@@ -43,5 +43,5 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
 
 - [Funzionalità del linguaggio Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Nozioni di base sulla programmazione](../../../visual-basic/programming-guide/concepts/index.md)
-- [raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
+- [Raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
 - [Sviluppo di applicazioni con Visual Basic](../../../visual-basic/developing-apps/index.md)

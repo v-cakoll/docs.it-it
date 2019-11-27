@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436341"
 ---
 # <a name="iceegengetilsection-method"></a>Metodo ICeeGen::GetIlSection
-Gets the section of the intermediate language code base referenced by the specified handle.  
+Ottiene la sezione della base di codice del linguaggio intermedio a cui fa riferimento l'handle specificato.  
   
- This method is obsolete and should not be used.  
+ Questo metodo è obsoleto e non deve essere utilizzato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +37,14 @@ HRESULT GetIlSection (
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- [in] The handle to the section to get.  
+ in Handle per la sezione da ottenere.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

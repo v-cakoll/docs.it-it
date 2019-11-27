@@ -73,13 +73,13 @@ Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere 
 
 ## <a name="related-articles"></a>Articoli correlati
 
-| Titolo | description |
+| Titolo | Descrizione |
 | ----- |------------ |
 | [Panoramica](overview.md) | Vengono fornite informazioni dettagliate per gli sviluppatori che realizzano app destinate a .NET Framework. |
 | [Guida all'installazione](../install/index.md) | Vengono fornite informazioni sull'installazione di .NET Framework. |  
 | [.NET Framework e rilascio fuori programma](the-net-framework-and-out-of-band-releases.md) | Vengono descritti i rilasci fuori programma di .NET Framework e viene illustrato come usarli nell'app. |
 | [Requisiti di sistema](system-requirements.md) | Vengono elencati i requisiti hardware e software per l'esecuzione di .NET Framework. |
-| [.NET Core e open source](net-core-and-open-source.md) | Viene descritto .NET Core in relazione a .NET Framework e viene spiegato come accedere ai progetti .NET Core open source. |
+| [Componenti di base e open-source di .NET](net-core-and-open-source.md) | Viene descritto .NET Core in relazione a .NET Framework e viene spiegato come accedere ai progetti .NET Core open source. |
 | [Documentazione di .NET Core](../../core/index.md) | Documentazione concettuale e di riferimento delle API per .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Viene descritto .NET Standard, una specifica con versione supportata dalle singole implementazioni di .NET per garantire la disponibilità di un set coerente di API in più piattaforme.
 

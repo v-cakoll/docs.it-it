@@ -44,20 +44,20 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdIn`|Specifica che il parametro viene passato alla chiamata al metodo.|  
+|`pdOut`|Specifica che il parametro viene passato dal metodo restituito.|  
+|`pdOptional`|Specifica che il parametro è facoltativo.|  
+|`pdReservedMask`|Riservato per uso interno da parte del Common Language Runtime.|  
+|`pdHasDefault`|Specifica che il parametro ha un valore predefinito.|  
+|`pdHasFieldMarshal`|Specifica che il parametro dispone di informazioni di marshalling.|  
 |`pdUnused`|Non usato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

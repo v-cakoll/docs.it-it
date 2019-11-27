@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429741"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Metodo ISymUnmanagedReader::Initialize
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati a cui verrà associato questo Reader, insieme al nome file del modulo.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> Questo metodo può essere chiamato una sola volta e deve essere chiamato prima di qualsiasi altro metodo Reader.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametri  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ in Interfaccia dell'utilità di importazione dei metadati a cui verrà associato il lettore.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ in Nome file del modulo. In alternativa, è possibile usare il parametro `pIStream`.  
   
  `searchPath`  
- [in] The path to search. Questo parametro è facoltativo.  
+ in Percorso in cui eseguire la ricerca. Questo parametro è facoltativo.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ in Il flusso di file, usato come alternativa al parametro filename.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="remarks"></a>Note  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. Il parametro `searchPath` è facoltativo.  
+ È necessario specificare solo uno dei parametri `filename` o `pIStream`, non entrambi. Il parametro `searchPath` è facoltativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443554"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Metodo IMetaDataAssemblyImport::EnumFiles
-Enumerates the files referenced in the current assembly manifest.  
+Enumera i file a cui si fa riferimento nel manifesto dell'assembly corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,30 +38,30 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [in, out] Puntatore all'enumeratore. Deve essere un valore null per la prima chiamata di questo metodo.  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ out Matrice utilizzata per archiviare i token di metadati del `mdFile`.  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ in Numero massimo di token di `mdFile` che possono essere inseriti nel `rFiles`.  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ out Il numero di token `mdFile` effettivamente inseriti in `rFiles`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

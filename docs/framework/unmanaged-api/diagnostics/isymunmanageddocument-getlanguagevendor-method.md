@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449165"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>Metodo ISymUnmanagedDocument::GetLanguageVendor
-Gets the language vendor of this document.  
+Ottiene il fornitore del linguaggio del documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ HRESULT GetLanguageVendor(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a variable that receives the language vendor.  
+ out Puntatore a una variabile che riceve il fornitore del linguaggio.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds.  
+ S_OK se il metodo ha esito positivo.  
   
 ## <a name="see-also"></a>Vedere anche
 

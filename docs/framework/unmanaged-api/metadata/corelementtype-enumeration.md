@@ -23,7 +23,7 @@ ms.locfileid: "74443624"
 ---
 # <a name="corelementtype-enumeration"></a>Enumerazione CorElementType
 
-Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
+Specifica un Common Language Runtime <xref:System.Type>, un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,72 +77,72 @@ typedef enum CorElementType {
 
 ## <a name="members"></a>Members
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Used internally.|
-|`ELEMENT_TYPE_VOID`|A void type.|
-|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
+|`ELEMENT_TYPE_END`|Utilizzato internamente.|
+|`ELEMENT_TYPE_VOID`|Tipo void.|
+|`ELEMENT_TYPE_BOOLEAN`|Tipo booleano|
 |`ELEMENT_TYPE_CHAR`|Tipo carattere.|
-|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
+|`ELEMENT_TYPE_I1`|Intero con segno a 1 byte.|
 |`ELEMENT_TYPE_U1`|Intero senza segno a 1 byte.|
-|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
-|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
-|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
-|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
-|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
-|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
-|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
-|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
-|`ELEMENT_TYPE_STRING`|A System.String type.|
-|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
-|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
-|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
-|`ELEMENT_TYPE_CLASS`|A class type modifier.|
-|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
-|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
-|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
+|`ELEMENT_TYPE_I2`|Intero con segno a 2 byte.|
+|`ELEMENT_TYPE_U2`|Intero senza segno a 2 byte.|
+|`ELEMENT_TYPE_I4`|Intero con segno a 4 byte.|
+|`ELEMENT_TYPE_U4`|Intero senza segno a 4 byte.|
+|`ELEMENT_TYPE_I8`|Intero con segno a 8 byte.|
+|`ELEMENT_TYPE_U8`|Intero senza segno a 8 byte.|
+|`ELEMENT_TYPE_R4`|Virgola mobile A 4 byte.|
+|`ELEMENT_TYPE_R8`|Virgola mobile a 8 byte.|
+|`ELEMENT_TYPE_STRING`|Tipo System. String.|
+|`ELEMENT_TYPE_PTR`|Modificatore di tipo puntatore.|
+|`ELEMENT_TYPE_BYREF`|Modificatore di tipo riferimento.|
+|`ELEMENT_TYPE_VALUETYPE`|Modificatore di tipo di valore.|
+|`ELEMENT_TYPE_CLASS`|Modificatore del tipo di classe.|
+|`ELEMENT_TYPE_VAR`|Modificatore di tipo di variabile di classe.|
+|`ELEMENT_TYPE_ARRAY`|Modificatore di tipo matrice multidimensionale.|
+|`ELEMENT_TYPE_GENERICINST`|Modificatore di tipo per i tipi generici.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Riferimento tipizzato.|
-|`ELEMENT_TYPE_I`|Size of a native integer.|
-|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
-|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
-|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
-|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
-|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
-|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
-|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
-|`ELEMENT_TYPE_INTERNAL`|Used internally.|
+|`ELEMENT_TYPE_I`|Dimensioni di un intero nativo.|
+|`ELEMENT_TYPE_U`|Dimensioni di un intero nativo senza segno.|
+|`ELEMENT_TYPE_FNPTR`|Puntatore a una funzione.|
+|`ELEMENT_TYPE_OBJECT`|Tipo System. Object.|
+|`ELEMENT_TYPE_SZARRAY`|Modificatore di tipo matrice A dimensione inferiore a zero singolo.|
+|`ELEMENT_TYPE_MVAR`|Modificatore di tipo di variabile di metodo.|
+|`ELEMENT_TYPE_CMOD_REQD`|Modificatore obbligatorio del linguaggio C.|
+|`ELEMENT_TYPE_CMOD_OPT`|Modificatore facoltativo del linguaggio C.|
+|`ELEMENT_TYPE_INTERNAL`|Utilizzato internamente.|
 |`ELEMENT_TYPE_MAX`|Tipo non valido.|
-|`ELEMENT_TYPE_MODIFIER`|Used internally.|
-|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
-|`ELEMENT_TYPE_PINNED`|Used internally.|
+|`ELEMENT_TYPE_MODIFIER`|Utilizzato internamente.|
+|`ELEMENT_TYPE_SENTINEL`|Modificatore di tipo che è una sentinella per un elenco di un numero variabile di parametri.|
+|`ELEMENT_TYPE_PINNED`|Utilizzato internamente.|
 
 ## <a name="remarks"></a>Note
 
-The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
+I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Un valore del modificatore di tipo `CorElementType` viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il valore del modificatore di tipo `CorElementType` può essere un valore di tipo semplice `CorElementType`, un token di metadati o un altro valore, come specificato nella tabella seguente.
 
 > [!NOTE]
-> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
+> Tutti i numeri *(numero, numero*di *argomenti*, *token di metadati*, *rango*, *conteggio*e *limite*) vengono archiviati come numeri interi compressi. Per informazioni dettagliate, vedere l' [Common Language Infrastructure standard ECMA-335-(CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) nel sito Web ECMA.
 
-|Type modifier|Formato|
+|Modificatore di tipo|Formato|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<un valore `CorElementType` >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<un valore `CorElementType` >|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<un token di metadati `mdTypeDef` >|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<un token di metadati `mdTypeDef` >|
+|`ELEMENT_TYPE_VAR`|Numero \<ELEMENT_TYPE_VAR >|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<un valore `CorElementType` > \<Rank > \<count1 > \<bound1 >... \<countn > \<>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<un token di metadati `mdTypeDef` > \<numero di argomenti > \<arg1 >... \<argN >|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusa la convenzione di chiamata >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<un valore `CorElementType` >|
+|`ELEMENT_TYPE_MVAR`|Numero \<ELEMENT_TYPE_MVAR >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<un token di metadati `mdTypeRef` o `mdTypeDef` >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<un token di metadati `mdTypeRef` o `mdTypeDef` >|
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Intestazione:** CorHdr. h
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

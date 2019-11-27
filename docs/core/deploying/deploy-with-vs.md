@@ -24,7 +24,7 @@ Le sezioni seguenti illustrano l'uso di Microsoft Visual Studio per creare i tip
 - Distribuzione autonoma
 - Distribuzione autonoma con dipendenze di terze parti
 
-For information on using Visual Studio to develop .NET Core applications, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Per informazioni sull'uso di Visual Studio per lo sviluppo di applicazioni .NET Core, vedere [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
 
@@ -32,7 +32,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Creare il progetto.
 
-   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
+   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK**.
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
@@ -71,7 +71,7 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
 
 1. Usare **Gestione pacchetti NuGet** per aggiungere al progetto un riferimento a un pacchetto NuGet e per installare il pacchetto se non è già disponibile nel sistema. Per aprire lo strumento per la gestione dei pacchetti, selezionare **Strumenti** > **Gestione pacchetti NuGet** > **Gestisci pacchetti NuGet per la soluzione**.
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. La scheda **Installati** elenca i pacchetti NuGet installati nel sistema. Se `Newtonsoft.Json` non è presente nell'elenco, selezionare la scheda **Sfoglia** e immettere "Newtonsoft.Json" nella casella di ricerca. Selezionare `Newtonsoft.Json`, selezionare il progetto nel riquadro destro e quindi selezionare **Installa**.
+1. Verificare che le dipendenze di terze parti, ad esempio `Newtonsoft.Json`, siano installate nel sistema e, in caso affermativo, installarle. La scheda **Installati** elenca i pacchetti NuGet installati nel sistema. Se `Newtonsoft.Json` non è presente nell'elenco, selezionare la scheda **Sfoglia** e immettere "Newtonsoft.Json" nella casella di ricerca. Selezionare `Newtonsoft.Json`, selezionare il progetto nel riquadro destro e quindi selezionare **Installa**.
 
 1. Se `Newtonsoft.Json` è già installato nel sistema aggiungerlo al progetto selezionando il progetto stesso nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
 
@@ -87,7 +87,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
-   Open the *Program.cs* or *Program.vb* file in your editor, and replace the auto-generated code with the following code. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
+   Aprire il file *Program.cs* o *Program. vb* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -144,7 +144,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
-      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. The profile's configuration settings are shown in the **Summary** section of the tab. **Target Runtime** identifies which runtime has been published, and **Target Location** identifies where the files for the self-contained deployment were written.
+      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo sono mostrate nella sezione **Riepilogo** della scheda. il **runtime di destinazione** identifica il runtime pubblicato e il **percorso di destinazione** identifica la posizione in cui sono stati scritti i file per la distribuzione autonoma.
 
       1. Per impostazione predefinita tutti i file pubblicati vengono salvati in una singola directory. Per praticità è consigliabile creare un profilo separato per ogni runtime di destinazione e inserire i file pubblicati in una directory specifica per la piattaforma. Questo richiede la creazione di un profilo di pubblicazione separato per ogni piattaforma di destinazione. A questo punto ricompilare l'applicazione per ogni piattaforma procedendo nel modo seguente:
 
@@ -192,7 +192,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
   
 1. Selezionare la posizione in cui Visual Studio pubblica l'applicazione.
 
-   If you're only publishing to a single platform, you can accept the default value in the **Choose a folder** text box; this publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish* directory.
+   Se si esegue la pubblicazione in una sola piattaforma, è possibile accettare il valore predefinito nella casella di testo **scegliere una cartella** . Questa operazione consente di pubblicare la distribuzione dipendente dal framework dell'applicazione nella directory *\<Project-directory > \bin\Release\netcoreapp2.1\publish* .
 
    Se esegue la pubblicazione in più di una piattaforma, aggiungere una stringa che identifica la piattaforma di destinazione. Se ad esempio si aggiunge la stringa "linux" al percorso del file, Visual Studio pubblica la distribuzione dipendente dal framework dell'applicazione nella directory *\<directory del progetto>\bin\Release\netcoreapp2.1\publish\linux*.
 
@@ -216,7 +216,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
 
-I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. A tale scopo, effettuare l'operazione seguente:
 
    1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 
@@ -268,7 +268,7 @@ Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'a
 
 1. Usare **Gestione pacchetti NuGet** per aggiungere al progetto un riferimento a un pacchetto NuGet e per installare il pacchetto se non è già disponibile nel sistema. Per aprire lo strumento per la gestione dei pacchetti, selezionare **Strumenti** > **Gestione pacchetti NuGet** > **Gestisci pacchetti NuGet per la soluzione**.
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. La scheda **Installati** elenca i pacchetti NuGet installati nel sistema. Se `Newtonsoft.Json` non è presente nell'elenco, selezionare la scheda **Sfoglia** e immettere "Newtonsoft.Json" nella casella di ricerca. Selezionare `Newtonsoft.Json`, selezionare il progetto nel riquadro destro e quindi selezionare **Installa**.
+1. Verificare che le dipendenze di terze parti, ad esempio `Newtonsoft.Json`, siano installate nel sistema e, in caso affermativo, installarle. La scheda **Installati** elenca i pacchetti NuGet installati nel sistema. Se `Newtonsoft.Json` non è presente nell'elenco, selezionare la scheda **Sfoglia** e immettere "Newtonsoft.Json" nella casella di ricerca. Selezionare `Newtonsoft.Json`, selezionare il progetto nel riquadro destro e quindi selezionare **Installa**.
 
 1. Se `Newtonsoft.Json` è già installato nel sistema aggiungerlo al progetto selezionando il progetto stesso nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
 

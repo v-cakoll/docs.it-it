@@ -77,7 +77,7 @@ Questa sezione elenca attività associate a creazione, eliminazione, spostamento
  [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Illustra come usare i metodi `My` per combinare percorsi di file.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Illustra l'oggetto `My.Computer.FileSystem` e i suoi membri.  

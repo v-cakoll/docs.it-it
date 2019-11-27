@@ -17,105 +17,105 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331462"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipi di dati dei risultati degli operatori (Visual Basic)
-Visual Basic determines the result data type of an operation based on the data types of the operands. In some cases this might be a data type with a greater range than that of either operand.  
+Visual Basic determina il tipo di dati del risultato di un'operazione in base ai tipi di dati degli operandi. In alcuni casi potrebbe trattarsi di un tipo di dati con un intervallo maggiore rispetto a quello di uno degli operandi.  
   
 ## <a name="data-type-ranges"></a>Intervalli dei tipi di dati  
- The ranges of the relevant data types, in order from smallest to largest, are as follows:  
+ Gli intervalli dei tipi di dati rilevanti, in ordine dal più piccolo al più grande, sono i seguenti:  
   
-- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — two possible values  
+- [Booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) : due valori possibili  
   
-- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 possible integral values  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 possibili valori integrali  
   
-- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E+4) possible integral values  
+- [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [ushort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) -65.536 (6.5... E + 4) possibili valori integrali  
   
-- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2...E+9) possible integral values  
+- [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4.294.967.296 (4.2... E + 9) possibili valori integrali  
   
-- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8...E+19) possible integral values  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULONG](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18.446.744.073.709.551.615 (1.8... E + 19) possibili valori integrali  
   
-- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5...E+29 possible integral values, maximum range 7.9...E+28 (absolute value)  
+- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) : 1.5... E + 29 possibili valori integrali, intervallo massimo 7.9... E + 28 (valore assoluto)  
   
-- [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) — maximum range 3.4...E+38 (absolute value)  
+- [Singolo](../../../visual-basic/language-reference/data-types/single-data-type.md) : intervallo massimo 3.4... E + 38 (valore assoluto)  
   
-- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — maximum range 1.7...E+308 (absolute value)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : intervallo massimo 1.7... E + 308 (valore assoluto)  
   
- For more information on Visual Basic data types, see [Data Types](../../../visual-basic/language-reference/data-types/index.md).  
+ Per ulteriori informazioni sui tipi di dati Visual Basic, vedere [tipi di dati](../../../visual-basic/language-reference/data-types/index.md).  
   
- If an operand evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the Visual Basic arithmetic operators treat it as zero.  
+ Se un operando non restituisce [nulla](../../../visual-basic/language-reference/nothing.md), gli operatori aritmetici Visual Basic lo considerano come zero.  
   
-## <a name="decimal-arithmetic"></a>Decimal Arithmetic  
- Note that the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type is neither floating-point nor integer.  
+## <a name="decimal-arithmetic"></a>Aritmetica decimale  
+ Si noti che il tipo di dati [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) non è né a virgola mobile né intero.  
   
- If either operand of a `+`, `–`, `*`, `/`, or `Mod` operation is `Decimal` and the other is not `Single` or `Double`, Visual Basic widens the other operand to `Decimal`. It performs the operation in `Decimal`, and the result data type is `Decimal`.  
+ Se uno degli operandi di un'operazione di `+`, `–`, `*`, `/`o `Mod` è `Decimal` e l'altro non è `Single` o `Double`, Visual Basic espande l'altro operando a `Decimal`. Esegue l'operazione in `Decimal`e il tipo di dati del risultato è `Decimal`.  
   
-## <a name="floating-point-arithmetic"></a>Floating-Point Arithmetic  
- Visual Basic performs most floating-point arithmetic in [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), which is the most efficient data type for such operations. However, if one operand is [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) and the other is not `Double`, Visual Basic performs the operation in `Single`. It widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+## <a name="floating-point-arithmetic"></a>Aritmetica a virgola mobile  
+ Visual Basic esegue la maggior parte delle operazioni aritmetiche a virgola mobile in [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), che rappresenta il tipo di dati più efficiente per tali operazioni. Tuttavia, se un operando è [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) e l'altro non è `Double`, Visual Basic esegue l'operazione in `Single`. Ogni operando viene ampliato in base al tipo di dati appropriato prima dell'operazione e il risultato ha tale tipo di dati.  
   
-### <a name="-and--operators"></a>/ and ^ Operators  
- The `/` operator is defined only for the [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), and [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data types. Visual Basic widens each operand as necessary to the appropriate data type before the operation, and the result has that data type.  
+### <a name="-and--operators"></a>Operatori/e ^  
+ L'operatore `/` viene definito solo per i tipi di dati [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)e [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) . Visual Basic allarga ogni operando in base al tipo di dati appropriato prima dell'operazione e il risultato ha tale tipo di dati.  
   
- The following table shows the result data types for the `/` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per l'operatore `/`. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 ||||||  
 |---|---|---|---|---|  
-||`Decimal`|`Single`|`Double`|Any integer type|  
-|`Decimal`|Decimale|Single|Double|Decimale|  
+||`Decimal`|`Single`|`Double`|Qualsiasi tipo Integer|  
+|`Decimal`|Decimal|Single|Double|Decimal|  
 |`Single`|Single|Single|Double|Single|  
 |`Double`|Double|Double|Double|Double|  
-|Any integer type|Decimale|Single|Double|Double|  
+|Qualsiasi tipo Integer|Decimal|Single|Double|Double|  
   
- The `^` operator is defined only for the `Double` data type. Visual Basic widens each operand as necessary to `Double` before the operation, and the result data type is always `Double`.  
+ L'operatore `^` viene definito solo per il tipo di dati `Double`. Visual Basic estende ogni operando in modo che sia necessario `Double` prima dell'operazione e il tipo di dati del risultato sia sempre `Double`.  
   
-## <a name="integer-arithmetic"></a>Integer Arithmetic  
- The result data type of an integer operation depends on the data types of the operands. In general, Visual Basic uses the following policies for determining the result data type:  
+## <a name="integer-arithmetic"></a>Aritmetica Integer  
+ Il tipo di dati del risultato di un'operazione Integer dipende dai tipi di dati degli operandi. In generale, Visual Basic utilizza i criteri seguenti per determinare il tipo di dati del risultato:  
   
-- If both operands of a binary operator have the same data type, the result has that data type. An exception is `Boolean`, which is forced to `Short`.  
+- Se entrambi gli operandi di un operatore binario hanno lo stesso tipo di dati, il risultato ha tale tipo di dati. Viene `Boolean`un'eccezione, che è forzato a `Short`.  
   
-- If an unsigned operand participates with a signed operand, the result has a signed type with at least as large a range as either operand.  
+- Se un operando non firmato partecipa a un operando firmato, il risultato ha un tipo firmato con almeno un valore di grandi dimensioni come operando.  
   
-- Otherwise, the result usually has the larger of the two operand data types.  
+- In caso contrario, il risultato è in genere il più grande dei due tipi di dati dell'operando.  
   
- Note that the result data type might not be the same as either operand data type.  
+ Si noti che il tipo di dati del risultato potrebbe non corrispondere al tipo di dati dell'operando.  
   
 > [!NOTE]
-> The result data type is not always large enough to hold all possible values resulting from the operation. An <xref:System.OverflowException> exception can occur if the value is too large for the result data type.  
+> Il tipo di dati del risultato non è sempre sufficiente per mantenere tutti i valori possibili risultante dall'operazione. È possibile che si verifichi un'eccezione <xref:System.OverflowException> se il valore è troppo grande per il tipo di dati del risultato.  
   
-### <a name="unary--and--operators"></a>Unary + and – Operators  
- The following table shows the result data types for the two unary operators, `+` and `–`.  
+### <a name="unary--and--operators"></a>Operatore unario + e-  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per i due operatori unari, `+` e `–`.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Unary `+`|Short|SByte|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|Unary `–`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimale|  
+|`+` unario|Short|SByte|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
+|`–` unario|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
   
-### <a name="-and--operators"></a><\< and >> Operators  
- The following table shows the result data types for the two bit-shift operators, `<<` and `>>`. Visual Basic treats each bit-shift operator as a unary operator on its left operand (the bit pattern to be shifted).  
+### <a name="-and--operators"></a>Operatori <\< e > >  
+ La tabella seguente illustra i tipi di dati dei risultati per i due operatori di spostamento di bit, `<<` e `>>`. Visual Basic considera ogni operatore di spostamento di bit come operatore unario sull'operando sinistro, ovvero lo schema di bit da spostare.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`<<`, `>>`|Short|SByte|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
   
- If the left operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`. The right operand (the number of bit positions to shift) must be `Integer` or a type that widens to `Integer`.  
+ Se l'operando sinistro è `Decimal`, `Single`, `Double`o `String`, Visual Basic tenta di convertirlo in `Long` prima dell'operazione e il tipo di dati del risultato è `Long`. L'operando destro (il numero di posizioni di bit da spostare) deve essere `Integer` o un tipo che si allarga a `Integer`.  
   
-### <a name="binary----and-mod-operators"></a>Binary +, –, \*, and Mod Operators  
- The following table shows the result data types for the binary `+` and `–` operators and the `*` and `Mod` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="binary----and-mod-operators"></a>Operatori binari +,-, \*e mod  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per gli operatori Binary `+` e `–` e gli operatori `*` e `Mod`. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimale|  
-|`SByte`|SByte|SByte|Short|Short|Integer|Integer|Long|Long|Decimale|  
+|`Boolean`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
+|`SByte`|SByte|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
 |`Byte`|Short|Short|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Integer|Integer|Long|Long|Decimale|  
+|`Short`|Short|Short|Short|Short|Integer|Integer|Long|Long|Decimal|  
 |`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Long|ULong|  
-|`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Decimale|  
+|`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Decimal|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
-|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimale|  
-|`ULong`|Decimale|Decimale|ULong|Decimale|ULong|Decimale|ULong|Decimale|ULong|  
+|`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimal|  
+|`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
 ### <a name="-operator"></a>Operatore \\  
- The following table shows the result data types for the `\` operator. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per l'operatore `\`. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -130,28 +130,28 @@ Visual Basic determines the result data type of an operation based on the data t
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- If either operand of the `\` operator is [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic attempts to convert it to [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) before the operation, and the result data type is `Long`.  
+ Se uno degli operandi dell'operatore `\` è [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)o [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic tenta di convertirlo in [Long](../../../visual-basic/language-reference/data-types/long-data-type.md) prima dell'operazione e il tipo di dati result è `Long`.  
   
-## <a name="relational-and-bitwise-comparisons"></a>Relational and Bitwise Comparisons  
- The result data type of a relational operation (`=`, `<>`, `<`, `>`, `<=`, `>=`) is always `Boolean`[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). The same is true for logical operations (`And`, `AndAlso`, `Not`, `Or`, `OrElse`, `Xor`) on `Boolean` operands.  
+## <a name="relational-and-bitwise-comparisons"></a>Confronti relazionali e bit per bit  
+ Il tipo di dati del risultato di un'operazione relazionale (`=`, `<>`, `<`, `>`, `<=``>=`) è sempre `Boolean`[tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Lo stesso vale per le operazioni logiche (`And`, `AndAlso`, `Not`, `Or`, `OrElse``Xor`) negli operandi `Boolean`.  
   
- The result data type of a bitwise logical operation depends on the data types of the operands. Note that `AndAlso` and `OrElse` are defined only for `Boolean`, and Visual Basic converts each operand as necessary to `Boolean` before performing the operation.  
+ Il tipo di dati del risultato di un'operazione logica bit per bit dipende dai tipi di dati degli operandi. Si noti che `AndAlso` e `OrElse` sono definiti solo per `Boolean`e Visual Basic converte ogni operando come necessario per `Boolean` prima di eseguire l'operazione.  
   
-### <a name="-----and--operators"></a>=, <>, \<, >, \<=, and >= Operators  
- If both operands are `Boolean`, Visual Basic considers `True` to be less than `False`. If a numeric type is compared with a `String`, Visual Basic attempts to convert the `String` to `Double` before the operation. A `Char` or `Date` operand can be compared only with another operand of the same data type. The result data type is always `Boolean`.  
+### <a name="-----and--operators"></a>=, < >, \<, >, \<= e > = operatori  
+ Se entrambi gli operandi sono `Boolean`, Visual Basic considera `True` inferiore a `False`. Se un tipo numerico viene confrontato con una `String`, Visual Basic tenta di convertire il `String` in `Double` prima dell'operazione. Un operando `Char` o `Date` può essere confrontato solo con un altro operando dello stesso tipo di dati. Il tipo di dati del risultato è sempre `Boolean`.  
   
-### <a name="bitwise-not-operator"></a>Bitwise Not Operator  
- The following table shows the result data types for the bitwise `Not` operator.  
+### <a name="bitwise-not-operator"></a>Operatore NOT bit per bit  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per l'operatore di `Not` bit per bit.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |`Not`|Booleano|SByte|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
   
- If the operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is `Long`.  
+ Se l'operando è `Decimal`, `Single`, `Double`o `String`, Visual Basic tenta di convertirlo in `Long` prima dell'operazione e il tipo di dati del risultato è `Long`.  
   
-### <a name="bitwise-and-or-and-xor-operators"></a>Bitwise And, Or, and Xor Operators  
- The following table shows the result data types for the bitwise `And`, `Or`, and `Xor` operators. Note that this table is symmetric; for a given combination of operand data types, the result data type is the same regardless of the order of the operands.  
+### <a name="bitwise-and-or-and-xor-operators"></a>Operatori and, or e XOR bit per bit  
+ Nella tabella seguente vengono illustrati i tipi di dati dei risultati per gli operatori di `And`, `Or`e `Xor` bit per bit. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
@@ -166,21 +166,21 @@ Visual Basic determines the result data type of an operation based on the data t
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Long|  
 |`ULong`|Long|Long|ULong|Long|ULong|Long|ULong|Long|ULong|  
   
- If an operand is `Decimal`, `Single`, `Double`, or `String`, Visual Basic attempts to convert it to `Long` before the operation, and the result data type is the same as if that operand had already been `Long`.  
+ Se un operando è `Decimal`, `Single`, `Double`o `String`, Visual Basic tenta di convertirlo in `Long` prima dell'operazione e il tipo di dati del risultato è identico a quello dell'operando che era già stato `Long`.  
   
 ## <a name="miscellaneous-operators"></a>Operatori vari  
- The `&` operator is defined only for concatenation of `String` operands. Visual Basic converts each operand as necessary to `String` before the operation, and the result data type is always `String`. For the purposes of the `&` operator, all conversions to `String` are considered to be widening, even if `Option Strict` is `On`.  
+ L'operatore `&` viene definito solo per la concatenazione di `String` operandi. Visual Basic converte ogni operando come necessario per `String` prima dell'operazione e il tipo di dati del risultato è sempre `String`. Ai fini dell'operatore `&`, tutte le conversioni da `String` vengono considerate più estese, anche se `Option Strict` è `On`.  
   
- The `Is` and `IsNot` operators require both operands to be of a reference type. The `TypeOf`...`Is` expression requires the first operand to be of a reference type and the second operand to be the name of a data type. In all these cases the result data type is `Boolean`.  
+ Gli operatori `Is` e `IsNot` richiedono che entrambi gli operandi siano di un tipo riferimento. L'espressione `TypeOf`...`Is` richiede che il primo operando sia di un tipo di riferimento e che il secondo operando sia il nome di un tipo di dati. In tutti questi casi il tipo di dati del risultato è `Boolean`.  
   
- The `Like` operator is defined only for pattern matching of `String` operands. Visual Basic attempts to convert each operand as necessary to `String` before the operation. The result data type is always `Boolean`.  
+ L'operatore `Like` viene definito solo per criteri di ricerca di `String` operandi. Visual Basic tenta di convertire ogni operando come necessario per `String` prima dell'operazione. Il tipo di dati del risultato è sempre `Boolean`.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
 - [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatori di confronto in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operatori](../../../visual-basic/language-reference/operators/index.md)
 - [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

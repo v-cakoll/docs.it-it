@@ -46,7 +46,7 @@ In C# 6 e versioni precedenti l'espressione di ricerca deve essere un'espression
 - un [char](../builtin-types/char.md).
 - una [string](../builtin-types/reference-types.md).
 - un [bool](bool.md).
-- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
+- valore [integrale](../builtin-types/integral-numeric-types.md) , ad esempio un `int` o una `long`.
 - un valore [enum](enum.md).
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore del compilatore, CS0163: "il controllo non può passare da un'etichetta case (\<etichetta case >) a un'altra".
 
 ```csharp
 switch (caseSwitch)
@@ -121,7 +121,7 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
 dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
 - Un valore letterale [bool](bool.md), ad esempio `true` o `false`.
-- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
+- Qualsiasi costante [integrale](../builtin-types/integral-numeric-types.md) , ad esempio un `int`, un `long`o un `byte`.
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](../builtin-types/char.md).

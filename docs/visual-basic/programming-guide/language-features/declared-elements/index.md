@@ -34,7 +34,7 @@ Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzi
   
 - [Istruzione Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
   

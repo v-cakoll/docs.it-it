@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428148"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>Metodo ICorProfilerObjectEnum::Reset
-Moves this enumerator's cursor to the starting position of the sequence.  
+Sposta il cursore dell'enumeratore nella posizione iniziale della sequenza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ HRESULT Reset ();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

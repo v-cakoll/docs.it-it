@@ -14,15 +14,15 @@ ms.locfileid: "74332120"
 # <a name="mycomputer-object"></a>Oggetto My.Computer
 Specifica le proprietà per la modifica dei componenti del computer, ad esempio audio, orologio, tastiera, file system e così via.  
   
-## <a name="remarks"></a>Note  
- Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer` , vedere <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+## <a name="remarks"></a>Osservazioni  
+ Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer` , vedere <xref:Microsoft.VisualBasic.Devices.Computer>. La classe di base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornisce i membri disponibili in tutti i progetti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Computer> (la classe di base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornisce i membri disponibili in tutti i progetti).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

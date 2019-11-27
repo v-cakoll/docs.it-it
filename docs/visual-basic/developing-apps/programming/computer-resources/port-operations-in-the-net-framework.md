@@ -24,7 +24,7 @@ Il modo più semplice per creare un oggetto <xref:System.IO.Ports.SerialPort> co
 
 In questa tabella sono elencate e descritte le enumerazioni principali usate per l'accesso alla porta seriale:
 
-|Enumerazione|Descrizione|
+|Enumerazione|description|
 |---|---|
 |<xref:System.IO.Ports.Handshake>|Specifica il protocollo di controllo usato per stabilire la comunicazione della porta seriale per un oggetto <xref:System.IO.Ports.SerialPort>.|
 |<xref:System.IO.Ports.Parity>|Specifica il bit di parità per un oggetto <xref:System.IO.Ports.SerialPort>.|

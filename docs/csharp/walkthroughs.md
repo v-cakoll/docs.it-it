@@ -24,7 +24,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Viene illustrato come creare una soluzione asincrona usando [async](./language-reference/keywords/async.md) e [await](./language-reference/operators/await.md).  
   
  [Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
+ Viene illustrato come creare un tipo di Windows Runtime, comprimerlo in un componente Windows Runtime e quindi chiamare il componente da un'app di Windows 8. x Store compilata per Windows usando JavaScript.  
   
  [Programmazione di Office (C# e Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Viene illustrato come creare una cartella di lavoro di Excel e un documento di Word usando C# e Visual Basic.  

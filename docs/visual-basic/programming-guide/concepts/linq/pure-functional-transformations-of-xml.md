@@ -9,23 +9,23 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346593"
 ---
-# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Pure Functional Transformations of XML (Visual Basic)
+# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Trasformazioni funzionali pure di XML (Visual Basic)
 Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funzionali per XML. Vengono illustrati i principali concetti e costrutti di linguaggio che è necessario comprendere per usare le trasformazioni funzionali e vengono presentati alcuni esempi di utilizzo delle trasformazioni funzionali per la modifica di documenti XML. Anche se nell'esercitazione sono riportati esempi di codice LINQ to XML, tutti i concetti sottostanti sono validi anche per altre tecnologie LINQ.  
   
- The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial provides a series of examples, each building on the previous one. In questi esempio è illustrato l'approccio delle trasformazioni funzionali pure per l'elaborazione XML.  
+ L'esercitazione [: manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) offre una serie di esempi, ognuno dei quali si basa su quello precedente. In questi esempio è illustrato l'approccio delle trasformazioni funzionali pure per l'elaborazione XML.  
   
- This tutorial assumes a working knowledge of Visual Basic. La semantica dettagliata dei costrutti del linguaggio non viene fornita, ma sono resi disponibili dei collegamenti alla documentazione appropriata.  
+ Questa esercitazione presuppone una conoscenza approfondita del Visual Basic. La semantica dettagliata dei costrutti del linguaggio non viene fornita, ma sono resi disponibili dei collegamenti alla documentazione appropriata.  
   
  È inoltre necessaria una conoscenza operativa dei concetti di base dell'informatica e degli ambienti XML, compresi gli spazi dei nomi XML.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Descrizione|  
+|Argomento|description|  
 |-----------|-----------------|  
-|[Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Vengono descritte le trasformazioni funzionali con una definizione della terminologia pertinente.|  
-|[Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Vengono descritte in dettaglio la valutazione lazy e l'esecuzione posticipata.|  
-|[Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|In questa esercitazione viene illustrata una trasformazione funzionale.|  
+|[Introduzione alle trasformazioni funzionali pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Vengono descritte le trasformazioni funzionali con una definizione della terminologia pertinente.|  
+|[Esercitazione: esecuzione posticipata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Vengono descritte in dettaglio la valutazione lazy e l'esecuzione posticipata.|  
+|[Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|In questa esercitazione viene illustrata una trasformazione funzionale.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Esecuzione di query su strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

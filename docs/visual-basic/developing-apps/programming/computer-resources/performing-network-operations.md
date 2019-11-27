@@ -27,7 +27,7 @@ Nelle tabelle seguenti sono elencate le attività associate all'oggetto `My.Comp
  [Procedura: Controllare lo stato di connessione](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  Illustra come determinare se il computer ha una connessione di rete funzionante.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimento  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
  Elenca i metodi, proprietà ed eventi per l'uso con della rete.  

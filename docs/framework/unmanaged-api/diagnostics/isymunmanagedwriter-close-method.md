@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428122"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>Metodo ISymUnmanagedWriter::Close
-Closes the symbol writer after committing the symbols to the symbol store.  
+Chiude il writer di simboli dopo aver eseguito il commit dei simboli nell'archivio dei simboli.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,13 +32,13 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="remarks"></a>Note  
- After this call, the symbol writer becomes invalid for further updates. To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.  
+ Dopo questa chiamata, il writer di simboli diventa non valido per ulteriori aggiornamenti. Per chiudere il writer di simboli senza eseguire il commit dei simboli, usare invece il metodo [ISymUnmanagedWriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

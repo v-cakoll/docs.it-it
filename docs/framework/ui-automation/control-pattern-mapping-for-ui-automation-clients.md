@@ -14,13 +14,13 @@ ms.locfileid: "74433866"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono elencati i tipi di controllo e i pattern di controllo associati.  
   
  Nella tabella seguente i pattern di controllo sono organizzati nelle categorie seguenti:  
   
-- Supportata. Il controllo deve supportare questo il pattern di controllo.  
+- Supportato. Il controllo deve supportare questo il pattern di controllo.  
   
 - Supporto condizionale. Il controllo può supportare questo pattern di controllo a seconda dello stato del controllo.  
   
@@ -32,46 +32,46 @@ ms.locfileid: "74433866"
 <a name="control_mapping_clients"></a>   
 ## <a name="ui-automation-control-patterns-for-clients"></a>Pattern di controllo di automazione interfaccia utente per i client  
   
-|Tipo di controllo|Supportato|Supporto condizionale|Funzionalità non supportata|  
+|Tipo di controllo|Supportato|Supporto condizionale|Non supportato|  
 |------------------|---------------|-------------------------|-------------------|  
-|Button|Nessuno|Invoke, Toggle, ExpandCollapse|Nessuno|  
-|Calendar|Grid, Table|Selection, Scroll|Value|  
-|CheckBox|Toggle|Nessuno|Nessuno|  
+|Pulsante|Nessuna|Invoke, Toggle, ExpandCollapse|Nessuna|  
+|Calendar|Grid, Table|Selection, Scroll|Valore|  
+|Casella di controllo|Toggle|Nessuna|Nessuna|  
 |ComboBox|ExpandCollapse|Selection, Value|Scroll|  
-|DataGrid|Grid|Scroll, Selection, Table|Nessuno|  
-|DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuno|  
-|Document|Testo|Scroll, Value|Nessuno|  
-|Edit|Nessuno|Text, RangeValue, Value|Nessuno|  
-|Raggruppa|Nessuno|ExpandCollapse|Nessuno|  
-|Header|Nessuno|Transform|Nessuno|  
-|HeaderItem|Nessuno|Transform, Invoke|Nessuno|  
-|Hyperlink|Invoke|Value|Nessuno|  
-|Immagine|Nessuno|GridItem, TableItem|Invoke, SelectionItem|  
-|List|Nessuno|Grid, MultipleView, Scroll, Selection|Table|  
-|ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuno|  
-|Menu|Nessuno|Nessuno|Nessuno|  
-|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|Nessuno|  
-|MenuItem|Nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuno|  
-|Riquadro|Nessuno|Dock Scroll, Transform|Window|  
-|ProgressBar|Nessuno|RangeValue, Value|Nessuno|  
-|RadioButton|SelectionItem|Nessuno|Toggle|  
-|ScrollBar|Nessuno|RangeValue|Scroll|  
-|Separator|Nessuno|Nessuno|Nessuno|  
-|Slider|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Spinner|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|Nessuno|  
-|StatusBar|Nessuno|Grid|Nessuno|  
-|Scheda|Selection|Scroll|Nessuno|  
-|TabItem|SelectionItem|Nessuno|Invoke|  
-|Table|Grid, GridItem, Table, TableItem|Nessuno|Nessuno|  
-|Testo|Nessuno|GridItem, TableItem, Text|Value|  
-|Thumb|Transform|Nessuno|Nessuno|  
-|TitleBar|Nessuno|Nessuno|Nessuno|  
-|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|Nessuno|  
-|ToolTip|Nessuno|Text, Window|Nessuno|  
-|Struttura ad albero|Nessuno|Scroll, Selection|Nessuno|  
-|TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuno|  
-|Window|Transform, Window|Dock|Nessuno|  
+|DataGrid|Grid|Scroll, Selection, Table|Nessuna|  
+|DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuna|  
+|Documento|Testo|Scroll, Value|Nessuna|  
+|Edit|Nessuna|Text, RangeValue, Value|Nessuna|  
+|Gruppo|Nessuna|ExpandCollapse|Nessuna|  
+|Intestazione|Nessuna|Trasforma|Nessuna|  
+|HeaderItem|Nessuna|Transform, Invoke|Nessuna|  
+|Hyperlink|Richiamare|Valore|Nessuna|  
+|Immagine|Nessuna|GridItem, TableItem|Invoke, SelectionItem|  
+|Elenco|Nessuna|Grid, MultipleView, Scroll, Selection|Tabella|  
+|ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuna|  
+|Menu|Nessuna|Nessuna|Nessuna|  
+|Barra dei menu|Nessuna|ExpandCollapse, Dock, Transform|Nessuna|  
+|Voce di menu|Nessuna|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuna|  
+|Riquadro|Nessuna|Dock Scroll, Transform|Finestra|  
+|ProgressBar|Nessuna|RangeValue, Value|Nessuna|  
+|Pulsante di opzione|SelectionItem|Nessuna|Toggle|  
+|ScrollBar|Nessuna|RangeValue|Scroll|  
+|Separatore|Nessuna|Nessuna|Nessuna|  
+|Dispositivo di scorrimento|Nessuna|RangeValue, Selection, Value|Nessuna|  
+|Spinner|Nessuna|RangeValue, Selection, Value|Nessuna|  
+|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuna|Nessuna|  
+|Barra di stato|Nessuna|Grid|Nessuna|  
+|Tab|Selezione|Scroll|Nessuna|  
+|TabItem|SelectionItem|Nessuna|Richiamare|  
+|Tabella|Grid, GridItem, Table, TableItem|Nessuna|Nessuna|  
+|Testo|Nessuna|GridItem, TableItem, Text|Valore|  
+|Visualizzazione di anteprima|Trasforma|Nessuna|Nessuna|  
+|Barra del titolo|Nessuna|Nessuna|Nessuna|  
+|ToolBar|Nessuna|Dock, ExpandCollapse, Transform|Nessuna|  
+|ToolTip|Nessuna|Text, Window|Nessuna|  
+|Struttura ad albero|Nessuna|Scroll, Selection|Nessuna|  
+|TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuna|  
+|Finestra|Transform, Window|Dock|Nessuna|  
   
 > [!NOTE]
 > Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.  

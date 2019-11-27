@@ -29,7 +29,7 @@ ms.locfileid: "74352078"
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Fare clic su **Add**.
 
 2. Individuare la sezione `<listeners>` nel file di configurazione dell'applicazione.
 

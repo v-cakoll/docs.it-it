@@ -19,7 +19,7 @@ ms.locfileid: "74338788"
 ---
 # <a name="keywords-visual-basic"></a>Parole chiave (Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 
 ## <a name="reserved-keywords"></a>Parole chiave riservate
 
@@ -53,12 +53,12 @@ Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Modulo](../modifiers/module-keyword.md)|[Istruzione Module](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[Vincolo New](../statements/type-list.md)|[Operatore New](../operators/new-operator.md)|[avanti](../statements/for-next-statement.md)|
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Spazio dei nomi](../statements/namespace-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[Vincolo New](../statements/type-list.md)|[Operatore New](../operators/new-operator.md)|[Successivo](../statements/for-next-statement.md)|
 |[Next (in Resume)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[Oggetto](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
 |[Operator](../statements/operator-statement.md)|[Opzione](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out (modificatore generico)](../modifiers/out-generic-modifier.md)|[Overload](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out (modificatore generico)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
@@ -80,7 +80,7 @@ Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`e `Wend` vengono mantenute come parole chiave riservate, anche se non vengono più utilizzate in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Parole chiave non riservate
 
@@ -95,19 +95,19 @@ Le parole chiave seguenti non sono riservate, ovvero possono essere usate come n
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iteratore](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Testo](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[per](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|description|  
 |-----------|-----------------|  
 |[Riepilogo delle matrici](arrays-summary.md)|Elenca gli elementi di linguaggio che consentono di creare, definire e usare le matrici.|  
 |[Riepilogo dell'oggetto Collection](collection-object-summary.md)|Elenca gli elementi del linguaggio usati per le raccolte.|  
 |[Riepilogo del flusso di controllo](control-flow-summary.md)|Elenca le istruzioni usate per eseguire il ciclo e controllare il flusso di routine.|  
 |[Riepilogo della conversione](conversion-summary.md)|Elenca le funzioni usate per convertire numeri, date, ore e stringhe.|  
-|[Riepilogo dei tipi di dati](data-types-summary.md)|Elenca i tipi di dati. Elenca anche le funzioni usate per convertire e verificare i tipi di dati.|  
+|[Data Types Summary](data-types-summary.md)|Elenca i tipi di dati. Elenca anche le funzioni usate per convertire e verificare i tipi di dati.|  
 |[Riepilogo di data e ora](dates-and-times-summary.md)|Elenca gli elementi del linguaggio usati per date e ore.|  
 |[Riepilogo delle dichiarazioni e delle costanti](declarations-and-constants-summary.md)|Elenca le istruzioni usate per dichiarare variabili, costanti, classi, moduli e altri elementi di programmazione. Elenca anche gli elementi del linguaggio usati per ottenere informazioni sugli oggetti, gestire gli eventi e implementare l'ereditarietà.|  
 |[Riepilogo di directory e file](directories-and-files-summary.md)|Elenca le funzioni usate per controllare il file system ed elaborare i file.|  

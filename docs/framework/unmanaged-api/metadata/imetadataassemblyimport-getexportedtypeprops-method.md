@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448214"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>Metodo IMetaDataAssemblyImport::GetExportedTypeProps
-Gets the set of properties of the exported type with the specified metadata signature.  
+Ottiene il set di proprietà del tipo esportato con la firma dei metadati specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,32 +41,32 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parametri  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ in Token di metadati `mdExportedType` che rappresenta il tipo esportato.  
   
  `szName`  
- [out] The name of the exported type.  
+ out Nome del tipo esportato.  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ in Dimensione, in caratteri wide, di `szName`.  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ out Numero di caratteri wide effettivamente restituiti in `szName`  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ out Un token di metadati `mdFile`, `mdAssemblyRef`o `mdExportedType` che contiene o consente l'accesso alle proprietà del tipo esportato.  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ out Puntatore a un token di `mdTypeDef` che rappresenta un tipo nel file.  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ out Puntatore ai flag che descrivono i metadati applicati al tipo esportato. Il valore dei flag può essere uno o più valori [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

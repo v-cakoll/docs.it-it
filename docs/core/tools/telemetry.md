@@ -55,15 +55,15 @@ La tutela della privacy è importante per Microsoft. Se si ritiene che la teleme
 
 La funzionalità di telemetria raccoglie i dati seguenti:
 
-| Versioni dell'SDK | Dati |
+| Versioni dell'SDK | Data |
 |--------------|------|
-| All          | Timestamp della chiamata. |
-| All          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
-| All          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
-| All          | Sistema operativo e versione. |
-| All          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
-| All          | Versione di .NET Core SDK. |
-| All          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
+| Tutte          | Timestamp della chiamata. |
+| Tutte          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
+| Tutte          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
+| Tutte          | Sistema operativo e versione. |
+| Tutte          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
+| Tutte          | Versione di .NET Core SDK. |
+| Tutte          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
 | >=2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
 | >=2.0         | Se il SDK è in esecuzione in un contenitore. |
 | >=2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
@@ -91,7 +91,7 @@ Alcuni comandi inviano dati aggiuntivi. Un subset di comandi invia il primo argo
 
 Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai relativi valori:
 
-| Opzione                  | Comandi:                                                                                       |
+| Opzione                  | Commands                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Tutti i comandi                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |

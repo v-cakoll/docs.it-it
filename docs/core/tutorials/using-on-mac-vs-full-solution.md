@@ -23,21 +23,21 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 > - In Visual Studio per Mac scegliere **Aiuto** > **Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per la registrazione di un report sul bug. È possibile tenere traccia dei commenti e dei suggerimenti inviati nel portale della [community di sviluppatori](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web Developer Community di Visual Studio per Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
+- OpenSSL (se si esegue .NET Core 1,1): vedere l'argomento [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
 - [.NET Core SDK 1.1 o versione successiva](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Per ulteriori informazioni sui prerequisiti, vedere le [dipendenze e i requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Creazione di una libreria
 
-1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Scegliere **Avanti**.
+1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Fare clic su **Avanti**.
 
    ![Finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Scegliere **Crea**.
+1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Selezionare **Crea**.
 
    ![Opzioni della finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
@@ -73,9 +73,9 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
    ![Finestra di dialogo Nuovo progetto di Visual Studio per Mac in cui si specifica il nome del progetto](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
 
-1. Aggiungere un riferimento al progetto `TextUtils` per consentire l'interazione tra la libreria di test e la classe `WordCount`. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse su **Dipendenze** in **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
+1. Aggiungere un riferimento al progetto `WordCount` per consentire l'interazione tra la libreria di test e la classe `TextUtils`. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse su **Dipendenze** in **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
 
-1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
+1. Nella finestra di dialogo **modifica riferimenti** selezionare il progetto **TextUtils** nella scheda **progetti** . Selezionare **OK**.
 
    ![Finestra di dialogo Modifica riferimenti di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -119,7 +119,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 1. Fare clic sul pulsante **Esegui tutto**.
 
-   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `GetWordCount` non vengono restituite due istanze della stringa `inputString`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo è il risultato previsto e la logica del test è corretta.
+   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `inputString` non vengono restituite due istanze della stringa `GetWordCount`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo è il risultato previsto e la logica del test è corretta.
 
    ![Visualizzazione dell'esito negativo del test di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
@@ -157,7 +157,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 ## <a name="adding-a-console-app"></a>Aggiunta di un'app console
 
-1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core** > **App**. Scegliere **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
+1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core** > **App**. Fare clic su **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
 
 1. Nella barra laterale **Soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del nuovo progetto **WordCounterApp**. Nella finestra di dialogo **Modifica riferimenti** selezionare **TextUtils** e scegliere **OK**.
 

@@ -30,7 +30,7 @@ Gli standard di codifica dei caratteri precedenti erano costituiti da set di car
 
 La classe <xref:System.Text.Encoding> rappresenta una codifica dei caratteri. In questa tabella sono elencati i tipi di codifica disponibili con una descrizione di ogni tipo.
 
-|Name|Descrizione|
+|nome|description|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Rappresenta una codifica dei caratteri ASCII di caratteri Unicode.|
 |<xref:System.Text.UnicodeEncoding>|Rappresenta una codifica UTF-16 dei caratteri Unicode.|

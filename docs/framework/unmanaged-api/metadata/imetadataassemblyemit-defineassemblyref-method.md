@@ -42,40 +42,40 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parametri  
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
+ in Chiave pubblica del server di pubblicazione dell'assembly a cui si fa riferimento. La funzione helper [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) può essere usata per ottenere l'hash della chiave pubblica da passare come parametro.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ in Dimensioni in byte del `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ in Nome di testo leggibile dell'assembly. Questo valore non deve superare i 1024 caratteri.  
   
  `pMetaData`  
- [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
+ in Istanza di ASSEMBLYMETADATA che contiene le informazioni sulla versione, sulla piattaforma e sulle impostazioni locali dell'assembly a cui si fa riferimento.  
   
  `pbHashValue`  
- [in] The hash data associated with the referenced assembly. Parametro facoltativo.  
+ in Dati hash associati all'assembly a cui si fa riferimento. Facoltativa.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ in Dimensioni in byte del `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
+ in Combinazione bit per bit di valori [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) che influenzano il comportamento del motore di esecuzione.  
   
  `pmdar`  
- [out] A pointer to the returned `AssemblyRef` metadata token.  
+ out Puntatore all'oggetto restituito `AssemblyRef` token di metadati.  
   
 ## <a name="remarks"></a>Note  
- One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
+ È necessario definire una `AssemblyRef` struttura dei metadati per ogni assembly a cui fa riferimento questo assembly.  
   
- At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
+ In fase di esecuzione, i dettagli di un assembly a cui viene fatto riferimento vengono passati al resolver dell'assembly, con l'indicazione che rappresentano le informazioni "come compilate". Il resolver dell'assembly applica quindi i criteri.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

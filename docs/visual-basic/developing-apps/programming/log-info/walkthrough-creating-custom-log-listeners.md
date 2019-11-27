@@ -16,7 +16,7 @@ ms.locfileid: "74353620"
 
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 
 I listener di log devono ereditare dalla <xref:System.Diagnostics.TraceListener> classe.
 
@@ -53,7 +53,7 @@ La procedura seguente prevede alcuni semplici passaggi per la creazione di un as
 
 6. Digitare una password nelle caselle **Immettere la password** e **Conferma password**.
 
-7. Fare clic su **OK**.
+7. fare clic su **OK**.
 
 8. Ricompilare l'applicazione.
 
@@ -79,7 +79,7 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
 1. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.
 
-     oppure
+     -oppure-
 
      Se non è presente un file app.config:
 
@@ -87,7 +87,7 @@ Con il nome sicuro è possibile aggiungere il listener alla raccolta di listener
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Fare clic su **Add**.
 
 2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 

@@ -27,11 +27,11 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) è la versione di .NET Framework supportata più recente in Windows XP e Windows Server 2003. .NET Framework 4.0.3 richiede l'installazione di [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40). Entrambe queste versioni di .NET Framework non sono più supportate da Microsoft.
 
-## <a name="net-framework-4"></a>.NET Framework 4
+## <a name="net-framework-4"></a>.NET Framework 4
 
 È possibile installare [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) in Windows XP. Questa versione non è più supportata da Microsoft.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 È possibile installare [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) in Windows XP.
 

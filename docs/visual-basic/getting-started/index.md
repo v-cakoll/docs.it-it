@@ -1,5 +1,5 @@
 ---
-title: Introduzione
+title: Attività iniziali
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
@@ -47,7 +47,7 @@ Vengono forniti i collegamenti ai codici di esempio in Visual Basic.
 - [Procedure dettagliate](../../visual-basic/walkthroughs.md)\
 Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio Visual Basic.
 
-- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
+- [Opzioni di feedback per Visual Studio](/visualstudio/ide/feedback-options)\
 Vengono fornite informazioni su come richiedere assistenza e inviare commenti e suggerimenti.
 
 - [Visual Studio](/visualstudio/)\

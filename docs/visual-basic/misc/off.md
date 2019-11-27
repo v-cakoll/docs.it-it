@@ -15,9 +15,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331932"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+Disattiva un'opzione del compilatore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile usare la parola chiave `Off` nei contesti seguenti:  
   
  [Istruzione Option Explicit](../../visual-basic/language-reference/statements/option-explicit-statement.md)  

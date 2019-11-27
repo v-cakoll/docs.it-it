@@ -48,26 +48,26 @@ typedef enum CorOpenFlags
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |`ofRead`|Indica che il file deve essere aperto in sola lettura.|  
 |`ofWrite`|Indica che il file deve essere aperto in scrittura.<br /><br /> Se si usa il flag `ofWrite` quando si apre un file con estensione winmd, è anche necessario passare il flag `ofNoTransform`.|  
 |`ofReadWriteMask`|Maschera per la lettura e la scrittura.|  
 |`ofCopyMemory`|Indica che il file deve essere letto in memoria. I metadati devono mantenere la propria copia.|  
-|`ofCacheImage`|Obsoleta. Questo flag viene ignorato.|  
-|`ofManifestMetadata`|Obsoleta. Questo flag viene ignorato.|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
-|`ofNoTypeLib`|Obsoleta. Questo flag viene ignorato.|  
-|`ofNoTransform`|Indica che le trasformazioni automatiche dei file con estensione winmd devono essere disabilitate. In altre parole, la proiezione di un tipo di Windows Runtime in un tipo di .NET Framework deve essere disabilitata. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|Riservato per uso interno.|  
-|`ofReserved2`|Riservato per uso interno.|  
-|`ofReserved`|Riservato per uso interno.|  
+|`ofCacheImage`|Obsoleto. Questo flag viene ignorato.|  
+|`ofManifestMetadata`|Obsoleto. Questo flag viene ignorato.|  
+|`ofReadOnly`|Indica che il file deve essere aperto per la lettura e che non è possibile effettuare una chiamata a `QueryInterface` per un oggetto [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) .|  
+|`ofTakeOwnership`|Indica che la memoria è stata allocata utilizzando una chiamata a [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) e verrà liberata dai metadati.|  
+|`ofNoTypeLib`|Obsoleto. Questo flag viene ignorato.|  
+|`ofNoTransform`|Indica che le trasformazioni automatiche dei file con estensione winmd devono essere disabilitate. In altre parole, la proiezione di un tipo di Windows Runtime in un tipo di .NET Framework deve essere disabilitata. Per ulteriori informazioni, vedere [Windows Runtime e CLR-sotto la cappa con .NET e il Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|Riservato a un uso interno.|  
+|`ofReserved2`|Riservato a un uso interno.|  
+|`ofReserved`|Riservato a un uso interno.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

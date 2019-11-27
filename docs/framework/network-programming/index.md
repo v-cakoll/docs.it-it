@@ -80,14 +80,14 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  Vengono descritti i miglioramenti aggiunti agli spazi dei nomi <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>e <xref:System.Net.Sockets?displayProperty=nameWithType> per il supporto dell'attraversamento NAT tramite IPv6 e Teredo.  
   
  [Network Isolation for Windows Store Apps](network-isolation-for-windows-store-apps.md) (Isolamento rete per app di Windows Store)  
- Describes the impact of network isolation when classes in the <xref:System.Net>, <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces are used in Windows 8.x Store apps.  
+ Descrive l'effetto dell'isolamento di rete quando le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> vengono usate nelle app di Windows 8. x Store.  
   
  [Esempi di programmazione di rete](network-programming-samples.md)  
  Collegamenti a esempi scaricabili di programmazione di rete che utilizzano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimento  
  <xref:System.Net?displayProperty=nameWithType>  
- Fornisce una semplice interfaccia di programmazione per molti dei protocolli attualmente usati per le reti. Le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> in questo spazio dei nomi sono la base dei protocolli modulari.  
+ Viene fornita una semplice interfaccia di programmazione per molti dei protocolli attualmente utilizzati per le reti. Le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> in questo spazio dei nomi sono la base dei protocolli modulari.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
  Definisce i tipi e le enumerazioni utilizzati per specificare i criteri di cache per le risorse ottenute mediante le classi <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
@@ -126,7 +126,7 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  Fornisce un'implementazione gestita dell'interfaccia WebSocket per gli sviluppatori.  
   
  <xref:System.Uri?displayProperty=nameWithType>  
- Fornisce una rappresentazione in forma di oggetto di un identificatore URI (uniform resource identifier) e un pratico accesso alle parti dell'URI.  
+ Fornisce una rappresentazione in forma di oggetto di un identificatore URI (Uniform Resource Identifier) e un pratico accesso alle parti dell'URI.  
   
  <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  Fornisce il supporto per l'autenticazione utilizzando la protezione estesa per le applicazioni.  
@@ -139,4 +139,4 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
 - [Procedure consigliate per Transport Layer Security (TLS) con .NET Framework](tls.md)
 - [Procedure per la programmazione di rete](network-programming-how-to-topics.md)
 - [Esempi di programmazione di rete](network-programming-samples.md)
-- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664) (Esempio con HttpClient)
+- [Esempio con HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -17,12 +17,12 @@ ms.locfileid: "74441475"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Provider di automazione interfaccia utente per il codice gestito
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ In questa sezione vengono fornite panoramiche e procedure che descrivono come scrivere provider [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per gli elementi [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] personalizzati.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)  
  [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)  
  [Implementazione dei provider di automazione interfaccia utente lato client](client-side-ui-automation-provider-implementation.md)  
- [Procedure relative alle proprietà](ui-automation-providers-for-managed-code-how-to-topics.md)
+ [Procedure relative](ui-automation-providers-for-managed-code-how-to-topics.md)

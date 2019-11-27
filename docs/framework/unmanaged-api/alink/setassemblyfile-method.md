@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445599"
 ---
 # <a name="setassemblyfile-method"></a>Metodo SetAssemblyFile
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+Assegna il nome dell'assembly da compilare. Non da usare quando si producono moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,25 +37,25 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ Nome completo del file manifesto.  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ Puntatore all'interfaccia dell' [interfaccia IMetaDataEmit](../metadata/imetadataemit-interface.md) .  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ Flag come definito nell' [Enumerazione AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ Puntatore all'ID dell'assembly risultante.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

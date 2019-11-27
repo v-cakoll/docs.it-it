@@ -21,7 +21,7 @@ ms.locfileid: "74343824"
 ---
 # <a name="externalsource-directive"></a>Direttiva #ExternalSource
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Indica un mapping tra le righe specifiche del codice sorgente e il testo esterno all'origine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,24 +34,24 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>Parti  
 
  `StringLiteral`  
- The path to the external source.  
+ Percorso dell'origine esterna.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Il numero di riga della prima riga dell'origine esterna.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ Riga in cui si è verificato l'errore nell'origine esterna.  
   
  `#End ExternalSource`  
  Termina il blocco `#ExternalSource`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
- This directive is used only by the compiler and the debugger.  
+ Questa direttiva viene utilizzata solo dal compilatore e dal debugger.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Un file di origine può includere direttive di origine esterne, che indicano un mapping tra righe specifiche di codice nel file di origine e testo esterno all'origine, ad esempio un file aspx. Se durante la compilazione vengono rilevati errori nel codice sorgente designato, vengono identificati come provenienti dall'origine esterna.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Le direttive external source non hanno alcun effetto sulla compilazione e non possono essere annidate. Sono destinate esclusivamente all'uso interno da parte dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -17,7 +17,7 @@ ms.locfileid: "74353597"
 
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 
 A ogni messaggio scritto da `My.Application.Log` è associato un livello di gravità, che i meccanismi di filtro usano per controllare l'output del log. Questa applicazione di esempio usa i metodi `My.Application.Log` per scrivere alcuni messaggi di log con diversi livelli di gravità.
 
@@ -61,7 +61,7 @@ Questa tabella illustra il livello di gravità richiesto al log per la scrittura
 |`Critical`|`Critical`|
 |`Error`|`Critical` o `Error`|
 |`Warning`|`Critical`, `Error`o `Warning`|
-|`Information`|`Critical`, `Error`, `Warning` o `Information`|
+|`Information`|`Critical`, `Error`, `Warning`o `Information`|
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|
 |`All`|Sono consentiti tutti i messaggi.|
@@ -76,7 +76,7 @@ In questa tabella viene illustrato l'output di log dell'esempio precedente: con 
 
 1. Fare clic con il pulsante destro del mouse su app.config **Esplora soluzioni** e selezionare **Apri**.
 
-     oppure
+     -oppure-
 
      Se non è presente alcun file app.config:
 
@@ -84,7 +84,7 @@ In questa tabella viene illustrato l'output di log dell'esempio precedente: con 
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Fare clic su **Add**.
 
 2. Individuare la sezione `<switches>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .
 
@@ -160,7 +160,7 @@ In questo esempio viene illustrato come configurare il filtro per un nuovo liste
 
     2. Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.
 
-    3. Fare clic su **Aggiungi**.
+    3. Fare clic su **Add**.
 
 2. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni**. Scegliere **Apri**.
 

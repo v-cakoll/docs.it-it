@@ -12,7 +12,7 @@ ms.locfileid: "74204585"
 # <a name="service-security-validation-and-authentication-failures"></a>Servizio: errori di convalida e di autenticazione di sicurezza
 Nome contatore: errori di convalida e di autenticazione di sicurezza  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>description  
  Questo contatore avanza ogni volta che un messaggio viene rifiutato a causa di un problema di sicurezza non coperto dal contatore "chiamate di sicurezza non autorizzate". Tra tali problemi si contano:  
   
 - Non è stato possibile leggere il token client dal messaggio.  

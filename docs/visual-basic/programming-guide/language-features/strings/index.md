@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344342"
 ---
 # <a name="strings-in-visual-basic"></a>Stringhe in Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+In questa sezione vengono descritti i concetti di base relativi all'utilizzo di stringhe in Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Vengono elencati gli argomenti in cui vengono descritti i concetti di base relativi all'utilizzo di stringhe in Visual Basic.  
   
  [Procedura: Creare stringhe usando StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Illustra come creare in modo efficiente una stringa lunga da molte stringhe più piccole.  

@@ -41,19 +41,19 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|Specifica che il metodo è una funzione di accesso `set` per una proprietà.|  
+|`msGetter`|Specifica che il metodo è una funzione di accesso `get` per una proprietà.|  
+|`msOther`|Specifica che il metodo ha una relazione con una proprietà o un evento diverso da quelli definiti qui.|  
+|`msAddOn`|Specifica che il metodo aggiunge metodi di gestione per un evento.|  
+|`msRemoveOn`|Specifica che il metodo rimuove i metodi del gestore per un evento.|  
+|`msFire`|Specifica che il metodo genera un evento.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

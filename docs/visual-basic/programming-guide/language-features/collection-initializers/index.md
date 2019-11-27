@@ -39,7 +39,7 @@ Quando si crea una raccolta, ad esempio <xref:System.Collections.Generic.List%60
 > [!NOTE]
 > È possibile combinare un inizializzatore di insieme e un inizializzatore di oggetto per inizializzare lo stesso oggetto raccolta. È possibile usare gli inizializzatori di oggetto per inizializzare oggetti in un inizializzatore di insieme.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creazione di una raccolta tramite un inizializzatore di raccolta
 
 Quando si crea una raccolta usando un inizializzatore di insieme, ogni valore specificato nell'inizializzatore di insieme viene passato al metodo `Add` appropriato della raccolta. Se ad esempio si crea un <xref:System.Collections.Generic.List%601> usando un inizializzatore di insieme, ogni valore stringa nell'inizializzatore di insieme viene passato al metodo <xref:System.Collections.Generic.List%601.Add%2A>. Se si vuole creare una raccolta usando un inizializzatore di insieme, il tipo specificato deve essere un tipo di raccolta valido. Sono esempi di tipi di raccolta validi le classi che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o ereditano la classe <xref:System.Collections.CollectionBase>. Il tipo specificato deve anche esporre un metodo `Add` che soddisfa i criteri seguenti.
 
@@ -75,15 +75,15 @@ Solo gli elenchi di valori annidati al primo livello di annidamento vengono invi
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Descrizione|
+|Titolo|description|
 |---|---|
 |[Procedura: Creare un metodo di estensione Add usato da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Illustra come creare un metodo di estensione denominato `Add` che può essere usato per popolare una raccolta con valori di un inizializzatore di insieme.|
 |[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [raccolte](../../../../visual-basic/programming-guide/concepts/collections.md)
-- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Raccolte](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)

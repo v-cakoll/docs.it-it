@@ -26,7 +26,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno significati
 |---|---|---|---|  
 |[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
-|[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
+|[char](../builtin-types/char.md)|[checked](checked.md)|[classe](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
 |[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
@@ -59,8 +59,8 @@ Le parole chiave sono identificatori riservati predefiniti che hanno significati
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (tipo)](partial-type.md)|[partial (metodo)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[unmanaged (generic type constraint)](where-generic-type-constraint.md)|[valore](value.md)|[var](var.md)|
-|[when (condizione filtro)](when.md)|[where (vincolo di tipo generico)](where-generic-type-constraint.md)|[where (clausola query)](where-clause.md)|
+|[unmanaged (vincolo di tipo generico)](where-generic-type-constraint.md)|[valore](value.md)|[var](var.md)|
+|[when (condizione di filtro)](when.md)|[where (vincolo di tipo generico)](where-generic-type-constraint.md)|[where (clausola query)](where-clause.md)|
 |[yield](yield.md)| | |
   
 ## <a name="see-also"></a>Vedere anche

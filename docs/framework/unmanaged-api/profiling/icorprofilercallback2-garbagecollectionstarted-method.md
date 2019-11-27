@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439820"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>Metodo ICorProfilerCallback2::GarbageCollectionStarted
-Notifies the code profiler that garbage collection has started.  
+Notifica all'Code Profiler che Garbage Collection è stata avviata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +36,23 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Parametri  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ in Il numero totale di voci nella matrice di `generationCollected`.  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ in Matrice di valori booleani, che vengono `true` se la generazione che corrisponde all'indice della matrice viene raccolta da questa Garbage Collection; in caso contrario, `false`.  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ La matrice viene indicizzata in base a un valore dell'enumerazione [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) , che indica la generazione.  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ in Valore dell'enumerazione [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) che indica il motivo per cui è stato indotto l'Garbage Collection.  
   
 ## <a name="remarks"></a>Note  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+ Tutti i callback relativi a questo Garbage Collection si verificheranno tra il callback `GarbageCollectionStarted` e il callback [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) corrispondente. Questi callback non devono essere eseguiti nello stesso thread.  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ Il profiler può ispezionare gli oggetti nei percorsi originali durante il callback `GarbageCollectionStarted`. Il Garbage Collector inizierà a trasferire gli oggetti dopo il ritorno da `GarbageCollectionStarted`. Dopo che il profiler ha restituito questo callback, il profiler deve considerare tutti gli ID oggetto come non validi fino a quando non riceve un callback `ICorProfilerCallback2::GarbageCollectionFinished`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

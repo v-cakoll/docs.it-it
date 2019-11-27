@@ -39,7 +39,7 @@ In questa sezione viene illustrato come eseguire attività associate alla lettur
  [Procedura: leggere il testo da file con un oggetto StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  Viene illustrato come usare un oggetto <xref:System.IO.StreamReader> per leggere da un file.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimento  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Illustra l'oggetto `My.Computer.FileSystem` e i suoi membri.  
@@ -64,7 +64,7 @@ In questa sezione viene illustrato come eseguire attività associate alla lettur
  [Analisi dei file di testo con l'oggetto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  Offre una panoramica della lettura dei file di testo con l'oggetto `TextFieldParser`.  
   
- [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Procedura dettagliata: modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Illustra come usare la funzionalità `My` con i file e le directory.  
   
  [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
