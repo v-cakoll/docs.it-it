@@ -12,25 +12,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344099"
 ---
-# <a name="mycomputerclipboard-object"></a><span data-ttu-id="fe278-102">Oggetto My.Computer.Clipboard</span><span class="sxs-lookup"><span data-stu-id="fe278-102">My.Computer.Clipboard Object</span></span>
-<span data-ttu-id="fe278-103">Specifica i metodi per la modifica degli Appunti.</span><span class="sxs-lookup"><span data-stu-id="fe278-103">Provides methods for manipulating the Clipboard.</span></span>  
+# <a name="mycomputerclipboard-object"></a><span data-ttu-id="52640-102">Oggetto My.Computer.Clipboard</span><span class="sxs-lookup"><span data-stu-id="52640-102">My.Computer.Clipboard Object</span></span>
+<span data-ttu-id="52640-103">Specifica i metodi per la modifica degli Appunti.</span><span class="sxs-lookup"><span data-stu-id="52640-103">Provides methods for manipulating the Clipboard.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe278-104">Note</span><span class="sxs-lookup"><span data-stu-id="fe278-104">Remarks</span></span>  
- <span data-ttu-id="fe278-105">Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Clipboard` , vedere <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span><span class="sxs-lookup"><span data-stu-id="fe278-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52640-104">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="52640-104">Remarks</span></span>  
+ <span data-ttu-id="52640-105">Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Clipboard` , vedere <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span><span class="sxs-lookup"><span data-stu-id="52640-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
   
- <span data-ttu-id="fe278-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="fe278-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
+ <span data-ttu-id="52640-106">Per ulteriori informazioni, vedere [archiviazione e lettura di dati negli Appunti](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="52640-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="fe278-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span><span class="sxs-lookup"><span data-stu-id="fe278-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
+> <span data-ttu-id="52640-107">È anche possibile usare i metodi della classe <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> per modificare gli Appunti.</span><span class="sxs-lookup"><span data-stu-id="52640-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe278-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fe278-108">Requirements</span></span>  
- <span data-ttu-id="fe278-109">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="fe278-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="52640-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="52640-108">Requirements</span></span>  
+ <span data-ttu-id="52640-109">**Spazio dei nomi:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="52640-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="fe278-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="fe278-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
+ <span data-ttu-id="52640-110">**Classe:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (fornisce l'accesso ai <xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="52640-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
   
- <span data-ttu-id="fe278-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="fe278-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="52640-111">**Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)</span><span class="sxs-lookup"><span data-stu-id="52640-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe278-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fe278-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52640-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="52640-112">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
-- [<span data-ttu-id="fe278-113">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="fe278-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="52640-113">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="52640-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
