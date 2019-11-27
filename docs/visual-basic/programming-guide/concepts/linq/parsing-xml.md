@@ -9,20 +9,20 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353159"
 ---
-# <a name="parsing-xml-visual-basic"></a>Parsing XML (Visual Basic)
+# <a name="parsing-xml-visual-basic"></a>Analisi di XML (Visual Basic)
 Negli argomenti di questa sezione viene descritto come analizzare documenti XML.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[How to: Parse a String (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Viene illustrato come analizzare una stringa per creare una struttura ad albero XML.|  
-|[How to: Load XML from a File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Viene illustrato come caricare XML da un URI usando il metodo <xref:System.Xml.Linq.XElement.Load%2A>.|  
+|[Procedura: analizzare una stringa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|Viene illustrato come analizzare una stringa per creare una struttura ad albero XML.|  
+|[Procedura: caricare XML da un file (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Viene illustrato come caricare XML da un URI usando il metodo <xref:System.Xml.Linq.XElement.Load%2A>.|  
 |[Conservazione di spazi vuoti durante il caricamento o l'analisi di dati XML](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml.md)|Viene descritto come controllare il comportamento dello spazio vuoto di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] durante il caricamento di alberi XML.|  
-|[How to: Catch Parsing Errors (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Viene illustrato come rilevare XML non corretto o non valido.|  
-|[How to: Create a Tree from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Viene illustrato come creare un albero XML direttamente da un oggetto <xref:System.Xml.XmlReader>.|  
-|[How to: Stream XML Fragments from an XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Viene illustrato come eseguire il flusso di frammenti XML usando un oggetto <xref:System.Xml.XmlReader>.<br /><br /> Quando è necessario elaborare file XML grandi in modo arbitrario, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In tali casi, è possibile eseguire il flusso di frammenti XML.|  
+|[Procedura: intercettare gli errori di analisi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Viene illustrato come rilevare XML non corretto o non valido.|  
+|[Procedura: creare una struttura ad albero da un XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Viene illustrato come creare un albero XML direttamente da un oggetto <xref:System.Xml.XmlReader>.|  
+|[Procedura: flusso di frammenti XML da un XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Viene illustrato come eseguire il flusso di frammenti XML usando un oggetto <xref:System.Xml.XmlReader>.<br /><br /> Quando è necessario elaborare file XML grandi in modo arbitrario, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In tali casi, è possibile eseguire il flusso di frammenti XML.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

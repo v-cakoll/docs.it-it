@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427992"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Metodo ISymUnmanagedWriter::DefineSequencePoints
-Definisce un gruppo di punti di sequenza nel metodo corrente. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+Definisce un gruppo di punti di sequenza nel metodo corrente. Ogni riga iniziale e colonna iniziale definiscono l'inizio di un'istruzione all'interno di un metodo. Ogni riga finale e colonna finale definiscono la fine di un'istruzione all'interno di un metodo. Le matrici devono essere ordinate in ordine crescente di offset. L'offset viene sempre misurato dall'inizio del metodo, espresso in byte.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ in Oggetto documento per il quale vengono definiti i punti di sequenza.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ in `ULONG32` che indica le dimensioni di ognuno dei buffer `offsets`, `lines`, `columns`, `endLines`e `endColumns`.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ in Offset dei punti di sequenza misurato a partire dall'inizio del metodo.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ in Numeri di riga iniziali dei punti di sequenza.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ in Numeri di colonna iniziali dei punti di sequenza.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. Questo parametro è facoltativo.  
+ in Numeri di riga finali dei punti di sequenza. Questo parametro è facoltativo.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. Questo parametro è facoltativo.  
+ in Numeri di colonna finali dei punti di sequenza. Questo parametro è facoltativo.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

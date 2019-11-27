@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: Sintassi utilizzata dalla proprietà DebugView
 description: Descrive la sintassi speciale usata dalla proprietà DebugView per produrre una rappresentazione di stringa degli alberi delle espressioni
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346874"
 
 La proprietà `DebugView` (disponibile solo durante il debug) fornisce un rendering in forma di stringa degli alberi delle espressioni. La maggior parte della sintassi è piuttosto semplice da comprendere e i casi speciali vengono descritti nelle sezioni seguenti.
 
-Each example is followed by a comment block containing the `DebugView`.
+Ogni esempio è seguito da un blocco di commento che contiene il `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,11 +45,11 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> che rappresentano valori interi, stringhe e `null`, viene visualizzato il valore della costante.
 
-For some numeric types, a suffix is added to the value:
+Per alcuni tipi numerici, viene aggiunto un suffisso al valore:
 
-| Digitare | Parola chiave | Suffisso |
+| Type | Parola chiave | Suffisso |
 |--|--|--|
-| <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | G |
+| <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |

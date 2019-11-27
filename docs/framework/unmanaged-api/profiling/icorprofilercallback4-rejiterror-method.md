@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430100"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Metodo ICorProfilerCallback4::ReJITError
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Notifica al profiler che il compilatore JIT (just-in-Time) ha rilevato un errore nel processo di ricompilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ in `ModuleID` in cui è stato effettuato il tentativo di ricompilazione non riuscita.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ in `MethodDef` del metodo in cui è stato effettuato il tentativo di ricompilazione non riuscita.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ in Istanza della funzione che viene ricompilata o contrassegnata per la ricompilazione. Questo valore può essere `NULL` se l'errore si è verificato per singolo metodo anziché per ogni singola istanza, ad esempio se il profiler ha specificato un token di metadati non valido per il metodo da ricompilare.  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ in HRESULT che indica la natura dell'errore. Per un elenco di valori, vedere la sezione stato HRESULTs.  
   
 ## <a name="return-value"></a>Valore restituito  
  I valori restituiti da questo callback vengono ignorati.  
@@ -55,15 +55,15 @@ HRESULT ReJITError(
   
 |HRESULT matrice di stato|Descrizione|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|Il token `moduleID` o `methodDef` è `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Il modulo non è ancora completamente caricato o è in fase di scaricamento.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Il modulo specificato è stato generato dinamicamente (ad esempio, da `Reflection.Emit`) e pertanto non è supportato da questo metodo.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Viene creata un'istanza del metodo in un assembly ritirabile e pertanto non può essere ricompilata. Si noti che è possibile creare un'istanza di tipi e funzioni definiti in un contesto non di reflection, ad esempio `List<MyCollectibleStruct>`, in un assembly ritirabile.|  
+|E_OUTOFMEMORY|Memoria insufficiente per CLR durante il tentativo di contrassegnare il metodo specificato per la ricompilazione JIT.|  
+|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Se, ad esempio, una chiamata di sistema per modificare la protezione dell'accesso di una pagina di memoria non riesce, viene visualizzato l'errore del sistema operativo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
