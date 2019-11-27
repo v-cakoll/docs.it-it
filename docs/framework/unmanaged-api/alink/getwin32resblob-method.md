@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430697"
 ---
 # <a name="getwin32resblob-method"></a>Metodo GetWin32ResBlob
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+Recupera il BLOB di risorse Win32. Chiamare questo metodo dopo aver impostato le opzioni di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +39,31 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ Token del file usato per recuperare il nome file da usare quando si costruisce la risorsa della versione Win32  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ TRUE se il file è una DLL, false per un file EXE.  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ Icona facoltativa da inserire nel BLOB di risorse.  
   
  `ppResBlob`  
- Receives the resource blob.  
+ Riceve il BLOB di risorse.  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ Riceve la dimensione del BLOB.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

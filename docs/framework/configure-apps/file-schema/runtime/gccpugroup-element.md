@@ -12,13 +12,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430487"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<elemento > GCCpuGroup
 
 Specifica se Garbage Collection supporta più gruppi di CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+&nbsp;&nbsp;[ **\<runtime >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,38 +33,38 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|Descrizione|
+|Attributo|description|
 |---------------|-----------------|
 |`enabled`|Attributo obbligatorio.<br /><br /> Specifica se Garbage Collection supporta più gruppi di CPU.|
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Value|Descrizione|
+|Value|description|
 |-----------|-----------------|
-|`false`|Garbage collection does not support multiple CPU groups. Questa è l'impostazione predefinita.|
-|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
+|`false`|Garbage Collection non supporta più gruppi di CPU. Questa è l'impostazione predefinita.|
+|`true`|Se il server Garbage Collection è abilitato, Garbage Collection supporta più gruppi di CPU.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuna.
+Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|description|
 |-------------|-----------------|
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Quando un computer dispone di più gruppi di CPU e Garbage Collection server è abilitato (vedere l'elemento [\<> gcserver](gcserver-element.md) ), l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU e prende in considerazione tutti i core quando crea e bilancia gli heap.
 
 > [!NOTE]
-> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Questo elemento si applica solo ai thread Garbage Collection. Per consentire al runtime di distribuire i thread utente in tutti i gruppi di CPU, è necessario abilitare anche l'elemento [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Esempio
 
-The following example shows how to enable garbage collection for multiple CPU groups.
+Nell'esempio seguente viene illustrato come abilitare Garbage Collection per più gruppi di CPU.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ The following example shows how to enable garbage collection for multiple CPU gr
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Per disabilitare Garbage Collection simultanee](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Operazione di Garbage Collection per workstation e server](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

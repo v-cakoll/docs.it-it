@@ -13,24 +13,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350097"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Tipi di dati elementari (Visual Basic)
-Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements. This section describes these types and how to use them.  
+Visual Basic fornisce un set di tipi di dati predefiniti che è possibile usare per molti degli elementi di programmazione. Questa sezione descrive questi tipi e come usarli.  
   
 > [!NOTE]
-> Every elementary data type in Visual Basic is supported by a structure or a class that is in the <xref:System> namespace. The compiler uses each data type keyword as an alias for the underlying structure or class. For example, declaring a variable by using the reserved word `Byte` is the same as declaring it by using the fully qualified structure name <xref:System.Byte?displayProperty=nameWithType>.  
+> Ogni tipo di dati elementare in Visual Basic è supportato da una struttura o da una classe nello spazio dei nomi <xref:System>. Il compilatore USA ogni parola chiave del tipo di dati come alias per la struttura o la classe sottostante. Ad esempio, la dichiarazione di una variabile tramite la parola riservata `Byte` equivale alla dichiarazione usando il nome di struttura completo <xref:System.Byte?displayProperty=nameWithType>.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Tipi di dati numerici](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- Describes the integral and non-integral numeric types.  
+ Descrive i tipi numerici integrali e non integrali.  
   
  [Dati di tipo carattere](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- Describes the `Char` and `String` types.  
+ Vengono descritti i tipi di `Char` e `String`.  
   
  [Tipi di dati vari](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- Describes the `Boolean`, `Date`, and `Object` types.  
+ Vengono descritti i tipi di `Boolean`, `Date`e `Object`.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Introduce i tipi di dati Visual Basic e ne descrive l'utilizzo.  
   
  [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
- Provides an overview of the elementary data types supplied by Visual Basic.
+ Viene fornita una panoramica dei tipi di dati elementari forniti da Visual Basic.

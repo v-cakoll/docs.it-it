@@ -15,20 +15,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346251"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Convalida delle stringhe in Visual Basic
-This section discusses how to validate strings in Visual Basic.  
+In questa sezione viene illustrato come convalidare le stringhe in Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [How to: Validate File Names and Paths in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- How to determine whether a string represents a file name or path.  
+ [Procedura: convalidare i nomi file e i percorsi in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ Come determinare se una stringa rappresenta un nome file o un percorso.  
   
  [Procedura: Convalidare le stringhe che rappresentano date o ore](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- How to determine whether a string represents a valid date.  
+ Come determinare se una stringa rappresenta una data valida.  
   
- [Using Regular Expressions with the MaskedTextBox Control in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+ [Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ Viene illustrato come convertire espressioni regolari semplici da utilizzare con il controllo <xref:System.Windows.Forms.MaskedTextBox>.  
   
  [Procedura dettagliata: Verifica della complessità delle password](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- How to determine whether a string has the characteristics of a strong password.  
+ Come determinare se una stringa presenta le caratteristiche di una password complessa.  
   
 ## <a name="see-also"></a>Vedere anche
 

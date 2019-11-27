@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438277"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineGlobalVariable2
-Defines a single global variable.  
+Definisce una singola variabile globale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parametri  
  `name`  
- [in] The global variable name.  
+ in Nome della variabile globale.  
   
  `attributes`  
- [in] The global variable attributes.  
+ in Attributi della variabile globale.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ in Token di metadati della firma.  
   
  `addrKind`  
- [in] The address type.  
+ in Tipo di indirizzo.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ in Primo indirizzo per la specifica del parametro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ in Secondo indirizzo per la specifica del parametro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ in Terzo indirizzo per la specifica del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl  
+ **Intestazione:** CorSym. idl  
   
 ## <a name="see-also"></a>Vedere anche
 

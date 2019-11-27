@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349556"
 ---
 # <a name="gettype-operator-visual-basic"></a>Operatore GetType (Visual Basic)
-Returns a <xref:System.Type> object for the specified type. The <xref:System.Type> object provides information about the type such as its properties, methods, and events.  
+Restituisce un oggetto <xref:System.Type> per il tipo specificato. L'oggetto <xref:System.Type> fornisce informazioni sul tipo, ad esempio proprietà, metodi ed eventi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,33 +27,33 @@ GetType(typename)
   
 |Parametro|Descrizione|  
 |---|---|  
-|`typename`|The name of the type for which you desire information.|  
+|`typename`|Nome del tipo per il quale si desiderano le informazioni.|  
   
-## <a name="remarks"></a>Note  
- The `GetType` operator returns the <xref:System.Type> object for the specified `typename`. You can pass the name of any defined type in `typename`. Il comportamento predefinito include quanto segue:  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore `GetType` restituisce l'oggetto <xref:System.Type> per la `typename`specificata. È possibile passare il nome di qualsiasi tipo definito in `typename`. Il comportamento predefinito include quanto segue:  
   
-- Any Visual Basic data type, such as `Boolean` or `Date`.  
+- Qualsiasi tipo di dati Visual Basic, ad esempio `Boolean` o `Date`.  
   
-- Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.  
+- Qualsiasi .NET Framework classe, struttura, modulo o interfaccia, ad esempio <xref:System.ArgumentException?displayProperty=nameWithType> o <xref:System.Double?displayProperty=nameWithType>.  
   
-- Any class, structure, module, or interface defined by your application.  
+- Qualsiasi classe, struttura, modulo o interfaccia definita dall'applicazione.  
   
-- Any array defined by your application.  
+- Qualsiasi matrice definita dall'applicazione.  
   
-- Any delegate defined by your application.  
+- Qualsiasi delegato definito dall'applicazione.  
   
-- Any enumeration defined by Visual Basic, the .NET Framework, or your application.  
+- Qualsiasi enumerazione definita da Visual Basic, .NET Framework o dall'applicazione.  
   
- If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.  
+ Se si desidera ottenere l'oggetto tipo di una variabile oggetto, utilizzare il metodo <xref:System.Type.GetType%2A?displayProperty=nameWithType>.  
   
- The `GetType` operator can be useful in the following circumstances:  
+ L'operatore `GetType` può essere utile nelle circostanze seguenti:  
   
-- You must access the metadata for a type at run time. The <xref:System.Type> object supplies metadata such as type members and deployment information. You need this, for example, to reflect over an assembly. Per ulteriori informazioni, vedere <xref:System.Reflection?displayProperty=nameWithType>.  
+- È necessario accedere ai metadati per un tipo in fase di esecuzione. L'oggetto <xref:System.Type> fornisce metadati, ad esempio i membri del tipo e le informazioni di distribuzione. Questa operazione è necessaria, ad esempio, per riflettere un assembly. Per altre informazioni, vedere <xref:System.Reflection?displayProperty=nameWithType>.  
   
-- You want to compare two object references to see if they refer to instances of the same type. If they do, `GetType` returns references to the same <xref:System.Type> object.  
+- Si desidera confrontare due riferimenti a oggetti per verificare se fanno riferimento a istanze dello stesso tipo. In caso affermativo, `GetType` restituisce riferimenti allo stesso oggetto <xref:System.Type>.  
   
 ## <a name="example"></a>Esempio  
- The following examples show the `GetType` operator in use.  
+ Negli esempi seguenti viene illustrato l'operatore `GetType` in uso.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   

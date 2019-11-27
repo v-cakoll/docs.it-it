@@ -17,43 +17,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354011"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Costanti definite dall'utente (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
+Una costante è un nome significativo che prende il posto di un numero o di una stringa che non cambia. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. È possibile usare le costanti definite dai controlli o dai componenti usati oppure è possibile crearne di personalizzati. Le costanti create dall'utente vengono descritte come *definite dall'utente*.  
   
- You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+ Viene dichiarata una costante con l'istruzione `Const`, usando le stesse linee guida per la creazione di un nome di variabile. Se `Option Strict` è `On`, è necessario dichiarare in modo esplicito il tipo di costante.  
   
-## <a name="const-statement-usage"></a>Const Statement Usage  
- A `Const` statement can represent a mathematical or date/time quantity:  
+## <a name="const-statement-usage"></a>Utilizzo istruzioni Const  
+ Un'istruzione `Const` può rappresentare una quantità matematica o di data/ora:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- It also can define `String` constants:  
+ Consente inoltre di definire `String` costanti:  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
+ L'espressione a destra del segno di uguale (`=`) è spesso un numero o una stringa letterale, ma può anche essere un'espressione che restituisce un numero o una stringa (anche se l'espressione non può contenere chiamate alle funzioni). È anche possibile definire costanti in termini di costanti definite in precedenza:  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
- A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
+## <a name="scope-of-user-defined-constants"></a>Ambito delle costanti definite dall'utente  
+ L'ambito di un'istruzione `Const` è uguale a quello di una variabile dichiarata nella stessa posizione. È possibile specificare l'ambito in uno dei modi seguenti:  
   
-- To create a constant that exists only within a procedure, declare it within that procedure.  
+- Per creare una costante che esiste solo all'interno di una routine, dichiararla all'interno di tale procedura.  
   
-- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
+- Per creare una costante disponibile per tutte le routine all'interno di una classe, ma non per il codice esterno a tale modulo, dichiararla nella sezione delle dichiarazioni della classe.  
   
-- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
+- Per creare una costante disponibile a tutti i membri di un assembly, ma non all'esterno dei client dell'assembly, dichiararla usando la parola chiave `Friend` nella sezione delle dichiarazioni della classe.  
   
-- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
+- Per creare una costante disponibile nell'applicazione, dichiararla usando la parola chiave `Public` nella sezione delle dichiarazioni della classe.  
   
- For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ Per altre informazioni, vedere [procedura: dichiarare una costante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### <a name="avoiding-circular-references"></a>Avoiding Circular References  
- Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
+### <a name="avoiding-circular-references"></a>Evitare riferimenti circolari  
+ Poiché le costanti possono essere definite in termini di altre costanti, è possibile creare inavvertitamente un *ciclo*o un riferimento circolare tra due o più costanti. Si verifica un ciclo quando si hanno due o più costanti pubbliche, ciascuna delle quali è definita in base all'altra, come nell'esempio seguente:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- If a cycle occurs, Visual Basic generates a compiler error.  
+ Se si verifica un ciclo, Visual Basic genera un errore del compilatore.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -63,6 +63,6 @@ A constant is a meaningful name that takes the place of a number or string that 
 - [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Cenni preliminari sulle enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Cenni preliminari sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Procedura: dichiarare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

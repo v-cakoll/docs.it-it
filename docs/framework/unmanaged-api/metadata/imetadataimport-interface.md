@@ -91,7 +91,7 @@ Fornisce metodi per importare e modificare i metadati esistenti da un file esegu
 |[Metodo ResetEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resetenum-method.md)|Reimposta l'enumeratore specificato nella posizione specificata.|  
 |[Metodo ResolveTypeRef](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|Ottiene le informazioni per il tipo a cui fa riferimento il token TypeRef specificato.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'interfaccia `IMetaDataImport` è progettata principalmente per essere usata da strumenti e servizi che importeranno informazioni sul tipo, ad esempio strumenti di sviluppo, o gestiranno componenti distribuiti, quali servizi di risoluzione o attivazione. I metodi di `IMetaDataImport` rientrano nelle seguenti categorie di attività:  
   
 - Enumerazione di raccolte di elementi nell'ambito dei metadati.  
@@ -103,11 +103,11 @@ Fornisce metodi per importare e modificare i metadati esistenti da un file esegu
 - I metodi Get sono progettati specificamente per restituire le proprietà a valore singolo di un elemento dei metadati. Quando la proprietà è un riferimento a un altro elemento, viene restituito un token per tale elemento. Qualunque tipo di input del puntatore può essere NULL per indicare che il valore in questione non è richiesto. Per ottenere proprietà che siano essenzialmente oggetti Collection, ad esempio la raccolta di interfacce implementate da una classe, usare i metodi di enumerazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

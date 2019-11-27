@@ -1,5 +1,5 @@
 ---
-title: Accessing application settings
+title: Accesso alle impostazioni dell'applicazione
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings

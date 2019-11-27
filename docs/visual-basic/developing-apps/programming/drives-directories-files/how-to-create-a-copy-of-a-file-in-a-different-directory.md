@@ -52,7 +52,7 @@ Il metodo `My.Computer.FileSystem.CopyFile` consente di copiare i file. I sui pa
   
 - La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
-- L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   

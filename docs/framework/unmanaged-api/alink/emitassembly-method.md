@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446529"
 ---
 # <a name="emitassembly-method"></a>Metodo EmitAssembly
-Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
+Crea l'assembly. Chiamare questo metodo dopo la chiusura di tutti gli altri file, ad eccezione del file di assembly. Non chiamare questo metodo quando si producono moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

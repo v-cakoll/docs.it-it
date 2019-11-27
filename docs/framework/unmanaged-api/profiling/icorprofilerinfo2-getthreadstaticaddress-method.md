@@ -48,7 +48,7 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  out Puntatore all'indirizzo del campo statico che si trova all'interno del thread specificato.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il metodo `GetThreadStaticAddress` può restituire uno dei seguenti elementi:  
   
 - CORPROF_E_DATAINCOMPLETE HRESULT se al campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.  

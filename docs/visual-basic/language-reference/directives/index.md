@@ -19,15 +19,15 @@ Gli argomenti in questa sezione descrivono le direttive del compilatore del codi
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [Direttiva #Const](../../../visual-basic/language-reference/directives/const-directive.md) --definire una costante del compilatore  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [Direttiva #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) : indicare un mapping tra le righe di origine e il testo esterno all'origine  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Direttive then... #Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : compila i blocchi di codice selezionati  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [Direttiva #Region](../../../visual-basic/language-reference/directives/region-directive.md) : comprimere e nascondere sezioni di codice nell'editor di Visual Studio  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** disabilitare e abilitare avvisi specifici per le aree di codice.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

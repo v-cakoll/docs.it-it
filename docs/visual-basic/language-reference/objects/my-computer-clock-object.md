@@ -14,7 +14,7 @@ ms.locfileid: "74344087"
 # <a name="mycomputerclock-object"></a>Oggetto My.Computer.Clock
 Offre proprietà che consentono di accedere all'ora locale corrente e all'ora UTC (Universal Coordinated Time), equivalente all'ora di Greenwich, dal clock di sistema.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Clock` , vedere <xref:Microsoft.VisualBasic.Devices.Clock>.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -22,7 +22,7 @@ Offre proprietà che consentono di accedere all'ora locale corrente e all'ora UT
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

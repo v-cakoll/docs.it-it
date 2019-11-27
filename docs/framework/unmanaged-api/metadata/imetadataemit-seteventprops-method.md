@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450324"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Metodo IMetaDataEmit::SetEventProps
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Imposta o aggiorna la funzionalità specificata di un evento definito da una chiamata precedente a [IMetaDataEmit::D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,32 +41,32 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parametri  
  `ev`  
- [in] The event token.  
+ in Token dell'evento.  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ in Flag evento. Si tratta di una maschera di maschera dei valori `CorEventAttr`.  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ in Token per la classe di evento. Si tratta di un token `mdTypeDef` o `mdTypeRef`.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ in Metodo utilizzato per sottoscrivere l'evento o null.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ in Metodo utilizzato per annullare la sottoscrizione dell'evento o null.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ in Metodo usato (da una classe derivata) per generare l'evento.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ in Matrice di token per altri metodi associati all'evento. L'ultimo elemento della matrice deve essere `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

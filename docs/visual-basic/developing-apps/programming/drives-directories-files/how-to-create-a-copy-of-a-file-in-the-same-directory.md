@@ -22,7 +22,7 @@ Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametr
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Per creare una copia di un file nella stessa directory  
   
-- Usare il metodo `CopyFile` specificando il percorso e il file di destinazione. Nell'esempio seguente viene creata una copia di `test2.txt` denominata `test.txt`.  
+- Usare il metodo `CopyFile` specificando il percorso e il file di destinazione. Nell'esempio seguente viene creata una copia di `test.txt` denominata `test2.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
@@ -60,7 +60,7 @@ Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametr
   
 - La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).  
   
-- L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
+- L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
 - L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   

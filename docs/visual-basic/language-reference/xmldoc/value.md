@@ -12,8 +12,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352182"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>valore \<> (Visual Basic)
+Specifica la descrizione di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -25,13 +25,13 @@ Specifies the description of a property.
  `property-description`  
  Descrizione della proprietà.  
   
-## <a name="remarks"></a>Note  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+## <a name="remarks"></a>Osservazioni  
+ Usare il tag `<value>` per descrivere una proprietà. Si noti che quando si aggiunge una proprietà usando la creazione guidata codice nell'ambiente di sviluppo di Visual Studio, verrà aggiunto un [\<riepilogo >](../../../visual-basic/language-reference/xmldoc/summary.md) tag per la nuova proprietà. È quindi necessario aggiungere manualmente un tag `<value>` per descrivere il valore rappresentato dalla proprietà.  
   
  Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ Questo esempio usa il tag `<value>` per descrivere il valore che la proprietà `Counter` possiede.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

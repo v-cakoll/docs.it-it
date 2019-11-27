@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430709"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>Metodo ISymUnmanagedDispose::Destroy
-Causes the underlying object to release all internal references and return failure on any subsequent method calls.  
+Fa in modo che l'oggetto sottostante rilasci tutti i riferimenti interni e restituisca un errore in tutte le chiamate al metodo successive.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,10 +32,10 @@ HRESULT Destroy();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

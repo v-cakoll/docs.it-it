@@ -40,29 +40,29 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] The TypeDef token for the class with the layout to return.  
+ in Token TypeDef per la classe con il layout da restituire.  
   
  `pdwPackSize`  
- [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
+ out Uno dei valori 1, 2, 4, 8 o 16, che rappresenta le dimensioni del pacchetto della classe.  
   
  `rFieldOffset`  
- [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
+ out Matrice di valori di [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) .  
   
  `cMax`  
  [in] Dimensione massima della matrice `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] The number of elements returned in `rFieldOffset`.  
+ out Numero di elementi restituiti in `rFieldOffset`.  
   
  `pulClassSize`  
- [out] The size in bytes of the class represented by `td`.  
+ out Dimensioni in byte della classe rappresentata da `td`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.locfileid: "74353821"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedura: creare oggetti GenericPrincipal e GenericIdentity
 
-You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
+È possibile utilizzare la classe <xref:System.Security.Principal.GenericIdentity> insieme alla classe <xref:System.Security.Principal.GenericPrincipal> per creare uno schema di autorizzazione esistente indipendentemente da un dominio di Windows.
 
 ### <a name="to-create-a-genericprincipal-object"></a>Per creare un oggetto GenericPrincipal
 
@@ -48,7 +48,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Usare il codice seguente per allegare l'entità al thread attuale. This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread. Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Usare il codice seguente per allegare l'entità al thread attuale. Questo è utile nelle situazioni in cui l'entità deve essere convalidata più volte, deve essere convalidata da un altro codice in esecuzione nell'applicazione oppure deve essere convalidata da un oggetto <xref:System.Security.Permissions.PrincipalPermission>. Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread. Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal

@@ -12,8 +12,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352290"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>> parametri \<(Visual Basic)
+Definisce un nome di parametro e una descrizione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,19 +28,19 @@ Defines a parameter name and description.
  `description`  
  Descrizione del parametro.  
   
-## <a name="remarks"></a>Note  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+## <a name="remarks"></a>Osservazioni  
+ Il tag `<param>` deve essere usato nel commento per una dichiarazione di metodo per descrivere uno dei parametri per il metodo.  
   
- The text for the `<param>` tag will appear in the following locations:  
+ Il testo per il tag `<param>` verrà visualizzato nei percorsi seguenti:  
   
-- Parameter Info of IntelliSense. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).  
+- Informazioni sul parametro di IntelliSense. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).  
   
-- Object Browser. Per altre informazioni, vedere [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code) (Visualizzazione della struttura del codice).  
+- Visualizzatore oggetti. Per altre informazioni, vedere [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code) (Visualizzazione della struttura del codice).  
   
  Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ Questo esempio usa il tag `<param>` per descrivere il parametro `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

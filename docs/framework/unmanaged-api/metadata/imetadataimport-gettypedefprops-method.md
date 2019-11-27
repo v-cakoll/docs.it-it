@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436744"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Metodo IMetaDataImport::GetTypeDefProps
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+Restituisce le informazioni sui metadati per la <xref:System.Type> rappresentata dal token TypeDef specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ in Token TypeDef che rappresenta il tipo per cui restituire i metadati.  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ out Buffer contenente il nome del tipo.  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ in Dimensioni in caratteri wide di `szTypeDef`.  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ out Numero di caratteri wide restituiti in `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ out Puntatore a tutti i flag che modificano la definizione del tipo. Questo valore è una maschera di maschera dall'enumerazione [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ out Token di metadati TypeDef o TypeRef che rappresenta il tipo di base del tipo richiesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

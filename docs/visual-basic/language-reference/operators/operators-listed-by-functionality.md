@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348262"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Elenco degli operatori per funzionalità (Visual Basic)
-See one of the categories listed below, or open this portion of the Help table of contents to see an alphabetical list of Visual Basic operators.  
+Vedere una delle categorie elencate di seguito o aprire questa parte del sommario della Guida per visualizzare un elenco in ordine alfabetico degli operatori Visual Basic.  
   
-## <a name="categories-of-operators"></a>Categories of Operators  
+## <a name="categories-of-operators"></a>Categorie di operatori  
   
 |Operatori|Descrizione|  
 |---------------|-----------------|  
-|[Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|These operators perform mathematical calculations.|  
-|[Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)|These operators perform assignment operations.|  
-|[Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)|These operators perform comparisons.|  
-|[Operatori di concatenazione](../../../visual-basic/language-reference/operators/concatenation-operators.md)|These operators combine strings.|  
-|[Operatori logici e bit per bit](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|These operators perform logical operations.|  
-|[Operatori di spostamento bit](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|These operators perform arithmetic shifts on bit patterns.|  
-|[Operatori vari](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|These operators perform miscellaneous operations.|  
+|[Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|Questi operatori eseguono calcoli matematici.|  
+|[Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)|Questi operatori eseguono operazioni di assegnazione.|  
+|[Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)|Questi operatori eseguono confronti.|  
+|[Operatori di concatenazione](../../../visual-basic/language-reference/operators/concatenation-operators.md)|Questi operatori combinano le stringhe.|  
+|[Operatori logici e bit per bit](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|Questi operatori eseguono operazioni logiche.|  
+|[Operatori di spostamento bit](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|Questi operatori eseguono turni aritmetici sugli schemi di bit.|  
+|[Operatori vari](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|Questi operatori eseguono operazioni varie.|  
   
 ## <a name="see-also"></a>Vedere anche
 

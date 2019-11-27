@@ -1,5 +1,5 @@
 ---
-title: 'How to: Initialize an Array Variable'
+title: 'Procedura: inizializzare una variabile di matrice'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -15,45 +15,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351872"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedura: inizializzare una variabile di matrice in Visual Basic
-You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array. You can either specify the type or allow it to be inferred from the values in the array literal. For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+Per inizializzare una variabile di matrice, è necessario includere un valore letterale di matrice in una clausola `New` e specificare i valori iniziali della matrice. È possibile specificare il tipo o consentirne la deduzione dai valori nel valore letterale di matrice. Per ulteriori informazioni sul modo in cui il tipo viene dedotto, vedere "popolamento di una matrice con valori iniziali" nelle [matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>To initialize an array variable by using an array literal  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Per inizializzare una variabile di matrice utilizzando un valore letterale di matrice  
   
-- Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`). The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.  
+- Nella clausola `New` o quando si assegna il valore della matrice, fornire i valori dell'elemento racchiusi tra parentesi graffe (`{}`). Nell'esempio seguente vengono illustrati diversi modi per dichiarare, creare e inizializzare una variabile in modo che contenga una matrice contenente elementi di tipo `Char`.  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
-     After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values. If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.  
+     Dopo l'esecuzione di ogni istruzione, la matrice creata ha una lunghezza di 3, con elementi in corrispondenza dell'indice 0 fino all'indice 2 che contiene i valori iniziali. Se si specificano sia il limite superiore che i valori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore.  
   
-     Notice that you do not have to specify the index upper bound if you supply element values in an array literal. If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.  
+     Si noti che non è necessario specificare il limite superiore dell'indice se si forniscono i valori degli elementi in un valore letterale di matrice. Se non viene specificato alcun limite superiore, le dimensioni della matrice vengono dedotte in base al numero di valori nel valore letterale di matrice.  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>To initialize a multidimensional array variable by using array literals  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Per inizializzare una variabile di matrice multidimensionale tramite valori letterali di matrice  
   
-- Nest values inside braces (`{}`) within braces. Ensure that the nested array literals all infer as arrays of the same type and length. The following code example shows several examples of multidimensional array initialization.  
+- Annidare i valori racchiusi tra parentesi graffe (`{}`) tra parentesi graffe. Assicurarsi che i valori letterali di matrice annidati deducano tutti come matrici dello stesso tipo e della stessa lunghezza. Nell'esempio di codice seguente vengono illustrati diversi esempi di inizializzazione di matrici multidimensionali.  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal. If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension. The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`  
+- È possibile specificare in modo esplicito i limiti della matrice oppure ometterli e fare in modo che il compilatore deduca i limiti della matrice in base ai valori nel valore letterale di matrice. Se si forniscono sia i limiti superiori che i valori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore in ogni dimensione. Nell'esempio seguente vengono illustrati diversi modi per dichiarare, creare e inizializzare una variabile in modo che contenga una matrice bidimensionale con elementi di tipo `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
-     After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`. Each array location contains the value `10`.  
+     Dopo l'esecuzione di ogni istruzione, la matrice creata contiene sei elementi inizializzati con indici `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`e `(1,2)`. Ogni posizione della matrice contiene il valore `10`.  
   
-- The following example iterates through a multidimensional array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method. The last comments show the output.  
+- Nell'esempio seguente viene eseguita l'iterazione di una matrice multidimensionale. In un'applicazione console di Windows scritta in Visual Basic, incollare il codice all'interno del `Sub Main()` metodo. Gli ultimi commenti mostrano l'output.  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>To initialize a jagged array variable by using array literals  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Per inizializzare una variabile di matrice irregolare usando valori letterali di matrice  
   
-- Nest object values inside braces (`{}`). Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array. The following code example shows two examples of jagged array initialization.  
+- Annidare i valori degli oggetti racchiusi tra parentesi graffe (`{}`). Sebbene sia anche possibile annidare valori letterali di matrice che specificano matrici di lunghezze diverse, nel caso di una matrice di matrici, assicurarsi che i valori letterali di matrice annidati siano racchiusi tra parentesi (`()`). Le parentesi forzano la valutazione dei valori letterali di matrice annidati e le matrici risultanti vengono usate come valori iniziali della matrice di matrici. Nell'esempio di codice seguente vengono illustrati due esempi di inizializzazione di matrici di matrici.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
-- The following example iterates through a jagged array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.  The last comments in the code show the output.  
+- Nell'esempio seguente viene eseguita l'iterazione di una matrice di matrici. In un'applicazione console di Windows scritta in Visual Basic, incollare il codice all'interno del `Sub Main()` metodo.  Gli ultimi commenti nel codice mostrano l'output.  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

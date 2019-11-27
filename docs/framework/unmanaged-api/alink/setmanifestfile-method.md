@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445565"
 ---
 # <a name="setmanifestfile-method"></a>Metodo SetManifestFile
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+Consente di specificare o reimpostare il file manifesto utilizzato dal linker durante la creazione dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,20 +35,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parametri  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ Nome del file manifesto il cui contenuto viene inserito nel BLOB di risorse Win32.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
-## <a name="remarks"></a>Note  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+## <a name="remarks"></a>Osservazioni  
+ Chiamare questo oggetto prima di richiedere l'Win32ResBlob. Il valore del parametro `pszFile` è il nome del file manifesto il cui contenuto viene letto e inserito nelle risorse Win32 con ID RT_MANIFEST. Quando viene chiamato usando un parametro NULL, qualsiasi manifesto precedentemente letto viene cancellato. In questo modo, è possibile reimpostare lo stato del linker su quello del tempo di inizializzazione.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires aLink.h  
+ Richiede aLink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink3](ialink3-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)
 - [Interfaccia IALink](ialink-interface.md)
 - [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

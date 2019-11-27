@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445055"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Metodo ICorProfilerCallback::COMClassicVTableCreated
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Notifica al profiler che è stato creato un vtable di interoperabilità COM per l'IID e la classe specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,24 +37,24 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parametri  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ in ID della classe per cui è stato creato il vtable.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ in ID dell'interfaccia implementata dalla classe. Questo valore può essere NULL se l'interfaccia è solo interna.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ in Puntatore all'inizio di vtable.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ in Numero di slot presenti in vtable.  
   
-## <a name="remarks"></a>Note  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+## <a name="remarks"></a>Osservazioni  
+ Il profiler non deve bloccarsi nella sua implementazione di questo metodo perché lo stack potrebbe non trovarsi in uno stato che consente Garbage Collection e pertanto non è possibile abilitare il Garbage Collection preemptive. Se il profiler si blocca qui e si tenta di Garbage Collection, il runtime si bloccherà fino a quando questo callback non viene restituito.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ L'implementazione del profiler di questo metodo non deve chiamare nel codice gestito o in alcun modo causare un'allocazione della memoria gestita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

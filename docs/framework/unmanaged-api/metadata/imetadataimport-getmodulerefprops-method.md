@@ -38,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ in Token di metadati ModuleRef che fa riferimento al modulo per il quale ottenere informazioni sui metadati.  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ out Un buffer in cui memorizzare il nome del modulo.  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ in Dimensioni richieste di `szName` in caratteri wide.  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ out Dimensioni restituite di `szName` in caratteri wide.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

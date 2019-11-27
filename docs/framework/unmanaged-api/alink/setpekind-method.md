@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445543"
 ---
 # <a name="setpekind-method"></a>Metodo SetPEKind
-Determines the portable executable type, either machine-specific or machine-agnostic.  
+Determina il tipo di eseguibile portatile, specifico del computer o indipendente dal computer.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
  `FileToken`  
- Token of file for which the PE type is to be set. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Token del file per il quale deve essere impostato il tipo PE. Può essere NULL se `AssemblyID` non indica un netmodule non associato.  
   
  `dwPEKind`  
- The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).  
+ Tipo di PE, come indicato dall' [enumerazione CorPEKind](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- The target machine architecture, as indicated in the NT header.  
+ L'architettura del computer di destinazione, come indicato nell'intestazione NT.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Metodo GetPEKind](../metadata/imetadataimport2-getpekind-method.md)
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

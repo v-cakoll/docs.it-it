@@ -31,7 +31,7 @@ ms.locfileid: "74333954"
  [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Descrive come usare .NET Framework per modificare file e cartelle.  
   
- [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Procedura dettagliata: modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Descrive come usare l'oggetto `My.Computer.FileSystem` per modificare file e cartelle.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

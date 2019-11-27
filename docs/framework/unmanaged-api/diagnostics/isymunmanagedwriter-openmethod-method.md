@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427925"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>Metodo ISymUnmanagedWriter::OpenMethod
-Opens a method into which symbol information is emitted. The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes. There is an implicit lexical scope around the entire method. Reopening a method that was previously closed erases any previously defined symbols for that method. There can be only one open method at a time.  
+Apre un metodo in cui vengono emesse le informazioni sui simboli. Il metodo specificato diventa il metodo corrente per le chiamate a per definire i punti di sequenza, i parametri e gli ambiti lessicali. È presente un ambito lessicale implicito intorno all'intero metodo. La riapertura di un metodo precedentemente chiuso Cancella tutti i simboli definiti in precedenza per il metodo. Può essere presente un solo metodo Open alla volta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT OpenMethod(
   
 ## <a name="parameters"></a>Parametri  
  `method`  
- [in] The metadata token for the method to be opened.  
+ in Token di metadati per il metodo da aprire.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

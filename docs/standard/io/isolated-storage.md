@@ -31,7 +31,7 @@ ms.locfileid: "74204785"
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
 
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
+> Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. x Store. Al contrario, usare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API di Windows Runtime per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.
 
 Di seguito sono elencate le diverse sezioni di questo argomento:
 
@@ -51,7 +51,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 - [Argomenti correlati](#related_topics)
 
-- [Reference](#reference)
+- [Riferimento](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -146,7 +146,7 @@ Lo spazio di memorizzazione isolato risulta utile in molte situazioni, inclusi i
 
 - Archiviazione di componenti condivisi. I componenti condivisi tra le applicazioni possono utilizzare l'archiviazione isolata per fornire accesso controllato agli archivi di dati.
 
-- Archiviazione server. Le applicazioni server possono utilizzare l'archiviazione isolata per fornire singoli archivi a un ampio numero di utenti che inoltrano richieste all'applicazione. Poiché l'archiviazione isolata è sempre isolata dall'utente, il server deve impersonare l'utente che inoltra la richiesta. In questo caso, i dati vengono isolati in base all'identità del principale, che è la stessa usata dall'applicazione per distinguere gli utenti.
+- Archiviazione server. Le applicazioni server possono utilizzare l'archiviazione isolata per fornire singoli archivi a un ampio numero di utenti che inoltrano richieste all'applicazione. Poiché l'archiviazione isolata è sempre isolata dall'utente, il server deve impersonare l'utente che inoltra la richiesta. In questo caso, i dati vengono isolati in base all'identità del principale, che è la stessa utilizzata dall'applicazione per distinguere gli utenti.
 
 - Roaming. Le applicazioni possono anche utilizzare l'archiviazione isolata con i profili di utente roaming. In questo modo gli archivi isolati di un utente possono spostarsi con il profilo.
 
@@ -179,7 +179,7 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Riferimenti
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

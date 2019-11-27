@@ -39,37 +39,37 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ in Nome del tipo da esportare. Per la versione 1,1 della Common Language Runtime, il nome del tipo esportato deve corrispondere esattamente al nome specificato nel `TypeDef` per il tipo.  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ in Token che specifica la posizione in cui viene implementato il tipo esportato. I valori validi e i significati associati sono:  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` il tipo viene implementato in un file diverso all'interno dell'assembly.  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` il tipo viene implementato in un assembly diverso.  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` il tipo è annidato all'interno di un altro tipo.  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` il tipo si trova nello stesso file del manifesto e non è un tipo annidato.  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ in Token per i metadati che specifica il tipo da esportare. Questo valore viene immesso nella tabella `TypeDef` nel file che implementa il tipo ed è pertinente solo se tale file si trova in questo assembly.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ in Combinazione bit per bit di valori di enumerazione [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) che definiscono le impostazioni delle proprietà per il tipo esportato.  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ out Puntatore al token di metadati restituito che indica il tipo esportato.  
   
-## <a name="remarks"></a>Note  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+## <a name="remarks"></a>Osservazioni  
+ È necessario definire una struttura di metadati di `ExportedType` per ogni tipo esposto dall'assembly e che viene implementato in un modulo diverso da quello che contiene il manifesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

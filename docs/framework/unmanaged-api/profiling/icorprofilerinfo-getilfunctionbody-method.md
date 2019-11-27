@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450366"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Metodo ICorProfilerInfo::GetILFunctionBody
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Ottiene un puntatore al corpo di un metodo nel codice MSIL (Microsoft Intermediate Language), a partire dalla relativa intestazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,24 +37,24 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ in ID del modulo in cui risiede la funzione.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ in Token di metadati per il metodo.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ out Puntatore all'intestazione del metodo.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ out Integer che specifica le dimensioni del metodo.  
   
-## <a name="remarks"></a>Note  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+## <a name="remarks"></a>Osservazioni  
+ Un metodo ha come ambito il modulo in cui risiede. Poiché il metodo `GetILFunctionBody` è progettato per concedere a uno strumento l'accesso al codice MSIL prima che sia stato caricato dal Common Language Runtime (CLR), usa il token di metadati del metodo per trovare l'istanza desiderata.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` possibile restituire un valore HRESULT CORPROF_E_FUNCTION_NOT_IL se il `methodId` punta a un metodo senza codice MSIL, ad esempio un metodo astratto o un metodo platform invoke (PInvoke).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

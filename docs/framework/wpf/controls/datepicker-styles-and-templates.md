@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepicker-parts"></a>Parti DatePicker  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.DatePicker>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|Radice del controllo.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|Pulsante che consente di aprire e chiudere la <xref:System.Windows.Controls.Calendar>.|  
@@ -32,7 +32,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepicker-states"></a>Stati DatePicker  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.DatePicker>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.DatePicker> è disabilitato.|  
@@ -43,7 +43,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepickertextbox-parts"></a>Parti DatePickerTextBox  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|Elemento contenente il testo iniziale nel <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
@@ -51,7 +51,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datepickertextbox-states"></a>Stati DatePickerTextBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.DatePickerTextBox> è disabilitato.|  

@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tabcontrol-parts"></a>Parti TabControl  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TabControl>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Oggetto che mostra il contenuto del <xref:System.Windows.Controls.TabItem>attualmente selezionato.|  
   
@@ -31,7 +31,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tabcontrol-states"></a>Stati di TabControl  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TabControl>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
@@ -45,7 +45,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tabitem-states"></a>Stati di TabItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TabItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
 |Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  

@@ -48,28 +48,28 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indica una convenzione di chiamata predefinita.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indica che il metodo accetta un numero variabile di parametri.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indica che la chiamata è a un campo.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indica che la chiamata è a un metodo locale.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indica che la chiamata è a una proprietà.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indica che la chiamata non è gestita.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica una creazione di un'istanza di metodo generica.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indica una chiamata PInvoke a 64 bit a un metodo che accetta un numero variabile di parametri.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Descrive un valore a 4 bit non valido.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica che la convenzione di chiamata è descritta dai quattro bit inferiori.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica che il bit superiore descrive un parametro di `this`.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica che un parametro di `this` viene descritto in modo esplicito nella firma.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma del metodo generico con un numero esplicito di argomenti di tipo. Questo precede un numero di parametri normali.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

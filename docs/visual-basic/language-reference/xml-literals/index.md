@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349408"
 ---
 # <a name="xml-literals-visual-basic"></a>Valori letterali XML (Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. La sintassi dei valori letterali XML consente di incorporare XML direttamente nel codice.  
+Negli argomenti di questa sezione viene illustrata la sintassi dei valori letterali XML in Visual Basic. La sintassi dei valori letterali XML consente di incorporare XML direttamente nel codice.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

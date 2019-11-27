@@ -28,7 +28,7 @@ Il controllo <xref:System.Windows.Controls.Primitives.Thumb> non dispone di part
 
 Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.Thumb>.
 
-|Nome VisualState|Nome VisualStateGroup|description|
+|Nome VisualState|Nome VisualStateGroup|Descrizione|
 |-|-|-|
 |Normale|CommonStates|Lo stato predefinito.|
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|

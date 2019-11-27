@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436037"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Metodo ICorProfilerInfo2::GetArrayObjectInfo
-Gets detailed information about an array object.  
+Ottiene informazioni dettagliate su un oggetto Array.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,25 +38,25 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parametri  
  `objectId`  
- [in] The ID of a valid array object.  
+ in ID di un oggetto matrice valido.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ in Rango (numero di dimensioni) della matrice.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ out Matrice contenente Integer, ognuno dei quali rappresenta la dimensione di una dimensione della matrice.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ out Matrice contenente Integer, ognuno dei quali rappresenta il limite inferiore di una dimensione della matrice.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ out Puntatore all'indirizzo del buffer non elaborato per la matrice, disposto in base alla C++ convenzione.  
   
-## <a name="remarks"></a>Note  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+## <a name="remarks"></a>Osservazioni  
+ I `pDimensionSizes` e `pDimensionLowerBounds` sono matrici parallele, pertanto gli elementi che si trovano nello stesso indice in ogni matrice sono caratteristiche della stessa entità.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametri  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ in Token FieldDef che rappresenta il campo per il quale ottenere i metadati associati.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ out Puntatore a un token TypeDef che rappresenta il tipo della classe a cui appartiene il campo.  
   
  `szField`  
- [out] The name of the field.  
+ out Nome del campo.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ in Dimensioni in caratteri wide del buffer per *szField*.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ out Dimensioni effettive del buffer restituito.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ out Flag associati ai metadati del campo.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ in Puntatore al valore dei metadati binari che descrive il campo.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ out Dimensioni in byte del `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ out Flag che specifica il tipo di valore del campo.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ out Valore costante per il campo.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ out Dimensioni in caratteri di `ppValue`o zero se non esiste alcuna stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

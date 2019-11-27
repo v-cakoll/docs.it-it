@@ -37,20 +37,20 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parametri  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ in Token per il quale restituire la firma dei metadati binari.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ out Puntatore alla firma dei metadati restituita.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ out Dimensioni in byte della firma dei metadati binari.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444907"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>Metodo ICorProfilerCallback::ExceptionOSHandlerEnter
-Non implementato. A profiler that needs unmanaged exception information must obtain this information through other means.  
+Non implementato. Un profiler che necessita di informazioni sulle eccezioni non gestite deve ottenere tali informazioni tramite altri mezzi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +33,7 @@ HRESULT ExceptionOSHandlerEnter(
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

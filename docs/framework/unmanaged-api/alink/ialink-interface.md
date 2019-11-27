@@ -14,12 +14,12 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441823"
 ---
 # <a name="ialink-interface"></a>Interfaccia IALink
-Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
+Consente di costruire assembly .NET Framework. Tra le altre cose, l'interfaccia contiene metodi che facilitano la scrittura di manifesti di assembly per gli assembly a più moduli, la firma di assembly con nomi sicuri e la creazione di netmodule.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [AddFile Method](addfile-method.md)  
+ [Metodo AddFile](addfile-method.md)  
   
- [AddImport Method](addimport-method.md)  
+ [Metodo AddImport](addimport-method.md)  
   
  [Metodo CloseAssembly](closeassembly-method.md)  
   
@@ -51,7 +51,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [Metodo GetResolutionScope](getresolutionscope-method.md)  
   
- [GetScope Method](getscope-method.md)  
+ [Metodo GetScope](getscope-method.md)  
   
  [Metodo GetWin32ResBlob](getwin32resblob-method.md)  
   
@@ -61,7 +61,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [Metodo ImportTypes](importtypes-method.md)  
   
- "Init Method"  
+ "Metodo Init"  
   
  [Metodo LinkResource](linkresource-method.md)  
   
@@ -75,6 +75,6 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [API ALink](index.md)
+- [Alink (API)](index.md)
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

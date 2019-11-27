@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446512"
 ---
 # <a name="emitassemblycustomattribute-method"></a>Metodo EmitAssemblyCustomAttribute
-Call to set assembly-level custom attributes.  
+Chiamare per impostare gli attributi personalizzati a livello di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,34 +41,34 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ File che defilerà l'attributo. Può essere NULL se `AssemblyID` non indica un netmodule non associato.  
   
  `tkType`  
- Type of the custom attribute.  
+ Tipo dell'attributo personalizzato.  
   
  `pCustomValue`  
- Custom value data.  
+ Dati del valore personalizzato.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ Lunghezza dei dati del valore personalizzato.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ TRUE se l'attributo personalizzato è correlato alla firma dell'assembly.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ TRUE se devono essere emessi più attributi.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

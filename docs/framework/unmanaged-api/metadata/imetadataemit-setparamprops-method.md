@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432500"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>Metodo IMetaDataEmit::SetParamProps
-Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Imposta o modifica le funzionalità di un parametro del metodo definito da una chiamata precedente a [IMetaDataEmit::D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,29 +40,29 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Parametri  
  `pd`  
- [in] The token for the target parameter.  
+ in Token per il parametro di destinazione.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ in Nome del parametro in formato Unicode.  
   
  `dwParamFlags`  
- [in] The flags for the parameter.  
+ in Flag per il parametro.  
   
  `dwCPlusTypeFlag`  
- [in] The ELEMENT_TYPE_* for the constant value.  
+ in ELEMENT_TYPE_ * per il valore della costante.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ in Valore costante per il parametro.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ in Dimensioni in caratteri (Unicode) del `pValue`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

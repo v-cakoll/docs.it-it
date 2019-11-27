@@ -19,7 +19,7 @@ ms.locfileid: "74353937"
 
 Se non vengono applicate regole, un programma procede attraverso le relative istruzioni dall'inizio alla fine. Alcuni programmi molto semplici possono essere scritti con solo questo flusso unidirezionale. Tuttavia, l'efficacia e l'utilità di un linguaggio di programmazione sono in gran parte correlate alla possibilità di modificare l'ordine di esecuzione con cicli e istruzioni di controllo.
 
- Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.
+ Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Usando le strutture di controllo, è possibile scrivere Visual Basic codice che prende decisioni o che ripete le azioni. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.
   
 ## <a name="in-this-section"></a>Contenuto della sezione
 

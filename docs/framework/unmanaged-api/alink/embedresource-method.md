@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446542"
 ---
 # <a name="embedresource-method"></a>Metodo EmbedResource
-Declares an embedded resource. This method does not actually embed the resource.  
+Dichiara una risorsa incorporata. Questo metodo non incorpora effettivamente la risorsa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,28 +39,28 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ Token file o ID assembly del file che contiene la risorsa.  
   
  `pszResourceName`  
  Nome della risorsa.  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ Offset della risorsa da RVA.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Flag di accessibilità, ad esempio `mrPublic` e `mrPrivate`. Questi flag possono essere passati al [Metodo DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

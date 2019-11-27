@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428051"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Metodo ISymUnmanagedWriter::DefineDocument
-Definisce un documento di origine. GUIDs are provided for known languages, vendors, and document types.  
+Definisce un documento di origine. I GUID sono forniti per i linguaggi noti, i fornitori e i tipi di documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parametri  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ in Puntatore a un `WCHAR` che definisce l'URL (Uniform Resource Locator) che identifica il documento.  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ in Puntatore a un GUID che definisce la lingua del documento.  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ in Puntatore a un GUID che definisce l'identità del fornitore per la lingua del documento.  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ in Puntatore a un GUID che definisce il tipo del documento.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ out Puntatore all'interfaccia [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

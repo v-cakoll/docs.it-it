@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440123"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>Metodo IMetaDataFilter::UnmarkAll
-Removes the processing marks from all the tokens in the current metadata scope.  
+Rimuove i contrassegni di elaborazione da tutti i token nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,14 +32,14 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Parametri  
- `UnmarkAll` takes no parameters.  
+ `UnmarkAll` non accetta parametri.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

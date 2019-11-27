@@ -13,6 +13,6 @@ ms.locfileid: "74378172"
 > - [Crittografia](~/docs/core/compatibility/cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 > - [Globalizzazione](~/docs/core/compatibility/globalization.md)
-> - [Servizi di rete](~/docs/core/compatibility/networking.md)
+> - [Rete](~/docs/core/compatibility/networking.md)
 > - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
 > - [Windows Form](~/docs/core/compatibility/winforms.md)

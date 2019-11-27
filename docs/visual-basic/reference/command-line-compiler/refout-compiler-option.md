@@ -26,16 +26,16 @@ L'opzione **-refout** specifica un percorso file in cui l'assembly di riferiment
 -refout:filepath
 ```
 
-## <a name="arguments"></a>argomenti
+## <a name="arguments"></a>Argomenti
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. La convenzione consigliata (usata da MSBuild) consiste nell'inserire l'assembly di riferimento in una sottocartella "ref /" relativa all'assembly primario. All folders in `filepath` must exist; the compiler does not create them.
+Percorso e nome del file dell'assembly di riferimento. In genere dovrebbe trovarsi in una sottocartella dell'assembly primario. La convenzione consigliata (usata da MSBuild) consiste nell'inserire l'assembly di riferimento in una sottocartella "ref /" relativa all'assembly primario. Tutte le cartelle nel `filepath` devono esistere; il compilatore non li crea.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic supporta l'opzione di `-refout` a partire dalla versione 15,3.
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+Gli assembly di riferimento sono un tipo speciale di assembly che contiene solo la quantità minima di metadati necessaria per rappresentare la superficie dell'API pubblica della libreria. Sono incluse le dichiarazioni per tutti i membri significativi quando si fa riferimento a un assembly negli strumenti di compilazione, ma si escludono tutte le implementazioni e le dichiarazioni dei membri privati che non hanno alcun impatto osservabile sul contratto API. Per ulteriori informazioni, vedere [assembly di riferimento](../../../standard/assembly/reference-assemblies.md) nella Guida di .NET.
 
 Le opzioni `-refout` e [`-refonly`](refonly-compiler-option.md) si escludono reciprocamente.
 

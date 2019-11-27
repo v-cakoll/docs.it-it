@@ -24,7 +24,7 @@ ms.locfileid: "74343838"
 ---
 # <a name="const-directive"></a>Direttiva #Const
 
-Defines conditional compiler constants for Visual Basic.  
+Definisce le costanti del compilatore condizionale per Visual Basic.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>Parti  
 
  `constname`  
- Obbligatorio. Name of the constant being defined.  
+ Obbligatoria. Nome della costante da definire.  
   
  `expression`  
- Obbligatorio. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ Obbligatoria. Valore letterale, altra costante del compilatore condizionale o qualsiasi combinazione che includa tutti gli operatori aritmetici o logici eccetto `Is`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ Le costanti del compilatore condizionale sono sempre private per il file in cui sono visualizzate. Non è possibile creare costanti del compilatore pubbliche usando la direttiva `#Const`; è possibile crearli solo nell'interfaccia utente o con l'opzione del compilatore `/define`.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ È possibile utilizzare solo le costanti e i valori letterali del compilatore condizionale in `expression`. L'uso di una costante standard definita con `Const` causa un errore. Viceversa, è possibile utilizzare le costanti definite con la parola chiave `#Const` solo per la compilazione condizionale. Le costanti possono anche essere indefinite, nel qual caso hanno il valore `Nothing`.  
   
 ## <a name="example"></a>Esempio  
 

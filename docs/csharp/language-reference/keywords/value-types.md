@@ -32,7 +32,7 @@ Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?di
 
 A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore. Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.
 
-Le variabili del tipo valore non possono essere `null` per impostazione predefinita. However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.
+Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Tuttavia, le variabili dei [tipi valore Nullable](../builtin-types/nullable-value-types.md) corrispondenti possono essere `null`.
 
 Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il valore predefinito del tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).
 

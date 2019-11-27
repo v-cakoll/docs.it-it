@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349803"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Riepilogo delle informazioni e dell'interazione (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Le parole chiave del linguaggio Visual Basic e i membri della libreria di runtime sono organizzati in base allo scopo e usano.  
   
-|Operazione|Elemento di linguaggio|  
+|Operazione|Language - elemento|  
 |------------|----------------------|  
-|Run other programs.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|Call a method or property.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|Sound a beep from computer.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
-|Provide a command-line string.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
-|Manipulate COM objects.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
-|Retrieve color information.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
-|Control dialog boxes|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|Eseguire altri programmi.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
+|Chiamare un metodo o una proprietà.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
+|Emette un segnale acustico dal computer.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
+|Specificare una stringa della riga di comando.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
+|Modificare gli oggetti COM.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
+|Recuperare le informazioni sui colori.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
+|Finestre di dialogo di controllo|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
 

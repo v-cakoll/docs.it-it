@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350183"
 ---
 # <a name="addhandler-statement"></a>Istruzione AddHandler
-Associates an event with an event handler at run time.  
+Associa un evento a un gestore eventi in fase di esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,19 +27,19 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>Parti  
 |||
 |---|---|
-|event|The name of the event to handle.|  
-|`eventhandler`|The name of a procedure that handles the event.|
+|event|Nome dell'evento da gestire.|  
+|`eventhandler`|Nome di una routine che gestisce l'evento.|
 |||
   
-## <a name="remarks"></a>Note  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
+## <a name="remarks"></a>Osservazioni  
+ Le istruzioni `AddHandler` e `RemoveHandler` consentono di avviare e arrestare la gestione degli eventi in qualsiasi momento durante l'esecuzione del programma.  
   
- The signature of the `eventhandler` procedure must match the signature of the event `event`.  
+ La firma della stored procedure `eventhandler` deve corrispondere alla firma della `event`dell'evento.  
   
- La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. Per ulteriori informazioni, vedere [handle](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Per gli eventi personalizzati, l'istruzione `AddHandler` richiama la funzione di accesso `AddHandler` dell'evento. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

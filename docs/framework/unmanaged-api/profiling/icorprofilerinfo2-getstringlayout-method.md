@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431401"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Metodo ICorProfilerInfo2::GetStringLayout
-Ottiene informazioni sul layout di un oggetto stringa. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+Ottiene informazioni sul layout di un oggetto stringa. Questo metodo è deprecato nel .NET Framework 4 e viene sostituito dal metodo [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,30 +36,30 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametri  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ out Puntatore all'offset della posizione, relativo al puntatore `ObjectID`, che archivia la lunghezza della stringa. La lunghezza viene archiviata come `DWORD`.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> Questo parametro restituisce la lunghezza della stringa stessa, non la lunghezza del buffer. La lunghezza del buffer non è più disponibile.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ out Puntatore all'offset della posizione, relativo al puntatore `ObjectID`, in cui è archiviata la lunghezza della stringa stessa. La lunghezza viene archiviata come `DWORD`.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ out Puntatore all'offset del buffer, relativo al puntatore `ObjectID`, che archivia la stringa di caratteri wide.  
   
-## <a name="remarks"></a>Note  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo `GetStringLayout` ottiene gli offset, relativi al puntatore `ObjectID`, delle posizioni in cui sono archiviati gli elementi seguenti:  
   
-- The length of the string's buffer.  
+- Lunghezza del buffer della stringa.  
   
-- The length of the string itself.  
+- Lunghezza della stringa stessa.  
   
-- The buffer that contains the actual string of wide characters.  
+- Buffer contenente la stringa effettiva di caratteri wide.  
   
- Strings may be null-terminated.  
+ Le stringhe possono essere con terminazione null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

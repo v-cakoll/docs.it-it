@@ -24,7 +24,7 @@ ms.locfileid: "74448729"
 ---
 # <a name="enumimporttypes-method"></a>Metodo EnumImportTypes
 
-Enumerates each type in each scope.
+Enumera ogni tipo in ogni ambito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,27 +40,27 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>Parametri
 
 `hEnum`\
-Handle for enumerator.
+Handle per Enumerator.
 
 `dwMax`\
-Maximum number of types to retrieve.
+Numero massimo di tipi da recuperare.
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+Riceve i token di tipo, per non superare `dwMax`.
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+Riceve il numero effettivo di tipo in `aTypeDefs`.
 
 ## <a name="return-value"></a>Valore restituito
 
-Returns S_OK if the method succeeds.
+Restituisce S_OK se il metodo ha esito positivo.
 
 ## <a name="requirements"></a>Requisiti
 
-Requires alink.h
+Richiede ALink. h
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

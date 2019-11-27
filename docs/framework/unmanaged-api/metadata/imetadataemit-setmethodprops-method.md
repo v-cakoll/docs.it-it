@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442123"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Metodo IMetaDataEmit::SetMethodProps
-Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
+Imposta o aggiorna la funzionalità, archiviata in corrispondenza dell'indirizzo virtuale relativo specificato, di un metodo definito da una chiamata precedente a [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +38,23 @@ HRESULT SetMethodProps (
   
 ## <a name="parameters"></a>Parametri  
  `md`  
- [in] The token for the method to be changed.  
+ in Token per il metodo da modificare.  
   
  `dwMethodFlags`  
- [in] The member attributes.  
+ in Attributi del membro.  
   
  `ulCodeRVA`  
- [in] The address of the code.  
+ in Indirizzo del codice.  
   
  `dwImplFlags`  
- [in] The implementation flags for the method.  
+ in Flag di implementazione per il metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

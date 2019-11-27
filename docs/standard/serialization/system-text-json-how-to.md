@@ -23,7 +23,7 @@ Le direzioni e il codice di esempio usano la libreria direttamente, non tramite 
 
 La maggior parte del codice di esempio di serializzazione imposta <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> per `true` "Pretty-Print" JSON (con rientri e spazi vuoti per la leggibilità umana). Per l'uso in produzione, in genere si accetta il valore predefinito di `false` per questa impostazione.
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>Spazi dei nomi
 
 Lo spazio dei nomi <xref:System.Text.Json> contiene tutti i punti di ingresso e i tipi principali. Lo spazio dei nomi <xref:System.Text.Json.Serialization> contiene attributi e API per scenari avanzati e personalizzazione specifici per la serializzazione e la deserializzazione. Gli esempi di codice illustrati in questo articolo richiedono direttive `using` per uno o entrambi gli spazi dei nomi seguenti:
 
@@ -381,7 +381,7 @@ Di seguito è riportato un esempio di oggetto da serializzare e output JSON:
 |---------|---------|
 | Data    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| Riepilogo| Null|
+| Riepilogo| null|
 
 ```json
 {
@@ -575,7 +575,7 @@ Quando si deserializza il codice JSON illustrato in precedenza in questo tipo di
 |---------|---------|---------|
 | Data    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Mancata corrispondenza tra maiuscole e minuscole (`temperatureCelsius` in JSON), quindi la proprietà non è impostata. |
-| Riepilogo | A caldo ||
+| Riepilogo | Alto ||
 | ExtensionData | temperatureCelsius: 25 |Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|
 | |SummaryWords:<br>Comode<br>Ventoso<br>Umido |Una proprietà aggiuntiva da JSON diventa una coppia chiave-valore, con una matrice come oggetto valore.|

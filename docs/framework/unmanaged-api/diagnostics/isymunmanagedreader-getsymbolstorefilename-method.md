@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431231"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Metodo ISymUnmanagedReader::GetSymbolStoreFileName
-Provides the on-disk file name of the symbol store.  
+Fornisce il nome file su disco dell'archivio dei simboli.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametri  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ in Dimensioni del buffer `szName`.  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ out Puntatore alla variabile che riceve la lunghezza del nome restituito in `szName`, inclusa la terminazione null.  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ out Puntatore alla variabile che riceve il nome file dell'archivio dei simboli.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

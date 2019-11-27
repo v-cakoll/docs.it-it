@@ -37,9 +37,9 @@ Il Open Data Protocol (OData) consente di creare servizi dati in modo che i clie
 |Set di entità|-Rimuovi set di entità|-Aggiungi tipo derivato<br />-Modifica tipo di base<br />-Aggiungi set di entità|
 |Personalizzazione di feed|-Modificare il mapping di proprietà-entità||
 
- <sup>1</sup> Può dipendere da quanto un'applicazione client si basa sul ricevimento di un codice di errore specifico.
+ <sup>1</sup> questo può dipendere dal modo in cui un'applicazione client si basa sulla ricezione di un codice di errore specifico.
 
- <sup>2</sup> È possibile impostare la proprietà <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> su `true` in modo che il client ignori qualsiasi nuova proprietà inviata dal servizio dati non definita sul client. Tuttavia, quando vengono eseguiti inserimenti, le proprietà non incluse dal client nella richiesta POST vengono impostate sui valori predefiniti. Per gli aggiornamenti, qualsiasi dato esistente in una proprietà sconosciuto al client potrebbe essere sovrascritto da valori predefiniti. In questo caso, è necessario inviare l'aggiornamento come una richiesta MERGE (impostazione predefinita). Per ulteriori informazioni, vedere [gestione del contesto del servizio dati](managing-the-data-service-context-wcf-data-services.md).
+ <sup>2</sup> è possibile impostare la proprietà <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> su `true` per fare in modo che il client ignori le nuove proprietà inviate dal servizio dati che non sono definite nel client. Tuttavia, quando vengono eseguiti inserimenti, le proprietà non incluse dal client nella richiesta POST vengono impostate sui valori predefiniti. Per gli aggiornamenti, qualsiasi dato esistente in una proprietà sconosciuto al client potrebbe essere sovrascritto da valori predefiniti. In questo caso, è necessario inviare l'aggiornamento come una richiesta MERGE (impostazione predefinita). Per ulteriori informazioni, vedere [gestione del contesto del servizio dati](managing-the-data-service-context-wcf-data-services.md).
 
 ### <a name="how-to-version-a-data-service"></a>Come controllare le versioni di un servizio dati
  Se necessario, una nuova versione del servizio dati viene definita creando una nuova istanza del servizio con un contratto di servizio o un modello di dati aggiornato. Questo nuovo servizio viene quindi esposto tramite un nuovo endpoint dell'URI che lo differenzia dalla versione precedente. Di seguito è riportato un esempio:
@@ -65,7 +65,7 @@ Il Open Data Protocol (OData) consente di creare servizi dati in modo che i clie
 |Versione del protocollo OData|Supporto introdotto in…|
 |-----------------------------------------------------------------------------------|----------------------------|
 |Versione 1|-.NET Framework 3,5 Service Pack 1 (SP1)<br />-Silverlight versione 3|
-|Versione 2|-.NET Framework 4<br />-Aggiornamento a .NET Framework 3,5 SP1. È possibile scaricare e installare l'aggiornamento dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versione 4|
+|Versione 2|-.NET Framework 4<br />-Aggiornamento a .NET Framework 3,5 SP1. Questo aggiornamento può essere scaricato dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versione 4|
 |Versione 3|-È possibile scaricare e installare una versione non definitiva che supporta OData versione 3 dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Versioni di metadati

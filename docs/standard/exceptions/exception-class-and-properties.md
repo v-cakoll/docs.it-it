@@ -26,7 +26,7 @@ La classe <xref:System.Exception> è la classe di base da cui vengono ereditate 
 
 La classe <xref:System.Exception> include le proprietà seguenti che facilitano la comprensione di un'eccezione.
 
-| Nome proprietà | description |
+| Nome proprietà: | Descrizione |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> contenente dati arbitrari in coppie chiave-valore. |
 | <xref:System.Exception.HelpLink> | Può contenere un URL (o URN) di un file della Guida che offre informazioni dettagliate sulla causa di un'eccezione. |

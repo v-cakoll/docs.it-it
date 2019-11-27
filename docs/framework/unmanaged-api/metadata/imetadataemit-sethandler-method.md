@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442160"
 ---
 # <a name="imetadataemitsethandler-method"></a>Metodo IMetaDataEmit::SetHandler
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+Imposta il metodo a cui fa riferimento il puntatore `IUnknown` specificato come callback di notifica per le rimappe dei token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,19 +35,19 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parametri  
  `pUnk`  
- [in] The handler to register.  
+ in Gestore da registrare.  
   
-## <a name="remarks"></a>Note  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+## <a name="remarks"></a>Osservazioni  
+ Il motore dei metadati invia una notifica tramite il metodo fornito da `SetHandler`, ai compilatori che non generano record in modo ottimizzato e che desiderano ottimizzare i record salvati.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ Se il metodo di callback non viene fornito tramite `SetHandler`, non verrà eseguita alcuna ottimizzazione al salvataggio, tranne nel caso in cui diversi ambiti di importazione siano Stati Uniti utilizzando `IMapToken` al merge per ogni ambito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

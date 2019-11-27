@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351677"
 ---
 # <a name="registry-summary-visual-basic"></a>Riepilogo del Registro di sistema (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Le parole chiave del linguaggio di Visual Studio e i membri della libreria di runtime sono organizzati in base allo scopo e usano.  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ L'uso della funzionalità `My` offre una maggiore produttività e prestazioni nelle operazioni del registro di sistema rispetto a questi elementi. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
 |**Azione**|**Elemento di linguaggio**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Elimina le impostazioni del programma.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Leggere le impostazioni del programma.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Salvare le impostazioni del programma.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
 

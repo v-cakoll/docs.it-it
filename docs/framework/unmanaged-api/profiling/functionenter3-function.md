@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440774"
 ---
 # <a name="functionenter3-function"></a>Funzione FunctionEnter3
-Notifies the profiler that control is being passed to a function.  
+Notifica al profiler che il controllo viene passato a una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parametri  
  `functionOrRemappedID`  
- [in] The identifier of the function to which control is passed.  
+ in Identificatore della funzione a cui viene passato il controllo.  
   
-## <a name="remarks"></a>Note  
- The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione di callback `FunctionEnter3` notifica al profiler che le funzioni vengono chiamate, ma non supporta l'ispezione degli argomenti. Usare il [Metodo ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) per registrare l'implementazione di questa funzione.  
   
- The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ La funzione `FunctionEnter3` è un callback. è necessario implementarla. L'implementazione deve usare l'`__declspec(naked)` attributo della classe di archiviazione.  
   
- The execution engine does not save any registers before calling this function.  
+ Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   

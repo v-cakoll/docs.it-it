@@ -20,9 +20,9 @@ ms.locfileid: "74353260"
 
 Questa sezione contiene argomenti che descrivono come registrare le informazioni provenienti dall'applicazione usando l'oggetto `My.Application.Log` o `My.Log`. Viene anche spiegato come estendere le funzionalità di registrazione dell'applicazione.  
   
- L'oggetto `Log` fornisce i metodi per scrivere le informazioni sui listener di log dell'applicazione, mentre la proprietà avanzata `TraceSource` dell'oggetto `Log` fornisce informazioni di configurazione dettagliate. L'oggetto `Log` può essere configurato dal file di configurazione dell'applicazione.  
+ L'oggetto `Log` fornisce i metodi per scrivere le informazioni sui listener di log dell'applicazione, mentre la proprietà avanzata `Log` dell'oggetto `TraceSource` fornisce informazioni di configurazione dettagliate. L'oggetto `Log` può essere configurato dal file di configurazione dell'applicazione.  
   
- L'oggetto `My.Log` è disponibile solo per le applicazioni ASP.NET. Per le applicazioni client, usare `My.Application.Log`. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Logging.Log>.  
+ L'oggetto `My.Log` è disponibile solo per le applicazioni ASP.NET. Per le applicazioni client, usare `My.Application.Log`. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Attività  
   

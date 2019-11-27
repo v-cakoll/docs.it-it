@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350274"
 ---
 # <a name="addressof-operator-visual-basic"></a>Operatore AddressOf (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+Crea un'istanza di delegato che fa riferimento alla procedura specifica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,20 +26,20 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Parti  
  `procedurename`  
- Obbligatorio. Specifies the procedure to be referenced by the newly created delegate.  
+ Obbligatoria. Specifica la procedura a cui fa riferimento il delegato appena creato.  
   
-## <a name="remarks"></a>Note  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore `AddressOf` crea un delegato che punta alla subroutine o alla funzione specificata da `procedurename`. Quando la procedura specificata è un metodo di istanza, il delegato fa riferimento sia all'istanza sia al metodo. Quindi, quando viene richiamato il delegato, viene chiamato il metodo specificato dell'istanza specificata.  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ L'operatore `AddressOf` può essere usato come operando di un costruttore di delegato o può essere usato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.  
   
 ## <a name="example"></a>Esempio  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ In questo esempio viene usato l'operatore `AddressOf` per designare un delegato per gestire l'evento `Click` di un pulsante.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Esempio  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ Nell'esempio seguente viene usato l'operatore `AddressOf` per designare la funzione di avvio per un thread.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

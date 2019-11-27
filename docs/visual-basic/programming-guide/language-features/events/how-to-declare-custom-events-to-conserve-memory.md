@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345136"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procedura: dichiarare eventi personalizzati per proteggere la memoria (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+In alcuni casi è importante che un'applicazione mantenga l'utilizzo di memoria basso. Gli eventi personalizzati consentono all'applicazione di usare la memoria solo per gli eventi gestiti.  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ Per impostazione predefinita, quando una classe dichiara un evento, il compilatore alloca memoria per un campo per archiviare le informazioni sull'evento. Se una classe dispone di molti eventi non utilizzati, inutilmente si occupino di memoria.  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ Invece di usare l'implementazione predefinita di eventi forniti da Visual Basic, è possibile usare gli eventi personalizzati per gestire l'utilizzo della memoria con maggiore attenzione.  
   
 ## <a name="example"></a>Esempio  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ In questo esempio, la classe usa un'istanza della classe <xref:System.ComponentModel.EventHandlerList>, archiviata nel campo `Events`, per archiviare le informazioni sugli eventi in uso. La classe <xref:System.ComponentModel.EventHandlerList> è una classe di elenco ottimizzata progettata per ospitare delegati.  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ Tutti gli eventi nella classe usano il campo `Events` per tenere traccia dei metodi che gestiscono ogni evento.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

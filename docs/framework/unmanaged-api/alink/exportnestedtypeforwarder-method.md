@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438408"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>Metodo ExportNestedTypeForwarder
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+Aggiunge un server d'avanzamento del tipo per un tipo annidato alla tabella dei tipi dell'assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,34 +40,34 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly to export from.  
+ ID dell'assembly da cui eseguire l'esportazione.  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ Token file o ID assembly del file che definisce il tipo.  
   
  `TypeToken`  
- Token for the type.  
+ Token per il tipo.  
   
  `ParentType`  
- Token of parent type.  
+ Token del tipo padre.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Nome completo del tipo da esportare.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ flag di `ComType` come `tdPublic` o `tdNested`.  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ Riceve il token del tipo di esportazione. Questa operazione è necessaria solo per la creazione di tipi annidati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

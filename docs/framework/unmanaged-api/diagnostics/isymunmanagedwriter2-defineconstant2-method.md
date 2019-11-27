@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438320"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Metodo ISymUnmanagedWriter2::DefineConstant2
-Defines a name for a constant value.  
+Definisce un nome per un valore costante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +36,19 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>Parametri  
  `name`  
- [in] The constant name.  
+ in Nome della costante.  
   
  `value`  
- [in] The value of the constant.  
+ in Valore della costante.  
   
  `sigToken`  
- [in] The metadata token of the constant.  
+ in Token di metadati della costante.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448766"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Enumerazione CorValidatorModuleType
-Specifies the type of a module.  
+Specifica il tipo di un modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,24 +39,24 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Il modulo non è un tipo valido.|  
+|`ValidatorModuleTypeMin`|Valore minimo dell'enumerazione `CorValidatorModuleType`.|  
+|`ValidatorModuleTypePE`|Il modulo è un file eseguibile portabile (PE).|  
+|`ValidatorModuleTypeObj`|Il modulo è un file con estensione obj.|  
+|`ValidatorModuleTypeEnc`|Il modulo è una sessione del debugger di modifica e continuazione.|  
+|`ValidatorModuleTypeIncr`|Il modulo è un modulo che è stato compilato in modo incrementale.|  
+|`ValidatorModuleTypeMax`|Valore massimo dell'enumerazione `CorValidatorModuleType`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
