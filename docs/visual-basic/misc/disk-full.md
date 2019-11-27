@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Disco pieno
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,13 +11,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351105"
 ---
-# <a name="disk-full-visual-basic"></a><span data-ttu-id="44fbd-102">Disco pieno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44fbd-102">Disk full (Visual Basic)</span></span>
-<span data-ttu-id="44fbd-103">Lo spazio su disco non è sufficiente per completare un'operazione `Print`, `Write`o `FileClose` oppure per creare i file necessari.</span><span class="sxs-lookup"><span data-stu-id="44fbd-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
+# <a name="disk-full-visual-basic"></a><span data-ttu-id="3a0fb-102">Disco pieno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a0fb-102">Disk full (Visual Basic)</span></span>
+<span data-ttu-id="3a0fb-103">Lo spazio su disco non è sufficiente per completare un'operazione `Print`, `Write`o `FileClose` oppure per creare i file necessari.</span><span class="sxs-lookup"><span data-stu-id="3a0fb-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="44fbd-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="44fbd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3a0fb-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="3a0fb-104">To correct this error</span></span>  
   
-- <span data-ttu-id="44fbd-105">Liberare ulteriore spazio su disco spostando alcuni file in un altro disco o eliminando alcuni file.</span><span class="sxs-lookup"><span data-stu-id="44fbd-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
+- <span data-ttu-id="3a0fb-105">Liberare ulteriore spazio su disco spostando alcuni file in un altro disco o eliminando alcuni file.</span><span class="sxs-lookup"><span data-stu-id="3a0fb-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44fbd-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="44fbd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a0fb-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a0fb-106">See also</span></span>
 
-- [<span data-ttu-id="44fbd-107">Tipi di errore</span><span class="sxs-lookup"><span data-stu-id="44fbd-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="3a0fb-107">Tipi di errore</span><span class="sxs-lookup"><span data-stu-id="3a0fb-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

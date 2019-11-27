@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439855"
 ---
-# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="faf17-102">Metodo ICorProfilerCallback2::FinalizeableObjectQueued</span><span class="sxs-lookup"><span data-stu-id="faf17-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
-<span data-ttu-id="faf17-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span><span class="sxs-lookup"><span data-stu-id="faf17-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
+# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="6a58f-102">Metodo ICorProfilerCallback2::FinalizeableObjectQueued</span><span class="sxs-lookup"><span data-stu-id="6a58f-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
+<span data-ttu-id="6a58f-103">Notifica all'Code Profiler che un oggetto con un finalizzatore è stato accodato al thread del finalizzatore per l'esecuzione del relativo metodo di `Finalize`.</span><span class="sxs-lookup"><span data-stu-id="6a58f-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="faf17-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="faf17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a58f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6a58f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FinalizeableObjectQueued(  
@@ -33,23 +33,23 @@ HRESULT FinalizeableObjectQueued(
     [in] ObjectID objectID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="faf17-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="faf17-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a58f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6a58f-105">Parameters</span></span>  
  `finalizerFlags`  
- <span data-ttu-id="faf17-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span><span class="sxs-lookup"><span data-stu-id="faf17-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
+ <span data-ttu-id="6a58f-106">in Valore dell'enumerazione [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) che descrive gli aspetti del finalizzatore.</span><span class="sxs-lookup"><span data-stu-id="6a58f-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
   
  `objectID`  
- <span data-ttu-id="faf17-107">[in] The ID of the object that has been queued.</span><span class="sxs-lookup"><span data-stu-id="faf17-107">[in] The ID of the object that has been queued.</span></span>  
+ <span data-ttu-id="6a58f-107">in ID dell'oggetto che è stato accodato.</span><span class="sxs-lookup"><span data-stu-id="6a58f-107">[in] The ID of the object that has been queued.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="faf17-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="faf17-108">Requirements</span></span>  
- <span data-ttu-id="faf17-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="faf17-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a58f-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6a58f-108">Requirements</span></span>  
+ <span data-ttu-id="6a58f-109">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a58f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="faf17-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="faf17-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6a58f-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a58f-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="faf17-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="faf17-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6a58f-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a58f-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="faf17-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="faf17-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6a58f-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a58f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="faf17-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="faf17-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a58f-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a58f-113">See also</span></span>
 
-- [<span data-ttu-id="faf17-114">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="faf17-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="faf17-115">Interfaccia ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="faf17-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="6a58f-114">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="6a58f-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="6a58f-115">Interfaccia ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="6a58f-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

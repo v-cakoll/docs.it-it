@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449051"
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="2dbac-102">Metodo ISymUnmanagedDocumentWriter::SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="2dbac-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="2dbac-103">Imposta le informazioni di checksum.</span><span class="sxs-lookup"><span data-stu-id="2dbac-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="e02a0-102">Metodo ISymUnmanagedDocumentWriter::SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="e02a0-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+<span data-ttu-id="e02a0-103">Imposta le informazioni di checksum.</span><span class="sxs-lookup"><span data-stu-id="e02a0-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dbac-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2dbac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e02a0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e02a0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetCheckSum(  
@@ -34,22 +34,22 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2dbac-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2dbac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e02a0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e02a0-105">Parameters</span></span>  
  `algorithmId`  
- <span data-ttu-id="2dbac-106">[in] The GUID that represents the algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="2dbac-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="e02a0-106">in GUID che rappresenta l'identificatore dell'algoritmo.</span><span class="sxs-lookup"><span data-stu-id="e02a0-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="2dbac-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span><span class="sxs-lookup"><span data-stu-id="2dbac-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="e02a0-107">in `ULONG32` che indica le dimensioni, in byte, del buffer di `checkSum`.</span><span class="sxs-lookup"><span data-stu-id="e02a0-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="2dbac-108">[in] The buffer that stores the checksum information.</span><span class="sxs-lookup"><span data-stu-id="2dbac-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="e02a0-108">in Buffer che archivia le informazioni di checksum.</span><span class="sxs-lookup"><span data-stu-id="e02a0-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2dbac-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="2dbac-109">Return Value</span></span>  
- <span data-ttu-id="2dbac-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2dbac-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e02a0-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e02a0-109">Return Value</span></span>  
+ <span data-ttu-id="e02a0-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="e02a0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2dbac-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2dbac-111">Requirements</span></span>  
- <span data-ttu-id="2dbac-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2dbac-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e02a0-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e02a0-111">Requirements</span></span>  
+ <span data-ttu-id="e02a0-112">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="e02a0-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dbac-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2dbac-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e02a0-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e02a0-113">See also</span></span>
 
-- [<span data-ttu-id="2dbac-114">Interfaccia ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="2dbac-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [<span data-ttu-id="e02a0-114">Interfaccia ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="e02a0-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

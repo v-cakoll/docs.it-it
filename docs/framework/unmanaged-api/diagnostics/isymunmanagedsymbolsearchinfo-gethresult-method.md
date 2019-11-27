@@ -22,26 +22,26 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446181"
 ---
-# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="39b54-102">Metodo ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="39b54-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
-<span data-ttu-id="39b54-103">Gets the HRESULT.</span><span class="sxs-lookup"><span data-stu-id="39b54-103">Gets the HRESULT.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="16f8f-102">Metodo ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="16f8f-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
+<span data-ttu-id="16f8f-103">Ottiene HRESULT.</span><span class="sxs-lookup"><span data-stu-id="16f8f-103">Gets the HRESULT.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39b54-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="39b54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16f8f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16f8f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHRESULT(  
     [out] HRESULT *phr);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39b54-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="39b54-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16f8f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="16f8f-105">Parameters</span></span>  
  `phr`  
- <span data-ttu-id="39b54-106">[out] A pointer to the HRESULT.</span><span class="sxs-lookup"><span data-stu-id="39b54-106">[out] A pointer to the HRESULT.</span></span>  
+ <span data-ttu-id="16f8f-106">out Puntatore a HRESULT.</span><span class="sxs-lookup"><span data-stu-id="16f8f-106">[out] A pointer to the HRESULT.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="39b54-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="39b54-107">Return Value</span></span>  
- <span data-ttu-id="39b54-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="39b54-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="16f8f-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="16f8f-107">Return Value</span></span>  
+ <span data-ttu-id="16f8f-108">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="16f8f-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39b54-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="39b54-109">Requirements</span></span>  
- <span data-ttu-id="39b54-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="39b54-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16f8f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="16f8f-109">Requirements</span></span>  
+ <span data-ttu-id="16f8f-110">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="16f8f-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39b54-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="39b54-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16f8f-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16f8f-111">See also</span></span>
 
-- [<span data-ttu-id="39b54-112">Interfaccia ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="39b54-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="16f8f-112">Interfaccia ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="16f8f-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

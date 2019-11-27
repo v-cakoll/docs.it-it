@@ -21,27 +21,27 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441628"
 ---
-# <a name="imetadataerror-interface"></a><span data-ttu-id="dfdb6-102">Interfaccia IMetaDataError</span><span class="sxs-lookup"><span data-stu-id="dfdb6-102">IMetaDataError Interface</span></span>
-<span data-ttu-id="dfdb6-103">Provides a callback mechanism for reporting errors during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="dfdb6-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
+# <a name="imetadataerror-interface"></a><span data-ttu-id="b7787-102">Interfaccia IMetaDataError</span><span class="sxs-lookup"><span data-stu-id="b7787-102">IMetaDataError Interface</span></span>
+<span data-ttu-id="b7787-103">Fornisce un meccanismo di callback per la segnalazione di errori durante l'Unione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="b7787-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="dfdb6-104">The `IMetaDataError` interface must be implemented by the client.</span><span class="sxs-lookup"><span data-stu-id="dfdb6-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
+> <span data-ttu-id="b7787-104">L'interfaccia di `IMetaDataError` deve essere implementata dal client.</span><span class="sxs-lookup"><span data-stu-id="b7787-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="dfdb6-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="dfdb6-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b7787-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="b7787-105">Methods</span></span>  
   
-|<span data-ttu-id="dfdb6-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="dfdb6-106">Method</span></span>|<span data-ttu-id="dfdb6-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dfdb6-107">Description</span></span>|  
+|<span data-ttu-id="b7787-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="b7787-106">Method</span></span>|<span data-ttu-id="b7787-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b7787-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="dfdb6-108">Metodo OnError</span><span class="sxs-lookup"><span data-stu-id="dfdb6-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="dfdb6-109">Provides notification of errors that occur during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="dfdb6-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
+|[<span data-ttu-id="b7787-108">Metodo OnError</span><span class="sxs-lookup"><span data-stu-id="b7787-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="b7787-109">Fornisce la notifica degli errori che si verificano durante l'Unione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="b7787-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dfdb6-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dfdb6-110">Requirements</span></span>  
- <span data-ttu-id="dfdb6-111">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfdb6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7787-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b7787-110">Requirements</span></span>  
+ <span data-ttu-id="b7787-111">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7787-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dfdb6-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dfdb6-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b7787-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b7787-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dfdb6-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dfdb6-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b7787-113">**Libreria:** Usato come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b7787-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dfdb6-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfdb6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b7787-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7787-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dfdb6-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dfdb6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7787-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b7787-115">See also</span></span>
 
-- [<span data-ttu-id="dfdb6-116">Interfacce di metadati</span><span class="sxs-lookup"><span data-stu-id="dfdb6-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="b7787-116">Interfacce di metadati</span><span class="sxs-lookup"><span data-stu-id="b7787-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

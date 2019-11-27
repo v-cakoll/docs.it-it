@@ -1,5 +1,5 @@
 ---
-title: Enumerazione CorLocalRefPreservation
+title: CorLocalRefPreservation Enumeration
 ms.date: 03/30/2017
 api_name:
 - CorLocalRefPreservation
@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450238"
 ---
-# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="0535e-102">Enumerazione CorLocalRefPreservation</span><span class="sxs-lookup"><span data-stu-id="0535e-102">CorLocalRefPreservation Enumeration</span></span>
-<span data-ttu-id="0535e-103">Contiene valori di flag per il trattamento dei riferimenti locali.</span><span class="sxs-lookup"><span data-stu-id="0535e-103">Contains flag values for the treatment of local references.</span></span>  
+# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="71a75-102">CorLocalRefPreservation Enumeration</span><span class="sxs-lookup"><span data-stu-id="71a75-102">CorLocalRefPreservation Enumeration</span></span>
+<span data-ttu-id="71a75-103">Contiene valori di flag per il trattamento dei riferimenti locali.</span><span class="sxs-lookup"><span data-stu-id="71a75-103">Contains flag values for the treatment of local references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0535e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0535e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71a75-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="71a75-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorLocalRefPreservation  
@@ -35,21 +35,21 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0535e-105">Members</span><span class="sxs-lookup"><span data-stu-id="0535e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="71a75-105">Members</span><span class="sxs-lookup"><span data-stu-id="71a75-105">Members</span></span>  
   
-|<span data-ttu-id="0535e-106">Member</span><span class="sxs-lookup"><span data-stu-id="0535e-106">Member</span></span>|<span data-ttu-id="0535e-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0535e-107">Description</span></span>|  
+|<span data-ttu-id="71a75-106">Membro</span><span class="sxs-lookup"><span data-stu-id="71a75-106">Member</span></span>|<span data-ttu-id="71a75-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="71a75-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|<span data-ttu-id="0535e-108">Preserve no local references.</span><span class="sxs-lookup"><span data-stu-id="0535e-108">Preserve no local references.</span></span>|  
-|`MDPreserveLocalTypeRef`|<span data-ttu-id="0535e-109">Preserve local type references.</span><span class="sxs-lookup"><span data-stu-id="0535e-109">Preserve local type references.</span></span>|  
-|`MDPreserveLocalMemberRef`|<span data-ttu-id="0535e-110">Preserve local member references.</span><span class="sxs-lookup"><span data-stu-id="0535e-110">Preserve local member references.</span></span>|  
+|`MDPreserveLocalRefsNone`|<span data-ttu-id="71a75-108">Non mantenere riferimenti locali.</span><span class="sxs-lookup"><span data-stu-id="71a75-108">Preserve no local references.</span></span>|  
+|`MDPreserveLocalTypeRef`|<span data-ttu-id="71a75-109">Mantieni i riferimenti ai tipi locali.</span><span class="sxs-lookup"><span data-stu-id="71a75-109">Preserve local type references.</span></span>|  
+|`MDPreserveLocalMemberRef`|<span data-ttu-id="71a75-110">Conserva i riferimenti ai membri locali.</span><span class="sxs-lookup"><span data-stu-id="71a75-110">Preserve local member references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0535e-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0535e-111">Requirements</span></span>  
- <span data-ttu-id="0535e-112">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0535e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71a75-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="71a75-111">Requirements</span></span>  
+ <span data-ttu-id="71a75-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71a75-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0535e-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="0535e-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="71a75-113">**Intestazione:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="71a75-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="0535e-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0535e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="71a75-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71a75-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0535e-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0535e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71a75-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71a75-115">See also</span></span>
 
-- [<span data-ttu-id="0535e-116">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="0535e-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="71a75-116">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="71a75-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428254"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="73c95-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="73c95-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="73c95-103">Gets the total number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="73c95-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="75451-102">Metodo ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="75451-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="75451-103">Ottiene il numero totale di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="75451-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73c95-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="73c95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75451-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="75451-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,21 +33,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73c95-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="73c95-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75451-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="75451-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="73c95-106">[out] A pointer to the number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="73c95-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="75451-106">out Puntatore al numero di oggetti bloccati nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="75451-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="73c95-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span><span class="sxs-lookup"><span data-stu-id="73c95-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="75451-107">Questo metodo restituirà sempre zero in .NET Framework versione 3,5 Service Pack 1 (SP1) e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="75451-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73c95-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="73c95-108">Requirements</span></span>  
- <span data-ttu-id="73c95-109">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73c95-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75451-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="75451-108">Requirements</span></span>  
+ <span data-ttu-id="75451-109">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75451-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73c95-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="73c95-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="75451-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="75451-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="73c95-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73c95-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="75451-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="75451-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="73c95-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73c95-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="75451-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75451-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73c95-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73c95-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75451-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75451-113">See also</span></span>
 
-- [<span data-ttu-id="73c95-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="73c95-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="75451-114">Interfaccia ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="75451-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

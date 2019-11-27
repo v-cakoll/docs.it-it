@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440020"
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="7dfbb-102">Metodo ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="7dfbb-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="7dfbb-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span><span class="sxs-lookup"><span data-stu-id="7dfbb-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="18ae8-102">Metodo ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="18ae8-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="18ae8-103">Notifica al profiler che un thread gestito viene implementato utilizzando un particolare thread del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="18ae8-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7dfbb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7dfbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18ae8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="18ae8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadAssignedToOSThread(  
@@ -33,25 +33,25 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7dfbb-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7dfbb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18ae8-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="18ae8-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="7dfbb-106">[in] The identifier of the managed thread.</span><span class="sxs-lookup"><span data-stu-id="7dfbb-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="18ae8-106">in Identificatore del thread gestito.</span><span class="sxs-lookup"><span data-stu-id="18ae8-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="7dfbb-107">[in] The identifier of the operating system thread.</span><span class="sxs-lookup"><span data-stu-id="7dfbb-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="18ae8-107">in Identificatore del thread del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="18ae8-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7dfbb-108">Note</span><span class="sxs-lookup"><span data-stu-id="7dfbb-108">Remarks</span></span>  
- <span data-ttu-id="7dfbb-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span><span class="sxs-lookup"><span data-stu-id="7dfbb-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18ae8-108">Note</span><span class="sxs-lookup"><span data-stu-id="18ae8-108">Remarks</span></span>  
+ <span data-ttu-id="18ae8-109">Il callback `ThreadAssignedToOSThread` esiste, in modo che il profiler possa mantenere un mapping accurato tra i fiber dei thread del sistema operativo e i thread gestiti.</span><span class="sxs-lookup"><span data-stu-id="18ae8-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7dfbb-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7dfbb-110">Requirements</span></span>  
- <span data-ttu-id="7dfbb-111">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7dfbb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18ae8-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="18ae8-110">Requirements</span></span>  
+ <span data-ttu-id="18ae8-111">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18ae8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7dfbb-112">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7dfbb-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="18ae8-112">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="18ae8-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7dfbb-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7dfbb-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18ae8-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18ae8-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7dfbb-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7dfbb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="18ae8-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18ae8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7dfbb-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7dfbb-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18ae8-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="18ae8-115">See also</span></span>
 
-- [<span data-ttu-id="7dfbb-116">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="7dfbb-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="18ae8-116">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="18ae8-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

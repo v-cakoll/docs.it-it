@@ -22,26 +22,26 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446167"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="d708a-102">Metodo ISymUnmanagedSymbolSearchInfo::GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="d708a-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
-<span data-ttu-id="d708a-103">Gets the search path.</span><span class="sxs-lookup"><span data-stu-id="d708a-103">Gets the search path.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="4dd7b-102">Metodo ISymUnmanagedSymbolSearchInfo::GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="4dd7b-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+<span data-ttu-id="4dd7b-103">Ottiene il percorso di ricerca.</span><span class="sxs-lookup"><span data-stu-id="4dd7b-103">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d708a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d708a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4dd7b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4dd7b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d708a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d708a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4dd7b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4dd7b-105">Parameters</span></span>  
  `pcchPath`  
- <span data-ttu-id="d708a-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span><span class="sxs-lookup"><span data-stu-id="d708a-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="4dd7b-106">out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere il percorso di ricerca.</span><span class="sxs-lookup"><span data-stu-id="4dd7b-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d708a-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d708a-107">Return Value</span></span>  
- <span data-ttu-id="d708a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d708a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4dd7b-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4dd7b-107">Return Value</span></span>  
+ <span data-ttu-id="4dd7b-108">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="4dd7b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d708a-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d708a-109">Requirements</span></span>  
- <span data-ttu-id="d708a-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d708a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4dd7b-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4dd7b-109">Requirements</span></span>  
+ <span data-ttu-id="4dd7b-110">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="4dd7b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d708a-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d708a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4dd7b-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4dd7b-111">See also</span></span>
 
-- [<span data-ttu-id="d708a-112">Interfaccia ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="d708a-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="4dd7b-112">Interfaccia ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="4dd7b-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

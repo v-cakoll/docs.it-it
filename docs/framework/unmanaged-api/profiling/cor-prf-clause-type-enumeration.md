@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428408"
 ---
-# <a name="cor_prf_clause_type-enumeration"></a><span data-ttu-id="37241-102">Enumerazione COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="37241-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
-<span data-ttu-id="37241-103">Indica il tipo di clausola di eccezione in cui il codice è appena entrato o da cui è appena uscito.</span><span class="sxs-lookup"><span data-stu-id="37241-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
+# <a name="cor_prf_clause_type-enumeration"></a><span data-ttu-id="376ec-102">Enumerazione COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="376ec-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
+<span data-ttu-id="376ec-103">Indica il tipo di clausola di eccezione in cui il codice è appena entrato o da cui è appena uscito.</span><span class="sxs-lookup"><span data-stu-id="376ec-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37241-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="37241-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="376ec-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="376ec-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,24 +35,24 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="37241-105">Members</span><span class="sxs-lookup"><span data-stu-id="37241-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="376ec-105">Members</span><span class="sxs-lookup"><span data-stu-id="376ec-105">Members</span></span>  
   
-|<span data-ttu-id="37241-106">Member</span><span class="sxs-lookup"><span data-stu-id="37241-106">Member</span></span>|<span data-ttu-id="37241-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="37241-107">Description</span></span>|  
+|<span data-ttu-id="376ec-106">Membro</span><span class="sxs-lookup"><span data-stu-id="376ec-106">Member</span></span>|<span data-ttu-id="376ec-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="376ec-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="37241-108">The exception clause is not valid.</span><span class="sxs-lookup"><span data-stu-id="37241-108">The exception clause is not valid.</span></span>|  
-|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="37241-109">The exception clause is a filter expression.</span><span class="sxs-lookup"><span data-stu-id="37241-109">The exception clause is a filter expression.</span></span>|  
-|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="37241-110">The exception clause is a `catch` statement.</span><span class="sxs-lookup"><span data-stu-id="37241-110">The exception clause is a `catch` statement.</span></span>|  
-|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="37241-111">The exception clause is a `finally` statement.</span><span class="sxs-lookup"><span data-stu-id="37241-111">The exception clause is a `finally` statement.</span></span>|  
+|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="376ec-108">Clausola Exception non valida.</span><span class="sxs-lookup"><span data-stu-id="376ec-108">The exception clause is not valid.</span></span>|  
+|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="376ec-109">La clausola Exception è un'espressione di filtro.</span><span class="sxs-lookup"><span data-stu-id="376ec-109">The exception clause is a filter expression.</span></span>|  
+|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="376ec-110">La clausola Exception è un'istruzione `catch`.</span><span class="sxs-lookup"><span data-stu-id="376ec-110">The exception clause is a `catch` statement.</span></span>|  
+|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="376ec-111">La clausola Exception è un'istruzione `finally`.</span><span class="sxs-lookup"><span data-stu-id="376ec-111">The exception clause is a `finally` statement.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="37241-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="37241-112">Requirements</span></span>  
- <span data-ttu-id="37241-113">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37241-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="376ec-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="376ec-112">Requirements</span></span>  
+ <span data-ttu-id="376ec-113">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="376ec-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37241-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="37241-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="376ec-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="376ec-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="37241-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37241-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="376ec-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="376ec-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="37241-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37241-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="376ec-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="376ec-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37241-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37241-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="376ec-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="376ec-117">See also</span></span>
 
-- [<span data-ttu-id="37241-118">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="37241-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="376ec-118">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="376ec-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
