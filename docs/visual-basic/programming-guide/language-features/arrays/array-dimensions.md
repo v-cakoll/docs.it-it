@@ -18,82 +18,82 @@ ms.locfileid: "74351900"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 
-A *dimension* is a direction in which you can vary the specification of an array's elements. An array that holds the sales total for each day of the month has one dimension (the day of the month). An array that holds the sales total by department for each day of the month has two dimensions (the department number and the day of the month). The number of dimensions an array has is called its *rank*.
+Una *dimensione* rappresenta una direzione in cui è possibile variare la specifica degli elementi di una matrice. Una matrice che contiene il totale delle vendite per ogni giorno del mese ha una dimensione (il giorno del mese). Una matrice che contiene il totale delle vendite per reparto per ogni giorno del mese ha due dimensioni, ovvero il numero del reparto e il giorno del mese. Il numero di dimensioni di una matrice è denominato *rango*.
 
 > [!NOTE]
-> You can use the <xref:System.Array.Rank%2A> property to determine the how many dimensions an array has.
+> È possibile utilizzare la proprietà <xref:System.Array.Rank%2A> per determinare il numero di dimensioni di una matrice.
 
-## <a name="working-with-dimensions"></a>Working with Dimensions
+## <a name="working-with-dimensions"></a>Utilizzo delle dimensioni
 
-You specify an element of an array by supplying an *index* or *subscript* for each of its dimensions. The elements are contiguous along each dimension from index 0 through the highest index for that dimension.
+Per specificare un elemento di una matrice, è necessario specificare un indice *o un* *Indice* per ogni dimensione. Gli elementi sono contigui lungo ogni dimensione dall'indice 0 all'indice più alto per tale dimensione.
 
-The following illustrations show the conceptual structure of arrays with different ranks. Each element in the illustrations shows the index values that access it. For example, you can access the first element of the second row of the two-dimensional array by specifying indexes `(1, 0)`.
+Nelle illustrazioni seguenti viene illustrata la struttura concettuale di matrici con diverse classificazioni. Ogni elemento nelle illustrazioni mostra i valori di indice che vi accedono. Ad esempio, è possibile accedere al primo elemento della seconda riga della matrice bidimensionale specificando gli indici `(1, 0)`.
 
-![Diagram that shows a one-dimensional array.](./media/array-dimensions/one-dimensional-array.gif)
+![Diagramma che mostra una matrice unidimensionale.](./media/array-dimensions/one-dimensional-array.gif)
 
-![Diagram that shows a two-dimensional array.](./media/array-dimensions/two-dimensional-array.gif)
+![Diagramma che mostra una matrice bidimensionale.](./media/array-dimensions/two-dimensional-array.gif)
 
-![Diagram that shows a three-dimensional array.](./media/array-dimensions/three-dimensional-array.gif)
+![Diagramma che mostra una matrice tridimensionale.](./media/array-dimensions/three-dimensional-array.gif)
 
-### <a name="one-dimension"></a>One Dimension
+### <a name="one-dimension"></a>Una dimensione
 
-Many arrays have only one dimension, such as the number of people of each age. The only requirement to specify an element is the age for which that element holds the count. Therefore, such an array uses only one index. The following example declares a variable to hold a *one-dimensional array* of age counts for ages 0 through 120.
+Molte matrici hanno solo una dimensione, ad esempio il numero di persone di ogni età. L'unico requisito per specificare un elemento è l'età per cui l'elemento include il conteggio. Pertanto, una matrice di questo tipo utilizza un solo indice. Nell'esempio seguente viene dichiarata una variabile per includere una *matrice unidimensionale* di età compresa tra 0 e 120.
 
 ```vb
 Dim ageCounts(120) As UInteger
 ```
 
-### <a name="two-dimensions"></a>Two Dimensions
+### <a name="two-dimensions"></a>Due dimensioni
 
-Some arrays have two dimensions, such as the number of offices on each floor of each building on a campus. The specification of an element requires both the building number and the floor, and each element holds the count for that combination of building and floor. Therefore, such an array uses two indexes. The following example declares a variable to hold a *two-dimensional array* of office counts, for buildings 0 through 40 and floors 0 through 5.
+Alcune matrici hanno due dimensioni, ad esempio il numero di uffici in ogni piano di ogni edificio in un campus. La specifica di un elemento richiede il numero di edificio e il piano e ogni elemento include il conteggio per la combinazione di compilazione e piano. Pertanto, una matrice di questo tipo utilizza due indici. Nell'esempio seguente viene dichiarata una variabile in cui è contenuta una *matrice bidimensionale* di conteggi di Office, per edifici da 0 a 40 e da piani 0 a 5.
 
 ```vb
 Dim officeCounts(40, 5) As Byte
 ```
 
-A two-dimensional array is also called a *rectangular array*.
+Una matrice bidimensionale viene definita anche *matrice rettangolare*.
 
-### <a name="three-dimensions"></a>Three Dimensions
+### <a name="three-dimensions"></a>Tre dimensioni
 
-A few arrays have three dimensions, such as values in three-dimensional space. Such an array uses three indexes, which in this case represent the x, y, and z coordinates of physical space. The following example declares a variable to hold a *three-dimensional array* of air temperatures at various points in a three-dimensional volume.
+Alcune matrici hanno tre dimensioni, ad esempio valori nello spazio tridimensionale. Tale matrice utilizza tre indici, che in questo caso rappresentano le coordinate x, y e z dello spazio fisico. Nell'esempio seguente viene dichiarata una variabile in cui è contenuta una *matrice tridimensionale* di temperature aeree in vari punti in un volume tridimensionale.
 
 ```vb
 Dim airTemperatures(99, 99, 24) As Single
 ```
 
-### <a name="more-than-three-dimensions"></a>More than Three Dimensions
+### <a name="more-than-three-dimensions"></a>Più di tre dimensioni
 
-Although an array can have as many as 32 dimensions, it is rare to have more than three.
+Sebbene una matrice possa avere un numero di dimensioni pari a 32, è raro avere più di tre dimensioni.
 
 > [!NOTE]
-> When you add dimensions to an array, the total storage needed by the array increases considerably, so use multidimensional arrays with care.
+> Quando si aggiungono dimensioni a una matrice, lo spazio di archiviazione totale necessario per l'array aumenta considerevolmente, pertanto è opportuno utilizzare matrici multidimensionali con cautela.
 
-## <a name="using-different-dimensions"></a>Using Different Dimensions
+## <a name="using-different-dimensions"></a>Utilizzo di dimensioni diverse
 
-Suppose you want to track sales amounts for every day of the present month. You might declare a one-dimensional array with 31 elements, one for each day of the month, as the following example shows.
+Si supponga di voler tenere traccia degli importi delle vendite per ogni giorno del mese corrente. È possibile dichiarare una matrice unidimensionale con 31 elementi, uno per ogni giorno del mese, come illustrato nell'esempio riportato di seguito.
 
 ```vb
 Dim salesAmounts(30) As Double
 ```
 
-Now suppose you want to track the same information not only for every day of a month but also for every month of the year. You might declare a two-dimensional array with 12 rows (for the months) and 31 columns (for the days), as the following example shows.
+Si supponga ora di voler tenere traccia delle stesse informazioni non solo per ogni giorno del mese, ma anche per ogni mese dell'anno. È possibile dichiarare una matrice bidimensionale con 12 righe (per i mesi) e 31 colonne (per i giorni), come illustrato nell'esempio riportato di seguito.
 
 ```vb
 Dim salesAmounts(11, 30) As Double
 ```
 
-Now suppose you decide to have your array hold information for more than one year. If you want to track sales amounts for 5 years, you could declare a three-dimensional array with 5 layers, 12 rows, and 31 columns, as the following example shows.
+Si supponga ora di decidere se la matrice contiene informazioni per più di un anno. Se si desidera tenere traccia degli importi delle vendite per 5 anni, è possibile dichiarare una matrice tridimensionale con 5 livelli, 12 righe e 31 colonne, come illustrato nell'esempio riportato di seguito.
 
 ```vb
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-Note that, because each index varies from 0 to its maximum, each dimension of `salesAmounts` is declared as one less than the required length for that dimension. Note also that the size of the array increases with each new dimension. The three sizes in the preceding examples are 31, 372, and 1,860 elements respectively.
+Si noti che, poiché ogni indice varia da 0 al massimo, ogni dimensione di `salesAmounts` viene dichiarata come una minore della lunghezza richiesta per tale dimensione. Si noti inoltre che le dimensioni della matrice aumentano con ogni nuova dimensione. Le tre dimensioni degli esempi precedenti sono rispettivamente 31, 372 e 1.860.
 
 > [!NOTE]
-> You can create an array without using the `Dim` statement or the `New` clause. For example, you can call the <xref:System.Array.CreateInstance%2A> method, or another component can pass your code an array created in this manner. Such an array can have a lower bound other than 0. You can always test for the lower bound of a dimension by using the <xref:System.Array.GetLowerBound%2A> method or the `LBound` function.
+> È possibile creare una matrice senza utilizzare l'istruzione `Dim` o la clausola `New`. Ad esempio, è possibile chiamare il metodo <xref:System.Array.CreateInstance%2A> o un altro componente può passare il codice a una matrice creata in questo modo. Una matrice di questo tipo può avere un limite inferiore diverso da 0. È sempre possibile verificare il limite inferiore di una dimensione tramite il metodo <xref:System.Array.GetLowerBound%2A> o la funzione `LBound`.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

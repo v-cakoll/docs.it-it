@@ -174,7 +174,7 @@ Per permettere il funzionamento dell'esempio precedente, è necessario stabilire
 
 ## <a name="asymmetric-decryption"></a>Decrittografia asimmetrica
 
-In genere, una parte (parte A) genera la sia la chiave pubblica che quella privata e archivia la chiave in memoria o in un contenitore di chiavi crittografiche. La parte A invia quindi la chiave pubblica a un'altra parte (parte B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. La decrittografia avrà esito positivo solo se la parte A usa la chiave privata corrispondente alla chiave pubblica usata dalla parte B per crittografare i dati.
+In genere, una parte (parte A) genera la sia la chiave pubblica che quella privata e archivia la chiave in memoria o in un contenitore di chiavi crittografiche. La parte A invia quindi la chiave pubblica a un'altra parte (parte B). Utilizzando la chiave pubblica, l'entità B crittografa i dati e li invia all'entità A. Dopo la ricezione dei dati, l'entità A la decrittografa usando la chiave privata corrispondente A. La decrittografia avrà esito positivo solo se la parte A usa la chiave privata corrispondente alla chiave pubblica usata dalla parte B per crittografare i dati.
 
 Per informazioni su come archiviare una chiave asimmetrica in un contenitore protetto di chiavi crittografiche e su come recuperare in seguito la chiave asimmetrica, vedere [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 

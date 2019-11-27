@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350414"
 ---
 # <a name="select-clause-visual-basic"></a>Clausola Select (Visual Basic)
-Defines the result of a query.  
+Definisce il risultato di una query.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,28 +26,28 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Parti  
  `var1`  
- Parametro facoltativo. An alias that can be used to reference the results of the column expression.  
+ Facoltativa. Alias che può essere utilizzato per fare riferimento ai risultati dell'espressione di colonna.  
   
  `fieldName1`  
- Obbligatorio. The name of the field to return in the query result.  
+ Obbligatoria. Nome del campo da restituire nel risultato della query.  
   
 ## <a name="remarks"></a>Note  
- You can use the `Select` clause to define the results to return from a query. This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query. The `Select` clause is not required for a query. If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope. Per altre informazioni, vedere [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.  
+ È possibile utilizzare la clausola `Select` per definire i risultati che devono essere restituiti da una query. Ciò consente di definire i membri di un nuovo tipo anonimo creato da una query o di destinare i membri di un tipo denominato restituito da una query. La clausola `Select` non è obbligatoria per una query. Se non viene specificata alcuna clausola `Select`, la query restituirà un tipo basato su tutti i membri delle variabili di intervallo identificate per l'ambito corrente. Per altre informazioni, vedere [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Quando una query crea un tipo denominato, viene restituito un risultato di tipo <xref:System.Collections.Generic.IEnumerable%601> dove `T` è il tipo creato.  
   
- The `Select` clause can reference any variables in the current scope. This includes range variables identified in the `From` clause (or `From` clauses). It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression. The `Select` clause can also include static values. For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`. The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause. The `DiscountedPrice` member value is calculated in the `Let` clause. The `Discount` member is a static value.  
+ La clausola `Select` può fare riferimento a qualsiasi variabile nell'ambito corrente. Sono incluse le variabili di intervallo identificate nella clausola `From` o `From` clausole. Include anche tutte le nuove variabili create con un alias dalle clausole `Aggregate`, `Let`, `Group By`o `Group Join` o dalle variabili di una clausola di `Select` precedente nell'espressione di query. La clausola `Select` può includere anche valori statici. Nell'esempio di codice seguente, ad esempio, viene illustrata un'espressione di query in cui la clausola `Select` definisce il risultato della query come nuovo tipo anonimo con quattro membri: `ProductName`, `Price`, `Discount`e `DiscountedPrice`. I valori dei membri `ProductName` e `Price` sono ricavati dalla variabile di intervallo di prodotti definita nella clausola `From`. Il valore del membro `DiscountedPrice` viene calcolato nella clausola `Let`. Il `Discount` membro è un valore statico.  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope. The last `Select` clause in a query expression determines the return value of the query. For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500. The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause. The second `Select` clause identifies the values returned by the query as a new anonymous type.  
+ La clausola `Select` introduce un nuovo set di variabili di intervallo per le clausole di query successive e le variabili di intervallo precedenti non sono più nell'ambito. L'ultima clausola `Select` in un'espressione di query determina il valore restituito dalla query. Ad esempio, la query seguente restituisce il nome e l'ID dell'azienda per ogni ordine cliente per il quale il totale supera 500. La prima clausola `Select` identifica le variabili di intervallo per la clausola `Where` e la seconda clausola `Select`. La seconda clausola `Select` identifica i valori restituiti dalla query come un nuovo tipo anonimo.  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item. If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items. For example, the following two queries return collections of two different types based on the `Select` clause. The first query returns a collection of company names as strings. The second query returns a collection of `Customer` objects populated with the company names and address information.  
+ Se la clausola `Select` identifica un singolo elemento da restituire, l'espressione di query restituisce una raccolta del tipo di quel singolo elemento. Se la clausola `Select` identifica più elementi da restituire, l'espressione di query restituisce una raccolta di un nuovo tipo anonimo, in base agli elementi selezionati. Ad esempio, le due query seguenti restituiscono raccolte di due tipi diversi in base alla clausola `Select`. La prima query restituisce una raccolta di nomi di società come stringhe. La seconda query restituisce una raccolta di oggetti `Customer` popolati con i nomi e le informazioni sull'indirizzo della società.  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Esempio  
- The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection. The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable. The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.  
+ Nell'espressione di query seguente viene utilizzata una clausola `From` per dichiarare una variabile di intervallo `cust` per la raccolta di `customers`. La clausola `Select` seleziona il nome e il valore ID del cliente e popola le colonne `CompanyName` e `CustomerID` della nuova variabile di intervallo. L'istruzione `For Each` esegue il ciclo di ogni oggetto restituito e visualizza le colonne `CompanyName` e `CustomerID` per ogni record.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   

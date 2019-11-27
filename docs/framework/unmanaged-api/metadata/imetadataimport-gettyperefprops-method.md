@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436706"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>Metodo IMetaDataImport::GetTypeRefProps
-Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
+Ottiene i metadati associati all'<xref:System.Type> a cui fa riferimento il token TypeRef specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,26 +39,26 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `tr`  
- [in] The TypeRef token that represents the type to return metadata for.  
+ in Token TypeRef che rappresenta il tipo per cui restituire i metadati.  
   
  `ptkResolutionScope`  
- [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
+ out Puntatore all'ambito in cui viene eseguito il riferimento. Questo valore è un token AssemblyRef o ModuleRef.  
   
  `szName`  
- [out] A buffer containing the type name.  
+ out Buffer contenente il nome del tipo.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ in Dimensioni richieste in caratteri wide di `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ out Dimensioni restituite in caratteri wide di `szName`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

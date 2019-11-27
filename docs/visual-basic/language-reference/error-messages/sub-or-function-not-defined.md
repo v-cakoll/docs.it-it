@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349572"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function non definita (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. Alcune cause possibili di questo errore sono:  
+Per poter essere chiamato, è necessario definire un `Sub` o `Function`. Alcune cause possibili di questo errore sono:  
   
-- Misspelling the procedure name.  
+- Ortografia del nome della procedura.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- Tentativo di chiamare una routine da un altro progetto senza aggiungere esplicitamente un riferimento a tale progetto nella finestra di dialogo **riferimenti** .  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Specifica di una routine che non è visibile alla procedura chiamante.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Dichiarazione di una routine della libreria di collegamento dinamico (DLL) di Windows o di una routine di risorsa di codice Macintosh che non si trova nella libreria o nella risorsa di codice specificata.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Verificare che il nome della stored procedure sia stato digitato correttamente.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. Trovare il nome del progetto contenente la procedura che si desidera chiamare nella finestra di dialogo **riferimenti** . Se non viene visualizzato, fare clic sul pulsante **Sfoglia** per cercarlo. Selezionare la casella di controllo a sinistra del nome del progetto, quindi fare clic su **OK**.  
   
-3. Check the name of the routine.  
+3. Verificare il nome della routine.  
   
 ## <a name="see-also"></a>Vedere anche
 

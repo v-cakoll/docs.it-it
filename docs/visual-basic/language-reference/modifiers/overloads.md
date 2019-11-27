@@ -23,15 +23,15 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
 ## <a name="remarks"></a>Note
 
-*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
+L' *Overload* è la pratica di fornire più di una definizione per un nome di proprietà o di routine specifico nello stesso ambito. La ridichiarazione di una proprietà o di una routine con una firma diversa viene talvolta chiamata *nascosta dalla firma*.
 
 ## <a name="rules"></a>Regole
 
-- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
+- **Contesto di dichiarazione.** È possibile utilizzare `Overloads` solo in un'istruzione di dichiarazione di proprietà o di routine.
 
-- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
+- **Modificatori combinati.** Non è possibile specificare `Overloads` insieme alle [ombre](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.
 
-- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:
+- **Differenze obbligatorie.** La *firma* in questa dichiarazione deve essere diversa dalla firma di ogni proprietà o routine che viene sovraccaricata. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:
 
   - numero dei parametri
 
@@ -45,7 +45,7 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
   Tutti gli overload devono avere lo stesso nome, ma ognuno deve essere diverso da tutti gli altri per uno o più elementi tra quelli elencati in precedenza. Questo consente al compilatore di distinguere la versione da usare quando il codice chiama la proprietà o la routine.
 
-- **Disallowed Differences.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:
+- **Differenze non consentite.** Poiché gli elementi riportati di seguito non fanno parte della firma, la relativa modifica non è valida per l'overload di una proprietà o di una routine:
 
   - la capacità di restituire un valore (per una routine)
 
@@ -59,9 +59,9 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
 
   - e parole chiave di modificatori di proprietà o di routine (ad esempio `Public` o `Shared`)
 
-- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.
+- **Modificatore facoltativo.** Non è necessario utilizzare il modificatore `Overloads` quando si definiscono più proprietà o routine di overload nella stessa classe. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.
 
-- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.
+- **Ombreggiatura e overload.** è possibile utilizzare `Overloads` anche per nascondere un membro esistente o un set di membri di overload in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.
 
 Se si usa `Overrides`, il compilatore aggiunge implicitamente `Overloads` in modo che le API della libreria funzionino più facilmente con C#.
 
@@ -69,7 +69,7 @@ Il modificatore `Overloads` può essere usato nei contesti seguenti:
 
 - [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 
 - [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
 
@@ -79,6 +79,6 @@ Il modificatore `Overloads` può essere usato nei contesti seguenti:
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

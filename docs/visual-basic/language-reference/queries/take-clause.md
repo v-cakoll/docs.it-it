@@ -26,19 +26,19 @@ Take count
   
 ## <a name="parts"></a>Parti  
  `count`  
- Obbligatorio. A value or an expression that evaluates to the number of elements of the sequence to return.  
+ Obbligatoria. Valore o espressione che restituisce il numero di elementi della sequenza da restituire.  
   
 ## <a name="remarks"></a>Note  
- The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
+ La clausola `Take` fa in modo che una query includa un numero specificato di elementi contigui dall'inizio di un elenco di risultati. Il numero di elementi da includere è specificato dal parametro `count`.  
   
- You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
+ È possibile utilizzare la clausola `Take` con la clausola `Skip` per restituire un intervallo di dati da qualsiasi segmento di una query. A tale scopo, passare l'indice del primo elemento dell'intervallo alla clausola `Skip` e la dimensione dell'intervallo alla clausola `Take`. In questo caso, è necessario specificare la clausola `Take` dopo la clausola `Skip`.  
   
- When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando si utilizza la clausola `Take` in una query, potrebbe essere necessario verificare che i risultati vengano restituiti in un ordine che consenta alla clausola `Take` di includere i risultati desiderati. Per ulteriori informazioni sull'ordinamento dei risultati di query, vedere [clausola ORDER BY](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
+ È possibile utilizzare la clausola `TakeWhile` per specificare che vengano restituiti solo determinati elementi, a seconda della condizione specificata.  
   
 ## <a name="example"></a>Esempio  
- The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ Nell'esempio di codice seguente viene utilizzata la clausola `Take` insieme alla clausola `Skip` per restituire dati da una query in pagine. La funzione GetCustomers usa la clausola `Skip` per ignorare i clienti nell'elenco fino al valore di indice iniziale fornito e usa la clausola `Take` per restituire una pagina di clienti a partire da tale valore di indice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

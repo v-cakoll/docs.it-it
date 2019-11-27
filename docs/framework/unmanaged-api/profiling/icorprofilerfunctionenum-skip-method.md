@@ -33,21 +33,21 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Parametri  
  `celt`  
- [in] The number of elements to be skipped.  
+ in Numero di elementi da ignorare.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|gli elementi `celt` sono stati ignorati.|  
+|S_FALSE|Sono stati ignorati meno di `celt` elementi, a indicare che non sono presenti altri elementi.|  
   
 ## <a name="remarks"></a>Note  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ La nuova posizione del cursore di questo enumeratore è (posizione corrente) + `celt`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

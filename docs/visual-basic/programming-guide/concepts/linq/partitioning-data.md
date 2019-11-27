@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353146"
 ---
-# <a name="partitioning-data-visual-basic"></a>Partitioning Data (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>Partizionamento dei dati (Visual Basic)
 Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input in due sezioni senza ridisposizione degli elementi e la successiva restituzione di una delle sezioni.  
   
  La figura seguente illustra i risultati di tre diverse operazioni di partizionamento in una sequenza di caratteri. La prima operazione restituisce i primi tre elementi nella sequenza. La seconda operazione ignora i primi tre elementi e restituisce gli elementi rimanenti. La terza operazione ignora i primi due elementi nella sequenza e restituisce i tre elementi successivi.  
@@ -20,7 +20,7 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
   
 ## <a name="operators"></a>Operatori  
   
-|Nome dell'operatore|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
+|Nome dell'operatore|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Skip|Ignora gli elementi fino a una posizione specificata in una sequenza.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Ignora gli elementi in base a una funzione di predicato fino a quando un elemento non soddisfa la condizione.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,22 +30,22 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
   
 ### <a name="skip"></a>Skip  
- The following code example uses the `Skip` clause in Visual Basic to skip over the first four strings in an array of strings before returning the remaining strings in the array.  
+ Nell'esempio di codice seguente viene usata la clausola `Skip` in Visual Basic per ignorare le prime quattro stringhe in una matrice di stringhe prima di restituire le stringhe rimanenti nella matrice.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- The following code example uses the `Skip While` clause in Visual Basic to skip over the strings in an array while the first letter of the string is "a". The remaining strings in the array are returned.  
+ Nell'esempio di codice seguente viene usata la clausola `Skip While` in Visual Basic per ignorare le stringhe in una matrice mentre la prima lettera della stringa è "a". Vengono restituite le stringhe rimanenti nella matrice.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- The following code example uses the `Take` clause in Visual Basic to return the first two strings in an array of strings.  
+ Nell'esempio di codice seguente viene usata la clausola `Take` in Visual Basic per restituire le prime due stringhe in una matrice di stringhe.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- The following code example uses the `Take While` clause in Visual Basic to return strings from an array while the length of the string is five or less.  
+ Nell'esempio di codice seguente viene usata la clausola `Take While` in Visual Basic per restituire stringhe da una matrice mentre la lunghezza della stringa è cinque o meno.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   

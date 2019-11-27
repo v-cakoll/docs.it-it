@@ -8,9 +8,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349597"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>Caratteri speciali (riferimenti per Visual Basic)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+I caratteri speciali sono caratteri contestuali predefiniti che modificano l'elemento del programma a cui vengono anteposti. Visual Basic supporta il carattere speciale seguente:
 
 - [$](interpolated.md), carattere di stringa interpolata.
 

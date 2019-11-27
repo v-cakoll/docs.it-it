@@ -18,25 +18,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350859"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedura: eseguire l'overload di una routine che accetta parametri facoltativi (Visual Basic)
-If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads. For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+Se una stored procedure ha uno o più parametri [facoltativi](../../../../visual-basic/language-reference/modifiers/optional.md) , non è possibile definire una versione di overload corrispondente a uno qualsiasi degli overload impliciti. Per ulteriori informazioni, vedere "Overload impliciti per i parametri facoltativi" in [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
   
-## <a name="one-optional-parameter"></a>One Optional Parameter  
+## <a name="one-optional-parameter"></a>Un parametro facoltativo  
   
-#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>To overload a procedure that takes one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Per eseguire l'overload di una routine che accetta un parametro facoltativo  
   
-1. Write a `Sub` or `Function` declaration statement that includes the optional parameter in the parameter list. Do not use the `Optional` keyword in this overloaded version.  
+1. Scrivere un'istruzione di dichiarazione `Sub` o `Function` che includa il parametro facoltativo nell'elenco di parametri. Non utilizzare la parola chiave `Optional` in questa versione di overload.  
   
-2. Precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+2. Precede la `Sub` o la parola chiave `Function` con la parola chiave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
   
-3. Write the procedure code that should execute when the calling code supplies the optional argument.  
+3. Scrivere il codice della procedura da eseguire quando il codice chiamante fornisce l'argomento facoltativo.  
   
-4. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. Terminare la procedura con l'istruzione `End Sub` o `End Function` in base alle esigenze.  
   
-5. Write a second declaration statement that is identical to the first declaration except that it does not include the optional parameter in the parameter list.  
+5. Scrivere una seconda istruzione di dichiarazione identica alla prima dichiarazione, ad eccezione del fatto che non include il parametro facoltativo nell'elenco di parametri.  
   
-6. Write the procedure code that should execute when the calling code does not supply the optional argument. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. Scrivere il codice della procedura da eseguire quando il codice chiamante non fornisce l'argomento facoltativo. Terminare la procedura con l'istruzione `End Sub` o `End Function` in base alle esigenze.  
   
-     The following example shows a procedure defined with an optional parameter,  an equivalent set of two overloaded procedures, and finally examples of both invalid and valid overloaded versions.  
+     Nell'esempio seguente viene illustrata una procedura definita con un parametro facoltativo, un set equivalente di due procedure di overload e infine esempi di versioni di overload valide e non valide.  
   
      [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
@@ -44,22 +44,22 @@ If a procedure has one or more [Optional](../../../../visual-basic/language-refe
   
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
-## <a name="multiple-optional-parameters"></a>Multiple Optional Parameters  
- For a procedure with more than one optional parameter, you normally need more than two overloaded versions. For example, if there are two optional parameters, and the calling code can supply or omit each one independently of the other, you need four overloaded versions, one for each possible combination of supplied arguments.  
+## <a name="multiple-optional-parameters"></a>Più parametri facoltativi  
+ Per una procedura con più di un parametro facoltativo, in genere sono necessarie più di due versioni di overload. Se, ad esempio, sono presenti due parametri facoltativi e il codice chiamante può fornire o omettere ognuno di essi indipendentemente dall'altro, sono necessarie quattro versioni di overload, una per ogni possibile combinazione di argomenti forniti.  
   
- As the number of optional parameters increases, the complexity of the overloading increases. Unless some combinations of supplied arguments are not acceptable, for N optional parameters you need 2 ^ N overloaded versions. Depending on the nature of the procedure, you might find that the clarity of logic justifies the extra effort of defining all the overloaded versions.  
+ Con l'aumentare del numero di parametri facoltativi, aumenta la complessità dell'overload. A meno che non siano accettate alcune combinazioni di argomenti forniti, per N parametri facoltativi sono necessarie 2 ^ N versioni di overload. A seconda della natura della procedura, è possibile che la chiarezza della logica giustifichi il lavoro aggiuntivo di definizione di tutte le versioni di overload.  
   
-#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>To overload a procedure that takes more than one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Per eseguire l'overload di una routine che accetta più di un parametro facoltativo  
   
-1. Determine which combinations of supplied optional arguments are acceptable to the logic of the procedure. An unacceptable combination might arise if one optional parameter depends on another. For example, if one parameter accepts a person's name and another accepts the person's age, a combination of arguments supplying the age but omitting the name is unacceptable.  
+1. Determinare quali combinazioni di argomenti facoltativi forniti sono accettabili per la logica della routine. Una combinazione inaccettabile potrebbe verificarsi se un parametro facoltativo dipende da un altro. Se, ad esempio, un parametro accetta il nome di una persona e un altro accetta l'età della persona, una combinazione di argomenti che forniscono la validità, ma omettendo il nome non è accettabile.  
   
-2. For each acceptable combination of supplied optional arguments, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use the `Optional` keyword.  
+2. Per ogni combinazione accettabile di argomenti facoltativi specificati, scrivere un'istruzione `Sub` o `Function` dichiarazione che definisce l'elenco di parametri corrispondente. Non usare la parola chiave `Optional`.  
   
-3. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+3. In ogni dichiarazione precedere la parola chiave `Sub` o `Function` con la parola chiave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
   
-4. Following each declaration, write the procedure code that should execute when the calling code supplies an argument list corresponding to that declaration's parameter list.  
+4. Dopo ogni dichiarazione, scrivere il codice della procedura da eseguire quando il codice chiamante fornisce un elenco di argomenti corrispondente all'elenco di parametri della dichiarazione.  
   
-5. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+5. Terminare ogni procedura con l'istruzione `End Sub` o `End Function` in base alle esigenze.  
   
 ## <a name="see-also"></a>Vedere anche
 

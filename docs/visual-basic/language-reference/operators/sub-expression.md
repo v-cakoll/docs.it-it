@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350908"
 ---
 # <a name="sub-expression-visual-basic"></a>Sottoespressione (Visual Basic)
-Declares the parameters and code that define a subroutine lambda expression.  
+Dichiara i parametri e il codice che definiscono un'espressione lambda subroutine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,30 +30,30 @@ End Sub
   
 |Termine|Definizione|  
 |---|---|  
-|`parameterlist`|Parametro facoltativo. A list of local variable names that represent the parameters of the procedure. The parentheses must be present even when the list is empty. Per altre informazioni, vedere [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Obbligatorio. A single statement.|  
-|`statements`|Obbligatorio. A list of statements.|  
+|`parameterlist`|Facoltativa. Elenco di nomi di variabili locali che rappresentano i parametri della stored procedure. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per altre informazioni, vedere [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`statement`|Obbligatoria. Una singola istruzione.|  
+|`statements`|Obbligatoria. Elenco di istruzioni.|  
   
 ## <a name="remarks"></a>Note  
- A *lambda expression* is a subroutine that does not have a name and that executes one or more statements. You can use a lambda expression anywhere that you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Un' *espressione lambda* è una subroutine che non ha un nome e che esegue una o più istruzioni. È possibile usare un'espressione lambda ovunque sia possibile usare un tipo di delegato, ad eccezione di un argomento per `RemoveHandler`. Per altre informazioni sui delegati e sull'uso di espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e conversione di delegati [rilassati](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
- The syntax of a lambda expression resembles that of a standard subroutine. The differences are as follows:  
+ La sintassi di un'espressione lambda è simile a quella di una subroutine standard. Le differenze sono le seguenti:  
   
-- A lambda expression does not have a name.  
+- Un'espressione lambda non ha un nome.  
   
-- A lambda expression cannot have a modifier, such as `Overloads` or `Overrides`.  
+- Un'espressione lambda non può avere un modificatore, ad esempio `Overloads` o `Overrides`.  
   
-- The body of a single-line lambda expression must be a statement, not an expression. The body can consist of a call to a sub procedure, but not a call to a function procedure.  
+- Il corpo di un'espressione lambda a riga singola deve essere un'istruzione, non un'espressione. Il corpo può essere costituito da una chiamata a una routine Sub, ma non da una chiamata a una routine di funzione.  
   
-- In a lambda expression, either all parameters must have specified data types or all parameters must be inferred.  
+- In un'espressione lambda, tutti i parametri devono avere tipi di dati specificati oppure è necessario dedurre tutti i parametri.  
   
-- Optional and `ParamArray` parameters are not permitted in lambda expressions.  
+- I parametri facoltativi e `ParamArray` non sono consentiti nelle espressioni lambda.  
   
-- Generic parameters are not permitted in lambda expressions.  
+- I parametri generici non sono consentiti nelle espressioni lambda.  
   
 ## <a name="example"></a>Esempio  
- Following is an example of a lambda expression that writes a value to the console. The example shows both the single-line and multiline lambda expression syntax for a subroutine. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Di seguito è riportato un esempio di espressione lambda che scrive un valore nella console. Nell'esempio viene illustrata la sintassi delle espressioni lambda su una sola riga e su più righe per una subroutine. Per altri esempi, vedere [espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

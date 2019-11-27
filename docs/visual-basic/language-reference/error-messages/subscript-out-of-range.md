@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350802"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Indice non incluso nell'intervallo (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Un indice di matrice non è valido perché non rientra nell'intervallo consentito. Il valore di indice più basso per una dimensione è sempre 0 e il valore di indice più alto viene restituito dal metodo `GetUpperBound` per tale dimensione.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Change the subscript so it falls within the valid range.  
+- Modificare l'indice in modo che rientri nell'intervallo valido.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>
-- [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)

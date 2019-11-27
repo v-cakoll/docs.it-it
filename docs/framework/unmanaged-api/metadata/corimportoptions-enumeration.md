@@ -44,22 +44,22 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Indica il comportamento predefinito, ovvero ignorare i record eliminati.|  
+|`MDImportOptionAll`|Indica che tutti i metadati devono essere enumerati.|  
+|`MDImportOptionAllTypeDefs`|Indica che devono essere enumerati tutti i TypeDef, inclusi quelli eliminati.|  
+|`MDImportOptionAllMethodDefs`|Indica che devono essere enumerati tutti MethodDefs, inclusi quelli eliminati.|  
+|`MDImportOptionAllFieldDefs`|Indica che devono essere enumerati tutti FieldDefs, inclusi quelli eliminati.|  
+|`MDImportOptionAllProperties`|Indica che devono essere enumerati tutti PropertyDefs, inclusi quelli eliminati.|  
+|`MDImportOptionAllEvents`|Indica che devono essere enumerati tutti EventDefs, inclusi quelli eliminati.|  
+|`MDImportOptionAllCustomAttributes`|Indica che tutti gli attributi personalizzati, inclusi quelli eliminati, devono essere enumerati.|  
+|`MDImportOptionAllExportedTypes`|Indica che tutti i tipi esportati, inclusi quelli eliminati, devono essere enumerati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

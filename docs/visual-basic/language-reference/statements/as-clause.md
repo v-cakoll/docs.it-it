@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350179"
 ---
 # <a name="as-clause-visual-basic"></a>Clausola As (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Introduce una clausola `As`, che identifica un tipo di dati in un'istruzione di dichiarazione o un elenco di vincoli in un parametro di tipo generico.  
   
 ## <a name="remarks"></a>Note  
  È possibile usare la parola chiave `As` nei contesti seguenti:  
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Per... Istruzioni successive](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Per ogni... Istruzioni successive](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -49,7 +49,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Prova... Rileva... Finally (istruzioni)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -65,5 +65,5 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
 - [Tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

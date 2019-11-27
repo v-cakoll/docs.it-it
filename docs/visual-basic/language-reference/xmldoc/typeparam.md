@@ -12,8 +12,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352195"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
-Defines a type parameter name and description.  
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+Definisce il nome e la descrizione di un parametro di tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,15 +26,15 @@ Defines a type parameter name and description.
  Nome del parametro di tipo. Racchiudere il nome tra virgolette doppie (" ").  
   
  `description`  
- A description of the type parameter.  
+ Descrizione del parametro di tipo.  
   
 ## <a name="remarks"></a>Note  
- Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
+ Usare il tag `<typeparam>` nel commento per una dichiarazione di un tipo generico o di un membro generico per descrivere uno dei parametri di tipo.  
   
  Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- This example uses the `<typeparam>` tag to describe the `id` parameter.  
+ Questo esempio usa il tag `<typeparam>` per descrivere il parametro `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

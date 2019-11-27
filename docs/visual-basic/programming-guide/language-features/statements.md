@@ -1,5 +1,5 @@
 ---
-title: Statements (Istruzioni)
+title: Istruzioni
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,227 +24,227 @@ ms.locfileid: "74352498"
 ---
 # <a name="statements-in-visual-basic"></a>Istruzioni in Visual Basic
 
-A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
+Un'istruzione in Visual Basic è un'istruzione completa. Può contenere parole chiave, operatori, variabili, costanti ed espressioni. Ogni istruzione appartiene a una delle categorie seguenti:
 
-- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
+- Le **istruzioni di dichiarazione**, che denominano una variabile, una costante o una routine, possono anche specificare un tipo di dati.
 
-- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
+- **Istruzioni eseguibili**, che avviano le azioni. Queste istruzioni possono chiamare un metodo o una funzione e possono eseguire il ciclo o il branching tramite blocchi di codice. Le istruzioni eseguibili includono **istruzioni di assegnazione**che assegnano un valore o un'espressione a una variabile o a una costante.
 
-This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
+In questo argomento viene descritta ogni categoria. Inoltre, in questo argomento viene descritto come combinare più istruzioni su una sola riga e come continuare un'istruzione su più righe.
 
 ## <a name="declaration-statements"></a>Istruzioni di dichiarazione
 
-You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
+Usare le istruzioni di dichiarazione per assegnare un nome e una definizione a procedure, variabili, proprietà, matrici e costanti. Quando si dichiara un elemento di programmazione, è anche possibile definire il tipo di dati, il livello di accesso e l'ambito. Per altre informazioni, vedere [caratteristiche degli elementi dichiarati](./declared-elements/declared-element-characteristics.md).
 
-The following example contains three declarations.
+Nell'esempio seguente sono contenute tre dichiarazioni.
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
+La prima dichiarazione è l'istruzione `Sub`. Insieme alla relativa istruzione `End Sub` corrispondente, viene dichiarata una stored procedure denominata `applyFormat`. Specifica anche che `applyFormat` è `Public`, il che significa che il codice che può farvi riferimento può chiamarlo.
 
-The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
+La seconda dichiarazione è l'istruzione `Const`, che dichiara la costante `limit`, specificando il tipo di dati `Integer` e un valore di 33.
 
-The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
+La terza dichiarazione è l'istruzione `Dim`, che dichiara la variabile `thisWidget`. Il tipo di dati è un oggetto specifico, ovvero un oggetto creato dalla classe `Widget`. È possibile dichiarare una variabile come qualsiasi tipo di dati elementare o qualsiasi tipo di oggetto esposto nell'applicazione in uso.
 
-### <a name="initial-values"></a>Initial Values
+### <a name="initial-values"></a>Valori iniziali
 
-When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
+Quando viene eseguito il codice contenente un'istruzione di dichiarazione, Visual Basic riserva la memoria necessaria per l'elemento dichiarato. Se l'elemento include un valore, Visual Basic lo inizializza sul valore predefinito per il tipo di dati. Per ulteriori informazioni, vedere "comportamento" nell' [istruzione Dim](../../language-reference/statements/dim-statement.md).
 
-You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
+È possibile assegnare un valore iniziale a una variabile come parte della relativa dichiarazione, come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
+Se una variabile è una variabile oggetto, è possibile creare in modo esplicito un'istanza della relativa classe quando viene dichiarata tramite la parola chiave [new operator](../../../visual-basic/language-reference/operators/new-operator.md) , come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
+Si noti che il valore iniziale specificato in un'istruzione di dichiarazione non viene assegnato a una variabile finché l'esecuzione non raggiunge la relativa istruzione di dichiarazione. Fino a quel momento, la variabile contiene il valore predefinito per il tipo di dati.
 
-## <a name="executable-statements"></a>Executable statements
+## <a name="executable-statements"></a>Istruzioni eseguibili
 
-An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
+Un'istruzione eseguibile esegue un'azione. Può chiamare una routine, creare un ramo in un'altra posizione nel codice, eseguire il ciclo di diverse istruzioni o valutare un'espressione. Un'istruzione di assegnazione è un caso speciale di un'istruzione eseguibile.
 
-The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
+Nell'esempio seguente viene utilizzata una struttura di controllo `If...Then...Else` per eseguire blocchi di codice diversi in base al valore di una variabile. All'interno di ogni blocco di codice, un ciclo `For...Next` esegue un numero specificato di volte.
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
+L'istruzione `If` nell'esempio precedente verifica il valore del parametro `clockwise`. Se il valore è `True`, viene chiamato il metodo `spinClockwise` di `aWidget`. Se il valore è `False`, viene chiamato il metodo `spinCounterClockwise` di `aWidget`. La struttura di controllo `If...Then...Else` termina con `End If`.
 
-The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
+Il ciclo `For...Next` all'interno di ogni blocco chiama il metodo appropriato un numero di volte uguale al valore del parametro `revolutions`.
 
-## <a name="assignment-statements"></a>Assignment statements
+## <a name="assignment-statements"></a>Istruzioni di assegnazione
 
-Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
+Le istruzioni di assegnazione eseguono operazioni di assegnazione, che sono costituite dall'acquisizione del valore sul lato destro dell'operatore di assegnazione (`=`) e dall'archiviazione nell'elemento a sinistra, come nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
+Nell'esempio precedente, l'istruzione di assegnazione archivia il valore letterale 42 nella variabile `v`.
 
-### <a name="eligible-programming-elements"></a>Eligible programming elements
+### <a name="eligible-programming-elements"></a>Elementi di programmazione idonei
 
-The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
+L'elemento di programmazione sul lato sinistro dell'operatore di assegnazione deve essere in grado di accettare e archiviare un valore. Questo significa che deve essere una variabile o una proprietà che non è [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)o deve essere un elemento di matrice. Nel contesto di un'istruzione di assegnazione, tale elemento viene talvolta denominato *lvalue*, per "valore a sinistra".
 
-The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. Questa condizione è illustrata nell'esempio seguente.
+Il valore a destra dell'operatore di assegnazione viene generato da un'espressione, che può essere costituita da qualsiasi combinazione di valori letterali, costanti, variabili, proprietà, elementi di matrice, altre espressioni o chiamate di funzione. Ciò è illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
+Nell'esempio precedente viene aggiunto il valore contenuto nella variabile `y` al valore contenuto nella variabile `z`, quindi viene aggiunto il valore restituito dalla chiamata al `findResult`di funzione. Il valore totale di questa espressione viene quindi archiviato nella variabile `x`.
 
-### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
+### <a name="data-types-in-assignment-statements"></a>Tipi di dati nelle istruzioni di assegnazione
 
-In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
+Oltre ai valori numerici, l'operatore di assegnazione può assegnare anche `String` valori, come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
+È anche possibile assegnare valori `Boolean`, usando un valore letterale `Boolean` o un'espressione `Boolean`, come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
+Analogamente, è possibile assegnare valori appropriati agli elementi di programmazione del tipo di dati `Char`, `Date`o `Object`. È inoltre possibile assegnare un'istanza di oggetto a un elemento dichiarato come della classe da cui viene creata l'istanza.
 
-### <a name="compound-assignment-statements"></a>Compound assignment statements
+### <a name="compound-assignment-statements"></a>Istruzioni di assegnazione composta
 
-*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
+Le *istruzioni di assegnazione composta* eseguono innanzitutto un'operazione su un'espressione prima di assegnarla a un elemento di programmazione. Nell'esempio seguente viene illustrato uno di questi operatori, `+=`, che incrementa il valore della variabile sul lato sinistro dell'operatore in base al valore dell'espressione a destra.
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
+Nell'esempio precedente viene aggiunto 1 al valore di `n`, quindi il nuovo valore viene archiviato nel `n`. Si tratta di un equivalente a sintassi abbreviata dell'istruzione seguente:
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
+È possibile eseguire un'ampia gamma di operazioni di assegnazione composta utilizzando operatori di questo tipo. Per un elenco di questi operatori e altre informazioni su di essi, vedere [operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md).
 
-The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
+L'operatore di assegnazione di concatenazione (`&=`) è utile per aggiungere una stringa alla fine di stringhe già esistenti, come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
+### <a name="type-conversions-in-assignment-statements"></a>Conversioni di tipi nelle istruzioni di assegnazione
 
-The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
+Il valore assegnato a una variabile, una proprietà o un elemento di matrice deve essere di un tipo di dati appropriato a tale elemento di destinazione. In generale, è consigliabile provare a generare un valore dello stesso tipo di dati dell'elemento di destinazione. Tuttavia, alcuni tipi possono essere convertiti in altri tipi durante l'assegnazione.
 
-For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. Per altre informazioni, vedere [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md).
+Per informazioni sulla conversione tra tipi di dati, vedere [conversioni di tipi in Visual Basic](./data-types/type-conversions.md). In breve, Visual Basic converte automaticamente un valore di un determinato tipo in un altro tipo a cui viene ampliato. Una *conversione* verso un tipo di dati più ampio è una conversione in che ha sempre esito positivo in fase di esecuzione e non perde i dati. Ad esempio, Visual Basic converte un valore di `Integer` in `Double` quando appropriato, perché `Integer` viene ampliato `Double`. Per altre informazioni, vedere [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md).
 
-*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
+Le *conversioni* verso un tipo di dati più piccolo, ovvero quelle che non si ampliano, presentano un rischio di errore in fase di esecuzione o di perdita di dati. È possibile eseguire una conversione verso un tipo di conversione più piccolo in modo esplicito tramite una funzione di conversione di tipi oppure è possibile indirizzare il compilatore in modo implicito per eseguire tutte le conversioni impostando `Option Strict Off`. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](./data-types/implicit-and-explicit-conversions.md).
 
-## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
+## <a name="putting-multiple-statements-on-one-line"></a>Inserimento di più istruzioni su una sola riga
 
-You can have multiple statements on a single line separated by the colon (`:`) character. Questa condizione è illustrata nell'esempio seguente.
+È possibile avere più istruzioni su una sola riga separate dal carattere due punti (`:`). Ciò è illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
+Sebbene occasionalmente pratico, questo tipo di sintassi rende il codice difficile da leggere e gestire. È quindi consigliabile usare una sola istruzione per una riga.
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
+## <a name="continuing-a-statement-over-multiple-lines"></a>Continuazione di un'istruzione su più righe
 
-A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
+Un'istruzione si trova in genere su una sola riga, ma quando è troppo lunga, è possibile continuare nella riga successiva utilizzando una sequenza di continuazione di riga, costituita da uno spazio seguito da un carattere di sottolineatura (`_`) seguito da un ritorno a capo. Nell'esempio seguente, l'istruzione `MsgBox` eseguibile viene continuata su due righe.
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>Implicit line continuation
+### <a name="implicit-line-continuation"></a>Continuazione di riga implicita
 
-In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
+In molti casi, è possibile continuare un'istruzione sulla riga consecutiva successiva senza usare il carattere di sottolineatura (`_`). Gli elementi di sintassi seguenti continuano in modo implicito l'istruzione alla riga di codice successiva.
 
-- After a comma (`,`). Esempio:
+- Dopo una virgola (`,`). Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- After an open parenthesis (`(`) or before a closing parenthesis (`)`). Esempio:
+- Dopo una parentesi aperta (`(`) o prima di una parentesi di chiusura (`)`). Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- After an open curly brace (`{`) or before a closing curly brace (`}`). Esempio:
+- Dopo la parentesi graffa aperta (`{`) o prima di una parentesi graffa chiusa (`}`). Ad esempio:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
+    Per altre informazioni, vedere [inizializzatori di oggetto: tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md) o [inizializzatori di insieme](./collection-initializers/index.md).
 
-- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. Esempio:
+- Dopo un'espressione incorporata aperta (`<%=`) o prima della chiusura di un'espressione incorporata (`%>`) in un valore letterale XML. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
+   Per ulteriori informazioni, vedere [espressioni incorporate in XML](./xml/embedded-expressions-in-xml.md).
 
-- After the concatenation operator (`&`). Esempio:
+- Dopo l'operatore di concatenazione (`&`). Ad esempio:
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Per ulteriori informazioni, vedere [operatori elencati per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Esempio:
+- Dopo gli operatori di assegnazione (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Per ulteriori informazioni, vedere [operatori elencati per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. Esempio:
+- Dopo gli operatori binari (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) in un'espressione. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Per ulteriori informazioni, vedere [operatori elencati per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After the `Is` and `IsNot` operators. Esempio:
+- Dopo gli operatori `Is` e `IsNot`. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Per ulteriori informazioni, vedere [operatori elencati per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After a member qualifier character (`.`) and before the member name. Esempio:
+- Dopo un carattere qualificatore membro (`.`) e prima del nome del membro. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. Esempio:
+   Tuttavia, è necessario includere un carattere di continuazione di riga (`_`) dopo un carattere qualificatore membro quando si usa l'istruzione `With` o si specificano i valori nell'elenco di inizializzazione per un tipo. Provare a suddividere la riga dopo l'operatore di assegnazione, ad esempio `=`, quando si utilizzano istruzioni `With` o elenchi di inizializzazione di oggetti. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Per ulteriori informazioni, vedere [con... Termina con l'istruzione](../../../visual-basic/language-reference/statements/with-end-with-statement.md) o gli [inizializzatori di oggetto: tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
-- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. Esempio:
+- Dopo un qualificatore di proprietà Axis XML (`.` o `.@` o `...`). Tuttavia, è necessario includere un carattere di continuazione di riga (`_`) quando si specifica un qualificatore di membro quando si usa la parola chiave `With`. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
+   Per ulteriori informazioni, vedere [Proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/index.md).
 
-- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. Esempio:
+- Dopo un segno di minore (<) o prima di un segno di maggiore di (`>`) quando si specifica un attributo. Anche dopo un segno di maggiore (`>`) quando si specifica un attributo. Tuttavia, è necessario includere un carattere di continuazione di riga (`_`) quando si specificano gli attributi a livello di assembly o di modulo. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
+   Per altre informazioni, vedere [Cenni preliminari sugli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md).
 
-- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). Esempio:
+- Operatori di query before e After (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`e `Descending`). Non è possibile suddividere una linea tra le parole chiave degli operatori di query costituite da più parole chiave (`Order By`, `Group Join`, `Take While`e `Skip While`). Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
+   Per ulteriori informazioni, vedere [query](../../../visual-basic/language-reference/queries/index.md).
 
-- After the `In` keyword in a `For Each` statement. Esempio:
+- Dopo la parola chiave `In` in un'istruzione `For Each`. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+   Per ulteriori informazioni, vedere [for each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-- After the `From` keyword in a collection initializer. Esempio:
+- Dopo la parola chiave `From` in un inizializzatore di raccolta. Ad esempio:
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
    Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
-## <a name="adding-comments"></a>Adding comments
+## <a name="adding-comments"></a>Aggiunta di commenti
 
-Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
+Il codice sorgente non è sempre di chiara comprensione, neanche al programmatore che lo ha scritto. Per documentare il codice, la maggior parte dei programmatori fa uso di commenti incorporati. I commenti nel codice possono spiegare una procedura o una particolare istruzione a chiunque legga o funzioni in un secondo momento. Visual Basic ignora i commenti durante la compilazione e non influiscono sul codice compilato.
 
-Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
+Le righe di commento iniziano con un apostrofo (`'`) o `REM` seguito da uno spazio. Possono essere aggiunti ovunque nel codice, tranne che all'interno di una stringa. Per aggiungere un commento a un'istruzione, inserire un apostrofo o `REM` dopo l'istruzione, seguito dal commento. I commenti possono anche essere inseriti in una riga separata. Nell'esempio seguente vengono illustrate queste possibilità.
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>Checking compilation errors
+## <a name="checking-compilation-errors"></a>Verifica degli errori di compilazione
 
-If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
+Se, dopo aver digitato una riga di codice, la riga viene visualizzata con una sottolineatura blu ondulata (potrebbe essere visualizzato anche un messaggio di errore), nell'istruzione si verifica un errore di sintassi. È necessario individuare il problema con l'istruzione (esaminando l'elenco attività oppure passando il puntatore del mouse sull'errore con il puntatore del mouse e leggendo il messaggio di errore) e correggerlo. Fino a quando non sono stati corretti tutti gli errori di sintassi nel codice, il programma non verrà compilato correttamente.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 |Termine|Definizione|
 |---|---|
-|[Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
-|[Operatori ed espressioni](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
-|[Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
-|[Procedura: Etichettare le istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|
+|[Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)|Fornisce collegamenti a pagine di riferimento per il linguaggio che coprono gli operatori di assegnazione, ad esempio `=`, `*=`e `&=`.|
+|[Operatori ed espressioni](./operators-and-expressions/index.md)|Viene illustrato come combinare elementi con operatori per restituire nuovi valori.|
+|[Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Viene illustrato come suddividere una singola istruzione in più righe e come inserire più istruzioni nella stessa riga.|
+|[Procedura: Etichettare le istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Viene illustrato come etichettare una riga di codice.|

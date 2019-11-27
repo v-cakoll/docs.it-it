@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349378"
 ---
 # <a name="xml-document-literal-visual-basic"></a>Valore letterale di documento XML (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XDocument> object.  
+Valore letterale che rappresenta un oggetto <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,26 +32,26 @@ rootElement
   
 |Termine|Definizione|  
 |---|---|  
-|`encoding`|Parametro facoltativo. Literal text declaring which encoding the document uses.|  
-|`standalone`|Parametro facoltativo. Literal text. Must be "yes" or "no".|  
-|`piCommentList`|Parametro facoltativo. List of XML processing instructions and XML comments. Takes the following format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Each `piComment` can be one of the following:<br /><br /> -   [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Obbligatorio. Root element of the document. The format is one of the following:<br /><br /> <ul><li>[XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Embedded expression of the form `<%=` `elementExp` `%>`. The `elementExp` returns one of the following:<br /><br /> <ul><li>Oggetto <xref:System.Xml.Linq.XElement>.</li><li>A collection that contains one <xref:System.Xml.Linq.XElement> object and any number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects.</li></ul></li></ul><br /> For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|Facoltativa. Testo letterale che dichiara la codifica utilizzata dal documento.|  
+|`standalone`|Facoltativa. Testo letterale. Deve essere "Yes" o "No".|  
+|`piCommentList`|Facoltativa. Elenco di istruzioni di elaborazione XML e commenti XML. Accetta il formato seguente:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Ogni `piComment` può essere uno dei seguenti:<br /><br /> -   [valore letterale di istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [valore letterale del commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|Obbligatoria. Elemento radice del documento. Il formato è uno dei seguenti:<br /><br /> <ul><li>[Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Espressione incorporata del form `<%=` `%>``elementExp`. Il `elementExp` restituisce uno dei seguenti elementi:<br /><br /> <ul><li>Oggetto <xref:System.Xml.Linq.XElement>.</li><li>Raccolta che contiene un <xref:System.Xml.Linq.XElement> oggetto e un numero qualsiasi di oggetti <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment>.</li></ul></li></ul><br /> Per ulteriori informazioni, vedere [espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="remarks"></a>Note  
- An XML document literal is identified by the XML declaration at the start of the literal. Although each XML document literal must have exactly one root XML element, it can have any number of XML processing instructions and XML comments.  
+ Un valore letterale di documento XML viene identificato dalla dichiarazione XML all'inizio del valore letterale. Sebbene ogni valore letterale del documento XML debba contenere esattamente un elemento XML radice, può includere un numero qualsiasi di istruzioni di elaborazione XML e commenti XML.  
   
- An XML document literal cannot appear in an XML element.  
+ Un valore letterale di documento XML non può essere incluso in un elemento XML.  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Un valore letterale XML può estendersi su più righe senza usare caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollarlo direttamente in un programma Visual Basic.  
   
- The Visual Basic compiler converts the XML document literal into calls to the <xref:System.Xml.Linq.XDocument.%23ctor%2A> and <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructors.  
+ Il compilatore Visual Basic converte il valore letterale del documento XML in chiamate ai costruttori <xref:System.Xml.Linq.XDocument.%23ctor%2A> e <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>.  
   
 ## <a name="example"></a>Esempio  
- The following example creates an XML document that has an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+ Nell'esempio seguente viene creato un documento XML con una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

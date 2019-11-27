@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: Non è possibile eseguire l'operazione richiesta
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17

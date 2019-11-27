@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352349"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -22,7 +22,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
@@ -31,7 +31,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 |`Itanium`|Compila l'assembly in modo da essere eseguito da CLR a 64 bit su un computer dotato di processore Itanium.|  
 |`arm`|Compila l'assembly in modo da essere eseguito su un computer con processore ARM (Advanced RISC Machine).|  
 |`anycpu`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit su versioni di Windows a 32 bit e come applicazione a 64 bit su versioni di Windows a 64 bit. Questo flag è il valore predefinito.|  
-|`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. Questo flag è valido solo per i file eseguibili (. EXE) e richiede .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Note  
  Per specificare il tipo di processore di destinazione del file di output, usare l'opzione `-platform`.  
@@ -48,7 +48,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 - Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
   
- The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. In particolare:  
+ L'opzione **-Platform** consente di attenuare alcuni problemi se si è certi di aver fatto supposizioni sull'architettura in cui viene eseguito il codice. In particolare:  
   
 - Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
   
@@ -64,15 +64,15 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 - Gli eseguibili compilati con l'opzione `-platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
   
- For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
+ Per ulteriori informazioni sullo sviluppo di un'applicazione per l'esecuzione in una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Per impostare-Platform nell'IDE di Visual Studio  
   
-1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
+1. In **Esplora soluzioni**scegliere il progetto, aprire il menu **progetto** , quindi fare clic su **proprietà**.  
   
-2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
+2. Nella scheda **Compila** selezionare o deselezionare la casella di controllo **preferisci 32 bit** oppure selezionare un valore nell'elenco **CPU di destinazione** .  
   
-     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Per ulteriori informazioni, vedere [compilazione pagina, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come usare l'opzione del compilatore `-platform`.  

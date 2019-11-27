@@ -1,5 +1,5 @@
 ---
-title: Statements (Istruzioni)
+title: Istruzioni
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]

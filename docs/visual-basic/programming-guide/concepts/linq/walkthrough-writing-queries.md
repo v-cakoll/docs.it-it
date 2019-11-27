@@ -16,130 +16,130 @@ ms.locfileid: "74351022"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
 
-This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions. The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them. The queries incorporate several features including object initializers, local type inference, and anonymous types.
+In questa procedura dettagliata viene illustrato come è possibile utilizzare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni di query. Nella procedura dettagliata viene illustrato come creare query in un elenco di oggetti Student, come eseguire le query e come modificarli. Le query includono diverse funzionalità, inclusi gli inizializzatori di oggetto, l'inferenza del tipo locale e i tipi anonimi.
 
-After completing this walkthrough, you will be ready to move on to the samples and documentation for the specific [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider you are interested in. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers include [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Al termine di questa procedura dettagliata, si sarà pronti a passare agli esempi e alla documentazione per il provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] specifico a cui si è interessati. i provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] includono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Creare un progetto
 
-### <a name="to-create-a-console-application-project"></a>To create a console application project
+### <a name="to-create-a-console-application-project"></a>Per creare un progetto di applicazione console
 
 1. Avviare Visual Studio.
 
 2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
-3. In the **Installed Templates** list, click **Visual Basic**.
+3. Nell'elenco **modelli installati** fare clic su **Visual Basic**.
 
-4. In the list of project types, click **Console Application**. In the **Name** box, type a name for the project, and then click **OK**.
+4. Nell'elenco dei tipi di progetto fare clic su **applicazione console**. Nella casella **nome** Digitare un nome per il progetto, quindi fare clic su **OK**.
 
-    A project is created. By default, it contains a reference to System.Core.dll. Also, the **Imported namespaces** list on the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) includes the <xref:System.Linq?displayProperty=nameWithType> namespace.
+    Viene creato un progetto. Per impostazione predefinita, contiene un riferimento a System. Core. dll. Inoltre, l'elenco degli **spazi dei nomi importati** nella [pagina riferimenti, progettazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) include lo spazio dei nomi <xref:System.Linq?displayProperty=nameWithType>.
 
-5. On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.
+5. Nella [pagina compilazione, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), assicurarsi che l' **opzione deduce** sia impostata **su on**.
 
-## <a name="add-an-in-memory-data-source"></a>Add an In-Memory Data Source
+## <a name="add-an-in-memory-data-source"></a>Aggiungere un'origine dati in memoria
 
-The data source for the queries in this walkthrough is a list of `Student` objects. Each `Student` object contains a first name, a last name, a class year, and an academic rank in the student body.
+L'origine dati per le query in questa procedura dettagliata è un elenco di oggetti `Student`. Ogni oggetto `Student` contiene un nome, un cognome, un anno di classe e un rango accademico nel corpo degli studenti.
 
 ### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati
 
-- Define a `Student` class, and create a list of instances of the class.
+- Definire una classe `Student` e creare un elenco di istanze della classe.
 
   > [!IMPORTANT]
-  > The code needed to define the `Student` class and create the list used in the walkthrough examples is provided in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy it from there and paste it into your project. The new code replaces the code that appeared when you created the project.
+  > Il codice necessario per definire la classe `Student` e creare l'elenco usato negli esempi di procedura dettagliata è disponibile in [procedura: creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiarlo da questa posizione e incollarlo nel progetto. Il nuovo codice sostituisce il codice visualizzato quando è stato creato il progetto.
 
-### <a name="to-add-a-new-student-to-the-students-list"></a>To add a new student to the students list
+### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti
 
-- Follow the pattern in the `getStudents` method to add another instance of the `Student` class to the list. Adding the student will introduce you to object initializers. For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).
+- Seguire il modello nel metodo `getStudents` per aggiungere un'altra istanza della classe `Student` all'elenco. Aggiungendo lo studente si introdurranno gli inizializzatori di oggetto. Per altre informazioni, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 ## <a name="create-a-query"></a>Creare una query
 
-When executed, the query added in this section produces a list of the students whose academic rank puts them in the top ten. Because the query selects the complete `Student` object each time, the type of the query result is `IEnumerable(Of Student)`. However, the type of the query typically is not specified in query definitions. Instead, the compiler uses local type inference to determine the type. For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). The query's range variable, `currentStudent`, serves as a reference to each `Student` instance in the source, `students`, providing access to the properties of each object in `students`.
+Quando viene eseguita, la query aggiunta in questa sezione produce un elenco degli studenti il cui rango accademico li inserisce nei primi dieci. Poiché la query seleziona ogni volta l'oggetto `Student` completo, il tipo del risultato della query viene `IEnumerable(Of Student)`. Tuttavia, il tipo della query non viene in genere specificato nelle definizioni di query. Al contrario, il compilatore usa l'inferenza del tipo locale per determinare il tipo. Per altre informazioni, vedere [inferenza dei tipi locali](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). La variabile di intervallo della query, `currentStudent`, funge da riferimento a ogni istanza di `Student` nell'origine `students`che fornisce l'accesso alle proprietà di ogni oggetto `students`.
 
 ### <a name="to-create-a-simple-query"></a>Per creare una query semplice
 
-1. Find the place in the `Main` method of the project that is marked as follows:
+1. Individuare la posizione nel metodo `Main` del progetto contrassegnato come segue:
 
     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]
 
-    Copy the following code and paste it in.
+    Copiare il codice seguente e incollarlo in.
 
     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]
 
-2. Rest the mouse pointer over `studentQuery` in your code to verify that the compiler-assigned type is `IEnumerable(Of Student)`.
+2. Posizionare il puntatore del mouse su `studentQuery` nel codice per verificare che il tipo assegnato dal compilatore sia `IEnumerable(Of Student)`.
 
-## <a name="run-the-query"></a>Run the Query
+## <a name="run-the-query"></a>Eseguire la query
 
-The variable `studentQuery` contains the definition of the query, not the results of running the query. A typical mechanism for running a query is a `For Each` loop. Each element in the returned sequence is accessed through the loop iteration variable. For more information about query execution, see [Writing Your First LINQ Query](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).
+La variabile `studentQuery` contiene la definizione della query, non i risultati dell'esecuzione della query. Un meccanismo tipico per l'esecuzione di una query è un ciclo `For Each`. È possibile accedere a ogni elemento nella sequenza restituita tramite la variabile di iterazione del ciclo. Per ulteriori informazioni sull'esecuzione di query, vedere [scrittura della prima query LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).
 
-### <a name="to-run-the-query"></a>To run the query
+### <a name="to-run-the-query"></a>Per eseguire la query
 
-1. Add the following `For Each` loop below the query in your project.
+1. Aggiungere il seguente ciclo di `For Each` sotto la query nel progetto.
 
     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]
 
-2. Rest the mouse pointer over the loop control variable `studentRecord` to see its data type. The type of `studentRecord` is inferred to be `Student`, because `studentQuery` returns a collection of `Student` instances.
+2. Posizionare il puntatore del mouse sulla variabile di controllo del ciclo `studentRecord` per visualizzarne il tipo di dati. Il tipo di `studentRecord` viene dedotto come `Student`, perché `studentQuery` restituisce una raccolta di istanze di `Student`.
 
-3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
+3. Compilare ed eseguire l'applicazione premendo CTRL + F5. Si notino i risultati nella finestra della console.
 
 ## <a name="modify-the-query"></a>Modificare la query
 
-It is easier to scan query results if they are in a specified order. You can sort the returned sequence based on any available field.
+È più semplice analizzare i risultati della query se sono in un ordine specificato. È possibile ordinare la sequenza restituita in base a qualsiasi campo disponibile.
 
 ### <a name="to-order-the-results"></a>Per ordinare i risultati
 
-1. Add the following `Order By` clause between the `Where` statement and the `Select` statement of the query. The `Order By` clause will order the results alphabetically from A to Z, according to the last name of each student.
+1. Aggiungere la seguente clausola `Order By` tra l'istruzione `Where` e l'istruzione `Select` della query. Con la clausola `Order By` i risultati vengono ordinati in ordine alfabetico da a a Z, in base al cognome di ogni studente.
 
     ```vb
     Order By currentStudent.Last Ascending
     ```
 
-2. To order by last name and then first name, add both fields to the query:
+2. Per eseguire l'ordinamento in base al cognome e quindi al nome, aggiungere entrambi i campi alla query:
 
     ```vb
     Order By currentStudent.Last Ascending, currentStudent.First Ascending
     ```
 
-    You can also specify `Descending` to order from Z to A.
+    È anche possibile specificare `Descending` per ordinare da Z a A.
 
-3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
+3. Compilare ed eseguire l'applicazione premendo CTRL + F5. Si notino i risultati nella finestra della console.
 
-### <a name="to-introduce-a-local-identifier"></a>To introduce a local identifier
+### <a name="to-introduce-a-local-identifier"></a>Per introdurre un identificatore locale
 
-1. Add the code in this section to introduce a local identifier in the query expression. The local identifier will hold an intermediate result. In the following example, `name` is an identifier that holds a concatenation of the student's first and last names. A local identifier can be used for convenience, or it can enhance performance by storing the results of an expression that would otherwise be calculated multiple times.
+1. Aggiungere il codice in questa sezione per introdurre un identificatore locale nell'espressione di query. L'identificatore locale conterrà un risultato intermedio. Nell'esempio seguente `name` è un identificatore che include una concatenazione del nome e del cognome dello studente. Un identificatore locale può essere usato per praticità oppure può migliorare le prestazioni archiviando i risultati di un'espressione che altrimenti verrebbe calcolata più volte.
 
     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]
 
-2. Build and run the application by pressing CTRL+F5. Note the results in the console window.
+2. Compilare ed eseguire l'applicazione premendo CTRL + F5. Si notino i risultati nella finestra della console.
 
-### <a name="to-project-one-field-in-the-select-clause"></a>To project one field in the Select clause
+### <a name="to-project-one-field-in-the-select-clause"></a>Per proiettare un campo nella clausola SELECT
 
-1. Add the query and `For Each` loop from this section to create a query that produces a sequence whose elements differ from the elements in the source. In the following example, the source is a collection of `Student` objects, but only one member of each object is returned: the first name of students whose last name is Garcia. Because `currentStudent.First` is a string, the data type of the sequence returned by `studentQuery3` is `IEnumerable(Of String)`, a sequence of strings. As in earlier examples, the assignment of a data type for `studentQuery3` is left for the compiler to determine by using local type inference.
+1. Aggiungere la query e il ciclo `For Each` da questa sezione per creare una query che produce una sequenza i cui elementi differiscono dagli elementi nell'origine. Nell'esempio seguente l'origine è una raccolta di oggetti `Student`, ma viene restituito solo un membro di ogni oggetto: il nome degli studenti il cui cognome è Garcia. Poiché `currentStudent.First` è una stringa, il tipo di dati della sequenza restituita da `studentQuery3` è `IEnumerable(Of String)`, una sequenza di stringhe. Come negli esempi precedenti, l'assegnazione di un tipo di dati per `studentQuery3` viene lasciata al compilatore per determinare utilizzando l'inferenza del tipo locale.
 
     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]
 
-2. Rest the mouse pointer over `studentQuery3` in your code to verify that the assigned type is `IEnumerable(Of String)`.
+2. Posizionare il puntatore del mouse su `studentQuery3` nel codice per verificare che il tipo assegnato sia `IEnumerable(Of String)`.
 
-3. Build and run the application by pressing CTRL+F5. Note the results in the console window.
+3. Compilare ed eseguire l'applicazione premendo CTRL + F5. Si notino i risultati nella finestra della console.
 
-### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>To create an anonymous type in the Select clause
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Per creare un tipo anonimo nella clausola SELECT
 
-1. Add the code from this section to see how anonymous types are used in queries. You use them in queries when you want to return several fields from the data source rather than complete records (`currentStudent` records in previous examples) or single fields (`First` in the preceding section). Instead of defining a new named type that contains the fields you want to include in the result, you specify the fields in the `Select` clause and the compiler creates an anonymous type with those fields as its properties. Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+1. Aggiungere il codice da questa sezione per vedere come vengono usati i tipi anonimi nelle query. Vengono usati nelle query quando si desidera restituire più campi dall'origine dati anziché record completi (`currentStudent` record negli esempi precedenti) o campi singoli (`First` nella sezione precedente). Anziché definire un nuovo tipo denominato che contiene i campi che si desidera includere nel risultato, è necessario specificare i campi nella clausola `Select` e il compilatore crea un tipo anonimo con tali campi come proprietà. Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-    The following example creates a query that returns the name and rank of seniors whose academic rank is between 1 and 10, in order of academic rank. In this example, the type of `studentQuery4` must be inferred because the `Select` clause returns an instance of an anonymous type, and an anonymous type has no usable name.
+    Nell'esempio seguente viene creata una query che restituisce il nome e il rango degli anziani il cui rango accademico è compreso tra 1 e 10, in ordine di rango accademico. In questo esempio, il tipo di `studentQuery4` deve essere dedotto perché la clausola `Select` restituisce un'istanza di un tipo anonimo e un tipo anonimo non ha un nome utilizzabile.
 
     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]
 
-2. Build and run the application by pressing CTRL+F5. Note the results in the console window.
+2. Compilare ed eseguire l'applicazione premendo CTRL + F5. Si notino i risultati nella finestra della console.
 
-## <a name="additional-examples"></a>Additional Examples
+## <a name="additional-examples"></a>Esempi aggiuntivi
 
-Now that you understand the basics, the following is a list of additional examples to illustrate the flexibility and power of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries. Each example is preceded by a brief description of what it does. Rest the mouse pointer over the query result variable for each query to see the inferred type. Use a `For Each` loop to produce the results.
+Ora che sono state appreso le nozioni di base, di seguito è riportato un elenco di esempi aggiuntivi che illustrano la flessibilità e la potenza di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Ogni esempio è preceduto da una breve descrizione dell'operazione. Posizionare il puntatore del mouse sulla variabile dei risultati della query per ogni query per visualizzare il tipo dedotto. Usare un ciclo `For Each` per produrre i risultati.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-After you are familiar with the basic concepts of working with queries, you are ready to read the documentation and samples for the specific type of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider that you are interested in:
+Dopo aver acquisito familiarità con i concetti di base relativi all'utilizzo delle query, è possibile leggere la documentazione e gli esempi per il tipo specifico di provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] a cui si è interessati:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

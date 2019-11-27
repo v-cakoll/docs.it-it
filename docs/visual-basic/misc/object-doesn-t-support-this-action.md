@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: L'oggetto non supporta questa azione
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445

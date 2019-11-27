@@ -13,11 +13,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353769"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Opzione \<parola chiave > istruzione
+Introduce un'istruzione che specifica un'opzione del compilatore da applicare all'intero file di origine.  
   
 ## <a name="remarks"></a>Note  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ Le opzioni del compilatore consentono di controllare se tutte le variabili devono essere dichiarate in modo esplicito, se le conversioni di tipi più piccole devono essere esplicite o se le stringhe devono essere confrontate come testo o come quantità binarie.  
   
  È possibile usare la parola chiave `Option` nei contesti seguenti:  
   

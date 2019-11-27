@@ -15,50 +15,50 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350344"
 ---
 # <a name="mywebservices-object"></a>Oggetto My.WebServices
-Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
+Fornisce le proprietà per la creazione e l'accesso a una singola istanza di ogni servizio Web XML a cui fa riferimento il progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente. Ogni istanza viene creata su richiesta. È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`. Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede. Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web. For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente. Ogni istanza viene creata su richiesta. È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`. Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede. Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web. Per informazioni sull'aggiunta di servizi Web a un progetto, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ L'oggetto `My.WebServices` espone solo i servizi Web associati al progetto corrente. Non fornisce l'accesso ai servizi Web dichiarati in dll a cui si fa riferimento. Per accedere a un servizio Web fornito da una DLL, è necessario utilizzare il nome completo del servizio Web nel formato *dllname*. *WebServiceName*. Per ulteriori informazioni, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- The object and its properties are not available for Web applications.  
+ L'oggetto e le relative proprietà non sono disponibili per le applicazioni Web.  
   
 ## <a name="properties"></a>Proprietà  
- Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
+ Ogni proprietà dell'oggetto `My.WebServices` fornisce l'accesso a un'istanza di un servizio Web a cui fa riferimento il progetto corrente. Il nome della proprietà è uguale al nome del servizio Web a cui accede la proprietà e il tipo della proprietà è uguale al tipo del servizio Web.  
   
 > [!NOTE]
-> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> Se si verifica un conflitto di nomi, il nome della proprietà per accedere a un servizio Web è *RootNamespace*_*namespace*\_*ServiceName*. Si considerino, ad esempio, due servizi Web denominati `Service1`. Se uno di questi servizi si trova nello spazio dei nomi radice `WindowsApplication1` e nella `Namespace1`dello spazio dei nomi, si accederà a tale servizio utilizzando `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
   
- When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
+ Quando si accede per la prima volta a una delle proprietà dell'oggetto `My.WebServices`, viene creata una nuova istanza del servizio Web che viene archiviata. Gli accessi successivi di tale proprietà restituiscono l'istanza del servizio Web.  
   
- You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
+ È possibile eliminare un servizio Web assegnando `Nothing` alla proprietà per il servizio Web. Il metodo di impostazione della proprietà assegna `Nothing` al valore archiviato. Se si assegna un valore diverso da `Nothing` alla proprietà, il setter genera un'eccezione <xref:System.ArgumentException>.  
   
- You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
+ È possibile verificare se una proprietà dell'oggetto `My.WebServices` archivia un'istanza del servizio Web utilizzando l'operatore `Is` o `IsNot`. È possibile utilizzare tali operatori per verificare se il valore della proprietà è `Nothing`.  
   
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
+> In genere, l'operatore `Is` o `IsNot` deve leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà attualmente archivia `Nothing`, la proprietà crea una nuova istanza del servizio Web e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà dell'oggetto `My.WebServices` in modo specifico e consente all'operatore `Is` o `IsNot` di controllare lo stato della proprietà senza modificarne il valore.  
   
 ## <a name="example"></a>Esempio  
- This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
+ In questo esempio viene chiamato il metodo `FahrenheitToCelsius` del servizio Web XML `TemperatureConverter` e viene restituito il risultato.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ Per il corretto funzionamento di questo esempio, il progetto deve fare riferimento a un servizio Web denominato `Converter`e il servizio Web deve esporre il metodo di `ConvertTemperature`. Per ulteriori informazioni, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- This code does not work in a Web application project.  
+ Questo codice non funziona in un progetto di applicazione Web.  
   
 ## <a name="requirements"></a>Requisiti  
   
-### <a name="availability-by-project-type"></a>Availability by Project Type  
+### <a name="availability-by-project-type"></a>Disponibilità per tipo di progetto  
   
 |Tipo di progetto|Disponibile|  
 |---|---|  
 |Applicazione Windows|**Sì**|  
 |Libreria di classi|**Sì**|  
 |Applicazione console|**Sì**|  
-|Windows Control Library|**Sì**|  
-|Web Control Library|**Sì**|  
+|Libreria di controlli Windows|**Sì**|  
+|Libreria di controlli Web|**Sì**|  
 |Servizio Windows|**Sì**|  
 |Sito Web|No|  
   

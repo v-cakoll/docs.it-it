@@ -19,9 +19,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350909"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
 
-Divides two numbers and returns only the remainder.
+Divide due numeri e restituisce solo il resto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,26 +32,26 @@ result = number1 Mod number2
 ## <a name="parts"></a>Parti
 
 `result` \
-Obbligatorio. Any numeric variable or property.
+Obbligatoria. Qualsiasi variabile o proprietà numerica.
 
 `number1` \
-Obbligatorio. Qualsiasi espressione numerica.
+Obbligatoria. Qualsiasi espressione numerica.
 
 `number2` \
-Obbligatorio. Qualsiasi espressione numerica.
+Obbligatoria. Qualsiasi espressione numerica.
 
-## <a name="supported-types"></a>Supported types
+## <a name="supported-types"></a>Tipi supportati
 
-tutti i tipi numerici. This includes the unsigned and floating-point types and `Decimal`.
+tutti i tipi numerici. Sono inclusi i tipi a virgola mobile e senza segno e `Decimal`.
 
 ## <a name="result"></a>Risultato
 
-The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
+Il risultato è il resto dopo la divisione di `number1` per `number2`. Ad esempio, l'espressione `14 Mod 4` restituisce 2.
 
 > [!NOTE]
-> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
+> Esiste una differenza tra *resto* e *modulo* in matematica, con risultati diversi per i numeri negativi. L'operatore `Mod` in Visual Basic, l'operatore .NET Framework `op_Modulus` e l'istruzione [REM](<xref:System.Reflection.Emit.OpCodes.Rem>) il sottostante eseguono un'operazione resto.
 
-The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. Esempio:
+Il risultato di un'operazione di `Mod` mantiene il segno del dividendo, `number1`e pertanto può essere positivo o negativo. Il risultato è sempre compreso nell'intervallo (-`number2`, `number2`), Exclusive. Ad esempio:
 
 ```vb
 Public Module Example
@@ -71,48 +71,48 @@ End Module
 
 ## <a name="remarks"></a>Note
 
-If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
+Se `number1` o `number2` è un valore a virgola mobile, viene restituito il resto a virgola mobile della divisione. Il tipo di dati del risultato è il tipo di dati più piccolo che può conservare tutti i valori possibili risultanti dalla divisione con i tipi di dati di `number1` e `number2`.
 
-If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
+Se `number1` o `number2` restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), viene considerato come zero.
 
-Related operators include the following:
+Gli operatori correlati includono quanto segue:
 
-- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
+- L' [operatore \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) restituisce il quoziente integer di una divisione. Ad esempio, l'espressione `14 \ 4` restituisce 3.
 
-- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
+- L' [operatore/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, come numero a virgola mobile. Ad esempio, l'espressione `14 / 4` restituisce 3,5.
 
-## <a name="attempted-division-by-zero"></a>Attempted division by zero
+## <a name="attempted-division-by-zero"></a>Tentativo di divisione per zero
 
-If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
+Se `number2` restituisce zero, il comportamento dell'operatore `Mod` dipende dal tipo di dati degli operandi:
 
-- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
-- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
+- Una divisione integrale genera un'eccezione <xref:System.DivideByZeroException> se non è possibile determinare `number2` in fase di compilazione e genera un errore in fase di compilazione `BC30542 Division by zero occurred while evaluating this expression` se `number2` viene valutato a zero in fase di compilazione.
+- Una divisione a virgola mobile restituisce <xref:System.Double.NaN?displayProperty=nameWithType>.
 
-## <a name="equivalent-formula"></a>Equivalent formula
+## <a name="equivalent-formula"></a>Formula equivalente
 
-The expression `a Mod b` is equivalent to either of the following formulas:
+L'espressione `a Mod b` è equivalente a una delle formule seguenti:
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Floating-point imprecision
+## <a name="floating-point-imprecision"></a>Imprecisione a virgola mobile
 
-When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+Quando si utilizzano numeri a virgola mobile, tenere presente che in memoria non è sempre presente una rappresentazione decimale precisa. Questo può causare risultati imprevisti di determinate operazioni, ad esempio il confronto dei valori e l'operatore `Mod`. Per ulteriori informazioni, vedere [risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)relativi ai tipi di dati.
 
 ## <a name="overloading"></a>Overload
 
-The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+È possibile eseguire l' *Overload*dell'operatore `Mod`, il che significa che una classe o una struttura può ridefinire il comportamento. Se il codice viene applicato `Mod` a un'istanza di una classe o una struttura che include tale overload, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Esempio
 
-The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
+Nell'esempio seguente viene usato l'operatore `Mod` per dividere due numeri e restituire solo il resto. Se uno dei due numeri è un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>Esempio
 
-The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
+Nell'esempio seguente viene illustrata la potenziale imprecisione degli operandi a virgola mobile. Nella prima istruzione gli operandi sono `Double`e 0,2 è una frazione binaria ripetuta in modo infinito con un valore archiviato di 0.20000000000000001. Nella seconda istruzione, il carattere di tipo letterale `D` impone a entrambi gli operandi di `Decimal`e 0,2 presenta una rappresentazione precisa.
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
@@ -124,5 +124,5 @@ The following example demonstrates the potential imprecision of floating-point o
 - [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Risoluzione dei problemi relativi ai tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatore \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

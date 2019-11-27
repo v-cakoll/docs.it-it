@@ -9,17 +9,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353401"
 ---
-# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
+# <a name="generation-operations-visual-basic"></a>Operazioni di generazione (Visual Basic)
 La generazione si riferisce alla creazione di una nuova sequenza di valori.  
   
  La sezione seguente elenca i metodi dell'operatore query standard che esegue la generazione.  
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |DefaultIfEmpty|Sostituisce una raccolta vuota con una raccolta singleton dal valore predefinito.|Non applicabile.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
-|Empty|Restituisce una raccolta vuota.|Non applicabile.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Vuoto|Restituisce una raccolta vuota.|Non applicabile.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
 |Intervallo|Genera una raccolta che contiene una sequenza di numeri.|Non applicabile.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
 |Repeat|Genera una raccolta che contiene un valore ripetuto.|Non applicabile.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   

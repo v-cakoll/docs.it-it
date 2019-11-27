@@ -22,23 +22,23 @@ Specifica il nome del file di output.
 -out:filename  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`filename`|Obbligatorio. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Obbligatoria. Nome del file di output creato dal compilatore. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
 ## <a name="remarks"></a>Note  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ Specificare il nome completo e l'estensione del file da creare. In caso contrario, il file con estensione exe prende il nome dal file del codice sorgente contenente la stored procedure `Sub Main` e il file con estensione dll prende il nome dal primo file di codice sorgente.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Se si specifica un nome di file senza estensione exe o dll, il compilatore aggiunge automaticamente l'estensione, a seconda del valore specificato per l'opzione del compilatore `-target`.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Per impostare il Integrated Development Environment in Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **applicazione** .<br />3. modificare il valore nella casella **nome assembly** .|  
   
 ## <a name="example"></a>Esempio  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ Il codice seguente compila `T2.vb` e crea `T2.exe`di file di output.  
   
 ```console
 vbc t2.vb -out:t3.exe  

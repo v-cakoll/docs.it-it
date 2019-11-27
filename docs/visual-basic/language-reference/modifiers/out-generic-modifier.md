@@ -16,7 +16,7 @@ ms.locfileid: "74351419"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificatore generico) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+Per i parametri di tipo generico, la parola chiave `Out` specifica che il tipo è covariante.
 
 ## <a name="remarks"></a>Note
 
@@ -37,11 +37,11 @@ In un'interfaccia generica un parametro di tipo può essere dichiarato covariant
 
 - Il parametro di tipo non viene usato come vincolo generico per i metodi di interfaccia.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+In un delegato generico, un parametro di tipo può essere dichiarato covariante se viene usato solo come tipo restituito del metodo e non usato per gli argomenti del metodo.
 
 La covarianza e la controvarianza sono supportate per i tipi di riferimento, ma non per i tipi di valore.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+In Visual Basic non è possibile dichiarare gli eventi nelle interfacce covariante senza specificare il tipo delegato. Inoltre, le interfacce covariante non possono avere classi, enumerazioni o strutture annidate, ma possono avere interfacce nidificate.
 
 ## <a name="behavior"></a>Comportamento
 
@@ -57,7 +57,7 @@ L'esempio seguente illustra come dichiarare, estendere e implementare un'interfa
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. It also shows how you can use implicit conversion for delegate types.
+L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. Viene inoltre illustrato come è possibile utilizzare la conversione implicita per i tipi delegati.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

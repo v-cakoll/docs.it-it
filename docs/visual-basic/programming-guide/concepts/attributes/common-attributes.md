@@ -9,9 +9,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353534"
 ---
-# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Attributi comuni (Visual Basic)
 
-This topic describes the attributes that are most commonly used in Visual Basic programs.
+In questo argomento vengono descritti gli attributi usati più di frequente nei programmi Visual Basic.
 
 - [Attributi globali](#Global)
 
@@ -21,7 +21,7 @@ This topic describes the attributes that are most commonly used in Visual Basic 
 
 - [Attributi informativi sul chiamante](#CallerInfo)
 
-- [Visual Basic Attributes](#VB)
+- [Attributi di Visual Basic](#VB)
 
 ## <a name="Global"></a> Attributi globali
 
@@ -31,9 +31,9 @@ La maggior parte degli attributi viene applicata a elementi specifici del lingua
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
+Gli attributi globali vengono visualizzati nel codice sorgente dopo qualsiasi istruzione `Imports` di primo livello e prima di qualsiasi dichiarazione di tipo, modulo o spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Per i progetti Visual Basic, gli attributi globali vengono in genere inseriti nel file AssemblyInfo. vb. il file viene creato automaticamente quando si crea un progetto in Visual Studio.
 
-Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Sono suddivisi nelle seguenti categorie:
+Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Tali pagine e schermate rientrano nelle categorie seguenti:
 
 - Attributi relativi all'identità dell'assembly
 
@@ -81,7 +81,7 @@ Gli attributi informativi consentono di fornire informazioni aggiuntive relative
 
 ## <a name="Obsolete"></a> Attributo Obsolete
 
-L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Esempio:
+L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Ad esempio:
 
 ```vb
 <System.Obsolete("use class B")>
@@ -224,36 +224,36 @@ Gli attributi di informazioni sul chiamante consentono di ottenere informazioni 
 
 È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi. Ogni parametro facoltativo specifica un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:
 
-|Attributo|Descrizione|Digitare|
+|Attributo|Descrizione|Type|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per ulteriori informazioni, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Per ulteriori informazioni sugli attributi delle informazioni sul chiamante, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a> Visual Basic Attributes
+## <a name="VB"></a>Attributi di Visual Basic
 
-The following table lists the attributes that are specific to Visual Basic.
+Nella tabella seguente sono elencati gli attributi specifici per Visual Basic.
 
 |Attributo|Scopo|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilatore che la classe deve essere esposta come oggetto COM.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Consente l'accesso ai membri del modulo usando solo la qualifica necessaria per il modulo.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifica la dimensione di una stringa a lunghezza fissa in una struttura da utilizzare con le funzioni di input e output di file.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifica la dimensione di una matrice fissa in una struttura da utilizzare con le funzioni di input e output di file.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
+Utilizzare `COMClassAttribute` per semplificare il processo di creazione di componenti COM da Visual Basic. Gli oggetti COM sono molto diversi dagli assembly .NET Framework e, senza `COMClassAttribute`, è necessario seguire una serie di passaggi per generare un oggetto COM da Visual Basic. Per le classi contrassegnate con `COMClassAttribute`, il compilatore esegue automaticamente molti di questi passaggi.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
+Usare `HideModuleNameAttribute` per consentire l'accesso ai membri del modulo usando solo la qualifica necessaria per il modulo.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
+Usare `VBFixedStringAttribute` per forzare Visual Basic a creare una stringa a lunghezza fissa. Per impostazione predefinita, le stringhe sono di lunghezza variabile e questo attributo è utile quando si archiviano le stringhe nei file. Il codice seguente illustra questo processo:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
+Utilizzare `VBFixedArrayAttribute` per dichiarare matrici di dimensioni fisse. Come Visual Basic stringhe, le matrici hanno una lunghezza variabile per impostazione predefinita. Questo attributo è utile per la serializzazione o la scrittura di dati in file.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,14 +9,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354197"
 ---
-# <a name="element-operations-visual-basic"></a>Element Operations (Visual Basic)
+# <a name="element-operations-visual-basic"></a>Operazioni sugli elementi (Visual Basic)
 Le operazioni sugli elementi restituiscono un singolo elemento specifico di una sequenza.  
   
  La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni sugli elementi.  
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |ElementAt|Restituisce l'elemento in corrispondenza dell'indice specificato in una Collection.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|Restituisce l'elemento in corrispondenza di un indice specificato in una Collection o un valore predefinito se l'indice è esterno all'intervallo.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
@@ -31,4 +31,4 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
 
 - <xref:System.Linq>
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [Procedura: eseguire una query per il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

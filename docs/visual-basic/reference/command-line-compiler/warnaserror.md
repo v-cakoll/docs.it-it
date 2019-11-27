@@ -22,12 +22,12 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
 -warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|+ &#124; -|Parametro facoltativo. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
-|`numberList`|Parametro facoltativo. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
+|+ &#124; -|Facoltativa. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
+|`numberList`|Facoltativa. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
   
 ## <a name="remarks"></a>Note  
  L'opzione `-warnaserror` considera tutti gli avvisi come errori. Qualsiasi messaggio segnalato di norma come avviso viene invece segnalato come errore. Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.  
@@ -41,11 +41,11 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
   
 |Per impostare -warnaserror in modo da considerare tutti gli avvisi come errori nell'IDE di Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. Assicurarsi che la casella di controllo **Disabilita tutti gli avvisi** sia deselezionata.<br />4. Selezionare la casella **di controllo Considera tutti gli avvisi come errori** .|  
   
 |Per impostare -warnaserror in modo da considerare avvisi specifici come errori nell'IDE di Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />2. fare clic sulla scheda **Compila** .<br />3. Assicurarsi che la casella di controllo **Disabilita tutti gli avvisi** sia deselezionata.<br />4. Assicurarsi che la casella **di controllo Considera tutti gli avvisi come errori** sia deselezionata.<br />5. Selezionare **errore** nella colonna **notifica** accanto all'avviso che deve essere considerato come un errore.|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `In.vb` e indica al compilatore di visualizzare un errore per la prima occorrenza di ogni avviso rilevato.  
