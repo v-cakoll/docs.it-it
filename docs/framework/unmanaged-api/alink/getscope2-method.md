@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447194"
 ---
-# <a name="getscope2-method"></a><span data-ttu-id="84684-102">Metodo GetScope2</span><span class="sxs-lookup"><span data-stu-id="84684-102">GetScope2 Method</span></span>
-<span data-ttu-id="84684-103">Gets an import scope.</span><span class="sxs-lookup"><span data-stu-id="84684-103">Gets an import scope.</span></span>  
+# <a name="getscope2-method"></a><span data-ttu-id="fd195-102">Metodo GetScope2</span><span class="sxs-lookup"><span data-stu-id="fd195-102">GetScope2 Method</span></span>
+<span data-ttu-id="fd195-103">Ottiene un ambito di importazione.</span><span class="sxs-lookup"><span data-stu-id="fd195-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84684-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="84684-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd195-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fd195-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScope2(  
@@ -35,27 +35,27 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="84684-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="84684-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd195-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fd195-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="84684-106">ID of target assembly.</span><span class="sxs-lookup"><span data-stu-id="84684-106">ID of target assembly.</span></span>  
+ <span data-ttu-id="fd195-106">ID dell'assembly di destinazione.</span><span class="sxs-lookup"><span data-stu-id="fd195-106">ID of target assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="84684-107">ID of file from which to import.</span><span class="sxs-lookup"><span data-stu-id="84684-107">ID of file from which to import.</span></span>  
+ <span data-ttu-id="fd195-107">ID del file da cui eseguire l'importazione.</span><span class="sxs-lookup"><span data-stu-id="fd195-107">ID of file from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="84684-108">Zero-based scope to import.</span><span class="sxs-lookup"><span data-stu-id="84684-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="fd195-108">Ambito in base zero da importare.</span><span class="sxs-lookup"><span data-stu-id="fd195-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="84684-109">Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.</span><span class="sxs-lookup"><span data-stu-id="84684-109">Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
+ <span data-ttu-id="fd195-109">Riceve il puntatore all'interfaccia dell' [interfaccia IMetaDataImport2](../metadata/imetadataimport2-interface.md) per l'ambito indicato.</span><span class="sxs-lookup"><span data-stu-id="fd195-109">Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="84684-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="84684-110">Return Value</span></span>  
- <span data-ttu-id="84684-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="84684-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fd195-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="fd195-110">Return Value</span></span>  
+ <span data-ttu-id="fd195-111">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="fd195-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84684-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="84684-112">Requirements</span></span>  
- <span data-ttu-id="84684-113">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="84684-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd195-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fd195-112">Requirements</span></span>  
+ <span data-ttu-id="fd195-113">Richiede ALink. h.</span><span class="sxs-lookup"><span data-stu-id="fd195-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84684-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84684-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd195-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd195-114">See also</span></span>
 
-- [<span data-ttu-id="84684-115">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="84684-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="84684-116">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="84684-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="84684-117">API ALink</span><span class="sxs-lookup"><span data-stu-id="84684-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="fd195-115">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="fd195-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="fd195-116">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="fd195-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="fd195-117">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="fd195-117">ALink API</span></span>](index.md)

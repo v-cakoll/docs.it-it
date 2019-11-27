@@ -21,10 +21,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450251"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="a23ab-102">Enumerazione CorManifestResourceFlags</span><span class="sxs-lookup"><span data-stu-id="a23ab-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="a23ab-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="a23ab-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="35881-102">Enumerazione CorManifestResourceFlags</span><span class="sxs-lookup"><span data-stu-id="35881-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="35881-103">Indica la visibilità delle risorse codificate in un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="35881-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a23ab-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a23ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35881-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35881-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a23ab-105">Members</span><span class="sxs-lookup"><span data-stu-id="a23ab-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="35881-105">Membri</span><span class="sxs-lookup"><span data-stu-id="35881-105">Members</span></span>  
   
-|<span data-ttu-id="a23ab-106">Member</span><span class="sxs-lookup"><span data-stu-id="a23ab-106">Member</span></span>|<span data-ttu-id="a23ab-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a23ab-107">Description</span></span>|  
+|<span data-ttu-id="35881-106">Membro</span><span class="sxs-lookup"><span data-stu-id="35881-106">Member</span></span>|<span data-ttu-id="35881-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35881-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="a23ab-108">Riservato.</span><span class="sxs-lookup"><span data-stu-id="a23ab-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="a23ab-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="a23ab-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="a23ab-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="a23ab-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="35881-108">Riservato.</span><span class="sxs-lookup"><span data-stu-id="35881-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="35881-109">Le risorse sono pubbliche.</span><span class="sxs-lookup"><span data-stu-id="35881-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="35881-110">Le risorse sono private.</span><span class="sxs-lookup"><span data-stu-id="35881-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a23ab-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a23ab-111">Requirements</span></span>  
- <span data-ttu-id="a23ab-112">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a23ab-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35881-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="35881-111">Requirements</span></span>  
+ <span data-ttu-id="35881-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35881-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a23ab-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a23ab-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="35881-113">**Intestazione:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="35881-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="a23ab-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a23ab-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="35881-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35881-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a23ab-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a23ab-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35881-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35881-115">See also</span></span>
 
-- [<span data-ttu-id="a23ab-116">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="a23ab-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="35881-116">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="35881-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -22,29 +22,29 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442763"
 ---
-# <a name="icorprofilermoduleenumgetcount-method"></a><span data-ttu-id="0fa37-102">Metodo ICorProfilerModuleEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="0fa37-102">ICorProfilerModuleEnum::GetCount Method</span></span>
-<span data-ttu-id="0fa37-103">Ottiene il numero di moduli gestiti caricati nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="0fa37-103">Gets the number of managed modules that were loaded into the application.</span></span>  
+# <a name="icorprofilermoduleenumgetcount-method"></a><span data-ttu-id="f0891-102">Metodo ICorProfilerModuleEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="f0891-102">ICorProfilerModuleEnum::GetCount Method</span></span>
+<span data-ttu-id="f0891-103">Ottiene il numero di moduli gestiti caricati nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f0891-103">Gets the number of managed modules that were loaded into the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0fa37-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0fa37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0891-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f0891-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0fa37-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0fa37-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f0891-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f0891-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="0fa37-106">[out] The number of runtime modules in the collection.</span><span class="sxs-lookup"><span data-stu-id="0fa37-106">[out] The number of runtime modules in the collection.</span></span>  
+ <span data-ttu-id="f0891-106">out Numero di moduli di runtime nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="f0891-106">[out] The number of runtime modules in the collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0fa37-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0fa37-107">Requirements</span></span>  
- <span data-ttu-id="0fa37-108">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0fa37-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0891-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f0891-107">Requirements</span></span>  
+ <span data-ttu-id="f0891-108">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0891-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0fa37-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0fa37-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f0891-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f0891-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0fa37-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0fa37-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f0891-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0891-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0fa37-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0fa37-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f0891-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0891-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0fa37-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0fa37-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0891-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f0891-112">See also</span></span>
 
-- [<span data-ttu-id="0fa37-113">Interfaccia ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="0fa37-113">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="0fa37-114">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="0fa37-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="f0891-113">Interfaccia ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="f0891-113">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="f0891-114">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="f0891-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

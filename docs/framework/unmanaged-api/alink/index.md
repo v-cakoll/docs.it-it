@@ -13,30 +13,30 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445658"
 ---
-# <a name="alink-api-unmanaged-api-reference"></a><span data-ttu-id="9f020-102">API ALink (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="9f020-102">ALink API (Unmanaged API Reference)</span></span>
-<span data-ttu-id="9f020-103">Supporta la creazione di moduli non associati e assembly .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9f020-103">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
+# <a name="alink-api-unmanaged-api-reference"></a><span data-ttu-id="cdc7c-102">API ALink (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="cdc7c-102">ALink API (Unmanaged API Reference)</span></span>
+<span data-ttu-id="cdc7c-103">Supporta la creazione di moduli non associati e assembly .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cdc7c-103">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9f020-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9f020-104">In This Section</span></span>  
- [<span data-ttu-id="9f020-105">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="9f020-105">AssemblyAttributesGoHere</span></span>](assemblyattributesgohere.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cdc7c-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cdc7c-104">In This Section</span></span>  
+ [<span data-ttu-id="cdc7c-105">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="cdc7c-105">AssemblyAttributesGoHere</span></span>](assemblyattributesgohere.md)  
   
- [<span data-ttu-id="9f020-106">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="9f020-106">AssemblyAttributesGoHereM</span></span>](assemblyattributesgoherem.md)  
+ [<span data-ttu-id="cdc7c-106">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="cdc7c-106">AssemblyAttributesGoHereM</span></span>](assemblyattributesgoherem.md)  
   
- [<span data-ttu-id="9f020-107">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="9f020-107">AssemblyAttributesGoHereS</span></span>](assemblyattributesgoheres.md)  
+ [<span data-ttu-id="cdc7c-107">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="cdc7c-107">AssemblyAttributesGoHereS</span></span>](assemblyattributesgoheres.md)  
   
- [<span data-ttu-id="9f020-108">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="9f020-108">AssemblyAttributesGoHereSM</span></span>](assemblyattributesgoheresm.md)  
+ [<span data-ttu-id="cdc7c-108">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="cdc7c-108">AssemblyAttributesGoHereSM</span></span>](assemblyattributesgoheresm.md)  
   
- [<span data-ttu-id="9f020-109">Enumerazione AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="9f020-109">AssemblyOptions Enumeration</span></span>](assemblyoptions-enumeration.md)  
+ [<span data-ttu-id="cdc7c-109">Enumerazione AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="cdc7c-109">AssemblyOptions Enumeration</span></span>](assemblyoptions-enumeration.md)  
   
- [<span data-ttu-id="9f020-110">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="9f020-110">CreateALink Function</span></span>](createalink-function.md)  
+ [<span data-ttu-id="cdc7c-110">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="cdc7c-110">CreateALink Function</span></span>](createalink-function.md)  
   
- [<span data-ttu-id="9f020-111">Funzione GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="9f020-111">GetALinkMessageDll Function</span></span>](getalinkmessagedll-function.md)  
+ [<span data-ttu-id="cdc7c-111">Funzione GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="cdc7c-111">GetALinkMessageDll Function</span></span>](getalinkmessagedll-function.md)  
   
- [<span data-ttu-id="9f020-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="9f020-112">IALink Interface</span></span>](ialink-interface.md)  
+ [<span data-ttu-id="cdc7c-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="cdc7c-112">IALink Interface</span></span>](ialink-interface.md)  
   
- [<span data-ttu-id="9f020-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="9f020-113">IALink2 Interface</span></span>](ialink2-interface.md)  
+ [<span data-ttu-id="cdc7c-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="cdc7c-113">IALink2 Interface</span></span>](ialink2-interface.md)  
   
- [<span data-ttu-id="9f020-114">Interfaccia IALink3</span><span class="sxs-lookup"><span data-stu-id="9f020-114">IALink3 Interface</span></span>](ialink3-interface.md)  
+ [<span data-ttu-id="cdc7c-114">Interfaccia IALink3</span><span class="sxs-lookup"><span data-stu-id="cdc7c-114">IALink3 Interface</span></span>](ialink3-interface.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9f020-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9f020-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdc7c-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cdc7c-115">See also</span></span>
 
-- [<span data-ttu-id="9f020-116">Riferimenti alle API non gestite</span><span class="sxs-lookup"><span data-stu-id="9f020-116">Unmanaged API Reference</span></span>](../index.md)
+- [<span data-ttu-id="cdc7c-116">Riferimenti alle API non gestite</span><span class="sxs-lookup"><span data-stu-id="cdc7c-116">Unmanaged API Reference</span></span>](../index.md)

@@ -22,12 +22,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448084"
 ---
-# <a name="iceegengetsectiondatalen-method"></a><span data-ttu-id="a7f69-102">Metodo ICeeGen::GetSectionDataLen</span><span class="sxs-lookup"><span data-stu-id="a7f69-102">ICeeGen::GetSectionDataLen Method</span></span>
-<span data-ttu-id="a7f69-103">Gets the length of the specified section.</span><span class="sxs-lookup"><span data-stu-id="a7f69-103">Gets the length of the specified section.</span></span>  
+# <a name="iceegengetsectiondatalen-method"></a><span data-ttu-id="538ac-102">Metodo ICeeGen::GetSectionDataLen</span><span class="sxs-lookup"><span data-stu-id="538ac-102">ICeeGen::GetSectionDataLen Method</span></span>
+<span data-ttu-id="538ac-103">Ottiene la lunghezza della sezione specificata.</span><span class="sxs-lookup"><span data-stu-id="538ac-103">Gets the length of the specified section.</span></span>  
   
- <span data-ttu-id="a7f69-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="a7f69-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="538ac-104">Questo metodo è obsoleto e non deve essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="538ac-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7f69-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a7f69-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="538ac-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="538ac-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionDataLen (  
@@ -36,25 +36,25 @@ HRESULT GetSectionDataLen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a7f69-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="a7f69-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="538ac-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="538ac-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="a7f69-107">[in] The data section whose length will be retrieved.</span><span class="sxs-lookup"><span data-stu-id="a7f69-107">[in] The data section whose length will be retrieved.</span></span>  
+ <span data-ttu-id="538ac-107">in Sezione di dati di cui verrà recuperata la lunghezza.</span><span class="sxs-lookup"><span data-stu-id="538ac-107">[in] The data section whose length will be retrieved.</span></span>  
   
  `dataLen`  
- <span data-ttu-id="a7f69-108">[out] The returned length of the specified section.</span><span class="sxs-lookup"><span data-stu-id="a7f69-108">[out] The returned length of the specified section.</span></span>  
+ <span data-ttu-id="538ac-108">out Lunghezza restituita della sezione specificata.</span><span class="sxs-lookup"><span data-stu-id="538ac-108">[out] The returned length of the specified section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a7f69-109">Note</span><span class="sxs-lookup"><span data-stu-id="a7f69-109">Remarks</span></span>  
- <span data-ttu-id="a7f69-110">Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="a7f69-110">Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="538ac-109">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="538ac-109">Remarks</span></span>  
+ <span data-ttu-id="538ac-110">Chiamare `GetSectionDataLen` solo se si dispone di requisiti speciali per la sezione che non sono gestiti da altri metodi.</span><span class="sxs-lookup"><span data-stu-id="538ac-110">Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a7f69-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a7f69-111">Requirements</span></span>  
- <span data-ttu-id="a7f69-112">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7f69-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="538ac-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="538ac-111">Requirements</span></span>  
+ <span data-ttu-id="538ac-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="538ac-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a7f69-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a7f69-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="538ac-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="538ac-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a7f69-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a7f69-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="538ac-114">**Libreria:** Usato come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="538ac-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a7f69-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7f69-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="538ac-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="538ac-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7f69-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a7f69-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="538ac-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="538ac-116">See also</span></span>
 
-- [<span data-ttu-id="a7f69-117">Interfaccia ICeeGen</span><span class="sxs-lookup"><span data-stu-id="a7f69-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="538ac-117">Interfaccia ICeeGen</span><span class="sxs-lookup"><span data-stu-id="538ac-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

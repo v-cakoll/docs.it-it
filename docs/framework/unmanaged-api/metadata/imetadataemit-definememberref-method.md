@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431828"
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="050f7-102">Metodo IMetaDataEmit::DefineMemberRef</span><span class="sxs-lookup"><span data-stu-id="050f7-102">IMetaDataEmit::DefineMemberRef Method</span></span>
-<span data-ttu-id="050f7-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span><span class="sxs-lookup"><span data-stu-id="050f7-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="5889c-102">Metodo IMetaDataEmit::DefineMemberRef</span><span class="sxs-lookup"><span data-stu-id="5889c-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+<span data-ttu-id="5889c-103">Definisce un riferimento a un membro di un modulo esterno all'ambito corrente e ottiene un token per la definizione di riferimento.</span><span class="sxs-lookup"><span data-stu-id="5889c-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="050f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="050f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5889c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5889c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineMemberRef (   
@@ -37,32 +37,32 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="050f7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="050f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5889c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5889c-105">Parameters</span></span>  
  `tkImport`  
- <span data-ttu-id="050f7-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span><span class="sxs-lookup"><span data-stu-id="050f7-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="5889c-106">in Token per la classe o l'interfaccia del membro di destinazione, se il membro non è globale; Se il membro è globale, il token `mdModuleRef` per l'altro file.</span><span class="sxs-lookup"><span data-stu-id="5889c-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="050f7-107">[in] The name of the target member.</span><span class="sxs-lookup"><span data-stu-id="050f7-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="5889c-107">in Nome del membro di destinazione.</span><span class="sxs-lookup"><span data-stu-id="5889c-107">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="050f7-108">[in] The signature of the target member.</span><span class="sxs-lookup"><span data-stu-id="050f7-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="5889c-108">in Firma del membro di destinazione.</span><span class="sxs-lookup"><span data-stu-id="5889c-108">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="050f7-109">[in] The count of bytes in `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="050f7-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="5889c-109">in Conteggio dei byte in `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="5889c-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="050f7-110">[out] The `mdMemberRef` token assigned.</span><span class="sxs-lookup"><span data-stu-id="050f7-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="5889c-110">out Token `mdMemberRef` assegnato.</span><span class="sxs-lookup"><span data-stu-id="5889c-110">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="050f7-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="050f7-111">Requirements</span></span>  
- <span data-ttu-id="050f7-112">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="050f7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5889c-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5889c-111">Requirements</span></span>  
+ <span data-ttu-id="5889c-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5889c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="050f7-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="050f7-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5889c-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5889c-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="050f7-114">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="050f7-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5889c-114">**Libreria:** Usato come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5889c-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="050f7-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="050f7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5889c-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5889c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="050f7-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="050f7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5889c-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5889c-116">See also</span></span>
 
-- [<span data-ttu-id="050f7-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="050f7-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="050f7-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="050f7-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5889c-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="5889c-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5889c-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="5889c-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

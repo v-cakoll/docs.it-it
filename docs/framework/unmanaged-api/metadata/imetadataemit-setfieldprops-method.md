@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445458"
 ---
-# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="33279-102">Metodo IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="33279-102">IMetaDataEmit::SetFieldProps Method</span></span>
-<span data-ttu-id="33279-103">Sets or updates the default value for the field referenced by the specified field token.</span><span class="sxs-lookup"><span data-stu-id="33279-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
+# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="27089-102">Metodo IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="27089-102">IMetaDataEmit::SetFieldProps Method</span></span>
+<span data-ttu-id="27089-103">Imposta o aggiorna il valore predefinito per il campo a cui fa riferimento il token di campo specificato.</span><span class="sxs-lookup"><span data-stu-id="27089-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33279-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="33279-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27089-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="27089-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFieldProps (  
@@ -37,32 +37,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33279-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="33279-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="27089-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="27089-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="33279-106">[in] The token for the target field.</span><span class="sxs-lookup"><span data-stu-id="33279-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="27089-106">in Token per il campo di destinazione.</span><span class="sxs-lookup"><span data-stu-id="27089-106">[in] The token for the target field.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="33279-107">[in] Field attributes.</span><span class="sxs-lookup"><span data-stu-id="33279-107">[in] Field attributes.</span></span> <span data-ttu-id="33279-108">This is a bitmask of `CorFieldAttr` values.</span><span class="sxs-lookup"><span data-stu-id="33279-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="27089-107">in Attributi di campo.</span><span class="sxs-lookup"><span data-stu-id="27089-107">[in] Field attributes.</span></span> <span data-ttu-id="27089-108">Si tratta di una maschera di maschera dei valori `CorFieldAttr`.</span><span class="sxs-lookup"><span data-stu-id="27089-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="33279-109">[in] The `ELEMENT_TYPE_` *\** for the constant value.</span><span class="sxs-lookup"><span data-stu-id="33279-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="33279-110">This is a `CorElementType` value.</span><span class="sxs-lookup"><span data-stu-id="33279-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="33279-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="33279-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="27089-109">in *\** `ELEMENT_TYPE_`per il valore della costante.</span><span class="sxs-lookup"><span data-stu-id="27089-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="27089-110">Si tratta di un valore `CorElementType`.</span><span class="sxs-lookup"><span data-stu-id="27089-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="27089-111">Se una costante non viene definita, impostare questo valore su `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="27089-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="33279-112">[in] The constant value for the field.</span><span class="sxs-lookup"><span data-stu-id="33279-112">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="27089-112">in Valore costante per il campo.</span><span class="sxs-lookup"><span data-stu-id="27089-112">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="33279-113">[in] The size, in Unicode characters, of `pValue`.</span><span class="sxs-lookup"><span data-stu-id="33279-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="27089-113">in Dimensione, in caratteri Unicode, di `pValue`.</span><span class="sxs-lookup"><span data-stu-id="27089-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33279-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="33279-114">Requirements</span></span>  
- <span data-ttu-id="33279-115">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33279-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27089-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="27089-114">Requirements</span></span>  
+ <span data-ttu-id="27089-115">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27089-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33279-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="33279-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="27089-116">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="27089-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="33279-117">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33279-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="27089-117">**Libreria:** Usato come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="27089-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="33279-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33279-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="27089-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27089-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33279-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="33279-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27089-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="27089-119">See also</span></span>
 
-- [<span data-ttu-id="33279-120">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="33279-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="33279-121">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="33279-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="27089-120">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="27089-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="27089-121">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="27089-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

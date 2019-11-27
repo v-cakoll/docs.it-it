@@ -22,26 +22,26 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444516"
 ---
-# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="b7811-102">Metodo ISymUnmanagedReader::GetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="b7811-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
-<span data-ttu-id="b7811-103">Returns the method that was specified as the user entry point for the module, if any.</span><span class="sxs-lookup"><span data-stu-id="b7811-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="b7811-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span><span class="sxs-lookup"><span data-stu-id="b7811-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
+# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="b53fe-102">Metodo ISymUnmanagedReader::GetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="b53fe-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
+<span data-ttu-id="b53fe-103">Restituisce il metodo specificato come punto di ingresso utente per il modulo, se disponibile.</span><span class="sxs-lookup"><span data-stu-id="b53fe-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="b53fe-104">Questo metodo, ad esempio, potrebbe essere il metodo principale dell'utente anziché gli stub generati dal compilatore prima del metodo Main.</span><span class="sxs-lookup"><span data-stu-id="b53fe-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7811-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b7811-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b53fe-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b53fe-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetUserEntryPoint (  
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b7811-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="b7811-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b53fe-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="b53fe-106">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="b7811-107">[out] A pointer to a variable that receives the entry point.</span><span class="sxs-lookup"><span data-stu-id="b7811-107">[out] A pointer to a variable that receives the entry point.</span></span>  
+ <span data-ttu-id="b53fe-107">out Puntatore a una variabile che riceve il punto di ingresso.</span><span class="sxs-lookup"><span data-stu-id="b53fe-107">[out] A pointer to a variable that receives the entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b7811-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b7811-108">Return Value</span></span>  
- <span data-ttu-id="b7811-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="b7811-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b53fe-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b53fe-108">Return Value</span></span>  
+ <span data-ttu-id="b53fe-109">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="b53fe-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7811-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b7811-110">Requirements</span></span>  
- <span data-ttu-id="b7811-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b7811-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b53fe-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b53fe-110">Requirements</span></span>  
+ <span data-ttu-id="b53fe-111">**Intestazione:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="b53fe-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7811-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b7811-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b53fe-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b53fe-112">See also</span></span>
 
-- [<span data-ttu-id="b7811-113">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="b7811-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="b53fe-113">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="b53fe-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
