@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445698"
 ---
 # <a name="importfileex2-method"></a>Metodo ImportFileEx2
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+Importa assembly e moduli non associati. Questo metodo è simile al [metodo ImportFile](importfile-method.md), ma funziona anche se il file importato non esiste sul disco.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,37 +41,37 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Name of file to be imported.  
+ Nome del file da importare.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Nome facoltativo del file di destinazione.  
   
  `pAssemblyScopeIn`  
- Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ Interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito di importazione facoltativa.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Flag da passare al [Metodo OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives unique ID for the assembly or file.  
+ Riceve l'ID univoco per l'assembly o il file.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
+ Riceve l'interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito di importazione assembly. Può essere NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Receives the number of files and/or scopes imported.  
+ Riceve il numero di file e/o ambiti importati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

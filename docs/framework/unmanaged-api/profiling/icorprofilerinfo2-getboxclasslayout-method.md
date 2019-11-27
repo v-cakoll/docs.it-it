@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436016"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Metodo ICorProfilerInfo2::GetBoxClassLayout
-Gets information about where the specified value type is located when it is boxed.  
+Ottiene informazioni sul punto in cui si trova il tipo di valore specificato quando viene sottoposto a Boxing.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ in ID della classe che descrive il tipo di valore boxed.  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ out Intero che rappresenta l'offset, relativo al puntatore ID oggetto boxed, del tipo di valore.  
   
-## <a name="remarks"></a>Note  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore `pBufferOffset` è il percorso del tipo di valore all'interno di una casella. Dopo l'applicazione di `pBufferOffset` a un oggetto boxed, il layout della classe del tipo di valore può essere utilizzato per interpretare il valore dell'oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

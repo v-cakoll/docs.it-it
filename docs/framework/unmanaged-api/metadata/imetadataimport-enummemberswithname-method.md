@@ -40,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntatore all'enumeratore.  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ in Token TypeDef che rappresenta il tipo con i membri da enumerare.  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ in Nome del membro che limita l'ambito dell'enumeratore.  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ out Matrice utilizzata per archiviare i token MemberDef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMembers`.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ out Numero effettivo di token MemberDef restituiti in `rMembers`.  
   
-## <a name="remarks"></a>Note  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo enumera i campi e i metodi, ma non le proprietà o gli eventi. A differenza di [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` Elimina tutti i token dei campi e dei membri che non hanno il nome specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token MemberDef da enumerare. In tal caso, `pcTokens` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -38,23 +38,23 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
+|`nltNone`|Indica che non è stata specificata alcuna parola chiave.|  
+|`nltAnsi`|Indica che è specificata una parola chiave ANSI.|  
+|`nltUnicode`|Indica che è specificata una parola chiave Unicode.|  
+|`nltAuto`|Indica che è specificata una parola chiave auto.|  
+|`nltOle`|Indica che è specificata una parola chiave OLE.|  
 |`nltMaxValue`|Non usato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445672"
 ---
 # <a name="importtypes2-method"></a>Metodo ImportTypes2
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+Avvia l'importazione di tipi. Chiamare questo metodo per iniziare a importare i tipi da ogni ambito importato tramite il [metodo ImportFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +39,31 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of assembly into which to import.  
+ ID dell'assembly in cui eseguire l'importazione.  
   
  `FileToken`  
- ID of file to from which to import.  
+ ID del file da importare.  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ Ambito in base zero da cui eseguire l'importazione.  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ Riceve l'handle dell'enumeratore per i tipi nell'ambito specificato.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ Riceve facoltativamente l'interfaccia dell' [interfaccia IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ Riceve facoltativamente il numero di tipi nell'ambito specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

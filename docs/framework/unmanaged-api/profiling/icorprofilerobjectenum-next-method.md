@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428161"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Metodo ICorProfilerObjectEnum::Next
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Ottiene il numero specificato di oggetti contigui da una raccolta sequenziale di oggetti, a partire dalla posizione corrente dell'enumeratore nella sequenza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,13 +41,13 @@ HRESULT Next (
  [in] Numero di oggetti da recuperare.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ out Matrice di valori di `ObjectID`, ognuno dei quali rappresenta un oggetto recuperato.  
   
  `pceltFetched`  
  [out] Puntatore al numero di elementi effettivamente restituiti nella matrice `objects`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

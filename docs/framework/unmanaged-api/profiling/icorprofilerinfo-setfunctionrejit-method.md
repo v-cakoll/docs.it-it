@@ -33,13 +33,13 @@ HRESULT SetFunctionReJIT(
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Versione .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448933"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Metodo ISymUnmanagedMethod::GetRanges
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+Data una posizione in un documento, restituisce una matrice di coppie di offset di inizio e di fine che corrispondono agli intervalli di MSIL (Microsoft Intermediate Language) che la posizione copre all'interno di questo metodo. La matrice è una matrice di numeri interi e ha il formato [inizio, fine, inizio, fine]. Il numero di coppie di intervalli è la lunghezza della matrice divisa per 2.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] The document for which the offset is requested.  
+ in Documento per cui è richiesto l'offset.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ in Riga del documento corrispondente agli intervalli.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ in Colonna del documento corrispondente agli intervalli.  
   
  `cRanges`  
  [in] Dimensione della matrice `ranges`.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere gli intervalli.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ out Puntatore al buffer che riceve gli intervalli.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

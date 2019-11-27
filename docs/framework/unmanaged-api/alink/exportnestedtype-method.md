@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438429"
 ---
 # <a name="exportnestedtype-method"></a>Metodo ExportNestedType
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+Specifica i tipi annidati come esportabili. Il [Metodo ExportType](exporttype-method.md) può anche esportare tipi annidati, ma questo metodo è più veloce.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,34 +41,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of assembly to export from.  
+ ID dell'assembly da cui eseguire l'esportazione.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ Token del file o assembly del file che definisce il tipo da rendere esportabile.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ Token di tipo di tipo da rendere esportabile.  
   
  `ParentType`  
- Token of parent type.  
+ Token del tipo padre.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Nome completo del tipo da esportare.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ flag di `ComType` come `tdPublic` o `tdNested`. Questo valore può essere passato al [Metodo DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Riceve il token per il tipo esportato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445999"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Metodo ISymUnmanagedVariable::GetStartOffset
-Gets the start offset of this variable within its parent. If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.  
+Ottiene l'offset iniziale della variabile all'interno dell'elemento padre. Se si tratta di una variabile locale all'interno di un ambito, l'offset iniziale rientrerà negli offset definiti per l'ambito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the start offset.  
+ out Puntatore a un `ULONG32` che riceve l'offset iniziale.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

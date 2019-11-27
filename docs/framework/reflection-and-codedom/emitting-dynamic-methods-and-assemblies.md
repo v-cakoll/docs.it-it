@@ -34,7 +34,7 @@ La reflection emit offre le funzionalità seguenti:
   
 Oltre ai tipi gestiti dello spazio dei nomi <xref:System.Reflection.Emit>, sono disponibili interfacce di metadati non gestite, descritte nella documentazione di riferimento per le [interfacce di metadati](../unmanaged-api/metadata/metadata-interfaces.md). La reflection emit gestita garantisce un controllo degli errori semantici più completo e un livello di astrazione dei metadati più alto rispetto alle interfacce di metadati non gestite.  
   
-Un'altra risorsa per l'uso di metadati e codice MSIL è la documentazione CLI (Common Language Infrastructure), in particolare la seconda e la terza parte, relative rispettivamente alla semantica e alla definizione dei metadati e all'insieme di istruzioni. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+Un'altra risorsa per l'uso di metadati e codice MSIL è la documentazione CLI (Common Language Infrastructure), in particolare la seconda e la terza parte, relative rispettivamente alla semantica e alla definizione dei metadati e all'insieme di istruzioni. La documentazione è disponibile online nel [sito Web ECMA](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione
   
@@ -53,7 +53,7 @@ Illustra le procedure di creazione, emit e richiamo di un metodo generico sempli
 [Assembly ritirabili per la generazione di tipi dinamici](collectible-assemblies.md)   
 Offre un'introduzione degli assembly ritirabili, ovvero assembly dinamici che possono essere scaricati senza scaricare il dominio dell'applicazione in cui sono stati creati.
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Riferimenti  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Cataloga i codici di istruzioni MSIL che è possibile usare per compilare i corpi dei metodi.  

@@ -56,34 +56,34 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|Specifica le informazioni di accessibilità.|  
+|`fdPrivateScope`|Specifica che non è possibile fare riferimento al campo.|  
+|`fdPrivate`|Specifica che il campo è accessibile solo dal tipo padre.|  
+|`fdFamANDAssem`|Specifica che il campo è accessibile dalle classi derivate nell'assembly.|  
+|`fdAssembly`|Specifica che il campo è accessibile da tutti i tipi nell'assembly.|  
+|`fdFamily`|Specifica che il campo è accessibile solo dal tipo e dalle classi derivate.|  
+|`fdFamORAssem`|Specifica che il campo è accessibile dalle classi derivate e da tutti i tipi nell'assembly.|  
+|`fdPublic`|Specifica che il campo è accessibile da tutti i tipi con visibilità di questo ambito.|  
+|`fdStatic`|Specifica che il campo è un membro del tipo anziché di un membro di istanza.|  
+|`fdInitOnly`|Specifica che il campo non può essere modificato dopo l'inizializzazione.|  
+|`fdLiteral`|Specifica che il valore del campo è una costante in fase di compilazione.|  
+|`fdNotSerialized`|Specifica che il campo non viene serializzato quando il tipo è remoto.|  
+|`fdSpecialName`|Specifica che il campo è speciale e che il nome descrive come.|  
+|`fdPinvokeImpl`|Specifica che l'implementazione del campo viene trasmessa tramite PInvoke.|  
+|`fdReservedMask`|Riservato per uso interno da parte del Common Language Runtime.|  
+|`fdRTSpecialName`|Specifica che le API interne dei metadati di Common Language Runtime devono verificare la codifica del nome.|  
+|`fdHasFieldMarshal`|Specifica che il campo contiene informazioni di marshalling.|  
+|`fdHasDefault`|Specifica che il campo ha un valore predefinito.|  
+|`fdHasFieldRVA`|Specifica che il campo dispone di un indirizzo virtuale relativo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

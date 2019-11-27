@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
+title: Classe AssemblyAttributesGoHere (System. Runtime. CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -22,7 +22,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446644"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
+# <a name="assemblyattributesgohere-class"></a>Classe AssemblyAttributesGoHere
 
 Usato da ALink come segnaposto per archiviare le informazioni sugli attributi personalizzati.
 
@@ -32,13 +32,13 @@ Usato da ALink come segnaposto per archiviare le informazioni sugli attributi pe
 internal sealed class AssemblyAttributesGoHere
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I riferimenti a questo tipo potrebbero essere incorporati in netmodule le cui origini contengono attributi personalizzati dell'assembly. Quando compila un manifesto di assembly da uno o più netmodule contenenti riferimenti a questi tipi, ALink usa le informazioni associate a tali riferimenti per generare i veri attributi personalizzati. Per questo tipo non viene pertanto mai creata un'istanza e i riferimenti a esso relativi vengono usati solo come parte del processo di compilazione e non hanno alcun ruolo nell'assembly finale.
 
 I riferimenti a questo tipo indicano gli attributi personalizzati che non sono correlati alla sicurezza e non sono multiuso.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Questi tipi sono contrassegnati come "Internal" all'interno del .NET Framework e si trovano nello spazio dei nomi <xref:System.Runtime.CompilerServices>.
 
 ## <a name="requirements"></a>Requisiti
 

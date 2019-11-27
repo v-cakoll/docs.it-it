@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445361"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFilterLeave
-Notifies the profiler that a user filter has just finished executing.  
+Notifica al profiler che un filtro utente ha appena terminato l'esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ HRESULT ExceptionSearchFilterLeave();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

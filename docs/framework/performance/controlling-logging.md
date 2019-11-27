@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
+Se il provider CLR non compare nell'elenco, è possibile installarlo in Windows Vista e nei sistemi operativi successivi tramite lo strumento da riga di comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) di Windows. Aprire la finestra del prompt dei comandi come amministratore. Modificare la directory dei messaggi di richiesta nella cartella .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET Version > \). Questa cartella contiene il file CLR-ETW.man. Al prompt dei comandi digitare il comando seguente per installare il provider CLR:
 
 `wevtutil im CLR-ETW.man`
 
@@ -55,9 +55,9 @@ Per attivare la registrazione, un utente deve specificare tre impostazioni:
 
     - Il parametro `-p` identifica il GUID del provider.
 
-    - `0x1CCBD` specifica le categorie degli eventi che saranno generati.
+    - `0x1CCBD` specifica le categorie di eventi che verranno generati.
 
-    - `0x5` imposta il livello di registrazione, in questo caso Verbose (5).
+    - `0x5` imposta il livello di registrazione (in questo caso, Verbose (5)).
 
     - Il parametro `-ets` indica a Logman di inviare comandi alle sessioni di traccia degli eventi.
 

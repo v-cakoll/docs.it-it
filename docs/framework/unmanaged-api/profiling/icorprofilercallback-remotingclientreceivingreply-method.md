@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445816"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Metodo ICorProfilerCallback::RemotingClientReceivingReply
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+Notifica al profiler che la parte lato server di una chiamata remota è stata completata e che il client sta ricevendo e sta per elaborare la risposta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,21 +35,21 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parametri  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ in Valore che corrisponderà al valore fornito in [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) in queste condizioni:  
   
-- Remoting GUID cookies are active.  
+- I cookie GUID di comunicazione remota sono attivi.  
   
-- The channel succeeds in transmitting the message.  
+- Il canale riesce a trasmettere il messaggio.  
   
-- GUID cookies are active on the server-side process.  
+- I cookie GUID sono attivi sul processo sul lato server.  
   
- This allows easy pairing of remoting calls.  
+ In questo modo è possibile associare agevolmente le chiamate remote.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ in Valore `true` se la chiamata è asincrona. in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

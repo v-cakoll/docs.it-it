@@ -38,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ out Buffer per il nome dell'assembly o del modulo.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ in Dimensioni in caratteri wide di `szName`.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ out Numero di caratteri wide restituiti in `szName`.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out, facoltativo] Puntatore a un GUID che identifica in modo univoco la versione dell'assembly o del modulo.  
   
-## <a name="remarks"></a>Note  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+## <a name="remarks"></a>Osservazioni  
+ Per impostare queste proprietà, viene usato il metodo [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

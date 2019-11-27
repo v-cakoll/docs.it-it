@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427305"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Metodo IMetaDataImport2::GetGenericParamProps
-Gets the metadata associated with the generic parameter represented by the specified token.  
+Ottiene i metadati associati al parametro generico rappresentato dal token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Parametri  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ in Token che rappresenta il parametro generico per il quale restituire i metadati.  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ out Posizione ordinale del parametro `Type` nel costruttore o nel metodo padre.  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ out Valore dell'enumerazione [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) che descrive la `Type` per il parametro generico.  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ out Token TypeDef o MethodDef che rappresenta il proprietario del parametro.  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ out Riservato per l'estendibilità futura.  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ out Nome del parametro generico.  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ in Dimensioni del buffer `wzName`.  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ out Dimensioni restituite del nome, in caratteri wide.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

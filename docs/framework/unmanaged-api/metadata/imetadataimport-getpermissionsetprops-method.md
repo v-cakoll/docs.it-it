@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437118"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>Metodo IMetaDataImport::GetPermissionSetProps
-Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
+Ottiene i metadati associati all'<xref:System.Security.PermissionSet?displayProperty=nameWithType> rappresentata dal token di autorizzazione specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +38,23 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametri  
  `pm`  
- [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
+ in Token di metadati dell'autorizzazione che rappresenta il set di autorizzazioni per il quale ottenere le proprietà dei metadati.  
   
  `pdwAction`  
- [out] A pointer to the permission set.  
+ out Puntatore al set di autorizzazioni.  
   
  `ppvPermission`  
- [out] A pointer to the binary metadata signature of the permission set.  
+ out Puntatore alla firma dei metadati binari del set di autorizzazioni.  
   
  `pcbPermission`  
- [out] The size in bytes of `ppvPermission`.  
+ out Dimensioni in byte del `ppvPermission`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

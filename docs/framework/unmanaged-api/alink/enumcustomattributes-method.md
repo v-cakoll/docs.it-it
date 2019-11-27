@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446468"
 ---
 # <a name="enumcustomattributes-method"></a>Metodo EnumCustomAttributes
-Retrieves assembly-level custom attributes.  
+Recupera gli attributi personalizzati a livello di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,28 +39,28 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parametri  
  `hEnum`  
- Handle of enumerator.  
+ Handle dell'enumeratore.  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ Tipo di attributi da enumerare. Usare `mdTokenNill` per tutti gli attributi.  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ Riceve i token degli attributi personalizzati.  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ Specifica le dimensioni della matrice `rCustomValues`.  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ Riceve facoltativamente il numero di valori di token.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

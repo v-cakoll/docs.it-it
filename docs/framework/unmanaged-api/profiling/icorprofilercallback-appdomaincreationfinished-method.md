@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445282"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Metodo ICorProfilerCallback::AppDomainCreationFinished
-Notifies the profiler that an application domain has been created.  
+Notifica al profiler che è stato creato un dominio dell'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Parametri  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ in Identifica il dominio creato.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ in HRESULT che indica se la creazione del dominio dell'applicazione è stata completata correttamente.  
   
-## <a name="remarks"></a>Note  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+## <a name="remarks"></a>Osservazioni  
+ L'ID applicazione non è valido per tutte le richieste di informazioni fino a quando non viene chiamato il metodo `AppDomainCreationFinished`.  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ Alcune parti del caricamento del dominio dell'applicazione possono continuare dopo il callback `AppDomainCreationFinished`. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte della creazione del dominio dell'applicazione è riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

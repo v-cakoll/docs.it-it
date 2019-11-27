@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449912"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Metodo ICorProfilerCallback::JITCompilationFinished
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+Notifica al profiler che il compilatore just-in-time (JIT) ha terminato la compilazione di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,18 +36,18 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Parametri  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ in ID della funzione compilata.  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ in Valore che indica se la compilazione è stata eseguita correttamente.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ in Valore che indica al profiler se il blocco influirà sul funzionamento del runtime. Il valore è `true` se il blocco può causare la restituzione del thread chiamante da parte del runtime. in caso contrario, `false`.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ Sebbene il valore `true` non danneggi il runtime, può alterare i risultati della profilatura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

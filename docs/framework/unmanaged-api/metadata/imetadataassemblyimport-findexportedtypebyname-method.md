@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449456"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Metodo IMetaDataAssemblyImport::FindExportedTypeByName
-Gets a pointer to an exported type, given its name and enclosing type.  
+Ottiene un puntatore a un tipo esportato, in base al nome e al tipo di inclusione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] The name of the exported type.  
+ in Nome del tipo esportato.  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ in Token di metadati per la classe contenitore del tipo esportato. Questo valore è `mdExportedTypeNil` se il tipo esportato richiesto non è un tipo annidato.  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ out Puntatore al token `mdExportedType` che rappresenta il tipo esportato.  
   
-## <a name="remarks"></a>Note  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo `FindExportedTypeByName` utilizza le regole standard utilizzate dall'Common Language Runtime per la risoluzione dei riferimenti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

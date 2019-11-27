@@ -26,13 +26,13 @@ Fornisce i metodi per la scrittura di un documento cui viene fatto riferimento i
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|description|  
 |------------|-----------------|  
 |[Metodo SetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Imposta le informazioni di checksum.|  
-|[Metodo SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[Metodo SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Imposta l'origine incorporata per un documento in corso di scrittura.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

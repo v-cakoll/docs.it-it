@@ -54,22 +54,22 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
 |`dclActionMask`|Riservato.|  
 |`dclActionNil`|Riservato.|  
 |`dclRequest`|Riservato.|  
 |`dclDemand`|A tutti i chiamanti nella parte superiore dello stack di chiamate deve essere concessa l'autorizzazione specificata dall'oggetto di autorizzazione corrente.|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|Il codice chiamante può accedere alla risorsa identificata dall'oggetto di autorizzazione corrente, anche se ai chiamanti più in alto nello stack non è stata concessa l'autorizzazione per accedere alla risorsa|  
+|`dclDeny`|La possibilità di accedere alla risorsa specificata dall'oggetto di autorizzazione corrente viene negata ai chiamanti, anche se è stata concessa l'autorizzazione per accedervi.|  
 |`dclPermitOnly`|È possibile accedere solo alle risorse specificate dall'oggetto di autorizzazione, anche se al codice è stata concessa l'autorizzazione per accedere ad altre risorse.|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. Questa azione può essere usata solo nell'ambito dell'assembly.|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). Con questa richiesta viene implicitamente rifiutata ogni altra autorizzazione che non sia stata esplicitamente richiesta. Questa azione può essere usata solo nell'ambito dell'assembly.|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. Questa azione può essere usata solo nell'ambito dell'assembly.|  
+|`dclLinktimeCheck`|Al chiamante immediato è necessario concedere l'autorizzazione specificata per un determinato periodo di tempo.|  
+|`dclInheritanceCheck`|Alla classe derivata che eredita un'altra classe o che esegue l'override di un metodo è necessario concedere l'autorizzazione specificata.|  
+|`dclRequestMinimum`|Il chiamante può richiedere le autorizzazioni minime necessarie per l'esecuzione del codice. Questa azione può essere usata solo nell'ambito dell'assembly.|  
+|`dclRequestOptional`|Il chiamante può richiedere autorizzazioni aggiuntive facoltative (non necessarie per l'esecuzione). Con questa richiesta viene implicitamente rifiutata ogni altra autorizzazione che non sia stata esplicitamente richiesta. Questa azione può essere usata solo nell'ambito dell'assembly.|  
+|`dclRequestRefuse`|La richiesta del chiamante per le autorizzazioni che potrebbero essere impiegate in uso non verrà concessa. Questa azione può essere usata solo nell'ambito dell'assembly.|  
 |`dclPrejitGrant`|Riservato.|  
 |`dclPrejitDenied`|Riservato.|  
 |`dclNonCasDemand`|Riservato.|  
@@ -81,9 +81,9 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Riservato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

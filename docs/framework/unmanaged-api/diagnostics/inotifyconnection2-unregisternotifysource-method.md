@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440991"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>Metodo INotifyConnection2::UnregisterNotifySource
-Removes a specified notification source object from the connection.  
+Rimuove un oggetto origine notifica specificato dalla connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +36,13 @@ HRESULT UnregisterNotifySource
   
 ## <a name="parameters"></a>Parametri  
  `in_pNotifySource`  
- [in] Notification object to be unregistered.  
+ in Oggetto notifica di cui annullare la registrazione.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds.  
+ S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** ProtocolNotify2.idl  
+ **Intestazione:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vedere anche
 

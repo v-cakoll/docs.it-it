@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441805"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Metodo ISymUnmanagedReader::GetMethodsFromDocumentPosition
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Restituisce una matrice di metodi, ognuno dei quali contiene il punto di interruzione nella posizione specificata in un documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parametri  
  `document`  
- [in] The specified document.  
+ in Documento specificato.  
   
  `line`  
- [in] The line of the specified document.  
+ in Riga del documento specificato.  
   
  `column`  
- [in] The column of the specified document.  
+ in Colonna del documento specificato.  
   
  `cMethod`  
  [in] Dimensione della matrice `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ out Puntatore a una variabile che riceve il numero di elementi restituiti nella matrice `pRetVal`.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ out Matrice di puntatori, ciascuno dei quali punta a un oggetto [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) che rappresenta un metodo contenente il punto di interruzione.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

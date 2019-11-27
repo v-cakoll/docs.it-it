@@ -16,7 +16,7 @@ ms.locfileid: "74428540"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabella dei tipi incorporati (Riferimenti per C#)
 
-The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
+Nella tabella seguente vengono illustrate le parole chiave per C# i tipi incorporati, ovvero alias di tipi predefiniti nello spazio dei nomi <xref:System>:
 
 |Tipo C#|Tipo .NET|  
 |--------------|-------------------------|  
@@ -36,7 +36,7 @@ The following table shows the keywords for built-in C# types, which are aliases 
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](../builtin-types/reference-types.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Tutti i tipi nella tabella, ad eccezione di `object` e `string`, sono detti tipi semplici.
 

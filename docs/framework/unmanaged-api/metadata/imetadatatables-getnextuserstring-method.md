@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447402"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Metodo IMetaDataTables::GetNextUserString
-Gets the index of the row that contains the next hard-coded string in the current table column.  
+Ottiene l'indice della riga che contiene la stringa hardcoded successiva nella colonna della tabella corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,20 +36,20 @@ HRESULT GetNextUserString (
   
 ## <a name="parameters"></a>Parametri  
  `ixUserString`  
- [in] An index value from the current string column.  
+ in Valore di indice della colonna stringa corrente.  
   
  `pNext`  
- [out] A pointer to the row index of the next string in the column.  
+ out Puntatore all'indice di riga della stringa successiva nella colonna.  
   
-## <a name="remarks"></a>Note  
- We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (ECMA C# e standard di Common Language Infrastructure) in MSDN e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) nel sito Web internazionale Ecma.  
+## <a name="remarks"></a>Osservazioni  
+ Non è consigliabile usare questo metodo, perché non restituisce risultati coerenti. Per informazioni sulla tabella GUID, vedere la documentazione Common Language Infrastructure (CLI), in particolare "Partition II: Metadata Definition and Semantics". La documentazione è disponibile online; vedere [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (ECMA C# e standard di Common Language Infrastructure) in MSDN e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) nel sito Web internazionale Ecma.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

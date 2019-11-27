@@ -39,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntatore all'enumeratore.  
   
  `tkParent`  
- [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
+ in Un token TypeDef, TypeRef, MethodDef o ModuleRef per il tipo di cui è necessario enumerare i membri.  
   
  `rMemberRefs`  
- [out] The array used to store MemberRef tokens.  
+ out Matrice utilizzata per archiviare i token MemberRef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rMemberRefs`.  
   
  `pcTokens`  
- [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
+ out Numero effettivo di token MemberRef restituiti in `rMemberRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` returned successfully.|  
-|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
+|`S_OK`|`EnumMemberRefs` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token MemberRef da enumerare. In tal caso, `pcTokens` è pari a zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

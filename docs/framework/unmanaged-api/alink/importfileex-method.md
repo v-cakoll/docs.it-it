@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446960"
 ---
 # <a name="importfileex-method"></a>Metodo ImportFileEx
-Imports indicated assembly or unbound module.  
+Importa l'assembly indicato o il modulo non associato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,34 +40,34 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ Nome completo del file da cui eseguire l'importazione.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Nome facoltativo del file di destinazione.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Flag da passare al [Metodo OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Riceve l'ID del file importato.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Riceve l'interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito di importazione assembly. È impostato su NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Riceve il numero di file e/o ambiti importati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink2](ialink2-interface.md)
 - [Interfaccia IALink](ialink-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

@@ -18,9 +18,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449848"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>Metodo ICorProfilerInfo10:: EnumerateObjectReferences
 
-Given an ObjectID, callback and clientData, enumerates each object reference (if any).
+Dato un ObjectID, callback e clientData, enumera ogni riferimento a un oggetto (se presente).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>Parametri
 
 `objectId` \
-[in] The object to enumerate references on.
+in Oggetto su cui enumerare i riferimenti.
 
 `callback` \
-[in] The function that will be called with the references for the object.
+in Funzione che verrà chiamata con i riferimenti per l'oggetto.
 
 `clientData` \
-[in] Profiler-provided data to pass to the `callback` function.
+in Dati forniti dal profiler da passare alla funzione `callback`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
+Il metodo `EnumerateObjectReferences` è simile a [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), ad eccezione del fatto che scorre i riferimenti su richiesta per il profiler anziché pre-allocare una matrice per archiviare i riferimenti.
 
 ## <a name="requirements"></a>Requisiti
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Piattaforme:** Vedere [sistemi operativi supportati da .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Intestazione:** CorProf.idl, CorProf.h
 
 **Libreria:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Versioni di .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interfaccia ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

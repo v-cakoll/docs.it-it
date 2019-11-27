@@ -1,5 +1,5 @@
 ---
-title: Message.WriteStartHeaders Method (System.ServiceModel.Channels)
+title: Metodo Message. WriteStartHeaders (System. ServiceModel. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451178"
 ---
-# <a name="messagewritestartheaders-method"></a>Message.WriteStartHeaders Method
+# <a name="messagewritestartheaders-method"></a>Message. WriteStartHeaders, metodo
 
-Writes the start header into an XML file by calling the <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> method.
+Scrive l'intestazione iniziale in un file XML chiamando il metodo <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType>.
 
 ```csharp
 internal void WriteStartHeaders(XmlDictionaryWriter writer)
@@ -29,19 +29,19 @@ internal void WriteStartHeaders(XmlDictionaryWriter writer)
 ## <a name="parameters"></a>Parametri
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to write the start header into an XML file.
+  Writer utilizzato per scrivere l'intestazione iniziale in un file XML.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!WARNING]
-> The `Message.WriteStartHeaders` method is internal and is not meant to be used directly in your code.
+> Il `Message.WriteStartHeaders` metodo è interno e non deve essere usato direttamente nel codice.
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> Microsoft non supporta l'utilizzo di questo metodo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**Assembly:** System. ServiceModel. dll
 
-**.NET Framework versions:** Available since 3.0.
+**Versioni .NET Framework:** Disponibile a partire da 3,0.

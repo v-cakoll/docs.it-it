@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Ubuntu 18.04 package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on Ubuntu 18.04.
+title: Installare .NET Core in Ubuntu 18,04 Package Manager-.NET Core
+description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime in Ubuntu 18,04.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,32 +11,32 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450863"
 ---
-# <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 Package Manager - Install .NET Core
+# <a name="ubuntu-1804-package-manager---install-net-core"></a>Gestione pacchetti Ubuntu 18,04-installare .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on Ubuntu 18.04. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Ubuntu 18,04. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
 
-Before installing .NET, you'll need to:
+Prima di installare .NET, è necessario:
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- Registrare la chiave Microsoft
+- registrare il repository del prodotto
+- Installare le dipendenze necessarie
 
-This only needs to be done once per machine.
+Questa operazione deve essere eseguita solo una volta per ogni computer.
 
-Open a terminal and run the following commands.
+Aprire un terminale ed eseguire i comandi seguenti.
 
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following commands.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il .NET Core SDK. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo add-apt-repository universe
@@ -47,11 +47,11 @@ sudo apt-get install dotnet-sdk-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package dotnet-sdk-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-SDK-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>Installare il runtime di ASP.NET Core
 
-Update the products available for installation, then install the ASP.NET Core runtime. In your terminal, run the following commands.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il ASP.NET Core Runtime. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo add-apt-repository universe
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto aspnetcore-runtime-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following commands.
+Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di .NET Core. Nel terminale eseguire i comandi seguenti.
 
 ```bash
 sudo add-apt-repository universe
@@ -77,15 +77,15 @@ sudo apt-get install dotnet-runtime-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package dotnet-runtime-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-runtime-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Troubleshoot the package manager
+## <a name="troubleshoot-the-package-manager"></a>Risolvere i problemi relativi a gestione pacchetti
 
-If you receive an error message similar to **Unable to locate package {the .NET Core package}** , run the following commands.
+Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto {il pacchetto .NET Core}** , eseguire i comandi seguenti.
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -93,7 +93,7 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-If that doesn't work, you can run a manual install with the following commands.
+Se questa operazione non funziona, è possibile eseguire un'installazione manuale con i comandi seguenti.
 
 ```bash
 sudo apt-get install -y gpg

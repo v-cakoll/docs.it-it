@@ -16,9 +16,9 @@ ms.locfileid: "74441453"
 ---
 # <a name="ui-automation-control-patterns"></a>Pattern di controllo per automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ In questa sezione vengono fornite informazioni dettagliate sull'utilizzo di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pattern di controllo.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Implementazione del pattern di controllo Dock di automazione interfaccia utente](implementing-the-ui-automation-dock-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441453"
  [Implementazione del pattern di controllo Transform di automazione interfaccia utente](implementing-the-ui-automation-transform-control-pattern.md)  
  [Implementazione del pattern di controllo Value di automazione interfaccia utente](implementing-the-ui-automation-value-control-pattern.md)  
  [Implementazione del pattern di controllo Window di automazione interfaccia utente](implementing-the-ui-automation-window-control-pattern.md)  
- [Procedure relative alle proprietà](ui-automation-control-patterns-how-to-topics.md)
+ [Procedure relative](ui-automation-control-patterns-how-to-topics.md)

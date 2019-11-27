@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430618"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Metodo ICorProfilerCallback::RuntimeSuspendAborted
-Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.  
+Notifica al profiler che il runtime ha interrotto la sospensione di runtime che era in corso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,15 +31,15 @@ Notifies the profiler that the runtime has aborted the runtime suspension that w
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a>Note  
- The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.  
+## <a name="remarks"></a>Osservazioni  
+ La sospensione della fase di esecuzione può essere interrotta se due thread tentano contemporaneamente di sospendere il Runtime.  
   
- Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.  
+ Il callback [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) o il callback di `RuntimeSuspendAborted` si verificherà in un singolo thread che segue un callback [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) .  
   
- The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.  
+ Si garantisce che il callback `RuntimeSuspendAborted` venga eseguito sullo stesso thread del callback di `RuntimeSuspendStarted`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446975"
 ---
 # <a name="importfile2-method"></a>Metodo ImportFile2
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+Importa assembly e moduli non associati. Questo metodo è simile al [metodo ImportFile](importfile-method.md), ma funziona anche se il file importato non esiste sul disco.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,34 +40,34 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Name of file to be imported.  
+ Nome del file da importare.  
   
  `pszTargetName`  
- Optional output file name that can be used to rename the file as it is linked into the assembly.  
+ Nome del file di output facoltativo che può essere usato per rinominare il file mentre è collegato nell'assembly.  
   
  `pAssemblyScopeIn`  
- Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ Interfaccia facoltativa dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `pImportToken`  
- Receives the ID for the file or assembly.  
+ Riceve l'ID per il file o l'assembly.  
   
  `ppAssemblyScope`  
- Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
+ Riceve l'interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Receives the found of files and/or scopes imported.  
+ Riceve l'oggetto trovato dei file e/o degli ambiti importati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448115"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>Metodo ICorProfilerInfo::GetClassFromToken
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+Ottiene l'ID della classe, dato il token di metadati. Questo metodo è obsoleto nella versione .NET Framework 2,0. Usare invece [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,25 +36,25 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametri  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ in ID del modulo che contiene la classe.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ in Token di metadati `mdTypeDef` che fa riferimento alla classe.  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ out Puntatore all'ID della classe.  
   
-## <a name="remarks"></a>Note  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo è obsoleto; usare invece `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` per tutti i tipi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **Versioni .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vedere anche
 

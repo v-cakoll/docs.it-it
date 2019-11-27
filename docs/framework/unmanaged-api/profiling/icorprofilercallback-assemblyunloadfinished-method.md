@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445144"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Metodo ICorProfilerCallback::AssemblyUnloadFinished
-Notifies the profiler that an assembly has been unloaded.  
+Notifica al profiler che un assembly è stato scaricato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="parameters"></a>Parametri  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ in Identifica l'assembly da scaricare.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly was unloaded successfully.  
+ in HRESULT che indica se l'assembly è stato scaricato correttamente.  
   
-## <a name="remarks"></a>Note  
- The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo che il metodo [ICorProfilerCallback:: AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) restituisce.  
   
- Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
+ Alcune parti dello scaricamento dell'assembly potrebbero continuare dopo il callback `AssemblyUnloadFinished`. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte dello scaricamento dell'assembly ha avuto esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

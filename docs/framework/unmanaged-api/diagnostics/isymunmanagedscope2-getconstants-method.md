@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446245"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Metodo ISymUnmanagedScope2::GetConstants
-Gets the local constants defined within this scope.  
+Ottiene le costanti locali definite all'interno di questo ambito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +38,19 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>Parametri  
  `cConstants`  
- [in] The length of the buffer that the `pcConstants` parameter points to.  
+ in Lunghezza del buffer a cui punta il parametro `pcConstants`.  
   
  `pcConstants`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
+ out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere le costanti.  
   
  `constants`  
- [out] The buffer that stores the constants.  
+ out Buffer che archivia le costanti.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446246"
 ---
 # <a name="isymunmanagedscope2getconstantcount-method"></a>Metodo ISymUnmanagedScope2::GetConstantCount
-Gets a count of the constants defined within this scope.  
+Ottiene un conteggio delle costanti definite in questo ambito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT GetConstantCount(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
+ out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere le costanti.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

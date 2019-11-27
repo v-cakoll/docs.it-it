@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448569"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Enumerazione CorSymSearchPolicyAttributes
-Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
+Specifica i criteri da utilizzare durante la ricerca di un lettore di simboli. Queste costanti vengono usate dai metodi [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .  
   
 > [!IMPORTANT]
-> It is a security risk to open a program database (PDB) file from an untrusted source.  
+> L'apertura di un file di database di programma (PDB) da un'origine non attendibile costituisce un rischio per la sicurezza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,17 +39,17 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
-|`AllowSymbolServerAccess`|Accesses a symbol server.|  
-|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
-|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
+|`AllowRegistryAccess`|Esegue una query nel registro di sistema per individuare i percorsi dei simboli.|  
+|`AllowSymbolServerAccess`|Accede a un server di simboli.|  
+|`AllowOriginalPathAccess`|Cerca nel percorso specificato nella directory di debug.|  
+|`AllowReferencePathAccess`|Cerca il PDB nel punto in cui si trova il file exe.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

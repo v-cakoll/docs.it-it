@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433894"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>Metodo ISymUnmanagedNamespace::GetNamespaces
-Gets the children of this namespace.  
+Ottiene gli elementi figlio di questo spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametri  
  `cNameSpaces`  
- [in] A `ULONG32` that indicates the size of the `namespaces` array.  
+ in `ULONG32` che indica le dimensioni della matrice di `namespaces`.  
   
  `pcNameSpaces`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
+ out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere gli spazi dei nomi.  
   
  `namespaces`  
- [out] A pointer to the buffer that contains the namespaces.  
+ out Puntatore al buffer che contiene gli spazi dei nomi.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

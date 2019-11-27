@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442446"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumerazione CorUnmanagedCallingConvention
-Specifies the calling conventions for unmanaged code.  
+Specifica le convenzioni di chiamata per il codice non gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,26 +42,26 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Convenzione di chiamata del linguaggio C.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Convenzione di chiamata standard.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|Convenzione di chiamata "This".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Convenzione di chiamata "Fast".|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Non usato.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Non usato.|  
   
-## <a name="remarks"></a>Note  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+## <a name="remarks"></a>Osservazioni  
+ CLR non supporta la convenzione di chiamata "Fast" nella versione .NET Framework 1,0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

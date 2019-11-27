@@ -14,23 +14,23 @@ ms.locfileid: "74447958"
 ---
 # <a name="ui-automation-properties-overview"></a>Cenni preliminari sulle proprietà di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  I provider di automazione interfaccia utente espongono le proprietà negli elementi di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Queste proprietà consentono alle applicazioni client di automazione interfaccia utente di individuare informazioni su parti dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], soprattutto i controlli, inclusi i dati sia statici che dinamici.  
   
  Questa sezione offre un'ampia panoramica delle proprietà di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Informazioni più specifiche sono disponibili negli argomenti seguenti:  
   
-- [Proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md)  
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
   
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Identificatori di proprietà  
- Ogni proprietà è identificata da un numero e da un nome. I nomi delle proprietà vengono usati solo per il debug e la diagnosi. Providers use the numeric IDs to identify incoming property requests. Le applicazioni client, tuttavia, usano solo <xref:System.Windows.Automation.AutomationProperty>, che incapsula il numero e il nome, per identificare le proprietà che vogliono recuperare.  
+ Ogni proprietà è identificata da un numero e da un nome. I nomi delle proprietà vengono usati solo per il debug e la diagnosi. I provider utilizzano gli ID numerici per identificare le richieste di proprietà in ingresso. Le applicazioni client, tuttavia, usano solo <xref:System.Windows.Automation.AutomationProperty>, che incapsula il numero e il nome, per identificare le proprietà che vogliono recuperare.  
   
  Gli oggetti<xref:System.Windows.Automation.AutomationProperty> che rappresentano particolari proprietà sono disponibili come campi in diverse classi. Per motivi di sicurezza, i provider di automazione interfaccia utente ottengono questi oggetti da un set separato di classi contenute in Uiautomationtypes.dll.  
   
- The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
+ La tabella seguente classifica le proprietà in base alle classi che contengono gli ID del <xref:System.Windows.Automation.AutomationProperty>.  
   
 |Tipologie di proprietà|I client ottengono gli ID da|I provider ottengono gli ID da|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "74447958"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Proprietà per categoria  
- The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. Queste proprietà sono comuni a tutti i controlli. È probabile che quasi tutte siano statiche per tutto il ciclo di vita dell'applicazione del provider. Le proprietà più dinamiche sono associate ai pattern di controllo.  
+ Le tabelle seguenti classificano le proprietà i cui ID si trovano in <xref:System.Windows.Automation.AutomationElement> e <xref:System.Windows.Automation.AutomationElementIdentifiers>. Queste proprietà sono comuni a tutti i controlli. È probabile che quasi tutte siano statiche per tutto il ciclo di vita dell'applicazione del provider. Le proprietà più dinamiche sono associate ai pattern di controllo.  
   
  La colonna **Accesso a proprietà** elenca tutte le altre funzioni di accesso per ogni proprietà, oltre a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> e <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Per altre informazioni su come ottenere le proprietà in un'applicazione client, vedere [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
@@ -161,8 +161,8 @@ ms.locfileid: "74447958"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Memorizzazione nella cache di client di automazione interfaccia utente](caching-in-ui-automation-clients.md)
-- [Proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)
 - [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Restituire proprietà da un provider di automazione interfaccia utente](return-properties-from-a-ui-automation-provider.md)

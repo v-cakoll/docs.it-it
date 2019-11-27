@@ -14,13 +14,13 @@ ms.locfileid: "74433945"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  Questo argomento presenta la memorizzazione nella cache delle proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e dei pattern di controllo.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]la memorizzazione nella cache corrisponde al recupero preliminare dei dati. I dati diventano quindi accessibili senza un'ulteriore comunicazione tra processi. La memorizzazione nella cache in genere viene usata dalle applicazioni client di automazione interfaccia utente per recuperare in massa proprietà e pattern di controllo. Le informazioni vengono quindi recuperate dalla cache in base alle necessità. L'applicazione aggiorna periodicamente la cache, in genere come risposta a eventi indicanti che è cambiato qualcosa nell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ I vantaggi della memorizzazione nella cache sono molto evidenti con i controlli Windows Presentation Foundation (WPF) e i controlli personalizzati con provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
   
  La memorizzazione nella cache si verifica quando l'applicazione attiva un elemento <xref:System.Windows.Automation.CacheRequest> e quindi usa un metodo o una proprietà che restituisce un elemento <xref:System.Windows.Automation.AutomationElement>, ad esempio <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. I metodi della classe <xref:System.Windows.Automation.TreeWalker> sono un'eccezione. La memorizzazione nella cache viene eseguita solo se un elemento <xref:System.Windows.Automation.CacheRequest> viene specificato come parametro (ad esempio, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74433945"
 ## <a name="activating-the-cacherequest"></a>Attivazione di CacheRequest  
  La memorizzazione nella cache viene eseguita solo quando gli oggetti <xref:System.Windows.Automation.AutomationElement> vengono recuperati mentre un oggetto <xref:System.Windows.Automation.CacheRequest> è attivo per il thread corrente. Esistono due diverse modi per attivare un oggetto <xref:System.Windows.Automation.CacheRequest>.  
   
- Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
+ Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . Il modo più semplice per controllare la durata dell'oggetto consiste nel racchiudere la chiamata all'interno di unC#blocco `using` () o `Using` (Visual Basic). In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
   
  Un altro modo, utile quando si vuole annidare le richieste della cache, consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Push%2A>, che inserisce la richiesta in uno stack e la attiva. La richiesta rimane attiva finché viene rimossa dallo stack da <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La richiesta diventa temporaneamente inattiva se viene effettuato il push di un'altra richiesta nello stack. Solo la richiesta principale dello stack è attiva.  
   
@@ -103,6 +103,6 @@ ms.locfileid: "74433945"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)
+- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
-- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Esempio FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

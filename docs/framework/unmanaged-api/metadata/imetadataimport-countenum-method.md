@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440361"
 ---
 # <a name="imetadataimportcountenum-method"></a>Metodo IMetaDataImport::CountEnum
-Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
+Ottiene il numero di elementi nell'enumerazione recuperato dall'enumeratore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,20 +36,20 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>Parametri  
  `hEnum`  
- [in] The handle for the enumerator.  
+ in Handle per l'enumeratore.  
   
  `pulCount`  
- [out] The number of elements enumerated.  
+ out Numero di elementi enumerati.  
   
-## <a name="remarks"></a>Note  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+## <a name="remarks"></a>Osservazioni  
+ L'handle specificato da `hEnum` viene ottenuto da una chiamata al *nome* di `Enum`precedente (ad esempio, [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

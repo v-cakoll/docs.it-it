@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440480"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Metodo IMetaDataEmit::TranslateSigWithScope
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+Importa un assembly nell'ambito corrente e ottiene una nuova firma dei metadati per l'ambito Unito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parametri  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ in Interfaccia per l'assembly di importazione (in cui è definita la firma).  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ in Blob hash per l'assembly.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ in Conteggio dei byte in `pbHashValue`.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ in Interfaccia per l'ambito dell'importazione dei metadati.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ in Firma da importare.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ in Dimensione, in byte, del `pbSigBlob`.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ in Interfaccia per l'esportazione dell'assembly.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ in Interfaccia per l'ambito di esportazione dei metadati.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ out Buffer in cui memorizzare il BLOB di firma tradotto.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ in Capacità, in byte, di `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ out Numero di byte effettivi nella firma tradotta.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -32,17 +32,17 @@ typedef enum {
 } COR_PRF_FINALIZER_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|The finalizer is critical.|  
+|`COR_PRF_FINALIZER_CRITICAL`|Il finalizzatore è di importanza critica.|  
   
-## <a name="remarks"></a>Note  
- The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.  
+## <a name="remarks"></a>Osservazioni  
+ L'enumerazione `COR_PRF_FINALIZER_FLAGS` viene utilizzata dal metodo [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) per descrivere il finalizzatore per un oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

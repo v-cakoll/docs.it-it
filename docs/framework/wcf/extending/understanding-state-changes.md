@@ -28,12 +28,12 @@ In questo argomento vengono descritti gli stati e le transizioni dei canali, i t
   
  Tutti gli oggetti <xref:System.ServiceModel.ICommunicationObject> iniziano con lo stato Created. In questo stato un'applicazione può configurare l'oggetto impostandone le proprietà. Una volta che l'oggetto ha assunto uno stato diverso da Created, viene considerato immutabile.  
   
- ![Dataflow diagram of the channel state transition.](./media/understanding-state-changes/channel-state-transitions.gif)  
-Figure 1. La macchina a stati di ICommunicationObject.  
+ ![Diagramma del flusso di flussi della transizione di stato del canale.](./media/understanding-state-changes/channel-state-transitions.gif)  
+Figura 1. La macchina a stati di ICommunicationObject.  
   
- Windows Communication Foundation (WCF) provides an abstract base class named <xref:System.ServiceModel.Channels.CommunicationObject> that implements <xref:System.ServiceModel.ICommunicationObject> and the channel state machine. Di seguito è illustrato un diagramma di stato modificato specifico di <xref:System.ServiceModel.Channels.CommunicationObject>. Oltre alla macchina a stati <xref:System.ServiceModel.ICommunicationObject>, è indicato l'intervallo in cui vengono richiamati metodi <xref:System.ServiceModel.Channels.CommunicationObject> aggiuntivi.  
+ Windows Communication Foundation (WCF) fornisce una classe base astratta denominata <xref:System.ServiceModel.Channels.CommunicationObject> che implementa <xref:System.ServiceModel.ICommunicationObject> e la macchina a Stati del canale. Di seguito è illustrato un diagramma di stato modificato specifico di <xref:System.ServiceModel.Channels.CommunicationObject>. Oltre alla macchina a stati <xref:System.ServiceModel.ICommunicationObject>, è indicato l'intervallo in cui vengono richiamati metodi <xref:System.ServiceModel.Channels.CommunicationObject> aggiuntivi.  
   
- ![Dataflow diagram of CommunicationObject implementation state changes.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+ ![diagramma del flusso di flussi delle modifiche dello stato di implementazione di CommunicationObject.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
 Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stati ICommunicationObject con chiamate a eventi e metodi protetti.  
   
 ### <a name="icommunicationobject-events"></a>Eventi ICommunicationObject  
@@ -52,19 +52,19 @@ Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stat
   
  Mentre per <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>e <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> non è disponibile un'implementazione predefinita, per le altre richiamate ne è disponibile una, necessaria per la correttezza della macchina a stati. Se si esegue l'override di questi metodi, assicurarsi di chiamare l'implementazione di base o di sostituirla correttamente.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> generano gli eventi <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> corrispondenti. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> impostano rispettivamente lo stato dell'oggetto su Opened e su Closed, quindi generano gli eventi <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> corrispondenti.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> generano gli eventi <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> corrispondenti. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> impostano rispettivamente lo stato dell'oggetto su aperto e chiuso, quindi generano gli eventi corrispondenti di <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType>.  
   
 ### <a name="state-transition-methods"></a>Metodi delle transizioni di stato  
- L'oggetto <xref:System.ServiceModel.Channels.CommunicationObject> fornisce le implementazioni di Abort, Close e Open oltre a un metodo Fault che causa la transizione dello stato a Faulted. Nella Figura 2 è illustrata la macchina a stati di <xref:System.ServiceModel.ICommunicationObject> unitamente a ogni transizione identificata dal metodo che la provoca (nell'implementazione del metodo che causa l'ultima transizione con etichetta si verificano transizioni senza etichetta).  
+ <xref:System.ServiceModel.Channels.CommunicationObject> fornisce le implementazioni di Abort, Close e Open. oltre a un metodo Fault che causa la transizione dello stato a Faulted. Nella Figura 2 è illustrata la macchina a stati di <xref:System.ServiceModel.ICommunicationObject> unitamente a ogni transizione identificata dal metodo che la provoca (nell'implementazione del metodo che causa l'ultima transizione con etichetta si verificano transizioni senza etichetta).  
   
 > [!NOTE]
 > Tutte le implementazioni <xref:System.ServiceModel.Channels.CommunicationObject> dello stato della comunicazione get/set sono sincronizzate in base al thread.  
   
  Costruttore  
   
- L'elemento <xref:System.ServiceModel.Channels.CommunicationObject> fornisce tre costruttori che lasciano tutti l'oggetto nello stato Created. I costruttori sono definiti come segue:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> fornisce tre costruttori, che lasciano tutti l'oggetto nello stato created. I costruttori sono definiti come segue:  
   
- The first constructor is a parameterless constructor that delegates to the constructor overload that takes an object:  
+ Il primo costruttore è un costruttore senza parametri che delega all'overload del costruttore che accetta un oggetto:  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -90,7 +90,7 @@ Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stat
   
  Imposta quindi lo stato su Opening e chiama OnOpening() (che genera l'evento Opening), OnOpen() e OnOpened(), nell'ordine specificato. OnOpened() imposta lo stato su Opened e genera l'evento Opened. Se uno di questi elementi genera un'eccezione, Open() chiama Fault() e consente all'eccezione di emergere. Nel diagramma seguente il processo Open è illustrato più dettagliatamente.  
   
- ![Dataflow diagram of ICommunicationObject.Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
+ ![Diagramma di flusso di Dataflow di ICommunicationObject. Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
 Eseguire l'override del metodo OnOpen per implementare logica di apertura personalizzata, quale l'apertura di un oggetto di comunicazione interno.  
   
  Metodo Close  
@@ -101,17 +101,17 @@ Eseguire l'override del metodo OnOpen per implementare logica di apertura person
   
  Il metodo Close() può essere chiamato a qualsiasi stato. Tenta di chiudere l'oggetto normalmente. Se viene rilevato un errore, l'oggetto viene terminato. Il metodo non esegue alcuna operazione se lo stato corrente è Closing o Closed. In caso contrario imposta lo stato su Closing. Se lo stato originale era Created, Opening o Faulted, chiama Abort() (vedere il diagramma seguente). Se lo stato originale era Opened, chiama OnClosing() (che genera l'evento Closing), OnClose() e OnClosed(), nell'ordine specificato. Se alcuni di questi elementi generano eccezioni, Close() chiama Abort() e consente all'eccezione di emergere. OnClosed() imposta lo stato su Closed e genera l'evento Closed. Nel diagramma seguente il processo Close è illustrato più dettagliatamente.  
   
- ![Dataflow diagram of ICommunicationObject.Close state changes.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
+ ![Diagramma del flusso di flussi di modifiche dello stato di ICommunicationObject. Close.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 Eseguire l'override del metodo OnClose per implementare logica di chiusura personalizzata, quale la chiusura di un oggetto di comunicazione interno. Tutta la logica di chiusura corretta che può bloccarsi a lungo (ad esempio, in attesa della risposta dell'altro lato) deve essere implementata in OnClose() perché utilizza un parametro di timeout e perché non viene chiamata come parte Abort().  
   
- Abort  
+ Interruzione  
   
  Precondizione: nessuna.  
 Postcondizione: lo stato è Closed. Può generare un'eccezione.  
   
  Il metodo Abort() non esegue alcuna operazione se lo stato corrente è Closed o se l'oggetto è stato terminato in precedenza, facendo ad esempio in modo che Abort() venisse eseguito su un altro thread. In caso contrario imposta lo stato su Closing e chiama OnClosing() (che genera l'evento Closing), OnAbort() e OnClosed(), nell'ordine specificato, senza chiamare OnClose perché l'oggetto sta per essere terminato, non chiuso. OnClosed() imposta lo stato su Closed e genera l'evento Closed. Se uno di questi elementi genera un'eccezione, l'eccezione viene generata nuovamente al chiamante di Abort. Le implementazioni di OnClosing(), OnClosed() e OnAbort() non si devono bloccare, ad esempio su input/output. Nel diagramma seguente il processo Abort è illustrato più dettagliatamente.  
   
- ![Dataflow diagram of ICommunicationObject.Abort state changes.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
+ ![Il diagramma di flusso di Dataflow dello stato ICommunicationObject. Abort cambia.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
 Eseguire l'override del metodo OnAbort per implementare logica di terminazione personalizzata, quale la terminazione di un oggetto di comunicazione interno.  
   
  Fault  
@@ -127,11 +127,11 @@ Eseguire l'override del metodo OnAbort per implementare logica di terminazione p
 ### <a name="throwifxxx-methods"></a>Metodi ThrowIfXxx  
  CommunicationObject dispone di tre metodi protetti che possono essere utilizzati per generare eccezioni se l'oggetto è in un stato specifico.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> genera un'eccezione se lo stato è Closing, Closed o Faulted.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> genera un'eccezione se lo stato è Closing, closed o Faulted.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> genera un'eccezione se lo stato non è Created.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> genera un'eccezione se lo stato non viene creato.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> genera un'eccezione se lo stato non è Opened.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> genera un'eccezione se lo stato non è aperto.  
   
  Le eccezioni generate dipendono dallo stato. Nella tabella seguente sono illustrati i diversi stati e il tipo di eccezione corrispondente generata chiamando un elemento ThrowIfXxx che la genera per quello stato.  
   
@@ -140,16 +140,16 @@ Eseguire l'override del metodo OnAbort per implementare logica di terminazione p
 |Creato|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Apertura|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Closing|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Closing|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso un oggetto sia stato chiuso da una chiamata precedente ed esplicita ad Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
-|Closed|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Chiuso|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso in cui un oggetto è stato chiuso da una chiamata precedente ed esplicita Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
+|Chiuso|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Non riuscito|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>Timeout  
  Molti dei metodi di cui si è parlato accettano parametri di timeout. Questi metodi sono Close, Open (alcuni overload e versioni asincrone), OnClose e OnOpen. Sono progettati in modo da consentire operazioni lunghe (ad esempio, bloccandosi su input/output e chiudendo normalmente una connessione), pertanto il parametro di timeout indica per quanto tempo possono essere eseguite tali operazioni prima di essere interrotte. Le implementazioni di alcuni di questi metodi devono utilizzare il valore di timeout fornito per assicurare il ritorno al chiamante entro il timeout. Le implementazioni di altri metodi che non utilizzano un timeout non sono progettate per operazioni lunghe e non devono bloccarsi su input/output.  
   
- Fanno eccezione gli overload di Open() e Close() che non accettano timeout, ma utilizzano un valore di timeout predefinito fornito dalla classe derivata. <xref:System.ServiceModel.Channels.CommunicationObject> espone due proprietà astratte protette, denominate <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> e <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A>, definite come segue:  
+ Fanno eccezione gli overload di Open() e Close() che non accettano timeout, ma utilizzano un valore di timeout predefinito fornito dalla classe derivata. <xref:System.ServiceModel.Channels.CommunicationObject> espone due proprietà astratte protette denominate <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> e <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> definite come segue:  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

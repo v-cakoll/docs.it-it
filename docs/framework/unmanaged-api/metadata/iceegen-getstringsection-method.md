@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443259"
 ---
 # <a name="iceegengetstringsection-method"></a>Metodo ICeeGen::GetStringSection
-Gets a string representation of the code section referenced by the specified handle.  
+Ottiene una rappresentazione di stringa della sezione di codice a cui fa riferimento l'handle specificato.  
   
- This method is obsolete and should not be used.  
+ Questo metodo è obsoleto e non deve essere utilizzato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +37,14 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>Parametri  
  `section`  
- [in, out] The handle to the code section.  
+ [in, out] Handle per la sezione di codice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

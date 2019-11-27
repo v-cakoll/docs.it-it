@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: Elemento GCLOHThreshold
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451220"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>Elemento GCLOHThreshold
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+Specifica la dimensione della soglia, in byte, che fa in modo che il Garbage Collector inserisca gli oggetti nell'heap degli oggetti grandi (LOH).
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+&nbsp;&nbsp;[\<runtime >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,17 +30,17 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|`enabled`|Attributo obbligatorio.<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|Attributo obbligatorio.<br /><br />Specifica le dimensioni della soglia che determinano l'uso degli oggetti nell'heap degli oggetti grandi.|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>attributo enabled
 
 |Value|Descrizione|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|Dimensione della soglia, in byte, che fa sì che gli oggetti vadano nell'heap degli oggetti grandi.|
 
-## <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elemento figlio
 
-Nessuna.
+Nessuno.
 
 ## <a name="parent-elements"></a>Elementi padre
 
@@ -49,13 +49,13 @@ Nessuna.
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-This setting was introduced in .NET Framework 4.8.
+Questa impostazione è stata introdotta in .NET Framework 4,8.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Run-time settings schema](index.md)
+- [Schema delle impostazioni della fase di esecuzione](index.md)
 - [Schema dei file di configurazione](../index.md)
 - [Principi fondamentali di Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [Opzioni di configurazione della fase di esecuzione di NET Core per GC](../../../../core/run-time-config/garbage-collector.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431581"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>Metodo IMetaDataEmit::DefinePermissionSet
-Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
+Crea una definizione per un set di autorizzazioni con la firma dei metadati specificata e ottiene un token per la definizione del set di autorizzazioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,26 +39,26 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] The object to be decorated.  
+ in Oggetto da decorare.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ in Valore [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) che specifica il tipo di sicurezza dichiarativa da usare.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ in BLOB di autorizzazioni.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ in Dimensione, in byte, del `pvPermission`.  
   
  `ppm`  
- [out] The returned permission token.  
+ out Token di autorizzazione restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
