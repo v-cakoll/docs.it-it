@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444112"
 ---
 # <a name="coinitiee-enumeration"></a>Enumerazione COINITIEE
-Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
+Specifica le costanti usate dal [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) durante l'inizializzazione del Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,18 +36,18 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Default initialization mode. This initializes the runtime and creates the default <xref:System.AppDomain>.|  
-|`COINITEE_DLL`|Initializes to run a managed DLL.|  
-|`COINITEE_MAIN`|Initializes to run a managed EXE. This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.|  
+|`COINITEE_DEFAULT`|Modalità di inizializzazione predefinita. Il runtime viene inizializzato e viene creata la <xref:System.AppDomain>predefinita.|  
+|`COINITEE_DLL`|Inizializza per eseguire una DLL gestita.|  
+|`COINITEE_MAIN`|Inizializza per eseguire un file EXE gestito. In questo modo viene inizializzato il runtime, ma non viene creato il <xref:System.AppDomain>predefinito, che viene creato dopo l'immissione della routine principale del file EXE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

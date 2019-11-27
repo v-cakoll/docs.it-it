@@ -18,9 +18,9 @@ ms.locfileid: "74447673"
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventi ETW in Common Language Runtime
 Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Event Tracing for Windows) tramite svariati eventi di debug e profilatura. Gli eventi ETW di CLR sfruttano il sistema di traccia Windows ETW per migliorare il supporto esistente per la profilatura e il debug offerto da Common Language Runtime.  
   
- More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
+ Altre informazioni su ETW sono disponibili nell'articolo [migliorare il debug e l'ottimizzazione delle prestazioni con ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) . Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
   
- The .NET Framework 4 or later is required for all the events described in the event topics. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
+ Il .NET Framework 4 o versione successiva è necessario per tutti gli eventi descritti negli argomenti dell'evento. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Controllo della registrazione di .NET Framework](controlling-logging.md)  

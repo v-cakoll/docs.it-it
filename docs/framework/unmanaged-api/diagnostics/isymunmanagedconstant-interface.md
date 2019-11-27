@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449254"
 ---
 # <a name="isymunmanagedconstant-interface"></a>Interfaccia ISymUnmanagedConstant
-Provides access to unmanaged constants.  
+Fornisce l'accesso alle costanti non gestite.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Gets the name of the constant.|  
-|[Metodo GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Gets the signature of the constant.|  
-|[Metodo GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Gets the value of the constant.|  
+|[Metodo GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Ottiene il nome della costante.|  
+|[Metodo GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Ottiene la firma della costante.|  
+|[Metodo GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Ottiene il valore della costante.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

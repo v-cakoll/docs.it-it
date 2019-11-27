@@ -37,10 +37,10 @@ Fornisce metodi che consentono di eseguire l'iterazione sequenziale con una racc
 ## <a name="remarks"></a>Note  
  L'interfaccia `ICorProfilerFunctionEnum` è un enumeratore. Consente al ricevitore di una matrice di effettuare il pull di elementi dal mittente a una velocità appropriata per il ricevitore. In altre parole, il ricevitore è in grado di controllare in modo esplicito il flusso degli elementi della matrice, evitando così i problemi associati al passaggio di matrici di grandi dimensioni come parametri di metodo.  
   
- `ICorProfilerFunctionEnum` esegue l'enumerazione sulle funzioni già sottoposte a compilazione JIT, ma non include le funzioni caricate da immagini native generate con Ngen.exe.  
+ `ICorProfilerFunctionEnum` enumera le funzioni che sono già state compilate tramite JIT, ma non include funzioni caricate da immagini native generate con Ngen. exe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

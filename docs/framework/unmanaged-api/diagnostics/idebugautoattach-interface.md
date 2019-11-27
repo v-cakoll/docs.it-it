@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445516"
 ---
 # <a name="idebugautoattach-interface"></a>Interfaccia IDebugAutoAttach
-Defines the interface for server-invoked debugger auto attach.  
+Definisce l'interfaccia per la connessione automatica del debugger richiamata dal server.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[Metodo AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Esegue la connessione automatica al debugger richiamato dal server.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** DbgAutoAttach.idl  
+ **Intestazione:** DbgAutoAttach. idl  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,14 +22,14 @@ Fornisce i metodi e le proprietà per l'analisi dei file di testo strutturati.
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sui metodi e le proprietà dell'oggetto `TextFieldParser` , vedere <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Per ulteriori informazioni, vedere [lettura da file](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.FileIO>  
   
  **Classe:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)

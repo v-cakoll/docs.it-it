@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450379"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>Enumerazione COR_PRF_RUNTIME_TYPE
-Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
+Contiene valori che indicano la versione di Common Language Runtime (CLR): desktop o CoreCLR, utilizzata in Silverlight.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,15 +36,15 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
-|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|Versione desktop di CLR.|  
+|`COR_PRF_CORE_CLR`|Versione principale di CLR, utilizzata in Silverlight.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

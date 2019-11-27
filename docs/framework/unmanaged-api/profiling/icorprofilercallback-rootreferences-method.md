@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444468"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>Metodo ICorProfilerCallback::RootReferences
-Notifies the profiler with information about root references after garbage collection.  
+Notifica al profiler informazioni sui riferimenti radice dopo Garbage Collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,20 +35,20 @@ HRESULT RootReferences(
   
 ## <a name="parameters"></a>Parametri  
  `cRootRefs`  
- [in] The number of references in the `rootRefIds` array.  
+ in Numero di riferimenti nella matrice `rootRefIds`.  
   
  `rootRefIds`  
- [in] An array of object IDs that reference either a static object or an object on the stack.  
+ in Matrice di ID oggetto che fanno riferimento a un oggetto statico o a un oggetto nello stack.  
   
 ## <a name="remarks"></a>Note  
- Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler. Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
+ Per notificare al profiler vengono chiamati sia `RootReferences` che [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) . I profiler in genere implementano uno o l'altro, ma non entrambi, perché le informazioni passate in `RootReferences2` sono un superset di quello passato in `RootReferences`.  
   
- It is possible for the `rootRefIds` array to contain a null object. For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.  
+ È possibile che la matrice di `rootRefIds` contenga un oggetto null. Ad esempio, tutti i riferimenti a oggetti dichiarati nello stack vengono considerati come radici dal Garbage Collector e verranno sempre segnalati.  
   
- The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. Therefore, profilers must not attempt to inspect objects during a `RootReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
+ Gli ID oggetto restituiti da `RootReferences` non sono validi durante il callback stesso, perché è possibile che il Garbage Collection stia spostando gli oggetti dagli indirizzi precedenti ai nuovi indirizzi. Pertanto, i profiler non devono tentare di ispezionare gli oggetti durante una chiamata `RootReferences`. Quando viene chiamato [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) , tutti gli oggetti sono stati spostati nelle nuove posizioni e possono essere controllati in modo sicuro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -22,21 +22,21 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448480"
 ---
 # <a name="ibindingdisplay-interface"></a>Interfaccia IBindingDisplay
-Provides methods that display current binding information about the running application.  
+Fornisce metodi che visualizzano le informazioni di binding correnti sull'applicazione in esecuzione.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
-|[Metodo InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Initializes the `IBindingDisplay` object.|  
+|[Metodo GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Restituisce le informazioni di visualizzazione dell'associazione corrente.|  
+|[Metodo InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Inizializza l'oggetto `IBindingDisplay`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Intestazione:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Libreria:** BindingDisplay. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

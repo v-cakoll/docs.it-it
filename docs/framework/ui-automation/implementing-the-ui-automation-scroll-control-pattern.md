@@ -15,13 +15,13 @@ ms.locfileid: "74447166"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementazione del pattern di controllo Scroll di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IScrollProvider>, incluse le informazioni relative a eventi e proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
  Il pattern di controllo <xref:System.Windows.Automation.ScrollPattern> viene usato per supportare un controllo che funge da contenitore scorrevole per una raccolta di oggetti figlio. Pur supportandole, il controllo non deve usare le barre di scorrimento per supportare la funzionalità di scorrimento.  
   
- ![Scroll control without scrollbars.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![Controllo Scroll senza barre di scorrimento.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 Esempio di controllo scorrevole che non usa barre di scorrimento  
   
  Per esempi di controlli che implementano questo controllo, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
@@ -48,14 +48,14 @@ Esempio di controllo scorrevole che non usa barre di scorrimento
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Metodo|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Metodo|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Metodo|Nessuna|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -74,6 +74,6 @@ Esempio di controllo scorrevole che non usa barre di scorrimento
 
 - [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

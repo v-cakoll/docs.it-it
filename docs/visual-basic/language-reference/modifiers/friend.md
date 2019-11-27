@@ -18,32 +18,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351570"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.  
+Specifica che uno o più elementi di programmazione dichiarati sono accessibili solo all'interno dell'assembly che contiene la relativa dichiarazione.  
   
-## <a name="remarks"></a>Note  
- In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them. However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary). If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.  
+## <a name="remarks"></a>Osservazioni  
+ In molti casi, si desidera che gli elementi di programmazione come classi e strutture siano utilizzati dall'intero assembly, non solo dal componente che li dichiara. Tuttavia, è possibile che non si desideri che siano accessibili dal codice all'esterno dell'assembly (ad esempio, se l'applicazione è proprietaria). Se si desidera limitare l'accesso a un elemento in questo modo, è possibile dichiararlo utilizzando il modificatore `Friend`.  
   
- Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.  
+ Il codice in altre classi, strutture e moduli compilati nello stesso assembly può accedere a tutti gli elementi `Friend` in tale assembly.  
   
- `Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.  
+ `Friend` Access è spesso il livello preferenziale per gli elementi di programmazione di un'applicazione e `Friend` è il livello di accesso predefinito di un'interfaccia, un modulo, una classe o una struttura.  
   
- You can use `Friend` only at the module, interface, or namespace level. Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.  
+ È possibile usare `Friend` solo a livello di modulo, interfaccia o spazio dei nomi. Pertanto, il contesto di dichiarazione per un elemento di `Friend` deve essere un file di origine, uno spazio dei nomi, un'interfaccia, un modulo, una classe o una struttura; non può essere una procedura.  
 
 > [!NOTE]
-> You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined. To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.
+> È anche possibile usare il modificatore di accesso [Friend protetto](protected-friend.md) , che rende accessibile un membro della classe da tale classe, dalle classi derivate e dallo stesso assembly in cui è definita la classe. Per limitare l'accesso a un membro dall'interno della relativa classe e dalle classi derivate nello stesso assembly, usare il modificatore di accesso [privato protetto](private-protected.md) .
 
- For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Per un confronto tra `Friend` e gli altri modificatori di accesso, vedere [livelli di accesso nel Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`. Per altre informazioni, vedere [Friend Assemblies](../../../standard/assembly/friend.md) (Assembly friend).
+> È possibile specificare che un altro assembly è un assembly Friend, che consente di accedere a tutti i tipi e i membri contrassegnati come `Friend`. Per altre informazioni, vedere [Friend Assemblies](../../../standard/assembly/friend.md) (Assembly friend).
 
 ## <a name="example"></a>Esempio  
- The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.  
+ La classe seguente usa il modificatore `Friend` per consentire ad altri elementi di programmazione all'interno dello stesso assembly di accedere a determinati membri.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Utilizzo  
- You can use the `Friend` modifier in these contexts:  
+ È possibile usare il modificatore `Friend` in questi contesti:  
   
  [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -79,7 +79,7 @@ Specifies that one or more declared programming elements are accessible only fro
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

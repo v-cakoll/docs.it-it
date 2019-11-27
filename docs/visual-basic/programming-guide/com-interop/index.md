@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347998"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
-Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. In questa sezione vengono illustrati alcuni dei problemi associati alla creazione e all'utilizzo di oggetti COM con Visual Basic.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  Spiega come aggiungere riferimenti agli oggetti COM con librerie dei tipi.  
   
  [Procedura: Utilizzare i controlli ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Viene illustrato come utilizzare i controlli ActiveX esistenti per aggiungere funzionalità alla casella degli strumenti di Visual Studio.  
   
  [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Descrive i passaggi della procedura di chiamata delle API che fanno parte del sistema operativo Windows.  

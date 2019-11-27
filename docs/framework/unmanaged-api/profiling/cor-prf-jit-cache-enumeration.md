@@ -25,7 +25,7 @@ ms.locfileid: "74447350"
 Indica il risultato della ricerca di una funzione memorizzata nella cache.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` ha un valore pari a zero, pertanto non è possibile usare `COR_PRF_JIT_CACHE` come surrogato booleano.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +38,13 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
+|`COR_PRF_FUNCTION_FOUND`|La ricerca ha rilevato la funzione.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|La ricerca non ha trovato la funzione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449879"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>Metodo ICorProfilerInfo::SetILFunctionBody
-Replaces the body of the specified function in the specified module.  
+Sostituisce il corpo della funzione specificata nel modulo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +36,23 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ in ID del modulo in cui risiede la funzione.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ in Token della funzione per cui sostituire il corpo.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ in Nuova intestazione per la funzione.  
   
 ## <a name="remarks"></a>Note  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ Il metodo `SetILFunctionBody` sostituisce l'indirizzo virtuale relativo della funzione nei metadati in modo che punti al nuovo corpo della funzione e modifichi tutte le strutture di dati interne in base alle esigenze.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ Il metodo `SetILFunctionBody` può essere chiamato solo per le funzioni che non sono mai state compilate da un compilatore JIT (just-in-Time).  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Usare il metodo [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) per allocare spazio al nuovo metodo per assicurarsi che il buffer sia compatibile.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

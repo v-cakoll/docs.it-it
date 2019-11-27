@@ -66,7 +66,7 @@ La tabella seguente elenca le attività comunemente eseguite con un flusso:
 |Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../standard/io/how-to-write-characters-to-a-string.md)|
-|Crittografare i dati|[Crittografia di dati](../../../../standard/security/encrypting-data.md)|
+|Crittografa dati|[Crittografia di dati](../../../../standard/security/encrypting-data.md)|
 |Decrittografare i dati|[Decrittografia di dati](../../../../standard/security/decrypting-data.md)|
 
 ## <a name="file-access-and-attributes"></a>Accesso ai file e attributi
@@ -84,7 +84,7 @@ La tabella seguente elenca le attività che coinvolgono l'accesso ai file e gli 
 
 ## <a name="file-permissions"></a>Autorizzazioni di file
 
-Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di ASP.NET e .NET Framework. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.
+Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di ASP.NET e .NET Framework. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per altre informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Archiviazione di file isolati
 
@@ -110,5 +110,5 @@ Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modi
 
 - [Composizione dei flussi](../../../../standard/io/composing-streams.md)
 - [I/O di file e di flussi](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))

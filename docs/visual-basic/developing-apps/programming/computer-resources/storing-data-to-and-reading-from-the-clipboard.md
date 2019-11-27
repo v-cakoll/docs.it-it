@@ -1,5 +1,5 @@
 ---
-title: Storing data to and reading from the Clipboard
+title: Archiviazione e lettura di dati negli Appunti
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)

@@ -14,7 +14,7 @@ ms.locfileid: "74347201"
 # <a name="mycomputerkeyboard-object"></a>Oggetto My.Computer.Keyboard
 Offre proprietà che consentono di accedere allo stato corrente della tastiera, per sapere ad esempio quali tasti vengono attualmente premuti, e un metodo per inviare le sequenze di tasti alla finestra attiva.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.Keyword` , vedere <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
  Per altre informazioni, vedere [Accesso alla tastiera](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -24,7 +24,7 @@ Offre proprietà che consentono di accedere allo stato corrente della tastiera, 
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

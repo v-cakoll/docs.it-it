@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448920"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>Metodo ISymUnmanagedMethod::GetRootScope
-Gets the root lexical scope within this method. Questo ambito racchiude l'intero metodo.  
+Ottiene l'ambito lessicale radice all'interno di questo metodo. Questo ambito racchiude l'intero metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ out Puntatore impostato sull'interfaccia [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

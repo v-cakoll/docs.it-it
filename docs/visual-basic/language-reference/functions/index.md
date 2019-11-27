@@ -25,9 +25,9 @@ Gli argomenti di questa sezione contengono tabelle delle funzioni membro di runt
   
  [Funzioni stringa](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  

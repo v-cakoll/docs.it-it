@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445155"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Metodo ICorProfilerCallback::AssemblyLoadStarted
-Notifies the profiler that an assembly is being loaded.  
+Notifica al profiler che è in corso il caricamento di un assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>Parametri  
  `assemblyId`  
- [in] Identifies the assembly that is being loaded.  
+ in Identifica l'assembly da caricare.  
   
 ## <a name="remarks"></a>Note  
- The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.  
+ Il valore di `assemblyId` non è valido per una richiesta di informazioni fino a quando non viene chiamato il metodo [ICorProfilerCallback:: AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

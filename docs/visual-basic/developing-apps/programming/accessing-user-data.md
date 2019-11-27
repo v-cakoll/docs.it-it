@@ -26,7 +26,7 @@ Questa sezione contiene argomenti relativi all'oggetto `My.User` e alle attivit√
   
 ## <a name="tasks"></a>Attivit√†  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
 |Ottenere il nome dell'account di accesso dell'utente|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |Ottenere il nome di dominio dell'utente se l'applicazione usa l'autenticazione di Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  

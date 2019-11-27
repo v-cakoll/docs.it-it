@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448155"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Metodo ICorProfilerInfo::GetClassFromObject
-Gets the `ClassID` of an object, given its `ObjectID`.  
+Ottiene l'`ClassID` di un oggetto, in base al relativo `ObjectID`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Parametri  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ in ID dell'oggetto per il quale ottenere il `ClassID`.  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ out Puntatore al `ClassID`restituito.  
   
 ## <a name="remarks"></a>Note  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+ Un `pClassId` null indica che `objectId` dispone di un tipo che sta scaricando.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

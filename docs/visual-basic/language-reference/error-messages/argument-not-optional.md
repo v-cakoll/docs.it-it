@@ -13,13 +13,13 @@ ms.locfileid: "74353906"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argomento non facoltativo (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+Il numero e i tipi di argomenti devono corrispondere a quelli previsti. È presente un numero errato di argomenti oppure un argomento omesso non è facoltativo. Un argomento può essere omesso solo da una chiamata a una stored procedure definita dall'utente, se è stata dichiarata `Optional` nella definizione della procedura.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Supply all necessary arguments.  
+1. Specificare tutti gli argomenti necessari.  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. Assicurarsi che gli argomenti omessi siano facoltativi. In caso contrario, fornire l'argomento nella chiamata o dichiarare il parametro `Optional` nella definizione.  
   
 ## <a name="see-also"></a>Vedere anche
 

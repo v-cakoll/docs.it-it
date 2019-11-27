@@ -36,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametri  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ in Lunghezza del buffer fornito dal parametro `data`  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ out Dimensioni e lunghezza del checksum, in byte.  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ out Buffer che riceve il checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
   
 ## <a name="see-also"></a>Vedere anche
 

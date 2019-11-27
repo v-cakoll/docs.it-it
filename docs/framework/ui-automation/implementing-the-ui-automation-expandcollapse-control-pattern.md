@@ -16,7 +16,7 @@ ms.locfileid: "74447143"
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementazione del pattern di controllo ExpandCollapse di automazione interfaccia utente
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).
 
 In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, incluse le informazioni relative a proprietà, metodi ed eventi. Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.
 
@@ -55,10 +55,10 @@ Le proprietà e i metodi seguenti sono obbligatori per l'implementazione di <xre
 
 |Membri obbligatori|Tipo di membro|Note|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|proprietà|Nessuno|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Metodo|Nessuno|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Metodo|Nessuno|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|A questo controllo non sono associati eventi; usare questo delegato generico.|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Proprietà|Nessuna|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Metodo|Nessuna|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Metodo|Nessuna|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Evento|A questo controllo non sono associati eventi; usare questo delegato generico.|
 
 <a name="Exceptions"></a>
 
@@ -74,7 +74,7 @@ I provider devono generare le eccezioni seguenti.
 
 - [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
 - [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

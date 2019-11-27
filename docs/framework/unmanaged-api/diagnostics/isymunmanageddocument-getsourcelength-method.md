@@ -34,10 +34,10 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
+ out Puntatore a una variabile che indica la lunghezza, in byte, dell'origine incorporata.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds.  
+ S_OK se il metodo ha esito positivo.  
   
 ## <a name="see-also"></a>Vedere anche
 

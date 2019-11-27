@@ -17,9 +17,9 @@ ms.locfileid: "74448831"
 # <a name="ui-automation-control-types"></a>Tipi di controllo per l'automazione dell'interfaccia utente
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).
 
-This section contains information about support for control types in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].
+In questa sezione vengono fornite informazioni sul supporto di per i tipi di controllo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -63,7 +63,7 @@ This section contains information about support for control types in [!INCLUDE[T
 - [Supporto per automazione interfaccia utente del tipo di controllo TreeItem](ui-automation-support-for-the-treeitem-control-type.md)
 - [Supporto per automazione interfaccia utente del tipo di controllo Window](ui-automation-support-for-the-window-control-type.md)
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Riferimento
 
 <xref:System.Windows.Automation.ControlType>
 

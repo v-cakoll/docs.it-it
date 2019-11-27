@@ -16,9 +16,9 @@ ms.locfileid: "74446808"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Argomenti sulle procedure relative ai client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.  
+ In questa sezione vengono fornite informazioni dettagliate sull'implementazione di funzionalità di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in un'applicazione client.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)  

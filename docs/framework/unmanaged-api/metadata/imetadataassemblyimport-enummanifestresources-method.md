@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449548"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Metodo IMetaDataAssemblyImport::EnumManifestResources
-Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
+Ottiene un puntatore a un enumeratore per le risorse a cui si fa riferimento nel manifesto dell'assembly corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,30 +38,30 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
+ [in, out] Puntatore all'enumeratore. Deve essere un valore null quando viene chiamato il metodo `EnumManifestResources` per la prima volta.  
   
  `rManifestResources`  
- [out] The array used to store the `mdManifestResource` metadata tokens.  
+ out Matrice utilizzata per archiviare i token di metadati del `mdManifestResource`.  
   
  `cMax`  
- [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
+ in Numero massimo di token di `mdManifestResource` che possono essere inseriti nel `rManifestResources`.  
   
  `pcTokens`  
- [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
+ out Il numero di token `mdManifestResource` effettivamente inseriti in `rManifestResources`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumManifestResources` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

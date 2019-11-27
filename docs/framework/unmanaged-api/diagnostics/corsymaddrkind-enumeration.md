@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448584"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Enumerazione CorSymAddrKind
-Indicates the type of memory address.  
+Indica il tipo di indirizzo di memoria.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,21 +44,21 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Indica una variabile locale Microsoft Intermediate Language (MSIL) o un indice di parametro.|  
+|`ADDR_NATIVE_RVA`|Indica un indirizzo virtuale relativo in un modulo.|  
+|`ADDR_NATIVE_REGISTER`|Indica un registro della CPU.|  
+|`ADDR_NATIVE_REGREL`|Indica che il primo indirizzo è un registro e il secondo indirizzo è un offset.|  
+|`ADDR_NATIVE_OFFSET`|Indica un offset da un indirizzo di base.|  
+|`ADDR_NATIVE_REGREG`|Indica che il primo indirizzo è la parte inferiore di un registro e il secondo indirizzo è la parte alta.|  
+|`ADDR_NATIVE_REGSTK`|Indica che il primo indirizzo è la parte inferiore di un registro, il secondo è la parte superiore e il terzo è un offset.|  
+|`ADDR_NATIVE_STKREG`|Indica che il primo indirizzo è un registro, il secondo è un offset e il terzo è la parte superiore del registro.|  
+|`ADDR_BITFIELD`|Indica che il primo indirizzo è l'inizio di un campo e il secondo indirizzo è la lunghezza del campo.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Indica che il primo indirizzo è la sezione e il secondo indirizzo è un offset.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

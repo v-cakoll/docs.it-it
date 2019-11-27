@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352954"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare un attributo dell'elemento padre (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come spostarsi all'elemento padre e trovare un relativo attributo.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come spostarsi all'elemento padre e trovare
 ## <a name="example"></a>Esempio  
  Viene innanzitutto individuato un elemento `Author`. Quindi, viene individuato l'attributo `id` dell'elemento padre.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -49,4 +49,4 @@ id="bk101"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

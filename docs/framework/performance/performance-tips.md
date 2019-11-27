@@ -23,7 +23,7 @@ Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di 
  È consigliabile evitare l'uso di tipi valore nelle situazioni in cui devono essere sottoposti a conversione boxing un numero elevato di volte, ad esempio nelle classi di raccolte non generiche, come <xref:System.Collections.ArrayList?displayProperty=nameWithType>. È possibile evitare la conversione boxing di tipi valore usando raccolte generiche, come <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Le conversioni boxing e unboxing sono processi onerosi dal punto di vista del calcolo. Quando un tipo valore viene sottoposto a conversione boxing, è necessario creare un oggetto completamente nuovo. L'operazione può richiedere fino a 20 volte più tempo rispetto a una semplice assegnazione di riferimento. Durante l'unboxing, il processo di cast può richiedere il quadruplo del tempo rispetto a un'assegnazione. Per altre informazioni, vedere [Boxing e unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Stringhe  
- Quando si concatena un numero elevato di variabili stringa, ad esempio in un ciclo rigido, usare <xref:System.Text.StringBuilder?displayProperty=nameWithType> invece dell'[operatore +](../../csharp/language-reference/operators/addition-operator.md) C# o degli [operatori di concatenazione](../../visual-basic/language-reference/operators/concatenation-operators.md) di Visual Basic. For more information, see [How to concatenate multiple strings](../../csharp/how-to/concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Quando si concatena un numero elevato di variabili stringa, ad esempio in un ciclo rigido, usare <xref:System.Text.StringBuilder?displayProperty=nameWithType> invece dell'[operatore +](../../csharp/language-reference/operators/addition-operator.md) C# o degli [operatori di concatenazione](../../visual-basic/language-reference/operators/concatenation-operators.md) di Visual Basic. Per ulteriori informazioni, vedere [come concatenare più stringhe](../../csharp/how-to/concatenate-multiple-strings.md) e [operatori di concatenazione in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Distruttori  
  Non usare distruttori vuoti. Quando una classe contiene un distruttore, viene creata una voce nella coda Finalize. Quando si chiama il distruttore, viene richiamato Garbage Collector per elaborare la coda. Se il distruttore è vuoto, si verifica semplicemente un calo di prestazioni. Per altre informazioni, vedere [Distruttori](../../csharp/programming-guide/classes-and-structs/destructors.md) e [Durata degli oggetti: come creare ed eliminare definitivamente oggetti](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
@@ -40,7 +40,7 @@ Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di 
 
 - [Rico Mariani's Performance Tidbits](https://blogs.msdn.microsoft.com/ricom/) (Suggerimenti per le prestazioni di Rico Mariani)  
 
-- [Vance Morrison's Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog di Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Vedere anche
 
