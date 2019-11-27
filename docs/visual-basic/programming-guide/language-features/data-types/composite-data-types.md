@@ -19,30 +19,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346380"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipi di dati compositi (Visual Basic)
-In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes. You can build composite data types from elementary types and from other composite types. For example, you can define an array of structure elements, or a structure with array members.  
+Oltre ai tipi di dati elementari Visual Basic fornisce, è anche possibile assemblare elementi di tipi diversi per creare *tipi di dati compositi* , ad esempio strutture, matrici e classi. È possibile compilare tipi di dati compositi da tipi elementari e da altri tipi compositi. Ad esempio, è possibile definire una matrice di elementi della struttura o una struttura con membri di matrice.  
   
 ## <a name="data-types"></a>Tipi di dati  
- A composite type is different from the data type of any of its components. For example, an array of `Integer` elements is not of the `Integer` data type.  
+ Un tipo composito è diverso dal tipo di dati di uno dei relativi componenti. Una matrice di elementi `Integer`, ad esempio, non è del tipo di dati `Integer`.  
   
- An array data type is normally represented using the element type, parentheses, and commas as necessary. For example, a one-dimensional array of `String` elements is represented as `String()`, and a two-dimensional array of `Boolean` elements is represented as `Boolean(,)`.  
+ Un tipo di dati di matrice viene in genere rappresentato utilizzando il tipo di elemento, le parentesi e le virgole secondo necessità. Ad esempio, una matrice unidimensionale di elementi `String` viene rappresentata come `String()`e una matrice bidimensionale di elementi `Boolean` viene rappresentata come `Boolean(,)`.  
   
-## <a name="structure-types"></a>Structure Types  
- There is no single data type comprising all structures. Instead, each definition of a structure represents a unique data type, even if two structures define identical elements in the same order. However, if you create two or more instances of the same structure, Visual Basic considers them to be of the same data type.  
+## <a name="structure-types"></a>Tipi di struttura  
+ Non esiste un singolo tipo di dati costituito da tutte le strutture. Al contrario, ogni definizione di una struttura rappresenta un tipo di dati univoco, anche se due strutture definiscono elementi identici nello stesso ordine. Tuttavia, se si creano due o più istanze della stessa struttura, Visual Basic considera che siano dello stesso tipo di dati.  
   
-## <a name="tuples"></a>Tuple
+## <a name="tuples"></a>Tuples
 
-A tuple is a lightweight structure that contains two or more fields whose types are predefined. Tuples are supported starting with Visual Basic 2017. Tuples are most commonly used to return multiple values from a single method call without having to pass arguments by reference or packaging the returned fields in a more heavy-weight class or structure. See the [Tuples](tuples.md) topic for more information on tuples.
+Una tupla è una struttura leggera che contiene due o più campi i cui tipi sono predefiniti. Le tuple sono supportate a partire da Visual Basic 2017. Le tuple vengono in genere utilizzate per restituire più valori da una singola chiamata al metodo senza dover passare argomenti per riferimento o per comprimere i campi restituiti in una classe o una struttura più pesante. Per ulteriori informazioni sulle tuple, vedere l'argomento [Tuple](tuples.md) .
 
-## <a name="array-types"></a>Array Types  
- There is no single data type comprising all arrays. The data type of a particular instance of an array is determined by the following:  
+## <a name="array-types"></a>Tipi di matrice  
+ Non esiste un singolo tipo di dati costituito da tutte le matrici. Il tipo di dati di una determinata istanza di una matrice è determinato dai seguenti elementi:  
   
-- The fact of being an array  
+- Il fatto di essere una matrice  
   
-- The rank (number of dimensions) of the array  
+- Rango (numero di dimensioni) della matrice  
   
-- The element type of the array  
+- Tipo di elemento della matrice.  
   
- In particular, the length of a given dimension is not part of the instance's data type. Questa condizione è illustrata nell'esempio seguente.  
+ In particolare, la lunghezza di una determinata dimensione non fa parte del tipo di dati dell'istanza. Ciò è illustrato nell'esempio seguente.  
   
 ```vb  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- In the preceding example, array variables `arrayA` and `arrayB` are considered to be of the same data type — `Byte()` — even though they are initialized to different lengths. Variables `arrayB` and `arrayC` are not of the same type because their element types are different. Variables `arrayC` and `arrayD` are not of the same type because their ranks are different. Variables `arrayD` and `arrayE` have the same type — `Short(,)` — because their ranks and element types are the same, even though `arrayD` is not yet initialized.  
+ Nell'esempio precedente, le variabili di matrice `arrayA` e `arrayB` sono considerate dello stesso tipo di dati, `Byte()`, anche se vengono inizializzate su lunghezze diverse. Le variabili `arrayB` e `arrayC` non sono dello stesso tipo perché i tipi di elemento sono diversi. Le variabili `arrayC` e `arrayD` non sono dello stesso tipo perché le relative dimensioni sono diverse. Le variabili `arrayD` e `arrayE` hanno lo stesso tipo, `Short(,)`, perché i relativi tipi di rango e di elemento sono gli stessi, anche se `arrayD` non è ancora inizializzato.  
   
- For more information on arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Per ulteriori informazioni sulle matrici, vedere [matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="class-types"></a>Tipi di classe  
- There is no single data type comprising all classes. Although one class can inherit from another class, each is a separate data type. Multiple instances of the same class are of the same data type. If you assign one class instance variable to another, not only do they have the same data type, they point to the same class instance in memory.  
+ Non esiste un singolo tipo di dati costituito da tutte le classi. Sebbene una classe possa ereditare da un'altra classe, ognuno è un tipo di dati separato. Più istanze della stessa classe sono dello stesso tipo di dati. Se si assegna una variabile di istanza di classe a un'altra, non solo i tipi di dati hanno lo stesso tipo di dati, fanno riferimento alla stessa istanza della classe in memoria.  
   
- For more information on classes, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ Per ulteriori informazioni sulle classi, vedere [oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Procedura: Inserire più valori in una variabile](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

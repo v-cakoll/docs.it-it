@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346718"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Procedura: creare un metodo di estensione Add utilizzato da un inizializzatore di raccolta (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+Quando si usa un inizializzatore di raccolta per creare una raccolta, il compilatore Visual Basic cerca un metodo di `Add` del tipo di raccolta per il quale i parametri per il metodo `Add` corrispondono ai tipi dei valori nell'inizializzatore di raccolta. Questo metodo `Add` viene usato per popolare la raccolta con i valori dall'inizializzatore di raccolta.  
   
- If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer. This is typically what you need to do when you use collection initializers for generic collections.  
+ Se non esiste alcun metodo di `Add` corrispondente e non è possibile modificare il codice per la raccolta, è possibile aggiungere un metodo di estensione denominato `Add` che accetta i parametri richiesti dall'inizializzatore di raccolta. Questa operazione è in genere necessaria quando si usano gli inizializzatori di insieme per le raccolte generiche.  
   
 ## <a name="example"></a>Esempio  
- The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`. The extension method enables you to use the shortened collection initializer syntax.  
+ Nell'esempio seguente viene illustrato come aggiungere un metodo di estensione al tipo di <xref:System.Collections.Generic.List%601> generico in modo che sia possibile utilizzare un inizializzatore di raccolta per aggiungere oggetti di tipo `Employee`. Il metodo di estensione consente di usare la sintassi abbreviata dell'inizializzatore di raccolta.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   

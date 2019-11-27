@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333052"
 ---
 # <a name="raiseevent-statement"></a>Istruzione RaiseEvent
-Triggers an event declared at module level within a class, form, or document.  
+Attiva un evento dichiarato a livello di modulo all'interno di una classe, un form o un documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,30 +28,30 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Parti  
  `eventname`  
- Obbligatorio. Name of the event to trigger.  
+ Obbligatoria. Nome dell'evento da attivare.  
   
  `argumentlist`  
- Parametro facoltativo. Comma-delimited list of variables, arrays, or expressions. The `argumentlist` argument must be enclosed by parentheses. If there are no arguments, the parentheses must be omitted.  
+ Facoltativa. Elenco delimitato da virgole di variabili, matrici o espressioni. Il `argumentlist` argomento deve essere racchiuso tra parentesi. Se non è presente alcun argomento, le parentesi devono essere omesse.  
   
 ## <a name="remarks"></a>Note  
- The required `eventname` is the name of an event declared within the module. It follows Visual Basic variable naming conventions.  
+ Il `eventname` obbligatorio è il nome di un evento dichiarato all'interno del modulo. Segue Visual Basic convenzioni di denominazione delle variabili.  
   
- If the event has not been declared within the module in which it is raised, an error occurs. The following code fragment illustrates an event declaration and a procedure in which the event is raised.  
+ Se l'evento non è stato dichiarato all'interno del modulo in cui viene generato, si verifica un errore. Nel frammento di codice seguente viene illustrata una dichiarazione di evento e una procedura in cui viene generato l'evento.  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- You cannot use `RaiseEvent` to raise events that are not explicitly declared in the module. For example, all forms inherit a <xref:System.Windows.Forms.Control.Click> event from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, it cannot be raised using `RaiseEvent` in a derived form. If you declare a `Click` event in the form module, it shadows the form's own <xref:System.Windows.Forms.Control.Click> event. You can still invoke the form's <xref:System.Windows.Forms.Control.Click> event by calling the <xref:System.Windows.Forms.Control.OnClick%2A> method.  
+ Non è possibile usare `RaiseEvent` per generare eventi non dichiarati in modo esplicito nel modulo. Ad esempio, tutti i form ereditano un evento <xref:System.Windows.Forms.Control.Click> da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, non possono essere generati utilizzando `RaiseEvent` in un formato derivato. Se si dichiara un evento `Click` nel modulo modulo, viene ombreggiato il <xref:System.Windows.Forms.Control.Click> evento del modulo. È comunque possibile richiamare l'evento <xref:System.Windows.Forms.Control.Click> del form chiamando il metodo <xref:System.Windows.Forms.Control.OnClick%2A>.  
   
- By default, an event defined in Visual Basic raises its event handlers in the order that the connections are established. Because events can have `ByRef` parameters, a process that connects late may receive parameters that have been changed by an earlier event handler. After the event handlers execute, control is returned to the subroutine that raised the event.  
-  
-> [!NOTE]
-> Non-shared events should not be raised within the constructor of the class in which they are declared. Although such events do not cause run-time errors, they may fail to be caught by associated event handlers. Use the `Shared` modifier to create a shared event if you need to raise an event from a constructor.  
+ Per impostazione predefinita, un evento definito in Visual Basic genera i relativi gestori eventi nell'ordine in cui vengono stabilite le connessioni. Poiché gli eventi possono avere parametri `ByRef`, un processo che si connette in ritardo può ricevere parametri che sono stati modificati da un gestore eventi precedente. Dopo l'esecuzione dei gestori di eventi, il controllo viene restituito alla subroutine che ha generato l'evento.  
   
 > [!NOTE]
-> You can change the default behavior of events by defining a custom event. For custom events, the `RaiseEvent` statement invokes the event's `RaiseEvent` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Gli eventi non condivisi non devono essere generati all'interno del costruttore della classe in cui sono dichiarati. Sebbene tali eventi non causino errori in fase di esecuzione, potrebbero non essere rilevati dai gestori eventi associati. Usare il modificatore `Shared` per creare un evento condiviso se è necessario generare un evento da un costruttore.  
+  
+> [!NOTE]
+> È possibile modificare il comportamento predefinito degli eventi definendo un evento personalizzato. Per gli eventi personalizzati, l'istruzione `RaiseEvent` richiama la funzione di accesso `RaiseEvent` dell'evento. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
- Negli esempi seguenti, gli eventi vengono usati per il conto alla rovescia dei secondi, da 10 a 0. The code illustrates several of the event-related methods, properties, and statements, including the `RaiseEvent` statement.  
+ Negli esempi seguenti, gli eventi vengono usati per il conto alla rovescia dei secondi, da 10 a 0. Nel codice vengono illustrati diversi metodi, proprietà e istruzioni correlati agli eventi, inclusa l'istruzione `RaiseEvent`.  
   
  La classe che genera un evento viene definita origine e i metodi che lo elaborano vengono definiti gestori eventi. Un'origine eventi può disporre di più gestori per gli eventi generati. Quando la classe genera l'evento, lo stesso evento viene generato in tutte le classi per cui è stato scelto di gestire eventi per tale istanza dell'oggetto.  
   
@@ -59,21 +59,21 @@ RaiseEvent eventname[( argumentlist )]
   
  Il codice di `Form1` specifica gli stati di inizio e fine del form. Contiene inoltre il codice eseguito quando vengono generati gli eventi.  
   
- To use this example, open a new Windows Application project, add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`. Then right-click the form and click **View Code** to open the Code Editor.  
+ Per usare questo esempio, aprire un nuovo progetto di applicazione Windows, aggiungere un pulsante denominato `Button1` e una casella di testo denominata `TextBox1` al form principale, denominato `Form1`. Fare quindi clic con il pulsante destro del mouse sul form e scegliere **Visualizza codice** per aprire l'editor di codice.  
   
- Add a `WithEvents` variable to the declarations section of the `Form1` class.  
+ Aggiungere una variabile di `WithEvents` alla sezione delle dichiarazioni della classe `Form1`.  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Esempio  
- Aggiungere il codice seguente al codice per `Form1`: Replace any duplicate procedures that may exist, such as `Form_Load`, or `Button_Click`.  
+ Aggiungere il codice seguente al codice per `Form1`: Sostituire eventuali procedure duplicate che possono esistere, ad esempio `Form_Load`o `Button_Click`.  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Press F5 to run the preceding example, and click the button labeled **Start**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".  
+ Premere F5 per eseguire l'esempio precedente e fare clic sul pulsante **Avvia**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".  
   
 > [!NOTE]
-> The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../standard/threading/index.md).  
+> Il metodo `My.Application.DoEvents` non elabora gli eventi esattamente allo stesso modo del modulo. Per consentire al modulo di gestire direttamente gli eventi, è possibile utilizzare il multithreading. Per altre informazioni, vedere [Threading gestito](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

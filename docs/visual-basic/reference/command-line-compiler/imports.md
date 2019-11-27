@@ -13,8 +13,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332960"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
+Importa gli spazi dei nomi da un assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -22,23 +22,23 @@ Imports namespaces from a specified assembly.
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`namespaceList`|Obbligatorio. Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|Obbligatoria. Elenco delimitato da virgole di spazi dei nomi da importare.|  
   
 ## <a name="remarks"></a>Note  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+ L'opzione `-imports` importa qualsiasi spazio dei nomi definito all'interno del set di file di origine corrente o da qualsiasi assembly a cui si fa riferimento.  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ I membri in uno spazio dei nomi specificato con `-imports` sono disponibili per tutti i file del codice sorgente nella compilazione. Usare l' [istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per usare uno spazio dei nomi in un unico file del codice sorgente.  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|Per impostare/Imports in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **riferimenti** .<br />3. Immettere il nome dello spazio dei nomi nella casella accanto al pulsante **Aggiungi importazione utente** .<br />4. fare clic sul pulsante **Aggiungi importazione utente** .|  
   
 ## <a name="example"></a>Esempio  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Il codice seguente viene compilato quando si specifica `/imports:system.globalization`. In caso contrario, la compilazione riuscita richiede che un'istruzione `Imports System.Globalization` venga inclusa all'inizio del file di codice sorgente o che la proprietà sia completamente qualificata come `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

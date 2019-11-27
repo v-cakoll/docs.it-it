@@ -18,12 +18,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348144"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
-You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
+È possibile inserire istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un blocco `If...Then...Else` all'interno di un ciclo di `For...Next`. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo è detta *annidata*.  
   
-## <a name="nesting-levels"></a>Nesting Levels  
- Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
+## <a name="nesting-levels"></a>Livelli di annidamento  
+ Le strutture di controllo in Visual Basic possono essere nidificate a tutti i livelli desiderati. Per rendere più leggibili le strutture annidate, è consigliabile rientrare nel corpo di ognuna di esse. Questa operazione viene eseguita automaticamente dall'editor Integrated Development Environment (IDE).  
   
- In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
+ Nell'esempio seguente la procedura `sumRows` somma gli elementi positivi di ogni riga della matrice.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
+ Nell'esempio precedente, la prima istruzione `Next` chiude il ciclo di `For` interno e l'ultima istruzione `Next` chiude il ciclo di `For` esterno.  
   
- Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
+ Analogamente, nelle istruzioni `If` annidate, le istruzioni `End If` si applicano automaticamente all'istruzione `If` precedente più vicina. I cicli di `Do` annidati funzionano in modo simile, con l'istruzione `Loop` più interna che corrisponde all'istruzione `Do` più interna.  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> Per molte strutture di controllo, quando si fa clic su una parola chiave, vengono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando si fa clic su `If` in una costruzione `If...Then...Else`, vengono evidenziate tutte le istanze di `If`, `Then`, `ElseIf`, `Else`e `End If` nella costruzione. Per passare alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
- You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Annidamento di tipi diversi di strutture di controllo  
+ È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. Nell'esempio seguente viene utilizzato un blocco `With` all'interno di un ciclo di `For Each` e blocchi `If` annidati all'interno del blocco `With`.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
- You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
+## <a name="overlapping-control-structures"></a>Strutture di controllo sovrapposte  
+ Non è possibile sovrapporre strutture di controllo. Ciò significa che qualsiasi struttura annidata deve essere completamente contenuta nella successiva struttura più interna. La disposizione seguente, ad esempio, non è valida perché il ciclo di `For` termina prima del termine del blocco di `With` interno.  
   
- ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagramma che mostra un esempio di annidamento non valido.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
+ Il compilatore Visual Basic rileva tali strutture di controllo sovrapposte e segnala un errore in fase di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

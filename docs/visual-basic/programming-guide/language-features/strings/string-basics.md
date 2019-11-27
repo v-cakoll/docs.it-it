@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344287"
 ---
 # <a name="string-basics-in-visual-basic"></a>Nozioni fondamentali sulle stringhe in Visual Basic
-Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. This topic introduces the basic concepts of strings in Visual Basic.  
+Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. In questo argomento vengono introdotti i concetti di base delle stringhe in Visual Basic.  
   
 ## <a name="string-variables"></a>Variabili di tipo String  
- È possibile assegnare a un'istanza di una stringa un valore letterale che rappresenta una serie di caratteri. Esempio:  
+ È possibile assegnare a un'istanza di una stringa un valore letterale che rappresenta una serie di caratteri. Ad esempio:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
@@ -29,7 +29,7 @@ Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:  
+ L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. Per risolvere questo problema, Visual Basic interpreta due virgolette in un valore letterale stringa come una virgoletta singola nella stringa. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,18 +50,18 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Caratteri nelle stringhe  
- Una stringa può essere considerata una serie di valori `Char`. Il tipo `String` è dotato di funzioni predefinite che consentono di eseguire numerose manipolazioni della stringa, simili a quelle consentite dalle matrici. Like all array in .NET Framework, these are zero-based arrays. Per fare riferimento a un carattere specifico di una stringa è possibile usare la proprietà `Chars`, che consente di accedere a un carattere in base alla sua posizione all'interno della stringa. Esempio:  
+ Una stringa può essere considerata una serie di valori `Char`. Il tipo `String` è dotato di funzioni predefinite che consentono di eseguire numerose manipolazioni della stringa, simili a quelle consentite dalle matrici. Come tutte le matrici in .NET Framework, si tratta di matrici in base zero. Per fare riferimento a un carattere specifico di una stringa è possibile usare la proprietà `Chars`, che consente di accedere a un carattere in base alla sua posizione all'interno della stringa. Ad esempio:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- Nell'esempio precedente, la proprietà `Chars` della stringa restituisce il quarto carattere della stringa, ovvero `D`, e lo assegna a `myChar`. È anche possibile ottenere la lunghezza di una particolare stringa mediante la proprietà `Length`. Se è necessario eseguire su una stringa più manipolazioni analoghe a quelle consentite nelle matrici, è possibile convertire la stringa in una matrice di istanze di `Char` usando la funzione `ToCharArray` della stringa. Esempio:  
+ Nell'esempio precedente, la proprietà `Chars` della stringa restituisce il quarto carattere della stringa, ovvero `D`, e lo assegna a `myChar`. È anche possibile ottenere la lunghezza di una particolare stringa mediante la proprietà `Length`. Se è necessario eseguire su una stringa più manipolazioni analoghe a quelle consentite nelle matrici, è possibile convertire la stringa in una matrice di istanze di `Char` usando la funzione `ToCharArray` della stringa. Ad esempio:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
  La variabile `myArray` ora contiene una matrice di istanze di `Char`, ognuna delle quali rappresenta un carattere di `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Immutabilità delle stringhe  
- A string is *immutable*, which means its value cannot be changed once it has been created. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Si consideri l'esempio seguente:  
+ Una stringa è *immutabile*, quindi il suo valore non può essere modificato dopo che è stato creato. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Si consideri l'esempio seguente:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

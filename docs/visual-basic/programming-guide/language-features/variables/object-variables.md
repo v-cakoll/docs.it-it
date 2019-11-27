@@ -16,17 +16,17 @@ ms.locfileid: "74351787"
 ---
 # <a name="object-variables-in-visual-basic"></a>Variabili oggetto in Visual Basic
 
-In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
+Oltre a archiviare direttamente i valori, una variabile può fare riferimento a un oggetto. Si assegna un oggetto a una variabile per gli stessi motivi per cui si assegna un valore a una variabile:
 
-- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
+- Un nome di variabile è spesso più breve e più facile da ricordare rispetto al percorso completo dei metodi e delle proprietà necessari per accedere all'oggetto stesso.
 
-- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
+- L'uso di una variabile che fa riferimento a un oggetto è più efficiente rispetto all'accesso ripetuto ripetutamente all'oggetto tramite le proprietà o i metodi necessari.
 
-- You can change a variable to refer to other objects while your code is running.
+- È possibile modificare una variabile in modo che faccia riferimento ad altri oggetti mentre il codice è in esecuzione.
 
-## <a name="making-code-shorter"></a>Making Code Shorter
+## <a name="making-code-shorter"></a>Creazione di codice più breve
 
-You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
+È possibile utilizzare le variabili oggetto per abbreviare il codice che è necessario digitare. Nell'esempio seguente viene usato il percorso completo dei metodi e delle proprietà per accedere a un oggetto <xref:System.Windows.Forms.Control>.
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
+È possibile abbreviare questo codice e velocizzare l'esecuzione, se si usa una variabile oggetto per il controllo. È necessario dichiarare la variabile oggetto con la classe specifica a cui si desidera assegnarla (`Control` in questo caso). Una volta assegnato un oggetto alla variabile, è possibile considerarlo esattamente come si tratta dell'oggetto a cui fa riferimento. È possibile impostare o recuperare le proprietà dell'oggetto o utilizzare uno dei relativi metodi. Nell'esempio seguente viene usata una variabile oggetto per semplificare il codice nell'esempio precedente.
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

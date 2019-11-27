@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349167"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Spazio di stringa insufficiente (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+Con Visual Basic, è possibile usare stringhe di grandi dimensioni. Tuttavia, i requisiti di altri programmi e il modo in cui si lavora con le stringhe possono comunque causare questo errore.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. Assicurarsi che un'espressione che richiede la creazione di stringhe temporanee durante la valutazione non causi l'errore.  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. Rimuovere tutte le applicazioni non necessarie dalla memoria per creare altro spazio.  
   
 ## <a name="see-also"></a>Vedere anche
 

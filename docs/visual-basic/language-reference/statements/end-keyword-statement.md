@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343743"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> Statement (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<parola chiave > Statement (Visual Basic)
 
-When followed by an additional keyword, terminates the definition of the statement block introduced by that keyword.
+Quando seguito da una parola chiave aggiuntiva, termina la definizione del blocco di istruzioni introdotto da tale parola chiave.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,34 +48,34 @@ End With
 
 |Parte|Descrizione|
 |---|---|
-|`End`|Obbligatorio. Terminates the definition of the programming element.|
-|`AddHandler`|Required to terminate an `AddHandler` accessor begun by a matching `AddHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Class`|Required to terminate a class definition begun by a matching [Class Statement](class-statement.md).|
-|`Enum`|Required to terminate an enumeration definition begun by a matching [Enum Statement](enum-statement.md).|
-|`Event`|Required to terminate a `Custom` event definition begun by a matching [Event Statement](event-statement.md).|  
-|`Function`|Required to terminate a `Function` procedure definition begun by a matching [Function Statement](function-statement.md). If execution encounters an `End Function` statement, control returns to the calling code.|
-|`Get`|Required to terminate a `Property` procedure definition begun by a matching [Get Statement](get-statement.md). If execution encounters an `End Get` statement, control returns to the statement requesting the property's value.|
-|`If`|Required to terminate an `If`...`Then`...`Else` block definition begun by a matching `If` statement. See [If...Then...Else Statement](if-then-else-statement.md).|
-|`Interface`|Required to terminate an interface definition begun by a matching [Interface Statement](interface-statement.md).|
-|`Module`|Required to terminate a module definition begun by a matching [Module Statement](module-statement.md).|
-|`Namespace`|Required to terminate a namespace definition begun by a matching [Namespace Statement](namespace-statement.md).|
-|`Operator`|Required to terminate an operator definition begun by a matching [Operator Statement](operator-statement.md).|
-|`Property`|Required to terminate a property definition begun by a matching [Property Statement](property-statement.md).|
-|`RaiseEvent`|Required to terminate a `RaiseEvent` accessor begun by a matching `RaiseEvent` statement in a custom [Event Statement](event-statement.md).|
-|`RemoveHandler`|Required to terminate a `RemoveHandler` accessor begun by a matching `RemoveHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Select`|Required to terminate a `Select`...`Case` block definition begun by a matching `Select` statement. See [Select...Case Statement](select-case-statement.md).  
-|`Set`|Required to terminate a `Property` procedure definition begun by a matching [Set Statement](set-statement.md). If execution encounters an `End Set` statement, control returns to the statement setting the property's value.  
-|`Structure`|Required to terminate a structure definition begun by a matching [Structure Statement](structure-statement.md).  
-|`Sub`|Required to terminate a `Sub` procedure definition begun by a matching [Sub Statement](sub-statement.md). If execution encounters an `End Sub` statement, control returns to the calling code.  
-|`SyncLock`|Required to terminate a `SyncLock` block definition begun by a matching `SyncLock` statement. See [SyncLock Statement](synclock-statement.md).  
-|`Try`|Required to terminate a `Try`...`Catch`...`Finally` block definition begun by a matching `Try` statement. See [Try...Catch...Finally Statement](try-catch-finally-statement.md).  
-|`While`|Required to terminate a `While` loop definition begun by a matching `While` statement. See [While...End While Statement](while-end-while-statement.md).  
-|`With`| Required to terminate a `With` block definition begun by a matching `With` statement. See [With...End With Statement](with-end-with-statement.md).  
+|`End`|Obbligatoria. Termina la definizione dell'elemento di programmazione.|
+|`AddHandler`|Obbligatorio per terminare una funzione di accesso `AddHandler` iniziata da un'istruzione `AddHandler` corrispondente in un' [istruzione di evento](event-statement.md)personalizzata.|
+|`Class`|Obbligatorio per terminare una definizione di classe iniziata da un' [istruzione di classe](class-statement.md)corrispondente.|
+|`Enum`|Obbligatorio per terminare una definizione di enumerazione iniziata da un' [istruzione enum](enum-statement.md)corrispondente.|
+|`Event`|Obbligatorio per terminare una definizione di evento `Custom` iniziata da un' [istruzione di evento](event-statement.md)corrispondente.|  
+|`Function`|Obbligatorio per terminare una definizione di routine `Function` iniziata da un' [istruzione Function](function-statement.md)corrispondente. Se l'esecuzione rileva un'istruzione `End Function`, il controllo viene restituito al codice chiamante.|
+|`Get`|Obbligatorio per terminare una definizione di routine `Property` iniziata da un' [istruzione Get](get-statement.md)corrispondente. Se l'esecuzione rileva un'istruzione `End Get`, il controllo torna all'istruzione che richiede il valore della proprietà.|
+|`If`|Obbligatorio per terminare una definizione del blocco `If`...`Then`...`Else` iniziata da un'istruzione `If` corrispondente. Vedere [if... Quindi... Else (istruzione](if-then-else-statement.md)).|
+|`Interface`|Obbligatorio per terminare una definizione di interfaccia iniziata da un' [istruzione di interfaccia](interface-statement.md)corrispondente.|
+|`Module`|Obbligatorio per terminare la definizione di un modulo iniziata da un' [istruzione del modulo](module-statement.md)corrispondente.|
+|`Namespace`|Obbligatorio per terminare una definizione dello spazio dei nomi iniziata da un' [istruzione dello spazio dei nomi](namespace-statement.md)corrispondente.|
+|`Operator`|Obbligatorio per terminare la definizione di un operatore iniziata da un' [istruzione di operatore](operator-statement.md)corrispondente.|
+|`Property`|Obbligatorio per terminare una definizione di proprietà iniziata da un' [istruzione Property](property-statement.md)corrispondente.|
+|`RaiseEvent`|Obbligatorio per terminare una funzione di accesso `RaiseEvent` iniziata da un'istruzione `RaiseEvent` corrispondente in un' [istruzione di evento](event-statement.md)personalizzata.|
+|`RemoveHandler`|Obbligatorio per terminare una funzione di accesso `RemoveHandler` iniziata da un'istruzione `RemoveHandler` corrispondente in un' [istruzione di evento](event-statement.md)personalizzata.|
+|`Select`|Obbligatorio per terminare un `Select`...`Case` definizione del blocco iniziata da un'istruzione `Select` corrispondente. Vedere [Select... Istruzione case](select-case-statement.md).  
+|`Set`|Obbligatorio per terminare una definizione di routine `Property` iniziata da un' [istruzione set](set-statement.md)corrispondente. Se l'esecuzione rileva un'istruzione `End Set`, il controllo torna all'istruzione impostando il valore della proprietà.  
+|`Structure`|Obbligatorio per terminare una definizione di struttura iniziata da un' [istruzione di struttura](structure-statement.md)corrispondente.  
+|`Sub`|Obbligatorio per terminare una definizione di routine `Sub` iniziata da un' [istruzione secondaria](sub-statement.md)corrispondente. Se l'esecuzione rileva un'istruzione `End Sub`, il controllo viene restituito al codice chiamante.  
+|`SyncLock`|Obbligatorio per terminare una definizione di blocco `SyncLock` iniziata da un'istruzione `SyncLock` corrispondente. Vedere l' [istruzione SyncLock](synclock-statement.md).  
+|`Try`|Obbligatorio per terminare una definizione del blocco `Try`...`Catch`...`Finally` iniziata da un'istruzione `Try` corrispondente. Vedere [try... Rileva... Istruzione finally](try-catch-finally-statement.md).  
+|`While`|Obbligatorio per terminare una definizione del ciclo `While` iniziata da un'istruzione `While` corrispondente. Vedi [while... End While (istruzione](while-end-while-statement.md)).  
+|`With`| Obbligatorio per terminare una definizione di blocco `With` iniziata da un'istruzione `With` corrispondente. Vedi [con... Termina con l'istruzione](with-end-with-statement.md).  
 |||
   
 ## <a name="directives"></a>Direttive
 
-When preceded by a number sign (`#`), the `End` keyword terminates a preprocessing block introduced by the corresponding directive.  
+Quando è preceduto da un simbolo di cancelletto (`#`), la parola chiave `End` termina un blocco di pre-elaborazione introdotto dalla direttiva corrispondente.  
 
 ```vb
 #End ExternalSource
@@ -85,19 +85,19 @@ When preceded by a number sign (`#`), the `End` keyword terminates a preprocessi
 
 |Parte|Descrizione|
 |---|---|
-|`#End`|Obbligatorio. Terminates the definition of the preprocessing block.|
-|`ExternalSource`|Required to terminate an external source block begun by a matching [#ExternalSource Directive](../directives/externalsource-directive.md).|
-|`If`|Required to terminate a conditional compilation block begun by a matching `#If` directive. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
-|`Region`|Required to terminate a source region block begun by a matching [#Region Directive](../directives/region-directive.md).|
+|`#End`|Obbligatoria. Termina la definizione del blocco di pre-elaborazione.|
+|`ExternalSource`|Obbligatorio per terminare un blocco di origine esterno iniziato da una [direttiva #ExternalSource](../directives/externalsource-directive.md)corrispondente.|
+|`If`|Obbligatorio per terminare un blocco di compilazione condizionale iniziato da una direttiva `#If` corrispondente. Vedere [#If... Quindi... #Else direttive](../directives/if-then-else-directives.md).|
+|`Region`|Obbligatorio per terminare un blocco di area di origine iniziato da una [direttiva #Region](../directives/region-directive.md)corrispondente.|
 |||
 
 ## <a name="remarks"></a>Note
 
-The [End Statement](end-statement.md), without an additional keyword, terminates execution immediately.
+L' [istruzione End](end-statement.md), senza una parola chiave aggiuntiva, termina immediatamente l'esecuzione.
 
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+## <a name="smart-device-developer-notes"></a>Note per gli sviluppatori di Smart Device  
 
-The `End` statement, without an additional keyword, is not supported.  
+L'istruzione `End`, senza una parola chiave aggiuntiva, non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche
 

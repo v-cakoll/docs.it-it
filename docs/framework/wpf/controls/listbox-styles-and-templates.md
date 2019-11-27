@@ -27,7 +27,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="listbox-states"></a>Stati di ListBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ListBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo è valido.|  
 |InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
@@ -39,15 +39,15 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="listboxitem-states"></a>Stati di ListBoxItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ListBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Disabilitato|CommonStates|L'elemento è disabilitato.|  
 |Con stato attivo|FocusStates|L'elemento ha uno stato attivo.|  
 |Con stato non attivo|FocusStates|L'elemento non ha uno stato attivo.|  
 |Deselezionato|SelectionStates|L'elemento non è selezionato.|  
-|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
+|Selected|SelectionStates|L'elemento è attualmente selezionato.|  
 |SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

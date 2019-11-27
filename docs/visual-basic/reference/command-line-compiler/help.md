@@ -25,20 +25,20 @@ Visualizza le opzioni del compilatore.
 -help  
 ```
 
-Oppure  
+oppure  
 
 ```console
 -?  
 ```  
   
 ## <a name="remarks"></a>Note  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+ Se si include questa opzione in una compilazione, non viene creato alcun file di output e non si verifica alcuna compilazione.  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> L'opzione `-help` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- The following code displays help from the command line.  
+ Il codice seguente Visualizza la guida dalla riga di comando.  
   
 ```console  
 vbc -help  

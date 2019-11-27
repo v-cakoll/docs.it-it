@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344392"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Procedura: creare una stringa da una matrice di valori Char (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+In questo esempio viene creata la stringa "abcd" da singoli caratteri.  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- This method has no special requirements.  
+ Questo metodo non ha requisiti particolari.  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ La sintassi `"a"c`, in cui un singolo `c` segue un singolo carattere racchiuso tra virgolette, viene usato per creare un valore letterale carattere.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+ I caratteri null (equivalenti a `Chr(0)`) nella stringa portano a risultati imprevisti quando si usa la stringa. Il carattere null verrà incluso nella stringa, ma in alcune situazioni i caratteri che seguono il carattere null non verranno visualizzati.  
   
 ## <a name="see-also"></a>Vedere anche
 

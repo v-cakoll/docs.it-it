@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346165"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
-Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
+Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore Visual Basic di ignorare il testo che lo segue o il *Commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
   
  È buona norma di programmazione iniziare tutte le routine con un breve commento che ne descriva le caratteristiche funzionali, ovvero le operazioni che vengono compiute. Ciò può rivelarsi a proprio vantaggio e di chi esaminerà il codice. È opportuno separare le informazioni dettagliate relative alle modalità di implementazione dai commenti che descrivono le caratteristiche funzionali. Quando si includono informazioni dettagliate sulle modalità di implementazione, è importante che queste vengano aggiornate contestualmente all'aggiornamento della funzione.  
   
@@ -35,7 +35,7 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Thi
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Indicazioni sui commenti  
- Nella tabella riportata di seguito vengono fornite indicazioni generali sui tipi di commenti che possono precedere una sezione del codice. These are suggestions; Visual Basic does not enforce rules for adding comments. Scrivere il testo che si ritiene più adatto alle proprie esigenze e a quelle di chi leggerà il codice.  
+ Nella tabella riportata di seguito vengono fornite indicazioni generali sui tipi di commenti che possono precedere una sezione del codice. Si tratta di suggerimenti; Visual Basic non impone regole per l'aggiunta di commenti. Scrivere il testo che si ritiene più adatto alle proprie esigenze e a quelle di chi leggerà il codice.  
   
 |||  
 |---|---|  
@@ -54,14 +54,14 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Thi
   
 - Non è possibile inserire sulla stessa riga una sequenza di continuazione di riga seguita da un commento.  
   
- You can add or remove comment symbols for a block of code by selecting one or more lines of code and choosing the **Comment** (![The Visual Basic Comment button in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) and **Uncomment** (![The Visual Basic Uncomment button in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) buttons on the **Edit** toolbar.  
+ È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice selezionando una o più righe di codice e scegliendo il **Commento** (![pulsante Visual Basic commento in Visual studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e rimuovere il **Commento** (![il pulsante Visual Basic Rimuovi commento nei pulsanti di Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) sulla barra degli strumenti di **modifica** .  
   
 > [!NOTE]
-> Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. However, the `'` symbol and the **Comment**/**Uncomment** buttons are easier to use and require less space and memory.  
+> Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. Tuttavia, il simbolo `'` e i pulsanti **commento**/Rimuovi **Commento** sono più semplici da utilizzare e richiedono meno spazio e memoria.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Basic Instincts - Documenting Your Code With XML Comments](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Istinti di base-documentazione del codice con commenti XML](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

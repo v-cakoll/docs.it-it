@@ -16,20 +16,20 @@ ms.locfileid: "74349258"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Sviluppo rapido di applicazioni con My.Resources e My.Settings (Visual Basic)
 
-The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.  
+L'oggetto `My.Resources` fornisce l'accesso alle risorse dell'applicazione e consente di recuperare dinamicamente le risorse per l'applicazione.  
   
 ## <a name="retrieving-resources"></a>Recupero di risorse  
 
- A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object. For example, you can access the application's culture-specific resource files. The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.  
+ Tramite l'oggetto `My.Resources` è possibile recuperare diverse risorse, ad esempio file audio, icone, immagini e stringhe. Ad esempio, è possibile accedere ai file di risorse specifici delle impostazioni cultura dell'applicazione. Nell'esempio seguente viene impostata l'icona del form sull'icona denominata `Form1Icon` archiviata nel file di risorse dell'applicazione.  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ L'oggetto `My.Resources` espone solo le risorse globali. Non fornisce l'accesso ai file di risorse associati ai moduli. È necessario accedere alle risorse del modulo dal form.  
   
- Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ Analogamente, l'oggetto `My.Settings` fornisce l'accesso alle impostazioni dell'applicazione e consente di archiviare e recuperare dinamicamente le impostazioni delle proprietà e altre informazioni per l'applicazione. Per altre informazioni, vedere oggetto [My. resources](../../../visual-basic/language-reference/objects/my-resources-object.md) e [My. Settings](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)

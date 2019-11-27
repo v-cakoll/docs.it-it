@@ -31,35 +31,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347476"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Procedura: dichiarare una costante (Visual Basic)
-You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
+Usare l'istruzione `Const` per dichiarare una costante e impostarne il valore. Dichiarando una costante, si assegna un nome significativo a un valore. Una volta dichiarata una costante, non è possibile modificarla o assegnarle un nuovo valore.  
   
- You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
+ Viene dichiarata una costante all'interno di una routine o nella sezione delle dichiarazioni di un modulo, una classe o una struttura. Le costanti a livello di classe o di struttura sono `Private` per impostazione predefinita, ma possono anche essere dichiarate come `Public`, `Friend`, `Protected`o `Protected Friend` per il livello di accesso al codice appropriato.  
   
- The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
+ La costante deve avere un nome simbolico valido (le regole sono le stesse di quelle per la creazione di nomi di variabili) e un'espressione costituita da costanti e operatori numerici o di stringa (ma nessuna chiamata di funzione).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>To declare a constant  
+### <a name="to-declare-a-constant"></a>Per dichiarare una costante  
   
-- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
+- Scrivere una dichiarazione che includa un identificatore di accesso, la parola chiave `Const` e un'espressione, come negli esempi seguenti:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
+     Quando [Option deduce](../../../../visual-basic/language-reference/statements/option-infer-statement.md) è `Off` e [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) è `On`, è necessario dichiarare una costante in modo esplicito specificando un tipo di dati (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`o `String`).  
   
-     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
+     Quando `Option Infer` è `On` o `Option Strict` è `Off`, è possibile dichiarare una costante senza specificare un tipo di dati con una clausola `As`. Il compilatore determina il tipo della costante dal tipo dell'espressione. Per altre informazioni, vedere [tipi di dati costanti e letterali](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Per dichiarare una costante con un tipo di dati dichiarato in modo esplicito  
   
-- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
+- Scrivere una dichiarazione che includa la parola chiave `As` e un tipo di dati esplicito, come negli esempi seguenti:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
+     È possibile dichiarare più costanti su una sola riga, anche se il codice è più leggibile se si dichiara una sola costante per riga. Se si dichiarano più costanti su una sola riga, devono avere lo stesso livello di accesso (`Public`, `Private`, `Friend`, `Protected`o `Protected Friend`).  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>Per dichiarare più costanti su una sola riga  
   
-- Separate the declarations with a comma and a space, as in the following example:  
+- Separare le dichiarazioni con una virgola e uno spazio, come nell'esempio seguente:  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
@@ -84,7 +84,7 @@ You use the `Const` statement to declare a constant and set its value. By declar
 
 - [Cenni preliminari sulle enumerazioni](enumerations-overview.md)
 - [Cenni preliminari sulle costanti](constants-overview.md)
-- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
+- [Procedura: dichiarare un'enumerazione](how-to-declare-enumerations.md)
 - [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md)
 - [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)

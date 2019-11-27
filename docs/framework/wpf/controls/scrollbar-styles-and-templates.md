@@ -22,16 +22,16 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="scrollbar-parts"></a>Parti della barra di scorrimento  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Contenitore per l'elemento che indica la posizione del <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
 ## <a name="scrollbar-states"></a>Stati ScrollBar  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  

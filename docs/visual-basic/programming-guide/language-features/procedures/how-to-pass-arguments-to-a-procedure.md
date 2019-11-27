@@ -19,31 +19,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344849"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: passare argomenti a una routine (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+Quando si chiama una routine, il nome della procedura viene seguito da un elenco di argomenti racchiuso tra parentesi. Si fornisce un argomento corrispondente a ogni parametro obbligatorio definito dalla procedura ed è possibile specificare facoltativamente argomenti per i parametri del `Optional`. Se non si specifica un parametro di `Optional` nella chiamata, è necessario includere una virgola per contrassegnare la posizione nell'elenco di argomenti se si specificano gli argomenti successivi.  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Se si intende passare un argomento di un tipo di dati diverso da quello del parametro corrispondente, ad esempio `Byte` `String`, è possibile impostare l'opzione di controllo del tipo ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) su `Off`. Se `Option Strict` è `On`, è necessario usare le conversioni verso un tipo di conversione più ampio o le parole chiave di conversione esplicita. Per altre informazioni, vedere [conversioni](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) verso un tipo di dati più piccolo e le [funzioni di conversione dei tipi](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Per ulteriori informazioni, vedere [parametri e argomenti delle procedure](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Per passare uno o più argomenti a una routine  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. Nell'istruzione chiamante, seguire il nome della procedura con le parentesi.  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. Inserire un elenco di argomenti all'interno delle parentesi. Includere un argomento per ogni parametro obbligatorio definito dalla procedura e separare gli argomenti con virgole.  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. Verificare che ogni argomento sia un'espressione valida che restituisca un tipo di dati convertibile nel tipo definito dalla routine per il parametro corrispondente.  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. Se un parametro è definito come [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md), è possibile includerlo nell'elenco di argomenti o ometterlo. Se la si omette, la procedura utilizzerà il valore predefinito definito per il parametro.  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. Se si omette un argomento per un parametro di `Optional` ed esiste un altro parametro dopo di esso nell'elenco dei parametri, è possibile contrassegnare la posizione dell'argomento omesso con una virgola aggiuntiva nell'elenco di argomenti.  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     Nell'esempio seguente viene chiamata la funzione di <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Visual Basic.  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     Nell'esempio precedente viene fornito il primo argomento obbligatorio, ovvero la stringa di messaggio da visualizzare. Omette un argomento per il secondo parametro facoltativo, che specifica i pulsanti da visualizzare nella finestra di messaggio. Poiché la chiamata non fornisce un valore, `MsgBox` usa il valore predefinito `MsgBoxStyle.OKOnly`, che visualizza solo un pulsante **OK** .  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     La seconda virgola nell'elenco di argomenti contrassegna il posto del secondo argomento omesso e l'ultima stringa viene passata al terzo parametro facoltativo di `MsgBox`, ovvero il testo da visualizzare nella barra del titolo.  
   
 ## <a name="see-also"></a>Vedere anche
 

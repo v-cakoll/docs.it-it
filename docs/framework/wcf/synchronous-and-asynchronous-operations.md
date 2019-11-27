@@ -56,7 +56,7 @@ In questo argomento vengono illustrate l'implementazione e la chiamata delle ope
 3. Modello asincrono IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Modello asincrono basato su attività  
- Il modello asincrono basato su attività è la modalità preferita per implementare le operazioni asincrone dal momento che è il più semplice. Per usare questo metodo, implementare semplicemente l'operazione del servizio e specificare un tipo restituito Task\<T>, dove T è il tipo restituito dall'operazione logica. Di seguito è riportato un esempio:  
+ Il modello asincrono basato su attività è la modalità preferita per implementare le operazioni asincrone dal momento che è il più semplice. Per usare questo metodo, implementare semplicemente l'operazione del servizio e specificare un tipo restituito Task\<T>, dove T è il tipo restituito dall'operazione logica. Ad esempio:  
   
 ```csharp  
 public class SampleService:ISampleService   

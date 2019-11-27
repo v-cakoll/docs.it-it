@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: "Procedura: passare routine a un'altra routine"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345252"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procedura: passare una routine a un'altra routine in Visual Basic
-This example shows how to use delegates to pass a procedure to another procedure.  
+Questo esempio illustra come usare i delegati per passare una routine a un'altra routine.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ Un delegato è un tipo che può essere usato come qualsiasi altro tipo in Visual Basic. L'operatore `AddressOf` restituisce un oggetto delegato quando viene applicato al nome di una stored procedure.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ Questo esempio include una routine con un parametro delegate che può assumere un riferimento a un'altra routine, ottenuta con l'operatore `AddressOf`.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>Creare il delegato e le procedure di corrispondenza  
   
-1. Create a delegate named `MathOperator`.  
+1. Creare un delegato denominato `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. Creare una routine denominata `AddNumbers` con i parametri e il valore restituito corrispondenti a quelli di `MathOperator`, in modo che le firme corrispondano.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. Creare una routine denominata `SubtractNumbers` con una firma corrispondente `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. Creare una routine denominata `DelegateTest` che accetta un delegato come parametro.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     Questa procedura può accettare un riferimento a `AddNumbers` o `SubtractNumbers`, perché le relative firme corrispondono alla firma di `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. Creare una routine denominata `Test` che chiama `DelegateTest` una volta con il delegato per `AddNumbers` come parametro e di nuovo con il delegato per `SubtractNumbers` come parametro.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     Quando viene chiamato `Test`, viene prima visualizzato il risultato di `AddNumbers` che agisce su `5` e `3`, ovvero 8. Viene quindi visualizzato il risultato di `SubtractNumbers` che agisce su `9` e `3`, che è 6.  
   
 ## <a name="see-also"></a>Vedere anche
 

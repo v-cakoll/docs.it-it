@@ -32,12 +32,12 @@ Comprime e nasconde sezioni di codice in file di Visual Basic.
   
 |Termine|Definizione|  
 |---|---|  
-|`identifier_string`|Obbligatorio. Stringa che funge da titolo di un'area quando viene compressa. Le aree sono compresse per impostazione predefinita.|  
+|`identifier_string`|Obbligatoria. Stringa che funge da titolo di un'area quando viene compressa. Le aree sono compresse per impostazione predefinita.|  
 |`#End Region`|Termina il blocco `#Region`.|  
   
 ## <a name="remarks"></a>Note  
 
- Usare la direttiva `#Region` per specificare un blocco di codice da espandere o comprimere durante l'uso della funzionalità di struttura dell'editor di Visual Studio Code. You can place, or *nest*, regions within other regions to group similar regions together.  
+ Usare la direttiva `#Region` per specificare un blocco di codice da espandere o comprimere durante l'uso della funzionalità di struttura dell'editor di Visual Studio Code. È possibile inserire, o *annidare*, le aree all'interno di altre aree per raggruppare aree simili.  
   
 ## <a name="example"></a>Esempio  
 

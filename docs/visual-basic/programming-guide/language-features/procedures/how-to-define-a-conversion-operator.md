@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344891"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procedura: definire un operatore di conversione (Visual Basic)
-If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
+Se è stata definita una classe o una struttura, è possibile definire un operatore di conversione dei tipi tra il tipo della classe o della struttura e un altro tipo di dati (ad esempio `Integer`, `Double`o `String`).  
   
- Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ Definire la conversione del tipo come routine della [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) all'interno della classe o della struttura. Tutte le procedure di conversione devono essere `Public Shared`te, ognuna delle quali deve specificare un valore [crescente](../../../../visual-basic/language-reference/modifiers/widening.md) o più [piccolo](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ La definizione di un operatore in una classe o in una struttura è detta anche *Overload* dell'operatore.  
   
 ## <a name="example"></a>Esempio  
- The following example defines conversion operators between a structure called `digit` and a `Byte`.  
+ Nell'esempio seguente vengono definiti gli operatori di conversione tra una struttura denominata `digit` e una `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- You can test the structure `digit` with the following code.  
+ È possibile testare la struttura `digit` con il codice seguente.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
@@ -38,7 +38,7 @@ If you have defined a class or structure, you can define a type conversion opera
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)
 - [Procedura: Usare una classe che definisce gli operatori](./how-to-use-a-class-that-defines-operators.md)
-- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

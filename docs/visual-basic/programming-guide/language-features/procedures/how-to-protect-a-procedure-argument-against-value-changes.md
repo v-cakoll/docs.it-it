@@ -22,12 +22,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344852"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Procedura: impedire la modifica del valore di un argomento di una routine (Visual Basic)
-If a procedure declares a parameter as [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code. This permits the procedure to change the value underlying the argument in the calling code. In some cases the calling code might want to protect against such a change.  
+Se una routine dichiara un parametro come [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic assegna al codice della procedura un riferimento diretto all'elemento di programmazione sottostante all'argomento nel codice chiamante. Ciò consente alla routine di modificare il valore sottostante all'argomento nel codice chiamante. In alcuni casi il codice chiamante potrebbe voler proteggersi da una modifica di questo tipo.  
   
- You can always protect an argument from change by declaring the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in the procedure. If you want to be able to change a given argument in some cases but not others, you can declare it `ByRef` and let the calling code determine the passing mechanism in each call. It does this by enclosing the corresponding argument in parentheses to pass it by value, or not enclosing it in parentheses to pass it by reference. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ È sempre possibile proteggere un argomento dalla modifica dichiarando il parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) corrispondente nella procedura. Se si desidera essere in grado di modificare un argomento specifico in alcuni casi ma non in altri, è possibile dichiararlo `ByRef` e lasciare che il codice chiamante determini il meccanismo di passaggio in ogni chiamata. A tale scopo, racchiudere l'argomento corrispondente tra parentesi per passarlo per valore o non racchiuderlo tra parentesi per passarlo per riferimento. Per altre informazioni, vedere [procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Esempio  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code.  
+ Nell'esempio seguente vengono illustrate due procedure che accettano una variabile di matrice e operano sui relativi elementi. La procedura `increase` aggiunge semplicemente una a ogni elemento. La procedura `replace` assegna una nuova matrice al parametro `a()` e quindi ne aggiunge una a ogni elemento. Tuttavia, la riassegnazione non influisce sulla variabile di matrice sottostante nel codice chiamante.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,12 +35,12 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `increase` can change its members, even though the passing mechanism is `ByVal`.  
+ La prima chiamata di `MsgBox` Visualizza "After increase (n): 11, 21, 31, 41". Poiché la matrice `n` è un tipo di riferimento, `increase` possibile modificarne i membri, anche se il meccanismo di passaggio è `ByVal`.  
   
- The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` in the calling code by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it changes the members of `a`, only the local array `k` is affected. Therefore, `replace` does not increment the values of array `n` in the calling code.  
+ La seconda chiamata di `MsgBox` Visualizza "dopo Replace (n): 11, 21, 31, 41". Poiché `n` viene passato `ByVal`, `replace` possibile modificare la variabile `n` nel codice chiamante assegnando una nuova matrice. Quando `replace` crea la nuova istanza della matrice `k` e la assegna alla variabile locale `a`, perde il riferimento a `n` passato dal codice chiamante. Quando modifica i membri di `a`, viene interessata solo la matrice locale `k`. Pertanto, `replace` non incrementa i valori della matrice `n` nel codice chiamante.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Il valore predefinito in Visual Basic consiste nel passare gli argomenti per valore. Tuttavia, è consigliabile includere la parola chiave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) con tutti i parametri dichiarati. Questo rende il codice più facile da leggere.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -53,4 +53,4 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
 - [Procedura: cambiare il valore di un argomento di routine](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

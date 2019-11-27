@@ -9,10 +9,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336023"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Procedura: modificare un documento Office Open XML (Visual Basic)
 In questo argomento viene presentato un esempio in cui viene aperto, modificato e salvato un documento Office Open XML.  
   
- For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
+ Per ulteriori informazioni su Office Open XML, vedere il [Blog di Eric White](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene ricercato il primo elemento del paragrafo nel documento. Viene recuperato il testo dal paragrafo e quindi vengono eliminate tutte le sequenze di testo nel paragrafo. Viene creata una nuova sequenza di testo costituita dal testo del primo paragrafo convertito in lettere maiuscole. L'XML modificato viene quindi serializzato nel package Open XML e viene chiuso.  
@@ -137,7 +137,7 @@ End Module
   
  Se si apre `SampleDoc.docx` dopo l'esecuzione di questo programma, è possibile notare che il programma ha convertito il primo paragrafo del documento in lettere maiuscole.  
   
- When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
+ Quando viene eseguito con il documento Open XML di esempio descritto in [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), questo esempio produce l'output seguente:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
@@ -145,4 +145,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Tecniche di query avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

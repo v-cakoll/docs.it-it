@@ -18,12 +18,12 @@ Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Lo strumento si trova nel percorso di installazione di .NET Framework 3,5, in particolare%windir%\Microsoft.NET\Framework\v3.5 o in%windir%\Microsoft.NET\Framework64\v3.5 in computer a 64 bit.  
   
  Nelle tabelle riportate di seguito vengono illustrate le opzioni che è possibile utilizzare con lo strumento di registrazione dei servizi di Windows Workflow.  
   
-|Opzione|description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |`/c`|Configura i servizi di Windows Workflow. Utilizzato in scenari di installazione e ripristino.|  
 |`/r`|Rimuove la configurazione dei servizi di Windows Workflow.|  
@@ -67,7 +67,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 > [!NOTE]
 > A differenza di ServiceModelreg.exe, WFServicesReg.exe non consente di aggiungere, rimuovere o ripristinare scriptmap o gestori per un particolare sito Web. Per una soluzione alternativa a questo problema, vedere la sezione "Ripristino di scriptmap".  
   
-## <a name="usage-scenarios"></a>Utilizzo di scenari  
+## <a name="usage-scenarios"></a>Scenari di utilizzo  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installazione di IIS dopo l'installazione di .NET Framework 3.5  
  In un computer [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .NET Framework 3,5 viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di .NET Framework 3,5 riesce senza installare gli scriptmap. xoml e. Rules.  

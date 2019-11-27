@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346663"
 ---
 # <a name="type-mismatch-visual-basic"></a>Tipo non corrispondente (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+Si è provato a convertire un valore in un altro tipo in modo non valido.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Check the assignment to make sure it is valid.  
+1. Controllare l'assegnazione per assicurarsi che sia valida.  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. Assicurarsi che non sia stato passato un oggetto a una routine che prevede una singola proprietà o un valore.  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. Assicurarsi che non sia stato utilizzato un modulo o un nome di progetto in cui era prevista un'espressione.  
   
 ## <a name="see-also"></a>Vedere anche
 

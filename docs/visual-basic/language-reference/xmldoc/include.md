@@ -12,8 +12,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348452"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>\<includere > (Visual Basic)
+Fa riferimento a un altro file che descrive i tipi e i membri nel codice sorgente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>Parametri  
  `filename`  
- Obbligatorio. Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso. Enclose `filename` in double quotation marks (" ").  
+ Obbligatoria. Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso. Racchiudere `filename` tra virgolette doppie ("").  
   
  `tagpath`  
- Obbligatorio. Percorso dei tag di `filename` che porta al `name` del tag. Enclose the path in double quotation marks (" ").  
+ Obbligatoria. Percorso dei tag di `filename` che porta al `name` del tag. Racchiudere il percorso tra virgolette doppie ("").  
   
  `name`  
- Obbligatorio. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ Obbligatoria. Identificatore del nome nel tag che precede i commenti. `Name` avrà una `id`.  
   
  `id`  
- Obbligatorio. ID del tag che precede i commenti. Enclose the ID in single quotation marks (' ').  
+ Obbligatoria. ID del tag che precede i commenti. Racchiudere l'ID racchiuso tra virgolette singole ('').  
   
 ## <a name="remarks"></a>Note  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  
+ Usare il tag `<include>` per fare riferimento ai commenti in un altro file che descrive i tipi e i membri nel codice sorgente. eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ Il tag `<include>` usa la raccomandazione W3C XML Path Language (XPath) versione 1,0. Per ulteriori informazioni sulle modalità di personalizzazione dell'utilizzo `<include>`, vedere <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Esempio  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ Questo esempio usa il tag `<include>` per importare i commenti relativi alla documentazione dei membri da un file denominato `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ Il formato del `commentFile.xml` è il seguente.  
   
 ```xml  
 <Docs>  

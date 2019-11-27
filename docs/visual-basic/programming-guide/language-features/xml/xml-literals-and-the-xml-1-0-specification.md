@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346179"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Valori letterali XML e specifica XML 1.0 (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+La sintassi dei valori letterali XML in Visual Basic supporta la maggior parte della specifica Extensible Markup Language (XML) 1,0. Per informazioni dettagliate sulla specifica XML 1,0, vedere [Extensible Markup Language (XML) 1,0](https://www.w3.org/TR/xml) sul sito Web W3C.  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>Quali Visual Basic non supporta  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- Un valore letterale XML non può contenere un Document Type Definition (DTD).  
   
-- An XML document literal must start with an XML document declaration.  
+- Un valore letterale di documento XML deve iniziare con una dichiarazione di documento XML.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- Un valore letterale XML non può contenere più di 65.535 caratteri su una riga.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- I prefissi degli spazi dei nomi XML, i nomi degli elementi e i nomi degli attributi non possono contenere più di 1.024 caratteri.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Funzionalità aggiuntive supportate da Visual Basic  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- La sintassi dell'espressione incorporata consentita nei valori letterali di elemento e documento non è un XML valido.  
   
 ## <a name="see-also"></a>Vedere anche
 

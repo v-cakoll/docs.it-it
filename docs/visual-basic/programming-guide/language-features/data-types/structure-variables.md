@@ -16,7 +16,7 @@ ms.locfileid: "74346299"
 ---
 # <a name="structure-variables-visual-basic"></a>Variabili di struttura (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. Nell'esempio che segue viene illustrato quanto descritto.
+Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di procedura e a livello di modulo come quel tipo. Ad esempio, è possibile creare una struttura che registra le informazioni relative a un sistema di computer. Nell'esempio che segue viene illustrato quanto descritto.
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+È ora possibile dichiarare variabili di quel tipo. Questa operazione viene illustrata nella dichiarazione seguente.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> Nelle classi e nei moduli, le strutture dichiarate con l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sono predefinite per l'accesso pubblico. Se si vuole che una struttura sia privata, assicurarsi di dichiararla usando la parola chiave [private](../../../../visual-basic/language-reference/modifiers/private.md) .
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>Accesso ai valori della struttura
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+Per assegnare e recuperare valori dagli elementi di una variabile di struttura, è possibile utilizzare la stessa sintassi utilizzata per impostare e ottenere le proprietà di un oggetto. Si inserisce l'operatore di accesso ai membri (`.`) tra il nome della variabile di struttura e il nome dell'elemento. Nell'esempio seguente viene eseguito l'accesso agli elementi delle variabili dichiarate in precedenza come tipo `systemInfo`.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,22 +45,22 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>Assegnazione di variabili di struttura
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+È anche possibile assegnare una variabile a un'altra se entrambe sono dello stesso tipo di struttura. In questo modo tutti gli elementi di una struttura vengono copiati negli elementi corrispondenti dell'altro. Questa operazione viene illustrata nella dichiarazione seguente.
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+Se un elemento della struttura è un tipo di riferimento, ad esempio un `String`, `Object`o una matrice, viene copiato il puntatore ai dati. Nell'esempio precedente, se `systemInfo` aveva incluso una variabile oggetto, l'esempio precedente avrebbe copiato il puntatore da `mySystem` a `yourSystem`e una modifica ai dati dell'oggetto tramite una struttura verrebbe applicata quando si accede tramite l'altra struttura.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

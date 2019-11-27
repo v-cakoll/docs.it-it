@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351469"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Indica che un operatore di conversione (`CType`) converte una classe o una struttura in un tipo che potrebbe non essere in grado di contenere alcuni dei possibili valori della classe o della struttura originale.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Conversione con la parola chiave Narrowing  
+ La procedura di conversione deve specificare `Public Shared` oltre al `Narrowing`.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ Le conversioni verso un tipo di dati più piccolo non vengono sempre eseguite in fase di esecuzione e possono avere esito negativo o causare una perdita di dati. Gli esempi sono `Long` `Integer`, `String` `Date`e un tipo di base a un tipo derivato. Questa ultima conversione si restringe perché il tipo di base potrebbe non contenere tutti i membri del tipo derivato e pertanto non è un'istanza del tipo derivato.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ Se `Option Strict` è `On`, il codice consumer deve utilizzare `CType` per tutte le conversioni verso un tipo di caratteri più piccolo.  
   
- The `Narrowing` keyword can be used in this context:  
+ Il `Narrowing` parola chiave può essere usato in questo contesto:  
   
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

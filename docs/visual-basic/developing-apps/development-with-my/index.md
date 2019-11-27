@@ -24,7 +24,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
   
  Questa tabella mostra gli oggetti `My` di primo livello e le relazioni tra tali oggetti.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![Il diagramma mostra il modello a oggetti per My.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
@@ -38,7 +38,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  Vengono descritti gli oggetti `My.Resources` e `My.Settings`, che consentono di accedere alle risorse e alle impostazioni di un'applicazione.  
   
  [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Viene descritto il modello di avvio/arresto dell'applicazione Visual Basic.  
   
  [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  

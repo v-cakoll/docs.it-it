@@ -46,9 +46,9 @@ Avviare Visual Studio e iniziare il progetto creando un modulo che l'utente può
 
 |**Oggetto**|**Proprietà**|**Valore**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Submit`<br /><br /> **Invia voce**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Clear`<br /><br /> **Cancella voce**|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **per**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Scrivere nel file
 
@@ -83,7 +83,7 @@ Per aggiungere la possibilità di scrivere in un file tramite l'applicazione, us
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Clear`.
+4. Aggiungere infine il codice per cancellare <xref:System.Windows.Forms.TextBox>. Aggiungere il codice seguente all'evento `Clear` del pulsante <xref:System.Windows.Forms.Control.Click>.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -95,10 +95,10 @@ Per questa sezione della procedura, aggiungere i controlli della tabella seguent
 
 |Control|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Schermo**|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`Display`<br /><br /> **Visualizza**|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**|`GetEntries`<br /><br /> **Ottieni voci**|
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata
 
@@ -124,13 +124,13 @@ Aggiungere i controlli della tabella seguente al form e impostare i valori corri
 
 |Control|Proprietà|Valori|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **per**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci
 
-1. Aggiungere il codice seguente all'evento <xref:System.Windows.Forms.Control.Click> del pulsante `Display`, dopo `DisplayEntry.Text = ReadString`.
+1. Aggiungere il codice seguente all'evento `Display` del pulsante <xref:System.Windows.Forms.Control.Click>, dopo `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 

@@ -38,7 +38,7 @@ Il valore predefinito di `Date` è 00.00.00 (mezzanotte) del 1° gennaio 0001.
 
 È necessario racchiudere un valore letterale `Date` tra simboli di cancelletto (`# #`). Il valore della data deve essere specificato nel formato M/g/aaaa, ad esempio `#5/31/1993#`, oppure aaaa-MM-gg, ad esempio `#1993-5-31#`. Quando si specifica prima l'anno, è possibile usare le barre.  Questo requisito è indipendente dalle impostazioni locali usate e dalle impostazioni relative al formato di data e ora del computer.
 
-Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date``#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. But suppose you deploy your application in many countries/regions. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.
+Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date``#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. Si supponga, tuttavia, di distribuire l'applicazione in molti paesi o aree geografiche. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.
 
 ## <a name="workarounds"></a>Soluzioni
 
@@ -68,15 +68,15 @@ Se un valore `Date` viene convertito nel tipo `String`, Visual Basic esegue il r
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-- **Interop Considerations.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di data/ora in altri ambienti non sono compatibili con il tipo `Date` di Visual Basic. Se si passa un argomento di data/ora a un componente di questo tipo, nel nuovo codice Visual Basic è necessario dichiararlo come `Double` anziché come `Date` e usare i metodi di conversione <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> e <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
+- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di data/ora in altri ambienti non sono compatibili con il tipo `Date` di Visual Basic. Se si passa un argomento di data/ora a un componente di questo tipo, nel nuovo codice Visual Basic è necessario dichiararlo come `Double` anziché come `Date` e usare i metodi di conversione <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> e <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. Il compilatore considera tuttavia i valori letterali racchiusi tra simboli del cancelletto (`# #`) come valori `Date`.
+- **Digitare i caratteri.** `Date` non ha un carattere di tipo letterale o un carattere di tipo identificatore. Il compilatore considera tuttavia i valori letterali racchiusi tra simboli del cancelletto (`# #`) come valori `Date`.
 
-- **Framework Type.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.DateTime?displayProperty=nameWithType>.
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.DateTime?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Esempio
 
-Una variabile o una costante del tipo di dati `Date` contiene sia la data che l'ora. Questa condizione è illustrata nell'esempio seguente.
+Una variabile o una costante del tipo di dati `Date` contiene sia la data che l'ora. Ciò è illustrato nell'esempio seguente.
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
@@ -86,8 +86,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
-- [Stringhe di formato di data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [Stringhe di formato di data e ora personalizzato](../../../standard/base-types/custom-date-and-time-format-strings.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

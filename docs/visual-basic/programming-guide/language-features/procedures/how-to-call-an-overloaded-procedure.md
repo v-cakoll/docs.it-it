@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340201"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procedura: chiamare una routine di overload (Visual Basic)
-The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
+Il vantaggio dell'overload di una stored procedure è la flessibilità della chiamata. Il codice chiamante può ottenere le informazioni necessarie per passare alla routine e quindi chiamare un solo nome di routine, indipendentemente dagli argomenti che passano.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Per chiamare una routine con più di una versione definita  
   
-1. In the calling code, determine which data to pass to the procedure.  
+1. Nel codice chiamante determinare i dati da passare alla routine.  
   
-2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
+2. Scrivere la chiamata di procedura in modo normale, presentando i dati nell'elenco di argomenti. Assicurarsi che gli argomenti corrispondano all'elenco di parametri in una delle versioni definite per la stored procedure.  
   
-3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
+3. Non è necessario determinare la versione della procedura da chiamare. Visual Basic passa il controllo alla versione corrispondente all'elenco di argomenti.  
   
-     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
+     Nell'esempio seguente viene chiamata la procedura `post` dichiarata in procedura [: definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md). Ottiene l'identificazione del cliente, determina se è un `String` o un `Integer`, quindi in entrambi i casi chiama la stessa procedura.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -43,4 +43,4 @@ The advantage of overloading a procedure is in the flexibility of the call. The 
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
 - [Risoluzione dell'overload](./overload-resolution.md)
-- [Overload](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

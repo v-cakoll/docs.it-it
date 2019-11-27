@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: 'Procedura: creare stringhe usando StringBuilder'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,13 +12,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344377"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Procedura: creare stringhe usando StringBuilder in Visual Basic
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+Questo esempio crea una stringa estesa da molte stringhe più piccole usando la classe <xref:System.Text.StringBuilder>. La classe <xref:System.Text.StringBuilder> è più efficiente dell'operatore `&=` per la concatenazione di molte stringhe.
 
 ## <a name="example"></a>Esempio
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+Nell'esempio seguente viene creata un'istanza della classe <xref:System.Text.StringBuilder>, vengono accodate 1.000 stringhe a tale istanza, quindi viene restituita la relativa rappresentazione di stringa:
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 

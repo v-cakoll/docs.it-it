@@ -16,13 +16,13 @@ ms.locfileid: "74346709"
 
 Un *oggetto* è una combinazione di codice e dati che è possibile considerare come singola unità. Un oggetto può essere una parte di un'applicazione, ad esempio un controllo o un form. Anche un'intera applicazione può essere un oggetto.
 
-When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.
+Quando si crea un'applicazione in Visual Basic, si utilizzano costantemente gli oggetti. È possibile utilizzare gli oggetti forniti da Visual Basic, ad esempio controlli, form e oggetti di accesso ai dati. È anche possibile usare oggetti di altre applicazioni all'interno dell'applicazione Visual Basic. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.
 
 Questo argomento fornisce informazioni dettagliate sugli oggetti.
 
 ## <a name="objects-and-classes"></a>Oggetti e classi
 
-Each object in Visual Basic is defined by a *class*. che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
+Ogni oggetto in Visual Basic è definito da una *classe*. che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
 
 Per comprendere la relazione esistente tra un oggetto e la classe di appartenenza, si pensi alla relazione tra gli stampi per biscotti e i biscotti. La classe è lo stampo che definisce le caratteristiche di ogni biscotto, ad esempio le dimensioni e la forma. La classe viene usata per creare oggetti. Gli oggetti sono i biscotti.
 
@@ -98,7 +98,7 @@ Usare le routine delle proprietà nei casi seguenti:
 
 Usare i campi nei casi seguenti:
 
-- Il valore è di tipo auto-convalidante. Ad esempio, se a una variabile `Boolean` viene assegnato un valore diverso da `True` o `False`, si verifica un errore o una conversione automatica di dati.
+- Il valore è di tipo auto-convalidante. Ad esempio, se a una variabile `True` viene assegnato un valore diverso da `False` o `Boolean`, si verifica un errore o una conversione automatica di dati.
 
 - Tutti i valori compresi nell'intervallo supportato dal tipo dati sono validi. Questa affermazione è vera per diverse proprietà di tipo `Single` o `Double`.
 
@@ -121,11 +121,11 @@ Si noti che un metodo è semplicemente una *routine* esposta da un oggetto.
 
 Per altre informazioni, vedere [Routine](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
 
-### <a name="events"></a>eventi
+### <a name="events"></a>Events
 
 Un evento è un'azione che viene riconosciuta da un oggetto, ad esempio il clic del mouse o la pressione di un tasto, e alla quale è possibile rispondere mediante un codice scritto appositamente. Gli eventi possono verificarsi come conseguenza di un'azione utente o un codice programma oppure possono essere generati dal sistema. Il codice che segnala un evento è detto codice che *genera* l'evento, mentre il codice che risponde all'evento è detto codice che *gestisce* l'evento.
 
-È inoltre possibile sviluppare eventi personalizzati generati dai propri oggetti e gestiti da altri oggetti. Per altre informazioni, vedere [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).
+È inoltre possibile sviluppare eventi personalizzati generati dai propri oggetti e gestiti da altri oggetti. Per ulteriori informazioni, vedi [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).
 
 ### <a name="instance-members-and-shared-members"></a>Membri di istanza e membri condivisi
 
@@ -176,7 +176,7 @@ D'altra parte, i membri dichiarati all'interno di un modulo sono accessibili pub
 
 Grazie agli oggetti, è possibile dichiarare variabili e routine una sola volta e quindi riutilizzarle quando necessario. Se, ad esempio, si desidera aggiungere un correttore ortografico a un'applicazione, è possibile definire tutte le variabili e le funzioni di supporto per fornire la funzionalità di correttore ortografico. Se il controllo ortografico viene creato come classe, sarà possibile riutilizzarlo in altre applicazioni aggiungendo un riferimento all'assembly compilato. Soluzione ancora migliore, sarà possibile risparmiare lavoro usando una classe correttore ortografico già sviluppata da altri programmatori.
 
-The .NET Framework provides many examples of components that are available for use. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
+Il .NET Framework fornisce molti esempi di componenti disponibili per l'utilizzo. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
 
 ```vb
 Public Sub examineTimeZone()
@@ -212,9 +212,9 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
    Public Class reversibleButton
    ```
 
-   Verificare che l'ultima riga di codice della classe sia seguita da un'istruzione `End Class`. Per impostazione predefinita, quando si immette un'istruzione `Class` l'ambiente di sviluppo integrato (IDE) genera automaticamente un'istruzione `End Class`.
+   Verificare che l'ultima riga di codice della classe sia seguita da un'istruzione `End Class`. Per impostazione predefinita, quando si immette un'istruzione `End Class` l'ambiente di sviluppo integrato (IDE) genera automaticamente un'istruzione `Class`.
 
-2. Aggiungere un'[istruzione Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md) subito dopo l'istruzione `Class`. Specificare la classe dalla quale deriva la nuova classe.
+2. Aggiungere un'`Class`istruzione Inherits[ subito dopo l'istruzione ](../../../../visual-basic/language-reference/statements/inherits-statement.md). Specificare la classe dalla quale deriva la nuova classe.
 
    ```vb
    Inherits System.Windows.Forms.Button
@@ -249,14 +249,14 @@ Un altro tipo di relazione tra oggetti è la *relazione di contenimento*. Gli og
 
 #### <a name="collections"></a>Raccolte
 
-Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
+Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supporta una sintassi specifica in [for each... Istruzione successiva](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Procedura dettagliata: definizione delle classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 Viene fornita una descrizione dettagliata della creazione di una classe.
 
-[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Metodi e proprietà di overload](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 Metodi e proprietà di overload
 
 [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
@@ -271,5 +271,5 @@ Viene descritto come creare e usare i tipi anonimi, che consentono di creare ogg
 [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 Vengono discussi gli inizializzatori di oggetto, usati per creare istanze di tipi denominati e anonimi mediante un'unica espressione.
 
-[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Viene descritto come dedurre nomi e tipi di proprietà nelle dichiarazioni di tipo anonimo. Vengono forniti esempi di inferenze riuscite e non riuscite.

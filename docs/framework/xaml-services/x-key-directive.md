@@ -20,7 +20,7 @@ ms.locfileid: "74283850"
 # <a name="xkey-directive"></a>Direttiva x:Key
 Identifica in modo univoco gli elementi creati e a cui si fa riferimento in un dizionario definito da XAML. L'aggiunta di un valore `x:Key` a un elemento oggetto XAML è il modo più comune per identificare una risorsa in un dizionario risorse, ad esempio in un <xref:System.Windows.ResourceDictionary>WPF.  
   
-## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per attributi  
   
 ```xaml  
 <object x:Key="stringKeyValue".../>  
@@ -40,14 +40,14 @@ Identifica in modo univoco gli elementi creati e a cui si fa riferimento in un d
 </object.Resources>  
 ```  
   
-## <a name="xaml-values"></a>Valori XAML  
+## <a name="xaml-values"></a>Valor XAML  
   
 |||  
 |-|-|  
 |`stringKeyValue`|Stringa di testo da utilizzare come chiave. La stringa di testo deve essere conforme alla [Grammatica XamlName](xamlname-grammar.md).|  
 |`markupExtensionUsage`|All'interno dei delimitatori dell'estensione di markup {}, un utilizzo dell'estensione di markup che fornisce un oggetto da usare come chiave. Vedere la sezione Osservazioni.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  `x:Key` supporta il concetto del dizionario risorse XAML. XAML come linguaggio non definisce un'implementazione del dizionario risorse, che viene lasciata a Framework dell'interfaccia utente specifici. Per altre informazioni su come vengono implementati i dizionari risorse XAML in WPF, vedere [risorse XAML](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
  In XAML 2006 e WPF, `x:Key` necessario fornire come attributo. È comunque possibile usare chiavi non di tipo stringa, ma questo richiede un utilizzo dell'estensione di markup per fornire il valore non stringa nella forma dell'attributo. Se si usa XAML 2009, `x:Key` possibile specificare come elemento, per supportare in modo esplicito i dizionari codificati da tipi di oggetto diversi dalle stringhe senza richiedere un'estensione di markup intermedia. Vedere la sezione "XAML 2009" in questo argomento. Il resto della sezione osservazioni si applica in modo specifico all'implementazione XAML 2006.  
@@ -95,7 +95,7 @@ keyObject
 </object>  
 ```  
   
-### <a name="xaml-values"></a>Valori XAML  
+### <a name="xaml-values"></a>Valor XAML  
   
 |||  
 |-|-|  

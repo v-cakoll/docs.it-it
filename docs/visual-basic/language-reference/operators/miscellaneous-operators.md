@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous operators
+title: Operatori vari
 ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
@@ -12,25 +12,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344059"
 ---
-# <a name="miscellaneous-operators-visual-basic"></a>Miscellaneous operators (Visual Basic)
-The following are miscellaneous operators defined in Visual Basic.  
+# <a name="miscellaneous-operators-visual-basic"></a>Operatori vari (Visual Basic)
+Di seguito sono riportati gli operatori vari definiti in Visual Basic.  
   
-[?. null-conditional operator](null-conditional-operators.md)
+[?. operatore condizionale null](null-conditional-operators.md)
 
-[?() null-conditional operator](null-conditional-operators.md)
+[? () (operatore condizionale null)](null-conditional-operators.md)
 
- [AddressOf operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Operatore await](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType operator](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [Operatore GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [Function expression](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [Espressione di funzione](../../../visual-basic/language-reference/operators/function-expression.md)  
 
- [If operator](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [TypeOf operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Operatore TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operators listed by functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatori elencati per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -16,41 +16,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344879"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedura: definire un parametro per una routine (Visual Basic)
-A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
+Un *parametro* consente al codice chiamante di passare un valore alla routine quando lo chiama. Si dichiara ogni parametro per una routine nello stesso modo in cui si dichiara una variabile, specificandone il nome e il tipo di dati. Si specifica anche il meccanismo di passaggio e se il parametro è facoltativo.  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Per ulteriori informazioni, vedere [parametri e argomenti delle procedure](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
+### <a name="to-define-a-procedure-parameter"></a>Per definire un parametro di routine  
   
-1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
+1. Nella dichiarazione di routine aggiungere il nome del parametro all'elenco di parametri della stored procedure, separandoli da altri parametri per virgole.  
   
-2. Decide the data type of the parameter.  
+2. Decidere il tipo di dati del parametro.  
   
-3. Follow the parameter name with an `As` clause to specify the data type.  
+3. Per specificare il tipo di dati, seguire il nome del parametro con una clausola `As`.  
   
-4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
+4. Decidere il meccanismo di passaggio desiderato per il parametro. In genere si passa un parametro per valore, a meno che non si desideri che la procedura sia in grado di modificare il valore nel codice chiamante.  
   
-5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Anteporre [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) al nome del parametro per specificare il meccanismo di passaggio. Per ulteriori informazioni, vedere [differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
+6. Se il parametro è facoltativo, precedere il meccanismo di passaggio con [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) e seguire il tipo di dati del parametro con un segno di uguale (`=`) e un valore predefinito.  
   
-     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
+     Nell'esempio seguente viene definita la struttura di una routine `Sub` con tre parametri. Le prime due sono obbligatorie e la terza è facoltativa. Le dichiarazioni di parametro sono separate da virgole nell'elenco di parametri.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     Il primo parametro accetta un oggetto `customer` e `updateCustomer` può aggiornare direttamente la variabile passata a `c` perché all'argomento viene passato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). La stored procedure non può modificare i valori degli ultimi due argomenti perché vengono passati [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
+     Se il codice chiamante non fornisce un valore per il parametro `level`, Visual Basic lo imposta sul valore predefinito 0.  
   
-     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
+     Se l'opzione di controllo del tipo ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) è `Off`, la clausola `As` è facoltativa quando si definisce un parametro. Tuttavia, se uno dei parametri usa una clausola `As`, è necessario utilizzarli tutti. Se l'opzione di controllo del tipo è `On`, la clausola `As` è obbligatoria per ogni definizione di parametro.  
   
-     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
+     Specificare i tipi di dati per tutti gli elementi di programmazione è noto come tipizzazione *forte*. Quando si imposta `Option Strict On`, Visual Basic impone la tipizzazione forte. Questa operazione è fortemente consigliata per i motivi seguenti:  
   
-    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
+    - Abilita il supporto IntelliSense per le variabili e i parametri. In questo modo è possibile visualizzare le relative proprietà e altri membri durante la digitazione nel codice.  
   
-    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
+    - Consente al compilatore di eseguire il controllo dei tipi. Questo consente di intercettare le istruzioni che possono avere esito negativo in fase di esecuzione a causa di errori come l'overflow. Rileva inoltre le chiamate ai metodi su oggetti che non li supportano.  
   
-    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+    - Questo comporta un'esecuzione più rapida del codice. Un motivo è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic lo assegna al tipo di `Object`. Il codice compilato potrebbe dover eseguire la conversione tra `Object` e altri tipi di dati, riducendo così le prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche
 

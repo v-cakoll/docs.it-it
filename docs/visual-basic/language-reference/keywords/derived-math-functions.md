@@ -29,30 +29,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349844"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funzioni matematiche derivate (Visual Basic)
-The following table shows non-intrinsic math functions that can be derived from the intrinsic math functions of the <xref:System.Math?displayProperty=nameWithType> object. You can access the intrinsic math functions by adding `Imports System.Math` to your file or project.  
+Nella tabella seguente vengono illustrate le funzioni matematiche non intrinseche che possono essere derivate dalle funzioni matematiche intrinseche dell'oggetto <xref:System.Math?displayProperty=nameWithType>. È possibile accedere alle funzioni matematiche intrinseche aggiungendo `Imports System.Math` al file o al progetto.  
   
-|Funzione|Derived equivalents|  
+|Funzione|Equivalenti derivati|  
 |--------------|-------------------------|  
-|Secant (Sec(x))|1 / Cos(x)|  
-|Cosecant (Csc(x))|1 / Sin(x)|  
-|Cotangent (Ctan(x))|1 / Tan(x)|  
-|Inverse sine (Asin(x))|Atan(x / Sqrt(-x * x + 1))|  
-|Inverse cosine (Acos(x))|Atan(-x / Sqrt(-x * x + 1)) + 2 \* Atan(1)|  
-|Inverse secant (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt(x \* x – 1))|  
-|Inverse cosecant (Acsc(x))|Atan(Sign(x) / Sqrt(x * x – 1))|  
-|Inverse cotangent (Acot(x))|2 * Atan(1) - Atan(x)|  
-|Hyperbolic sine (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
-|Hyperbolic cosine (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
-|Hyperbolic tangent (Tanh(x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
-|Hyperbolic secant (Sech(x))|2 / (Exp(x) + Exp(-x))|  
-|Hyperbolic cosecant (Csch(x))|2 / (Exp(x) – Exp(-x))|  
-|Hyperbolic cotangent (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
-|Inverse hyperbolic sine (Asinh(x))|Log(x + Sqrt(x * x + 1))|  
-|Inverse hyperbolic cosine (Acosh(x))|Log(x + Sqrt(x * x – 1))|  
-|Inverse hyperbolic tangent (Atanh(x))|Log((1 + x) / (1 – x)) / 2|  
-|Inverse hyperbolic secant (AsecH(x))|Log((Sqrt(-x * x + 1) + 1) / x)|  
-|Inverse hyperbolic cosecant (Acsch(x))|Log((Sign(x) * Sqrt(x \* x + 1) + 1) / x)|  
-|Inverse hyperbolic cotangent (Acoth(x))|Log((x + 1) / (x – 1)) / 2|  
+|Secante (sec (x))|1/cos (x)|  
+|Cosecator (CSC (x))|1/sin (x)|  
+|Cotangente (CTAN (x))|1/tan (x)|  
+|Seno inverso (Asin (x))|Atan (x/sqrt (-x * x + 1))|  
+|Coseno inverso (ARCCOS (x))|Atan (-x/sqrt (-x * x + 1)) + 2 \* Atan (1)|  
+|Secante inversa (ASEC (x))|2 * Atan (1) – Atan (Sign (x)/sqrt (x \* x-1))|  
+|Cosecante inverso (ACSC (x))|Atan (Sign (x)/sqrt (x * x-1))|  
+|Cotangente inversa (acot (x))|2 * Atan (1)-Atan (x)|  
+|Seno iperbolico ((x))|(Exp(x) – Exp(-x)) / 2|  
+|Coseno iperbolico (cosh (x))|(Exp(x) + Exp(-x)) / 2|  
+|Tangente iperbolica (tanh (x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
+|Secante iperbolica (sech (x))|2 / (Exp(x) + Exp(-x))|  
+|Cosecante iperbolica (csch (x))|2 / (Exp(x) – Exp(-x))|  
+|Cotangente iperbolica (coth (x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
+|Seno iperbolico inverso (asinh (x))|Log (x + sqrt (x * x + 1))|  
+|Coseno iperbolico inverso (acosh (x))|Log (x + sqrt (x * x-1))|  
+|Tangente iperbolica inversa (atanh (x))|Log ((1 + x)/(1 – x))/2|  
+|Secante iperbolica inversa (AsecH (x))|Log ((sqrt (-x * x + 1) + 1)/x)|  
+|Cosecante iperbolica inversa (Acsch (x))|Log ((Sign (x) * sqrt (x \* x + 1) + 1)/x)|  
+|Cotangente iperbolica inversa (Acoth (x))|Log ((x + 1)/(x-1))/2|  
   
 ## <a name="see-also"></a>Vedere anche
 

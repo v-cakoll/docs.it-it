@@ -27,7 +27,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="treeview-states"></a>Stati di TreeView  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TreeView>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -36,16 +36,16 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="treeviewitem-parts"></a>Parti TreeViewItem  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Elemento visivo che contiene il contenuto dell'intestazione del controllo <xref:System.Windows.Controls.TreeView>.|  
   
 ## <a name="treeviewitem-states"></a>Stati di TreeViewItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.TreeViewItem>.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.TreeViewItem> è disabilitato.|  
 |Con stato attivo|FocusStates|Il <xref:System.Windows.Controls.TreeViewItem> ha lo stato attivo.|  
@@ -54,7 +54,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 |Collapsed|ExpansionStates|Il controllo <xref:System.Windows.Controls.TreeViewItem> è compresso.|  
 |HasItems|HasItemsStates|Il <xref:System.Windows.Controls.TreeViewItem> contiene elementi.|  
 |Noitems|HasItemsStates|Il <xref:System.Windows.Controls.TreeViewItem> non contiene elementi.|  
-|Selezionato|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato.|  
+|Selected|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato.|  
 |SelectedInactive|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> è selezionato ma non attivo.|  
 |Deselezionato|SelectionStates|Il <xref:System.Windows.Controls.TreeViewItem> non è selezionato.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  

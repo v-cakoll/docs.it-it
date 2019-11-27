@@ -14,41 +14,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345224"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversione di tipo relaxed del delegato (Visual Basic)
-Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical. Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.  
+La conversione di un delegato rilassato consente di assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche. Pertanto, l'associazione a delegati diventa coerente con l'associazione già consentita per le chiamate al metodo.  
   
-## <a name="parameters-and-return-type"></a>Parameters and Return Type  
- In place of exact signature match, relaxed conversion requires that the following conditions be met when `Option Strict` is set to `On`:  
+## <a name="parameters-and-return-type"></a>Parametri e tipo restituito  
+ Al posto della corrispondenza esatta della firma, la conversione con attenuazione richiede che vengano soddisfatte le condizioni seguenti quando `Option Strict` è impostato su `On`:  
   
-- A widening conversion must exist from the data type of each delegate parameter to the data type of the corresponding parameter of the assigned function or `Sub`. In the following example, the delegate `Del1` has one parameter, an `Integer`. Parameter `m` in the assigned lambda expressions must have a data type for which there is a widening conversion from `Integer`, such as `Long` or `Double`.  
+- Deve esistere una conversione verso un tipo di dati più ampio dal tipo di dati di ogni parametro del delegato al tipo di dati del parametro corrispondente della funzione o `Sub`assegnata. Nell'esempio seguente, il delegato `Del1` dispone di un parametro, una `Integer`. Il parametro `m` nelle espressioni lambda assegnate deve avere un tipo di dati per il quale esiste una conversione verso un tipo di dati più ampio da `Integer`, ad esempio `Long` o `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
      [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
-     Narrowing conversions are permitted only when `Option Strict` is set to `Off`.  
+     Le conversioni verso un tipo di caratteri più piccolo sono consentite solo quando `Option Strict` è impostato su `Off`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
-- A widening conversion must exist in the opposite direction from the return type of the assigned function or `Sub` to the return type of the delegate. In the following examples, the body of each assigned lambda expression must evaluate to a data type that widens to `Integer` because the return type of `del1` is `Integer`.  
+- Una conversione verso un tipo di allargamento deve esistere nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` al tipo restituito del delegato. Negli esempi seguenti, il corpo di ogni espressione lambda assegnata deve restituire un tipo di dati che viene ampliato a `Integer` perché il tipo restituito di `del1` è `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
- If `Option Strict` is set to `Off`, the widening restriction is removed in both directions.  
+ Se `Option Strict` è impostato su `Off`, la restrizione di allargamento viene rimossa in entrambe le direzioni.  
   
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
-## <a name="omitting-parameter-specifications"></a>Omitting Parameter Specifications  
- Relaxed delegates also allow you to completely omit parameter specifications in the assigned method:  
+## <a name="omitting-parameter-specifications"></a>Omissione delle specifiche di parametro  
+ I delegati rilassati consentono inoltre di omettere completamente le specifiche dei parametri nel metodo assegnato:  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#6)]  
   
- Note that you cannot specify some parameters and omit others.  
+ Si noti che non è possibile specificare alcuni parametri e ometterne altri.  
   
  [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
- The ability to omit parameters is helpful in a situation such as defining an event handler, where several complex parameters are involved. The arguments to some event handlers are not used. Instead, the handler directly accesses the state of the control on which the event is registered, and ignores the arguments. Relaxed delegates allow you to omit the arguments in such declarations when no ambiguities result. In the following example, the fully specified method `OnClick` can be rewritten as `RelaxedOnClick`.  
+ La possibilità di omettere i parametri è utile in una situazione come la definizione di un gestore eventi, in cui sono interessati diversi parametri complessi. Gli argomenti per alcuni gestori di eventi non vengono usati. Al contrario, il gestore accede direttamente allo stato del controllo in cui è registrato l'evento e ignora gli argomenti. I delegati rilassati consentono di omettere gli argomenti in tali dichiarazioni quando non risultano ambiguità. Nell'esempio seguente, il metodo completamente specificato `OnClick` può essere riscritto come `RelaxedOnClick`.  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -60,10 +60,10 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## <a name="addressof-examples"></a>AddressOf Examples  
- Lambda expressions are used in the previous examples to make the type relationships easy to see. However, the same relaxations are permitted for delegate assignments that use `AddressOf`, `Handles`, or `AddHandler`.  
+## <a name="addressof-examples"></a>Esempi di AddressOf  
+ Le espressioni lambda vengono usate negli esempi precedenti per semplificare la visualizzazione delle relazioni tra i tipi. Tuttavia, sono consentiti gli stessi relax per le assegnazioni di delegati che utilizzano `AddressOf`, `Handles`o `AddHandler`.  
   
- In the following example, functions `f1`, `f2`, `f3`, and `f4` can all be assigned to `Del1`.  
+ Nell'esempio seguente è possibile assegnare a `Del1`le funzioni `f1`, `f2`, `f3`e `f4`.  
   
  [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -71,12 +71,12 @@ End Sub
   
  [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
- The following example is valid only when `Option Strict` is set to `Off`.  
+ L'esempio seguente è valido solo quando `Option Strict` è impostato su `Off`.  
   
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
-## <a name="dropping-function-returns"></a>Dropping Function Returns  
- Relaxed delegate conversion enables you to assign a function to a `Sub` delegate, effectively ignoring the return value of the function. However, you cannot assign a `Sub` to a function delegate. In the following example, the address of function `doubler` is assigned to `Sub` delegate `Del3`.  
+## <a name="dropping-function-returns"></a>Eliminazione della funzione restituita  
+ La conversione di un delegato rilassato consente di assegnare una funzione a un delegato `Sub`, ignorando in modo efficace il valore restituito della funzione. Tuttavia, non è possibile assegnare un `Sub` a un delegato di funzione. Nell'esempio seguente, l'indirizzo della funzione `doubler` viene assegnato a `Sub` `Del3`di delegati.  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   

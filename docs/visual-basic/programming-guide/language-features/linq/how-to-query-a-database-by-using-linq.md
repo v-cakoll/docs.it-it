@@ -1,5 +1,5 @@
 ---
-title: 'How to: Query a Database by Using LINQ'
+title: 'Procedura: eseguire una query su un database tramite LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -17,61 +17,61 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344967"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Procedura: eseguire query in un database utilizzando LINQ (Visual Basic)
-Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.  
+LINQ (Language-Integrated Query) consente di accedere facilmente alle informazioni sul database ed eseguire query.  
   
- The following example shows how to create a new application that performs queries against a SQL Server database.  
+ Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server.  
   
- The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Negli esempi di questo argomento viene utilizzato il database di esempio Northwind. Se questo database non è presente nel computer di sviluppo, è possibile scaricarlo dal Microsoft Download Center. Per istruzioni, vedere [download di database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
+## <a name="to-create-a-connection-to-a-database"></a>Per creare una connessione a un database  
   
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
+1. In Visual Studio aprire **Esplora server**/**Esplora database** scegliendo **Esplora server**/**Esplora database** dal menu **Visualizza** .  
   
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
+2. Fare clic con il pulsante destro del mouse su **connessioni dati** in **Esplora server**/**Esplora database** , quindi scegliere **Aggiungi connessione**.  
   
-3. Specify a valid connection to the Northwind sample database.  
+3. Specificare una connessione valida al database di esempio Northwind.  
   
-## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Per aggiungere un progetto che contiene un file di LINQ to SQL  
   
-1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Select Visual Basic **Windows Forms Application** as the project type.  
+1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Selezionare Visual Basic **Windows Forms applicazione** come tipo di progetto.  
   
-2. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Select the **LINQ to SQL Classes** item template.  
+2. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare il modello di elemento **classi LINQ to SQL** .  
   
-3. Denominare il file `northwind.dbml`. Fare clic su **Aggiungi**. The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
+3. Denominare il file `northwind.dbml`. Fare clic su **Add**. Il Object Relational Designer (O/R Designer) viene aperto per il file Northwind. dbml.  
   
-## <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer  
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>Per aggiungere tabelle a query in Progettazione relazionale di O/R  
   
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.  
+1. In **Esplora server**/**Esplora database**espandere la connessione al database Northwind. Espandere la cartella **tabelle** .  
   
-     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
+     Se la finestra di progettazione di O/R è stata chiusa, è possibile riaprirla facendo doppio clic sul file Northwind. dbml aggiunto in precedenza.  
   
-2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.  
+2. Fare clic sulla tabella Customers e trascinarla nel riquadro sinistro della finestra di progettazione. Fare clic sulla tabella Orders e trascinarlo nel riquadro sinistro della finestra di progettazione.  
   
-     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.  
+     La finestra di progettazione crea nuovi oggetti `Customer` e `Order` per il progetto. Si noti che la finestra di progettazione rileva automaticamente le relazioni tra le tabelle e crea le proprietà figlio per gli oggetti correlati. Ad esempio, IntelliSense indicherà che l'oggetto `Customer` dispone di una proprietà `Orders` per tutti gli ordini correlati a tale cliente.  
   
-3. Save your changes and close the designer.  
+3. Salvare le modifiche e chiudere la finestra di progettazione.  
   
 4. Salvare il progetto.  
   
-## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results  
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Per aggiungere codice per eseguire query sul database e visualizzare i risultati  
   
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
+1. Dalla **casella degli strumenti**trascinare un controllo <xref:System.Windows.Forms.DataGridView> nel Windows Form predefinito per il progetto Form1.  
   
-2. Double-click Form1 to add code to the `Load` event of the form.  
+2. Fare doppio clic su Form1 per aggiungere codice all'evento `Load` del modulo.  
   
-3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those tables, in addition to individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
+3. Quando sono state aggiunte tabelle a Progettazione relazionale oggetti, nella finestra di progettazione è stato aggiunto un oggetto <xref:System.Data.Linq.DataContext> per il progetto. Questo oggetto contiene il codice necessario per accedere a tali tabelle, oltre a singoli oggetti e raccolte per ogni tabella. L'oggetto <xref:System.Data.Linq.DataContext> per il progetto viene denominato in base al nome del file con estensione dbml. Per questo progetto, l'oggetto <xref:System.Data.Linq.DataContext> è denominato `northwindDataContext`.  
   
-     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.  
+     È possibile creare un'istanza del <xref:System.Data.Linq.DataContext> nel codice ed eseguire una query sulle tabelle specificate da O/R Designer.  
   
-     Add the following code to the `Load` event to query the tables that are exposed as properties of your data context.  
+     Aggiungere il codice seguente all'evento `Load` per eseguire una query sulle tabelle esposte come proprietà del contesto dati.  
   
      [!code-vb[VbLINQToSQLHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#3)]  
   
-4. Press F5 to run your project and view the results.  
+4. Premere F5 per eseguire il progetto e visualizzare i risultati.  
   
-5. Following are some additional queries that you can try:  
+5. Di seguito sono riportate alcune query aggiuntive che è possibile provare:  
   
      [!code-vb[VbLINQToSQLHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#4)]  
     [!code-vb[VbLINQToSQLHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#5)]  

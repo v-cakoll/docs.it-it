@@ -27,7 +27,7 @@ ms.locfileid: "74283758"
 ## <a name="groupbox-states"></a>Stati di GroupBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.GroupBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

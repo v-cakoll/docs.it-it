@@ -14,9 +14,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336116"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Operatori di scorrimento bit (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+Di seguito sono riportati gli operatori di spostamento bit definiti in Visual Basic.  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [Operatore \< <](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

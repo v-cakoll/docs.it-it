@@ -18,19 +18,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345162"
 ---
 # <a name="error-types-visual-basic"></a>Tipi di errore (Visual Basic)
-In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
+In Visual Basic gli errori rientrano in una delle tre categorie seguenti: errori di sintassi, errori di run-time ed errori logici.
 
 ## <a name="syntax-errors"></a>Errori di sintassi
- *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
+ Gli *errori di sintassi* sono quelli visualizzati durante la scrittura del codice. Se si usa Visual Studio, Visual Basic controlla il codice durante la digitazione nella finestra dell' **Editor del codice** e avvisa l'utente se si commette un errore, ad esempio l'ortografia di una parola o l'uso errato di un elemento di linguaggio. Se si esegue la compilazione dalla riga di comando, Visual Basic Visualizza un errore del compilatore con informazioni sull'errore di sintassi. Gli errori di sintassi sono il tipo più comune di errori. È possibile correggerli facilmente nell'ambiente di codifica non appena si verificano.
 
 > [!NOTE]
-> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
+> L'istruzione `Option Explicit` rappresenta un mezzo per evitare errori di sintassi. Impone di dichiarare in anticipo tutte le variabili da usare nell'applicazione. Pertanto, quando tali variabili vengono utilizzate nel codice, eventuali errori tipografici vengono rilevati immediatamente e possono essere corretti.
 
-## <a name="run-time-errors"></a>Run-Time Errors
- *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
+## <a name="run-time-errors"></a>Errori di run-time
+ Gli *errori di run-time* sono quelli visualizzati solo dopo la compilazione e l'esecuzione del codice. Queste implicano il codice che potrebbe sembrare corretto in quanto non presenta errori di sintassi, ma che non verrà eseguito. Ad esempio, è possibile scrivere correttamente una riga di codice per aprire un file. Tuttavia, se il file non esiste, l'applicazione non è in grado di aprire il file e viene generata un'eccezione. È possibile correggere la maggior parte degli errori di run-time riscrivendo il codice difettoso o utilizzando la [gestione delle eccezioni](../../language-reference/statements/try-catch-finally-statement.md), quindi ricompilando e rieseguendo il codice.
   
-## <a name="logic-errors"></a>Logic Errors
- *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
+## <a name="logic-errors"></a>Errori di logica
+ Gli *errori logici* sono quelli che vengono visualizzati una volta che l'applicazione è in uso. Spesso si tratta di presupposti difettosi creati dallo sviluppatore o risultati indesiderati o imprevisti in risposta alle azioni dell'utente. Una chiave tipizzata in modo errato, ad esempio, può fornire informazioni non corrette a un metodo oppure si presuppone che un valore valido venga sempre fornito a un metodo in caso contrario. Sebbene sia possibile gestire gli errori logici utilizzando la [gestione delle eccezioni](../../language-reference/statements/try-catch-finally-statement.md) (ad esempio, verificando se un argomento è `Nothing` e generando una <xref:System.ArgumentNullException>), in genere devono essere risolti correggendo l'errore nella logica e ricompilando l'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 

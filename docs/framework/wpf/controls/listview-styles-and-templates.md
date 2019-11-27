@@ -27,7 +27,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="listview-states"></a>Stati di ListView  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ListView>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -39,14 +39,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="listviewitem-states"></a>Stati ListViewItem  
  Nella tabella seguente sono elencati gli Stati per il controllo <xref:System.Windows.Controls.ListViewItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse si trova sul controllo <xref:System.Windows.Controls.ComboBox>.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
-|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
+|Selected|SelectionStates|L'elemento è attualmente selezionato.|  
 |Deselezionato|SelectionStates|L'elemento non è selezionato.|  
 |SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  

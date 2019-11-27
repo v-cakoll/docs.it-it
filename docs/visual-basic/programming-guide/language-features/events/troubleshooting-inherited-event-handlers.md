@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345099"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic
-This topic lists common issues that arise with event handlers in inherited components.  
+In questo argomento vengono elencati i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.  
   
 ## <a name="procedures"></a>Procedure  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Code in Event Handler Executes Twice for Every Call  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Il codice nel gestore eventi viene eseguito due volte per ogni chiamata  
   
-- An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause. The method in the base class is already associated with the event and will fire accordingly. Remove the `Handles` clause from the inherited method.  
+- Un gestore eventi ereditato non deve includere una clausola [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) . Il metodo nella classe base è già associato all'evento e verrà attivato di conseguenza. Rimuovere la clausola `Handles` dal metodo ereditato.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.  
+- Se il metodo ereditato non dispone di una parola chiave `Handles`, verificare che il codice non contenga un' [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) aggiuntiva o altri metodi che gestiscono lo stesso evento.  
   
 ## <a name="see-also"></a>Vedere anche
 

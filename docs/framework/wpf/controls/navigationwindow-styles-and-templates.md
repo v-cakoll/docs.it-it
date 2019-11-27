@@ -22,14 +22,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="navigationwindow-parts"></a>Parti NavigationWindow  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|Area del contenuto.|  
   
 ## <a name="navigationwindow-states"></a>Stati NavigationWindow  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

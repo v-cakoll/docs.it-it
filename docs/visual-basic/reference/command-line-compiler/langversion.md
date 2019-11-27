@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344205"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Causes the compiler to accept only syntax that is included in the specified Visual Basic language version.  
+Fa in modo che il compilatore accetti solo la sintassi inclusa nella versione della lingua Visual Basic specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -22,23 +22,23 @@ Causes the compiler to accept only syntax that is included in the specified Visu
 -langversion:version  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
  `version`  
- Obbligatorio. The language version to be used during the compilation. Accepted values are `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` and `latest`.
+ Obbligatoria. La versione del linguaggio da utilizzare durante la compilazione. I valori accettati sono `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` e `latest`.
 
- Any of the whole numbers may also be specified using `.0` as the minor version, for example, `11.0`.
+ I numeri interi possono essere specificati anche usando `.0` come versione secondaria, ad esempio `11.0`.
 
- You can see the list of all possible values by specifying `-langversion:?` on the command line.  
+ È possibile visualizzare l'elenco di tutti i valori possibili specificando `-langversion:?` nella riga di comando.  
   
 ## <a name="remarks"></a>Note  
- The `-langversion` option specifies what syntax the compiler accepts. For example, if you specify that the language version is 9.0, the compiler generates errors for syntax that is valid only in version 10.0 and later.  
+ L'opzione `-langversion` specifica la sintassi accettata dal compilatore. Se, ad esempio, si specifica che la versione del linguaggio è 9,0, il compilatore genera errori per la sintassi valida solo nella versione 10,0 e successive.  
   
- You can use this option when you develop applications that target different versions of the .NET Framework. For example, if you are targeting .NET Framework 3.5, you could use this option to ensure that you do not use syntax from language version 10.0.  
+ È possibile utilizzare questa opzione quando si sviluppano applicazioni destinate a versioni diverse del .NET Framework. Ad esempio, se la destinazione è .NET Framework 3,5, è possibile usare questa opzione per assicurarsi di non usare la sintassi della versione 10,0 del linguaggio.  
   
- You can set `-langversion` directly only by using the command line. Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview).  
+ È possibile impostare `-langversion` direttamente solo tramite la riga di comando. Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview).  
   
 ## <a name="example"></a>Esempio  
- The following code compiles `sample.vb` for Visual Basic 9.0.  
+ Il codice seguente compila `sample.vb` per Visual Basic 9,0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  

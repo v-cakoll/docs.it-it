@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341224"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Differenze tra il passaggio di un argomento per valore e per riferimento (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+Quando si passano uno o più argomenti a una routine, ogni argomento corrisponde a un elemento di programmazione sottostante nel codice chiamante. È possibile passare il valore di questo elemento sottostante o un riferimento ad esso. Questa operazione è nota come *meccanismo di passaggio*.  
   
 ## <a name="passing-by-value"></a>passaggio per valore  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ Passare un argomento per *valore* specificando la parola chiave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) per il parametro corrispondente nella definizione della procedura. Quando si utilizza questo meccanismo di passaggio, Visual Basic copia il valore dell'elemento di programmazione sottostante in una variabile locale nella routine. Il codice della procedura non ha accesso all'elemento sottostante nel codice chiamante.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>Passaggio per riferimento  
+ Per passare un argomento per *riferimento* , specificare la parola chiave [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) per il parametro corrispondente nella definizione della procedura. Quando si utilizza questo meccanismo di passaggio, Visual Basic assegna alla routine un riferimento diretto all'elemento di programmazione sottostante nel codice chiamante.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>Passaggio del meccanismo e del tipo di elemento  
+ La scelta del meccanismo di passaggio non corrisponde alla classificazione del tipo di elemento sottostante. Il passaggio per valore o per riferimento si riferisce a ciò che Visual Basic fornisce al codice della procedura. Un tipo di valore o un tipo di riferimento si riferisce al modo in cui un elemento di programmazione viene archiviato in memoria.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ Tuttavia, il meccanismo di passaggio e il tipo di elemento sono correlati. Il valore di un tipo di riferimento è un puntatore ai dati in un'altra posizione nella memoria. Ciò significa che quando si passa un tipo di riferimento per valore, il codice della procedura presenta un puntatore ai dati dell'elemento sottostante, anche se non è in grado di accedere all'elemento sottostante stesso. Se, ad esempio, l'elemento è una variabile di matrice, il codice della procedura non ha accesso alla variabile stessa, ma può accedere ai membri della matrice.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>Possibilità di modificare  
+ Quando si passa un elemento non modificabile come argomento, la routine non può mai modificarla nel codice chiamante, indipendentemente dal fatto che venga passato `ByVal` o `ByRef`.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ Per un elemento modificabile, nella tabella seguente viene riepilogata l'interazione tra il tipo di elemento e il meccanismo di passaggio.  
   
-|Tipo di elemento|Passed `ByVal`|Passed `ByRef`|  
+|Tipo di elemento|`ByVal` passati|`ByRef` passati|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|Tipo valore (contiene solo un valore)|La stored procedure non può modificare la variabile o i relativi membri.|La procedura può modificare la variabile e i relativi membri.|  
+|Tipo di riferimento (contiene un puntatore a un'istanza di classe o struttura)|La stored procedure non può modificare la variabile ma può modificare i membri dell'istanza a cui fa riferimento.|La procedura può modificare la variabile e i membri dell'istanza a cui fa riferimento.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -50,4 +50,4 @@ When you pass one or more arguments to a procedure, each argument corresponds to
 - [Procedura: impedire la modifica del valore di un argomento di una routine](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

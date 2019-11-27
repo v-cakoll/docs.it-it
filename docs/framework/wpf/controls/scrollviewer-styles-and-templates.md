@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="scrollviewer-parts"></a>Parti ScrollViewer  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.ScrollViewer>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Segnaposto per il contenuto nel <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar> utilizzato per scorrere il contenuto orizzontalmente.|  
@@ -31,7 +31,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="scrollviewer-states"></a>Stati di ScrollViewer  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ScrollViewer>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

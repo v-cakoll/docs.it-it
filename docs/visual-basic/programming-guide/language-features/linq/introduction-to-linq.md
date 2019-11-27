@@ -20,39 +20,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344930"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
-Language-Integrated Query (LINQ) adds query capabilities to Visual Basic and provides simple and powerful capabilities when you work with all kinds of data. Rather than sending a query to a database to be processed, or working with different query syntax for each type of data that you are searching, LINQ introduces queries as part of the Visual Basic language. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
+LINQ (Language-Integrated Query) aggiunge funzionalità di query a Visual Basic e fornisce funzionalità semplici e potenti quando si utilizzano tutti i tipi di dati. Anziché inviare una query a un database da elaborare o usare una sintassi di query diversa per ogni tipo di dati che si sta cercando, LINQ introduce le query come parte del linguaggio Visual Basic. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
   
- LINQ enables you to query data from a SQL Server database, XML, in-memory arrays and collections, ADO.NET datasets, or any other remote or local data source that supports LINQ. You can do all this with common Visual Basic language elements. Because your queries are written in the Visual Basic language, your query results are returned as strongly-typed objects. Questi oggetti supportano IntelliSense, che consente di scrivere il codice più velocemente e di individuare errori nelle query in fase di compilazione anziché in fase di esecuzione. Le query LINQ possono essere utilizzate come origine di query aggiuntive per perfezionare i risultati. Possono anche venire associate a controlli in modo che gli utenti possano facilmente visualizzare e modificare i risultati della query.  
+ LINQ consente di eseguire query sui dati da un database SQL Server, XML, matrici e raccolte in memoria, set di dati ADO.NET o qualsiasi altra origine dati remota o locale che supporta LINQ. Questa operazione può essere eseguita con gli elementi comuni del linguaggio Visual Basic. Poiché le query sono scritte nel linguaggio Visual Basic, i risultati della query vengono restituiti come oggetti fortemente tipizzati. Questi oggetti supportano IntelliSense, che consente di scrivere il codice più velocemente e di individuare errori nelle query in fase di compilazione anziché in fase di esecuzione. Le query LINQ possono essere utilizzate come origine di query aggiuntive per perfezionare i risultati. Possono anche venire associate a controlli in modo che gli utenti possano facilmente visualizzare e modificare i risultati della query.  
   
  Nell'esempio di codice seguente viene illustrata una query LINQ che restituisce un elenco di clienti da una raccolta e li raggruppa in base alla località.  
   
  [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Esecuzione degli esempi  
- To run the examples in the introduction and in the [Structure of a LINQ Query](#structure-of-a-linq-query) section, include the following code, which returns lists of customers and orders.  
+ Per eseguire gli esempi nell'introduzione e nella [struttura di una sezione di query LINQ](#structure-of-a-linq-query) , includere il codice seguente, che restituisce elenchi di clienti e ordini.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
-## <a name="linq-providers"></a>LINQ providers  
- A *LINQ provider* maps your Visual Basic LINQ queries to the data source being queried. Quando si scrive una query LINQ, il provider prende tale query e la traduce in comandi che l'origine dati sarà in grado di eseguire. Il provider converte anche i dati dall'origine negli oggetti che costituiscono il risultato della query. Infine, converte gli oggetti in dati quando si inviano aggiornamenti all'origine dati.  
+## <a name="linq-providers"></a>Provider LINQ  
+ Un *provider LINQ* esegue il mapping delle query LINQ Visual Basic all'origine dati sottoposta a query. Quando si scrive una query LINQ, il provider prende tale query e la traduce in comandi che l'origine dati sarà in grado di eseguire. Il provider converte anche i dati dall'origine negli oggetti che costituiscono il risultato della query. Infine, converte gli oggetti in dati quando si inviano aggiornamenti all'origine dati.  
   
- Visual Basic includes the following LINQ providers.  
+ Visual Basic include i provider LINQ seguenti.  
   
 |Provider|Descrizione|  
 |---|---|  
-|LINQ to Objects|Il provider LINQ to Objects consente di eseguire una query su raccolte e matrici in memoria. Se un oggetto supporta l'interfaccia <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, il provider LINQ to Objects consente di eseguire una query su di esso.<br /><br /> You can enable the LINQ to Objects provider by importing the <xref:System.Linq> namespace, which is imported by default for all Visual Basic projects.<br /><br /> For more information about the LINQ to Objects provider, see [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ to SQL|Il provider LINQ to SQL consente di eseguire query e di modificare i dati su un database SQL server. Questo semplifica il mapping del modello a oggetti per un'applicazione alle tabelle e agli oggetti in un database.<br /><br /> Visual Basic makes it easier to work with LINQ to SQL by including the Object Relational Designer (O/R Designer). Questa finestra di progettazione viene utilizzata per creare un modello a oggetti in un'applicazione con mapping sugli oggetti in un database. The O/R Designer also provides functionality to map stored procedures and functions to the <xref:System.Data.Linq.DataContext> object, which manages communication with the database and stores state for optimistic concurrency checks.<br /><br /> For more information about the LINQ to SQL provider, see [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). For more information about the Object Relational Designer, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ to XML|Il provider LINQ to XML consente di eseguire query e di modificare l'XML. È possibile modificare l'XML in memoria o caricare l'XML da file o salvare l'XML in un file.<br /><br /> Additionally, the LINQ to XML provider enables XML literals and XML axis properties that enable you to write XML directly in your Visual Basic code. For more information, see [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|The LINQ to DataSet provider enables you to query and update data in an ADO.NET dataset. È possibile aggiungere le caratteristiche avanzate di LINQ ad applicazioni che utilizzano set di dati per semplificare ed estendere le funzionalità per l'esecuzione di query, l'aggregazione e l'aggiornamento dei dati nel set di dati.<br /><br /> Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to Objects|Il provider LINQ to Objects consente di eseguire una query su raccolte e matrici in memoria. Se un oggetto supporta l'interfaccia <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, il provider LINQ to Objects consente di eseguire una query su di esso.<br /><br /> Per abilitare il provider di LINQ to Objects, è possibile importare lo spazio dei nomi <xref:System.Linq>, che viene importato per impostazione predefinita per tutti i progetti di Visual Basic.<br /><br /> Per ulteriori informazioni sul provider LINQ to Objects, vedere [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
+|LINQ to SQL|Il provider LINQ to SQL consente di eseguire query e di modificare i dati su un database SQL server. Questo semplifica il mapping del modello a oggetti per un'applicazione alle tabelle e agli oggetti in un database.<br /><br /> Visual Basic semplifica l'uso di LINQ to SQL includendo il Object Relational Designer (O/R Designer). Questa finestra di progettazione viene utilizzata per creare un modello a oggetti in un'applicazione con mapping sugli oggetti in un database. In Progettazione relazionale oggetti è inoltre disponibile la funzionalità per eseguire il mapping di stored procedure e funzioni all'oggetto <xref:System.Data.Linq.DataContext>, che gestisce la comunicazione con il database e archivia lo stato per i controlli di concorrenza ottimistica.<br /><br /> Per ulteriori informazioni sul provider LINQ to SQL, vedere [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Per ulteriori informazioni sulla Object Relational Designer, vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to XML|Il provider LINQ to XML consente di eseguire query e di modificare l'XML. È possibile modificare l'XML in memoria o caricare l'XML da file o salvare l'XML in un file.<br /><br /> Inoltre, il provider di LINQ to XML Abilita i valori letterali XML e le proprietà Axis XML che consentono di scrivere codice XML direttamente nel codice di Visual Basic. Per ulteriori informazioni, vedere [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ to DataSet|Il provider di LINQ to DataSet consente di eseguire query e aggiornare i dati in un set di dati ADO.NET. È possibile aggiungere le caratteristiche avanzate di LINQ ad applicazioni che utilizzano set di dati per semplificare ed estendere le funzionalità per l'esecuzione di query, l'aggregazione e l'aggiornamento dei dati nel set di dati.<br /><br /> Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-## <a name="structure-of-a-linq-query"></a>Structure of a LINQ query  
- A LINQ query, often referred to as a *query expression*, consists of a combination of query clauses that identify the data sources and iteration variables for the query. Un'espressione di query può includere anche istruzioni per ordinare, filtrare, raggruppare e unire o eseguire calcoli da applicare ai dati di origine. La sintassi delle espressioni di query è simile alla sintassi SQL; pertanto, gran parte della sintassi risulterà familiare.  
+## <a name="structure-of-a-linq-query"></a>Struttura di una query LINQ  
+ Una query LINQ, spesso definita *espressione di query*, è costituita da una combinazione di clausole di query che identificano le origini dati e le variabili di iterazione per la query. Un'espressione di query può includere anche istruzioni per ordinare, filtrare, raggruppare e unire o eseguire calcoli da applicare ai dati di origine. La sintassi delle espressioni di query è simile alla sintassi SQL; pertanto, gran parte della sintassi risulterà familiare.  
   
- Un'espressione di query inizia con una clausola `From`. Questa clausola identifica i dati di origine per una query e le variabili utilizzate per fare riferimento a ogni singolo elemento dell'insieme di origine. These variables are named *range variables* or *iteration variables*. La clausola `From` è obbligatoria per una query, tranne per le query `Aggregate`, in cui la clausola `From` è facoltativa. Dopo che l'ambito e l'origine della query sono identificati nelle clausole `From` o `Aggregate`, è possibile includere qualsiasi combinazione di clausole di query per perfezionare la query. For details about query clauses, see Visual Basic LINQ Query Operators later in this topic. Ad esempio, nella query seguente viene identificata una raccolta di origine di dati sul cliente come variabile `customers` e una variabile di iterazione denominata `cust`.  
+ Un'espressione di query inizia con una clausola `From`. Questa clausola identifica i dati di origine per una query e le variabili utilizzate per fare riferimento a ogni singolo elemento dell'insieme di origine. Queste variabili sono denominate *variabili di intervallo* o *variabili di iterazione*. La clausola `From` è obbligatoria per una query, tranne per le query `Aggregate`, in cui la clausola `From` è facoltativa. Dopo che l'ambito e l'origine della query sono identificati nelle clausole `From` o `Aggregate`, è possibile includere qualsiasi combinazione di clausole di query per perfezionare la query. Per informazioni dettagliate sulle clausole di query, vedere Visual Basic operatori di query LINQ più avanti in questo argomento. Ad esempio, nella query seguente viene identificata una raccolta di origine di dati sul cliente come variabile `customers` e una variabile di iterazione denominata `cust`.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
- In questo esempio viene illustrata una query valida; tuttavia, la query diventa molto più efficace quando si aggiungono altre clausole di query per perfezionare il risultato. Ad esempio, è possibile aggiungere una clausola `Where` per filtrare il risultato per uno o più valori. Le espressioni di query consistono in una sola riga di codice; è possibile inserire clausole aggiuntive solo alla fine della query. You can break up a query across multiple lines of text to improve readability by using the underscore (\_) line-continuation character. Nell'esempio di codice seguente viene illustrato un esempio di query che include una clausola `Where`.  
+ In questo esempio viene illustrata una query valida; tuttavia, la query diventa molto più efficace quando si aggiungono altre clausole di query per perfezionare il risultato. Ad esempio, è possibile aggiungere una clausola `Where` per filtrare il risultato per uno o più valori. Le espressioni di query consistono in una sola riga di codice; è possibile inserire clausole aggiuntive solo alla fine della query. È possibile suddividere una query su più righe di testo per migliorare la leggibilità utilizzando il carattere di sottolineatura (\_). Nell'esempio di codice seguente viene illustrato un esempio di query che include una clausola `Where`.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
@@ -68,21 +68,21 @@ Language-Integrated Query (LINQ) adds query capabilities to Visual Basic and pro
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- Esistono molti altri operatori di query LINQ che è possibile utilizzare per creare efficaci espressioni di query. Nella prossima sezione di questo argomento vengono discusse le varie clausole di query che è possibile includere in un'espressione di query. For details about Visual Basic query clauses, see [Queries](../../../../visual-basic/language-reference/queries/index.md).  
+ Esistono molti altri operatori di query LINQ che è possibile utilizzare per creare efficaci espressioni di query. Nella prossima sezione di questo argomento vengono discusse le varie clausole di query che è possibile includere in un'espressione di query. Per informazioni dettagliate sulle clausole di query Visual Basic, vedere [query](../../../../visual-basic/language-reference/queries/index.md).  
   
-## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ query operators  
+## <a name="visual-basic-linq-query-operators"></a>Visual Basic operatori di query LINQ  
 
-Le classi nello spazio dei nomi <xref:System.Linq> e negli altri spazi dei nomi che supportano query LINQ includono metodi che è possibile chiamare per creare e perfezionare query basate sulle esigenze dell'applicazione. Visual Basic includes keywords for the following common query clauses. For details about Visual Basic query clauses, see [Queries](../../../language-reference/queries/index.md).
+Le classi nello spazio dei nomi <xref:System.Linq> e negli altri spazi dei nomi che supportano query LINQ includono metodi che è possibile chiamare per creare e perfezionare query basate sulle esigenze dell'applicazione. Visual Basic include parole chiave per le clausole di query comuni seguenti. Per informazioni dettagliate sulle clausole di query Visual Basic, vedere [query](../../../language-reference/queries/index.md).
 
 ### <a name="from-clause"></a>Clausola From
 
-Either a [`From` clause](../../../../visual-basic/language-reference/queries/from-clause.md) or an `Aggregate` clause is required to begin a query. Una clausola `From` specifica una raccolta di origine e una variabile di iterazione per una query. Esempio:
+Per iniziare una query è necessario specificare una clausola [`From`](../../../../visual-basic/language-reference/queries/from-clause.md) o una clausola `Aggregate`. Una clausola `From` specifica una raccolta di origine e una variabile di iterazione per una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>clausola Select
 
-Parametro facoltativo. A [`Select` clause](../../../../visual-basic/language-reference/queries/select-clause.md) declares a set of iteration variables for a query. Esempio:
+Facoltativa. Una [clausola`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) dichiara un set di variabili di iterazione per una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,140 +90,140 @@ Se non viene specificata nessuna clausola `Select`, le variabili di iterazione p
 
 ### <a name="where-clause"></a>Clausola Where
 
-Parametro facoltativo. A [`Where` clause](../../../../visual-basic/language-reference/queries/where-clause.md) specifies a filtering condition for a query. Esempio:
+Facoltativa. Una [clausola`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) specifica una condizione di filtro per una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order By clause]
+### <a name="order-by-clause"></a>Clausola ORDER BY]
 
-|Optional. An [`Order By` clause](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifies the sort order for columns in a query. Esempio:
+| Opzionale. Una [clausola`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifica l'ordinamento delle colonne in una query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>clausola Join
 
-Parametro facoltativo. A [`Join` clause](../../../../visual-basic/language-reference/queries/join-clause.md) combines two collections into a single collection. Esempio:
+Facoltativa. Una [clausola`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) combina due raccolte in un'unica raccolta. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>clausola Group By
 
-Parametro facoltativo. A [`Group By` clause](../../../../visual-basic/language-reference/queries/group-by-clause.md) groups the elements of a query result. It can be used to apply aggregate functions to each group. Esempio:
+Facoltativa. Una [clausola`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) raggruppa gli elementi di un risultato della query. Può essere usato per applicare funzioni di aggregazione a ogni gruppo. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>clausola Group Join
 
-Parametro facoltativo. A [`Group Join` clause](../../../../visual-basic/language-reference/queries/group-join-clause.md) combines two collections into a single hierarchical collection. Esempio:
+Facoltativa. Una [clausola`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) combina due raccolte in un'unica raccolta gerarchica. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>clausola di aggregazione
 
-Either an [`Aggregate` clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) or a `From` clause is required to begin a query. Una clausola `Aggregate` applica una o più funzioni di aggregazione a una raccolta. For example, you can use the `Aggregate` clause to calculate a sum for all the elements returned by a query, as the following example does.
+Per iniziare una query è necessario specificare una clausola [`Aggregate`](../../../../visual-basic/language-reference/queries/aggregate-clause.md) o una clausola `From`. Una clausola `Aggregate` applica una o più funzioni di aggregazione a una raccolta. È ad esempio possibile utilizzare la clausola `Aggregate` per calcolare una somma di tutti gli elementi restituiti da una query, come avviene nell'esempio seguente.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-È anche possibile utilizzare la clausola `Aggregate` per modificare una query. Ad esempio, è possibile utilizzare la clausola `Aggregate` per eseguire un calcolo su una raccolta di query correlata. Esempio:
+È anche possibile utilizzare la clausola `Aggregate` per modificare una query. Ad esempio, è possibile utilizzare la clausola `Aggregate` per eseguire un calcolo su una raccolta di query correlata. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let (clausola)
 
-Parametro facoltativo. A [`Let` clause](../../../../visual-basic/language-reference/queries/let-clause.md) computes a value and assigns it to a new variable in the query. Esempio:
+Facoltativa. Una [clausola`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) calcola un valore e lo assegna a una nuova variabile nella query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>clausola Distinct
 
-Parametro facoltativo. A `Distinct` clause restricts the values of the current iteration variable to eliminate duplicate values in query results. Esempio:
+Facoltativa. Una clausola `Distinct` limita i valori della variabile di iterazione corrente per eliminare i valori duplicati nei risultati della query. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip (clausola)
 
-Parametro facoltativo. A [`Skip` clause](../../../../visual-basic/language-reference/queries/skip-clause.md) bypasses a specified number of elements in a collection and then returns the remaining elements. Esempio:
+Facoltativa. Una [clausola`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While (clausola)
 
-Parametro facoltativo. A [`Skip While` clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md) bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements. Esempio:
+Facoltativa. Una [clausola`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignora gli elementi di una raccolta, purché una condizione specificata venga `true` e quindi restituisce gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take (clausola)
 
-Parametro facoltativo. A [`Take` clause](../../../../visual-basic/language-reference/queries/take-clause.md) returns a specified number of contiguous elements from the start of a collection. Esempio:
+Facoltativa. Una [clausola`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) restituisce un numero specificato di elementi contigui dall'inizio di una raccolta. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While (clausola)
 
-Parametro facoltativo. A [`Take While` clause](../../../../visual-basic/language-reference/queries/take-while-clause.md) includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements. Esempio:
+Facoltativa. Una [clausola`Take While`](../../../../visual-basic/language-reference/queries/take-while-clause.md) include elementi in una raccolta, purché una condizione specificata venga `true` e ignori gli elementi rimanenti. Ad esempio:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
-## <a name="use-additional-linq-query-features"></a>Use additional LINQ query features  
+## <a name="use-additional-linq-query-features"></a>Usare funzionalità di query LINQ aggiuntive  
   
-È possibile utilizzare le funzionalità aggiuntive delle query LINQ chiamando i membri dei tipi enumerabili e disponibili per query forniti da LINQ. È possibile utilizzare queste funzionalità aggiuntive chiamando un particolare operatore di query sul risultato di un'espressione di query. For example, the following example uses the <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> method to combine the results of two queries into one query result. Viene utilizzato il metodo <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> per restituire il risultato della query come elenco generico.
+È possibile utilizzare le funzionalità aggiuntive delle query LINQ chiamando i membri dei tipi enumerabili e disponibili per query forniti da LINQ. È possibile utilizzare queste funzionalità aggiuntive chiamando un particolare operatore di query sul risultato di un'espressione di query. Nell'esempio seguente, ad esempio, viene utilizzato il metodo <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> per combinare i risultati di due query in un unico risultato della query. Viene utilizzato il metodo <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> per restituire il risultato della query come elenco generico.
   
  [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
- For details about additional LINQ capabilities, see [Standard Query Operators Overview](../../concepts/linq/standard-query-operators-overview.md).  
+ Per informazioni dettagliate sulle funzionalità LINQ aggiuntive, vedere [Cenni preliminari sugli operatori di query standard](../../concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Connect to a database by using LINQ to SQL  
- In Visual Basic, you identify the SQL Server database objects, such as tables, views, and stored procedures, that you want to access by using a LINQ to SQL file. Un file LINQ to SQL ha un'estensione .dbml.  
+## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Connettersi a un database tramite LINQ to SQL  
+ In Visual Basic, è possibile identificare gli oggetti di database SQL Server, ad esempio tabelle, viste e stored procedure, a cui si desidera accedere utilizzando un file LINQ to SQL. Un file LINQ to SQL ha un'estensione .dbml.  
   
- When you have a valid connection to a SQL Server database, you can add a **LINQ to SQL Classes** item template to your project. Verrà visualizzato Object Relational Designer (O/R Designer). The O/R Designer enables you to drag the items that you want to access in your code from the **Server Explorer**/**Database Explorer** onto the designer surface. Il file LINQ to SQL aggiunge un oggetto <xref:System.Data.Linq.DataContext> al progetto. Questo oggetto include proprietà e raccolte per tabelle e visualizzazioni alle quali si desidera accedere e metodi per le stored procedure che si desidera chiamare. Dopo avere salvato le modifiche nel file LINQ to SQL (.dbml), è possibile accedere a questi oggetti nel codice facendo riferimento all'oggetto <xref:System.Data.Linq.DataContext> che viene definito da O/R Designer. L'oggetto <xref:System.Data.Linq.DataContext> per il progetto viene denominato in base al nome del file LINQ to SQL. Ad esempio, un file LINQ to SQL denominato Northwind.dbml creerà un oggetto <xref:System.Data.Linq.DataContext> chiamato `NorthwindDataContext`.  
+ Quando si dispone di una connessione valida a un database di SQL Server, è possibile aggiungere un modello di elemento **classi LINQ to SQL** al progetto. Verrà visualizzato Object Relational Designer (O/R Designer). La finestra di progettazione di O/R consente di trascinare gli elementi a cui si desidera accedere nel codice dall' **Esplora server**/**Esplora database** nell'area di progettazione. Il file LINQ to SQL aggiunge un oggetto <xref:System.Data.Linq.DataContext> al progetto. Questo oggetto include proprietà e raccolte per tabelle e visualizzazioni alle quali si desidera accedere e metodi per le stored procedure che si desidera chiamare. Dopo avere salvato le modifiche nel file LINQ to SQL (.dbml), è possibile accedere a questi oggetti nel codice facendo riferimento all'oggetto <xref:System.Data.Linq.DataContext> che viene definito da O/R Designer. L'oggetto <xref:System.Data.Linq.DataContext> per il progetto viene denominato in base al nome del file LINQ to SQL. Ad esempio, un file LINQ to SQL denominato Northwind.dbml creerà un oggetto <xref:System.Data.Linq.DataContext> chiamato `NorthwindDataContext`.  
   
- For examples with step-by-step instructions, see [How to: Query a Database](how-to-query-a-database-by-using-linq.md) and [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Per esempi di istruzioni dettagliate, vedere [procedura: eseguire una query su un database](how-to-query-a-database-by-using-linq.md) e [procedura: chiamare una stored procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
   
-## <a name="visual-basic-features-that-support-linq"></a>Visual Basic features that support LINQ  
- Visual Basic includes other notable features that make the use of LINQ simple and reduce the amount of code that you must write to perform LINQ queries. tra cui:  
+## <a name="visual-basic-features-that-support-linq"></a>Visual Basic funzionalità che supportano LINQ  
+ Visual Basic include altre importanti funzionalità che rendono l'utilizzo di LINQ semplice e riducono la quantità di codice che è necessario scrivere per eseguire query LINQ. tra cui:  
   
-- **Anonymous types**, which enable you to create a new type based on a query result.  
+- **Tipi anonimi**, che consentono di creare un nuovo tipo in base al risultato di una query.  
   
-- **Implicitly typed variables**, which enable you to defer specifying a type and let the compiler infer the type based on the query result.  
+- **Variabili tipizzate in modo implicito**, che consentono di rinviare la specifica di un tipo e consentire al compilatore di dedurre il tipo in base al risultato della query.  
   
-- **Extension methods**, which enable you to extend an existing type with your own methods without modifying the type itself.  
+- **Metodi di estensione**, che consentono di estendere un tipo esistente con metodi personalizzati senza modificare il tipo stesso.  
   
- For details, see [Visual Basic Features That Support LINQ](../../concepts/linq/features-that-support-linq.md).  
+ Per informazioni dettagliate, vedere [Visual Basic funzionalità che supportano LINQ](../../concepts/linq/features-that-support-linq.md).  
   
-## <a name="deferred-and-immediate-query-execution"></a>Deferred and immediate query execution
+## <a name="deferred-and-immediate-query-execution"></a>Esecuzione di query posticipata e immediata
 
- L'esecuzione della query è distinta dalla creazione della query. Dopo che una query viene creata, l'esecuzione viene attivata da un meccanismo separato. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
+ L'esecuzione della query è distinta dalla creazione della query. Dopo che una query viene creata, l'esecuzione viene attivata da un meccanismo separato. Una query può essere eseguita non appena viene definita (*esecuzione immediata*) oppure la definizione può essere archiviata e la query può essere eseguita in un secondo momento (*esecuzione posticipata*).  
   
- Per impostazione predefinita, quando si crea una query, la query stessa non viene eseguita immediatamente. Al contrario, la definizione della query viene archiviata nella variabile utilizzata per fare riferimento al risultato della query. Quando si accede in un secondo momento alla variabile del risultato della query nel codice, ad esempio in un ciclo `For…Next`, la query viene eseguita. This process is referred to as *deferred execution*.  
+ Per impostazione predefinita, quando si crea una query, la query stessa non viene eseguita immediatamente. Al contrario, la definizione della query viene archiviata nella variabile utilizzata per fare riferimento al risultato della query. Quando si accede in un secondo momento alla variabile del risultato della query nel codice, ad esempio in un ciclo `For…Next`, la query viene eseguita. Questo processo viene definito *esecuzione posticipata*.  
   
- Queries can also be executed when they are defined, which is referred to as *immediate execution*. È possibile attivare l'esecuzione immediata applicando un metodo che richiede l'accesso ai singoli elementi del risultato della query. Questo potrebbe risultare dall'inclusione di una funzione di aggregazione, come `Count`, `Sum`, `Average`, `Min` o `Max`. For more information about aggregate functions, see [Aggregate Clause](../../../language-reference/queries/aggregate-clause.md).  
+ Le query possono essere eseguite anche quando vengono definite, a cui viene fatto riferimento come *esecuzione immediata*. È possibile attivare l'esecuzione immediata applicando un metodo che richiede l'accesso ai singoli elementi del risultato della query. Questo potrebbe risultare dall'inclusione di una funzione di aggregazione, come `Count`, `Sum`, `Average`, `Min` o `Max`. Per ulteriori informazioni sulle funzioni di aggregazione, vedere [clausola Aggregate](../../../language-reference/queries/aggregate-clause.md).  
   
- Anche l'utilizzo dei metodi `ToList` o `ToArray` forza l'esecuzione immediata. Ciò può essere utile quando si desidera eseguire immediatamente la query e memorizzare nella cache i risultati. For more information about these methods, see [Converting Data Types](../../concepts/linq/converting-data-types.md).  
+ Anche l'utilizzo dei metodi `ToList` o `ToArray` forza l'esecuzione immediata. Ciò può essere utile quando si desidera eseguire immediatamente la query e memorizzare nella cache i risultati. Per ulteriori informazioni su questi metodi, vedere [conversione di tipi di dati](../../concepts/linq/converting-data-types.md).  
   
- For more information about query execution, see [Writing Your First LINQ Query](../../concepts/linq/writing-your-first-linq-query.md).  
+ Per ulteriori informazioni sull'esecuzione di query, vedere [scrittura della prima query LINQ](../../concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="xml-in-visual-basic"></a>XML in Visual Basic  
- The XML features in Visual Basic include XML literals and XML axis properties, which enable you easily to create, access, query, and modify XML in your code. I valori letterali XML consentono di scrivere l'XML direttamente nel codice. Il compilatore di Visual Basic tratta l'XML come oggetto dati di prima classe.  
+ Le funzionalità XML in Visual Basic includono valori letterali XML e proprietà Axis XML, che consentono di creare, accedere, eseguire query e modificare XML nel codice in modo semplice. I valori letterali XML consentono di scrivere l'XML direttamente nel codice. Il compilatore di Visual Basic tratta l'XML come oggetto dati di prima classe.  
   
  Nell'esempio di codice seguente viene mostrato come creare un elemento XML, accedere ai sottoelementi e agli attributi ed eseguire una query sul contenuto dell'elemento utilizzando LINQ.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- For more information, see [XML](../xml/index.md).  
+ Per ulteriori informazioni, vedere [XML](../xml/index.md).  
   
 ## <a name="related-resources"></a>Risorse correlate  
   
 |Argomento|Descrizione|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|Describes the XML features in Visual Basic that can be queried and that enable you to include XML as first-class data objects in your Visual Basic code.|  
-|[Query](../../../language-reference/queries/index.md)|Provides reference information about the query clauses that are available in Visual Basic.|  
+|[XML](../../language-features/xml/index.md)|Vengono descritte le funzionalità XML in Visual Basic su cui è possibile eseguire query e che consentono di includere XML come oggetti dati di prima classe nel codice di Visual Basic.|  
+|[Query](../../../language-reference/queries/index.md)|Vengono fornite informazioni di riferimento sulle clausole di query disponibili in Visual Basic.|  
 |[LINQ (Language-Integrated Query)](../../concepts/linq/index.md)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ to SQL.|  
 |[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ to Objects.|  
-|[LINQ to ADO.NET (pagina portale)](../../concepts/linq/linq-to-adonet-portal-page.md)|Includes links to general information, programming guidance, and samples for LINQ to ADO.NET.|  
+|[LINQ to ADO.NET (pagina portale)](../../concepts/linq/linq-to-adonet-portal-page.md)|Sono inclusi collegamenti a informazioni generali, indicazioni di programmazione ed esempi per LINQ to ADO.NET.|  
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ to XML.|  
   
-## <a name="how-to-and-walkthrough-topics"></a>How to and walkthrough topics
+## <a name="how-to-and-walkthrough-topics"></a>Procedure e procedure dettagliate
  [Procedura: Eseguire query in un database](how-to-query-a-database-by-using-linq.md)  
   
  [Procedura: Chiamare una stored procedure](how-to-call-a-stored-procedure-by-using-linq.md)  
@@ -242,8 +242,8 @@ Parametro facoltativo. A [`Take While` clause](../../../../visual-basic/language
   
  [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
-## <a name="featured-book-chapters"></a>Featured book chapters  
- [Chapter 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) in [Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+## <a name="featured-book-chapters"></a>Capitoli del libro in primo piano  
+ [Capitolo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) in [programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Vedere anche
 

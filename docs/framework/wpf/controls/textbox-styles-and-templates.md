@@ -22,16 +22,16 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="textbox-parts"></a>Parti casella di testo  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.TextBox>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visivo che può contenere un <xref:System.Windows.FrameworkElement>. Il testo dell'<xref:System.Windows.Controls.TextBox> viene visualizzato in questo elemento.|  
   
 ## <a name="textbox-states"></a>Stati TextBox  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.TextBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |ReadOnly|CommonStates|L'utente non può modificare il testo nel <xref:System.Windows.Controls.TextBox>.|  

@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345956"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parametri facoltativi (Visual Basic)
-È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. È necessario attenersi alle regole che seguono:  
+È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata. I *parametri facoltativi* sono indicati dalla parola chiave `Optional` nella definizione della procedura. È necessario attenersi alle regole che seguono:  
   
 - È necessario che ciascun parametro facoltativo nella definizione della routine specifichi un valore predefinito.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox` che include un parametro obbligatorio e due parametri facoltativi.  
+ Nell'esempio riportato di seguito vengono effettuate diverse chiamate alla funzione `MsgBox` `MsgBox` include un parametro obbligatorio e due parametri facoltativi.  
   
  Nella prima chiamata a `MsgBox` vengono forniti tutti e tre gli argomenti nell'ordine in cui sono definiti da `MsgBox`. Nella seconda chiamata viene fornito solo l'argomento obbligatorio. Nella terza e quarta chiamata vengono forniti il primo e il terzo argomento. Nella terza chiamata gli argomenti vengono forniti in base alla posizione, nella quarta in base al nome.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Determinazione dell'eventuale presenza di un argomento facoltativo  
- Una routine non può rilevare, in fase di esecuzione, se un determinato argomento è stato omesso o se il codice di chiamata ha fornito in modo esplicito il valore predefinito. Se è necessario fare questa distinzione, è possibile impostare come predefinito un valore improbabile. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ Una routine non può rilevare, in fase di esecuzione, se un determinato argomento è stato omesso o se il codice di chiamata ha fornito in modo esplicito il valore predefinito. Se è necessario fare questa distinzione, è possibile impostare come predefinito un valore improbabile. La procedura seguente definisce il parametro facoltativo `office`e verifica il valore predefinito `QJZ`per verificare se è stato omesso nella chiamata:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   

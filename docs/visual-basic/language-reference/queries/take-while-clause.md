@@ -28,15 +28,15 @@ Take While expression
   
 |Termine|Definizione|  
 |---|---|  
-|`expression`|Obbligatorio. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Obbligatoria. Espressione che rappresenta una condizione per cui verificare gli elementi. L'espressione deve restituire un valore `Boolean` o un equivalente funzionale, ad esempio un `Integer` da valutare come `Boolean`.|  
   
 ## <a name="remarks"></a>Note  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ La clausola `Take While` include gli elementi dall'inizio di un risultato della query fino a quando l'`expression` fornito non restituisce `false`. Quando il `expression` restituisce `false`, la query ignorerà tutti gli elementi rimanenti. Il `expression` viene ignorato per i risultati rimanenti.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ La clausola `Take While` differisce dalla clausola `Where` in quanto la clausola `Where` può essere utilizzata per includere tutti gli elementi di una query che soddisfano una determinata condizione. La clausola `Take While` include gli elementi solo fino alla prima volta che la condizione non viene soddisfatta. La clausola `Take While` è particolarmente utile quando si utilizza un risultato di query ordinato.  
   
 ## <a name="example"></a>Esempio  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ Nell'esempio di codice seguente viene utilizzata la clausola `Take While` per recuperare i risultati fino a quando non viene trovato il primo cliente senza ordini.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   

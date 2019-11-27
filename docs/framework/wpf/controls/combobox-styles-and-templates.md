@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="combobox-parts"></a>Parti ComboBox  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contiene il testo della <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Elenco a discesa che contiene gli elementi nella casella combinata.|  
@@ -32,9 +32,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="combobox-states"></a>Stati ComboBox  
  Nella tabella seguente sono elencati gli Stati per il controllo <xref:System.Windows.Controls.ComboBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse si trova sul controllo <xref:System.Windows.Controls.ComboBox>.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
@@ -43,7 +43,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non ha lo stato attivo.|  
-|Modificabile|EditStates|La proprietà <xref:System.Windows.Controls.ComboBox.IsEditable%2A> è `true`.|  
+|Editable|EditStates|La proprietà <xref:System.Windows.Controls.ComboBox.IsEditable%2A> è `true`.|  
 |Modificabili|EditStates|La proprietà <xref:System.Windows.Controls.ComboBox.IsEditable%2A> è `false`.|  
   
 ## <a name="comboboxitem-parts"></a>Parti ComboBoxItem  
@@ -52,14 +52,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="comboboxitem-states"></a>Stati ComboBoxItem  
  Nella tabella seguente sono elencati gli Stati per il controllo <xref:System.Windows.Controls.ComboBoxItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse si trova sul controllo <xref:System.Windows.Controls.ComboBox>.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
-|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
+|Selected|SelectionStates|L'elemento è attualmente selezionato.|  
 |Deselezionato|SelectionStates|L'elemento non è selezionato.|  
 |SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  

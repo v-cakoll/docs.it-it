@@ -25,9 +25,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="tooltip-states"></a>Stati descrizione comando  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ToolTip>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Closed|OpenStates|Lo stato predefinito.|  
+|Chiuso|OpenStates|Stato predefinito.|  
 |Apri|OpenStates|Il <xref:System.Windows.Controls.ToolTip> è visibile.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

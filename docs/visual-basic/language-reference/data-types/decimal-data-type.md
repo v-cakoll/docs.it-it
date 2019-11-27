@@ -29,23 +29,23 @@ ms.locfileid: "74344040"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Tipo di dati Decimal (Visual Basic)
 
-Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
+Contiene valori Signed a 128 bit (16 byte) che rappresentano numeri di tipo Integer a 96 bit (12 byte) scalati in base a una potenza variabile di 10. Il fattore di scala specifica il numero di cifre a destra del separatore decimale. l'intervallo è compreso tra 0 e 28. Con una scala pari a 0 (senza posizioni decimali), il valore massimo possibile è +/-79.228.162.514.264.337.593.543.950.335 (+/-7.9228162514264337593543950335E + 28). Con 28 cifre decimali, il valore più grande è +/-7.9228162514264337593543950335 e il valore diverso da zero è +/-0,0000000000000000000000000001 (+/-1E-28).
 
 ## <a name="remarks"></a>Note
 
-The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
+Il tipo di dati `Decimal` fornisce il maggior numero di cifre significative per un numero. Supporta fino a 29 cifre significative e può rappresentare valori superiori a 7,9228 x 10 ^ 28. È particolarmente adatto per i calcoli, ad esempio Financial, che richiedono un numero elevato di cifre ma non tollerano errori di arrotondamento.
 
 Il valore predefinito di `Decimal` è 0.
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
+- **Precisione.** `Decimal` non è un tipo di dati a virgola mobile. La struttura `Decimal` include un valore integer binario, insieme a un bit di segno e a un fattore di scala integer che specifica quale parte del valore è una frazione decimale. Per questo motivo, `Decimal` numeri hanno una rappresentazione più precisa in memoria rispetto ai tipi a virgola mobile (`Single` e `Double`).
 
-- **Prestazioni.** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
+- **Prestazioni.** Il tipo di dati `Decimal` è il più lento di tutti i tipi numerici. Prima di scegliere un tipo di dati, è necessario valutare l'importanza della precisione rispetto alle prestazioni.
 
-- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Conversioni.** Il tipo di dati `Decimal` viene ampliato in `Single` o `Double`. Ciò significa che è possibile convertire `Decimal` in uno di questi tipi senza riscontrare un errore <xref:System.OverflowException?displayProperty=nameWithType>.
 
-- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. Questa condizione è illustrata nell'esempio seguente.
+- **Zeri finali.** Visual Basic non archivia zeri finali in un valore letterale `Decimal`. Tuttavia, una variabile `Decimal` conserva gli zeri finali acquisiti in modo computazionale. Ciò è illustrato nell'esempio seguente.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,19 +57,19 @@ Il valore predefinito di `Decimal` è 0.
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  The output of `MsgBox` in the preceding example is as follows:
+  L'output di `MsgBox` nell'esempio precedente è il seguente:
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Type Characters.** Aggiungendo il carattere di tipo letterale `D` a un valore letterale, se ne determina la conversione nel tipo di dati `Decimal`. Aggiungendo il carattere identificatore di tipo `@` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Decimal`.
+- **Digitare i caratteri.** Aggiungendo il carattere di tipo letterale `D` a un valore letterale, se ne determina la conversione nel tipo di dati `Decimal`. Aggiungendo il carattere identificatore di tipo `@` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Decimal`.
 
-- **Framework Type.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Decimal?displayProperty=nameWithType>.
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Decimal?displayProperty=nameWithType>.
 
 ## <a name="range"></a>Intervallo
 
- You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
+ Potrebbe essere necessario usare il carattere di tipo `D` per assegnare un valore di grandi dimensioni a una variabile o a una costante di `Decimal`. Questo requisito è dovuto al fatto che il compilatore interpreta un valore letterale come `Long` a meno che un carattere di tipo letterale non segua il valore letterale, come illustrato nell'esempio seguente.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -77,11 +77,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
+La dichiarazione per `bigDec1` non produce un overflow perché il valore assegnato è compreso nell'intervallo per `Long`. È possibile assegnare il valore `Long` alla variabile `Decimal`.
 
-The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
+La dichiarazione per `bigDec2` genera un errore di overflow perché il valore assegnato è troppo grande per `Long`. Poiché il valore letterale numerico non può essere prima interpretato come `Long`, non può essere assegnato alla variabile `Decimal`.
 
-For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
+Per `bigDec3`, il carattere di tipo letterale `D` risolve il problema forzando il compilatore a interpretare il valore letterale come `Decimal` anziché come `Long`.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -91,6 +91,6 @@ For `bigDec3`, the literal type character `D` solves the problem by forcing the 
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
 - [Tipo di dati Single](../../../visual-basic/language-reference/data-types/single-data-type.md)
 - [Tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

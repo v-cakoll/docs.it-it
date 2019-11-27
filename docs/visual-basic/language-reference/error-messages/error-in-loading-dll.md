@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329551"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Errore di caricamento della DLL (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Una libreria di collegamento dinamico (DLL) è una libreria specificata nella clausola `Lib` di un'istruzione `Declare`. Le possibili cause di questo errore includono:  
   
-- The file is not DLL executable.  
+- Il file non è un file eseguibile DLL.  
   
-- The file is not a Microsoft Windows DLL.  
+- Il file non è una DLL di Microsoft Windows.  
   
-- The DLL references another DLL that is not present.  
+- La DLL fa riferimento a un'altra DLL non presente.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- La DLL o la DLL a cui si fa riferimento non si trova in una directory specificata nel percorso.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Se il file è un file di testo di origine e pertanto non un eseguibile DLL, è necessario compilarlo e collegarlo a un modulo eseguibile DLL.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Se il file non è una DLL di Microsoft Windows, ottenere l'equivalente di Microsoft Windows.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- Se la DLL fa riferimento a un'altra DLL non presente, ottenere la DLL a cui si fa riferimento e renderla disponibile.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- Se la dll o la dll a cui si fa riferimento non è presente in una directory specificata dal percorso, spostare la DLL in una directory a cui si fa riferimento.  
   
 ## <a name="see-also"></a>Vedere anche
 

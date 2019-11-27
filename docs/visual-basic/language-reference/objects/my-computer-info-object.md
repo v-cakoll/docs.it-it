@@ -15,14 +15,14 @@ ms.locfileid: "74347207"
 Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.  
   
 ## <a name="remarks"></a>Note  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ Per informazioni sulle proprietà dell'oggetto `My.Computer.Info`, vedere <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

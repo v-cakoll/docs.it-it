@@ -23,32 +23,32 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343929"
 ---
-# <a name="short-data-type-visual-basic"></a>Short data type (Visual Basic)
+# <a name="short-data-type-visual-basic"></a>Tipo di dati short (Visual Basic)
 
-Holds signed 16-bit (2-byte) integers that range in value from -32,768 through 32,767.  
+Include interi con segno a 16 bit (2 byte) compresi tra-32.768 e 32.767.  
   
 ## <a name="remarks"></a>Note  
 
- Use the `Short` data type to contain integer values that do not require the full data width of `Integer`. In some cases, the common language runtime can pack your `Short` variables closely together and save memory consumption.  
+ Utilizzare il tipo di dati `Short` per contenere valori integer che non richiedono la larghezza dei dati completa di `Integer`. In alcuni casi, le Common Language Runtime possono comprimere le variabili di `Short` e risparmiare sull'utilizzo della memoria.  
   
  Il valore predefinito di `Short` è 0.  
   
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Assegnazioni di valori letterali
 
-You can declare and initialize a `Short` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Se il valore letterale integer è esterno all'intervallo di `Short`, vale a dire se è minore di <xref:System.Int16.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.Int16.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
+È possibile dichiarare e inizializzare una variabile di `Short` assegnando un valore letterale decimale, un valore letterale esadecimale, un valore letterale ottale o (a partire da Visual Basic 2017) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `Short`, vale a dire se è minore di <xref:System.Int16.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.Int16.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
 
-In the following example, integers equal to 1,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [Integer](integer-data-type.md) to `Short` values.
+Nell'esempio seguente, i numeri interi uguali a 1.034 rappresentati come valori letterali decimali, esadecimali e binari vengono convertiti in modo implicito da [Integer](integer-data-type.md) a valori `Short`.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. I valori letterali decimali non hanno prefissi.
+> Usare il prefisso `&h` o `&H` per indicare un valore letterale esadecimale, il prefisso `&b` o `&B` per indicare un valore letterale binario e il prefisso `&o` o `&O` per indicare un valore letterale ottale. I valori letterali decimali non hanno prefissi.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+A partire da Visual Basic 2017, è anche possibile usare il carattere di sottolineatura, `_`, come separatore di cifre per migliorare la leggibilità, come illustrato nell'esempio seguente.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Esempio:
+A partire da Visual Basic 15,5, è anche possibile usare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre esadecimali, binarie o ottali. Ad esempio:
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +56,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `S` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Short` data type, as the following example shows.
+I valori letterali numerici possono includere anche il [carattere del tipo](../../programming-guide/language-features/data-types/type-characters.md) di `S` per indicare il tipo di dati `Short`, come illustrato nell'esempio riportato di seguito.
 
 ```vb
 Dim number = &H_3264S
@@ -64,17 +64,17 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-- **Widening.** The `Short` data type widens to `Integer`, `Long`, `Decimal`, `Single`, or `Double`. È pertanto possibile convertire `Short` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Conversioni.** Il tipo di dati `Short` viene ampliato in `Integer`, `Long`, `Decimal`, `Single`o `Double`. È pertanto possibile convertire `Short` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-- **Type Characters.** Aggiungendo il carattere di tipo letterale `S` a un valore letterale, se ne determina la conversione nel tipo di dati `Short`. `Short` has no identifier type character.  
+- **Digitare i caratteri.** Aggiungendo il carattere di tipo letterale `S` a un valore letterale, se ne determina la conversione nel tipo di dati `Short`. `Short` non dispone di alcun carattere di tipo identificatore.  
   
-- **Framework Type.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Int16?displayProperty=nameWithType>.  
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Int16?displayProperty=nameWithType>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)

@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346033"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedura: restituire un valore da una routine (Visual Basic)
-A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
+Una routine `Function` restituisce un valore al codice chiamante eseguendo un'istruzione `Return` o rilevando un'istruzione `Exit Function` o `End Function`.  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
+### <a name="to-return-a-value-using-the-return-statement"></a>Per restituire un valore utilizzando l'istruzione return  
   
-1. Put a `Return` statement at the point where the procedure's task is completed.  
+1. Inserire un'istruzione `Return` nel punto in cui è stata completata l'attività della stored procedure.  
   
-2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. Seguire la parola chiave `Return` con un'espressione che restituisce il valore che si vuole restituire al codice chiamante.  
   
 3. Una routine può includere più di un'istruzione `Return`.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+     Con la seguente procedura `Function` viene calcolato il lato più lungo, o ipotenusa, di un triangolo rettangolo, che viene quindi restituito al codice chiamante.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+     Nell'esempio seguente viene illustrata una tipica chiamata a `hypotenuse`, che archivia il valore restituito.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Per restituire un valore utilizzando la funzione Exit o end  
   
-1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
+1. In almeno una posizione nella procedura `Function` assegnare un valore al nome della stored procedure.  
   
-2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
+2. Quando si esegue un'istruzione `Exit Function` o `End Function`, Visual Basic restituisce il valore assegnato più di recente al nome della stored procedure.  
   
 3. Una routine può includere più di un'istruzione `Exit Function` ed è possibile combinare istruzioni `Return` e `Exit Function` nella stessa routine.  
   
-4. You can have only one `End Function` statement in a `Function` procedure.  
+4. In una procedura `Function` è possibile disporre di una sola istruzione `End Function`.  
   
-     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     Per ulteriori informazioni e un esempio, vedere "valore restituito" nell' [istruzione Function](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

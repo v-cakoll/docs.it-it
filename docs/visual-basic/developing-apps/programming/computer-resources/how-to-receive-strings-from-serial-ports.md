@@ -25,7 +25,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
   
 2. Determinare quale porta seriale deve fornire le stringhe. In questo esempio si presuppone che sia `COM1`.  
   
-3. Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Il blocco `Try...Catch...Finally` consente all'applicazione di chiudere la porta seriale, anche se viene generata un'eccezione. Tutto il codice per la modifica della porta seriale deve essere contenuto all'interno di questo blocco.  
   

@@ -16,33 +16,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335991"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomi di elementi e attributi XML dichiarati (Visual Basic)
-This topic provides Visual Basic guidelines for naming XML elements and attributes in XML literals.  In an XML literal, you can specify a local name or a qualified name. A qualified name consists of an XML namespace prefix, a colon, and a local name. For more information about XML namespace prefixes, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+In questo argomento vengono fornite Visual Basic linee guida per la denominazione di elementi e attributi XML nei valori letterali XML.  In un valore letterale XML è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, da due punti e da un nome locale. Per ulteriori informazioni sui prefissi degli spazi dei nomi XML, vedere [valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Regole  
- A local name of an element or attribute in Visual Basic must adhere to the following rules.  
+ Il nome locale di un elemento o di un attributo in Visual Basic deve rispettare le regole seguenti.  
   
-- It can begin with a namespace. It must begin with an alphabetical character or an underscore (`_`).  
+- Può iniziare con uno spazio dei nomi. Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
   
-- It must contain only alphabetical characters, decimal digits, underscores, periods (.), and hyphens (-).  
+- Deve contenere solo caratteri alfabetici, cifre decimali, caratteri di sottolineatura, punti (.) e trattini (-).  
   
-- It must not be more than 1,024 characters long.  
+- La lunghezza non deve superare i 1.024 caratteri.  
   
-- Colons that appear in names indicate namespace demarcation. Therefore, you can use colons only to specify an XML namespace for a particular name.  
+- I due punti visualizzati nei nomi indicano la delimitazione dello spazio dei nomi. Pertanto, è possibile utilizzare i due punti solo per specificare uno spazio dei nomi XML per un determinato nome.  
   
- In addition, you should adhere to the following guideline.  
+ Inoltre, è necessario rispettare le linee guida seguenti.  
   
-- The XML 1.0 specification reserves all names starting with the string "xml", of any capitalization variation. Therefore, do not use those names for your element and attribute names.  
+- La specifica XML 1,0 riserva tutti i nomi che iniziano con la stringa "XML", di qualsiasi variazione di maiuscole e minuscole. Pertanto, non utilizzare tali nomi per i nomi di elemento e di attributo.  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, a name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>Linee guida per la lunghezza del nome  
+ In pratica, un nome deve essere il più breve possibile, pur identificando chiaramente la natura dell'elemento. In questo modo è possibile migliorare la leggibilità del codice e ridurre la lunghezza delle righe e le dimensioni del file di origine.  
   
- However, your name should not be so short that it does not adequately describe the element or how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, appropriate element names can save time.  
+ Il nome, tuttavia, non deve essere così breve da descrivere in modo adeguato l'elemento o il modo in cui il codice lo usa. Questo è importante per la leggibilità del codice. Se un altro utente sta provando a comprenderlo o se si sta esaminando molto tempo dopo averlo scritto, i nomi di elemento appropriati possono risparmiare tempo.  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- XML element names are case sensitive. This means that when the Visual Basic compiler compares two names that differ in alphabetical case only, it interprets them as different names. For example, it interprets `ABC` and `abc` as referring to separate elements.  
+## <a name="case-sensitivity-in-names"></a>Distinzione maiuscole/minuscole nei nomi  
+ Con distinzione tra maiuscole e minuscole. Ciò significa che quando il compilatore di Visual Basic confronta due nomi che differiscono solo per i casi alfabetici, li interpreta come nomi diversi. Ad esempio, interpreta `ABC` e `abc` come riferimento a elementi distinti.  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
- When creating an XML element literal, you can specify the XML namespace prefix for the element name. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ Quando si crea un valore letterale elemento XML, è possibile specificare il prefisso dello spazio dei nomi XML per il nome dell'elemento. Per altre informazioni, vedere [valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

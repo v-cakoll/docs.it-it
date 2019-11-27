@@ -14,31 +14,31 @@ ms.locfileid: "74330966"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procedura: caricare XML da un file, da una stringa o da un flusso (Visual Basic)
 
-You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods. These methods are shown in the following examples.
+È possibile creare [valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md) e popolarli con il contenuto di un'origine esterna, ad esempio un file, una stringa o un flusso usando diversi metodi. Questi metodi sono illustrati negli esempi seguenti.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-load-xml-from-a-file"></a>To load XML from a file
+## <a name="to-load-xml-from-a-file"></a>Per caricare XML da un file
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method. This method can take a file path, text stream, or XML stream as input.
+Per popolare un valore letterale XML, ad esempio un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> da un file, usare il metodo `Load`. Questo metodo può assumere come input un percorso di file, un flusso di testo o un flusso XML.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.
+Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo del metodo <xref:System.Xml.Linq.XDocument.Load%28System.String%29> per popolare un oggetto <xref:System.Xml.Linq.XDocument> con XML da un file di testo.
 
 [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
 
-## <a name="to-load-xml-from-a-string"></a>To load XML from a string
+## <a name="to-load-xml-from-a-string"></a>Per caricare XML da una stringa
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.
+Per popolare un valore letterale XML, ad esempio un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> oggetto da una stringa, è possibile usare il metodo `Parse`.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.
+Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo del metodo <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> per popolare un oggetto <xref:System.Xml.Linq.XDocument> con XML da una stringa.
 
 [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
 
-## <a name="to-load-xml-from-a-stream"></a>To load XML from a stream
+## <a name="to-load-xml-from-a-stream"></a>Per caricare XML da un flusso
 
-To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.
+Per popolare un valore letterale XML, ad esempio un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> da un flusso, è possibile usare il metodo `Load` o il metodo <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>.
 
-The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.
+Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo del metodo <xref:System.Xml.Linq.XNode.ReadFrom%2A> per popolare un oggetto <xref:System.Xml.Linq.XDocument> con XML da un flusso XML.
 
 [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
 

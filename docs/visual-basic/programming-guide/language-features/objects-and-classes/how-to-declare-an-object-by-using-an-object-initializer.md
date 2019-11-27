@@ -15,49 +15,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347132"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto (Visual Basic)
-Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
+Gli inizializzatori di oggetto consentono di dichiarare e creare un'istanza di una classe in un'unica istruzione. Inoltre, è possibile inizializzare uno o più membri dell'istanza contemporaneamente, senza richiamare un costruttore con parametri.  
   
- When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
+ Quando si utilizza un inizializzatore di oggetto per creare un'istanza di un tipo denominato, viene chiamato il costruttore senza parametri per la classe, seguito dall'inizializzazione dei membri designati nell'ordine specificato.  
   
- The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
+ Nella procedura seguente viene illustrato come creare un'istanza di una classe `Student` in tre modi diversi. La classe include le proprietà First Name, Last Name e Class year, tra le altre. Ognuna delle tre dichiarazioni crea una nuova istanza di `Student`, con la proprietà `First` impostata su "Michael", la proprietà `Last` impostata su "Tucker" e tutti gli altri membri impostati sui rispettivi valori predefiniti. Il risultato di ogni dichiarazione nella procedura è equivalente all'esempio seguente, che non usa un inizializzatore di oggetto.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
+ Per un'implementazione della classe `Student`, vedere [procedura: creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiare il codice da questo argomento per configurare la classe e creare un elenco di oggetti `Student` da usare.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Per creare un oggetto di una classe denominata utilizzando un inizializzatore di oggetto  
   
-1. Begin the declaration as if you planned to use a constructor.  
+1. Iniziare la dichiarazione come se si pianificasse l'uso di un costruttore.  
   
      `Dim student1 As New Student`  
   
-2. Type the keyword `With`, followed by an initialization list in braces.  
+2. Digitare la parola chiave `With`, seguita da un elenco di inizializzazione tra parentesi graffe.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
+3. Nell'elenco di inizializzazione includere ogni proprietà che si desidera inizializzare e assegnarvi un valore iniziale. Il nome della proprietà è preceduto da un punto.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     You can initialize one or more members of the class.  
+     È possibile inizializzare uno o più membri della classe.  
   
-4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
+4. In alternativa, è possibile dichiarare una nuova istanza della classe e quindi assegnarvi un valore. Dichiarare innanzitutto un'istanza di `Student`:  
   
      `Dim student2 As Student`  
   
-5. Begin the creation of an instance of `Student` in the normal way.  
+5. Iniziare la creazione di un'istanza di `Student` in modo normale.  
   
      `Dim student2 As Student = New Student`  
   
-6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
+6. Digitare `With` e quindi un inizializzatore di oggetto per inizializzare uno o più membri della nuova istanza.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
+7. È possibile semplificare la definizione nel passaggio precedente omettendo `As Student`. In tal caso, il compilatore determina che `student3` è un'istanza di `Student` utilizzando l'inferenza del tipo locale.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     Per altre informazioni, vedere [inferenza dei tipi locali](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

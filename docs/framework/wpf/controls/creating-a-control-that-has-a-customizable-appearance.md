@@ -52,7 +52,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 In questo argomento si presuppone che l'utente sia in grado di creare un nuovo <xref:System.Windows.Controls.ControlTemplate> per un controllo esistente, di avere familiarità con gli elementi di un contratto di controllo e di comprendere i concetti illustrati in [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 

@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="toolbar-parts"></a>Parti della barra degli strumenti  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.ToolBar>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Oggetto che contiene i controlli nella <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Oggetto che contiene i controlli che si trovano nell'area di overflow del <xref:System.Windows.Controls.ToolBar>.|  
@@ -32,7 +32,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="toolbar-states"></a>Stati della barra degli strumenti  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.ToolBar>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  

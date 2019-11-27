@@ -1,5 +1,5 @@
 ---
-title: Scope
+title: Ambito
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -24,40 +24,40 @@ ms.locfileid: "74345284"
 ---
 # <a name="scope-in-visual-basic"></a>Ambito in Visual Basic
 
-The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). An element can have scope at one of the following levels:
+L' *ambito* di un elemento dichiarato è il set di tutto il codice che può farvi riferimento senza qualificarne il nome o renderlo disponibile tramite un' [istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento può avere un ambito a uno dei livelli seguenti:
 
 |Level|Descrizione|
 |-----------|-----------------|
-|Ambito del blocco|Available only within the code block in which it is declared|
-|Procedure scope|Available to all code within the procedure in which it is declared|
-|Module scope|Available to all code within the module, class, or structure in which it is declared|
-|Namespace scope|Available to all code in the namespace in which it is declared|
+|Ambito blocco|Disponibile solo all'interno del blocco di codice in cui è dichiarata|
+|Ambito procedura|Disponibile per tutto il codice all'interno della routine in cui è dichiarata|
+|Ambito del modulo|Disponibile per tutto il codice all'interno del modulo, della classe o della struttura in cui è dichiarata|
+|Ambito dello spazio dei nomi|Disponibile per tutto il codice nello spazio dei nomi in cui è dichiarato|
 
-These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification. For more information, see "Levels of Scope" on this page.
+Questi livelli di avanzamento dell'ambito dal più piccolo (blocco) al più ampio (spazio dei nomi), dove l' *ambito più ristretto* indica il set di codice più piccolo che può fare riferimento all'elemento senza qualifica. Per ulteriori informazioni, vedere "livelli di ambito" in questa pagina.
 
-## <a name="specifying-scope-and-defining-variables"></a>Specifying Scope and Defining Variables
+## <a name="specifying-scope-and-defining-variables"></a>Specifica dell'ambito e definizione delle variabili
 
-You specify the scope of an element when you declare it. The scope can depend on the following factors:
+L'ambito di un elemento viene specificato quando lo si dichiara. L'ambito può dipendere dai fattori seguenti:
 
-- The region (block, procedure, module, class, or structure) in which you declare the element
+- Area (Block, procedure, modulo, classe o struttura) in cui viene dichiarato l'elemento
 
-- The namespace containing the element's declaration
+- Spazio dei nomi contenente la dichiarazione dell'elemento.
 
-- The access level you declare for the element
+- Livello di accesso dichiarato per l'elemento
 
-Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results. Per altre informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Prestare attenzione quando si definiscono le variabili con lo stesso nome ma con un ambito diverso, perché questa operazione può causare risultati imprevisti. Per altre informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-## <a name="levels-of-scope"></a>Levels of Scope
+## <a name="levels-of-scope"></a>Livelli di ambito
 
-A programming element is available throughout the region in which you declare it. All code in the same region can refer to the element without qualifying its name.
+Un elemento di programmazione è disponibile nell'area geografica in cui viene dichiarata. Tutto il codice nella stessa area può fare riferimento all'elemento senza qualificare il nome.
 
-### <a name="block-scope"></a>Block Scope
+### <a name="block-scope"></a>Ambito del blocco
 
-A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:
+Un blocco è un set di istruzioni racchiuse tra istruzioni di inizializzazione e terminazione di dichiarazione, come le seguenti:
 
 - `Do` e `Loop`
 
-- `For` [`Each`] and `Next`
+- `For` [`Each`] e `Next`
 
 - `If` e `End If`
 
@@ -71,7 +71,7 @@ A block is a set of statements enclosed within initiating and terminating declar
 
 - `With` e `End With`
 
-If you declare a variable within a block, you can use it only within that block. In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.
+Se si dichiara una variabile all'interno di un blocco, è possibile utilizzarla solo all'interno di tale blocco. Nell'esempio seguente, l'ambito della variabile Integer `cube` è il blocco tra `If` e `End If`e non è più possibile fare riferimento a `cube` quando l'esecuzione passa all'esterno del blocco.
 
 ```vb
 If n < 1291 Then
@@ -81,26 +81,26 @@ End If
 ```
 
 > [!NOTE]
-> Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure. If you enter the block more than once during the procedure, each block variable retains its previous value. To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.
+> Anche se l'ambito di una variabile è limitato a un blocco, la sua durata è ancora quella dell'intera procedura. Se durante la procedura si immette più di una volta il blocco, ogni variabile di blocco mantiene il valore precedente. Per evitare risultati imprevisti in tal caso, è consigliabile inizializzare le variabili di blocco all'inizio del blocco.
 
-### <a name="procedure-scope"></a>Procedure Scope
+### <a name="procedure-scope"></a>Ambito procedura
 
-An element declared within a procedure is not available outside that procedure. Only the procedure that contains the declaration can use it. Variables at this level are also known as *local variables*. You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.
+Un elemento dichiarato all'interno di una routine non è disponibile all'esterno di tale procedura. Solo la routine che contiene la dichiarazione può usarla. Le variabili a questo livello sono note anche come *variabili locali*. Vengono dichiarati con l' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md), con o senza la parola chiave [static](../../../../visual-basic/language-reference/modifiers/static.md) .
 
-Procedure and block scope are closely related. If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.
+La procedura e l'ambito del blocco sono strettamente correlati. Se si dichiara una variabile all'interno di una routine, ma all'esterno di qualsiasi blocco all'interno di tale procedura, è possibile considerare la variabile come avente un ambito di blocco, in cui il blocco è l'intera routine.
 
 > [!NOTE]
-> All local elements, even if they are `Static` variables, are private to the procedure in which they appear. You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.
+> Tutti gli elementi locali, anche se sono `Static` variabili, sono privati della routine in cui vengono visualizzati. Non è possibile dichiarare alcun elemento utilizzando la parola chiave [public](../../../../visual-basic/language-reference/modifiers/public.md) all'interno di una routine.
 
-### <a name="module-scope"></a>Module Scope
+### <a name="module-scope"></a>Ambito del modulo
 
-For convenience, the single term *module level* applies equally to modules, classes, and structures. You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.
+Per praticità, il *livello del modulo* a singolo termine si applica ugualmente a moduli, classi e strutture. È possibile dichiarare elementi a questo livello inserendo l'istruzione di dichiarazione all'esterno di qualsiasi routine o blocco, ma all'interno del modulo, della classe o della struttura.
 
-When you make a declaration at the module level, the access level you choose determines the scope. The namespace that contains the module, class, or structure also affects the scope.
+Quando si crea una dichiarazione a livello di modulo, il livello di accesso scelto determina l'ambito. Lo spazio dei nomi che contiene il modulo, la classe o la struttura influiscono anche sull'ambito.
 
-Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module. The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords. However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.
+Gli elementi per i quali si dichiara il livello di accesso [privato](../../../../visual-basic/language-reference/modifiers/private.md) sono disponibili per tutte le procedure del modulo, ma non per il codice in un modulo diverso. Per impostazione predefinita, l'istruzione `Dim` a livello di modulo viene `Private` se non si usano parole chiave del livello di accesso. Tuttavia, è possibile rendere più evidenti l'ambito e il livello di accesso utilizzando la parola chiave `Private` nell'istruzione `Dim`.
 
-In the following example, all procedures defined in the module can refer to the string variable `strMsg`. When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.
+Nell'esempio seguente, tutte le routine definite nel modulo possono fare riferimento alla variabile di stringa `strMsg`. Quando viene chiamata la seconda procedura, viene visualizzato il contenuto della variabile stringa `strMsg` in una finestra di dialogo.
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -115,40 +115,40 @@ Sub usePrivateVariable()
 End Sub
 ```
 
-### <a name="namespace-scope"></a>Namespace Scope
+### <a name="namespace-scope"></a>Ambito dello spazio dei nomi
 
-If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared. With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.
+Se si dichiara un elemento a livello di modulo usando la parola chiave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [public](../../../../visual-basic/language-reference/modifiers/public.md) , diventa disponibile per tutte le routine in tutto lo spazio dei nomi in cui viene dichiarato l'elemento. Con la seguente modifica apportata all'esempio precedente, è possibile fare riferimento alla variabile di stringa `strMsg` dal codice in qualsiasi punto dello spazio dei nomi della relativa dichiarazione.
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
 Public strMsg As String
 ```
 
-Namespace scope includes nested namespaces. An element available from within a namespace is also available from within any namespace nested inside that namespace.
+Lo spazio dei nomi include spazi dei nomi annidati. Un elemento disponibile in uno spazio dei nomi è disponibile anche all'interno di qualsiasi spazio dei nomi annidato all'interno di tale spazio dei nomi.
 
-If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace. In this case, namespace scope can be thought of as project scope. `Public` elements in a module, class, or structure are also available to any project that references their project.
+Se il progetto non contiene alcuna [istruzione dello spazio dei nomi](../../../../visual-basic/language-reference/statements/namespace-statement.md), tutti gli elementi del progetto si trova nello stesso spazio dei nomi. In questo caso, l'ambito dello spazio dei nomi può essere considerato come ambito del progetto. gli elementi `Public` in un modulo, una classe o una struttura sono disponibili anche per qualsiasi progetto che fa riferimento al progetto.
 
-## <a name="choice-of-scope"></a>Choice of Scope
+## <a name="choice-of-scope"></a>Scelta dell'ambito
 
-When you declare a variable, you should keep in mind the following points when choosing its scope.
+Quando si dichiara una variabile, è necessario tenere presenti i punti seguenti quando si sceglie l'ambito.
 
-### <a name="advantages-of-local-variables"></a>Advantages of Local Variables
+### <a name="advantages-of-local-variables"></a>Vantaggi delle variabili locali
 
-Local variables are a good choice for any kind of temporary calculation, for the following reasons:
+Le variabili locali rappresentano una scelta ottimale per qualsiasi tipo di calcolo temporaneo, per i motivi seguenti:
 
-- **Name Conflict Avoidance.** Local variable names are not susceptible to conflict. For example, you can create several different procedures containing a variable called `intTemp`. As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`. Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.
+- **Evitare conflitti di nomi.** I nomi delle variabili locali non sono suscettibili ai conflitti. È ad esempio possibile creare diverse procedure contenenti una variabile denominata `intTemp`. Fino a quando ogni `intTemp` viene dichiarata come variabile locale, ogni procedura riconosce solo la propria versione di `intTemp`. Ogni procedura può modificare il valore nella `intTemp` locale senza influire sulle variabili `intTemp` in altre routine.
 
-- **Memory Consumption.** Local variables consume memory only while their procedure is running. Their memory is released when the procedure returns to the calling code. By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary. *Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.
+- **Consumo di memoria.** Le variabili locali utilizzano la memoria solo mentre è in esecuzione la relativa procedura. La memoria viene rilasciata quando la procedura viene restituita al codice chiamante. Al contrario, le variabili [condivise](../../../../visual-basic/language-reference/modifiers/shared.md) e [statiche](../../../../visual-basic/language-reference/modifiers/static.md) utilizzano risorse di memoria fino a quando l'applicazione non viene arrestata, quindi utilizzarle solo quando necessario. Le *variabili di istanza* utilizzano la memoria mentre la loro istanza continua a esistere, rendendole meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti rispetto a `Shared` o `Static` variabili.
 
-### <a name="minimizing-scope"></a>Minimizing Scope
+### <a name="minimizing-scope"></a>Riduzione dell'ambito
 
-In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest). This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable. Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.
+In generale, quando si dichiara una variabile o una costante, è consigliabile fare in modo che l'ambito sia più stretto possibile (l'ambito del blocco è il più piccolo). Questo consente di conservare la memoria e ridurre al minimo le probabilità che il codice faccia riferimento erroneamente alla variabile non corretta. Analogamente, è consigliabile dichiarare una variabile come [statica](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario mantenerne il valore tra le chiamate di routine.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Procedura: controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -18,27 +18,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347836"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
+Indica che un operatore di conversione (`CType`) converte una classe o una struttura in un tipo che può conservare tutti i valori possibili della classe o della struttura originale.  
   
-## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>Conversione con la parola chiave Widen  
+ La procedura di conversione deve specificare `Public Shared` oltre al `Widening`.  
   
- Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
+ Le conversioni verso un tipo di dati più ampio hanno sempre esito positivo in fase di esecuzione e non subiscono mai Gli esempi sono `Single` `Double`, `Char` `String`e un tipo derivato al relativo tipo di base. Questa ultima conversione viene ampliata perché il tipo derivato contiene tutti i membri del tipo di base e pertanto è un'istanza del tipo di base.  
   
- The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
+ Il codice consumer non deve usare `CType` per le conversioni verso un tipo di oggetto più ampio, anche se `Option Strict` è `On`.  
   
- The `Widening` keyword can be used in this context:  
+ Il `Widening` parola chiave può essere usato in questo contesto:  
   
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Per le definizioni di operatori di conversione verso un tipo di informazioni più piccolo e più piccolo, vedere [procedura: definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

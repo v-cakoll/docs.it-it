@@ -14,11 +14,11 @@ LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET L
   
  La famiglia di tecnologie LINQ offre coerenza per l'esecuzione di query per oggetti (LINQ to Objects), database relazionali (LINQ to SQL) e XML (LINQ to XML).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Introduzione (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  Offre informazioni introduttive su LINQ to XML, incluse una panoramica concettuale e una panoramica delle classi <xref:System.Xml.Linq?displayProperty=nameWithType>.  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  Offre informazioni concettuali e procedurali sulla programmazione con LINQ to XML.  
   
  [Riferimenti (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  

@@ -13,15 +13,15 @@ ms.locfileid: "74344924"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definizione di tipo anonimo (Visual Basic)
 
-In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
+In risposta alla dichiarazione di un'istanza di un tipo anonimo, il compilatore crea una nuova definizione di classe che contiene le proprietà specificate per il tipo.
 
-## <a name="compiler-generated-code"></a>Compiler-Generated Code
+## <a name="compiler-generated-code"></a>Codice generato dal compilatore
 
-For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
+Per la seguente definizione di `product`, il compilatore crea una nuova definizione di classe che contiene le proprietà `Name`, `Price`e `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
+La definizione della classe contiene definizioni di proprietà simili a quelle riportate di seguito. Si noti che non esiste alcun metodo di `Set` per le proprietà chiave. I valori delle proprietà chiave sono di sola lettura.
 
 ```vb
 Public Class $Anonymous1
@@ -52,36 +52,36 @@ Public Class $Anonymous1
 End Class
 ```
 
-In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
+Inoltre, le definizioni di tipo anonimo contengono un costruttore senza parametri. I costruttori che richiedono parametri non sono consentiti.
 
-If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
+Se una dichiarazione di tipo anonimo contiene almeno una proprietà chiave, la definizione del tipo esegue l'override di tre membri ereditati da <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>e <xref:System.Object.ToString%2A>. Se non viene dichiarata alcuna proprietà chiave, viene eseguito l'override solo <xref:System.Object.ToString%2A>. Le sostituzioni forniscono le funzionalità seguenti:
 
-- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
+- `Equals` restituisce `True` se due istanze di tipo anonimo sono la stessa istanza o se soddisfano le condizioni seguenti:
 
-  - They have the same number of properties.
+  - Hanno lo stesso numero di proprietà.
 
-  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
+  - Le proprietà vengono dichiarate nello stesso ordine, con gli stessi nomi e gli stessi tipi dedotti. I confronti tra nomi non fanno distinzione tra maiuscole e minuscole.
 
-  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
+  - Almeno una delle proprietà è una proprietà chiave e la parola chiave `Key` viene applicata alle stesse proprietà.
 
-  - Comparison of each corresponding pair of key properties returns `True`.
+  - Il confronto di ogni coppia corrispondente di proprietà chiave restituisce `True`.
 
-    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
+    Negli esempi seguenti, ad esempio, `Equals` restituisce `True` solo per `employee01` e `employee08`. Il commento prima di ogni riga specifica il motivo per cui la nuova istanza non corrisponde `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
+- `GetHashcode` fornisce un algoritmo GetHashCode univoco in modo appropriato. L'algoritmo usa solo le proprietà chiave per calcolare il codice hash.
 
-- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
+- `ToString` restituisce una stringa di valori di proprietà concatenati, come illustrato nell'esempio seguente. Sono incluse entrambe le proprietà chiave e non chiave.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
+Le proprietà denominate in modo esplicito di un tipo anonimo non possono essere in conflitto con questi metodi generati. Ovvero non è possibile utilizzare `.Equals`, `.GetHashCode`o `.ToString` per assegnare un nome a una proprietà.
 
-Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
+Le definizioni di tipo anonimo che includono almeno una proprietà chiave implementano anche l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType>, dove `T` è il tipo del tipo anonimo.
 
 > [!NOTE]
-> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
+> Le dichiarazioni di tipo anonimo creano lo stesso tipo anonimo solo se si trovano nello stesso assembly, le relative proprietà hanno gli stessi nomi e gli stessi tipi inferiti, le proprietà vengono dichiarate nello stesso ordine e le stesse proprietà sono contrassegnate come proprietà chiave.
 
 ## <a name="see-also"></a>Vedere anche
 

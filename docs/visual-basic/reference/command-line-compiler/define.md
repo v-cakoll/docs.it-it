@@ -25,31 +25,31 @@ Definisce le costanti del compilatore condizionali.
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-Oppure
+oppure
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`symbol`|Obbligatorio. Il simbolo da definire.|  
-|`value`|Parametro facoltativo. Il valore da assegnare a `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. Se non è specificato un valore, è considerato True.|  
+|`symbol`|Obbligatoria. Il simbolo da definire.|  
+|`value`|Facoltativa. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\") anziché virgolette. Se non è specificato un valore, è considerato True.|  
   
 ## <a name="remarks"></a>Note  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+ L'opzione `-define` ha un effetto simile all'uso di una direttiva per il preprocessore `#Const` nel file di origine, ad eccezione del fatto che le costanti definite con `-define` sono pubbliche e si applicano a tutti i file del progetto.  
   
  È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.  
   
- `-d` è la versione abbreviata di `-define`.  
+ `-d` è la forma abbreviata di `-define`.  
   
  È possibile definire più simboli con `-define`, separando le definizioni dei simboli con una virgola.  
   
 |Per impostare /define nell'ambiente di sviluppo integrato di Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. fare clic su **Avanzate**.<br />4. modificare il valore nella casella **costanti personalizzate** .|  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente sono definite e usate due costanti di compilazione condizionale.  

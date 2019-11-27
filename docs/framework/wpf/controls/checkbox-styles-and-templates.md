@@ -25,9 +25,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="checkbox-states"></a>Stati casella di controllo  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.CheckBox>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Premuto|CommonStates|Il controllo è premuto.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  

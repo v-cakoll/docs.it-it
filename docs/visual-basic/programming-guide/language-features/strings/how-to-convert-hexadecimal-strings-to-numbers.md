@@ -17,22 +17,22 @@ ms.locfileid: "74347169"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Procedura: convertire stringhe esadecimali in numeri (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+Questo esempio converte una stringa esadecimale in un Integer usando il metodo <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Per convertire una stringa esadecimale in un numero
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Usare il metodo <xref:System.Convert.ToInt32(System.String,System.Int32)> per convertire il numero espresso in base-16 in un valore integer.
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  Il primo argomento del metodo <xref:System.Convert.ToInt32(System.String,System.Int32)> è la stringa da convertire. Il secondo argomento descrive la base in cui è espresso il numero; il formato esadecimale è base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- Si noti che la stringa esadecimale presenta le restrizioni seguenti:
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - Non può includere il prefisso `&h`.
+  - Non può includere il separatore di cifre `_`.
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  Se è presente il prefisso o un separatore di cifre, la chiamata al metodo <xref:System.Convert.ToInt32(System.String,System.Int32)> genera un'<xref:System.FormatException>.
 
 ## <a name="see-also"></a>Vedere anche
 

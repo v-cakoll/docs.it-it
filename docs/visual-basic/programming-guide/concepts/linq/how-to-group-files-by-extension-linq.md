@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344539"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>How to: Group Files by Extension (LINQ) (Visual Basic)
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedura: raggruppare file per estensione (LINQ) (Visual Basic)
 Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle. Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -94,7 +94,7 @@ End Module
  L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e dell'impostazione di `startFolder`. Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati. È possibile applicare le stesse tecniche ad applicazioni Windows e Web. Si noti che, poiché il codice dispone gli elementi in un gruppo, è necessario un ciclo `For Each` annidato. È disponibile anche una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo scorrimento e uscire dal programma. In questo caso particolare la query di scorrimento viene eseguita sui risultati memorizzati nella cache della query originale. In altri contesti, come ad esempio LINQ to SQL, la memorizzazione nella cache non è necessaria.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
   
 ## <a name="see-also"></a>Vedere anche
 

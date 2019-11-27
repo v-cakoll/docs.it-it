@@ -18,14 +18,14 @@ Specifica le proprietà per l'accesso alle directory a cui si fa comunemente rif
 ## <a name="remarks"></a>Note  
  Per informazioni sui metodi e le proprietà dell'oggetto `My.Computer.FileSystem.SpecialDirectories` , vedere <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ Per ulteriori informazioni, vedere [procedura: recuperare il contenuto della directory documenti](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **Classe:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (fornisce l'accesso ai <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Libreria di runtime Visual Basic (in Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagrid-parts"></a>Parti DataGrid  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.DataGrid>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Riga che contiene le intestazioni di colonna.|  
   
@@ -33,9 +33,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagrid-states"></a>Stati DataGrid  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.DataGrid>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
 |InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
@@ -47,17 +47,17 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcell-states"></a>Stati di DataGridCell  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridCell>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla cella.|  
 |Con stato attivo|FocusStates|La cella ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|La cella non ha lo stato attivo|  
 |Corrente|CurrentStates|La cella è la cella corrente.|  
 |Regular|CurrentStates|La cella non è la cella corrente.|  
-|Display|InteractionStates|La cella è in modalità di visualizzazione.|  
+|Visualizza|InteractionStates|La cella è in modalità di visualizzazione.|  
 |Modifica|InteractionStates|La cella è in modalità di modifica.|  
-|Selezionato|SelectionStates|La cella è selezionata.|  
+|Selected|SelectionStates|La cella è selezionata.|  
 |Deselezionato|SelectionStates|La cella non è selezionata.|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
@@ -69,9 +69,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrow-states"></a>Stati di DataGridRow  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridRow>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla riga.|  
 |MouseOver_Editing|CommonStates|Il puntatore del mouse viene posizionato sulla riga e la riga è in modalità di modifica.|  
 |MouseOver_Selected|CommonStates|Il puntatore del mouse viene posizionato sulla riga e la riga è selezionata.|  
@@ -89,7 +89,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrowheader-parts"></a>Parti DataGridRowHeader  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte superiore.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte inferiore.|  
@@ -97,9 +97,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridrowheader-states"></a>Stati DataGridRowHeader  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sulla riga.|  
 |MouseOver_CurrentRow|CommonStates|Il puntatore del mouse viene posizionato sulla riga e la riga è la riga corrente.|  
 |MouseOver_CurrentRow_Selected|CommonStates|Il puntatore del mouse viene posizionato sulla riga e la riga è corrente e selezionata.|  
@@ -122,14 +122,14 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Parti DataGridColumnHeadersPresenter  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Segnaposto per le intestazioni di colonna.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>Stati DataGridColumnHeadersPresenter  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
@@ -138,7 +138,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheader-parts"></a>Parti DataGridColumnHeader  
  Nella tabella seguente sono elencate le parti denominate per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna da sinistra.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna da destra.|  
@@ -146,9 +146,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="datagridcolumnheader-states"></a>Stati DataGridColumnHeader  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
 |Premuto|CommonStates|Il controllo è premuto.|  
 |SortAscending|SortStates|La colonna viene ordinata in ordine crescente.|  

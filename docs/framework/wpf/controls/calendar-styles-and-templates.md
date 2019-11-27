@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendar-parts"></a>Parti del calendario  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Calendar>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Mese o anno attualmente visualizzato nel <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Pannello che contiene il <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -30,7 +30,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendar-states"></a>Stati del calendario  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Calendar>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -39,7 +39,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendaritem-parts"></a>Parti CalendarItem  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Parte|Digitare|description|  
+|Parte|Type|Descrizione|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Radice del controllo.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Pulsante che visualizza la pagina precedente del calendario quando viene selezionato.|  
@@ -53,9 +53,9 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendaritem-states"></a>Stati CalendarItem  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Stato normale|CommonStates|Lo stato predefinito.|  
+|Stato normale|CommonStates|Stato predefinito.|  
 |Stato disabilitato|CommonStates|Stato del calendario quando la proprietà <xref:System.Windows.UIElement.IsEnabled%2A> è `false`.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
@@ -70,20 +70,20 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendardaybutton-states"></a>Stati CalendarDayButton  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarDayButton>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.CalendarDayButton> è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Premuto|CommonStates|Viene premuto il <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Selezionato|SelectionStates|Il pulsante è selezionato.|  
+|Selected|SelectionStates|Il pulsante è selezionato.|  
 |Deselezionato|SelectionStates|Il pulsante non è selezionato.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Il pulsante ha lo stato attivo.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Il pulsante non ha lo stato attivo.|  
 |Con stato attivo|FocusStates|Il pulsante ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il pulsante non ha lo stato attivo.|  
 |Attivo|ActiveStates|Il pulsante è attivo.|  
-|Inattivo|ActiveStates|Il pulsante è inattivo.|  
+|Inactive|ActiveStates|Il pulsante è inattivo.|  
 |RegularDay|DayStates|Il pulsante non rappresenta <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Oggi|DayStates|Il pulsante rappresenta <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Il pulsante rappresenta un giorno selezionabile.|  
@@ -98,20 +98,20 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="calendarbutton-states"></a>Stati CalendarButton  
  Nella tabella seguente sono elencati gli Stati di visualizzazione per il controllo <xref:System.Windows.Controls.Primitives.CalendarButton>.  
   
-|Nome VisualState|Nome VisualStateGroup|description|  
+|Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Normale|CommonStates|Lo stato predefinito.|  
+|Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il <xref:System.Windows.Controls.Primitives.CalendarButton> è disabilitato.|  
 |MouseOver|CommonStates|Il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Premuto|CommonStates|Viene premuto il <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Selezionato|SelectionStates|Il pulsante è selezionato.|  
+|Selected|SelectionStates|Il pulsante è selezionato.|  
 |Deselezionato|SelectionStates|Il pulsante non è selezionato.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Il pulsante ha lo stato attivo.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Il pulsante non ha lo stato attivo.|  
 |Con stato attivo|FocusStates|Il pulsante ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il pulsante non ha lo stato attivo.|  
 |Attivo|ActiveStates|Il pulsante è attivo.|  
-|Inattivo|ActiveStates|Il pulsante è inattivo.|  
+|Inactive|ActiveStates|Il pulsante è inattivo.|  
 |Valido|ValidationStates|Il controllo Usa la classe <xref:System.Windows.Controls.Validation> e la proprietà <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` il controllo ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non ha lo stato attivo.|  
