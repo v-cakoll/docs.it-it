@@ -23,7 +23,7 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
   
 4. Distribuire ed eseguire l'app per testarla usando gli strumenti di isolamento rete forniti per la risoluzione dei problemi.  
   
- For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
+ Per informazioni più dettagliate su come configurare le funzionalità di rete e gli strumenti di isolamento utilizzati per la risoluzione dei problemi di isolamento rete, vedere [come configurare le funzionalità di isolamento rete](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) nella documentazione per sviluppatori di Windows 8. x Store.
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -32,4 +32,4 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
 - [Quickstart: Connecting using HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10)) (Guida introduttiva: Connessione tramite HttpClient)
 - [How to use HttpClient handlers](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10)) (Come usare i gestori HttpClient)
 - [How to secure HttpClient connections](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10)) (Come proteggere le connessioni HttpClient)
-- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664) (Esempio con HttpClient)
+- [Esempio con HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

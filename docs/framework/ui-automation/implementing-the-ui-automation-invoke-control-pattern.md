@@ -16,7 +16,7 @@ ms.locfileid: "74435165"
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementazione del pattern di controllo Invoke di automazione interfaccia utente
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).
 
 In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IInvokeProvider>, incluse le informazioni relative a eventi e proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.
 
@@ -47,11 +47,11 @@ Quando si implementa il pattern di controllo pattern, tenere presenti le linee g
 > [!NOTE]
 > Questa implementazione viene considerata un problema di accessibilità se il controllo può essere chiamato solo come risultato di un effetto collaterale relativo al mouse.
 
-- La chiamata di un controllo è diversa dalla selezione di un elemento. Tuttavia, a seconda del controllo, come effetto collaterale la chiamata potrebbe causare la selezione dell'elemento. For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
+- La chiamata di un controllo è diversa dalla selezione di un elemento. Tuttavia, a seconda del controllo, come effetto collaterale la chiamata potrebbe causare la selezione dell'elemento. Ad esempio, la chiamata di un elemento dell'elenco di documenti di Microsoft Word nella cartella documenti seleziona l'elemento e apre il documento.
 
 - Un elemento può scomparire dall'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] subito dopo essere stato richiamato. Di conseguenza, la richiesta di informazioni dall'elemento fornito dal callback di evento potrebbe avere esito negativo. La prelettura delle informazioni memorizzate nella cache rappresenta la soluzione alternativa consigliata.
 
-- I controlli possono implementare più pattern di controllo. For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.
+- I controlli possono implementare più pattern di controllo. Ad esempio, il controllo colore riempimento sulla barra degli strumenti di Microsoft Excel implementa i pattern di controllo <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.ExpandCollapsePattern>. <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -77,7 +77,7 @@ I provider devono generare le eccezioni seguenti.
 
 - [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
-- [Richiamare un controllo usando l'automazione interfaccia utente](invoke-a-control-using-ui-automation.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
 - [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

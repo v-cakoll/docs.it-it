@@ -1,5 +1,5 @@
 ---
-title: Autenticazione di Windows integrata con Protezione estesa
+title: Autenticazione integrata di Windows con protezione estesa
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444237"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione di Windows integrata con Protezione estesa
+# <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione integrata di Windows con protezione estesa
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
   
  Queste modifiche possono influire sulle applicazioni che usano queste classi per effettuare richieste Web e ricevere risposte in cui viene usata l'autenticazione integrata di Windows. Questa modifica può anche influire sulle applicazioni client e sui server Web configurati per l'uso dell'autenticazione integrata di Windows.  

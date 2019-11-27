@@ -16,31 +16,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350483"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: definire più versioni di una routine (Visual Basic)
-You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.  
+È possibile definire una stored procedure in più versioni eseguendo l' *Overload* , usando lo stesso nome ma un elenco di parametri diverso per ogni versione. Lo scopo dell'overload è definire diverse versioni strettamente correlate di una stored procedure senza doverle differenziare per nome.  
   
  Per altre informazioni, vedere [Procedure Overloading](./procedure-overloading.md).  
   
-### <a name="to-define-multiple-versions-of-a-procedure"></a>To define multiple versions of a procedure  
+### <a name="to-define-multiple-versions-of-a-procedure"></a>Per definire più versioni di una routine  
   
-1. Write a `Sub` or `Function` declaration statement for each version of the procedure you want to define. Use the same procedure name in every declaration.  
+1. Scrivere un'istruzione di dichiarazione `Sub` o `Function` per ogni versione della procedura che si desidera definire. Utilizzare lo stesso nome di procedura in ogni dichiarazione.  
   
-2. Precede the `Sub` or `Function` keyword in each declaration with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword. You can optionally omit `Overloads` in the declarations, but if you include it in any of the declarations, you must include it in every declaration.  
+2. Precede la parola chiave `Sub` o `Function` in ogni dichiarazione con la parola chiave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) . Facoltativamente, è possibile omettere `Overloads` nelle dichiarazioni, ma se lo si include in una delle dichiarazioni, è necessario includerlo in ogni dichiarazione.  
   
-3. Following each declaration statement, write procedure code to handle the specific case where the calling code supplies arguments matching that version's parameter list. You do not have to test for which parameters the calling code has supplied. Visual Basic passes control to the matching version of your procedure.  
+3. Dopo ogni istruzione di dichiarazione, scrivere il codice della procedura per gestire il caso specifico in cui il codice chiamante fornisce argomenti corrispondenti all'elenco di parametri della versione. Non è necessario testare i parametri forniti dal codice chiamante. Visual Basic passa il controllo alla versione corrispondente della routine.  
   
-4. Terminate each version of the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. Terminare ogni versione della routine con l'istruzione `End Sub` o `End Function` in base alle esigenze.  
   
 ## <a name="example"></a>Esempio  
- The following example defines a `Sub` procedure to post a transaction against a customer's balance. It uses the `Overloads` keyword to define two versions of the procedure, one that accepts the customer by name and the other by account number.  
+ Nell'esempio seguente viene definita una procedura `Sub` per pubblicare una transazione in base al saldo del cliente. Usa la parola chiave `Overloads` per definire due versioni della procedura, una che accetta il cliente in base al nome e l'altra per numero di conto.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- The calling code can obtain the customer identification as either a `String` or an `Integer`, and then use the same calling statement in either case.  
+ Il codice chiamante può ottenere l'identificazione del cliente come un `String` o un `Integer`e quindi usare la stessa istruzione chiamante in entrambi i casi.  
   
- For information on how to call these versions of the `post` procedure, see [How to: Call an Overloaded Procedure](./how-to-call-an-overloaded-procedure.md).  
+ Per informazioni su come chiamare queste versioni della procedura `post`, vedere procedura [: chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Make sure each of your overloaded versions has the same procedure name but a different parameter list.  
+ Verificare che ogni versione di overload abbia lo stesso nome di procedura ma un elenco di parametri diverso.  
   
 ## <a name="see-also"></a>Vedere anche
 

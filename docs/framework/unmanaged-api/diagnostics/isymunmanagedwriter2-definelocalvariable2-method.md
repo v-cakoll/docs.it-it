@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438302"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineLocalVariable2
-Definisce una singola variabile nell'ambito lessicale corrente. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome che dispone di più case in un ambito. In questo caso, tuttavia, i valori dei parametri `startOffset` e `endOffset` non devono sovrapporsi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>Parametri  
  `name`  
- [in] The local variable name.  
+ in Nome della variabile locale.  
   
  `attributes`  
- [in] The local variable attributes.  
+ in Attributi della variabile locale.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ in Token di metadati della firma.  
   
  `addrKind`  
- [in] The address type.  
+ in Tipo di indirizzo.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ in Primo indirizzo per la specifica del parametro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ in Secondo indirizzo per la specifica del parametro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ in Terzo indirizzo per la specifica del parametro.  
   
  `startOffset`  
- [in] The start offset for the variable. Questo parametro è facoltativo. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ in Offset iniziale della variabile. Questo parametro è facoltativo. Se è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientra negli offset dell'ambito corrente.  
   
  `endOffset`  
- [in] The end offset for the variable. Questo parametro è facoltativo. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ in Offset finale della variabile. Questo parametro è facoltativo. Se è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientra negli offset dell'ambito corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl  
+ **Intestazione:** CorSym. idl  
   
 ## <a name="see-also"></a>Vedere anche
 

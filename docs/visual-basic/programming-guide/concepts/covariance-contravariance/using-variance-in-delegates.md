@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349036"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Uso della varianza nei delegati (Visual Basic)
 
 Quando si assegna un metodo a un delegato, *covarianza* e *controvarianza* offrono flessibilità per la corrispondenza di un tipo delegato con una firma di metodo. La covarianza consente a un metodo di avere un tipo restituito più derivato di quello definito nel delegato. La controvarianza consente un metodo con tipi di parametro meno derivati rispetto a quelli del tipo delegato.
 

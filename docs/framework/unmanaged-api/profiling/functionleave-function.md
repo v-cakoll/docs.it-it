@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440578"
 ---
 # <a name="functionleave-function"></a>Funzione FunctionLeave
-Notifies the profiler that a function is about to return to the caller.  
+Notifica al profiler che una funzione sta per tornare al chiamante.  
   
 > [!NOTE]
-> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
+> La funzione `FunctionLeave` è deprecata nel .NET Framework 2,0. Continuerà a funzionare, ma comporterà una riduzione delle prestazioni. Usare invece la funzione [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametri  
  `funcID`  
- [in] The identifier of the function that is returning.  
+ in Identificatore della funzione che restituisce.  
   
 ## <a name="remarks"></a>Note  
- The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ La funzione `FunctionLeave` è un callback. è necessario implementarla. L'implementazione deve usare l'attributo della classe di archiviazione `__declspec`(`naked`).  
   
- The execution engine does not save any registers before calling this function.  
+ Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
+ L'implementazione di `FunctionLeave` non deve bloccarsi perché ritarda Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si bloccherà fino a quando `FunctionLeave` non restituisce.  
   
- Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
+ Inoltre, la funzione `FunctionLeave` non deve chiamare nel codice gestito o in alcun modo causare un'allocazione di managed memory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Intestazione:** CorProf. idl  
   
  **Libreria:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

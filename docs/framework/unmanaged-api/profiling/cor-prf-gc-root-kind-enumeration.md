@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447363"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>Enumerazione COR_PRF_GC_ROOT_KIND
-Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+Indica il tipo di Garbage Collection radice esposto dal callback [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,15 +37,15 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|The root is a variable on the stack.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|The root is an entry in the finalizer queue.|  
-|`COR_PRF_GC_ROOT_HANDLE`|The root is a garbage collection handle.|  
-|`COR_PRF_GC_ROOT_OTHER`|The kind of root is unspecified.|  
+|`COR_PRF_GC_ROOT_STACK`|La radice è una variabile nello stack.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|La radice è una voce nella coda del finalizzatore.|  
+|`COR_PRF_GC_ROOT_HANDLE`|La radice è un handle Garbage Collection.|  
+|`COR_PRF_GC_ROOT_OTHER`|Il tipo di radice non è specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

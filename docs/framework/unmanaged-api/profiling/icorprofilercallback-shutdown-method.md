@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446939"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Metodo ICorProfilerCallback::Shutdown
-Notifies the profiler that the application is shutting down.  
+Notifica al profiler che l'applicazione è in fase di chiusura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,14 +32,14 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Note  
- The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
+ Il codice del profiler non può chiamare in modo sicuro i metodi dell'interfaccia [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) dopo la chiamata del metodo `Shutdown`. Tutte le chiamate ai metodi `ICorProfilerInfo` hanno come risultato un comportamento non definito dopo la restituzione del metodo `Shutdown`. Alcuni eventi non modificabili possono ancora verificarsi dopo l'arresto. il profiler deve prestare attenzione a restituire immediatamente quando si verifica questo problema.  
   
- The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
+ Il metodo `Shutdown` verrà chiamato solo se l'applicazione gestita sottomessa a profilatura è stata avviata come codice gestito, ovvero il frame iniziale nello stack del processo è gestito. Se l'applicazione è stata avviata come codice non gestito, ma in seguito viene passata al codice gestito, creando quindi un'istanza del Common Language Runtime (CLR), `Shutdown` non verrà chiamata. In questi casi, il profiler deve includere nella relativa libreria un `DllMain` routine che usa il valore DLL_PROCESS_DETACH per liberare le risorse ed eseguire l'elaborazione di pulitura dei dati, ad esempio lo scaricamento delle tracce sul disco e così via.  
   
- In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
+ In generale, il profiler deve far fronte a arresti imprevisti. È ad esempio possibile che un processo venga interrotto da Win32 `TerminateProcess` metodo (dichiarato in winbase. h). In altri casi, CLR interromperà alcuni thread gestiti (thread in background) senza dover recapitano i messaggi di distruzione ordinata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

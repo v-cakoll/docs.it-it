@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parametri  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ in Token MethodDef che rappresenta il metodo per il quale restituire i metadati.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ out Puntatore a un token TypeDef che rappresenta il tipo che implementa il metodo.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ out Puntatore a un buffer con il nome del metodo.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ in Dimensioni richieste di `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ out Un puntatore alla dimensione in caratteri wide di `szMethod`o in caso di troncamento, il numero effettivo di caratteri wide nel nome del metodo.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ out Puntatore a qualsiasi flag associato al metodo.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ out Puntatore alla firma dei metadati binari del metodo.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ out Puntatore alla dimensione in byte del `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ out Puntatore all'indirizzo virtuale relativo del metodo.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ out Puntatore a tutti i flag di implementazione per il metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

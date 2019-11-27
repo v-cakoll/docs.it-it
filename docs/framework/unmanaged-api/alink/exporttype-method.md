@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438563"
 ---
 # <a name="exporttype-method"></a>Metodo ExportType
-Specifies that a type is exportable.  
+Specifica che un tipo può essere esportato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +39,31 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly to export from.  
+ ID dell'assembly da cui eseguire l'esportazione.  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ Token file o ID assembly del file che definisce il tipo esportabile.  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ Token di tipo da rendere esportabile.  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ Nome completo del tipo da rendere esportabile.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ flag di `ComType` come `tdPublic` o `tdNested`. Questo parametro può essere passato al [Metodo DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Riceve il token per il tipo esportato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

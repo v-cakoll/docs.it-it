@@ -14,42 +14,42 @@ ms.locfileid: "74346896"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procedura: spostare i dati all'interno e all'esterno di una variabile (Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+Per archiviare un valore in una variabile, inserire il nome della variabile sul lato sinistro di un'istruzione di assegnazione.
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>Inserimento di dati in una variabile
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>Per archiviare un valore in una variabile
 
-- Use the variable name on the left side of an assignment statement.
+- Usare il nome della variabile sul lato sinistro di un'istruzione di assegnazione.
 
-    The following example sets the value of the variable `alpha`.
+    Nell'esempio seguente viene impostato il valore della variabile `alpha`.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    Il valore generato sul lato destro dell'istruzione di assegnazione viene archiviato nella variabile.
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>Recupero di dati da una variabile
 
-You retrieve a variable's value by including the variable name in an expression.
+Per recuperare il valore di una variabile, è necessario includere il nome della variabile in un'espressione.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>Per recuperare un valore da una variabile
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- Usare il nome della variabile in un'espressione. È possibile usare una variabile ovunque sia possibile usare una costante o un valore letterale, tranne che in un'espressione che definisce il valore di una costante.
 
   \-oppure-
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- Usare il nome della variabile che segue il segno di uguale (`=`) in un'istruzione di assegnazione.
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  Nell'esempio seguente viene letto il valore della variabile `startValue`, quindi viene utilizzato il valore della variabile `counter` in un'espressione.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  Il valore della variabile partecipa all'espressione come una costante e quindi viene archiviato nella variabile o nella proprietà sul lato sinistro dell'istruzione di assegnazione.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435883"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Metodo ICorProfilerInfo2::GetAppDomainStaticAddress
-Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
+Ottiene l'indirizzo del campo statico del dominio dell'applicazione specificato nell'ambito del dominio dell'applicazione specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,28 +37,28 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] The class ID of the class that contains the requested application domain-static field.  
+ in ID classe della classe che contiene il campo statico dell'applicazione richiesto.  
   
  `fieldToken`  
- [in] The metadata token for the requested application domain-static field.  
+ in Token di metadati per il campo di dominio applicazione richiesto-statico.  
   
  `appDomainId`  
- [in] The ID of the application domain that is the scope for the requested static field.  
+ in ID del dominio applicazione che rappresenta l'ambito per il campo statico richiesto.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified application domain.  
+ out Puntatore all'indirizzo del campo statico che si trova all'interno del dominio applicazione specificato.  
   
 ## <a name="remarks"></a>Note  
- The `GetAppDomainStaticAddress` method may return one of the following:  
+ Il metodo `GetAppDomainStaticAddress` può restituire uno dei seguenti elementi:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- CORPROF_E_DATAINCOMPLETE HRESULT se al campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Indirizzi degli oggetti che possono trovarsi nell'heap Garbage Collection. Questi indirizzi potrebbero non essere più validi dopo Garbage Collection, quindi, dopo Garbage Collection, i profiler non devono presupporre che siano validi.  
   
- Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Prima che il costruttore della classe di una classe venga completato, `GetAppDomainStaticAddress` restituirà CORPROF_E_DATAINCOMPLETE per tutti i campi statici, anche se alcuni dei campi statici potrebbero essere già inizializzati e vengono radicati Garbage Collection oggetti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

@@ -48,10 +48,10 @@ HRESULT SetILFunctionBody(
 |S_OK|Sostituzione completata correttamente.|  
   
 ## <a name="remarks"></a>Note  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. ma può essere allocato in qualsiasi heap. The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+ A differenza del metodo [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) , il metodo `SetILFunctionBody` gestisce la memoria necessaria per il nuovo corpo CIL. Ciò significa che il corpo del CIL fornito dal profiler non deve essere allocato tramite l'interfaccia [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) o allocato in un intervallo specifico. ma può essere allocato in qualsiasi heap. Il profiler può liberare la memoria usata per il corpo del CIL dopo che `SetILFunctionBody` restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

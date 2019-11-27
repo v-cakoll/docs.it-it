@@ -1,5 +1,5 @@
 ---
-title: Validating Passwords Complexity
+title: Convalida della complessità delle password
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348334"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Procedura dettagliata: verifica della complessità delle password (Visual Basic)
-This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
+Questo metodo verifica la presenza di alcune caratteristiche di password complesse e aggiorna un parametro di stringa con informazioni sui controlli che la password ha esito negativo.  
   
- Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
+ Le password possono essere utilizzate in un sistema sicuro per autorizzare un utente. Tuttavia, le password devono essere difficili da indovinare per utenti non autorizzati. Gli utenti malintenzionati possono usare un programma di *attacco del dizionario* , che scorre tutte le parole in un dizionario (o più dizionari in linguaggi diversi) e verifica se una delle parole funziona come la password di un utente. È possibile indovinare rapidamente password vulnerabili, ad esempio "Yankee" o "Mustang". Password più complesse, ad esempio "? È molto meno probabile che venga indovinato il 'L1N3vaFiNdMeyeP@sSWerd!'. Un sistema protetto da password deve garantire che gli utenti scelgano password complesse.  
   
- A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
+ Una password complessa è complessa (contenente una combinazione di caratteri maiuscoli, minuscoli, numerici e speciali) e non è una parola. Questo esempio illustra come verificare la complessità.  
   
 ## <a name="example"></a>Esempio  
   
@@ -24,24 +24,24 @@ This method checks for some strong-password characteristics and updates a string
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Call this method by passing the string that contains that password.  
+ Chiamare questo metodo passando la stringa che contiene tale password.  
   
  L'esempio presenta i requisiti seguenti:  
   
 - Accedere ai membri dello spazio dei nomi <xref:System.Text.RegularExpressions>. Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sicurezza  
- If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ Se si sta migrando la password in una rete, è necessario usare un metodo sicuro per il trasferimento dei dati. Per altre informazioni, vedere [sicurezza dell'applicazione Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
+ Per migliorare l'accuratezza della funzione di `ValidatePassword`, è possibile aggiungere ulteriori controlli di complessità:  
   
-- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
+- Confrontare la password e le relative sottostringhe con il nome dell'utente, l'identificatore utente e un dizionario definito dall'applicazione. Inoltre, quando si eseguono i confronti, i caratteri visivi simili sono considerati equivalenti. Ad esempio, considerare le lettere "l" e "e" come equivalenti ai numeri "1" e "3".  
   
-- If there is only one uppercase character, make sure it is not the password's first character.  
+- Se è presente un solo carattere maiuscolo, assicurarsi che non sia il primo carattere della password.  
   
-- Make sure that the last two characters of the password are letter characters.  
+- Verificare che gli ultimi due caratteri della password siano caratteri letterali.  
   
-- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
+- Non consentire le password in cui tutti i simboli vengono immessi dalla riga superiore della tastiera.  
   
 ## <a name="see-also"></a>Vedere anche
 

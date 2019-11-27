@@ -49,20 +49,20 @@ HRESULT RequestReJIT (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Si è tentato di contrassegnare tutti i metodi per la ricompilazione JIT. The profiler must implement the [ICorProfilerCallback4::ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) method to determine which methods were successfully marked for JIT recompilation.|  
-|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
-|CORPROF_E_REJIT_NOT_ENABLED|La ricompilazione JIT non è stata abilitata. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
-|E_INVALIDARG|Il parametro `cFunctions` è pari a 0 oppure `moduleIds` o `methodIds` è `NULL`.|  
+|S_OK|Si è tentato di contrassegnare tutti i metodi per la ricompilazione JIT. Il profiler deve implementare il metodo [ICorProfilerCallback4:: ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) per determinare quali metodi sono stati contrassegnati correttamente per la ricompilazione JIT.|  
+|CORPROF_E_CALLBACK4_REQUIRED|Il profiler deve implementare l'interfaccia [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) per il supporto di questa chiamata.|  
+|CORPROF_E_REJIT_NOT_ENABLED|La ricompilazione JIT non è stata abilitata. È necessario abilitare la ricompilazione JIT durante l'inizializzazione usando il metodo [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) per impostare il flag di `COR_PRF_ENABLE_REJIT`.|  
+|E_INVALIDARG|`cFunctions` è 0 oppure `moduleIds` o `methodIds` è `NULL`.|  
 |||  
 |E_OUTOFMEMORY|CLR non è stato in grado di completare la richiesta a causa di memoria insufficiente.|  
   
 ## <a name="remarks"></a>Note  
- Chiamare `RequestReJIT` per ottenere la ricompilazione tramite il runtime di un set di funzioni specificato. A code profiler can then use the [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface to adjust the code that is generated when the functions are recompiled. Questa operazione non influisce sulle funzioni attualmente in esecuzione, ma solo sulle chiamate di funzione future. Se una delle funzioni specificate è stata precedentemente ricompilata tramite JIT, la richiesta di ricompilazione equivale al ripristino e alla ricompilazione della funzione. Per mantenere la reversibilità, quando il compilatore JIT compila la versione originale di una funzione, considera solo le versioni originali dei relativi chiamati per le decisioni di incorporamento (inlining). Quando il compilatore JIT ricompila una funzione, considera le versioni correnti (ricompilate o originali) dei relativi chiamati per l'incorporamento.  
+ Chiamare `RequestReJIT` per ottenere la ricompilazione tramite il runtime di un set di funzioni specificato. Un Code Profiler può quindi utilizzare l'interfaccia [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) per modificare il codice generato quando le funzioni vengono ricompilate. Questa operazione non influisce sulle funzioni attualmente in esecuzione, ma solo sulle chiamate di funzione future. Se una delle funzioni specificate è stata precedentemente ricompilata tramite JIT, la richiesta di ricompilazione equivale al ripristino e alla ricompilazione della funzione. Per mantenere la reversibilità, quando il compilatore JIT compila la versione originale di una funzione, considera solo le versioni originali dei relativi chiamati per le decisioni di incorporamento (inlining). Quando il compilatore JIT ricompila una funzione, considera le versioni correnti (ricompilate o originali) dei relativi chiamati per l'incorporamento.  
   
- In genere, un profiler chiama `RequestReJIT` in risposta all'input dell'utente che richiede al profiler di instrumentare uno o più metodi. `RequestReJIT` in genere sospende il runtime per eseguire le proprie attività e potrebbe attivare una Garbage Collection. Di conseguenza, il profiler dovrebbe chiamare `RequestReJIT` da un thread creato in precedenza e non da un thread creato da CLR che sta eseguendo un callback del profiler.  
+ In genere, un profiler chiama `RequestReJIT` in risposta all'input dell'utente che richiede al profiler di instrumentare uno o più metodi. `RequestReJIT` in genere sospende il runtime per eseguire alcune delle operazioni e può potenzialmente attivare una Garbage Collection. Di conseguenza, il profiler dovrebbe chiamare `RequestReJIT` da un thread creato in precedenza e non da un thread creato da CLR che sta eseguendo un callback del profiler.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

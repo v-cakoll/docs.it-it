@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346916"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>How to: Retrieve the Shallow Value of an Element (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Procedura: recuperare il valore superficiale di un elemento (Visual Basic)
 
 In questo argomento viene illustrato come ottenere il valore superficiale di un elemento. Per valore superficiale si intende un valore che appartiene solo all'elemento specifico, a differenza del valore completo che include i valori di tutti gli elementi discendenti concatenati in una singola stringa.
 

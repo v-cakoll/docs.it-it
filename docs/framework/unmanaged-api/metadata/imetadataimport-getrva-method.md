@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436951"
 ---
 # <a name="imetadataimportgetrva-method"></a>Metodo IMetaDataImport::GetRVA
-Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
+Ottiene l'indirizzo RVA (relative Virtual Address) e i flag di implementazione del metodo o del campo rappresentato dal token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
+ in Token di metadati MethodDef o FieldDef che rappresenta l'oggetto di codice per il quale restituire l'RVA. Se il token è un FieldDef, il campo deve essere una variabile globale.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the code object represented by the token.  
+ out Puntatore all'indirizzo virtuale relativo dell'oggetto di codice rappresentato dal token.  
   
  `pdwImplFlags`  
- [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
+ out Puntatore ai flag di implementazione per il metodo. Questo valore è una maschera di maschera dall'enumerazione [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) . Il valore di `pdwImplFlags` è valido solo se `tk` è un token MethodDef.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

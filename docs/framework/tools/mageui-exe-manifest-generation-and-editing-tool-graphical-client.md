@@ -56,7 +56,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ## <a name="signing-options-dialog-box"></a>Finestra di dialogo Opzioni di firma  
  La finestra di dialogo **Opzioni di firma** viene visualizzata quando si salva per la prima o quando si modifica un manifesto o una licenza di attendibilità. Viene visualizzata solo se l'opzione **Firma al salvataggio** nella finestra di dialogo **Preferenze** è selezionata. È necessario essere connessi a Internet quando si firma un manifesto che specifica un valore nella casella di testo **TimeStamp URI**.  
   
- In questa finestra di dialogo sono inclusi i seguenti elementi:  
+ All'interno della finestra di dialogo sono contenuti gli elementi seguenti.  
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
@@ -90,11 +90,11 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Nome**|Obbligatorio. Il nome del manifesto dell'applicazione. In genere coincide con il nome del file.|  
-|**Version**|Obbligatorio. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
-|**Processore**|Parametro facoltativo. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, che rappresenta il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati precompilati per un'architettura specifica. Per altre informazioni sulla precompilazione, vedere [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
-|**Impostazioni cultura**|Parametro facoltativo. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
-|**Token di chiave pubblica**|Parametro facoltativo. La chiave pubblica con cui è stato firmato il manifesto dell'applicazione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
+|**Nome**|Obbligatoria. Il nome del manifesto dell'applicazione. In genere coincide con il nome del file.|  
+|**Version**|Obbligatoria. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Processore**|Facoltativa. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, che rappresenta il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati precompilati per un'architettura specifica. Per altre informazioni sulla precompilazione, vedere [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
+|**Impostazioni cultura**|Facoltativa. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
+|**Token di chiave pubblica**|Facoltativa. La chiave pubblica con cui è stato firmato il manifesto dell'applicazione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
   
 ### <a name="description-tab"></a>Scheda Descrizione  
  Queste informazioni sono generalmente disponibili all'interno del manifesto della distribuzione. Questi campi possono essere modificati solo se la casella di controllo **Usa manifesto applicazione per informazioni sull'attendibilità** è selezionata nella scheda **Opzioni applicazione**.  
@@ -147,30 +147,30 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Nome**|Obbligatorio. Il nome del manifesto della distribuzione. In genere coincide con il nome del file.|  
-|**Version**|Obbligatorio. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
-|**Processore**|Parametro facoltativo. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati compilati per un'architettura specifica.|  
-|**Impostazioni cultura**|Parametro facoltativo. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
-|**Token di chiave pubblica**|Parametro facoltativo. La chiave pubblica con cui è stato firmato il manifesto della distribuzione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
+|**Nome**|Obbligatoria. Il nome del manifesto della distribuzione. In genere coincide con il nome del file.|  
+|**Version**|Obbligatoria. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Processore**|Facoltativa. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati compilati per un'architettura specifica.|  
+|**Impostazioni cultura**|Facoltativa. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
+|**Token di chiave pubblica**|Facoltativa. La chiave pubblica con cui è stato firmato il manifesto della distribuzione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
   
 ### <a name="description-tab"></a>Scheda Descrizione  
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Server di pubblicazione**|Obbligatorio. Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
-|**Prodotto**|Obbligatorio. Il nome del prodotto completo. Se è stato selezionato **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione**, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** di questa applicazione.|  
-|**Percorso del supporto**|Parametro facoltativo. L'URL tramite cui i clienti possono ottenere assistenza e supporto per l'applicazione.|  
+|**Server di pubblicazione**|Obbligatoria. Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
+|**Prodotto**|Obbligatoria. Il nome del prodotto completo. Se è stato selezionato **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione**, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** di questa applicazione.|  
+|**Percorso del supporto**|Facoltativa. L'URL tramite cui i clienti possono ottenere assistenza e supporto per l'applicazione.|  
   
 ### <a name="deployment-options-tab"></a>Scheda Opzioni di distribuzione  
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Tipo di applicazione**|Parametro facoltativo. Specifica se l'applicazione esegue l'installazione automatica nel computer client (**Installazione locale**), viene eseguita online (**Solo in linea**) oppure è un'applicazione WPF eseguita nel browser (**Applicazione browser WPF**). Il valore predefinito è **Installazione locale**.|  
-|**Posizione iniziale**|Parametro facoltativo. L'URL da cui deve essere effettivamente avviata l'applicazione. È utile quando si distribuisce un'applicazione da un CD che deve aggiornarsi automaticamente dal Web.|  
-|**Includi il percorso iniziale (ProviderURL) nel manifesto**|Parametro facoltativo. Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|  
-|**Esegui automaticamente l'applicazione dopo l'installazione**|Obbligatorio. Specifica che l'applicazione ClickOnce deve essere eseguita subito dopo l'installazione iniziale da un URL. Il valore predefinito prevede che la casella di controllo sia selezionata.|  
-|**Consenti passaggio di parametri URL all'applicazione**|Obbligatorio. Consente il trasferimento dei dati di parametro nell'applicazione ClickOnce tramite una stringa di query aggiunta all'URL del manifesto della distribuzione. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
-|**Usa l'estensione di file .deploy**|Obbligatorio. Se è selezionato, tutti i file nel manifesto dell'applicazione devono avere l'estensione .deploy. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
+|**Tipo di applicazione**|Facoltativa. Specifica se l'applicazione esegue l'installazione automatica nel computer client (**Installazione locale**), viene eseguita online (**Solo in linea**) oppure è un'applicazione WPF eseguita nel browser (**Applicazione browser WPF**). Il valore predefinito è **Installazione locale**.|  
+|**Posizione iniziale**|Facoltativa. L'URL da cui deve essere effettivamente avviata l'applicazione. È utile quando si distribuisce un'applicazione da un CD che deve aggiornarsi automaticamente dal Web.|  
+|**Includi il percorso iniziale (ProviderURL) nel manifesto**|Facoltativa. Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|  
+|**Esegui automaticamente l'applicazione dopo l'installazione**|Obbligatoria. Specifica che l'applicazione ClickOnce deve essere eseguita subito dopo l'installazione iniziale da un URL. Il valore predefinito prevede che la casella di controllo sia selezionata.|  
+|**Consenti passaggio di parametri URL all'applicazione**|Obbligatoria. Consente il trasferimento dei dati di parametro nell'applicazione ClickOnce tramite una stringa di query aggiunta all'URL del manifesto della distribuzione. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
+|**Usa l'estensione di file .deploy**|Obbligatoria. Se è selezionato, tutti i file nel manifesto dell'applicazione devono avere l'estensione .deploy. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
   
 ### <a name="update-options-tab"></a>Scheda Opzioni aggiornamento  
  La scheda **Opzioni aggiornamento** contiene le opzioni sopra indicate solo quando la casella di selezione **Tipo di applicazione** nella scheda **Nome** è impostata su **Installazione locale**.  
@@ -180,7 +180,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 |**L'applicazione deve controllare la disponibilità di aggiornamenti**|Specifica se ClickOnce deve controllare disponibilità di aggiornamenti per l'applicazione. Se questa casella di controllo non è selezionata, l'applicazione non controllerà gli aggiornamenti a meno che non venga aggiornata a livello di codice tramite le API nello spazio dei nomi <xref:System.Deployment.Application>.|  
 |**Scegliere quando controllare la disponibilità di aggiornamenti**|Fornisce due opzioni per i controlli degli aggiornamenti:<br /><br /> -   **Prima dell'avvio dell'applicazione**. Il controllo degli aggiornamenti viene eseguito prima dell'esecuzione dell'applicazione.<br />-   **Dopo l'avvio dell'applicazione**. Il controllo degli aggiornamenti viene avviato subito dopo l'inizializzazione del form principale dell'applicazione e viene eseguito al successivo avvio dell'applicazione.|  
 |**Frequenza controllo disponibilità aggiornamenti**|Determina la frequenza con cui ClickOnce controlla gli aggiornamenti:<br /><br /> -   **Controlla sempre all'avvio dell'applicazione**. ClickOnce eseguirà un controllo degli aggiornamenti ogni volta che l'utente apre l'applicazione.<br />-   **Controlla ogni**: Seleziona un intervallo di tempo e un'unità (ore, giorni o settimane) che deve trascorrere prima del controllo degli aggiornamenti.|  
-|**Specificare la versione minima richiesta per l'applicazione**|Parametro facoltativo. Specifica che è necessario installare una determinata versione dell'applicazione, impedendo agli utenti di usare una versione precedente.|  
+|**Specificare la versione minima richiesta per l'applicazione**|Facoltativa. Specifica che è necessario installare una determinata versione dell'applicazione, impedendo agli utenti di usare una versione precedente.|  
 |**Version**|Obbligatorio se la casella di controllo **Specificare la versione minima richiesta per l'applicazione** è selezionata. Il numero di versione specificato deve essere nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Scheda Riferimento all'applicazione  

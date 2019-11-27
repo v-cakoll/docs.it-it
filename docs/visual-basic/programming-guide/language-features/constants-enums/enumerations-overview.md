@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347480"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Panoramica sulle enumerazioni (Visual Basic)
-Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  
+Le enumerazioni rappresentano un modo pratico per usare set di costanti correlate e per associare i valori costanti ai nomi. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  
   
-## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
- The following table lists common tasks involving enumerations.  
+## <a name="tasks-involving-enumerations"></a>Attività che coinvolgono enumerazioni  
+ Nella tabella seguente sono elencate le attività comuni relative alle enumerazioni.  
   
 |Per eseguire questa operazione|Vedere|  
 |----------------|---------|  
-|Find a pre-defined enumeration|[Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|Fully qualify an enumeration's name|[Qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|Refer to an enumeration member|[Procedura: Fare riferimento a un membro di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|Determine the string associated with an enumeration|[Procedura: Determinare la stringa associata a un valore di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|Decide when to use an enumeration|[Quando usare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Trovare un'enumerazione predefinita|[Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Dichiarare un'enumerazione|[Procedura: dichiarare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|Qualificare completamente il nome di un'enumerazione|[Qualifica di nomi ed enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Fare riferimento a un membro di enumerazione|[Procedura: Fare riferimento a un membro di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Scorrere un'enumerazione|[Procedura: scorrere un'enumerazione in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Determinare la stringa associata a un'enumerazione|[Procedura: Determinare la stringa associata a un valore di enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Decidere quando utilizzare un'enumerazione|[Quando usare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Vedere anche
 

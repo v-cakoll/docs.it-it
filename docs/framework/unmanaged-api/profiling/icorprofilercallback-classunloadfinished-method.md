@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435919"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Metodo ICorProfilerCallback::ClassUnloadFinished
-Notifies the profiler that a class has finished unloading.  
+Notifica al profiler che una classe ha completato lo scaricamento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ in Identifica la classe che è stata scaricata.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ in HRESULT che indica se la classe è stata scaricata correttamente.  
   
 ## <a name="remarks"></a>Note  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+ Alcune parti dello scaricamento della classe potrebbero continuare dopo il callback `ClassUnloadFinished`. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte dello scaricamento della classe ha avuto esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

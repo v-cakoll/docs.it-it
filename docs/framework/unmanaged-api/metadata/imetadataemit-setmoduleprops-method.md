@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445451"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>Metodo IMetaDataEmit::SetModuleProps
-Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
+Aggiorna i riferimenti a un modulo definito da una chiamata precedente a [IMetaDataEmit::D efinemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,14 +35,14 @@ HRESULT SetModuleProps (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] The module name in Unicode. This is the file name only and not the full path name.  
+ in Nome del modulo in formato Unicode. Si tratta solo del nome del file e non del percorso completo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

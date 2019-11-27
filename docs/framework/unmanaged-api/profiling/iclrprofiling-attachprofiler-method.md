@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] Percorso completo del file DLL del profiler da caricare. Questa stringa deve contenere al massimo 260 caratteri, compreso il terminatore null. Se `wszProfilerPath` è null o una stringa vuota, Common Language Runtime (CLR) tenterà di determinare il percorso del file DLL del profiler cercando nel Registro di sistema il CLSID a cui `pClsidProfiler` punta.  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).  
+ in Puntatore ai dati da passare al profiler tramite il metodo [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Il processo trigger può riutilizzare questa memoria dopo che `AttachProfiler` restituisce un risultato. Se `pvClientData` è null, `cbClientData` deve essere 0 (zero).  
   
  `cbClientData`  
  [in] Dimensioni in byte dei dati a cui `pvClientData` punta.  
@@ -72,7 +72,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Si è verificato il timeout prima dell'inizio del caricamento del profiler. È possibile ritentare l'operazione di connessione. I timeout si verificano quando un finalizzatore nel processo di destinazione viene eseguito per un tempo maggiore del valore di timeout.|  
 |E_INVALIDARG|Uno o più parametri presentano valori non validi.|  
 |E_FAIL|Si è verificato un errore non specificato di altro tipo.|  
-|Altri codici di errore|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Altri codici di errore|Se il metodo [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) del profiler restituisce un valore HRESULT che indica l'esito negativo, `AttachProfiler` restituisce lo stesso valore HRESULT. In questo caso, E_NOTIMPL viene convertito in CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -80,7 +80,7 @@ HRESULT AttachProfiler(
  In conformità alle convenzioni COM, il chiamante di `AttachProfiler` (ad esempio, il codice del trigger creato dallo sviluppatore del profiler) è responsabile dell'allocazione e della deallocazione della memoria dei dati a cui punta il parametro `pvClientData`. Quando CLR esegue la chiamata a `AttachProfiler` fa una copia della memoria a cui `pvClientData` punta e la trasmette al processo di destinazione. Quando il runtime CLR nel processo di destinazione riceve la propria copia del blocco `pvClientData` lo passa al profiler tramite il metodo `InitializeForAttach`, quindi dealloca la propria copia del blocco `pvClientData` dal processo di destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

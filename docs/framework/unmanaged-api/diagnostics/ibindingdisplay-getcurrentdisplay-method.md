@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448501"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Metodo IBindingDisplay::GetCurrentDisplay
-Returns the current binding display information.  
+Restituisce le informazioni di visualizzazione dell'associazione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>Parametri  
  `display`  
- [out, retval] A pointer to a safearray containing the binding display information.  
+ [out, retval] Puntatore a un SafeArray contenente le informazioni di visualizzazione dell'associazione.  
   
 ## <a name="remarks"></a>Note  
- The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
+ Il metodo [IBindingDisplay:: InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) deve avere avuto esito positivo e il programma deve essere arrestato da un debugger.  
   
- The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ Il chiamante deve deallocare la memoria `SAFEARRAY` restituita utilizzando [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Intestazione:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Libreria:** BindingDisplay. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

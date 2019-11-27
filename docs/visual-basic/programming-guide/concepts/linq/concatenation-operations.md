@@ -9,7 +9,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345658"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>Operazioni di concatenazione (Visual Basic)
 Il termine concatenazione descrive l'operazione che consiste nell'accodare una sequenza a un'altra sequenza.  
   
  La figura seguente illustra un'operazione di concatenazione tra due sequenze di caratteri.  
@@ -20,7 +20,7 @@ Il termine concatenazione descrive l'operazione che consiste nell'accodare una s
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Visual Basic Query Expression Syntax|Altre informazioni|  
+|Nome metodo|Descrizione|Visual Basic sintassi delle espressioni di query|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|Concatena due sequenze formando un'unica sequenza.|Non applicabile.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
@@ -28,4 +28,4 @@ Il termine concatenazione descrive l'operazione che consiste nell'accodare una s
 
 - <xref:System.Linq>
 - [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

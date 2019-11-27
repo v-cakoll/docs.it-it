@@ -25,30 +25,30 @@ ms.locfileid: "74343895"
 ---
 # <a name="uinteger-data-type"></a>UInteger (tipo di dati)
 
-Holds unsigned 32-bit (4-byte) integers ranging in value from 0 through 4,294,967,295.
+Include interi senza segno a 32 bit (4 byte) compresi tra 0 e 4.294.967.295.
 
 ## <a name="remarks"></a>Note
 
-The `UInteger` data type provides the largest unsigned value in the most efficient data width.
+Il tipo di dati `UInteger` fornisce il valore senza segno più grande nella larghezza dei dati più efficiente.
 
 Il valore predefinito di `UInteger` è 0.
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Assegnazioni di valori letterali
 
-You can declare and initialize a `UInteger` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Se il valore letterale integer è esterno all'intervallo di `UInteger`, vale a dire se è minore di <xref:System.UInt32.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
+È possibile dichiarare e inizializzare una variabile di `UInteger` assegnando un valore letterale decimale, un valore letterale esadecimale, un valore letterale ottale o (a partire da Visual Basic 2017) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `UInteger`, vale a dire se è minore di <xref:System.UInt32.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
 
 Nell'esempio seguente, i valori interi uguali a 3.000.000.000 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `UInteger`.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. I valori letterali decimali non hanno prefissi.
+> Usare il prefisso `&h` o `&H` per indicare un valore letterale esadecimale, il prefisso `&b` o `&B` per indicare un valore letterale binario e il prefisso `&o` o `&O` per indicare un valore letterale ottale. I valori letterali decimali non hanno prefissi.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+A partire da Visual Basic 2017, è anche possibile usare il carattere di sottolineatura, `_`, come separatore di cifre per migliorare la leggibilità, come illustrato nell'esempio seguente.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Esempio:
+A partire da Visual Basic 15,5, è anche possibile usare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre esadecimali, binarie o ottali. Ad esempio:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `UI` or `ui` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UInteger` data type, as the following example shows.
+I valori letterali numerici possono includere anche il [carattere di tipo](../../programming-guide/language-features/data-types/type-characters.md) `UI` o `ui` per indicare il tipo di dati `UInteger`, come illustrato nell'esempio seguente.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,25 +64,25 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-The `UInteger` and `Integer` data types provide optimal performance on a 32-bit processor, because the smaller integer types (`UShort`, `Short`, `Byte`, and `SByte`), even though they use fewer bits, take more time to load, store, and fetch.
+I tipi di dati `UInteger` e `Integer` offrono prestazioni ottimali in un processore a 32 bit, perché i tipi integer più piccoli (`UShort`, `Short`, `Byte`e `SByte`), anche se usano meno bit, richiedono più tempo per il caricamento, l'archiviazione e il recupero.
 
-- **Negative Numbers.** Because `UInteger` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UInteger`, Visual Basic converts the expression to `Long` first.
+- **Numeri negativi.** Poiché `UInteger` è un tipo senza segno, non può rappresentare un numero negativo. Se si usa l'operatore meno unario (`-`) su un'espressione che restituisce il tipo `UInteger`, Visual Basic converte prima l'espressione in `Long`.
 
-- **CLS Compliance.** The `UInteger` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
+- **Conformità a CLS.** Il tipo di dati `UInteger` non fa parte della [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), pertanto il codice conforme a CLS non può utilizzare un componente che lo utilizza.
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `uint` can have a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.
+- **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi come `uint` possono avere una larghezza di dati diversa (16 bit) in altri ambienti. Se si passa un argomento a 16 bit a tale componente, dichiararlo come `UShort` anziché `UInteger` nel codice di Visual Basic gestito.
 
-- **Widening.** The `UInteger` data type widens to `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UInteger` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Conversioni.** Il tipo di dati `UInteger` viene ampliato in `Long`, `ULong`, `Decimal`, `Single`e `Double`. Ciò significa che è possibile convertire `UInteger` in uno di questi tipi senza riscontrare un errore <xref:System.OverflowException?displayProperty=nameWithType>.
 
-- **Type Characters.** Appending the literal type characters `UI` to a literal forces it to the `UInteger` data type. `UInteger` has no identifier type character.
+- **Digitare i caratteri.** L'aggiunta di caratteri di tipo letterale `UI` a un valore letterale forza il tipo di dati `UInteger`. `UInteger` non dispone di alcun carattere di tipo identificatore.
 
-- **Framework Type.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.UInt32?displayProperty=nameWithType>.
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.UInt32?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.UInt32>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Procedura: Chiamare una funzione Windows che accetta tipi senza segno](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

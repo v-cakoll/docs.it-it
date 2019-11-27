@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431209"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>Metodo IMetaDataDispenserEx::GetCORSystemDirectory
-Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
+Ottiene la directory che include la Common Language Runtime corrente (CLR). Questo metodo è supportato solo per l'utilizzo da debugger out-of-process. Se viene chiamato da un altro componente, restituirà E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametri  
  `szBuffer`  
- [out] The buffer to receive the directory name.  
+ out Buffer per la ricezione del nome della directory.  
   
  `cchBuffer`  
- [in] The size, in bytes, of `szBuffer`.  
+ in Dimensione, in byte, del `szBuffer`.  
   
  `pchBuffer`  
- [out] The number of bytes actually returned in `szBuffer`.  
+ out Numero di byte effettivamente restituiti in `szBuffer`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

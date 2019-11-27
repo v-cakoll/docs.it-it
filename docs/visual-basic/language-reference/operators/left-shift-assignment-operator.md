@@ -18,8 +18,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350948"
 ---
-# <a name="-operator-visual-basic"></a>\<\<= Operator (Visual Basic)
-Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.  
+# <a name="-operator-visual-basic"></a>Operatore \<\<= (Visual Basic)
+Esegue uno scorrimento a sinistra aritmetico sul valore di una variabile o di una proprietà e assegna il risultato alla variabile o alla proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,23 +29,23 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>Parti  
  `variableorproperty`  
- Obbligatorio. Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ Obbligatoria. Variabile o proprietà di un tipo integrale (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`o `ULong`).  
   
  `amount`  
- Obbligatorio. Numeric expression of a data type that widens to `Integer`.  
+ Obbligatoria. Espressione numerica di un tipo di dati che viene ampliato a `Integer`.  
   
 ## <a name="remarks"></a>Note  
- The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ L'elemento sul lato sinistro dell'operatore `<<=` può essere una variabile scalare semplice, una proprietà o un elemento di una matrice. La variabile o la proprietà non può essere di sola [lettura](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `<<=` operator first performs an arithmetic left shift on the value of the variable or property. The operator then assigns the result of that operation back to that variable or property.  
+ L'operatore `<<=` esegue innanzitutto uno spostamento a sinistra aritmetico sul valore della variabile o della proprietà. L'operatore assegna quindi il risultato dell'operazione alla variabile o alla proprietà.  
   
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
+ I turni aritmetici non sono circolari, il che significa che i bit spostati da un'estremità del risultato non vengono reintrodotti nell'altra estremità. In uno scorrimento a sinistra aritmetico, i bit spostati oltre l'intervallo del tipo di dati del risultato vengono rimossi e le posizioni dei bit sgomberate a destra vengono impostate su zero.  
   
 ## <a name="overloading"></a>Overload  
- The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `<<` operator affects the behavior of the `<<=` operator. If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ L' [operatore < <](../../../visual-basic/language-reference/operators/left-shift-operator.md) può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. L'overload dell'operatore `<<` influiscono sul comportamento dell'operatore `<<=`. Se il codice USA `<<=` su una classe o una struttura che esegue l'overload di `<<`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.  
+ Nell'esempio seguente viene usato l'operatore `<<=` per spostare lo schema di bit di una variabile `Integer` a sinistra della quantità specificata e assegnare il risultato alla variabile.  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   

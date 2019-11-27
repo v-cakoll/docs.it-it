@@ -40,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntatore all'enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ in Token TypeDef per il tipo di cui è necessario enumerare le implementazioni del metodo.  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ out Matrice in cui archiviare i token MethodBody.  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ out Matrice in cui archiviare i token MethodDeclaration.  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ in Dimensioni massime delle matrici di `rMethodBody` e di `rMethodDecl`.  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ in Numero effettivo di metodi restituiti in `rMethodBody` e `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodImpls` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token di metodo da enumerare. In tal caso, `pcTokens` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

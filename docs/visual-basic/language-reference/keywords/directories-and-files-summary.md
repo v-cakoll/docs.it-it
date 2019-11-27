@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349831"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Riepilogo di directory e file (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Le parole chiave del linguaggio Visual Basic e i membri della libreria di runtime sono organizzati in base allo scopo e usano.  
   
- Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ L'uso della funzionalità `My` garantisce una maggiore produttività e prestazioni nelle operazioni di I/O dei file rispetto all'uso di questi membri. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
 |**Azione**|**Elemento di linguaggio**|  
 |----------------|--------------------------|  
-|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Modificare una directory o una cartella.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Modificare l'unità.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Copiare un file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Creare una directory o una cartella.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|Rimuovere una directory o una cartella.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Rinominare un file, una directory o una cartella.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|Restituisce il percorso corrente.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|Restituisce l'indicatore di data e ora di un file.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Restituisce gli attributi del file, della directory o dell'etichetta.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Restituisce la lunghezza di un file.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Restituisce il nome o l'etichetta del volume di un file.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Impostare le informazioni sugli attributi per un file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
 

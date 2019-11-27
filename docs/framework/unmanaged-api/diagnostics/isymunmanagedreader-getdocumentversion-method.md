@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448304"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>Metodo ISymUnmanagedReader::GetDocumentVersion
-Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
+Ottiene la versione specificata del documento specificato. La versione del documento inizia con 1 e viene incrementata ogni volta che il documento viene aggiornato con il metodo [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) . Se il parametro `pbCurrent` è `true`, si tratta della versione più recente del documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +36,19 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>Parametri  
  `pDoc`  
- [in] The specified document.  
+ in Documento specificato.  
   
  `version`  
- [out] A pointer to a variable that receives the version of the specified document.  
+ out Puntatore a una variabile che riceve la versione del documento specificato.  
   
  `pbCurrent`  
- [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
+ out Puntatore a una variabile che riceve `true` se è la versione più recente del documento oppure `false` se non è la versione più recente.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

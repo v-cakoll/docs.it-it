@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438714"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Metodo ICorProfilerInfo::IsArrayClass
-Determines whether the specified class is an array class.  
+Determina se la classe specificata è una classe di matrici.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +37,22 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] The ID of the class to be examined.  
+ in ID della classe da esaminare.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ out Puntatore a un valore dell'enumerazione CorElementType che indica il tipo degli elementi della matrice.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ out Puntatore all'ID della classe degli elementi della matrice, se disponibile.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ out Puntatore a un intero che indica il rango, ovvero il numero di dimensioni, della matrice.  
   
 ## <a name="remarks"></a>Note  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ Se la classe specificata è una classe di matrici, il metodo `IsArrayClass` restituisce un S_OK HRESULT e i valori per tutti i parametri di output non null. In caso contrario, restituisce S_FALSE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

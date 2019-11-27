@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437362"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>Metodo IMetaDataImport::GetModuleFromScope
-Gets a metadata token for the module referenced in the current metadata scope.  
+Ottiene un token di metadati per il modulo a cui si fa riferimento nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,14 +35,14 @@ HRESULT GetModuleFromScope (
   
 ## <a name="parameters"></a>Parametri  
  `pmd`  
- [out] A pointer to the token representing the module referenced in the current metadata scope.  
+ out Puntatore al token che rappresenta il modulo a cui si fa riferimento nell'ambito dei metadati corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

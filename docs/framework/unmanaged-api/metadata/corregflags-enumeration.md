@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450108"
 ---
 # <a name="corregflags-enumeration"></a>Enumerazione CorRegFlags
-Provides flag values used for registration when installing a module or composite image.  
+Fornisce valori di flag usati per la registrazione durante l'installazione di un modulo o un'immagine composita.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +37,18 @@ typedef enum
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`regNoCopy`|Specifies that files should not be copied into the destination.|  
-|`regConfig`|Specifies that the module or composite is a configuration.|  
-|`regHasRefs`|Specifies that the module or composite has class references.|  
+|`regNoCopy`|Specifica che i file non devono essere copiati nella destinazione.|  
+|`regConfig`|Specifica che il modulo o composito è una configurazione.|  
+|`regHasRefs`|Specifica che il modulo o composito contiene riferimenti a classi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

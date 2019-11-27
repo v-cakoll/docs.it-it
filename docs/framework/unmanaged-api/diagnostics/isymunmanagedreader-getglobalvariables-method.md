@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448322"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>Metodo ISymUnmanagedReader::GetGlobalVariables
-Returns all global variables.  
+Restituisce tutte le variabili globali.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>Parametri  
  `cVars`  
- [in] The length of the buffer pointed to by `pcVars`.  
+ in Lunghezza del buffer a cui punta `pcVars`.  
   
  `pcVars`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.  
+ out Puntatore a un `ULONG32` che riceve la dimensione del buffer necessario per contenere le variabili.  
   
  `pVars`  
- [out] A buffer that contains the variables.  
+ out Buffer che contiene le variabili.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

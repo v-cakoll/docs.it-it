@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431726"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Metodo IMetaDataEmit::DefineModuleRef
-Creates the metadata signature for a module with the specified name.  
+Crea la firma dei metadati per un modulo con il nome specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +36,17 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
+ in Nome dell'altro file di metadati, in genere una DLL. Questo è solo il nome del file. Non usare un nome di percorso completo.  
   
  `pmur`  
- [out] The assigned `mdModuleRef` token.  
+ out Token `mdModuleRef` assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

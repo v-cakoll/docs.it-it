@@ -15,7 +15,7 @@ ms.locfileid: "74435257"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementazione del pattern di controllo GridItem di automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IGridItemProvider>, incluse le informazioni relative alle proprietà. Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "74435257"
   
 - Le celle unite segnaleranno le proprietà <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> e <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> in base alla cella di aggancio sottostante, secondo quanto definito dal provider di automazione interfaccia utente. In genere si tratterà della riga o della colonna più in alto e più a sinistra.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> non consente di apportare modifiche attive alla griglia, ad esempio l'unione o la separazione di celle.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> non fornisce la manipolazione attiva della griglia, ad esempio l'Unione o la suddivisione di celle.  
   
 - I controlli che implementano <xref:System.Windows.Automation.Provider.IGridItemProvider> in genere possono essere attraversati (ovvero, il client di automazione interfaccia utente può passare ai controlli adiacenti) usando la tastiera.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "74435257"
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Proprietà|Nessuna|  
   
  Questo pattern di controllo non è associato a metodi o eventi.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74435257"
 
 - [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo Grid di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md)
 - [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

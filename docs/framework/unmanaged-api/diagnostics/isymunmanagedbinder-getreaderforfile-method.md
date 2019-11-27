@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449354"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>Metodo ISymUnmanagedBinder::GetReaderForFile
-Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
+Data un'interfaccia di metadati e un nome file, restituisce l'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) corretta che leggerà i simboli di debug associati al modulo.  
   
- This method will open the program database (PDB) file only if it is next to the executable file. This change has been made for security purposes. If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.  
+ Questo metodo consente di aprire il file del database di programma (PDB) solo se è accanto al file eseguibile. Questa modifica è stata apportata per motivi di sicurezza. Se è necessaria una ricerca più completa per il file PDB, usare il metodo [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +39,22 @@ HRESULT GetReaderForFile(
   
 ## <a name="parameters"></a>Parametri  
  `importer`  
- [in] A pointer to the metadata import interface.  
+ in Puntatore all'interfaccia di importazione dei metadati.  
   
  `fileName`  
- [in] A pointer to the file name.  
+ in Puntatore al nome del file.  
   
  `searchPath`  
- [in] A pointer to the search path.  
+ in Puntatore al percorso di ricerca.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
+ out Puntatore impostato sull'interfaccia [ISymUnmanagedReader](isymunmanagedreader-interface.md) restituita.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348246"
 ---
 # <a name="or-operator-visual-basic"></a>Operatore Or (Visual Basic)
-Performs a logical disjunction on two `Boolean` expressions, or a bitwise disjunction on two numeric expressions.  
+Esegue una disgiunzione logica di due espressioni `Boolean` o una disgiunzione bit per bit di due espressioni numeriche.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio. Any `Boolean` or numeric expression. For `Boolean` comparison, `result` is the inclusive logical disjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the inclusive bitwise disjunction of two numeric bit patterns.  
+ Obbligatoria. Qualsiasi `Boolean` o espressione numerica. Per `Boolean` confronto, `result` è la disgiunzione logica inclusiva di due valori di `Boolean`. Per le operazioni bit per bit, `result` è un valore numerico che rappresenta la disgiunzione bit per bit inclusiva di due modelli di bit numerici.  
   
  `expression1`  
- Obbligatorio. Any `Boolean` or numeric expression.  
+ Obbligatoria. Qualsiasi `Boolean` o espressione numerica.  
   
  `expression2`  
- Obbligatorio. Any `Boolean` or numeric expression.  
+ Obbligatoria. Qualsiasi `Boolean` o espressione numerica.  
   
 ## <a name="remarks"></a>Note  
- For `Boolean` comparison, `result` is `False` if and only if both `expression1` and `expression2` evaluate to `False`. The following table illustrates how `result` is determined.  
+ Per `Boolean` confronto, `result` viene `False` se e solo se sia `expression1` che `expression2` restituiscono `False`. Nella tabella seguente viene illustrato il modo in cui viene determinato `result`.  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|Se `expression1` è|E `expression2` è|Il valore di `result` è|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a `Boolean` comparison, the `Or` operator always evaluates both expressions, which could include making procedure calls. The [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) performs *short-circuiting*, which means that if `expression1` is `True`, then `expression2` is not evaluated.  
+> In un confronto di `Boolean`, l'operatore `Or` valuta sempre entrambe le espressioni, che possono includere la chiamata di routine. L' [operatore OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md) esegue un *corto circuito*, il che significa che se `expression1` è `True`, `expression2` non viene valutato.  
   
- For bitwise operations, the `Or` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ Per le operazioni bit per bit, l'operatore `Or` esegue un confronto bit per bit dei bit posizionati in modo identico in due espressioni numeriche e imposta il bit corrispondente in `result` in base alla tabella seguente.  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|Se bit in `expression1` è|E bit in `expression2` è|Il bit in `result` è|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,34 +64,34 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
+> Poiché gli operatori logici e bit per bit hanno una precedenza inferiore rispetto ad altri operatori aritmetici e relazionali, qualsiasi operazione bit per bit deve essere racchiusa tra parentesi per garantire un'esecuzione accurata.  
   
 ## <a name="data-types"></a>Tipi di dati  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ Se gli operandi sono costituiti da un'espressione `Boolean` e un'espressione numerica, Visual Basic converte l'espressione `Boolean` in un valore numerico (-1 per `True` e 0 per `False`) ed esegue un'operazione bit per bit.  
   
- For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Per un confronto di `Boolean`, il tipo di dati del risultato è `Boolean`. Per un confronto bit per bit, il tipo di dati result è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere la tabella "confronto relazionale e bit per bit" in [tipi di dati dei risultati dell'operatore](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Overload  
- The `Or` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ L'operatore `Or` può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. Se il codice usa questo operatore su una classe o una struttura di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- The following example uses the `Or` operator to perform an inclusive logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is `True`.  
+ Nell'esempio seguente viene usato l'operatore `Or` per eseguire una disgiunzione logica inclusiva su due espressioni. Il risultato è un valore `Boolean` che indica se una delle due espressioni è `True`.  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- The preceding example produces results of `True`, `True`, and `False`, respectively.  
+ Nell'esempio precedente vengono prodotti rispettivamente i risultati di `True`, `True`e `False`.  
   
 ## <a name="example"></a>Esempio  
- The following example uses the `Or` operator to perform inclusive logical disjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if either of the corresponding bits in the operands is set to 1.  
+ Nell'esempio seguente viene usato l'operatore `Or` per eseguire la disgiunzione logica inclusiva sui singoli bit di due espressioni numeriche. Il bit nel modello di risultato viene impostato se uno dei bit corrispondenti negli operandi è impostato su 1.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- The preceding example produces results of 10, 14, and 14, respectively.  
+ Nell'esempio precedente vengono prodotti rispettivamente i risultati 10, 14 e 14.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Operatori logici/bit per bit (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatore OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operatori logici e bit per bit in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

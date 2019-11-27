@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437923"
 ---
 # <a name="imetadataimportfindmember-method"></a>Metodo IMetaDataImport::FindMember
-Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Ottiene un puntatore al token MemberDef per il campo o il metodo racchiuso dall'<xref:System.Type> specificato e con il nome e la firma dei metadati specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,36 +39,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
+ in Token TypeDef per la classe o l'interfaccia che racchiude il membro da cercare. Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale o una funzione globale.  
   
  `szName`  
- [in] The name of the member to search for.  
+ in Nome del membro da cercare.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member.  
+ in Puntatore alla firma dei metadati binari del membro.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ in Dimensioni in byte del `pvSigBlob`.  
   
  `pmb`  
- [out] A pointer to the matching MemberDef token.  
+ out Puntatore al token MemberDef corrispondente.  
   
 ## <a name="remarks"></a>Note  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
+ È possibile specificare il membro utilizzando la classe o l'interfaccia di inclusione (`td`), il nome (`szName`) e, facoltativamente, la relativa firma (`pvSigBlob`). Potrebbero essere presenti più membri con lo stesso nome in una classe o in un'interfaccia. In tal caso, passare la firma del membro per trovare la corrispondenza univoca.  
   
- The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
+ La firma passata a `FindMember` deve essere stata generata nell'ambito corrente, perché le firme sono associate a un ambito specifico. Una firma può incorporare un token che identifica la classe o il tipo di valore contenitore. Il token è un indice nella tabella TypeDef locale. Non è possibile compilare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e utilizzare tale firma come input per l'input per `FindMember`.  
   
- `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
+ `FindMember` trova solo i membri definiti direttamente nella classe o nell'interfaccia; non vengono trovati membri ereditati.  
   
 > [!NOTE]
-> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+> `FindMember` è un metodo helper. Chiama [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); Se la chiamata non trova una corrispondenza, `FindMember` chiama [IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

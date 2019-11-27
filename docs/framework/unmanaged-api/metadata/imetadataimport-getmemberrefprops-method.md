@@ -41,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametri  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ in Token MemberRef per il quale restituire i metadati associati.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ out Token TypeDef o TypeRef o TypeSpec che rappresenta la classe che dichiara il membro o un token ModuleRef che rappresenta la classe modulo che dichiara il membro o un MethodDef che rappresenta il membro.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ out Buffer di stringa per il nome del membro.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ in Dimensioni richieste in caratteri wide di `szMember`.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ out Dimensioni restituite in caratteri wide di `szMember`.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ out Puntatore alla firma dei metadati binaria per il membro.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ out Dimensioni in byte del `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

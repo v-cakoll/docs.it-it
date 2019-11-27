@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442286"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>Metodo IMetaDataDispenserEx::FindAssembly
-Questo metodo non è implementato. If called, it returns E_NOTIMPL.  
+Questo metodo non è implementato. Se chiamato, restituisce E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,32 +41,32 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>Parametri  
  `szAppBase`  
- [in] Not used.  
+ in Non utilizzato.  
   
  `szPrivateBin`  
- [in] Not used.  
+ in Non utilizzato.  
   
  `szGlobalBin`  
- [in] Not used.  
+ in Non utilizzato.  
   
  `szAssemblyName`  
- [in] The assembly to be found.  
+ in Assembly da trovare.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ out Nome semplice dell'assembly.  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ in Dimensione, in byte, del `szName`.  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ out Numero di caratteri effettivamente restituiti in `szName`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -42,19 +42,19 @@ HRESULT GetGenerationBounds(
  [out] Puntatore a un intero che specifica il numero complessivo di intervalli restituiti, interamente o in parte, nella matrice `ranges`.  
   
  `ranges`  
- [out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.  
+ out Matrice di strutture di [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) , ognuna delle quali descrive un intervallo, ovvero un blocco, della memoria all'interno della generazione che è in fase di Garbage Collection.  
   
 ## <a name="remarks"></a>Note  
  Il metodo `GetGenerationBounds` può essere chiamato da qualsiasi callback del profiler, purché non sia in corso un'operazione di Garbage Collection.
 
  La maggior parte delle modifiche di generazione si verifica durante le operazioni di Garbage Collection. Le generazioni possono aumentare tra un'operazione di Garbage Collection e l'altra, ma in genere non si spostano. I punti più interessanti in cui chiamare `GetGenerationBounds` sono quindi `ICorProfilerCallback2::GarbageCollectionStarted` e `ICorProfilerCallback2::GarbageCollectionFinished`.  
   
- Durante l'avvio del programma, alcuni oggetti vengono allocati direttamente da Common Language Runtime, di solito nelle generazioni 3 e 0. In questo modo, prima che inizi l'esecuzione del codice gestito, queste generazioni conterranno già oggetti. Le generazioni 1 e 2 in genere restano vuote, a eccezione degli oggetti fittizi generati dal Garbage Collector. (The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe). In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.  
+ Durante l'avvio del programma, alcuni oggetti vengono allocati direttamente da Common Language Runtime, di solito nelle generazioni 3 e 0. In questo modo, prima che inizi l'esecuzione del codice gestito, queste generazioni conterranno già oggetti. Le generazioni 1 e 2 in genere restano vuote, a eccezione degli oggetti fittizi generati dal Garbage Collector. (La dimensione degli oggetti fittizi è 12 byte nelle implementazioni a 32 bit di CLR; le dimensioni sono maggiori nelle implementazioni a 64 bit). È anche possibile vedere gli intervalli di generazione 2 che si trovano all'interno dei moduli prodotti dal generatore di immagini native (NGen. exe). In questo caso, gli oggetti della generazione 2 sono *oggetti bloccati*, che vengono allocati quando viene eseguito Ngen. exe anziché dal Garbage Collector.  
   
  Questa funzione usa buffer allocati dal chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

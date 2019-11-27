@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431071"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>Metodo ISymUnmanagedDocument::GetCheckSumAlgorithmId
-Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.  
+Ottiene l'identificatore dell'algoritmo di checksum oppure restituisce un GUID di tutti gli zeri in assenza di checksum.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ HRESULT GetCheckSumAlgorithmId(
   
 ## <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] A pointer to a variable that receives the checksum algorithm identifier.  
+ out Puntatore a una variabile che riceve l'identificatore dell'algoritmo di checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds.  
+ S_OK se il metodo ha esito positivo.  
   
 ## <a name="see-also"></a>Vedere anche
 

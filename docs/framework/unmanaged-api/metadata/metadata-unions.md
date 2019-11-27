@@ -18,7 +18,7 @@ Questa sezione descrive le unioni non gestite usate dall'API dei metadati.
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Unione CeeSectionRelocExtra](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Rappresenta un offset di indirizzo utilizzato dall'interfaccia [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) per spostare una sezione  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

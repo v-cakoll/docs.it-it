@@ -20,27 +20,27 @@ ms.locfileid: "74350013"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: inserire più valori in una variabile (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+Una variabile include più di un valore se lo si dichiara come *tipo di dati composito*.
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[I tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) includono strutture, matrici e classi. Una variabile di un tipo di dati composito può avere una combinazione di tipi di dati elementari e altri tipi compositi. Le strutture e le classi possono conservare il codice e i dati.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>Per conservare più di un valore in una variabile
 
-1. Determine what composite data type you want to use for your variable.
+1. Determinare il tipo di dati composito che si desidera utilizzare per la variabile.
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. Se il tipo di dati composito non è già definito, definirlo in modo che possa essere utilizzato dalla variabile.
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Definire una struttura con un' [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - Definire una matrice con un' [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - Definire una classe con un' [istruzione di classe](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. Declare your variable with a `Dim` statement.
+3. Dichiarare la variabile con un'istruzione `Dim`.
 
-4. Follow the variable name with an `As` clause.
+4. Seguire il nome della variabile con una clausola `As`.
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. Seguire la parola chiave `As` con il nome del tipo di dati composito appropriato.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -48,6 +48,6 @@ A variable holds more than one value if you declare it to be of a *composite dat
 - [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

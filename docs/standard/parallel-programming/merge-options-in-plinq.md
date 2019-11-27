@@ -32,7 +32,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
 - `Not Buffered`  
   
-     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Although `NotBuffered` starts yielding results as soon as they're available, the total time to produce all the results might still be longer than using one of the other merge options.  
+     L'opzione <xref:System.Linq.ParallelMergeOptions.NotBuffered> fa in modo che ogni elemento elaborato venga restituito da ogni thread non appena viene prodotto. Questo comportamento è simile alla "trasmissione" dell'output. Se l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> è presente nella query, `NotBuffered` mantiene l'ordine degli elementi di origine. Anche se `NotBuffered` inizia a produrre risultati non appena sono disponibili, il tempo totale per produrre tutti i risultati potrebbe essere ancora più lungo rispetto all'uso di una delle altre opzioni di merge.  
   
 - `Auto Buffered`  
   
@@ -45,19 +45,19 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
 ## <a name="query-operators-that-support-merge-options"></a>Operatori di query che supportano le opzioni di merge  
  La tabella seguente elenca gli operatori che supportano tutte le modalità delle opzioni di merge, soggette alle restrizioni specificate.  
   
-|??|Restrizioni|  
+|Operatore|Restrizioni|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nessuna|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Nessuna|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Query non ordinate che hanno solo un'origine matrice o elenco.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Nessuno|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Nessuno|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|Nessuna|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Nessuna|  
   
  Tutti gli altri operatori di query PLINQ potrebbero ignorare le opzioni di merge fornito dall'utente. Alcuni operatori di query, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A> e <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, non possono generare elementi finché tutti non sono stati prodotti e riordinati. Quando viene usato <xref:System.Linq.ParallelMergeOptions> in una query che contiene anche un operatore, ad esempio <xref:System.Linq.ParallelEnumerable.Reverse%2A>, il comportamento di merge non verrà quindi applicato nella query finché tale operatore non avrà prodotto i risultati.  
   

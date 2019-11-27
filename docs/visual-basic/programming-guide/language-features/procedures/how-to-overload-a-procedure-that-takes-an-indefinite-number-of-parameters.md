@@ -18,40 +18,40 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345841"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procedura: eseguire l'overload di una routine che accetta un numero indefinito di parametri (Visual Basic)
-If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array. For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+Se una stored procedure dispone di un parametro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , non è possibile definire una versione di overload che accetta una matrice unidimensionale per la matrice di parametri. Per ulteriori informazioni, vedere "Overload impliciti per un parametro ParamArray" in [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>To overload a procedure that takes a variable number of parameters  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Per eseguire l'overload di una routine che accetta un numero variabile di parametri  
   
-1. Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter. See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+1. Verificare che la procedura e la chiamata della logica del codice beneficino di versioni di overload maggiori rispetto a quelle di un parametro `ParamArray`. Vedere "Overload e ParamArray" in [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
   
-2. Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list. This might include the case of no value, and it might include the case of a single one-dimensional array.  
+2. Determinare il numero di valori forniti che la routine deve accettare nella parte variabile dell'elenco di parametri. Questo potrebbe includere il caso di nessun valore e potrebbe includere il caso di una singola matrice unidimensionale.  
   
-3. For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.  
+3. Per ogni numero accettabile di valori forniti, scrivere un'istruzione `Sub` o `Function` dichiarazione che definisce l'elenco di parametri corrispondente. Non utilizzare la `Optional` o la parola chiave `ParamArray` in questa versione di overload.  
   
-4. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+4. In ogni dichiarazione precedere la parola chiave `Sub` o `Function` con la parola chiave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) .  
   
-5. Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.  
+5. Dopo ogni dichiarazione, scrivere il codice della procedura da eseguire quando il codice chiamante fornisce valori corrispondenti all'elenco di parametri della dichiarazione.  
   
-6. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. Terminare ogni procedura con l'istruzione `End Sub` o `End Function` in base alle esigenze.  
   
 ## <a name="example"></a>Esempio  
- The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.  
+ Nell'esempio seguente viene illustrata una procedura definita con un parametro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , quindi un set equivalente di routine di overload.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
+ Non è possibile eseguire l'overload di questa procedura con un elenco di parametri che accetta una matrice unidimensionale per la matrice di parametri. Tuttavia, è possibile usare le firme degli altri overload impliciti. Questa operazione viene illustrata nelle dichiarazioni seguenti.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
- The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many. Visual Basic passes control to the version matching the calling argument list.  
+ Il codice nelle versioni di overload non deve verificare se il codice chiamante ha fornito uno o più valori per il parametro `ParamArray` o, in tal caso, il numero. Visual Basic passa il controllo alla versione corrispondente all'elenco di argomenti chiamante.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads. For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+ Poiché una routine con un parametro `ParamArray` è equivalente a un set di versioni di overload, non è possibile eseguire l'overload di tale procedura con un elenco di parametri corrispondente a uno di questi overload impliciti. Per ulteriori informazioni, vedere [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.  
+ Ogni volta che si tratta di una matrice che può essere indefinitamente grande, esiste il rischio di sovraeseguire una capacità interna dell'applicazione. Se si accetta una matrice di parametri, è necessario verificare la lunghezza della matrice a cui è stato passato il codice chiamante ed eseguire le operazioni appropriate se è troppo grande per l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447232"
 ---
 # <a name="getresolutionscope-method"></a>Metodo GetResolutionScope
-Retrieves the scope of a given type.  
+Recupera l'ambito di un tipo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,25 +37,25 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID of the assembly.  
+ ID dell'assembly.  
   
  `FileToken`  
- File that is in need of a reference.  
+ File che necessita di un riferimento.  
   
  `TargetFile`  
- Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
+ Token del file in cui è definito il tipo, generalmente recuperato con il [metodo ImportFile](importfile-method.md).  
   
  `pScope`  
- Receives the assembly or module reference.  
+ Riceve il riferimento all'assembly o al modulo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Returns S_OK if the method succeeds.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Requires alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfaccia IALink](ialink-interface.md)
 - [Interfaccia IALink2](ialink2-interface.md)
-- [API ALink](index.md)
+- [Alink (API)](index.md)

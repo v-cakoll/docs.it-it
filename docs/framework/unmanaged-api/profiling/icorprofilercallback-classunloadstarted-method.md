@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445075"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>Metodo ICorProfilerCallback::ClassUnloadStarted
-Notifies the profiler that a class is being unloaded.  
+Notifica al profiler che una classe viene scaricata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] Identifies the class that is being unloaded.  
+ in Identifica la classe che viene scaricata.  
   
 ## <a name="remarks"></a>Note  
- The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.  
+ Il valore di `classId` non è valido per una richiesta di informazioni dopo la restituzione del metodo `ClassUnloadStarted`, ovvero l'ultima possibilità del profiler di ottenere informazioni su questa classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

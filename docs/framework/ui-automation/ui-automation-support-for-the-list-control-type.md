@@ -15,7 +15,7 @@ ms.locfileid: "74446728"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo List
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo elenco. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -30,21 +30,21 @@ ms.locfileid: "74446728"
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
 |Contiene elementi che corrispondono ai controlli.|Rimuove le informazioni ridondanti dell'albero in modo che i prodotti di assistive technology dispongano di un insieme ridotto di informazioni significative per l'utente finale.|  
-|List<br /><br /> -   DataItem (0 or more)<br />-   ListItem (0 or more)<br />-   Group (0 or more)<br />-   ScrollBar (0, 1 or 2)|List<br /><br /> -   DataItem (0 or more)<br />-   ListItem (0 or more)<br />-   Group (0 or more)|  
+|Elenco<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)<br />-ScrollBar (0, 1 o 2)|Elenco<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)|  
   
  La visualizzazione controlli per un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
   
-- Zero or more items within the list control (items can be based on the List Item or Data Item control types).
+- Zero o più elementi nel controllo elenco (gli elementi possono essere basati sui tipi di controllo elemento elenco o elemento dati).
   
-- Zero or more group controls within a list control.
+- Zero o più controlli gruppo in un controllo elenco.
   
-- Zero, one, or two scroll bar controls.
+- Zero, uno o due controlli barra di scorrimento.
   
 La visualizzazione contenuto di un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
   
-- Zero or more items within the list control (items can be based on the List Item or Data Item control types).
+- Zero o più elementi nel controllo elenco (gli elementi possono essere basati sui tipi di controllo elemento elenco o elemento dati).
   
-- Zero or more groups within the list control.
+- Zero o più gruppi nel controllo elenco.
 
 Un controllo elenco non deve contenere elementi con una relazione gerarchica diversa dal raggruppamento. Se gli elementi hanno figli nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , il contenitore elenco deve essere basato sul tipo di controllo Tree.  
   
@@ -52,21 +52,21 @@ Un controllo elenco non deve contenere elementi con una relazione gerarchica div
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
- La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli elenco. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
+ La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli elenco. Per ulteriori informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [UI Automation Properties for clients](ui-automation-properties-for-clients.md).  
   
-|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Note|  
+|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valore|Note|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vedere le note.|Se l'elenco ha un punto selezionabile, ovvero un punto su cui è possibile fare clic affinché l'elenco assuma lo stato attivo, tale punto deve essere esposto tramite questa proprietà.<br /><br /> If the value of the `IsOffScreen` property is true, then the <xref:System.Windows.Automation.NoClickablePointException> will be raised.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vedere le note.|Se l'elenco ha un punto selezionabile, ovvero un punto su cui è possibile fare clic affinché l'elenco assuma lo stato attivo, tale punto deve essere esposto tramite questa proprietà.<br /><br /> Se il valore della proprietà `IsOffScreen` è true, verrà generato il <xref:System.Windows.Automation.NoClickablePointException>.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il valore della proprietà Name di un controllo elenco deve fornire la categoria di opzioni da cui l'utente effettua la selezione. Questa proprietà deriva in genere il nome da un'etichetta di testo statico. Se non è presente alcuna etichetta di testo statico, lo sviluppatore dell'applicazione deve esporre un valore per la proprietà Name.<br /><br /> L'unico caso in cui questa proprietà non è obbligatoria per i controlli elenco è quando si usa il controllo all'interno del sottoalbero di un altro controllo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vedere le note.|Se è presente un'etichetta di testo statico, questa proprietà deve esporre un riferimento a tale controllo.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|List|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Elenco|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"elenco"|Stringa localizzata corrispondente al tipo di controllo elenco.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Il controllo elenco è sempre incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Il controllo elenco è sempre incluso nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Se il contenitore può accettare input da tastiera, il valore di questa proprietà deve essere True.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Se il contenitore può accettare input da tastiera, il valore di questa proprietà deve essere true.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Vedere le note.|Il testo della Guida per i controlli elenco deve illustrare il motivo per cui viene chiesto all'utente di effettuare una selezione da un elenco di opzioni. Ad esempio, "La selezione di un elemento dall'elenco consente di impostare la risoluzione per il monitor".|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
@@ -75,13 +75,13 @@ Un controllo elenco non deve contenere elementi con una relazione gerarchica div
   
 |Pattern di controllo/proprietà del pattern|Supporto/valore|Note|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Richiesto|Tutti i controlli che supportano il tipo di controllo elenco devono implementare `ISelectionProvider` quando viene gestito uno stato di selezione tra gli elementi nel controllo. Se gli elementi all'interno del contenitore non sono selezionabili, usare il tipo di controllo Group.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Obbligatoria|Tutti i controlli che supportano il tipo di controllo elenco devono implementare `ISelectionProvider` quando viene gestito uno stato di selezione tra gli elementi nel controllo. Se gli elementi all'interno del contenitore non sono selezionabili, usare il tipo di controllo Group.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|A seconda dei casi|Nei controlli elenco non è necessario che un elemento sia sempre selezionato.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|A seconda dei casi|I controlli elenco possono essere contenitori per una o più selezioni.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|A seconda dei casi|Implementare questo pattern di controllo se gli elementi nel contenitore sono scorrevoli.|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|A seconda dei casi|Implementare questo pattern quando è necessario rendere disponibile lo spostamento nella griglia elemento per elemento.|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|A seconda dei casi|Implementare questo pattern di controllo se il controllo può supportare più visualizzazioni degli elementi nel contenitore.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` non è mai supportato per il tipo di controllo elenco. Se il controllo deve supportare questo pattern di controllo, deve essere basato sul tipo del controllo DataGrid.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Mai|`ITableProvider` non è mai supportato per il tipo di controllo elenco. Se il controllo deve supportare questo pattern di controllo, deve essere basato sul tipo del controllo DataGrid.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
@@ -89,20 +89,20 @@ Un controllo elenco non deve contenere elementi con una relazione gerarchica div
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Supporto/valore|Note|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|A seconda dei casi|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Richiesto|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Richiesto|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Richiesto|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|A seconda dei casi|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Richiesto|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Richiesto|Nessuno|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|A seconda dei casi|Nessuna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatoria|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatoria|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatoria|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|A seconda dei casi|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|A seconda dei casi|Nessuna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatoria|Nessuna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatoria|Nessuna|  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,22 +22,22 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447557"
 ---
 # <a name="imethodmalloc-interface"></a>Interfaccia IMethodMalloc
-Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
+Fornisce un metodo per allocare memoria per un nuovo corpo della funzione MSIL (Microsoft Intermediate Language).  
   
 > [!NOTE]
-> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
+> L'interfaccia `IMethodMalloc` è un semplice allocatore di memoria. Consente di allocare memoria, ma non di liberarla.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
+|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta di allocare una quantità specificata di memoria per un nuovo corpo della funzione MSIL.|  
   
 ## <a name="remarks"></a>Note  
- Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
+ Ogni allocatore è specifico del modulo e garantisce che il corpo della funzione si trovi in corrispondenza di un offset positivo rispetto alla base del modulo. La memoria al di sopra della base di un modulo può essere preziosa, quindi l'allocatore deve essere usato per allocare memoria solo per il corpo di una funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

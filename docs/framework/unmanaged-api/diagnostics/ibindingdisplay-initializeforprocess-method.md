@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448490"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Metodo IBindingDisplay::InitializeForProcess
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+Inizializza l'oggetto [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>Parametri  
  `pid`  
- [in] The process identifier.  
+ in Identificatore del processo.  
   
 ## <a name="remarks"></a>Note  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+ Il debugger chiama il metodo `InitializeForProcess` al momento della creazione per inizializzare la visualizzazione dell'associazione. `InitializeForProcess` necessario chiamare in fase di creazione prima di chiamare qualsiasi altro metodo su `IBindingDisplay`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Intestazione:** BindingDisplay. h  
   
- **Library:** BindingDisplay.idl  
+ **Libreria:** BindingDisplay. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

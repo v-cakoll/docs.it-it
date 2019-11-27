@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437454"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>Metodo IMetaDataImport::GetMethodSemantics
-Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.  
+Ottiene i flag che indicano la relazione tra il metodo a cui fa riferimento il token MethodDef specificato e la proprietà abbinata e l'evento a cui fa riferimento il token EventProp specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,23 +37,23 @@ HRESULT GetMethodSemantics (
   
 ## <a name="parameters"></a>Parametri  
  `mb`  
- [in] A MethodDef token representing the method to get the semantic role information for.  
+ in Token MethodDef che rappresenta il metodo per il quale ottenere le informazioni sul ruolo semantico.  
   
  `tkEventProp`  
- [in] A token representing the paired property and event for which to get the method's role.  
+ in Token che rappresenta la proprietà abbinata e l'evento per il quale ottenere il ruolo del metodo.  
   
  `pdwSemanticsFlags`  
- [out] A pointer to the associated semantics flags. This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.  
+ out Puntatore ai flag di semantica associati. Questo valore è una maschera di maschera dall'enumerazione [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) .  
   
 ## <a name="remarks"></a>Note  
- The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.  
+ Il metodo [IMetaDataEmit::D efineproperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) imposta i flag di semantica di un metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

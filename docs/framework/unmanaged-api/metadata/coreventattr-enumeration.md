@@ -39,16 +39,16 @@ typedef enum CorEventAttr {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`evSpecialName`|Specifies that the event is special, and that its name describes how.|  
-|`evReservedMask`|Reserved for internal use by the common language runtime.|  
-|`evRTSpecialName`|Specifies that the common language runtime should check the encoding of the event name.|  
+|`evSpecialName`|Specifica che l'evento è speciale e che il nome descrive come.|  
+|`evReservedMask`|Riservato per uso interno da parte del Common Language Runtime.|  
+|`evRTSpecialName`|Specifica che il Common Language Runtime deve controllare la codifica del nome dell'evento.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

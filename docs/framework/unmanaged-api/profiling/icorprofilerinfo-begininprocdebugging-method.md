@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447745"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>Metodo ICorProfilerInfo::BeginInprocDebugging
-Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.  
+Inizializza il supporto per il debug in-process. Questo metodo è obsoleto nella versione .NET Framework 2,0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,22 +35,22 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>Parametri  
  `fThisThreadOnly`  
- [in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.  
+ in Impostare questo valore su `true` per inizializzare il supporto del debug solo per il thread corrente. impostarlo su `false` per inizializzare il supporto del debug per tutti i thread.  
   
  `pdwProfilerContext`  
- [out] The pointer to a returned value that identifies the debugging session.  
+ out Puntatore a un valore restituito che identifica la sessione di debug.  
   
 ## <a name="remarks"></a>Note  
- The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ I servizi di debug CLR supportano il debug in-process limitato nelle versioni .NET Framework 1,0 e 1,1. Il debug in-process ha consentito a un profiler di usare le parti di ispezione dell'API di debug. Tuttavia, a causa dei suggerimenti dei clienti, il debug in-process è stato rimosso dalla .NET Framework nella versione 2,0 e sostituito con un set di funzionalità più in linea con l'API di profilatura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
  **Libreria:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Versione .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

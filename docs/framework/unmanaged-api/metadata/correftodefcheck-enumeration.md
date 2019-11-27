@@ -38,18 +38,18 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|Specifica che i riferimenti ai tipi e i riferimenti ai membri devono essere convertiti in definizioni. Si tratta del valore predefinito (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Specifica che tutti gli elementi a cui si fa riferimento devono essere convertiti in definizioni.|  
+|`MDRefToDefNone`|Specifica che nessun elemento a cui si fa riferimento deve essere convertito nelle definizioni.|  
+|`MDTypeRefToDef`|Specifica che solo i riferimenti ai tipi devono essere convertiti nelle definizioni di tipo.|  
+|`MDMemberRefToDef`|Specifica che solo i riferimenti ai membri devono essere convertiti in definizioni. Ovvero i riferimenti ai membri devono essere convertiti in definizioni di metodo o definizioni di campo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Intestazione:** CorHdr. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

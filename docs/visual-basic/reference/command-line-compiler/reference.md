@@ -16,8 +16,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348589"
 ---
-# <a name="-reference-visual-basic"></a>-reference (Visual Basic)
-Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
+# <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
+Fa in modo che il compilatore renda le informazioni sul tipo negli assembly specificati disponibili per il progetto attualmente in fase di compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -25,37 +25,37 @@ Causes the compiler to make type information in the specified assemblies availab
 -reference:fileList  
 ```
 
-Oppure
+oppure
 
 ```console
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>argomenti  
+## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`fileList`|Obbligatorio. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
+|`fileList`|Obbligatoria. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
   
 ## <a name="remarks"></a>Note  
- The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
+ I file importati devono contenere i metadati dell'assembly. Solo i tipi pubblici sono visibili all'esterno dell'assembly. L'opzione [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa i metadati da un modulo.  
   
- If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
+ Se si fa riferimento a un assembly (assembly A) che a sua volta fa riferimento a un altro assembly (assembly B), è necessario fare riferimento all'assembly B se:  
   
 - Un tipo dell'assembly A eredita da un tipo o implementa un'interfaccia dall'assembly B.  
   
 - Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Usare [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti ad assembly.  
   
- For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
+ Affinché il compilatore riconosca un tipo in un assembly (non un modulo), è necessario forzare la risoluzione del tipo. Un esempio di come è possibile eseguire questa operazione consiste nel definire un'istanza del tipo. Sono disponibili altri modi per risolvere i nomi dei tipi in un assembly per il compilatore. Se, ad esempio, si eredita da un tipo in un assembly, il nome del tipo diventa noto al compilatore.  
   
- The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
+ Per impostazione predefinita, viene usato il file di risposta vbc. rsp, che fa riferimento a assembly .NET Framework di uso comune. Usare `-noconfig` se non si vuole che il compilatore usi vbc. rsp.  
   
  La forma breve di `-reference` è `/r`.  
   
 ## <a name="example"></a>Esempio  
- The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
+ Il comando seguente compila `Input.vb` di file di origine e gli assembly di riferimento da `Metad1.dll` e `Metad2.dll` per produrre `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

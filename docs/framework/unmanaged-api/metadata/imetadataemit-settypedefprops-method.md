@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447725"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>Metodo IMetaDataEmit::SetTypeDefProps
-Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Imposta le funzionalità di un tipo definito da una chiamata precedente a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,23 +38,23 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>Parametri  
  `td`  
- [in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ in Token `mdTypeDef` ottenuto dalla chiamata originale a [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] attributi `TypeDef`. Si tratta di una maschera di maschera dei valori `CorTypeAttr`.  
   
  `tkExtends`  
- [in] The `mdToken` of the base class. Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.  
+ in `mdToken` della classe di base. Ottenuta da una chiamata precedente a [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)o `null`.  
   
  `rtkImplements[]`  
- [in] An array of tokens for the interfaces that this type implements. These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). The last element of the array is must be `mdTokenNil`.  
+ in Matrice di token per le interfacce implementate da questo tipo. Questi token di `mdTypeRef` vengono ottenuti utilizzando [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). L'ultimo elemento della matrice deve essere `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

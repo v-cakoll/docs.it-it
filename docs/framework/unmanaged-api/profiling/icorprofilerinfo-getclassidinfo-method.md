@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439239"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>Metodo ICorProfilerInfo::GetClassIDInfo
-Gets the parent module and the metadata token for the specified class.  
+Ottiene il modulo padre e il token di metadati per la classe specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ HRESULT GetClassIDInfo(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] The ID of the class for which to get the information.  
+ in ID della classe per cui ottenere le informazioni.  
   
  `pModuleId`  
- [out] A pointer to the ID of the parent module of the class.  
+ out Puntatore all'ID del modulo padre della classe.  
   
  `pTypeDefToken`  
- [out] A pointer to the metadata token for the class.  
+ out Puntatore al token di metadati per la classe.  
   
 ## <a name="remarks"></a>Note  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. Il token di metadati restituito al percorso a cui viene fatto riferimento tramite `pTypeDefToken` può quindi essere usato per accedere ai metadati per la classe.  
+ Il codice del profiler può chiamare [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) per ottenere un'interfaccia di metadati per un determinato modulo. Il token di metadati restituito al percorso a cui viene fatto riferimento tramite `pTypeDefToken` può quindi essere usato per accedere ai metadati per la classe.  
   
- To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
+ Per ottenere altre informazioni per i tipi generici, usare [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

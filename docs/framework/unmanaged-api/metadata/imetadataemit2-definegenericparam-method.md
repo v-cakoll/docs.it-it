@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444648"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Metodo IMetaDataEmit2::DefineGenericParam
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+Crea una definizione per un parametro di tipo generico e ottiene un token per il parametro di tipo generico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,32 +41,32 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Parametri  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ in Token `mdTypeDef` o `mdMethodDef` che rappresenta il metodo o il costruttore per cui definire un parametro generico.  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ in Indice del parametro generico.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ in Valore dell'enumerazione [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) che descrive il tipo per il parametro generico.  
   
  `szname`  
- [in] The name of the parameter.  
+ in Nome del parametro.  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ in Questo parametro è riservato per l'estendibilità futura.  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ in Matrice con terminazione zero di vincoli di tipo. I membri della matrice devono essere un token di metadati `mdTypeDef`, `mdTypeRef`o `mdTypeSpec`.  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ out Token che rappresenta il parametro generico.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

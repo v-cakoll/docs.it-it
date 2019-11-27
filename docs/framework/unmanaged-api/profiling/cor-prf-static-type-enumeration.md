@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448447"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>Enumerazione COR_PRF_STATIC_TYPE
-Indica se un campo è statico e, in tal caso, la qualità statica che si applica al campo. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
+Indica se un campo è statico e, in tal caso, la qualità statica che si applica al campo. Questi valori possono essere combinati usando l'operazione OR bit per bit per indicare che il campo ha più qualità statiche diverse.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
-|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|Il campo non è statico.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Il campo è statico del dominio dell'applicazione.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|Il campo è di thread-static.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|Il campo è statico del contesto.|  
+|`COR_PRF_FIELD_RVA_STATIC`|Il campo è un indirizzo RVA (relativo Virtual Address), statico.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

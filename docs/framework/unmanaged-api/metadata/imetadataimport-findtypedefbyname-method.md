@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437847"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>Metodo IMetaDataImport::FindTypeDefByName
-Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
+Ottiene un puntatore al token di metadati TypeDef per la <xref:System.Type> con il nome specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- [in] The name of the type for which to get the TypeDef token.  
+ in Nome del tipo per il quale ottenere il token TypeDef.  
   
  `tkEnclosingClass`  
- [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
+ in Token TypeDef o TypeRef che rappresenta la classe contenitore. Se il tipo da trovare non è una classe annidata, impostare questo valore su NULL.  
   
  `ptd`  
- [out] A pointer to the matching TypeDef token.  
+ out Puntatore al token TypeDef corrispondente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

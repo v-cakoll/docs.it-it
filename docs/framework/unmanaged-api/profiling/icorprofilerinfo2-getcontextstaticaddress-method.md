@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433198"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>Metodo ICorProfilerInfo2::GetContextStaticAddress
-Gets the address for the specified context-static field that is in the scope of the specified context.  
+Ottiene l'indirizzo per il campo statico del contesto specificato nell'ambito del contesto specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,28 +37,28 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>Parametri  
  `classId`  
- [in] The ID of the class that contains the requested context-static field.  
+ in ID della classe che contiene il campo statico di contesto richiesto.  
   
  `fieldToken`  
- [in] The metadata token for the requested context-static field.  
+ in Token di metadati per il campo statico di contesto richiesto.  
   
  `contextId`  
- [in] The ID of the context that is the scope for the requested context-static field.  
+ in ID del contesto che rappresenta l'ambito per il campo statico del contesto richiesto.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified context.  
+ out Puntatore all'indirizzo del campo statico che si trova all'interno del contesto specificato.  
   
 ## <a name="remarks"></a>Note  
- The `GetContextStaticAddress` method may return one of the following:  
+ Il metodo `GetContextStaticAddress` può restituire uno dei seguenti elementi:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- CORPROF_E_DATAINCOMPLETE HRESULT se al campo statico specificato non è stato assegnato un indirizzo nel contesto specificato.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Indirizzi degli oggetti che possono trovarsi nell'heap Garbage Collection. Questi indirizzi potrebbero non essere più validi dopo Garbage Collection, quindi, dopo Garbage Collection, i profiler non devono presupporre che siano validi.  
   
- Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Prima che il costruttore della classe di una classe venga completato, `GetContextStaticAddress` restituirà CORPROF_E_DATAINCOMPLETE per tutti i campi statici, anche se alcuni dei campi statici potrebbero essere già inizializzati e vengono radicati Garbage Collection oggetti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

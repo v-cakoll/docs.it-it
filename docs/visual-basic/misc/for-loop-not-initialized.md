@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: Ciclo for non inizializzato
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92

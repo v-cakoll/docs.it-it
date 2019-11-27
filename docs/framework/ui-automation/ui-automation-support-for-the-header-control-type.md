@@ -15,7 +15,7 @@ ms.locfileid: "74429862"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo Header
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo Header. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "74429862"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Header<br /><br /> -   HeaderItem (1 or more)|Nessuno|  
+|Intestazione<br /><br /> -HeaderItem (1 o più)|Nessuna|  
   
  I controlli intestazione hanno sempre 1 o più elementi figlio nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74429862"
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
  La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli intestazione. Per altre informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Note|  
+|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valore|Note|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|  
@@ -47,7 +47,7 @@ ms.locfileid: "74429862"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il controllo intestazione richiede un nome se è presente più di un'intestazione di riga o più di un'intestazione di colonna. Identifica le informazioni all'interno dell'intestazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|I controlli intestazione in genere non hanno un'etichetta statica.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Intestazione|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"header"|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Orizzontale|Il valore di questa proprietà espone la posizione del controllo intestazione, indipendentemente dal fatto che sia un'intestazione di riga o un'intestazione di colonna.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Il controllo intestazione non viene incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -67,11 +67,11 @@ ms.locfileid: "74429862"
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Richiesto|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Richiesto|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Richiesto|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Richiesto|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Richiesto|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Obbligatoria|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Obbligatoria|Nessuna|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Obbligatoria|Nessuna|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Obbligatoria|Nessuna|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Obbligatoria|Nessuna|  
   
 ## <a name="see-also"></a>Vedere anche
 

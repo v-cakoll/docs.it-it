@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349189"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Spazio dello stack insufficiente (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+Lo stack è un'area di lavoro di memoria che aumenta e compatta dinamicamente con le esigenze del programma in esecuzione. Sono stati superati i limiti.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Check that procedures are not nested too deeply.  
+1. Verificare che le procedure non siano annidate troppo profondamente.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Verificare che le procedure ricorsive vengano terminate correttamente.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Se le variabili locali richiedono più spazio variabile locale rispetto a quanto disponibile, provare a dichiarare alcune variabili a livello di modulo. È anche possibile dichiarare tutte le variabili nella procedura statica precedendo la parola chiave `Property`, `Sub`o `Function` con `Static`. In alternativa, è possibile usare l'istruzione `Static` per dichiarare singole variabili statiche all'interno delle procedure.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Ridefinire alcune stringhe a lunghezza fissa come stringhe a lunghezza variabile, poiché le stringhe a lunghezza fissa utilizzano più spazio dello stack rispetto alle stringhe a lunghezza variabile. È anche possibile definire la stringa a livello di modulo, in cui non è necessario spazio dello stack.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Controllare il numero di chiamate di funzione annidate `DoEvents` usando la finestra di dialogo `Calls` per visualizzare le procedure attive nello stack.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Assicurarsi che non sia stato causato un evento "Cascade" tramite l'attivazione di un evento che chiama una routine di evento già presente nello stack. Un evento Cascade è simile a una chiamata di routine ricorsiva senza terminazione, ma è meno ovvio, perché la chiamata viene eseguita da Visual Basic anziché da una chiamata esplicita nel codice. Utilizzare la finestra di dialogo `Calls` per visualizzare le procedure attive nello stack.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448663"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>Metodo ISymENCUnmanagedMethod::GetFileNameFromOffset
-Gets the file name for the line associated with an offset.  
+Ottiene il nome file per la riga associata a un offset.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,22 +38,22 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parametri  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ in `ULONG32` che contiene l'offset.  
   
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ in `ULONG32` che indica le dimensioni del buffer di `szName`.  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
+ out Puntatore a un `ULONG32` che riceve la dimensione, in caratteri, del buffer necessario per contenere i nomi file.  
   
  `szName`  
- [out] The buffer that contains the file names.  
+ out Buffer contenente i nomi dei file.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 
