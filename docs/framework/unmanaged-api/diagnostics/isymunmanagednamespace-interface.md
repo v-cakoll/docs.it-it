@@ -22,18 +22,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448352"
 ---
 # <a name="isymunmanagednamespace-interface"></a>Interfaccia ISymUnmanagedNamespace
-Represents a namespace.  
+Rappresenta uno spazio dei nomi.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|description|  
 |------------|-----------------|  
-|[Metodo GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Gets the name of this namespace.|  
-|[Metodo GetNamespaces](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Gets the children of this namespace.|  
-|[Metodo GetVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Returns all variables defined at global scope within this namespace.|  
+|[Metodo GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Ottiene il nome di questo spazio dei nomi.|  
+|[Metodo GetNamespaces](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Ottiene gli elementi figlio di questo spazio dei nomi.|  
+|[Metodo GetVariables](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Restituisce tutte le variabili definite in ambito globale all'interno di questo spazio dei nomi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

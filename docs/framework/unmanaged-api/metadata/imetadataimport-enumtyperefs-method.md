@@ -38,33 +38,33 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntatore all'enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ out Matrice utilizzata per archiviare i token TypeRef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rTypeRefs`.  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ out Puntatore al numero di token TypeRef restituiti in `rTypeRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|`EnumTypeRefs` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token da enumerare. In tal caso, `pcTypeRefs` è zero.|  
   
-## <a name="remarks"></a>Note  
- A TypeRef token represents a reference to a type.  
+## <a name="remarks"></a>Osservazioni  
+ Un token TypeRef rappresenta un riferimento a un tipo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

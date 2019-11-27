@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core runtime on Windows, Linux, and macOS - .NET Core
-description: Learn how to install .NET Core on Windows, Linux, and macOS. Discover the dependencies required to run .NET Core apps.
+title: Installare il runtime di .NET Core in Windows, Linux e macOS-.NET Core
+description: Informazioni su come installare .NET Core in Windows, Linux e macOS. Individuare le dipendenze necessarie per eseguire app .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -13,39 +13,39 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450856"
 ---
-# <a name="install-the-net-core-runtime"></a>Install the .NET Core Runtime
+# <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
-In this article, you'll learn how to download and install the .NET Core runtime. The .NET Core runtime is used to run apps created with .NET Core.
+In questo articolo si apprenderà come scaricare e installare il runtime di .NET Core. Il runtime di .NET Core viene usato per eseguire app create con .NET Core.
 
-You can download and install .NET Core directly with one of the following links:
+È possibile scaricare e installare .NET Core direttamente con uno dei collegamenti seguenti:
 
-- [.NET Core 3.1 Preview 3 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [Download di .NET Core 3,1 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Download di .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Download di .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [Download di .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
-## <a name="install-with-an-installer"></a>Install with an installer
+## <a name="install-with-an-installer"></a>Eseguire l'installazione con un programma di installazione
 
-Both Windows and macOS have standalone installers that can be used to install the .NET Core 3.0 runtime.
+Sia Windows che macOS hanno programmi di installazione autonomi che possono essere usati per installare il runtime di .NET Core 3,0.
 
-- Windows [x64 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x64-installer) | [x32 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x86-installer)
-- macOS [x64 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-macos-x64-installer)
+- CPU di Windows [x64](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x64-installer) | [x32 CPU](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x86-installer)
+- [CPU MacOS x64](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-macos-x64-installer)
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Install with a package manager
+## <a name="install-with-a-package-manager"></a>Installare con gestione pacchetti
 
-You can install the .NET Core Runtime with many of the common Linux package managers. For more information, see [Linux Package Manager - Install .NET Core](linux-package-manager-rhel7.md).
+È possibile installare il runtime di .NET Core con molti dei comuni gestori di pacchetti Linux. Per altre informazioni, vedere [Linux Package Manager (installare .NET Core](linux-package-manager-rhel7.md)).
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>Install with PowerShell automation
+## <a name="install-with-powershell-automation"></a>Eseguire l'installazione con l'automazione di PowerShell
 
-The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the runtime. You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).
+Gli [script DotNet-install](../tools/dotnet-install-script.md) vengono usati per l'automazione e le installazioni non amministrative del runtime. È possibile scaricare lo script dalla pagina di riferimento per gli [script DotNet-install](../tools/dotnet-install-script.md).
 
-The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 2.1. To install the current release of .NET Core (3.0), run the script with the following switch:
+Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 2,1. Per installare la versione corrente di .NET Core (3,0), eseguire lo script con l'opzione seguente:
 
 ```powershell
 dotnet-install.ps1 -Channel 3.0
@@ -55,11 +55,11 @@ dotnet-install.ps1 -Channel 3.0
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Install with bash automation
+## <a name="install-with-bash-automation"></a>Installare con l'automazione bash
 
-The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the runtime. You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).
+Gli [script DotNet-install](../tools/dotnet-install-script.md) vengono usati per l'automazione e le installazioni non amministrative del runtime. È possibile scaricare lo script dalla pagina di riferimento per gli [script DotNet-install](../tools/dotnet-install-script.md).
 
-The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 2.1. To install the current release of .NET Core (3.0), run the script with the following switch:
+Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 2,1. Per installare la versione corrente di .NET Core (3,0), eseguire lo script con l'opzione seguente:
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -69,14 +69,14 @@ The script defaults to installing the latest [long term support (LTS)](https://d
 
 ## <a name="docker"></a>Docker
 
-Containers provide a lightweight way to isolate your application from the rest of the host system. Containers on the same machine share just the kernel and use resources given to your application.
+I contenitori offrono un modo semplice per isolare l'applicazione dal resto del sistema host. I contenitori nello stesso computer condividono solo il kernel e usano le risorse specificate per l'applicazione.
 
-.NET Core can run in a Docker container. Le immagini Docker ufficiali di .NET Core sono pubblicate nel Registro Container di Microsoft e sono disponibili nel [repository di Microsoft .NET Core nell'hub Docker](https://hub.docker.com/_/microsoft-dotnet-core/). Ogni repository contiene le immagini per diverse combinazioni di .NET (SDK o Runtime) e del sistema operativo che è possibile usare.
+.NET Core può essere eseguito in un contenitore docker. Le immagini Docker ufficiali di .NET Core sono pubblicate nel Registro Container di Microsoft e sono disponibili nel [repository di Microsoft .NET Core nell'hub Docker](https://hub.docker.com/_/microsoft-dotnet-core/). Ogni repository contiene le immagini per diverse combinazioni di .NET (SDK o Runtime) e del sistema operativo che è possibile usare.
 
 Microsoft fornisce immagini progettate per scenari specifici. Il [repository di ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/), ad esempio, include immagini che vengono compilate per l'esecuzione di app ASP.NET Core nell'ambiente di produzione.
 
-For more information about using .NET Core in a Docker container, see [Introduction to .NET and Docker](../docker/introduction.md) and [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+Per altre informazioni sull'uso di .NET Core in un contenitore Docker, vedere [Introduzione a .NET e Docker](../docker/introduction.md) ed [esempi](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [How to check if .NET Core is already installed](how-to-detect-installed-versions.md).
+- [Come verificare se .NET Core è già installato](how-to-detect-installed-versions.md).

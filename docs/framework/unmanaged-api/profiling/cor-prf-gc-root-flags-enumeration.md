@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449465"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>Enumerazione COR_PRF_GC_ROOT_FLAGS
-Indicates a property of a garbage collection root.  
+Indica una proprietà di un Garbage Collection radice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,20 +35,20 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
-|Member|Descrizione|  
+|Membro|description|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|La radice impedisce a un Garbage Collection di migrare l'oggetto.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|La radice non impedisce Garbage Collection.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|La radice fa riferimento a un campo dell'oggetto anziché all'oggetto stesso.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|La radice impedisce Garbage Collection se il conteggio dei riferimenti dell'oggetto è un determinato valore.|  
   
-## <a name="remarks"></a>Note  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+## <a name="remarks"></a>Osservazioni  
+ `COR_PRF_GC_ROOT_FLAGS` è una maschera di maschera che fornisce informazioni aggiuntive sulle radici speciali. Tuttavia, non tutte le radici sono particolari. Alcune radici, ad esempio, non sono riferimenti vulnerabili, puntatori interni, aggiunti o conteggiati come riferimenti. Per tali radici, non sono presenti flag da inserire. Pertanto, i metodi che utilizzano questa enumerazione, ad esempio il metodo [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) , inviano 0 per la maschera di maschera dei flag, che indica che tutti i flag sono disattivati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   

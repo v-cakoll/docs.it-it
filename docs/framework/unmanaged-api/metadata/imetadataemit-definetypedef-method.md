@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450220"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Metodo IMetaDataEmit::DefineTypeDef
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Crea una definizione di tipo per un tipo di Common Language Runtime e ottiene un token di metadati per la definizione del tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,33 +39,33 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parametri  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ in Nome del tipo in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] attributi `TypeDef`. Si tratta di una maschera di maschera dei valori `CoreTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ in Token della classe di base. Deve essere un `mdTypeDef` o un token di `mdTypeRef`.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ in Matrice di token che specificano le interfacce implementate da questa classe o interfaccia.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ out Token `mdTypeDef` assegnato.  
   
-## <a name="remarks"></a>Note  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+## <a name="remarks"></a>Osservazioni  
+ Un flag in `dwTypeDefFlags` specifica se il tipo da creare è un tipo di riferimento Common Type System (classe o interfaccia) o un tipo di valore Common Type System.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ A seconda dei parametri forniti, questo metodo, come effetto collaterale, può anche creare un record `mdInterfaceImpl` per ogni interfaccia ereditata o implementata da questo tipo. Tuttavia, questo metodo non restituisce alcuno di questi token di `mdInterfaceImpl`. Se un client desidera aggiungere o modificare un token di `mdInterfaceImpl` in un secondo momento, è necessario utilizzare l'interfaccia `IMetaDataImport` per enumerarli. Se si desidera utilizzare la semantica COM dell'interfaccia `[default]`, è necessario fornire l'interfaccia predefinita come primo elemento nel `rtkImplements`; un attributo personalizzato impostato sulla classe indicherà che la classe dispone di un'interfaccia predefinita (che viene sempre considerata il primo token di `mdInterfaceImpl` dichiarato per la classe).  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ Ogni elemento della matrice `rtkImplements` include un token `mdTypeDef` o `mdTypeRef`. L'ultimo elemento nella matrice deve essere `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Libreria:** Usato come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

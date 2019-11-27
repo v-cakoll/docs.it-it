@@ -24,7 +24,7 @@ ms.locfileid: "74447563"
 ---
 # <a name="imethodmallocalloc-method"></a>Metodo IMethodMalloc::Alloc
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Tenta di allocare una quantità specificata di memoria per un nuovo corpo della funzione MSIL (Microsoft Intermediate Language).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,16 +37,16 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parametri
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+in Numero di byte da allocare per il corpo del metodo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ La memoria allocata inizierà in corrispondenza di un indirizzo maggiore dell'indirizzo di base del modulo associato a questo allocatore. In altre parole, ogni allocatore viene creato per un particolare modulo e tenterà di allocare memoria a un offset positivo dal relativo indirizzo di base. Se `Alloc` non riesce ad allocare il numero richiesto di byte in un indirizzo maggiore dell'indirizzo di base del modulo, restituisce E_OUTOFMEMORY, indipendentemente dalla quantità effettiva di spazio di memoria disponibile.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ È necessario usare il metodo `Alloc` insieme al metodo [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Requisiti
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
 
  **Intestazione:** CorProf.idl, CorProf.h
 

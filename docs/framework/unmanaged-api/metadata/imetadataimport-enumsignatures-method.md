@@ -38,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Puntatore all'enumeratore. Deve essere NULL per la prima chiamata di questo metodo.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ out Matrice utilizzata per archiviare i token della firma.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rSignatures`.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ out Numero di token di firma restituiti in `rSignatures`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token da enumerare. In tal caso, `pcSignatures` è zero.|  
   
-## <a name="remarks"></a>Note  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+## <a name="remarks"></a>Osservazioni  
+ I token di firma vengono creati dal metodo [IMetaDataEmit:: GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -40,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Puntatore all'enumeratore.  
   
  `cl`  
- [in] The token of the type whose fields are to be enumerated.  
+ in Token del tipo i cui campi devono essere enumerati.  
   
  `szName`  
- [in] The field name that limits the scope of the enumeration.  
+ in Nome del campo che limita l'ambito dell'enumerazione.  
   
  `rFields`  
- [out] Array used to store the FieldDef tokens.  
+ out Matrice utilizzata per archiviare i token FieldDef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ out Numero effettivo di token FieldDef restituiti in `rFields`.  
   
-## <a name="remarks"></a>Note  
- Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
+## <a name="remarks"></a>Osservazioni  
+ A differenza di [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` Elimina tutti i token di campo che non hanno il nome specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFieldsWithName` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun campo da enumerare. In tal caso, `pcTokens` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Libreria:** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

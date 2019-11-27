@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450351"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>Metodo IMetaDataAssemblyImport::EnumAssemblyRefs
-Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
+Enumera le istanze di `mdAssemblyRef` definite nel manifesto dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,30 +38,30 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
+ [in, out] Puntatore all'enumeratore. Deve essere un valore null quando viene chiamato il metodo `EnumAssemblyRefs` per la prima volta.  
   
  `rAssemblyRefs`  
- [out] The enumeration of `mdAssemblyRef` metadata tokens.  
+ out Enumerazione dei token di metadati `mdAssemblyRef`.  
   
  `cMax`  
- [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
+ in Numero massimo di token che possono essere inseriti nella matrice `rAssemblyRefs`.  
   
  `pcTokens`  
- [out] The number of tokens actually placed in `rAssemblyRefs`.  
+ out Numero di token effettivamente inseriti in `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumAssemblyRefs` ha restituito un esito positivo.|  
+|`S_FALSE`|Nessun token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Intestazione:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

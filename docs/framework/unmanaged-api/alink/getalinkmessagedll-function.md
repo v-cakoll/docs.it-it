@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449352"
 ---
 # <a name="getalinkmessagedll-function"></a>Funzione GetALinkMessageDll
-Finds and loads the message DLL. Returns 0 if the message DLL could not be located or loaded. The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.  
+Trova e carica la DLL del messaggio. Restituisce 0 se non è stato possibile trovare o caricare la DLL del messaggio. La DLL del messaggio deve trovarsi in una sottodirectory il cui nome è un ID lingua o nella directory corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,9 +32,9 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** alink.h  
+ **Intestazione:** ALink. h  
   
- **Library**: alink.dll  
+ **Libreria**: ALink. dll  
   
 ## <a name="see-also"></a>Vedere anche
 
