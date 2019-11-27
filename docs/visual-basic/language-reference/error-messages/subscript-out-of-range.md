@@ -11,14 +11,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350802"
 ---
-# <a name="subscript-out-of-range-visual-basic"></a><span data-ttu-id="343ba-102">Indice non incluso nell'intervallo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="343ba-102">Subscript out of range (Visual Basic)</span></span>
-<span data-ttu-id="343ba-103">An array subscript is not valid because it falls outside the allowable range.</span><span class="sxs-lookup"><span data-stu-id="343ba-103">An array subscript is not valid because it falls outside the allowable range.</span></span> <span data-ttu-id="343ba-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span><span class="sxs-lookup"><span data-stu-id="343ba-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span></span>  
+# <a name="subscript-out-of-range-visual-basic"></a><span data-ttu-id="22ed6-102">Indice non incluso nell'intervallo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22ed6-102">Subscript out of range (Visual Basic)</span></span>
+<span data-ttu-id="22ed6-103">Un indice di matrice non è valido perché non rientra nell'intervallo consentito.</span><span class="sxs-lookup"><span data-stu-id="22ed6-103">An array subscript is not valid because it falls outside the allowable range.</span></span> <span data-ttu-id="22ed6-104">Il valore di indice più basso per una dimensione è sempre 0 e il valore di indice più alto viene restituito dal metodo `GetUpperBound` per tale dimensione.</span><span class="sxs-lookup"><span data-stu-id="22ed6-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="343ba-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="343ba-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="22ed6-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="22ed6-105">To correct this error</span></span>  
   
-- <span data-ttu-id="343ba-106">Change the subscript so it falls within the valid range.</span><span class="sxs-lookup"><span data-stu-id="343ba-106">Change the subscript so it falls within the valid range.</span></span>  
+- <span data-ttu-id="22ed6-106">Modificare l'indice in modo che rientri nell'intervallo valido.</span><span class="sxs-lookup"><span data-stu-id="22ed6-106">Change the subscript so it falls within the valid range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="343ba-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="343ba-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22ed6-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="22ed6-107">See also</span></span>
 
 - <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="343ba-108">Array</span><span class="sxs-lookup"><span data-stu-id="343ba-108">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="22ed6-108">Matrici</span><span class="sxs-lookup"><span data-stu-id="22ed6-108">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

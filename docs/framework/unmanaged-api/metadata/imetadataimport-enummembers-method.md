@@ -22,10 +22,10 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447650"
 ---
-# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="839a6-102">Metodo IMetaDataImport::EnumMembers</span><span class="sxs-lookup"><span data-stu-id="839a6-102">IMetaDataImport::EnumMembers Method</span></span>
-<span data-ttu-id="839a6-103">Enumera i token MemberDef che rappresentano i membri del tipo specificato.</span><span class="sxs-lookup"><span data-stu-id="839a6-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
+# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="a13ac-102">Metodo IMetaDataImport::EnumMembers</span><span class="sxs-lookup"><span data-stu-id="a13ac-102">IMetaDataImport::EnumMembers Method</span></span>
+<span data-ttu-id="a13ac-103">Enumera i token MemberDef che rappresentano i membri del tipo specificato.</span><span class="sxs-lookup"><span data-stu-id="a13ac-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="839a6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="839a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a13ac-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a13ac-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMembers (   
@@ -37,44 +37,44 @@ HRESULT EnumMembers (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="839a6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="839a6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a13ac-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a13ac-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="839a6-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="839a6-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="a13ac-106">[in, out] Puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="a13ac-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="839a6-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="839a6-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
+ <span data-ttu-id="a13ac-107">in Token TypeDef che rappresenta il tipo di cui è necessario enumerare i membri.</span><span class="sxs-lookup"><span data-stu-id="a13ac-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
   
  `rMembers`  
- <span data-ttu-id="839a6-108">[out] The array used to hold the MemberDef tokens.</span><span class="sxs-lookup"><span data-stu-id="839a6-108">[out] The array used to hold the MemberDef tokens.</span></span>  
+ <span data-ttu-id="a13ac-108">out Matrice utilizzata per conservare i token MemberDef.</span><span class="sxs-lookup"><span data-stu-id="a13ac-108">[out] The array used to hold the MemberDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="839a6-109">[in] Dimensione massima della matrice `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="839a6-109">[in] The maximum size of the `rMembers` array.</span></span>  
+ <span data-ttu-id="a13ac-109">[in] Dimensione massima della matrice `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="a13ac-109">[in] The maximum size of the `rMembers` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="839a6-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="839a6-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
+ <span data-ttu-id="a13ac-110">out Numero effettivo di token MemberDef restituiti in `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="a13ac-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="839a6-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="839a6-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a13ac-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a13ac-111">Return Value</span></span>  
   
-|<span data-ttu-id="839a6-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="839a6-112">HRESULT</span></span>|<span data-ttu-id="839a6-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="839a6-113">Description</span></span>|  
+|<span data-ttu-id="a13ac-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a13ac-112">HRESULT</span></span>|<span data-ttu-id="a13ac-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a13ac-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="839a6-114">`EnumMembers` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="839a6-114">`EnumMembers` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="839a6-115">There are no MemberDef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="839a6-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="839a6-116">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="839a6-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="a13ac-114">`EnumMembers` ha restituito un esito positivo.</span><span class="sxs-lookup"><span data-stu-id="a13ac-114">`EnumMembers` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="a13ac-115">Nessun token MemberDef da enumerare.</span><span class="sxs-lookup"><span data-stu-id="a13ac-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="a13ac-116">In tal caso, `pcTokens` è zero.</span><span class="sxs-lookup"><span data-stu-id="a13ac-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="839a6-117">Note</span><span class="sxs-lookup"><span data-stu-id="839a6-117">Remarks</span></span>  
- <span data-ttu-id="839a6-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span><span class="sxs-lookup"><span data-stu-id="839a6-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="839a6-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span><span class="sxs-lookup"><span data-stu-id="839a6-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="839a6-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span><span class="sxs-lookup"><span data-stu-id="839a6-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="839a6-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span><span class="sxs-lookup"><span data-stu-id="839a6-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
+## <a name="remarks"></a><span data-ttu-id="a13ac-117">Note</span><span class="sxs-lookup"><span data-stu-id="a13ac-117">Remarks</span></span>  
+ <span data-ttu-id="a13ac-118">Quando si enumerano raccolte di membri per una classe, `EnumMembers` restituisce solo i membri (campi e metodi, ma **non** le proprietà o gli eventi) definiti direttamente nella classe.</span><span class="sxs-lookup"><span data-stu-id="a13ac-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="a13ac-119">Non restituisce i membri ereditati dalla classe, anche se la classe fornisce un'implementazione per i membri ereditati.</span><span class="sxs-lookup"><span data-stu-id="a13ac-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="a13ac-120">Per enumerare i membri ereditati, il chiamante deve esaminare in modo esplicito la catena di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="a13ac-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="a13ac-121">Si noti che le regole per la catena di ereditarietà possono variare a seconda del linguaggio o del compilatore che ha emesso i metadati originali.</span><span class="sxs-lookup"><span data-stu-id="a13ac-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
  
- <span data-ttu-id="839a6-122">Properties and events are not enumerated by `EnumMembers`.</span><span class="sxs-lookup"><span data-stu-id="839a6-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="839a6-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span><span class="sxs-lookup"><span data-stu-id="839a6-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
+ <span data-ttu-id="a13ac-122">Proprietà ed eventi non vengono enumerati dal `EnumMembers`.</span><span class="sxs-lookup"><span data-stu-id="a13ac-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="a13ac-123">Per enumerare tali, utilizzare [EnumProperties](imetadataimport-enumproperties-method.md) o [EnumEvents](imetadataimport-enumevents-method.md).</span><span class="sxs-lookup"><span data-stu-id="a13ac-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="839a6-124">Requisiti</span><span class="sxs-lookup"><span data-stu-id="839a6-124">Requirements</span></span>  
- <span data-ttu-id="839a6-125">**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="839a6-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a13ac-124">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a13ac-124">Requirements</span></span>  
+ <span data-ttu-id="a13ac-125">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a13ac-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="839a6-126">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="839a6-126">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a13ac-126">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a13ac-126">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="839a6-127">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="839a6-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a13ac-127">**Libreria:** Incluso come risorsa in MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a13ac-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="839a6-128">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="839a6-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a13ac-128">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a13ac-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="839a6-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="839a6-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a13ac-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a13ac-129">See also</span></span>
 
-- [<span data-ttu-id="839a6-130">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="839a6-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="839a6-131">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="839a6-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a13ac-130">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="a13ac-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a13ac-131">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="a13ac-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

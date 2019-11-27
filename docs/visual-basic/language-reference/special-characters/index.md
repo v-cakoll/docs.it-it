@@ -8,12 +8,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349597"
 ---
-# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="2092d-102">Special Characters (Visual Basic Reference)</span><span class="sxs-lookup"><span data-stu-id="2092d-102">Special Characters (Visual Basic Reference)</span></span>
+# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="d0dcc-102">Caratteri speciali (riferimenti per Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0dcc-102">Special Characters (Visual Basic Reference)</span></span>
 
-<span data-ttu-id="2092d-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span><span class="sxs-lookup"><span data-stu-id="2092d-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="2092d-104">Visual Basic supports the following special character:</span><span class="sxs-lookup"><span data-stu-id="2092d-104">Visual Basic supports the following special character:</span></span>
+<span data-ttu-id="d0dcc-103">I caratteri speciali sono caratteri contestuali predefiniti che modificano l'elemento del programma a cui vengono anteposti.</span><span class="sxs-lookup"><span data-stu-id="d0dcc-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="d0dcc-104">Visual Basic supporta il carattere speciale seguente:</span><span class="sxs-lookup"><span data-stu-id="d0dcc-104">Visual Basic supports the following special character:</span></span>
 
-- <span data-ttu-id="2092d-105">[$](interpolated.md), carattere di stringa interpolata.</span><span class="sxs-lookup"><span data-stu-id="2092d-105">[$](interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="d0dcc-105">[$](interpolated.md), carattere di stringa interpolata.</span><span class="sxs-lookup"><span data-stu-id="d0dcc-105">[$](interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2092d-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2092d-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0dcc-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0dcc-106">See also</span></span>
 
-- [<span data-ttu-id="2092d-107">Riferimenti di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2092d-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)
+- [<span data-ttu-id="d0dcc-107">Riferimenti di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d0dcc-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)
