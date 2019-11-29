@@ -73,7 +73,8 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Novità di .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Compatibilità delle applicazioni
+- name: Modifiche che causano un'interruzione
+  displayName: app compatibility
   href: compatibility/
 - name: Esercitazioni
   href: tutorials/index.md
@@ -321,23 +322,27 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: Generazione serializzatore XML
       href: additional-tools/xml-serializer-generator.md
-- name: Portabilità da .NET Framework
+- name: Convertire da .NET Framework
   href: porting/index.md
   items:
     - name: Tecnologie di .NET Framework non disponibili in .NET Core
       href: porting/net-framework-tech-unavailable.md
-    - name: Analisi delle dipendenze di terze parti
+    - name: Analizzare le dipendenze di terze parti
       href: porting/third-party-deps.md
-    - name: Portabilità nelle librerie
+    - name: Convertire le librerie
       href: porting/libraries.md
-    - name: Organizzazione dei progetti per .NET Core
+    - name: Organizzare progetti per .NET Core
       href: porting/project-structure.md
-    - name: Strumenti di supporto per la portabilità in .NET Core
+    - name: Strumenti
       href: porting/tools.md
-    - name: Uso di Windows Compatibility Pack
+    - name: Usare Windows Compatibility Pack
       href: porting/windows-compat-pack.md
     - name: Convertire progetti Windows Forms
-      href: porting/winforms.md
+      items:
+        - name: Come convertire un progetto
+          href: porting/winforms.md
+        - name: Modifiche che causano un'interruzione
+          href: porting/winforms-breaking-changes.md
     - name: Convertire progetti WPF
       href: porting/wpf.md
 - name: Caricamento delle dipendenze
