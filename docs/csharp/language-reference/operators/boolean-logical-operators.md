@@ -32,16 +32,16 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737887"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552484"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operatori logici booleani (Riferimenti per C#)
 
-Gli operatori seguenti eseguono operazioni logiche con operandi [bool](../keywords/bool.md) :
+Gli operatori seguenti eseguono operazioni logiche con operandi [bool](../builtin-types/bool.md) :
 
 - Operatore unario [`!` (negazione logica)](#logical-negation-operator-).
 - Operatori binari [`&` (AND logico)](#logical-and-operator-), [`|` (OR logico)](#logical-or-operator-) e [`^` (OR esclusivo logico)](#logical-exclusive-or-operator-). Questi operatori valutano sempre entrambi gli operandi.
@@ -120,13 +120,13 @@ Per gli operandi `bool?`, gli operatori `&` e `|` supportano la logica a tre val
 |x|s|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|False|False|true|  
+|true|false|false|true|  
 |true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|False|False|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
 Il comportamento di questi operatori è diverso dal comportamento tipico degli operatori con tipi valore nullable. In genere un operatore definito per gli operandi di un tipo valore può essere usato anche con gli operandi del tipo valore nullable corrispondente. Tale operatore produce `null` se uno qualsiasi degli operandi restituisce `null`. Tuttavia, gli operatori `&` e `|` possono produrre un valore diverso da null anche se uno degli operandi restituisce `null`. Per ulteriori informazioni sul comportamento dell'operatore con i tipi di valore Nullable, vedere la sezione [operatori rimossi](../builtin-types/nullable-value-types.md#lifted-operators) dell'articolo [tipi di valore Nullable](../builtin-types/nullable-value-types.md) .

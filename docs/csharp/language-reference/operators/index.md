@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039009"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552467"
 ---
 # <a name="c-operators-c-reference"></a>Operatori C# (Riferimenti per C#)
 
-C# include una serie di operatori supportati dai tipi predefiniti. Ad esempio, gli [operatori aritmetici](arithmetic-operators.md) eseguono operazioni aritmetiche con operandi numerici e gli [operatori logici booleani](boolean-logical-operators.md) eseguono operazioni logiche con operandi [bool](../keywords/bool.md). Certi operatori possono essere [sottoposti a overload](operator-overloading.md). Con l'overload degli operatori, è possibile specificare il comportamento dell'operatore per gli operandi di un tipo definito dall'utente.
+C# include una serie di operatori supportati dai tipi predefiniti. Ad esempio, gli [operatori aritmetici](arithmetic-operators.md) eseguono operazioni aritmetiche con operandi numerici e gli [operatori logici booleani](boolean-logical-operators.md) eseguono operazioni logiche con operandi [bool](../builtin-types/bool.md). Certi operatori possono essere [sottoposti a overload](operator-overloading.md). Con l'overload degli operatori, è possibile specificare il comportamento dell'operatore per gli operandi di un tipo definito dall'utente.
 
 In un'[espressione](../../programming-guide/statements-expressions-operators/expressions.md), la precedenza e l'associatività degli operatori determinano l'ordine in cui vengono eseguite le operazioni. È possibile usare le parentesi per cambiare l'ordine di valutazione imposto dalla precedenza e dall'associatività degli operatori.
 
@@ -42,7 +42,7 @@ La tabella seguente elenca gli operatori C# in ordine decrescente di precedenza.
 
 | Operatori | Categoria o nome |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primario |
+| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true e false](true-false-operators.md) | Unario |
 | [x.. y](member-access-operators.md#range-operator-) | Intervallo |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | Moltiplicazione|
@@ -78,14 +78,14 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 Senza correlazione con la precedenza e l'associatività degli operatori, gli operandi in un'espressione vengono valutati da sinistra a destra. Gli esempi seguenti dimostrano l'ordine di valutazione degli operatori e degli operandi:
 
-| Expression | Ordine di valutazione |
+| Espressione | Ordine di valutazione |
 | ---------- | ------------------- |
 |`a + b`|a, b, +|
 |`a + b * c`|a, b, c, *, +|
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-In genere, vengono valutati tutti gli operandi dell'operatore. Tuttavia, alcuni operatori valutano gli operandi in modo condizionale. Ovvero, il valore dell'operando più a sinistra di tale operatore definisce se (o quali) devono essere valutati altri operandi. Questi operatori sono gli operatori logici [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) condizionali, gli [operatori che uniscono i valori null `??` e `??=`](null-coalescing-operator.md), gli [operatori condizionali null `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e il [ `?:`dell'operatore condizionale ](conditional-operator.md). Per ulteriori informazioni, vedere la descrizione di ogni operatore.
+In genere, vengono valutati tutti gli operandi dell'operatore. Tuttavia, alcuni operatori valutano gli operandi in modo condizionale. Ovvero, il valore dell'operando più a sinistra di tale operatore definisce se (o quali) devono essere valutati altri operandi. Questi operatori sono gli operatori logici [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) condizionali, gli operatori con unione [null `??` e `??=`](null-coalescing-operator.md), gli [operatori condizionali null `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e l' [operatore condizionale `?:`](conditional-operator.md). Per ulteriori informazioni, vedere la descrizione di ogni operatore.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

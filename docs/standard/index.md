@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 6ce570460984d975b19fd2a696b668bc41e9054e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1af17be16061aedab9226bf2b4a0419b0a8d63b7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283847"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552832"
 ---
 # <a name="net-guide"></a>Guida di .NET
 
@@ -51,16 +51,16 @@ Se si è interessati ad approfondire alcuni dei concetti di base di .NET, consul
 * [Interoperabilità nativa](native-interop/index.md)
 * [Garbage Collection](garbage-collection/index.md)
 * [Tipi di base in .NET](base-types/index.md)
-* [Raccolte](collections/index.md)
+* [raccolte](collections/index.md)
 * [Date, ore e fusi orari](datetime/index.md)
 * [Programmazione asincrona](async.md)
 
 Per informazioni sui tre principali linguaggi .NET, è anche possibile consultare le guide dei singoli linguaggi:
 
 * [Guida a C#](../csharp/index.yml)
-* [Guida a F#](../fsharp/index.md)
+* [Guida a F#](../fsharp/index.yml)
 * [Guida a Visual Basic](../visual-basic/index.md)
 
-## <a name="api-reference"></a>Riferimento API
+## <a name="api-reference"></a>Riferimento per le API
 
 Per informazioni sulla gamma di API disponibili, vedere le [informazioni di riferimento sulle API .NET](../../api/index.md).

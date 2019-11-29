@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416738"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552233"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -29,14 +29,14 @@ ms.locfileid: "73416738"
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Testo sublime
 - Vim
- 
+
 Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io) .
 
-## <a name="apis"></a>API
+## <a name="apis"></a>APIs
 
 .NET Core espone API per molti scenari, tra cui i seguenti:
 
-- Tipi primitivi, ad esempio [bool](../csharp/language-reference/keywords/bool.md) e [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
+- Tipi primitivi, ad esempio <xref:System.Boolean?displayProperty=nameWithType> e <xref:System.Int32?displayProperty=nameWithType>.
 - Raccolte, ad esempio <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipi di utilità, ad esempio <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipi di dati, ad esempio <xref:System.Data.DataSet?displayProperty=nameWithType> e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
@@ -52,7 +52,7 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 - [Piattaforma UWP (Universal Windows Platform) di Windows 10](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Composizione
+## <a name="composition"></a>composizione
 
 .NET Core è costituito dalle parti seguenti:
 

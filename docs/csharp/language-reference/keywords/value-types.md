@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428459"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552324"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -42,7 +42,7 @@ I *tipi semplici* sono un set di tipi struct predefiniti forniti da C# e compren
 
 - [Tipi integrali](../builtin-types/integral-numeric-types.md): i tipi numerici interi e il tipo [char](../builtin-types/char.md)
 - [Tipi a virgola mobile](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 I tipi semplici sono identificati tramite parole chiave, le quali sono in realtà semplicemente degli alias dei tipi struct predefiniti nello spazio dei nomi <xref:System>. Ad esempio, [int](../builtin-types/integral-numeric-types.md) è un alias di <xref:System.Int32?displayProperty=nameWithType>. Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](built-in-types-table.md).
 

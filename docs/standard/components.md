@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283925"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552880"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -67,7 +67,7 @@ Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattafo
 
 ## <a name="net-runtimes"></a>Runtime .NET
 
-Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime .NET. Ecco alcuni esempi di runtime .NET:
+Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime di .NET:
 
 - CRL (Common Language Runtime) per .NET Framework
 - CoreCLR (Core Common Language Runtime) per .NET Core
@@ -111,5 +111,5 @@ I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [di
 - [Guida a .NET Core](../core/index.md)
 - [Guida a .NET Framework](../framework/index.md)
 - [Guida a C#](../csharp/index.yml)
-- [Guida a F#](../fsharp/index.md)
+- [Guida a F#](../fsharp/index.yml)
 - [Guida a VB.NET](../visual-basic/index.md)

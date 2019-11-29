@@ -6,23 +6,23 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428530"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551816"
 ---
 # <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Informazioni di riferimento per C#)
 
 La tabella seguente mostra i valori predefiniti dei tipi C#:
 
-|Type|Valore predefinito|
+|Tipo di|Valore predefinito|
 |---------|------------------|
 |Qualsiasi tipo riferimento|`null`|
 |Qualsiasi [tipo numerico integrale incorporato](../builtin-types/integral-numeric-types.md)|0 (zero)|
 |Qualsiasi [tipo numerico a virgola mobile incorporato](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
 |[struct](struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|

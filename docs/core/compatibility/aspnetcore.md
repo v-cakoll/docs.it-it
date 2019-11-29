@@ -1,15 +1,15 @@
 ---
 title: Modifiche di rilievo ASP.NET Core-.NET Core
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 11/20/2019
+ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: ba8d17d4a3d44f9ebac1592afa1d987cfb23c5e7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282531"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552163"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
 
@@ -202,3 +202,7 @@ Di seguito è riportato un elenco di ASP.NET Core modifiche di rilievo per ASP.N
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
+
+## <a name="aspnet-core-31"></a>ASP.NET Core 3,1
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]

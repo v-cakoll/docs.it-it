@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588708"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552417"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Confronti di uguaglianza (Guida per programmatori C#)
 
@@ -28,7 +28,7 @@ A volte è necessario confrontare due valori per verificarne l'uguaglianza. In a
 
 ## <a name="value-equality"></a>Uguaglianza di valori
 
- Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-), come indicato nell'esempio seguente.  
+ Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/builtin-types/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-), come indicato nell'esempio seguente.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -51,7 +51,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Procedura: Testare l'uguaglianza dei riferimenti (identità)](./how-to-test-for-reference-equality-identity.md)|Descrive come determinare se per due variabili esiste l'uguaglianza dei riferimenti.|  
 |[Procedura: Definire l'uguaglianza di valori per un tipo](./how-to-define-value-equality-for-a-type.md)|Descrive come specificare una definizione personalizzata di uguaglianza dei valori per un tipo.|  

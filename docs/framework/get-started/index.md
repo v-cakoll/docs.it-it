@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 563416f1ca9ddb9cb9bb7e78b9e13406983bdf9f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281828"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552794"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -65,7 +65,7 @@ Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
 1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.8, preinstallata nell'aggiornamento di maggio 2019 di Windows 10 e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](the-net-framework-and-out-of-band-releases.md).
 
-2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.md) e [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml) e [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
 3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). È disponibile in numerose edizioni.
 

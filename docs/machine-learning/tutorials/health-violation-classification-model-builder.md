@@ -3,15 +3,15 @@ title: 'Esercitazione: classificare le violazioni di integrità con il generator
 description: Questa esercitazione illustra come creare un modello di classificazione multiclasse usando il generatore di modelli ML.NET per classificare la gravità della violazione dell'integrità del ristorante a San Francisco.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977213"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552890"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Esercitazione: classificare la gravità delle violazioni di integrità del ristorante con generatore di modelli
 
@@ -41,7 +41,7 @@ Questo esempio crea un' C# applicazione console .NET Core che categorizza il ris
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
-1. Creare un'  **C# applicazione console .NET Core** denominata "RestaurantViolations".
+1. Creare un'  **C# applicazione console .NET Core** denominata "RestaurantViolations". Assicurarsi che **la posizione della soluzione e del progetto nella stessa directory** sia **deselezionata** (vs 2019) oppure che sia **selezionata** l'opzione **Crea directory per soluzione** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 
@@ -61,7 +61,7 @@ Ogni riga del set di dati contiene informazioni relative alle violazioni osserva
 - **ViolationDescription**: Descrizione della violazione trovata durante l'ispezione.
 - **RiskCategory**: la gravità del rischio rappresenta una violazione per l'integrità e la sicurezza pubbliche.
 
-`label` è la colonna da stimare. Quando si esegue un'attività di classificazione, l'obiettivo consiste nell'assegnare una categoria (testo o numerico). In questo scenario di classificazione, alla gravità della violazione viene assegnato il valore di basso, medio o alto rischio. Di conseguenza, **RiskCategory** è l'etichetta. Il `features` sono gli input da assegnare al modello per stimare l'`label`. In questo caso, **InspectionType** e **ViolationDescription** vengono usati come funzionalità o input per stimare il **RiskCategory**.
+`label` è la colonna sulla quale eseguire le stime. Quando si esegue un'attività di classificazione, l'obiettivo consiste nell'assegnare una categoria (testo o numerico). In questo scenario di classificazione, alla gravità della violazione viene assegnato il valore di basso, medio o alto rischio. Di conseguenza, **RiskCategory** è l'etichetta. Il `features` sono gli input da assegnare al modello per stimare l'`label`. In questo caso, **InspectionType** e **ViolationDescription** vengono usati come funzionalità o input per stimare il **RiskCategory**.
 
 ## <a name="choose-a-scenario"></a>Scegliere uno scenario
 
@@ -81,7 +81,7 @@ Il generatore di modelli accetta dati da un database SQL Server o da un file loc
     1. Nella finestra di dialogo **Scegli dati** selezionare **Microsoft SQL Server file di database**.
     1. Deselezionare la casella di controllo **Usa sempre questa selezione** e selezionare **continua**.
     1. Nella finestra di dialogo **Proprietà connessione** selezionare **Sfoglia** e selezionare il file *RestaurantScores. MDF* scaricato.
-    1. Selezionare **OK**.
+    1. Scegliere **OK**.
 1. Scegliere **violazioni** dall'elenco a discesa **nome tabella** .
 1. Scegliere **RiskCategory** nell'elenco **a discesa colonna da stimare (etichetta)** .
 1. Lasciare le selezioni di colonna predefinite, **InspectionType** e **ViolationDescription**, archiviate nell'elenco a discesa **colonne di input (funzionalità)** .

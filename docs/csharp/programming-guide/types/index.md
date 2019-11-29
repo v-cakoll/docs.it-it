@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739210"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552504"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -39,12 +39,12 @@ Le informazioni archiviate in un tipo possono includere quanto segue:
 
 - I tipi di operazioni consentite.
 
-Il compilatore usa le informazioni sul tipo per assicurarsi che tutte le operazioni eseguite nel codice siano *indipendenti dai tipi*. Se ad esempio si dichiara una variabile di tipo [int](../../language-reference/builtin-types/integral-numeric-types.md), il compilatore consente di usare la variabile anche in operazioni di addizione e sottrazione. Se si prova a eseguire le stesse operazioni su una variabile di tipo [bool](../../language-reference/keywords/bool.md), il compilatore genera un errore, come illustrato nell'esempio seguente:
+Il compilatore usa le informazioni sul tipo per assicurarsi che tutte le operazioni eseguite nel codice siano *indipendenti dai tipi*. Se ad esempio si dichiara una variabile di tipo [int](../../language-reference/builtin-types/integral-numeric-types.md), il compilatore consente di usare la variabile anche in operazioni di addizione e sottrazione. Se si prova a eseguire le stesse operazioni su una variabile di tipo [bool](../../language-reference/builtin-types/bool.md), il compilatore genera un errore, come illustrato nell'esempio seguente:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> Gli sviluppatori C e C++ devono tenere presente che, in C#, [bool](../../language-reference/keywords/bool.md) non è convertibile in [int](../../language-reference/builtin-types/integral-numeric-types.md).
+> Gli sviluppatori C e C++ devono tenere presente che, in C#, [bool](../../language-reference/builtin-types/bool.md) non è convertibile in [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
 Il compilatore incorpora le informazioni sul tipo nel file eseguibile come metadati. Il Common Language Runtime (CLR) usa i metadati in fase di esecuzione per garantire una maggiore indipendenza dai tipi quando alloca e recupera la memoria.
 
@@ -58,7 +58,7 @@ I tipi di parametri e valori restituiti del metodo sono specificati nella firma 
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Non è possibile, ad esempio, dichiarare una variabile [int](../../language-reference/builtin-types/integral-numeric-types.md) e assegnare ad essa il valore booleano [true](../../language-reference/keywords/true-literal.md). I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, mentre una conversione che può causare la perdita di dati richiede un *cast* nel codice sorgente.
+Una variabile dichiarata non può essere dichiarata una seconda volta con un tipo nuovo e non è possibile assegnare a tale variabile un valore non compatibile con il relativo tipo dichiarato. Ad esempio, non è possibile dichiarare un valore [int](../../language-reference/builtin-types/integral-numeric-types.md) e quindi assegnargli un valore booleano di `true`. I valori possono tuttavia essere convertiti in altri tipi, ad esempio quando vengono assegnati a nuove variabili o passati come argomenti di metodo. Una *conversione del tipo* che non causa la perdita di dati viene eseguita automaticamente dal compilatore, mentre una conversione che può causare la perdita di dati richiede un *cast* nel codice sorgente.
 
 Per altre informazioni, vedere [Cast e conversioni di tipi](./casting-and-type-conversions.md).
 

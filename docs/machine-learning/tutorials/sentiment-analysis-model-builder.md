@@ -1,17 +1,17 @@
 ---
 title: 'Esercitazione: analizzare i sentimenti-classificazione binaria'
 description: Questa esercitazione illustra come creare un'applicazione Razor Pages che classifica i sentimenti dai commenti del sito Web ed esegue l'azione appropriata. Il classificatore dei sentimenti binari usa il generatore di modelli in Visual Studio.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974802"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551853"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: analizzare i sentimenti dei commenti del sito Web in un'applicazione Web usando il generatore di modelli ML.NET
 
@@ -48,7 +48,7 @@ Per un elenco di prerequisiti e istruzioni di installazione, vedere la [Guida al
     1. Nella finestra di dialogo Nuovo progetto selezionare il nodo **Visual C#** seguito dal nodo **Web**.
     1. Selezionare quindi il modello di progetto **Applicazione Web ASP.NET Core**.
     1. Nella casella di testo **nome** Digitare "SentimentRazor".
-    1. Per impostazione predefinita, è necessario selezionare la casella di controllo **Crea una directory per soluzione** . In caso contrario, controllarlo.
+    1. Assicurarsi che **la posizione della soluzione e del progetto nella stessa directory** sia **deselezionata** (vs 2019) oppure che sia **selezionata** l'opzione **Crea directory per soluzione** (vs 2017).
     1. Selezionare il pulsante **OK** .
     1. Scegliere **applicazione Web** nella finestra che consente di visualizzare i diversi tipi di progetti di ASP.NET Core, quindi selezionare il pulsante **OK** .
 

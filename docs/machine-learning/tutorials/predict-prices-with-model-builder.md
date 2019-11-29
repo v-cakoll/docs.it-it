@@ -3,15 +3,15 @@ title: 'Esercitazione: stimare i prezzi usando la regressione con generatore di 
 description: Questa esercitazione illustra come creare un modello di regressione usando il generatore di modelli ML.NET per stimare i prezzi, nel caso specifico le tariffe dei taxi di New York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977351"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552934"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Esercitazione: stimare i prezzi usando la regressione con generatore di modelli
 
@@ -38,7 +38,7 @@ Per un elenco di prerequisiti e istruzioni di installazione, vedere la [Guida al
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
-1. Creare un'**applicazione console di .NET Core** con nome "TaxiFarePrediction".
+1. Creare un'  **C# applicazione console .NET Core** denominata "TaxiFarePrediction". Assicurarsi che **la posizione della soluzione e del progetto nella stessa directory** sia **deselezionata** (vs 2019) oppure che sia **selezionata** l'opzione **Crea directory per soluzione** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771897"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552272"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
@@ -52,8 +52,8 @@ Dato che il tipo `decimal` è caratterizzato da una maggiore precisione e da un 
 
 In un'espressione è possibile combinare tipi [integrali](integral-numeric-types.md) e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
 
-- Se uno dei tipi a virgola mobile è `double`, l'espressione restituisce `double` o a [bool](../keywords/bool.md) nei confronti relazionali e di uguaglianza.
-- Se non è presente alcun tipo di `double` nell'espressione, l'espressione restituisce `float` o a [bool](../keywords/bool.md) nei confronti relazionali e di uguaglianza.
+- Se uno dei tipi a virgola mobile è `double`, l'espressione restituisce `double`o a [bool](bool.md) nei confronti relazionali e di uguaglianza.
+- Se non è presente alcun tipo di `double` nell'espressione, l'espressione restituisce `float`o a [bool](bool.md) nei confronti relazionali e di uguaglianza.
 
 Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
 

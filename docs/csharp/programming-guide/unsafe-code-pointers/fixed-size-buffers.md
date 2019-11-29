@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429409"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552389"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ In C# è possibile usare l'istruzione [fixed](../../language-reference/keywords/
 private fixed char name[30];
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Nel codice safe, uno struct C# che contiene una matrice non contiene gli elementi della matrice. Lo struct contiene invece un riferimento agli elementi. È possibile incorporare una matrice di dimensioni fisse in uno [struct](../../language-reference/keywords/struct.md) quando viene usata in un blocco di codice [unsafe](../../language-reference/keywords/unsafe.md).
 
@@ -33,11 +33,11 @@ Un oggetto `struct` può contenere una matrice incorporata in codice unsafe. Nel
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/builtin-types/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
+Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/builtin-types/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
 
 L'esempio precedente mostra l'accesso ai campi `fixed` senza blocco, opzione disponibile a partire da C# 7.3.
 
-Un'altra matrice a dimensione fissa comune è la matrice [bool](../../language-reference/keywords/bool.md). Gli elementi in una matrice `bool` hanno sempre le dimensioni di un byte. Le matrici `bool` non sono adatte per la creazione di matrici o buffer di bit.
+Un'altra matrice a dimensione fissa comune è la matrice [bool](../../language-reference/builtin-types/bool.md). Gli elementi in una matrice `bool` hanno sempre le dimensioni di un byte. Le matrici `bool` non sono adatte per la creazione di matrici o buffer di bit.
 
 > [!NOTE]
 > Eccezione fatta per la memoria creata con [stackalloc](../../language-reference/operators/stackalloc.md), il compilatore C# e Common Language Runtime (CLR) non eseguono controlli di sicurezza per sovraccarico del buffer. Come per tutto il codice unsafe, è necessario prestare la massima attenzione.

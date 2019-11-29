@@ -115,7 +115,7 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: Compatibilità
+            - name: Modifiche che causano un'interruzione
               tocHref: /dotnet/core/compatibility/
               topicHref: /dotnet/core/compatibility/index
             - name: Configurazione del runtime
@@ -127,10 +127,6 @@
             - name: Guida all'installazione
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
-              items:
-                - name: Gestione pacchetti Linux
-                  tocHref: /dotnet/core/install/
-                  topicHref: /dotnet/core/install/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index

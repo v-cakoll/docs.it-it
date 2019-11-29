@@ -6,20 +6,20 @@ helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: c470bbdff6cb08732f063afb9b325e44d9ca4d6b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f2d81d90f6d68f1bada40c81f0f28febd51bd1f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428473"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552358"
 ---
 # <a name="value-types-table-c-reference"></a>Tabella tipi di valoreC# (riferimento)
 
 La tabella seguente mostra i tipi valore di C#:
 
-|Tipo valore|Categoria|
+|Tipo valore|Category|
 |----------------|--------------|
-|[bool](bool.md)|Booleano|
+|[bool](../builtin-types/bool.md)|Boolean|
 |`byte`|Senza segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|
 |[char](../builtin-types/char.md)|Senza segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|
 |`decimal`|Numerico, [virgola mobile](../builtin-types/floating-point-numeric-types.md)|

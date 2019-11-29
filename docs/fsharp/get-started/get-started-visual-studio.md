@@ -2,12 +2,12 @@
 title: Introduzione F# a in Visual Studio
 description: Informazioni su come usare F# con Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 80b4fc5b7631eace719832fe32003cad578ead27
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082690"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552826"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione F# a in Visual Studio
 
@@ -29,25 +29,25 @@ Uno dei progetti più semplici in Visual Studio è l'applicazione console.  Ecco
 
 ## <a name="writing-your-code"></a>Scrittura del codice
 
-Per iniziare, scrivere prima di tutto il codice.  Verificare che il `Program.fs` file sia aperto e quindi sostituirne il contenuto con il codice seguente:
+Per iniziare, scrivere prima di tutto il codice.  Verificare che il file `Program.fs` sia aperto e quindi sostituirne il contenuto con il codice seguente:
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Nell'esempio di codice precedente è stata definita `square` una funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l' [inferenza del tipo](../language-reference/type-inference.md), `x` non è necessario specificare il tipo di.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base alla `square` modalità di chiamata.  Se si passa il `square`puntatore del mouse, viene visualizzato quanto segue:
+Nell'esempio di codice precedente è stato definito un `square` di funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l' [inferenza del tipo](../language-reference/type-inference.md), non è necessario specificare il tipo di `x`.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base al modo in cui viene chiamato `square`.  Se si passa il mouse su `square`, viene visualizzato quanto segue:
 
 ```fsharp
 val square: x:int -> int
 ```
 
-Questa è la nota come la firma del tipo della funzione.  Può essere letto come segue: "Square è una funzione che accetta un numero intero denominato x e produce un Integer".  Si noti che il compilatore `square` ha `int` assegnato il tipo per il momento. questo è dovuto al fatto che la moltiplicazione non è generica in *tutti i* tipi, bensì è generica in un set chiuso di tipi.  Il F# compilatore ha `int` scelto a questo punto, ma modificherà la firma del tipo se si `square` chiama con un tipo di input `float`diverso, ad esempio.
+Questa è la nota come la firma del tipo della funzione.  Può essere letto come segue: "Square è una funzione che accetta un numero intero denominato x e produce un Integer".  Si noti che il compilatore ha `square` il tipo di `int` per ora, perché la moltiplicazione non è generica in *tutti* i tipi, ma è piuttosto generica in un set chiuso di tipi.  Il F# compilatore ha scelto `int` a questo punto, ma modificherà la firma del tipo se si chiama `square` con un tipo di input diverso, ad esempio un `float`.
 
-Viene definita un' `main`altra funzione,,, decorata con l' `EntryPoint` attributo per indicare al F# compilatore che l'esecuzione del programma dovrebbe iniziare da tale posizione.  Segue la stessa convenzione degli altri [linguaggi di programmazione di tipo C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), in cui è possibile passare argomenti della riga di comando a questa funzione e viene restituito un codice Integer ( `0`in genere).
+Viene definita un'altra funzione, `main`, che è decorata con l'attributo `EntryPoint` per indicare F# al compilatore che l'esecuzione del programma dovrebbe iniziare da questa posizione.  Segue la stessa convenzione degli altri [linguaggi di programmazione di tipo C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), in cui è possibile passare argomenti della riga di comando a questa funzione e viene restituito un codice Integer (in genere `0`).
 
-Si trova in questa funzione che viene chiamata la `square` funzione con un argomento di `12`.  Il F# compilatore `square` assegna quindi il tipo di a `int -> int` (ovvero, una funzione che accetta un oggetto `int` e produce un oggetto `int`).  La chiamata a `printfn` è una funzione di stampa formattata che usa una stringa di formato, simile ai linguaggi di programmazione di tipo C, i parametri che corrispondono a quelli specificati nella stringa di formato, quindi stampa il risultato e una nuova riga.
+Si trova in questa funzione che viene chiamata la funzione `square` con un argomento di `12`.  Il F# compilatore assegna quindi il tipo di `square` da `int -> int`, ovvero una funzione che accetta un `int` e produce un `int`.  La chiamata a `printfn` è una funzione di stampa formattata che usa una stringa di formato, simile ai linguaggi di programmazione di tipo C, parametri che corrispondono a quelli specificati nella stringa di formato, quindi stampa il risultato e una nuova riga.
 
 ## <a name="running-your-code"></a>Esecuzione del codice
 
-È possibile eseguire il codice e visualizzare i risultati premendo **CTRL**+**F5**.  Il programma viene eseguito senza debug e consente di visualizzare i risultati.  In alternativa, è possibile scegliere la voce di menu di primo livello **debug** in Visual Studio e scegliere **Avvia senza eseguire debug**.
+È possibile eseguire il codice e visualizzare i risultati premendo **Ctrl**+**F5**.  Il programma viene eseguito senza debug e consente di visualizzare i risultati.  In alternativa, è possibile scegliere la voce di menu di primo livello **debug** in Visual Studio e scegliere **Avvia senza eseguire debug**.
 
 A questo punto verrà visualizzato quanto segue nella finestra della console visualizzata da Visual Studio:
 
@@ -59,7 +59,7 @@ La procedura è stata completata.  Il primo F# progetto è stato creato in Visua
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se non è già stato fatto, consultare la [presentazione F#di ](../tour.md), che illustra alcune delle funzionalità principali del F# linguaggio.  Viene fornita una panoramica di alcune funzionalità di F#e vengono forniti esempi di codice ampi che è possibile copiare in Visual Studio ed eseguire.  Sono disponibili anche alcune eccezionali risorse esterne che è possibile usare, presentate nella [ F# guida](../index.md).
+Se non è già stato fatto, consultare la [presentazione F#di ](../tour.md), che illustra alcune delle funzionalità principali del F# linguaggio.  Viene fornita una panoramica di alcune funzionalità di F#e vengono forniti esempi di codice ampi che è possibile copiare in Visual Studio ed eseguire.  È anche possibile ottenere altre informazioni sulla F# documentazione nella [ F# Home page di docs](../index.yml).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283933"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552956"
 ---
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
@@ -40,7 +40,7 @@ Per informazioni sulle funzionalità più recenti aggiunte alle implementazioni 
 - [Novità di C#6](csharp/whats-new/index.md)
 - [Novità per Visual Basic](visual-basic/getting-started/whats-new.md)
 
-## <a name="documentation"></a>Documentazione
+## <a name="documentation"></a>Documentation
 
 Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaforme e linguaggi. È possibile iniziare a conoscere .NET e i suoi linguaggi nelle sezioni seguenti:
 
@@ -48,7 +48,7 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 - [Guida a .NET Core](core/index.md)
 - [Guida a .NET Framework](framework/index.md)
 - [Guida a C#](csharp/index.yml)
-- [Guida a F#](fsharp/index.md)
+- [Guida a F#](fsharp/index.yml)
 - [Guida a Visual Basic](visual-basic/index.md)
 - [Guida a ML.NET](machine-learning/index.yml)
 - [.NET per Apache Spark](spark/index.yml)

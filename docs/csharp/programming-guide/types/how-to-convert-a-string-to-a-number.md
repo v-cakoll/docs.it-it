@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417642"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552404"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: convertire una stringa in un numero (Guida per programmatori C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "73417642"
   
  Se si ha una stringa, è leggermente più efficiente e semplice chiamare un metodo `TryParse` (ad esempio, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) o un metodo `Parse` (ad esempio, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  L'uso di un metodo <xref:System.Convert> è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
   
- È possibile usare i metodi `Parse` o `TryParse` sul tipo numerico che si prevede sia contenuto nella stringa, ad esempio il tipo <xref:System.Int32?displayProperty=nameWithType>.  Il metodo <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utilizza il metodo <xref:System.Int32.Parse%2A> internamente.  Il metodo `Parse` restituisce il numero convertito. Il metodo `TryParse` restituisce un valore <xref:System.Boolean> che indica se la conversione ha avuto esito positivo e restituisce il numero convertito in un [parametro `out`](../../language-reference/keywords/out.md). Se il formato della stringa non è valido, il metodo `Parse` genera un'eccezione, mentre il metodo `TryParse` restituisce [false](../../language-reference/keywords/false-literal.md). Quando si chiama un metodo `Parse`, è sempre consigliabile usare la gestione delle eccezioni per intercettare <xref:System.FormatException> in caso di esito negativo dell'operazione di analisi.  
+ È possibile usare i metodi `Parse` o `TryParse` sul tipo numerico che si prevede sia contenuto nella stringa, ad esempio il tipo <xref:System.Int32?displayProperty=nameWithType>.  Il metodo <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> utilizza il metodo <xref:System.Int32.Parse%2A> internamente.  Il metodo `Parse` restituisce il numero convertito. Il metodo `TryParse` restituisce un valore <xref:System.Boolean> che indica se la conversione ha avuto esito positivo e restituisce il numero convertito in un [parametro `out`](../../language-reference/keywords/out.md). Se il formato della stringa non è valido, `Parse` genera un'eccezione, mentre `TryParse` restituisce `false`. Quando si chiama un metodo `Parse`, è sempre consigliabile usare la gestione delle eccezioni per intercettare <xref:System.FormatException> in caso di esito negativo dell'operazione di analisi.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Chiamata dei metodi Parse e TryParse
 
