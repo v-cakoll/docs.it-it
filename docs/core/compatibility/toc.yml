@@ -1,42 +1,32 @@
-- name: Compatibilità tra le versioni
+- name: Cosa sono le modifiche che causano un'interruzione?
+  href: index.md
+- name: Categorie di modifiche che causano un'interruzione
+  href: categories.md
+- name: Selettori di pagina
+  href: breaking-changes.md
+- name: Per versione
   items:
-    - name: Valutare le modifiche che causano un'interruzione
-      href: index.md
-    - name: Categorie di modifiche che causano un'interruzione
-      href: categories.md
-    - name: Selettore di modifiche che causano un'interruzione
-      href: breaking-changes.md
-    - name: Per versione
-      items:
-        - name: Da 3.0 a 3.1
-          href: 3.0-3.1.md
-        - name: Da 3.0 Preview 9 a 3.0
-          href: 3.0.9-3.0rc1.md
-        - name: Da 3.0 Preview 8 a 3.0 Preview 9
-          href: 3.0.8-3.0.9.md
-        - name: Da 3.0 Preview 7 a 3.0 Preview 8
-          href: 3.0.7-3.0.8.md
-        - name: Da 3.0 Preview 6 a 3.0 Preview 7
-          href: 3.0.6-3.0.7.md
-        - name: Da 2.2 a 3.0
-          href: 2.2-3.0.md
-        - name: Da .NET Framework a .NET Core
-          href: framework-core.md
-    - name: Per categoria
-      items:
-        - name: ASP.NET Core
-          href: aspnetcore.md
-        - name: CoreFx
-          href: corefx.md
-        - name: Crittografia
-          href: cryptography.md
-        - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
-        - name: Globalizzazione
-          href: globalization.md
-        - name: Rete
-          href: networking.md
-        - name: Visual Basic
-          href: visualbasic.md
-        - name: Windows Form
-          href: winforms.md
+    - name: Da 3.0 a 3.1
+      href: 3.0-3.1.md
+    - name: Da 2.2 a 3.1
+      href: 2.2-3.1.md
+    - name: Da 2.2 a 3.0
+      href: 2.2-3.0.md
+- name: Per area
+  items:
+    - name: ASP.NET Core
+      href: aspnetcore.md
+    - name: CoreFx
+      href: corefx.md
+    - name: Crittografia
+      href: cryptography.md
+    - name: Entity Framework Core
+      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+    - name: Globalizzazione
+      href: globalization.md
+    - name: Rete
+      href: networking.md
+    - name: Visual Basic
+      href: visualbasic.md
+    - name: Windows Form
+      href: winforms.md

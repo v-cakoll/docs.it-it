@@ -21,6 +21,8 @@
   items:
     - name: Eseguire il debug dell'applicazione
       href: how-to-guides/debug.md
+    - name: Inviare processi a HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: Riferimenti
   items:
     - name: Riferimento API
