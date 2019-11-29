@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#documentazione
+summary: Informazioni su come scrivere qualsiasi applicazione usando il F# linguaggio di programmazione in .NET.
+metadata:
+  title: 'F#documenti: introduzione, esercitazioni e informazioni di riferimento.'
+  description: 'Apprendimento F# della programmazione: per sviluppatori nuovi F#e esperti F# /.NET'
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553051"
+landingContent:
+- title: Impara a programmare inF#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Che cos' F#è?
+      url: what-is-fsharp.md
+    - text: Installare F#
+      url: get-started/install-fsharp.md
+    - text: Introduzione F# a in Visual Studio
+      url: get-started/get-started-visual-studio.md
+    - text: Introduzione F# a in Visual Studio Code
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: Scaricare la .NET Core SDK
+      url: https://dotnet.microsoft.com/download
+- title: F#Nozioni
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica di F#
+      url: tour.md
+    - text: Introduzione alla programmazione funzionale in F#
+      url: introduction-to-functional-programming/index.md
+    - text: Funzioni di prima classe
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: Guida di stile di F#
+      url: style-guide/index.md
+    - text: Linee guida per la formattazione del codice F#
+      url: style-guide/formatting.md
+    - text: Convenzioni di codifica F#
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: Programmazione asincrona inF#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#riferimenti per il linguaggio
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Riferimenti per il linguaggio
+      url: language-reference/index.md
+    - text: Riferimento alla parola chiave
+      url: language-reference/keyword-reference.md
+    - text: Riferimenti per simboli e operatori
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: Funzioni
+      url: language-reference/functions/index.md
+    - text: F#tipi
+      url: language-reference/fsharp-types.md
