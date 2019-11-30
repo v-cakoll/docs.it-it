@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 0b80461c48dc8cf619b59b0b93c0aa5edca9c4c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5110cdf53953bebd1a5ccd2781afa5c57175ea54
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975031"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568748"
 ---
 # <a name="wcf-data-services-resources"></a>Risorse di WCF Data Services
-Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
+WCF Data Services argomenti introduttivi sono disponibili nelle posizioni seguenti. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
   
  [Panoramica](wcf-data-services-overview.md)  
- Viene fornita una panoramica delle caratteristiche e delle funzionalità introdotte in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Viene fornita una panoramica delle caratteristiche e delle funzionalità disponibili in WCF Data Services.  
   
  [Introduzione](../adonet/ef/getting-started.md)  
- Viene descritto come progettare e accedere a un servizio dati utilizzando [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], come illustrato nella [Guida introduttiva](quickstart-wcf-data-services.md).  
+ Viene descritto come progettare e accedere a un servizio dati utilizzando WCF Data Services, come illustrato nella [Guida introduttiva](quickstart-wcf-data-services.md).  
   
  [Scenari di applicazione](application-scenarios-wcf-data-services.md)  
- Fornisce un approccio basato sulle attività per la creazione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e applicazioni che accedono ai feed Open Data Protocol (OData).  
+ Fornisce un approccio basato sulle attività per la creazione di WCF Data Services e applicazioni che accedono ai feed Open Data Protocol (OData).  
   
  [Glossario .NET](../../../standard/glossary.md)  
- Include i termini usati nella documentazione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e OData.  
+ Include i termini usati nella documentazione di WCF Data Services e OData.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Le risorse esterne seguenti forniscono ulteriori informazioni e supporto per la creazione di applicazioni [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che espongono e utilizzano feed OData.  
+ Le risorse esterne seguenti forniscono ulteriori informazioni e supporto per la creazione di applicazioni WCF Data Services che espongono e utilizzano feed OData.  
   
  [Forum WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
- Supporto alla programmazione di dati per sviluppatori di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Supporto della programmazione dei dati per gli sviluppatori di WCF Data Services.  
   
  [Blog del team di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
- Blog contenente aggiornamenti e discussioni relativi alle caratteristiche e funzionalità di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Blog contenente aggiornamenti e discussioni sulle funzionalità e le funzionalità di WCF Data Services.  
   
  [Sito Web OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Fonte principale di informazioni su OData.  
@@ -51,13 +51,13 @@ Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssA
  Contiene un set di video nei quali viene illustrato come compilare e accedere ai servizi dati.  
   
  [Panoramica: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
- Whitepaper che fornisce informazioni più dettagliate sui vantaggi offerti da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ White paper che fornisce informazioni più dettagliate sui vantaggi offerti da WCF Data Services.  
   
  [Utilizzo di Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
  Whitepaper con informazioni ed esempi aggiuntivi per la creazione di servizi dati e l'accesso ai servizi dati nelle applicazioni client.  
   
  [Modello entità-relazione: verso una visualizzazione unificata dei dati](https://go.microsoft.com/fwlink/?LinkId=91909) di Peter Pin-Shan Chen, Massachusetts Institute of Technology  
- Vengono descritte le basi del modello entità-relazione implementato da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Scritto nel 1976, si tratta di uno dei documenti più citati in campo informatico.  
+ Viene descritta la base per il modello entità-relazionale implementato da WCF Data Services. Scritto nel 1976, si tratta di uno dei documenti più citati in campo informatico.  
   
 ## <a name="see-also"></a>Vedere anche
 

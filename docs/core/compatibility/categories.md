@@ -2,16 +2,24 @@
 title: Categorie di modifiche che causano un'interruzione - .NET Core
 description: Informazioni sui modi in cui le modifiche che causano un'interruzione vengono categorizzate in .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739360"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567918"
 ---
 # <a name="breaking-change-categories"></a>Categorie di modifiche che causano un'interruzione
 
-Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una particolare modifica può influire sulla compatibilità in sei modi diversi. I [singoli tipi di modifiche considerati durante la valutazione della compatibilità](index.md) rientrano nelle prime cinque categorie.
+Per *compatibilità* si intende la possibilità di compilare o eseguire codice in una versione di un'implementazione di .NET diversa da quella con cui il codice è stato sviluppato originariamente. Una particolare modifica può influire sulla compatibilità in sei modi diversi. I [singoli tipi di modifiche](index.md) considerate durante la valutazione della compatibilità rientrano nelle categorie seguenti:
+
+- [modifica del comportamento](#behavioral-change)
+- [compatibilità binaria](#binary-compatibility)
+- [compatibilità con l'origine](#source-compatibility)
+- [compatibilità con la fase di progettazione](#design-time-compatibility)
+- [compatibilità con le versioni precedenti](#backwards-compatibility)
+
+La compatibilità con le [edizioni](#forward-compatibility) non è un obiettivo di .NET Core.
 
 ## <a name="behavioral-change"></a>Modifiche funzionali
 

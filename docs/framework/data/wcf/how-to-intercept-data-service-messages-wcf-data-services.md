@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Intercettare i messaggi del servizio dati (WCF Data Services)'
+title: 'Procedura: intercettare messaggi del servizio dati (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780032"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569036"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Procedura: Intercettare i messaggi del servizio dati (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile intercettare i messaggi di richiesta per l'aggiunta di logica personalizzata a un'operazione. Per intercettare un messaggio, è possibile utilizzare metodi con attributi specifici nel servizio dati. Per ulteriori informazioni, vedere [intercettori](interceptors-wcf-data-services.md).  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Procedura: intercettare messaggi del servizio dati (WCF Data Services)
+Con WCF Data Services, è possibile intercettare i messaggi di richiesta in modo che sia possibile aggiungere la logica personalizzata a un'operazione. Per intercettare un messaggio, è possibile utilizzare metodi con attributi specifici nel servizio dati. Per ulteriori informazioni, vedere [intercettori](interceptors-wcf-data-services.md).  
   
  Nell'esempio riportato in questo argomento viene usato il servizio dati Northwind di esempio. Questo servizio viene creato al completamento della [WCF Data Services Guida introduttiva](quickstart-wcf-data-services.md).  
   
@@ -57,5 +57,5 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile int
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Definire un'operazione del servizio](how-to-define-a-service-operation-wcf-data-services.md)
+- [Procedura: definire un operatore del servizio](how-to-define-a-service-operation-wcf-data-services.md)
 - [Definizione di WCF Data Services](defining-wcf-data-services.md)

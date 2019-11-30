@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Definire un'operazione del servizio (WCF Data Services)"
+title: "Procedura: definire un'operazione del servizio (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780080"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569133"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Procedura: Definire un'operazione del servizio (WCF Data Services)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Procedura: definire un'operazione del servizio (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] espone i metodi definiti nel server come operazioni del servizio. Le operazioni del servizio consentono a un servizio dati di fornire l'accesso tramite un URI a un metodo definito nel server. Per definire un'operazione del servizio, applicare l'`WebGet]` attributo `[WebInvoke]` [o al metodo. Per supportare gli operatori di query, l'operazione del servizio <xref:System.Linq.IQueryable%601> deve restituire un'istanza di. L'accesso ai dati sottostanti da parte delle operazioni del servizio può essere eseguito tramite la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> su <xref:System.Data.Services.DataService%601>. Per altre informazioni, vedere [operazioni del servizio](service-operations-wcf-data-services.md).
+WCF Data Services esporre i metodi definiti nel server come operazioni del servizio. Le operazioni del servizio consentono a un servizio dati di fornire l'accesso tramite un URI a un metodo definito nel server. Per definire un'operazione del servizio, applicare l'attributo [`WebGet]` o `[WebInvoke]` al metodo. Per supportare gli operatori di query, l'operazione del servizio deve restituire un'istanza di <xref:System.Linq.IQueryable%601>. L'accesso ai dati sottostanti da parte delle operazioni del servizio può essere eseguito tramite la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> su <xref:System.Data.Services.DataService%601>. Per altre informazioni, vedere [operazioni del servizio](service-operations-wcf-data-services.md).
 
 Nell'esempio incluso in questo argomento viene definita un'operazione del servizio denominata `GetOrdersByCity` che restituisce un'istanza di <xref:System.Linq.IQueryable%601> filtrata relativa a `Orders` e agli oggetti `Order_Details` correlati. Nell'esempio viene eseguito l'accesso all'istanza di <xref:System.Data.Objects.ObjectContext> che rappresenta l'origine dati per il servizio dati Northwind di esempio. Questo servizio viene creato al completamento della [WCF Data Services Guida introduttiva](quickstart-wcf-data-services.md).
 

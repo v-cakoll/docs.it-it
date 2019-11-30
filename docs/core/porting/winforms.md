@@ -1,20 +1,19 @@
 ---
-title: Convertire un'app Windows Forms in .NET Core 3.0
-description: Illustra come convertire un'applicazione Windows Forms .NET Framework in .NET Core 3.0 per Windows.
+title: Trasferire un'app Windows Forms a .NET Core
+description: Viene illustrato come trasferire un .NET Framework Windows Forms Application a .NET Core per Windows.
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.custom: ''
-ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973282"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567284"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Come trasferire un'app desktop Windows Forms a .NET Core
 
-Questo articolo descrive come convertire un'app desktop basata su Windows Forms da .NET Framework a .NET Core 3.0. .NET Core SDK 3.0 include il supporto per le applicazioni Windows Forms. Windows Forms è ancora un framework solo per Windows e supporta l'esecuzione solo in Windows. Questo esempio usa l'interfaccia della riga di comando di .NET Core SDK per creare e gestire il progetto.
+Questo articolo descrive come trasferire l'app desktop basata su Windows Forms da .NET Framework a .NET Core 3,0 o versione successiva. .NET Core SDK 3.0 include il supporto per le applicazioni Windows Forms. Windows Forms è ancora un framework solo per Windows e supporta l'esecuzione solo in Windows. Questo esempio usa l'interfaccia della riga di comando di .NET Core SDK per creare e gestire il progetto.
 
 In questo articolo vengono usati vari nomi per identificare i tipi di file usati per la migrazione. Durante la migrazione del progetto personale i file verranno denominati in modo diverso, pertanto abbinarli mentalmente a quelli elencati di seguito:
 
@@ -34,11 +33,11 @@ In questo articolo vengono usati vari nomi per identificare i tipi di file usati
   - Sviluppo multipiattaforma .NET Core
 
 - Un progetto Windows Forms funzionante in una soluzione che viene compilata ed eseguita senza problemi.
-- Il progetto deve essere codificato in C#. 
-- Installare l'anteprima più recente di [.NET Core 3.0](https://aka.ms/netcore3download).
+- Progetto codificato in C#.
+- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3,0 o versione successiva.
 
->[!NOTE]
->**Visual Studio 2017** non supporta progetti .NET Core 3.0. **Visual Studio 2019** supporta i progetti .NET Core 3.0, ma non supporta ancora la finestra di progettazione grafica per i progetti Windows Forms .NET Core 3.0. Per usare la finestra di progettazione visiva, è necessario avere un progetto Windows Forms .NET nella soluzione che condivide i file di modulo con il progetto .NET Core.
+> [!NOTE]
+> **Visual Studio 2017** non supporta progetti .NET Core 3.0. **Visual Studio 2019** supporta i progetti .NET Core 3.0, ma non supporta ancora la finestra di progettazione grafica per i progetti Windows Forms .NET Core 3.0. Per usare la finestra di progettazione visiva, è necessario disporre di un progetto di Windows Forms .NET in una soluzione che condivide i file di form con il progetto .NET Core.
 
 ### <a name="consider"></a>Consider
 
@@ -117,7 +116,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 I progetti Windows Forms che sono stati creati con .NET Framework includono un file `AssemblyInfo.cs` che contiene gli attributi dell'assembly, ad esempio la versione dell'assembly da generare. I progetti in stile SDK generano automaticamente queste informazioni in base al file di progetto SDK. La presenza di entrambi i tipi di "informazioni sull'assembly" crea un conflitto. Per risolvere questo problema, disabilitare la generazione automatica, che impone l'uso del file `AssemblyInfo.cs` esistente nel progetto.
 
-Sono disponibili tre impostazioni da aggiungere al nodo `<PropertyGroup>` principale. 
+Sono disponibili tre impostazioni da aggiungere al nodo `<PropertyGroup>` principale.
 
 - **GenerateAssemblyInfo**\
 Quando si imposta questa proprietà su `false`, non verranno generati gli attributi dell'assembly. Ciò consente di evitare il conflitto con il file `AssemblyInfo.cs` esistente dal progetto .NET Framework.
@@ -148,7 +147,7 @@ Aggiungere questi tre elementi al nodo `<PropertyGroup>` nel file `MyFormsCore.c
 
 ## <a name="add-source-code"></a>Aggiungere codice sorgente
 
-Il progetto **MyFormsCore.csproj** per il momento non compila alcun codice. Per impostazione predefinita, i progetti .NET Core includono automaticamente tutto il codice sorgente nella directory corrente e in eventuali directory figlio. È necessario configurare il progetto per includere il codice dal progetto .NET Framework usando un percorso relativo. Se il progetto .NET Framework usava file **resx** per le icone e le risorse dei moduli, sarà necessario includere anche questi. 
+Il progetto **MyFormsCore.csproj** per il momento non compila alcun codice. Per impostazione predefinita, i progetti .NET Core includono automaticamente tutto il codice sorgente nella directory corrente e in eventuali directory figlio. È necessario configurare il progetto per includere il codice dal progetto .NET Framework usando un percorso relativo. Se il progetto .NET Framework usava file **resx** per le icone e le risorse dei moduli, sarà necessario includere anche questi.
 
 Aggiungere il nodo `<ItemGroup>` seguente al progetto. Ogni istruzione include un criterio GLOB per i file che include le directory figlio.
 
@@ -163,7 +162,7 @@ In alternativa, è possibile creare una voce `<Compile>` o `<EmbeddedResource>` 
 
 ## <a name="add-nuget-packages"></a>Aggiungere pacchetti NuGet
 
-Aggiungere al progetto .NET Core ogni pacchetto NuGet a cui fa riferimento il progetto .NET Framework. 
+Aggiungere al progetto .NET Core ogni pacchetto NuGet a cui fa riferimento il progetto .NET Framework.
 
 È molto probabile che l'app Windows Forms di .NET Framework includa un file **packages.config** che contiene un elenco di tutti i pacchetti NuGet a cui fa riferimento il progetto. È possibile esaminare questo elenco per determinare quali pacchetti NuGet aggiungere al progetto .NET Core. Ad esempio, se il progetto .NET Framework fa riferimento ai pacchetti NuGet `MetroFramework`, `MetroFramework.Design` e `MetroFramework.Fonts`, aggiungerli al progetto con Visual Studio o l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
@@ -243,7 +242,7 @@ Di seguito è riportato un esempio dell'aspetto del file di progetto di libreria
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    
+
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
 
@@ -251,12 +250,12 @@ Di seguito è riportato un esempio dell'aspetto del file di progetto di libreria
     <AssemblyName>MyCoreControls</AssemblyName>
     <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <Compile Include="..\MyFormsControls\**\*.cs" />
     <EmbeddedResource Include="..\MyFormsControls\**\*.resx" />
   </ItemGroup>
-  
+
 </Project>
 ```
 
@@ -276,7 +275,7 @@ Il comando precedente consente di aggiungere il codice seguente al progetto **My
   </ItemGroup>
 ```
 
-## <a name="problems-compiling"></a>Problemi di compilazione
+## <a name="compilation-problems"></a>Problemi di compilazione
 
 Se si riscontrano problemi durante la compilazione dei progetti, è possibile che siano in uso alcune API solo per Windows disponibili in .NET Framework, ma non in .NET Core. È possibile provare ad aggiungere il pacchetto NuGet [Windows Compatibility Pack][compat-pack] al progetto. Questo pacchetto può essere eseguito solo in Windows e aggiunge circa 20.000 API Windows ai progetti .NET Core e .NET Standard.
 
@@ -297,7 +296,7 @@ Il comando precedente consente di aggiungere il codice seguente al progetto **My
 Come descritto in dettaglio in questo articolo, Visual Studio 2019 supporta solo Progettazione Windows Form nei progetti .NET Framework. È possibile creare un progetto .NET Core affiancato per testare il progetto .NET Core mentre si usa progetto .NET Framework per la progettazione dei moduli. Il file di soluzione include sia i progetti .NET Framework che .NET Core. Aggiungere e progettare i moduli e i controlli nel progetto .NET Framework e, in base ai criteri GLOB per i file aggiunti ai progetti .NET Core, qualsiasi file nuovo o modificato verrà incluso automaticamente nei progetti .NET Core.
 
 Quando Visual Studio 2019 supporterà la finestra di progettazione per Windows Forms, sarà possibile copiare e incollare il contenuto del file di progetto .NET Core nel file di progetto .NET Framework. Eliminare quindi i criteri GLOB per i file aggiunti con gli elementi `<Source>` e `<EmbeddedResource>`. Correggere i percorsi per qualsiasi riferimento del progetto usato dall'app. In questo modo il progetto .NET Framework viene effettivamente aggiornato a .NET Core.
- 
+
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Vedere altre informazioni su [Windows Compatibility Pack][compat-pack].

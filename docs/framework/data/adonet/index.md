@@ -2,17 +2,17 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783818"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569416"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET è un set di classi che espongono servizi di accesso ai dati per i programmatori .NET Framework. ADO.NET fornisce un set completo per la creazione di applicazioni distribuite e abilitate alla condivisione dei dati. ADO.NET è parte integrante di .NET Framework e consente l'accesso ai dati relazionali, ai dati XML e ai dati dell'applicazione. Supporta numerose esigenze di sviluppo, inclusa la creazione di client di database front-end e di oggetti business di livello intermedio, usati da applicazioni, strumenti, linguaggi o browser Internet.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Novità in ADO.NET](whats-new.md)  
  Vengono descritte le nuove funzionalità di ADO.NET.  
   
@@ -51,7 +51,7 @@ ADO.NET è un set di classi che espongono servizi di accesso ai dati per i progr
  Vengono forniti collegamenti ad argomenti e esempi di LINQ utilizzando Visual Basic.  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- Viene descritto come usare [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per distribuire servizi dati nel Web o in una rete Intranet che implementano il protocollo Open Data Protocol (OData).  
+ Viene descritto come utilizzare WCF Data Services per distribuire servizi dati nel Web o in una rete Intranet che implementano il Open Data Protocol (OData).  
   
  [Guida di sviluppo per .NET Framework](../../development-guide.md)  
  Vengono forniti collegamenti ad attività di sviluppo standard in .NET Framework.  

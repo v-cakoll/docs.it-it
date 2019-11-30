@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975294"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569216"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalizzazione di feed (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa il Open Data Protocol (OData) per esporre i dati come feed. OData supporta sia i formati Atom che JavaScript Object Notation (JSON) per i feed di dati. Quando si utilizza un feed Atom, OData fornisce un metodo standard per serializzare i dati, ad esempio entità e relazioni, in un formato XML che può essere incluso nel corpo del messaggio HTTP. OData definisce un mapping di proprietà di entità predefinito tra i dati contenuti nelle entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Data Services USA il Open Data Protocol (OData) per esporre i dati come feed. OData supporta sia i formati Atom che JavaScript Object Notation (JSON) per i feed di dati. Quando si utilizza un feed Atom, OData fornisce un metodo standard per serializzare i dati, ad esempio entità e relazioni, in un formato XML che può essere incluso nel corpo del messaggio HTTP. OData definisce un mapping di proprietà di entità predefinito tra i dati contenuti nelle entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  È possibile che lo scenario applicativo in uso richieda che i dati delle proprietà restituiti dal servizio dati vengano serializzati in modo personalizzato piuttosto che nel formato dei feed standard. Con OData è possibile personalizzare la serializzazione in un feed di dati in modo che sia possibile eseguire il mapping delle proprietà di un'entità agli elementi e agli attributi inutilizzati di una voce o agli elementi personalizzati di una voce nel feed.  
   
 > [!NOTE]
 > La personalizzazione di feed è supportata solo per i feed Atom. I feed personalizzati non vengono restituiti quando per il feed restituito è richiesto il formato JSON.  
   
- Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile definire un mapping alternativo di proprietà di entità per un payload Atom applicando manualmente gli attributi ai tipi di entità nel modello di dati. La modalità di applicazione degli attributi viene determinata dal provider dell'origine dati del servizio dati.  
+ Con WCF Data Services è possibile definire un mapping di proprietà di entità alternativo per un payload Atom applicando manualmente attributi ai tipi di entità nel modello di dati. La modalità di applicazione degli attributi viene determinata dal provider dell'origine dati del servizio dati.  
   
 > [!IMPORTANT]
 > Quando si definiscono feed personalizzati, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate siano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [proiezioni di query](query-projections-wcf-data-services.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "73975294"
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|Indica il tipo di contenuto. Le parole chiave seguenti definiscono i tipi di contenuto di diffusione.<br /><br /> `text:` il valore della proprietà viene visualizzato nel feed come testo.<br /><br /> `html:` il valore della proprietà viene visualizzato nel feed come HTML.<br /><br /> `xhtml:` il valore della proprietà viene visualizzato nel feed come HTML in formato XML.<br /><br /> Queste parole chiave equivalgono ai valori dell'enumerazione <xref:System.Data.Services.Common.SyndicationTextContentKind> usata con il provider di reflection.<br /><br /> Questo attributo non è supportato quando si usano gli attributi `FC_NsPrefix` e `FC_NsUri`.<br /><br /> Quando si specifica un valore `xhtml` per l'attributo `FC_ContentKind`, è necessario assicurarsi che il valore della proprietà contenga codice XML formattato correttamente. Il servizio dati restituisce il valore senza eseguire alcuna trasformazione. È inoltre necessario assicurarsi che tutti i prefissi degli elementi XML nel codice XML risultante dispongano di un URI dello spazio dei nomi e di un prefisso definito nel feed sottoposto a mapping.|  
-|`FC_KeepInContent`|Indica che il valore della proprietà a cui viene fatto riferimento deve essere incluso sia nella sezione di contenuto del feed sia nel percorso sottoposto a mapping. I valori validi sono `true` e `false`. Per rendere il feed risultante compatibile con le versioni precedenti di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], specificare il valore `true` per assicurarsi che il valore sia incluso nella sezione contenuto del feed.|  
+|`FC_KeepInContent`|Indica che il valore della proprietà a cui viene fatto riferimento deve essere incluso sia nella sezione di contenuto del feed sia nel percorso sottoposto a mapping. I valori validi sono `true` e `false`. Per rendere il feed risultante compatibile con le versioni precedenti di WCF Data Services, specificare il valore `true` per assicurarsi che il valore sia incluso nella sezione contenuto del feed.|  
 |`FC_NsPrefix`|Prefisso dello spazio dei nomi dell'elemento XML in un mapping non di diffusione. Questo attributo deve essere usato con l'attributo `FC_NsUri` e non è possibile usarlo con l'attributo `FC_ContentKind`.|  
 |`FC_NsUri`|URI dello spazio dei nomi dell'elemento XML in un mapping non di diffusione. Questo attributo deve essere usato con l'attributo `FC_NsPrefix` e non è possibile usarlo con l'attributo `FC_ContentKind`.|  
 |`FC_SourcePath`|Percorso della proprietà dell'entità a cui si applica la regola di mapping del feed. Questo attributo è supportato solo quando lo si usa in un elemento `EntityType`.<br /><br /> La proprietà <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> non può fare riferimento direttamente a un tipo complesso. Per i tipi complessi, è necessario usare un'espressione di percorso in cui i nomi delle proprietà sono separati da una barra rovesciata (`/`). Ad esempio, i valori seguenti sono consentiti per un tipo di entità `Person` con una proprietà Integer `Age` e una proprietà complessa<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> La proprietà <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> non può essere impostata su un valore contenente uno spazio o qualsiasi altro carattere non valido in un nome di proprietà.|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975294"
 ## <a name="feed-customization-considerations"></a>Considerazioni sulla personalizzazione dei feed  
  Quando si definiscono i mapping dei feed personalizzati è opportuno tenere presenti le considerazioni seguenti.  
   
-- Il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] considera gli elementi mappati in un feed come vuoti quando contengono solo spazi vuoti. Per questo motivo, gli elementi mappati che contengono solo spazi vuoti non vengono materializzati sul client con lo stesso spazio vuoto. Per mantenere lo spazio vuoto nel client, è necessario impostare il valore di `KeepInContext` su `true` nell'attributo mapping del feed.  
+- Il client WCF Data Services considera gli elementi mappati in un feed come vuoti quando contengono solo spazi vuoti. Per questo motivo, gli elementi mappati che contengono solo spazi vuoti non vengono materializzati sul client con lo stesso spazio vuoto. Per mantenere lo spazio vuoto nel client, è necessario impostare il valore di `KeepInContext` su `true` nell'attributo mapping del feed.  
   
 ## <a name="versioning-requirements"></a>Requisiti di versione  
  La personalizzazione dei feed presenta i requisiti di controllo delle versioni del protocollo OData seguenti:  

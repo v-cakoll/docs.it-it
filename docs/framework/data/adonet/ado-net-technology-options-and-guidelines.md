@@ -2,12 +2,12 @@
 title: Opzioni e linee guida per la tecnologia ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: d0f363d5eb102edf965c9c6068873fce0721d288
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785781"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569425"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opzioni e linee guida per la tecnologia ADO.NET
 ADO.NET Data Platform è una strategia multi-versione concepita per ridurre la quantità di codice e di interventi di manutenzione richiesti per gli sviluppatori consentendo loro di eseguire la programmazione per modelli di dati di entità concettuali. Questa piattaforma include ADO.NET Entity Framework e le tecnologie correlate.  
@@ -37,7 +37,7 @@ ADO.NET Data Platform è una strategia multi-versione concepita per ridurre la q
  LINQ to SQL è un'implementazione del mapping relazionale a oggetti che consente di modellare un database SQL Server tramite le classi di .NET Framework. LINQ to SQL consente di eseguire una query sul database tramite LINQ nonché di aggiornare, inserire ed eliminare dati da esso. LINQ to SQL supporta transazioni, visualizzazioni e stored procedure consentendo di integrare facilmente le regole relative alla convalida dei dati e alla logica di business nel modello dati. È possibile usare Progettazione relazionale oggetti per modellare le classi di entità e le associazioni basate sugli oggetti in un database. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] distribuisce servizi dati nel Web o in una rete Intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../wcf/index.md).  
+ WCF Data Services distribuisce i servizi dati sul Web o su una rete Intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

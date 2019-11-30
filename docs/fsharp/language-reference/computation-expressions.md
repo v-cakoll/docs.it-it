@@ -2,20 +2,20 @@
 title: Espressioni di calcolo
 description: Informazioni su come creare una sintassi pratica per la scrittura di F# calcoli in che possono essere sequenziati e combinati mediante costrutti e associazioni del flusso di controllo.
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976793"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569462"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
 Le espressioni di F# calcolo in forniscono una sintassi pratica per la scrittura di calcoli che possono essere sequenziati e combinati mediante costrutti e associazioni del flusso di controllo. A seconda del tipo di espressione di calcolo, possono essere considerati come un modo per esprimere monadi, monoids, i trasformatori Monad e funtori applicativi. Tuttavia, a differenza di altri linguaggi (ad esempio *do-Notation* in Haskell), non sono collegati a un'unica astrazione e non si basano su macro o altre forme di metaprogrammazione per realizzare una sintassi pratica e sensibile al contesto.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-I calcoli possono assumere molte forme. Il tipo di calcolo più comune è l'esecuzione a thread singolo, che è facile da comprendere e modificare. Tuttavia, non tutte le forme di calcolo sono semplici come l'esecuzione a thread singolo. Di seguito sono riportati alcuni esempi:
+I calcoli possono assumere molte forme. Il tipo di calcolo più comune è l'esecuzione a thread singolo, che è facile da comprendere e modificare. Tuttavia, non tutte le forme di calcolo sono semplici come l'esecuzione a thread singolo. Alcuni esempi includono:
 
 - Calcoli non deterministici
 - Calcoli asincroni
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-A partire F# da 4,5, la parola chiave`match!`consente di inline una chiamata a un'altra espressione di calcolo e il criterio di ricerca corrisponde al risultato:
+La parola chiave `match!` consente di inline una chiamata a un'altra espressione di calcolo e il criterio di ricerca corrisponde al risultato:
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ Nella tabella seguente vengono descritti i metodi che possono essere utilizzati 
 |`Zero`|`unit -> M<'T>`|Chiamato per `else` rami vuoti delle espressioni `if...then` nelle espressioni di calcolo.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica che l'espressione di calcolo viene passata al membro `Run` come virgoletta. Converte tutte le istanze di un calcolo in una virgoletta.|
 
-Molti dei metodi di una classe Builder usano e restituiscono un costrutto di `M<'T>`, che in genere è un tipo definito separatamente che caratterizza il tipo di calcoli combinati, ad esempio `Async<'T>` per i flussi di lavoro asincroni e `Seq<'T>` per la sequenza flussi. Le firme di questi metodi consentono di combinarle e nidificarle tra loro, in modo che l'oggetto flusso di lavoro restituito da un costrutto possa essere passato a quello successivo. Il compilatore, durante l'analisi di un'espressione di calcolo, converte l'espressione in una serie di chiamate di funzione annidate utilizzando i metodi della tabella precedente e il codice dell'espressione di calcolo.
+Molti dei metodi di una classe Builder utilizzano e restituiscono un costrutto di `M<'T>`, che in genere è un tipo definito separatamente che caratterizza il tipo di calcoli combinati, ad esempio `Async<'T>` per i flussi di lavoro asincroni e `Seq<'T>` per i flussi di lavoro di sequenza. Le firme di questi metodi consentono di combinarle e nidificarle tra loro, in modo che l'oggetto flusso di lavoro restituito da un costrutto possa essere passato a quello successivo. Il compilatore, durante l'analisi di un'espressione di calcolo, converte l'espressione in una serie di chiamate di funzione annidate utilizzando i metodi della tabella precedente e il codice dell'espressione di calcolo.
 
 Il formato dell'espressione annidata è il seguente:
 
@@ -258,9 +258,9 @@ Il formato dell'espressione annidata è il seguente:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Nel codice precedente, le chiamate a `Run` e `Delay` vengono omesse se non sono definite nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, qui indicato come `{| cexpr |}`, viene convertito in chiamate che coinvolgono i metodi della classe Builder dalle traduzioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definita in modo ricorsivo in base a queste traduzioni F# in cui `expr` è un'espressione e`cexpr`è un'espressione di calcolo.
+Nel codice precedente, le chiamate a `Run` e `Delay` vengono omesse se non sono definite nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, qui indicato come `{| cexpr |}`, viene convertito in chiamate che coinvolgono i metodi della classe Builder dalle traduzioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definita in modo ricorsivo in base a queste traduzioni F# in cui `expr` è un'espressione e `cexpr` è un'espressione di calcolo.
 
-|Expression|Conversione|
+|Espressione|Conversione|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|

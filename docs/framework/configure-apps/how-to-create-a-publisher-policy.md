@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare criteri editore'
+title: 'Procedura: Creare criteri editore'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040197"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568408"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
+# <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
 
 I fornitori di assembly possono dichiarare che le applicazioni devono usare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. Il file dei criteri editore specifica il reindirizzamento degli assembly e le impostazioni di base del codice e usa lo stesso formato di un file di configurazione dell'applicazione. Il file dei criteri editore viene compilato in un assembly e inserito nella Global Assembly Cache.
 
@@ -74,7 +74,7 @@ In questo comando:
   > [!NOTE]
   > La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0.
 
-La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0. Il comando seguente crea un assembly dei criteri editore denominato `policy.1.0.myAssembly` da un file di criteri editore denominato `pub.config`, assegna un nome sicuro all'assembly utilizzando la coppia di chiavi nel file `sgKey.snk` e specifica che l'assembly è destinato al processore x86 architettura.
+La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0. Il comando che segue crea un assembly dei criteri editore denominato `policy.1.0.myAssembly` da un file di criteri editore denominato `pub.config`, assegna un nome sicuro all'assembly utilizzando la coppia di chiavi nel file `sgKey.snk` e specifica che l'assembly è destinato all'architettura del processore x86.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -105,7 +105,7 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> Non è possibile aggiungere l'assembly dei criteri editore alla Global Assembly Cache a meno che il file dei criteri editore originale si trovi nella stessa directory dell'assembly.
+> Non è possibile aggiungere l'assembly dei criteri editore alla Global Assembly Cache a meno che il file dei criteri editore originale specificato nell'argomento `/link` si trovi nella stessa directory dell'assembly.
 
 ## <a name="see-also"></a>Vedere anche
 

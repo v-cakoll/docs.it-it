@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Abilitare l'accesso al servizio dati (WCF Data Services)"
+title: "Procedura: abilitare l'accesso al servizio dati (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: cbe25dcb62adf82921b24623cc4930c3076dd1fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ec9c9a730516b22b4eaa215e042e9393c01d752
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790659"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569099"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Procedura: Abilitare l'accesso al servizio dati (WCF Data Services)
-In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è necessario concedere in modo esplicito l'accesso alle risorse esposte da un servizio dati. In altre parole, dopo aver creato un nuovo servizio dati, è necessario fornire in modo esplicito l'accesso alle singole risorse come set di entità. In questo argomento viene illustrato come abilitare l'accesso in lettura e scrittura a cinque dei set di entità nel servizio dati Northwind creato al completamento della [Guida introduttiva](quickstart-wcf-data-services.md). Poiché l'enumerazione <xref:System.Data.Services.EntitySetRights> viene definita tramite <xref:System.FlagsAttribute>, è possibile utilizzare un operatore logico OR per specificare più autorizzazioni per un solo set di entità.  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Procedura: abilitare l'accesso al servizio dati (WCF Data Services)
+In WCF Data Services, è necessario concedere in modo esplicito l'accesso alle risorse esposte da un servizio dati. In altre parole, dopo aver creato un nuovo servizio dati, è necessario fornire in modo esplicito l'accesso alle singole risorse come set di entità. In questo argomento viene illustrato come abilitare l'accesso in lettura e scrittura a cinque dei set di entità nel servizio dati Northwind creato al completamento della [Guida introduttiva](quickstart-wcf-data-services.md). Poiché l'enumerazione <xref:System.Data.Services.EntitySetRights> viene definita tramite <xref:System.FlagsAttribute>, è possibile utilizzare un operatore logico OR per specificare più autorizzazioni per un solo set di entità.  
   
 > [!NOTE]
 > I client che possono accedere all'applicazione ASP.NET saranno inoltre in grado di accedere alle risorse esposte dal servizio dati. Per impedire l'accesso non autorizzato alle risorse in un servizio dati di produzione, è inoltre necessario proteggere l'applicazione stessa. Per ulteriori informazioni, vedere [protezione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
@@ -31,5 +31,5 @@ In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è necessario con
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Sviluppare un servizio dati WCF in esecuzione in IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [Procedura: sviluppare un servizio WCF in esecuzione in IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)
 - [Configurazione del servizio dati](configuring-the-data-service-wcf-data-services.md)

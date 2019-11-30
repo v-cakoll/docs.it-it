@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974840"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569328"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associazione di dati a controlli (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile associare controlli, quali `ComboBox` e `ListView`, a un'istanza della classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Questa raccolta, che eredita dalla classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contiene i dati di un feed di Open Data Protocol (OData). Questa classe rappresenta una raccolta di dati dinamica che fornisce notifiche in caso di aggiunta o rimozione di elementi. Quando si usa un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601> per data binding, le librerie client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gestiscono questi eventi per garantire che gli oggetti rilevati dal <xref:System.Data.Services.Client.DataServiceContext> rimangano sincronizzati con i dati nell'elemento dell'interfaccia utente associato.  
+Con WCF Data Services è possibile associare controlli quali i controlli `ComboBox` e `ListView` a un'istanza della classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Questa raccolta, che eredita dalla classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contiene i dati di un feed di Open Data Protocol (OData). Questa classe rappresenta una raccolta di dati dinamica che fornisce notifiche in caso di aggiunta o rimozione di elementi. Quando si usa un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601> per data binding, le librerie client WCF Data Services gestiscono questi eventi per garantire che gli oggetti rilevati dal <xref:System.Data.Services.Client.DataServiceContext> rimangano sincronizzati con i dati nell'elemento dell'interfaccia utente associato.  
   
  La classe <xref:System.Data.Services.Client.DataServiceCollection%601> implementa indirettamente l'interfaccia <xref:System.Collections.Specialized.INotifyCollectionChanged> per avvisare il contesto dell'aggiunta o della rimozione di oggetti dalla raccolta. Gli oggetti del tipo di servizio dati usati con <xref:System.Data.Services.Client.DataServiceCollection%601> devono inoltre implementare l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> per informare l'oggetto <xref:System.Data.Services.Client.DataServiceCollection%601> quando le proprietà di oggetti inclusi nella raccolta di associazioni vengono modificate.  
   
@@ -86,7 +86,7 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile ass
 - `entityCollectionChanged`: metodo che viene chiamato quando un oggetto viene aggiunto o rimosso dalla raccolta di associazioni. Questo delegato <xref:System.Func%602> accetta un oggetto <xref:System.Data.Services.Client.EntityCollectionChangedParams> e restituisce un valore booleano che indica se il comportamento predefinito, che implica la chiamata del metodo <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> per un'azione <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> o del metodo <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> per un'azione <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> sull'oggetto <xref:System.Data.Services.Client.DataServiceContext>, deve ancora verificarsi.  
   
 > [!NOTE]
-> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] non esegue alcuna convalida dei comportamenti personalizzati implementati in questi delegati.  
+> WCF Data Services non esegue alcuna convalida dei comportamenti personalizzati implementati in questi delegati.  
   
  Nell'esempio seguente l'azione <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> viene personalizzata per chiamare il metodo <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> e il metodo <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> per rimuovere le entità `Orders_Details` che appartengono a un'entità `Orders` eliminata. Questa azione personalizzata viene eseguita in quanto le entità dipendenti non vengono eliminate automaticamente al momento dell'eliminazione dell'entità padre.  
   

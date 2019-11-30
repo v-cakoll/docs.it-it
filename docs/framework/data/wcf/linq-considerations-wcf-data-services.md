@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975221"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568967"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerazioni su LINQ (WCF Data Services)
-In questo argomento vengono fornite informazioni sul modo in cui le query LINQ vengono composte ed eseguite quando si utilizza il client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e le limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa l'Open Data Protocol (OData). Per ulteriori informazioni sulla composizione e l'esecuzione di query su un servizio dati basato su OData, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
+In questo argomento vengono fornite informazioni sul modo in cui le query LINQ vengono composte ed eseguite quando si utilizza il client di WCF Data Services e le limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa l'Open Data Protocol (OData). Per ulteriori informazioni sulla composizione e l'esecuzione di query su un servizio dati basato su OData, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Composizione di query LINQ  
  LINQ consente di comporre query per una raccolta di oggetti che implementa <xref:System.Collections.Generic.IEnumerable%601>. Entrambe le **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio e lo strumento DataSvcUtil. exe vengono utilizzate per generare una rappresentazione di un servizio OData come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>, nonché da oggetti che rappresentano le entità restituite nei feed. Questi strumenti generano anche le proprietà per la classe contenitore di entità delle raccolte esposte come feed dal servizio. Ognuna di queste proprietà della classe che incapsula il servizio dati restituisce un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>. Dal momento che la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, è possibile comporre una query LINQ per i feed esposti dal servizio dati che vengono convertiti dalla libreria client in un URI di richiesta query inviato al servizio dati in esecuzione.  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- Il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di convertire entrambi tipi di query composte in un URI di query ed è possibile estendere una query LINQ aggiungendo i metodi di query a un'espressione di query. Quando si compongono query LINQ aggiungendo la sintassi del metodo a un'espressione di query o un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>, le operazioni vengono aggiunte all'URI della query nell'ordine di chiamata dei metodi. Equivale alla chiamata del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere ogni opzione di query all'URI della query.  
+ Il client WCF Data Services è in grado di convertire entrambi i tipi di query composte in un URI di query ed è possibile estendere una query LINQ aggiungendo i metodi di query a un'espressione di query. Quando si compongono query LINQ aggiungendo la sintassi del metodo a un'espressione di query o un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>, le operazioni vengono aggiunte all'URI della query nell'ordine di chiamata dei metodi. Equivale alla chiamata del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere ogni opzione di query all'URI della query.  
   
 ## <a name="executing-linq-queries"></a>Esecuzione di query LINQ  
  Alcuni metodi di query LINQ, ad esempio <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> o <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, quando vengono aggiunti alla query ne causano l'esecuzione. Una query viene eseguita anche quando i risultati vengono enumerati in modo implicito, ad esempio durante un ciclo `foreach` o quando la query è assegnata a una raccolta `List`. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  

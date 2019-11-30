@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Esecuzione di query in un batch (WCF Data Services)'
+title: 'Procedura: eseguire query in un batch (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: a825fe83ff62d935740fb69871ba2d1e2120e9ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ddf5b4f68ca08fca0c55cfcdfcd5431bcec6de2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790498"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569059"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Procedura: Esecuzione di query in un batch (WCF Data Services)
-Utilizzando la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client, è possibile eseguire più di una query sul servizio dati in un singolo batch. Per altre informazioni, vedere [operazioni](batching-operations-wcf-data-services.md)di invio in batch.  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Procedura: eseguire query in un batch (WCF Data Services)
+Utilizzando la libreria client di WCF Data Services, è possibile eseguire più query sul servizio dati in un singolo batch. Per altre informazioni, vedere [operazioni](batching-operations-wcf-data-services.md)di invio in batch.  
   
  Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).  
   

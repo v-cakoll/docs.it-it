@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975129"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568801"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 
@@ -25,7 +25,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
 
 - Elemento entry di collegamento multimediale: entità che presenta un riferimento a un flusso di risorse multimediali correlato.
 
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] si definisce un flusso di risorse binarie implementando un provider di dati di flusso. L'implementazione del provider di flusso fornisce al servizio dati il flusso di risorse multimediali associato a un'entità specifica come oggetto <xref:System.IO.Stream>. Questa implementazione consente al servizio dati di accettare e restituire risorse multimediali tramite HTTP sotto forma di flussi di dati binari di un tipo MIME specificato.
+Con WCF Data Services, si definisce un flusso di risorse binario implementando un provider di dati di flusso. L'implementazione del provider di flusso fornisce al servizio dati il flusso di risorse multimediali associato a un'entità specifica come oggetto <xref:System.IO.Stream>. Questa implementazione consente al servizio dati di accettare e restituire risorse multimediali tramite HTTP sotto forma di flussi di dati binari di un tipo MIME specificato.
 
 La configurazione di un servizio dati per supportare il flusso di dati binari richiede l'esecuzione dei passaggi seguenti:
 
@@ -67,7 +67,7 @@ Quando si usano provider di servizi personalizzati, si implementa l'interfaccia 
 
 Per creare un servizio dati che supporta i flussi di dati binari, è necessario implementare l'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Questa implementazione consente al servizio dati di restituire al client i dati binari sotto forma di flusso e di usarli come flusso inviato dal client. Il servizio dati crea un'istanza di questa interfaccia ogni volta che deve accedere ai dati binari sotto forma di flusso. L'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider> specifica i membri seguenti:
 
-|Nome del membro|Descrizione|
+|Nome membro|Descrizione|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Questo metodo viene richiamato dal servizio dati per eliminare la risorsa multimediale corrispondente quando viene eliminato l'elemento entry di collegamento multimediale. Quando si implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, questo metodo contiene il codice che elimina la risorsa multimediale associata all'elemento entry di collegamento multimediale fornito.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Questo metodo viene richiamato dal servizio dati per restituire una risorsa multimediale come flusso. Quando si implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, questo metodo contiene il codice che fornisce un flusso usato dal servizio dati per restituire la risorsa multimediale associata all'elemento entry di collegamento multimediale specifico.|
@@ -79,7 +79,7 @@ Per creare un servizio dati che supporta i flussi di dati binari, è necessario 
 
 ## <a name="creating-the-streaming-data-service"></a>Creazione del servizio dati di flusso
 
-Per fornire al runtime di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] l'accesso all'implementazione <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, il servizio dati creato deve implementare anche l'interfaccia <xref:System.IServiceProvider>. Nell'esempio seguente viene illustrato come implementare il metodo <xref:System.IServiceProvider.GetService%2A> per restituire un'istanza della classe `PhotoServiceStreamProvider` che implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Per consentire all'WCF Data Services Runtime di accedere all'implementazione <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, il servizio dati creato deve implementare anche l'interfaccia <xref:System.IServiceProvider>. Nell'esempio seguente viene illustrato come implementare il metodo <xref:System.IServiceProvider.GetService%2A> per restituire un'istanza della classe `PhotoServiceStreamProvider` che implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ Per impostazione predefinita, Internet Information Services (IIS) consente anche
 
 ## <a name="using-data-streams-in-a-client-application"></a>Utilizzo dei flussi di dati in un'applicazione client
 
-La libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di recuperare e aggiornare tali risorse esposte come flussi binari sul client. Per ulteriori informazioni, vedere [utilizzo di dati binari](working-with-binary-data-wcf-data-services.md).
+La libreria client di WCF Data Services consente di recuperare e aggiornare queste risorse esposte come flussi binari nel client. Per ulteriori informazioni, vedere [utilizzo di dati binari](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Considerazioni sull'utilizzo di un provider di flusso
 

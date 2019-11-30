@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Carica entità correlate (WCF Data Services)'
+title: 'Procedura: caricare entità correlate (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 14b0ba988c96c270610208a4f944083bb333eac5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c2448f317e813a95688feaaac1c97436de1b16
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780023"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569009"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Procedura: Carica entità correlate (WCF Data Services)
-Per caricare entità associate in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile usare il metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sulla classe <xref:System.Data.Services.Client.DataServiceContext>. È anche possibile usare il <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodo <xref:System.Data.Services.Client.DataServiceQuery%601> su per richiedere che le entità correlate vengano caricate in modo eager nella stessa risposta alla query.  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Procedura: caricare entità correlate (WCF Data Services)
+Quando è necessario caricare entità associate in WCF Data Services, è possibile usare il metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sulla classe <xref:System.Data.Services.Client.DataServiceContext>. È anche possibile usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> sul <xref:System.Data.Services.Client.DataServiceQuery%601> per richiedere che le entità correlate vengano caricate in modo eager nella stessa risposta alla query.  
   
  Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).  
   

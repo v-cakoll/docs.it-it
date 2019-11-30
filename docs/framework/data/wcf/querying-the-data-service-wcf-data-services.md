@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975159"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568887"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Esecuzione di query sul servizio dati (WCF Data Services)
 
-La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati mediante i modelli di programmazione comuni di .NET Framework, compreso il linguaggio LINQ (Language Integrated Query). La libreria client traduce una query, definita nel client come un'istanza della classe <xref:System.Data.Services.Client.DataServiceQuery%601>, in un messaggio di richiesta HTTP GET. La libreria riceve il messaggio di risposta e lo converte in istanze delle classi del servizio dati client. Queste classi vengono rilevate dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>.
+La libreria client di WCF Data Services consente di eseguire query su un servizio dati utilizzando modelli di programmazione .NET Framework noti, incluso l'utilizzo di LINQ (Language Integrated Query). La libreria client traduce una query, definita nel client come un'istanza della classe <xref:System.Data.Services.Client.DataServiceQuery%601>, in un messaggio di richiesta HTTP GET. La libreria riceve il messaggio di risposta e lo converte in istanze delle classi del servizio dati client. Queste classi vengono rilevate dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Query sul servizio dati
 
@@ -45,11 +45,11 @@ La query seguente, al termine dell'esecuzione, restituisce tutte le entità `Cus
 
 Per altre informazioni, vedere [procedura: eseguire query sul servizio dati](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il C#tipo dinamico in. Tuttavia, per preservare le prestazioni, è necessario comporre sempre query fortemente tipizzate per il servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
+Il client WCF Data Services supporta le query per gli oggetti ad associazione tardiva, ad esempio quando si usa il C#tipo dinamico in. Tuttavia, per preservare le prestazioni, è necessario comporre sempre query fortemente tipizzate per il servizio dati. Il tipo <xref:System.Tuple> e oggetti dinamici non sono supportati dal client.
 
 ## <a name="linq-queries"></a>Query LINQ
 
-Poiché la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, la libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata in base a una risorsa del servizio dati. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
+Poiché la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, la libreria client WCF Data Services è in grado di trasformare le query LINQ sui dati del set di entità in un URI che rappresenta un'espressione di query valutata in base a una risorsa del servizio dati. Nell'esempio seguente viene mostrata una query LINQ equivalente alla precedente classe <xref:System.Data.Services.Client.DataServiceQuery%601> che restituisce le entità `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base al costo di spedizione:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ Per ulteriori informazioni, vedere [considerazioni su LINQ](linq-considerations-
 
 ## <a name="adding-query-options"></a>Aggiunta di opzioni di query
 
-Le query del servizio dati supportano tutte le opzioni di query fornite da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. È possibile chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere opzioni di query a un'istanza <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> restituisce una nuova istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> equivalente alla query originale ma con il nuovo set di opzioni. La query seguente al termine dell'esecuzione restituisce oggetti `Orders` filtrati in base al valore di `Freight` e ordinati in ordine decrescente per `OrderID`:
+Le query del servizio dati supportano tutte le opzioni di query fornite da WCF Data Services. È possibile chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere opzioni di query a un'istanza <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> restituisce una nuova istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> equivalente alla query originale ma con il nuovo set di opzioni. La query seguente al termine dell'esecuzione restituisce oggetti `Orders` filtrati in base al valore di `Freight` e ordinati in ordine decrescente per `OrderID`:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ Le istanze del tipo di entità che rappresentano entità nel servizio dati vengo
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>: restituisce un oggetto <xref:System.Data.Services.Client.DataServiceQueryContinuation> che contiene l'URI della pagina di risultati successiva.
 
-Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] restituisce solo i dati selezionati esplicitamente dall'URI della query. Ciò consente di caricare in modo esplicito dati aggiuntivi dal servizio dati, quando necessario. Una richiesta viene inviata al servizio dati ogni volta che vengono caricati in modo esplicito dati dal servizio dati. I dati che possono essere caricati in modo esplicito comprendono entità correlate, dati di risposta di paging e flussi di dati binari.
+Per impostazione predefinita, WCF Data Services restituisce solo i dati selezionati esplicitamente dall'URI della query. Ciò consente di caricare in modo esplicito dati aggiuntivi dal servizio dati, quando necessario. Una richiesta viene inviata al servizio dati ogni volta che vengono caricati in modo esplicito dati dal servizio dati. I dati che possono essere caricati in modo esplicito comprendono entità correlate, dati di risposta di paging e flussi di dati binari.
 
 > [!NOTE]
 > Poiché un servizio dati può restituire una risposta di paging, si consiglia di gestire una risposta del servizio dati sottoposta a paging tramite un modello di programmazione dell'applicazione. Per ulteriori informazioni, vedere [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).

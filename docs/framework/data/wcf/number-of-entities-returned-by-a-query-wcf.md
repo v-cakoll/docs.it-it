@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare il numero di entità restituite da una query (WCF Data Services)'
+title: 'Procedura: determinare il numero di entità restituite da una query (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 942fc6d6cbfb35d836ca5881958e7c9965a7d08b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 43833566d59b15ef382872b0c40f452192b59bac
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779833"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568919"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Procedura: Determinare il numero di entità restituite da una query (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile determinare il numero di entità specificate nel set di entità dall'URI di una query. Il conteggio può essere incluso insieme al risultato della query o come valore integer. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Procedura: determinare il numero di entità restituite da una query (WCF Data Services)
+Con WCF Data Services è possibile determinare il numero di entità presenti nel set di entità specificato da un URI di query. Il conteggio può essere incluso insieme al risultato della query o come valore integer. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
  Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).  
   

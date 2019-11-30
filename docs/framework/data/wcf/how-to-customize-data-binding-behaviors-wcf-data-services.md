@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Personalizzare i comportamenti di associazione dati (WCF Data Services)'
+title: "Procedura: personalizzare i comportamenti dell'associazione dati (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: c878096cba7d31e0b48727213ee1bb8239b8f690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 453562dd1b86756bf9fc1684dc649dba1c24c578
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790756"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569172"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Procedura: Personalizzare i comportamenti di associazione dati (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile fornire logica personalizzata chiamata da <xref:System.Data.Services.Client.DataServiceCollection%601> quando un oggetto viene aggiunto o rimosso dalla raccolta di associazioni o quando viene rilevata una modifica a una proprietà. Questa logica personalizzata viene fornita come metodi, a cui viene <xref:System.Func%602> fatto riferimento come delegati, `false` che restituiscono il valore quando il comportamento predefinito deve essere ancora eseguito quando il `true` metodo personalizzato viene completato e quando l'elaborazione successiva del l'evento deve essere arrestato.  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Procedura: personalizzare i comportamenti dell'associazione dati (WCF Data Services)
+Con WCF Data Services, è possibile fornire la logica personalizzata che viene chiamata dall'<xref:System.Data.Services.Client.DataServiceCollection%601> quando un oggetto viene aggiunto o rimosso dalla raccolta di associazioni o quando viene rilevata una modifica della proprietà. Questa logica personalizzata viene fornita come metodi, a cui si fa riferimento come <xref:System.Func%602> delegati, che restituiscono un valore di `false` quando il comportamento predefinito deve essere ancora eseguito quando il metodo personalizzato viene completato e `true` quando l'elaborazione successiva dell'evento deve essere arrestata.  
   
  Negli esempi riportati in questo argomento vengono forniti metodi personalizzati per entrambi i parametri `entityChanged` e `entityCollectionChanged` di <xref:System.Data.Services.Client.DataServiceCollection%601>. Negli esempi riportati in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).  
   

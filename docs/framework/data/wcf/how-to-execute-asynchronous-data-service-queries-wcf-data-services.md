@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire query asincrone sul servizio dati (WCF Data Services)'
+title: 'Procedura: eseguire query asincrone sul servizio dati (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790579"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569061"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Procedura: Eseguire query asincrone sul servizio dati (WCF Data Services)
-Tramite la libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile eseguire in modo asincrono operazioni client-server, ad esempio query e salvataggio di modifiche. Per altre informazioni, vedere [operazioni asincrone](asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Procedura: eseguire query asincrone sul servizio dati (WCF Data Services)
+Utilizzando la libreria client di WCF Data Services, è possibile eseguire in modo asincrono operazioni client-server, ad esempio l'esecuzione di query e il salvataggio delle modifiche. Per altre informazioni, vedere [operazioni asincrone](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
 > In un'applicazione in cui il callback deve essere richiamato su un thread specifico, è necessario effettuare il marshalling in modo esplicito del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>. Per altre informazioni, vedere [operazioni asincrone](asynchronous-operations-wcf-data-services.md).  

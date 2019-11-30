@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: e088383adf2345f9a2698d0f8794765461cdbaad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975018"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568742"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilizzo di dati binari (WCF Data Services)
 
-La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di recuperare e aggiornare i dati binari da un feed di Open Data Protocol (OData) in uno dei modi seguenti:
+La libreria client di WCF Data Services consente di recuperare e aggiornare i dati binari da un feed di Open Data Protocol (OData) in uno dei modi seguenti:
 
 - Come proprietà di tipo primitivo di un'entità. Si tratta del metodo consigliato per l'uso di oggetti dati binari di dimensioni ridotte che possono essere caricati facilmente in memoria. In questo caso, la proprietà binaria è una proprietà dell'entità esposta dal modello di dati e il servizio dati serializza i dati binari come codice XML binario in base 64 nel messaggio di risposta.
 
 - Come flusso separato di risorse binarie. Si tratta del metodo consigliato per l'accesso e la modifica di dati di oggetti binari di grandi dimensioni (BLOB) che possono rappresentare una foto, un video o qualsiasi altro tipo di dati codificati binari.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementa il flusso di dati binari tramite HTTP come definito in OData. In questo meccanismo, i dati binari vengono considerati come una risorsa multimediale che è separata da ma correlata a un'entità, denominata voce di collegamento multimediale. Per ulteriori informazioni, vedere [provider di flussi](streaming-provider-wcf-data-services.md).
+WCF Data Services implementa il flusso di dati binari tramite HTTP come definito in OData. In questo meccanismo, i dati binari vengono considerati come una risorsa multimediale che è separata da ma correlata a un'entità, denominata voce di collegamento multimediale. Per ulteriori informazioni, vedere [provider di flussi](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.
@@ -34,11 +34,11 @@ Un'entità che dispone di un flusso di risorsa multimediale correlato viene indi
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Negli esempi restanti di questo argomento viene illustrato come accedere e modificare il flusso di risorsa multimediale. Per un esempio completo su come usare un flusso di risorse multimediali in un'applicazione client di .NET Framework usando la libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vedere l'articolo relativo all' [accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkID=201637).
+Negli esempi restanti di questo argomento viene illustrato come accedere e modificare il flusso di risorsa multimediale. Per un esempio completo su come usare un flusso di risorse multimediali in un'applicazione client di .NET Framework usando la libreria client di WCF Data Services, vedere l'articolo relativo all' [accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkID=201637).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Accesso al flusso di risorsa binaria
 
-La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] fornisce metodi per l'accesso ai flussi di risorse binarie da un servizio dati basato su OData. Quando si scarica una risorsa multimediale, è possibile usare l'URI della risorsa multimediale od ottenere un flusso binario contenente i dati della risorsa multimediale. È possibile caricare i dati della risorsa multimediale anche come un flusso binario.
+La libreria client di WCF Data Services fornisce metodi per l'accesso ai flussi di risorse binarie da un servizio dati basato su OData. Quando si scarica una risorsa multimediale, è possibile usare l'URI della risorsa multimediale od ottenere un flusso binario contenente i dati della risorsa multimediale. È possibile caricare i dati della risorsa multimediale anche come un flusso binario.
 
 > [!TIP]
 > Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che Scarica i file di immagine binari da un servizio OData che archivia le foto, vedere la [serie Post Data Services Streaming provider-parte 2: accesso a un flusso di risorse multimediali dal client](https://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio dati di foto di flusso in evidenza nel post di Blog, vedere l' [esempio streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.
