@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716472"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark a databricks
 
@@ -50,7 +50,7 @@ In questa sezione si crea un'area di lavoro Azure Databricks usando il portale d
     |---------|---------|
     |**Nome area di lavoro**     | Specificare un nome per l'area di lavoro di databricks.        |
     |**Sottoscrizione**     | Dall'elenco a discesa selezionare la sottoscrizione di Azure.        |
-    |**Gruppo di risorse**     | Specificare se si vuole creare un nuovo gruppo di risorse o utilizzarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. Per altre informazioni, vedere [Panoramica del gruppo di risorse di Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview). |
+    |**Gruppo di risorse**     | Specificare se si vuole creare un nuovo gruppo di risorse o utilizzarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. Per altre informazioni, vedere [Panoramica del gruppo di risorse di Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Posizione**     | Selezionare l'area preferita. Per informazioni sulle aree disponibili, vedere [servizi di Azure disponibili in base all'area](https://azure.microsoft.com/regions/services/).        |
     |**Piano tariffario**     |  Scegliere tra **standard**, **Premium**o **versione di valutazione**. Per altre informazioni su questi livelli, vedere la [pagina dei prezzi di databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Rete virtuale**     |   No       |
