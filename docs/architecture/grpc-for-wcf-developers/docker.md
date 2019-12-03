@@ -2,22 +2,25 @@
 title: Docker-gRPC per sviluppatori WCF
 description: Creazione di immagini Docker per ASP.NET Core applicazioni gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d23dc46526183b459c36f11bae4def8b1c9b9410
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967836"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711305"
 ---
-# <a name="docker"></a>Docker
+# <a name="create-docker-images"></a>Creare immagini Docker
 
-Questa sezione include la creazione di immagini Docker per ASP.NET Core applicazioni gRPC, pronte per l'esecuzione in Docker, Kubernetes o in altri ambienti contenitore. L'applicazione di esempio usata con un'app Web MVC ASP.NET Core e un servizio gRPC è disponibile nel repository [DotNet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) su GitHub.
+Questa sezione illustra la creazione di immagini Docker per ASP.NET Core applicazioni gRPC, pronte per l'esecuzione in Docker, Kubernetes o in altri ambienti contenitore. L'applicazione di esempio usata con un'app Web MVC ASP.NET Core e un servizio gRPC è disponibile nel repository [DotNet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) su GitHub.
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Immagini di base di Microsoft per applicazioni ASP.NET Core
 
-Microsoft offre una gamma di immagini di base per la compilazione e l'esecuzione di applicazioni .NET Core. Per creare un'immagine di ASP.NET Core 3,0, vengono usate due immagini di base: un'immagine dell'SDK per compilare e pubblicare l'applicazione e un'immagine di runtime per la distribuzione.
+Microsoft offre una gamma di immagini di base per la compilazione e l'esecuzione di applicazioni .NET Core. Per creare un'immagine di ASP.NET Core 3,0, usare due immagini di base: 
 
-| Image | description |
+- Un'immagine dell'SDK per compilare e pubblicare l'applicazione.
+- Immagine di runtime per la distribuzione.
+
+| Immagine | Descrizione |
 | ----- | ----------- |
 | [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Per la compilazione di applicazioni con `docker build`. Che non deve essere utilizzato nell'ambiente di produzione. |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Contiene le dipendenze di runtime e ASP.NET Core. Per la produzione. |
@@ -28,17 +31,17 @@ Per ogni immagine sono disponibili quattro varianti basate su distribuzioni dive
 | --------- | ----- | ----- |
 | 3,0-Buster, 3,0 | Debian 10 | Immagine predefinita se non è specificata alcuna variante del sistema operativo. |
 | 3,0-alpino | Alpino 3,9 | Le immagini di base Alpine sono molto più piccole di quelle Debian o Ubuntu. |
-| 3,0-disco | Ubuntu 19,04 | |
+| 3,0-disco | Ubuntu 19.04 | |
 | 3,0-Bionic | Ubuntu 18.04 | |
 
-L'immagine di base Alpina è di circa 100 MB, rispetto a 200 MB per le immagini Debian e Ubuntu, ma alcuni pacchetti software o librerie potrebbero non essere disponibili nella gestione dei pacchetti di Alpine. Se non si è certi dell'immagine da usare, è preferibile attenersi alla Debian predefinita, a meno che non sia necessario usare una distribuzione diversa.
+L'immagine di base Alpina è di circa 100 MB, rispetto a 200 MB per le immagini Debian e Ubuntu. Alcuni pacchetti software o librerie potrebbero non essere disponibili nella gestione dei pacchetti di Alpine. Se non si è certi dell'immagine da usare, è probabile che si scelga la Debian predefinita.
 
 > [!IMPORTANT]
 > Assicurarsi di usare la stessa variante di Linux per la compilazione e il Runtime. Le applicazioni compilate e pubblicate in una variante potrebbero non funzionare in un'altra.
 
 ## <a name="create-a-docker-image"></a>Creare un'immagine Docker
 
-Un'immagine Docker è definita da un *Dockerfile*, un file di testo che contiene tutti i comandi necessari per compilare l'applicazione e installare le dipendenze necessarie per la compilazione o l'esecuzione dell'applicazione. Nell'esempio seguente viene illustrato il Dockerfile più semplice per un'applicazione ASP.NET Core 3,0:
+Un'immagine Docker è definita da un *Dockerfile*. Si tratta di un file di testo che contiene tutti i comandi necessari per compilare l'applicazione e installare le dipendenze necessarie per la compilazione o l'esecuzione dell'applicazione. Nell'esempio seguente viene illustrato il Dockerfile più semplice per un'applicazione ASP.NET Core 3,0:
 
 ```dockerfile
 # Application build steps
@@ -65,13 +68,13 @@ COPY --from=builder /published .
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
 
-Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` per compilare e pubblicare l'applicazione. il secondo crea un'immagine di runtime dalla base `aspnet`. Ciò è dovuto al fatto che l'immagine del `sdk` è di circa 900 MB rispetto a circa 200 MB per l'immagine di runtime e la maggior parte del contenuto non è necessaria in fase di esecuzione.
+Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` per compilare e pubblicare l'applicazione. il secondo crea un'immagine di runtime dalla base `aspnet`. Ciò è dovuto al fatto che l'immagine del `sdk` è di circa 900 MB, rispetto a circa 200 MB per l'immagine di runtime e la maggior parte del contenuto non è necessaria in fase di esecuzione.
 
 ### <a name="the-build-steps"></a>Procedura di compilazione
 
-| Passaggio | description |
+| Passaggio | Descrizione |
 | ---- | ----------- |
-| `FROM ...` | Dichiara l'immagine di base e assegna l'alias di `builder` (vedere la sezione successiva per la spiegazione). |
+| `FROM ...` | Dichiara l'immagine di base e assegna l'alias del `builder`. |
 | `WORKDIR /src` | Crea la directory di `/src` e la imposta come directory di lavoro corrente. |
 | `COPY . .` | Copia tutti gli elementi sotto la directory corrente nell'host nella directory corrente dell'immagine. |
 | `RUN dotnet restore` | Ripristina tutti i pacchetti esterni (ASP.NET Core Framework 3,0 è preinstallato con l'SDK). |
@@ -79,7 +82,7 @@ Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` 
 
 ### <a name="the-runtime-image-steps"></a>Passaggi dell'immagine di runtime
 
-| Passaggio | description |
+| Passaggio | Descrizione |
 | ---- | ----------- |
 | `FROM ...` | Dichiara una nuova immagine di base. |
 | `WORKDIR /app` | Crea la directory di `/app` e la imposta come directory di lavoro corrente. |
@@ -88,7 +91,7 @@ Il Dockerfile è costituito da due parti: la prima usa l'immagine di base `sdk` 
 
 ### <a name="https-in-docker"></a>HTTPS in Docker
 
-Le immagini di base di Microsoft per Docker impostano la variabile di ambiente `ASPNETCORE_URLS` su `http://+:80`, il che significa che il gheppio viene eseguito senza HTTPS su tale porta. Se si usa HTTPS con un certificato personalizzato (come descritto nella [sezione precedente](self-hosted.md)), è consigliabile eseguire l'override impostando la variabile di ambiente **nella parte relativa alla creazione dell'immagine di runtime** di Dockerfile.
+Le immagini di base di Microsoft per Docker impostano la variabile di ambiente `ASPNETCORE_URLS` su `http://+:80`, ovvero il gheppio viene eseguito senza HTTPS su tale porta. Se si usa HTTPS con un certificato personalizzato, come descritto in [applicazioni GRPC indipendenti](self-hosted.md), è necessario eseguire l'override di questa operazione. Impostare la variabile di ambiente nella parte relativa alla creazione dell'immagine di runtime di Dockerfile.
 
 ```dockerfile
 # Runtime image creation
@@ -99,7 +102,7 @@ ENV ASPNETCORE_URLS=https://+:443
 
 ### <a name="the-dockerignore-file"></a>Il file con estensione dockerignore
 
-Analogamente ai file `.gitignore` che escludono determinati file e directory dal controllo del codice sorgente, è possibile usare il file `.dockerignore` per escludere file e directory dalla copia nell'immagine durante la compilazione. In questo modo non solo viene salvata la copia dell'ora, ma è anche possibile evitare alcuni errori di confusione che derivano dalla presenza (in particolare) della directory `obj` dal PC copiato nell'immagine. È necessario aggiungere almeno voci per `bin` e `obj` al file `.dockerignore`.
+Analogamente ai file `.gitignore` che escludono determinati file e directory dal controllo del codice sorgente, è possibile usare il file `.dockerignore` per escludere file e directory dalla copia nell'immagine durante la compilazione. In questo modo non solo viene salvata la copia dell'ora, ma è anche possibile evitare alcuni errori che derivano dalla presenza di `obj` directory dal PC copiato nell'immagine. Come minimo, è necessario aggiungere voci per `bin` e `obj` al file `.dockerignore`.
 
 ```console
 bin/
@@ -108,15 +111,15 @@ obj/
 
 ## <a name="build-the-image"></a>Creare l'immagine
 
-Per una soluzione con una singola applicazione e quindi un singolo Dockerfile, è più semplice inserire il Dockerfile nella directory di base; ovvero la stessa directory in cui si trova il file di `.sln`. In tal caso, per compilare l'immagine, usare il comando `docker build` seguente dalla directory che contiene Dockerfile.
+Per una soluzione con una singola applicazione e quindi un singolo Dockerfile, è più semplice inserire il Dockerfile nella directory di base. In altre parole, inserirlo nella stessa directory del file `.sln`. In tal caso, per compilare l'immagine, usare il comando `docker build` seguente dalla directory che contiene Dockerfile.
 
 ```console
 docker build --tag stockdata .
 ```
 
-Il flag di `--tag` con nome confuso, che può essere abbreviato in `-t`, specifica il nome completo dell'immagine, *incluso* il tag effettivo, se specificato. Il `.` alla fine specifica il *contesto* in cui verrà eseguita la compilazione. la directory di lavoro corrente per i comandi `COPY` in Dockerfile.
+Il flag di `--tag` con nome confuso, che può essere abbreviato in `-t`, specifica il nome completo dell'immagine, incluso il tag effettivo, se specificato. Il `.` alla fine specifica il contesto in cui verrà eseguita la compilazione. la directory di lavoro corrente per i comandi `COPY` in Dockerfile.
 
-Se si dispone di più applicazioni all'interno di una singola soluzione, è possibile mantenere il Dockerfile per ogni applicazione nella propria cartella, accanto al file `.csproj`, ma è comunque necessario eseguire il comando `docker build` dalla directory di base per assicurarsi che la soluzione e tutti i progetti vengano copiati nell'immagine. È possibile specificare un Dockerfile sotto la directory corrente usando il flag `--file` (o `-f`).
+Se si dispone di più applicazioni all'interno di una singola soluzione, è possibile salvare il Dockerfile per ogni applicazione nella propria cartella, accanto al file `.csproj`. È comunque necessario eseguire il comando `docker build` dalla directory di base per assicurarsi che la soluzione e tutti i progetti vengano copiati nell'immagine. È possibile specificare un Dockerfile sotto la directory corrente usando il flag `--file` (o `-f`).
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .
@@ -134,7 +137,7 @@ Il flag di `-ti` connette il terminale corrente al terminale del contenitore e v
 
 ## <a name="push-the-image-to-a-registry"></a>Eseguire il push dell'immagine in un registro
 
-Dopo aver verificato il funzionamento dell'immagine, è necessario eseguirne il push in un registro Docker per renderlo disponibile in altri sistemi. Le reti interne dovranno eseguire il provisioning di un registro docker. Questa operazione può essere semplice quanto l'esecuzione dell' [immagine `registry` di Docker](https://docs.docker.com/registry/deploying/) (a destra, il registro Docker viene eseguito in un contenitore Docker), ma sono disponibili diverse soluzioni più complete. Per la condivisione esterna e l'uso del cloud, sono disponibili diversi registri gestiti, ad esempio [Azure container Registry](https://docs.microsoft.com/azure/container-registry/) o [Hub Docker](https://docs.docker.com/docker-hub/repos/).
+Dopo aver verificato il funzionamento dell'immagine, eseguirne il push in un registro Docker per renderlo disponibile in altri sistemi. Le reti interne dovranno eseguire il provisioning di un registro docker. Questa operazione può essere semplice quanto l'esecuzione dell' [immagine `registry` di Docker](https://docs.docker.com/registry/deploying/) (il registro Docker viene eseguito in un contenitore Docker), ma sono disponibili diverse soluzioni più complete. Per la condivisione esterna e l'uso del cloud, sono disponibili diversi registri gestiti, ad esempio [Azure container Registry](https://docs.microsoft.com/azure/container-registry/) o [Hub Docker](https://docs.docker.com/docker-hub/repos/).
 
 Per eseguire il push nell'hub Docker, anteporre al nome dell'utente o dell'organizzazione il nome dell'immagine.
 

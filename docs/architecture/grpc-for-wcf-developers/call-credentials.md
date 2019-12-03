@@ -2,36 +2,34 @@
 title: Credenziali di chiamata-gRPC per sviluppatori WCF
 description: Come implementare e usare le credenziali di chiamata gRPC in ASP.NET Core 3,0.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2588fe3590a63ea6071b85ff29b3685efbfa25db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 01f21f58ed4235f45509c948c84653cd99d35618
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967991"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711529"
 ---
 # <a name="call-credentials"></a>Credenziali di chiamata
 
-Le credenziali di chiamata sono tutte basate su un tipo di token passato nei metadati con ogni richiesta.
+Le credenziali di chiamata sono tutte basate su un token passato nei metadati con ogni richiesta.
 
 ## <a name="ws-federation"></a>WS-Federation
 
-ASP.NET Core supporta WS-Federation usando il pacchetto NuGet di [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) . WS-Federation è l'alternativa più vicina disponibile all'autenticazione di Windows, che non è supportata su HTTP/2. Gli utenti vengono autenticati tramite Active Directory Federation Services (ADFS), che fornisce un token che può essere utilizzato per l'autenticazione con ASP.NET Core.
+ASP.NET Core supporta WS-Federation usando il pacchetto NuGet di [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) . WS-Federation è l'alternativa più vicina disponibile all'autenticazione di Windows, che non è supportata su HTTP/2. Gli utenti vengono autenticati tramite Active Directory Federation Services (AD FS), che fornisce un token che può essere usato per l'autenticazione con ASP.NET Core.
 
-Per ulteriori informazioni su come iniziare a usare questo metodo di autenticazione, vedere l'articolo [autenticare gli utenti con WS-Federation in ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0) .
+Per ulteriori informazioni su come iniziare a usare questo metodo di autenticazione, vedere [autenticare gli utenti con WS-Federation in ASP.NET Core](/aspnet/core/security/authentication/ws-federation).
 
 ## <a name="jwt-bearer-tokens"></a>Token di porta JWT
 
-Lo standard del [token Web JSON](https://jwt.io) consente di codificare le informazioni relative a un utente e le relative attestazioni in una stringa codificata e di firmare tale token in modo che il consumer possa verificare l'integrità del token usando la crittografia a chiave pubblica. È possibile usare vari servizi, ad esempio IdentityServer4, per autenticare gli utenti e generare token OpenID Connect (OIDC) da usare con le API gRPC e HTTP.
+Lo standard JWT ( [JSON Web token](https://jwt.io) ) fornisce un modo per codificare le informazioni su un utente e le relative attestazioni in una stringa codificata. Fornisce anche un modo per firmare il token, in modo che il consumer possa verificare l'integrità del token usando la crittografia a chiave pubblica. È possibile usare vari servizi, ad esempio IdentityServer4, per autenticare gli utenti e generare token OpenID Connect (OIDC) da usare con le API gRPC e HTTP.
 
-ASP.NET Core 3,0 è in grado di gestire i token Web JSON usando il pacchetto di JWT Bearer. La configurazione è esattamente identica per un'applicazione gRPC come applicazione MVC ASP.NET Core.
+ASP.NET Core 3,0 può gestire token JWT usando il pacchetto JWT Bearer. La configurazione è esattamente identica per un'applicazione gRPC, così come per un'applicazione MVC ASP.NET Core. Qui, ci concentreremo sui token di JWT Bearer, perché sono più facili da sviluppare con rispetto a WS-Federation.
 
-Questo capitolo è incentrato sui token di JWT Bearer poiché sono più semplici da sviluppare con WS-Federation.
-
-## <a name="adding-authentication-and-authorization-to-the-server"></a>Aggiunta dell'autenticazione e dell'autorizzazione al server
+## <a name="add-authentication-and-authorization-to-the-server"></a>Aggiungere l'autenticazione e l'autorizzazione al server
 
 Per impostazione predefinita, il pacchetto di JWT Bearer non è incluso in ASP.NET Core 3,0. Installare il pacchetto NuGet [Microsoft. AspNetCore. Authentication. JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) nell'app.
 
-Aggiungere il servizio di autenticazione nella classe Startup e configurare il gestore di JWT Bearer.
+Aggiungere il servizio di autenticazione nella classe Startup e configurare il gestore di JWT Bearer:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -57,9 +55,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Per la proprietà `IssuerSigningKey` è necessaria un'implementazione di `Microsoft.IdentityModels.Tokens.SecurityKey` con i dati di crittografia necessari per convalidare i token firmati. Questo token deve essere archiviato in modo sicuro in un *Server Secrets* come Azure Azure Vault.
+Per la proprietà `IssuerSigningKey` è necessaria un'implementazione di `Microsoft.IdentityModels.Tokens.SecurityKey` con i dati di crittografia necessari per convalidare i token firmati. Archiviare questo token in modo sicuro in un *Server Secrets*, ad esempio Azure Key Vault.
 
-Aggiungere quindi il servizio di autorizzazione, che controlla l'accesso al sistema.
+Aggiungere quindi il servizio di autorizzazione, che controlla l'accesso al sistema:
 
 ```csharp
     services.AddAuthorization(options =>
@@ -74,9 +72,9 @@ Aggiungere quindi il servizio di autorizzazione, che controlla l'accesso al sist
 ```
 
 > [!TIP]
-> L'autenticazione e l'autorizzazione sono due passaggi distinti. Viene utilizzata l'autenticazione per determinare l'identità dell'utente. L'autorizzazione decide se l'utente è autorizzato ad accedere a diverse parti del sistema.
+> L'autenticazione e l'autorizzazione sono due passaggi distinti. Si usa l'autenticazione per determinare l'identità dell'utente. Si utilizza l'autorizzazione per decidere se l'utente è autorizzato ad accedere a diverse parti del sistema.
 
-Aggiungere ora il middleware di autenticazione e autorizzazione alla pipeline ASP.NET Core nel metodo `Configure`.
+Aggiungere ora il middleware di autenticazione e autorizzazione alla pipeline ASP.NET Core nel metodo `Configure`:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -119,9 +117,9 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 }
 ```
 
-## <a name="providing-call-credentials-in-the-client-application"></a>Fornire le credenziali di chiamata nell'applicazione client
+## <a name="provide-call-credentials-in-the-client-application"></a>Fornire le credenziali di chiamata nell'applicazione client
 
-Una volta ottenuto un token JWT da un server di identità, è possibile usarlo per autenticare le chiamate gRPC dal client aggiungendolo come intestazione di metadati nella chiamata, come indicato di seguito:
+Dopo aver ottenuto un token JWT da un server di identità, è possibile usarlo per autenticare le chiamate gRPC dal client aggiungendolo come intestazione di metadati nella chiamata, come indicato di seguito:
 
 ```csharp
 public async Task ShowPortfolioAsync(int portfolioId)
