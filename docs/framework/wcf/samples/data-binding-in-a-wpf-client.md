@@ -2,12 +2,12 @@
 title: Associazione dati in un client Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 44a208cf081ef00396dfc874349dff57363c0df3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928627"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715391"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associazione dati in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un'associazione dati in un client Windows Presentation Foundation (WPF). Nell'esempio viene utilizzato un servizio Windows Communication Foundation (WCF) che genera in modo casuale una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio vengono associate automaticamente all'interfaccia utente (UI) fornita dal client Windows Presentation Foundation (WPF).  
@@ -37,7 +37,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
           IsSynchronizedWithCurrentItem="true" />  
 ```  
   
- In questo modo specifica che i dati associati all'elemento dell'interfaccia utente di livello superiore venga associato anche a questo controllo (ovvero, la matrice di album). `ItemTemplate="{StaticResource AlbumStyle}"` Specifica inoltre il modello di dati da utilizzare per ogni elemento `ListBox`in. È inoltre possibile definire modelli di dati per specificare come formattare i dati. Questi modelli di dati possono essere riusati per altri elementi dell'interfaccia utente dell'applicazione. Il vantaggio è che il modello di dati viene definito e gestito in un solo posto.  
+ In questo modo specifica che i dati associati all'elemento dell'interfaccia utente di livello superiore venga associato anche a questo controllo (ovvero, la matrice di album). `ItemTemplate="{StaticResource AlbumStyle}"` specifica inoltre il modello di dati da utilizzare per ogni elemento nel `ListBox`. È inoltre possibile definire modelli di dati per specificare come formattare i dati. Questi modelli di dati possono essere riusati per altri elementi dell'interfaccia utente dell'applicazione. Il vantaggio è che il modello di dati viene definito e gestito in un solo posto.  
   
  Il modello di dati `AlbumStyle` crea una griglia con due `TextBlock`, uno accanto all'altro. Uno specifica il nome dell'album e l'altro il numero di tracce contenute nell'album.  
   
@@ -78,6 +78,6 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  

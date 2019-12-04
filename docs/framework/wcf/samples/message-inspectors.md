@@ -1,15 +1,15 @@
 ---
-title: Controlli messaggi
+title: Controlli messaggio
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 29c7fd9729cbdcc99a05d01f717c1cc548e8d9ea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977303"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714818"
 ---
-# <a name="message-inspectors"></a>Controlli messaggi
+# <a name="message-inspectors"></a>Controlli messaggio
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
   
  Un controllo messaggi è un oggetto extensibility che può essere utilizzato nella fase di esecuzione del client e della distribuzione del modello del servizio a livello di programmazione o tramite configurazione e che può esaminare e modificare i messaggi dopo che sono stati ricevuti o prima che siano inviati.  
@@ -201,7 +201,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
     }  
 ```  
   
-## <a name="behavior"></a>Comportamento  
+## <a name="behavior"></a>Comportamento di  
  I controlli messaggi sono estensioni alla fase di esecuzione del client o della distribuzione. Tali estensioni vengono configurate utilizzando i *comportamenti*. Un comportamento è una classe che modifica il comportamento della fase di esecuzione del modello del servizio modificando la configurazione predefinita o aggiungendole estensioni (ad esempio controlli messaggi).  
   
  La classe `SchemaValidationBehavior` seguente rappresenta il comportamento utilizzato per aggiungere il controllo messaggi di questo esempio alla fase di esecuzione del client o della distribuzione. L'implementazione è piuttosto semplice in entrambi casi. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> e <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, il controllo messaggi viene creato e aggiunto alla raccolta <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> della rispettiva fase di esecuzione.  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

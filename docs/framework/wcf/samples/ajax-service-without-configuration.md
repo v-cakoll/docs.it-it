@@ -2,23 +2,23 @@
 title: Servizio AJAX senza configurazione
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 06af14ad551de0e56700b044aea25b59dbf890ce
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: bf80f00bbca370c973dab9f20024284a465be521
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895126"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716202"
 ---
 # <a name="ajax-service-without-configuration"></a>Servizio AJAX senza configurazione
 
 Questo esempio illustra come usare Windows Communication Foundation (WCF) per creare un servizio AJAX (ASP.NET Asynchronous JavaScript and XML) di base (un servizio a cui è possibile accedere tramite codice JavaScript da un client di Web browser) senza usare alcuna configurazione Impostazioni. Il servizio usa sintassi speciale nel file con estensione svc per abilitare automaticamente un endpoint AJAX.
 
-Il supporto AJAX in WCF è ottimizzato per l'uso con ASP.NET `ScriptManager` AJAX tramite il controllo. Per un esempio di utilizzo di WCF con ASP.NET AJAX, vedere gli [esempi di AJAX](ajax.md).
+Il supporto AJAX in WCF è ottimizzato per l'uso con ASP.NET AJAX tramite il controllo `ScriptManager`. Per un esempio di utilizzo di WCF con ASP.NET AJAX, vedere gli [esempi di AJAX](ajax.md).
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
- Nell'esempio viene usato il servizio AJAX con il protocollo HTTP POST. Come descritto nell'esempio di [servizio AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) di base <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> , viene usato per ospitare il servizio.
+ Nell'esempio viene usato il servizio AJAX con il protocollo HTTP POST. Come descritto nell'esempio di [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) , <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> viene usato per ospitare il servizio.
 
 ```text
 <%ServiceHost
@@ -36,7 +36,7 @@ Il supporto AJAX in WCF è ottimizzato per l'uso con ASP.NET `ScriptManager` AJA
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ConfigFreeAjaxService`
 

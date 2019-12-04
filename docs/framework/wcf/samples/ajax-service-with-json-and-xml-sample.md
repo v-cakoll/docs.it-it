@@ -2,12 +2,12 @@
 title: Servizio AJAX con esempi JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ca9bdbfa135ac7dc0b69589d4f8fce07bc4c4afe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895143"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716209"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servizio AJAX con esempi JSON e XML
 
@@ -37,7 +37,7 @@ La sezione seguente in Web.config può essere usata per effettuare modifiche di 
 </system.serviceModel>
 ```
 
-Il formato di dati predefinito <xref:System.ServiceModel.Description.WebHttpEndpoint> per è XML, mentre il formato di dati <xref:System.ServiceModel.Description.WebScriptEndpoint> predefinito per è JSON. Per ulteriori informazioni, vedere [creazione di servizi WCF AJAX senza ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
+Il formato di dati predefinito per <xref:System.ServiceModel.Description.WebHttpEndpoint> è XML, mentre il formato di dati predefinito per <xref:System.ServiceModel.Description.WebScriptEndpoint> è JSON. Per ulteriori informazioni, vedere [creazione di servizi WCF AJAX senza ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
 
 Il servizio nell'esempio seguente è un servizio WCF standard con due operazioni. Entrambe le operazioni richiedono lo stile del corpo <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> sugli attributi <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute> che è specifico del comportamento `webHttp` e non è rilevante per il cambiamento di formato JSON/XML.
 
@@ -47,7 +47,7 @@ Il servizio nell'esempio seguente è un servizio WCF standard con due operazioni
 MathResult DoMathXml(double n1, double n2);
 ```
 
-Il formato della risposta per l'operazione viene specificato come XML, ovvero l'impostazione predefinita per il comportamento del [ \<> WebHttp](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . Tuttavia, si consiglia di specificare esplicitamente il formato della risposta.
+Il formato della risposta per l'operazione viene specificato come XML, che è l'impostazione predefinita per il comportamento di [> WebHttp\<](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . Tuttavia, si consiglia di specificare esplicitamente il formato della risposta.
 
 L'altra operazione utilizza l'attributo `WebInvokeAttribute` e specifica in modo esplicito JSON anziché XML per la risposta.
 
@@ -57,7 +57,7 @@ L'altra operazione utilizza l'attributo `WebInvokeAttribute` e specifica in modo
 MathResult DoMathJson(double n1, double n2);
 ```
 
-Si noti che in entrambi i casi le operazioni restituiscono un `MathResult`tipo complesso,, che è un tipo di contratto dati WCF standard.
+Si noti che in entrambi i casi le operazioni restituiscono un tipo complesso, `MathResult`, che è un tipo di contratto dati WCF standard.
 
 La pagina Web client XmlAjaxClientPage. htm contiene codice JavaScript che richiama una delle due operazioni precedenti quando l'utente fa clic sui pulsanti **Esegui calcolo (Restituisci JSON)** o **Esegui calcolo (Restituisci XML)** nella pagina. Il codice per richiamare il servizio costruisce un corpo JSON e lo invia utilizzando HTTP POST. La richiesta viene creata manualmente in JavaScript, a differenza dell'esempio di [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) e degli altri esempi che usano ASP.NET AJAX.
 
@@ -98,7 +98,7 @@ xmlHttp.onreadystatechange=function(){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
 

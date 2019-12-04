@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1e755a28ff4ce6450db4189783fa688002ebe8eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 868d88cff1c398009f136fe50f6cc3fe8c62d8e1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045563"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715765"
 ---
 # <a name="instancing"></a>creazione di istanze
-Nell'esempio relativo alle istanze viene descritta l'impostazione del comportamento delle istanze che controlla come vengono create le istanze di una classe del servizio in risposta alle richieste del client. L'esempio è basato sulla [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. Questo esempio definisce un contratto nuovo, `ICalculatorInstance`, che eredita da `ICalculator`. Il contratto specificato da `ICalculatorInstance` fornisce tre operazioni aggiuntive per il controllo dello stato dell'istanza del servizio. Modificando l'impostazione delle istanze, è possibile osservare come viene modificato il comportamento quando si esegue il client.  
+Nell'esempio relativo alle istanze viene descritta l'impostazione del comportamento delle istanze che controlla come vengono create le istanze di una classe del servizio in risposta alle richieste del client. L'esempio è basato sulla [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il contratto di servizio `ICalculator`. Questo esempio definisce un contratto nuovo, `ICalculatorInstance`, che eredita da `ICalculator`. Il contratto specificato da `ICalculatorInstance` fornisce tre operazioni aggiuntive per il controllo dello stato dell'istanza del servizio. Modificando l'impostazione delle istanze, è possibile osservare come viene modificato il comportamento quando si esegue il client.  
   
  In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
   
@@ -22,11 +22,11 @@ Nell'esempio relativo alle istanze viene descritta l'impostazione del comportame
   
  Sono disponibili le modalità di istanza seguenti:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Viene creata una nuova istanza del servizio per ogni richiesta del client.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: viene creata una nuova istanza del servizio per ogni richiesta del client.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Viene creata una nuova istanza per ogni nuova sessione client e mantenuta per la durata di tale sessione (è necessaria un'associazione che supporti la sessione).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: viene creata una nuova istanza per ogni sessione del client e questa istanza viene mantenuta per tutta la durata della sessione (richiede un'associazione che supporta la sessione).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Una singola istanza della classe Service gestisce tutte le richieste client per la durata dell'applicazione.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: una singola istanza della classe del servizio gestisce tutte le richieste del client per la durata dell'applicazione.  
   
  La classe del servizio specifica il comportamento di istanza con l'attributo `[ServiceBehavior(InstanceContextMode=<setting>)]`, come illustrato nell'esempio di codice seguente. Modificando quali righe vengono impostate come commento, è possibile osservare il comportamento di ognuna delle modalità dell'istanza. Ricordarsi di ricompilare il servizio dopo avere modificato la modalità dell'istanza. Non è necessario specificare impostazioni correlate all'istanza sul client.  
   
@@ -135,6 +135,6 @@ static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  

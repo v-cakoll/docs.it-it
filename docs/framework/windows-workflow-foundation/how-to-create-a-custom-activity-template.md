@@ -2,18 +2,18 @@
 title: 'Procedura: Creare un modello di attività personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f910d1367c941dbc319421d402cae8f4194872e5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989708"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715250"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Procedura: Creare un modello di attività personalizzato
 
-I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni. Questi modelli personalizzati possono essere resi disponibili nella **casella degli strumenti** [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]viene fornito con esempi di modelli di questo tipo: [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nella categoria [Messaging Activity Designer](/visualstudio/workflow-designer/messaging-activity-designers) .
+I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni. Questi modelli personalizzati possono essere resi disponibili nella **casella degli strumenti** di Windows Progettazione flussi di lavoro o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata. Progettazione flussi di lavoro fornisce esempi efficaci di questi modelli: [Progettazione modelli SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [Progettazione modelli ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nella categoria ActivityDesigner [messaggistica](/visualstudio/workflow-designer/messaging-activity-designers) .
 
- Nella prima procedura di questo argomento viene descritto come creare un modello di attività personalizzato per un'attività **delay** e la seconda procedura descrive brevemente come renderlo disponibile in un [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] per verificare il corretto funzionamento del modello personalizzato.
+ Nella prima procedura di questo argomento viene descritto come creare un modello di attività personalizzato per un'attività **delay** e nella seconda procedura viene descritto brevemente come renderlo disponibile in una progettazione flussi di lavoro per verificare il corretto funzionamento del modello personalizzato.
 
  I modelli di attività personalizzati devono implementare l'oggetto <xref:System.Activities.Presentation.IActivityTemplateFactory>. L'interfaccia dispone di un singolo metodo <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> con il quale è possibile creare e configurare le istanze dell'attività usate nel modello.
 
@@ -76,7 +76,7 @@ I modelli di attività personalizzati vengono usati per personalizzare la config
 
 1. Fare clic con il pulsante destro del mouse sulla soluzione DelayActivityTemplate in **Esplora soluzioni** e scegliere **Aggiungi** , quindi **nuovo progetto** per aprire la finestra di dialogo **Aggiungi nuovo progetto** .
 
-2. Selezionare il modello **applicazione console flusso di lavoro** , `CustomActivityTemplateApp`denominarlo e quindi fare clic su **OK**.
+2. Selezionare il modello **applicazione console flusso di lavoro** , denominarlo `CustomActivityTemplateApp`, quindi fare clic su **OK**.
 
 3. Fare clic con il pulsante destro del mouse sulla directory riferimenti del progetto CustomActivityTemplateApp in **Esplora soluzioni** e scegliere **Aggiungi riferimento** per aprire la finestra di dialogo **Aggiungi riferimento** .
 
@@ -90,7 +90,7 @@ I modelli di attività personalizzati vengono usati per personalizzare la config
 
 8. Aprire il file Workflow1. XAML e aprire la **casella degli strumenti**.
 
-9. Individuare il modello **MyDelayActivity** nella categoria **DelayActivityTemplate** . Trascinarlo nell'area di progettazione. Verificare che nella finestra **Proprietà** la `Duration` proprietà sia stata impostata su 10 secondi.
+9. Individuare il modello **MyDelayActivity** nella categoria **DelayActivityTemplate** . Trascinarlo nell'area di progettazione. Verificare che nella finestra **Proprietà** la proprietà `Duration` sia stata impostata su 10 secondi.
 
 ## <a name="example"></a>Esempio
  Il file MyDelayActivity.cs deve contenere il codice seguente.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920308"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715895"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
@@ -78,7 +78,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
      WPF Designer viene aperto in visualizzazione **progettazione** e visualizza il file MainWindow. XAML. Visual Studio crea la cartella del **progetto** , il file Application. XAML e il file MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Destinazione della .NET Framework e aggiunta di un riferimento agli assembly di memorizzazione nella cache
- Per impostazione predefinita, le applicazioni WPF sono destinate al [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Per utilizzare lo spazio dei nomi <xref:System.Runtime.Caching> in un'applicazione WPF, è necessario che l'applicazione sia destinata al .NET Framework 4 (non al [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.
+ Per impostazione predefinita, le applicazioni WPF sono destinate al profilo client di .NET Framework 4. Per utilizzare lo spazio dei nomi <xref:System.Runtime.Caching> in un'applicazione WPF, è necessario che l'applicazione sia destinata al .NET Framework 4 (non al profilo client .NET Framework 4) e che includa un riferimento allo spazio dei nomi.
 
  Il passaggio successivo consiste quindi nel modificare la destinazione .NET Framework e aggiungere un riferimento allo spazio dei nomi <xref:System.Runtime.Caching>.
 
@@ -97,7 +97,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
      Viene visualizzata la finestra di dialogo **impostazioni del compilatore avanzate** .
 
-4. Nell'elenco **Framework di destinazione (tutte le configurazioni)** selezionare .NET Framework 4. Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].
+4. Nell'elenco **Framework di destinazione (tutte le configurazioni)** selezionare .NET Framework 4. (Non selezionare .NET Framework 4 profilo client).
 
 5. Fare clic su **OK**.
 
@@ -284,7 +284,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 12. Scegliere **Compila WPFCaching** dal menu **Compila** per compilare il progetto.
 
 ## <a name="testing-caching-in-the-wpf-application"></a>Test della memorizzazione nella cache nell'applicazione WPF
- È ora possibile testare l'applicazione.
+ È ora possibile eseguire il test dell’applicazione.
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Per testare la memorizzazione nella cache nell'applicazione WPF
 

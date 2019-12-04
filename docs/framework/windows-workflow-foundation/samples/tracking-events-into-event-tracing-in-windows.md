@@ -2,12 +2,12 @@
 title: Eventi di rilevamento in Traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2a8e93604654d20c210015896e02d76b4b8bd36e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037908"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715924"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
 
@@ -47,11 +47,11 @@ Il partecipante del rilevamento sottoscrive un subset dei record di rilevamento 
 
 3. Per eseguire la soluzione, premere F5.
 
-    Per impostazione predefinita, il servizio è in ascolto sulla porta http://localhost:53797/SampleWorkflowService.xamlx) 53797 (.
+    Per impostazione predefinita, il servizio è in ascolto sulla porta 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
 4. Utilizzando Esplora file, aprire il client di prova WCF.
 
-    Il client di prova WCF (WcfTestClient. exe) si trova nella \<cartella di installazione di Visual Studio 2010 > cartella \Common7\IDE\
+    Il client di prova WCF (WcfTestClient. exe) si trova nella cartella di installazione di \<Visual Studio 2010 > cartella \Common7\IDE\.
 
     La cartella di installazione predefinita di Visual Studio 2010 è C:\Programmi\Microsoft Visual Studio 10,0.
 
@@ -61,13 +61,13 @@ Il partecipante del rilevamento sottoscrive un subset dei record di rilevamento 
 
 6. Aprire l'applicazione Visualizzatore eventi.
 
-    Prima di richiamare il servizio, avviare Visualizzatore eventi dal menu **Start** , selezionare **Esegui** `eventvwr.exe`e digitare. Assicurarsi che il registro eventi sia in ascolto di eventi di rilevamento creati dal servizio flusso di lavoro.
+    Prima di richiamare il servizio, avviare Visualizzatore eventi dal menu **Start** , selezionare **esegui** e digitare `eventvwr.exe`. Assicurarsi che il registro eventi sia in ascolto di eventi di rilevamento creati dal servizio flusso di lavoro.
 
 7. Nella visualizzazione albero del Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**e **Microsoft**. Fare clic con il pulsante destro del mouse su **Microsoft** e selezionare **Visualizza** , quindi **Visualizza registri analitici e di debug** per abilitare i log analitici e di debug
 
     Verificare che l'opzione **Mostra log analitici e di debug** sia selezionata.
 
-8. Nella visualizzazione albero di Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, server applicazioni **-applicazioni**. Fare clic con il pulsante destro del mouse su analitico e selezionare **Abilita log** per abilitare il registro **analitico** .
+8. Nella visualizzazione albero di Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, server applicazioni **-applicazioni**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Abilita log** per abilitare il registro **analitico** .
 
 9. Eseguire il test del servizio tramite il client di prova WCF facendo doppio clic su `GetData`.
 
@@ -125,20 +125,20 @@ Il profilo di rilevamento del monitoraggio dell'integrità crea record di istanz
 
 #### <a name="to-clean-up-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1. Aprire Visualizzatore eventi.
+1. Aprire il Visualizzatore eventi.
 
-2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su analitico e selezionare **Disattiva log**.
+2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Disattiva log**.
 
-3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su analitico e selezionare **Cancella log**.
+3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Cancella log**.
 
 4. Scegliere l'opzione **Cancella** per cancellare gli eventi.
 
-## <a name="known-issue"></a>Problema noto
+## <a name="known-issue"></a>Problemi noti
 
 > [!NOTE]
-> Nel Visualizzatore eventi potrebbe non essere possibile decodificare gli eventi ETW. Si potrebbe visualizzare un messaggio di errore simile al seguente.
+> Si verifica un problema noto nel Visualizzatore eventi per cui quest'ultimo non riesce a decodificare eventi ETW. Si potrebbe visualizzare un messaggio di errore simile al seguente.
 >
-> Impossibile trovare la descrizione dell' \<ID ID evento > dall'origine Microsoft-Windows-Server applicazioni-applicazioni. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale.
+> Impossibile trovare la descrizione dell'ID evento \<ID > dall'origine Microsoft-Windows-Server applicazioni-applicazioni. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale.
 >
 > Se si rileva questo errore, fare clic su Aggiorna nel riquadro Azioni. La decodifica dell'evento dovrebbe ora essere eseguita in modo corretto.
 
@@ -147,7 +147,7 @@ Il profilo di rilevamento del monitoraggio dell'integrità crea record di istanz
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 

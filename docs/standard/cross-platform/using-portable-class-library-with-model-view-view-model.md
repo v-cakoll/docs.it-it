@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 445cf4178b90719f923b66a7778f60c1bc846766
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716747"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilizzo della libreria di classi portabile con MVVM (Model-View-View Model)
 È possibile usare la [libreria di classi](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) portabile .NET Framework per implementare il modello MVVM (Model-View-View Model) e condividere gli assembly in più piattaforme.
@@ -30,7 +30,7 @@ ms.locfileid: "74204980"
  In questo argomento non vengono fornite informazioni generali sul modello MVVM. Fornisce solo informazioni su come usare la libreria di classi portabile per implementare MVVM. Per ulteriori informazioni su MVVM, vedere la [Guida introduttiva di MVVM utilizzando la libreria Prism 5,0 per WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
 ## <a name="classes-that-support-mvvm"></a>Classi che supportano MVVM
- Quando la destinazione è la .NET Framework 4,5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight o Windows Phone 7,5 per il progetto libreria di classi portabile, sono disponibili le seguenti classi per l'implementazione del modello MVVM:
+ Quando la destinazione è la .NET Framework 4,5, .NET per le app di Windows 8. x Store, Silverlight o Windows Phone 7,5 per il progetto libreria di classi portabile, sono disponibili le classi seguenti per implementare il modello MVVM:
 
 - Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
 
@@ -86,7 +86,7 @@ ms.locfileid: "74204980"
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Visualizza  
+### <a name="view"></a>Visualizzazione  
  Da un'app .NET Framework 4,5, un'app di Windows 8. x Store, un'app basata su Silverlight o un'app Windows Phone 7,5, è possibile fare riferimento all'assembly che contiene i progetti modello e visualizza modello.  Si crea quindi una vista che interagisce con il modello di visualizzazione. Nell'esempio seguente viene illustrata un'app semplificata Windows Presentation Foundation (WPF) che recupera e aggiorna i dati dal modello di visualizzazione. È possibile creare visualizzazioni simili in Silverlight, Windows Phone o app di Windows 8. x Store.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  

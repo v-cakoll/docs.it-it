@@ -1,23 +1,23 @@
 ---
-title: Attività ParallelForEach non generica
+title: ActivityDesigner ParallelForEach non generico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 52b851686ea2fdc8c573a0622fe91ca5e205edeb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637743"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715640"
 ---
-# <a name="non-generic-parallelforeach"></a>Attività ParallelForEach non generica
+# <a name="non-generic-parallelforeach"></a>ActivityDesigner ParallelForEach non generico
 
 Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] è disponibile un set di attività del flusso di controllo, inclusa <xref:System.Activities.Statements.ParallelForEach%601> che consente di scorrere le raccolte <xref:System.Collections.Generic.IEnumerable%601>.
 
-<xref:System.Activities.Statements.ParallelForEach%601> richiede la relativa <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> proprietà sia di tipo <xref:System.Collections.Generic.IEnumerable%601>. In questo modo, gli utenti non possono scorrere le strutture di dati che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> (ad esempio l'oggetto <xref:System.Collections.ArrayList>). La versione non generica dell'oggetto <xref:System.Activities.Statements.ParallelForEach%601> supera questo requisito, a discapito di una maggiore complessità della fase di esecuzione per assicurare la compatibilità dei tipi dei valori nella raccolta.
+<xref:System.Activities.Statements.ParallelForEach%601> richiede che la proprietà <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> sia di tipo <xref:System.Collections.Generic.IEnumerable%601>. In questo modo, gli utenti non possono scorrere le strutture di dati che implementano l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> (ad esempio l'oggetto <xref:System.Collections.ArrayList>). La versione non generica dell'oggetto <xref:System.Activities.Statements.ParallelForEach%601> supera questo requisito, a discapito di una maggiore complessità della fase di esecuzione per assicurare la compatibilità dei tipi dei valori nella raccolta.
 
 In questo esempio viene illustrato come implementare un'attività <xref:System.Activities.Statements.ParallelForEach%601> non generica e la relativa finestra di progettazione. Questa attività può essere usata per scorrere l'oggetto <xref:System.Collections.ArrayList>.
 
-## <a name="parallelforeach-activity"></a>Attività ParallelForEach
+## <a name="parallelforeach-activity"></a>Attività ActivityDesigner ParallelForEach
 
 L'istruzione `foreach` di C#/VB enumera gli elementi di una raccolta eseguendo un'istruzione incorporata per ogni elemento della raccolta. Le attività equivalenti di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] sono <xref:System.Activities.Statements.ForEach%601> e <xref:System.Activities.Statements.ParallelForEach%601>. L'attività <xref:System.Activities.Statements.ForEach%601> contiene un elenco di valori e un corpo. In fase di esecuzione, viene scorso l'elenco e il corpo viene eseguito per ogni valore dell'elenco.
 
@@ -46,16 +46,16 @@ public class ParallelForEach : NativeActivity
 }
 ```
 
-Body (facoltativo) \
+Corpo (facoltativo) \
 Oggetto <xref:System.Activities.ActivityAction> di tipo <xref:System.Object> eseguito per ogni elemento della raccolta. Ogni singolo elemento viene passato al corpo tramite la proprietà Argument.
 
-Values (facoltativo) \
+Valori (facoltativo) \
 Raccolta di elementi che vengono scorsi. In fase di esecuzione si verifica che tutti gli elementi della raccolta siano di tipi compatibili.
 
 CompletionCondition (facoltativo) \
 La proprietà <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> viene valutata al termine di qualsiasi iterazione. Se restituisce `true`, le iterazioni in sospeso pianificate vengono annullate. Se questa proprietà non è impostata, tutte le attività nella raccolta di rami vengono eseguite fino al completamento.
 
-## <a name="example-of-using-parallelforeach"></a>Esempio di utilizzo di ParallelForEach
+## <a name="example-of-using-parallelforeach"></a>Esempio di uso di ActivityDesigner ParallelForEach
 
 Nel codice seguente viene illustrato come usare l'attività ParallelForEach in un'applicazione.
 
@@ -79,9 +79,9 @@ Activity sampleUsage =
    };
 ```
 
-## <a name="parallelforeach-designer"></a>Finestra di progettazione Parallelforeacht
+## <a name="parallelforeach-designer"></a>ActivityDesigner ParallelForEach designer
 
-L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ParallelForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nel **Samples**, **attività Non generiche** categoria. La finestra di progettazione viene denominata **ParallelForEachWithBodyFactory** nella casella degli strumenti, poiché l'attività espone un <xref:System.Activities.Presentation.IActivityTemplateFactory> nella casella degli strumenti che crea l'attività con un correttamente configurato <xref:System.Activities.ActivityAction>.
+L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ParallelForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nella categoria **esempi**, **attività non generiche** . La finestra di progettazione è denominata **ParallelForEachWithBodyFactory** nella casella degli strumenti, poiché l'attività espone un <xref:System.Activities.Presentation.IActivityTemplateFactory> nella casella degli strumenti che crea l'attività con una <xref:System.Activities.ActivityAction>configurata correttamente.
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -106,9 +106,9 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
 1. Impostare il progetto scelto come progetto di avvio della soluzione.
 
-    1. **CodeTestClient** viene illustrato come usare l'attività usando il codice.
+    1. **CodeTestClient** illustra come usare l'attività usando il codice.
 
-    2. **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.
+    2. **DesignerTestClient** Mostra come usare l'attività all'interno della finestra di progettazione.
 
 2. Compilare ed eseguire il progetto.
 
@@ -117,6 +117,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

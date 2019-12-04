@@ -2,12 +2,12 @@
 title: Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: bfac07d64cd5e30c3475d4e269c16597905ea829
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6b581b42c882c12425a17b9a518f8957ca10898a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715541"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato
 In questo esempio viene illustrato come usare l'oggetto <xref:System.Activities.Presentation.View.ExpressionTextBox> in un ActivityDesigner personalizzato. L'attività personalizzata, `MultiAssign`, assegna due valori stringa a due variabili di stringa. Alcuni controlli <xref:System.Activities.Presentation.View.ExpressionTextBox> vengono associati a oggetti <xref:System.Activities.InArgument> mentre altri a oggetti <xref:System.Activities.OutArgument>.
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come usare l'oggetto <xref:System.Activities.
 ## <a name="sample-details"></a>Dettagli dell'esempio
  L'oggetto `ArgumentToExpressionConverter` è il convertitore di tipi usato in caso di associazione di espressioni agli argomenti. La proprietà `ConverterParameter` deve essere impostata su `In`, `Out`, a seconda delle esigenze. `InOut` non è supportato.
 
- L' `UseLocationExpression` attributo viene utilizzato su `OutArgument`s per specificare che l'espressione deve essere un'espressione L-value ("valore a sinistra" o "valore location"). Nella maggior parte dei casi, un'espressione L-value è un identificatore di Visual Basic valido usato per indicare che l'oggetto `OutArgument` restituito è una variabile o un nome dell'argomento.
+ L'attributo `UseLocationExpression` viene utilizzato in `OutArgument`s per specificare che l'espressione deve essere un'espressione L-value ("valore sinistro" o "valore location"). Nella maggior parte dei casi, un'espressione L-value è un identificatore di Visual Basic valido usato per indicare che l'oggetto `OutArgument` restituito è una variabile o un nome dell'argomento.
 
  L'attributo `MaxLines` viene impostato su uno in questo esempio mentre `MinLines` non viene impostato. Pertanto, l'oggetto <xref:System.Activities.Presentation.View.ExpressionTextBox> è una dimensione fissa di una riga, indipendentemente dalla quantità di testo digitato dall'utente. Per consentire all'oggetto <xref:System.Activities.Presentation.View.ExpressionTextBox> di ingrandirsi per adattarsi all'input dell'utente, impostare per `MaxLines` un valore maggiore rispetto a `MinLines`.
 
@@ -33,16 +33,16 @@ In questo esempio viene illustrato come usare l'oggetto <xref:System.Activities.
 
 2. Aggiungere un riferimento al progetto **ExpressionTextBoxSample** dal nuovo progetto di applicazione console del flusso di lavoro.
 
-3. Compilare la soluzione.
+3. Compila la soluzione.
 
-4. Trascinare l' attività MultiAssign dalla casella degli strumenti e rilasciarla nel flusso di lavoro.
+4. Trascinare l'attività **MultiAssign** dalla casella degli strumenti e rilasciarla nel flusso di lavoro.
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   

@@ -2,12 +2,12 @@
 title: Utilizzo dell'attività Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037873"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715520"
 ---
 # <a name="using-the-pick-activity"></a>Utilizzo dell'attività Pick
 In questo esempio viene illustrato come usare l'attività <xref:System.Activities.Statements.Pick>.
@@ -24,17 +24,17 @@ In questo esempio viene illustrato come usare l'attività <xref:System.Activitie
 
  Workflow Designer la versione della finestra di progettazione dell'esempio illustra come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
-- Program.cs: Include la `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: include la funzione `Main` che esegue il flusso di lavoro di esempio.
 
-- ReadString.cs: Attività personalizzata che legge un input dalla console.
+- ReadString.cs: attività personalizzata che legge alcuni input dalla console.
 
-- Sequence1. XAML: Flusso di lavoro creato utilizzando la finestra di progettazione che utilizza pick.
+- Sequence1.xaml: flusso di lavoro creato tramite la finestra di progettazione usata da Pick.
 
  Flusso di lavoro codificato la versione codificata dell'esempio illustra come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
-- Program.cs: Include la `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: include la funzione `Main` che esegue il flusso di lavoro di esempio.
 
-- ReadString.cs: Attività personalizzata che legge un input dalla console.
+- ReadString.cs: attività personalizzata che legge alcuni input dalla console.
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
@@ -49,6 +49,6 @@ In questo esempio viene illustrato come usare l'attività <xref:System.Activitie
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

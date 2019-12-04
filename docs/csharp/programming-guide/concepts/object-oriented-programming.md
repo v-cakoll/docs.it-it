@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418040"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711826"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
@@ -158,7 +158,7 @@ Una classe può disporre di diverse implementazioni, o *overload*, dello stesso 
 Per essere in rapporto di overload con un metodo:
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-Per altre informazioni, vedere:
-
-[Costruttori](../classes-and-structs/constructors.md).
+Per altre informazioni, vedere [Costruttori](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> Finalizzatori
 
@@ -198,7 +196,7 @@ Per altre informazioni sui finalizzatori e sull'operazione di Garbage Collection
 
 #### <a name="Events"></a> Eventi
 
-Tramite gli eventi una classe o un oggetto sono in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*. Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).
+Tramite gli eventi, una classe o un oggetto è in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*. Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).
 
 - Per dichiarare un evento in una classe, usare la parola chiave [event](../../language-reference/keywords/event.md).
 

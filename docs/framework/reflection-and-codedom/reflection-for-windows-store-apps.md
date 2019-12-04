@@ -10,34 +10,34 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aaec282fda0a038d14f3a0cd57e1a8a2855f2ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d68f406b704df905528d444b605681ca6e871127
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448137"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714448"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
 
 A partire da .NET Framework 4,5, il .NET Framework include un set di tipi di reflection e membri da usare nelle app di Windows 8. x Store. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in .NET per applicazioni Windows Store. In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
   
- Se si sta creando un'app di Windows 8. x Store, è necessario usare i tipi e i membri di reflection nel [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Questi tipi e membri sono anche disponibili, ma non obbligatori, per l'utilizzo nelle applicazioni desktop, pertanto è possibile utilizzare lo stesso codice per entrambi i tipi di applicazioni.  
+ Se si sta creando un'app di Windows 8. x Store, è necessario usare i tipi e i membri di reflection in .NET per le app di Windows 8. x Store. Questi tipi e membri sono anche disponibili, ma non obbligatori, per l'utilizzo nelle applicazioni desktop, pertanto è possibile utilizzare lo stesso codice per entrambi i tipi di applicazioni.  
   
 ## <a name="typeinfo-and-assembly-loading"></a>Caricamento di assembly e TypeInfo  
- Nella classe [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] di <xref:System.Reflection.TypeInfo> sono contenute alcune delle funzionalità della classe <xref:System.Type> di .NET Framework 4. Un oggetto <xref:System.Type> rappresenta un riferimento a una definizione di tipo, mentre un oggetto <xref:System.Reflection.TypeInfo> rappresenta la definizione del tipo stesso. Ciò consente di modificare gli oggetti <xref:System.Type> senza richiedere necessariamente al runtime di caricare l'assembly a cui fanno riferimento. L'acquisizione dell'oggetto <xref:System.Reflection.TypeInfo> associato comporta il caricamento dell'assembly.  
+ In .NET per le app di Windows 8. x Store la classe <xref:System.Reflection.TypeInfo> contiene alcune funzionalità della classe .NET Framework 4 <xref:System.Type>. Un oggetto <xref:System.Type> rappresenta un riferimento a una definizione di tipo, mentre un oggetto <xref:System.Reflection.TypeInfo> rappresenta la definizione del tipo stesso. Ciò consente di modificare gli oggetti <xref:System.Type> senza richiedere necessariamente al runtime di caricare l'assembly a cui fanno riferimento. L'acquisizione dell'oggetto <xref:System.Reflection.TypeInfo> associato comporta il caricamento dell'assembly.  
   
- Nell'oggetto <xref:System.Reflection.TypeInfo> sono contenuti molti dei membri disponibili nell'oggetto <xref:System.Type> e tramite molte delle proprietà di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] vengono restituite raccolte di oggetti <xref:System.Reflection.TypeInfo>. Per ottenere un oggetto <xref:System.Reflection.TypeInfo> da un oggetto <xref:System.Type>, utilizzare il metodo <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
+ <xref:System.Reflection.TypeInfo> contiene molti dei membri disponibili <xref:System.Type>e molte delle proprietà di reflection in .NET per le app di Windows 8. x Store restituiscono raccolte di oggetti di <xref:System.Reflection.TypeInfo>. Per ottenere un oggetto <xref:System.Reflection.TypeInfo> da un oggetto <xref:System.Type>, utilizzare il metodo <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
   
 ## <a name="query-methods"></a>Metodi di query  
- In [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] utilizzare le proprietà di reflection tramite cui vengono restituite raccolte di oggetti <xref:System.Collections.Generic.IEnumerable%601> anziché i metodi mediante cui vengono restituite matrici. Nei contesti di reflection è possibile implementare l'attraversamento lazy di queste raccolte in caso di assembly o tipi di grandi dimensioni.  
+ In .NET per le app di Windows 8. x Store è possibile usare le proprietà di reflection che restituiscono raccolte di <xref:System.Collections.Generic.IEnumerable%601> anziché metodi che restituiscono matrici. Nei contesti di reflection è possibile implementare l'attraversamento lazy di queste raccolte in caso di assembly o tipi di grandi dimensioni.  
   
  Tramite le proprietà di reflection vengono restituiti solo i metodi dichiarati in un oggetto particolare invece di attraversare l'albero di ereditarietà. Inoltre, non vengono utilizzati i parametri <xref:System.Reflection.BindingFlags> per l'applicazione di filtri. Al contrario, i filtri vengono applicati al codice utente, utilizzando le query LINQ nelle raccolte restituite. Per gli oggetti di reflection generati con il runtime (ad esempio come risultato di `typeof(Object)`), l'attraversamento dell'albero di ereditarietà viene eseguito in modo migliore se si utilizzano i metodi helper della classe <xref:System.Reflection.RuntimeReflectionExtensions>. Nei consumer di oggetti derivanti da contesti di reflection personalizzati non possono essere utilizzati questi metodi e l'attraversamento dell'albero di ereditarietà deve essere eseguito in modo autonomo.  
   
 ## <a name="restrictions"></a>Restrizioni  
- In un'app di Windows 8. x Store, l'accesso ad alcuni tipi di .NET Framework e membri è limitato. Ad esempio, non è possibile chiamare i metodi di .NET Framework che non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] tramite un oggetto <xref:System.Reflection.MethodInfo>. Inoltre, alcuni tipi e membri che non sono considerati sicuri nel contesto di un'app di Windows 8. x Store vengono bloccati, così come sono <xref:System.Runtime.InteropServices.Marshal> e <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> membri. Questa restrizione influisce solo sui tipi e sui membri di .NET Framework; il proprio codice o quello di terze parti può essere chiamato normalmente.  
+ In un'app di Windows 8. x Store, l'accesso ad alcuni tipi di .NET Framework e membri è limitato. Non è ad esempio possibile chiamare .NET Framework metodi che non sono inclusi in .NET per le app di Windows 8. x Store, usando un oggetto <xref:System.Reflection.MethodInfo>. Inoltre, alcuni tipi e membri che non sono considerati sicuri nel contesto di un'app di Windows 8. x Store vengono bloccati, così come sono <xref:System.Runtime.InteropServices.Marshal> e <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> membri. Questa restrizione influisce solo sui tipi e sui membri di .NET Framework; il proprio codice o quello di terze parti può essere chiamato normalmente.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio vengono utilizzati i tipi e i membri di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per recuperare i metodi e le proprietà del tipo <xref:System.Globalization.Calendar>, inclusi i metodi e le proprietà ereditati. Per eseguire questo codice, incollarlo nel file di codice per una pagina di Windows 8. x Store contenente un controllo <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> denominato `textblock1` in un progetto denominato Reflection. Se si incolla il codice nel progetto con un nome diverso, assicurarsi di modificare il nome dello spazio dei nomi affinché corrisponda al progetto.  
+ Questo esempio usa i tipi e i membri di reflection in .NET per le app di Windows 8. x Store per recuperare i metodi e le proprietà del tipo di <xref:System.Globalization.Calendar>, inclusi i metodi e le proprietà ereditati. Per eseguire questo codice, incollarlo nel file di codice per una pagina di Windows 8. x Store contenente un controllo <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> denominato `textblock1` in un progetto denominato Reflection. Se si incolla il codice nel progetto con un nome diverso, assicurarsi di modificare il nome dello spazio dei nomi affinché corrisponda al progetto.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  

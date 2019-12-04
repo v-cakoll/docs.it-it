@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039821"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712051"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). L'esempio supporta sia la [specifica di individuazione 2005](https://go.microsoft.com/fwlink/?LinkId=177912) che la [versione 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -37,7 +37,7 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 > [!NOTE]
 > Alla versione 2008 del protocollo Discovery è stato aggiunto `PrefixList`.  
   
- Per calcolare la firma, nell'esempio vengono determinati gli elementi della firma espansi. Viene creata una firma XML (`SignedInfo`) usando il prefisso dello spazio dei nomi `ds`, come richiesto dalla specifica WS-Discovery. Al corpo e a tutte le intestazioni presenti negli spazi dei nomi di individuazione e indirizzamento viene fatto riferimento nella firma, impedendone pertanto l'alterazione. Ogni elemento a cui viene fatto riferimento viene trasformato usando la canonizzazione esclusiva http://www.w3.org/2001/10/xml-exc-c14n# () e quindi viene calcolato un valore digest SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). In base a tutti gli elementi a cui viene fatto riferimento e ai relativi valori di digest, il valore della firma http://www.w3.org/2000/09/xmldsig#rsa-sha1 viene calcolato usando l'algoritmo RSA ().  
+ Per calcolare la firma, nell'esempio vengono determinati gli elementi della firma espansi. Viene creata una firma XML (`SignedInfo`) usando il prefisso dello spazio dei nomi `ds`, come richiesto dalla specifica WS-Discovery. Al corpo e a tutte le intestazioni presenti negli spazi dei nomi di individuazione e indirizzamento viene fatto riferimento nella firma, impedendone pertanto l'alterazione. Ogni elemento a cui viene fatto riferimento viene trasformato usando la canonizzazione esclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ) e quindi viene calcolato un valore digest SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). In base a tutti gli elementi a cui viene fatto riferimento e ai relativi valori di digest, il valore della firma viene calcolato usando l'algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  I messaggi vengono firmati con un certificato specificato dal client. Il percorso e il nome dell'archivio, nonché il nome del soggetto del certificato devono essere specificati al momento della creazione dell'elemento di associazione. `KeyId` nella firma compressa rappresenta l'identificatore di chiave del token di firma e corrisponde all'identificatore di chiave del soggetto (SKI, Subject Key Identifier) del token di firma oppure (se l'identificatore SKI non esiste) a un hash SHA-1 della chiave pubblica del token di firma.  
   
@@ -47,13 +47,13 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  In questo esempio sono incluse un'applicazione di libreria e 4 applicazioni console:  
   
-- **DiscoverySecurityChannels**: Raccolta che espone l'associazione protetta. La libreria calcola e verifica la firma compatta per i messaggi in uscita/in arrivo.  
+- **DiscoverySecurityChannels**: raccolta che espone l'associazione protetta. La libreria calcola e verifica la firma compatta per i messaggi in uscita/in arrivo.  
   
-- **Servizio**: Un servizio che espone il contratto ICalculatorService, self hosted. Il servizio è contrassegnato come individuabile. L'utente specifica i dettagli del certificato usato per firmare i messaggi specificando il percorso e il nome dell'archivio e il nome del soggetto o di un altro identificatore univoco per il certificato, nonché l'archivio in cui si trovano i certificati client (i certificati usati per il controllo della firma dei messaggi in arrivo). In base a questi dettagli, viene compilato e usato un oggetto UdpDiscoveryEndpoint con sicurezza aggiunta.  
+- **Servizio**: un servizio che espone il contratto ICalculatorService, self hosted. Il servizio è contrassegnato come individuabile. L'utente specifica i dettagli del certificato usato per firmare i messaggi specificando il percorso e il nome dell'archivio e il nome del soggetto o di un altro identificatore univoco per il certificato, nonché l'archivio in cui si trovano i certificati client (i certificati usati per il controllo della firma dei messaggi in arrivo). In base a questi dettagli, viene compilato e usato un oggetto UdpDiscoveryEndpoint con sicurezza aggiunta.  
   
-- **Client**: Questa classe tenta di individuare un ICalculatorService e di chiamare i metodi nel servizio. Un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con sicurezza aggiunta viene di nuovo compilato e usato per firmare e verificare i messaggi.  
+- **Client**: questa classe tenta di individuare un ICalculatorService e di chiamare i metodi nel servizio. Un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con sicurezza aggiunta viene di nuovo compilato e usato per firmare e verificare i messaggi.  
   
-- **AnnouncementListener**: Un servizio indipendente che rimane in ascolto degli annunci online e offline e usa l'endpoint di annuncio protetto.  
+- **AnnouncementListener**: un servizio indipendente che rimane in ascolto degli annunci online e offline e usa l'endpoint di annuncio protetto.  
   
 > [!NOTE]
 > Se Setup.bat viene eseguito più volte, il gestore di certificati richiederà di scegliere un certificato da aggiungere, in quanto esistono certificati duplicati. In tal caso, Setup.bat dovrà essere interrotto e sarà necessario chiamare Cleanup.bat, poiché i duplicati sono già stati creati. Cleanup.bat richiederà inoltre di scegliere un certificato da eliminare. Selezionare un certificato nell'elenco e continuare a eseguire Cleanup.bat fino a quando non rimarrà alcun certificato.  
@@ -71,6 +71,6 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

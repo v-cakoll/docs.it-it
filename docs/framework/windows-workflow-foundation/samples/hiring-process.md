@@ -2,12 +2,12 @@
 title: Processo di assunzione
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 16975aaa56c8fde09fa6f57781f13280c147e73e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 02968acfc762550c9010dd0ed29acbca845e08bb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038166"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715983"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 - Flussi di lavoro <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> per modellare processi aziendali  
   
-- Servizi flusso di lavoro  
+- Servizi flusso di lavoro.  
   
 - Attività di messaggistica  
   
@@ -44,7 +44,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 - Timer durevoli (attività <xref:System.Activities.Statements.Delay>)  
   
-- Transazioni  
+- Transazioni.  
   
 - Uso di più di un flusso di lavoro nella stessa soluzione  
   
@@ -53,7 +53,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -95,7 +95,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 ## <a name="projects-in-the-sample"></a>Progetti presenti nell'esempio  
  Nella tabella seguente vengono illustrati i progetti presenti nella soluzione di esempio.  
   
-|Progetto|Descrizione|  
+|Progetto di|Descrizione|  
 |-------------|-----------------|  
 |ContosoHR|Contiene contratti dati, oggetti business e classi del repository.|  
 |HiringRequestService|Contiene la definizione del flusso di lavoro relativo al processo di richiesta di assunzione.<br /><br /> Il progetto viene implementato come un'applicazione console che ospita in modalità self-hosting il flusso di lavoro (file con estensione xaml) come un servizio.|  
@@ -108,25 +108,25 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 ## <a name="feature-summary"></a>Riepilogo delle funzionalità  
  Nella tabella seguente vengono descritte le modalità di utilizzo di ogni funzionalità nell'esempio.  
   
-|Funzionalità|DESCRIZIONE|Progetto|  
+|Caratteristica|Descrizione|Progetto di|  
 |-------------|-----------------|-------------|  
 |Diagramma di flusso|Il processo aziendale viene rappresentato come un diagramma di flusso la cui descrizione rappresenta il processo in modo analogo a quello in cui un'azienda l'avrebbe riportato su una lavagna.|HiringRequestService|  
 |Servizi flusso di lavoro|Il diagramma di flusso con la definizione del processo è ospitato in un servizio (in questo esempio il servizio è ospitato in un'applicazione console).|HiringRequestService|  
 |Attività di messaggistica|Il diagramma di flusso usa le attività di messaggistica per gli scopi seguenti:<br /><br /> -Per ottenere informazioni dall'utente (per ricevere le decisioni e le informazioni correlate in ogni passaggio di approvazione).<br />-Per interagire con altri servizi esistenti (InboxService e OrgDataService, usati tramite riferimenti al servizio).|HiringRequestService|  
 |Correlazione basata sul contenuto|I messaggi di approvazione sono correlati alla proprietà ID della richiesta di assunzione:<br /><br /> -Quando un processo viene avviato, l'handle di correlazione viene inizializzato con l'ID della richiesta.<br />-I messaggi di approvazione in ingresso sono correlati al rispettivo ID (il primo parametro di ogni messaggio di approvazione è l'ID della richiesta).|HiringRequestService / ResumeRequestService|  
-|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`: Questa attività genera un oggetto <xref:System.Activities.Tracking.TrackingRecord> personalizzato ( <xref:System.Activities.NativeActivityContext.Track%2A>usando). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Questa attività riceve un elenco di ID tipo di posizione e restituisce un elenco di persone con tale posizione in contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`: Questa attività Salva le informazioni di un `HiringRequest` oggetto ( `HiringRequestRepository.Save`usando). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`: questa attività genera un <xref:System.Activities.Tracking.TrackingRecord> personalizzato (usando <xref:System.Activities.NativeActivityContext.Track%2A>). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: questa attività riceve un elenco di ID tipo di posizione e restituisce un elenco di persone con tale posizione in contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`: questa attività Salva le informazioni di un `HiringRequest` (usando `HiringRequestRepository.Save`). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Persistenza di SQL Server fornita dal sistema|L'istanza di <xref:System.ServiceModel.Activities.WorkflowServiceHost> che ospita la definizione del processo del diagramma di flusso è configurata per usare la persistenza di SQL Server fornita dal sistema.|HiringRequestService / ResumeRequestService|  
 |Rilevamento personalizzato|Nell'esempio è incluso un partecipante del rilevamento personalizzato che salva la cronologia di un processo `HiringRequestProcess` (quest'ultimo registra l'azione eseguita nonché l'autore e il momento dell'esecuzione). Il codice sorgente si trova nella cartella Tracking di HiringRequestService.|HiringRequestService|  
 |Rilevamento ETW|Il rilevamento ETW fornito dal sistema viene configurato nel file App.config nel servizio HiringRequestService.|HiringRequestService|  
 |Composizione di attività|La definizione del processo usa la composizione libera di <xref:System.Activities.Activity>. Il diagramma di flusso contiene diverse attività Sequence e Parallel che a loro volta ne contengono altre e così via.|HiringRequestService|  
-|Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601>viene usato per la registrazione nella posta in arrivo del CEO e dei responsabili HR in parallelo (in attesa del passaggio di approvazione di due responsabili delle risorse umane).<br />-   <xref:System.Activities.Statements.Parallel>viene usato per eseguire alcune attività di pulizia nei passaggi completati e rifiutati|HiringRequestService|  
+|Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601> viene usato per effettuare la registrazione nella posta in arrivo del CEO e dei responsabili HR in parallelo (in attesa del passaggio di approvazione di due responsabili delle risorse umane).<br />-   <xref:System.Activities.Statements.Parallel> viene utilizzata per eseguire alcune attività di pulizia nei passaggi completati e rifiutati|HiringRequestService|  
 |Annullamento del modello|Nel diagramma di flusso viene usato <xref:System.Activities.Statements.CancellationScope> per applicare l'annullamento (in questo caso eseguendo attività di pulizia).|HiringRequestService|  
 |Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse umane di Contoso.|HiringRequestService|  
 |Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute nel file ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
-|Timer durevoli|In `ResumeRequestService` vengono usati timer durevoli per definire la durata di un elenco di offerte di lavoro (quando un timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
+|Timer permanenti|In `ResumeRequestService` vengono usati timer durevoli per definire la durata di un elenco di offerte di lavoro (quando un timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
 |Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati durante l'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
 |Transazioni|Il partecipante di persistenza (`HiringRequestPersistenceParticipant`) e il partecipante del rilevamento personalizzati (`HistoryFileTrackingParticipant`) usano la stessa transazione.|HiringRequestService|  
-|Uso [!INCLUDE[wf1](../../../../includes/wf1-md.md)] di nelle applicazioni ASP.NET.|È possibile accedere ai flussi di lavoro da due applicazioni ASP.NET.|InternalClient / CareersWebSite|  
+|Uso di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in applicazioni ASP.NET.|È possibile accedere ai flussi di lavoro da due applicazioni ASP.NET.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Archivio dati  
  I dati vengono archiviati in un database di SQL Server denominato `ContosoHR` (lo script per la creazione di questo database si trova nella cartella `DbSetup`), mentre le istanze di flusso di lavoro vengono archiviate in un database di SQL Server denominato `InstanceStore` (gli script per la creazione per l'archivio di istanze sono parte della distribuzione di [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
@@ -169,7 +169,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 6. Fare clic con il pulsante destro del mouse su **CareersWebSite** nella soluzione e selezionare **Visualizza nel browser**.  
   
-7. Tornare a `InternalClient` facendo clic con il pulsante destro del mouse su **InternalClient** nella soluzione e selezionando **Visualizza nel browser**.  
+7. Tornare al `InternalClient` facendo clic con il pulsante destro del mouse su **InternalClient** nella soluzione e selezionando **Visualizza nel browser**.  
   
 8. Per passare alla sezione **jobpostings** , fare clic sul collegamento **job postings** nel menu principale della posta in arrivo. È possibile seguire lo scenario descritto in questo punto.  
   
@@ -183,7 +183,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 3. Peter desidera intervenire sulla richiesta di Michael poiché ritiene che la posizione richieda 5 anni di esperienza nel linguaggio C# anziché 3 e pertanto invia i propri commenti per la revisione.  
   
-4. Michael riceve un messaggio nella casella di posta in arrivo proveniente dal responsabile e dopo aver esaminato la cronologia della richiesta di posizione concorda con Peter. Michael modifica pertanto la descrizione per richiedere 5 anni di esperienza nel linguaggio C# e accetta la modifica.  
+4. Michael vede un messaggio nella posta in arrivo del suo responsabile e vuole agire. Michael vede la cronologia della richiesta di posizione e acconsente a Peter. Michael modifica pertanto la descrizione per richiedere 5 anni di esperienza nel linguaggio C# e accetta la modifica.  
   
 5. Peter interviene sulla richiesta modificata di Michael e l'accetta. A questo punto la richiesta deve essere approvata dal direttore del reparto tecnico, Tsvi Reiter.  
   
@@ -215,7 +215,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 2. Se non è possibile compilare la soluzione, verificare l'elemento seguente:  
   
-    - Il riferimento a `ContosoHR` non è presente `InternalClient` nei progetti o `CareersWebSite` .  
+    - Il riferimento a `ContosoHR` non è presente nei progetti `InternalClient` o `CareersWebSite`.  
   
 3. Se non è possibile eseguire la soluzione, verificare gli elementi seguenti:  
   
@@ -229,7 +229,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
         3. Ricompilare la soluzione premendo CTRL + MAIUSC + B in Visual Studio.  
   
-## <a name="uninstalling"></a>Disinstallazione  
+## <a name="uninstalling"></a>Disinstallazione di  
   
 1. Eliminare l'archivio dell'istanza di SQL Server eseguendo Cleanup.bat, disponibile nella cartella DbSetup.  
   

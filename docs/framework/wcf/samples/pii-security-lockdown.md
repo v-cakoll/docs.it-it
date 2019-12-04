@@ -2,12 +2,12 @@
 title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044795"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714633"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) tramite:  
@@ -23,7 +23,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -37,17 +37,17 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
  In questo esempio viene illustrato come controllare la registrazione di informazioni personali nei registri di traccia e dei messaggi, come il nome utente e la password. Per impostazione predefinita, la registrazione di informazioni personali note è disattivata. Tuttavia in alcune situazioni la registrazione delle informazioni personali può essere importante per eseguire il debug di un'applicazione. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). Questo esempio usa inoltre la registrazione di traccia e dei messaggi. Per ulteriori informazioni, vedere l'esempio [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) .  
   
 ## <a name="encrypting-configuration-file-elements"></a>Crittografia degli elementi del file di configurazione  
- Per motivi di sicurezza in un ambiente di hosting Web condiviso, potrebbe essere auspicabile crittografare alcuni elementi di configurazione, ad esempio le stringhe di connessione al database che potrebbero contenere informazioni riservate. Un elemento di configurazione può essere crittografato utilizzando lo strumento Aspnet_regiis. exe disponibile nella cartella .NET Framework ad esempio,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
+ Per motivi di sicurezza in un ambiente di hosting Web condiviso, potrebbe essere auspicabile crittografare alcuni elementi di configurazione, ad esempio le stringhe di connessione al database che potrebbero contenere informazioni riservate. Un elemento di configurazione può essere crittografato utilizzando lo strumento aspnet_regiis. exe disponibile nella cartella .NET Framework ad esempio,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Per crittografare i valori nella sezione appSettings di Web.config per l'esempio  
   
-1. Aprire un prompt dei comandi utilizzando Start-> Esegui.... Digitare e fare clic su **OK.** `cmd`  
+1. Aprire un prompt dei comandi utilizzando Start-> Esegui.... Digitare `cmd` e fare clic su **OK**.  
   
 2. Spostarsi alla directory .NET Framework corrente eseguendo il comando seguente: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
 3. Crittografare le impostazioni di configurazione appSettings nella cartella Web.config eseguendo il comando seguente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Per ulteriori informazioni sulla crittografia delle sezioni dei file di configurazione, vedere la pagina relativa alla procedura di configurazione di DPAPI in ASP.NET[(compilazione di applicazioni ASP.NET sicure: Autenticazione, autorizzazione e comunicazione](https://go.microsoft.com/fwlink/?LinkId=95137)protetta) e una procedura per la configurazione di RSA in ASP.NET ([procedura: Crittografare le sezioni di configurazione in ASP.NET](https://go.microsoft.com/fwlink/?LinkId=95138)2,0 usando RSA.  
+ Per altre informazioni sulla crittografia delle sezioni dei file di configurazione, vedere la pagina relativa alla procedura di configurazione di DPAPI in ASP.NET ([compilazione di applicazioni ASP.NET sicure: autenticazione, autorizzazione e comunicazione protetta](https://go.microsoft.com/fwlink/?LinkId=95137)) e una procedura per la configurazione di rsa in ASP.NET ([procedura: crittografare le sezioni di configurazione in ASP.NET 2,0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Blocco degli elementi del file di configurazione  
  Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. In queste situazioni, i valori di configurazione per il servizio nella sottodirectory vengono calcolati esaminando i valori in Machine.config e unendoli successivamente con i file Web.config delle directory padre, facendo scorrere verso il basso l'albero di directory e unendo infine il file Web.config alla directory che contiene il servizio. Il comportamento predefinito della maggior parte degli elementi di configurazione è di consentire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nelle directory padre. In alcune situazioni potrebbe essere auspicabile impedire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nella configurazione della directory padre.  
@@ -76,7 +76,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 ## <a name="pii-logging-configuration"></a>Configurazione della registrazione di informazioni personali  
  La registrazione di informazioni personali viene controllata da due opzioni: un'impostazione a livello di computer situata in Machine.config che consente a un amministratore del computer di autorizzare o negare la registrazione di informazioni personali e un'impostazione dell'applicazione che consente a un amministratore dell'applicazione di modificare le autorizzazioni di registrazione di informazioni personali per ogni origine nei file Web.config o App.config.  
   
- L'impostazione a livello di computer viene controllata impostando `enableLoggingKnownPii` su `true` o `false`, nell'elemento `machineSettings` in Machine.config. Ad esempio, gli elementi seguenti consentono alle applicazioni di attivare la registrazione delle informazioni personali.  
+ L'impostazione a livello di computer viene controllata impostando `enableLoggingKnownPii` su `true` o `false`, nell'elemento `machineSettings` in Machine. config. Il codice seguente, ad esempio, consente alle applicazioni di attivare la registrazione delle informazioni personali.  
   
 ```xml  
 <configuration>  
@@ -120,13 +120,13 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 > System.Diagnostics ignora tutti gli attributi di tutte le origini tranne la prima elencata nel file di configurazione. Aggiungendo l'attributo `logKnownPii` alla seconda origine nel file di configurazione non ha alcun effetto.  
   
 > [!IMPORTANT]
-> Per eseguire questo esempio è necessario modificare manualmente Machine.config. È necessario fare attenzione nel modificare Machine.config, visto che valori o sintassi errati possono impedire l'esecuzione di tutte le applicazioni .NET Framework.  
+> Per eseguire questo esempio, comporta la modifica manuale di Machine. config. Prestare attenzione quando si modifica machine. config come valori non corretti o la sintassi potrebbe impedire l'esecuzione di tutte le applicazioni .NET Framework.  
   
  È inoltre possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   
-- [Compilazione di applicazioni ASP.NET sicure: Autenticazione, autorizzazione e comunicazione sicura](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Creazione di applicazioni ASP.NET sicure: autenticazione, autorizzazione e comunicazione sicura](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2,0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Procedura: crittografare le sezioni di configurazione in ASP.NET 2,0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

@@ -2,16 +2,16 @@
 title: 'Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716224"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid
 
-In questa attività verranno creati i riquadri **casella degli strumenti** e **PropertyGrid** e verranno aggiunti alla [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]riallocata.
+In questa attività verranno creati i riquadri **casella degli strumenti** e **PropertyGrid** e aggiunti al progettazione flussi di lavoro Windows riallocato.
 
 Per riferimento, al termine di questo argomento viene fornito il codice che deve trovarsi nel file MainWindow.xaml.cs dopo aver completato le tre attività riportate nella sezione relativa alla [riallocazione della progettazione flussi di lavoro](rehosting-the-workflow-designer.md) serie di argomenti.
 

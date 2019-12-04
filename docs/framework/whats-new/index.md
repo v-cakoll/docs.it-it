@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281659"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714501"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -201,7 +201,7 @@ Il runtime in .NET Framework 4.8 include le modifiche e i miglioramenti seguenti
 
 - [Classi di base](#core-472)
 - [ASP.NET 2.0](#asp-net472)
-- [Rete](#net472)
+- [Servizi di rete](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -350,7 +350,7 @@ Il supporto della decompressione mediante le API di Windows è abilitato per imp
 
 **API aggiuntive della raccolta**
 
-.NET Framework 4.7.2 aggiunge varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Sono inclusi:
+.NET Framework 4.7.2 aggiunge varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. tra cui:
 
 - Metodi `TryGetValue`, che estendono il modello Try usato in altri tipi di raccolta per questi due tipi. Sono disponibili i seguenti metodi:
 
@@ -434,7 +434,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472" />
 
-#### <a name="networking"></a>Rete
+#### <a name="networking"></a>Funzionalità di rete di
 
 **Implementazione di proprietà HttpClientHandler**
 
@@ -513,7 +513,7 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-Il metodo restituisce un oggetto enumerabile vuoto, a meno che non sia abilitato  <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente[`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) .
+Il metodo restituisce un oggetto enumerabile vuoto, a meno che non sia abilitato  <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
 
 **Rilevamento di proprietari di ResourceDictionary**
 
@@ -527,7 +527,7 @@ Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e 
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Questi metodi restituiscono un oggetto enumerabile vuoto, a meno che non sia abilitato <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente[`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) .
+Questi metodi restituiscono un oggetto enumerabile vuoto, a meno che non sia abilitato <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
 
 **Ricerca di riferimenti StaticResource**
 
@@ -567,7 +567,7 @@ Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
 End Class
 ```
 
-L'evento non viene attivato (e la funzione di accesso `add` corrispondente viene ignorata), a meno che la classe  <xref:System.Windows.Diagnostics.VisualDiagnostics> non sia abilitata e la variabile di ambiente[`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  non sia impostata.
+L'evento non viene attivato (e la funzione di accesso `add` corrispondente viene ignorata), a meno che la classe  <xref:System.Windows.Diagnostics.VisualDiagnostics> non sia abilitata e la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) non sia impostata.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -589,7 +589,7 @@ Per le applicazioni Windows Forms, la soluzione alternativa precedente, con impo
 
 - [Classi di base](#core471)
 - [Common Language Runtime (CLR)](#clr)
-- [Rete](#net471)
+- [Servizi di rete](#net471)
 - [ASP.NET 2.0](#asp-net471)
 
 Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology, continua a essere uno dei principali obiettivi di .NET Framework 4.7.1. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.7.1, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
@@ -630,7 +630,7 @@ Le modifiche apportate a Garbage Collection (GC) in .NET Framework 4.7.1 miglior
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Rete
+#### <a name="networking"></a>Funzionalità di rete di
 
 **Supporto di SHA-2 per Message.HashAlgorithm**
 
@@ -671,7 +671,7 @@ In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori 
 .NET Framework 4.7 include nuove funzionalità nelle aree seguenti:
 
 - [Classi di base](#Core47)
-- [Rete](#net47)
+- [Servizi di rete](#net47)
 - [ASP.NET 2.0](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Form](#wf47)
@@ -699,7 +699,7 @@ In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSe
 
 <a name="net47" />
 
-#### <a name="networking"></a>Rete
+#### <a name="networking"></a>Funzionalità di rete di
 
 .NET Framework 4.7 aggiunge la funzionalità seguente relativa alla rete:
 
@@ -741,7 +741,7 @@ A partire da .NET Framework 4.7, WCF consente di configurare TLS 1.1 o TLS 1.2, 
 
 **Miglioramento dell'affidabilità le applicazioni WCF e della serializzazione WCF**
 
-WCF include un numero di modifiche al codice che eliminano le race condition, migliorando così le prestazioni e l'affidabilità delle opzioni di serializzazione. Sono inclusi:
+WCF include un numero di modifiche al codice che eliminano le race condition, migliorando così le prestazioni e l'affidabilità delle opzioni di serializzazione. tra cui:
 
 - Supporto migliorato per la combinazione di codice sincrono e asincrono nelle chiamate a **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Maggiore affidabilità durante l'interruzione di una connessione con **SharedConnectionListener** e **DuplexChannelBinder**.
@@ -1037,7 +1037,7 @@ L'aggiunta della nuova parola chiave `PoolBlockingPeriod` consente di selezionar
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
-Il periodo di blocco del pool di connessioni per un'applicazione che si connette a un database SQL di Azure è disabilitato e il periodo di blocco del pool di connessioni per un'applicazione che si connette a qualsiasi altra istanza di SQL Server è abilitato. Rappresenta il valore predefinito. Se il nome dell'endpoint server termina in uno dei modi seguenti, vengono considerati i database SQL di Azure:
+Il periodo di blocco del pool di connessioni per un'applicazione che si connette a un database SQL di Azure è disabilitato e il periodo di blocco del pool di connessioni per un'applicazione che si connette a qualsiasi altra istanza di SQL Server è abilitato. Questo è il valore predefinito. Se il nome dell'endpoint server termina in uno dei modi seguenti, vengono considerati i database SQL di Azure:
 
 - .database.windows.net
 
@@ -1709,7 +1709,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
   Il valore predefinito è `false`.
 
-- **Rete**
+- **Servizi di rete**
 
   - **Riutilizzo di socket**
 
@@ -1743,7 +1743,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Supporto per le codifiche della tabella codici**
 
-  .NET Core supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework, ma non supportate in .NET Core registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per altre informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+  .NET Core supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework, ma non supportate in .NET Core registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1786,7 +1786,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Nuova funzionalità per il flusso di lavoro** Una funzionalità di gestione risorse che usa il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (e che quindi implementa l'interfaccia <xref:System.Transactions.IPromotableSinglePhaseNotification>) può usare il nuovo metodo <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> per richiedere quanto segue:
 
-  - Promuova la transazione in transazione MSDTC (Microsoft Distributed Transaction Coordinator).
+  - Promozione della transazione in transazione MSDTC (Microsoft Distributed Transaction Coordinator).
 
   - Sostituire <xref:System.Transactions.IPromotableSinglePhaseNotification> con una<xref:System.Transactions.ISinglePhaseNotification>, cioè un'integrazione durevole che supporta i commit monofase.
 
@@ -1954,7 +1954,7 @@ In .NET Framework 4.5 sono state aggiunte nuove funzionalità asincrone nei ling
 
 <a name="tools" />
 
-### <a name="tools"></a>Strumenti
+### <a name="tools"></a>Strumenti di
 
 In .NET Framework 4.5 il generatore di file di risorse (Resgen.exe) consente di creare un file con estensione resw per l'uso nelle app di Windows 8.x Store da un file con estensione resources incorporato in un assembly .NET Framework. Per altre informazioni, vedere [Resgen.exe (generatore di file di risorse)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -2116,13 +2116,13 @@ Per altre informazioni, vedere [Novità di Windows Workflow Foundation](https://
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>.NET per app di Windows 8.x Store
 
-Le app di WIndows 8.x Store sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di .NET Framework 4.5 o 4.5.1 è disponibile per la compilazione di app per Windows 8.x Store usando C# o Visual Basic. Questo subset è denominato [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e viene descritto in una [panoramica](https://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
+Le app di WIndows 8.x Store sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di .NET Framework 4.5 o 4.5.1 è disponibile per la compilazione di app per Windows 8.x Store usando C# o Visual Basic. Questo subset è denominato .NET per app di Windows 8.x Store e viene descritto in una [panoramica](https://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Librerie di classi portabili <a name="portable" />
 
-Il progetto Libreria di classi portabile in Visual Studio 2012 (e versioni successive) consente di scrivere e compilare assembly gestiti compatibili con più piattaforme .NET Framework. Se si usa un progetto Libreria di classi portabile, si scelgono le piattaforme (ad esempio Windows Phone e [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) di destinazione. I tipi e i membri disponibili nel progetto sono automaticamente limitati a tipi e membri comuni in queste piattaforme. Per altre informazioni, vedere [Libreria di classi portabile](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Il progetto Libreria di classi portabile in Visual Studio 2012 (e versioni successive) consente di scrivere e compilare assembly gestiti compatibili con più piattaforme .NET Framework. Usando un progetto libreria di classi portabile, si scelgono le piattaforme (ad esempio Windows Phone e .NET per le app di Windows 8. x Store) per la destinazione. I tipi e i membri disponibili nel progetto sono automaticamente limitati a tipi e membri comuni in queste piattaforme. Per altre informazioni, vedere [Libreria di classi portabile](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Vedere anche
 

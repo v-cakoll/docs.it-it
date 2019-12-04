@@ -2,15 +2,15 @@
 title: Accesso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715095"
 ---
 # <a name="accessing-operationcontext"></a>Accesso a OperationContext
-In questo esempio viene illustrato come le attività<xref:System.ServiceModel.Activities.Receive> di <xref:System.ServiceModel.Activities.Send>messaggistica (e) possono essere utilizzate con un'attività di <xref:System.ServiceModel.OperationContext.Current%2A> ambito personalizzata per accedere e associare o recuperare un'intestazione di messaggio personalizzata all'interno di un messaggio in uscita o in ingresso.  
+In questo esempio viene illustrato come è possibile utilizzare le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.Send>) con un'attività di ambito personalizzata per accedere <xref:System.ServiceModel.OperationContext.Current%2A> e associare o recuperare un'intestazione di messaggio personalizzata all'interno di un messaggio in uscita o in ingresso.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
  Attività di messaggistica, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come le attività<xref:System.ServiceModel.Ac
   
 2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
-    1. Compilare la soluzione.  
+    1. Compila la soluzione.  
   
     2. Impostare più progetti di avvio facendo clic con il pulsante destro del mouse sulla soluzione e selezionando **Imposta progetti di avvio**.  
   
@@ -41,6 +41,6 @@ In questo esempio viene illustrato come le attività<xref:System.ServiceModel.Ac
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

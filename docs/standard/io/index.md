@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204791"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716261"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e flussi
 
@@ -33,15 +33,15 @@ Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un pe
 
 Di seguito sono riportate alcune classi di file e directory comunemente usate:
 
-- <xref:System.IO.File>: fornisce metodi statici per la creazione, la copia, l'eliminazione, lo stato di trasferimento e l'apertura dei file e consente di creare un oggetto <xref:System.IO.FileStream>.
+- <xref:System.IO.File>: fornisce metodi statici per la creazione, la copia, l'eliminazione, lo spostamento e l'apertura di file; inoltre facilita la creazione di un oggetto <xref:System.IO.FileStream>.
 
-- <xref:System.IO.FileInfo>: fornisce metodi di istanza per la creazione, la copia, l'eliminazione, lo stato di trasferimento e l'apertura dei file e consente di creare un oggetto <xref:System.IO.FileStream>.
+- <xref:System.IO.FileInfo>: fornisce metodi di istanza per la creazione, la copia, l'eliminazione, lo spostamento e l'apertura di file; inoltre facilita la creazione di un oggetto <xref:System.IO.FileStream>.
 
-- <xref:System.IO.Directory>: fornisce metodi statici per creare, trasferire ed enumerare le directory e le sottodirectory.
+- <xref:System.IO.Directory>: consente di utilizzare metodi statici per la creazione, lo spostamento e l'enumerazione di directory e sottodirectory.
 
-- <xref:System.IO.DirectoryInfo>: fornisce metodi di istanza per creare, trasferire ed enumerare le directory e le sottodirectory.
+- <xref:System.IO.DirectoryInfo>: consente di usare metodi di istanza per la creazione, lo spostamento e l'enumerazione di directory e sottodirectory.
 
-- <xref:System.IO.Path>: fornisce metodi e proprietà per elaborare le stringhe di directory in modo multipiattaforma.
+- <xref:System.IO.Path>: fornisce metodi e proprietà che consentono di elaborare le stringhe di directory indipendentemente dalla piattaforma.
 
 È necessario fornire sempre affidabili funzionalità di gestione delle eccezioni quando si chiamano metodi del file system. Per altre informazioni, vedere [Gestione degli errori di I/O](handling-io-errors.md).
 
@@ -65,17 +65,17 @@ A seconda dell'origine dati o dell'archivio sottostante, è possibile che un flu
 
 Di seguito sono riportate alcune classi di flusso comunemente usate:
 
-- <xref:System.IO.FileStream>: per la lettura e la scrittura in un file.
+- <xref:System.IO.FileStream>: per la lettura e la scrittura su un file.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>: per la lettura e la scrittura in un file nello spazio di memorizzazione isolato.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>: per la lettura e la scrittura su un file in uno spazio di memorizzazione isolato.
 
-- <xref:System.IO.MemoryStream>: per la lettura e la scrittura in memoria come archivio di backup.
+- <xref:System.IO.MemoryStream>: per la lettura e la scrittura in memoria come l'archivio di backup.
 
 - <xref:System.IO.BufferedStream>: per migliorare le prestazioni delle operazioni di lettura e scrittura.
 
 - <xref:System.Net.Sockets.NetworkStream>: per la lettura e la scrittura sui socket di rete.
 
-- <xref:System.IO.Pipes.PipeStream>: per la lettura e la scrittura su pipe anonime e denominate.
+- <xref:System.IO.Pipes.PipeStream>: per la lettura e la scrittura su pipe unnamed e named.
 
 - <xref:System.Security.Cryptography.CryptoStream>: per collegare i flussi di dati alle trasformazioni crittografiche.
 
@@ -87,13 +87,13 @@ Lo spazio dei nomi <xref:System.IO?displayProperty=nameWithType> fornisce anche 
 
 Di seguito sono riportate alcune classi comunemente usate di reader e writer:
 
-- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter>: per la lettura e la scrittura di tipi di dati primitivi come valori binari.
+- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter>: per la lettura e la scrittura di tipi di dati primitivi, come ad esempio valori binari.
 
-- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter>: per la lettura e la scrittura di caratteri usando un valore di codifica per convertire i caratteri in e da byte.
+- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter>: per la lettura e la scrittura di caratteri usando un valore di codifica per la conversione dei caratteri in byte e viceversa.
 
-- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter>: per la lettura e la scrittura di caratteri da e verso le stringhe.
+- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter>: per la lettura e la scrittura di caratteri da stringhe e viceversa.
 
-- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter>-funge da classi base astratte per altri Reader e writer che leggono e scrivono caratteri e stringhe, ma non dati binari.
+- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter>: fungono da classi base astratte per gli altri reader e writer che leggono e scrivono caratteri e stringhe, ma non dati binari.
 
 Vedere [Procedura: leggere testo da un file](how-to-read-text-from-a-file.md), [Procedura: scrivere un testo in un file](how-to-write-text-to-a-file.md), [Procedura: leggere caratteri da una stringa](how-to-read-characters-from-a-string.md) e [Procedura: scrivere caratteri in una stringa](how-to-write-characters-to-a-string.md).
 
@@ -111,17 +111,17 @@ Per compressione si intende il processo di riduzione della dimensione di un file
 
 Le classi seguenti vengono spesso usate quando si comprimono e si decomprimono i file e i flussi:
 
-- <xref:System.IO.Compression.ZipArchive>: per la creazione e il recupero di voci nell'archivio zip.
+- <xref:System.IO.Compression.ZipArchive>: per creare e recuperare le voci in un archivio ZIP.
 
 - <xref:System.IO.Compression.ZipArchiveEntry>: per la rappresentazione di un file compresso.
 
-- <xref:System.IO.Compression.ZipFile>: per la creazione, l'estrazione e l'apertura di un pacchetto compresso.
+- <xref:System.IO.Compression.ZipFile>: per creare, estrarre e aprire un pacchetto compresso.
 
-- <xref:System.IO.Compression.ZipFileExtensions>: per la creazione e l'estrazione di voci in un pacchetto compresso.
+- <xref:System.IO.Compression.ZipFileExtensions>: per creare ed estrarre le voci in un pacchetto compresso.
 
-- <xref:System.IO.Compression.DeflateStream>: per comprimere e decomprimere i flussi mediante l'algoritmo Deflate.
+- <xref:System.IO.Compression.DeflateStream>: per la compressione e la decompressione dei flussi mediante l'algoritmo Deflate.
 
-- <xref:System.IO.Compression.GZipStream>: per comprimere e decomprimere i flussi in formato dati gzip.
+- <xref:System.IO.Compression.GZipStream>: per la compressione e la decompressione dei flussi nel formato di dati gzip.
 
 Vedere [Procedura: comprimere ed estrarre file](how-to-compress-and-extract-files.md).
 
@@ -133,9 +133,9 @@ Lo spazio di memorizzazione isolato non è disponibile per le app di Windows 8. 
 
 Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage>: fornisce la classe di base per le implementazioni dello spazio di memorizzazione isolato.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage>: fornisce la classe base per le implementazioni dello spazio di memorizzazione isolato.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>: fornisce un'area di archiviazione isolata che contiene file e directory.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>: fornisce un'area per lo spazio di memorizzazione isolato che contiene file e directory.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>: espone un file all'interno dello spazio di memorizzazione isolato.
 
@@ -143,11 +143,11 @@ Vedere [Spazio di memorizzazione isolato](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operazioni di I/O nelle applicazioni Windows Store
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contiene molti tipi per leggere e scrivere su flussi; tuttavia, questo set non include tutti i tipi di I/O di .NET Framework.
+.NET per app di Windows 8. x Store contiene molti tipi per la lettura e la scrittura nei flussi; Tuttavia, questo set non include tutti i tipi di i/O .NET Framework.
 
 Alcune differenze importanti da tenere presente quando si usano le operazioni di I/O nelle app di Windows 8. x Store:
 
-- I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di Windows Runtime, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- I tipi specificamente correlati alle operazioni sui file, ad esempio <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in .NET per le app di Windows 8. x Store. Usare invece i tipi nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType> di Windows Runtime, ad esempio <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

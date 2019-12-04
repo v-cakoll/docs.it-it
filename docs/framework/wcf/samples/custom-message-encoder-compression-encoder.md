@@ -1,15 +1,15 @@
 ---
-title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
+title: 'Codificatore di messaggi personalizzato: codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 80dd29569897be501d76024a081f38ec5add4ff7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928741"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716854"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
+# <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzato: codificatore di compressione
 
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma Windows Communication Foundation (WCF).
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
 
@@ -224,7 +224,7 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 Sebbene questo possa essere sufficiente per la maggioranza degli scenari utente, se un servizio deve essere ospitato sul Web è essenziale che supporti un file di configurazione. Per supportare lo scenario ospitato sul Web, è necessario sviluppare un gestore di configurazione personalizzato per consentire a un elemento di associazione personalizzato di essere configurabile in un file.
 
-È possibile compilare un gestore di configurazione per l'elemento di associazione nella parte superiore del sistema di configurazione. Il gestore di configurazione per l'elemento di associazione deve derivare dalla classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Informa il sistema di configurazione del tipo di elemento di associazione da creare per questa sezione. Tutti gli aspetti di `BindingElement` che possono essere impostati devono essere esposti come proprietà nella classe derivata <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.Configuration.ConfigurationPropertyAttribute> Supporta il mapping degli attributi degli elementi di configurazione alle proprietà e l'impostazione dei valori predefiniti se gli attributi non sono disponibili. Dopo aver caricato i valori della configurazione e averli applicati alle proprietà, viene chiamato il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> che converte le proprietà in un'istanza concreta di un elemento di associazione. Il <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> metodo viene utilizzato per convertire le proprietà <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> della classe derivata nei valori da impostare sull'elemento di associazione appena creato.
+È possibile compilare un gestore di configurazione per l'elemento di associazione nella parte superiore del sistema di configurazione. Il gestore di configurazione per l'elemento di associazione deve derivare dalla classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Il <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informa il sistema di configurazione del tipo di elemento di associazione da creare per questa sezione. Tutti gli aspetti di `BindingElement` che possono essere impostati devono essere esposti come proprietà nella classe derivata <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Il <xref:System.Configuration.ConfigurationPropertyAttribute> facilita il mapping degli attributi degli elementi di configurazione alle proprietà e l'impostazione dei valori predefiniti se gli attributi risultano mancanti. Dopo aver caricato i valori della configurazione e averli applicati alle proprietà, viene chiamato il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> che converte le proprietà in un'istanza concreta di un elemento di associazione. Il metodo <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> viene utilizzato per convertire le proprietà nella classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> derivata nei valori da impostare sull'elemento di associazione appena creato.
 
 Nel codice di esempio seguente viene mostrata l'implementazione di `GZipMessageEncodingElement`.
 
@@ -295,7 +295,7 @@ Questo gestore di configurazione esegue il mapping alla rappresentazione seguent
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-Per utilizzare questo gestore di configurazione, è necessario registrarlo all'interno dell' [ \<elemento > System. ServiceModel](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.
+Per utilizzare questo gestore di configurazione, è necessario registrarlo all'interno dell'elemento [\<System. serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.
 
 ```xml
 <extensions>
@@ -353,6 +353,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

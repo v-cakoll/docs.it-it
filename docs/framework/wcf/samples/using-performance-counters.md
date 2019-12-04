@@ -2,12 +2,12 @@
 title: Utilizzo dei contatori delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716707"
 ---
 # <a name="using-performance-counters"></a>Utilizzo dei contatori delle prestazioni
 In questo esempio viene illustrato come accedere ai contatori delle prestazioni Windows Communication Foundation (WCF) e come creare contatori delle prestazioni definiti dall'utente. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come accedere ai contatori delle prestazioni 
   
 ### <a name="to-view-performance-data"></a>Per visualizzare i dati relativi alle prestazioni  
   
-1. Avviare lo strumento Performance Monitor facendo clic sul pulsante **Start**, scegliere **Esegui...** , immettere `perfmon` e fare clic su **OK** oppure nel pannello di controllo selezionare **strumenti di amministrazione** e fare doppio clic su **prestazioni**.  
+1. Avviare lo strumento Performance Monitor facendo clic sul pulsante **Start**, scegliere **Esegui...** , immettere `perfmon` e fare clic su **OK,** oppure dal pannello di controllo, selezionare **strumenti di amministrazione** e fare doppio clic su **prestazioni**.  
   
     > [!NOTE]
     > Non è possibile aggiungere contatori mentre il codice di esempio è in esecuzione.  
@@ -72,7 +72,7 @@ In questo esempio viene illustrato come accedere ai contatori delle prestazioni 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   

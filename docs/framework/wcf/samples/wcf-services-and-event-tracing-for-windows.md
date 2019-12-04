@@ -2,12 +2,12 @@
 title: Servizi WCF e traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715270"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
 In questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi in Event Tracing for Windows (ETW). Le tracce analitiche sono eventi generati in punti chiave dello stack WCF che consentono la risoluzione dei problemi relativi ai servizi WCF nell'ambiente di produzione.
@@ -26,11 +26,11 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
 
      Nella Web browser fare clic su **Calculator. svc**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.
 
-     Per impostazione predefinita, il servizio inizia l'ascolto delle richieste sulla `http://localhost:1378/Calculator.svc`porta 1378.
+     Per impostazione predefinita, il servizio inizia l'ascolto delle richieste sulla porta 1378 `http://localhost:1378/Calculator.svc`.
 
 4. Eseguire il client di prova WCF (WcfTestClient. exe).
 
-     Il client di prova WCF (WcfTestClient. exe) si trova `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`in.  La directory di installazione predefinita di Visual Studio `C:\Program Files\Microsoft Visual Studio 10.0`2012 è.
+     Il client di prova WCF (WcfTestClient. exe) si trova in `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  La directory di installazione predefinita di Visual Studio 2012 è `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5. Nel client di prova WCF aggiungere il servizio selezionando **file**e quindi **Aggiungi servizio**.
 
@@ -40,19 +40,19 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
 
      Prima di richiamare il servizio, avviare Visualizzatore eventi e verificare che il registro eventi sia in ascolto di eventi di rilevamento generati dal servizio WCF.
 
-7. Dal menu **Start** , selezionare **strumenti di amministrazione**, quindi **Visualizzatore eventi**.  Abilitare i log analitici e di **debug** .
+7. Dal menu **Start** , selezionare **strumenti di amministrazione**, quindi **Visualizzatore eventi**.  Abilitare i log **analitici** e di **debug** .
 
 8. Nella visualizzazione albero di Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su **server applicazioni-applicazioni**, selezionare **Visualizza**, quindi **Visualizza registri analitici e di debug**.
 
      Verificare che l'opzione **Mostra log analitici e di debug** sia selezionata.
 
-9. Abilitare il registro analitico.
+9. Abilitare il registro **analitico** .
 
-     Nella visualizzazione albero di Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su analitico e selezionare **Abilita log**.
+     Nella visualizzazione albero di Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **server applicazioni-applicazioni**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Abilita log**.
 
 #### <a name="to-test-the-service"></a>Per eseguire il test del servizio
 
-1. Tornare al client di prova WCF e fare doppio clic `Divide` e mantenendone i valori predefiniti, che specificano un denominatore pari a 0.
+1. Tornare al client di prova WCF, fare doppio clic su `Divide` e mantengono i valori predefiniti, che specificano un denominatore pari a 0.
 
      Se il valore del denominatore è 0, il servizio genererà un errore.
 
@@ -70,11 +70,11 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
 
 #### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1. Aprire Visualizzatore eventi.
+1. Aprire il Visualizzatore eventi.
 
-2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **Application-Server-** Applications. Fare clic con il pulsante destro del mouse su analitico e selezionare **Disattiva log**.
+2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **Application-Server-** Applications. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Disattiva log**.
 
-3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **Application-Server-** Applications. Fare clic con il pulsante destro del mouse su analitico e selezionare **Cancella log**.
+3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, quindi **Application-Server-** Applications. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Cancella log**.
 
 4. Scegliere l'opzione **Cancella** per cancellare gli eventi.
 
@@ -83,7 +83,7 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

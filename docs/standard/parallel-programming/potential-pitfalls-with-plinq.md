@@ -1,5 +1,5 @@
 ---
-title: Problemi potenziali dell'utilizzo di PLINQ
+title: Potenziali problemi con PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,33 +8,33 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139997"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716247"
 ---
-# <a name="potential-pitfalls-with-plinq"></a>Problemi potenziali dell'utilizzo di PLINQ
+# <a name="potential-pitfalls-with-plinq"></a>Potenziali problemi con PLINQ
 
 In molti casi, PLINQ può fornire miglioramenti significativi a livello di prestazioni su query LINQ to Objects sequenziali. Le operazioni necessarie per parallelizzare l'esecuzione delle query comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono query PLINQ.
 
-## <a name="do-not-assume-that-parallel-is-always-faster"></a>Non presupporre che l'approccio in parallelo sia sempre più veloce
+## <a name="dont-assume-that-parallel-is-always-faster"></a>Non presupporre che Parallel sia sempre più veloce
 
-In alcuni casi la parallelizzazione rallenta l'esecuzione di una query PLINQ rispetto all'esecuzione di una query LINQ to Objects equivalente. La regola generale di base è che per le query con pochi elementi di origine e con delegati dell'utente veloci raramente si verifica un aumento significativo della velocità di esecuzione. Poiché molti fattori influiscono sulle prestazioni, è comunque consigliabile misurare sempre i risultati effettivi prima di decidere se usare PLINQ. Per altre informazioni, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+In alcuni casi la parallelizzazione rallenta l'esecuzione di una query PLINQ rispetto all'esecuzione di una query LINQ to Objects equivalente. La regola generale di base è che per le query con pochi elementi di origine e con delegati dell'utente veloci raramente si verifica un aumento significativo della velocità di esecuzione. Poiché molti fattori influiscono sulle prestazioni, è comunque consigliabile misurare sempre i risultati effettivi prima di decidere se usare PLINQ. Per altre informazioni, vedere [Informazioni sull'aumento di velocità in PLINQ](understanding-speedup-in-plinq.md).
 
-## <a name="avoid-writing-to-shared-memory-locations"></a>Evitare di scrivere in percorsi di memoria condivisi
+## <a name="avoid-writing-to-shared-memory-locations"></a>Evitare di scrivere in posizioni di memoria condivise
 
 Nel codice sequenziale spesso si eseguono operazioni di lettura e scrittura su variabili o campi di classe statici. Tuttavia, ogni volta che più thread eseguono un accesso simultaneo a queste variabili, è molto probabile che si verifichino race condition. Anche se è possibile sincronizzare l'accesso alla variabile mediante l'utilizzo di blocchi, il costo di questa sincronizzazione può influire negativamente sulle prestazioni. È pertanto consigliabile evitare o almeno limitare il più possibile l'accesso allo stato condiviso in una query PLINQ.
 
-## <a name="avoid-over-parallelization"></a>Evitare parallelizzazioni eccessive
+## <a name="avoid-over-parallelization"></a>Evitare la parallelismo
 
-L'uso dell'operatore `AsParallel` comporta costi di sovraccarico dovuti al partizionamento della raccolta di origine e alla sincronizzazione dei thread di lavoro. I vantaggi della parallelizzazione vengono limitati ulteriormente dal numero di processori nel computer. Non si ottiene alcun aumento di velocità eseguendo più thread con vincoli di calcolo in un unico processore. È pertanto fondamentale evitare la parallelizzazione eccessiva di una query.
+Utilizzando il metodo `AsParallel`, si incorrono i costi di overhead per il partizionamento della raccolta di origine e la sincronizzazione dei thread di lavoro. I vantaggi della parallelizzazione vengono limitati ulteriormente dal numero di processori nel computer. Non si ottiene alcun aumento di velocità eseguendo più thread con vincoli di calcolo in un unico processore. È pertanto fondamentale evitare la parallelizzazione eccessiva di una query.
 
 La situazione più comune in cui si verifica la parallelizzazione eccessiva è quando si usano query annidate, come illustrato nel frammento di codice seguente.
 
-[!code-csharp[PLINQ#20](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
-[!code-vb[PLINQ#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]
+[!code-csharp[PLINQ#20](~/samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
+[!code-vb[PLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]
 
 In questo caso è meglio parallelizzare solo l'origine dati esterna (clienti), a meno che non sussista almeno una delle condizioni seguenti:
 
@@ -60,7 +60,7 @@ FileStream fs = File.OpenWrite(...);
 a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 ```
 
-## <a name="limit-calls-to-thread-safe-methods"></a>Limitare le chiamate ai metodi thread-safe
+## <a name="limit-calls-to-thread-safe-methods"></a>Limitare le chiamate a metodi thread-safe
 
 La maggior parte dei metodi statici in .NET Framework è thread-safe e può essere chiamata simultaneamente da più thread. Tuttavia, anche in questi casi, la sincronizzazione da applicare può comportare un rallentamento significativo della query.
 
@@ -69,23 +69,21 @@ La maggior parte dei metodi statici in .NET Framework è thread-safe e può esse
 
 ## <a name="avoid-unnecessary-ordering-operations"></a>Evitare operazioni di ordinamento non necessarie
 
-Quando PLINQ esegue una query in parallelo, divide la sequenza di origine in partizioni che possono essere usate contemporaneamente su più thread. Per impostazione predefinita, l'ordine di elaborazione delle partizioni e i risultati restituiti non sono prevedibili, ad eccezione degli operatori quali, ad esempio, `OrderBy`. È possibile indicare a PLINQ di conservare l'ordine di qualsiasi sequenza di origine, ma ciò ha un impatto negativo sulle prestazioni. La procedura consigliata, se possibile, è strutturare le query in modo che non si basino sulla conservazione dell'ordine. Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
+Quando PLINQ esegue una query in parallelo, divide la sequenza di origine in partizioni che possono essere usate contemporaneamente su più thread. Per impostazione predefinita, l'ordine di elaborazione delle partizioni e i risultati restituiti non sono prevedibili, ad eccezione degli operatori quali, ad esempio, `OrderBy`. È possibile indicare a PLINQ di conservare l'ordine di qualsiasi sequenza di origine, ma ciò ha un impatto negativo sulle prestazioni. La procedura consigliata, se possibile, è strutturare le query in modo che non si basino sulla conservazione dell'ordine. Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](order-preservation-in-plinq.md).
 
 ## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>Preferire ForAll a ForEach quando è possibile
 
 Anche se PLINQ esegue una query su più thread, se si usano i risultati in un ciclo `foreach` (`For Each` in Visual Basic), i risultati della query devono essere uniti in un unico thread e l'enumeratore dovrà accedervi in modo seriale. In alcuni casi, questo è inevitabile. Tuttavia, se possibile, usare il metodo `ForAll` per consentire a ogni thread di restituire i propri risultati, ad esempio scrivendo in una raccolta thread-safe quale <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>.
 
-Lo stesso problema si verifica con <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. In altre parole, `source.AsParallel().Where().ForAll(...)` deve essere fortemente preferito a
+Lo stesso problema si applica ai <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. In altre parole, `source.AsParallel().Where().ForAll(...)` dovrebbe essere fortemente preferito `Parallel.ForEach(source.AsParallel().Where(), ...)`.
 
-`Parallel.ForEach(source.AsParallel().Where(), ...)`
-
-## <a name="be-aware-of-thread-affinity-issues"></a>Tenere presente i problemi di affinità di thread
+## <a name="be-aware-of-thread-affinity-issues"></a>Tenere presente i problemi di affinità dei thread
 
 Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Se si tenta di accedere allo stato condiviso di un controllo Windows Form in una query PLINQ, viene generata un'eccezione se si esegue il debugger. Questa impostazione può essere disattivata. Tuttavia, se la query viene utilizzata nel thread UI, è possibile accedere al controllo dal ciclo `foreach` che enumera i risultati della query perché il codice viene eseguito in un solo thread.
 
-## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Non presupporre che le iterazioni di Foreach, For e ForAll vengano eseguite sempre in parallelo
+## <a name="dont-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Non presupporre che le iterazioni di ForEach, for e ForAll vengano eseguite sempre in parallelo
 
-È importante tenere presente che le singole iterazioni in un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> o <xref:System.Linq.ParallelEnumerable.ForAll%2A> possono non necessariamente essere eseguite in parallelo. È pertanto necessario evitare di scrivere codice la cui correttezza dipenda dall'esecuzione parallela delle iterazioni o dall'esecuzione delle iterazioni in un particolare ordine.
+È importante tenere presente che le singole iterazioni in un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>o <xref:System.Linq.ParallelEnumerable.ForAll%2A> possono ma non devono essere eseguite in parallelo. È pertanto necessario evitare di scrivere codice la cui correttezza dipenda dall'esecuzione parallela delle iterazioni o dall'esecuzione delle iterazioni in un particolare ordine.
 
 Il codice seguente, ad esempio, è molto probabile che conduca a un deadlock:
 
@@ -125,4 +123,4 @@ In particolare, l'avanzamento di un'iterazione di un ciclo parallelo non deve di
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](parallel-linq-plinq.md)

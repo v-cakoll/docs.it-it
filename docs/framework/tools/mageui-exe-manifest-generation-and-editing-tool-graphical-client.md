@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714465"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
 
-MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI. exe sono destinati al profilo client di .NET Framework 4. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. Quando si aggiungono o si rimuovono assembly da un manifesto o si firma di nuovo i manifesti esistenti, MageUI. exe non aggiorna il manifesto per la destinazione .NET Framework 4 Client Profile. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
@@ -90,11 +90,11 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Nome**|Obbligatoria. Il nome del manifesto dell'applicazione. In genere coincide con il nome del file.|  
-|**Version**|Obbligatoria. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
-|**Processore**|Facoltativa. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, che rappresenta il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati precompilati per un'architettura specifica. Per altre informazioni sulla precompilazione, vedere [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
-|**Impostazioni cultura**|Facoltativa. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
-|**Token di chiave pubblica**|Facoltativa. La chiave pubblica con cui è stato firmato il manifesto dell'applicazione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
+|**Nome**|Richiesto. Il nome del manifesto dell'applicazione. In genere coincide con il nome del file.|  
+|**Version**|Richiesto. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Processore**|Parametro facoltativo. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, che rappresenta il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati precompilati per un'architettura specifica. Per altre informazioni sulla precompilazione, vedere [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
+|**Impostazioni cultura**|Parametro facoltativo. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
+|**Token di chiave pubblica**|Parametro facoltativo. La chiave pubblica con cui è stato firmato il manifesto dell'applicazione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
   
 ### <a name="description-tab"></a>Scheda Descrizione  
  Queste informazioni sono generalmente disponibili all'interno del manifesto della distribuzione. Questi campi possono essere modificati solo se la casella di controllo **Usa manifesto applicazione per informazioni sull'attendibilità** è selezionata nella scheda **Opzioni applicazione**.  
@@ -147,30 +147,30 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Nome**|Obbligatoria. Il nome del manifesto della distribuzione. In genere coincide con il nome del file.|  
-|**Version**|Obbligatoria. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
-|**Processore**|Facoltativa. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati compilati per un'architettura specifica.|  
-|**Impostazioni cultura**|Facoltativa. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
-|**Token di chiave pubblica**|Facoltativa. La chiave pubblica con cui è stato firmato il manifesto della distribuzione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
+|**Nome**|Richiesto. Il nome del manifesto della distribuzione. In genere coincide con il nome del file.|  
+|**Version**|Richiesto. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Processore**|Parametro facoltativo. L'architettura del computer in cui è possibile eseguire la distribuzione. Il valore predefinito è `msil`, ossia Microsoft Intermediate Language, il formato predefinito di tutti gli assembly gestiti. Modificare questo campo se gli assembly nell'applicazione sono stati compilati per un'architettura specifica.|  
+|**Impostazioni cultura**|Parametro facoltativo. Il codice ISO di paese e area in due parti in cui viene eseguita l'applicazione. Il valore predefinito è `neutral`.|  
+|**Token di chiave pubblica**|Parametro facoltativo. La chiave pubblica con cui è stato firmato il manifesto della distribuzione. Se si tratta di un manifesto nuovo o non firmato, questo campo verrà visualizzato come `Unsigned`.|  
   
 ### <a name="description-tab"></a>Scheda Descrizione  
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Server di pubblicazione**|Obbligatoria. Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
-|**Prodotto**|Obbligatoria. Il nome del prodotto completo. Se è stato selezionato **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione**, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** di questa applicazione.|  
-|**Percorso del supporto**|Facoltativa. L'URL tramite cui i clienti possono ottenere assistenza e supporto per l'applicazione.|  
+|**Server di pubblicazione**|Richiesto. Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
+|**Prodotto**|Richiesto. Il nome del prodotto completo. Se è stato selezionato **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione**, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** di questa applicazione.|  
+|**Percorso del supporto**|Parametro facoltativo. L'URL tramite cui i clienti possono ottenere assistenza e supporto per l'applicazione.|  
   
 ### <a name="deployment-options-tab"></a>Scheda Opzioni di distribuzione  
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Tipo di applicazione**|Facoltativa. Specifica se l'applicazione esegue l'installazione automatica nel computer client (**Installazione locale**), viene eseguita online (**Solo in linea**) oppure è un'applicazione WPF eseguita nel browser (**Applicazione browser WPF**). Il valore predefinito è **Installazione locale**.|  
-|**Posizione iniziale**|Facoltativa. L'URL da cui deve essere effettivamente avviata l'applicazione. È utile quando si distribuisce un'applicazione da un CD che deve aggiornarsi automaticamente dal Web.|  
-|**Includi il percorso iniziale (ProviderURL) nel manifesto**|Facoltativa. Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|  
-|**Esegui automaticamente l'applicazione dopo l'installazione**|Obbligatoria. Specifica che l'applicazione ClickOnce deve essere eseguita subito dopo l'installazione iniziale da un URL. Il valore predefinito prevede che la casella di controllo sia selezionata.|  
-|**Consenti passaggio di parametri URL all'applicazione**|Obbligatoria. Consente il trasferimento dei dati di parametro nell'applicazione ClickOnce tramite una stringa di query aggiunta all'URL del manifesto della distribuzione. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
-|**Usa l'estensione di file .deploy**|Obbligatoria. Se è selezionato, tutti i file nel manifesto dell'applicazione devono avere l'estensione .deploy. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
+|**Tipo di applicazione**|Parametro facoltativo. Specifica se l'applicazione esegue l'installazione automatica nel computer client (**Installazione locale**), viene eseguita online (**Solo in linea**) oppure è un'applicazione WPF eseguita nel browser (**Applicazione browser WPF**). Il valore predefinito è **Installazione locale**.|  
+|**Posizione iniziale**|Parametro facoltativo. L'URL da cui deve essere effettivamente avviata l'applicazione. È utile quando si distribuisce un'applicazione da un CD che deve aggiornarsi automaticamente dal Web.|  
+|**Includi il percorso iniziale (ProviderURL) nel manifesto**|Parametro facoltativo. Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|  
+|**Esegui automaticamente l'applicazione dopo l'installazione**|Richiesto. Specifica che l'applicazione ClickOnce deve essere eseguita subito dopo l'installazione iniziale da un URL. Il valore predefinito prevede che la casella di controllo sia selezionata.|  
+|**Consenti passaggio di parametri URL all'applicazione**|Richiesto. Consente il trasferimento dei dati di parametro nell'applicazione ClickOnce tramite una stringa di query aggiunta all'URL del manifesto della distribuzione. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
+|**Usa l'estensione di file .deploy**|Richiesto. Se è selezionato, tutti i file nel manifesto dell'applicazione devono avere l'estensione .deploy. Il valore predefinito prevede che la casella di controllo sia deselezionata.|  
   
 ### <a name="update-options-tab"></a>Scheda Opzioni aggiornamento  
  La scheda **Opzioni aggiornamento** contiene le opzioni sopra indicate solo quando la casella di selezione **Tipo di applicazione** nella scheda **Nome** è impostata su **Installazione locale**.  
@@ -180,7 +180,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 |**L'applicazione deve controllare la disponibilità di aggiornamenti**|Specifica se ClickOnce deve controllare disponibilità di aggiornamenti per l'applicazione. Se questa casella di controllo non è selezionata, l'applicazione non controllerà gli aggiornamenti a meno che non venga aggiornata a livello di codice tramite le API nello spazio dei nomi <xref:System.Deployment.Application>.|  
 |**Scegliere quando controllare la disponibilità di aggiornamenti**|Fornisce due opzioni per i controlli degli aggiornamenti:<br /><br /> -   **Prima dell'avvio dell'applicazione**. Il controllo degli aggiornamenti viene eseguito prima dell'esecuzione dell'applicazione.<br />-   **Dopo l'avvio dell'applicazione**. Il controllo degli aggiornamenti viene avviato subito dopo l'inizializzazione del form principale dell'applicazione e viene eseguito al successivo avvio dell'applicazione.|  
 |**Frequenza controllo disponibilità aggiornamenti**|Determina la frequenza con cui ClickOnce controlla gli aggiornamenti:<br /><br /> -   **Controlla sempre all'avvio dell'applicazione**. ClickOnce eseguirà un controllo degli aggiornamenti ogni volta che l'utente apre l'applicazione.<br />-   **Controlla ogni**: Seleziona un intervallo di tempo e un'unità (ore, giorni o settimane) che deve trascorrere prima del controllo degli aggiornamenti.|  
-|**Specificare la versione minima richiesta per l'applicazione**|Facoltativa. Specifica che è necessario installare una determinata versione dell'applicazione, impedendo agli utenti di usare una versione precedente.|  
+|**Specificare la versione minima richiesta per l'applicazione**|Parametro facoltativo. Specifica che è necessario installare una determinata versione dell'applicazione, impedendo agli utenti di usare una versione precedente.|  
 |**Version**|Obbligatorio se la casella di controllo **Specificare la versione minima richiesta per l'applicazione** è selezionata. Il numero di versione specificato deve essere nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Scheda Riferimento all'applicazione  

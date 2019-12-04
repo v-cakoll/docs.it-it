@@ -2,12 +2,12 @@
 title: HTTP duale WS
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716781"
 ---
 # <a name="ws-dual-http"></a>HTTP duale WS
 
@@ -21,7 +21,7 @@ Nell'esempio di HTTP duale viene illustrato come configurare l'associazione `WSD
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -88,7 +88,7 @@ Quando si esegue l'esempio, vengono visualizzati i messaggi restituiti al client
 4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Quando si esegue il client in una configurazione a più computer, assicurarsi di sostituire localhost sia nell'attributo `address` dell' [endpoint\<> dell'elemento \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo `clientBaseAddress` dell' [associazione\<](../../configure-apps/file-schema/wcf/bindings.md) elemento dell'elemento [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con il nome del computer appropriato, come illustrato:
+    > Quando si esegue il client in una configurazione a più computer, assicurarsi di sostituire localhost sia nell'attributo `address` dell' [endpoint\<> dell'elemento \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) che nell'attributo `clientBaseAddress` dell'elemento\<[Binding](../../configure-apps/file-schema/wcf/bindings.md) > dell'elemento\<[WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) con il nome del computer appropriato, come illustrato di seguito:
 
     ```xml
     <client>

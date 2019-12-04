@@ -2,12 +2,12 @@
 title: Uso di endpoint standard
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662386"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715338"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso di endpoint standard
 
@@ -105,7 +105,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```
 
-Nella funzione `CreateServiceEndpoint` viene creato un oggetto `CustomEndpoint`. La relativa definizione è illustrata nell'esempio seguente:
+Nella funzione `CreateServiceEndpoint` viene creato un oggetto `CustomEndpoint`. La definizione è illustrata nell'esempio seguente:
 
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -139,34 +139,34 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Usa Visual Studio 2012, aprire il file standardEndpoints.
+1. Con Visual Studio 2012 aprire il file StandardEndpoints. sln.
 
 2. Consentire l'avvio di più progetti.
 
-    1. Nelle **Esplora soluzioni**, fare doppio clic su soluzione Standard Endpoints, quindi selezionare **proprietà**.
+    1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla soluzione endpoint standard e quindi scegliere **Proprietà**.
 
-    2. Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
+    2. In **Proprietà comuni**selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
 
-    3. Spostare il progetto di servizio all'inizio dell'elenco, con la **azione** impostata su **avviare**.
+    3. Spostare il progetto di servizio all'inizio dell'elenco, con l' **azione** impostata su **Avvia**.
 
-    4. Spostare il progetto Client dopo il progetto di servizio, anche con il **azione** impostata su **avviare**.
+    4. Spostare il progetto client dopo il progetto del servizio, anche con l' **azione** impostata su **Avvia**.
 
          In questo modo si specifica che il progetto Client viene eseguito dopo il progetto Service.
 
 3. Per eseguire la soluzione, premere F5.
 
 > [!NOTE]
-> Se questi passaggi risolve il problema, assicurarsi che l'ambiente è stato configurato correttamente, usando la procedura seguente:
+> Se questi passaggi non funzionano, assicurarsi che l'ambiente sia stato configurato correttamente, attenendosi alla procedura seguente:
 >
-> 1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
-> 2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](building-the-samples.md).
-> 3. Per eseguire l'esempio in una o più configurazioni di computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](running-the-samples.md).
+> 1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+> 2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](building-the-samples.md).
+> 3. Per eseguire l'esempio in una o più configurazioni di computer, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

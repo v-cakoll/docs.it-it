@@ -2,12 +2,12 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044824"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716495"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affidabile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio viene illustrata l'implementazione di un canale di [connessione make](https://go.microsoft.com/fwlink/?LinkId=178141) che può essere composto insieme a Reliable Messaging ed eventualmente un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come comporre WCF e un [profilo sicuro affida
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
