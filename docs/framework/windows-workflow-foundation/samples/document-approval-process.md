@@ -2,12 +2,12 @@
 title: Processo di approvazione dei documenti
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038231"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710840"
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -102,9 +102,9 @@ Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo
 
 3. Passare alla cartella ApprovalClient\Bin\Debug ed eseguire due istanze di ApprovalClient.exe.
 
-4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.
+4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante **Sottoscrivi** .
 
-5. Digitare un nome utente e fareclic su Sottoscrivi. Per un client usare `UserType1` e per l'altro il tipo `UserType2`.
+5. Digitare un nome utente e fare clic su **Sottoscrivi**. Per un client usare `UserType1` e per l'altro il tipo `UserType2`.
 
 6. Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi approvazione**.
 
@@ -118,9 +118,9 @@ Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo
 
 3. Passare alla cartella ApprovalClient\Bin\Debug ed eseguire tre istanze di ApprovalClient.exe.
 
-4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.
+4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante **Sottoscrivi** .
 
-5. Digitare un nome utente e fareclic su Sottoscrivi. Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.
+5. Digitare un nome utente e fare clic su **Sottoscrivi**. Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.
 
 6. Nel client `UserType1` selezionare il tipo di approvazione a quorum dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi approvazione**. In questo modo viene richiesto che i due client `UserType2` approvino o rifiutino il documento. Mentre entrambi i client `UserType2` devono rispondere, solo un client deve approvare il documento.
 
@@ -134,13 +134,13 @@ Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo
 
 3. Passare alla cartella ApprovalClient\Bin\Debug ed eseguire quattro istanze di ApprovalClient.exe.
 
-4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.
+4. Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante **Sottoscrivi** .
 
-5. Digitare un nome utente e fareclic su Sottoscrivi. Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.
+5. Digitare un nome utente e fare clic su **Sottoscrivi**. Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.
 
 6. Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi approvazione**.
 
-7. Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approva**, il documento viene passato al `UserType3` client.
+7. Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approva**, il documento viene passato al client `UserType3`.
 
     Se il documento viene approvato dal primo quorum `UserType2`, il documento viene passato al client `UserType3`.
 

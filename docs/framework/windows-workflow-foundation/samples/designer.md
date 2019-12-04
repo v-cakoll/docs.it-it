@@ -2,19 +2,19 @@
 title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-ms.openlocfilehash: de4ead51c7ccad864695f2ef6c46ac60dda42715
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b765eac8cb553dcb8a6a5a441d01760ce6f5f3e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913822"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710801"
 ---
 # <a name="designer"></a>Designer
-Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].
+Questa sezione contiene esempi che illustrano come usare Windows Progettazione flussi di lavoro.
 
-## <a name="in-this-section"></a>In questa sezione
- [Rimuovere la visualizzazione di stato la finestra di progettazione aggiunge a un File XAML](removing-the-view-state-the-designer-adds-to-an-xaml-file.md) viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove visualizzazione dello stato da un file XAML.
+## <a name="in-this-section"></a>Contenuto della sezione
+ [Rimozione dello stato di visualizzazione aggiunto dalla finestra di progettazione a un file XAML](removing-the-view-state-the-designer-adds-to-an-xaml-file.md) Viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.
 
- [Albero degli elementi del modello di programmazione](programming-model-item-tree.md) viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).
+ [Albero degli elementi del modello di programmazione](programming-model-item-tree.md) Viene illustrato come spostarsi nell'albero <xref:System.Activities.Presentation.Model.ModelItem> utilizzando data binding dichiarativo dalla visualizzazione albero Windows Presentation Foundation (WPF).
 
- [Estensibilità della griglia delle proprietà](property-grid-extensibility.md) viene illustrato come personalizzare la griglia delle proprietà che viene visualizzato quando un'attività specificata viene selezionata nella finestra di progettazione.
+ [Estendibilità della griglia delle proprietà](property-grid-extensibility.md) Viene illustrato come personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione.
