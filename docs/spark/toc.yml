@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Distribuire in Databricks
       href: tutorials/databricks-deployment.md
+    - name: Structured Streaming
+      href: tutorials/streaming.md
 - name: Guide pratiche
   items:
     - name: Eseguire il debug dell'applicazione
