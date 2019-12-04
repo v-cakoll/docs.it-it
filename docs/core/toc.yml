@@ -47,21 +47,21 @@
   items:
     - name: 'Introduzione a C# e Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Creare un''app Hello World usando C# con .NET Core in Visual Studio 2017'
+    - name: 'Creare un''app Hello World con C# in Visual Studio'
       href: tutorials/with-visual-studio.md
-    - name: Creare un'app Hello World usando Visual Basic con .NET Core in Visual Studio 2017
+    - name: Creare un'app Hello World con Visual Basic in Visual Studio
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Eseguire il debug dell''applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017'
+    - name: Eseguire il debug di un'applicazione con Visual Studio
       href: tutorials/debugging-with-visual-studio.md
-    - name: Pubblicare l'applicazione Hello World con Visual Studio 2017
+    - name: Pubblicare un'applicazione con Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Creare una libreria .NET Standard con C# e .NET Core in Visual Studio 2017'
+    - name: 'Creare una libreria .NET Standard con C# in Visual Studio'
       href: tutorials/library-with-visual-studio.md
-    - name: Creare una libreria .NET Standard con Visual Basic e .NET Core in Visual Studio 2017
+    - name: Creare una libreria .NET Standard con Visual Basic in Visual Studio
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Eseguire il test di una libreria .NET Standard con .NET Core in Visual Studio 2017
+    - name: Testare una libreria .NET Standard in Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Usare una libreria .NET Standard in Visual Studio 2017
+    - name: Utilizzare una libreria .NET Standard in Visual Studio
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Novità di .NET Core
   items:
@@ -128,11 +128,11 @@
   items:
     - name: Da .NET Core 2.0 a 2.1
       href: migration/20-21.md
-    - name: Migrazione da project.json
+    - name: Eseguire la migrazione da project.json
       href: migration/index.md
     - name: Mapping tra project.json e csproj
       href: tools/project-json-to-csproj.md
-    - name: Migrazione da DNX
+    - name: Eseguire la migrazione da DNX
       href: migration/from-dnx.md
 - name: Distribuzione delle applicazioni
   href: deploying/index.md
@@ -141,7 +141,7 @@
       href: deploying/deploy-with-cli.md
     - name: Distribuire app con Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Creazione di un pacchetto NuGet con strumenti multipiattaforma
+    - name: Creare un pacchetto NuGet con strumenti multipiattaforma
       href: deploying/creating-nuget-packages.md
     - name: Roll forward del runtime di distribuzione autonoma
       href: deploying/runtime-patch-selection.md
@@ -153,7 +153,7 @@
       href: docker/introduction.md
     - name: Distribuire un'app .NET Core in un contenitore
       href: docker/build-container.md
-    - name: Strumenti per contenitori in Visual Studio
+    - name: Strumenti contenitore in Visual Studio
       href: /visualstudio/containers/overview
 - name: Strumenti di diagnostica
   items:
@@ -171,7 +171,7 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Testing unità
+- name: Unit test
   href: testing/index.md
   items:
     - name: Procedure consigliate per gli unit test
@@ -194,7 +194,7 @@
       href: testing/unit-testing-visual-basic-with-nunit.md
     - name: Unit test VB con MSTest
       href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: Esecuzione di unit test selettivi
+    - name: Eseguire unit test selettivi
       href: testing/selective-unit-tests.md
     - name: Output pubblicato degli unit test
       href: testing/unit-testing-published-output.md
@@ -207,7 +207,7 @@
   items:
     - name: Scelta della versione di .NET Core
       href: versions/selection.md
-    - name: Rimozione di SDK e runtime non aggiornati
+    - name: Rimuovere runtime e SDK non aggiornati
       href: versions/remove-runtime-sdk-versions.md
 - name: Catalogo RID (Runtime Identifier)
   href: rid-catalog.md
@@ -355,11 +355,11 @@
       items:
         - name: Probe delle dipendenze predefinito
           href: dependency-loading/default-probing.md
-        - name: Caricamento di assembly gestiti
+        - name: Caricare assembly gestiti
           href: dependency-loading/loading-managed.md
-        - name: Caricamento di assembly satellite
+        - name: Caricare assembly satellite
           href: dependency-loading/loading-resources.md
-        - name: Caricamento di librerie non gestite
+        - name: Caricare librerie non gestite
           href: dependency-loading/loading-unmanaged.md
     - name: Esercitazioni
       items:

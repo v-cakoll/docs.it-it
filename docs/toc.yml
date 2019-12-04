@@ -8,7 +8,7 @@
   href: framework/
 - name: Guida per desktop .NET - WPF
   href: desktop-wpf/
-- name: 'Guida a C#'
+- name: 'Guida per C#'
   href: csharp/index.yml
 - name: 'Guida a F#'
   href: fsharp/
