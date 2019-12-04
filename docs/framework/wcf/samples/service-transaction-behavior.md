@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: fc71d077e219481281be8f8bf22352bd19baebac
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425468"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715115"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 
-In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma è stato esteso per mantenere un registro sul server delle operazioni eseguite in una tabella di database e un totale per le operazioni della calcolatrice parziale con stato. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.
+In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice, ma viene esteso per gestire un log del server delle operazioni eseguite in una tabella di database e un totale di esecuzione con stato per le operazioni della calcolatrice. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
@@ -101,7 +101,7 @@ Nel servizio sono presenti tre attribuiti che influiscono sul comportamento dell
 
   - La proprietà `ReleaseServiceInstanceOnTransactionComplete` specifica se l'istanza del servizio sottostante viene riciclata al completamento di una transazione. Impostando questa proprietà su `false`, il servizio gestisce la stessa istanza del servizio tra varie richieste di operazione. Questo aspetto è necessario per gestire il totale parziale. Se la proprietà è impostata su `true`, viene generata una nuova istanza dopo ogni azione completata.
 
-  - La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostandola su `false`, le singole operazioni devono impostare la <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> proprietà `true` o richiedere in modo esplicito una chiamata al <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> metodo per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.
+  - La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostando la proprietà su `false`, le singole operazioni sono necessarie per impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> su `true` o per richiedere in modo esplicito una chiamata al metodo <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.
 
 - Per `ServiceContractAttribute`:
 
@@ -211,23 +211,23 @@ Il risultato di queste proceduta è che non viene eseguito il commit di nessuna 
 
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-Se si esegue l'esempio tra più computer, è necessario configurare il Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e utilizzare lo strumento WsatConfig.exe per abilitare la rete per le transazioni Windows Communication Foundation (WCF) supporto tecnico.
+Se si esegue l'esempio tra più computer, è necessario configurare Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e usare lo strumento WsatConfig. exe per abilitare la rete delle transazioni Windows Communication Foundation (WCF) supporto.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Per configurare Microsoft Distributed Transaction Coordinator (MSDTC) allo scopo di supportare l'esecuzione dell'esempio tra diversi computer
 
 1. Nel computer del servizio configurare MSDTC per consentire le transazioni di rete in ingresso.
 
-    1. Dal **avviare** menu, passare alla **Pannello di controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.
+    1. Dal menu **Start** passare a pannello di **controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.
 
-    2. Fare doppio clic su **risorse del Computer** e selezionare **proprietà**.
+    2. Fare clic con il pulsante destro del mouse su **computer locale** e scegliere **Proprietà**.
 
-    3. Nel **MSDTC** scheda, fare clic su **configurazione di sicurezza**.
+    3. Nella scheda **MSDTC** fare clic su **Configurazione sicurezza**.
 
-    4. Controllare **accesso DTC alla rete** e **consentire l'ingresso**.
+    4. Controllare **l'accesso di rete DTC** e **consentire il traffico in ingresso**.
 
-    5. Fare clic su **Yes** per riavviare il servizio MS DTC e quindi fare clic su **OK**.
+    5. Fare clic su **Sì** per riavviare il servizio MS DTC e quindi fare clic su **OK**.
 
     6. Fare clic su **OK** per chiudere la finestra di dialogo.
 
@@ -235,25 +235,25 @@ Se si esegue l'esempio tra più computer, è necessario configurare il Microsoft
 
     1. Eseguire l'applicazione Windows Firewall dal Pannello di controllo.
 
-    2. Dal **eccezioni** scheda, fare clic su **Aggiungi programma**.
+    2. Nella scheda **eccezioni** fare clic su **Aggiungi programma**.
 
     3. Passare alla cartella C:\WINDOWS\System32.
 
-    4. Selezionare Msdtc.exe e fare clic su **aperto**.
+    4. Selezionare MSDTC. exe e fare clic su **Apri**.
 
-    5. Fare clic su **OK** per chiudere la **Aggiungi programma** la finestra di dialogo e fare clic su **OK** per chiudere l'applet Windows Firewall.
+    5. Fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi programma** , quindi fare di nuovo clic su **ok** per chiudere l'applet Windows Firewall.
 
 3. Nel computer client configurare MSDTC per consentire le transazioni di rete in uscita.
 
-    1. Dal **avviare** menu, passare alla **Pannello di controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.
+    1. Dal menu **Start** passare a pannello di **controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.
 
-    2. Fare doppio clic su **risorse del Computer** e selezionare **proprietà**.
+    2. Fare clic con il pulsante destro del mouse su **computer locale** e scegliere **Proprietà**.
 
-    3. Nel **MSDTC** scheda, fare clic su **configurazione di sicurezza**.
+    3. Nella scheda **MSDTC** fare clic su **Configurazione sicurezza**.
 
-    4. Controllare **accesso DTC alla rete** e **Consenti connessioni in uscita**.
+    4. Controllare **l'accesso di rete DTC** e **consentire il traffico in uscita**.
 
-    5. Fare clic su **Yes** per riavviare il servizio MS DTC e quindi fare clic su **OK**.
+    5. Fare clic su **Sì** per riavviare il servizio MS DTC e quindi fare clic su **OK**.
 
     6. Fare clic su **OK** per chiudere la finestra di dialogo.
 
@@ -262,6 +262,6 @@ Se si esegue l'esempio tra più computer, è necessario configurare il Microsoft
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`
