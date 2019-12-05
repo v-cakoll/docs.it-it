@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f427ed5216af11b90c5a8cede15806a11aedc76d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739927"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835546"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -71,7 +71,7 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 2. Ricevere il comando in un gestore di comandi.
    - Eseguire una transazione della singola aggregazione.
    - (Facoltativo) Generare eventi del dominio per gli effetti collaterali, ad esempio OrderStartedDomainEvent.
-3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Di seguito è riportato un esempio:
+3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Ad esempio:
    - Verificare o creare l'acquirente e la modalità di pagamento.
    - Creare e inviare un evento di integrazione correlato al bus di eventi per propagare gli stati tra i microservizi o attivare azioni esterne, come l'invio di un messaggio di posta elettronica all'acquirente.
    - Gestire gli altri effetti collaterali.
@@ -341,6 +341,8 @@ Infine, è importante ricordare che a volte è possibile propagare eventi tra pi
 ## <a name="conclusions-on-domain-events"></a>Conclusioni sugli eventi del dominio
 
 Come illustrato, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali delle modifiche all'interno del dominio. Per usare la terminologia DDD, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali tra una o più aggregazioni. Inoltre, per migliorare la scalabilità e ridurre l'impatto sui blocchi di database, facoltativamente usare la coerenza finale tra le aggregazioni all'interno dello stesso dominio.
+
+L'app di riferimento USA [Mediator](https://github.com/jbogard/MediatR) per propagare gli eventi del dominio synchonously tra le aggregazioni, all'interno di una singola transazione. Tuttavia, è anche possibile usare un'implementazione di AMQP, ad esempio [RabbitMQ](https://www.rabbitmq.com/) o il [bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) , per propagare gli eventi del dominio in modo asincrono, usando la coerenza finale, ma, come indicato in precedenza, è necessario prendere in considerazione la necessità di azioni di compensazione in caso di errori.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
