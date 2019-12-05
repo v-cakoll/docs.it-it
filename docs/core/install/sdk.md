@@ -6,25 +6,35 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 290bdfb05b328bb311e6ff5ef493048b05985899
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567473"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801944"
 ---
 # <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
 In questo articolo si apprenderà come installare il .NET Core SDK. Il .NET Core SDK viene usato per creare le app e le librerie .NET Core. Il runtime di .NET Core viene sempre installato con l'SDK.
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>Eseguire l'installazione con un programma di installazione
 
-Sia Windows che macOS hanno programmi di installazione autonomi che possono essere usati per installare .NET Core 3,0 SDK.
+Windows dispone di programmi di installazione autonomi che possono essere usati per installare .NET Core 3,0 SDK:
 
-- [CPU Windows x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [cpu x86 (32-bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [CPU MacOS x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
+- [CPU x86 (32 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Eseguire l'installazione con un programma di installazione
+
+macOS dispone di programmi di installazione autonomi che possono essere usati per installare .NET Core 3,0 SDK:
+
+- [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 

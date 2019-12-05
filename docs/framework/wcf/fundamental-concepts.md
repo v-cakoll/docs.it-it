@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319844"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802308"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 
-In questo documento viene fornita una panoramica di alto livello dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio e di un client WCF, vedere [Introduzione esercitazione](getting-started-tutorial.md). Per informazioni sulla programmazione WCF, vedere [programmazione WCF di base](basic-wcf-programming.md).
+Nel presente documento viene fornita una panoramica generale dell'architettura Windows Communication Foundation (WCF) Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio e di un client WCF, vedere [Introduzione esercitazione](getting-started-tutorial.md). Per informazioni sulla programmazione WCF, vedere [programmazione WCF di base](basic-wcf-programming.md).
 
 ## <a name="wcf-fundamentals"></a>Nozioni fondamentali su WCF
 
@@ -150,7 +150,7 @@ Se abilitati, i metadati del servizio vengono generati automaticamente da WCF tr
  Specifica che la riservatezza, l'integrità e l'autenticazione vengono fornite da meccanismi a livello del trasporto, ad esempio HTTPS. In caso di uso di un trasporto come HTTPS, questa modalità presenta il vantaggio di essere efficiente in termini di prestazioni e di essere ben compresa grazie alla sua prevalenza su Internet. Lo svantaggio consiste nel fatto che questo tipo di sicurezza viene applicato separatamente su ogni hop nel percorso di comunicazione, rendendo quest'ultima vulnerabile a un attacco di tipo "man in the middle".
 
 **Modalità di sicurezza del messaggio**  
- Specifica che la sicurezza viene fornita implementando una o più specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: sicurezza dei messaggi SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è anche possibile includere più tipi di credenziali con il messaggio (queste sono denominate _attestazioni_). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.
+ Specifica che la sicurezza viene fornita implementando una o più specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: sicurezza dei messaggi SOAP](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è anche possibile includere più tipi di credenziali con il messaggio (queste sono denominate _attestazioni_). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.
 
 **Trasporto con modalità di sicurezza delle credenziali del messaggio**  
  Specifica l'utilizzo del livello trasporto per fornire riservatezza, autenticazione e integrità dei messaggi, mentre ogni messaggio può contenere più credenziali (attestazioni) richieste dai destinatari del messaggio.

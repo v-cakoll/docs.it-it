@@ -2,12 +2,12 @@
 title: Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 976eb1e4a507d3c09bbc6e030985cbc3143b5946
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320609"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802253"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
 In questo argomento vengono descritte le diverse proprietà in aree diverse dell'architettura Windows Communication Foundation (WCF) che consentono di controllare l'utilizzo delle risorse e di influenzare le metriche delle prestazioni.
@@ -44,7 +44,8 @@ In questo argomento vengono descritte le diverse proprietà in aree diverse dell
  Lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) può migliorare le prestazioni di avvio per queste applicazioni generando il codice di serializzazione necessario dagli assembly compilati per l'applicazione. Per ulteriori informazioni, vedere [procedura: migliorare il tempo di avvio delle applicazioni client WCF utilizzando XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemi di prestazioni quando ASP.NET ospita servizi WCF
- Quando un servizio WCF viene ospitato da IIS e ASP.NET, le impostazioni di configurazione di IIS e ASP.NET possono influire sulla velocità effettiva e sul footprint di memoria del servizio WCF.  Per altre informazioni sulle prestazioni di ASP.NET, vedere [miglioramento delle prestazioni di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=186462).  Un'impostazione che potrebbe avere conseguenze impreviste è <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, che è una proprietà di <xref:System.Web.Configuration.ProcessModelSection>. Se l'applicazione dispone di un numero fisso o piccolo di client, l'impostazione di <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> su 2 potrebbe fornire una spinta di velocità effettiva in un computer con multiprocessore con un utilizzo della CPU vicino al 100%. Questo aumento nelle prestazioni ha comunque un costo: determinerà anche un aumento dell'utilizzo della memoria, con conseguente riduzione della scalabilità.
+
+Quando un servizio WCF viene ospitato da IIS e ASP.NET, le impostazioni di configurazione di IIS e ASP.NET possono influire sulla velocità effettiva e sul footprint di memoria del servizio WCF.  Per altre informazioni sulle prestazioni di ASP.NET, vedere [miglioramento delle prestazioni di ASP.NET](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10)). Un'impostazione che potrebbe avere conseguenze impreviste è <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, che è una proprietà di <xref:System.Web.Configuration.ProcessModelSection>. Se l'applicazione dispone di un numero fisso o piccolo di client, l'impostazione di <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> su 2 potrebbe fornire una spinta di velocità effettiva in un computer con multiprocessore con un utilizzo della CPU vicino al 100%. Questo aumento nelle prestazioni ha comunque un costo: determinerà anche un aumento dell'utilizzo della memoria, con conseguente riduzione della scalabilità.
 
 ## <a name="see-also"></a>Vedere anche
 

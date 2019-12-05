@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134092"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802726"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membri obsoleti in .NET Framework
 
@@ -94,7 +94,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|La chiave del Registro di sistema <xref:Microsoft.Win32.Registry.DynData> funziona solo su Win9x, che non è più supportato da CLR. Nei sistemi operativi basati su NT, usare invece la chiave del Registro di sistema <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> o il proxy del Registro di sistema <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType>.|
 |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|I metodi che usano Evidence per la sandbox sono obsoleti e verranno rimossi in una delle prossime versioni di .NET Framework. Usare un overload di                                          <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> che non accetta un parametro <xref:System.Security.Policy.Evidence?displayProperty=nameWithType>.|
@@ -261,7 +261,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-presentationcoredll"></a>Assembly: PresentationCore.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|Gli effetti bitmap sono deprecati e non funzionano più. In alternativa, si consideri l'uso di <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> laddove appropriato.|
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|Gli effetti bitmap sono deprecati e non funzionano più. In alternativa, si consideri l'uso di <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> laddove appropriato.|
@@ -301,7 +301,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 <a name="PresFW"></a>
 ### <a name="assembly-presentationframeworkdll"></a>Assembly: PresentationFramework.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|Sostituito da <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>.|
 |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|Sostituito da <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>.|
@@ -312,7 +312,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemactivitiesdll"></a>Assembly: System.Activities.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Non usare questo costruttore. In sostituzione usare <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> o <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType>.|
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Non usare questo costruttore. In sostituzione usare <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> o <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType>.|
@@ -321,7 +321,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemactivitiespresentationdll"></a>Assembly: System.Activities.Presentation.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|Questo metodo non supporta il trascinamento di più elementi.|
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo metodo non supporta il trascinamento di più elementi. In alternativa, utilizzare <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>.|
@@ -337,7 +337,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Valore non corretto; usare invece <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2>.|
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|La seconda origine dati di un operatore binario deve essere di tipo <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> anziché <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Per risolvere questo problema, usare il metodo di estensione <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> per convertire l'origine dati giusta in <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>.|
@@ -381,7 +381,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> è stato deprecato.|
 |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> è stato deprecato. Usare il costruttore <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29>.|
@@ -404,7 +404,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdataentitydll"></a>Assembly: System.Data.Entity.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|Questa proprietà è deprecata. In alternativa, usare la proprietà <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType>.|
 |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> In alternativa, utilizzare <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType>.|
@@ -415,7 +415,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> è stato deprecato. Usare le classi <xref:System.Math?displayProperty=nameWithType> per impostare esplicitamente la precisione di un numero decimale.|
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> è stato deprecato. Usare le classi <xref:System.Math?displayProperty=nameWithType> per impostare esplicitamente la scala di un numero decimale.|
@@ -425,7 +425,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|Questo metodo è stato deprecato. In alternativa, utilizzare <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType>.|
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Questo metodo è stato deprecato. In alternativa, utilizzare <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>.|
@@ -479,7 +479,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdll"></a>Assembly: System.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|I chiamanti non devono usare l'interfaccia di <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>, ma usare invece i metodi direttamente sulla classe <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.|
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|I chiamanti non devono usare l'interfaccia di <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType>, ma usare invece i metodi direttamente sulla classe <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.|
@@ -592,7 +592,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemdrawingdll"></a>Assembly: System.Drawing.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|Non usare il metodo <xref:System.Drawing.FontFamily.GetFamilies%2A>. In alternativa, usare la proprietà <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType>.|
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo costruttore è stato deprecato. Usare <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|
@@ -601,7 +601,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemmessagingdll"></a>Assembly: System.Messaging.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|Questo metodo restituisce un <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> che implementa la famiglia di metodi <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> in modo non corretto. In alternativa, utilizzare <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>.|
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Questo metodo restituisce un <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> che implementa la famiglia di metodi <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> in modo non corretto. In alternativa, utilizzare <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>.|
@@ -610,7 +610,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questa proprietà è obsoleta. Per abilitare Http <xref:System.Net.CookieContainer>, usare invece la proprietà <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType>.|
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> La funzionalità del canale peer è obsoleta e verrà rimossa in futuro.|
@@ -623,7 +623,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemservicemodeldiscoverydll"></a>Assembly: System.ServiceModel.Discovery.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> La proprietà <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A> è obsoleta. È consigliabile usare <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> per impostare le proprietà del trasporto.|
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> La proprietà <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> è obsoleta. È consigliabile usare <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> per impostare le proprietà del trasporto.|
@@ -632,7 +632,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwebdatavisualizationdll"></a>Assembly: System.Web.DataVisualization.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> è stato deprecato. In alternativa, analizzare <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>.|
 
@@ -640,14 +640,14 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|L'alternativa consigliata è <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> in System.Web.dll.|
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|L'alternativa consigliata è <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> in System.Web.dll.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo metodo produce output non conforme agli standard e ha problemi di interoperabilità. L'alternativa migliore è <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo metodo produce output non conforme agli standard e ha problemi di interoperabilità. L'alternativa migliore è <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Questo campo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Questa proprietà è obsoleta. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Questo campo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Questa proprietà è obsoleta. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|L'alternativa consigliata è la proprietà <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType>. Un valore della versione <xref:System.Version.Major%2A?displayProperty=nameWithType> maggiore di o uguale a 1 implica il supporto JavaScript.|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll è obsoleto.|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Questo metodo è obsoleto. Eseguire l'override del metodo <xref:System.Web.Routing.UrlRoutingModule.Init%2A> per usare l'evento <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>.|
@@ -676,7 +676,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwebdynamicdatadll"></a>Assembly: System.Web.DynamicData.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Usare la proprietà `EnablePersistedSelection` su un controllo con associazione a dati, ad esempio <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> o <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>.|
 
@@ -684,7 +684,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwebextensionsdll"></a>Assembly: System.Web.Extensions.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Usare <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Questa proprietà è obsoleta. In alternativa, impostare la proprietà [ `System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) su ogni singolo <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>.|
@@ -699,7 +699,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwebservicesdll"></a>Assembly: System.Web.Services.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|Questo metodo verrà rimosso da una versione futura. La chiamata al metodo non è più necessaria per l'individuazione di risorse.|
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Questa proprietà verrà rimossa da una versione futura. La presenza di una particolare intestazione in un messaggio SOAP non viene più applicata.|
@@ -708,7 +708,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemwindowsformsdll"></a>Assembly: System.Windows.Forms.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|Questo valore di enumerazione è stato deprecato. Non è prevista alcuna sostituzione.|
 |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|Questo metodo è stato deprecato. Non è prevista alcuna sostituzione.|
@@ -726,7 +726,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|Non viene usato dal parser XAML. Vedere <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|L'argomento `expressionType` non viene usato dal parser XAML. Per specificare il tipo restituito previsto, usare <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType>. Per specificare la gestione personalizzata per i tipi di espressione, usare <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
@@ -735,7 +735,7 @@ Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema
 
 ### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|Il tipo di convalida deve essere specificato come <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> o <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType>.|
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|La convalida XDR tramite <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> è obsoleta.|
@@ -770,7 +770,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-isymwrapperdll"></a>Assembly: ISymWrapper.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|L'alternativa consigliata è <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>. <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType>, accetta un puntatore all'interfaccia dell'utilità di importazione come un <xref:System.IntPtr?displayProperty=nameWithType> anziché un <xref:System.Int32?displayProperty=nameWithType>, e pertanto funziona su architetture a 32 bit e a 64 bit.|
 
@@ -778,7 +778,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftbuildconversionv40dll"></a>Assembly: Microsoft.Build.Conversion.v4.0.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|Usare invece l'overload <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> senza parametri.|
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|Usare invece l'overload <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> senza parametri.|
@@ -789,7 +789,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Evitare di impostare <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>. Se si passa semplicemente nel percorso di .NET Framework come <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, non è necessaria alcuna altra azione. In caso contrario, definire i set di strumenti usando il Registro di sistema o il file di configurazione, oppure aggiungendo elementi all'oggetto <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> del motore, per usare un <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> personalizzato.|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Se si passa semplicemente nel percorso di .NET Framework come <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, modificare semplicemente nel costruttore <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> senza parametri. In caso contrario, è possibile definire set di strumenti personalizzati nel Registro di sistema o nel file di configurazione oppure aggiungere elementi al <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> del motore. Quindi, usare invece il costruttore <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> o <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType>.|
@@ -798,7 +798,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftbuildframeworkdll"></a>Assembly: Microsoft.Build.Framework.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> In alternativa, usare la proprietà <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType>.|
 
@@ -806,7 +806,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Assembly: Microsoft.Build.Utilities.v4.0.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Usare la proprietà <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType>.|
 
@@ -814,7 +814,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Assembly: Microsoft.Data.Entity.Build.Tasks.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Usato solo per compatibilità con la versione 3.5.|
 
@@ -822,7 +822,7 @@ Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti
 
 ### <a name="assembly-microsoftvisualbasicdll"></a>Assembly: Microsoft.VisualBasic.dll
 
-|Digitare|Member|Messaggio|
+|Tipo di|Member|Message|
 |----------|------------|-------------|
 |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|Questo membro è stato deprecato. Usare <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType> per scrivere i tipi <xref:System.Object> oppure forzare `FileNumber` e `RecordNumber` a <xref:System.Int32> per la scrittura di tipi non oggetto.|
 |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Non usare questo metodo.|

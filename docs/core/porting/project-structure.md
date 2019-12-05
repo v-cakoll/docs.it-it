@@ -4,12 +4,12 @@ description: Indicazioni per i responsabili di progetti che desiderano compilare
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522977"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801934"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organizzare il progetto per il supporto sia di .NET Framework che di .NET Core
 
@@ -24,12 +24,12 @@ Informazioni su come creare una soluzione che viene compilata sia per .NET Frame
   - Scrittura di codice per una versione specifica di .NET Framework nelle librerie tramite l'uso di direttive del compilatore.
 
   *Scenari non supportati:*
-  - Gli sviluppatori devono usare Visual Studio 2017 per aprire i progetti esistenti. Per supportare le versioni precedenti di Visual Studio, è opportuno [mantenere i file di progetto in cartelle diverse](#support-vs).
+  - Richiede agli sviluppatori di usare Visual Studio 2017 o una versione successiva per aprire i progetti esistenti. Per supportare le versioni precedenti di Visual Studio, è opportuno [mantenere i file di progetto in cartelle diverse](#support-vs).
 
 - <a name="support-vs"></a>[**Mantenere separati i progetti esistenti e i nuovi progetti .NET Core**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Vantaggi:*
-  - Supporto per lo sviluppo di progetti esistenti, senza necessità di aggiornamento per sviluppatori/collaboratori che non dispongono di Visual Studio 2017.
+  - Supporto dello sviluppo sui progetti esistenti per sviluppatori e collaboratori che non possono avere Visual Studio 2017 o versione successiva.
   - Riduzione della possibilità di creazione di nuovi bug nei progetti esistenti in quanto non è necessaria alcuna varianza del codice nei progetti.
 
 ## <a name="example"></a>Esempio

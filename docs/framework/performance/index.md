@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 041fc89ba319edb63af3aeea43dc581f59323906
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204661"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800332"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -30,12 +30,12 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 ### <a name="performance-tools"></a>Strumenti per le prestazioni  
  Di seguito sono elencati alcuni strumenti per le prestazioni che è possibile usare con le app .NET Framework.  
   
-|Strumento|description|  
+|Strumento|Descrizione|  
 |----------|-----------------|  
 |Analisi prestazioni di Visual Studio|Consente di analizzare l'uso di CPU delle app .NET Framework che verranno distribuite in computer che eseguono il sistema operativo Windows.<br /><br /> Questo strumento è disponibile nel menu **Debug** di Visual Studio dopo l'apertura di un progetto. Per altre informazioni, vedere [Esplora prestazioni](/visualstudio/profiling/performance-explorer). **Nota:** usare l'analisi applicazione di Windows Phone (vedere la riga seguente) per dispositivi Windows Phone.|  
 |Analisi applicazione di Windows Phone|Consente di analizzare l'uso di CPU e memoria, la velocità di trasferimento dati della rete, la velocità di risposta dell'app e il consumo di batteria delle app Windows Phone.<br /><br /> Questo strumento è disponibile nel menu **Debug** per un progetto Windows Phone in Visual Studio dopo l'installazione di [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Per altre informazioni, vedere [profilatura delle app per Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Consente di identificare i problemi prestazionali correlati alla CPU e alla memoria. Questo strumento usa le API di profilatura di Event Tracing for Windows (ETW) e CLR per offrire analisi avanzate sulla CPU e la memoria, oltre a informazioni su Garbage Collection e compilazione del codice JIT. Per altre informazioni su come usare PerfView, vedere l'esercitazione e i file della Guida inclusi con l'app, le [esercitazioni video di Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) e i [post di blog](https://blogs.msdn.microsoft.com/vancem/tag/perfview/).<br /><br /> Per problemi specifici della memoria, vedere [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (Uso di PerfView per le analisi della memoria).|  
-|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Consente di determinare le prestazioni complessive del sistema, ad esempio l'uso di memoria e risorse di archiviazione da parte dell'app quando più applicazioni sono in esecuzione nello stesso computer. Lo strumento è disponibile nell'Area download come parte di Windows Assessment and Deployment Kit (ADK) per [!INCLUDE[win8](../../../includes/win8-md.md)]. Per altre informazioni, vedere [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
+|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Consente di determinare le prestazioni complessive del sistema, ad esempio l'uso di memoria e risorse di archiviazione da parte dell'app quando più applicazioni sono in esecuzione nello stesso computer. Questo strumento è disponibile nell'area download come parte di Windows Assessment and Deployment Kit (ADK) per Windows 8. Per altre informazioni, vedere [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Event Tracing for Windows (ETW)  
  ETW è una tecnica che consente di ottenere informazioni diagnostiche sul codice in esecuzione ed è essenziale per molti degli strumenti per le prestazioni indicati in precedenza. ETW crea log per particolari eventi generati dalle app .NET Framework e da Windows. Con ETW è possibile abilitare e disabilitare la registrazione in modo dinamico e dunque eseguire analisi dettagliate negli ambienti di produzione senza riavviare l'app. .NET Framework offre supporto per gli eventi ETW ed ETW è usato da numerosi strumenti per la profilatura e le prestazioni per generare dati sulle prestazioni. Spesso questi strumenti abilitano e disabilitano gli eventi ETW, quindi è utile conoscerli. È possibile usare specifici eventi ETW per raccogliere informazioni sulle prestazioni relative a particolari componenti dell'app. Per altre informazioni sul supporto ETW in .NET Framework, vedere [ETW Events in the Common Language Runtime](etw-events-in-the-common-language-runtime.md) (Eventi ETW in Common Language Runtime) e [Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ](etw-events-in-task-parallel-library-and-plinq.md).  
@@ -52,9 +52,9 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Memorizzazione nella cache in applicazioni .NET Framework](caching-in-net-framework-applications.md)|Descrive tecniche per la memorizzazione nella cache dei dati per migliorare le prestazioni dell'app.|  
 |[Inizializzazione differita](lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
 |[Affidabilità](reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
-|[Writing Large, Responsive .NET Framework Apps](writing-large-responsive-apps.md) (Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|
+|[Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework](writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|

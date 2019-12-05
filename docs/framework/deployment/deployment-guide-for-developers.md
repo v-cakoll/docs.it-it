@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457989"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801883"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare qualsiasi versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
@@ -51,7 +51,7 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 - È necessario avere privilegi di amministratore per installare .NET Framework 4.5 e le relative versioni intermedie.
 
-- .NET Framework 4.5 è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'app in questi sistemi operativi. Analogamente, .NET Framework 4.5.1 è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. .NET Framework 4.6 è incluso in Windows 10, .NET Framework 4.6.1 è incluso in Windows 10 November Update e .NET Framework 4.6.2 è incluso in Windows 10 Anniversary Update.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è incluso in Windows 10 Fall Creators Update e .NET Framework 4.7.2 è incluso nell'aggiornamento di Windows 10 di ottobre 2018 e nell'aggiornamento di Windows 10 di aprile 2018. .NET Framework 4.8 è incluso nell'aggiornamento di Windows 10 di maggio 2019. Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../get-started/system-requirements.md).
+- .NET Framework 4,5 è incluso in Windows 8 e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'app in tali sistemi operativi. Analogamente, .NET Framework 4.5.1 è incluso in Windows 8.1 e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. .NET Framework 4.6 è incluso in Windows 10, .NET Framework 4.6.1 è incluso in Windows 10 November Update e .NET Framework 4.6.2 è incluso in Windows 10 Anniversary Update.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è incluso in Windows 10 Fall Creators Update e .NET Framework 4.7.2 è incluso nell'aggiornamento di Windows 10 di ottobre 2018 e nell'aggiornamento di Windows 10 di aprile 2018. .NET Framework 4.8 è incluso nell'aggiornamento di Windows 10 di maggio 2019. Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../get-started/system-requirements.md).
 
 - A partire da .NET Framework 4.5 gli utenti possono visualizzare un elenco di app .NET Framework in esecuzione durante l'installazione e chiuderle con facilità. In questo modo, è possibile evitare i riavvii del sistema dovuti alle installazioni di .NET Framework. Vedere [Riduzione dei riavvii del sistema](reducing-system-restarts.md).
 
@@ -78,7 +78,7 @@ Quando si ritiene di poter procedere alla pubblicazione dell'applicazione in un 
 ||programma di installazione Web|programma di installazione offline|
 |-|-------------------|-----------------------|
 |File per il download|.NET Framework 4.8: <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4.6:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.8: <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4.6: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
-|Connessione Internet necessaria?|Yes|No|
+|Connessione Internet necessaria?|Sì|No|
 |Dimensioni del download|Minime (include il programma di installazione per la sola piattaforma di destinazione)*|Massime*|
 |Language Pack|Incluso**|Deve essere [installato separatamente](#chain_langpack), a meno che non si usi il pacchetto destinato a tutti i sistemi operativi|
 |Metodo di distribuzione|Supporta tutti i metodi:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|Supporta tutti i metodi:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|
@@ -204,7 +204,7 @@ Ad esempio, se il programma eseguibile è Contoso.exe e si vuole installare auto
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-È possibile usare opzioni aggiuntive della riga di comando per personalizzare l'installazione. Esempio:
+È possibile usare opzioni aggiuntive della riga di comando per personalizzare l'installazione. Ad esempio:
 
 - Per offrire agli utenti un metodo per chiudere le applicazioni .NET Framework in esecuzione per ridurre al minimo i riavvii del sistema, impostare la modalità passiva e usare l'opzione `/showrmui` come segue:
 
@@ -276,8 +276,8 @@ Il programma di installazione di .NET Framework scrive le chiavi del Registro di
 |.NET Framework 4.6 installato in Windows 10|393295|
 |.NET Framework 4.6 installato in tutte le versioni del sistema operativo diverse da Windows 10|393297|
 |.NET Framework 4.5.2|379893|
-|.NET Framework 4.5.1 installato con [!INCLUDE[win81](../../../includes/win81-md.md)] o Windows Server 2012 R2|378675|
-|.NET Framework 4.5.1 installato in [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
+|.NET Framework 4.5.1 installato con Windows 8.1 o Windows Server 2012 R2|378675|
+|.NET Framework 4.5.1 installato in Windows 8, Windows 7|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>Rilevamento dei Language Pack
@@ -288,9 +288,9 @@ Ad esempio, per rilevare se è installato il Language Pack giapponese completo (
 
 | | |
 |-|-|
-| Chiave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Versione |
-| Digitare | DWORD |
+| Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Name | Release |
+| Tipo di | DWORD |
 
 Per determinare se per una versione particolare di .NET Framework dalla 4.5 alla 4.7.2 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE del valore DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
 
@@ -333,7 +333,7 @@ Non è necessario concatenare i Language Pack se si usa il programma di installa
 
 Per un elenco completo di opzioni della riga di comando, vedere la sezione [Opzioni della riga di comando](#command-line-options) .
 
-### <a name="troubleshooting"></a>Troubleshooting
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 #### <a name="return-codes"></a>Codici restituiti
 
@@ -368,7 +368,7 @@ Fare riferimento al contenuto seguente:
 
 ## <a name="uninstalling-the-net-framework"></a>Disinstallazione di .NET Framework
 
-A partire da [!INCLUDE[win8](../../../includes/win8-md.md)], è possibile disinstallare .NET Framework 4.5 o una delle relative versioni intermedie usando **Attiva o disattiva funzionalità di Windows** nel Pannello di controllo. Nelle versioni precedenti di Windows è possibile disinstallare NET Framework 4.5 o una delle relative versioni intermedie usando **Installazione applicazioni** nel Pannello di controllo.
+A partire da Windows 8, è possibile disinstallare .NET Framework 4,5 o una delle versioni intermedie usando **attivazione e disattivazione delle funzionalità Windows** nel pannello di controllo. Nelle versioni precedenti di Windows è possibile disinstallare NET Framework 4.5 o una delle relative versioni intermedie usando **Installazione applicazioni** nel Pannello di controllo.
 
 > [!IMPORTANT]
 > Per Windows 7 e sistemi operativi precedenti, la disinstallazione di .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8 non ripristina i file di .NET Framework 4.5 e la disinstallazione di .NET Framework 4.5 non ripristina i file di .NET Framework 4. Se si vuole tornare alla versione precedente, è necessario reinstallarla con tutti gli aggiornamenti.
@@ -401,7 +401,7 @@ Nella tabella seguente sono elencate le opzioni che è possibile includere quand
 
 Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibili per NET Framework 4.5 e per le relative versioni intermedie.
 
-|LCID|Lingua (paese/area)|culture|
+|LCID|Lingua (paese/area)|Lingua|
 |----------|--------------------------------|-------------|
 |1025|Arabo (Arabia Saudita)|ar|
 |1028|Cinese (tradizionale)|zh-Hant|

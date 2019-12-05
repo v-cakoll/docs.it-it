@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714481"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802752"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
 
@@ -112,7 +112,7 @@ Altri tipi di Windows Runtime di base, usati comunemente, che vengono visualizza
 
 ### <a name="other-differences"></a>Altre differenze
 
-In alcuni casi, il fatto che i tipi di .NET Framework siano visualizzati nel codice anziché Windows Runtime tipi richiedono un'azione da parte dell'utente. Ad esempio, la classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> viene visualizzata come <xref:System.Uri?displayProperty=nameWithType> nel codice .NET Framework. <xref:System.Uri?displayProperty=nameWithType> consente un URI relativo, ma <xref:Windows.Foundation.Uri?displayProperty=nameWithType> richiede un URI assoluto. Pertanto, quando si passa un URI a un metodo di Windows Runtime, è necessario assicurarsi che sia assoluto. Vedere [passaggio di un URI al Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+In alcuni casi, il fatto che i tipi di .NET Framework siano visualizzati nel codice anziché Windows Runtime tipi richiedono un'azione da parte dell'utente. Ad esempio, la classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> viene visualizzata come <xref:System.Uri?displayProperty=nameWithType> nel codice .NET Framework. <xref:System.Uri?displayProperty=nameWithType> consente un URI relativo, ma <xref:Windows.Foundation.Uri?displayProperty=nameWithType> richiede un URI assoluto. Pertanto, quando si passa un URI a un metodo di Windows Runtime, è necessario assicurarsi che sia assoluto. Vedi [Passaggio di un URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ Gli scenari supportati per i componenti Windows Runtime gestiti dipendono dai pr
 - I tipi nel componente possono derivare da tipi di Windows Runtime. I controlli possono derivare dai tipi di controllo primitivi nello spazio dei nomi <xref:Windows.UI.Xaml.Controls.Primitives> o da controlli più finiti, ad esempio <xref:Windows.UI.Xaml.Controls.Button>.
 
   > [!IMPORTANT]
-  > A partire da [!INCLUDE[win8](../../../includes/win8-md.md)] e .NET Framework 4,5, tutti i tipi pubblici in un componente Windows Runtime gestito devono essere sealed. Un tipo in un altro componente Windows Runtime non può derivare da essi. Se si desidera fornire il comportamento polimorfico nel componente, è possibile creare un'interfaccia e implementarla nei tipi polimorfici.
+  > A partire da Windows 8 e dal .NET Framework 4,5, tutti i tipi pubblici in un componente Windows Runtime gestito devono essere sealed. Un tipo in un altro componente Windows Runtime non può derivare da essi. Se si desidera fornire il comportamento polimorfico nel componente, è possibile creare un'interfaccia e implementarla nei tipi polimorfici.
 
 - Tutti i tipi di parametro e i tipi restituiti sui tipi pubblici nel componente devono essere Windows Runtime tipi (inclusi i tipi di Windows Runtime definiti dal componente).
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204785"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802453"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni desktop, lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.
@@ -51,7 +51,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 - [Argomenti correlati](#related_topics)
 
-- [Riferimento](#reference)
+- [Reference](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -118,7 +118,7 @@ Talvolta risulta utile verificare una modifica nello spazio di memorizzazione is
 |Windows 2000, Windows XP, Windows Server 2003 - (aggiornamento da Windows NT 4.0)|Archivi con supporto roaming =<br /><br /> \<SYSTEMROOT>\Profili\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMROOT>\Profili\\<utente\>\Impostazioni locali\Dati applicazione|
 |Windows 2000 - installazione pulita (e aggiornamenti da Windows 98 e Windows NT 3.51)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Impostazioni locali\Dati applicazione|
 |Windows XP, Windows Server 2003 - installazione pulita (e aggiornamenti da Windows 2000 e Windows 98)|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Dati applicazione<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<utente\>\Impostazioni locali\Dati applicazione|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Roaming<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Locale|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Archivi con supporto roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Roaming<br /><br /> Archivi non abilitati al roaming =<br /><br /> \<SYSTEMDRIVE>\Utenti\\<utente\>\AppData\Locale|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -179,7 +179,7 @@ Molte applicazioni utilizzano un database per memorizzare e isolare dati. In que
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

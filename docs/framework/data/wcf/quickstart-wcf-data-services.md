@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975131"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800359"
 ---
 # <a name="quickstart-wcf-data-services"></a>Guida rapida (WCF Data Services)
 
 Questa Guida introduttiva consente di acquisire familiarità con WCF Data Services e il Open Data Protocol (OData) tramite una serie di attività che supportano gli argomenti in [Introduzione](getting-started-with-wcf-data-services.md).
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà
+## <a name="what-youll-learn"></a>Lezioni dell'esercitazione
 
 Nella prima attività di questa Guida introduttiva viene illustrato come creare un servizio dati per esporre un feed OData dal database di esempio Northwind. Negli argomenti successivi, sarà possibile accedere al feed OData utilizzando un Web browser e creare anche un'applicazione client Windows Presentation Foundation (WPF) che utilizza il feed OData utilizzando le librerie client.
 
@@ -26,7 +26,7 @@ Per completare le attività incluse nella guida rapida, è necessario installare
 
 - Visual Studio
 
-- Istanza di SQL Server. Sono inclusi SQL Server Express, incluso in un'installazione predefinita di Visual Studio 2015, o come parte del carico di lavoro di **elaborazione e archiviazione dei dati** in visual studio 2017.
+- Istanza di SQL Server. Sono inclusi SQL Server Express, incluso in un'installazione predefinita di Visual Studio 2015, o come parte del carico di lavoro di **elaborazione e archiviazione dei dati** in visual studio 2017 o versione successiva.
 
 - Il database di esempio Northwind. Per scaricare questo database di esempio, vedere la pagina di download dei [database di esempio per SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 

@@ -1,14 +1,14 @@
 ---
 title: Impostazioni di configurazione del Garbage Collector
-description: Informazioni sulle impostazioni della fase di esecuzione per la configurazione della modalità di gestione della memoria da parte del Garbage Collector.
+description: Informazioni sulle impostazioni di run-time per la configurazione del modo in cui il Garbage Collector gestisce la memoria per le app .NET Core.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428705"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800630"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opzioni di configurazione in fase di esecuzione per Garbage Collection
 
@@ -38,7 +38,7 @@ Usare le impostazioni seguenti per selezionare le versioni di Garbage Collection
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | workstation `false`<br/>Server `true` | .NET Core 1.0 |
-| **Variabile di ambiente** | `COMPlus_gcServer` | 0-Workstation<br/>1-server | .NET Core 1.0 |
+| **Variabile di ambiente** | `COMPlus_gcServer` | workstation `0`<br/>Server `1` | .NET Core 1.0 |
 | **app. config per .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | workstation `false`<br/>Server `true` |  |
 
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. Concurrent/COMPlus_gcConcurrent
@@ -110,13 +110,13 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
   Quando un computer Windows a 64 bit dispone di più gruppi di CPU, ovvero sono presenti più di 64 processori, l'abilitazione di questo elemento estende Garbage Collection in tutti i gruppi di CPU. Il Garbage Collector utilizza tutti i core per creare e bilanciare gli heap.
 
 - Si applica solo a server Garbage Collection (GC) nei sistemi operativi Windows a 64 bit.
-- Impostazione predefinita: disabilitata (0).
+- Impostazione predefinita: disabilitato (`0`).
 - Per altre informazioni, vedere [migliorare la configurazione della CPU per GC nei computer con > cpu 64](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) nel Blog di Maoni Stephens.
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | N/D | N/D | N/D |
-| **Variabile di ambiente** | `COMPlus_GCCpuGroup` | 0-disabilitato<br/>1: abilitato | .NET Core 1.0 |
+| **Variabile di ambiente** | `COMPlus_GCCpuGroup` | `0` disabilitato<br/>Abilitazione di `1` | .NET Core 1.0 |
 | **app. config per .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` disabilitato<br/>Abilitazione di `true` |  |
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-creare affinità tra<br/>`true` non creare affinità tra | .NET Core 3.0 |
-| **Variabile di ambiente** | `COMPlus_GCNoAffinitize` | 0-creare affinità tra<br/>1-non creare affinità tra | .NET Core 3.0 |
+| **Variabile di ambiente** | `COMPlus_GCNoAffinitize` | `0`-creare affinità tra<br/>`1` non creare affinità tra | .NET Core 3.0 |
 | **app. config per .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-creare affinità tra<br/>`true` non creare affinità tra | 4.6.2 |
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
@@ -166,34 +166,34 @@ Per altre informazioni su alcune di queste impostazioni, vedere la parte interme
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-rilascia al sistema operativo<br/>`true`-put in standby| .NET Core 1.0 |
-| **Variabile di ambiente** | `COMPlus_GCRetainVM` | 0: rilascia al sistema operativo<br/>1-messa in standby | .NET Core 1.0 |
+| **Variabile di ambiente** | `COMPlus_GCRetainVM` | `0`-rilascia al sistema operativo<br/>`1`-put in standby | .NET Core 1.0 |
 
 ## <a name="large-pages"></a>Pagine di grandi dimensioni
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Specifica se le pagine di grandi dimensioni devono essere utilizzate quando viene impostato un limite rigido dell'heap.
-- Impostazione predefinita: disabilitata (0).
+- Impostazione predefinita: disabilitato (`0`).
 - Si tratta di un'impostazione sperimentale.
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | N/D | N/D | N/D |
-| **Variabile di ambiente** | `COMPlus_GCLargePages` | 0-disabilitato<br/>1: abilitato | .NET Core 3.0 |
+| **Variabile di ambiente** | `COMPlus_GCLargePages` | `0` disabilitato<br/>Abilitazione di `1` | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Oggetti di grandi dimensioni
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Configura Garbage Collector il supporto per le piattaforme a 64 bit per le matrici con dimensione totale superiore a 2 gigabyte (GB).
-- Impostazione predefinita: abilitata (1).
+- Impostazione predefinita: abilitata (`1`).
 - Questa opzione potrebbe diventare obsoleta in una versione futura di .NET.
 
 | | Nome impostazione | Valori | Versione introdotta |
 | - | - | - | - |
 | **runtimeconfig. JSON** | N/D | N/D | N/D |
-| **Variabile di ambiente** | `COMPlus_gcAllowVeryLargeObjects` | 1: abilitato<br/> 0-disabilitato | .NET Core 1.0 |
-| **app. config per .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1: abilitato<br/> 0-disabilitato | .NET Framework 4.5 |
+| **Variabile di ambiente** | `COMPlus_gcAllowVeryLargeObjects` | Abilitazione di `1`<br/> `0` disabilitato | .NET Core 1.0 |
+| **app. config per .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | Abilitazione di `1`<br/> `0` disabilitato | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Soglia heap oggetti grandi
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714501"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802318"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -800,7 +800,7 @@ Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayPro
 
 - [Miglioramenti apportati al debug](#Debug462)
 
-Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argomento [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) (Modifiche alle API di .NET Framework 4.6.2) su GitHub. Per un elenco dei miglioramenti apportati alle funzionalità e delle correzioni di bug in .NET Framework 4.6.2, vedere[.NET Framework 4.6.2 List of Changes](https://go.microsoft.com/fwlink/?LinkId=708778) (Elenco delle modifiche di .NET Framework 4.6.2) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) in .NET Blog.
+Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argomento [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) (Modifiche alle API di .NET Framework 4.6.2) su GitHub. Per un elenco dei miglioramenti apportati alle funzionalità e delle correzioni di bug in .NET Framework 4.6.2, vedere[.NET Framework 4.6.2 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) (Elenco delle modifiche di .NET Framework 4.6.2) su GitHub. Per altre informazioni, vedere l'[annuncio di .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) in .NET Blog.
 
 <a name="ASPNET462" />
 
@@ -1196,7 +1196,7 @@ In .NET Framework 4.6.2, Windows Workflow Foundation è stato ottimizzato nell'a
 
 **Supporto per espressioni C# e IntelliSense nell'utilità di progettazione di WF rieseguita nell'host**
 
-A partire da .NET Framework 4.5, WF supporta le espressioni C# sia nella progettazione di Visual Studio che nei flussi di lavoro di codice. La riallocazione della progettazione del flusso di lavoro è una funzionalità chiave di WF che consente di usare la finestra di progettazione del flusso di lavoro in un'applicazione esterna a Visual Studio, ad esempio WPF.  Windows Workflow Foundation offre la possibilità di supportare le espressioni C# e IntelliSense nell'utilità di progettazione del flusso di lavoro riallocata. Per altre informazioni, vedere il [blog di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+A partire da .NET Framework 4.5, WF supporta le espressioni C# sia nella progettazione di Visual Studio che nei flussi di lavoro di codice. La riallocazione della progettazione del flusso di lavoro è una funzionalità chiave di WF che consente di usare la finestra di progettazione del flusso di lavoro in un'applicazione esterna a Visual Studio, ad esempio WPF.  Windows Workflow Foundation offre la possibilità di supportare le espressioni C# e IntelliSense nell'utilità di progettazione del flusso di lavoro riallocata. Per altre informazioni, vedere il [blog di Windows Workflow Foundation](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Nelle versioni di .NET Framework precedenti a .NET Framework 4.6.2 l'esecuzione di IntelliSense viene interrotta nella progettazione del flusso di lavoro quando un cliente ricompila un progetto di flusso di lavoro da Visual Studio. Anche se la compilazione del progetto ha esito positivo, i tipi di flusso di lavoro non vengono trovati nell'utilità di progettazione e vengono visualizzati alcuni avvisi di IntelliSense per i tipi di flusso di lavoro mancanti nella finestra **Elenco errori**. .NET Framework 4.6.2 risolve questo problema e rende disponibile IntelliSense.
 
@@ -1262,11 +1262,11 @@ L'*API di debug non gestito* è stata ottimizzata in .NET Framework 4.6.2 per l'
 
 Per altre informazioni su .NET Framework 4.6.1, vedere gli argomenti seguenti:
 
-- [Elenco delle modifiche di .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [Elenco delle modifiche di .NET Framework 4.6.1](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [Compatibilità delle applicazioni nella versione 4.6.1](../migration-guide/application-compatibility.md)
 
-- [Differenza tra API di .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (su GitHub)
+- [Differenza tra API di .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md) (su GitHub)
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ Come nelle versioni precedenti di .NET Framework, la lingua per un controllo <xr
 
 - Impostazioni cultura del thread corrente.
 
-Per altre informazioni sul supporto delle lingue in WPF, vedere il [post di blog di WPF sulle funzionalità di .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=691819).
+Per altre informazioni sul supporto delle lingue in WPF, vedere il [post di blog di WPF sulle funzionalità di .NET Framework 4.6.1](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/).
 
 **Supporto aggiuntivo per i dizionari personalizzati per utente**
 
@@ -1349,7 +1349,7 @@ Sono disponibili numerosi esempi di WPF nel repository GitHub [Microsoft/WPF-Sam
 
 **Estensioni DirectX**
 
-WPF include un [pacchetto NuGet](https://go.microsoft.com/fwlink/?LinkID=691342) che offre nuove implementazioni di <xref:System.Windows.Interop.D3DImage>, le quali semplificano l'interazione con il contenuto DX10 e Dx11. Il codice per questo pacchetto è stato reso open source ed è disponibile su [GitHub](https://github.com/Microsoft/WPFDXInterop).
+WPF include un [pacchetto NuGet](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/) che offre nuove implementazioni di <xref:System.Windows.Interop.D3DImage>, le quali semplificano l'interazione con il contenuto DX10 e Dx11. Il codice per questo pacchetto è stato reso open source ed è disponibile su [GitHub](https://github.com/Microsoft/WPFDXInterop).
 
 <a name="WWF461" />
 
@@ -1755,7 +1755,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Pacchetti .NET Framework open source**
 
-  I pacchetti .NET Core come le raccolte non modificabili, le [API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) e le API di rete come quelle presenti nello spazio dei nomi <xref:System.Net.Http> sono ora disponibili come pacchetti open source su [GitHub](https://github.com/). Per accedere al codice, vedere [CoreFx su GitHub](https://github.com/dotnet/corefx). Per altre informazioni e indicazioni su come contribuire a questi pacchetti, vedere [Componenti di base e open source di .NET](../get-started/net-core-and-open-source.md) e la [home page di .NET su GitHub](https://github.com/dotnet/home).
+  I pacchetti .NET Core come le raccolte non modificabili, le [API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) e le API di rete come quelle presenti nello spazio dei nomi <xref:System.Net.Http> sono ora disponibili come pacchetti open source su [GitHub](https://github.com/). Per accedere al codice, vedere [CoreFx su GitHub](https://github.com/dotnet/corefx). Per altre informazioni e indicazioni su come contribuire a questi pacchetti, vedere [Componenti di base e open source di .NET](../get-started/net-core-and-open-source.md) e la [home page di .NET su GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1892,7 +1892,7 @@ I miglioramenti durante il debug delle app .NET Framework in Visual Studio 2013 
 
 - Debug asincrono. Per semplificare il debug delle app asincrone in Visual Studio 2013, lo stack di chiamate nasconde il codice dell'infrastruttura fornito dai compilatori per supportare la programmazione asincrona e inoltre si concatena nei frame padre logici, in modo da poter seguire più chiaramente l'esecuzione logica del programma. La finestra Attività in parallelo è stata sostituita da una finestra Attività, contenente le attività correlate a uno specifico punto di interruzione e qualsiasi altra attività attualmente attiva o pianificata nell'app. Informazioni su questa funzionalità sono disponibili nella sezione relativa al debug asincrono nell'[annuncio di .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Supporto avanzato delle eccezioni per i componenti Windows Runtime. In [!INCLUDE[win81](../../../includes/win81-md.md)] le eccezioni generate dalle app di Windows Store conservano le informazioni sull'errore che ha generato l'eccezione, anche oltre i limiti di linguaggio. Informazioni su questa funzionalità sono disponibili nella sezione relativa allo sviluppo di app di Windows Store nell'[annuncio di .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Supporto avanzato delle eccezioni per i componenti Windows Runtime. In Windows 8.1 le eccezioni generate dalle app di Windows Store conservano le informazioni sull'errore che ha generato l'eccezione, anche oltre i limiti di linguaggio. Informazioni su questa funzionalità sono disponibili nella sezione relativa allo sviluppo di app di Windows Store nell'[annuncio di .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 A partire da Visual Studio 2013, è possibile usare lo strumento [Mpgo.exe (Managed Profile Guided Optimization)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) per ottimizzare le app di Windows 8.x Store e quelle desktop.
 
@@ -1926,9 +1926,9 @@ Per le nuove funzionalità in ASP.NET 4.5.1, vedere [Note sulla versione di ASP.
 
 - Possibilità di personalizzare un contesto di reflection per eseguire l'override del comportamento di reflection predefinito tramite la classe <xref:System.Reflection.Context.CustomReflectionContext>.
 
-- Supporto per la versione 2008 dello standard IDNA (Internationalized Domain Names in Applications) quando la classe <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> viene usata in [!INCLUDE[win8](../../../includes/win8-md.md)].
+- Supporto per la versione 2008 dello standard IDNA (International Domain Names in Applications) quando la classe <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> viene utilizzata in Windows 8.
 
-- Delega del confronto tra stringhe al sistema operativo, che effettua l'implementazione di Unicode 6.0, quando .NET Framework viene usato in [!INCLUDE[win8](../../../includes/win8-md.md)]. Quando è in esecuzione in altre piattaforme, .NET Framework include i propri dati di confronto tra stringhe, che effettua l'implementazione di Unicode 5.x. Vedere la classe <xref:System.String> e la sezione Note della classe <xref:System.Globalization.SortVersion>.
+- Delega del confronto tra stringhe al sistema operativo, che effettua l'implementazione di Unicode 6.0, quando .NET Framework viene usato in Windows 8. Quando è in esecuzione in altre piattaforme, .NET Framework include i propri dati di confronto tra stringhe, che effettua l'implementazione di Unicode 5.x. Vedere la classe <xref:System.String> e la sezione Note della classe <xref:System.Globalization.SortVersion>.
 
 - Possibilità di calcolare i codici hash per le stringhe in base al dominio dell'applicazione. Vedere [\<Elemento UseRandomizedStringHashAlgorithm>](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
@@ -1944,7 +1944,7 @@ In .NET Framework 4.5 la libreria Managed Extensibility Framework (MEF) offre le
 
 - Più ambiti.
 
-- Subset di MEF che è possibile usare in fase di creazione delle app di Windows 8.x Store. Questo subset è disponibile come [pacchetto scaricabile](https://go.microsoft.com/fwlink/?LinkId=256238) dalla raccolta NuGet. Per installare il pacchetto, aprire il progetto in Visual Studio, scegliere **Gestisci pacchetti NuGet** dal menu **Progetto** ed eseguire una ricerca online del pacchetto `Microsoft.Composition`.
+- Subset di MEF che è possibile usare in fase di creazione delle app di Windows 8.x Store. Questo subset è disponibile come [pacchetto scaricabile](https://www.nuget.org/packages/Microsoft.Composition) dalla raccolta NuGet. Per installare il pacchetto, aprire il progetto in Visual Studio, scegliere **Gestisci pacchetti NuGet** dal menu **Progetto** ed eseguire una ricerca online del pacchetto `Microsoft.Composition`.
 
 Per altre informazioni, vedere [Managed Extensibility Framework (MEF)](../mef/index.md).
 
@@ -1964,7 +1964,7 @@ L'ottimizzazione PGO gestita (Mpgo.exe) consente di migliorare i tempi di avvio 
 
 ### <a name="parallel-computing"></a>Elaborazione parallela
 
-In .NET Framework 4.5 vengono forniti diversi miglioramenti e nuove funzionalità per il calcolo parallelo. Alcuni esempi: miglioramento delle prestazioni, maggiore controllo, supporto avanzato per la programmazione asincrona, una nuova libreria di flussi di dati e un miglioramento del supporto per il debug parallelo e l'analisi delle prestazioni. Vedere la voce relativa alle [novità per il parallelismo in .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) nel blog sulla programmazione parallela con .NET.
+In .NET Framework 4.5 vengono forniti diversi miglioramenti e nuove funzionalità per il calcolo parallelo. Alcuni esempi: miglioramento delle prestazioni, maggiore controllo, supporto avanzato per la programmazione asincrona, una nuova libreria di flussi di dati e un miglioramento del supporto per il debug parallelo e l'analisi delle prestazioni. Vedere la voce relativa alle [novità per il parallelismo in .NET 4.5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) nel blog sulla programmazione parallela con .NET.
 
 <a name="web" />
 
@@ -2058,7 +2058,7 @@ In .NET Framework 4.5 le seguenti funzionalità sono state aggiunte per semplifi
 
 - Supporto per servizi WCF che usano IDN (Internationalized Domain Name).
 
-Per altre informazioni, vedere [Novità di Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=228173).
+Per altre informazioni, vedere [Novità di Windows Communication Foundation](../wcf/whats-new.md).
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,7 +2066,7 @@ Per altre informazioni, vedere [Novità di Windows Communication Foundation](htt
 
 In .NET Framework 4.5 sono state introdotte numerose nuove funzionalità in Windows Workflow Foundation (WF), tra cui:
 
-- Flussi di lavoro della macchina a stati, introdotti per la prima volta in .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)). In questo aggiornamento erano incluse diverse nuove classi e attività che consentivano agli sviluppatori di creare flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4.5 al fine di includere:
+- Flussi di lavoro della macchina a stati, introdotti per la prima volta in .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)). In questo aggiornamento erano incluse diverse nuove classi e attività che consentivano agli sviluppatori di creare flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4.5 al fine di includere:
 
   - Possibilità di impostare punti di interruzione negli stati.
 
@@ -2112,13 +2112,13 @@ In .NET Framework 4.5 sono state introdotte numerose nuove funzionalità in Wind
 
 - Sviluppo di flussi di lavoro con priorità al contratto ("contract-first"), che fornisce supporto per generare automaticamente attività in modo da soddisfare un contratto di servizio esistente.
 
-Per altre informazioni, vedere [Novità di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=228176).
+Per altre informazioni, vedere [Novità di Windows Workflow Foundation](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>.NET per app di Windows 8.x Store
 
-Le app di WIndows 8.x Store sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di .NET Framework 4.5 o 4.5.1 è disponibile per la compilazione di app per Windows 8.x Store usando C# o Visual Basic. Questo subset è denominato .NET per app di Windows 8.x Store e viene descritto in una [panoramica](https://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
+Le app di WIndows 8.x Store sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di .NET Framework 4.5 o 4.5.1 è disponibile per la compilazione di app per Windows 8.x Store usando C# o Visual Basic. Questo subset è denominato .NET per le app di Windows 8. x Store e viene descritto in una [Panoramica](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Librerie di classi portabili <a name="portable" />
 
@@ -2129,5 +2129,6 @@ Il progetto Libreria di classi portabile in Visual Studio 2012 (e versioni succe
 - [.NET Framework e rilascio fuori programma](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md)
 - [Novità di Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Novità di Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET 2.0](/aspnet)
 - [Novità di C++ in Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

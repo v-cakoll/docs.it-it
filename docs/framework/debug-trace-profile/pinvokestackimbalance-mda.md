@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052362"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802000"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance (MDA)
 
-L' `PInvokeStackImbalance` assistente al debug gestito viene attivato quando CLR rileva che la profondità dello stack dopo una chiamata platform invoke non corrisponde alla profondità dello stack prevista, <xref:System.Runtime.InteropServices.DllImportAttribute> in base alla convenzione di chiamata specificata nell'attributo e Dichiarazione dei parametri nella firma gestita.
+Il `PInvokeStackImbalance` assistente al debug gestito viene attivato quando CLR rileva che la profondità dello stack dopo una chiamata platform invoke non corrisponde alla profondità dello stack prevista, in base alla convenzione di chiamata specificata nell'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> e alla dichiarazione dei parametri nella firma gestita.
 
 L'assistente al debug gestito `PInvokeStackImbalance` viene implementato solo per piattaforme x86 a 32 bit.
 
 > [!NOTE]
-> L' `PInvokeStackImbalance` assistente al debug gestito è disabilitato per impostazione predefinita. In Visual Studio 2017, l' `PInvokeStackImbalance` assistente al debug gestito viene visualizzato nell'elenco **assistenti al debug gestito** nella finestra di dialogo **Impostazioni eccezioni** (visualizzata quando > si seleziona**finestre**  >   **di debug). Impostazioni delle eccezioni**). Tuttavia, la selezione o la cancellazione della casella di controllo **Interrompi quando viene generata** non Abilita o Disabilita l'assistente al debug gestito; controlla solo se Visual Studio genera un'eccezione quando viene attivato l'assistente al debug gestito.
+> Il `PInvokeStackImbalance` MDA è disabilitato per impostazione predefinita. In Visual Studio 2017 e versioni successive, il `PInvokeStackImbalance` MDA viene visualizzato nell'elenco **assistenti al debug gestito** nella finestra di dialogo **Impostazioni eccezioni** (visualizzata quando si seleziona **debug** > **Windows** > **Impostazioni eccezioni**). Tuttavia, la selezione o la cancellazione della casella di controllo **Interrompi quando viene generata** non Abilita o Disabilita l'assistente al debug gestito; controlla solo se Visual Studio genera un'eccezione quando viene attivato l'assistente al debug gestito.
 
 ## <a name="symptoms"></a>Sintomi
 
@@ -50,7 +50,7 @@ Il messaggio dell'assistente al debug gestito fornisce il nome della chiamata al
 
 **Una chiamata alla funzione PInvoke ' SampleMethod ' ha sbilanciato lo stack. Questa operazione è probabilmente dovuta al fatto che la firma PInvoke gestita non corrisponde alla firma di destinazione non gestita. Verificare che la convenzione di chiamata e i parametri della firma PInvoke corrispondano alla firma non gestita di destinazione.**
 
-## <a name="configuration"></a>Configurazione
+## <a name="configuration"></a>Configurazione di
 
 ```xml
 <mdaConfig>

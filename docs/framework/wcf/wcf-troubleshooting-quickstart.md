@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320186"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802359"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul visualizzatore dei file di traccia, vedere [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -27,7 +27,7 @@ In questo argomento viene elencata una serie di problemi noti rilevati dai clien
   
 5. [Il servizio e il client funzionano bene, ma non è possibile farlo funzionare quando il client si trova in un altro computer? Cosa sta succedendo?](#BKMK_q4)  
   
-6. [Quando si genera un'eccezione FaultException \<Exception > in cui il tipo è un'eccezione, si riceve sempre un tipo FaultException generale sul client e non il tipo generico. Cosa sta succedendo?](#BKMK_q5)  
+6. [Quando viene generata un'eccezione FaultException\<eccezione > in cui il tipo è un'eccezione, ricevo sempre un tipo FaultException generale sul client e non il tipo generico. Cosa sta succedendo?](#BKMK_q5)  
   
 7. [Sembra che le operazioni unidirezionali e request-reply vengano restituite approssimativamente alla stessa velocità quando la risposta non contiene dati. Cosa sta succedendo?](#BKMK_q6)  
   
@@ -51,7 +51,7 @@ In questo argomento viene elencata una serie di problemi noti rilevati dai clien
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>A volte viene restituita un'eccezione MessageSecurityException alla seconda richiesta se il client è inattivo per un periodo di tempo dopo la prima richiesta. Qual è il problema?  
- La seconda richiesta può non riuscire principalmente per due ragioni: (1) la sessione è scaduta o (2) il server Web che sta ospitando il servizio è stato riciclato. Nel primo caso, la sessione è valida fino al timeout del servizio. Quando il servizio non riceve una richiesta dal client entro il periodo di tempo specificato nell'associazione del servizio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), il servizio termina la sessione di sicurezza. I messaggi client successivi determinano l'eccezione <xref:System.ServiceModel.Security.MessageSecurityException>. Il client deve ristabilire una sessione protetta con il servizio per inviare altri messaggi o utilizzare un token del contesto di sicurezza con stato. I token del contesto di sicurezza con stato consentono inoltre a una sessione protetta di restare attiva quando un server Web viene riciclato. Per altre informazioni sull'uso di token del contesto sicuro con stato in una sessione protetta, vedere [procedura: creare un token del contesto di sicurezza per una sessione protetta](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). In alternativa, è possibile disabilitare le sessioni protette. Quando si utilizza l'associazione [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) , è possibile impostare la proprietà `establishSecurityContext` su `false` per disabilitare le sessioni protette. Per disabilitare le sessioni protette per altre associazioni, è necessario creare un'associazione personalizzata. Per informazioni dettagliate sulla creazione di un'associazione personalizzata, vedere [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Prima di applicare qualsiasi opzione, è necessario conoscere i requisiti di sicurezza dell'applicazione.  
+ La seconda richiesta può non riuscire principalmente per due ragioni: (1) la sessione è scaduta o (2) il server Web che sta ospitando il servizio è stato riciclato. Nel primo caso, la sessione è valida fino al timeout del servizio. Quando il servizio non riceve una richiesta dal client entro il periodo di tempo specificato nell'associazione del servizio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), il servizio termina la sessione di sicurezza. I messaggi client successivi determinano l'eccezione <xref:System.ServiceModel.Security.MessageSecurityException>. Il client deve ristabilire una sessione protetta con il servizio per inviare altri messaggi o utilizzare un token del contesto di sicurezza con stato. I token del contesto di sicurezza con stato consentono inoltre a una sessione protetta di restare attiva quando un server Web viene riciclato. Per altre informazioni sull'uso di token del contesto sicuro con stato in una sessione protetta, vedere [procedura: creare un token del contesto di sicurezza per una sessione protetta](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). In alternativa, è possibile disabilitare le sessioni protette. Quando si utilizza l'associazione [\<wshttpbinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) , è possibile impostare la proprietà `establishSecurityContext` su `false` per disabilitare le sessioni protette. Per disabilitare le sessioni protette per altre associazioni, è necessario creare un'associazione personalizzata. Per informazioni dettagliate sulla creazione di un'associazione personalizzata, vedere [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Prima di applicare qualsiasi opzione, è necessario conoscere i requisiti di sicurezza dell'applicazione.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Il servizio rifiuta nuovi client se sta interagendo già con 10 client. Qual è il problema?  
@@ -136,12 +136,12 @@ public class MyServiceHost : ServiceHost
   
 - [Debug degli errori di autenticazione di Windows](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Registrazione di nomi SPN Kerberos utilizzando Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrazione di nomi SPN Kerberos utilizzando Http.sys](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Descrizione di Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Descrizione di Kerberos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando si genera un'eccezione FaultException \<Exception > in cui il tipo è un'eccezione, si riceve sempre un tipo FaultException generale sul client e non il tipo generico. Qual è il problema?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando viene generata un'eccezione FaultException\<eccezione > in cui il tipo è un'eccezione, ricevo sempre un tipo FaultException generale sul client e non il tipo generico. Qual è il problema?  
  È consigliabile creare un tipo di dati dell'errore personalizzato e dichiararlo come tipo di dettaglio nel contratto di errore. Ciò è necessario in quanto, se si utilizzano tipi di eccezione forniti dal sistema:  
   
 - Viene creata una dipendenza dal tipo che rimuove uno dei maggiori punti di forza delle applicazioni orientate ai servizi.  
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  In questo caso, è necessario assegnare i privilegi di accesso in lettura all'account del processo per il file che contiene la chiave privata. Ad esempio, se il processo di lavoro IIS è in esecuzione con l'account Bob, è necessario assegnare a Bob l'accesso in lettura al file che contiene la chiave privata.  
   
- Per ulteriori informazioni su come assegnare all'account utente corretto l'accesso al file che contiene la chiave privata per un certificato X. 509 specifico, vedere [procedura: rendere accessibili a WCF i certificati x. 509](./feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Per ulteriori informazioni su come concedere l'accesso all'account utente corretto per il file che contiene la chiave privata per un certificato X.509 specifico, vedere [Procedura: rendere accessibili a WCF i certificati X.509](./feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>In seguito alla modifica del primo parametro di un'operazione di passaggio da lettere maiuscole a lettere minuscole, il client genera un'eccezione. Qual è il problema?  
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Utilizzando uno degli strumenti di traccia, viene generata un'eccezione EndpointNotFoundException. Qual è il problema?  
- Se si utilizza uno strumento di traccia che non è il meccanismo di traccia WCF fornito dal sistema e si riceve un <xref:System.ServiceModel.EndpointNotFoundException> che indica che si è verificata una mancata corrispondenza del filtro di indirizzi, è necessario utilizzare la classe <xref:System.ServiceModel.Description.ClientViaBehavior> per indirizzare i messaggi all'utilità di traccia e tà y reindirizza tali messaggi all'indirizzo del servizio. La classe <xref:System.ServiceModel.Description.ClientViaBehavior> modifica l'intestazione di indirizzamento `Via` per specificare il successivo indirizzo di rete separatamente dal destinatario finale, indicato dall'intestazione di indirizzamento `To` . Durante questa modifica è importante tuttavia non modificare l'indirizzo dell'endpoint che viene utilizzato per stabilire il valore `To` .  
+ Se si utilizza uno strumento di traccia che non è il meccanismo di traccia WCF fornito dal sistema e si riceve un <xref:System.ServiceModel.EndpointNotFoundException> che indica che si è verificata una mancata corrispondenza del filtro di indirizzi, è necessario utilizzare la classe <xref:System.ServiceModel.Description.ClientViaBehavior> per indirizzare i messaggi all'utilità di traccia e fare in modo che l'utilità reindirizzi tali messaggi all'indirizzo del servizio. La classe <xref:System.ServiceModel.Description.ClientViaBehavior> modifica l'intestazione di indirizzamento `Via` per specificare il successivo indirizzo di rete separatamente dal destinatario finale, indicato dall'intestazione di indirizzamento `To` . Durante questa modifica è importante tuttavia non modificare l'indirizzo dell'endpoint che viene utilizzato per stabilire il valore `To` .  
   
  Nell'esempio di codice seguente viene illustrato un file di configurazione client di esempio.  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Verrà visualizzato un errore simile al seguente: eccezione non gestita: System. ServiceModel. AddressAlreadyInUseException: esiste già un listener sull'endpoint IP 0.0.0.0:9000. è possibile aggirare questo errore specificando un URL completo con una porta diversa per endpoint MEX, come illustrato nel frammento di configurazione seguente:  
+ Verrà visualizzato un errore analogo al seguente: Eccezione non gestita: System.ServiceModel.AddressAlreadyInUseException: Esiste già un listener nell'endpoint IP 0.0.0.0:9000. Per risolvere il problema, specificare un URL completo con una porta diversa per l'endpoint MEX come illustrato nel frammento di configurazione seguente:  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Quando si chiama un'applicazione HTTP Web WCF da un'applicazione SOAP WCF il servizio restituisce l'errore 405 Metodo non consentito  
- La chiamata di un'applicazione HTTP Web WCF (un servizio che utilizza il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) da un servizio WCF può generare l'eccezione seguente: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: il server remoto ha restituito una risposta imprevista: (405) metodo not Consentito. questa eccezione si verifica perché WCF sovrascrive il <xref:System.ServiceModel.OperationContext> in uscita con la <xref:System.ServiceModel.OperationContext> in ingresso. Per risolvere questo problema, creare un oggetto <xref:System.ServiceModel.OperationContextScope> all'interno dell'operazione del servizio HTTP Web WCF. Esempio:  
+ La chiamata di un'applicazione HTTP Web WCF (un servizio che utilizza il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) da un servizio WCF può generare l'eccezione seguente: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: il server remoto ha restituito una risposta imprevista: (405) il metodo non è consentito. questa eccezione si verifica perché WCF sovrascrive il <xref:System.ServiceModel.OperationContext> in uscita con il <xref:System.ServiceModel.OperationContext>in ingresso. Per risolvere questo problema, creare un oggetto <xref:System.ServiceModel.OperationContextScope> all'interno dell'operazione del servizio HTTP Web WCF. Ad esempio:  
   
 ```csharp
 public string Echo(string input)  

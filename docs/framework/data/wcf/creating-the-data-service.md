@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975403"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802273"
 ---
 # <a name="create-the-data-service"></a>Creazione del servizio dati
 
@@ -26,7 +26,7 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
 
 ## <a name="create-the-aspnet-web-app"></a>Creare l'app Web ASP.NET
 
-1. In Visual Studio scegliere **nuovo**  > **progetto**dal menu **file** .
+1. Nel menu **File** in Visual Studio selezionare **Nuovo** > **Progetto**.
 
 1. Nella finestra di dialogo **nuovo progetto** , in Visual Basic o Visual C# selezionare la categoria **Web** , quindi selezionare **applicazione Web ASP.NET**.
 
@@ -71,7 +71,7 @@ In questo argomento viene creato un servizio dati di esempio che usa WCF Data Se
    ![Modello di elemento del servizio dati WCF in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017.
+   > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017 o versioni successive.
 
 3. Per il nome del servizio, digitare `Northwind`.
 

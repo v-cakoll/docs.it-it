@@ -2,12 +2,12 @@
 title: Funzionalità di semplificazione WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 85c50e5939a5e63202d57bca08393b9b79308f57
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321226"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802388"
 ---
 # <a name="wcf-simplification-features"></a>Funzionalità di semplificazione WCF
 
@@ -88,13 +88,13 @@ WCF fornisce la modalità di compatibilità ASP.NET per garantire agli sviluppat
 
 - In WCF è stato aggiunto un nuovo supporto per il flusso asincrono. Per abilitare il flusso asincrono, aggiungere il comportamento dell'endpoint <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> all'host del servizio e impostare la relativa proprietà <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> su `true`. Questa operazione può migliorare la scalabilità quando un servizio sta inviando messaggi trasmessi a più client che leggono lentamente. WCF non blocca più un thread per client e libererà il thread per soddisfare un altro client.
 
-- Eliminazione delle limitazioni relativamente al buffer dei messaggi quando un servizio è ospitato da IIS. Nelle versioni precedenti di WCF, quando si riceveva un messaggio per un servizio ospitato da IIS che utilizzava il trasferimento dei messaggi di flusso, ASP.NET avrebbe memorizzato nel buffer l'intero messaggio prima di inviarlo a WCF. Questa condizione comportava un elevato consumo di memoria. Questo buffering è stato rimosso in .NET 4.5 e ora i servizi WCF ospitati da IIS possono iniziare l'elaborazione del flusso in ingresso prima che l'intero messaggio sia stato ricevuto, permettendo quindi un flusso vero. In questo modo, WCF risponde immediatamente ai messaggi e consente prestazioni migliori. Inoltre, non è più necessario specificare un valore per `maxRequestLength`, cioè il limite di dimensioni ASP.NET per le richieste in ingresso. Se questa proprietà è impostata, verrà ignorata. Per ulteriori informazioni su `maxRequestLength` vedere [\<httpRuntime > elemento di configurazione](https://go.microsoft.com/fwlink/?LinkId=223344). Sarà comunque necessario configurare il maxAllowedContentLength. per altre informazioni, vedere limiti delle [richieste di IIS](https://go.microsoft.com/fwlink/?LinkId=225908).
+- Eliminazione delle limitazioni relativamente al buffer dei messaggi quando un servizio è ospitato da IIS. Nelle versioni precedenti di WCF, quando si riceveva un messaggio per un servizio ospitato da IIS che utilizzava il trasferimento dei messaggi di flusso, ASP.NET avrebbe memorizzato nel buffer l'intero messaggio prima di inviarlo a WCF. Questa condizione comportava un elevato consumo di memoria. Questo buffering è stato rimosso in .NET 4.5 e ora i servizi WCF ospitati da IIS possono iniziare l'elaborazione del flusso in ingresso prima che l'intero messaggio sia stato ricevuto, permettendo quindi un flusso vero. In questo modo, WCF risponde immediatamente ai messaggi e consente prestazioni migliori. Inoltre, non è più necessario specificare un valore per `maxRequestLength`, cioè il limite di dimensioni ASP.NET per le richieste in ingresso. Se questa proprietà è impostata, verrà ignorata. Per ulteriori informazioni su `maxRequestLength` vedere [\<elemento di configurazione > httpRuntime](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71)). Sarà comunque necessario configurare il maxAllowedContentLength. per altre informazioni, vedere limiti delle [richieste di IIS](https://docs.microsoft.com/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
 
 ## <a name="new-transport-default-values"></a>Nuovi valori predefiniti di trasporto
 
 Nella tabella seguente vengono descritte le impostazioni che sono state modificate e dove reperire informazioni aggiuntive.
 
-|proprietà|Attivato|Nuova impostazione predefinita|Altre informazioni|
+|proprietà|On|Nuova impostazione predefinita|Altre informazioni|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|Questa proprietà determina per quanto tempo una connessione TCP può eseguire l'autenticazione usando il protocollo di framing .NET. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Questo timeout viene reso intenzionalmente più piccolo rispetto a ReceiveTimeout (10 min) in modo che eventuali client non autenticati dannosi non possano mantenere le connessioni al server per molto tempo. Il valore predefinito è 30 secondi. Per ulteriori informazioni su <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * numero di processori|È la proprietà a livello di socket che descrive il numero di richieste "in attesa di accettazione" da mettere in coda. Se la coda del backlog in ascolto si riempie, le nuove richieste del socket verranno rifiutate. Per ulteriori informazioni su <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -109,7 +109,7 @@ Nella tabella seguente vengono descritte le impostazioni che sono state modifica
 
 L'oggetto <xref:System.Xml.XmlDictionaryReaderQuotas> contiene i valori di quota configurabili per lettori di dizionari XML che limitano la quantità di memoria utilizzata da un codificatore durante la creazione di un messaggio. Anche se queste quote sono configurabili, i valori predefiniti sono stati modificati per ridurre la possibilità che uno sviluppatore debba impostarle in modo esplicito. La quota `MaxReceivedMessageSize` non è stata modificata, pertanto può ancora limitare il consumo di memoria evitando all'utente di dover gestire la complessità dell'oggetto <xref:System.Xml.XmlDictionaryReaderQuotas>. Nella tabella seguente sono illustrate le quote, i relativi nuovi valori predefiniti e una breve descrizione dell'utilizzo di ciascuna quota.
 
-|Nome della quota|Valore predefinito|Descrizione|
+|Nome quota|Valore predefinito|Descrizione|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Ottiene e imposta la lunghezza massima consentita della matrice. Questa quota limita la dimensione massima di una matrice di primitive che viene restituita dal lettore XML, incluse matrici di byte. La quota non limita l'utilizzo di memoria nel lettore XML stesso, bensì in un qualsiasi componente che utilizza il lettore. Ad esempio, quando la classe <xref:System.Runtime.Serialization.DataContractSerializer> utilizza un lettore protetto con <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, non deserializza matrici di byte che superano questa quota.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Ottiene e imposta i byte massimi consentiti restituiti per ogni lettura. Questa quota limita il numero di byte letti in una sola operazione di lettura, durante la lettura del tag iniziale dell'elemento e dei relativi attributi. In casi in cui non viene utilizzato il flusso, il nome dell'elemento stesso non viene contato ai fini della quota. La presenza di troppi attributi XML può causare un prolungamento eccessivo dei tempi di elaborazione perché è necessario controllare che i nomi degli attributi siano univoci. Utilizzando la proprietà<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> la minaccia viene mitigata.|

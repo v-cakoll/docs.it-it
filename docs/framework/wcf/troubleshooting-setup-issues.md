@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi di installazione
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281599"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802427"
 ---
 # <a name="troubleshooting-setup-issues"></a>Risoluzione dei problemi di installazione
 In questo argomento viene descritto come risolvere i problemi di configurazione di Windows Communication Foundation (WCF).  
@@ -52,7 +52,7 @@ In questo argomento viene descritto come risolvere i problemi di configurazione 
   
  Per risolvere il problema descritto in precedenza, è necessario eseguire la procedura seguente.  
   
-1. Eseguire [il utilità di diagnosi di WMI versione 2,0](https://go.microsoft.com/fwlink/?LinkId=94685) per ripristinare il servizio WMI. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere l'argomento [utilità di diagnosi di WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
+1. Eseguire [il utilità di diagnosi di WMI versione 2,0](https://go.microsoft.com/fwlink/?LinkId=94685) per ripristinare il servizio WMI. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere l'articolo [utilità di diagnosi di WMI](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) .  
   
  Ripristinare l'installazione di .NET Framework 3,0 usando l'applet installazione **applicazioni** disponibile nel pannello di **controllo**oppure disinstallare/reinstallare il .NET Framework 3,0.  
   

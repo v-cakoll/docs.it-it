@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creazione di un servizio dati tramite un'origine dati LINQ to SQL (WCF Data Services)"
+title: "Procedura: creare un servizio dati tramite un'origine dati LINQ to SQL (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052993"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802288"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Procedura: Creazione di un servizio dati tramite un'origine dati LINQ to SQL (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Procedura: creare un servizio dati tramite un'origine dati LINQ to SQL (WCF Data Services)
 
-WCF Data Services espone i dati di entità come servizio dati. Il provider di reflection consente di definire un modello di dati basato su qualsiasi classe che espone i membri che restituiscono <xref:System.Linq.IQueryable%601> un'implementazione di. Per essere in grado di apportare aggiornamenti ai dati nell'origine dati, queste classi devono inoltre implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per ulteriori informazioni, vedere [provider di servizi dati](data-services-providers-wcf-data-services.md). In questo argomento viene illustrato come creare classi LINQ to SQL per l'accesso al database Northwind di esempio tramite il provider di reflection, nonché come creare il servizio dati basato su queste classi di dati.
+WCF Data Services espone i dati di entità come servizio dati. Il provider di reflection consente di definire un modello di dati basato su qualsiasi classe che espone i membri che restituiscono un'implementazione di <xref:System.Linq.IQueryable%601>. Per essere in grado di apportare aggiornamenti ai dati nell'origine dati, queste classi devono inoltre implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per ulteriori informazioni, vedere [provider di servizi dati](data-services-providers-wcf-data-services.md). In questo argomento viene illustrato come creare classi LINQ to SQL per l'accesso al database Northwind di esempio tramite il provider di reflection, nonché come creare il servizio dati basato su queste classi di dati.
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>Per aggiungere classi LINQ to SQL a un progetto
 
@@ -31,7 +31,7 @@ WCF Data Services espone i dati di entità come servizio dati. Il provider di re
 
      Il file Northwind.dbml verrà aggiunto al progetto e verrà visualizzato Progettazione relazionale oggetti.
 
-5. In **Server**/**Esplora database**, in Northwind, espandere **tabelle** e trascinare la `Customers` tabella nella Object Relational Designer (O/R Designer).
+5. In **Server**/**Esplora database**, in Northwind, espandere **tabelle** e trascinare la tabella `Customers` nel Object Relational Designer (O/R Designer).
 
      Verrà creata una classe di entità `Customer` che verrà visualizzata nell'area di progettazione.
 
@@ -55,7 +55,7 @@ WCF Data Services espone i dati di entità come servizio dati. Il provider di re
    ![Modello di elemento del servizio dati WCF in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017.
+   > Il modello di **servizio dati WCF** è disponibile in visual studio 2015, ma non in visual studio 2017 o versioni successive.
 
 3. Specificare un nome per il servizio, quindi fare clic su **OK**.
 
@@ -74,6 +74,6 @@ WCF Data Services espone i dati di entità come servizio dati. Il provider di re
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un servizio dati tramite un'origine dati Entity Framework ADO.NET](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Procedura: Creazione di un servizio dati tramite il provider di Reflection](create-a-data-service-using-rp-wcf-data-services.md)
+- [Procedura: creare un servizio dati tramite un'origine dati ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Procedura: creare un servizio dati tramite il provider di reflection](create-a-data-service-using-rp-wcf-data-services.md)
 - [Provider di servizi dati](data-services-providers-wcf-data-services.md)

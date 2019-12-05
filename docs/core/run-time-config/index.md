@@ -2,12 +2,12 @@
 title: Configurazione della fase di esecuzione
 description: Informazioni su come configurare le applicazioni .NET Core usando le impostazioni di configurazione in fase di esecuzione.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567382"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801924"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Impostazioni di configurazione della fase di esecuzione di .NET Core
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567382"
 
 - [Variabili di ambiente](#environment-variables)
 
-Gli articoli di questa sezione della documentazione includono sono organizzati per categoria, ad esempio debug e Garbage Collection. Vengono visualizzate le opzioni di configurazione disponibili per *runtimeconfig. JSON* (solo .NET Core), *app. config* (solo .NET Framework) e le variabili di ambiente.
+Gli articoli di questa sezione della documentazione includono sono organizzati per categoria, ad esempio debug e Garbage Collection. Se applicabile, vengono visualizzate le opzioni di configurazione per *runtimeconfig. JSON* (solo .NET Core), *app. config* (solo .NET Framework) e le variabili di ambiente.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
 
-Specificare le opzioni di configurazione in fase di esecuzione nella sezione **configProperties** del file *runtimeconfig. JSON* . Questa sezione presenta il formato seguente:
+Specificare le opzioni di configurazione in fase di esecuzione nella sezione **configProperties** del file *runtimeconfig. JSON* dell'app. Questa sezione presenta il formato seguente:
 
 ```json
 {

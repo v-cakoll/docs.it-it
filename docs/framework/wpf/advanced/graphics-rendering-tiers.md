@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974008"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802136"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -54,7 +54,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  La tabella seguente illustra le differenze dei requisiti di hardware grafico tra il livello di rendering 1 e livello di rendering 2:  
   
-|Funzionalità|Livello 1|Livello 2|  
+|Caratteristica|Livello 1|Livello 2|  
 |-------------|------------|------------|  
 |Versione DirectX|Deve essere superiore o uguale alla 9.0.|Deve essere superiore o uguale alla 9.0.|  
 |RAM video|Deve essere superiore o uguale a 60 MB.|Deve essere superiore o uguale a 120 MB.|  
@@ -64,7 +64,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  Le funzionalità e capacità seguenti sono con accelerazione hardware per il livello di rendering 1 e livello di rendering 2:  
   
-|Funzionalità|Note|  
+|Caratteristica|Note|  
 |-------------|-----------|  
 |Rendering 2D|È supportata la maggior parte del rendering 2D.|  
 |Rasterizzazione 3D|È supportata la maggior parte delle rasterizzazioni 3D.|  
@@ -76,20 +76,20 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  Le funzionalità e capacità seguenti sono con accelerazione hardware solo per il livello di rendering 2:  
   
-|Funzionalità|Note|  
+|Caratteristica|Note|  
 |-------------|-----------|  
-|Anti-aliasing 3D|l'anti-aliasing 3D è supportato solo nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Anti-aliasing 3D|l'anti-aliasing 3D è supportato solo nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e Windows 7.|  
   
  Le funzionalità e capacità seguenti sono **senza** accelerazione hardware:  
   
-|Funzionalità|Note|  
+|Caratteristica|Note|  
 |-------------|-----------|  
 |Contenuti stampati|Il rendering di tutto il contenuto stampato viene eseguito con la pipeline software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
 |Contenuto rasterizzato che usa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto di cui viene eseguito il rendering tramite il metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> di <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Contenuto affiancato che usa <xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> del <xref:System.Windows.Media.TileBrush> è impostata su <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfici che superano le dimensioni massime della trama dell'hardware grafico|Per la maggior parte dell'hardware grafico, le superfici di grandi dimensioni sono pari a 2048x2048 o 4096x4096 pixel.|  
 |Qualsiasi operazione il cui requisito per la RAM video supera la memoria dell'hardware grafico|È possibile monitorare l'utilizzo della RAM video dell'applicazione usando lo strumento Perforator incluso nella [famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) in Windows SDK.|  
-|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando le proprietà <xref:System.Windows.Window> seguenti:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio Windows Vista e Windows 7, le finestre sovrapposte sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando le proprietà <xref:System.Windows.Window> seguenti:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Altre risorse  
@@ -98,7 +98,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 ### <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per controllare il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Impostazioni|Descrizione|  
+|Impostazione di|Descrizione|  
 |-------------|-----------------|  
 |**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
 |**Valore massimo di multicampionamento**|Specifica il grado di campionamento multiplo per l'anti-aliasing del contenuto 3D.|  

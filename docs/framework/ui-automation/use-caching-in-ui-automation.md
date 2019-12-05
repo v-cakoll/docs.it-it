@@ -8,22 +8,22 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: dd7506d388ba215f671ee3c7c4bae09baf4cc2b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 679192b611a423e095ee9acc956d247364940edf
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040314"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800799"
 ---
 # <a name="use-caching-in-ui-automation"></a>Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).  
   
  In questa sezione viene illustrato come implementare la memorizzazione nella cache delle proprietà e dei pattern di controllo per <xref:System.Windows.Automation.AutomationElement> .  
   
 ### <a name="activate-a-cache-request"></a>Attivare una richiesta della cache  
   
-1. Creare un oggetto <xref:System.Windows.Automation.CacheRequest>.  
+1. Creare un <xref:System.Windows.Automation.CacheRequest>.  
   
 2. Specificare le proprietà e i pattern da memorizzare nella cache mediante <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "71040314"
   
 5. Impostare la proprietà <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> su <xref:System.Windows.Automation.AutomationElementMode.None> se si desidera aumentare l'efficienza evitando di recuperare un riferimento completo agli oggetti. Ciò non consente di recuperare i valori correnti tali oggetti.  
   
-6. Attivare la richiesta usando <xref:System.Windows.Automation.CacheRequest.Activate%2A> all'interno di un `using` blocco`Using` (in Microsoft Visual Basic .NET).  
+6. Attivare la richiesta utilizzando <xref:System.Windows.Automation.CacheRequest.Activate%2A> all'interno di un blocco di `using` (`Using` in Microsoft Visual Basic .NET).  
   
- Dopo aver ottenuto gli oggetti <xref:System.Windows.Automation.AutomationElement> o aver eseguito la sottoscrizione degli eventi, disattivare la richiesta usando <xref:System.Windows.Automation.CacheRequest.Pop%2A> (se è stata usata <xref:System.Windows.Automation.CacheRequest.Push%2A> ) oppure eliminando l'oggetto creato da <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Usare <xref:System.Windows.Automation.CacheRequest.Activate%2A> in un `using` blocco (`Using` in Microsoft Visual Basic .NET).  
+ Dopo aver ottenuto gli oggetti <xref:System.Windows.Automation.AutomationElement> o aver eseguito la sottoscrizione degli eventi, disattivare la richiesta usando <xref:System.Windows.Automation.CacheRequest.Pop%2A> (se è stata usata <xref:System.Windows.Automation.CacheRequest.Push%2A> ) oppure eliminando l'oggetto creato da <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Usare <xref:System.Windows.Automation.CacheRequest.Activate%2A> in un blocco di `using` (`Using` in Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Memorizzare nella cache le proprietà della classe AutomationElement  
   

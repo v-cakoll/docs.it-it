@@ -2,16 +2,16 @@
 title: Esecuzione del debug dei flussi di lavoro
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291495"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802635"
 ---
 # <a name="debugging-workflows"></a>Esecuzione del debug dei flussi di lavoro
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Debug nell'utilità di progettazione del flusso di lavoro
 
@@ -31,7 +31,7 @@ Il debug del flusso di lavoro è supportato anche usando l'infrastruttura di Vis
 
 ## <a name="remote-debugging"></a>Remote Debugging
 
-Windows Workflow Foundation (WF) Remote Debugging funziona allo stesso modo del debug remoto per altri componenti di Visual Studio. Per informazioni sull'uso del debug remoto, vedere [procedura: abilitare il debug remoto](https://go.microsoft.com/fwlink/?LinkId=196257).
+Windows Workflow Foundation (WF) Remote Debugging funziona allo stesso modo del debug remoto per altri componenti di Visual Studio. Per informazioni sull'uso del debug remoto, vedere [procedura: abilitare il debug remoto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Se l'applicazione flusso di lavoro è destinata all'architettura x86 ed è ospitata in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che Visual Studio non sia installato nel computer remoto o la destinazione dell'applicazione del flusso di lavoro venga modificata in **qualsiasi CPU**.

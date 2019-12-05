@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Creare un partecipante di persistenza personalizzato'
+title: 'Procedura: creare un partecipante di persistenza personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 47283375b618422d91a6279ee9049fae469f540a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0e61395cb59a7d162668445d23241e3ff562d67b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989672"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802544"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Procedura: Creare un partecipante di persistenza personalizzato
-Nella procedura riportata di seguito sono illustrati i passaggi per creare un partecipante di persistenza. Per le implementazioni di esempio dei partecipanti di persistenza, vedere l'argomento relativo all'esempio di [persistenza](https://go.microsoft.com/fwlink/?LinkID=177735) e [archiviazione](store-extensibility.md) .  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Procedura: creare un partecipante di persistenza personalizzato
+Nella procedura riportata di seguito sono illustrati i passaggi per creare un partecipante di persistenza. Per le implementazioni di esempio dei partecipanti di persistenza, vedere l'argomento relativo all'esempio di [persistenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) e [archiviazione](store-extensibility.md) .  
   
 1. Creare una classe che deriva dalla classe <xref:System.Activities.Persistence.PersistenceParticipant> o <xref:System.Activities.Persistence.PersistenceIOParticipant>. La classe PersistenceIOParticipant offre gli stessi punti di estendibilità della classe PersistenceParticipant, oltre alla possibilità di partecipare alle operazioni di I/O. Attenersi ad almeno uno dei passaggi seguenti.  
   

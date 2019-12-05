@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141490"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802466"
 ---
 # <a name="format-types-in-net"></a>Tipi di formato in .NET
 
@@ -85,7 +85,7 @@ Ogni tipo derivato da <xref:System.Object?displayProperty=nameWithType> eredita 
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> A partire da [!INCLUDE[win81](../../../includes/win81-md.md)], Windows Runtime include un'interfaccia <xref:Windows.Foundation.IStringable> con un singolo metodo, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), che fornisce supporto per la formattazione predefinito. È tuttavia consigliabile che i tipi gestiti non implementino l'interfaccia `IStringable` . Per altre informazioni, vedere la sezione "Windows Runtime e l'interfaccia `IStringable`" nella pagina di riferimento <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
+> A partire da Windows 8.1, il Windows Runtime include un'interfaccia <xref:Windows.Foundation.IStringable> con un solo metodo, che è il [. ToString](xref:Windows.Foundation.IStringable.ToString%2A), che fornisce il supporto predefinito per la formattazione. È tuttavia consigliabile che i tipi gestiti non implementino l'interfaccia `IStringable` . Per altre informazioni, vedere la sezione "Windows Runtime e l'interfaccia `IStringable`" nella pagina di riferimento <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
 Poiché tutti i tipi diversi dalle interfacce sono derivati da <xref:System.Object>, questa funzionalità viene fornita automaticamente alle classi o alle strutture personalizzate. La funzionalità offerta dal metodo `ToString` predefinito è tuttavia limitata poiché non fornisce informazioni su un'istanza del tipo sebbene consenta di identificarlo. Per fornire una rappresentazione di stringa di un oggetto che fornisce informazioni su tale oggetto, è necessario eseguire l'override del metodo `ToString` .
 
@@ -101,7 +101,7 @@ La visualizzazione del nome di un tipo ha spesso un uso limitato e non consente 
 
 In .NET è stato eseguito l'override del metodo `ToString` di ogni tipo di valore primitivo per visualizzare il valore dell'oggetto invece del nome. Nella tabella seguente viene illustrato l'override per ogni tipo primitivo. Si noti che la maggior parte dei metodi sottoposti a override chiama un altro overload del metodo `ToString` e passa a esso l'identificatore di formato "G", che definisce il formato generale per il tipo, e un oggetto <xref:System.IFormatProvider> , che rappresenta le impostazioni cultura correnti.
 
-|Digitare|Override di ToString|
+|Tipo di|Override di ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Restituisce <xref:System.Boolean.TrueString?displayProperty=nameWithType> o <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chiama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` per formattare il valore <xref:System.Byte> per le impostazioni cultura correnti.|
@@ -251,7 +251,7 @@ In .NET sono disponibili tre classi che implementano <xref:System.IFormatProvide
 
 - <xref:System.Globalization.NumberFormatInfo>, una classe che fornisce informazioni sulla formattazione numerica per impostazioni cultura specifiche. L'implementazione del metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> della classe restituisce un'istanza della classe stessa.
 
-- <xref:System.Globalization.CultureInfo> L'implementazione del metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> della classe può restituire un oggetto <xref:System.Globalization.NumberFormatInfo> per fornire informazioni sulla formattazione numerica o un oggetto <xref:System.Globalization.DateTimeFormatInfo> per fornire informazioni sulla formattazione per i valori di data e ora.
+- <xref:System.Globalization.CultureInfo>. L'implementazione del metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> della classe può restituire un oggetto <xref:System.Globalization.NumberFormatInfo> per fornire informazioni sulla formattazione numerica o un oggetto <xref:System.Globalization.DateTimeFormatInfo> per fornire informazioni sulla formattazione per i valori di data e ora.
 
 È anche possibile implementare un provider di formato personalizzato per sostituire una di queste classi. Il metodo <xref:System.IFormatProvider.GetFormat%2A> dell'implementazione, tuttavia, deve restituire un oggetto del tipo elencato nella tabella precedente, se deve fornire informazioni sulla formattazione al metodo `ToString`.
 

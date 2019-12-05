@@ -2,12 +2,12 @@
 title: Novità di .NET Core 2.0
 description: Informazioni sulle nuove funzionalità in .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100835"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801888"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -56,7 +56,7 @@ Per altre informazioni sulla migrazione del progetto a .NET Core 2.0, vedere [Mi
 
 Oltre a supportare C# e F#, .NET Core 2.0 supporta anche Visual Basic.
 
-### <a name="visual-basic"></a>Visual Basic
+### <a name="visual-basic"></a>Visual Basic -
 
 Con la versione 2.0, .NET Core supporta ora Visual Basic 2017. È possibile usare Visual Basic per creare i tipi di progetto seguenti:
 
@@ -136,7 +136,7 @@ Per ridestinare il progetto in Visual Studio, aprire la scheda **Applicazione** 
 
 Ogni volta che si modifica il codice, Live Unit Testing esegue automaticamente tutti gli unit test interessati in background, visualizzando in tempo reale i risultati e il code coverage nell'ambiente di Visual Studio. .NET Core 2.0 ora supporta Live Unit Testing. In precedenza, Live Unit Testing era disponibile solo per le applicazioni .NET Framework.
 
-Per altre informazioni, vedere [Live Unit Testing con Visual Studio 2017](/visualstudio/test/live-unit-testing) e le [domande frequenti su Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
+Per altre informazioni, vedere [Live unit testing con Visual Studio](/visualstudio/test/live-unit-testing) e le [domande frequenti su Live unit testing](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Supporto migliorato per più framework di destinazione
 

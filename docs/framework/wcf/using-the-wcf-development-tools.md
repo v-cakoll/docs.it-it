@@ -1,15 +1,15 @@
 ---
-title: Utilizzo degli strumenti di sviluppo WCF
+title: Uso degli strumenti di sviluppo WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: afa62a63aa955dc868791da635418331f93e9e87
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420689"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802410"
 ---
-# <a name="using-the-wcf-development-tools"></a>Utilizzo degli strumenti di sviluppo WCF
+# <a name="using-the-wcf-development-tools"></a>Uso degli strumenti di sviluppo WCF
 Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono risultare utili per lo sviluppo di WCFservice.  
   
  È possibile utilizzare i modelli di Visual Studio come base per creare rapidamente un servizio personalizzato, quindi utilizzare l'host automatico del servizio WCF e il client di prova WCF per eseguire il debug e il test del servizio. Questi strumenti forniscono funzioni di debug e test veloci e trasparenti e precludono la necessità di eseguire il commit a un modello di hosting in fase iniziale.  
@@ -43,7 +43,7 @@ Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono r
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Per ulteriori informazioni su Netsh. exe, vedere [come utilizzare lo strumento Netsh. exe e le opzioni della riga di comando](https://go.microsoft.com/fwlink/?LinkId=97877).  
+ Per ulteriori informazioni su Netsh. exe, vedere [come utilizzare lo strumento Netsh. exe e le opzioni della riga di comando](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).  
   
 ## <a name="see-also"></a>Vedere anche
 

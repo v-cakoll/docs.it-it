@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320462"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802375"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novità in Windows Communication Foundation 4.5
 
@@ -78,7 +78,7 @@ WebSockets è una tecnologia che fornisce la vera comunicazione bidirezionale pe
 
 Nella tabella seguente vengono descritte le impostazioni che sono state modificate e dove reperire informazioni aggiuntive.
 
-|proprietà|Attivato|Nuova impostazione predefinita|Per ulteriori informazioni, vedere|
+|proprietà|On|Nuova impostazione predefinita|Per ulteriori informazioni, vedi|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * il numero di processori|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -126,7 +126,7 @@ Come in IIS, è stato aggiunto il supporto di più modalità di autenticazione i
 
 ## <a name="httpclient"></a>HttpClient
 
-È stata aggiunta una nuova classe denominata <xref:System.Net.Http.HttpClient> per semplificare l'utilizzo delle richieste HTTP. Per altre informazioni, vedere [rendere le app social e connesse con i servizi http](https://go.microsoft.com/fwlink/?LinkId=231886) e l' [esempio di client http](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+È stata aggiunta una nuova classe denominata <xref:System.Net.Http.HttpClient> per semplificare l'utilizzo delle richieste HTTP. Per altre informazioni, vedere [rendere le app social e connesse con i servizi http](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) e l' [esempio di client http](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>Configurazione di Intellisense
 

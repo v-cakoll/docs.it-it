@@ -2,18 +2,18 @@
 title: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460859"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802583"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
 
 In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.
 
-Windows Server AppFabric semplifica il processo di configurazione della persistenza. Per altre informazioni, vedere [configurazione di persistenza di App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
+Windows Server AppFabric semplifica il processo di configurazione della persistenza. Per altre informazioni, vedere [configurazione di persistenza di App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Prima di usare tale funzionalità, creare un database usato dalla funzionalità per rendere persistenti le istanze del flusso di lavoro. Il programma di installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia i file di script SQL associati alla funzionalità di archivio di istanze del flusso di lavoro SQL nella cartella %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Eseguire questi file di script in un database di SQL Server 2005 o SQL Server 2008 che si desidera venga usato dall'archivio di istanze del flusso di lavoro SQL per rendere persistenti le istanze del flusso di lavoro. Eseguire innanzitutto il file SqlWorkflowInstanceStoreSchema.sql, quindi il file SqlWorkflowInstanceStoreLogic.sql.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password. In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso (ACL) del file system. Inoltre, è possibile proteggere i valori di configurazione all'interno di un file di configurazione come indicato in [crittografia delle informazioni di configurazione tramite la configurazione protetta](https://go.microsoft.com/fwlink/?LinkId=178419).
+> È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password. In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso (ACL) del file system. Inoltre, è possibile proteggere i valori di configurazione all'interno di un file di configurazione come indicato in [crittografia delle informazioni di configurazione tramite la configurazione protetta](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementi Machine.config correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104636"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801843"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
@@ -89,9 +89,9 @@ signtool [command] [options] [file_name | ...]
 |`/s`  *NomeArchivio*|Specifica l'archivio da aprire durante la ricerca del certificato. Se questa opzione non è specificata, viene aperto l'archivio `My`.|  
 |`/sha1`  *Hash*|Specifica l'hash SHA1 del certificato di firma. Il valore hash SHA1 viene specificato in genere quando più certificati soddisfano i criteri specificati dalle opzioni rimanenti.|  
 |`/sm`|Specifica di usare un archivio del computer anziché un archivio utente.|  
-|`/t`  *URL*|Specifica l'URL del server di timestamp. Se questa opzione (o `/tr`) non è presente, al file firmato non verrà aggiunto il timestamp. Se l'aggiunta del timestamp non riesce, viene generato un avviso. Non è possibile usare questa opzione con l'opzione `/tr`.|  
+|`/t`  *URL*|Specifica l'URL del server di timestamp. Se questa opzione (o `/tr`) non è presente, al file firmato non verrà aggiunto il timestamp. Se l'aggiunta del timestamp non riesce, viene generato un avviso. Questa opzione non può essere utilizzata con l'opzione `/tr`.|  
 |`/td`  *algoritmo*|Usata con l'opzione `/tr` per richiedere un algoritmo digest usato dal server di timestamp RFC 3161.|  
-|`/tr`  *URL*|Specifica l'URL del server di timestamp RFC 3161. Se questa opzione (o `/t`) non è presente, al file firmato non verrà aggiunto il timestamp. Se l'aggiunta del timestamp non riesce, viene generato un avviso. Non è possibile usare questa opzione con l'opzione `/t`.|  
+|`/tr`  *URL*|Specifica l'URL del server di timestamp RFC 3161. Se questa opzione (o `/t`) non è presente, al file firmato non verrà aggiunto il timestamp. Se l'aggiunta del timestamp non riesce, viene generato un avviso. Questa opzione non può essere utilizzata con l'opzione `/t`.|  
 |`/u`  *Utilizzo*|Specifica l'utilizzo chiavi avanzato (EKU) che deve essere presente nel certificato di firma. Il valore di utilizzo può essere specificato tramite OID o stringa. L'utilizzo predefinito è "Firma codice" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Specifica l'utilizzo di "Verifica dei componenti di sistema Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Indice*|Verifica la firma in una posizione specificata.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Specifica un algoritmo hash facoltativo da usare quando si cerca un file in un catalogo.|  
 |`/kp`|Specifica che la verifica deve essere eseguita con i criteri di firma del driver in modalità kernel.|  
-|`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) in [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni successive.|  
+|`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) in Windows 8 e versioni successive.|  
 |`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  è consigliabile l'uso dell'opzione `/o`. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
 |`/p7`|Verifica i file PKCS #7. Non viene usato alcun criterio esistente per la convalida PKCS #7. La firma viene controllata e viene creata una catena per il certificato di firma.|  
 |`/pa`|Specifica che devono essere usati i criteri di verifica Authenticode predefiniti. Se l'opzione `/pa` non è specificata, vengono usati i criteri di verifica dei driver di Windows. Non è possibile usare questa opzione con le opzioni `catdb`.|  

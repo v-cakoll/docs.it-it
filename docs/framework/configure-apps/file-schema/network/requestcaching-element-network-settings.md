@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697832"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802123"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (impostazioni di rete)
 Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.  
@@ -29,7 +29,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
@@ -40,7 +40,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`isPrivateCache`|Specifica se la cache fornisce l'isolamento tra le informazioni di utenti diversi. Il valore predefinito è `true`. Questo valore deve essere `false` per le applicazioni di livello intermedio.|  
 |`disableAllCaching`|Specifica che la memorizzazione nella cache è disabilitata per tutte le risposte Web e non può essere sottoposta a override a livello di codice.|  
@@ -49,7 +49,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ## <a name="policylevel-attribute"></a>policyLevel (attributo)  
   
-|Valore|description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e sono presenti gli attributi relativi alla scadenza, alla modifica e alla lunghezza del contenuto.|  
 |`BypassCache`|Restituisce la risorsa dal server.|  
@@ -62,14 +62,14 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
 |[\<elemento > defaultFtpCachePolicy (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
