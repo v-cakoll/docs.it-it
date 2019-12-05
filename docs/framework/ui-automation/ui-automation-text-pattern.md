@@ -8,28 +8,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bd19d02ade7c7826f6c0b26d894bcd48827e7ccb
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040508"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800856"
 ---
-# <a name="ui-automation-text-pattern"></a><span data-ttu-id="ad3e9-102">Pattern di testo per l'automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="ad3e9-102">UI Automation Text Pattern</span></span>
+# <a name="ui-automation-text-pattern"></a><span data-ttu-id="2d6b0-102">Pattern di testo per l'automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2d6b0-102">UI Automation Text Pattern</span></span>
 > [!NOTE]
-> <span data-ttu-id="ad3e9-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="ad3e9-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ad3e9-104">Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="ad3e9-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="2d6b0-103">Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="2d6b0-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="2d6b0-104">Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="2d6b0-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="ad3e9-105">In questo argomento vengono fornite panoramiche e procedure utili per iniziare a programmare gli elementi di testo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ad3e9-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
+ <span data-ttu-id="2d6b0-105">In questo argomento vengono fornite panoramiche e procedure per iniziare a programmare gli elementi di testo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2d6b0-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad3e9-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="ad3e9-106">In This Section</span></span>  
- [<span data-ttu-id="ad3e9-107">Panoramica di TextPattern di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="ad3e9-107">UI Automation TextPattern Overview</span></span>](ui-automation-textpattern-overview.md)  
- [<span data-ttu-id="ad3e9-108">Panoramica degli oggetti incorporati e TextPattern</span><span class="sxs-lookup"><span data-stu-id="ad3e9-108">TextPattern and Embedded Objects Overview</span></span>](textpattern-and-embedded-objects-overview.md)  
- [<span data-ttu-id="ad3e9-109">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="ad3e9-109">How-to Topics</span></span>](ui-automation-text-pattern-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2d6b0-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="2d6b0-106">In This Section</span></span>  
+ [<span data-ttu-id="2d6b0-107">Panoramica di TextPattern di automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2d6b0-107">UI Automation TextPattern Overview</span></span>](ui-automation-textpattern-overview.md)  
+ [<span data-ttu-id="2d6b0-108">Panoramica degli oggetti incorporati e TextPattern</span><span class="sxs-lookup"><span data-stu-id="2d6b0-108">TextPattern and Embedded Objects Overview</span></span>](textpattern-and-embedded-objects-overview.md)  
+ [<span data-ttu-id="2d6b0-109">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="2d6b0-109">How-to Topics</span></span>](ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ad3e9-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="ad3e9-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2d6b0-110">Reference</span><span class="sxs-lookup"><span data-stu-id="2d6b0-110">Reference</span></span>  
  <xref:System.Windows.Automation.Text>  
   
-## <a name="see-also"></a><span data-ttu-id="ad3e9-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad3e9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d6b0-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2d6b0-111">See also</span></span>
 
-- [<span data-ttu-id="ad3e9-112">Pattern di controllo per automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="ad3e9-112">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
-- [<span data-ttu-id="ad3e9-113">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="ad3e9-113">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)
+- [<span data-ttu-id="2d6b0-112">Pattern di controllo per automazione interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="2d6b0-112">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
+- [<span data-ttu-id="2d6b0-113">Pattern di controllo di automazione interfaccia utente per i client</span><span class="sxs-lookup"><span data-stu-id="2d6b0-113">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)
