@@ -4,12 +4,12 @@ description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423563"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884436"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
@@ -17,7 +17,7 @@ La documentazione di .NET contiene una serie di esempi ed esercitazioni che illu
 
 ## <a name="net-core"></a>.NET Core
 
-### <a name="samples"></a>Esempi
+### <a name="samples"></a>Esempi di
 
 **[Unit Testing in .NET Core using dotnet test](../core/testing/unit-testing-with-dotnet-test.md)** (Testing unità in .NET Core con il test dotnet)
 
@@ -25,7 +25,7 @@ Questa guida illustra come creare un'app Web ASP.NET Core e gli unit test associ
 
 ### <a name="tutorials"></a>Esercitazioni
 
-**[Writing .NET Core console apps using the CLI tools: A step-by-step guide](../core/tutorials/using-with-xplat-cli.md)** (Scrittura di app console .NET Core mediante gli strumenti dell'interfaccia della riga di comando: guida dettagliata)
+**[Writing .NET Core console apps using the CLI tools: A step-by-step guide](../core/tutorials/cli-create-console-app.md)** (Scrittura di app console .NET Core mediante gli strumenti dell'interfaccia della riga di comando: guida dettagliata)
 
 Questa guida illustra come usare gli strumenti dell'interfaccia della riga di comando di .NET Core per creare applicazioni console multipiattaforma. Si inizia con un'app console semplice per poi passare a più progetti, incluso un progetto di test. Le funzionalità vengono aggiunte progressivamente, in modo da poter ampliare le proprie conoscenze man mano che si procede. L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/console-apps) è disponibile nel repository dotnet/samples su GitHub.
 
@@ -39,7 +39,7 @@ Vedere le [esercitazioni di ASP .NET Core](/aspnet/core/tutorials/). Molti artic
 
 ## <a name="c-language"></a>Linguaggio C#
 
-### <a name="samples"></a>Esempi
+### <a name="samples"></a>Esempi di
 
 **[Iteratori](../csharp/iterators.md)**
 

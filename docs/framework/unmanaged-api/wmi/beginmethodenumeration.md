@@ -14,14 +14,14 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138794"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884423"
 ---
-# <a name="beginenumeration-function"></a>Funzione BeginEnumeration
+# <a name="beginmethodenumeration-function"></a>Funzione BeginMethodEnumeration
 Inizia un'enumerazione dei metodi disponibili per l'oggetto.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +47,7 @@ in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-
 `lEnumFlags`  
 in Zero (0) per tutti i metodi o un flag che specifica l'ambito dell'enumerazione. I flag seguenti sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-Costante  |Value  |Descrizione  |
+Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione ai metodi definiti nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione alle proprietà ereditate dalle classi di base. |
@@ -56,7 +56,7 @@ Costante  |Value  |Descrizione  |
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` è diverso da zero e non è uno dei flag specificati. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
@@ -67,7 +67,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 Questa chiamata al metodo è supportata solo se l'oggetto corrente è una definizione di classe. La manipolazione del metodo non è disponibile dai puntatori [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) che puntano alle istanze. L'ordine in cui vengono enumerati i metodi è sicuramente invariante per un'istanza specificata di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti di  
  **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils. idl  

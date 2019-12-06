@@ -3,12 +3,12 @@ title: Struttura del programma C# - Panoramica del linguaggio C#
 description: Informazioni sui blocchi predefiniti di un programma C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834161"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884384"
 ---
 # <a name="program-structure"></a>Struttura del programma
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 compila l'esempio come libreria (codice senza un punto di ingresso `Main`) e genera un assembly denominato `acme.dll`.
 
 > [!IMPORTANT]
-> Negli esempi precedenti viene usato `csc` come compilatore C# della riga di comando. Questo compilatore è un eseguibile Windows. Per usare C# in altre piattaforme, è necessario usare gli strumenti per .NET Core. L'ecosistema .NET Core usa l'interfaccia della riga di comando `dotnet` per gestire le compilazioni della riga di comando e anche per gestire le dipendenze e richiamare il compilatore C#. Per una descrizione completa di tali strumenti sulle piattaforme supportate da .NET Core, vedere [questa esercitazione](../../core/tutorials/using-with-xplat-cli.md).
+> Negli esempi precedenti viene usato `csc` come compilatore C# della riga di comando. Questo compilatore è un eseguibile Windows. Per usare C# in altre piattaforme, è necessario usare gli strumenti per .NET Core. L'ecosistema .NET Core usa l'interfaccia della riga di comando `dotnet` per gestire le compilazioni della riga di comando e anche per gestire le dipendenze e richiamare il compilatore C#. Per una descrizione completa di tali strumenti sulle piattaforme supportate da .NET Core, vedere [questa esercitazione](../../core/tutorials/cli-create-console-app.md).
 
 Gli assembly contengono codice eseguibile sotto forma di istruzioni di linguaggio intermedio (Intermediate Language, IL) e informazioni simboliche sotto forma di metadati. Prima di essere eseguito, il codice IL presente in un assembly viene convertito automaticamente nel codice specifico del processore dal compilatore JIT (Just-In-Time) di .NET Common Language Runtime.
 

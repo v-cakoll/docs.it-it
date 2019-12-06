@@ -4,16 +4,16 @@ description: Questa esercitazione illustra come organizzare e testare i progetti
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117381"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884215"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizzazione e test di progetti con la riga di comando di .NET Core
 
-Questa esercitazione segue [Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando](using-with-xplat-cli.md) e va oltre la creazione di una semplice app console, illustrando lo sviluppo di applicazioni più avanzate e organizzate. L'esercitazione indica come usare le cartelle per organizzare il codice, quindi illustra come estendere un'applicazione console con il framework di testo [xUnit](https://xunit.github.io/).
+Questa esercitazione segue [Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando](cli-create-console-app.md) e va oltre la creazione di una semplice app console, illustrando lo sviluppo di applicazioni più avanzate e organizzate. L'esercitazione indica come usare le cartelle per organizzare il codice, quindi illustra come estendere un'applicazione console con il framework di testo [xUnit](https://xunit.github.io/).
 
 ## <a name="using-folders-to-organize-code"></a>Uso di cartelle per organizzare il codice
 
@@ -84,7 +84,7 @@ Creare la seguente struttura di cartelle con il contenuto di file indicato:
 
 [!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
-Eseguire il seguente comando:
+Eseguire il comando seguente:
 
 ```dotnetcli
 dotnet run
@@ -103,7 +103,7 @@ Esercizio facoltativo: aggiungere un nuovo tipo di animale domestico, ad esempio
 
 Il progetto `NewTypes` è attivo ed è stato organizzato inserendo i tipi associati agli animali da compagnia in una cartella. Creare il progetto di test e iniziare a creare test con il framework di test [xUnit](https://xunit.github.io/). Il testing unità permette di controllare automaticamente il comportamento dei tipi di animali domestici per verificare che funzionino correttamente.
 
-Tornare alla cartella *src* e creare una cartella *test* contenente una sottocartella *NewTypesTests*. Al prompt dei comandi della cartella *NewTypesTests* eseguire `dotnet new xunit`. In questo modo vengono prodotti due file: *NewTypesTests.csproj* e *UnitTest1.cs*.
+Tornare alla cartella *src* e creare una cartella *test* contenente una sottocartella *NewTypesTests*. Al prompt dei comandi della cartella *NewTypesTests* eseguire `dotnet new xunit`. Questa operazione produce due file: *NewTypesTests.csproj* e *UnitTest1.cs*.
 
 Il progetto di test non può verificare i tipi in `NewTypes` e richiede un riferimento al progetto `NewTypes`. Per aggiungere un riferimento al progetto usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
