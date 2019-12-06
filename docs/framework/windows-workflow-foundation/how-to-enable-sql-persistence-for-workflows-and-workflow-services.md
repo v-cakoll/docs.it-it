@@ -2,12 +2,12 @@
 title: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802583"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837688"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password. In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso (ACL) del file system. Inoltre, è possibile proteggere i valori di configurazione all'interno di un file di configurazione come indicato in [crittografia delle informazioni di configurazione tramite la configurazione protetta](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
+> È consigliabile non archiviare nel file Web.config informazioni riservate, quali nomi utente e password. In caso contrario, è necessario proteggere l'accesso a tale file tramite gli elenchi di controllo di accesso (ACL) del file system. Inoltre, è possibile proteggere i valori di configurazione all'interno di un file di configurazione come indicato in [crittografia delle informazioni di configurazione tramite la configurazione protetta](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementi Machine.config correlati alla funzionalità di archivio di istanze del flusso di lavoro SQL
 

@@ -2,12 +2,12 @@
 title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660919"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837623"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 
@@ -17,7 +17,7 @@ I profili di rilevamento contengono query di rilevamento che consentono a un par
 
 I profili di rilevamento vengono usati per specificare le informazioni di rilevamento generate per un'istanza del flusso di lavoro. Se non è specificato alcun profilo, vengono generati tutti gli eventi di rilevamento. Se viene specificato un profilo, verranno generati gli eventi di rilevamento specificati nel profilo. A seconda dei requisiti di monitoraggio, è possibile scrivere un profilo molto generale che sottoscrive un piccolo set di modifiche dello stato di alto livello in un flusso di lavoro oppure creare un profilo molto dettagliato i cui eventi risultanti sono sufficientemente precisi per ricostruire un flusso di esecuzione dettagliato in un secondo momento.
 
-I profili di rilevamento si manifestano come elementi XML all'interno di un file di configurazione di .NET Framework standard o specificato nel codice. Nell'esempio seguente è illustrato un profilo di rilevamento di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] in un file di configurazione che consente a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro `Started` e `Completed`.
+I profili di rilevamento si manifestano come elementi XML all'interno di un file di configurazione .NET Framework standard o specificati nel codice. Nell'esempio seguente è illustrato un profilo di rilevamento di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] in un file di configurazione che consente a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro `Started` e `Completed`.
 
 ```xml
 <system.serviceModel>
@@ -59,13 +59,13 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-I record di rilevamento vengono filtrati tramite la modalità di visibilità all'interno di un profilo di rilevamento usando l'attributo <xref:System.Activities.Tracking.ImplementationVisibility>. Un'attività composita è un'attività di primo livello che contiene le altre attività che formano l'implementazione. La modalità di visibilità specifica i record di rilevamento creati dalle attività composite all'interno di un'attività di flusso di lavoro per specificare se le attività che formano l'implementazione vengono rilevate. La modalità di visibilità si applica a livello del profilo di rilevamento. L'applicazione di filtri ai record di rilevamento per singole attività all'interno di un flusso di lavoro viene controllata dalle query incluse nel profilo di rilevamento. Per altre informazioni, vedere la **tipi di Query del profilo di rilevamento** sezione in questo documento.
+I record di rilevamento vengono filtrati tramite la modalità di visibilità all'interno di un profilo di rilevamento usando l'attributo <xref:System.Activities.Tracking.ImplementationVisibility>. Un'attività composita è un'attività di primo livello che contiene le altre attività che formano l'implementazione. La modalità di visibilità specifica i record di rilevamento creati dalle attività composite all'interno di un'attività di flusso di lavoro per specificare se le attività che formano l'implementazione vengono rilevate. La modalità di visibilità si applica a livello del profilo di rilevamento. L'applicazione di filtri ai record di rilevamento per singole attività all'interno di un flusso di lavoro viene controllata dalle query incluse nel profilo di rilevamento. Per ulteriori informazioni, vedere la sezione relativa ai **tipi di query del profilo di rilevamento** in questo documento.
 
 Le due modalità di visibilità specificate dall'attributo `implementationVisibility` nel profilo di rilevamento sono: `RootScope` e `All`. Usando la modalità `RootScope` vengono eliminati i record di rilevamento per le attività che formano l'implementazione di un'attività nel caso in cui un'attività composita non costituisca la radice di un flusso di lavoro. Di conseguenza, quando un'attività implementata tramite altre attività viene aggiunta a un flusso di lavoro e l'attributo `implementationVisibility` viene impostato su RootScope, viene rilevata solo l'attività di primo livello all'interno di tale attività composita. Se un'attività costituisce la radice del flusso di lavoro, l'implementazione dell'attività è il flusso di lavoro stesso e i record di rilevamento vengono creati per le attività che formano l'implementazione. Tramite la modalità All, tutti i record di rilevamento possono essere creati per l'attività radice e tutte le relative attività composite.
 
-Ad esempio supponga *MyActivity* è un'attività composita la cui implementazione contiene due attività, *Activity1* e *Activity2*. Quando questa attività viene aggiunta a un flusso di lavoro e con un profilo di rilevamento con il rilevamento è attivato `implementationVisibility` impostata su `RootScope`, vengono generati solo per record di rilevamento *MyActivity*. Tuttavia, nessun record venga creato per le attività *Activity1* e *Activity2*.
+Si supponga, ad esempio, che *l'attività sia* un'attività composita la cui implementazione contiene due attività, *Activity1* e *Activity2*. Quando questa attività viene aggiunta a un flusso di lavoro e il rilevamento viene abilitato con un profilo di rilevamento con `implementationVisibility` impostato su `RootScope`, i record di rilevamento vengono generati solo per l' *attività*. Tuttavia, non viene generato alcun record per le attività *Activity1* e *Activity2*.
 
-Tuttavia, se il `implementationVisibility` dell'attributo per il profilo di rilevamento è impostato su `All`, quindi i record di rilevamento vengono creati non solo per *MyActivity*, ma anche per le attività *Activity1* e *Activity2*.
+Tuttavia, se l'attributo `implementationVisibility` per il profilo di rilevamento è impostato su `All`, i record di rilevamento vengono generati non solo per l' *attività Activity*, ma anche per le attività *Activity1* e *Activity2*.
 
 Il flag `implementationVisibility` si applica ai seguenti tipi di record di rilevamento:
 
@@ -150,7 +150,7 @@ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichi
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery>: usare questo tipo per rilevare le modifiche del ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. Ad esempio, è possibile tenere traccia di ogni volta che viene completata l'attività "Invia messaggio" all'interno di un'istanza del flusso di lavoro. Questa query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.ActivityStateRecord>. Gli stati disponibili per la sottoscrizione sono specificati nell'oggetto <xref:System.Activities.Tracking.ActivityStates>.
+- <xref:System.Activities.Tracking.ActivityStateQuery>: usare questo tipo per rilevare le modifiche del ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. È possibile, ad esempio, tenere traccia di ogni volta che l'attività "Invia messaggio di posta elettronica" viene completata in un'istanza del flusso di lavoro. Questa query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.ActivityStateRecord>. Gli stati disponibili per la sottoscrizione sono specificati nell'oggetto <xref:System.Activities.Tracking.ActivityStates>.
 
   La configurazione e il codice usati per sottoscrivere i record di rilevamento dello stato dell'attività che usano l'oggetto <xref:System.Activities.Tracking.ActivityStateQuery> per l'attività `SendEmailActivity` sono illustrati nell'esempio seguente.
 
@@ -234,7 +234,7 @@ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichi
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery>: usare questo tipo per rilevare le richieste di annullamento di un'attività figlio da parte dell'attività padre. La query è necessaria affinché un oggetto <xref:System.Activities.Tracking.TrackingParticipant> sottoscriva gli oggetti <xref:System.Activities.Tracking.CancelRequestedRecord>.
 
-  La configurazione e il codice usati per sottoscrivere i record relativi all'utilizzo di annullamento attività <xref:System.Activities.Tracking.CancelRequestedQuery> è illustrato nell'esempio seguente.
+  Nell'esempio seguente viene illustrato il codice e la configurazione usati per sottoscrivere i record relativi all'annullamento dell'attività usando <xref:System.Activities.Tracking.CancelRequestedQuery>.
 
   ```xml
   <cancelRequestedQueries>
@@ -306,9 +306,9 @@ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichi
   };
   ```
 
-### <a name="annotations"></a>Annotazioni
+### <a name="annotations"></a>Annotations
 
-Le annotazioni consentono di contrassegnare in modo arbitrario mediante tag i record di rilevamento con un valore che può essere configurato dopo la compilazione. Ad esempio, è possibile diversi record di rilevamento in diversi flussi di lavoro deve essere contrassegnato con "Mail Server" = = "Mail Server1". Questo consente di individuare facilmente tutti i record con tale tag quando si esegue una query sui record di rilevamento in un secondo momento.
+Le annotazioni consentono di contrassegnare in modo arbitrario mediante tag i record di rilevamento con un valore che può essere configurato dopo la compilazione. È possibile, ad esempio, che si desideri contrassegnare più record di rilevamento in diversi flussi di lavoro con "mail server" = = "mail Server1". Questo consente di individuare facilmente tutti i record con tale tag quando si esegue una query sui record di rilevamento in un secondo momento.
 
 A tal fine, viene aggiunta un'annotazione a una query di rilevamento come mostrato nell'esempio seguente.
 
@@ -344,9 +344,9 @@ Gli elementi della query di rilevamento vengono usati per creare un profilo di r
 > [!WARNING]
 > Per un servizio WF in cui viene usato l'host del servizio del flusso di lavoro, il profilo di rilevamento viene generalmente creato usando un file di configurazione. È anche possibile creare un profilo di rilevamento con il codice, usando il profilo di rilevamento e l'API della query di rilevamento.
 
-Un profilo configurato come file di configurazione XML viene applicato a un partecipante del rilevamento tramite un'estensione di comportamento. Questo viene aggiunto a un oggetto WorkflowServiceHost come descritto nella sezione successiva [configurazione del rilevamento per un flusso di lavoro](configuring-tracking-for-a-workflow.md).
+Un profilo configurato come file di configurazione XML viene applicato a un partecipante del rilevamento tramite un'estensione di comportamento. Viene aggiunto a un WorkflowServiceHost, come descritto nella sezione successiva [configurazione del rilevamento per un flusso di lavoro](configuring-tracking-for-a-workflow.md).
 
-Il livello di dettaglio dei record di rilevamento creati dall'host è determinato dalle impostazioni di configurazione all'interno del profilo di rilevamento. Un partecipante del rilevamento sottoscrive i record di rilevamento aggiungendo query a un profilo di rilevamento. Per eseguire la sottoscrizione a tutti i record di rilevamento, è necessario specificare tutte le query di rilevamento utilizzando il profilo di rilevamento "\*" nei campi dei nomi in ognuna delle query.
+Il livello di dettaglio dei record di rilevamento creati dall'host è determinato dalle impostazioni di configurazione all'interno del profilo di rilevamento. Un partecipante del rilevamento sottoscrive i record di rilevamento aggiungendo query a un profilo di rilevamento. Per sottoscrivere tutti i record di rilevamento, il profilo di rilevamento deve specificare tutte le query di rilevamento utilizzando "\*" nei campi nome di ogni query.
 
 Di seguito sono riportati alcuni degli esempi comuni di profili di rilevamento.
 
@@ -388,5 +388,5 @@ Di seguito sono riportati alcuni degli esempi comuni di profili di rilevamento.
 ## <a name="see-also"></a>Vedere anche
 
 - [Rilevamento SQL](./samples/sql-tracking.md)
-- [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoraggio di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitoraggio delle applicazioni con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

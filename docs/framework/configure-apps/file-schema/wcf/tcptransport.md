@@ -2,14 +2,14 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6761d090206e55e58001ea2bb885eaa69f26d9eb
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: cf2abd460dcf19346d9efb41e9a5ccef99120fbb
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738647"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837064"
 ---
-# <a name="tcptransport"></a>\<tcpTransport >
+# <a name="tcptransport"></a>\<tcpTransport>
 Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
   
 [ **\<configuration>** ](../configuration-element.md)\
@@ -44,7 +44,7 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -62,18 +62,18 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 |maxPendingConnections|Ottiene o imposta il numero massimo di connessioni in attesa dell'invio nel servizio.|  
 |maxReceivedMessageSize|Ottiene e imposta la dimensione massima consentita del messaggio che può essere ricevuto.|  
 |portSharingEnabled|Valore booleano che specifica se è attivata la condivisione delle porte TCP per la connessione. Se è `false`, ciascuna associazione userà la propria porta esclusiva. Il valore predefinito è `false`.<br /><br /> Questa impostazione è pertinente solo per i servizi. I client non ne sono interessati.<br /><br /> L'uso di questa impostazione richiede l'attivazione del servizio di condivisione porte TCP di Windows Communication Foundation (WCF) modificando il relativo Tipo di avvio su Manuale o Automatico.|  
-|teredoEnabled|Valore booleano che specifica se Teredo (una tecnologia per l'indirizzamento dei client dietro a firewall) è attivata. Il valore predefinito è `false`.<br /><br /> Questa proprietà abilita Teredo per il socket TCP sottostante. Per altre informazioni, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] ha un'opzione di configurazione a livello di computer per Teredo, pertanto quando viene eseguito Vista, questa proprietà viene ignorata. L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente. Per ulteriori informazioni sulla configurazione di Teredo, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Per ulteriori informazioni, vedere la pagina relativa ai [centri tecnologici di Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Valore booleano che specifica se Teredo (una tecnologia per l'indirizzamento dei client dietro a firewall) è attivata. Il valore predefinito è `false`.<br /><br /> Questa proprietà abilita Teredo per il socket TCP sottostante. Per altre informazioni, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. Windows Vista dispone di un'opzione di configurazione a livello di computer per Teredo, pertanto quando si esegue vista, questa proprietà viene ignorata. L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente. Per ulteriori informazioni sulla configurazione di Teredo, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Per ulteriori informazioni, vedere la pagina relativa ai [centri tecnologici di Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Ottiene o imposta un valore che indica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.|  
 |impostazioniPoolConnessioni|Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding >](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](bindings.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
  Questo trasporto usa URI nel formato "net.tcp://nomehost:porta/percorso". Gli altri componenti URI sono facoltativi.  
@@ -91,4 +91,4 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 - [Associazioni](../../../wcf/bindings.md)
 - [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
-- [\<CustomBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

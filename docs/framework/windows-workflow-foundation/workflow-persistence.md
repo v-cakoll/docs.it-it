@@ -1,47 +1,47 @@
 ---
-title: Persistenza del flusso di lavoro
+title: Persistenza flusso di lavoro
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: afe47975a393db3074222ebf0461f5b73fb6442d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655800"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837532"
 ---
-# <a name="workflow-persistence"></a>Persistenza del flusso di lavoro
+# <a name="workflow-persistence"></a>Persistenza flusso di lavoro
 La persistenza del flusso di lavoro è l'acquisizione durevole di uno stato di un'istanza del flusso di lavoro, indipendentemente dalle informazioni relative al processo o al computer. In questo modo viene fornito un punto noto di ripristino dell'istanza del flusso di lavoro in caso di errore di sistema o viene conservata memoria scaricando istanze del flusso di lavoro il cui funzionamento non viene eseguito in modo attivo o ancora viene spostato lo stato dell'istanza del flusso di lavoro da un nodo a un altro in una server farm.  
   
  La persistenza abilita agilità di processo, scalabilità, ripristino nonostante errori e la possibilità di gestire la memoria in modo più efficiente. Il processo di persistenza include l'identificazione di un punto di persistenza, la raccolta dei dati da salvare e infine la delega dell'archiviazione effettiva dei dati a un provider di persistenza.  
   
- Per abilitare la persistenza per un flusso di lavoro, è necessario associare un archivio di istanze di **WorkflowApplication** oppure **WorkflowServiceHost** come indicato in [come: Abilitare la persistenza per i flussi di lavoro e i servizi del flusso di lavoro](how-to-enable-persistence-for-workflows-and-workflow-services.md). Il **WorkflowApplication** e **WorkflowServiceHost** usare l'archivio di istanze associata per consentire di rendere persistenti le istanze del flusso di lavoro in un archivio di persistenza e il caricamento di istanze del flusso di lavoro in memoria in base ai dati di istanza del flusso di lavoro archiviati in archivio di persistenza.  
+ Per abilitare la persistenza per un flusso di lavoro, è necessario associare un archivio di istanze a **WorkflowApplication** o **WorkflowServiceHost** come indicato in [procedura: abilitare la persistenza per i flussi di lavoro e i servizi flusso di lavoro](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** e **WorkflowServiceHost** utilizzano l'archivio di istanze associato per consentire la persistenza delle istanze del flusso di lavoro in un archivio di persistenza e il caricamento di istanze del flusso di lavoro in memoria basate sui dati dell'istanza del flusso di lavoro archiviati nell'archivio di persistenza.  
   
- Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito con il **SqlWorkflowInstanceStore** (classe), che consente la persistenza dei dati e i metadati relativi a istanze del flusso di lavoro in un database SQL Server 2005 o SQL Server 2008. Visualizzare [Store di istanza del flusso di lavoro SQL](sql-workflow-instance-store.md) per altri dettagli.  
+ Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito con la classe **SqlWorkflowInstanceStore** , che consente la persistenza dei dati e dei metadati relativi alle istanze del flusso di lavoro in un database SQL Server 2005 o SQL Server 2008. Per ulteriori informazioni, vedere l' [Archivio di istanze del flusso di lavoro SQL](sql-workflow-instance-store.md) .  
   
- Per archiviare e caricare i dati specifici dell'applicazione insieme alle informazioni correlate all'istanza del flusso di lavoro, è possibile creare partecipanti di persistenza che estendono la classe <xref:System.Activities.Persistence.PersistenceParticipant>. Un partecipante di persistenza fa parte del processo di persistenza per salvare dati serializzabili personalizzati nell'archivio di persistenza, per caricare i dati dall'archivio di istanze in memoria ed eseguire qualsiasi logica aggiuntiva in una transazione di persistenza. Per altre informazioni, vedere [partecipanti di persistenza](persistence-participants.md).  
+ Per archiviare e caricare i dati specifici dell'applicazione insieme alle informazioni correlate all'istanza del flusso di lavoro, è possibile creare partecipanti di persistenza che estendono la classe <xref:System.Activities.Persistence.PersistenceParticipant>. Un partecipante di persistenza fa parte del processo di persistenza per salvare dati serializzabili personalizzati nell'archivio di persistenza, per caricare i dati dall'archivio di istanze in memoria ed eseguire qualsiasi logica aggiuntiva in una transazione di persistenza. Per ulteriori informazioni, vedere [partecipanti di persistenza](persistence-participants.md).  
   
- Windows Server AppFabric semplifica il processo di configurazione della persistenza. Per altre informazioni, vedere [concetti di persistenza con Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server AppFabric semplifica il processo di configurazione della persistenza. Per altre informazioni, vedere [concetti relativi alla persistenza con Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)) AppFabric  
   
 ## <a name="implicit-persistence-points"></a>Punti di persistenza impliciti  
  Nell'elenco seguente sono contenuti esempi di condizioni in base alle quali un flusso di lavoro viene reso persistente quando un archivio di istanze è associato a un flusso di lavoro.  
   
-- Quando un **TransactionScope** dell'attività viene completata o un' **TransactedReceiveScope** attività viene completata.  
+- Quando un'attività **TransactionScope** viene completata o viene completata un'attività **TransactedReceiveScope** .  
   
-- Quando un'istanza del flusso di lavoro diventa inattiva e il **WorkflowIdleBehavior** viene impostato sull'host del flusso di lavoro. Ciò si verifica, ad esempio, quando si usano attività di messaggistica o una **ritardo** attività.  
+- Quando un'istanza del flusso di lavoro diventa inattiva e **WorkflowIdleBehavior** viene impostato sull'host del flusso di lavoro. Questa situazione si verifica, ad esempio, quando si usano attività di messaggistica o un'attività di **ritardo** .  
   
-- Quando WorkflowApplication diventa inattivo e il **PersistableIdle** dell'applicazione è impostata su **Persistableidleaction**.  
+- Quando un WorkflowApplication diventa inattivo e la proprietà **PersistableIdle** dell'applicazione è impostata su **PersistableIdleAction. perseverare**.  
   
 - Quando a un'applicazione host viene richiesto di rendere persistente o scaricare un'istanza del flusso di lavoro.  
   
 - Quando un'istanza del flusso di lavoro viene terminata o termina.  
   
-- Quando un **Persist** eseguite dall'attività.  
+- Quando viene eseguita un'attività di **salvataggio permanente** .  
   
 - Quando un'istanza di un flusso di lavoro sviluppata usando una versione precedente di Windows Workflow Foundation incontra un punto di persistenza durante l'esecuzione interoperativa.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 - [Archivio di istanze del flusso di lavoro SQL](sql-workflow-instance-store.md)  
   

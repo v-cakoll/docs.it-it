@@ -2,19 +2,19 @@
 title: 'Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 981c4890b11130b937e176da78f378340c0d3894
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991657"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837389"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata
 Una prenotazione URL consente di limitare chi può ricevere messaggi da un URL o un set di URL. Una prenotazione è costituita da un modello di URL, un elenco di controllo di accesso (ACL) e un set di flag. Il modello di URL definisce quali URL sono interessati dalla prenotazione. Per altre informazioni su come vengono elaborati i modelli di URL, vedere [routing delle richieste in ingresso](https://go.microsoft.com/fwlink/?LinkId=136764). L'elenco ACL controlla a quale utente o gruppo di utenti è permesso ricevere messaggi dagli URL specificati. I flag indicano se la prenotazione deve fornire a un utente o a un gruppo l'autorizzazione per ascoltare direttamente l'URL o delegare l'autorizzazione per ascoltare qualche altro processo.  
   
  Come parte della configurazione del sistema operativo predefinita, Windows Communication Foundation (WCF) crea una prenotazione accessibile globalmente per la porta 80 per consentire a tutti gli utenti di eseguire applicazioni che usano un binding HTTP doppio per la comunicazione duplex. Poiché l'elenco ACL in questa prenotazione è per tutti, gli amministratori non possono consentire o impedire in modo esplicito l'autorizzazione all'ascolto di un URL o un set di URL. In questo argomento viene illustrato come eliminare questa prenotazione e come ricrearne una con un ACL limitato.  
   
- In [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] è possibile visualizzare tutte le prenotazioni URL HTTP da un prompt dei comandi con privilegi elevati digitando `netsh http show urlacl`.  Nell'esempio seguente viene illustrata la somiglianza di una prenotazione URL WCF.  
+ In Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] è possibile visualizzare tutte le prenotazioni URL HTTP da un prompt dei comandi con privilegi elevati digitando `netsh http show urlacl`.  Nell'esempio seguente viene illustrata la somiglianza di una prenotazione URL WCF.  
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -30,7 +30,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **Accessori**, fare clic con il pulsante destro del mouse su **prompt dei comandi** e scegliere **Esegui come amministratore** nel menu di scelta rapida che viene visualizzato. Fare clic su **continua** nella finestra controllo dell'account utente (UAC) che potrebbe richiedere le autorizzazioni per continuare.  
   
-2. Digitare **netsh http delete urlacl http://+:80/Temporary_Listen_Addresses/ URL =** nella finestra del prompt dei comandi.  
+2. Digitare **netsh http delete urlacl url =http://+:80/Temporary_Listen_Addresses/** nella finestra del prompt dei comandi.  
   
 3. Se la prenotazione viene eliminata correttamente, viene visualizzato il messaggio seguente. **La prenotazione URL è stata eliminata**  
   
@@ -41,7 +41,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **Accessori**, fare clic con il pulsante destro del mouse su **prompt dei comandi** e scegliere **Esegui come amministratore** nel menu di scelta rapida che viene visualizzato. Fare clic su **continua** nella finestra controllo dell'account utente (UAC) che potrebbe richiedere le autorizzazioni per continuare.  
   
-2. Digitare **net\<localgroup "nome del gruppo di sicurezza >"/comment: "\<Descrizione del gruppo di sicurezza >"/Add** al prompt dei comandi. Sostituendo  **\<il nome del gruppo di sicurezza >** con il nome del gruppo di sicurezza che si vuole creare e  **\<la descrizione del gruppo di sicurezza >** con una descrizione appropriata per il gruppo di sicurezza.  
+2. Digitare **net localgroup "\<nome del gruppo di sicurezza >"/comment: "\<Descrizione del gruppo di sicurezza >"/Add** al prompt dei comandi. Sostituendo **\<nome del gruppo di sicurezza >** con il nome del gruppo di sicurezza che si vuole creare e **\<Descrizione del gruppo di sicurezza >** con una descrizione appropriata per il gruppo di sicurezza.  
   
 3. Se il gruppo di sicurezza viene creato correttamente, viene visualizzato il messaggio seguente. **Il comando è stato completato correttamente.**  
   
@@ -55,6 +55,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **Accessori**, fare clic con il pulsante destro del mouse su **prompt dei comandi** e scegliere **Esegui come amministratore** nel menu di scelta rapida che viene visualizzato. Fare clic su **continua** nella finestra controllo dell'account utente (UAC) che potrebbe richiedere le autorizzazioni per continuare.  
   
-2. Digitare **netsh http add urlacl url =http://+:80/Temporary_Listen_Addresses/ User = "\< nome computer >\\ < nome\> del gruppo di sicurezza** al prompt dei comandi. Sostituendo  **\<il nome** del computer > con il nome del computer in cui deve essere creato il gruppo e  **\<il nome del gruppo di sicurezza >** con il nome del gruppo di sicurezza creato in precedenza.  
+2. Digitare **netsh http add urlacl url =http://+:80/Temporary_Listen_Addresses/ User = "\< nome computer >\\ < nome del gruppo di sicurezza\>** al prompt dei comandi. Sostituendo **\<nome computer >** con il nome del computer in cui deve essere creato il gruppo e **\<nome del gruppo di sicurezza >** con il nome del gruppo di sicurezza creato in precedenza.  
   
 3. Se la prenotazione viene creata correttamente, viene visualizzato il messaggio seguente. **Aggiunta della prenotazione URL completata**.

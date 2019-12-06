@@ -3,13 +3,13 @@ title: Installare .NET Core in CentOS 7-Gestione pacchetti-.NET Core
 description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime in CentOS 7.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 62b07342197addaa5c7d962c08c4ff1d7121eff8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: cb65811d5cae5c747c2660b4b10486f3162b9f33
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451080"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836941"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>Gestione pacchetti CentOS 7-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74451080"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in CentOS 7. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - registrare il repository del prodotto
 - Installare le dipendenze necessarie
 
-Questa operazione deve essere eseguita solo una volta per ogni computer.
+Questa operazione deve essere eseguita una volta sola per ogni computer.
 
 Aprire un terminale ed eseguire il comando seguente.
 
@@ -38,7 +38,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 Aggiornare i prodotti disponibili per l'installazione, quindi installare il .NET Core SDK. Nel terminale eseguire il comando seguente.
 
 ```bash
-sudo yum install dotnet-sdk-3.0
+sudo yum install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Installare il runtime di ASP.NET Core
@@ -46,7 +46,7 @@ sudo yum install dotnet-sdk-3.0
 Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di ASP.NET. Nel terminale eseguire il comando seguente.
 
 ```bash
-sudo yum install aspnetcore-runtime-3.0
+sudo yum install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
@@ -54,7 +54,7 @@ sudo yum install aspnetcore-runtime-3.0
 Aggiornare i prodotti disponibili per l'installazione, quindi installare il runtime di .NET Core. Nel terminale eseguire il comando seguente.
 
 ```bash
-sudo yum install dotnet-runtime-3.0
+sudo yum install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni

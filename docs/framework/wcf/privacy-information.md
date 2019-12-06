@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318701"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837935"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione con Windows Communication Foundation (WCF) versione 3,0, l'applicazione può influisca sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione a meno che l'utente o l'utente finale non scelga di inviarlo a Microsoft.  
@@ -44,17 +44,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Il risultato dell'autenticazione può essere una sessione protetta stabilita tra gli endpoint di comunicazione. La sessione viene identificata da un GUID che ha la durata della sessione di sicurezza. Nella tabella seguente viene mostrato cosa viene mantenuto e dove.  
   
-|Dati|Archiviazione|  
+|Data|Servizio di archiviazione|  
 |----------|-------------|  
 |Credenziali di presentazione, ad esempio nome utente, certificati X.509, token Kerberos e riferimenti alle credenziali.|Meccanismi di gestione delle credenziali standard di Windows, ad esempio l'archivio certificati di Windows.|  
 |Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|Provider di appartenenze ASP.NET.|  
 |Informazioni di identità sul servizio usato per autenticare il servizio sui client.|Indirizzo dell'endpoint del servizio.|  
 |Informazioni sul chiamante.|Registri di controllo.|  
   
-## <a name="auditing"></a>Controllo  
+## <a name="auditing"></a>Controllo di  
  Il controllo registra l'esito positivo o negativo degli eventi di autenticazione e autorizzazione. I record di controllo contengono i dati seguenti: URI del servizio, URI dell'azione e identificazione del chiamante.  
   
- Il controllo registra inoltre quando l'amministratore modifica la configurazione della registrazione messaggi (attivandola o disattivandola), poiché la registrazione messaggi può registrare dati specifici dell'applicazione in intestazioni e corpi. Per [!INCLUDE[wxp](../../../includes/wxp-md.md)], viene registrato un record nel registro eventi dell'applicazione. Per [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], viene registrato un record nel registro eventi di sicurezza.  
+ Il controllo registra inoltre quando l'amministratore modifica la configurazione della registrazione messaggi (attivandola o disattivandola), poiché la registrazione messaggi può registrare dati specifici dell'applicazione in intestazioni e corpi. Per [!INCLUDE[wxp](../../../includes/wxp-md.md)], viene registrato un record nel registro eventi dell'applicazione. Per Windows Vista e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], viene registrato un record nel registro eventi di protezione.  
   
 ## <a name="transactions"></a>Transazioni  
  La funzionalità transazioni fornisce servizi transazionali a un'applicazione WCF.  
@@ -149,7 +149,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \- per xmlns: SAML = "urn: Oasis: Names: TC: SAML: 1.0: Assertion" gli elementi in grassetto (sotto) vengono rimossi:  
   
- \<Assertion  
+ Asserzione di \<  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [URI] \</audience > +  
+ \<audience > [URI]\</audience > +  
   
- \</AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition/> *  
   
- < \!--tipo di base astratto  
+ <\!--tipo di base astratto  
   
- \<Condition/> *  
+ Condizione \</> *  
   
  -->  
   
- \< >/Conditions?  
+ \<>/Conditions?  
   
- \<Advice >  
+ \<consigli >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > *  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
- \<Assertion > [Assertion] \</Assertion > *  
+ \<Assertion > [Assertion]\</Assertion > *  
   
  [any]*  
   
- \< >/advice?  
+ \</Advice>?  
   
- < \!--tipi di base astratti  
+ <\!--tipi di base astratti  
   
- \<Statement/> *  
+ \<Istruzione/> *  
   
  \<SubjectStatement >  
   
- \<Subject >  
+ \<oggetto >  
   
  `<NameIdentifier`  
   
@@ -211,15 +211,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyURI] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any] \</SubjectConfirmationData >?  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds: informazioni sulle >... \</DS: > delle informazioni sulle informazioni?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \< >/SubjectConfirmation?  
+ \</SubjectConfirmation>?  
   
  \</Subject >  
   
@@ -245,7 +245,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  `/>?`  
   
- < autorità  
+ <AuthorityBinding  
   
  AuthorityKind="[QName]"  
   
@@ -261,7 +261,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [Subject]  
   
- \<Attribute  
+ Attributo \<  
   
  AttributeName="[string]"  
   
@@ -279,23 +279,23 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Resource="[uri]"  
   
- Decisione = "[Consenti&#124;Nega&#124;indeterminato]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<Action Namespace = "[URI]" > [stringa] \</Action > +  
+ \<Action Namespace = "[URI]" > [String]\</Action > +  
   
- \<Evidence >  
+ \<evidenza >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > +  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
- \<Assertion > [Assertion] \</Assertion > +  
+ \<Assertion > [Assertion]\</Assertion > +  
   
- \< >/Evidence?  
+ \<>/Evidence?  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
  \</Assertion >  
   

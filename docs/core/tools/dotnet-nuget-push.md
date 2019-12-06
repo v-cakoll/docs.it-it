@@ -2,13 +2,13 @@
 title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/04/2019
+ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117501"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835519"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117501"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet nuget push`: effettua il push di un pacchetto nel server e lo pubblica.
 
@@ -26,7 +26,7 @@ ms.locfileid: "71117501"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
@@ -40,7 +40,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
   Specifica il percorso del file del pacchetto di cui eseguire il push.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 * **`-d|--disable-buffering`**
 
@@ -52,7 +52,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
 * **`-h|--help`**
 
-Stampa una breve guida per il comando.
+  Stampa una breve guida per il comando.
 
 * **`--interactive`**
 
@@ -74,6 +74,10 @@ Stampa una breve guida per il comando.
 
   Specifica l'URL del server. Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.
 
+* **`--skip-duplicate`**
+
+  Quando si esegue il push di più pacchetti in un server HTTP (S), tratta qualsiasi risposta di conflitto 409 come un avviso, in modo che il push possa continuare. Disponibile a partire da .NET Core 3,1 SDK.
+                                 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Chiave API per il server di simboli.
@@ -127,3 +131,9 @@ Stampa una breve guida per il comando.
   > [!NOTE]
   > Il mancato funzionamento di questo comando può dipendere da un bug che era presente nelle versioni precedenti del SDK (.NET Core 2.1 SDK e versioni precedenti).
   > Per risolvere questo problema, aggiornare la versione del SDK oppure eseguire il comando seguente: `dotnet nuget push **/*.nupkg`
+  
+* Inserisce tutti i file *nupkg* anche se una risposta di conflitto 409 viene restituita da un server http (S):
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg --skip-duplicate
+  ```

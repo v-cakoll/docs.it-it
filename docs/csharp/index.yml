@@ -5,15 +5,13 @@ metadata:
   title: 'C#documenti: introduzione, esercitazioni e informazioni di riferimento.'
   description: 'Apprendimento C# della programmazione: per gli sviluppatori principianti, sviluppatori C#nuovi e esperti C# di .NET'
   ms.topic: landing-page
-  author: billwagner
-  ms.author: wiwagn
   ms.date: 11/19/2019
-  ms.openlocfilehash: 5af88b8a75ecd3cfca7c93b08cb262f161498903
-  ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 11/21/2019
-  ms.locfileid: "74284017"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74835471"
 landingContent:
 - title: Impara a programmare inC#
   linkLists:
@@ -35,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: Scaricare la .NET Core SDK
+    - text: Scaricare .NET Core SDK
       url: https://dotnet.microsoft.com/download
 - title: C#Nozioni
   linkLists:

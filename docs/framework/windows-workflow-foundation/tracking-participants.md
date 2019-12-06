@@ -2,12 +2,12 @@
 title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a033b65125a562307c6247eeda93dcacb31f5382
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963679"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837649"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
 I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
@@ -67,7 +67,7 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
  La dimensione di un evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW, a seconda di quale dimensione è minore. Se la dimensione dell'evento supera entrambi questi limiti ETW, l'evento viene troncato e il relativo contenuto rimosso in maniera arbitraria. Variabili, argomenti, annotazioni e dati personalizzati non vengono rimossi in modo selettivo. In caso di troncamento, tutti gli elementi vengono troncati indipendentemente dal valore che ha causato il superamento del limite ETW della dimensione dell'evento.  I dati rimossi vengono sostituiti con `<item>..<item>`.  
   
- I tipi complessi in variabili, argomenti ed elementi di dati personalizzati vengono serializzati nel record dell'evento ETW usando la [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Questa classe include informazioni sul tipo CLR nel flusso XML serializzato.  
+ I tipi complessi in variabili, argomenti ed elementi di dati personalizzati vengono serializzati nel record dell'evento ETW usando la classe <xref:System.Runtime.Serialization.NetDataContractSerializer>. Questa classe include informazioni sul tipo CLR nel flusso XML serializzato.  
   
  Il troncamento di dati payload dovuto ai limiti ETW può comportare l'invio di record di rilevamento duplicati a una sessione ETW. Questa situazione si può verificare se più sessioni restano in ascolto di eventi. Le sessioni presentano limiti di payload differenti per gli eventi.  
   
@@ -85,9 +85,9 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
 2. Selezionare **Visualizzatore eventi, registri applicazioni e servizi, Microsoft, Windows, server applicazioni-applicazioni**.  
   
-3. Fare clic con il pulsante destro del mouse e assicurarsi che visualizza **, Mostra log analitici e di debug** sia selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Verranno visualizzati ilog analitico, **prestazioni**e **debug** .  
+3. Fare clic con il pulsante destro del mouse e assicurarsi che visualizza **, Mostra log analitici e di debug** sia selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Verranno visualizzati i log **analitico**, **prestazioni**e **debug** .  
   
-4. Fare clic con il pulsante destro del mouse sul log analitico e quindi scegliere **Abilita log**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4. Fare clic con il pulsante destro del mouse sul log **analitico** e quindi scegliere **Abilita log**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Partecipante di rilevamento personalizzato  
  L'API del partecipante del rilevamento consente l'estensione del runtime di rilevamento con un partecipante del rilevamento fornito dall'utente che può includere la logica personalizzata per gestire i record di rilevamento creati dall'esecuzione del flusso di lavoro. Per scrivere un partecipante del rilevamento personalizzato, lo sviluppatore deve implementare il metodo `Track` sulla classe <xref:System.Activities.Tracking.TrackingParticipant>. Questo metodo viene chiamato quando un record di rilevamento viene creato dall'esecuzione del flusso di lavoro.  
@@ -142,5 +142,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Monitoraggio di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoraggio delle applicazioni con l'infrastruttura di app](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoraggio di Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitoraggio delle applicazioni con l'infrastruttura di app](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

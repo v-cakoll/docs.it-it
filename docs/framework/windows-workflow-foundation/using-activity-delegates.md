@@ -1,15 +1,15 @@
 ---
-title: Utilizzo di delegati di attività
+title: Uso di delegati di attività
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989087"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837571"
 ---
-# <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
+# <a name="using-activity-delegates"></a>Uso di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.
 
 I delegati di attività sono utili in scenari in cui un'attività figlio deve disporre di una determinata firma. Ad esempio, un'attività <xref:System.Activities.Statements.While> può contenere qualsiasi tipo di attività figlio senza vincoli, ma il corpo di un'attività <xref:System.Activities.Statements.ForEach%601> è un oggetto <xref:System.Activities.ActivityAction%601> e l'attività figlio che viene eseguita alla fine dall'oggetto <xref:System.Activities.Statements.ForEach%601> deve disporre di un oggetto <xref:System.Activities.InArgument%601> dello stesso tipo dei membri della raccolta enumerata dall'oggetto <xref:System.Activities.Statements.ForEach%601>.
@@ -30,9 +30,9 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Per ulteriori informazioni sugli inizializzatori di oggetto, [vedere Procedura: Inizializzare gli oggetti senza chiamare unC# Costruttore (Guida](https://go.microsoft.com/fwlink/?LinkId=161015) per [programmatori) e procedura: Dichiarare un oggetto utilizzando un inizializzatore](https://go.microsoft.com/fwlink/?LinkId=161016)di oggetto.
+Per ulteriori informazioni sugli inizializzatori di oggetto, vedere [procedura: inizializzare oggetti senza chiamare un costruttoreC# (Guida per programmatori)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) e [procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).
 
-Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per l' <xref:System.Activities.Statements.Catch%601> azione dell'attività Activity è un' <xref:System.Activities.Statements.WriteLine> attività e il dettaglio dell'eccezione viene propagata tramite l'oggetto `ex` <xref:System.Activities.DelegateInArgument%601>.
+Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per l'azione dell'attività dell'attività <xref:System.Activities.Statements.Catch%601> è un'attività <xref:System.Activities.Statements.WriteLine> e il dettaglio dell'eccezione viene propagato tramite il <xref:System.Activities.DelegateInArgument%601>di `ex`.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

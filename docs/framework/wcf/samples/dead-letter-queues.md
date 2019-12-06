@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710881"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837909"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -16,7 +16,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
 > [!NOTE]
-> Questo esempio dimostra la coda di messaggi non recapitabili di ciascuna applicazione che è disponibile solo su [!INCLUDE[wv](../../../../includes/wv-md.md)]. L'esempio può essere modificato per usare le code a livello di sistema predefinite per MSMQ 3.0 su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> In questo esempio viene illustrata ogni coda di messaggi non recapitabili dell'applicazione disponibile solo in Windows Vista. L'esempio può essere modificato per usare le code a livello di sistema predefinite per MSMQ 3.0 su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 
@@ -30,9 +30,9 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 - `System`: viene usata la coda di messaggi non recapitabili di sistema per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
 
-- `Custom`: per archiviare i messaggi non recapitati viene usata una coda di messaggi non recapitabili personalizzata specificata usando la proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
+- `Custom`: per archiviare i messaggi non recapitati viene usata una coda di messaggi non recapitabili personalizzata specificata usando la proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>. Questa funzionalità è disponibile solo in Windows Vista. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
-- Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa operazione è disponibile solo in Windows Vista.
 
  In questo esempio, il client invia un gruppo di messaggi al servizio dall'interno dell'ambito di una transazione e specifica un valore arbitrariamente basso per la "durata" di questi messaggi (circa 2 secondi). Il client specifica anche una coda di messaggi non recapitabili personalizzata da usare per accodare i messaggi che sono scaduti.
 

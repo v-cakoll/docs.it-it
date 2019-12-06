@@ -3,13 +3,13 @@ title: Installare .NET Core in Ubuntu 18,04 Package Manager-.NET Core
 description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime in Ubuntu 18,04.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 6929c7a91c131abb1170938fee010b077b1dbdc9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 7d5112df4a25f885f68783419097ff30fb504612
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450863"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836899"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Gestione pacchetti Ubuntu 18,04-installare .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74450863"
 
 Questo articolo descrive come usare un gestore di pacchetti per installare .NET Core in Ubuntu 18,04. Se si sta installando il runtime, si consiglia di installare il [runtime di ASP.NET Core](#install-the-aspnet-core-runtime), perché include sia .NET Core che ASP.NET Core Runtime.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave e il feed Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrare la chiave Microsoft e il feed
 
 Prima di installare .NET, è necessario:
 
@@ -25,7 +25,7 @@ Prima di installare .NET, è necessario:
 - registrare il repository del prodotto
 - Installare le dipendenze necessarie
 
-Questa operazione deve essere eseguita solo una volta per ogni computer.
+Questa operazione deve essere eseguita una volta sola per ogni computer.
 
 Aprire un terminale ed eseguire i comandi seguenti.
 
@@ -43,11 +43,11 @@ sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-SDK-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-SDK-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-aspnet-core-runtime"></a>Installare il runtime di ASP.NET Core
 
@@ -58,11 +58,11 @@ sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto aspnetcore-runtime-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto aspnetcore-runtime-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
@@ -73,11 +73,11 @@ sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-runtime-3,0**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
+> Se viene visualizzato un messaggio di errore simile a **non è possibile individuare il pacchetto dotnet-runtime-3,1**, vedere la sezione [risolvere i problemi relativi a gestione pacchetti](#troubleshoot-the-package-manager) .
 
 ## <a name="how-to-install-other-versions"></a>Come installare altre versioni
 

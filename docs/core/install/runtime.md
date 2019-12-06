@@ -3,28 +3,38 @@ title: Installare il runtime di .NET Core in Windows, Linux e macOS-.NET Core
 description: Informazioni su come installare .NET Core in Windows, Linux e macOS. Individuare le dipendenze necessarie per eseguire app .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: fbe9b9e12dc53d9ab6570299e03f2b0a8868fb53
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567265"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835728"
 ---
 # <a name="install-the-net-core-runtime"></a>Installare il runtime di .NET Core
 
 In questo articolo si apprenderà come scaricare e installare il runtime di .NET Core. Il runtime di .NET Core viene usato per eseguire app create con .NET Core.
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>Eseguire l'installazione con un programma di installazione
 
-Sia Windows che macOS hanno programmi di installazione autonomi che possono essere usati per installare il runtime di .NET Core 3,0.
+Windows dispone di programmi di installazione autonomi che possono essere usati per installare il runtime di .NET Core 3,1:
 
-- [CPU Windows x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [cpu x86 (32-bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [CPU MacOS x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [CPU x86 (32 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>Eseguire l'installazione con un programma di installazione
+
+macOS dispone di programmi di installazione autonomi che possono essere usati per installare il runtime di .NET Core 3,1:
+
+- [CPU x64 (64 bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -42,11 +52,14 @@ Sia Windows che macOS hanno programmi di installazione autonomi che possono esse
 
 Gli [script DotNet-install](../tools/dotnet-install-script.md) vengono usati per l'automazione e le installazioni non amministrative del runtime. È possibile scaricare lo script dalla pagina di riferimento per gli [script DotNet-install](../tools/dotnet-install-script.md).
 
-Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 2,1. Per installare la versione corrente di .NET Core (3,0), eseguire lo script con l'opzione seguente:
+Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 3,1. È possibile scegliere una versione specifica specificando l'opzione `Channel`. Includere l'opzione `Runtime` per installare un Runtime. In caso contrario, lo script installa l' [SDK](sdk.md).
 
 ```powershell
-dotnet-install.ps1 -Channel 3.0
+dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
+
+> [!NOTE]
+> Il comando precedente installa il runtime di ASP.NET Core per la massima compatibilità. Il runtime di ASP.NET Core include anche il Runtime .NET Core standard.
 
 ::: zone-end
 
@@ -56,11 +69,14 @@ dotnet-install.ps1 -Channel 3.0
 
 Gli [script DotNet-install](../tools/dotnet-install-script.md) vengono usati per l'automazione e le installazioni non amministrative del runtime. È possibile scaricare lo script dalla pagina di riferimento per gli [script DotNet-install](../tools/dotnet-install-script.md).
 
-Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 2,1. Per installare la versione corrente di .NET Core (3,0), eseguire lo script con l'opzione seguente:
+Per impostazione predefinita, lo script installa la versione più recente del [supporto a lungo termine (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , che è .net core 3,1. È possibile scegliere una versione specifica specificando l'opzione `current`. Includere l'opzione `runtime` per installare un Runtime. In caso contrario, lo script installa l' [SDK](sdk.md).
 
 ```bash
-./dotnet-install.sh -c Current
+./dotnet-install.sh --current 3.1 --runtime aspnetcore
 ```
+
+> [!NOTE]
+> Il comando precedente installa il runtime di ASP.NET Core per la massima compatibilità. Il runtime di ASP.NET Core include anche il Runtime .NET Core standard.
 
 ::: zone-end
 
@@ -68,7 +84,7 @@ Per impostazione predefinita, lo script installa la versione più recente del [s
 
 È possibile scaricare e installare .NET Core direttamente con uno dei collegamenti seguenti:
 
-- [Download di .NET Core 3,1 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Download di .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [Download di .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [Download di .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [Download di .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)

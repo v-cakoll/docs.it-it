@@ -2,12 +2,12 @@
 title: Configurazione del servizio di condivisione delle porte Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 2ff622dc97e63bd0ee10f00c7515692be8df09a1
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988229"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837454"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurazione del servizio di condivisione delle porte Net.TCP
 I servizi indipendenti che usano il trasporto Net.TCP possono controllare diverse impostazioni avanzate, quali esempio `ListenBacklog` e `MaxPendingAccepts`, che regolano il comportamento del socket TCP sottostante usato per la comunicazione di rete. Tuttavia, queste impostazioni per ogni socket si applicano solo al livello di associazione, se l'associazione del trasporto ha disattivato la condivisione delle porte, che è attivata per impostazione predefinita.  
@@ -49,14 +49,14 @@ I servizi indipendenti che usano il trasporto Net.TCP possono controllare divers
 ```  
   
 ## <a name="when-to-modify-smsvchostexeconfig"></a>Quando modificare SMSvcHost.exe.config  
- In generale, quando si modifica il contenuto del file SMSvcHost.exe.config è necessario fare attenzione, poiché qualsiasi impostazione di configurazione in esso specificata influenza tutti i servizi presenti in un computer che usa il servizio di condivisione delle porte Net.TCP. Sono incluse le applicazioni su [!INCLUDE[wv](../../../../includes/wv-md.md)] che usano le funzionalità di attivazione TCP del servizio di attivazione dei processi di Windows (WAS).  
+ In generale, quando si modifica il contenuto del file SMSvcHost.exe.config è necessario fare attenzione, poiché qualsiasi impostazione di configurazione in esso specificata influenza tutti i servizi presenti in un computer che usa il servizio di condivisione delle porte Net.TCP. Sono incluse le applicazioni in Windows Vista che usano le funzionalità di attivazione TCP del servizio di attivazione dei processi di Windows (WAS).  
   
  Talvolta può però essere necessario modificare la configurazione predefinita del servizio di condivisione delle porte Net.TCP. Ad esempio, il valore predefinito per `maxPendingAccepts` è 4 volte il numero di processori. Nei server che ospitano un gran numero di servizi che usano la condivisione delle porte potrebbe essere necessario aumentare questo valore per raggiungere la velocità effettiva massima. Il valore predefinito di `maxPendingConnections` è 100. Considerare la possibilità di aumentare questo valore se sono presenti più client simultanei che chiamano il servizio e quest'ultimo sta rimuovendo connessioni client.  
   
- SMSvcHost.exe.config contiene inoltre informazioni sulle identità dei processi che potrebbero usare il servizio di condivisione delle porte. Quando un processo si connette al servizio di condivisione delle porte per usare una porta TCP condivisa, l'identità del processo di connessione viene controllata a fronte di un elenco delle identità autorizzate a usare il servizio di condivisione delle porte. Queste identità vengono specificate come ID di sicurezza (SID) nella \<sezione AllowAccounts > del file SMSvcHost. exe. config. Per impostazione predefinita, l'autorizzazione a usare il servizio di condivisione delle porte viene concessa agli account di sistema (LocalService, LocalSystem e NetworkService) così come ai membri del gruppo Administrators. Le applicazioni che consentono l'esecuzione di un processo con un'altra identità, ad esempio un'identità utente, per connettersi al servizio di condivisione delle porte, devono aggiungere in modo esplicito il SID appropriato al file SMSvcHost.exe.config. Queste modifiche non vengono applicate fino a quando il processo SMSvc.exe non viene riavviato.  
+ SMSvcHost.exe.config contiene inoltre informazioni sulle identità dei processi che potrebbero usare il servizio di condivisione delle porte. Quando un processo si connette al servizio di condivisione delle porte per usare una porta TCP condivisa, l'identità del processo di connessione viene controllata a fronte di un elenco delle identità autorizzate a usare il servizio di condivisione delle porte. Queste identità vengono specificate come ID di sicurezza (SID) nella sezione \<allowAccounts > del file SMSvcHost. exe. config. Per impostazione predefinita, l'autorizzazione a usare il servizio di condivisione delle porte viene concessa agli account di sistema (LocalService, LocalSystem e NetworkService) così come ai membri del gruppo Administrators. Le applicazioni che consentono l'esecuzione di un processo con un'altra identità, ad esempio un'identità utente, per connettersi al servizio di condivisione delle porte, devono aggiungere in modo esplicito il SID appropriato al file SMSvcHost.exe.config. Queste modifiche non vengono applicate fino a quando il processo SMSvc.exe non viene riavviato.  
   
 > [!NOTE]
-> Nei sistemi [!INCLUDE[wv](../../../../includes/wv-md.md)] con il controllo dell'account utente attivato, gli utenti locali necessitano di autorizzazioni elevate anche se il proprio account è un membro del gruppo Administrators. Per consentire a questi utenti di usare il servizio di condivisione delle porte senza elevazione, il SID dell'utente (o il SID di un gruppo di cui l'utente è membro) deve essere aggiunto in modo esplicito alla \<sezione AllowAccounts > di SMSvcHost. exe. config.  
+> Nei sistemi Windows Vista con controllo dell'account utente abilitato, gli utenti locali richiedono autorizzazioni elevate anche se il proprio account è un membro del gruppo Administrators. Per consentire a questi utenti di usare il servizio di condivisione delle porte senza elevazione, il SID dell'utente (o il SID di un gruppo di cui l'utente è membro) deve essere aggiunto in modo esplicito alla sezione \<allowAccounts > di SMSvcHost. exe. config.  
   
 > [!WARNING]
 > Il file SMSvcHost.exe.config predefinito specifica un elemento `etwProviderId` personalizzato per impedire che la traccia di SMSvcHost.exe interferisca con le tracce del servizio.  

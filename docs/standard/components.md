@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552880"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838195"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -112,4 +112,4 @@ I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [di
 - [Guida a .NET Framework](../framework/index.md)
 - [Guida a C#](../csharp/index.yml)
 - [Guida a F#](../fsharp/index.yml)
-- [Guida a VB.NET](../visual-basic/index.md)
+- [Guida a VB.NET](../visual-basic/index.yml)

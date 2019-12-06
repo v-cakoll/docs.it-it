@@ -2,12 +2,12 @@
 title: Uso degli strumenti di sviluppo WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8253a9136b2310deeb7c6d162a9f190c13ba02da
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802410"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837727"
 ---
 # <a name="using-the-wcf-development-tools"></a>Uso degli strumenti di sviluppo WCF
 Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono risultare utili per lo sviluppo di WCFservice.  
@@ -37,7 +37,7 @@ Questa sezione descrive gli strumenti di sviluppo di Visual Studio che possono r
 ## <a name="using-the-tools-without-administrator-privilege"></a>Utilizzo degli strumenti senza privilegio di amministratore  
  Per consentire agli utenti senza privilegi di amministratore di sviluppare servizi WCF, viene creato un ACL (elenco di controllo di accesso) per lo spazio dei nomi "http://+:8731/Design_Time_Addresses" durante l'installazione di Visual Studio. L'ACL viene impostato su (UI) che include tutti gli utenti interattivi che hanno eseguito l'accesso al computer. Gli amministratori possono aggiungere o possono utenti da questo ACL oppure aprire porte aggiuntive. Questo ACL aggiuntivo consente a WCF o ai modelli WF di inviare e ricevere dati nella relativa configurazione predefinita. Consente inoltre agli utenti di utilizzare l'host automatico del servizio WCF (wcfSvcHost. exe) senza concedere loro privilegi di amministratore.  
   
- È inoltre possibile modificare l'accesso mediante lo strumento Netsh.exe disponibile in [!INCLUDE[wv](../../../includes/wv-md.md)] utilizzando l'account di amministratore con privilegi elevati. Di seguito è riportato un esempio di utilizzo di Netsh.exe.  
+ È possibile modificare l'accesso utilizzando lo strumento Netsh. exe in Windows Vista con l'account amministratore con privilegi elevati. Di seguito è riportato un esempio di utilizzo di Netsh.exe.  
   
 ```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  

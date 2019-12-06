@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare una porta con un certificato SSL'
+title: 'Procedura: configurare una porta con un certificato SSL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 6e21311802b0a3ce4e415b14686b101d31f18035
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893309"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838000"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: Configurare una porta con un certificato SSL
-Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <xref:System.ServiceModel.WSHttpBinding> con la classe che utilizza la sicurezza del trasporto, è inoltre necessario configurare una porta con un certificato X. 509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per ulteriori informazioni, vedere la pagina relativa alla [sicurezza del trasporto http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: configurare una porta con un certificato SSL
+Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) con la classe <xref:System.ServiceModel.WSHttpBinding> che utilizza la sicurezza del trasporto, è inoltre necessario configurare una porta con un certificato X. 509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per ulteriori informazioni, vedere la pagina relativa alla [sicurezza del trasporto http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Per configurare una porta, lo strumento da usare dipende dal sistema operativo eseguito nel computer.  
   
  Se viene eseguito [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe. Con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], questo strumento è installato. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)]è possibile scaricare lo strumento con gli [strumenti di supporto di Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Per ulteriori informazioni, vedere [Cenni preliminari su HttpCfg](https://go.microsoft.com/fwlink/?LinkId=88605). La [documentazione relativa agli strumenti di supporto di Windows](https://go.microsoft.com/fwlink/?LinkId=94840) illustra la sintassi dello strumento HttpCfg. exe.  
   
- Se viene eseguito [!INCLUDE[wv](../../../../includes/wv-md.md)], usare lo strumento Netsh.exe già installato.  
+ Se si esegue Windows Vista, utilizzare lo strumento Netsh. exe già installato.  
   
  In questo argomento viene descritto come eseguire diverse procedure:  
   
@@ -41,13 +41,13 @@ Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <x
   
 ### <a name="to-determine-how-ports-are-configured"></a>Per determinare la configurazione delle porte  
   
-1. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)]usare lo strumento HttpCfg. exe per visualizzare la configurazione corrente delle porte, usando le opzioni **query** e **SSL** , come illustrato nell'esempio seguente.  
+1. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg. exe per visualizzare la configurazione corrente delle porte, usando le opzioni **query** e **SSL** , come illustrato nell'esempio seguente.  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] usare lo strumento Netsh.exe per visualizzare la configurazione corrente delle porte, come illustrato nell'esempio seguente.  
+2. In Windows Vista, utilizzare lo strumento Netsh. exe per visualizzare la configurazione della porta corrente, come illustrato nell'esempio seguente.  
   
     ```console  
     netsh http show sslcert  
@@ -55,9 +55,9 @@ Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <x
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Per ottenere l'identificazione personale di un certificato  
   
-1. Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. Per altre informazioni, vedere [Procedura: Visualizzare i certificati con lo snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC.  
+1. Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Accedere all'identificazione personale del certificato. Per altre informazioni, vedere [Procedura: Recuperare l'identificazione personale di un](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificato.  
+2. Accedere all'identificazione personale del certificato. Per altre informazioni, vedere [Procedura: recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Copiare l'identificazione personale del certificato in un editor di testo, ad esempio Blocco note.  
   
@@ -75,7 +75,7 @@ Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <x
   
     - L'opzione **-h** specifica l'identificazione personale del certificato.  
   
-2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] usare lo strumento Netsh.exe come illustrato nell'esempio seguente.  
+2. In Windows Vista, utilizzare lo strumento Netsh. exe, come illustrato nell'esempio seguente.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
@@ -97,7 +97,7 @@ Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <x
   
      L'opzione **-f** presenta la sintassi di `n` dove n è un numero compreso tra 1 e 7. Un valore di 2, come mostrato nell'esempio precedente, abilita certificati client a livello di trasporto. Il valore 3 attiva i certificati client e associa tali certificati a un account Windows. Per il comportamento di altri valori, vedere la Guida di HttpCfg.exe.  
   
-2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] per supportare i client che eseguono l'autenticazione con i certificati X.509 a livello di trasporto, eseguire la procedura precedente, ma con un parametro aggiuntivo, come illustrato nell'esempio seguente.  
+2. In Windows Vista, per supportare i client che eseguono l'autenticazione con certificati X. 509 a livello di trasporto, attenersi alla procedura precedente, ma con un parametro aggiuntivo, come illustrato nell'esempio seguente.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -111,13 +111,13 @@ Quando si crea un servizio self-hosted Windows Communication Foundation (WCF) <x
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)]usare lo strumento HttpCfg. exe con le parole chiave **Delete** e **SSL** . Usare l'opzione **-i** per specificare il `IP`numero`port` : e l'opzione **-h** per specificare l'identificazione personale.  
+2. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg. exe con le parole chiave **Delete** e **SSL** . Usare l'opzione **-i** per specificare il numero di `IP`:`port` e l'opzione **-h** per specificare l'identificazione personale.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. In [!INCLUDE[wv](../../../../includes/wv-md.md)] usare lo strumento Netsh.exe come illustrato nell'esempio seguente.  
+3. In Windows Vista, utilizzare lo strumento Netsh. exe, come illustrato nell'esempio seguente.  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  

@@ -2,12 +2,12 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142076"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837597"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte molte nuove funzionalità, tra cui diversi miglioramenti apportati all'esperienza di progettazione dei flussi di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
@@ -16,7 +16,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
 > Per un elenco di tutte le nuove funzionalità di Windows Workflow Foundation (WF) introdotte in .NET Framework 4,5, incluse quelle non correlate alla riallocazione della finestra di progettazione, vedere Novità [di Windows Workflow Foundation in .net 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="activities"></a>Attività
- La libreria di attività predefinita contiene nuove attività e funzionalità per le attività esistenti. Tutte queste nuove attività sono supportate nella finestra di progettazione ospitata nuovamente. Per ulteriori informazioni su queste nuove attività, vedere la sezione relativa alle [attività](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) delle [novità di Windows Workflow Foundation in .NET 4,5](whats-new-in-wf-in-dotnet.md).
+ La libreria di attività predefinita contiene nuove attività e funzionalità per le attività esistenti. Tutte queste nuove attività sono supportate nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste nuove attività, vedere la [impegni](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sezione [Novità in Windows Workflow Foundation in .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Espressioni C#
  Prima di .NET Framework 4,5, tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In .NET Framework 4,5, le espressioni Visual Basic vengono utilizzate solo per i progetti creati utilizzando Visual Basic. Nei progetti Visual C# viene ora usato C# per le espressioni. Quando si creano flussi di lavoro in Visual Studio 2012, viene fornito C# un editor di espressioni pienamente funzionante con funzionalità quali l'evidenziazione della grammatica e IntelliSense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
@@ -122,7 +122,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  Oltre ai modelli di sviluppo dei flussi di lavoro del diagramma di flusso e sequenziale, in questa versione sono inclusi i flussi di lavoro macchina a stati e i servizi dei flussi di lavoro con priorità al contratto ("contract-first").  
   
 ### <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati  
- I flussi di lavoro della macchina a Stati sono stati introdotti come parte del .NET Framework 4.0.1 in [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4,5. Gli aggiornamenti includono:  
+ I flussi di lavoro della macchina a Stati sono stati introdotti come parte del .NET Framework 4.0.1 in [Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). In questo aggiornamento sono incluse numerose nuove classi e attività che hanno consentito agli sviluppatori di creare i flussi di lavoro macchina a stati. Queste classi e attività sono state aggiornate per .NET Framework 4,5. Gli aggiornamenti includono:  
   
 1. Possibilità di impostare punti di interruzione negli stati  
   

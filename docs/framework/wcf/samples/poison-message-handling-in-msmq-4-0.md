@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716529"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837818"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -18,12 +18,12 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 
  In base alla versione di MSMQ, NetMsmqBinding supporta dal rilevamento limitato fino a quello completo dei messaggi non elaborabili. Dopo che il messaggio è stato rilevato come non elaborabile, è possibile gestirlo in alcuni modi. Di nuovo, in base alla versione di MSMQ, NetMsmqBinding supporta dalla gestione limitata fino a quella completa dei messaggi non elaborabili.
 
- Questo esempio illustra le funzioni dei messaggi non elaborabili limitate fornite nella piattaforma [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e quelle complete fornite in [!INCLUDE[wv](../../../../includes/wv-md.md)]. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile in un'altra coda che quindi può essere gestita da un servizio messaggi non elaborabili.
+ In questo esempio vengono illustrate le funzionalità non elaborabili limitate fornite su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] piattaforma e sulle funzionalità complete non elaborabili fornite in Windows Vista. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile in un'altra coda che quindi può essere gestita da un servizio messaggi non elaborabili.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Esempio di gestione dei messaggi non elaborabili di MSMQ v4.0
- In [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere usata per archiviare i messaggi non elaborabili. Questo esempio dimostra la procedura consigliata per gestire i messaggi non elaborabili usando [!INCLUDE[wv](../../../../includes/wv-md.md)].
+ In Windows Vista, MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere utilizzata per archiviare i messaggi non elaborabili. In questo esempio viene illustrata la procedura consigliata per gestire i messaggi non elaborabili utilizzando Windows Vista.
 
- Il rilevamento dei messaggi non elaborabili in [!INCLUDE[wv](../../../../includes/wv-md.md)] è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
+ Il rilevamento dei messaggi non elaborabili in Windows Vista è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
 
  Una volta il messaggio è contrassegnato come non elaborabile, viene gestito in base alle impostazioni nell'enumerazione <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Per reiterare i valori possibili:
 
@@ -31,9 +31,9 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 
 - Rilascia: per rilasciare il messaggio.
 
-- Move: per spostare il messaggio nella coda secondaria di messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Move: per spostare il messaggio nella coda secondaria di messaggi non elaborabili. Questo valore è disponibile solo in Windows Vista.
 
-- Reject: per rifiutare il messaggio, rispedendolo alla coda di messaggi non recapitabili del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject: per rifiutare il messaggio, rispedendolo alla coda di messaggi non recapitabili del mittente. Questo valore è disponibile solo in Windows Vista.
 
  Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` determina lo spostamento del messaggio nella coda secondaria non elaborabile.
 

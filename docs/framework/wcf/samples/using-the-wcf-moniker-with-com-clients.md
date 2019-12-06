@@ -2,12 +2,12 @@
 title: Utilizzo del moniker WCF con i client COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715297"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837779"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Utilizzo del moniker WCF con i client COM
 In questo esempio viene illustrato come utilizzare il moniker del servizio Windows Communication Foundation (WCF) per integrare servizi Web in ambienti di sviluppo basati su COM, ad esempio Microsoft Office Visual Basic, Applications Edition (Office VBA) o Visual Basic 6,0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Da un Prompt dei comandi per gli sviluppatori per Visual Studio, aprire la cartella \client\bin\ nella cartella specifica del linguaggio.  
   
     > [!NOTE]
-    > Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, verificare di eseguire il prompt dei comandi con privilegi di amministratore.  
+    > Se si utilizza Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, assicurarsi di eseguire il prompt dei comandi con privilegi di amministratore.  
   
 4. Digitare `tlbexp.exe client.dll /out:CalcProxy.tlb` per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. Copiare la libreria Client.dll dalla cartella \client\bin\, nella cartella specifica della lingua, a una directory sul computer client.  
   
-7. Da un prompt dei comandi spostarsi a tale directory di destinazione sul computer client. Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] assicurarsi di eseguire il prompt dei comandi come amministratore.  
+7. Da un prompt dei comandi spostarsi a tale directory di destinazione sul computer client. Se si utilizza Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], assicurarsi di eseguire il prompt dei comandi come amministratore.  
   
 8. Digitare `tlbexp.exe client.dll /out:CalcProxy.tlb` per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: b14dd600526612b6af8b9fad15f65a748eb0b368
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 36d03a2fca8f143b98338050fc9da4490960bda9
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637530"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837519"
 ---
 # <a name="workflow-security"></a>Sicurezza del flusso di lavoro
-Windows Workflow Foundation (WF) si integra con varie tecnologie diverse, ad esempio Microsoft SQL Server e Windows Communication Foundation (WCF). L'interazione con queste tecnologie può introdurre problemi di sicurezza nel flusso di lavoro, se eseguito in modo errato.
+Windows Workflow Foundation (WF) si integra con diverse tecnologie, ad esempio Microsoft SQL Server e Windows Communication Foundation (WCF). L'interazione con queste tecnologie può introdurre problemi di sicurezza nel flusso di lavoro, se eseguito in modo errato.
 
 ## <a name="persistence-security-concerns"></a>Problemi di sicurezza della persistenza
 
@@ -30,22 +30,22 @@ Windows Workflow Foundation (WF) si integra con varie tecnologie diverse, ad ese
 
 - Quando si usano numerose attività figlio, percorsi, segnalibri, estensioni host o ambiti o quando si usano segnalibri con payload di notevoli dimensioni, la memoria può esaurirsi o si può allocare eccessivo spazio del database durante la persistenza. Questa situazione può essere attenuata con la sicurezza a livello di oggetto e a livello di database.
 
-- Quando si usa l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'archivio di istanze deve essere protetto. Per altre informazioni, vedere [SQL Server Best Practices](https://go.microsoft.com/fwlink/?LinkId=164972).
+- Quando si usa l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'archivio di istanze deve essere protetto.
 
-- I dati sensibili nell'archivio di istanze devono essere crittografati. Per altre informazioni, vedere [crittografia di sicurezza SQL](https://go.microsoft.com/fwlink/?LinkId=164976).
+- I dati sensibili nell'archivio di istanze devono essere crittografati. Per altre informazioni, vedere [Crittografia di SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption).
 
 - Poiché la stringa di connessione del database è spesso inclusa in un file di configurazione, è necessario usare la sicurezza a livello di Windows (ACL) per assicurarsi che il file di configurazione (in genere Web.Config) sia protetto e che le informazioni sull'accesso e sulla password non siano incluse nella stringa di connessione. Tra il database e il server Web dovrebbe invece essere usata l'autenticazione di Windows.
 
 ## <a name="considerations-for-workflowservicehost"></a>Considerazioni su WorkflowServiceHost
 
-- Endpoint Windows Communication Foundation (WCF) usati nei flussi di lavoro deve essere protetto. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](https://go.microsoft.com/fwlink/?LinkID=164975).
+- Gli endpoint Windows Communication Foundation (WCF) usati nei flussi di lavoro devono essere protetti. Per ulteriori informazioni, vedere [Cenni preliminari sulla sicurezza di WCF](../wcf/feature-details/security-overview.md).
 
-- È possibile implementare l'autorizzazione a livello host usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Vedere [come: Creare un gestore autorizzazioni personalizzato per un servizio](https://go.microsoft.com/fwlink/?LinkId=192228) per informazioni dettagliate.
+- È possibile implementare l'autorizzazione a livello host usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Per informazioni dettagliate, vedere [procedura: creare un gestore autorizzazioni personalizzato per un servizio](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) .
 
 - L'oggetto ServiceSecurityContext per il messaggio in arrivo è disponibile anche dall'interno del flusso di lavoro tramite l'accesso a OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
- Microsoft WF Security Pack CTP 1 è la prima versione di anteprima (CTP) tecnologia della community di un set di attività e relative implementazioni basato su [Windows Workflow Foundation](index.md) nelle [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) e il [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF Security Pack CTP 1 contiene sia le attività e che le finestre di progettazione che illustrano come attivare facilmente i diversi scenari relativi alla sicurezza mediante il flusso di lavoro, tra cui:
+ Microsoft WF Security Pack CTP 1 è la prima versione Community Technology Preview (CTP) di un set di attività e la relativa implementazione basata su [Windows Workflow Foundation](index.md) in [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) e [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF Security Pack CTP 1 contiene sia le attività e che le finestre di progettazione che illustrano come attivare facilmente i diversi scenari relativi alla sicurezza mediante il flusso di lavoro, tra cui:
 
 1. Rappresentazione di un'identità client nel flusso di lavoro
 
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) si integra con varie tecnologie diverse, ad ese
 
 4. Propagazione di un token di sicurezza client a un servizio back-end (delega basata su richieste) usando ActAs di WS-Trust
 
-Per altre informazioni e per scaricare WF Security Pack CTP, vedere: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)
+Per ulteriori informazioni e per scaricare WF Security Pack CTP, vedere: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

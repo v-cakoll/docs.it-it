@@ -2,12 +2,12 @@
 title: Host servizio WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802405"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837740"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host servizio WCF (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ La finestra principale dell' **host del servizio WCF** contiene due aree:
 
 Per consentire agli utenti senza privilegi di amministratore di sviluppare servizi WCF, viene creato un ACL (elenco di controllo di accesso) per lo spazio dei nomi "http://+:8731/Design_Time_Addresses" durante l'installazione di Visual Studio. L'ACL viene impostato su (UI) che include tutti gli utenti interattivi che hanno eseguito l'accesso al computer. Gli amministratori possono aggiungere o rimuovere utenti da questo ACL oppure aprire porte aggiuntive. Questo ACL consente agli utenti di utilizzare l'host automatico del servizio WCF (wcfSvcHost. exe) senza concedere loro privilegi di amministratore.
 
-È anche possibile modificare l'accesso utilizzando lo strumento netsh.exe in [!INCLUDE[wv](../../../includes/wv-md.md)] con l'account di amministratore con privilegi elevati. Di seguito è riportato un esempio dell'utilizzo di netsh.exe.
+È possibile modificare l'accesso utilizzando lo strumento Netsh. exe in Windows Vista con l'account amministratore con privilegi elevati. Di seguito è riportato un esempio dell'utilizzo di netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643547"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837337"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Code in Windows Communication Foundation
-Gli argomenti in questa sezione descrivono il supporto di Windows Communication Foundation (WCF) per le code. WCF fornisce il supporto per la gestione tramite sfruttando al contempo Accodamento messaggi Microsoft (precedentemente noto come MSMQ) come trasporto e abilita gli scenari seguenti:  
+Negli argomenti di questa sezione viene illustrato il supporto di Windows Communication Foundation (WCF) per le code di. WCF fornisce il supporto per l'accodamento sfruttando Microsoft Message Queuing (precedentemente noto come MSMQ) come trasporto e consente gli scenari seguenti:  
   
 - Applicazioni a regime di controllo libero. Le applicazioni di invio possono inviare messaggi alle code senza che sia necessario sapere se l'applicazione ricevente è disponibile per l'elaborazione del messaggio. La coda fornisce un'indipendenza di elaborazione che consente a un'applicazione di invio di inviare messaggi alla coda a una velocità indipendente da quella di elaborazione dei messaggi da parte delle applicazioni riceventi. La disponibilità complessiva del sistema aumenta quando l'invio di messaggi a una coda non è strettamente associato all'elaborazione dei messaggi.  
   
@@ -22,20 +22,20 @@ Gli argomenti in questa sezione descrivono il supporto di Windows Communication 
   
 - Operazioni disconnesse. Le operazioni di invio, ricezione ed elaborazione possono venire disconnesse durante la comunicazione tramite reti con latenza elevata o con disponibilità limitata, ad esempio nel caso di dispositivi mobili. Le code consentono la continuazione di queste operazioni, anche quando gli endpoint sono disconnessi. Quando la connessione viene ristabilita, la coda inoltra i messaggi all'applicazione ricevente.  
   
- Per usare la funzionalità delle code in un'applicazione WCF, è possibile usare una delle associazioni standard oppure è possibile creare un'associazione personalizzata se una delle associazioni standard non soddisfa i requisiti. Per altre informazioni sulle associazioni standard pertinenti e su come sceglierle, vedere [come: Scambiare messaggi con endpoint WCF e applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Per altre informazioni sulla creazione di associazioni personalizzate, vedere [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Per utilizzare la funzionalità code in un'applicazione WCF, è possibile utilizzare una delle associazioni standard oppure è possibile creare un'associazione personalizzata se una delle associazioni standard non soddisfa i requisiti. Per ulteriori informazioni sulle associazioni standard pertinenti e su come sceglierne una, vedere [procedura: scambiare messaggi con endpoint WCF e applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Per altre informazioni sulla creazione di associazioni personalizzate, vedere [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Panoramica dei concetti di accodamento dei messaggi.  
   
  [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Panoramica del supporto per coda WCF.  
+ Panoramica del supporto per le code WCF.  
   
- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Viene illustrato come utilizzare il <xref:System.ServiceModel.NetMsmqBinding> classe per la comunicazione tra un client WCF e servizio WCF.  
+ [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ Viene illustrato come utilizzare la classe <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione tra un client WCF e un servizio WCF.  
   
- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Viene illustrato come utilizzare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione tra applicazioni WCF e di Accodamento messaggi.  
+ [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ Viene illustrato come utilizzare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione tra le applicazioni WCF e Accodamento messaggi.  
   
  [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Spiega come raggruppare messaggi in una coda per agevolare l'elaborazione di messaggi correlati da parte di un'unica applicazione ricevente.  
@@ -50,7 +50,7 @@ Gli argomenti in questa sezione descrivono il supporto di Windows Communication 
  Spiega come gestire messaggi non elaborabili, ovvero messaggi che hanno superato il numero massimo di tentativi di recapito all'applicazione ricevente.  
   
  [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Vengono riepilogate le differenze nella funzionalità tra le code WCF [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Riepiloga le differenze nella funzionalità code WCF tra Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Descrive come utilizzare la protezione del trasporto per proteggere messaggi in coda.  
@@ -62,4 +62,4 @@ Gli argomenti in questa sezione descrivono il supporto di Windows Communication 
  Spiega come risolvere problemi di accodamento comuni.  
   
  [Procedure consigliate per le comunicazioni in coda](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Illustra le procedure consigliate per l'utilizzo di WCF comunicazione in coda.  
+ Illustra le procedure consigliate per l'utilizzo della comunicazione accodata WCF.  

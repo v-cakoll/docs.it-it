@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458516"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837259"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Panoramica dei convertitori di tipi per XAML
 I convertitori di tipi forniscono la logica per un writer di oggetti che esegue una conversione da una stringa nel markup XAML in particolari oggetti in un oggetto grafico. Nei servizi XAML di .NET Framework, il convertitore di tipi deve essere una classe che deriva da <xref:System.ComponentModel.TypeConverter>. Alcuni convertitori supportano anche il percorso di salvataggio XAML e possono essere usati per serializzare un oggetto in un formato stringa nel markup di serializzazione. Questo argomento descrive come e quando vengono richiamati i convertitori di tipi in XAML e vengono forniti consigli di implementazione per gli override del metodo di <xref:System.ComponentModel.TypeConverter>.  
@@ -60,7 +60,7 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sono metodi di supporto usati quando un servizio esegue una query sulle funzionalità dell'implementazione di <xref:System.ComponentModel.TypeConverter> . È necessario implementare questi metodi per restituire `true` per i casi specifici del tipo supportati dai metodi di conversione equivalenti del convertitore. Per XAML, si tratta in genere del tipo <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informazioni relative alle impostazioni cultura e convertitori di tipi per XAML  
- Ogni implementazione di <xref:System.ComponentModel.TypeConverter> può interpretare in modo univoco il concetto di stringa valida per una conversione e può quindi usare o ignorare la descrizione del tipo passata come parametri. Una considerazione importante circa le impostazioni cultura e la conversione di tipi XAML: anche se l'uso di stringhe localizzabili come valori di attributo è supportato da XAML, non è possibile usare queste stringhe come input del convertitore di tipi con requisiti specifici per le impostazioni cultura. Questa limitazione è dovuta al fatto che i convertitori di tipi per i valori di attributo XAML implicano necessariamente un comportamento di elaborazione XAML basato su un'unica lingua che usa le impostazioni cultura `en-US` . Per ulteriori informazioni sui motivi di progettazione di questa restrizione, vedere la specifica del linguaggio XAML ([\[MS-xaml\]](https://go.microsoft.com/fwlink/?LinkId=114525)) o [Cenni preliminari sulla globalizzazione e localizzazione WPF](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Ogni implementazione di <xref:System.ComponentModel.TypeConverter> può interpretare in modo univoco il concetto di stringa valida per una conversione e può quindi usare o ignorare la descrizione del tipo passata come parametri. Una considerazione importante circa le impostazioni cultura e la conversione di tipi XAML: anche se l'uso di stringhe localizzabili come valori di attributo è supportato da XAML, non è possibile usare queste stringhe come input del convertitore di tipi con requisiti specifici per le impostazioni cultura. Questa limitazione è dovuta al fatto che i convertitori di tipi per i valori di attributo XAML implicano necessariamente un comportamento di elaborazione XAML basato su un'unica lingua che usa le impostazioni cultura `en-US` . Per ulteriori informazioni sui motivi di progettazione di questa restrizione, vedere la specifica del linguaggio XAML ([\[MS-xaml\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))) o [Cenni preliminari sulla globalizzazione e localizzazione WPF](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Un esempio delle problematiche che possono presentarsi con le impostazioni cultura è rappresentato dal separatore decimale per i numeri in formato stringa, che per alcune impostazioni cultura è la virgola anziché il punto. Quest'uso è in conflitto con il comportamento di molti convertitori di tipi esistenti, che prevede l'uso della virgola come delimitatore. Il passaggio di impostazioni cultura tramite `xml:lang` nel codice XAML adiacente non risolve il problema.  
   

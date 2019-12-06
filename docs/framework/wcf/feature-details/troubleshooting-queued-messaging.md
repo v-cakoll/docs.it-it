@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi ai messaggi in coda
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976048"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837311"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 
@@ -25,7 +25,7 @@ In questa sezione sono contenute le domande frequenti e la guida alla risoluzion
 
 **D:** È necessario aggiornare MSMQ per usare le associazioni <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** No. Entrambe le associazioni funzionano con MSMQ 3.0 in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Alcune funzionalità delle associazioni divengono disponibili quando si esegue l'aggiornamento a MSMQ 4.0 in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+**R:** No. Entrambe le associazioni funzionano con MSMQ 3.0 in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Alcune funzionalità dei binding diventano disponibili quando si esegue l'aggiornamento a MSMQ 4,0 in Windows Vista.
 
 **D:** Quali funzionalità delle associazioni <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sono disponibili in MSMQ 4,0 ma non in MSMQ 3,0?
 
@@ -47,7 +47,7 @@ Per ulteriori informazioni, vedere [differenze nelle funzionalità di Accodament
 
 **R:** No. Non è necessario eseguire l'aggiornamento a MSMQ 4.0 in entrambi i lati.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Contenuto della sezione sono contenute risposte per la risoluzione della maggior parte dei problemi frequenti. Alcuni problemi costituiti da limitazioni note sono descritti anche nelle note sulla versione.
 
@@ -89,7 +89,7 @@ Se le garanzie sono None (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%
 
 **D:** Il servizio genera un'eccezione su SvcHost. Open con un messaggio "i requisiti di EndpointListener non possono essere soddisfatti da ListenerFactory". Perché?
 
-Un Controllare il contratto di servizio. È possibile che si sia dimenticato di inserire "IsOneWay =`true`" in tutte le operazioni del servizio. Le code supportano solo operazioni del servizio unidirezionali.
+Oggetto. Controllare il contratto di servizio. È possibile che si sia dimenticato di inserire "IsOneWay =`true`" in tutte le operazioni del servizio. Le code supportano solo operazioni del servizio unidirezionali.
 
 **D:** Sono presenti messaggi nella coda, ma non viene richiamata alcuna operazione del servizio. Da che cosa è causato il problema?
 
@@ -134,9 +134,9 @@ La coda dei messaggi non recapitabili di sistema, così come quella personalizza
 
 **R:** Quando si utilizza l'associazione di integrazione MSMQ, è necessario utilizzare lo schema MSMQ. FormatName. Ad esempio, msmq.formatname:DIRECT=OS:.\private$\OrdersQueue. Ma quando si specifica la coda dei messaggi non recapitabili personalizzata è necessario utilizzare lo schema net.msmq.
 
-**D:** Quando si utilizza un nome di formato pubblico o privato e si apre l'host del servizio in [!INCLUDE[wv](../../../../includes/wv-md.md)], viene visualizzato un errore. Perché?
+**D:** Quando si utilizza un nome di formato pubblico o privato e si apre l'host del servizio in Windows Vista, viene visualizzato un errore. Perché?
 
-**R:** Il canale di integrazione WCF su [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se è possibile aprire una coda secondaria per la coda dell'applicazione principale per la gestione dei messaggi non elaborabili. Il nome della coda secondaria deriva da un URI msmq.formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome in formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.
+**R:** Il canale di integrazione WCF in Windows Vista verifica se è possibile aprire una coda secondaria per la coda dell'applicazione principale per la gestione dei messaggi non elaborabili. Il nome della coda secondaria deriva da un URI msmq.formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome in formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.
 
 **D:** Quando si riceve un messaggio da un'applicazione MSMQ, il messaggio si trova nella coda e non viene letto dall'applicazione WCF di destinazione. Perché?
 
@@ -174,7 +174,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 6. Successivamente, aggiungere un secondo snap-in certificati usando i passaggi precedenti, ma questa volta selezionare **account computer** e fare clic su **Avanti**.
 
-7. Selezionare **computer locale** e fare clic su **fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
+7. Selezionare **Computer locale** e fare clic su **Fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.
 
 **D:** Quando il servizio legge da una coda in un altro computer in modalità gruppo di lavoro, viene generata un'eccezione "accesso negato".
 
@@ -186,7 +186,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 ### <a name="remote-transacted-receives"></a>Ricezioni transazionali remote
 
-**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Cosa è possibile fare per risolvere questo problema?
+**D:** Quando si dispone di una coda sul computer A e un servizio WCF che legge i messaggi da una coda nel computer B (scenario di ricezione transazionale remoto), i messaggi non vengono letti dalla coda. Le informazioni di traccia indicano che la ricezione non è riuscita con il messaggio "Impossibile importare la transazione". Come si può risolvere questo problema?
 
 **R:** Esistono tre possibili motivi:
 
@@ -200,7 +200,7 @@ Un'ulteriore soluzione alternativa consiste nell'installare MSMQ unitamente all'
 
 - Verificare che MSDTC sia nell'elenco delle eccezioni nelle impostazioni del firewall per la **connessione Internet** .
 
-- Assicurarsi di utilizzare [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ con [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta la lettura transazionale remota. MSMQ con le versioni precedenti di Windows non supporta la lettura transazionale remota.
+- Assicurarsi di utilizzare Windows Vista. MSMQ in Windows Vista supporta la lettura transazionale remota. MSMQ con le versioni precedenti di Windows non supporta la lettura transazionale remota.
 
 **D:** Quando il servizio che legge dalla coda è un servizio di rete, ad esempio in un host Web, perché viene generata un'eccezione di accesso negato durante la lettura dalla coda?
 

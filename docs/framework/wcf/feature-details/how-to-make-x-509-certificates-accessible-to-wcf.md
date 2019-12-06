@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rendere accessibili a WCF i certificati X.509'
+title: 'Procedura: rendere accessibili a WCF i certificati X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972347"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837402"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: Rendere accessibili a WCF i certificati X.509
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: rendere accessibili a WCF i certificati X.509
 Per rendere accessibile un certificato X. 509 a Windows Communication Foundation (WCF), il codice dell'applicazione deve specificare il nome e il percorso dell'archivio certificati. In alcuni casi l'identità del processo deve avere accesso al file contenente la chiave privata associata al certificato X.509. Per ottenere la chiave privata associata a un certificato X. 509 in un archivio certificati, WCF deve disporre delle autorizzazioni necessarie. Per impostazione predefinita solo il proprietario e l'account di sistema possono accedere alla chiave privata di un certificato.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Per rendere accessibili a WCF i certificati X.509  
@@ -43,9 +43,9 @@ Per rendere accessibile un certificato X. 509 a Windows Communication Foundation
   
     3. Determinare dove si trova la chiave privata per il certificato nel computer utilizzando lo strumento [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) .  
   
-         Lo strumento [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) richiede il nome dell'archivio certificati, il percorso dell'archivio certificati e un elemento che identifica in modo univoco il certificato. Lo strumento accetta il nome del soggetto del certificato o l'identificazione digitale come identificatore univoco. Per ulteriori informazioni su come determinare l'identificazione personale per un certificato, vedere [procedura: Recuperare l'identificazione personale di un](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificato.  
+         Lo strumento [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) richiede il nome dell'archivio certificati, il percorso dell'archivio certificati e un elemento che identifica in modo univoco il certificato. Lo strumento accetta il nome del soggetto del certificato o l'identificazione digitale come identificatore univoco. Per altre informazioni su come determinare l'identificazione personale per un certificato, vedere [procedura: recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-         Nell'esempio di codice seguente viene usato lo strumento [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) per determinare il percorso della chiave privata per un certificato nell' `My` archivio in `CurrentUser` con un'identificazione personale `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`di.  
+         Nell'esempio di codice seguente viene usato lo strumento [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) per determinare il percorso della chiave privata per un certificato nell'archivio `My` in `CurrentUser` con un'identificazione personale di `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
@@ -55,11 +55,11 @@ Per rendere accessibile un certificato X. 509 a Windows Communication Foundation
   
          La tabella seguente illustra in dettaglio l'account con cui viene eseguito WCF per uno scenario specifico.  
   
-        |Scenario|Identità del processo|  
+        |Scenario|Identità processo|  
         |--------------|----------------------|  
         |Client (console o applicazione Windows Form).|Utente attualmente connesso.|  
         |Servizio indipendente.|Utente attualmente connesso.|  
-        |Servizio ospitato in IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) o IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|SERVIZIO DI RETE|  
+        |Servizio ospitato in IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) o IIS 7,0 (Windows Vista).|SERVIZIO DI RETE|  
         |Servizio ospitato in IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controllato dall'elemento `<processModel>` nel file Machine.config. L'account predefinito è ASPNET.|  
   
     5. Concedere l'accesso in lettura al file che contiene la chiave privata all'account con cui viene eseguito WCF, utilizzando uno strumento come icacls. exe.  

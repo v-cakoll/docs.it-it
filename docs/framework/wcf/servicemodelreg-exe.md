@@ -2,12 +2,12 @@
 title: Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: aa9fc1b2338007db240fb10a9af35754107b07d0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2b2580a43270cc221de9cfdf0894a59a040ba307
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424881"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837766"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 Questo strumento da riga di comando offre la possibilità di gestire la registrazione di componenti WCF e WF in un singolo computer. In condizioni normali l'utilizzo di questo strumento non è consigliabile perché i componenti WCF e WF vengono configurati quando installati. Tuttavia, se si verificano problemi con l'attivazione del servizio, si può tentare la registrazione dei componenti tramite questo strumento.  
@@ -24,7 +24,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> Quando lo strumento di registrazione ServiceModel viene eseguito in [!INCLUDE[wv](../../../includes/wv-md.md)], la finestra di dialogo **funzionalità Windows** potrebbe non riflettere che l'opzione di **attivazione HTTP Windows Communication Foundation** in **Microsoft .NET Framework 3,0** è attivata. È possibile accedere alla finestra di dialogo **funzionalità Windows** facendo clic sul pulsante **Start**, quindi su **Esegui** e digitando **OptionalFeatures**.  
+> Quando lo strumento di registrazione ServiceModel viene eseguito in Windows Vista, la finestra di dialogo **funzionalità Windows** potrebbe non riflettere che l'opzione di **attivazione Windows Communication Foundation http** in **Microsoft .NET Framework 3,0** è attivata. È possibile accedere alla finestra di dialogo **funzionalità Windows** facendo clic sul pulsante **Start**, quindi su **Esegui** e digitando **OptionalFeatures**.  
   
  Nella tabella riportata di seguito sono descritte le opzioni che possono essere utilizzate con ServiceModelReg.exe.  
   

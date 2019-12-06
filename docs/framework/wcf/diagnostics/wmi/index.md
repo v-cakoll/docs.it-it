@@ -2,12 +2,12 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855811"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837441"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio in fase di esecuzione tramite un provider WCF Strumentazione gestione Windows (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
   
  Un provider WMI è un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. È costituito da un set di oggetti WMI che hanno coppie di valore/attributo. Le coppie possono essere costituite da un numero qualsiasi di tipi semplici. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. WCF espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
- Il provider WMI incorporato può essere attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite `wmiProviderEnabled` l'attributo [ \<della > di diagnostica](../../../configure-apps/file-schema/wcf/diagnostics.md) nella [ \<sezione > System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.  
+ Il provider WMI incorporato può essere attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite l'attributo `wmiProviderEnabled` del [> di diagnostica\<](../../../configure-apps/file-schema/wcf/diagnostics.md) nella sezione [\<system. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,22 +35,22 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
 > [!CAUTION]
 > Se si usano i metodi forniti da .NET Framework per accedere ai dati WMI a livello di programmazione, tenere presente che questi metodi possono generare eccezioni nel momento in cui viene stabilita la connessione. La connessione non viene stabilita durante la costruzione dell'istanza <xref:System.Management.ManagementObject>, ma alla prima richiesta che comporta uno scambio di dati effettivo. Per intercettare le possibili eccezioni è pertanto necessario usare un blocco `try..catch`.  
   
- Per l'origine di traccia `System.ServiceModel` in WMI è possibile modificare il livello di registrazione della traccia e del messaggio, nonché le opzioni di registrazione dei messaggi. Questa operazione può essere eseguita accedendo all'istanza di [AppDomainInfo](appdomaininfo.md) , che espone le proprietà booleane `LogMessagesAtServiceLevel`seguenti `LogMessagesAtTransportLevel`: `LogMalformedMessages`,, `TraceLevel`e. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo verrà abilitata la registrazione dei messaggi a runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI.  
+ Per l'origine di traccia `System.ServiceModel` in WMI è possibile modificare il livello di registrazione della traccia e del messaggio, nonché le opzioni di registrazione dei messaggi. Questa operazione può essere eseguita accedendo all'istanza di [AppDomainInfo](appdomaininfo.md) , che espone le proprietà booleane seguenti: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`e `TraceLevel`. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo verrà abilitata la registrazione dei messaggi a runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI.  
   
  Se nel file di configurazione non viene specificato alcun listener di traccia per la registrazione dei messaggi né alcun listener di traccia `System.ServiceModel`, nessuna delle modifiche apportate verrà resa effettiva, anche se accettata da WMI. Per altre informazioni sulla corretta configurazione dei rispettivi listener, vedere Configurazione della [registrazione dei messaggi](../configuring-message-logging.md) e [configurazione della traccia](../tracing/configuring-tracing.md). Il livello di traccia di tutte le altre origini di traccia specificate dalla configurazione viene attivato all'avvio dell'applicazione e non può essere modificato.  
   
- WCF espone un `GetOperationCounterInstanceName` metodo per lo scripting. Se al metodo viene fornito un nome operazione, il metodo restituisce il nome di un'istanza di contatore delle prestazioni. L'input non viene tuttavia convalidato. Pertanto, se si fornisce un nome operazione errato, verrà restituito un nome di contatore errato.  
+ WCF espone un metodo di `GetOperationCounterInstanceName` per lo scripting. Se al metodo viene fornito un nome operazione, il metodo restituisce il nome di un'istanza di contatore delle prestazioni. L'input non viene tuttavia convalidato. Pertanto, se si fornisce un nome operazione errato, verrà restituito un nome di contatore errato.  
   
- La `OutgoingChannel` proprietà `Service` dell'istanza non conta i canali aperti da un servizio per la connessione a un altro servizio, se il client WCF per il servizio di destinazione non viene creato all'interno del metodo. `Service`  
+ La proprietà `OutgoingChannel` dell'istanza di `Service` non conta i canali aperti da un servizio per la connessione a un altro servizio, se il client WCF per il servizio di destinazione non viene creato all'interno del metodo di `Service`.  
   
- **Attenzione** WMI supporta solo un <xref:System.TimeSpan> valore massimo di 3 punti decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
+ **Attenzione** WMI supporta solo un valore <xref:System.TimeSpan> massimo 3 punti decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza -  
  Poiché il provider WMI WCF consente l'individuazione dei servizi in un ambiente, è necessario prestare particolare attenzione alla concessione dell'accesso. Se si consentono deroghe all'accesso al solo amministratore (impostazione predefinita), è possibile che l'accesso a dati sensibili presenti nell'ambiente sia consentito anche a utenti meno attendibili. In particolare, se le autorizzazioni all'accesso WMI remoto vengono concesse indistintamente, possono verificarsi attacchi flood. Se un processo viene sovraccaricato da un numero eccessivo di richieste WMI, è possibile che si verifichi una riduzione delle prestazioni.  
   
  Inoltre, se si concedono liberamente autorizzazioni di accesso al file MOF, utenti meno attendibili potrebbero modificare il comportamento di WMI e alterare gli oggetti caricati nello schema WMI. È possibile ad esempio rimuovere campi in modo che i dati critici vengano nascosti dall'amministratore o che i campi che non contengono o generano eccezioni vengano aggiunti al file.  
   
- Per impostazione predefinita, il provider WMI WCF concede le autorizzazioni "Esegui metodo", "scrittura provider" e "Abilita account" per l'amministratore e l'autorizzazione "Abilita account" per ASP.NET, servizio locale e servizio di rete. In particolare, sulle piattaforme diverse da [!INCLUDE[wv](../../../../../includes/wv-md.md)] l'account ASP.NET dispone dell'accesso in lettura allo spazio dei nomi ServiceModel di WMI. Se non si desidera concedere questi privilegi a un particolare gruppo di utenti, è necessario disattivare il provider WMI (è disabilitato per impostazione predefinita) o disabilitare l'accesso per il gruppo di utenti specifico.  
+ Per impostazione predefinita, il provider WMI WCF concede le autorizzazioni "Esegui metodo", "scrittura provider" e "Abilita account" per l'amministratore e l'autorizzazione "Abilita account" per ASP.NET, servizio locale e servizio di rete. In particolare, nelle piattaforme non Windows Vista, l'account ASP.NET dispone dell'accesso in lettura allo spazio dei nomi ServiceModel WMI. Se non si desidera concedere questi privilegi a un particolare gruppo di utenti, è necessario disattivare il provider WMI (è disabilitato per impostazione predefinita) o disabilitare l'accesso per il gruppo di utenti specifico.  
   
  Inoltre, l'abilitazione di WMI mediante la configurazione potrebbe non essere possibile a causa di privilegi utente insufficienti. Per questo errore non viene tuttavia scritto alcun evento nel registro eventi.  
   
@@ -155,7 +155,7 @@ Whoami /user
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Se sono stati installati [gli strumenti di amministrazione WMI](https://go.microsoft.com/fwlink/?LinkId=95185), è possibile utilizzare WMI CIM Studio per accedere alle istanze di WMI. Gli strumenti si trovano nella cartella seguente:  
   
- **Strumenti Files\WMI%windir%\Program\\**  
+ **%windir%\Program Files\WMI Tools\\**  
   
 1. Nella finestra **Connetti a spazio dei nomi:** digitare **root\ServiceModel** e fare clic su **OK.**  
   

@@ -1,27 +1,27 @@
 ---
-title: 'Esercitazione: Scrivere il primo analizzatore con correzione del codice'
+title: 'Esercitazione: compilare il primo analizzatore con correzione del codice'
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105762"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837051"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: Scrivere il primo analizzatore con correzione del codice
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: compilare il primo analizzatore con correzione del codice
 
 .NET Compiler Platform SDK fornisce gli strumenti necessari per creare avvisi personalizzati destinati a codice C# o Visual Basic. L'**analizzatore** contiene il codice che riconosce le violazioni della regola. La **correzione del codice** contiene il codice che corregge la violazione. Le regole implementate possono essere di qualsiasi tipo: struttura del codice, stile di codifica, convenzioni di denominazione e altro ancora. .NET Compiler Platform fornisce il framework per l'esecuzione di analisi mentre gli sviluppatori scrivono il codice e tutte le funzionalità dell'interfaccia utente di Visual Studio per la correzione del codice: visualizzazione di linee ondulate nell'editor, informazioni dell'Elenco errori di Visual Studio, creazione di suggerimenti "lampadina" e visualizzazione di un'anteprima dettagliata delle correzioni suggerite.
 
 In questa esercitazione verrà esaminata la creazione di un **analizzatore** e una **correzione del codice** associato usando le API Roslyn. Un analizzatore è un modo per eseguire analisi del codice sorgente e segnalare un problema all'utente. Facoltativamente, un analizzatore può anche fornire una correzione del codice che rappresenta una modifica del codice sorgente per l'utente. In questa esercitazione verrà creato un analizzatore per trovare le dichiarazioni di variabili locali che potrebbero essere dichiarate tramite il modificatore `const` ma che lo non sono. La correzione del codice associata modifica tali dichiarazioni per aggiungere il modificatore `const`.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Sarà necessario installare **.NET Compiler Platform SDK** usando il programma di installazione di Visual Studio:
+È necessario installare **.NET Compiler Platform SDK** tramite il programma di installazione di Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -60,7 +60,7 @@ Il modello di analizzatore con correzione del codice crea tre progetti: uno cont
 > [!TIP]
 > Quando si esegue l'analizzatore, si avvia una seconda copia di Visual Studio. Questa seconda copia usa un diverso hive del Registro di sistema per archiviare le impostazioni. Questo consente di distinguere le impostazioni di visualizzazione nelle due copie di Visual Studio. È possibile scegliere un tema diverso per l'esecuzione sperimentale di Visual Studio. Inoltre, non eseguire il roaming delle impostazioni o accedere all'account di Visual Studio usando l'istanza sperimentale di Visual Studio. Ciò consente di mantenere diverse le impostazioni.
 
-Nella seconda istanza di Visual Studio che è stata avviata creare un nuovo progetto di applicazione console C# (può trattarsi di un progetto .NET Core o .NET Framework, perché gli analizzatori operano a livello di origine). Passando il mouse sul token con una sottolineatura ondulata, verrà visualizzato il testo dell'avviso fornito da un analizzatore.
+Nella seconda istanza di Visual Studio appena avviata creare un nuovo C# progetto di applicazione console (.NET Core o .NET Framework progetto funzionerà--Analyzers funziona a livello di origine). Passare il puntatore del mouse sul token con una sottolineatura ondulata e viene visualizzato il testo di avviso fornito da un analizzatore.
 
 Il modello crea un analizzatore che genera un avviso per ogni dichiarazione di tipo in cui il nome del tipo contiene lettere minuscole, come illustrato nella figura seguente:
 
@@ -427,7 +427,7 @@ Ci siamo quasi. Esistono alcune altre condizioni che l'analizzatore deve gestire
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Inoltre, i tipi di riferimento non sono gestiti correttamente. L'unico valore costante consentito per un tipo di riferimento è `null`, tranne che nel caso di <xref:System.String?displayProperty=nameWIthType>, che consente valori letterali stringa. In altre parole, `const string s = "abc"` è consentito, mentre `const object s = "abc"` non lo è. Tale condizione viene verificata da questo frammento di codice:
+Inoltre, i tipi di riferimento non sono gestiti correttamente. L'unico valore costante consentito per un tipo di riferimento è `null`, tranne che nel caso di <xref:System.String?displayProperty=nameWithType>, che consente valori letterali stringa. In altre parole, `const string s = "abc"` è consentito, mentre `const object s = "abc"` non lo è. Tale condizione viene verificata da questo frammento di codice:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
