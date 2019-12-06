@@ -96,7 +96,7 @@
     - name: Creazione di una soluzione .NET Core completa in macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Introduzione all'uso di .NET Core con gli strumenti dell'interfaccia della riga di comando
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: Organizzare e testare progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core
       href: tutorials/testing-with-cli.md
     - name: Sviluppare librerie con strumenti multipiattaforma
