@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: f427ed5216af11b90c5a8cede15806a11aedc76d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835546"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884228"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -342,7 +342,7 @@ Infine, è importante ricordare che a volte è possibile propagare eventi tra pi
 
 Come illustrato, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali delle modifiche all'interno del dominio. Per usare la terminologia DDD, usare gli eventi del dominio per implementare in modo esplicito gli effetti collaterali tra una o più aggregazioni. Inoltre, per migliorare la scalabilità e ridurre l'impatto sui blocchi di database, facoltativamente usare la coerenza finale tra le aggregazioni all'interno dello stesso dominio.
 
-L'app di riferimento USA [Mediator](https://github.com/jbogard/MediatR) per propagare gli eventi del dominio synchonously tra le aggregazioni, all'interno di una singola transazione. Tuttavia, è anche possibile usare un'implementazione di AMQP, ad esempio [RabbitMQ](https://www.rabbitmq.com/) o il [bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) , per propagare gli eventi del dominio in modo asincrono, usando la coerenza finale, ma, come indicato in precedenza, è necessario prendere in considerazione la necessità di azioni di compensazione in caso di errori.
+L'app di riferimento USA [Mediator](https://github.com/jbogard/MediatR) per propagare in modo sincrono gli eventi del dominio tra le aggregazioni, all'interno di una singola transazione. Tuttavia, è anche possibile usare un'implementazione di AMQP, ad esempio [RabbitMQ](https://www.rabbitmq.com/) o il [bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) , per propagare gli eventi del dominio in modo asincrono, usando la coerenza finale, ma, come indicato in precedenza, è necessario prendere in considerazione la necessità di azioni di compensazione in caso di errori.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972138"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884241"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -222,7 +222,7 @@ Per un'applicazione potrebbe non essere necessaria la scalabilità delle funzion
 
 Nelle prime fasi di sviluppo di un'applicazione, i limiti funzionali naturali potrebbero inoltre non essere ancora chiari. Durante lo sviluppo di un prodotto valido minimo, la separazione naturale potrebbe non essere ancora emersa. Alcune di queste condizioni potrebbero essere temporanee. Si potrebbe iniziare creando un'applicazione monolitica e successivamente separare alcune funzionalità da sviluppare e distribuire come microservizi. Altre condizioni potrebbero essere essenziali per i problemi dell'applicazione, vale a dire che l'applicazione potrebbe non essere mai suddivisa in più microservizi.
 
-La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi incrementa la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
+La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi aumenta la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione eShopOnContainers: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
 
 L'[applicazione di riferimento eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), molto più semplice, supporta l'utilizzo del contenitore monolitico a contenitore singolo. L'applicazione include un'applicazione Web con visualizzazioni MVC tradizionali, API Web e Razor Pages. L'applicazione può essere avviata dalla radice della soluzione usando i comandi `docker-compose build` e `docker-compose up`. Questo comando configura un contenitore per l'istanza Web usando l'oggetto `Dockerfile` all'interno della radice del progetto Web ed esegue il contenitore in una porta specifica. È possibile scaricare l'origine per questa applicazione da GitHub ed eseguirla in locale. Anche questa applicazione monolitica trae vantaggio dalla distribuzione in un ambiente basato su contenitori.
 
@@ -260,7 +260,7 @@ networks:
       name: nat
 ```
 
-Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Web` di `Dockerfile`:
+Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Dockerfile` di `Web`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
@@ -302,6 +302,8 @@ Se si vuole aggiungere il supporto per Docker all'applicazione tramite Visual St
   <https://github.com/ardalis/cleanarchitecture>
 - **Architecting Microservices e-book** (E-book Progettazione di microservizi)  
   <https://aka.ms/MicroservicesEbook>
+- **DDD (progettazione basata su domini)**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[Precedente](architectural-principles.md)
