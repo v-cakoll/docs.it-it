@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: Pipeline
       href: pipelines.md
+    - name: Utilizzare i buffer
+      href: buffers.md
     - name: File mappati alla memoria
       href: memory-mapped-files.md
