@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716472"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960467"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark a databricks
 
@@ -19,7 +19,7 @@ In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 >
-> - Creare un'area di lavoro Azure Databricks.
+> - Creare un'area di lavoro di Azure Databricks.
 > - Pubblicare .NET per Apache Spark app.
 > - Creare un processo Spark e un cluster Spark.
 > - Eseguire l'app nel cluster Spark.
@@ -32,30 +32,30 @@ Prima di iniziare, eseguire le attività seguenti:
 * Accedere al [portale di Azure](https://portal.azure.com/).
 * Completare l'esercitazione [su .NET per Apache Spark-introduzione in 10 minuti](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
-## <a name="create-an-azure-databricks-workspace"></a>Creare un'area di lavoro Azure Databricks
+## <a name="create-an-azure-databricks-workspace"></a>Creare un'area di lavoro di Azure Databricks
 
 > [!Note]
-> Questa esercitazione non può essere eseguita con la **sottoscrizione della versione di valutazione gratuita di Azure**.
-> Se si dispone di un account gratuito, passare al proprio profilo e modificare la sottoscrizione con **pagamento in base**al consumo. Per altre informazioni, vedere [account gratuito di Azure](https://azure.microsoft.com/free/). Quindi, [rimuovere il limite di spesa](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)e [richiedere un aumento della quota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) per vCPU nella propria area. Quando si crea l'area di lavoro di Azure Databricks, è possibile selezionare il piano tariffario per la **versione di valutazione (dbus gratuita a 14 giorni)** per concedere all'area di lavoro l'accesso gratuito a Azure Databricks dbus Premium per 14 giorni.
+> Questa esercitazione non può essere eseguita usando una **sottoscrizione di valutazione gratuita di Azure**.
+> Se l'utente ha un account gratuito, andare al proprio profilo e modificare la sottoscrizione a **con pagamento in base al consumo**. Per altre informazioni, vedere [Account gratuito di Azure](https://azure.microsoft.com/free/). Quindi [rimuovere il limite di spesa](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) e [richiedere un aumento della quota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) per le vCPU nell'area dell'utente. Quando si crea l'area di lavoro Azure Databricks, è possibile selezionare il piano tariffario **Versione di valutazione (Premium - Unità Databricks gratuite per 14 giorni)** per concedere l'accesso gratuito Premium per 14 giorni dell'area di lavoro alle Unità Databricks di Azure.
 
-In questa sezione si crea un'area di lavoro Azure Databricks usando il portale di Azure.
+In questa sezione viene creata un'area di lavoro di Azure Databricks usando il portale di Azure.
 
-1. Nella portale di Azure selezionare **Crea una risorsa** > **Analytics** > **Azure Databricks**.
+1. Nel portale di Azure selezionare **Crea una risorsa** > **Analisi** > **Azure Databricks**.
 
    ![Creare una risorsa Azure Databricks in portale di Azure](./media/databricks-deployment/create-databricks-resource.png)
 
-2. In **Azure Databricks Service**specificare i valori per creare un'area di lavoro di databricks.
+2. Nella pagina **Servizio Azure Databricks** specificare i valori per creare un'area di lavoro di Databricks.
 
     |proprietà  |Descrizione  |
     |---------|---------|
-    |**Nome area di lavoro**     | Specificare un nome per l'area di lavoro di databricks.        |
-    |**Sottoscrizione**     | Dall'elenco a discesa selezionare la sottoscrizione di Azure.        |
-    |**Gruppo di risorse**     | Specificare se si vuole creare un nuovo gruppo di risorse o utilizzarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. Per altre informazioni, vedere [Panoramica del gruppo di risorse di Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
+    |**Nome area di lavoro**     | Specificare un nome per l'area di lavoro di Databricks.        |
+    |**Sottoscrizione**     | Selezionare la sottoscrizione di Azure nell'elenco a discesa.        |
+    |**Gruppo di risorse**     | Specificare se si vuole creare un nuovo gruppo di risorse o usarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. Per altre informazioni, vedere [Panoramica di Gestione risorse di Microsoft Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Posizione**     | Selezionare l'area preferita. Per informazioni sulle aree disponibili, vedere [servizi di Azure disponibili in base all'area](https://azure.microsoft.com/regions/services/).        |
-    |**Piano tariffario**     |  Scegliere tra **standard**, **Premium**o **versione di valutazione**. Per altre informazioni su questi livelli, vedere la [pagina dei prezzi di databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
+    |**Piano tariffario**     |  Scegliere tra **Standard**, **Premium** e **Versione di valutazione**. Per altre informazioni su questi piani tariffari, vedere la [pagina dei prezzi di Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Rete virtuale**     |   No       |
 
-3. Scegliere **Crea**. La creazione dell'area di lavoro richiede alcuni minuti. Durante la creazione dell'area di lavoro, è possibile visualizzare lo stato di distribuzione nelle **notifiche**.
+3. Scegliere **Crea**. La creazione dell'area di lavoro richiede alcuni minuti, durante i quali è possibile visualizzare lo stato della distribuzione in **Notifiche**.
 
 ## <a name="install-azure-databricks-tools"></a>Installare gli strumenti di Azure Databricks
 
@@ -130,7 +130,7 @@ Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-int
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **In Linux:**
@@ -175,7 +175,7 @@ In questa sezione vengono caricati diversi file in DBFS in modo che il cluster d
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
 
-## <a name="create-a-job"></a>Creazione di un processo
+## <a name="create-a-job"></a>Creare un processo
 
 L'app viene eseguita in Azure Databricks tramite un processo che esegue **Spark-Submit**, che è il comando usato per eseguire .net per Apache Spark processi.
 
