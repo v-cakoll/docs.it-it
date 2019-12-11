@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978345"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960123"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Risoluzione dei problemi relativi ad applicazioni ibride
 <a name="introduction"></a> Questo argomento illustra alcuni problemi comuni che possono verificarsi durante la creazione di applicazioni che usano tecnologie sia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], sia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -36,11 +36,11 @@ ms.locfileid: "73978345"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hanno modelli di ridimensionamento diversi. Alcune trasformazioni di ridimensionamento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno valore per i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], ma non tutte. Ad esempio, è possibile ridimensionare un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] fino a 0, ma se si prova a riportare lo stesso controllo su un valore diverso da 0, le dimensioni del controllo rimarranno invariate. Per altre informazioni, vedere [Considerazioni sul layout per l'elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
-## <a name="adapter"></a>Adattatore  
+## <a name="adapter"></a>Adapter  
  È possibile che si verifichino confusione quando si utilizzano le classi <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost>, perché includono un contenitore nascosto. Entrambe le classi <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> hanno un contenitore nascosto, denominato *Adapter*, che usano per ospitare il contenuto. Per l'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, l'adapter deriva dalla classe <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType>. Per il controllo <xref:System.Windows.Forms.Integration.ElementHost>, l'adapter deriva dall'elemento <xref:System.Windows.Controls.DockPanel>. I riferimenti all'adattatore presenti in altri argomenti sull'interoperabilità alludono a tale contenitore.  
   
 <a name="nesting"></a>   
-## <a name="nesting"></a>Annidamento  
+## <a name="nesting"></a>Nidificazione  
  Annidamento di un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> all'interno di un controllo <xref:System.Windows.Forms.Integration.ElementHost> non supportato. Anche l'annidamento di un controllo <xref:System.Windows.Forms.Integration.ElementHost> all'interno di un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> non è supportato.  
   
 <a name="focus"></a>   
@@ -50,7 +50,7 @@ ms.locfileid: "73978345"
  Lo stato attivo influisce anche sulla convalida dei dati. La convalida funziona in un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, ma non funziona quando si esce dalla tabulazione dell'elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> o tra due elementi <xref:System.Windows.Forms.Integration.WindowsFormsHost> diversi.  
   
 <a name="property_mapping"></a>   
-## <a name="property-mapping"></a>Mapping di proprietà  
+## <a name="property-mapping"></a>Mapping proprietà  
  Alcuni mapping di proprietà richiedono un'interpretazione estensiva per integrare implementazioni dissimili tra le tecnologie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. I mapping di proprietà consentono al codice di rispondere alle modifiche apportate ai tipi di carattere, ai colori e ad altre proprietà. In generale, i mapping di proprietà funzionano rimanendo in ascolto di eventi *Property*Changed o chiamate On*Property*Changed e impostando le proprietà adeguate sul controllo figlio o sul relativo adattatore. Per altre informazioni, vedere [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
@@ -86,7 +86,7 @@ ms.locfileid: "73978345"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Abilitazione degli stili di visualizzazione  
- Gli stili di visualizzazione [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] di un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] potrebbero non essere abilitati. Il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> viene chiamato nel modello per un'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Sebbene questo metodo non venga chiamato per impostazione predefinita, se si usa Visual Studio per creare un progetto, si otterranno [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] stili di visualizzazione per i controlli, se è disponibile la versione 6,0 di Comctl32. dll. Prima di creare handle nel thread, è necessario chiamare il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Per altre informazioni, vedere [Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Gli stili di visualizzazione di Microsoft Windows XP in un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] potrebbero non essere abilitati. Il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> viene chiamato nel modello per un'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Sebbene questo metodo non venga chiamato per impostazione predefinita, se si utilizza Visual Studio per creare un progetto, si otterranno gli stili di visualizzazione di Microsoft Windows XP per i controlli, se è disponibile la versione 6,0 di Comctl32. dll. Prima di creare handle nel thread, è necessario chiamare il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Per altre informazioni, vedere [Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Controlli con licenza  

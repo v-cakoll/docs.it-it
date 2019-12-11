@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802108"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960158"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Definizione di XPDM e WDDM  
- Alcune impostazioni del Registro di sistema per il rendering della grafica hanno valori predefiniti diversi, a seconda che la scheda video usi un driver XPDM o WDDM. XPDM è il modello di driver video di [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] e WDDM è il modello di driver video di Windows. WDDM è disponibile nei computer che eseguono Windows Vista e Windows 7. XPDM è disponibile nei computer che eseguono Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]e [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Per altre informazioni su WDDM, vedere [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guida alla progettazione del modello di driver video di Windows).  
+ Alcune impostazioni del Registro di sistema per il rendering della grafica hanno valori predefiniti diversi, a seconda che la scheda video usi un driver XPDM o WDDM. XPDM è il modello di driver di visualizzazione di Microsoft Windows XP e WDDM è il modello di driver di visualizzazione di Windows. WDDM è disponibile nei computer che eseguono Windows Vista e Windows 7. XPDM è disponibile nei computer che eseguono Windows Vista, Microsoft Windows XP e [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Per altre informazioni su WDDM, vedere [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guida alla progettazione del modello di driver video di Windows).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
@@ -57,7 +57,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- Il **valore di multisample massimo** consente di regolare la quantità massima di anti-aliasing del contenuto 3D. Utilizzare questo livello per disabilitare l'anti-aliasing 3D in Windows Vista o abilitarlo in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ Il **valore di multisample massimo** consente di regolare la quantità massima di anti-aliasing del contenuto 3D. Utilizzare questo livello per disabilitare l'anti-aliasing 3D in Windows Vista.  
   
  Il **valore massimo di multicampionamento** è un valore DWORD che va da 0 a 16. Il valore 0 specifica che deve essere disabilitato l'anti-aliasing di multicampionamento del contenuto 3D, e un valore pari a 16 tenterà di usare fino a 16x dell'anti-aliasing di multicampionamento, se supportato dalla scheda video. Tenere presente che l'impostazione di questo valore della chiave del registro di sistema nei computer che usano driver XPDM provocherà l'uso di una grande quantità di memoria video aggiuntiva da parte delle applicazioni, riducendo le prestazioni del rendering 3D e presentando la possibilità di introdurre errori e stabilità di rendering problemi.  
   

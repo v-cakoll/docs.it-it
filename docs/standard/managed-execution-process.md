@@ -1,5 +1,5 @@
 ---
-title: processo di esecuzione gestita
+title: Processo di esecuzione gestita
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121997"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960382"
 ---
-# <a name="managed-execution-process"></a>processo di esecuzione gestita
+# <a name="managed-execution-process"></a>Processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
   
 1. [Scelta di un compilatore](#choosing_a_compiler).  
@@ -95,7 +95,7 @@ ms.locfileid: "73121997"
   
  Durante l'esecuzione, il codice gestito riceve servizi come Garbage Collection, sicurezza, interoperabilità con codice non gestito, supporto per il debug tra linguaggi e supporto migliorato per distribuzione e controllo delle versioni.  
   
- In Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] e [!INCLUDE[windowsver](../../includes/windowsver-md.md)]il caricatore del sistema operativo controlla la presenza di moduli gestiti esaminando un bit nell'intestazione COFF. Il bit impostato denota un modulo gestito. Se il caricatore rileva moduli gestiti, carica mscoree.dll e `_CorValidateImage` e `_CorImageUnloading` notificano al caricatore l'avvenuto caricamento o scaricamento delle immagini dei moduli gestiti. `_CorValidateImage` esegue le azioni seguenti:  
+ In Microsoft Windows Vista, il caricatore del sistema operativo controlla la presenza di moduli gestiti esaminando un bit nell'intestazione COFF. Il bit impostato denota un modulo gestito. Se il caricatore rileva moduli gestiti, carica mscoree.dll e `_CorValidateImage` e `_CorImageUnloading` notificano al caricatore l'avvenuto caricamento o scaricamento delle immagini dei moduli gestiti. `_CorValidateImage` esegue le azioni seguenti:  
   
 1. Assicura che il codice sia codice gestito valido.  
   

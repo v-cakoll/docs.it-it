@@ -2,17 +2,19 @@
 title: Integrazione di WPF e WF in XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: e873e3ca8a2b07cfc4de332b0af3f5bfd25f2d40
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b8015e5c526f58875beb58ab48a21c050bdc8a06
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710942"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960083"
 ---
-# <a name="wpf-and-wf-integration-in-xaml"></a>Integrazione di WPF e WF in XAML
-In questo esempio viene illustrato come creare un'applicazione che utilizza le funzionalità di Windows Presentation Foundation (WPF) e Windows Workflow Foundation (WF) in un unico documento XAML. A tale scopo, l'esempio utilizza Windows Workflow Foundation (WF) e l'estendibilità XAML.
+# <a name="wpf-and-windows-workflow-foundation-integration-in-xaml"></a>Integrazione di WPF e Windows Workflow Foundation in XAML
+
+In questo esempio viene illustrato come creare un'applicazione che utilizza le funzionalità di Windows Presentation Foundation (WPF) e Windows Workflow Foundation (WF) in un unico documento XAML. A tale scopo, nell'esempio vengono utilizzati Windows Workflow Foundation e l'estendibilità XAML.
 
 ## <a name="sample-details"></a>Dettagli dell'esempio
+
  Il file ShowWindow.xaml viene deserializzato in un'attività <xref:System.Activities.Statements.Sequence> con due variabili di stringa modificate dalle attività della sequenza: `ShowWindow` e `WriteLine`. L'attività <xref:System.Activities.Statements.WriteLine> invia come output alla finestra della console l'espressione che assegna alla proprietà <xref:System.Activities.Statements.WriteLine.Text%2A>. L'attività `ShowWindow` Visualizza una finestra WPF come parte della relativa logica di esecuzione. La proprietà <xref:System.Activities.ActivityContext.DataContext%2A> della finestra include le variabili dichiarate nella sequenza. I controlli della finestra dichiarati nell'attività `ShowWindow` usano l'associazione dati per modificare tali variabili. Infine, nella finestra è contenuto un controllo pulsante. L'evento `Click` per il pulsante viene gestito da un oggetto <xref:System.Activities.ActivityDelegate> denominato `MarkupExtension` che contiene un'attività `CloseWindow`. `MarkUpExtension` richiama l'attività esterna che fornisce come contesto tutti gli oggetti identificati da un oggetto `x:Name` nonché l'oggetto <xref:System.Activities.ActivityContext.DataContext%2A> della finestra contenitore. Pertanto, l'oggetto `CloseWindow.InArgument<Window>` può essere associato usando un'espressione che fa riferimento al nome della finestra.
 
  L'attività `ShowWindow` deriva dalla classe <xref:System.Activities.AsyncCodeActivity%601> per visualizzare una finestra WPF e viene completata quando la finestra viene chiusa. La proprietà `Window` è di tipo `Func<Window>`, il quale consente la creazione della finestra su richiesta per ogni esecuzione dell'attività. La proprietà `Window` usa un oggetto <xref:System.Xaml.XamlDeferringLoader> per abilitare questo modello di valutazione posticipato. L'oggetto `FuncFactoryDeferringLoader` consente di acquisire un oggetto `XamlReader` durante la serializzazione e di leggerlo durante l'esecuzione di attività.
@@ -24,23 +26,23 @@ In questo esempio viene illustrato come creare un'applicazione che utilizza le f
 > [!NOTE]
 > La finestra di progettazione predefinita non supporta l'attività ShowWindow; pertanto, il file ShowWindow.Xaml non viene visualizzato correttamente nella finestra di progettazione.
 
-#### <a name="to-use-this-sample"></a>Per usare questo esempio
+## <a name="run-the-sample"></a>Eseguire l'esempio
 
-1. Con Visual Studio 2010 aprire il file della soluzione WPFWFIntegration. sln.
+1. Con Visual Studio aprire il file della soluzione WPFWFIntegration. sln.
 
-2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere **Ctrl**+**MAIUSC**+**B**.
 
-3. Per eseguire la soluzione, premere F5.
+3. Per eseguire la soluzione, premere **F5**.
 
 4. Digitare il proprio nome e cognome nella finestra di dialogo.
 
 5. Chiudere la finestra di dialogo; la console restituirà il nome.
 
 > [!IMPORTANT]
-> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

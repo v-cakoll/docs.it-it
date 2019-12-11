@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283795"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960371"
 ---
 # <a name="combobox-styles-and-templates"></a>Stili e modelli di ComboBox
 In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ComboBox>. È possibile modificare il <xref:System.Windows.Controls.ControlTemplate> predefinito per dare al controllo un aspetto univoco. Per altre informazioni, vedere [creare un modello per un controllo](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +22,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 ## <a name="combobox-parts"></a>Parti ComboBox  
  Nella tabella seguente sono elencate le parti denominate per il controllo <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Type|Descrizione|  
+|Componente|Tipo di|Descrizione|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contiene il testo della <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Elenco a discesa che contiene gli elementi nella casella combinata.|  
@@ -56,7 +56,7 @@ In questo argomento vengono descritti gli stili e i modelli per il controllo <xr
 |-|-|-|  
 |Normale|CommonStates|Stato predefinito.|  
 |Disabilitato|CommonStates|Il controllo è disabilitato.|  
-|MouseOver|CommonStates|Il puntatore del mouse si trova sul controllo <xref:System.Windows.Controls.ComboBox>.|  
+|MouseOver|CommonStates|Il puntatore del mouse si trova sul controllo <xref:System.Windows.Controls.ComboBoxItem>.|  
 |Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
 |Selected|SelectionStates|L'elemento è attualmente selezionato.|  

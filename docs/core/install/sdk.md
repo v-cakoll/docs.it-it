@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 5ac2d7897ee4c6707669e4f9104317aeb2e1f473
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835682"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959832"
 ---
 # <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
@@ -49,7 +49,7 @@ macOS dispone di programmi di installazione autonomi che possono essere usati pe
 Per estrarre l'SDK e rendere disponibili i comandi nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, aprire un terminale ed eseguire i comandi seguenti.
 
 ```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
@@ -157,7 +157,7 @@ Per impostazione predefinita, lo script installa la versione più recente del [s
 
 È possibile scaricare e installare .NET Core direttamente con uno dei collegamenti seguenti:
 
-- [Download di .NET Core 3,1 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Download di .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [Download di .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [Download di .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [Download di .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)

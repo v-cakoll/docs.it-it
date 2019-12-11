@@ -2,12 +2,12 @@
 title: Associazione HTTP WS 2007 Federation
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714979"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960187"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Associazione HTTP WS 2007 Federation
 
@@ -119,7 +119,7 @@ Il file *Setup. bat* incluso in questo esempio consente di configurare il server
 
 1. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-2. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md). Se si utilizza [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], è necessario eseguire *Service. exe*, *client. exe*e *SecurityTokenService. exe* con privilegi elevati (fare clic con il pulsante destro del mouse sui file e quindi scegliere **Esegui come amministratore**).
+2. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](running-the-samples.md). Se si utilizza Windows Vista, è necessario eseguire *Service. exe*, *client. exe*e *SecurityTokenService. exe* con privilegi elevati (fare clic con il pulsante destro del mouse sui file e quindi scegliere **Esegui come amministratore**).
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
