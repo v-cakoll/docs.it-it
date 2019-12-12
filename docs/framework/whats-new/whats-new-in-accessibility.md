@@ -167,7 +167,7 @@ Nelle applicazioni destinate a .NET Framework 4.7.2 e versioni precedenti un con
 
 La figura seguente mostra la descrizione comando visualizzata quando l'utente seleziona un pulsante con la tastiera.
 
-![Screenshot of tooltip when user navigates to button with the keyboard.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
+![Screenshot della descrizione comando quando l'utente passa al pulsante con la tastiera.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
@@ -187,7 +187,7 @@ In .NET Framework 4.7.2, WPF ha aggiunto la possibilità di disegnare una selezi
 
 Per usare questa proprietà, è sufficiente aggiungerla al codice XAML e usare il pennello o l'associazione appropriata. La selezione testo risultante è simile alla seguente:
 
-![Screenshot of the app running with the words Hello World selected.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
+![Screenshot dell'app in esecuzione con le parole Hello World selezionate.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 È possibile usare insieme le proprietà `SelectionBrush` e `SelectionTextBrush` per generare qualsiasi combinazione di colore primo piano e colore di sfondo che si ritiene appropriata.
 
@@ -445,10 +445,10 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - L'enumerazione <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, che definisce le i valori **LiveSetting** possibili seguenti:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. L'elemento non invia notifiche se il contenuto dell'area attiva è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.
 
 È possibile creare un'area dinamica impostando la proprietà **AutomationProperties.LiveSetting** sull'elemento di interesse, come illustrato nell'esempio seguente:
 
@@ -472,85 +472,85 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Contrasto elevato**
 
-A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. tra cui:
+A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. Sono inclusi:
 
 - Controllo <xref:System.Windows.Controls.Expander>
 
-  L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Esempio:
+  L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Ad esempio:
 
   Prima: 
 
-  ![Screenshot of the expander control with focus and no focus visual.](./media/whats-new-in-accessibility/expander-control-before.png)
+  ![Screenshot del controllo Expander con lo stato attivo e nessun oggetto visivo dello stato attivo.](./media/whats-new-in-accessibility/expander-control-before.png)
 
   Dopo: 
 
-  ![Screenshot of the expander control with focus showing a dotted line around the control's text.](./media/whats-new-in-accessibility/expander-control-after.png)
+  ![Screenshot del controllo Expander con lo stato attivo che mostra una linea tratteggiata intorno al testo del controllo.](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - Controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
-  Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Esempio:
+  Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Ad esempio:
 
   Prima: 
 
-  ![Screenshot of radio and check buttons with poor text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
+  ![Screenshot dei pulsanti di opzione e controllo con visibilità del testo insufficiente sui temi a contrasto elevato.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
   Dopo: 
 
-  ![Screenshot of radio and check buttons with better text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
+  ![Screenshot dei pulsanti di opzione e controllo con visibilità del testo migliore sui temi a contrasto elevato.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - Controllo <xref:System.Windows.Controls.ComboBox>
 
-  A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Esempio:
+  A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Ad esempio:
 
   Prima: 
 
-  ![Screenshot of a disabled ComboBox with border and control text in different colors.](./media/whats-new-in-accessibility/combo-disabled-before.png)
+  ![Screenshot di un controllo ComboBox disabilitato con il testo del bordo e del controllo in colori diversi.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
   Dopo:   
 
-  ![Screenshot of a disabled ComboBox with border the same color as the control text.](./media/whats-new-in-accessibility/combo-disabled-after.png)
+  ![Screenshot di un controllo ComboBox disabilitato con bordo con lo stesso colore del testo del controllo.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   Inoltre, i pulsanti con lo stato attivo e disabilitati usano il colore del tema corretto.
 
   Prima:
 
-  ![Screenshot of a black button with gray text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![Screenshot di un pulsante nero con testo grigio che afferma lo stato attivo.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
   Dopo: 
 
-  ![Screenshot of a blue button with black text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![Screenshot di un pulsante blu con testo nero che indica lo stato attivo.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
-  Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Esempio:
+  Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Ad esempio:
 
   Prima: 
 
-  ![Screenshot of a ComboBox control with an invisible drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![Screenshot di un controllo ComboBox con una freccia a discesa invisibile.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
   Dopo: 
 
-  ![Screenshot of a ComBoxBox control displaying the drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![Screenshot di un controllo ComBoxBox che visualizza la freccia a discesa.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
 - Controllo <xref:System.Windows.Controls.DataGrid>
 
-  A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Esempio:
+  A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Ad esempio:
 
   Prima: 
 
-  ![Screenshot of sort indicator arrow before improvements.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![Screenshot della freccia dell'indicatore di ordinamento prima dei miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
   Dopo:   
 
-  ![Screenshot of sort indicator arrow after improvements.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![Screenshot della freccia dell'indicatore di ordinamento dopo i miglioramenti.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
   Inoltre, in .NET Framework 4.7 e versioni precedenti, per lo stile di collegamento predefinito viene usato un colore non corretto al passaggio del mouse in modalità a contrasto elevato. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Analogamente, le colonne della casella di controllo per i controlli <xref:System.Windows.Controls.DataGrid> usano i colori previsti per il riscontro dello stato attivo della tastiera a partire da .NET Framework 4.7.1.
 
   Prima: 
 
-  ![Screenshot of a link saying Click Me! in red.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![Screenshot di un collegamento che dice clic su me. in rosso.](./media/whats-new-in-accessibility/default-link-style-before.png) 
 
   Dopo:    
 
-  ![Screenshot of a link saying Click Me! in yellow.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![Screenshot di un collegamento che dice clic su me. in giallo.](./media/whats-new-in-accessibility/default-link-style-after.png) 
 
 Per altre informazioni sui miglioramenti per l'accessibilità di WPF in .NET Framework 4.7.1, vedere [Miglioramenti di accessibilità in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -577,15 +577,15 @@ Alcuni esempi di modifiche per il contrasto elevato includono:
 
 - Il testo in un controllo <xref:System.Windows.Forms.Button> selezionato è contrastato rispetto al colore della selezione.
 
-- Il testo disabilitato è più facile da leggere. Esempio:
+- Il testo disabilitato è più facile da leggere. Ad esempio:
 
   Prima:
 
-  ![Screenshot of an app that uses different controls running in high contrast mode before accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![Screenshot di un'app che usa diversi controlli eseguiti in modalità a contrasto elevato prima dei miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
   Dopo:
 
-  ![Screenshot of an app that uses different controls running in high contrast mode after accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![Screenshot di un'app che usa diversi controlli eseguiti in modalità a contrasto elevato dopo i miglioramenti dell'accessibilità.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
 - Miglioramenti per il contrasto elevato nella finestra di dialogo di eccezione del thread.
 
@@ -626,7 +626,7 @@ A partire da .NET Framework 4.7.1, Windows Forms include:
 
 ### <a name="aspnet-web-controls"></a>Controlli Web ASP.NET
 
-Starting with .NET Framework 4.7.1 and Visual Studio 2017 version 15.3, ASP.NET improves how ASP.NET web controls work with accessibility technology in Visual Studio. Le modifiche includono quanto segue:
+A partire da .NET Framework 4.7.1 e Visual Studio 2017 versione 15,3, ASP.NET migliora il funzionamento dei controlli Web ASP.NET con la tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
 
 - Modifiche per implementare criteri di accessibilità dell'interfaccia utente mancanti nei controlli, come la finestra di dialogo **Aggiungi campo** nella procedura guidata **Visualizzazione dettagli** o la finestra di dialogo **Configura ListView** nella procedura guidata **ListView**.
 
