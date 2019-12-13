@@ -2,12 +2,12 @@
 title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955314"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837974"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifici. Ad esempio, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition non implementa i protocolli di autenticazione SSPI o Kerberos e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows su tale piattaforma. Quando si esegue WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e autenticazione integrata HTTP/HTTPS.  
@@ -18,7 +18,7 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
  Quando un client WCF effettua chiamate asincrone a un servizio WCF utilizzando l'autenticazione di Windows sotto rappresentazione, potrebbe verificarsi l'autenticazione con l'identità del processo client anziché con l'identità rappresentata.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP con cookie di token del contesto di sicurezza attivo  
- WCF non supporta la rappresentazione e viene generata un' <xref:System.InvalidOperationException> eccezione quando sussistono le condizioni seguenti:  
+ WCF non supporta la rappresentazione e viene generata un'<xref:System.InvalidOperationException> quando sussistono le condizioni seguenti:  
   
 - Il sistema operativo è [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -28,15 +28,15 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
   
 - Viene creato un token del contesto di sicurezza SCT (Security Context Token) basato sullo stato. Per impostazione predefinita, la creazione è disattivata.  
   
- Il token SCT basato sullo stato può essere creato solo tramite un'associazione personalizzata. Per altre informazioni, vedere [Procedura: Creare un token del contesto di sicurezza per una](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sessione protetta. In codice, per attivare il token occorre creare un elemento di associazione di sicurezza (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizzando il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> e impostando il parametro `requireCancellation` su `false`. Il parametro fa riferimento alla memorizzazione nella cache del token SCT. L'impostazione del valore su `false` comporta l'attivazione della funzionalità del token SCT basato sullo stato.  
+ Il token SCT basato sullo stato può essere creato solo tramite un'associazione personalizzata. Per altre informazioni, vedere [Procedura: Creare un token del contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Nel codice, il token viene abilitato creando un elemento di associazione di sicurezza (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizzando il <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> e impostando il `requireCancellation` parametro su `false`. Il parametro fa riferimento alla memorizzazione nella cache del token SCT. L'impostazione del valore su `false` comporta l'attivazione della funzionalità del token SCT basato sullo stato.  
   
- In alternativa, in configurazione il token viene abilitato creando un <`customBinding`>, quindi aggiungendo un elemento <`security`> e impostando l' `authenticationMode` attributo su SecureConversation e l' `requireSecurityContextCancellation` attributo su `true`.  
+ In alternativa, in configurazione il token viene abilitato creando un <`customBinding`>, quindi aggiungendo un <`security`> elemento e impostando l'attributo `authenticationMode` su SecureConversation e l'attributo `requireSecurityContextCancellation` su `true`.  
   
 > [!NOTE]
 > I requisiti precedenti sono specifici. Ad esempio, il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento di associazione che genera un'identità Windows senza tuttavia creare un token SCT. È pertanto possibile utilizzare questa identità con l'opzione `Required` di [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Possibile conflitto con ASP.NET  
- WCF e ASP.NET possono abilitare o disabilitare la rappresentazione. Quando ASP.NET ospita un'applicazione WCF, è possibile che esista un conflitto tra le impostazioni di configurazione di WCF e ASP.NET. In caso di conflitto, l'impostazione WCF ha la precedenza, a meno <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> che la proprietà non <xref:System.ServiceModel.ImpersonationOption.NotAllowed>sia impostata su, nel qual caso l'impostazione di rappresentazione ASP.NET ha la precedenza.  
+ WCF e ASP.NET possono abilitare o disabilitare la rappresentazione. Quando ASP.NET ospita un'applicazione WCF, è possibile che esista un conflitto tra le impostazioni di configurazione di WCF e ASP.NET. In caso di conflitto, l'impostazione WCF ha la precedenza, a meno che la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> non sia impostata su <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, nel qual caso l'impostazione di rappresentazione ASP.NET ha la precedenza.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Possibilità di esito negativo dei caricamenti dell'assembly in caso di utilizzo della rappresentazione  
  Se il contesto rappresentato non dispone delle autorizzazioni di accesso per caricare un assembly e se è la prima volta che il Common Language Runtime (CLR) tenta di caricare l'assembly per tale dominio applicazione, il dominio <xref:System.AppDomain> memorizza l'errore nella cache. I tentativi successivi di caricamento dell'assembly (o degli assembly) hanno esito negativo, anche dopo aver ripristinato la rappresentazione e anche se il contesto ripristinato dispone delle autorizzazioni di accesso per caricare l'assembly. Ciò è dovuto al fatto che CLR non esegue nuovi tentativi di caricamento dopo che il contesto utente è cambiato. Per risolvere il problema è necessario riavviare il dominio applicazione.  
@@ -62,7 +62,7 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
  La crittografia AES conforme agli standard FIPS non funziona nei callback duplex nel contesto di una rappresentazione di livello di identificazione.  
   
 ### <a name="cngksp-certificates"></a>Certificati CNG/KSP  
- *API di crittografia: Next Generation (CNG)* è la sostituzione a lungo termine per CryptoAPI. Questa API è disponibile nel codice non gestito in [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] e versioni successive di Windows.  
+ *API di crittografia: Next Generation (CNG)* è la sostituzione a lungo termine per CryptoAPI. Questa API è disponibile nel codice non gestito in Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] e versioni successive di Windows.  
   
  .NET Framework 4.6.1 e versioni precedenti non supportano questi certificati poiché utilizzano la CryptoAPI legacy per gestire i certificati CNG/KSP. L'uso di questi certificati con .NET Framework 4.6.1 e versioni precedenti provocherà un'eccezione.  
   
@@ -70,14 +70,14 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
   
 - Eseguire `p/invoke` di `CertGetCertificateContextProperty` e controllare `dwProvType` sulla proprietà `CertGetCertificateContextProperty` restituita.  
   
-- Usare il `certutil` comando dalla riga di comando per eseguire query sui certificati. Per ulteriori informazioni, vedere [attività certutil per la risoluzione dei problemi relativi ai certificati](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Usare il comando `certutil` dalla riga di comando per eseguire query sui certificati. Per ulteriori informazioni, vedere [attività certutil per la risoluzione dei problemi relativi ai certificati](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Errore di sicurezza a livello di messaggio quando si utilizza la rappresentazione ASP.NET e la compatibilità con ASP.NET è obbligatoria  
  WCF non supporta la seguente combinazione di impostazioni perché può impedire che si verifichi l'autenticazione client:  
   
-- La rappresentazione ASP.NET è abilitata. Questa operazione viene eseguita nel file Web. config impostando l' `impersonate` attributo dell'elemento <`identity`> su `true`.  
+- La rappresentazione ASP.NET è abilitata. Questa operazione viene eseguita nel file Web. config impostando l'attributo `impersonate` della <`identity`elemento > su `true`.  
   
-- La modalità di compatibilità ASP.NET è abilitata `aspNetCompatibilityEnabled` impostando l'attributo [ \<di serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) su. `true`  
+- La modalità di compatibilità ASP.NET è abilitata impostando l'attributo `aspNetCompatibilityEnabled` del [>\<ServiceHostingEnvironment](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) su `true`.  
   
 - Viene utilizzata la protezione a livello di messaggio.  
   
@@ -93,11 +93,11 @@ Per diversi motivi, Windows Communication Foundation (WCF) non supporta alcuni s
   
  Un esempio di questa situazione è dato da un servizio con i tre indirizzi endpoint seguenti:  
   
-- `http://localhost/CalculatorService/service`(servizio)  
+- `http://localhost/CalculatorService/service` (servizio)  
   
-- `http://localhost/CalculatorService/issue_ticket`(STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
-- `http://localhost/CalculatorService/mex`(endpoint dei metadati)  
+- `http://localhost/CalculatorService/mex` (endpoint dei metadati)  
   
  Viene generata un'eccezione.  
   
