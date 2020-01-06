@@ -2,12 +2,12 @@
 title: Resilienza della piattaforma Azure
 description: Architettura di app .NET cloud native per Azure | Resilienza dell'infrastruttura cloud con Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520765"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337382"
 ---
 # <a name="azure-platform-resiliency"></a>Resilienza della piattaforma Azure
 
@@ -26,11 +26,11 @@ Comprendere il modo in cui queste caratteristiche interagiscono e il modo in cui
 
 Gli errori variano nell'ambito dell'effetto. Un errore hardware, ad esempio un disco guasto, può interessare un singolo nodo in un cluster. Uno switch di rete con errore potrebbe influire su un intero rack server. Errori meno comuni, ad esempio la perdita di energia, potrebbero causare l'interruzione di un intero data center. Raramente, un'intera area diventa non disponibile.
 
-La [ridondanza](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) è un modo per garantire la resilienza dell'applicazione. Il livello di ridondanza esatto necessario dipende dai requisiti aziendali e influirà sia sui costi che sulla complessità del sistema. Ad esempio, una distribuzione in più aree è più costosa e più complessa da gestire rispetto a una distribuzione in una singola area. Sono necessarie procedure operative per gestire il failover e il failback. I costi e la complessità aggiuntivi possono essere giustificati per alcuni scenari aziendali e non per altri.
+La [ridondanza](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) è un modo per garantire la resilienza dell'applicazione. Il livello di ridondanza esatto necessario dipende dai requisiti aziendali e influirà sia sui costi che sulla complessità del sistema. Ad esempio, una distribuzione in più aree è più costosa e più complessa da gestire rispetto a una distribuzione in una singola area. Sono necessarie procedure operative per gestire il failover e il failback. L'incremento dei costi e la maggiore complessità potrebbero essere giustificabili per alcuni scenari aziendali e non per altri.
 
 Per la ridondanza degli architetti, è necessario identificare i percorsi critici nell'applicazione e quindi determinare se è presente una ridondanza in ogni punto del percorso. Se un sottosistema ha esito negativo, verrà eseguito il failover dell'applicazione in un altro? Infine, è necessario conoscere in modo chiaro le funzionalità incorporate nella piattaforma cloud di Azure che è possibile sfruttare per soddisfare i requisiti di ridondanza. Di seguito sono riportati alcuni suggerimenti per l'architettura della ridondanza:
 
-- *Distribuire più istanze dei servizi.* Se l'applicazione dipende da una singola istanza di un servizio, viene creato un singolo punto di errore. Il provisioning di più istanze migliora sia la resilienza che la scalabilità. Quando si esegue l'hosting nel servizio Azure Kubernetes, è possibile configurare in modo dichiarativo istanze ridondanti (set di repliche) nel file manifesto Kubernetes. Il valore del numero di repliche può essere gestito a livello di codice, nel portale o tramite le funzionalità di scalabilità automatica, che verranno discusse in un secondo momento.
+- *Distribuire più istanze di servizi.* Se l'applicazione dipende da una singola istanza di un servizio, crea un singolo punto di errore. Il provisioning di più istanze migliora sia la resilienza che la scalabilità. Quando si esegue l'hosting nel servizio Azure Kubernetes, è possibile configurare in modo dichiarativo istanze ridondanti (set di repliche) nel file manifesto Kubernetes. Il valore del numero di repliche può essere gestito a livello di codice, nel portale o tramite le funzionalità di scalabilità automatica, che verranno discusse in un secondo momento.
 
 - *Uso di un servizio di bilanciamento del carico.* Il bilanciamento del carico distribuisce le richieste dell'applicazione a istanze del servizio integre e rimuove automaticamente le istanze non integre dalla rotazione. Quando si esegue la distribuzione in Kubernetes, il bilanciamento del carico può essere specificato nel file manifesto Kubernetes nella sezione dei servizi.
 
@@ -78,9 +78,9 @@ Il cloud si sviluppa in scala. La possibilità di aumentare o ridurre le risorse
 
 - *Cache Redis di Azure.* Il client Redis StackExchange usa una classe di gestione connessione che include tentativi per i tentativi non riusciti. Il numero di tentativi, i criteri di ripetizione e il tempo di attesa specifici sono configurabili.
 
-- *Bus di servizio di Azure.* Il client del bus di servizio espone una [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) che può essere configurata con un intervallo di back-off, un numero di tentativi e un <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, che specifica il tempo massimo che un'operazione può assumere. I criteri predefiniti sono nove tentativi di ripetizione massimi con un periodo di backoff di 30 secondi tra i tentativi.
+- *Bus di servizio di Azure.* Il client del bus di servizio espone una [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) che può essere configurata con un intervallo di back-off, un numero di tentativi e un <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>, che specifica il tempo massimo che un'operazione può assumere. I criteri predefiniti sono nove tentativi di ripetizione massimi con un periodo di backoff di 30 secondi tra i tentativi.
 
-- *Database SQL di Azure.* Quando si usa la libreria [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) , viene fornito il supporto per i tentativi.
+- *Database SQL di Azure* Quando si usa la libreria [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) , viene fornito il supporto per i tentativi.
 
 - *Archiviazione di Azure.* La libreria client di archiviazione supporta le operazioni di ripetizione dei tentativi. Le strategie variano tra le tabelle, i BLOB e le code di archiviazione di Azure. Inoltre, i tentativi alternativi passano tra i percorsi di servizi di archiviazione primari e secondari quando è abilitata la funzionalità di ridondanza geografica.
 

@@ -4,12 +4,12 @@ description: Informazioni su come creare componenti dell'interfaccia utente riut
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088096"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337393"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crea componenti dell'interfaccia utente riutilizzabili con blazer
 
@@ -77,17 +77,17 @@ Le direttive Razor iniziano con il carattere `@` e vengono in genere usate all'i
 
 La tabella seguente riepiloga le varie direttive Razor usate in blazer e i rispettivi equivalenti Web Form ASP.NET, se esistenti.
 
-|Directive    |description|Esempio|Web Form equivalenti|
+|Directive    |Descrizione|Esempio|Web Form equivalenti|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|None|
+|`@attribute` |Aggiunge un attributo a livello di classe al componente.|`@attribute [Authorize]`|nessuna|
 |`@code`      |Aggiunge membri di classe al componente|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|Implementa l'interfaccia specificata.|`@implements IDisposable`|USA code-behind|
+|`@implements`|Implementa l'interfaccia specificata.|`@implements IDisposable`|Usare il code-behind|
 |`@inherits`  |Eredita dalla classe di base specificata|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|None|
+|`@inject`    |Inserisce un servizio nel componente|`@inject IJSRuntime JS`|nessuna|
 |`@layout`    |Specifica un componente di layout per il componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|None|
+|`@namespace` |Imposta lo spazio dei nomi per il componente|`@namespace MyNamespace`|nessuna|
 |`@page`      |Specifica la route per il componente|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |Specifica un parametro di tipo generico per il componente|`@typeparam TItem`|USA code-behind|
+|`@typeparam` |Specifica un parametro di tipo generico per il componente|`@typeparam TItem`|Usare il code-behind|
 |`@using`     |Specifica uno spazio dei nomi da inserire nell'ambito|`@using MyComponentNamespace`|Aggiungi spazio dei nomi in *Web. config*|
 
 I componenti Razor fanno anche uso estensivo degli *attributi di direttiva* sugli elementi per controllare vari aspetti del modo in cui i componenti vengono compilati (gestione degli eventi, data binding, componenti & riferimenti agli elementi e così via). Tutti gli attributi di direttiva seguono una sintassi generica comune in cui i valori tra parentesi sono facoltativi:
@@ -98,7 +98,7 @@ I componenti Razor fanno anche uso estensivo degli *attributi di direttiva* sugl
 
 Nella tabella seguente vengono riepilogati i vari attributi per le direttive Razor utilizzate in blazer.
 
-|Attributo    |description|Esempio|
+|Attributo    |Descrizione|Esempio|
 |-------------|-----------|-------|
 |`@attributes`|Esegue il rendering di un dizionario di attributi|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Crea una data binding bidirezionale    |`<input @bind="username" @bind:event="oninput" />`|
@@ -131,7 +131,7 @@ Per aggiungere membri alla classe del componente Razor, usare la direttiva `@cod
 }
 ```
 
-Poiché Razor è basato su C#, è necessario compilarlo dall'interno C# di un progetto (*csproj*). Non è possibile compilare i file con *estensione Razor* da un progetto VB (*VBPROJ*). È comunque possibile fare riferimento a progetti VB dal progetto blazer. Il contrario è true.
+Poiché Razor è basato su C#, è necessario compilarlo dall'interno C# di un progetto (*csproj*). Non è possibile compilare file con *estensione Razor* da un progetto Visual Basic (*VBPROJ*). È comunque possibile fare riferimento ai progetti Visual Basic dal progetto blazer. Il contrario è true.
 
 Per un riferimento completo sintassi Razor, vedere [riferimento sintassi Razor per ASP.NET Core](/aspnet/core/mvc/views/razor).
 
@@ -554,7 +554,7 @@ Un componente padre può quindi fornire contenuto figlio utilizzando la normale 
 </ChildContentComponent>
 ```
 
-### <a name="template-parameters"></a>Parametri di modelli
+### <a name="template-parameters"></a>Parametri modello
 
 Un componente Blazer basato su modelli può anche definire più parametri di componenti di tipo `RenderFragment` o `RenderFragment<T>`. Il parametro per un `RenderFragment<T>` può essere specificato quando viene richiamato. Per specificare un parametro di tipo generico per un componente, usare la direttiva `@typeparam` Razor.
 

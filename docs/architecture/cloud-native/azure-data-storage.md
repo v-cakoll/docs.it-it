@@ -2,12 +2,12 @@
 title: Archiviazione dati in Azure
 description: Architettura di app .NET cloud native per Azure | Archiviazione dati in Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087760"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337465"
 ---
 # <a name="data-storage-in-azure"></a>Archiviazione dati in Azure
 
@@ -63,7 +63,7 @@ Oltre allo stack di Microsoft SQL Server tradizionale, Azure offre anche version
 
 - [Ridimensionare](https://docs.microsoft.com/azure/mysql/concepts-high-availability) in base alle esigenze in pochi secondi.
 
-- Protetto per proteggere i dati sensibili inattivi e in movimento.
+- Protezione dei dati sensibili inattivi e in movimento.
 
 - [Backup automatici](https://docs.microsoft.com/azure/mysql/concepts-backup) e [ripristino temporizzato](https://docs.microsoft.com/azure/mysql/concepts-backup) per un massimo di 35 giorni.
 
@@ -131,9 +131,9 @@ La funzionalità protocollo [multimaster](https://docs.microsoft.com/azure/cosmo
 
 - Scalabilità di lettura e scrittura elastica illimitata.
 
-- 99,999% di disponibilità in lettura e scrittura in tutto il mondo.
+- Disponibilità in lettura e scrittura pari al 99,999% in tutto il mondo.
 
-- Letture e scritture garantite servite in meno di 10 millisecondi al 99 ° percentile.
+- Letture e scritture gestite in meno di 10 millisecondi nel 99% dei casi.
 
 Internamente, Cosmos DB gestisce la replica dei dati tra aree con garanzie a livello di coerenza e contratti di servizio con supporto finanziario.
 
@@ -141,7 +141,7 @@ Con le Cosmos DB [API](https://docs.microsoft.com/azure/cosmos-db/distribute-dat
 
 ### <a name="multi-model-support"></a>Supporto per più modelli
 
-Cosmos DB è una *piattaforma dati multimodello* che consente di interagire con i dati usando diversi modelli di NoSQL supportati, tra cui documenti, coppie chiave-valore, colonne a colonna ampia e rappresentazioni di grafici. Internamente, i dati vengono archiviati in un formato [struct](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) semplice costituito da tipi di dati primitivi, tra cui stringhe, bool e numeri. Per ogni richiesta, il motore di database converte i dati nella rappresentazione del modello selezionata. È possibile scegliere tra un'API proprietaria Cosmos DB basata su SQL o una qualsiasi delle [API di compatibilità](https://www.wikiwand.com/en/Cosmos_DB) illustrate nella figura 5-14.
+Cosmos DB è una *piattaforma dati multimodello* che consente di interagire con i dati usando diversi modelli NoSQL supportati, tra cui documenti, coppie chiave-valore, colonne a colonna ampia e rappresentazioni di grafici. Internamente, i dati vengono archiviati in un formato [struct](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) semplice costituito da tipi di dati primitivi, tra cui stringhe, valori booleani e numeri. Per ogni richiesta, il motore di database converte i dati nella rappresentazione del modello selezionata. È possibile scegliere tra un'API proprietaria Cosmos DB basata su SQL o una qualsiasi delle [API di compatibilità](https://www.wikiwand.com/en/Cosmos_DB) illustrate nella figura 5-14.
 
 ![Provider di Cosmos DB](./media/cosmos-db-providers.png)
 

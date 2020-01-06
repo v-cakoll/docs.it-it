@@ -2,12 +2,12 @@
 title: Cloud nativo DevOps
 description: Architettura di app .NET cloud native per Azure | Cloud nativo DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087548"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337405"
 ---
 # <a name="cloud-native-devops"></a>Cloud nativo DevOps
 
@@ -27,7 +27,7 @@ I modelli e le procedure che consentono versioni più veloci e affidabili per fo
 
 DevOps è emerso prima dei microservizi ed è probabile che lo spostamento verso i servizi più piccoli e più idonei non sarebbe stato possibile senza DevOps per rendere più semplice il rilascio e il funzionamento di una sola applicazione, ma di molte applicazioni in produzione.
 
-![Figura 11-0 le tendenze di ricerca mostrano che la crescita nei microservizi non si avvia fino a quando DevOps non è un'idea abbastanza solida.](./media/microservices-vs-devops.png)
+![Figura 11-0 le tendenze di ricerca mostrano che la crescita nei microservizi non si avvia fino a quando DevOps non è un'idea abbastanza ben definita.](./media/microservices-vs-devops.png)
 
 Grazie alle buone procedure DevOps, è possibile sfruttare i vantaggi delle applicazioni native del cloud senza soffocare in una montagna di lavoro che funziona effettivamente con le applicazioni.
 
@@ -59,7 +59,7 @@ Ognuno di questi componenti offre alcuni vantaggi per le applicazioni native del
 
 Organizzare il codice per un'applicazione nativa del cloud può risultare complesso. Invece di una singola applicazione gigante, le applicazioni native del cloud tendono a essere costituite da un Web di applicazioni più piccole che comunicano tra loro. Come per tutti gli aspetti del calcolo, la migliore disposizione del codice rimane una domanda aperta. Sono disponibili esempi di applicazioni riuscite che usano diversi tipi di layout, ma due varianti sembrano avere la massima popolarità.
 
-Prima di accedere al controllo del codice sorgente effettivo, è probabile che sia opportuno decidere il numero di progetti appropriati. All'interno di un singolo progetto è disponibile il supporto per più repository e pipeline di compilazione. Le lavagne sono leggermente più complesse, ma è possibile assegnarle facilmente a più team all'interno di un singolo progetto. È certamente possibile supportare centinaia, persino migliaia di sviluppatori, da un singolo progetto DevOps di Azure. Questa operazione è probabilmente l'approccio migliore in quanto offre un'unica posizione per consentire a tutti gli sviluppatori di lavorare da e ridurre la confusione di ricerca di un'applicazione quando gli sviluppatori non sono certi del progetto in cui risiede.
+Prima di accedere al controllo del codice sorgente effettivo, è probabile che sia opportuno decidere il numero di progetti appropriati. All'interno di un singolo progetto è disponibile il supporto per più repository e pipeline di compilazione. Le lavagne sono leggermente più complesse, ma anche in questo caso le attività possono essere assegnate facilmente a più team all'interno di un singolo progetto. È certamente possibile supportare centinaia, persino migliaia di sviluppatori, da un singolo progetto DevOps di Azure. Questa operazione è probabilmente l'approccio migliore in quanto offre un'unica posizione per consentire a tutti gli sviluppatori di lavorare da e ridurre la confusione di ricerca di un'applicazione quando gli sviluppatori non sono certi del progetto in cui risiede.
 
 Suddividere il codice per i microservizi nel progetto Azure DevOps può essere leggermente più complesso.
 
@@ -238,11 +238,11 @@ Il risultato finale di una compilazione è una raccolta di file noti come artefa
 
 ### <a name="azure-devops-releases"></a>Versioni di Azure DevOps
 
-Le compilazioni si occupano della compilazione del software in un pacchetto spedito, ma gli artefatti devono comunque essere inviati a un ambiente di test per completare il recapito continuo. Per questo, Azure DevOps usa uno strumento separato denominato releases. Le versioni utilizzano la stessa libreria delle attività disponibili per la compilazione, ma introducono un concetto di "fasi". Una fase è un ambiente isolato in cui è installato il pacchetto. Un prodotto, ad esempio, potrebbe usare uno sviluppo, un sistema di controllo di qualità e un ambiente di produzione. Il codice viene costantemente recapitato nell'ambiente di sviluppo in cui è possibile eseguire test automatizzati. Una volta superati i test, i test vengono spostati sull'ambiente di controllo di qualità per i test manuali. Infine, il codice viene inserito in produzione, dove è visibile a tutti gli utenti.
+Le compilazioni si occupano della compilazione del software in un pacchetto spedito, ma gli artefatti devono comunque essere inviati a un ambiente di test per completare il recapito continuo. Per questo, Azure DevOps usa uno strumento separato denominato releases. Lo strumento versioni utilizza la stessa libreria delle attività disponibili per la compilazione, ma introduce un concetto di "fasi". Una fase è un ambiente isolato in cui è installato il pacchetto. Un prodotto, ad esempio, potrebbe usare uno sviluppo, un sistema di controllo di qualità e un ambiente di produzione. Il codice viene costantemente recapitato nell'ambiente di sviluppo in cui è possibile eseguire test automatizzati. Una volta superati i test, i test vengono spostati sull'ambiente di controllo di qualità per i test manuali. Infine, il codice viene inserito in produzione, dove è visibile a tutti gli utenti.
 
 ![Figura 11-9 una pipeline di rilascio di esempio con fasi di sviluppo, QA e produzione](./media/release-pipeline.png)
 
-Ogni fase della compilazione può essere attivata automaticamente dal completamento della fase precedente. In molti casi, tuttavia, ciò non è consigliabile. Lo stato di un codice in produzione potrebbe richiedere l'approvazione di qualcuno. Le versioni supportano questa operazione consentendo ai responsabili dell'approvazione a ogni passaggio della pipeline di rilascio. Le regole possono essere configurate in modo che una persona o un gruppo di utenti specifico debba disconnettersi da un rilascio prima di renderlo in produzione. Questi controlli consentono di controllare la qualità manuale e anche per la conformità ai requisiti normativi correlati al controllo di ciò che passa alla produzione.
+Ogni fase della compilazione può essere attivata automaticamente dal completamento della fase precedente. In molti casi, tuttavia, ciò non è consigliabile. Lo stato di un codice in produzione potrebbe richiedere l'approvazione di qualcuno. Lo strumento versioni supporta questa operazione consentendo ai responsabili approvazione a ogni passaggio della pipeline di rilascio. Le regole possono essere configurate in modo che una persona o un gruppo di utenti specifico debba disconnettersi da un rilascio prima di renderlo in produzione. Questi controlli consentono di controllare la qualità manuale e anche per la conformità ai requisiti normativi correlati al controllo di ciò che passa alla produzione.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Tutti gli utenti ottengono una pipeline di compilazione
 

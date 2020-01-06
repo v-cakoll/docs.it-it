@@ -4,12 +4,12 @@ description: Informazioni su come eseguire la migrazione di un'app Web Form ASP.
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191940"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337444"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Eseguire la migrazione da Web Form ASP.NET a blazer
 
@@ -252,7 +252,7 @@ Per altre informazioni sull'avvio dell'app, vedere [avvio dell'app](app-startup.
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Eseguire la migrazione di moduli e gestori HTTP al middleware
 
-I moduli e i gestori HTTP sono modelli comuni in Web Form per controllare la pipeline di richieste HTTP. Le classi che implementano `IHttpModule` o `IHttpHandler` potrebbero essere registrate ed elaborare le richieste in ingresso. Web Form configura i moduli e i gestori nel file *Web. config* . Anche i Web Form sono molto basati sulla gestione degli eventi del ciclo di vita dell'app. ASP.NET Core usa invece il middleware. I middleware sono registrati nel metodo `Configure` della classe `Startup`. L'ordine di esecuzione del middleware è determinato dall'ordine di registrazione.
+I moduli e i gestori HTTP sono modelli comuni in Web Form per controllare la pipeline di richieste HTTP. Le classi che implementano `IHttpModule` o `IHttpHandler` potrebbero essere registrate ed elaborare le richieste in ingresso. Web Form configura i moduli e i gestori nel file *Web. config* . Anche i Web Form sono molto basati sulla gestione degli eventi del ciclo di vita dell'app. ASP.NET Core usa invece il middleware. Il middleware è registrato nel metodo `Configure` della classe `Startup`. L'ordine di esecuzione del middleware è determinato dall'ordine di registrazione.
 
 Nella sezione [Enable Startup Process](#enable-startup-process) è stato generato un evento Lifecycle da Web Form come metodo `Application_BeginRequest`. Questo evento non è disponibile in ASP.NET Core. Un modo per ottenere questo comportamento consiste nell'implementare il middleware come illustrato nell'esempio di file *Startup.cs* . Questo middleware esegue la stessa logica e quindi trasferisce il controllo al gestore successivo nella pipeline middleware.
 
@@ -277,7 +277,7 @@ Il progetto eShop Abilita l'accesso ai file statici di base. Sono disponibili mo
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>Eseguire la migrazione della creazione di bundle e della configurazione di minification
 
-La creazione di bundle e minification sono tecniche di ottimizzazione delle prestazioni per ridurre il numero e le dimensioni delle richieste del server per recuperare determinati tipi di file. JavaScript e CSS spesso subiscono una forma di aggregazione o minification prima di essere inviati al client. In ASP.NET Web Forms queste ottimizzazioni vengono gestite in fase di esecuzione. Le convenzioni di ottimizzazione sono definite un file *app_start/BundleConfig. cs* . In ASP.NET Core, viene adottato un approccio più dichiarativo. Un file elenca i file da minimizzati, insieme a impostazioni minification specifiche.
+La creazione di bundle e minification sono tecniche di ottimizzazione delle prestazioni per ridurre il numero e le dimensioni delle richieste del server per recuperare determinati tipi di file. JavaScript e CSS spesso subiscono una forma di aggregazione o minification prima di essere inviati al client. In ASP.NET Web Forms queste ottimizzazioni vengono gestite in fase di esecuzione. Le convenzioni di ottimizzazione sono definite *app_start file/bundleconfig.cs* . In ASP.NET Core, viene adottato un approccio più dichiarativo. Un file elenca i file da minimizzati, insieme a impostazioni minification specifiche.
 
 Per altre informazioni sulla creazione di bundle e minification, vedere [bundle e minimizzare asset statici in ASP.NET Core](/aspnet/core/client-side/bundling-and-minification).
 
@@ -634,7 +634,7 @@ Infine, esistono alcune importanti differenze di architettura da considerare qua
 Poiché Blazer si basa su .NET Core, ci sono alcune considerazioni per garantire il supporto in .NET Core. Alcune delle principali modifiche includono la rimozione delle funzionalità seguenti:
 
 - Più AppDomain
-- Servizi remoti
+- Gestione remota
 - Sicurezza per l'accesso al codice (CAS, Code Access Security)
 - Trasparenza della sicurezza
 
@@ -642,7 +642,7 @@ Per altre informazioni sulle tecniche per identificare le modifiche necessarie p
 
 ASP.NET Core è una versione ripensata di ASP.NET e presenta alcune modifiche che potrebbero non sembrare evidenti. Di seguito sono riportate le modifiche principali:
 
-- Nessun contesto di sincronizzazione, ovvero non esistono `HttpContext.Current`, `Thread.CurrentPrincipal` o altre funzioni di accesso statiche
+- Nessun contesto di sincronizzazione, ovvero non esistono `HttpContext.Current`, `Thread.CurrentPrincipal`o altre funzioni di accesso statiche
 - Nessuna copia shadow
 - Nessuna coda di richieste
 
