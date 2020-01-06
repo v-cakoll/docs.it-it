@@ -5,8 +5,6 @@
 - name: Introduzione
   href: getting-started/index.md
   items:
-    - name: Modifiche importanti di Visual Basic in Visual Studio
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: Risorse aggiuntive per i programmatori Visual Basic
       href: getting-started/additional-resources.md
 - name: Sviluppo di applicazioni
@@ -1285,7 +1283,7 @@
           href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
         - name: L'URI dello spazio dei nomi XML '<uri>' può essere associato solo a 'xmlns'
           href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-- name: Riferimenti
+- name: Riferimento
   href: reference/index.md
   items:
     - name: Compilatore della riga di comando
