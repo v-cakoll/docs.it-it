@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459516"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559963"
 ---
 # <a name="how-to-use-systemfonts"></a>Procedura: Usare la classe SystemFonts
 Questo esempio illustra come usare le risorse statiche della classe <xref:System.Windows.SystemFonts> per applicare uno stile a un pulsante o personalizzarlo.  
@@ -43,6 +43,6 @@ Questo esempio illustra come usare le risorse statiche della classe <xref:System
 - [Utilizzare SystemParameters](how-to-use-systemparameters.md)
 - [Usare chiavi di caratteri del sistema](how-to-use-system-fonts-keys.md)
 - [Procedure relative alle proprietà](resources-how-to-topics.md)
-- [Estensione del markup x:Static](../../xaml-services/x-static-markup-extension.md)
+- [Estensione del markup x:Static](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [Risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Estensione del markup DynamicResource](dynamicresource-markup-extension.md)

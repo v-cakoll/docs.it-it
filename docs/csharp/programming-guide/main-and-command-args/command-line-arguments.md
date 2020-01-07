@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 88f30376f9c7684e64dd593becfa0ff8711a08ec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039308"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635262"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 
@@ -79,6 +79,6 @@ Per compilare ed eseguire l'applicazione al prompt dei comandi, seguire questa p
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guida per programmatori C#](../index.md)
 - [Main() e argomenti della riga di comando](index.md)
-- [Procedura: Visualizzare gli argomenti della riga di comando](how-to-display-command-line-arguments.md)
+- [Come Dsplay argomenti della riga di comando](how-to-display-command-line-arguments.md)
 - [Valori restituiti da Main()](main-return-values.md)
 - [Classi](../classes-and-structs/classes.md)

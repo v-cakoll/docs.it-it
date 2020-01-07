@@ -2,12 +2,12 @@
 title: Panoramica della classe XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: e742741f56f3e39f93b9f1d6be30a54a4ede67f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d77c725b3c786b8a8fa2b0eeab4bc4b30f298218
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590889"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635470"
 ---
 # <a name="xelement-class-overview-c"></a>Panoramica della classe XElement (C#)
 <xref:System.Xml.Linq.XElement> è una delle classi fondamentali di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Rappresenta un elemento XML. Può essere usata per creare elementi, modificare il contenuto dell'elemento, aggiungere, modificare o eliminare elementi figlio, aggiungere attributi a un elemento oppure serializzare il contenuto di un elemento in formato testo. È inoltre possibile definire l'interoperabilità con altre classi di <xref:System.Xml?displayProperty=nameWithType>, ad esempio <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -21,7 +21,7 @@ In questo argomento viene descritta la funzionalità fornita dalla classe <xref:
   
 - È possibile analizzare codice XML di origini diverse, incluso un oggetto <xref:System.IO.TextReader>, file di testo o un indirizzo Web (URL). Per altre informazioni, vedere [Analisi di codice XML (C#)](./how-to-parse-a-string.md).  
   
-- È possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare l'albero. Per altre informazioni, vedere <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- È possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare l'albero. Per ulteriori informazioni, vedere <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 - Se si dispone di un modulo in grado di scrivere contenuto in un oggetto <xref:System.Xml.XmlWriter>, è possibile usare il metodo <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare un writer, passare il writer al modulo e quindi usare il contenuto scritto in <xref:System.Xml.XmlWriter> per popolare l'albero XML.  
   
@@ -43,7 +43,7 @@ XElement contacts =
     );  
 ```  
   
- Un'altra tecnica molto comune per la creazione di un albero XML implica l'uso dei risultati di una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per popolare un albero XML, come illustrato nell'esempio seguente:  
+ Un'altra tecnica molto comune per la creazione di un albero XML prevede l'uso dei risultati di una query LINQ per popolare un albero XML, come illustrato nell'esempio seguente:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -81,12 +81,12 @@ Console.WriteLine(xmlTree);
  Per altre informazioni, vedere l'articolo sulla [serializzazione delle strutture ad albero XML in C#](./preserving-white-space-while-serializing.md).  
   
 ## <a name="retrieving-xml-data-via-axis-methods"></a>Recupero di dati XML tramite metodi dell'asse  
- È possibile usare metodi dell'asse per recuperare attributi, elementi figlio, elementi discendenti ed elementi predecessori. Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono eseguite sui metodi dell'asse e forniscono numerose funzionalità flessibili e potenti per spostarsi in un albero XML ed elaborarla.  
+ È possibile usare metodi dell'asse per recuperare attributi, elementi figlio, elementi discendenti ed elementi predecessori. Le query LINQ operano sui metodi dell'asse e forniscono diversi modi flessibili e potenti per spostarsi ed elaborare un albero XML.  
   
  Per altre informazioni, vedere [Assi LINQ to XML (C#)](./linq-to-xml-axes-overview.md).  
   
 ## <a name="querying-xml-trees"></a>Esecuzione di query su strutture ad albero XML  
- È possibile scrivere query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per estrarre dati da un albero XML.  
+ È possibile scrivere query LINQ che consentono di estrarre dati da un albero XML.  
   
  Per altre informazioni, vedere [Esecuzione di query su strutture ad albero XML (C#)](./how-to-find-an-element-with-a-specific-attribute.md).  
   

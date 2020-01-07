@@ -1,15 +1,15 @@
 ---
-title: Progettare con tipi riferimento nullable
-description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
+title: Aggiornare i tipi di riferimento Nullable
+description: Questa esercitazione avanzata illustra come eseguire la migrazione di codice esistente con tipi di riferimento Nullable.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 75bc8d278efb66363212e3e000154ffc70f373bf
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969353"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634911"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: eseguire la migrazione di codice esistente con tipi di riferimento Nullable
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 > - Gestire l'interfaccia tra contesti abilitati per nullable e contesti disabilitati per nullable.
 > - Controllare i contesti delle annotazioni nullable.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
@@ -83,7 +83,7 @@ Queste due proprietà causano l'avviso `CS8618` "Non-nullable property is uninit
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Sono tanti gli aspetti interessanti nel blocco di codice precedente. Questa applicazione usa il pacchetto NuGet [AutoMapper](https://automapper.org/) per costruire un elemento di notizie da un `ISyndicationItem`. Si è scoperto che gli elementi della storia delle notizie vengono costruiti e le proprietà vengono impostate in tale singola istruzione. Questo significa che la progettazione per `NewsStoryViewModel` indica che queste proprietà non devono mai avere il valore `null`. Queste proprietà devono essere **tipi riferimento non nullable**. Questa è la migliore espressione della finalità di progettazione originale. In effetti, per qualsiasi `NewsStoryViewModel` *viene* correttamente creata un'istanza con valori non Null. Il codice di inizializzazione seguente rappresenta quindi una correzione valida:
+Sono tanti gli aspetti interessanti nel blocco di codice precedente. Questa applicazione usa il pacchetto NuGet [AutoMapper](https://automapper.org/) per costruire un elemento di notizie da un `ISyndicationItem`. Si è scoperto che gli elementi della storia delle notizie vengono costruiti e le proprietà vengono impostate in tale singola istruzione. Questo significa che la progettazione per `NewsStoryViewModel` indica che queste proprietà non devono mai avere il valore `null`. Queste proprietà devono essere **tipi riferimento non nullable**. Questa è la migliore espressione della finalità di progettazione originale. In realtà, qualsiasi `NewsStoryViewModel` *viene* creata correttamente con i valori non null. Il codice di inizializzazione seguente rappresenta quindi una correzione valida:
 
 ```csharp
 public class NewsStoryViewModel

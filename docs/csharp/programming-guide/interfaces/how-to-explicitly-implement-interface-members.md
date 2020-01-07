@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Implementare in modo esplicito i membri di interfaccia - Guida per programmatori C#'
+title: Come implementare in modo esplicito i membri C# di interfaccia-Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 5ef8b42fe5ca07548d52b88720ea4845d2408bb1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4efc325b3587ee790cce739727506a28c3a1f524
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589211"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635405"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Procedura: Implementare in modo esplicito i membri di interfaccia (Guida per programmatori C#)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Come implementare in modo esplicito i membriC# di interfaccia (Guida per programmatori)
 Questo esempio dichiara un'[interfaccia](../../language-reference/keywords/interface.md), `IDimensions`, e una classe, `Box`, che implementa in modo esplicito i membri dell'interfaccia `getLength` e `getWidth`. L'accesso ai membri avviene tramite l'istanza di interfaccia `dimensions`.  
   
 ## <a name="example"></a>Esempio  
@@ -33,4 +33,4 @@ Questo esempio dichiara un'[interfaccia](../../language-reference/keywords/inter
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](../classes-and-structs/index.md)
 - [Interfacce](./index.md)
-- [Procedura: Implementare in modo esplicito i membri di due interfacce](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [Come implementare in modo esplicito i membri di due interfacce](./how-to-explicitly-implement-members-of-two-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969723"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635080"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -56,7 +56,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 |\\"|Virgoletta doppia|0x0022|  
 |\\\\ |Barra rovesciata|0x005C|  
 |\0|Null|0x0000|  
-|\a|API ascolto|0x0007|  
+|\a|Alert|0x0007|  
 |\b|Backspace|0x0008|  
 |\f|Avanzamento carta|0x000C|  
 |\n|Nuova riga|0x000A|  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Stringhe, metodi di estensione e LINQ  
- Poiché il tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601> è possibile usare i metodi di estensione definiti nella classe <xref:System.Linq.Enumerable> sulle stringhe. Per evitare confusioni a livello visivo questi metodi sono esclusi da IntelliSense per il tipo <xref:System.String>, ma sono comunque disponibili. È anche possibile usare le espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sulle stringhe. Per altre informazioni, vedere [LINQ e stringhe](../concepts/linq/linq-and-strings.md).  
+ Poiché il tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601> è possibile usare i metodi di estensione definiti nella classe <xref:System.Linq.Enumerable> sulle stringhe. Per evitare confusioni a livello visivo questi metodi sono esclusi da IntelliSense per il tipo <xref:System.String>, ma sono comunque disponibili. È anche possibile usare espressioni di query LINQ sulle stringhe. Per altre informazioni, vedere [LINQ e stringhe](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
@@ -139,7 +139,7 @@ string s = String.Empty;
 |[Come determinare se una stringa rappresenta un valore numerico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Interpolazione di stringhe](../../language-reference/tokens/interpolated.md)|Descrive la funzionalità di interpolazione di stringhe che offre una sintassi efficiente per formattare le stringhe.|
 |[Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
-|[Analisi di stringhe](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  
 |[Analisi di stringhe di data e ora in .NET](../../../standard/base-types/parsing-datetime.md)|Illustra come convertire una stringa come "24/01/2008" in un oggetto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Confronto di stringhe](../../../standard/base-types/comparing.md)|Informazioni su come confrontare le stringhe ed esempi in C# e Visual Basic.|  
 |[Uso della classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descrive come creare e modificare oggetti stringa dinamici tramite la classe <xref:System.Text.StringBuilder>.|  

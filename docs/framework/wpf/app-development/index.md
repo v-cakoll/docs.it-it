@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b0bdf49e0bb3d9bfa3fc4e7fd94aa68ee4ea0bb3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420644"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636393"
 ---
 # <a name="application-development"></a>Sviluppo di applicazioni
 <a name="introduction"></a>Windows Presentation Foundation (WPF) è un Framework di presentazione che può essere utilizzato per sviluppare i seguenti tipi di applicazioni:  
@@ -26,11 +26,11 @@ ms.locfileid: "73420644"
 > [!NOTE]
 > L'uso di tipi WPF in un servizio Windows è fortemente sconsigliato. Se usate in un servizio Windows, queste funzionalità potrebbero non funzionare nel modo previsto.  
   
- Per compilare questo set di applicazioni, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa una serie di servizi. Questo argomento offre una panoramica dei servizi, con indicazioni sulle risorse in cui trovare altre informazioni.  
+ Per compilare questo set di applicazioni, WPF implementa un host di servizi. Questo argomento offre una panoramica dei servizi, con indicazioni sulle risorse in cui trovare altre informazioni.  
 
 <a name="Application_Management"></a>   
-## <a name="application-management"></a>Gestione applicazioni  
- Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eseguibili richiedono un set di funzionalità di base, incluse le seguenti:  
+## <a name="application-management"></a>Gestione dell'applicazione  
+ Per le applicazioni WPF eseguibili è in genere necessario un set di funzionalità di base che include quanto segue:  
   
 - Creazione e gestione dell'infrastruttura di applicazioni comuni, inclusa la creazione di un metodo del punto di ingresso e di un loop di messaggi di Windows per la ricezione di messaggi di sistema e di input.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "73420644"
  Per altre informazioni, vedere [Cenni preliminari sulla gestione di applicazioni](application-management-overview.md).  
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
-## <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende il supporto principale nel Framework Microsoft .NET per le risorse incorporate con supporto per tre tipi di file di dati non eseguibili: risorse, contenuto e dati. Per altre informazioni, vedere [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md).  
+## <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF  
+ WPF estende il supporto principale nel Framework Microsoft .NET per le risorse incorporate con supporto per tre tipi di file di dati non eseguibili: risorse, contenuto e dati. Per altre informazioni, vedere [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md).  
   
  Un componente chiave del supporto per i file di dati non eseguibili WPF è la possibilità di identificare e caricare i file utilizzando un URI univoco. Per altre informazioni, vedere [URI di tipo pack in WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Finestre e finestre di dialogo  
- Gli utenti interagiscono con applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonome tramite le finestre. Lo scopo di una finestra è ospitare il contenuto dell'applicazione ed esporre le funzionalità dell'applicazione che in genere permettono agli utenti di interagire con il contenuto. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le finestre sono incapsulate dalla classe <xref:System.Windows.Window>, che supporta:  
+ Gli utenti interagiscono con applicazioni autonome WPF tramite Windows. Lo scopo di una finestra è ospitare il contenuto dell'applicazione ed esporre le funzionalità dell'applicazione che in genere permettono agli utenti di interagire con il contenuto. In WPF, le finestre sono incapsulate dalla classe <xref:System.Windows.Window>, che supporta:  
   
 - Creazione e visualizzazione di finestre.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73420644"
   
  <xref:System.Windows.Window> permette di creare un tipo speciale di finestra, chiamata finestra di dialogo. È possibile creare tipi di finestre di dialogo modali e non modali.  
   
- Per praticità e i vantaggi della riusabilità e di un'esperienza utente coerente tra le applicazioni, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] espone tre delle finestre di dialogo comuni di Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>e <xref:System.Windows.Controls.PrintDialog>.  
+ Per praticità e i vantaggi della riusabilità e di un'esperienza utente coerente tra le applicazioni, WPF espone tre delle finestre di dialogo comuni di Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>e <xref:System.Windows.Controls.PrintDialog>.  
   
  Una finestra di messaggio è un tipo speciale di finestra di dialogo che permette di visualizzare agli utenti informazioni testuali importanti e di porre semplici domande con risposta Sì/No/OK/Annulla. Per creare e mostrare finestre di messaggio, è necessario usare la classe <xref:System.Windows.MessageBox>.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73420644"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navigazione  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta la navigazione Web tramite pagine (<xref:System.Windows.Controls.Page>) e collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>). La navigazione può essere implementata in svariati modi, tra cui i seguenti:  
+ WPF supporta la navigazione Web tramite pagine (<xref:System.Windows.Controls.Page>) e collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>). La navigazione può essere implementata in svariati modi, tra cui i seguenti:  
   
 - Pagine autonome ospitate in un Web browser.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73420644"
   
 - Pagine ospitate da un frame (<xref:System.Windows.Controls.Frame>), che può essere ospitato in una pagina autonoma, oppure una pagina compilata in un'applicazione XBAP o autonoma.  
   
- Per semplificare la navigazione, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa quanto segue:  
+ Per semplificare la navigazione, WPF implementa gli elementi seguenti:  
   
 - <xref:System.Windows.Navigation.NavigationService>, il motore di navigazione condiviso per l'elaborazione delle richieste di navigazione utilizzato da <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>e XBAPs per supportare la navigazione all'interno dell'applicazione.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "73420644"
   
  Per informazioni, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta anche un tipo speciale di navigazione chiamato navigazione strutturata. La navigazione strutturata può essere usata per chiamare una o più pagine che restituiscono dati in modo strutturato e prevedibile, coerentemente con le funzioni chiamanti. Questa funzionalità dipende dalla classe <xref:System.Windows.Navigation.PageFunction%601>, che viene descritta in modo più approfondito in [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> ha anche lo scopo di semplificare la creazione di topologie di navigazione complesse, descritte in [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md).  
+ WPF supporta anche un tipo speciale di navigazione noto come navigazione strutturata. La navigazione strutturata può essere usata per chiamare una o più pagine che restituiscono dati in modo strutturato e prevedibile, coerentemente con le funzioni chiamanti. Questa funzionalità dipende dalla classe <xref:System.Windows.Navigation.PageFunction%601>, che viene descritta in modo più approfondito in [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> ha anche lo scopo di semplificare la creazione di topologie di navigazione complesse, descritte in [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
@@ -112,7 +112,7 @@ ms.locfileid: "73420644"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilazione e distribuzione  
- Sebbene le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] semplici possano essere compilate da un prompt dei comandi usando i compilatori della riga di comando, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] si integra con Visual Studio per fornire supporto aggiuntivo che semplifica il processo di sviluppo e compilazione. Per altre informazioni, vedere [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
+ Sebbene sia possibile compilare semplici applicazioni WPF da un prompt dei comandi utilizzando i compilatori della riga di comando, WPF si integra con Visual Studio per fornire supporto aggiuntivo che semplifica il processo di sviluppo e compilazione. Per altre informazioni, vedere [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
   
  A seconda del tipo di applicazione compilato, è possibile scegliere tra una o più opzioni di distribuzione. Per altre informazioni, vedere [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 25e7051f0ceaa035c58af541f0b32e5d24dd0323
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419260"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635782"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  
@@ -46,7 +46,7 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
  L'implementazione <xref:System.ValueType?displayProperty=nameWithType> di `Equals` usa la reflection perché deve essere in grado di determinare i campi presenti in tutti gli struct. Quando si creano struct, eseguire l'override del metodo `Equals` per specificare un algoritmo di uguaglianza efficiente specifico del tipo.  
   
-- Per determinare se i valori dei campi in due istanze di classe sono uguali, è possibile usare il metodo <xref:System.Object.Equals%2A> o l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-). Tuttavia, usarli solo se la classe ha eseguito il loro override o overload per offrire una definizione personalizzata di cosa significa "uguaglianza" per gli oggetti di quel tipo. La classe può anche implementare l'interfaccia <xref:System.IEquatable%601> o <xref:System.Collections.Generic.IEqualityComparer%601>. Entrambe le interfacce offrono metodi che possono essere usati per verificare l'uguaglianza dei valori. Durante la progettazione di classi che eseguono l'override di `Equals`, assicurarsi di seguire le linee guida definite in [Procedura: Definire l'uguaglianza di valori per un tipo](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Per determinare se i valori dei campi in due istanze di classe sono uguali, è possibile usare il metodo <xref:System.Object.Equals%2A> o l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-). Tuttavia, usarli solo se la classe ha eseguito il loro override o overload per offrire una definizione personalizzata di cosa significa "uguaglianza" per gli oggetti di quel tipo. La classe può anche implementare l'interfaccia <xref:System.IEquatable%601> o <xref:System.Collections.Generic.IEqualityComparer%601>. Entrambe le interfacce offrono metodi che possono essere usati per verificare l'uguaglianza dei valori. Quando si progettano classi personalizzate che eseguono l'override di `Equals`, assicurarsi di seguire le linee guida indicate in [come definire l'uguaglianza di valori per un tipo](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
@@ -66,7 +66,7 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
 - [Guida per programmatori C#](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Ereditarietà](./inheritance.md)
-- [class](../../language-reference/keywords/class.md)
+- [classe](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)
 - [Operatore new](../../language-reference/operators/new-operator.md)
 - [Common Type System](../../../standard/base-types/common-type-system.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460512"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559448"
 ---
 # <a name="dynamicresource-markup-extension"></a>Estensione del markup DynamicResource
 Fornisce un valore per qualsiasi attributo di proprietà [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] rinviando tale valore in modo che sia un riferimento a una risorsa definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di esecuzione.  
   
-## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per attributi  
   
 ```xml  
 <object property="{DynamicResource key}" .../>  
@@ -34,11 +34,11 @@ Fornisce un valore per qualsiasi attributo di proprietà [!INCLUDE[TLA2#tla_xaml
 </object>  
 ```  
   
-## <a name="xaml-values"></a>Valori XAML  
+## <a name="xaml-values"></a>Valor XAML  
   
 |||  
 |-|-|  
-|`key`|Chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dalla [direttiva x:Key](../../xaml-services/x-key-directive.md) se una risorsa è stata creata nel markup oppure è stata fornita come parametro di `key` quando viene chiamata <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se la risorsa è stata creata nel codice.|  
+|`key`|Chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dalla [direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) se una risorsa è stata creata nel markup oppure è stata fornita come parametro di `key` quando viene chiamata <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se la risorsa è stata creata nel codice.|  
   
 ## <a name="remarks"></a>Note  
  Un `DynamicResource` creerà un'espressione temporanea durante la compilazione iniziale e quindi rinvia la ricerca delle risorse finché il valore della risorsa richiesta non è effettivamente necessario per costruire un oggetto. Questo problema potrebbe essere dovuto al caricamento della pagina [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Il valore della risorsa verrà trovato in base alla ricerca chiave eseguita su tutti i dizionari risorse attivi a partire dall'ambito della pagina corrente e sostituisce l'espressione segnaposto dalla compilazione.  
@@ -48,9 +48,9 @@ Fornisce un valore per qualsiasi attributo di proprietà [!INCLUDE[TLA2#tla_xaml
   
  Alcuni scenari di accesso alle risorse sono particolarmente appropriati per `DynamicResource` anziché un' [estensione di markup StaticResource](staticresource-markup-extension.md). Vedere [risorse XAML](xaml-resources.md) per una discussione sui meriti relativi e sulle implicazioni relative alle prestazioni di `DynamicResource` e `StaticResource`.  
   
- Il <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> specificato deve corrispondere a una risorsa esistente determinata dalla [direttiva x:Key](../../xaml-services/x-key-directive.md) a un certo livello nella pagina, applicazione, i temi di controllo disponibili e le risorse esterne, o risorse di sistema, e la ricerca delle risorse verrà eseguita in Questo ordine. Per altre informazioni sulla ricerca di risorse per le risorse statiche e dinamiche, vedere [risorse XAML](xaml-resources.md).  
+ Il <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> specificato deve corrispondere a una risorsa esistente determinata dalla [direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) a un certo livello nella pagina, applicazione, i temi di controllo disponibili e le risorse esterne, o risorse di sistema, e la ricerca delle risorse verrà eseguita in tale ordine. Per altre informazioni sulla ricerca di risorse per le risorse statiche e dinamiche, vedere [risorse XAML](xaml-resources.md).  
   
- Una chiave di risorsa può essere qualsiasi stringa definita nella [Grammatica XamlName](../../xaml-services/xamlname-grammar.md). Una chiave di risorsa può essere anche altri tipi di oggetto, ad esempio un <xref:System.Type>. Una chiave <xref:System.Type> è fondamentale per il modo in cui i controlli possono essere disegnati in base ai temi. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).  
+ Una chiave di risorsa può essere qualsiasi stringa definita nella [Grammatica XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md). Una chiave di risorsa può essere anche altri tipi di oggetto, ad esempio un <xref:System.Type>. Una chiave <xref:System.Type> è fondamentale per il modo in cui i controlli possono essere disegnati in base ai temi. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).  
   
  Le API per la ricerca dei valori delle risorse, ad esempio <xref:System.Windows.FrameworkElement.FindResource%2A>, seguono la stessa logica di ricerca delle risorse usata da `DynamicResource`.  
   
@@ -76,7 +76,7 @@ Fornisce un valore per qualsiasi attributo di proprietà [!INCLUDE[TLA2#tla_xaml
 
 - [Risorse XAML](xaml-resources.md)
 - [Risorse e codice](resources-and-code.md)
-- [Direttiva x:Key](../../xaml-services/x-key-directive.md)
+- [Direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Estensione di markup StaticResource](staticresource-markup-extension.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353509"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636861"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ
-Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce alla tecnologia in Visual Basic che supporta la sintassi di query e altri costrutti di linguaggio direttamente nel linguaggio. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non è necessario imparare un nuovo linguaggio per eseguire query su un'origine dati esterna. È possibile eseguire query sui dati in database relazionali, archivi XML o oggetti usando Visual Basic. Questa integrazione delle funzionalità di query nel linguaggio consente il controllo in fase di compilazione di errori di sintassi e indipendenza dai tipi. Questa integrazione garantisce anche la maggior parte delle informazioni necessarie per la scrittura di query complete e diversificate in Visual Basic.  
+Il nome Language-Integrated Query (LINQ) si riferisce alla tecnologia in Visual Basic che supporta la sintassi di query e altri costrutti di linguaggio direttamente nel linguaggio. Con LINQ non è necessario imparare un nuovo linguaggio per eseguire query su un'origine dati esterna. È possibile eseguire query sui dati in database relazionali, archivi XML o oggetti usando Visual Basic. Questa integrazione delle funzionalità di query nel linguaggio consente il controllo in fase di compilazione di errori di sintassi e indipendenza dai tipi. Questa integrazione garantisce anche la maggior parte delle informazioni necessarie per la scrittura di query complete e diversificate in Visual Basic.  
   
  Nelle sezioni seguenti vengono descritti i costrutti di linguaggio che supportano LINQ in modo sufficientemente dettagliato per poter iniziare a leggere la documentazione introduttiva, gli esempi di codice e le applicazioni di esempio. È anche possibile fare clic sui collegamenti per trovare una spiegazione più dettagliata del modo in cui le funzionalità del linguaggio sono disponibili per abilitare le query basate sulla lingua. Un punto di partenza ideale è la [procedura dettagliata: scrittura di query in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce all
  Per altre informazioni, vedere [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Metodi di estensione  
- I metodi di estensione consentono di aggiungere metodi a un tipo di dati o a un'interfaccia dall'esterno della definizione. Questa funzionalità consente di aggiungere nuovi metodi a un tipo esistente senza modificare effettivamente il tipo. Gli operatori di query standard sono a loro volta un set di metodi di estensione che forniscono [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funzionalità di query per qualsiasi tipo che implementi <xref:System.Collections.Generic.IEnumerable%601>. Altre estensioni da <xref:System.Collections.Generic.IEnumerable%601> includono <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Intersect%2A>.  
+ I metodi di estensione consentono di aggiungere metodi a un tipo di dati o a un'interfaccia dall'esterno della definizione. Questa funzionalità consente di aggiungere nuovi metodi a un tipo esistente senza modificare effettivamente il tipo. Gli operatori di query standard sono a loro volta un set di metodi di estensione che forniscono funzionalità di query LINQ per qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>. Altre estensioni da <xref:System.Collections.Generic.IEnumerable%601> includono <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  Il metodo di estensione seguente aggiunge un metodo Print alla classe <xref:System.String>.  
   
@@ -77,7 +77,7 @@ Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce all
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], le espressioni lambda sono sottostanti molti degli operatori di query standard. Il compilatore crea espressioni lambda per acquisire i calcoli definiti nei metodi di query fondamentali, ad esempio `Where`, `Select`, `Order By`, `Take While`e altri.  
+ In LINQ, le espressioni lambda sono sottostanti molti degli operatori di query standard. Il compilatore crea espressioni lambda per acquisire i calcoli definiti nei metodi di query fondamentali, ad esempio `Where`, `Select`, `Order By`, `Take While`e altri.  
   
  Ad esempio, il codice seguente definisce una query che restituisce tutti gli studenti senior da un elenco di studenti.  
   

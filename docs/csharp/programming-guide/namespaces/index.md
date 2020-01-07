@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 8a03baffc17da07ccab14c89dc9f99be2fc5ba1a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039499"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635210"
 ---
 # <a name="namespaces-c-programming-guide"></a>Spazi dei nomi (Guida per programmatori C#)
 
@@ -50,7 +50,7 @@ Per altre informazioni, vedere la sezione [Spazi dei nomi](~/_csharplang/spec/na
 
 - [Guida per programmatori C#](../index.md)
 - [Uso degli spazi dei nomi](using-namespaces.md)
-- [Procedura: Usare lo spazio dei nomi My](how-to-use-the-my-namespace.md)
+- [Come usare lo spazio dei nomi My](how-to-use-the-my-namespace.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)
 - [Direttiva using](../../language-reference/keywords/using-directive.md)
-- [:: (operatore)](../../language-reference/operators/namespace-alias-qualifier.md)
+- [Operatore ::](../../language-reference/operators/namespace-alias-qualifier.md)

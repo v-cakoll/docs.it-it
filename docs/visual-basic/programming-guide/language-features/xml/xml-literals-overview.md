@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346192"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636081"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Cenni preliminari sui valori letterali XML (Visual Basic)
 Un *valore letterale XML* consente di incorporare XML direttamente nel codice Visual Basic. La sintassi dei valori letterali XML rappresenta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti ed è simile alla sintassi XML 1,0. Questo rende più semplice la creazione di elementi e documenti XML a livello di codice, perché il codice ha la stessa struttura del codice XML finale.  
   
- Visual Basic compila i valori letterali XML in oggetti [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornisce un modello a oggetti semplice per la creazione e la modifica di XML e questo modello si integra bene con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
+ Visual Basic compila i valori letterali XML in oggetti [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornisce un modello a oggetti semplice per la creazione e la modifica di XML e questo modello si integra bene con LINQ (Language-Integrated Query). Per ulteriori informazioni, vedere <xref:System.Xml.Linq.XElement>.  
   
  È possibile incorporare un'espressione Visual Basic in un valore letterale XML. In fase di esecuzione, l'applicazione crea un oggetto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per ogni valore letterale, incorporando i valori delle espressioni incorporate. Ciò consente di specificare contenuto dinamico all'interno di un valore letterale XML. Per ulteriori informazioni, vedere [espressioni incorporate in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   

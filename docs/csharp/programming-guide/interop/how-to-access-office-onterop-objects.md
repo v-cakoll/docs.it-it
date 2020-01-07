@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: accedere agli oggetti di interoperabilità di C# Office utilizzando C# le funzionalità visive-Guida alla programmazione'
+title: Come accedere a oggetti di interoperabilità di Office- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 63a3bf422e19bbfb644b809aa9f4573bfdbd42bd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417711"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635223"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Come accedere agli oggetti di interoperabilità di Office (C# guida per programmatori)
 
-Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.
+C#dispone di funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.
 
 In questo argomento si useranno le nuove funzionalità per scrivere codice che consente di creare e visualizzare un foglio di lavoro di Microsoft Office Excel. Quindi si scriverà il codice per aggiungere un documento di Office Word contenente un'icona che è collegata al foglio di lavoro di Excel.
 
@@ -179,4 +179,4 @@ Nel codice seguente viene illustrato l'esempio completo.
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Uso del tipo dinamico](../types/using-type-dynamic.md)
 - [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md)
-- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Come usare gli argomenti denominati e facoltativi nella programmazione di Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

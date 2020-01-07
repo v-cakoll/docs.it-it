@@ -5,17 +5,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0d804a00eca1910a5415859b1ed3a18ad2f8e9d2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346229"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636224"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Cenni preliminari su LINQ to XML in Visual Basic
 Visual Basic fornisce il supporto per [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] tramite i valori letterali XML e le proprietà Axis XML. In questo modo è possibile utilizzare una sintassi familiare e pratica per l'utilizzo di XML nel codice Visual Basic. I *valori letterali XML* consentono di includere codice XML direttamente nel codice. Le *Proprietà Axis XML* consentono di accedere a nodi figlio, nodi discendenti e attributi di un valore letterale XML. Per ulteriori informazioni, vedere [Cenni preliminari sui valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) e [accesso a XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è un'API di programmazione XML in memoria progettata specificamente per sfruttare i vantaggi delle [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Sebbene sia possibile chiamare direttamente le API di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], solo Visual Basic consente di dichiarare i valori letterali XML e di accedere direttamente alle proprietà Axis XML.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è un'API di programmazione XML in memoria progettata specificamente per sfruttare i vantaggi di LINQ (Language-Integrated Query). Sebbene sia possibile chiamare direttamente le API LINQ, solo Visual Basic consente di dichiarare i valori letterali XML e di accedere direttamente alle proprietà Axis XML.  
   
 > [!NOTE]
 > I valori letterali XML e le proprietà Axis XML non sono supportati nel codice dichiarativo in una pagina ASP.NET. Per usare Visual Basic funzionalità XML, inserire il codice in una pagina code-behind nell'applicazione ASP.NET.  
@@ -23,14 +23,14 @@ Visual Basic fornisce il supporto per [!INCLUDE[sqltecxlinq](~/includes/sqltecxl
  [Pulsante Riproduci](./media/overview-of-linq-to-xml/play-video-icon-example.gif) Per le dimostrazioni video correlate, vedere la pagina relativa alla procedura per iniziare [a usare LINQ to XML](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) e [come creare fogli di calcolo di Excel con LINQ to XML](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>Creazione di XML  
- Esistono due modi per creare alberi XML in Visual Basic. È possibile dichiarare un valore letterale XML direttamente nel codice oppure è possibile usare le API [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per creare l'albero. Entrambi i processi consentono al codice di riflettere la struttura finale dell'albero XML. Nell'esempio di codice seguente, ad esempio, viene creato un elemento XML:  
+ Esistono due modi per creare alberi XML in Visual Basic. È possibile dichiarare un valore letterale XML direttamente nel codice oppure è possibile usare le API LINQ per creare l'albero. Entrambi i processi consentono al codice di riflettere la struttura finale dell'albero XML. Nell'esempio di codice seguente, ad esempio, viene creato un elemento XML:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Per ulteriori informazioni, vedere [creazione di codice XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## <a name="accessing-and-navigating-xml"></a>Accesso ed esplorazione di XML  
- Visual Basic fornisce proprietà Axis XML per l'accesso e l'esplorazione di strutture XML. Queste proprietà consentono di accedere a elementi e attributi XML specificando i nomi degli elementi figlio XML. In alternativa, è possibile chiamare in modo esplicito i metodi [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per spostarsi e individuare gli elementi e gli attributi. Nell'esempio di codice seguente, ad esempio, vengono utilizzate le proprietà Axis XML per fare riferimento agli attributi e agli elementi figlio di un elemento XML. Nell'esempio di codice viene utilizzata una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per recuperare gli elementi figlio e restituirli come elementi XML, eseguendo in modo efficace una trasformazione.  
+ Visual Basic fornisce proprietà Axis XML per l'accesso e l'esplorazione di strutture XML. Queste proprietà consentono di accedere a elementi e attributi XML specificando i nomi degli elementi figlio XML. In alternativa, è possibile chiamare in modo esplicito i metodi LINQ per lo spostamento e l'individuazione di elementi e attributi. Nell'esempio di codice seguente, ad esempio, vengono utilizzate le proprietà Axis XML per fare riferimento agli attributi e agli elementi figlio di un elemento XML. Nell'esempio di codice viene utilizzata una query LINQ per recuperare gli elementi figlio e restituirli come elementi XML, eseguendo in modo efficace una trasformazione.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
@@ -57,7 +57,7 @@ Visual Basic fornisce il supporto per [!INCLUDE[sqltecxlinq](~/includes/sqltecxl
  [!code-vb[VbXMLSamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#3)]  
   
 ### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Utilizzo di spazi dei nomi XML in Proprietà Axis XML  
- Gli spazi dei nomi XML dichiarati in valori letterali XML non sono disponibili per l'utilizzo nelle proprietà Axis XML. È tuttavia possibile utilizzare gli spazi dei nomi globali con le proprietà dell'asse XML. Usare i due punti per separare il prefisso dello spazio dei nomi XML dal nome dell'elemento locale. Di seguito è riportato un esempio:  
+ Gli spazi dei nomi XML dichiarati in valori letterali XML non sono disponibili per l'utilizzo nelle proprietà Axis XML. È tuttavia possibile utilizzare gli spazi dei nomi globali con le proprietà dell'asse XML. Usare i due punti per separare il prefisso dello spazio dei nomi XML dal nome dell'elemento locale. come nell'esempio seguente:  
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   

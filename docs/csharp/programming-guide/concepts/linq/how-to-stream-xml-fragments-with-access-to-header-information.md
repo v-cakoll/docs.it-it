@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)'
+title: Come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: d40fa5b7ae60836c0fd947d36f88765eafc60334
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bf9cc92b5f76936ba02effff3b205000b50ec072
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592340"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635626"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()
 A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
- Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per eseguire una query nell'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per altre informazioni, vedere [Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)](./how-to-write-a-linq-to-xml-axis-method.md).  
+Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Tuttavia, potrebbe essere necessario usare LINQ per eseguire una query sull'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per ulteriori informazioni, vedere [come scrivere un metodo dell'asse LINQ to XML (C#)](./how-to-write-a-linq-to-xml-axis-method.md).
   
  Per scrivere metodo dell'asse, scrivere un piccolo metodo che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse. Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML. Restituisce quindi ogni frammento tramite `yield return` al metodo che sta enumerando il metodo dell'asse personalizzato. È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
   

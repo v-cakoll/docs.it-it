@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 84a7eba7bf71f5ef5a0f46eb5863952e1af37c86
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417948"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635431"
 ---
 # <a name="events-c-programming-guide"></a>Eventi (Guida per programmatori C#)
 Tramite gli eventi, una [classe](../../language-reference/keywords/class.md) o un oggetto è in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia (o *genera*) l'evento è chiamata *autore* e le classi che ricevono (o *gestiscono*) l'evento sono chiamate *sottoscrittori*.  
   
- In un'applicazione C# Web o Windows Form tipica si sottoscrivono eventi generati da controlli quali pulsanti e caselle di riepilogo. È possibile usare l'ambiente di sviluppo integrato (IDE) di Visual C# per cercare gli eventi pubblicati da un controllo e selezionare quelli che si vuole gestire. L'IDE consente di aggiungere automaticamente un metodo vuoto del gestore eventi e il codice per sottoscrivere l'evento. Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
+In un'applicazione C# Web o Windows Form tipica si sottoscrivono eventi generati da controlli quali pulsanti e caselle di riepilogo. È possibile usare l'ambiente di sviluppo integrato (IDE) di Visual C# per cercare gli eventi pubblicati da un controllo e selezionare quelli che si vuole gestire. L'IDE consente di aggiungere automaticamente un metodo vuoto del gestore eventi e il codice per sottoscrivere l'evento. Per ulteriori informazioni, vedere [come sottoscrivere e annullare la sottoscrizione di eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Cenni preliminari sugli eventi  
  Di seguito sono riportate le proprietà degli eventi:  
@@ -37,17 +37,17 @@ Tramite gli eventi, una [classe](../../language-reference/keywords/class.md) o u
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni, vedere:  
   
-- [Procedura: Eseguire e annullare la sottoscrizione a eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
-  
-- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-  
-- [Procedura: Generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)  
-  
-- [Procedura: Implementare eventi di interfaccia](./how-to-implement-interface-events.md)  
-  
-- [Procedura: Implementare funzioni di accesso a eventi personalizzati](./how-to-implement-custom-event-accessors.md)  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+- [Come sottoscrivere e annullare la sottoscrizione di eventi](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+
+- [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+
+- [Come generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)
+
+- [Come implementare gli eventi di interfaccia](./how-to-implement-interface-events.md)
+
+- [Come implementare funzioni di accesso agli eventi personalizzati](./how-to-implement-custom-event-accessors.md)
+
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
 
 Per altre informazioni, vedere [Eventi](~/_csharplang/spec/classes.md#events) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

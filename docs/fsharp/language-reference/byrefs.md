@@ -2,12 +2,12 @@
 title: Byref
 description: Informazioni sui tipi ByRef e di tipo ByRef in F#, usati per la programmazione di basso livello.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976821"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545125"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -104,7 +104,7 @@ Ognuna di queste regole significa che il titolare di un puntatore `inref` potreb
 
 ### <a name="outref-semantics"></a>Semantica di Outref
 
-Lo scopo di `outref<'T>` è indicare che il puntatore deve essere letto solo da. In modo imprevisto, `outref<'T>` consente di leggere il valore sottostante nonostante il nome. Per motivi di compatibilità. Semanticamente, `outref<'T>` non è diverso da `byref<'T>`.
+Lo scopo di `outref<'T>` è indicare che il puntatore deve essere scritto solo in. In modo imprevisto, `outref<'T>` consente di leggere il valore sottostante nonostante il nome. Per motivi di compatibilità. Semanticamente, `outref<'T>` non è diverso da `byref<'T>`.
 
 ### <a name="interop-with-c"></a>Interoperabilità con C\#
 
@@ -114,17 +114,17 @@ C#supporta le parole chiave `in ref` e `out ref`, oltre a `ref` restituisce. Nel
 |------------|---------|
 |`ref` valore restituito|`outref<'T>`|
 |`ref readonly` valore restituito|`inref<'T>`|
-|parametro `in ref`|`inref<'T>`|
-|parametro `out ref`|`outref<'T>`|
+|Parametro `in ref`.|`inref<'T>`|
+|Parametro `out ref`.|`outref<'T>`|
 
 La tabella seguente mostra cosa F# genera:
 
 |F#costruire|Costrutto emesso|
 |------------|-----------------|
-|argomento `inref<'T>`|attributo `[In]` sull'argomento|
+|`inref<'T>` argomento|attributo `[In]` sull'argomento|
 |`inref<'T>` restituito|`modreq` attributo per valore|
 |`inref<'T>` nello slot o nell'implementazione astratta|`modreq` sull'argomento o sulla restituzione|
-|argomento `outref<'T>`|attributo `[Out]` sull'argomento|
+|`outref<'T>` argomento|attributo `[Out]` sull'argomento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Regole di overload e inferenza del tipo
 
@@ -134,7 +134,7 @@ Un tipo di `inref<'T>` viene dedotto dal F# compilatore nei casi seguenti:
 2. Puntatore `this` su un tipo struct senza campi modificabili.
 3. Indirizzo di una posizione di memoria derivata da un altro puntatore `inref<_>`.
 
-Quando viene eseguito un indirizzo implicito di un `inref`, un overload con un argomento di tipo `SomeType` è preferibile a un overload di con un argomento di tipo `inref<SomeType>`. Esempio:
+Quando viene eseguito un indirizzo implicito di un `inref`, un overload con un argomento di tipo `SomeType` è preferibile a un overload di con un argomento di tipo `inref<SomeType>`. Ad esempio:
 
 ```fsharp
 type C() =
@@ -179,7 +179,7 @@ Sebbene queste regole limitino molto fortemente l'utilizzo, lo fanno per soddisf
 
 ## <a name="byref-returns"></a>ByRef restituisce
 
-I ritorni F# ByRef da funzioni o membri possono essere prodotti e utilizzati. Quando si utilizza un metodo di restituzione di `byref`, il valore viene dereferenziato in modo implicito. Esempio:
+I ritorni F# ByRef da funzioni o membri possono essere prodotti e utilizzati. Quando si utilizza un metodo di restituzione di `byref`, il valore viene dereferenziato in modo implicito. Ad esempio:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

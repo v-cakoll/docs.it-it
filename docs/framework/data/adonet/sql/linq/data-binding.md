@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 79a14e787b4fe1aa1b16ad661b11a43b12bdd718
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7048d292bdf5c1372d5f8f174f7f0e84efa7593
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247372"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634716"
 ---
 # <a name="data-binding"></a>Data binding
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]supporta l'associazione a controlli comuni, ad esempio i controlli griglia. In particolare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , definisce i modelli di base per l'associazione a una griglia di dati e la gestione dell'associazione Master-Details, sia per quanto riguarda la visualizzazione e l'aggiornamento.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta l'associazione a controlli comuni, ad esempio i controlli griglia. In particolare, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definisce i modelli di base per l'associazione a una griglia di dati e la gestione del binding Master-Details, sia per quanto riguarda la visualizzazione che l'aggiornamento.
 
 ## <a name="underlying-principle"></a>Principio sottostante
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Converte [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] le query in SQL per l'esecuzione in un database. I risultati sono costituiti da oggetti `IEnumerable` fortemente tipizzati. Poiché si tratta di oggetti di Common Language Runtime ordinari (CLR), è possibile usare l'data binding di oggetti ordinaria per visualizzare i risultati. Al contrario, le operazioni di modifica (inserimenti, aggiornamenti ed eliminazioni) richiedono passaggi aggiuntivi.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte le query LINQ in SQL per l'esecuzione in un database. I risultati sono costituiti da oggetti `IEnumerable` fortemente tipizzati. Poiché si tratta di oggetti di Common Language Runtime ordinari (CLR), è possibile usare l'data binding di oggetti ordinaria per visualizzare i risultati. Al contrario, le operazioni di modifica (inserimenti, aggiornamenti ed eliminazioni) richiedono passaggi aggiuntivi.
 
 ## <a name="operation"></a>Operazione
 
-L'associazione implicita ai controlli Windows Form viene eseguita implementando <xref:System.ComponentModel.IListSource>. Le origini dati <xref:System.Data.Linq.Table%601> generiche C# ( `Table(Of T)` `Table<T>` in o in Visual Basic) `DataQuery` e Generic sono state aggiornate <xref:System.ComponentModel.IListSource>per implementare. I motori di associazione dati dell'interfaccia utente (Windows Form e Windows Presentation Foundation) verificano se le relative origini dati implementano <xref:System.ComponentModel.IListSource>. Pertanto, la scrittura di un'influenza diretta di una query in un'origine dati di un controllo chiama [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in modo implicito la generazione della raccolta, come nell'esempio seguente:
+L'associazione implicita ai controlli Windows Form viene eseguita implementando <xref:System.ComponentModel.IListSource>. Le origini dati <xref:System.Data.Linq.Table%601> generici ( C#`Table<T>` in o `Table(Of T)` in Visual Basic) e i `DataQuery` generici sono stati aggiornati per implementare <xref:System.ComponentModel.IListSource>. I motori di associazione dati dell'interfaccia utente (Windows Form e Windows Presentation Foundation) verificano se le relative origini dati implementano <xref:System.ComponentModel.IListSource>. Pertanto, la scrittura di un'influenza diretta di una query in un'origine dati di un controllo chiama in modo implicito [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generazione della raccolta, come nell'esempio seguente:
 
 [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
 [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]
@@ -36,15 +36,15 @@ Le generazioni di raccolte vengono implementate dall'oggetto generico <xref:Syst
 
 ## <a name="ilistsource-implementation"></a>Implementazione di IListSource
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]implementa <xref:System.ComponentModel.IListSource> in due posizioni:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa <xref:System.ComponentModel.IListSource> in due posizioni:
 
-- L'origine dati è <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Esplora la tabella per riempire una `DataBindingList` raccolta che conserva un riferimento nella tabella.
+- L'origine dati è un <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sfoglia la tabella per riempire una raccolta di `DataBindingList` che mantiene un riferimento alla tabella.
 
-- L'origine dati è un oggetto <xref:System.Linq.IQueryable%601>. Esistono due possibili scenari:
+- L'origine dati è un oggetto <xref:System.Linq.IQueryable%601>. Gli scenari sono due:
 
-  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trova l'oggetto <xref:System.Data.Linq.Table%601> sottostante da <xref:System.Linq.IQueryable%601>, l'origine consente l'edizione e la situazione è identica a quella del primo punto.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trova l'<xref:System.Data.Linq.Table%601> sottostante dalla <xref:System.Linq.IQueryable%601>, l'origine consente l'edizione e la situazione è identica a quella del primo punto.
 
-  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è in grado <xref:System.Data.Linq.Table%601>di trovare l'oggetto sottostante, l'origine non consente l'edizione `groupby`(ad esempio,). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Esplora la query per riempire un oggetto generico `SortableBindingList`, che è un semplice <xref:System.ComponentModel.BindingList%601> oggetto che implementa la funzionalità di ordinamento per le entità T per una determinata proprietà.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non riesce a trovare l'<xref:System.Data.Linq.Table%601>sottostante, l'origine non consente l'edizione (ad esempio, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Esplora la query per compilare un `SortableBindingList`generico, ovvero una semplice <xref:System.ComponentModel.BindingList%601> che implementa la funzionalità di ordinamento per le entità T per una determinata proprietà.
 
 ## <a name="specialized-collections"></a>Raccolte specializzate
 
@@ -56,7 +56,7 @@ Questa classe eredita da <xref:System.ComponentModel.BindingList%601> ed è una 
 
 Se la proprietà non appartiene a T, viene generata un'eccezione.
 
-Per ottenere l'ordinamento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea una classe `SortableBindingList.PropertyComparer` generica che eredita da <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> Generic e implementa un operatore di confronto predefinito per un tipo specificato T `PropertyDescriptor`, un oggetto e una direzione. Questa classe crea dinamicamente un oggetto `Comparer` di T, dove T è `PropertyType` di `PropertyDescriptor`. L'operatore di confronto predefinito viene quindi recuperato dall'oggetto statico generico `Comparer`. Usando la reflection si ottiene un'istanza predefinita.
+Per ottenere l'ordinamento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea una classe di `SortableBindingList.PropertyComparer` generica che eredita da <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> generici e implementa un operatore di confronto predefinito per un tipo specificato T, un `PropertyDescriptor`e una direzione. Questa classe crea dinamicamente un oggetto `Comparer` di T, dove T è `PropertyType` di `PropertyDescriptor`. L'operatore di confronto predefinito viene quindi recuperato dall'oggetto statico generico `Comparer`. Usando la reflection si ottiene un'istanza predefinita.
 
 La classe generica `SortableBindingList` è anche la classe base per `DataBindingList`. La classe generica `SortableBindingList` offre due metodi virtuali per sospendere o riprendere il rilevamento dell'aggiunta o rimozione di elementi. Questi due metodi possono essere usati per funzionalità di base come l'ordinamento, ma saranno effettivamente implementati dalle classi superiori come `DataBindingList` generico.
 
@@ -66,7 +66,7 @@ Questa classe eredita dalla classe generica `SortableBindingLIst`. La classe gen
 
 ## <a name="binding-to-entitysets"></a>Associazione a EntitySet
 
-L'associazione a `EntitySet` è un caso speciale perché `EntitySet` è già una raccolta che implementa <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]aggiunge il supporto per l'ordinamento e<xref:System.ComponentModel.ICancelAddNew>l'annullamento (). Una classe `EntitySet` usa un elenco interno per archiviare entità. Tale elenco è una raccolta di basso livello basato su una matrice generica, la classe `ItemList` generica.
+L'associazione a `EntitySet` è un caso speciale perché `EntitySet` è già una raccolta che implementa <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aggiunge il supporto per l'ordinamento e l'annullamento (<xref:System.ComponentModel.ICancelAddNew>). Una classe `EntitySet` usa un elenco interno per archiviare entità. Tale elenco è una raccolta di basso livello basato su una matrice generica, la classe `ItemList` generica.
 
 ### <a name="adding-a-sorting-feature"></a>Aggiunta di una funzionalità di ordinamento
 
@@ -80,13 +80,13 @@ Sul lato `EntitySet` è necessario dichiarare il supporto dell'ordinamento:
 
 - Le proprietà <xref:System.ComponentModel.IBindingList.SortDirection%2A> e <xref:System.ComponentModel.IBindingList.SortProperty%2A> espongono la definizione di ordinamento corrente, che viene archiviata nei membri locali.
 
-Quando si usa un oggetto System. Windows. Forms. BindingSource e si\<associa un elemento di tipo EntitySet TEntity > a System. Windows. Forms. BindingSource\<. DataSource, è necessario chiamare EntitySet TEntity >. GetNewBindingList per aggiornare BindingSource. list.
+Quando si usa un oggetto System. Windows. Forms. BindingSource e si associa un elemento EntitySet\<TEntity > a System. Windows. Forms. BindingSource. DataSource, è necessario chiamare EntitySet\<TEntity >. GetNewBindingList per aggiornare BindingSource. list.
 
-Se si usa un oggetto System. Windows. Forms. BindingSource e si imposta la proprietà BindingSource. DataMember e si imposta BindingSource. DataSource su una classe che dispone di una proprietà denominata in BindingSource. DataMember\<che espone il > di tipo EntitySet, non è necessario chiamare EntitySet\<TEntity >. GetNewBindingList per aggiornare BindingSource. list ma si perde la funzionalità di ordinamento.
+Se si usa un oggetto System. Windows. Forms. BindingSource e si imposta la proprietà BindingSource. DataMember e si imposta BindingSource. DataSource su una classe che dispone di una proprietà denominata in BindingSource. DataMember che espone EntitySet\<TEntity >, non è necessario chiamare EntitySet\<TEntity >. GetNewBindingList per aggiornare BindingSource. list ma si perde la funzionalità di ordinamento.
 
 ## <a name="caching"></a>Memorizzazione nella cache
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]le query <xref:System.ComponentModel.IListSource.GetList%2A>implementano. Quando la classe BindingSource di Windows Form individua questa interfaccia, chiama GetList() tre volte per una sola connessione. Per ovviare a questa situazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , implementa una cache per ogni istanza per archiviare e restituire sempre la stessa raccolta generata.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query implementano <xref:System.ComponentModel.IListSource.GetList%2A>. Quando la classe BindingSource di Windows Form individua questa interfaccia, chiama GetList() tre volte per una sola connessione. Per ovviare a questa situazione, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una cache per ogni istanza per archiviare e restituire sempre la stessa raccolta generata.
 
 ## <a name="cancellation"></a>Annullamento
 
@@ -112,9 +112,9 @@ Questa sezione descrive alcuni elementi che potrebbero facilitare la risoluzione
 
 - È necessario usare proprietà; non è sufficiente usare solo campi. Questo tipo di uso è obbligatorio in Windows Form.
 
-- Per impostazione predefinita `image`, `varbinary`i tipi `timestamp` di database, e vengono mappati a una matrice di byte. Poiché `ToString()` non è supportato in questo scenario, questi oggetti non possono essere visualizzati.
+- Per impostazione predefinita, i tipi di database `image`, `varbinary`e `timestamp` vengono mappati a una matrice di byte. Poiché `ToString()` non è supportato in questo scenario, questi oggetti non possono essere visualizzati.
 
-- Un membro di classe mappato a una chiave primaria dispone di un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] setter, ma non supporta la modifica dell'identità dell'oggetto. Non è quindi possibile aggiornare la chiave primaria/univoca usata per il mapping nel database. Una modifica nella griglia genera un'eccezione quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.
+- Un membro di classe mappato a una chiave primaria dispone di un setter, ma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta la modifica dell'identità dell'oggetto. Non è quindi possibile aggiornare la chiave primaria/univoca usata per il mapping nel database. Una modifica nella griglia genera un'eccezione quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.
 
 - Se un'entità è associata in due griglie separate, ad esempio una di dettaglio e una master, un'operazione `Delete` nella griglia master non viene propagata alla griglia di dettaglio.
 

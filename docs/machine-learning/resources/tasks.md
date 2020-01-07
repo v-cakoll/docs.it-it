@@ -2,18 +2,22 @@
 title: Attività di apprendimento automatico
 description: Esplorare le diverse attività di apprendimento automatico e le attività associate supportate in ML.NET.
 ms.custom: seodec18
-ms.date: 04/23/2019
+ms.date: 12/23/2019
 author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: cde4af720fe1ede80cb1bdc6b70f6586293920a4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977247"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636445"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Attività di apprendimento automatico in ML.NET
 
-Quando si compila un modello di apprendimento automatico, è innanzitutto necessario definire quale risultato si vuole ottenere con i dati. In tal modo è possibile scegliere l'attività di apprendimento automatico più adatta alla specifica situazione. Nell'elenco seguente sono descritte le diverse attività di apprendimento automatico tra cui è possibile scegliere e alcuni casi d'uso comuni. Per ulteriori informazioni sulla scelta dell'attività appropriata per il proprio scenario, vedere [algoritmi](../how-to-choose-an-ml-net-algorithm.md).
+Un'attività di Machine Learning è il tipo di stima o di inferenza effettuata, in base al problema o alla domanda richiesta e ai dati disponibili. Ad esempio, l'attività di classificazione assegna i dati alle categorie e l'attività di Clustering raggruppa i dati in base alla somiglianza.
+
+Le attività di Machine Learning si basano sui modelli nei dati anziché essere programmati in modo esplicito.
+
+Questo articolo descrive le diverse attività di Machine Learning tra cui è possibile scegliere in ML.NET e alcuni casi d'uso comuni.
 
 Dopo aver deciso quale attività è appropriata per il proprio scenario, è necessario scegliere l'algoritmo migliore per il training del modello. Gli algoritmi disponibili sono elencati nella sezione per ogni attività.
 
@@ -91,7 +95,7 @@ La colonna delle funzionalità deve essere un vettore di dimensioni fisse di <xr
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Digitare | Descrizione|
+| Nome output | Tipo di | Descrizione|
 | -- | -- | -- |
 | `Score` | Vettore di <xref:System.Single> | I punteggi di tutte le classi. Valori più alti indicano maggiori probabilità di rientrare nella classe associata. Se l'elemento i-esimo ha il valore più elevato, l'indice delle etichette stimate sarà i. Si noti che i è l'indice a base zero. |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice dell'etichetta stimata. Se il valore è i, l'etichetta effettiva potrebbe essere la categoria i-esima nel tipo di etichetta di input con valori key. |
@@ -124,7 +128,7 @@ I dati della colonna dell'etichetta di input devono essere <xref:System.Single>.
 
 Gli algoritmi di training per questa attività restituiscono quanto segue:
 
-| Nome output | Digitare | Descrizione|
+| Nome output | Tipo di | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non elaborato stimato dal modello |
 
@@ -148,7 +152,7 @@ I dati delle funzionalità di input devono essere <xref:System.Single>. Non sono
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Digitare | Descrizione|
+| Nome output | Tipo di | Descrizione|
 | -- | -- | -- |
 | `Score` | vettore di <xref:System.Single> | Le distanze del punto dati specificato dai baricentri di tutti i cluster |
 | `PredictedLabel` | Tipo [key](xref:Microsoft.ML.Data.KeyDataViewType) | L'indice del cluster più vicino stimato dal modello. |
@@ -180,9 +184,10 @@ Le funzionalità di input devono essere un vettore a dimensione fissa di <xref:S
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Digitare | Descrizione|
+| Nome output | Tipo di | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio non negativo, illimitato calcolato dal modello di rilevamento anomalie |
+| `PredictedLabel` | <xref:System.Boolean> | Valore true/false che indica se l'input è un'anomalia (PredictedLabel = true) o meno (PredictedLabel = false) |
 
 ## <a name="ranking"></a>Ranking
 
@@ -203,11 +208,11 @@ I dati della funzionalità devono essere un vettore di dimensioni fisse di <xref
 
 Questo algoritmo di training restituisce quanto segue:
 
-| Nome output | Digitare | Descrizione|
+| Nome output | Tipo di | Descrizione|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Il punteggio illimitato calcolato dal modello per determinare la stima |
 
-## <a name="recommendation"></a>Consiglio
+## <a name="recommendation"></a>Indicazione
 
 Un'attività di raccomandazione consente di generare un elenco di servizi o prodotti consigliati. ML.NET usa la [fattorizzazione di matrice](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) e un algoritmo di [filtraggio collaborativo](https://en.wikipedia.org/wiki/Collaborative_filtering) per le raccomandazioni quando si hanno dati cronologici di classificazione dei prodotti nel proprio catalogo. Ad esempio, quando sono presenti dati cronologici di classificazione di film per gli utenti e si vogliono raccomandare altri film a cui questi potrebbero essere interessati.
 

@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418567"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635795"
 ---
 # <a name="c-features-that-support-linq"></a>Funzionalità di C# che supportano LINQ
 
-Nella sezione seguente vengono illustrati i nuovi costrutti di linguaggio introdotti in C# 3.0. Sebbene queste nuove funzionalità vengano tutte usate con le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non sono limitate a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e possono essere usate in qualsiasi contesto in cui risultino utili.
+Nella sezione seguente vengono illustrati i nuovi costrutti di linguaggio introdotti in C# 3.0. Anche se queste nuove funzionalità sono tutte usate per un grado di query LINQ, non sono limitate a LINQ e possono essere usate in qualsiasi contesto in cui si trovano utili.
 
 ## <a name="query-expressions"></a>Espressioni di query
 
-Le espressioni di query usano una sintassi dichiarativa simile a SQL o XQuery per eseguire una query sulle raccolte IEnumerable. In fase di compilazione la sintassi della query viene convertita nelle chiamate al metodo per l'implementazione di un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dei metodi di estensione degli operatori di query standard. Le applicazioni controllano gli operatori di query standard inclusi nell'ambito specificando lo spazio dei nomi adatto con una direttiva `using`. Nell'espressione di query seguente viene usata una matrice di stringhe, raggruppate in base al primo carattere della stringa, e vengono ordinati i gruppi.
+Le espressioni di query usano una sintassi dichiarativa simile a SQL o XQuery per eseguire una query sulle raccolte IEnumerable. In fase di compilazione la sintassi di query viene convertita in chiamate al metodo nell'implementazione di un provider LINQ dei metodi di estensione degli operatori di query standard. Le applicazioni controllano gli operatori di query standard inclusi nell'ambito specificando lo spazio dei nomi adatto con una direttiva `using`. Nell'espressione di query seguente viene usata una matrice di stringhe, raggruppate in base al primo carattere della stringa, e vengono ordinati i gruppi.
 
 ```csharp
 var query = from str in stringArray
@@ -84,13 +84,13 @@ Per altre informazioni, vedere [Tipi anonimi](../../classes-and-structs/anonymou
 
 ## <a name="extension-methods"></a>Metodi di estensione
 
-Un metodo di estensione è un metodo statico che può essere associato a un tipo, in modo da poter essere chiamato come se fosse un metodo di istanza sul tipo. Questa funzionalità consente in pratica di "aggiungere" nuovi metodi ai tipi esistenti senza doverli effettivamente modificare. Gli operatori query standard sono un set di metodi di estensione che forniscono funzionalità di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>.
+Un metodo di estensione è un metodo statico che può essere associato a un tipo, in modo da poter essere chiamato come se fosse un metodo di istanza sul tipo. Questa funzionalità consente in pratica di "aggiungere" nuovi metodi ai tipi esistenti senza doverli effettivamente modificare. Gli operatori di query standard sono un set di metodi di estensione che forniscono funzionalità di query LINQ per qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>.
 
 Per altre informazioni, vedere [Metodi di estensione](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Espressioni lambda
 
-Un'espressione lambda è una funzione inline che usa l'operatore => per separare i parametri di input dal corpo della funzione e, in fase di compilazione, può essere convertita in un delegato o in un albero delle espressioni. Nella programmazione [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] le espressioni lambda vengono usate quando si effettuano chiamate al metodo dirette agli operatori di query standard.
+Un'espressione lambda è una funzione inline che usa l'operatore => per separare i parametri di input dal corpo della funzione e, in fase di compilazione, può essere convertita in un delegato o in un albero delle espressioni. Nella programmazione LINQ si verificheranno espressioni lambda quando si eseguono chiamate a metodi diretti agli operatori di query standard.
 
 Per altre informazioni, vedere:
 
@@ -102,4 +102,4 @@ Per altre informazioni, vedere:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Language-Integrated Query (LINQ) (C#)](./index.md)
+- [LINQ (Language-Integrated Query) (C#)](./index.md)

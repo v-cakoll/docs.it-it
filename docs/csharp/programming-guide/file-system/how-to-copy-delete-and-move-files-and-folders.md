@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Copiare, eliminare e spostare file e cartelle - Guida per programmatori C#'
+title: Come copiare, eliminare e spostare file e cartelle- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: dd32798062dbfc9a10acd27ce51d8d5dd3b164f6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 234e534ef081d3ab527d307b9d3f1756783ad5ac
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590097"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635561"
 ---
-# <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Procedura: Copiare, eliminare e spostare file e cartelle (Guida per programmatori C#)
-Gli esempi seguenti mostrano come copiare, spostare ed eliminare file e cartelle in modo sincrono usando le classi <xref:System.IO.File?displayProperty=nameWithType>, <xref:System.IO.Directory?displayProperty=nameWithType>, <xref:System.IO.FileInfo?displayProperty=nameWithType> e <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> dello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>. Questi esempi non forniscono un indicatore di stato o altri elementi di interfaccia utente. Se si vuole fornire una finestra di dialogo di stato standard, vedere [Procedura: Creare una finestra di dialogo dello stato di avanzamento per operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
+# <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Come copiare, eliminare e spostare file e cartelle (C# guida per programmatori)
+Gli esempi seguenti mostrano come copiare, spostare ed eliminare file e cartelle in modo sincrono usando le classi <xref:System.IO.File?displayProperty=nameWithType>, <xref:System.IO.Directory?displayProperty=nameWithType>, <xref:System.IO.FileInfo?displayProperty=nameWithType> e <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> dello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>. Questi esempi non forniscono un indicatore di stato o altri elementi di interfaccia utente. Se si desidera fornire una finestra di dialogo di stato standard, vedere [come fornire una finestra di dialogo di stato per le operazioni sui file](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
   
  Usare <xref:System.IO.FileSystemWatcher?displayProperty=nameWithType> per fornire eventi che consentano di calcolare lo stato quando si opera su più file. Un altro approccio consiste nell'usare pInvoke per chiamare i metodi correlati ai file pertinenti nella shell di Windows. Per informazioni su come eseguire queste operazioni sui file in modo asincrono, vedere [I/O di file asincrono](../../../standard/io/asynchronous-file-i-o.md).  
   
@@ -37,6 +37,6 @@ Gli esempi seguenti mostrano come copiare, spostare ed eliminare file e cartelle
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guida per programmatori C#](../index.md)
 - [File system e Registro di sistema (Guida per programmatori C#)](index.md)
-- [Procedura: Creare una finestra di dialogo dello stato di avanzamento per operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md)
+- [Come specificare una finestra di dialogo di stato per le operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md)
 - [I/O di file e di flussi](../../../standard/io/index.md)
 - [Attività di I/O comuni](../../../standard/io/common-i-o-tasks.md)

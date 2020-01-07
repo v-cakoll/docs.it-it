@@ -6,19 +6,19 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204595"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634924"
 ---
 # <a name="c-walkthroughs"></a>Procedure dettagliate di C#
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
   
  In questa sezione vengono forniti collegamenti a procedure dettagliate di programmazione di C#.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
 
  [Accesso al Web con Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Viene illustrato come creare una soluzione asincrona usando [async](./language-reference/keywords/async.md) e [await](./language-reference/operators/await.md).  
@@ -48,7 +48,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Vengono illustrate alcune delle attività comunemente svolte quali l'aggiunta o la rimozione di una scheda in un `TabControl`, l'ancoraggio di un controllo al relativo elemento padre e la modifica dell'orientamento di un controllo `SplitContainer`.  
   
  [Scrittura di query in C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Vengono illustrate le funzionalità del linguaggio C# usate per scrivere espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Vengono illustrate le funzionalità del C# linguaggio utilizzate per scrivere espressioni di query LINQ.  
   
  [Modifica dei dati (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Descrive uno scenario [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per l'aggiunta, la modifica e l'eliminazione di dati in un database.  

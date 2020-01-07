@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837298"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636770"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
-<a name="introduction"></a>Quando si sviluppano applicazioni autonome e ospitate nel browser di Windows Presentation Foundation (WPF), è necessario prendere in considerazione il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni (set di autorizzazioni CAS**FullTrust** ), sia distribuite con Windows Installer (MSI), XCOPY o ClickOnce. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host con attendibilità totale può creare una <xref:System.AppDomain> parzialmente attendibile usando il modello del componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti](./app-development/wpf-add-ins-overview.md)aggiuntivi di WPF.  
+<a name="introduction"></a>Quando si sviluppano applicazioni autonome e ospitate nel browser di Windows Presentation Foundation (WPF), è necessario prendere in considerazione il modello di sicurezza. Le applicazioni WPF autonome vengono eseguite con autorizzazioni senza restrizioni (set di autorizzazioni CAS**FullTrust** ), se distribuite mediante Windows Installer (MSI), XCOPY o ClickOnce. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host con attendibilità totale può creare una <xref:System.AppDomain> parzialmente attendibile usando il modello del componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti](./app-development/wpf-add-ins-overview.md)aggiuntivi di WPF.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate da browser sono ospitate da Windows Internet Explorer o Firefox e possono essere applicazioni browser XAML (XBAP) o documenti [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] separati per ulteriori informazioni, vedere [Cenni preliminari sulle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
+ Le applicazioni WPF ospitate da browser sono ospitate da Windows Internet Explorer o Firefox e possono essere applicazioni browser XAML (XBAP) o documenti separati [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] per altre informazioni, vedere [Cenni preliminari sulle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate da browser vengono eseguite in una sandbox di sicurezza con attendibilità parziale, per impostazione predefinita, che è limitata al set di autorizzazioni predefinito dell'area**Internet** CAS. Questo consente di isolare in modo efficace [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le applicazioni ospitate dal browser dal computer client nello stesso modo in cui si prevede che le applicazioni Web tipiche siano isolate. Un'applicazione XBAP può elevare il livello di privilegi fino ad Attendibilità totale a seconda dell'area di sicurezza dell'URL di distribuzione e della configurazione di sicurezza del client. Per altre informazioni, vedere [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md).  
+ Per impostazione predefinita, le applicazioni WPF ospitate da browser vengono eseguite in una sandbox di sicurezza con attendibilità parziale, che è limitata al set di autorizzazioni predefinito dell'area**Internet** CAS. Questo consente di isolare in modo efficace le applicazioni ospitate da browser WPF dal computer client nello stesso modo in cui si prevede che le applicazioni Web tipiche siano isolate. Un'applicazione XBAP può elevare il livello di privilegi fino ad Attendibilità totale a seconda dell'area di sicurezza dell'URL di distribuzione e della configurazione di sicurezza del client. Per altre informazioni, vedere [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md).  
   
  In questo argomento viene illustrato il modello di sicurezza per le applicazioni autonome Windows Presentation Foundation (WPF) e ospitate da browser.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837298"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Navigazione sicura  
- Per le applicazioni XBAPs, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distingue due tipi di navigazione: applicazione e browser.  
+ Per le applicazioni XBAP, WPF distingue due tipi di navigazione: applicazione e browser.  
   
  La *navigazione tramite applicazione* consiste nel passaggio tra elementi di contenuto all'interno di un'applicazione ospitata da un browser. La *navigazione tramite browser* implica la modifica del contenuto e dell'URL del percorso del browser stesso. Nella figura seguente è illustrata la relazione tra l'esplorazione dell'applicazione (in genere XAML) e la navigazione del browser (in genere HTML):
   
@@ -79,7 +79,7 @@ ms.locfileid: "74837298"
   
 - **Navigazione dell'utente**. L'utente si sposta facendo clic su un elemento <xref:System.Windows.Documents.Hyperlink> che si trova all'interno del <xref:System.Windows.Navigation.NavigationWindow>principale, non in un <xref:System.Windows.Controls.Frame>annidato.  
   
-- **Zona**. Il contenuto per la navigazione si trova nell'area Internet o Intranet locale.  
+- **Area**. Il contenuto per la navigazione si trova nell'area Internet o Intranet locale.  
   
 - **Protocollo**. Il protocollo utilizzato è **http**, **https**, **file**o **mailto**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "74837298"
   
  Tuttavia, un assembly APTCA può presentare un difetto di sicurezza dopo l'installazione nella GAC. Quando viene individuato un difetto nel sistema di sicurezza, gli editori dell'assembly possono creare un aggiornamento della sicurezza per risolvere il problema nelle installazioni esistenti e per proteggere le installazioni eseguite dopo l'individuazione del problema. Un'opzione per l'aggiornamento è la disinstallazione dell'assembly, anche se in questo modo può essere compromessa la funzionalità di altre applicazioni client completamente attendibili che usano l'assembly.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornisce un meccanismo mediante il quale è possibile disabilitare un assembly APTCA per le applicazioni XBAP parzialmente attendibili senza disinstallare l'assembly APTCA.  
+ WPF fornisce un meccanismo mediante il quale è possibile disabilitare un assembly APTCA per le applicazioni XBAP parzialmente attendibili senza disinstallare l'assembly APTCA.  
   
  Per disabilitare un assembly APTCA, è necessario creare una chiave speciale del Registro di sistema:  
   
@@ -262,14 +262,14 @@ ms.locfileid: "74837298"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Risorse per lo sviluppo di applicazioni WPF che garantiscano la sicurezza  
- Di seguito sono riportate alcune risorse aggiuntive per contribuire allo sviluppo di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] che favoriscono la sicurezza:  
+ Di seguito sono riportate alcune risorse aggiuntive per facilitare lo sviluppo di applicazioni WPF che favoriscono la sicurezza:  
   
 |Area|Risorsa|  
 |----------|--------------|  
 |Codice gestito|[Patterns and Practices Security Guidance for Applications](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)) (Modelli e indicazioni sulla sicurezza per applicazioni)|  
 |CAS|[Sicurezza dall'accesso di codice](../misc/code-access-security.md)|  
 |ClickOnce|[Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)|  
+|WPF|[Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Vedere anche
 

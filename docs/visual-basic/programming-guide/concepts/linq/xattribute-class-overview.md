@@ -2,25 +2,25 @@
 title: Panoramica della classe XAttribute
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349331"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636653"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Panoramica della classe XAttribute (Visual Basic)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
   
-## <a name="overview"></a>Panoramica  
- Le modalità di utilizzo degli attributi in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono simili a quelle degli elementi. I relativi costruttori sono simili. I metodi usati per recuperare le relative raccolte sono simili. Un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] relativa a una raccolta di attributi ha un aspetto molto simile a quello di un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] relativa a una raccolta di elementi.  
+## <a name="overview"></a>Panoramica di  
+ Le modalità di utilizzo degli attributi in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono simili a quelle degli elementi. I relativi costruttori sono simili. I metodi usati per recuperare le relative raccolte sono simili. Un'espressione di query LINQ per una raccolta di attributi ha un aspetto molto simile a un'espressione di query LINQ per una raccolta di elementi.  
   
  L'ordine con cui gli attributi vengono aggiunti a un elemento viene mantenuto. Quando si scorrono gli attributi, questi vengono visualizzati nell'ordine in cui sono stati aggiunti.  
   
 ## <a name="the-xattribute-constructor"></a>Costruttore XAttribute  
  Il seguente costruttore della classe <xref:System.Xml.Linq.XAttribute> è quello usato più comunemente:  
   
-|Costruttore|description|  
+|Costruttore|Descrizione|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XAttribute>. L'argomento `name` specifica il nome dell'attributo, mentre `content` ne specifica il contenuto.|  
   

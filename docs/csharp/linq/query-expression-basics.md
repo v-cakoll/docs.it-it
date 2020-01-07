@@ -3,12 +3,12 @@ title: Nozioni fondamentali sulle espressioni di query (LINQ in C#)
 description: Vengono introdotti concetti relativi alle espressioni di query
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709117"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635860"
 ---
 # <a name="query-expression-basics"></a>Nozioni fondamentali sulle espressioni di query
 
@@ -114,7 +114,7 @@ Usare la clausola `select` per creare tutti gli altri tipi di sequenze. Una clau
 
 [!code-csharp[csrefQueryExpBasics#56](~/samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]
 
-La clausola `select` può essere usata per trasformare i dati di origine in sequenze di nuovi tipi. Questa trasformazione è detta anche *proiezione*. Nell'esempio seguente la clausola `select` *proietta* una sequenza di tipi anonimi che contiene solo un subset dei campi dell'elemento originale. Si noti che i nuovi oggetti vengono inizializzati usando un inizializzatore di oggetto.
+La clausola `select` può essere usata per trasformare i dati di origine in sequenze di nuovi tipi. Questa trasformazione è detta anche *proiezione*. Nell'esempio seguente la clausola `select`*proietta* una sequenza di tipi anonimi che contiene solo un subset dei campi dell'elemento originale. Si noti che i nuovi oggetti vengono inizializzati usando un inizializzatore di oggetto.
 
 [!code-csharp[csrefQueryExpBasics#57](~/samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]
 
@@ -150,7 +150,7 @@ La parola chiave `ascending` è facoltativa, ma consente l'ordinamento predefini
 
 #### <a name="join-clause"></a>Clausola join
 
-Usare la clausola `join` per associare e/o combinare gli elementi di un'origine dati con gli elementi di un'altra origine dati in base a un confronto di uguaglianza tra le chiavi specificate in ogni elemento. In LINQ le operazioni di join vengono eseguite su sequenze di oggetti i cui elementi sono tipi diversi. Dopo avere unito due sequenze, è necessario usare un'istruzione `select` o `group` per specificare l'elemento da archiviare nella sequenza di output. È anche possibile usare un tipo anonimo per combinare le proprietà da ogni set di elementi associati in un nuovo tipo per la sequenza di output. L'esempio seguente associa oggetti `prod` la cui proprietà `Category` corrisponde a una delle categorie nella matrice di stringhe `categories`. I prodotti il cui valore `Category` non corrisponde a una delle stringhe in `categories` vengono esclusi. L'istruzione `select` proietta un nuovo tipo le cui proprietà sono accettate sia da `cat` che da `prod`.
+Usare la clausola `join` per associare e/o combinare gli elementi di un'origine dati con gli elementi di un'altra origine dati in base a un confronto di uguaglianza tra le chiavi specificate in ogni elemento. In LINQ le operazioni di join vengono eseguite su sequenze di oggetti i cui elementi sono tipi diversi. Dopo avere unito due sequenze, è necessario usare un'istruzione `select` o `group` per specificare l'elemento da archiviare nella sequenza di output. È anche possibile usare un tipo anonimo per combinare le proprietà da ogni set di elementi associati in un nuovo tipo per la sequenza di output. L'esempio seguente associa oggetti `prod` la cui proprietà `Category` corrisponde a una delle categorie nella matrice di stringhe `categories`. I prodotti la cui `Category` non corrisponde ad alcuna stringa in `categories` sono esclusi. L'istruzione `select` proietta un nuovo tipo le cui proprietà sono detratte da `cat` e `prod`.
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
@@ -170,11 +170,11 @@ Una clausola di query può contenere un'espressione di query, a volte detta *sot
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Per altre informazioni, vedere [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md).
+Per altre informazioni, vedere [eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../programming-guide/index.md)
 - [LINQ (Language-Integrated Query)](index.md)
 - [Parole chiave di query (LINQ)](../language-reference/keywords/query-keywords.md)
-- [Panoramica degli operatori query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standard query operators overview](../programming-guide/concepts/linq/standard-query-operators-overview.md) (Panoramica degli operatori di query standard)

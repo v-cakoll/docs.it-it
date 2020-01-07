@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977013"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636198"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
 
@@ -30,7 +30,7 @@ Nell'immagine seguente viene illustrato il frame di vetro esteso nella barra deg
 
 ![Screenshot che mostra la cornice a cristallino esteso dietro la barra degli indirizzi IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Per estendere il frame di vetro in un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario l'accesso all'API non gestita. Nell'esempio di codice seguente viene eseguita una PInvoke (Platform Invoke) per le due API necessarie per estendere il frame nell'area client. Ognuna di queste API viene dichiarata in una classe denominata **NonClientRegionAPI**.
+Per estendere il frame di vetro in un'applicazione WPF, è necessario l'accesso all'API non gestita. Nell'esempio di codice seguente viene eseguita una PInvoke (Platform Invoke) per le due API necessarie per estendere il frame nell'area client. Ognuna di queste API viene dichiarata in una classe denominata **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Esempio
 
-Per usare la funzione [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), è necessario ottenere un punto di controllo di finestra. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'handle di finestra può essere ottenuto dalla proprietà <xref:System.Windows.Interop.HwndSource.Handle%2A> di un <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente il frame viene esteso all'area client nell'evento <xref:System.Windows.FrameworkElement.Loaded> della finestra.
+Per usare la funzione [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), è necessario ottenere un punto di controllo di finestra. In WPF, l'handle di finestra può essere ottenuto dalla proprietà <xref:System.Windows.Interop.HwndSource.Handle%2A> di un <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente il frame viene esteso all'area client nell'evento <xref:System.Windows.FrameworkElement.Loaded> della finestra.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,7 +145,7 @@ Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramm
 </Window>
 ```
 
-Nell'immagine seguente viene illustrato il frame di vetro esteso in un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
+Nell'immagine seguente viene illustrato il frame di vetro esteso in un'applicazione WPF:
 
 ![Screenshot che mostra un frame di vetro esteso in un'applicazione WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

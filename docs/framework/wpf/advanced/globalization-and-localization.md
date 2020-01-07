@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010280"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559422"
 ---
 # <a name="globalization-and-localization"></a>Globalizzazione e localizzazione
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce supporto completo per lo sviluppo di applicazioni internazionalizzate.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un supporto completo per lo sviluppo di applicazioni internazionali.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)  
@@ -36,6 +36,6 @@ ms.locfileid: "62010280"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Gestione di xml:lang in XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [Gestione di xml:lang in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate

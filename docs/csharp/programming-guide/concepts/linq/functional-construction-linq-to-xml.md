@@ -2,12 +2,12 @@
 title: costruzione funzionale (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486035"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635756"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>costruzione funzionale (LINQ to XML) (C#)
 In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una potente funzionalità per la creazione di elementi XML, denominata *costruzione funzionale*. Per costruzione funzionale si intende la possibilità di creare una struttura ad albero XML in un'unica istruzione.  
@@ -18,9 +18,9 @@ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una pote
   
 - Il costruttore <xref:System.Xml.Linq.XElement> accetta una matrice `params` di tipo <xref:System.Object>, quindi è possibile passare qualsiasi numero di oggetti. In questo modo è possibile creare un elemento con contenuto complesso.  
   
-- Se un oggetto implementa <xref:System.Collections.Generic.IEnumerable%601>, la raccolta nell'oggetto viene enumerata e vengono aggiunti tutti gli elementi della raccolta. Se la raccolta contiene oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, ogni elemento della raccolta viene aggiunto separatamente. Questo aspetto è importante perché consente di passare i risultati di una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] al costruttore.  
+- Se un oggetto implementa <xref:System.Collections.Generic.IEnumerable%601>, la raccolta nell'oggetto viene enumerata e vengono aggiunti tutti gli elementi della raccolta. Se la raccolta contiene oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, ogni elemento della raccolta viene aggiunto separatamente. Questo è importante perché consente di passare i risultati di una query LINQ al costruttore.  
   
- Queste funzionalità consentono di scrivere codice per creare un albero XML. Di seguito è riportato un esempio:  
+ Queste funzionalità consentono di scrivere codice per creare un albero XML. Di seguito si riporta un esempio.  
   
 ```csharp  
 XElement contacts =  
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Queste funzionalità consentono anche di scrivere codice che usa i risultati di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per creare un albero XML. Di seguito è riportato un esempio:  
+ Queste funzionalità consentono inoltre di scrivere codice che utilizza i risultati delle query LINQ quando si crea un albero XML, come indicato di seguito:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

@@ -1,5 +1,5 @@
 ---
-title: File di dati e di risorse dell'applicazione WPF.
+title: File di dati e di risorse dell'applicazione WPF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460918"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636263"
 ---
-# <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
+# <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF
 Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, chiamati file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
   
-- **File di risorse**: file di dati compilati in un file eseguibile o in una libreria [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **File di risorse**: file di dati compilati in un file eseguibile o in un assembly WPF di libreria.  
   
-- **File di contenuto**: file di dati autonomi con un'associazione esplicita a un assembly [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eseguibile.  
+- **File di contenuto**: file di dati autonomi con un'associazione esplicita a un assembly WPF eseguibile.  
   
-- **File del sito di origine**: file di dati autonomi senza associazione a un assembly [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eseguibile.  
+- **File del sito di origine**: file di dati autonomi senza associazione a un assembly WPF eseguibile.  
   
  Un'importante distinzione da fare tra questi tre tipi di file riguarda il fatto che i file di risorse e i file di dati sono resi noti in fase di compilazione e pertanto sono conosciuti esplicitamente da un assembly. Per i file del sito di origine, tuttavia, un assembly può non conoscerli affatto o una conoscenza implicita tramite un riferimento URI (Uniform Resource Identifier) di Pack. in quest'ultimo caso, non vi è alcuna garanzia che il file del sito di origine a cui si fa riferimento esista effettivamente.  
   
@@ -55,7 +55,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
 > I file di risorse descritti in questa sezione sono diversi dai file di risorse descritti in [risorse XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) e diversi dalle risorse incorporate o collegate descritte in [gestire le risorse dell'applicazione (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Configurazione dei file di risorse  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], un file di risorse è un file incluso in un progetto di Microsoft Build Engine (MSBuild) come elemento di `Resource`.  
+ In WPF un file di risorse è un file incluso in un progetto di Microsoft Build Engine (MSBuild) come elemento `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Quando si chiama <xref:System.Windows.Application.GetResourceStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] di aprire e convertire il <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
+ Quando si chiama <xref:System.Windows.Application.GetResourceStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire a WPF di gestire l'apertura e la conversione del <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
   
  Nell'esempio seguente viene illustrato come caricare un <xref:System.Windows.Controls.Page> direttamente in una <xref:System.Windows.Controls.Frame> (`pageFrame`) utilizzando il codice.  
   
@@ -92,7 +92,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>File di codice dell'applicazione come file di risorse  
- È possibile fare riferimento A un set speciale di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] file di codice dell'applicazione usando URI di pacchetto, tra cui finestre, pagine, documenti dinamici e dizionari risorse. Ad esempio, è possibile impostare la proprietà <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> con un URI di tipo pack che fa riferimento alla finestra o alla pagina che si desidera caricare all'avvio di un'applicazione.  
+ È possibile fare riferimento A un set speciale di file di codice dell'applicazione WPF usando URI di pacchetto, tra cui finestre, pagine, documenti dinamici e dizionari risorse. Ad esempio, è possibile impostare la proprietà <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> con un URI di tipo pack che fa riferimento alla finestra o alla pagina che si desidera caricare all'avvio di un'applicazione.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -117,7 +117,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
 > Se un file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene configurato come elemento `Resource` e non dispone di un file code-behind, la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non elaborata viene compilata in un assembly anziché in una versione binaria del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]non elaborato.  
   
 <a name="Content_Files"></a>   
-## <a name="content-files"></a>File di dati  
+## <a name="content-files"></a>File di contenuto  
  Un *file di contenuto* viene distribuito come file separato insieme a un assembly eseguibile. Sebbene questi file non vengano compilati in un assembly, dal canto loro gli assembly vengono compilati con i metadati che stabiliscono un'associazione con ciascun file di dati.  
   
  È necessario utilizzare i file di dati quando l'applicazione richiede un set specifico di file di dati che possono essere aggiornati senza dover ricompilare l'assembly che li utilizza.  
@@ -160,7 +160,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Quando si chiama <xref:System.Windows.Application.GetContentStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] di aprire e convertire il <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
+ Quando si chiama <xref:System.Windows.Application.GetContentStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire a WPF di gestire l'apertura e la conversione del <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
   
  Nell'esempio seguente viene illustrato come caricare un <xref:System.Windows.Controls.Page> direttamente in una <xref:System.Windows.Controls.Frame> (`pageFrame`) utilizzando il codice.  
   
@@ -195,7 +195,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
 > I file del sito di origine non vengono memorizzati nella cache con un'applicazione browser XAML (XBAP) in un computer client, mentre i file di contenuto sono. Di conseguenza, vengono scaricati solo se esplicitamente richiesto. Se un'applicazione browser XAML (XBAP) contiene file multimediali di grandi dimensioni, la configurazione come file del sito di origine indica che l'avvio iniziale dell'applicazione è molto più veloce e che i file vengono scaricati solo su richiesta.  
   
 ### <a name="configuring-site-of-origin-files"></a>Configurazione dei file del sito di origine  
- Se i file del sito di origine sono inesistenti o sconosciuti in fase di compilazione, è necessario utilizzare i meccanismi di distribuzione tradizionali per garantire che i file necessari siano disponibili in fase di esecuzione, incluso l'utilizzo del programma `XCopy` dalla riga di comando o di Microsoft Windows Installazione.  
+ Se i file del sito di origine sono inesistenti o sconosciuti in fase di compilazione, è necessario usare i meccanismi di distribuzione tradizionali per garantire che i file necessari siano disponibili in fase di esecuzione, incluso l'uso del programma `XCopy` dalla riga di comando o del Microsoft Windows Installer.  
   
  Se si conosce in fase di compilazione i file che si desidera individuare nel sito di origine, ma si desidera comunque evitare una dipendenza esplicita, è possibile aggiungere tali file a un progetto MSBuild come `None` elemento. Come per i file di contenuto, è necessario impostare l'attributo `CopyToOutputDirectory` di MSBuild per specificare che il file del sito di origine viene copiato in un percorso relativo all'assembly compilato, specificando il valore di `Always` o il valore di `PreserveNewest`.  
   
@@ -222,7 +222,7 @@ Le applicazioni Microsoft Windows spesso dipendono da file che contengono dati n
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Quando si chiama <xref:System.Windows.Application.GetRemoteStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] di aprire e convertire il <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
+ Quando si chiama <xref:System.Windows.Application.GetRemoteStream%2A> consente di accedere al <xref:System.IO.Stream>, è necessario eseguire l'operazione aggiuntiva di conversione nel tipo della proprietà che verrà impostata con. È invece possibile consentire a WPF di gestire l'apertura e la conversione del <xref:System.IO.Stream> caricando un file di risorse direttamente nella proprietà di un tipo usando il codice.  
   
  Nell'esempio seguente viene illustrato come caricare un <xref:System.Windows.Controls.Page> direttamente in una <xref:System.Windows.Controls.Frame> (`pageFrame`) utilizzando il codice.  
   

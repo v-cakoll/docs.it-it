@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740705"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559924"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 
@@ -42,7 +42,7 @@ Quando si progetta un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-u
 
 - Abilitare <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> su <xref:System.Windows.Controls.TextBlock> per evitare il ritaglio.
 
-- Impostare l'attributo `xml:lang` . Questo attributo descrive le impostazioni cultura di un elemento specifico e dei relativi elementi figlio. Il valore di questa proprietà modifica il comportamento di diverse funzionalità in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ad esempio, cambia il comportamento della sillabazione, del controllo ortografico, della sostituzione dei numeri, della definizione di lingue con alfabeto non latino e del fallback dei tipi di carattere. Per ulteriori informazioni sull'impostazione della [gestione di XML: lang in XAML](../../xaml-services/xml-lang-handling-in-xaml.md), vedere [globalizzazione per WPF](globalization-for-wpf.md) .
+- Impostare l'attributo `xml:lang` . Questo attributo descrive le impostazioni cultura di un elemento specifico e dei relativi elementi figlio. Il valore di questa proprietà modifica il comportamento di diverse funzionalità in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ad esempio, cambia il comportamento della sillabazione, del controllo ortografico, della sostituzione dei numeri, della definizione di lingue con alfabeto non latino e del fallback dei tipi di carattere. Per ulteriori informazioni sull'impostazione della [gestione di XML: lang in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md), vedere [globalizzazione per WPF](globalization-for-wpf.md) .
 
 - Creare un tipo di carattere composito personalizzato per ottenere un controllo migliore sui tipi di carattere usati per lingue diverse. Per impostazione predefinita, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa il tipo di carattere carattere GlobalUserInterface. composite nella directory Windows\Fonts.
 
@@ -144,11 +144,11 @@ Le prime due colonne in cui vengono posizionati i <xref:System.Windows.Controls.
 
 Si noti che nell'esempio viene utilizzata la funzionalità di ridimensionamento condiviso di <xref:System.Windows.Controls.Grid>. Le ultime tre colonne sfruttano i vantaggi di questa operazione posizionandosi nello stesso <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Come si evince dal nome della proprietà, in questo modo le colonne possono condividere le stesse dimensioni. Quindi, quando "Sfoglia..." viene localizzato nella stringa più lunga "durchsuchen...", tutti i pulsanti crescono in larghezza anziché avere un piccolo pulsante "OK" e un "durchsuchen..." molto grande. pulsante.
 
-**XML: lang**
+**xml:lang**
 
 `xml:lang="en-US"`
 
-Si noti la [gestione di XML: lang in XAML](../../xaml-services/xml-lang-handling-in-xaml.md) posizionata in corrispondenza dell'elemento radice del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Questa proprietà descrive le impostazioni cultura di un determinato elemento e dei relativi elementi figlio. Questo valore viene utilizzato da diverse funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve essere modificato in modo appropriato durante la localizzazione. Questo valore cambia il dizionario in lingua usato per la sillabazione e il controllo ortografico delle parole. Influisce anche sulla visualizzazione delle cifre e sulla selezione del tipo di carattere da usare da parte del sistema di fallback dei tipi di carattere. Infine, la proprietà influisce sulla visualizzazione dei numeri e sulla forma dei testi scritti in lingue con alfabeti non latini. Il valore predefinito è "en-US".
+Si noti la [gestione di XML: lang in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md) posizionata in corrispondenza dell'elemento radice del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Questa proprietà descrive le impostazioni cultura di un determinato elemento e dei relativi elementi figlio. Questo valore viene utilizzato da diverse funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve essere modificato in modo appropriato durante la localizzazione. Questo valore cambia il dizionario in lingua usato per la sillabazione e il controllo ortografico delle parole. Influisce anche sulla visualizzazione delle cifre e sulla selezione del tipo di carattere da usare da parte del sistema di fallback dei tipi di carattere. Infine, la proprietà influisce sulla visualizzazione dei numeri e sulla forma dei testi scritti in lingue con alfabeti non latini. Il valore predefinito è "en-US".
 
 **Creazione di un assembly di risorse satellite**
 
@@ -178,27 +178,27 @@ Dopo aver compilato l'applicazione, il primo passaggio della localizzazione cons
 
 Usare un editor CSV che supporta la codifica Unicode per modificare il file. Escludere tutte le voci con categoria di localizzazione "Nessuna". Dovrebbero essere visualizzate le voci seguenti:
 
-|Chiave di risorsa|Categoria di localizzazione|Value|
+|Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Button|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Button|Annulla|
+|Button_2:System.Windows.Controls.Button.$Content|Button|Cancel|
 |Button_3:System.Windows.Controls.Button.$Content|Button|Sfoglia...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Digitare il nome del programma, della cartella, del documento o della risorsa Internet da aprire.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Apri:|
-|Window_1:System.Windows.Window.Title|Titolo|Esegui|
+|Window_1:System.Windows.Window.Title|Titolo|Eseguire|
 
 La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:
 
-|Chiave di risorsa|Categoria di localizzazione|Value|
+|Chiave di risorsa|Categoria di localizzazione|Valore|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Button|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Geben Sie den Namen eines programmes, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Öffnen:|
-|Window_1:System.Windows.Window.Title|Titolo|Esegui|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Apri:|
+|Window_1:System.Windows.Window.Title|Titolo|Eseguire|
 
 **Generazione**
 
@@ -265,9 +265,9 @@ In molti casi il contenuto può risultare ambiguo e difficile da tradurre. Lo sv
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Questo commento viene associato al contenuto di TextBlock_1's e, nel caso dello strumento LocBaml (vedere [localizzare un'applicazione](how-to-localize-an-application.md)), può essere visualizzato nella sesta colonna della riga TextBlock_1 nel file output. csv:
+Questo commento viene associato al contenuto di TextBlock_1 e, nel caso dello strumento LocBaml (vedere [localizzare un'applicazione](how-to-localize-an-application.md)), può essere visualizzato nella sesta colonna della TextBlock_1 riga nel file output. csv:
 
-|Chiave di risorsa|Category|Leggibile|Modificabile|Commento|Value|
+|Chiave di risorsa|Categoria|Leggibile|Modificabile|Commento|Valore|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|true|true|Questo carattere viene usato come regola decorativa.|&#124;|
 
@@ -285,7 +285,7 @@ Oltre agli attributi di leggibilità e di modificabilità, [!INCLUDE[TLA2#tla_wi
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Esempio:
+Gli attributi di localizzazione predefiniti che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce possono anche essere sottoposti a override tramite codice, pertanto è possibile impostare correttamente i valori predefiniti corretti per i controlli personalizzati. Ad esempio:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

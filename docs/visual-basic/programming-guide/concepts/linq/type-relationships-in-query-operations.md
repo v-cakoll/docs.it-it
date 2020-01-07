@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350558"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636913"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 
-Le variabili utilizzate in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] operazioni di query sono fortemente tipizzate e devono essere compatibili tra loro. La tipizzazione forte viene utilizzata nell'origine dati, nella query stessa e nell'esecuzione della query. Nell'illustrazione seguente vengono identificati i termini utilizzati per descrivere una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per ulteriori informazioni sulle parti di una query, vedere [operazioni di query di base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Le variabili utilizzate nelle operazioni di query LINQ (Language Integrated Query) sono fortemente tipizzate e devono essere compatibili tra loro. La tipizzazione forte viene utilizzata nell'origine dati, nella query stessa e nell'esecuzione della query. Nell'illustrazione seguente vengono identificati i termini utilizzati per descrivere una query LINQ. Per ulteriori informazioni sulle parti di una query, vedere [operazioni di query di base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Screenshot che mostra una query pseudocodice con elementi evidenziati.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 Il tipo della variabile di intervallo nella query deve essere compatibile con il tipo degli elementi nell'origine dati. Il tipo della variabile di query deve essere compatibile con l'elemento Sequence definito nella clausola `Select`. Infine, anche il tipo degli elementi di sequenza deve essere compatibile con il tipo della variabile di controllo del ciclo utilizzata nell'istruzione `For Each` che esegue la query. Questa tipizzazione forte facilita l'identificazione degli errori di tipo in fase di compilazione.
 
-Visual Basic rende comoda la tipizzazione forte implementando l'inferenza del tipo locale, nota anche come *tipizzazione implicita*. Questa funzionalità viene usata nell'esempio precedente e verrà usata in tutti i [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esempi e la documentazione. In Visual Basic, l'inferenza del tipo locale viene eseguita semplicemente utilizzando un'istruzione `Dim` senza una clausola `As`. Nell'esempio seguente `city` è fortemente tipizzato come stringa.
+Visual Basic rende comoda la tipizzazione forte implementando l'inferenza del tipo locale, nota anche come *tipizzazione implicita*. Tale funzionalità viene utilizzata nell'esempio precedente e verrà utilizzata in tutti gli esempi e la documentazione di LINQ. In Visual Basic, l'inferenza del tipo locale viene eseguita semplicemente utilizzando un'istruzione `Dim` senza una clausola `As`. Nell'esempio seguente `city` è fortemente tipizzato come stringa.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > L'inferenza del tipo locale funziona solo quando `Option Infer` è impostato su `On`. Per altre informazioni, vedere [istruzione Option dedurre](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Tuttavia, anche se si usa l'inferenza del tipo locale in una query, le stesse relazioni di tipo sono presenti tra le variabili nell'origine dati, la variabile di query e il ciclo di esecuzione della query. È utile avere una conoscenza di base di queste relazioni tra i tipi durante la scrittura di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query o l'utilizzo degli esempi e degli esempi di codice nella documentazione.
+Tuttavia, anche se si usa l'inferenza del tipo locale in una query, le stesse relazioni di tipo sono presenti tra le variabili nell'origine dati, la variabile di query e il ciclo di esecuzione della query. È utile avere una conoscenza di base di queste relazioni tra i tipi durante la scrittura di query LINQ o l'uso degli esempi e degli esempi di codice nella documentazione.
 
 Potrebbe essere necessario specificare un tipo esplicito per una variabile di intervallo che non corrisponde al tipo restituito dall'origine dati. È possibile specificare il tipo della variabile di intervallo utilizzando una clausola `As`. Tuttavia, si verifica un errore se la conversione è una conversione verso un tipo di dati più [piccolo](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e `Option Strict` è impostata su `On`. Pertanto, è consigliabile eseguire la conversione sui valori recuperati dall'origine dati. È possibile convertire i valori dall'origine dati al tipo di variabile di intervallo esplicito usando il metodo <xref:System.Linq.Enumerable.Cast%2A>. È anche possibile eseguire il cast dei valori selezionati nella clausola `Select` a un tipo esplicito diverso dal tipo della variabile di intervallo. Questi punti vengono illustrati nel codice seguente.
 
@@ -41,7 +41,7 @@ Potrebbe essere necessario specificare un tipo esplicito per una variabile di in
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Query che restituiscono interi elementi dei dati di origine
 
-Nell'esempio seguente viene illustrata un'operazione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] che restituisce una sequenza di elementi selezionati dai dati di origine. Il codice sorgente, `names`, contiene una matrice di stringhe e l'output della query è una sequenza contenente stringhe che iniziano con la lettera M.
+Nell'esempio seguente viene illustrata un'operazione di query LINQ che restituisce una sequenza di elementi selezionati dai dati di origine. Il codice sorgente, `names`, contiene una matrice di stringhe e l'output della query è una sequenza contenente stringhe che iniziano con la lettera M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

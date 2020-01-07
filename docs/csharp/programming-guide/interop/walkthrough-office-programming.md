@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423189"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635353"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
 
@@ -24,7 +24,7 @@ Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da
 
 In questa procedura dettagliata queste funzionalità vengono illustrate nel contesto della programmazione di Office, ma molte di esse sono utili anche nella programmazione generale. Nella procedura dettagliata si usa un componente aggiuntivo di Excel per creare una cartella di lavoro di Excel. A questo punto si crea un documento di Word contenente un collegamento alla cartella di lavoro. Infine, si visualizzerà come la dipendenza dell'assembly di interoperabilità primario può essere abilitata e disabilitata.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata è necessario aver installato Microsoft Office Excel o Microsoft Office Word nel computer.
 
@@ -106,7 +106,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
          Non è possibile creare proprietà indicizzate personalizzate. La funzionalità supporta solo l'utilizzo di proprietà indicizzate esistenti.
 
-         Per altre informazioni, vedere [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Per ulteriori informazioni, vedere [come utilizzare le proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.
 
@@ -114,7 +114,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Queste aggiunte dimostrano un'altra nuova funzionalità di C#: considerare i valori `Object` restituiti dagli host COM, ad esempio Office, come se il tipo fosse [dynamic](../../language-reference/builtin-types/reference-types.md). Ciò avviene automaticamente quando l'opzione **Incorpora tipi di interoperabilità** è impostata sul valore predefinito, `True` o, in modo equivalente, quando si fa riferimento all'assembly tramite l'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) . Il tipo `dynamic` consente l'associazione tardiva, già disponibile in Visual Basic, ed evita il cast esplicito richiesto in C# 3.0 e versioni precedenti del linguaggio.
+     Queste aggiunte dimostrano un'altra nuova funzionalità di C#: considerare i valori `Object` restituiti dagli host COM, ad esempio Office, come se il tipo fosse [dynamic](../../language-reference/builtin-types/reference-types.md). Ciò avviene automaticamente quando l'opzione **Incorpora tipi di interoperabilità** è impostata sul valore predefinito, `True`o, in modo equivalente, quando si fa riferimento all'assembly tramite l'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) . Il tipo `dynamic` consente l'associazione tardiva, già disponibile in Visual Basic, ed evita il cast esplicito richiesto in C# 3.0 e versioni precedenti del linguaggio.
 
      Ad esempio, `excelApp.Columns[1]` restituisce `Object` e `AutoFit` è un metodo [Range](<xref:Microsoft.Office.Interop.Excel.Range>) di Excel. In assenza di `dynamic`, è necessario eseguire il cast dell'oggetto restituito da `excelApp.Columns[1]` come istanza di `Range` prima di chiamare il metodo `AutoFit`.
 
@@ -203,7 +203,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 - [Uso del tipo dinamico](../types/using-type-dynamic.md)
 - [Espressioni lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Espressioni lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Come usare le proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
 - [Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

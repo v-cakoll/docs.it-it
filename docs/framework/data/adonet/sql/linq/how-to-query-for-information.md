@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Eseguire una query per ottenere informazioni'
+title: 'Procedura: eseguire una query per ottenere informazioni'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
-ms.openlocfilehash: ed32bbe7d27357cbed7d77dd235b698a65c0e29e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3380b486da33a5dc083ed51f6705e666978df197
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793532"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634651"
 ---
-# <a name="how-to-query-for-information"></a>Procedura: Eseguire una query per ottenere informazioni
-Le query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usano la stessa sintassi delle query in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. L'unica differenza è che gli oggetti a cui viene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fatto riferimento nelle query vengono mappati agli elementi in un database. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+# <a name="how-to-query-for-information"></a>Procedura: eseguire una query per ottenere informazioni
+Le query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizzano la stessa sintassi delle query in LINQ. L'unica differenza è che agli oggetti a cui viene fatto riferimento nelle query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping agli elementi in un database. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query create vengono convertite in query SQL equivalenti e inviate al server per l'elaborazione.  
   
- Alcune funzionalità delle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] potrebbero richiedere un'attenzione speciale nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Per altre informazioni, vedere [concetti relativi alle query](query-concepts.md).  
+ Alcune funzionalità delle query LINQ potrebbero richiedere particolare attenzione nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Per altre informazioni, vedere [concetti relativi alle query](query-concepts.md).  
   
 ## <a name="example"></a>Esempio  
  La query seguente consente di richiedere un elenco di clienti nell'area londinese. In questo esempio `Customers` è una tabella nel database di esempio Northwind.  

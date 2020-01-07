@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Usare puntatori per copiare una matrice di byte - Guida per programmatori C#'
+title: Come usare i puntatori per copiare una matrice di byte- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2673b5a7b87e90618c3a8e579e34e7c7e80efa81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640303"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635002"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Procedura: Usare puntatori per copiare una matrice di byte (Guida per programmatori C#)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Come usare i puntatori per copiare una matrice di byte (C# guida per programmatori)
 
 Nell'esempio seguente vengono usati i puntatori per copiare i byte da una matrice a un'altra.
 
-In questo esempio viene usata la parola chiave [unsafe](../../language-reference/keywords/unsafe.md), che consente l'uso di puntatori nel metodo `Copy`. Per dichiarare i puntatori nelle matrici di origine e destinazione, viene usata l'istruzione [fixed](../../language-reference/keywords/fixed-statement.md), L'istruzione `fixed` *blocca* la posizione delle matrici di origine e destinazione nella memoria in modo che non vengano rimosse da Garbage Collection. I blocchi di memoria per le matrici vengono rimossi quando il blocco `fixed` è completato. Il metodo `Copy` in questo esempio usa la parola chiave `unsafe`. Deve pertanto essere compilato con l'opzione del compilatore [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
+In questo esempio viene usata la parola chiave [unsafe](../../language-reference/keywords/unsafe.md), che consente l'uso di puntatori nel metodo `Copy`. Per dichiarare i puntatori nelle matrici di origine e destinazione, viene usata l'istruzione [fixed](../../language-reference/keywords/fixed-statement.md), L'istruzione `fixed`*blocca* la posizione delle matrici di origine e destinazione nella memoria in modo che non vengano rimosse da Garbage Collection. I blocchi di memoria per le matrici vengono rimossi quando il blocco `fixed` è completato. Il metodo `Copy` in questo esempio usa la parola chiave `unsafe`. Deve pertanto essere compilato con l'opzione del compilatore [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).
 
 L'esempio accede agli elementi di entrambe le matrici usando gli indici invece di un secondo puntatore non gestito. La dichiarazione dei puntatori `pSource` e `pTarget` blocca le matrici. Questa funzionalità è disponibile a partire da C# 7.3.
 

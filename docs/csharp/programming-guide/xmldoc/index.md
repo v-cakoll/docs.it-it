@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.openlocfilehash: 08357017a29f05c11e316e037497b1ee24d06eff
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523487"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634976"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Commenti relativi alla documentazione XML (Guida per programmatori C#)
 In Visual C# è possibile creare la documentazione relativa al codice includendo elementi XML in campi di commento speciali (indicati da barre triple) nel codice sorgente, immediatamente prima del blocco di codice a cui i commenti fanno riferimento, ad esempio:  
@@ -36,7 +36,7 @@ public class MyClass {}
 > [!NOTE]
 > I commenti relativi alla documentazione XML non sono metadati, ovvero non vengono inclusi nell'assembly compilato e pertanto non sono accessibili mediante reflection.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 - [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md)  
   
@@ -44,14 +44,14 @@ public class MyClass {}
   
 - [Delimitatori per i tag della documentazione](./delimiters-for-documentation-tags.md)  
   
-- [Procedura: Usare le funzionalità relative alla documentazione XML](./how-to-use-the-xml-documentation-features.md)  
+- [Come utilizzare le funzionalità della documentazione XML](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni, vedere:  
   
 - [-DOC (elabora i commenti relativi alla documentazione)](../../language-reference/compiler-options/doc-compiler-option.md)  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

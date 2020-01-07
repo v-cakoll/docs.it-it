@@ -10,18 +10,18 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837090"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636718"
 ---
 # <a name="visual-basic-language-reference"></a>Riferimenti per il linguaggio Visual Basic
 
 In questa sezione vengono fornite informazioni di riferimento per diversi aspetti del linguaggio Visual Basic.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
 
  [Convenzioni tipografiche e di scrittura del codice](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Riepiloga il modo in cui le parole chiave, i segnaposto e altri elementi del linguaggio vengono formattati nella documentazione di Visual Basic.  
@@ -66,7 +66,7 @@ In questa sezione vengono fornite informazioni di riferimento per diversi aspett
  Vengono documentate le proprietà disponibili in Visual Basic.  
   
  [Query](../../visual-basic/language-reference/queries/index.md)  
- Include informazioni di riferimento sull'uso delle espressioni [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] nel codice.  
+ Vengono fornite informazioni di riferimento sull'utilizzo di espressioni LINQ (Language Integrated Query) nel codice.  
   
  [Istruzioni](../../visual-basic/language-reference/statements/index.md)  
  Documenta la dichiarazione e le istruzioni eseguibili disponibili in Visual Basic.  

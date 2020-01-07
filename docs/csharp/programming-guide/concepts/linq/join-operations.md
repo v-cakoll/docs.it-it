@@ -2,12 +2,12 @@
 title: Operazioni di join (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423387"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635600"
 ---
 # <a name="join-operations-c"></a>Operazioni di join (C#)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
@@ -34,11 +34,11 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
 - [Tipi anonimi](../../classes-and-structs/anonymous-types.md)
 - [Formulare join e query di prodotto incrociato](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [Clausola join](../../../language-reference/keywords/join-clause.md)
-- [Procedura: Eseguire un join usando una chiave composta](../../../linq/join-by-using-composite-keys.md)
-- [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Procedura: Ordinare i risultati di una clausola join](../../../linq/order-the-results-of-a-join-clause.md)
-- [Procedura: Eseguire operazioni di join personalizzate](../../../linq/perform-custom-join-operations.md)
-- [Procedura: Eseguire dei join raggruppati](../../../linq/perform-grouped-joins.md)
-- [Procedura: Eseguire degli inner join](../../../linq/perform-inner-joins.md)
-- [Procedura: Eseguire i left outer join](../../../linq/perform-left-outer-joins.md)
-- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Eseguire un join usando una chiave composta](../../../linq/join-by-using-composite-keys.md)
+- [Come unire il contenuto da file non analoghi (LINQ)C#()](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Ordinare i risultati di una clausola join](../../../linq/order-the-results-of-a-join-clause.md)
+- [Eseguire operazioni di join personalizzate](../../../linq/perform-custom-join-operations.md)
+- [Eseguire join raggruppati](../../../linq/perform-grouped-joins.md)
+- [Eseguire inner join](../../../linq/perform-inner-joins.md)
+- [Eseguire left outer join](../../../linq/perform-left-outer-joins.md)
+- [Come popolare le raccolte di oggetti da più origini (LINQ)C#()](./how-to-populate-object-collections-from-multiple-sources-linq.md)

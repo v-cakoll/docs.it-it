@@ -2,18 +2,18 @@
 title: 'Procedura: generare XML da file CSV'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344600"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636822"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Procedura: generare XML da file CSV (Visual Basic)
-In questo esempio viene illustrato come usare [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file CSV con valori delimitati da virgole.  
+Questo esempio illustra come usare LINQ (Language-Integrated Query) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file con valori delimitati da virgole (CSV).  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente consente di eseguire la query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] su una matrice di stringhe.  
+ Nel codice seguente viene eseguita una query LINQ su una matrice di stringhe.  
   
 ```vb  
       ' Create the text file.  

@@ -2,12 +2,12 @@
 title: 'Procedura: flusso di frammenti XML da un XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346216"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636796"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Procedura: flusso di frammenti XML da un XmlReader (Visual Basic)
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
@@ -23,7 +23,7 @@ Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare
  L'argomento [procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio di utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene creato un metodo dell'asse personalizzato. È possibile sottoporlo a query tramite una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
+ In questo esempio viene creato un metodo dell'asse personalizzato. È possibile eseguire query su di esso utilizzando una query LINQ. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
   
 ```vb  
 Module Module1  

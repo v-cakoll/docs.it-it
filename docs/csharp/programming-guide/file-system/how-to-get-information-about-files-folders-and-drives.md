@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Ottenere informazioni relative a file, cartelle e unità - Guida per programmatori C#'
+title: Come ottenere informazioni su file, cartelle e unità- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 57c7811246dd1de3f009033403ec269082915c09
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e8bd65b1c8c24f69d280cf69deaf25daf7cf8818
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590031"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635392"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedura: Ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#)
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Come ottenere informazioni su file, cartelle e unità (C# guida per programmatori)
 In .NET Framework è possibile accedere a informazioni sul file system mediante le classi seguenti:  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  

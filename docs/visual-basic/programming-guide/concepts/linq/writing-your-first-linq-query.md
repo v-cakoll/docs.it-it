@@ -6,20 +6,20 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: addf35afa2a4c88faf73ebc3d60fbcf9c4db1518
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349338"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636705"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo sono stati sviluppati linguaggi diversi per diversi tipi di origini dati, ad esempio SQL per i database relazionali e XQuery per XML. Questo consente allo sviluppatore di applicazioni di apprendere un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] semplifica la situazione offrendo un modello coerente per l'utilizzo dei dati in diversi tipi di origini dati e formati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Si utilizzano gli stessi modelli di codifica di base per eseguire query e trasformare i dati in documenti XML, database SQL, set di dati ADO.NET ed entità, raccolte di .NET Framework e qualsiasi altra origine o formato per cui è disponibile un provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. In questo documento vengono descritte le tre fasi della creazione e dell'utilizzo di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] di base.  
+ LINQ (Language-Integrated Query) semplifica la situazione offrendo un modello coerente per l'utilizzo dei dati in diversi tipi di origini dati e formati. In una query LINQ si utilizzano sempre oggetti. Si utilizzano gli stessi modelli di codifica di base per eseguire query e trasformare i dati in documenti XML, database SQL, set di dati ADO.NET ed entità, raccolte di .NET Framework e qualsiasi altra origine o formato per cui è disponibile un provider LINQ. In questo documento vengono descritte le tre fasi della creazione e dell'utilizzo di query LINQ di base.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Tre fasi di un'operazione di query  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operazioni di query sono costituite da tre azioni:  
+ Le operazioni di query LINQ sono costituite da tre azioni:  
   
 1. Ottenere l'origine dati o le origini.  
   
@@ -27,7 +27,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
 3. Eseguire la query.  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], l'esecuzione di una query è diversa dalla creazione della query. Non è possibile recuperare i dati semplicemente creando una query. Questo punto viene illustrato più dettagliatamente di seguito in questo argomento.  
+ In LINQ, l'esecuzione di una query è diversa dalla creazione della query. Non è possibile recuperare i dati semplicemente creando una query. Questo punto viene illustrato più dettagliatamente di seguito in questo argomento.  
   
  Nell'esempio seguente vengono illustrate le tre parti di un'operazione di query. Nell'esempio viene utilizzata una matrice di numeri interi come un'origine dati comoda a scopo dimostrativo. Tuttavia, gli stessi concetti si applicano anche ad altre origini dati.  
   
@@ -41,11 +41,11 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>Origine dati  
- Poiché l'origine dati nell'esempio precedente è una matrice, supporta implicitamente l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> generica. In questo modo è possibile utilizzare una matrice come origine dati per una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio l'interfaccia generica <xref:System.Linq.IQueryable%601> sono denominati *tipi queryable*.  
+ Poiché l'origine dati nell'esempio precedente è una matrice, supporta implicitamente l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> generica. In questo modo è possibile utilizzare una matrice come origine dati per una query LINQ. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio l'interfaccia generica <xref:System.Linq.IQueryable%601> sono denominati *tipi queryable*.  
   
- Come tipo sottoposta a query in modo implicito, la matrice non richiede alcuna modifica o trattamento speciale da utilizzare come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Lo stesso vale per qualsiasi tipo di raccolta che supporta <xref:System.Collections.Generic.IEnumerable%601>, inclusi i <xref:System.Collections.Generic.List%601>generici, <xref:System.Collections.Generic.Dictionary%602>e altre classi nella libreria di classi .NET Framework.  
+ Come tipo sottoposta a query in modo implicito, la matrice non richiede alcuna modifica o trattamento speciale da utilizzare come origine dati LINQ. Lo stesso vale per qualsiasi tipo di raccolta che supporta <xref:System.Collections.Generic.IEnumerable%601>, inclusi i <xref:System.Collections.Generic.List%601>generici, <xref:System.Collections.Generic.Dictionary%602>e altre classi nella libreria di classi .NET Framework.  
   
- Se i dati di origine non implementano già <xref:System.Collections.Generic.IEnumerable%601>, è necessario un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per implementare la funzionalità degli *operatori di query standard* per tale origine dati. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gestisce il lavoro di caricamento di un documento XML in un tipo di <xref:System.Xml.Linq.XElement> Queryable, come illustrato nell'esempio seguente. Per ulteriori informazioni sugli operatori di query standard, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](standard-query-operators-overview.md).  
+ Se i dati di origine non implementano già <xref:System.Collections.Generic.IEnumerable%601>, è necessario un provider LINQ per implementare la funzionalità degli *operatori di query standard* per tale origine dati. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gestisce il lavoro di caricamento di un documento XML in un tipo di <xref:System.Xml.Linq.XElement> Queryable, come illustrato nell'esempio seguente. Per ulteriori informazioni sugli operatori di query standard, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
@@ -57,19 +57,19 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per un elenco di questi provider, vedere [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md). La regola di base è semplice: un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati è un oggetto che supporta l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia che eredita da essa.  
+ Per ulteriori informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione relativa ai vari provider LINQ. Per un elenco di questi provider, vedere [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md). La regola di base è semplice: un'origine dati LINQ è un oggetto che supporta l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> generica o un'interfaccia che eredita da essa.  
   
 > [!NOTE]
-> I tipi, ad esempio <xref:System.Collections.ArrayList> che supportano l'interfaccia <xref:System.Collections.IEnumerable> non generica, possono essere utilizzati anche come origini dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per un esempio in cui viene usato un <xref:System.Collections.ArrayList>, vedere [procedura: eseguire una query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> I tipi, ad esempio <xref:System.Collections.ArrayList> che supportano l'interfaccia <xref:System.Collections.IEnumerable> non generica, possono essere utilizzati anche come origini dati LINQ. Per un esempio in cui viene usato un <xref:System.Collections.ArrayList>, vedere [procedura: eseguire una query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
-## <a name="the-query"></a>Query  
+## <a name="the-query"></a>La query  
  Nella query specificare le informazioni che si desidera recuperare dall'origine o dalle origini dati. È anche possibile specificare il modo in cui le informazioni devono essere ordinate, raggruppate o strutturate prima di essere restituite. Per abilitare la creazione della query, Visual Basic ha incorporato una nuova sintassi di query nel linguaggio.  
   
  Quando viene eseguita, la query nell'esempio seguente restituisce tutti i numeri pari da una matrice di interi, `numbers`.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- L'espressione di query contiene tre clausole: `From`, `Where`e `Select`. La funzione e lo scopo specifici di ogni clausola di espressione di query sono illustrati in [operazioni di query di base (Visual Basic)](basic-query-operations.md). Per ulteriori informazioni, vedere [query](../../../../visual-basic/language-reference/queries/index.md). Si noti che in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]la definizione di una query è spesso archiviata in una variabile ed eseguita in un secondo momento. La variabile di query, ad esempio `evensQuery` nell'esempio precedente, deve essere un tipo Queryable. Il tipo di `evensQuery` è `IEnumerable(Of Integer)`, assegnato dal compilatore usando l'inferenza del tipo locale.  
+ L'espressione di query contiene tre clausole: `From`, `Where`e `Select`. La funzione e lo scopo specifici di ogni clausola di espressione di query sono illustrati in [operazioni di query di base (Visual Basic)](basic-query-operations.md). Per ulteriori informazioni, vedere [query](../../../../visual-basic/language-reference/queries/index.md). Si noti che in LINQ la definizione di una query viene spesso archiviata in una variabile ed eseguita in un secondo momento. La variabile di query, ad esempio `evensQuery` nell'esempio precedente, deve essere un tipo Queryable. Il tipo di `evensQuery` è `IEnumerable(Of Integer)`, assegnato dal compilatore usando l'inferenza del tipo locale.  
   
  È importante ricordare che la variabile di query non esegue alcuna azione e non restituisce alcun dato. Archivia solo la definizione della query. Nell'esempio precedente si tratta del ciclo `For Each` che esegue la query.  
   
@@ -77,7 +77,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  L'esecuzione della query è separata dalla creazione della query. La creazione della query definisce la query, ma l'esecuzione viene attivata da un meccanismo diverso. Una query può essere eseguita non appena viene definita (*esecuzione immediata*) oppure la definizione può essere archiviata e la query può essere eseguita in un secondo momento (*esecuzione posticipata*).  
   
 ### <a name="deferred-execution"></a>Esecuzione posticipata  
- Una query di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tipica è simile a quella dell'esempio precedente, in cui `evensQuery` è definito. Consente di creare la query, ma non di eseguirla immediatamente. Al contrario, la definizione della query viene archiviata nella variabile di query `evensQuery`. Si esegue la query in un secondo momento, in genere usando un ciclo `For Each`, che restituisce una sequenza di valori o applicando un operatore di query standard, ad esempio `Count` o `Max`. Questo processo viene definito *esecuzione posticipata*.  
+ Una tipica query LINQ è simile a quella dell'esempio precedente, in cui `evensQuery` è definito. Consente di creare la query, ma non di eseguirla immediatamente. Al contrario, la definizione della query viene archiviata nella variabile di query `evensQuery`. Si esegue la query in un secondo momento, in genere usando un ciclo `For Each`, che restituisce una sequenza di valori o applicando un operatore di query standard, ad esempio `Count` o `Max`. Questo processo viene definito *esecuzione posticipata*.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458963"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559461"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Estensione del markup ComponentResourceKey
 Definisce e fa riferimento alle chiavi per le risorse caricate da assembly esterni. Ciò consente a una ricerca di risorse di specificare un tipo di destinazione in un assembly, anziché un dizionario risorse esplicito in un assembly o in una classe.  
@@ -42,12 +42,12 @@ Definisce e fa riferimento alle chiavi per le risorse caricate da assembly ester
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
 ```  
   
-## <a name="xaml-values"></a>Valori XAML  
+## <a name="xaml-values"></a>Valor XAML  
   
 |||  
 |-|-|  
 |`targetTypeName`|Nome del tipo di Common Language Runtime pubblico (CLR) definito nell'assembly di risorse.|  
-|`targetID`|Chiave per la risorsa. Quando le risorse vengono cercate, `targetID` sarà analogo alla [direttiva x:Key](../../xaml-services/x-key-directive.md) della risorsa.|  
+|`targetID`|Chiave per la risorsa. Quando le risorse vengono cercate, `targetID` sarà analogo alla [direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) della risorsa.|  
   
 ## <a name="remarks"></a>Note  
  Come illustrato negli usi precedenti, un utilizzo dell'estensione di markup {`ComponentResourceKey`} si trova in due posizioni:  
@@ -66,7 +66,7 @@ Definisce e fa riferimento alle chiavi per le risorse caricate da assembly ester
   
  La sintassi Compact illustrata si basa sulla firma del costruttore <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> e sull'utilizzo dei parametri posizionali di un'estensione di markup. L'ordine in cui vengono forniti i `targetTypeName` e `targetID` è importante. La sintassi dettagliata si basa sul <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> costruttore senza parametri, quindi imposta le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> in modo analogo a una sintassi di attributo true su un elemento oggetto. Nella sintassi Verbose, l'ordine in cui le proprietà sono impostate non è importante. La relazione e i meccanismi di queste due alternative (Compact e Verbose) vengono descritti in modo più dettagliato nell'argomento [estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
- Tecnicamente, il valore per `targetID` può essere qualsiasi oggetto, non è necessario che sia una stringa. Tuttavia, l'utilizzo più comune in WPF consiste nell'allineare il valore `targetID` con i form che sono stringhe e in cui tali stringhe sono valide nella [Grammatica XamlName](../../xaml-services/xamlname-grammar.md).  
+ Tecnicamente, il valore per `targetID` può essere qualsiasi oggetto, non è necessario che sia una stringa. Tuttavia, l'utilizzo più comune in WPF consiste nell'allineare il valore `targetID` con i form che sono stringhe e in cui tali stringhe sono valide nella [Grammatica XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` possibile utilizzare la sintassi dell'elemento oggetto. In questo caso, è necessario specificare il valore delle proprietà <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> per inizializzare correttamente l'estensione.  
   

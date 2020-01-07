@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: aa1e8ce53038fce24854561e83db1c086b5b276e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417586"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635015"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Utilizzo del tipo dinamico (Guida per programmatori C#)
 
@@ -66,7 +66,7 @@ DLR (Dynamic Language Runtime) è una nuova API in .NET Framework 4. Fornisce l'
 
 C# 4 include diverse funzionalità che migliorano l'esperienza di interoperabilità con le API COM, ad esempio le API di automazione di Office. Tra i miglioramenti è compreso l'utilizzo del tipo `dynamic` e di [argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md).
 
-Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo restituito designando i tipi come `object`. Per questo motivo è necessario il cast esplicito dei valori per la coordinazione con le variabili fortemente tipizzate in C#. Se si esegue la compilazione utilizzando l'opzione [-C# link (opzioni del compilatore)](../../language-reference/compiler-options/link-compiler-option.md) , l'introduzione del tipo di `dynamic` consente di gestire le occorrenze di `object` nelle firme com come se fossero di tipo `dynamic` ed evitare così la maggior parte del cast. Le istruzioni seguenti sono ad esempio in contrasto con la modalità di accesso a una cella in un foglio di calcolo di Microsoft Office Excel con il tipo `dynamic` e senza il tipo `dynamic`.
+Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo restituito designando i tipi come `object`. Per questo motivo è necessario il cast esplicito dei valori per la coordinazione con le variabili fortemente tipizzate in C#. Se si esegue la compilazione utilizzando l'opzione [-C# link (opzioni del compilatore)](../../language-reference/compiler-options/link-compiler-option.md) , l'introduzione del tipo di `dynamic` consente di gestire le occorrenze di `object` nelle firme com come se fossero di tipo `dynamic`ed evitare così la maggior parte del cast. Le istruzioni seguenti sono ad esempio in contrasto con la modalità di accesso a una cella in un foglio di calcolo di Microsoft Office Excel con il tipo `dynamic` e senza il tipo `dynamic`.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 
@@ -79,4 +79,4 @@ Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo res
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|Viene descritto l'utilizzo della parola chiave `dynamic`.|
 |[Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime)|Viene fornita una panoramica di DLR, un ambiente di runtime che estende Common Language Runtime (CLR) con un set di servizi per linguaggi dinamici.|
 |[Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](walkthrough-creating-and-using-dynamic-objects.md)|Fornisce istruzioni dettagliate per la creazione di un oggetto dinamico personalizzato e per la creazione di un progetto che accede a una libreria `IronPython`.|
-|[Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../interop/how-to-access-office-onterop-objects.md)|Viene illustrato come creare un progetto che usa argomenti denominati e facoltativi, il tipo `dynamic` e altri miglioramenti che semplificano l'accesso agli oggetti API di Office.|
+|[Come accedere agli oggetti di interoperabilità C# di Office usando le funzionalità](../interop/how-to-access-office-onterop-objects.md)|Viene illustrato come creare un progetto che usa argomenti denominati e facoltativi, il tipo `dynamic` e altri miglioramenti che semplificano l'accesso agli oggetti API di Office.|

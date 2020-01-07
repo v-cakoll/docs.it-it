@@ -2,22 +2,22 @@
 title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320333"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544640"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
   
 ## <a name="remarks"></a>Note  
- Se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], è possibile trovare lo snap-in MMC passando a **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
+ Se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003, è possibile trovare lo snap-in MMC passando a **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
   
- Se si esegue Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], è possibile trovare lo snap-in MMC facendo clic sul pulsante **Start** e digitando `dcomcnfg.exe` nella casella di **ricerca** . Quando si apre MMC, passare al nodo **Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
+ Se si esegue Windows Vista o Windows Server 2008, è possibile trovare lo snap-in MMC facendo clic sul pulsante **Start** e digitando `dcomcnfg.exe` nella casella di **ricerca** . Quando si apre MMC, passare al nodo **Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
   
- I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire passaggi simili se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Se si esegue Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], seguire i passaggi precedenti per vista e [!INCLUDE[lserver](../../../includes/lserver-md.md)], ma usare il nodo **Distributed Transaction COORDINATOR\LOCAL DTC** nel nodo del computer remoto.  
+ I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire passaggi simili se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o Windows Server 2003. Se si esegue Windows Vista o Windows Server 2008, seguire i passaggi precedenti per vista e Windows Server 2008, ma usare il nodo **Distributed Transaction COORDINATOR\LOCAL DTC** nel nodo del computer remoto.  
   
  Per usare l'interfaccia fornita dallo strumento è necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Account autorizzati**  
   
- Facendo clic sul pulsante **Seleziona** viene richiamato l'editor dell'elenco di controllo di accesso di Windows, in cui è possibile specificare l'utente o il gruppo che può partecipare alle transazioni WS-Atomic selezionando la casella **Consenti** o **Nega** nella pagina **partecipa** gruppo di autorizzazioni.  
+ Facendo clic sul pulsante **Seleziona** viene richiamato l'editor dell'elenco di controllo di accesso di Windows, in cui è possibile specificare l'utente o il gruppo che può partecipare alle transazioni WS-Atomic selezionando la casella **Consenti** o **Nega** nel gruppo di autorizzazioni **partecipa** .  
   
  **Certificati autorizzati**  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
-ms.translationtype: MT
+ms.openlocfilehash: 2d791e233ea869381de3a1c29f79d81d549904e0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141597"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635821"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito - Guida per programmatori C#
 
@@ -49,7 +49,7 @@ Per ulteriori informazioni, vedere [come utilizzare variabili e matrici locali t
 
 ## <a name="var-and-anonymous-types"></a>var e tipi anonimi
 
-In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per altre informazioni, vedere [Tipi anonimi](anonymous-types.md).
+In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query LINQ. Per altre informazioni, vedere [Tipi anonimi](anonymous-types.md).
 
 Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una variabile di query è stata inizializzata con `var`, l'unico modo per accedere alle proprietà nella sequenza di oggetti restituita è usare `var` come tipo della variabile di iterazione nell'istruzione `foreach`.
 

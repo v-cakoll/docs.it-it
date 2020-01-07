@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460142"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636302"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
-Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. Windows e il .NET Framework includono diverse tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è necessario distribuirle. Windows e il .NET Framework includono diverse tecnologie di distribuzione. La tecnologia di distribuzione utilizzata per distribuire un'applicazione WPF dipende dal tipo di applicazione. In questo argomento viene fornita una breve panoramica di ogni tecnologia di distribuzione e viene illustrato come vengono utilizzate in combinazione con i requisiti di distribuzione di ogni tipo di applicazione WPF.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologie di distribuzione  
@@ -63,7 +63,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Distribuzione di applicazioni WPF  
- Le opzioni di distribuzione per un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dipendono dal tipo di applicazione. Dalla prospettiva della distribuzione, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dispone di tre significativi tipi di applicazione:  
+ Le opzioni di distribuzione per un'applicazione WPF dipendono dal tipo di applicazione. Dal punto di vista della distribuzione, WPF prevede tre tipi di applicazioni significativi:  
   
 - Applicazioni autonome.  
   
@@ -79,7 +79,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
 ### <a name="deploying-markup-only-xaml-applications"></a>Distribuzione di applicazioni XAML solo sarkup  
  Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup vengono in genere pubblicate in server Web, come le pagine HTML, e possono essere visualizzate utilizzando Internet Explorer. Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup vengono eseguite in una sandbox di sicurezza con attendibilità parziale, con restrizioni definite dal set di autorizzazioni dell'area Internet. In questo modo viene fornita una sandbox di sicurezza equivalente per le applicazioni Web basate su HTML.  
   
- Per altre informazioni sulla sicurezza per le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Sicurezza](../security-wpf.md).  
+ Per ulteriori informazioni sulla sicurezza per le applicazioni WPF, vedere [sicurezza](../security-wpf.md).  
   
  Le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo markup possono essere installate nella file system locale utilizzando XCopy o Windows Installer. Queste pagine possono essere visualizzate utilizzando Internet Explorer o Esplora risorse.  
   
@@ -112,7 +112,7 @@ Una volta compilate le applicazioni Windows Presentation Foundation (WPF), è ne
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installazione di .NET Framework  
- Per eseguire un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], il Framework di Microsoft .NET deve essere installato nel client. Internet Explorer rileva automaticamente se i client vengono installati con .NET Framework quando vengono visualizzate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni ospitate da browser. Se il .NET Framework non è installato, Internet Explorer richiede agli utenti di installarlo.  
+ Per eseguire un'applicazione WPF, è necessario che nel client sia installato il Framework Microsoft .NET. Internet Explorer rileva automaticamente se i client vengono installati con .NET Framework quando vengono visualizzate le applicazioni WPF ospitate da browser. Se il .NET Framework non è installato, Internet Explorer richiede agli utenti di installarlo.  
   
  Per rilevare se la .NET Framework è installata, Internet Explorer include un'applicazione del programma di avvio automatico registrata come gestore di fallback Multipurpose Internet Mail Extensions (MIME) per i file di contenuto con le estensioni seguenti:. XAML,. XPS,. XBAP , e. Application. Se si passa a questi tipi di file e il .NET Framework non è installato nel client, l'applicazione del programma di avvio automatico richiede l'autorizzazione per l'installazione. Se non viene fornita l'autorizzazione, né l'.NET Framework né l'applicazione sono installate.  
   

@@ -2,12 +2,12 @@
 title: Istruzioni del firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837844"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544786"
 ---
 # <a name="firewall-instructions"></a>Istruzioni del firewall
 È necessario abilitare più porte o programmi nel firewall in modo che gli esempi di Windows Communication Foundation (WCF) possano funzionare. In molti degli esempi la comunicano avviene tramite le porte comprese nell'intervallo 8000-8003 e la porta 9000. Il firewall viene attivato per impostazione predefinita e impedisce l'accesso a queste porte. Per abilitare il firewall per gli esempi, completare una delle procedure descritte di seguito, a seconda dei requisiti e dell’ambiente di sicurezza:  
@@ -36,7 +36,7 @@ ms.locfileid: "74837844"
   
     - In Windows 7 o Windows Server 2008 R2 fare clic su **Consenti programma o funzionalità tramite Windows Firewall**. Fare clic su **Cambia impostazioni**, Consenti **un altro programma...** .  
   
-    - In Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)]fare clic su **Consenti programma tramite Windows Firewall**.  
+    - In Windows Vista o Windows Server 2008, fare clic su **Consenti programma tramite Windows Firewall**.  
   
 4. Nella scheda **eccezioni** fare clic su **Aggiungi programma**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74837844"
   
     10. Fare clic su **regole in uscita** e ripetere i passaggi da c a h.  
   
-3. In Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], attenersi alla seguente procedura.  
+3. In Windows Vista o Windows Server 2008, attenersi alla seguente procedura.  
   
     1. Fare clic su **Consenti programma con Windows Firewall**.  
   

@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Testare l'uguaglianza di riferimenti (identità) - Guida per programmatori C#"
+title: Come testare l'uguaglianza dei riferimenti (identità)- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d41182d3042f7165fe9a55a275ab0f7e6204a295
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588635"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635132"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Procedura: Testare l'uguaglianza di riferimenti (identità) (Guida per programmatori C#)
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Come verificare l'uguaglianza dei riferimenti (identità) (C# guida per programmatori)
 Non è necessario implementare alcuna logica personalizzata per supportare i confronti di uguaglianza dei riferimenti nei tipi. Questa funzionalità viene fornita per tutti i tipi dal metodo statico <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.  
   
  L'esempio seguente mostra come determinare se due variabili presentano *uguaglianza dei riferimenti*, ovvero se fanno riferimento allo stesso oggetto in memoria.  

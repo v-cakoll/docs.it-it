@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837493"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544753"
 ---
 # <a name="analytic-tracing-overview"></a>Panoramica della traccia analitica
 La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows (ETW). ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia. Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio. I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.  
   
  Per ulteriori informazioni su ETW, vedere [migliorare il debug e l'ottimizzazione delle prestazioni con ETW](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Oltre a utilizzare i registri eventi di sistema, sicurezza e applicazione di Windows per analizzare l'applicazione, Windows Vista e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto log aggiuntivi nel nodo di livello superiore registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia WCF, log dei messaggi WCF e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] ai registri applicazioni e servizi.  
+ Oltre a utilizzare i registri eventi di sistema, sicurezza e applicazione di Windows per analizzare l'applicazione, Windows Vista e Windows Server 2008 hanno introdotto log aggiuntivi nel nodo di livello superiore registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia WCF, log dei messaggi WCF e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] ai registri applicazioni e servizi.  
   
 ## <a name="concepts-and-capabilities"></a>Concetti e funzionalità  
  I concetti e le funzionalità seguenti si applicano alla traccia analitica di WCF.  

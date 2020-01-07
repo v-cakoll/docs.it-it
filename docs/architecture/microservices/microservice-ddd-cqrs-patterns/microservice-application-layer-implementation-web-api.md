@@ -3,10 +3,10 @@ title: Implementazione del livello dell'applicazione di microservizi tramite l'A
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 ms.date: 10/08/2018
 ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73737499"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
@@ -439,7 +439,7 @@ Un Mediator è un oggetto che incapsula la modalità di questo processo: coordin
 
 Gli elementi Decorator e i comportamenti sono simili alla [programmazione orientata agli aspetti](https://en.wikipedia.org/wiki/Aspect-oriented_programming), che viene applicata solo a una pipeline di processi specifica gestita dal componente Mediator. Gli aspetti nella programmazione orientata agli aspetti, che implementano i problemi trasversali, vengono applicati in base ai *weaver degli aspetti* inseriti in fase di compilazione o in base all'intercettazione della chiamata all'oggetto. Si dice a volte che entrambi i tipici approcci alla programmazione orientata agli aspetti "fanno magie", perché non è facile vedere come funziona la programmazione orientata agli aspetti. Quando si affrontano problemi o bug gravi, può essere difficile eseguire il debug della programmazione orientata agli aspetti. D'altra parte, questi elementi Decorator/comportamenti sono espliciti e vengono applicati solo nel contesto del Mediator, quindi il debug è molto più prevedibile e semplice.
 
-Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva spiegando in che modo eShopOnContainers implementa i [comportamenti](https://www.nuget.org/packages/MediatR/3.0.0) di [MediatR 3](https://github.com/jbogard/MediatR/wiki/Behaviors).
+Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti è illustrata nella sezione successiva mostrando il modo in cui eShopOnContainers usa i [comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) [Mediator 3](https://www.nuget.org/packages/MediatR/3.0.0) .
 
 ### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usare le code di messaggi (out-of-process) nella pipeline del comando
 
@@ -459,7 +459,7 @@ Inoltre, i comandi asincroni sono comandi unidirezionali, che in molti casi potr
 
 > \[Burtsev Alexey\] Trovo una gran quantità di codice dove le persone usano la gestione dei comandi asincroni o la messaggistica basata su comandi unidirezionali senza alcun motivo per farlo (non devono eseguire operazioni lunghe, non devono eseguire codice asincrono esterno, non devono neppure attraversare il limite dell'applicazione per usare il bus di messaggi). Perché rendono tutto così complesso senza motivo? E finora non ho visto un solo esempio di codice CQRS con il blocco dei gestori comando, anche se funzionerebbe davvero bene nella maggior parte dei casi.
 >
-> \[Greg Young\] \[...\] non esiste un comando asincrono, che è in realtà un altro evento. Se devo accettare quello che tu mi invii e generare un evento se non sono d'accordo, non mi stai più dicendo di fare qualcosa \[quindi, non è un comando\]. Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
+> \[Greg Young\] \[...\] un comando asincrono non esiste; si tratta in realtà di un altro evento. Se devo accettare quello che tu mi invii e generare un evento se non sono d'accordo, non mi stai più dicendo di fare qualcosa \[quindi, non è un comando\]. Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
 
 I comandi asincroni accrescono considerevolmente la complessità di un sistema, perché non esiste un modo semplice per indicare gli errori. I comandi asincroni non sono quindi consigliati se non quando sono necessari requisiti di ridimensionamento o in casi particolari quando si comunicano i microservizi interni tramite la messaggistica. In tali casi, è necessario progettare un sistema di segnalazione e ripristino separato per gli errori.
 
@@ -816,13 +816,13 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **MediatR.** Repository GitHub. \
   <https://github.com/jbogard/MediatR>
 
-- **CQRS with MediatR and AutoMapper** \ (CQRS con MediatR e AutoMapper)
+- **CQRS with MediatR and AutoMapper (CQRS con MediatR e AutoMapper)**  \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Put your controllers on a diet: POSTs and commands.** (Mettere a dieta i controller: POST e comandi) \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Tackling cross-cutting concerns with a mediator pipeline** \ (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
+- **Tackling cross-cutting concerns with a mediator pipeline (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)**  \
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS and REST: the perfect match (CQRS e REST: la coppia perfetta)**  \

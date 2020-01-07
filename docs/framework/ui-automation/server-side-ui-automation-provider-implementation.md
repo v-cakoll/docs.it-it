@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446853"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632312"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 
@@ -20,7 +20,7 @@ ms.locfileid: "74446853"
 
 In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.
 
-L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], ad esempio quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], è fondamentalmente diversa. Gli elementi[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto tramite implementazioni di interfacce del provider.
+L'implementazione per gli elementi Windows Presentation Foundation (WPF) e gli elementi non WPF (ad esempio quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) è fondamentalmente diversa. Gli elementi WPF forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non WPF forniscono supporto tramite implementazioni di interfacce del provider.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Per altre informazioni su questo argomento, vedere [Automazione interfaccia uten
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementazione di provider da elementi non WPF
 
-I controlli personalizzati che non fanno parte del framework [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , ma scritti in codice gestito (in genere si tratta di controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ), offrono il supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
+I controlli personalizzati che non fanno parte del framework WPF, ma che sono scritti in codice gestito (spesso si tratta di controlli [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mediante l'implementazione di interfacce. Ogni elemento deve implementare almeno una delle interfacce elencate nella prima tabella nella sezione successiva. Inoltre, se l'elemento supporta uno o più pattern di controllo, deve implementare l'interfaccia appropriata per ognuno di essi.
 
 Il progetto del provider [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deve fare riferimento agli assembly seguenti:
 
@@ -115,7 +115,7 @@ I provider per i controlli basati su HWND in genere non richiedono di specificar
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per altre informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> di un elemento semplice o di una radice di frammento ospitato in una finestra viene ottenuto dalla finestra. Tuttavia, gli elementi del frammento sotto la radice (ad esempio voci di elenco in una casella di riepilogo) devono fornire i propri identificatori. Per ulteriori informazioni, vedere <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deve essere restituito per i provider ospitati in un controllo [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . In questo caso, il provider di finestra predefinito potrebbe non essere in grado di recuperare il valore corretto.
 >
@@ -132,7 +132,7 @@ I provider[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiauto
 |Metodo|Descrizione|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Genera vari eventi, inclusi gli eventi attivati dai pattern di controllo.|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Genera un evento in seguito alla modifica di una proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Genera un evento in seguito alla modifica di una proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Genera un evento in seguito alla modifica della struttura dell'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , ad esempio per la rimozione o l'aggiunta di un elemento.|
 
 Lo scopo di un evento è notificare al client qualcosa che si verifica nell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], indipendentemente dal fatto che l'attività sia attivata dal sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stesso. Ad esempio, l'evento identificato da <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> dovrebbe essere generato ogni volta che viene richiamato il controllo, sia tramite input diretto dell'utente o dall'applicazione client che chiama <xref:System.Windows.Automation.InvokePattern.Invoke%2A>.

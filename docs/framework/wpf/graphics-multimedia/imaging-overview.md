@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733575"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636640"
 ---
 # <a name="imaging-overview"></a>Cenni preliminari sulla creazione dell'immagine
 In questo argomento viene fornita un'introduzione al componente Microsoft Windows Presentation Foundation Imaging. La creazione di immagini WPF consente agli sviluppatori di visualizzare, trasformare e formattare le immagini.  
@@ -48,7 +48,7 @@ In questo argomento viene fornita un'introduzione al componente Microsoft Window
   
 - Supporto per i metadati proprietari all'interno dei file.  
   
-- Il componente gestito usa l'infrastruttura non gestita per fornire l'integrazione di immagini con altre funzionalità [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], ad esempio [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animazione e grafica. Il componente gestito trae anche vantaggio dal modello di estendibilità del codec di imaging Windows Presentation Foundation (WPF), che consente il riconoscimento automatico dei nuovi formati di immagini nelle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- Il componente gestito utilizza l'infrastruttura non gestita per offrire una facile integrazione delle immagini con altre funzionalità di WPF, ad esempio [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animazione e grafica. Il componente gestito trae anche vantaggio dal modello di estendibilità del codec di imaging Windows Presentation Foundation (WPF), che consente il riconoscimento automatico dei nuovi formati di immagini nelle applicazioni WPF.  
   
  La maggior parte dell'API per la creazione di immagini WPF gestita risiede nello spazio dei nomi <xref:System.Windows.Media.Imaging?displayProperty=nameWithType>, anche se diversi tipi importanti, ad esempio <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.ImageDrawing> risiedono nello spazio dei nomi <xref:System.Windows.Media?displayProperty=nameWithType> e <xref:System.Windows.Controls.Image> si trovano nello spazio dei nomi <xref:System.Windows.Controls?displayProperty=nameWithType>.  
   
@@ -59,7 +59,7 @@ In questo argomento viene fornita un'introduzione al componente Microsoft Window
 
  Viene usato un codec per decodificare o codificare un formato multimediale specifico. La creazione di immagini WPF include un codec per i formati di immagine BMP, JPEG, PNG, TIFF, Windows Media Photo, GIF e ICON. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> è una classe importante utilizzata per la decodifica e la codifica delle immagini. Si tratta del blocco predefinito di base della pipeline di imaging WPF e rappresenta un singolo set costante di pixel a una determinata dimensione e risoluzione. Un <xref:System.Windows.Media.Imaging.BitmapSource> può essere un singolo frame di un'immagine a più frame oppure il risultato di una trasformazione eseguita su una <xref:System.Windows.Media.Imaging.BitmapSource>. Si tratta dell'elemento padre di molte delle classi primarie utilizzate in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Imaging, ad esempio <xref:System.Windows.Media.Imaging.BitmapFrame>.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> è una classe importante utilizzata per la decodifica e la codifica delle immagini. Si tratta del blocco predefinito di base della pipeline di imaging WPF e rappresenta un singolo set costante di pixel a una determinata dimensione e risoluzione. Un <xref:System.Windows.Media.Imaging.BitmapSource> può essere un singolo frame di un'immagine a più frame oppure il risultato di una trasformazione eseguita su una <xref:System.Windows.Media.Imaging.BitmapSource>. È l'elemento padre di molte delle classi primarie utilizzate nella creazione di immagini WPF, ad esempio <xref:System.Windows.Media.Imaging.BitmapFrame>.  
   
  Viene utilizzato un <xref:System.Windows.Media.Imaging.BitmapFrame> per archiviare i dati bitmap effettivi di un formato di immagine. Molti formati di immagine supportano solo una singola <xref:System.Windows.Media.Imaging.BitmapFrame>, anche se formati quali GIF e TIFF supportano più frame per ogni immagine. I fotogrammi vengono usati dai decodificatori come dati di input e vengono passati ai codificatori per creare file di immagine.  
   
@@ -69,7 +69,7 @@ In questo argomento viene fornita un'introduzione al componente Microsoft Window
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Decodifica dei formati di immagine  
- La decodifica delle immagini è la conversione di un formato di immagine in dati di immagine che possono essere usati dal sistema. I dati dell'immagine possono quindi essere usati per visualizzare, elaborare o eseguire la codifica in un formato diverso. La scelta del decodificatore varia a seconda del formato di immagine. La selezione del codec è automatica, a meno che non si indichi un decodificatore specifico. Gli esempi nella sezione [Visualizzazione di immagini in WPF](#_displayingimages) illustrano la decodifica automatica. I decodificatori di formato personalizzati sviluppati utilizzando le interfacce di imaging WPF non gestite e registrati con il sistema partecipano automaticamente alla selezione del decodificatore. In questo modo i formati personalizzati vengono visualizzati automaticamente nelle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ La decodifica delle immagini è la conversione di un formato di immagine in dati di immagine che possono essere usati dal sistema. I dati dell'immagine possono quindi essere usati per visualizzare, elaborare o eseguire la codifica in un formato diverso. La scelta del decodificatore varia a seconda del formato di immagine. La selezione del codec è automatica, a meno che non si indichi un decodificatore specifico. Gli esempi nella sezione [Visualizzazione di immagini in WPF](#_displayingimages) illustrano la decodifica automatica. I decodificatori di formato personalizzati sviluppati utilizzando le interfacce di imaging WPF non gestite e registrati con il sistema partecipano automaticamente alla selezione del decodificatore. In questo modo è possibile visualizzare automaticamente i formati personalizzati nelle applicazioni WPF.  
   
  Nell'esempio seguente viene illustrato l'utilizzo di un decodificatore bitmap per decodificare un'immagine in formato BMP.  
   
@@ -91,7 +91,7 @@ In questo argomento viene fornita un'introduzione al componente Microsoft Window
  Esistono diversi modi per visualizzare un'immagine in un'applicazione Windows Presentation Foundation (WPF). Le immagini possono essere visualizzate utilizzando un controllo <xref:System.Windows.Controls.Image>, dipinte su un oggetto visivo utilizzando una <xref:System.Windows.Media.ImageBrush>o disegnate utilizzando un <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Uso del controllo Image  
- <xref:System.Windows.Controls.Image> è un elemento del Framework e il modo principale per visualizzare le immagini nelle applicazioni. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<xref:System.Windows.Controls.Image> può essere utilizzato in due modi: sintassi degli attributi o sintassi della proprietà. L'esempio seguente mostra come eseguire il rendering di un'immagine con una larghezza di 200 pixel mediante la sintassi di attributo e la sintassi di tag di proprietà. Per altre informazioni sulla sintassi di attributo e di proprietà, vedere [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> è un elemento del Framework e il modo principale per visualizzare le immagini nelle applicazioni. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<xref:System.Windows.Controls.Image> può essere utilizzato in due modi: sintassi degli attributi o sintassi della proprietà. L'esempio seguente mostra come eseguire il rendering di un'immagine con una larghezza di 200 pixel mediante la sintassi di attributo e la sintassi di tag di proprietà. Per altre informazioni sulla sintassi degli attributi e la sintassi di proprietà, vedere [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md).  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
@@ -106,7 +106,7 @@ In questo argomento viene fornita un'introduzione al componente Microsoft Window
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Rotazione, conversione e ritaglio di immagini  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente agli utenti di trasformare le immagini usando le proprietà di <xref:System.Windows.Media.Imaging.BitmapImage> o utilizzando oggetti <xref:System.Windows.Media.Imaging.BitmapSource> aggiuntivi, ad esempio <xref:System.Windows.Media.Imaging.CroppedBitmap> o <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Queste trasformazioni di immagini possono ridimensionare, ruotare, modificare il formato dei pixel o ritagliare un'immagine.  
+ WPF consente agli utenti di trasformare le immagini usando le proprietà di <xref:System.Windows.Media.Imaging.BitmapImage> o usando oggetti <xref:System.Windows.Media.Imaging.BitmapSource> aggiuntivi, ad esempio <xref:System.Windows.Media.Imaging.CroppedBitmap> o <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Queste trasformazioni di immagini possono ridimensionare, ruotare, modificare il formato dei pixel o ritagliare un'immagine.  
   
  Le rotazioni delle immagini vengono eseguite utilizzando la proprietà <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> di <xref:System.Windows.Media.Imaging.BitmapImage>. Le rotazioni possono essere eseguite solo in incrementi di 90 gradi. Nell'esempio seguente un'immagine viene ruotata di 90 gradi.  
   
@@ -181,7 +181,7 @@ I pennelli immagine possono riempire forme, controlli, testo e altro ancora
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Estendibilità dei codec  
- Una funzionalità di base dell'imaging WPF è il modello di estendibilità per i nuovi codec di immagine. Queste interfacce non gestite consentono agli sviluppatori di codec di integrare i codec con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], per consentire l'uso automatico di nuovi formati di immagine da parte delle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Una funzionalità di base dell'imaging WPF è il modello di estendibilità per i nuovi codec di immagine. Queste interfacce non gestite consentono agli sviluppatori di codec di integrare i codec con WPF, in modo che le applicazioni WPF possano usare automaticamente nuovi formati di immagine.  
   
  Per un esempio di API di estendibilità, vedere il [codec di esempio Win32](https://go.microsoft.com/fwlink/?LinkID=160052). Questo esempio spiega come creare un decodificatore e un codificatore per un formato di immagine personalizzato.  
   

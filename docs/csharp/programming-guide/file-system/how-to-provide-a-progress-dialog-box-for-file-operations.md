@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Fornire una finestra di dialogo dello stato di avanzamento per operazioni su file - Guida per programmatori C#'
+title: Come fornire una finestra di dialogo di avanzamento per operazioni su C# file-Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bec718660b998c6d29fe014abffef1bae705deb0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590057"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635639"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Procedura: Fornire una finestra di dialogo dello stato di avanzamento per operazioni su file (Guida per programmatori C#)
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Come fornire una finestra di dialogo di stato per le operazioniC# su file (Guida per programmatori)
 È possibile fornire una finestra di dialogo standard che mostra lo stato di avanzamento delle operazioni sui file in Windows se si usa il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> nello spazio dei nomi <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

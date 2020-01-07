@@ -4,18 +4,18 @@ description: Informazioni su come creare librerie .NET Core usando gli strumenti
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 13c8541d1045f9130b3b5b260769a50fdc2316ba
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420464"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559539"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
 Questo articolo illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma. L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://dotnet.microsoft.com/download) siano installati nel computer.
 
@@ -76,7 +76,7 @@ Se si vuole raggiungere il numero massimo di sviluppatori e progetti, usare .NET
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| .NET Framework 3.5     | `net35`  |
+| .NET Framework 3.5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
@@ -308,7 +308,7 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346126"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636809"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inizializzatori di oggetto: tipi denominati e tipi anonimi (Visual Basic)
 Gli inizializzatori di oggetto consentono di specificare le proprietà per un oggetto complesso utilizzando una singola espressione. Possono essere usati per creare istanze di tipi denominati e di tipi anonimi.  
@@ -105,7 +105,7 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
   
  Poiché il nome del tipo non è disponibile, non è possibile usare una clausola `As` per dichiarare `cust13`. Il tipo deve essere dedotto. Senza usare l'associazione tardiva, questo limita l'uso di tipi anonimi alle variabili locali.  
   
- I tipi anonimi forniscono supporto critico per le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per ulteriori informazioni sull'utilizzo di tipi anonimi nelle query, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ I tipi anonimi forniscono supporto critico per le query LINQ. Per ulteriori informazioni sull'utilizzo di tipi anonimi nelle query, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Osservazioni sui tipi anonimi  
   

@@ -12,22 +12,22 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591012"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635613"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
-Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
+Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Se si conoscono queste relazioni, è più facile comprendere gli esempi di LINQ e gli esempi di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
   
- Le operazioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sono fortemente tipizzate nell'origine dati, nella query stessa e nell'esecuzione della query. Il tipo delle variabili nella query deve essere compatibile con il tipo degli elementi nell'origine dati e con il tipo della variabile di iterazione nell'istruzione `foreach`. Questa forte tipizzazione garantisce che gli errori di tipo vengono rilevati in fase di compilazione quando possono essere corretti prima di essere riscontrati dagli utenti.  
+ Le operazioni di query LINQ sono fortemente tipizzate nell'origine dati, nella query stessa e nell'esecuzione della query. Il tipo delle variabili nella query deve essere compatibile con il tipo degli elementi nell'origine dati e con il tipo della variabile di iterazione nell'istruzione `foreach`. Questa forte tipizzazione garantisce che gli errori di tipo vengono rilevati in fase di compilazione quando possono essere corretti prima di essere riscontrati dagli utenti.  
   
  Per illustrare tali relazioni del tipo, la maggior parte degli esempi che seguono usa la tipizzazione esplicita per tutte le variabili. Nell'ultimo esempio viene illustrato come si applichino gli stessi principi anche quando si usa la tipizzazione implicita tramite [var](../../../language-reference/keywords/var.md).  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Query che non trasformano i dati di origine  
- La figura seguente mostra un'operazione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects che non esegue alcuna trasformazione sui dati. L'origine contiene una sequenza di stringhe e anche l'output della query è una sequenza di stringhe.  
+ Nella figura seguente viene illustrata un'operazione di query LINQ to Objects che non esegue alcuna trasformazione sui dati. L'origine contiene una sequenza di stringhe e anche l'output della query è una sequenza di stringhe.  
   
  ![Diagramma che illustra la relazione dei tipi di dati in una query LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   

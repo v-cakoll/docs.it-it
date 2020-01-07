@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351022"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636757"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
 
-In questa procedura dettagliata viene illustrato come è possibile utilizzare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni di query. Nella procedura dettagliata viene illustrato come creare query in un elenco di oggetti Student, come eseguire le query e come modificarli. Le query includono diverse funzionalità, inclusi gli inizializzatori di oggetto, l'inferenza del tipo locale e i tipi anonimi.
+In questa procedura dettagliata viene illustrato come è possibile utilizzare le funzionalità del linguaggio Visual Basic per scrivere espressioni di query LINQ (Language-Integrated Query). Nella procedura dettagliata viene illustrato come creare query in un elenco di oggetti Student, come eseguire le query e come modificarli. Le query includono diverse funzionalità, inclusi gli inizializzatori di oggetto, l'inferenza del tipo locale e i tipi anonimi.
 
-Al termine di questa procedura dettagliata, si sarà pronti a passare agli esempi e alla documentazione per il provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] specifico a cui si è interessati. i provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] includono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Al termine di questa procedura dettagliata, si sarà pronti a passare agli esempi e alla documentazione per il provider LINQ specifico a cui si è interessati. I provider LINQ includono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Creare un progetto
 
@@ -133,13 +133,13 @@ La variabile `studentQuery` contiene la definizione della query, non i risultati
 
 ## <a name="additional-examples"></a>Esempi aggiuntivi
 
-Ora che sono state appreso le nozioni di base, di seguito è riportato un elenco di esempi aggiuntivi che illustrano la flessibilità e la potenza di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Ogni esempio è preceduto da una breve descrizione dell'operazione. Posizionare il puntatore del mouse sulla variabile dei risultati della query per ogni query per visualizzare il tipo dedotto. Usare un ciclo `For Each` per produrre i risultati.
+A questo punto, dopo aver compreso le nozioni di base, di seguito è riportato un elenco di esempi aggiuntivi per illustrare la flessibilità e la potenza delle query LINQ. Ogni esempio è preceduto da una breve descrizione dell'operazione. Posizionare il puntatore del mouse sulla variabile dei risultati della query per ogni query per visualizzare il tipo dedotto. Usare un ciclo `For Each` per produrre i risultati.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-Dopo aver acquisito familiarità con i concetti di base relativi all'utilizzo delle query, è possibile leggere la documentazione e gli esempi per il tipo specifico di provider di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] a cui si è interessati:
+Dopo aver acquisito familiarità con i concetti di base relativi all'utilizzo delle query, è possibile leggere la documentazione e gli esempi relativi al tipo specifico di provider LINQ a cui si è interessati:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

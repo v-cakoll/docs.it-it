@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960146"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544658"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 
@@ -63,7 +63,7 @@ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazio
     > [!NOTE]
     > Se questo passaggio non viene completato, tutti gli esempi ospitati in IIS genereranno un errore durante la compilazione. Assicurarsi di impostare correttamente le autorizzazioni oppure eseguire il prompt dei comandi SDK e il prompt dei comandi di Visual Studio (2012) come amministratore.
 
-11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, Windows Vista e Windows Server 2008 R2, questo account è **servizio di rete**. Per [!INCLUDE[lserver](../../../../includes/lserver-md.md)], l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], l'account è ASPNET.
+11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, Windows Vista e Windows Server 2008 R2, questo account è **servizio di rete**. Per Windows Server 2008, l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e Windows Server 2003, l'account è ASPNET.
 
 12. Eseguire il file Setupcerttool.bat. Questo file si trova nella \<cartella installpath > \WF_WCF_Samples\WCF\Setup  Tramite questo script verranno eseguite le attività seguenti:
 

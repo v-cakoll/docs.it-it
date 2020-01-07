@@ -1,14 +1,14 @@
 ---
 title: Come usare l'API di Machine Learning automatizzato per ML.NET
 description: L'API di Machine Learning automatizzato per ML.NET consente di automatizzare il processo di compilazione del modello e genera un modello pronto per la distribuzione. Sono disponibili varie opzioni per configurare attività di Machine Learning automatizzato.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977126"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636562"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
 
@@ -38,6 +38,7 @@ Prima di creare un esperimento, determinare il tipo di problema di apprendimento
 * Classificazione binaria
 * Classificazione multiclasse
 * Regressione
+* Indicazione
 
 ## <a name="create-experiment-settings"></a>Creare le impostazioni dell'esperimento
 
@@ -61,11 +62,17 @@ Creare le impostazioni dell'esperimento per il tipo specifico di attività di ap
   var experimentSettings = new RegressionExperimentSettings();
   ```
 
+* Indicazione
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
+  ```
+
 ## <a name="configure-experiment-settings"></a>Configurare le impostazioni dell'esperimento
 
 Gli esperimenti sono ampiamente configurabili. Vedere la [documentazione dell'API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) per un elenco completo delle impostazioni di configurazione.
 
-Di seguito sono riportati alcuni esempi:
+Alcuni esempi includono:
 
 1. Specificare il tempo massimo per il quale eseguire l'esperimento.
 
@@ -110,12 +117,13 @@ L'elenco degli algoritmi di training supportati per ogni attività di apprendime
 * [Algoritmi di classificazione binaria supportati](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmi di classificazione multiclasse supportati](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmi di regressione supportati](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Algoritmi di raccomandazione supportati](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Metrica di ottimizzazione
 
 Come illustrato nell'esempio precedente, la metrica di ottimizzazione determina la metrica da ottimizzare durante il training del modello. La metrica di ottimizzazione selezionabile è determinata dal tipo di attività scelto. Ecco un elenco delle metriche disponibili.
 
-|[Classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Raccomandazione & regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Accuratezza| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -187,7 +195,7 @@ Esplorare altri overload per `Execute()` se si vuole passare dati di convalida, 
 
 ## <a name="training-modes"></a>Modalità di training
 
-### <a name="training-dataset"></a>Dataset di training
+### <a name="training-dataset"></a>Set di dati di training
 
 AutoML include un metodo di esecuzione dell'esperimento con overload che consente di specificare dati di training. A livello interno, il Machine Learning automatizzato suddivide i dati in gruppi train-validate (training-convalida).
 
@@ -219,7 +227,7 @@ Di seguito sono elencate tutte le metriche disponibili per attività ML:
 
 * [Metriche di classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metriche di classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Metriche di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Metriche delle raccomandazioni del & di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Vedere anche
 

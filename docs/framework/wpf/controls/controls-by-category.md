@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005697"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636211"
 ---
 # <a name="controls-by-category"></a>Controlli per categoria
 I controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
   
-## <a name="layout"></a>Layout  
+## <a name="layout"></a>Formato  
  I controlli di layout consentono di gestire le dimensioni, la posizione e la disposizione degli elementi figlio.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -78,7 +78,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a>Menu  
+## <a name="menus"></a>Menus  
  I menu consentono di raggruppare azioni correlate o fornire assistenza contestuale.  
   
 - <xref:System.Windows.Controls.ContextMenu>  
@@ -140,7 +140,7 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Documenti  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] include vari controlli specializzati per la visualizzazione dei documenti, che ottimizzano l'esperienza di lettura, in base allo specifico scenario utente.  
+ WPF include diversi controlli specializzati per la visualizzazione di documenti. che ottimizzano l'esperienza di lettura, in base allo specifico scenario utente.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -161,8 +161,8 @@ I controlli Windows Presentation Foundation (WPF) possono essere raggruppati log
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Supporti  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] include il supporto integrato per l'hosting di contenuto audio e video, nonché di [codec] per i formati di immagine più diffusi.  
+## <a name="media"></a>Elemento multimediale  
+ WPF include il supporto integrato per l'hosting di contenuto audio e video, nonché [codec] per i formati di immagine più diffusi.  
   
 - <xref:System.Windows.Controls.Image>  
   

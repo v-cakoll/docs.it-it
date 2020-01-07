@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: usare espressioni lambda in una guida per la C# programmazione di query'
+title: Come utilizzare le espressioni lambda in una query- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: e66239174d5598d7cf532d21426a9e15d5075085
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423171"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635119"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procedura: utilizzare espressioni lambda in una query (Guida per programmatori C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Come usare le espressioni lambda in una query (C# guida per programmatori)
 Le espressioni lambda non vengono usate direttamente nella sintassi delle query, ma nelle chiamate al metodo e le espressioni di query possono contenere chiamate al metodo. Di fatto, alcune operazioni di query possono essere espresse solo nella sintassi del metodo. Per altre informazioni sulle differenze tra la sintassi delle query e la sintassi dei metodi, vedere [Sintassi di query e sintassi di metodi in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Esempio  
@@ -28,7 +28,7 @@ Le espressioni lambda non vengono usate direttamente nella sintassi delle query,
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Per eseguire questo codice, copiare e incollare il metodo nel valore `StudentClass` fornito in [Procedura: eseguire una query su una raccolta di oggetti](../../linq/query-a-collection-of-objects.md) e chiamarlo dal metodo `Main`.  
+ Per eseguire questo codice, copiare e incollare il metodo nel `StudentClass` fornito in [eseguire una query su una raccolta di oggetti](../../linq/query-a-collection-of-objects.md) e chiamarlo dal metodo `Main`.
   
 ## <a name="see-also"></a>Vedere anche
 

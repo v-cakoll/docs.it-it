@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare se una stringa rappresenta un valore numerico - Guida per programmatori C#'
+title: Come determinare se una stringa rappresenta una guida per la C# programmazione di valori numerici
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 5eda9684c6b9d376eeaa498e4c4adf4af2921e2e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252949"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635093"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Procedura: Determinare se una stringa rappresenta un valore numerico (Guida per programmatori C#)
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Come determinare se una stringa rappresenta un valore numerico (C# guida per programmatori)
 Per determinare se una stringa è una rappresentazione valida di un tipo numerico specificato, usare il metodo statico `TryParse` che viene implementato da tutti i tipi numerici primitivi e anche da tipi quali <xref:System.DateTime> e <xref:System.Net.IPAddress>. L'esempio seguente illustra come determinare se "108" è un tipo [int](../../language-reference/builtin-types/integral-numeric-types.md) valido.  
   
 ```csharp  
@@ -41,8 +41,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Convertire una matrice di byte in un Integer](../types/how-to-convert-a-byte-array-to-an-int.md)
-- [Procedura: Convertire una stringa in un numero](../types/how-to-convert-a-string-to-a-number.md)
-- [Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [Come convertire una matrice di byte in un valore int](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [Come convertire una stringa in un numero](../types/how-to-convert-a-string-to-a-number.md)
+- [Come eseguire la conversione tra stringhe esadecimali e tipi numerici](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [Analisi di stringhe numeriche](../../../standard/base-types/parsing-numeric.md)
 - [Formattazione di tipi](../../../standard/base-types/formatting-types.md)

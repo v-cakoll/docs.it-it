@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740791"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559768"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintassi XAML di PropertyPath
 
@@ -113,7 +113,7 @@ Per fare riferimento al puntatore al record corrente per una visualizzazione di 
 <object Path="[index1,index2...]" .../>
 ```
 
-Oppure
+oppure
 
 ```xaml
 <object Path="propertyName[index,index2...]" .../>
@@ -137,7 +137,7 @@ Tutte le sintassi illustrate in precedenza possono essere combinate. Ad esempio,
 
 Per determinati oggetti business è possibile che la stringa di percorso delle proprietà richieda un carattere di escape per poter essere analizzata correttamente. L'esigenza di usare caratteri di escape deve essere rara, perché molti di questi caratteri hanno problemi di interazione-denominazione simili nei linguaggi che in genere vengono usati per definire l'oggetto business.
 
-- All'interno degli indicizzatori ([ ]), l'accento circonflesso (^) funge da escape per il carattere successivo.
+- All'interno degli indicizzatori ([]), l’accento circonflesso (^) funge da escape per il carattere successivo.
 
 - È necessario usare caratteri di escape (con entità XML) per alcuni caratteri specifici della definizione del linguaggio XML. Usare `&` come carattere di escape per "&". Usare `>` come carattere di escape per il tag di fine ">".
 
@@ -192,7 +192,7 @@ Per supportare la clonazione per l'animazione di una <xref:System.Windows.Freeza
 
 `propertyName2` deve essere il nome di una proprietà di dipendenza presente nell'oggetto che costituisce il valore di `propertyName`. In altre parole, `propertyName2` deve esistere come proprietà di dipendenza nel tipo che corrisponde al `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.
 
-L'impostazione indiretta delle animazioni come destinazioni è necessaria a causa degli stili e dei modelli applicati. Per fare riferimento a un'animazione, è necessario un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> in un oggetto di destinazione e tale nome viene stabilito da [x:Name](../../xaml-services/x-name-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Sebbene gli elementi di modelli e stili possano avere nomi, tali nomi sono validi solo all'interno dell'ambito dei nomi dello stile e del modello. Se modelli e stili non condividessero gli ambiti dei nomi con il markup dell'applicazione, i nomi non potrebbero essere univoci. Gli stili e i modelli sono letteralmente condivisi tra le istanze e possono perpetuare i nomi duplicati. Pertanto, se le singole proprietà di un elemento che si desidera animare provengono da uno stile o da un modello, è necessario iniziare con un'istanza dell'elemento denominato che non deriva da un modello di stile e quindi eseguire la destinazione nella struttura ad albero visuale di stile o modello per arrivare alla proprietà si desidera aggiungere un'animazione a.
+L'impostazione indiretta delle animazioni come destinazioni è necessaria a causa degli stili e dei modelli applicati. Per fare riferimento a un'animazione, è necessario un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> in un oggetto di destinazione e tale nome viene stabilito da [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Sebbene gli elementi di modelli e stili possano avere nomi, tali nomi sono validi solo all'interno dell'ambito dei nomi dello stile e del modello. Se modelli e stili non condividessero gli ambiti dei nomi con il markup dell'applicazione, i nomi non potrebbero essere univoci. Gli stili e i modelli sono letteralmente condivisi tra le istanze e possono perpetuare i nomi duplicati. Pertanto, se le singole proprietà di un elemento che si desidera animare provengono da uno stile o da un modello, è necessario iniziare con un'istanza dell'elemento denominato che non deriva da un modello di stile e quindi eseguire la destinazione nella struttura ad albero visuale di stile o modello per arrivare alla proprietà si desidera aggiungere un'animazione a.
 
 Ad esempio, la proprietà <xref:System.Windows.Controls.Panel.Background%2A> di un <xref:System.Windows.Controls.Panel> è un <xref:System.Windows.Media.Brush> completo (effettivamente un <xref:System.Windows.Media.SolidColorBrush>) proveniente da un modello di tema. Per animare un <xref:System.Windows.Media.Brush> completamente, è necessario che sia presente un BrushAnimation (probabilmente uno per ogni tipo di <xref:System.Windows.Media.Brush>) e che tale tipo non sia presente. Per animare un pennello, è invece necessario animare le proprietà di un particolare tipo di <xref:System.Windows.Media.Brush>. È necessario ottenere da <xref:System.Windows.Media.SolidColorBrush> al <xref:System.Windows.Media.SolidColorBrush.Color%2A> per applicare un <xref:System.Windows.Media.Animation.ColorAnimation>. Il percorso della proprietà per questo esempio sarebbe `Background.Color`.
 
@@ -227,5 +227,5 @@ In generale, <xref:System.Windows.PropertyPath> è progettato per usare due cost
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.PropertyPath>
-- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
+- [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)
 - [Cenni preliminari sugli storyboard](../graphics-multimedia/storyboards-overview.md)

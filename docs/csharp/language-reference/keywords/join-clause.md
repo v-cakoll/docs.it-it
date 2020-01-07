@@ -9,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2e1304c9f38c82b43b0c6551d1b5e7aac523dfe4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633616"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635964"
 ---
 # <a name="join-clause-c-reference"></a>Clausola join (Riferimento C#)
 
@@ -56,7 +56,7 @@ Per altre informazioni, vedere [Eseguire join raggruppati](../../linq/perform-gr
 
 ## <a name="left-outer-join"></a>Left outer join
 
-In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire un left outer join in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], usare il metodo `DefaultIfEmpty` insieme a un group join per specificare di generare un elemento di destra predefinito se un elemento di sinistra non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:
+In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire una left outer join in LINQ, usare il metodo `DefaultIfEmpty` in combinazione con un join di gruppo per specificare un elemento di destra predefinito da produrre se un elemento di sinistra non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -72,7 +72,7 @@ Una clausola `join` esegue un equijoin. In altre parole, è possibile basare le 
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Join su raccolte di oggetti e tabelle relazionali
 
-In un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] le operazioni di join vengono eseguite su raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] le clausole `join` esplicite sono necessarie solo quando due sequenze di origine non sono legate da una relazione. Quando si usa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.
+In un'espressione di query LINQ, le operazioni di join vengono eseguite sulle raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In LINQ le clausole `join` esplicite sono necessarie solo se due sequenze di origine non sono collegate da alcuna relazione. Quando si usa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.
 
 Per altre informazioni sull'esecuzione di una query in tabelle correlate nel contesto di [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vedere [Procedura: Eseguire il mapping delle relazioni di database](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
@@ -86,7 +86,7 @@ Nell'esempio seguente vengono confrontati i risultati di un inner join, di un gr
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Una clausola `join` non seguita da `into` viene traslata in una chiamata al metodo <xref:System.Linq.Enumerable.Join%2A>. Una clausola `join` seguita da `into` viene traslata in una chiamata al metodo <xref:System.Linq.Enumerable.GroupJoin%2A>.
 

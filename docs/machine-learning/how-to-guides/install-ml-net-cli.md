@@ -1,18 +1,21 @@
 ---
 title: Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
-description: Panoramica e installazione dello strumento dell'interfaccia della riga di comando (CLI) di ML.NET.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: Informazioni su come installare, aggiornare, eseguire il downgrade e disinstallare lo strumento dell'interfaccia della riga di comando ML.NET.
+ms.date: 12/18/2019
+ms.author: nakersha
+author: natke
+ms.openlocfilehash: 07b6e924ed9c6b0c278a86539ebe7d750f9ced37
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977086"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636588"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
 
-L'interfaccia della riga di comando di ML.NET è uno strumento che può essere eseguito in qualsiasi prompt dei comandi (Windows, Mac o Linux) per generare modelli ML.NET e codice sorgente di buona qualità in base ai training set specificati.
+Informazioni su come installare l'interfaccia della riga di comando di ML.NET in Windows, Mac o Linux.
+
+L'interfaccia della riga di comando di ML.NET genera modelli ML.NET e codice sorgente di qualità elevata usando l'apprendimento automatico automatico (AutoML) e un set di dati di training.
 
 > [!NOTE]
 > Questo argomento fa riferimento all'interfaccia della riga di comando di ML.NET e al Machine Learning automatico, attualmente in anteprima, e il materiale può essere soggetto a modifiche.
@@ -23,7 +26,7 @@ L'interfaccia della riga di comando di ML.NET è uno strumento che può essere e
 
 - (Facoltativo) [Visual Studio 2017 o 2019](https://visualstudio.microsoft.com/vs/)
 
-È possibile eseguire i progetti in codice C# generati con F5 in Visual Studio o con `dotnet run` (interfaccia della riga di comando di .NET Core).
+È possibile eseguire i progetti C# di codice generati con Visual Studio premendo il tasto `F5` o con `dotnet run` (interfaccia della riga di comando di .NET Core).
 
 Nota: se dopo l'installazione di [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) il comando `dotnet tool` non funziona, disconnettersi da Windows ed eseguire di nuovo l'accesso.
 
@@ -123,7 +126,7 @@ L'interfaccia della riga di comando di ML.NET può essere installata nella direc
 | Sistema operativo          | Percorso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
+| Portale di     | `%USERPROFILE%\.dotnet\tools` |
 
 Questi percorsi vengono aggiunti al percorso dell'utente alla prima esecuzione dell'SDK in modo che gli strumenti globali installati possano essere chiamati direttamente.
 
@@ -134,7 +137,7 @@ In questo caso l'interfaccia della riga di comando di .NET Core non aggiunge aut
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione dell'introduzione allo strumento dell'interfaccia della riga di comando di ML.NET CLI](../tutorials/mlnet-cli.md)
-- [Come eseguire automaticamente il training dei modelli con lo strumento dell'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
+- [Panoramica dell'interfaccia della riga di comando ML.NET](../automate-training-with-cli.md)
+- [Esercitazione: analizzare i sentimenti con l'interfaccia della riga di comando di ML.NET](../tutorials/sentiment-analysis-cli.md)
 - [Guida di riferimento per i comandi di training automatico dell'interfaccia della riga di comando ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)

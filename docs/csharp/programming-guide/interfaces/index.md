@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120162"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635236"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -62,17 +62,17 @@ Un'interfaccia presenta le proprietà seguenti:
 [Implementazione esplicita dell'interfaccia](explicit-interface-implementation.md)  
  Illustra come creare un membro di una classe specifico di un'interfaccia.  
   
- [Procedura: Implementare in modo esplicito i membri di interfaccia](how-to-explicitly-implement-interface-members.md)  
+ [Come implementare in modo esplicito i membri di interfaccia](how-to-explicitly-implement-interface-members.md)  
  Fornisce un esempio di come implementare in modo esplicito i membri delle interfacce.  
   
- [Procedura: Implementare in modo esplicito i membri di due interfacce](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Come implementare in modo esplicito i membri di due interfacce](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fornisce un esempio di come implementare in modo esplicito i membri delle interfacce con l'ereditarietà.  
   
 ## <a name="BKMK_RelatedSections"></a> Sezioni correlate
 
 - [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md)  
 - [Indicizzatori nelle interfacce](../indexers/indexers-in-interfaces.md)  
-- [Procedura: Implementare eventi di interfaccia](../events/how-to-implement-interface-events.md)  
+- [Come implementare gli eventi di interfaccia](../events/how-to-implement-interface-events.md)
 - [Classi e struct](../classes-and-structs/index.md)  
 - [Ereditarietà](../classes-and-structs/inheritance.md)  
 - [Metodi](../classes-and-structs/methods.md)  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459663"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636380"
 ---
 # <a name="pack-uris-in-wpf"></a>URI di tipo pack in WPF
 
@@ -38,7 +38,7 @@ Gli URI possono inoltre essere utilizzati per identificare e caricare file da di
 
 - L'applicazione del sito di origine.
 
-Per fornire un meccanismo coerente per l'identificazione e il caricamento di questi tipi di file da questi percorsi, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sfrutta l'estendibilità dello *schema URI*di tipo pack. In questo argomento viene fornita una panoramica dello schema, viene illustrato come costruire URI di pacchetto per diversi scenari, vengono illustrati gli URI assoluti e relativi e la risoluzione degli URI, prima di illustrare come utilizzare gli URI di Pack da markup e codice.
+Per fornire un meccanismo coerente per l'identificazione e il caricamento di questi tipi di file da questi percorsi, WPF sfrutta l'estensibilità dello *schema URI*di tipo pack. In questo argomento viene fornita una panoramica dello schema, viene illustrato come costruire URI di pacchetto per diversi scenari, vengono illustrati gli URI assoluti e relativi e la risoluzione degli URI, prima di illustrare come utilizzare gli URI di Pack da markup e codice.
 
 <a name="The_Pack_URI_Scheme"></a>
 
@@ -52,7 +52,7 @@ Per identificare le parti, la specifica OPC sfrutta l'estendibilità di RFC 2396
 
 Lo schema specificato da un URI viene definito dal relativo prefisso. http, FTP e file sono esempi noti. Lo schema URI di Pack utilizza "Pack" come schema e contiene due componenti: Authority e Path. Di seguito è riportato il formato per un URI di pacchetto.
 
-*percorso* / dell'*autorità* Pack://
+*percorso*/dell'*autorità* Pack://
 
 L' *autorità* specifica il tipo di pacchetto in cui è contenuta una parte, mentre il *percorso* specifica la posizione di una parte all'interno di un pacchetto.
 
@@ -72,7 +72,7 @@ Pacchetti e parti sono analoghi ad applicazioni e file, dove un'applicazione (pa
 
 - File del sito di origine.
 
-Per accedere a questi tipi di file, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta due autorità: application:///e siteoforigin:///. L'autorità application:/// identifica i file di dati dell'applicazione noti al momento della compilazione, inclusi file di risorse e di contenuto. L'autorità siteoforigin:/// identifica i file del sito di origine. La figura seguente illustra l'ambito di ciascuna autorità.
+Per accedere a questi tipi di file, WPF supporta due autorità: application:///e siteoforigin:///. L'autorità application:/// identifica i file di dati dell'applicazione noti al momento della compilazione, inclusi file di risorse e di contenuto. L'autorità siteoforigin:/// identifica i file del sito di origine. La figura seguente illustra l'ambito di ciascuna autorità.
 
 ![Diagramma dell'URI di tipo pack](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
@@ -139,7 +139,7 @@ Nell'esempio seguente viene illustrato l'URI di pacchetto per un file di risorse
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Si noti che la sintassi dell'URI di Pack per i file di risorse dell'assembly a cui si fa riferimento può essere usata solo con l'autorità application:///. Il codice seguente, ad esempio, non è supportato in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Si noti che la sintassi dell'URI di Pack per i file di risorse dell'assembly a cui si fa riferimento può essere usata solo con l'autorità application:///. Il codice seguente, ad esempio, non è supportato in WPF.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -251,7 +251,7 @@ Questo URI di tipo pack assoluto può fare riferimento a un file di risorse nell
 
 `/ResourceOrContentFile.xaml`
 
-Per determinare il tipo di file a cui fa riferimento un URI di tipo pack, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] risolve gli URI per i file di risorse in assembly locali e file di contenuto usando l'euristica seguente:
+Per determinare il tipo di file a cui fa riferimento un URI di tipo pack, WPF risolve gli URI per i file di risorse in assembly locali e file di contenuto usando l'euristica seguente:
 
 1. Esegue il probe dei metadati dell'assembly per un attributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> corrispondente all'URI del pacchetto.
 
@@ -265,7 +265,7 @@ Per determinare il tipo di file a cui fa riferimento un URI di tipo pack, [!INCL
 
 La risoluzione dell'URI non è valida per gli URI che fanno riferimento agli elementi seguenti:
 
-- File di contenuto in assembly a cui si fa riferimento: questi tipi di file non sono supportati da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- File di contenuto in assembly a cui si fa riferimento: questi tipi di file non sono supportati da WPF.
 
 - File incorporati negli assembly a cui si fa riferimento: gli URI che li identificano sono univoci in quanto includono sia il nome dell'assembly a cui si fa riferimento sia il suffisso `;component`.
 
@@ -277,7 +277,7 @@ Una semplificazione che la risoluzione URI di Pack consente è che il codice sia
 
 ## <a name="programming-with-pack-uris"></a>Programmazione con URI di tipo pack
 
-Molte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classi implementano proprietà che possono essere impostate con URI di pacchetto, tra cui:
+Molte classi WPF implementano proprietà che possono essere impostate con URI di pacchetto, tra cui:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -297,7 +297,7 @@ Queste proprietà possono essere impostate da markup e codice. Questa sezione il
 
 ### <a name="using-pack-uris-in-markup"></a>Uso di URI di tipo pack nel markup
 
-Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Esempio:
+Un URI di pacchetto viene specificato nel markup impostando l'elemento di un attributo con l'URI del pacchetto. Ad esempio:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -397,13 +397,13 @@ Tabella 4: URI di tipo pack relativi nel codice
 
 ### <a name="common-pack-uri-scenarios"></a>Scenari comuni di URI Pack
 
-Nelle sezioni precedenti è stato illustrato come costruire URI di pacchetto per identificare i file di risorse, di contenuto e del sito di origine. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]queste costruzioni vengono usate in diversi modi e nelle sezioni seguenti vengono illustrati alcuni utilizzi comuni.
+Nelle sezioni precedenti è stato illustrato come costruire URI di pacchetto per identificare i file di risorse, di contenuto e del sito di origine. In WPF queste costruzioni vengono usate in diversi modi e nelle sezioni seguenti vengono illustrati alcuni utilizzi comuni.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Specifica dell'interfaccia utente da visualizzare all'avvio di un'applicazione
 
-<xref:System.Windows.Application.StartupUri%2A> specifica il primo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da visualizzare quando viene avviata un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Per le applicazioni autonome, il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] può essere una finestra, come illustrato nell'esempio seguente.
+<xref:System.Windows.Application.StartupUri%2A> specifica il primo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da visualizzare quando viene avviata un'applicazione WPF. Per le applicazioni autonome, il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] può essere una finestra, come illustrato nell'esempio seguente.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +411,7 @@ Le applicazioni autonome e le applicazioni browser XAML (XBAPs) possono inoltre 
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Se l'applicazione è un'applicazione autonoma ed è specificata una pagina con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] apre un <xref:System.Windows.Navigation.NavigationWindow> per ospitare la pagina. Per le applicazioni XBAPs, la pagina viene visualizzata nel browser host.
+Se l'applicazione è un'applicazione autonoma e viene specificata una pagina con <xref:System.Windows.Application.StartupUri%2A>, WPF apre un <xref:System.Windows.Navigation.NavigationWindow> per ospitare la pagina. Per le applicazioni XBAPs, la pagina viene visualizzata nel browser host.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ L'esempio seguente illustra come spostarsi su una pagina.
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Per ulteriori informazioni sui vari modi per spostarsi in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Cenni preliminari sulla navigazione](navigation-overview.md).
+Per ulteriori informazioni sui vari modi per spostarsi in WPF, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -439,7 +439,7 @@ Per ulteriori informazioni, vedere <xref:System.Windows.Window.Icon%2A>.
 
 #### <a name="loading-image-audio-and-video-files"></a>Caricamento di file di immagine, audio e video
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente alle applicazioni di usare un'ampia gamma di tipi di supporti, che possono essere identificati e caricati con URI di tipo pack, come illustrato negli esempi seguenti.
+WPF consente alle applicazioni di usare un'ampia gamma di tipi di supporti, che possono essere identificati e caricati con URI di tipo pack, come illustrato negli esempi seguenti.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -457,7 +457,7 @@ Per ulteriori informazioni sull'utilizzo del contenuto multimediale, vedere [gra
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Per una panoramica dei temi in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere applicazione di [stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
+Per una panoramica dei temi in WPF, vedere applicazione di [stili e modelli](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
 

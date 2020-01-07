@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare Platform Invoke per riprodurre una guida per la C# programmazione di file Wave'
+title: Come usare platform invoke per riprodurre un file WAV- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 082bd4b51e06332b0fecc633cc0501cafa8e7ff8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039331"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635288"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procedura: utilizzare platform invoke per riprodurre un file audio (Guida per programmatori C#)
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Come usare platform invoke per riprodurre un file WAV (C# guida per programmatori)
 
-L'esempio di codice C# seguente descrive come usare i servizi platform invoke per riprodurre un file audio con estensione wav nel sistema operativo Windows.
+Nell'esempio C# di codice seguente viene illustrato come utilizzare i servizi di Platform Invoke per riprodurre un file audio WAV nel sistema operativo Windows.
 
 ## <a name="example"></a>Esempio
 

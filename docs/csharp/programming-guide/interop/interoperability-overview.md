@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e1b31817873324fd320a9dcbabaf5ef26fa7b74
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921824"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635184"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Cenni preliminari sull'interoperabilità (Guida per programmatori C#)
 In questo argomento vengono descritti i metodi per consentire l'interoperabilità tra il codice gestito C# e il codice non gestito.  
@@ -22,7 +22,7 @@ In questo argomento vengono descritti i metodi per consentire l'interoperabilit�
 ## <a name="platform-invoke"></a>Platform invoke  
  *Platform invoke* è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie di collegamento dinamico (DLL), come quelle nell'API Microsoft Windows. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.  
   
- Per altre informazioni, vedere [Utilizzo di funzioni di DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [Procedura: Usare platform invoke per riprodurre un file audio](./how-to-use-platform-invoke-to-play-a-wave-file.md).  
+Per ulteriori informazioni, vedere Utilizzo di [funzioni dll non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [come utilizzare Platform Invoke per riprodurre un file WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md).
   
 > [!NOTE]
 > Il [Common Language Runtime](../../../standard/clr.md) (CLR) gestisce l'accesso alle risorse di sistema. La chiamata di codice non gestito esterno al CLR ignora questo meccanismo di sicurezza e presenta pertanto un rischio per la sicurezza. Ad esempio, il codice non gestito può chiamare direttamente le risorse nel codice non gestito, ignorando i meccanismi di sicurezza CLR. Per altre informazioni, vedere [Sicurezza in .NET](../../../standard/security/index.md).  
@@ -31,7 +31,7 @@ In questo argomento vengono descritti i metodi per consentire l'interoperabilit�
  È possibile usare l'interoperabilità C++, nota anche come It Just Works (IJW), per eseguire il wrapping di una classe C++ nativa in modo che possa essere usata dal codice creato in C# o in un altro linguaggio .NET Framework. A tale scopo, scrivere codice C++ per eseguire il wrapping di un componente COM o DLL nativo. A differenza di altri linguaggi .NET Framework, Visual C++ offre un tipo di supporto per l'interoperabilità che permette la presenza di codice gestito e non gestito nella stessa applicazione e anche nello stesso file. Compilare quindi il codice C++ mediante l'opzione del compilatore **/clr** per produrre un assembly gestito. Infine, aggiungere un riferimento all'assembly nel progetto C# e usare gli oggetti con wrapping esattamente come si userebbero altre classi gestite.  
   
 ## <a name="exposing-com-components-to-c"></a>Esposizione di componenti COM a C\#
- È possibile usare un componente COM da un progetto C#. La procedura generale è la seguente:  
+ È possibile usare un componente COM da un progetto C#. I passaggi principali sono i seguenti:  
   
 1. Individuare un componente COM da usare e registrarlo. Usare regsvr32.exe per registrare o annullare la registrazione di una DLL COM.  
   

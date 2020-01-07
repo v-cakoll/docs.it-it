@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
-ms.translationtype: MT
+ms.openlocfilehash: aa3d3032f083682f94c75c400710640b9408e973
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884397"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635366"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
 
@@ -34,7 +34,7 @@ Convertire il metodo `Main` in *program.cs* come indicato di seguito:
 
 Quando si esegue un programma in ambiente Windows, qualsiasi valore restituito dalla funzione `Main` viene archiviato in una variabile di ambiente. Questa variabile di ambiente può essere recuperata mediante `ERRORLEVEL` da un file batch o mediante `$LastExitCode` da PowerShell.
 
-È possibile compilare l'applicazione usando il comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`.
+È possibile compilare l'applicazione usando il comando [DotNet CLI](../../../core/tools/dotnet.md) `dotnet build`.
 
 Quindi creare uno script di PowerShell per eseguire l'applicazione e visualizzare il risultato. Incollare il codice seguente in un file di testo e salvarlo come `test.ps1` nella cartella che contiene il progetto. Eseguire lo script di PowerShell digitando `test.ps1` al prompt di PowerShell.
 
@@ -98,4 +98,4 @@ Quando il punto di ingresso dell'applicazione restituisce `Task` o `Task<int>` i
 - [Guida per programmatori C#](../index.md)
 - [Riferimenti per C#](../index.md)
 - [Main() e argomenti della riga di comando](index.md)
-- [Procedura: Visualizzare gli argomenti della riga di comando](./how-to-display-command-line-arguments.md)
+- [Come visualizzare gli argomenti della riga di comando](./how-to-display-command-line-arguments.md)

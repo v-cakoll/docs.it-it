@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Flusso di frammenti XML da un XmlReader (C#)'
+title: Come eseguire lo streaming di frammenti XML da un XmlReaderC#()
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 20fa4096a79648edc3f5d699f764fc6d71fa0ba4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253285"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635652"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Procedura: Flusso di frammenti XML da un XmlReader (C#)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Come eseguire lo streaming di frammenti XML da un XmlReaderC#()
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
   
  Uno dei modi più efficaci per usare un oggetto <xref:System.Xml.XmlReader> per leggere oggetti <xref:System.Xml.Linq.XElement> consiste nello scrivere un metodo dell'asse personalizzato. Un metodo dell'asse restituisce in genere una raccolta, ad esempio <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, come illustrato nell'esempio di questo argomento. Nel metodo dell'asse personalizzato, dopo avere creato il frammento XML chiamando il metodo <xref:System.Xml.Linq.XNode.ReadFrom%2A>, restituire la raccolta usando `yield return`. In questo modo si fornisce la semantica di esecuzione posticipata al metodo dell'asse personalizzato.  
@@ -18,12 +18,12 @@ Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare
   
  Se si desidera creare un albero parziale, è possibile creare un'istanza di <xref:System.Xml.XmlReader>, posizionare il lettore sul nodo da convertire in un albero <xref:System.Xml.Linq.XElement> e quindi creare l'oggetto <xref:System.Xml.Linq.XElement>.  
   
- L'argomento [Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) contiene informazioni e un esempio su come generare un flusso per un documento più complesso.  
+Nell'argomento [come eseguire lo streaming di frammenti XML con accesso a informazioni diC#intestazione ()](./how-to-stream-xml-fragments-with-access-to-header-information.md) sono contenute informazioni e un esempio su come trasmettere un documento più complesso.
   
- L'argomento [Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio dell'uso di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
+ Nell'argomento [come eseguire la trasformazione flusso di documenti XML di grandiC#dimensioni ()](./how-to-perform-streaming-transform-of-large-xml-documents.md) è incluso un esempio di utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene creato un metodo dell'asse personalizzato. È possibile sottoporlo a query tramite una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
+ In questo esempio viene creato un metodo dell'asse personalizzato. È possibile eseguire query su di esso utilizzando una query LINQ. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  

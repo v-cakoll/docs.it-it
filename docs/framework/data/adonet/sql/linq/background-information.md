@@ -2,12 +2,12 @@
 title: Informazioni di base
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248098"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634729"
 ---
 # <a name="background-information"></a>Informazioni di base
 Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno oltre le nozioni di base relative all'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -18,11 +18,11 @@ Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno o
   
 - Partecipare al [Forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
   
-- Studiare il white paper che [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descrive in dettaglio la tecnologia, C# completa con Visual Basic ed esempi di codice. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Esaminare il white paper che descrive in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, completati con Visual Basic ed C# esempi di codice. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [ADO.NET e LINQ to SQL](ado-net-and-linq-to-sql.md)  
- Viene descritta la relazione tra ADO.NET [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]e.  
+ Viene descritta la relazione tra ADO.NET e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Analisi del codice sorgente in LINQ to SQL](analyzing-linq-to-sql-source-code.md)  
  Viene descritto come analizzare i mapping di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generando e visualizzando codice sorgente dal database di esempio Northwind.  
@@ -31,7 +31,7 @@ Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno o
  Viene illustrato come aggiungere codice di convalida e altre personalizzazioni.  
   
  [Data binding](data-binding.md)  
- Viene descritto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] come <xref:System.ComponentModel.IListSource> utilizzare per supportare Data Binding.  
+ Viene descritto come [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizza <xref:System.ComponentModel.IListSource> per supportare data binding.  
   
  [Supporto dell'ereditarietà](inheritance-support.md)  
  Viene spiegato il ruolo dell'ereditarietà nel modello a oggetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e come usare operatori correlati nelle query.  
@@ -51,11 +51,11 @@ Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno o
  [Stati di oggetti e rilevamento di modifiche](object-states-and-change-tracking.md)  
  Fornisce informazioni dettagliate sulle modalità con cui [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tiene traccia delle modifiche.  
   
- [Concorrenza ottimistica: Panoramica](optimistic-concurrency-overview.md)  
+ [Concorrenza ottimistica: panoramica](optimistic-concurrency-overview.md)  
  Viene descritta la concorrenza ottimistica e vengono definiti i termini.  
   
  [Concetti relativi alle query](query-concepts.md)  
- Vengono descritti gli aspetti delle query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che differiscono dalle query in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Vengono descritti gli aspetti delle query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che differiscono dalle query in LINQ.  
   
  [Recupero di oggetti dalla cache di identità](retrieving-objects-from-the-identity-cache.md)  
  Vengono descritti i tipi di query che recuperano gli oggetti dalla cache delle identità.  

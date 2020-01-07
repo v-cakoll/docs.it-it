@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458309"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559859"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e la gestione degli eventi WPF
 Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare la parola chiave `Handles` specifica del linguaggio per associare i gestori eventi alle istanze, anziché collegare i gestori eventi agli attributi o usare il metodo <xref:System.Windows.UIElement.AddHandler%2A>. Tuttavia, la tecnica `Handles` per collegare gestori alle istanze presenta alcuni limiti, in quanto la sintassi `Handles` non è in grado di supportare alcune delle funzioni degli eventi indirizzati specifiche del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Uso di "Handles" in un'applicazione WPF  
- I gestori eventi connessi a istanze ed eventi tramite `Handles` devono essere definiti tutti all'interno della dichiarazione di classe parziale dell'istanza. Ciò vale anche per i gestori eventi assegnati tramite valori di attributo negli elementi. È possibile specificare solo `Handles` per un elemento nella pagina che ha un valore di proprietà <xref:System.Windows.FrameworkContentElement.Name%2A> (o [direttiva x:Name](../../xaml-services/x-name-directive.md) dichiarata). Ciò è dovuto al fatto che il <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea il riferimento all'istanza necessario per supportare il formato di riferimento dell' *istanza. evento* richiesto dalla sintassi `Handles`. L'unico elemento che può essere utilizzato per `Handles` senza un riferimento <xref:System.Windows.FrameworkContentElement.Name%2A> è l'istanza dell'elemento radice che definisce la classe parziale.  
+ I gestori eventi connessi a istanze ed eventi tramite `Handles` devono essere definiti tutti all'interno della dichiarazione di classe parziale dell'istanza. Ciò vale anche per i gestori eventi assegnati tramite valori di attributo negli elementi. È possibile specificare solo `Handles` per un elemento nella pagina che ha un valore di proprietà <xref:System.Windows.FrameworkContentElement.Name%2A> (o [direttiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) dichiarata). Ciò è dovuto al fatto che il <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea il riferimento all'istanza necessario per supportare il formato di riferimento dell' *istanza. evento* richiesto dalla sintassi `Handles`. L'unico elemento che può essere utilizzato per `Handles` senza un riferimento <xref:System.Windows.FrameworkContentElement.Name%2A> è l'istanza dell'elemento radice che definisce la classe parziale.  
   
  È possibile assegnare lo stesso gestore a più elementi separando i riferimenti *Istanza.Evento* dopo `Handles` con delle virgole.  
   
@@ -37,7 +37,7 @@ Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare
 > Non usare la sintassi `Handles` nel codice Visual Basic quando si specifica un gestore eventi per lo stesso evento in XAML. In questo caso, il gestore eventi viene chiamato due volte.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Come WPF implementa la funzionalità "Handles"  
- Quando viene compilata una pagina di [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], il file intermedio dichiara `Friend` `WithEvents` riferimenti a ogni elemento della pagina che dispone di una <xref:System.Windows.FrameworkContentElement.Name%2A> set di proprietà (o [direttiva x:Name](../../xaml-services/x-name-directive.md) dichiarata). Ogni istanza denominata è potenzialmente un elemento che può essere assegnato a un gestore tramite `Handles`.  
+ Quando viene compilata una pagina di [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], il file intermedio dichiara `Friend` `WithEvents` riferimenti a ogni elemento della pagina che dispone di una <xref:System.Windows.FrameworkContentElement.Name%2A> set di proprietà (o [direttiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) dichiarata). Ogni istanza denominata è potenzialmente un elemento che può essere assegnato a un gestore tramite `Handles`.  
   
 > [!NOTE]
 > In Visual Studio, IntelliSense consente di visualizzare il completamento per cui sono disponibili elementi per un riferimento `Handles` in una pagina. Tuttavia, tale operazione potrebbe richiedere un passaggio di compilazione che consenta al file intermedio di popolare tutti i riferimenti `Friends`.  

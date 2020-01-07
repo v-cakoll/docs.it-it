@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Proiettare un oggetto grafico (C#)'
+title: Come proiettare un oggetto grafico (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253489"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635691"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Procedura: Proiettare un oggetto grafico (C#)
+# <a name="how-to-project-an-object-graph-c"></a>Come proiettare un oggetto grafico (C#)
 In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del documento XML [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) Documento XML.  
   
 ```csharp  
 class Address  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- Nell'esempio il risultato della query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] viene restituito come oggetto <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.  
+ In questo esempio, il risultato della query LINQ viene restituito come <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`. Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.  
   
  Questo esempio produce il seguente output:  
   

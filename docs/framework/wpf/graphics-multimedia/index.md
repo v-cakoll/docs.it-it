@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919984"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636627"
 ---
 # <a name="graphics-and-multimedia"></a>Grafica e funzionalità multimediali
 
@@ -59,11 +59,11 @@ WPF include il supporto per gli elementi grafici 2D di qualità elevata. La funz
 
 ### <a name="2-d-shapes"></a>Forme 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di forme 2D di uso comune, ad esempio rettangoli ed ellissi, illustrati nella figura seguente.
+In WPF è disponibile una libreria di forme 2D create da vettori di uso comune, ad esempio rettangoli ed ellissi, illustrati nella figura seguente.
 
 ![Diagramma che mostra ellissi e rettangoli.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Queste forme [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] intrinseche non sono solo forme: sono elementi programmabili che implementano molte delle funzionalità tipiche dei controlli più comuni, che includono l'input della tastiera e del mouse. Nell'esempio seguente viene illustrato come gestire l'evento <xref:System.Windows.UIElement.MouseUp> generato facendo clic su un elemento di <xref:System.Windows.Shapes.Ellipse>.
+Queste forme WPF intrinseche non sono solo forme: sono elementi programmabili che implementano molte delle funzionalità che ci si aspettano dalla maggior parte dei controlli comuni, che includono l'input della tastiera e del mouse. Nell'esempio seguente viene illustrato come gestire l'evento <xref:System.Windows.UIElement.MouseUp> generato facendo clic su un elemento di <xref:System.Windows.Shapes.Ellipse>.
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ Per altre informazioni, vedere [Panoramica degli oggetti Shape e sulle funzional
 
 ### <a name="2-d-geometries"></a>Geometrie 2D
 
-Quando le forme 2D fornite da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non sono sufficienti, è possibile usare [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporto per le geometrie e i percorsi per crearne di personalizzati. La figura seguente mostra come usare le geometrie per creare forme, ad esempio un pennello da disegno e per ritagliare altri elementi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Quando le forme 2D fornite da WPF non sono sufficienti, è possibile usare il supporto WPF per le geometrie e i percorsi per crearne di personalizzati. Nella figura seguente viene illustrato come utilizzare le geometrie per creare forme, come un pennello da disegno e per ritagliare altri elementi WPF.
 
 ![Screenshot che illustra come è possibile usare le geometrie per creare forme.](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ Per altre informazioni, vedere [Cenni preliminari sulle classi Geometry](geometr
 
 ### <a name="2-d-effects"></a>Effetti 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di classi 2D che è possibile utilizzare per creare un'ampia gamma di effetti. La funzionalità di rendering 2D di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre la possibilità di disegnare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi con sfumature, bitmap, disegni e video; e per modificarli usando la rotazione, il ridimensionamento e l'inclinazione. La figura seguente fornisce un esempio dei molti effetti che è possibile ottenere usando i pennelli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+In WPF è disponibile una libreria di classi 2D che è possibile utilizzare per creare un'ampia gamma di effetti. La funzionalità di rendering 2D di WPF offre la possibilità di disegnare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi con sfumature, bitmap, disegni e video; e per modificarli usando la rotazione, il ridimensionamento e l'inclinazione. Nell'illustrazione seguente viene illustrato un esempio dei diversi effetti che è possibile ottenere utilizzando i pennelli WPF.
 
 ![Illustrazione che mostra i diversi pennelli e elementi di disegno WPF.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [Panoramica dei pennelli di WPF](wpf-brushes-over
 
 ## <a name="3-d-rendering"></a>Rendering 3D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre un set di funzionalità di rendering 3D che si integrano con il supporto grafico 2D in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per creare layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]e visualizzazione dei dati più entusiasmanti. A un'estremità dello spettro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di eseguire il rendering di immagini 2D sulle superfici delle forme tridimensionali, illustrate nella figura seguente.
+WPF offre un set di funzionalità di rendering 3D che si integrano con il supporto grafico 2D in WPF per creare layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]e visualizzazione dei dati più interessanti. A un'estremità dello spettro, WPF consente di eseguire il rendering di immagini 2D sulle superfici delle forme tridimensionali, illustrate nella figura seguente.
 
 ![Screenshot di un esempio che Mostra forme 3D con diverse trame.](./media/index/visual-three-dimensional-shape.png)
 
@@ -129,7 +129,7 @@ Per altre informazioni, vedere [Panoramica della grafica tridimensionale](3-d-gr
 
 ## <a name="animation"></a>Animazione
 
-Usare l'animazione per applicare ai controlli e agli elementi gli effetti di ingrandimento, tremolio, rotazione e dissolvenza, nonché per creare interessanti transizioni tra le pagine e altro ancora. Poiché [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di animare la maggior parte delle proprietà, non solo è possibile animare la maggior parte degli oggetti [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], ma è anche possibile usare [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per animare oggetti personalizzati creati.
+Usare l'animazione per applicare ai controlli e agli elementi gli effetti di ingrandimento, tremolio, rotazione e dissolvenza, nonché per creare interessanti transizioni tra le pagine e altro ancora. Poiché WPF consente di animare la maggior parte delle proprietà, non solo è possibile animare la maggior parte degli oggetti WPF, ma è anche possibile utilizzare WPF per animare oggetti personalizzati creati dall'utente.
 
 ![Screenshot di un cubo animato.](./media/index/animate-custom-objects.png)
 
@@ -137,13 +137,13 @@ Per altre informazioni, vedere [Panoramica dell'animazione](animation-overview.m
 
 <a name="media"></a>
 
-## <a name="media"></a>Supporto
+## <a name="media"></a>Elemento multimediale
 
 Immagini, video e audio sono supporti multimediali per trasmettere informazioni ed esperienze utente.
 
 ### <a name="images"></a>Immagini
 
-Le immagini, tra cui le icone, gli sfondi e le parti di animazioni, sono un componente fondamentale della maggior parte delle applicazioni. Poiché spesso è necessario usare le immagini, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di usarle in vari modi. La figura seguente mostra uno dei vari modi.
+Le immagini, tra cui le icone, gli sfondi e le parti di animazioni, sono un componente fondamentale della maggior parte delle applicazioni. Poiché spesso è necessario usare le immagini, WPF ne espone la possibilità di lavorare in diversi modi. La figura seguente mostra uno dei vari modi.
 
 ![Schermata di esempio dello stile](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
@@ -151,7 +151,7 @@ Per altre informazioni, vedere [Panoramica della creazione dell'immagine](imagin
 
 ### <a name="video-and-audio"></a>Video e audio
 
-Una caratteristica fondamentale delle funzionalità grafiche di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consiste nel fornire il supporto nativo per l'uso di contenuti multimediali, inclusi video e audio. L'esempio seguente illustra come inserire un lettore multimediale in un'applicazione.
+Una funzionalità di base delle funzionalità grafiche di WPF consiste nel fornire il supporto nativo per l'utilizzo di contenuti multimediali, che includono video e audio. L'esempio seguente illustra come inserire un lettore multimediale in un'applicazione.
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />

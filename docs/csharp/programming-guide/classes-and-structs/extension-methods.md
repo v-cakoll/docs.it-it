@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 66c8dee059d65f6628bf38edecf2f5abec320eea
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971059"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635834"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
   
- I metodi di estensione più comuni sono gli operatori query standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] che aggiungono la funzionalità di query ai tipi <xref:System.Collections.IEnumerable?displayProperty=nameWithType> e <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> esistenti. Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
+ I metodi di estensione più comuni sono gli operatori di query standard LINQ che aggiungono la funzionalità di query ai tipi di <xref:System.Collections.IEnumerable?displayProperty=nameWithType> e di <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> esistenti. Per utilizzare gli operatori query standard, inserirli innanzitutto nell'ambito con una direttiva `using System.Linq`. In questo modo qualsiasi tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> avrà apparentemente metodi di istanza quali <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>e così via. È possibile visualizzare questi metodi aggiuntivi con la funzionalità di completamento istruzioni di IntelliSense quando si digita "punto" dopo un'istanza di un tipo <xref:System.Collections.Generic.IEnumerable%601>, ad esempio <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
   
  Nell'esempio seguente viene illustrato come chiamare il metodo `OrderBy` dell'operatore query standard su una matrice di Integer. L'espressione tra parentesi è un'espressione lambda. Molti operatori query standard accettano espressioni lambda come parametri, sebbene non sia un requisito per i metodi di estensione. Per altre informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
   

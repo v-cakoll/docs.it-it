@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352835"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636042"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
 
@@ -26,7 +26,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Illustra come dichiarare e generare eventi in Visual Basic.
 
 - [Gestione degli eventi](programming-guide/language-features/events/walkthrough-handling-events.md)  
- Spiega come gestire gli eventi usando la parola chiave standard `WithEvents` o le nuove parole chiave `AddHandler` / `RemoveHandler`.
+ Spiega come gestire gli eventi usando la parola chiave standard `WithEvents` o le nuove parole chiave `AddHandler`/`RemoveHandler`.
 
 - [Creazione e implementazione di interfacce](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
  Illustra come dichiarare e implementare le interfacce in Visual Basic.
@@ -35,7 +35,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Descrive la procedura di dichiarazione di una classe e dei relativi campi, proprietà, metodi ed eventi.
 
 - [Scrittura delle query in Visual Basic](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Viene illustrato come usare le funzionalità del linguaggio Visual Basic per scrivere le espressioni di query [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].
+ Viene illustrato come utilizzare le funzionalità del linguaggio Visual Basic per scrivere espressioni di query LINQ (Language-Integrated Query).
 
 - [Implementazione di IEnumerable(Of T) in Visual Basic](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  Viene illustrato come creare una classe che implementa l'interfaccia `IEnumerable(Of String)` e una classe che implementa l'interfaccia `IEnumerator(Of String)` per leggere un file di testo una riga alla volta.

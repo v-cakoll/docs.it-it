@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740685"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636406"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
-Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonome forniscono le proprie finestre usando la classe <xref:System.Windows.Window>. Questo argomento introduce <xref:System.Windows.Window> prima di illustrare le nozioni di base relative alla creazione e alla gestione di Windows in applicazioni autonome.  
+Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le applicazioni WPF autonome forniscono le proprie finestre usando la classe <xref:System.Windows.Window>. Questo argomento introduce <xref:System.Windows.Window> prima di illustrare le nozioni di base relative alla creazione e alla gestione di Windows in applicazioni autonome.  
   
 > [!NOTE]
-> Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitate da browser, incluse le applicazioni browser XAML (XBAP) e le pagine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Le applicazioni WPF ospitate da browser, incluse le applicazioni browser XAML (XBAP) e le pagine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
@@ -49,7 +49,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Un finestra è suddivisa in due aree: l'area non client e l'area client.  
   
- L' *area non client* di una finestra viene implementata da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e include le parti di una finestra comuni alla maggior parte delle finestre, incluse le seguenti:  
+ L' *area non client* di una finestra è implementata da WPF e include le parti di una finestra comuni alla maggior parte delle finestre, incluse le seguenti:  
   
 - Un bordo.  
   
@@ -65,7 +65,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  L'area *client* di una finestra è l'area all'interno dell'area non client di una finestra e viene utilizzata dagli sviluppatori per aggiungere contenuto specifico dell'applicazione, ad esempio barre dei menu, barre degli strumenti e controlli.  
   
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], una finestra è incapsulata dalla classe <xref:System.Windows.Window> utilizzata per eseguire le operazioni seguenti:  
+ In WPF, una finestra è incapsulata dalla classe <xref:System.Windows.Window> utilizzata per eseguire le operazioni seguenti:  
   
 - Visualizzare una finestra.  
   
@@ -77,7 +77,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementazione di una finestra  
- L'implementazione di una tipica finestra comprende aspetto e comportamento, in cui l' *aspetto* definisce il modo in cui una finestra esamina gli utenti e il *comportamento* definisce il modo in cui una finestra funziona mentre gli utenti interagiscono con essa. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è possibile implementare l'aspetto e il comportamento di una finestra usando il codice o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.  
+ L'implementazione di una tipica finestra comprende aspetto e comportamento, in cui l' *aspetto* definisce il modo in cui una finestra esamina gli utenti e il *comportamento* definisce il modo in cui una finestra funziona mentre gli utenti interagiscono con essa. In WPF è possibile implementare l'aspetto e il comportamento di una finestra utilizzando il codice o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.  
   
  In generale, tuttavia, l'aspetto di una finestra viene implementato utilizzando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e il relativo comportamento viene implementato utilizzando code-behind, come illustrato nell'esempio seguente.  
   
@@ -124,7 +124,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
 </Project>  
 ```  
   
- Per informazioni sulla compilazione di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
+ Per informazioni sulla compilazione di applicazioni WPF, vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Durata di una finestra  
@@ -325,13 +325,13 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Se si vuole che la larghezza e l'altezza della finestra abbiano una dimensione che corrisponda alle dimensioni del contenuto della finestra, è possibile usare la proprietà <xref:System.Windows.Window.SizeToContent%2A>, che presenta i valori seguenti:  
   
-- <xref:System.Windows.SizeToContent.Manual> Nessun effetto (impostazione predefinita).  
+- <xref:System.Windows.SizeToContent.Manual>. Nessun effetto (impostazione predefinita).  
   
-- <xref:System.Windows.SizeToContent.Width> Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Width>. Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.Height> Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto.  
+- <xref:System.Windows.SizeToContent.Height>. Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto e dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell'impostazione di <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> sull'altezza del contenuto e dell'impostazione di <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
  L'esempio seguente mostra una finestra che si ridimensiona automaticamente in base al contenuto, sia in verticale sia in orizzontale, quando viene visualizzata per la prima volta.  
   
@@ -401,7 +401,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modalità di ridimensionamento  
- A seconda della proprietà <xref:System.Windows.Window.WindowStyle%2A>, è possibile controllare come e se gli utenti possono ridimensionare la finestra. La scelta dello stile della finestra influiscono sul fatto che un utente possa ridimensionare la finestra trascinando il bordo con il mouse, se i pulsanti **Riduci a icona**, **Ingrandisci**e **ridimensionati** vengono visualizzati nell'area non client e, se vengono visualizzati, indipendentemente dal fatto che siano abilitato.  
+ A seconda della proprietà <xref:System.Windows.Window.WindowStyle%2A>, è possibile controllare come e se gli utenti possono ridimensionare la finestra. La scelta dello stile della finestra influiscono sul fatto che un utente possa ridimensionare la finestra trascinando il bordo con il mouse, se i pulsanti **Riduci a icona**, **Ingrandisci**e **ridimensionati** vengono visualizzati nell'area non client e, se vengono visualizzati, se sono abilitati.  
   
  È possibile configurare la modalità di ridimensionamento di una finestra impostando la relativa proprietà <xref:System.Windows.Window.ResizeMode%2A>, che può essere uno dei seguenti valori di enumerazione <xref:System.Windows.ResizeMode>:  
   

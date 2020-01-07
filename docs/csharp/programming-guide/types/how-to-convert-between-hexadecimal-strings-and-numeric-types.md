@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire la conversione tra stringhe esadecimali e tipi C# numerici-Guida alla programmazione'
+title: Come eseguire la conversione tra stringhe esadecimali e tipi C# numerici-Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 26c2aa12c9c67c59d1ba6fbd20bf675b947b3967
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429448"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635028"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedura: eseguire la conversione tra stringhe esadecimali e tipi numerici (Guida per programmatori C#)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Come eseguire la conversione tra stringhe esadecimali e tipiC# numerici (Guida per programmatori)
 In questi esempi viene mostrato come effettuare le seguenti attività:  
   
 - Ottenere il valore esadecimale di ogni carattere in un oggetto [string](../../language-reference/builtin-types/reference-types.md).  
@@ -34,7 +34,7 @@ In questi esempi viene mostrato come effettuare le seguenti attività:
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>Esempio  
- Questo esempio analizza un oggetto `string` di valori esadecimali e restituisce il carattere corrispondente a ogni valore esadecimale. Prima viene chiamato il metodo [Split(Char\[\])](xref:System.String.Split(System.Char[])) per ottenere ogni valore esadecimale come singolo oggetto `string` in una matrice. Chiama quindi <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> per convertire il valore esadecimale in un valore decimale rappresentato come [int](../../language-reference/builtin-types/integral-numeric-types.md). Mostra due modi diversi per ottenere il carattere corrispondente al codice carattere. La prima tecnica usa <xref:System.Char.ConvertFromUtf32%28System.Int32%29> che restituisce il carattere corrispondente all'argomento Integer come `string`. La seconda tecnica esegue il cast in modo esplicito del valore `int` a un valore [char](../../language-reference/builtin-types/char.md).  
+ Questo esempio analizza un oggetto `string` di valori esadecimali e restituisce il carattere corrispondente a ogni valore esadecimale. Prima viene chiamato il metodo [Split(Char\[\])](xref:System.String.Split(System.Char[])) per ottenere ogni valore esadecimale come singolo oggetto `string` in una matrice. Chiama quindi <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> per convertire il valore esadecimale in un valore decimale rappresentato come [int](../../language-reference/builtin-types/integral-numeric-types.md). Mostra due modi diversi per ottenere il carattere corrispondente al codice carattere. La prima tecnica usa `string` che restituisce il carattere corrispondente all'argomento Integer come <xref:System.Char.ConvertFromUtf32%28System.Int32%29>. La seconda tecnica esegue il cast in modo esplicito del valore `int` a un valore [char](../../language-reference/builtin-types/char.md).  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
@@ -55,6 +55,6 @@ In questi esempi viene mostrato come effettuare le seguenti attività:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Tipi](./index.md)
-- [Procedura: Determinare se una stringa rappresenta un valore numerico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Come determinare se una stringa rappresenta un valore numerico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

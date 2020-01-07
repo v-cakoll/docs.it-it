@@ -3,12 +3,12 @@ title: Tipi riferimento nullable
 description: Questo articolo fornisce una panoramica dei tipi di riferimento Nullable, aggiunto C# in 8,0. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737831"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559625"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -23,7 +23,7 @@ In C# 8.0 sono stati introdotti i **tipi riferimento nullable** e i **tipi rifer
 
 Questa nuova funzionalità offre vantaggi significativi rispetto alla gestione delle variabili di riferimento nelle versioni precedenti di C# in cui la finalità della progettazione non poteva essere determinata dalla dichiarazione di variabile. Il compilatore non offriva sicurezza contro le eccezioni dei riferimenti Null per i tipi riferimento:
 
-- **Un riferimento può essere Null**. Non vengono generati avvisi quando un tipo riferimento viene inizializzato come Null o successivamente assegnato a Null.
+- **Un riferimento può essere Null**. Non viene generato alcun avviso quando un tipo di riferimento viene inizializzato su null o viene assegnato un valore null in un secondo momento.
 - **Si suppone che un riferimento sia non Null**. Il compilatore non genera avvisi quando i tipi riferimento sono dereferenziati. Con i riferimenti nullable, il compilatore genera avvisi quando si dereferenzia una variabile che potrebbe essere Null.
 
 Con l'aggiunta di tipi riferimento nullable, è possibile dichiarare in modo più chiaro la finalità. Il valore `null` è il modo corretto di indicare che una variabile non fa riferimento a un valore. Non usare questa funzionalità per rimuovere tutti i valori `null` dal codice. È invece consigliabile dichiarare la finalità al compilatore e agli altri sviluppatori che leggono il codice. Dichiarando la finalità, il compilatore informa l'utente quando scrive codice non coerente con tale finalità.
@@ -93,7 +93,7 @@ Per impostazione predefinita, i contesti di annotazione e avviso nullable sono *
 Il compilatore usa le regole seguenti in un contesto di annotazione nullable disabilitato:
 
 - Non è possibile dichiarare riferimenti nullable in un contesto disabilitato.
-- Tutte le variabili di riferimento possono essere assegnate a null.
+- A tutte le variabili di riferimento può essere assegnato un valore null.
 - Non vengono generati avvisi quando una variabile di un tipo riferimento viene dereferenziata.
 - L'operatore null-forgiving non può essere usato in un contesto disabilitato.
 

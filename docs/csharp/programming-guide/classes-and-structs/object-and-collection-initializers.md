@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: ac04bf3e6d683caa330643820a89c6cc4f62c780
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455446"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635990"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inizializzatori di oggetto e di raccolte (Guida per programmatori C#)
 
@@ -58,13 +58,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>Inizializzatori di oggetto con tipi anonimi
 
-Anche se gli inizializzatori di oggetto possono essere usati in qualsiasi contesto, sono particolarmente utili nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Le espressioni di query si avvalgono di frequente di [tipi anonimi](./anonymous-types.md) che possono essere inizializzati solo con un inizializzatore di oggetto, come illustrato nella dichiarazione seguente.  
+Anche se gli inizializzatori di oggetto possono essere usati in qualsiasi contesto, sono particolarmente utili nelle espressioni di query LINQ. Le espressioni di query si avvalgono di frequente di [tipi anonimi](./anonymous-types.md) che possono essere inizializzati solo con un inizializzatore di oggetto, come illustrato nella dichiarazione seguente.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-I tipi anonimi consentono alla clausola `select` in un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] di trasformare gli oggetti della sequenza originale in oggetti i cui valori e la cui forma potrebbero essere diversi dall'originale. Questo è utile se si desidera archiviare solo una parte delle informazioni di ogni oggetto di una sequenza. Nell'esempio seguente, si supponga che un oggetto prodotto (`p`) contenga diversi campi e metodi e che si sia interessati a creare solo una sequenza di oggetti che contengono il nome e il prezzo unitario del prodotto.  
+I tipi anonimi consentono alla clausola `select` in un'espressione di query LINQ di trasformare gli oggetti della sequenza originale in oggetti i cui valori e la cui forma potrebbero essere diversi dall'originale. Questo è utile se si desidera archiviare solo una parte delle informazioni di ogni oggetto di una sequenza. Nell'esempio seguente, si supponga che un oggetto prodotto (`p`) contenga diversi campi e metodi e che si sia interessati a creare solo una sequenza di oggetti che contengono il nome e il prezzo unitario del prodotto.  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 

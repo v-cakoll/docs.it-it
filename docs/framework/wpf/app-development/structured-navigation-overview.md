@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425334"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636341"
 ---
 # <a name="structured-navigation-overview"></a>Cenni preliminari sulla navigazione strutturata
 
@@ -135,7 +135,7 @@ Non è necessario passare parametri alla pagina chiamata. In alternativa, è pos
 
   - Recuperare e utilizzare i parametri archiviati in <xref:System.Windows.Application.Properties%2A>.
 
-Tuttavia, come si vedrà successivamente, è comunque necessario usare il codice per creare un'istanza della pagina chiamata e spostarsi su di essa per raccogliere i dati restituiti dalla pagina chiamata. Per questo motivo, il <xref:System.Windows.Navigation.PageFunction%601> deve essere mantenuto attivo; in caso contrario, la volta successiva che si passa alla <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] crea un'istanza della <xref:System.Windows.Navigation.PageFunction%601> usando il costruttore senza parametri.
+Tuttavia, come si vedrà successivamente, è comunque necessario usare il codice per creare un'istanza della pagina chiamata e spostarsi su di essa per raccogliere i dati restituiti dalla pagina chiamata. Per questo motivo, il <xref:System.Windows.Navigation.PageFunction%601> deve essere mantenuto attivo; in caso contrario, la volta successiva che si passa alla <xref:System.Windows.Navigation.PageFunction%601>, WPF crea un'istanza della <xref:System.Windows.Navigation.PageFunction%601> utilizzando il costruttore senza parametri.
 
 Prima che sia possibile la restituzione della pagina chiamata, questa deve restituire i dati che possono essere recuperati dalla pagina chiamante.
 

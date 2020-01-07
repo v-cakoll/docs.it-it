@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: a9dddb4a3e7af2ca76bb5d3f953cc36c6142623a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283056"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636003"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduzione al linguaggio C# e a .NET Framework
 
@@ -22,7 +22,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 ## <a name="c-language"></a>Linguaggio C#
 
- La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi basata sulle parentesi graffe di C# risulterà immediatamente riconoscibile per chiunque abbia familiarità con i linguaggi C, C++ o Java. Gli sviluppatori che conoscono uno di questi linguaggi di solito sono in grado di iniziare a lavorare in modo produttivo in C# dopo un breve periodo di tempo. La sintassi di C# semplifica molte delle complessità presenti in C++ e include potenti funzionalità, come tipi valore nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria, che non sono disponibili in Java. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] trasformano la query fortemente tipizzata in un costrutto di linguaggio di prima classe.  
+ La sintassi di C# è altamente espressiva, ma è anche semplice e facile da imparare. La sintassi basata sulle parentesi graffe di C# risulterà immediatamente riconoscibile per chiunque abbia familiarità con i linguaggi C, C++ o Java. Gli sviluppatori che conoscono uno di questi linguaggi di solito sono in grado di iniziare a lavorare in modo produttivo in C# dopo un breve periodo di tempo. La sintassi di C# semplifica molte delle complessità presenti in C++ e include potenti funzionalità, come tipi valore nullable, enumerazioni, delegati, espressioni lambda e accesso diretto alla memoria, che non sono disponibili in Java. C# supporta metodi e tipi generici, che garantiscono migliori prestazioni e maggior indipendenza dai tipi, nonché iteratori, che consentono ai responsabili dell'implementazione di classi Collection di definire comportamenti di iterazione personalizzati facili da usare con il codice client. Le espressioni LINQ (Language-Integrated Query) rendono la query fortemente tipizzata un costrutto di linguaggio di prima classe.  
   
  Essendo un linguaggio orientato a oggetti, C# supporta i concetti di incapsulamento, ereditarietà e polimorfismo. Tutti i metodi e le variabili, incluso il metodo `Main`, ovvero il punto di ingresso dell'applicazione, vengono incapsulati all'interno delle definizioni di classe. Una classe può ereditare direttamente da un'unica classe padre, ma può implementare un numero qualsiasi di interfacce. Per evitare una ridefinizione accidentale, i metodi che eseguono l'override di metodi virtuali in una classe padre richiedono la parola chiave `override`. In C# un tipo struct è simile a una classe leggera. Si tratta di un tipo allocato nello stack che può implementare interfacce, ma non supporta l'ereditarietà.  
   
@@ -36,7 +36,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 - Commenti inline relativi alla documentazione XML.  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] che fornisce funzionalità di query incorporate attraverso una varietà di origini dati.  
+- LINQ (Language-Integrated Query), che fornisce funzionalità di query incorporate in un'ampia gamma di origini dati.  
   
  Se è necessario interagire con altri componenti software Windows come oggetti COM o DLL Win32 native, in C# è possibile usare un processo denominato "Interop". Interop permette ai programmi C# di eseguire sostanzialmente qualsiasi operazione consentita a un'applicazione C++ nativa. C# supporta anche i puntatori e il concetto di codice "non sicuro" per i casi in cui l'accesso diretto alla memoria è assolutamente critico.  
   
@@ -48,7 +48,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 - Per informazioni dettagliate su aspetti specifici del linguaggio C#, vedere [Riferimenti per C#](../language-reference/index.md).  
   
-- Per altre informazioni su [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vedere [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
+- Per ulteriori informazioni su LINQ, vedere [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>Architettura della piattaforma .NET Framework
 

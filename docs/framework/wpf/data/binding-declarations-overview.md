@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460036"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544472"
 ---
 # <a name="binding-declarations-overview"></a>Cenni preliminari sulle dichiarazioni di associazione
 
@@ -25,7 +25,7 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di leggere questo argomento, è importante avere familiarità con i concetti e l'utilizzo delle estensioni di markup. Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).
 
@@ -106,13 +106,13 @@ Utilizzare la proprietà <xref:System.Windows.Data.Binding.Path%2A> per specific
 
 ### <a name="escaping-mechanism"></a>Meccanismo di escape
 
-- All'interno degli indicizzatori ([ ]), l'accento circonflesso (^) funge da escape per il carattere successivo.
+- All'interno degli indicizzatori ([]), l’accento circonflesso (^) funge da escape per il carattere successivo.
 
 - Se si imposta <xref:System.Windows.Data.Binding.Path%2A> in XAML, è anche necessario eseguire l'escape (usando entità XML) di determinati caratteri speciali per la definizione del linguaggio XML:
 
-  - Usare `&` come carattere di escape per "&".
+  - Usare `&amp;` come carattere di escape per "&".
 
-  - Usare `>` come carattere di escape per il tag di fine ">".
+  - Usare `&gt;` come carattere di escape per il tag di fine ">".
 
 - Se si descrive inoltre l'intera associazione di un attributo usando la sintassi dell'estensione di markup, è necessario usare un carattere di escape (la barra rovesciata \\) per i caratteri speciali del parser dell'estensione di markup [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:
 
@@ -142,7 +142,7 @@ Il comportamento predefinito è come indicato di seguito se non viene specificat
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
+- [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)
 - [Procedure relative alle proprietà](data-binding-how-to-topics.md)
 - [Data binding](../advanced/optimizing-performance-data-binding.md)
 - [Sintassi XAML di PropertyPath](../advanced/propertypath-xaml-syntax.md)

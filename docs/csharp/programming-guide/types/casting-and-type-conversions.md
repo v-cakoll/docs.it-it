@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 7285b69ea34be087705c1163a94310d43b2f6f02
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969618"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635067"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -34,7 +34,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversioni definite dall'utente**: le conversioni definite dall'utente vengono eseguite da metodi speciali che possono essere definiti per abilitare conversioni esplicite e implicite tra tipi personalizzati che non hanno una relazione di classe basata su una classe di base. Per altre informazioni, vedere [Operatori di conversione definiti dall'utente](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Conversioni con le classi helper**: per eseguire la conversione tra tipi non compatibili, ad esempio numeri interi e oggetti <xref:System.DateTime?displayProperty=nameWithType> oppure tra stringhe esadecimali e matrici di byte, è possibile usare la classe <xref:System.BitConverter?displayProperty=nameWithType>, la classe <xref:System.Convert?displayProperty=nameWithType> e i metodi `Parse` dei tipi numerici predefiniti, ad esempio <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Procedura: Convertire una matrice di byte in un int](./how-to-convert-a-byte-array-to-an-int.md), [Procedura: Convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md) e [Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Conversioni con le classi helper**: per eseguire la conversione tra tipi non compatibili, ad esempio numeri interi e oggetti <xref:System.DateTime?displayProperty=nameWithType> oppure tra stringhe esadecimali e matrici di byte, è possibile usare la classe <xref:System.BitConverter?displayProperty=nameWithType>, la classe <xref:System.Convert?displayProperty=nameWithType> e i metodi `Parse` dei tipi numerici predefiniti, ad esempio <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere [come convertire una matrice di byte in un tipo int](./how-to-convert-a-byte-array-to-an-int.md), [come convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md)e [come eseguire la conversione tra stringhe esadecimali e tipi numerici](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Conversioni implicite
 
@@ -96,4 +96,4 @@ Per altre informazioni, vedere la sezione [Conversioni](~/_csharplang/spec/conve
 - [Operatore cast ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Operatori di conversione definiti dall'utente](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversione di tipi generalizzati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Procedura: Convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md)
+- [Come convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md)

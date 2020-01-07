@@ -5,17 +5,17 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350449"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636731"
 ---
 # <a name="queries-visual-basic"></a>Query (Visual Basic)
-Visual Basic consente di creare espressioni [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] nel codice.  
+Visual Basic consente di creare espressioni LINQ (Language Integrated Query) nel codice.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  Descrive la clausola `Aggregate`, che applica una o più funzioni di aggregazione a una raccolta.  
   

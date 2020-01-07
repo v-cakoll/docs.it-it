@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331073"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632337"
 ---
 # <a name="function-expression-visual-basic"></a>Espressione di funzione (Visual Basic)
 Dichiara i parametri e il codice che definiscono un'espressione lambda di funzione.  
@@ -26,13 +26,13 @@ Function ( [ parameterlist ] )
 End Function  
 ```  
   
-## <a name="parts"></a>Parti  
+## <a name="parts"></a>Componenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`parameterlist`|Facoltativa. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Vedere [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Obbligatoria. Espressione singola. Il tipo dell'espressione è il tipo restituito della funzione.|  
-|`statements`|Obbligatoria. Elenco di istruzioni che restituiscono un valore tramite l'istruzione `Return`. (Vedere [istruzione return](../../../visual-basic/language-reference/statements/return-statement.md)). Il tipo del valore restituito è il tipo restituito della funzione.|  
+|`parameterlist`|Parametro facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Vedere [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Richiesto. Espressione singola. Il tipo dell'espressione è il tipo restituito della funzione.|  
+|`statements`|Richiesto. Elenco di istruzioni che restituiscono un valore tramite l'istruzione `Return`. (Vedere [istruzione return](../../../visual-basic/language-reference/statements/return-statement.md)). Il tipo del valore restituito è il tipo restituito della funzione.|  
   
 ## <a name="remarks"></a>Note  
  Un' *espressione lambda* è una funzione senza nome che calcola e restituisce un valore. È possibile usare un'espressione lambda ovunque sia possibile usare un tipo di delegato, ad eccezione di un argomento per `RemoveHandler`. Per altre informazioni sui delegati e sull'uso di espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e conversione di delegati [rilassati](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Esempio  
- Le espressioni lambda sono sottostanti molti degli operatori di query in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]e possono essere utilizzate in modo esplicito nelle query basate su metodo. Nell'esempio seguente viene illustrata una tipica query di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], seguita dalla conversione della query nel formato del metodo.  
+ Le espressioni lambda sono sottostanti molti degli operatori di query in LINQ (Language Integrated Query) e possono essere utilizzate in modo esplicito nelle query basate su metodo. Nell'esempio seguente viene illustrata una tipica query LINQ, seguita dalla conversione della query nel formato del metodo.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

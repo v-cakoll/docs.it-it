@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7fd4a3e9629a497ba3650bd24f535e864bd68820
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: b81f77032c2770cce9a1ed5b697859750ae10862
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116618"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559526"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e xUnit
 
@@ -21,7 +21,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
 Aprire una finestra della shell. Creare una directory denominata *unit-testing-with-fsharp* in cui archiviare la soluzione.
-In questa nuova directory eseguire [`dotnet new sln`](../tools/dotnet-new.md) per creare una nuova soluzione. Questo rende più semplice gestire sia la libreria di classi che il progetto di unit test.
+All'interno di questa nuova directory eseguire `dotnet new sln` per creare una nuova soluzione. Questo rende più semplice gestire sia la libreria di classi che il progetto di unit test.
 All'interno della directory della soluzione creare una directory *MathService*. La struttura della directory e dei file fino a questo momento è la seguente:
 
 ```
@@ -30,14 +30,14 @@ All'interno della directory della soluzione creare una directory *MathService*. 
     /MathService
 ```
 
-Impostare *MathService* come directory corrente ed eseguire [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) per creare il progetto di origine.  Si creerà un'implementazione non corretta del servizio matematico:
+Rendere *MathService* la directory corrente ed eseguire `dotnet new classlib -lang "F#"` per creare il progetto di origine. Si creerà un'implementazione non corretta del servizio matematico:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Tornare alla directory *unit-test-con-fsharp*. Eseguire [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
+Tornare alla directory *unit-test-con-fsharp*. Eseguire `dotnet sln add .\MathService\MathService.fsproj` per aggiungere il progetto libreria di classi alla soluzione.
 
 ## <a name="creating-the-test-project"></a>Creazione del progetto di test
 
@@ -52,7 +52,7 @@ Creare quindi la directory *MathService.Tests*. Di seguito è illustrata la stru
     /MathService.Tests
 ```
 
-Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando [`dotnet new xunit -lang F#`](../tools/dotnet-new.md). In questo modo viene creato un progetto di test che usa xUnit come libreria di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
+Rendere la directory *MathService. tests* la directory corrente e creare un nuovo progetto usando `dotnet new xunit -lang "F#"`. In questo modo viene creato un progetto di test che usa xUnit come libreria di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -62,7 +62,7 @@ Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto
 </ItemGroup>
 ```
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto xUnit e il Runner di xUnit. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto xUnit e il Runner di xUnit. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +83,7 @@ Il layout della soluzione finale è il seguente:
         MathServiceTests.fsproj
 ```
 
-Eseguire [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) nella directory *unit-testing-with-fsharp*. 
+Eseguire `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` nella directory *Unit-Testing-with-FSharp* . 
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
@@ -98,7 +98,7 @@ let ``My test`` () =
 let ``Fail every time`` () = Assert.True(false)
 ```
 
-L'attributo `[<Fact>]` indica un metodo di test eseguito dal Test Runner. Da *unit-test-con-fsharp* eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di xUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
+L'attributo `[<Fact>]` indica un metodo di test eseguito dal Test Runner. Da *Unit-Testing-with-FSharp*eseguire `dotnet test` per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di xUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
 Questi due test mostrano i test più semplici superati e non superati. `My test` viene superato e `Fail every time` non viene superato. A questo punto, creare un test per il metodo `squaresOfOdds`. Il metodo `squaresOfOdds` restituisce una sequenza di quadrati di tutti i valori interi dispari che fanno parte della sequenza di input. Anziché tentare di scrivere tutte queste funzioni in una sola volta, è possibile creare in modo iterativo test per la convalida della funzionalità. Fare in modo che ogni test venga superato significa creare le funzionalità necessarie per il metodo.
 
@@ -166,3 +166,10 @@ let squaresOfOdds xs =
 ```
 
 È stata compilata una piccola libreria e un set di unit test per tale libreria. La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro. La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-new.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

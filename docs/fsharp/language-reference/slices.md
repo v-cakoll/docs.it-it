@@ -1,17 +1,17 @@
 ---
-title: Sezioni (F#)
-description: Informazioni su come usare le sezioni per i tipi F# di dati esistenti e su come definire sezioni personalizzate per altri tipi di dati.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Sezioni
+description: Viene illustrato come utilizzare le sezioni per i F# tipi di dati esistenti e come definire sezioni personalizzate per altri tipi di dati.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733369"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545110"
 ---
 # <a name="slices"></a>Sezioni
 
-In F#una sezione è un subset di un tipo di dati. Per poter eseguire una sezione da un tipo di dati, il tipo di dati deve definire un metodo di `GetSlice` o un' [estensione del tipo](type-extensions.md) nell'ambito. Questo articolo illustra come prendere le sezioni dai tipi esistenti F# e come definirne di personalizzate.
+In F#una sezione è un subset di qualsiasi tipo di dati che dispone di un metodo di `GetSlice` nella definizione o in un'estensione del [tipo](type-extensions.md)nell'ambito. Viene in genere usato con F# matrici ed elenchi. Questo articolo illustra come prendere sezioni da tipi esistenti F# e come definire sezioni personalizzate.
 
 Le sezioni sono simili agli [indicizzatori](./members/indexed-properties.md), ma anziché restituire un singolo valore dalla struttura dei dati sottostante, producono più di uno.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-La F# libreria principale non definisce`GetSlice`per le matrici 3D. Se si desidera sezionare tali matrici o altre matrici di dimensioni maggiori, è necessario definire manualmente il membro `GetSlice`.
+La F# libreria principale attualmente non definisce `GetSlice` per le matrici 3D. Se si desidera sezionare matrici 3D o altre matrici di dimensioni maggiori, definire il membro `GetSlice`.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definizione di sezioni per altre strutture di dati
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>Le F# sezioni predefinite sono end-Inclusive
+
+Tutte le sezioni intrinseche F# in sono end-Inclusive; ovvero, il limite superiore è incluso nella sezione. Per una sezione specifica con indice iniziale `x` e indice finale `y`, la sezione risultante includerà il valore *YTH* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>Vedere anche

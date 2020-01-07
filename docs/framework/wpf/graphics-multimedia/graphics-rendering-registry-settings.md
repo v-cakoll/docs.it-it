@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960158"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559651"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Definizione di XPDM e WDDM  
- Alcune impostazioni del Registro di sistema per il rendering della grafica hanno valori predefiniti diversi, a seconda che la scheda video usi un driver XPDM o WDDM. XPDM è il modello di driver di visualizzazione di Microsoft Windows XP e WDDM è il modello di driver di visualizzazione di Windows. WDDM è disponibile nei computer che eseguono Windows Vista e Windows 7. XPDM è disponibile nei computer che eseguono Windows Vista, Microsoft Windows XP e [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Per altre informazioni su WDDM, vedere [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guida alla progettazione del modello di driver video di Windows).  
+ Alcune impostazioni del Registro di sistema per il rendering della grafica hanno valori predefiniti diversi, a seconda che la scheda video usi un driver XPDM o WDDM. XPDM è il modello di driver di visualizzazione di Microsoft Windows XP e WDDM è il modello di driver di visualizzazione di Windows. WDDM è disponibile nei computer che eseguono Windows Vista e Windows 7. XPDM è disponibile nei computer che eseguono Windows Vista, Microsoft Windows XP e Microsoft Windows Server 2003. Per altre informazioni su WDDM, vedere [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guida alla progettazione del modello di driver video di Windows).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
@@ -78,7 +78,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
 | |  
 |-|  
-|*AAAA* `/` *MM* `/` *GG*|  
+|*Aaaa* `/` *mm* `/` *GG*|  
   
  Dove *AAAA* è l'anno a quattro cifre, *MM* è il mese a due cifre, e *GG* è il giorno a due cifre. Se questo valore non è impostato, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa novembre 2004 come data necessaria del driver video.  
   

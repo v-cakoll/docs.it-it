@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: convertire una stringa in una guida per la C# programmazione di numeri'
+title: Come convertire una stringa in una guida per la C# programmazione di numeri
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: MT
+ms.openlocfilehash: a22b3af659630e947490858915e638e601b5f18f
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552404"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635041"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: convertire una stringa in un numero (Guida per programmatori C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Come convertire una stringa in un numero (C# guida per programmatori)
 
 È possibile convertire una [stringa](../../language-reference/builtin-types/reference-types.md) in un numero chiamando il metodo `Parse` o `TryParse` disponibile per i vari tipi numerici (`int`, `long`, `double` e così via) oppure usando i metodi nella classe <xref:System.Convert?displayProperty=nameWithType>.  
   
@@ -58,5 +58,5 @@ Nella tabella seguente sono elencati alcuni dei metodi della classe <xref:System
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi](./index.md)
-- [Procedura: Determinare se una stringa rappresenta un valore numerico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Come determinare se una stringa rappresenta un valore numerico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Esempio: Utilità di formattazione di .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
