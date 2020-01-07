@@ -2,12 +2,12 @@
 title: Introduzione agli strumenti F# da riga di comando
 description: Informazioni su come creare una semplice soluzione multiprogetto sull' F# uso del interfaccia della riga di comando di .NET Core in qualsiasi sistema operativo (Windows, MacOS o Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117928"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559487"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F# con l'interfaccia della riga di comando di .NET Core
 
@@ -21,7 +21,7 @@ Questo articolo presuppone che l'utente sappia come usare una riga di comando e 
 
 ## <a name="build-a-simple-multi-project-solution"></a>Creazione di una soluzione multiprogetto semplice
 
-Aprire un prompt dei comandi o un terminale e usare il comando [DotNet New](../../core/tools/dotnet-new.md) per creare un nuovo `FSNetCore`file di soluzione denominato:
+Aprire un prompt dei comandi o un terminale e usare il comando [DotNet New](../../core/tools/dotnet-new.md) per creare un nuovo file di soluzione denominato `FSNetCore`:
 
 ```dotnetcli
 dotnet new sln -o FSNetCore
@@ -38,10 +38,10 @@ FSNetCore
 
 Modificare le directory in *FSNetCore*.
 
-Usare il `dotnet new` comando, creare un progetto libreria di classi nella cartella **src** denominata Library.
+Usare il comando `dotnet new`, creare un progetto libreria di classi nella cartella **src** denominata Library.
 
 ```dotnetcli
-dotnet new classlib -lang F# -o src/Library
+dotnet new classlib -lang "F#" -o src/Library
 ```
 
 La struttura di directory seguente viene generata dopo l'esecuzione del comando precedente:
@@ -72,7 +72,7 @@ Aggiungere il pacchetto NuGet Newtonsoft. JSON al progetto di libreria.
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Aggiungere il `Library` progetto `FSNetCore` alla soluzione usando il comando [DotNet sln Add](../../core/tools/dotnet-sln.md) :
+Aggiungere il progetto `Library` alla soluzione `FSNetCore` usando il comando [DotNet sln Add](../../core/tools/dotnet-sln.md) :
 
 ```dotnetcli
 dotnet sln add src/Library/Library.fsproj
@@ -82,10 +82,10 @@ Eseguire `dotnet build` per compilare il progetto. Le dipendenze non risolte ver
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Scrivere un'applicazione console che utilizza la libreria di classi
 
-Usare il `dotnet new` comando per creare un'applicazione console nella cartella **src** denominata app.
+Usare il comando `dotnet new` per creare un'applicazione console nella cartella **src** denominata app.
 
 ```dotnetcli
-dotnet new console -lang F# -o src/App
+dotnet new console -lang "F#" -o src/App
 ```
 
 La struttura di directory seguente viene generata dopo l'esecuzione del comando precedente:
@@ -102,7 +102,7 @@ La struttura di directory seguente viene generata dopo l'esecuzione del comando 
             └── Library.fsproj
 ```
 
-Sostituire il contenuto del `Program.fs` file con il codice seguente:
+Sostituire il contenuto del file `Program.fs` con il codice seguente:
 
 ```fsharp
 open System
@@ -119,28 +119,28 @@ let main argv =
     0 // return an integer exit code
 ```
 
-Aggiungere un riferimento al `Library` progetto usando [DotNet Add Reference](../../core/tools/dotnet-add-reference.md).
+Aggiungere un riferimento al progetto `Library` usando [DotNet Add Reference](../../core/tools/dotnet-add-reference.md).
 
 ```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Aggiungere il `App` progetto `FSNetCore` alla soluzione usando il `dotnet sln add` comando:
+Aggiungere il progetto `App` alla soluzione `FSNetCore` usando il comando `dotnet sln add`:
 
 ```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 
-Ripristinare le dipendenze `dotnet restore` NuGet ed eseguire `dotnet build` per compilare il progetto.
+Ripristinare le dipendenze NuGet, `dotnet restore` ed eseguire `dotnet build` per compilare il progetto.
 
-Passare alla directory del `src/App` progetto console ed eseguire il progetto passando `Hello World` come argomenti:
+Passare alla directory del progetto console `src/App` ed eseguire il progetto passando `Hello World` come argomenti:
 
 ```console
 cd src/App
 dotnet run Hello World
 ```
 
-Dovrebbero essere visualizzati i risultati seguenti:
+I risultati visualizzati sono simili ai seguenti:
 
 ```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:

@@ -2,12 +2,12 @@
 title: Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837753"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346584"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe)
 Lo strumento di registrazione dei servizi di Windows Workflow (WFServicesReg.exe) è un strumento autonomo che può essere utilizzato per aggiungere, rimuovere o ripristinare gli elementi di configurazione per i servizi Windows Workflow Foundation (WF).  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Lo strumento registra inoltre scriptmap e gestori .xoml e .rules nella metabase IIS.  
   
- Nei computer [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), viene registrato un set di scriptmap. xoml e. Rules.  
+ Nei computer Windows Server 2003 e [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), viene registrato un set di scriptmap. xoml e. Rules.  
   
  In computer a 64 bit lo strumento registra scriptmap di modalità WOW, se l'opzione `Enable32BitAppOnWin64` è abilitata, o scriptmap a 64 bit nativi, se l'opzione `Enable32BitAppOnWin64` è disabilitata.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Utilizzo di scenari  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installazione di IIS dopo l'installazione di .NET Framework 3.5  
- In un computer [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .NET Framework 3,5 viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di .NET Framework 3,5 riesce senza installare gli scriptmap. xoml e. Rules.  
+ In un computer Windows Server 2003, .NET Framework 3,5 viene installato prima dell'installazione di IIS. A causa dell'indisponibilità della metabase IIS, l'installazione di .NET Framework 3,5 riesce senza installare gli scriptmap. xoml e. Rules.  
   
  Al termine dell'installazione di IIS, è possibile utilizzare lo strumento WFServicesReg.exe con l'opzione `/c` per installare questi scriptmap specifici.  
   
 ### <a name="repairing-the-scriptmaps"></a>Ripristino di scriptmap  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>Eliminazione di scriptmap nel nodo Siti Web  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato dal nodo Siti Web. Può essere ripristinato eseguendo lo strumento WFServicesReg.exe con l'opzione `/c`.  
+ In un computer Windows Server 2003, le regole. xoml o. vengono accidentalmente eliminate dal nodo siti Web. Può essere ripristinato eseguendo lo strumento WFServicesReg.exe con l'opzione `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Eliminazione di scriptmap in un particolare sito Web  
- In un computer con sistema [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], .xoml o .rules viene accidentalmente eliminato da un particolare sito Web (ad esempio il sito Web predefinito) piuttosto che dal nodo Siti Web.  
+ In un computer Windows Server 2003,. xoml o. Rules viene accidentalmente eliminato da un particolare sito Web (ad esempio, il sito Web predefinito) invece che dal nodo siti Web.  
   
  Per ripristinare i gestori eliminati per un particolare sito Web, è necessario eseguire "WFServicesReg. exe/r" per rimuovere i gestori da tutti i siti Web, quindi eseguire "WFServicesReg. exe/c" per creare i gestori appropriati per tutti i siti Web.  
   

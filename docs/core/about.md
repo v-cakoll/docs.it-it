@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801957"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344914"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -36,7 +36,7 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 
 .NET Core espone API per molti scenari, tra cui i seguenti:
 
-- Tipi primitivi, come <xref:System.Boolean?displayProperty=nameWithType> e <xref:System.Int32?displayProperty=nameWithType>.
+- Tipi primitivi, ad esempio <xref:System.Boolean?displayProperty=nameWithType> e <xref:System.Int32?displayProperty=nameWithType>.
 - Raccolte, ad esempio <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipi di utilità, ad esempio <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipi di dati, ad esempio <xref:System.Data.DataSet?displayProperty=nameWithType> e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
@@ -58,7 +58,7 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 
 - Il [runtime di .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), che fornisce un sistema di tipi, il caricamento di assembly, una Garbage Collector, l'interoperabilità nativa e altri servizi di base. Le [librerie .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) forniscono tipi di dati primitivi, tipi di composizione delle app e utilità fondamentali.
 - Il [runtime di ASP.NET](https://github.com/aspnet/home), che fornisce un Framework per la compilazione di moderne applicazioni connesse a Internet basate su cloud, ad esempio app Web, app per le cose e backend per dispositivi mobili.
-- Gli [strumenti dell'interfaccia della riga di comando di .NET Core](https://github.com/dotnet/cli) e compilatori di linguaggio ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) che rendono possibile l'esperienza di sviluppo .NET Core.
+- Gli [strumenti dell'interfaccia della riga di comando di .NET Core](https://github.com/dotnet/sdk) e compilatori di linguaggio ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) che rendono possibile l'esperienza di sviluppo .NET Core.
 - [dotnet tool](https://github.com/dotnet/core-setup), usato per avviare le app e gli strumenti dell'interfaccia della riga di comando di .NET Core. Seleziona il runtime e ospita il runtime, fornisce un criterio di caricamento degli assembly e avvia le app e gli strumenti.
 
 Questi componenti sono distribuiti nei modi seguenti:

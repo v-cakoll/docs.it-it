@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Scrivere query in XML negli spazi dei nomi (C#)'
+title: Come scrivere query in XML negli spazi dei nomi (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253184"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337365"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procedura: Scrivere query in XML negli spazi dei nomi (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Come scrivere query in XML negli spazi dei nomi (C#)
 Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  
   
  Per C#, l'approccio più comune consiste nell'inizializzare un oggetto <xref:System.Xml.Linq.XNamespace> usando una stringa contenente l'URI, quindi usare l'overload dell'operatore di addizione per combinare lo spazio dei nomi con il nome locale.  

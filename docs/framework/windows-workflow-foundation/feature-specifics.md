@@ -2,12 +2,12 @@
 title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802596"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345110"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 
@@ -189,7 +189,7 @@ Un'attività del diagramma di flusso può essere usata per implementare un gioco
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>Attività procedurali (Sequence, If, ForEach, Switch, Assign, DoWhile, While)
 
-Le attività procedurali forniscono un meccanismo per modellare il flusso di controllo sequenziale usando concetti noti ai programmatori. Queste attività abilitano i costrutti del linguaggio di programmazione strutturati in modo tradizionale e, se opportuno, forniscono la parità di linguaggio con linguaggi procedurali comuni, ad esempio C#/VB.
+Le attività procedurali forniscono un meccanismo per modellare il flusso di controllo sequenziale usando concetti noti ai programmatori. Queste attività consentono i costrutti del linguaggio di programmazione strutturati tradizionalmente e, quando appropriato, forniscono la parità di linguaggio C# con linguaggi procedurali comuni, ad esempio e Visual Basic.
 
 ### <a name="getting-started"></a>Guida introduttiva
 
@@ -231,7 +231,7 @@ L'attività <xref:System.Activities.Statements.InvokeMethod> consente di richiam
 
 ## <a name="error-handling-activities"></a>Attività di gestione degli errori
 
-L'attività <xref:System.Activities.Statements.TryCatch> fornisce un meccanismo per il rilevamento delle eccezioni che si verificano durante l'esecuzione di un set di attività contenute (simile al costrutto Try/Catch in C#/VB). <xref:System.Activities.Statements.TryCatch> fornisce la gestione delle eccezioni a livello di flusso di lavoro. Quando viene generata un'eccezione non gestita, il flusso di lavoro viene interrotto e non viene eseguito il blocco Finally. Questo comportamento è coerente con C#.
+L'attività <xref:System.Activities.Statements.TryCatch> fornisce un meccanismo per intercettare le eccezioni che si verificano durante l'esecuzione di un set di attività contenute (simile al costrutto C# try/catch in e Visual Basic). <xref:System.Activities.Statements.TryCatch> fornisce la gestione delle eccezioni a livello di flusso di lavoro. Quando viene generata un'eccezione non gestita, il flusso di lavoro viene interrotto e non viene eseguito il blocco Finally. Questo comportamento è coerente con C#.
 
 ### <a name="getting-started"></a>Guida introduttiva
 

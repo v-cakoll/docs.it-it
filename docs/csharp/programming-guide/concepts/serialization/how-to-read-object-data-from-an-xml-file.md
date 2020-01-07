@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Leggere dati oggetto in un file XML (C#)'
+title: Come leggere i dati di un oggetto da un fileC#XML ()
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590744"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346427"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedura: Leggere dati oggetto in un file XML (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Come leggere i dati di un oggetto da un fileC#XML ()
 Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Esempio  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Sostituire il nome di file "c:\temp\SerializationOverview.xml" con il nome del file contenente i dati serializzati. Per altre informazioni sulla serializzazione dei dati, vedere [Procedura: Scrivere dati oggetto in un file XML (C#)](./how-to-write-object-data-to-an-xml-file.md).  
+Sostituire il nome di file "c:\temp\SerializationOverview.xml" con il nome del file contenente i dati serializzati. Per ulteriori informazioni sulla serializzazione dei dati, vedere la pagina relativa [alla modalità di scrittura dei datiC#di un oggetto in un file XML ()](./how-to-write-object-data-to-an-xml-file.md).
   
  La classe deve avere un costruttore public senza parametri.  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IO.StreamWriter>
-- [Procedura: Scrivere dati oggetto in un file XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Come scrivere i dati di un oggetto in un fileC#XML ()](./how-to-write-object-data-to-an-xml-file.md)
 - [Serializzazione (C#)](./index.md)
 - [Guida per programmatori C#](../../index.md)

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 3be4ec01137a96a9b38869cbbb81fb0e89b7d700
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116213"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559500"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit
 
@@ -44,7 +44,7 @@ Creare quindi una directory *MathService*. Finora è stata creata la struttura d
 Impostare *MathService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 Si crea un'implementazione non corretta del servizio matematico:
@@ -76,7 +76,7 @@ Creare quindi la directory *MathService.Tests*. Di seguito è illustrata la stru
 Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 Ciò crea un progetto di test che usa NUnit come framework di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
@@ -89,7 +89,7 @@ Ciò crea un progetto di test che usa NUnit come framework di test. Il modello g
 </ItemGroup>
 ```
 
-Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -138,7 +138,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-L'attributo `[<TestFixture>]` indica una classe che contiene test. L'attributo `[<Test>]` indica un metodo di test eseguito dal Test Runner. Dalla directory *unit-test-con-fsharp* eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
+L'attributo `[<TestFixture>]` indica una classe che contiene test. L'attributo `[<Test>]` indica un metodo di test eseguito dal Test Runner. Dalla directory *Unit-Testing-with-FSharp* eseguire `dotnet test` per compilare i test e la libreria di classi, quindi eseguire i test. Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test. `dotnet test` avvia il Test Runner usando il progetto di unit test creato.
 
 Questi due test mostrano i test più semplici superati e non superati. `My test` viene superato e `Fail every time` non viene superato. A questo punto, creare un test per il metodo `squaresOfOdds`. Il metodo `squaresOfOdds` restituisce una sequenza di quadrati di tutti i valori interi dispari che fanno parte della sequenza di input. Anziché tentare di scrivere tutte queste funzioni in una sola volta, è possibile creare in modo iterativo test per la convalida della funzionalità. Fare in modo che ogni test venga superato significa creare le funzionalità necessarie per il metodo.
 
@@ -210,3 +210,8 @@ let squaresOfOdds xs =
 ```
 
 È stata compilata una piccola libreria e un set di unit test per tale libreria. La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro. La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

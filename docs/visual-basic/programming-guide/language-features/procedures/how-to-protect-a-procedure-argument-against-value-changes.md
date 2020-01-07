@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344852"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347907"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Procedura: impedire la modifica del valore di un argomento di una routine (Visual Basic)
 Se una routine dichiara un parametro come [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic assegna al codice della procedura un riferimento diretto all'elemento di programmazione sottostante all'argomento nel codice chiamante. Ciò consente alla routine di modificare il valore sottostante all'argomento nel codice chiamante. In alcuni casi il codice chiamante potrebbe voler proteggersi da una modifica di questo tipo.  
@@ -39,7 +39,7 @@ Se una routine dichiara un parametro come [ByRef](../../../../visual-basic/langu
   
  La seconda chiamata di `MsgBox` Visualizza "dopo Replace (n): 11, 21, 31, 41". Poiché `n` viene passato `ByVal`, `replace` possibile modificare la variabile `n` nel codice chiamante assegnando una nuova matrice. Quando `replace` crea la nuova istanza della matrice `k` e la assegna alla variabile locale `a`, perde il riferimento a `n` passato dal codice chiamante. Quando modifica i membri di `a`, viene interessata solo la matrice locale `k`. Pertanto, `replace` non incrementa i valori della matrice `n` nel codice chiamante.  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
  Il valore predefinito in Visual Basic consiste nel passare gli argomenti per valore. Tuttavia, è consigliabile includere la parola chiave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) con tutti i parametri dichiarati. Questo rende il codice più facile da leggere.  
   
 ## <a name="see-also"></a>Vedere anche
@@ -53,4 +53,4 @@ Se una routine dichiara un parametro come [ByRef](../../../../visual-basic/langu
 - [Procedura: cambiare il valore di un argomento di routine](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
-- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipi valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
