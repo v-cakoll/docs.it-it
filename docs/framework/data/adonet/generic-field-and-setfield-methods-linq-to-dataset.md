@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 1b2c7434543bb2574c59eaec126a621121dd7cef
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 310eb3ccecc3159234ed362ed044be7ad704dde4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504791"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634833"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Metodi generici Field e SetField (LINQ to DataSet)
-LINQ to DataSet fornisce metodi di estensione per il <xref:System.Data.DataRow> classe per accedere ai valori di colonna: il <xref:System.Data.DataRowExtensions.Field%2A> metodo e il <xref:System.Data.DataRowExtensions.SetField%2A> (metodo). Questi metodi semplificano l'accesso ai valori di colonna per gli sviluppatori, in particolare per quanto riguarda i valori Null. Il <xref:System.Data.DataSet> viene utilizzato <xref:System.DBNull.Value?displayProperty=nameWithType> per rappresentare valori null, mentre [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] utilizza il <xref:System.Nullable> e <xref:System.Nullable%601> tipi. Usando la funzione di accesso colonna preesistente in <xref:System.Data.DataRow> è necessario eseguire il cast dell'oggetto restituito nel tipo appropriato. Se un campo specifico in un <xref:System.Data.DataRow> può essere null, è necessario controllare in modo esplicito per un valore null perché la restituzione <xref:System.DBNull.Value?displayProperty=nameWithType> e in modo implicito il cast in un altro tipo genera un <xref:System.InvalidCastException>. Nell'esempio seguente, se il <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> metodo non è stato usato per verificare la presenza di un valore null, verrà generata un'eccezione se l'indicizzatore restituisca <xref:System.DBNull.Value?displayProperty=nameWithType> e ha provato a eseguire il cast a un <xref:System.String>.  
+LINQ to DataSet fornisce metodi di estensione alla classe <xref:System.Data.DataRow> per l'accesso ai valori di colonna: il metodo <xref:System.Data.DataRowExtensions.Field%2A> e il metodo <xref:System.Data.DataRowExtensions.SetField%2A>. Questi metodi semplificano l'accesso ai valori di colonna per gli sviluppatori, in particolare per quanto riguarda i valori Null. Il <xref:System.Data.DataSet> utilizza <xref:System.DBNull.Value?displayProperty=nameWithType> per rappresentare i valori null, mentre LINQ utilizza i tipi di <xref:System.Nullable> e <xref:System.Nullable%601>. Per utilizzare la funzione di accesso di colonna preesistente in <xref:System.Data.DataRow>, è necessario eseguire il cast dell'oggetto restituito al tipo appropriato. Se un campo specifico in un <xref:System.Data.DataRow> può essere null, è necessario verificare in modo esplicito la presenza di un valore null perché la restituzione di <xref:System.DBNull.Value?displayProperty=nameWithType> e il cast implicito a un altro tipo genera un <xref:System.InvalidCastException>. Nell'esempio seguente, se il metodo <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> non è stato usato per verificare la presenza di un valore null, viene generata un'eccezione se l'indicizzatore ha restituito <xref:System.DBNull.Value?displayProperty=nameWithType> e ha tentato di eseguirne il cast a un <xref:System.String>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  
@@ -27,7 +27,7 @@ LINQ to DataSet fornisce metodi di estensione per il <xref:System.Data.DataRow> 
   
  Si noti che il tipo di dati specificato nel parametro `T` generico del metodo <xref:System.Data.DataRowExtensions.Field%2A> e del metodo <xref:System.Data.DataRowExtensions.SetField%2A> deve corrispondere al tipo del valore sottostante. In caso contrario, verrà generata un'eccezione <xref:System.InvalidCastException>. Il nome di colonna specificato deve inoltre corrispondere al nome di una colonna presente in <xref:System.Data.DataSet>; in caso contrario, verrà generata un'eccezione <xref:System.ArgumentException>. In entrambi casi, l'eccezione viene generata in fase di esecuzione durante l'enumerazione dei dati quando viene eseguita la query.  
   
- Il metodo <xref:System.Data.DataRowExtensions.SetField%2A> non esegue alcun tipo di conversione. Tuttavia, ciò non significa che non verrà eseguita una conversione del tipo. Il <xref:System.Data.DataRowExtensions.SetField%2A> metodo espone il comportamento ADO.NET del <xref:System.Data.DataRow> classe. È possibile eseguire una conversione del tipo tramite il <xref:System.Data.DataRow> oggetto e il valore convertito verrebbero quindi salvate nel <xref:System.Data.DataRow> oggetto.  
+ Il metodo <xref:System.Data.DataRowExtensions.SetField%2A> non esegue alcun tipo di conversione. Tuttavia, ciò non significa che non verrà eseguita una conversione del tipo. Il metodo <xref:System.Data.DataRowExtensions.SetField%2A> espone il comportamento ADO.NET della classe <xref:System.Data.DataRow>. Una conversione di tipo può essere eseguita dall'oggetto <xref:System.Data.DataRow> e il valore convertito verrebbe quindi salvato nell'oggetto <xref:System.Data.DataRow>.  
   
 ## <a name="see-also"></a>Vedere anche
 

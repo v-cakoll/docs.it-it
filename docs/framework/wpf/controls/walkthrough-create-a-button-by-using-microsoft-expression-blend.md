@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460103"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636172"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procedura dettagliata: creazione di un pulsante tramite Microsoft Expression Blend
 
-Questa procedura dettagliata illustra il processo di creazione di un pulsante personalizzato [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando Microsoft Expression Blend.
+Questa procedura dettagliata illustra il processo di creazione di un pulsante personalizzato WPF con Microsoft Expression Blend.
 
 > [!IMPORTANT]
 > Microsoft Expression Blend funziona generando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che viene quindi compilato per creare il programma eseguibile. Se invece si preferisce usare direttamente XAML, è disponibile un'altra procedura dettagliata che crea la stessa applicazione con XAML con Visual Studio anziché con Blend. Per altre informazioni, vedere [creare un pulsante usando XAML](walkthrough-create-a-button-by-using-xaml.md) .
@@ -40,7 +40,7 @@ Nella prima parte di questa procedura dettagliata viene illustrato come creare l
 
 5. Denominare il progetto `CustomButton` e fare clic su **OK**.
 
-A questo punto si dispone di un progetto di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vuoto. È possibile premere F5 per eseguire l'applicazione. Come si può immaginare, l'applicazione è costituita solo da una finestra vuota. Successivamente, creare un rettangolo arrotondato e convertirlo in un pulsante.
+A questo punto si dispone di un progetto WPF vuoto. È possibile premere F5 per eseguire l'applicazione. Come si può immaginare, l'applicazione è costituita solo da una finestra vuota. Successivamente, creare un rettangolo arrotondato e convertirlo in un pulsante.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Per convertire un rettangolo in un pulsante
 
@@ -90,7 +90,7 @@ A questo punto si dispone di un rettangolo che è stato modificato in un pulsant
 
     Impostare quindi il <xref:System.Windows.Shapes.Shape.Stroke%2A> sul colore di qualunque sia il modello. A tale scopo, fare clic sulla piccola casella bianca accanto a **Stroke**, selezionare **CustomExpression**e digitare "{TemplateBinding Background}" nella finestra di dialogo.
 
-    ![Procedura di impostazione dell'utilizzo del colore del modello](./media/custom-button-blend-templatestroke.png)
+    ![Procedura di impostazione dell'uso del colore del modello](./media/custom-button-blend-templatestroke.png)
 
 4. **Creare un rettangolo interno:** A questo punto, creare un altro rettangolo (denominarlo "rettangolo interno") e posizionarlo in un punto simmetrico all'interno di **rettangolo esterno** . Per questo tipo di lavoro, è probabile che si desideri applicare lo zoom per rendere il pulsante più grande nell'area di modifica.
 
@@ -224,7 +224,7 @@ Come ultimo passaggio di questa procedura dettagliata, si aggiungeranno animazio
 
         ![Procedura di creazione di una trasformazione rotativa](./media/custom-button-blend-rotatetransform.gif)
 
-    5. Premere F5 per eseguire l'applicazione. Fare clic sul pulsante. Si noti che il livello cristallo ruota intorno.
+    5. Premere F5 per eseguire l'applicazione. Fare clic sul pulsante . Si noti che il livello cristallo ruota intorno.
 
 ## <a name="conclusion"></a>Conclusione
 

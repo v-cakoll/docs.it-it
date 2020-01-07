@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Recuperare paragrafi da un documento Office Open XML (C#)'
+title: Come recuperare paragrafi da un documento Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253397"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347465"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Procedura: Recuperare paragrafi da un documento Office Open XML (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Come recuperare paragrafi da un documento Office Open XML (C#)
 In questo argomento viene presentato un esempio in cui viene aperto un documento Office Open XML e viene recuperata una raccolta di tutti i relativi paragrafi.  
   
  Per altre informazioni su Office Open XML, vedere [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) e [www.ericwhite.com](http://ericwhite.com/).  

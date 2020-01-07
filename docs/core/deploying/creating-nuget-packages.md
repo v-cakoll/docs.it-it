@@ -1,16 +1,16 @@
 ---
-title: Creare un pacchetto NuGet con gli strumenti dell'interfaccia della riga di comando di .NET Core
+title: Creare un pacchetto NuGet con interfaccia della riga di comando di .NET Core
 description: Informazioni su come creare un pacchetto NuGet con il comando 'dotnet pack'.
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.openlocfilehash: 4927e3796be42d70d25a1947d4519312aef7e289
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771936"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343609"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Come creare un pacchetto NuGet con gli strumenti dell'interfaccia della riga di comando di .NET Core
 

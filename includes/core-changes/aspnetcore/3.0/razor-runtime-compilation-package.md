@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8479168b64153d3c729f8814a2649df8d46f2135
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393897"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344296"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor: la compilazione di runtime è stata spostata in un pacchetto
 
@@ -20,12 +20,12 @@ La compilazione del runtime è disponibile senza che siano necessari pacchetti a
 
 #### <a name="new-behavior"></a>Nuovo comportamento
 
-La funzionalità è stata spostata nel pacchetto `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
+La funzionalità è stata spostata nel pacchetto [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) .
 
 Le API seguenti erano in precedenza disponibili in `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` per supportare la compilazione in fase di esecuzione. Le API sono ora disponibili tramite `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`.
 
-- `RazorViewEngineOptions.FileProviders` -> `MvcRazorRuntimeCompilationOptions.FileProviders`
-- `RazorViewEngineOptions.AdditionalCompilationReferences` -> `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
+- `RazorViewEngineOptions.FileProviders` è ora `MvcRazorRuntimeCompilationOptions.FileProviders`
+- `RazorViewEngineOptions.AdditionalCompilationReferences` è ora `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
 
 Inoltre, `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` è stato rimosso. Per impostazione predefinita, la ricompilazione delle modifiche ai file è abilitata facendo riferimento al pacchetto `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
 
@@ -38,14 +38,14 @@ Questa modifica era necessaria per rimuovere la dipendenza del Framework condivi
 Per le app che richiedono la compilazione o la ricompilazione di runtime dei file Razor, seguire questa procedura:
 
 1. Aggiungere un riferimento al pacchetto `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
-1. Aggiornare il metodo `Startup.ConfigureServices` del progetto in modo da includere una chiamata a `AddMvcRazorRuntimeCompilation`. Ad esempio, in `Startup.ConfigureServices`:
+1. Aggiornare il metodo `Startup.ConfigureServices` del progetto in modo da includere una chiamata a `AddRazorRuntimeCompilation`. Ad esempio:
 
     ```csharp
     services.AddMvc()
-        .AddMvcRazorRuntimeCompilation();
+        .AddRazorRuntimeCompilation();
     ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 ASP.NET Core
 

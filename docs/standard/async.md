@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106693"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346077"
 ---
 # <a name="async-overview"></a>Panoramica della programmazione asincrona
 
@@ -20,7 +20,7 @@ Fino a non molto tempo fa, per avere app più veloci bastava acquistare un nuovo
 - Ci si aspetta che le applicazioni client siano sempre attive, sempre connesse e costantemente reattive all'interazione dell'utente, ad esempio al tocco, con valutazioni dell'archivio applicazioni sempre ottime.
 - Ci si attende dai servizi che sappiano gestire i picchi di traffico scalando verticalmente e orizzontalmente senza intoppi. 
 
-La programmazione asincrona è una tecnica fondamentale che semplifica la gestione di pesanti operazioni I/O simultanee su diversi core. .NET offre ad app e servizi la capacità di garantire velocità di risposta ed elasticità grazie a modelli di programmazione asincrona a livello di linguaggio facili da usare in C#, VB e F#.
+La programmazione asincrona è una tecnica fondamentale che semplifica la gestione di pesanti operazioni I/O simultanee su diversi core. .NET offre funzionalità per le app e i servizi che possono essere reattive ed elastiche con modelli di programmazione asincrona a livello di linguaggio facili C#da usare in, F#Visual Basic e.
 
 ## <a name="why-write-async-code"></a>Perché scrivere codice asincrono?
 

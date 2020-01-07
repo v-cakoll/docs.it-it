@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421131"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636250"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
-L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che consente l'hosting di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni in browser compatibili (incluso Microsoft Internet Explorer 6 e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come Shell e gestore MIME per il contenuto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitato dal browser, che include:  
+L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che consente l'hosting di applicazioni WPF in browser compatibili (incluso Microsoft Internet Explorer 6 e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come Shell e gestore MIME per il contenuto WPF ospitato dal browser, che include:  
   
 - File [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati (con estensione xaml) non compilati.  
   
@@ -29,7 +29,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
  Questo argomento descrive i parametri della riga di comando che è possibile utilizzare con PresentationHost.exe.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Usage  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Parametri  
@@ -40,7 +40,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
 |-debug|Quando si attiva un'applicazione, non esegue il commit o non lo esegue dall'archivio. Funziona solo quando un file locale è attivato.|  
 |-debugSecurityZoneURL \<url>|Utilizzato con un valore URL per indicare a PresentationHost. exe che un'applicazione deve essere sottoposta a debug come se fosse stata distribuita dall'URL specificato. In questo modo si determina l'area di distribuzione e il sito di origine.|  
 |-embedding|Richiesto da OLE. Se viene specificato il parametro `-event` o `-debug`, non è necessario specificare il parametro `-embedding`, poiché tale parametro è impostato internamente.|  
-|-event \<nomeevento>|Aprire l'evento con questo nome e segnalarlo quando PresentationHost.exe è inizializzato e pronto per ospitare il contenuto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. PresentationHost.exe verrà chiuso se si verifica un errore durante l'apertura dell'evento, ad esempio come se non fosse stato creato.|  
+|-event \<nomeevento>|Aprire l'evento con questo nome e segnalarlo quando PresentationHost. exe è inizializzato e pronto per ospitare il contenuto WPF. PresentationHost.exe verrà chiuso se si verifica un errore durante l'apertura dell'evento, ad esempio come se non fosse stato creato.|  
 |-launchApplication \<url>|Avvia un'applicazione ClickOnce autonoma dall'URL specificato. Vengono applicati i criteri di sicurezza di Internet Explorer e WinINet relativi alle applicazioni .NET.|  
   
 ## <a name="scenarios"></a>Scenari  

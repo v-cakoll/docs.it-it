@@ -1,13 +1,13 @@
 ---
-title: 'Procedura: Eseguire alberi delle espressioni'
+title: "Procedura: eseguire strutture ad albero dell'espressione"
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 82801728596449869e5124c3fc92c9c0673f5dd9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2a2749eaed5279d04b72eb77b066c83de9722fa9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332990"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345997"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Procedura: eseguire alberi delle espressioni (Visual Basic)
 In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
@@ -42,7 +42,7 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
   
 - Includere lo spazio dei nomi System.Linq.Expressions.  
   

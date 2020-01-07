@@ -1,15 +1,15 @@
 ---
-title: Esempio FindPrivateKey-WCF
+title: Esempio FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989878"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346022"
 ---
 # <a name="findprivatekey-sample"></a>Esempio FindPrivateKey
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Per scaricare il progetto, visitare gli [esempi Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Aprire Esplora file e passare alla cartella *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* nel percorso della directory in cui è stato installato l'esempio.
+1. Aprire Esplora file e passare alla cartella *WF_WCF_Samples \wcf\setup\findprivatekey\cs* nel percorso della directory in cui è stato installato l'esempio.
 
 2. Fare doppio clic sull'icona del file con estensione sln per aprirlo in Visual Studio.
 
 3. Scegliere **Ricompila soluzione**dal menu **Compila** .
 
-4. La compilazione della soluzione genera il file: FindPrivateKey.exe.
+4. La compilazione della soluzione genera il file FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Convenzioni-voci della riga di comando
 
@@ -62,9 +62,9 @@ Per scaricare il progetto, visitare gli [esempi Windows Communication Foundation
 
  "*opzione1* &#124; *opzione2*" rappresenta una scelta tra set di opzioni.
 
- "\<*value*>" rappresenta un valore di parametro da immettere.
+ "\<*valore*>" rappresenta un valore di parametro da immettere.
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Usage
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
@@ -72,7 +72,7 @@ FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbpri
 
 Dove:
 
-| Parametro         | DESCRIZIONE                                                                       |
+| Parametro         | Descrizione                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | Nome del soggetto del certificato                                               |
 | `<thumbprint>`  | Identificazione personale del certificato. è possibile utilizzare lo strumento Certmgr. exe per trovarlo. |

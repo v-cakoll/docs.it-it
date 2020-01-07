@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Ordinare elementi (C#)'
+title: Come ordinare gli elementi (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347370"
 ---
-# <a name="how-to-sort-elements-c"></a>Procedura: Ordinare elementi (C#)
+# <a name="how-to-sort-elements-c"></a>Come ordinare gli elementi (C#)
 In questo esempio viene illustrato come scrivere una query che ordina i relativi risultati.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Panoramica degli spazi dei nomi (LINQ to XML)](namespaces-overview-linq-to-xml.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](./sample-xml-file-numerical-data-in-a-namespace.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

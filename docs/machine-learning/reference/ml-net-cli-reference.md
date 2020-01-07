@@ -1,89 +1,65 @@
 ---
-title: Comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET
+title: Riferimento al comando CLI ML.NET
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 12/18/2019
+ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929205"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636120"
 ---
-# <a name="the-auto-train-command-in-mlnet-cli"></a>Comando 'auto-train' nell'interfaccia della riga di comando di ML.NET
+# <a name="the-mlnet-cli-command-reference"></a>Riferimento ai comandi dell'interfaccia della riga di comando ML.NET
+
+Il comando `auto-train` è il comando principale dello strumento dell'interfaccia della riga di comando di ML.NET. Il comando consente di generare un modello ML.NET di qualità elevata usando automazione Machine Learning (AutoML), nonché il codice di esempio C# per eseguire/assegnare un punteggio al modello. Inoltre, il C# codice per eseguire il training del modello viene generato per la ricerca dell'algoritmo e delle impostazioni del modello.
 
 > [!NOTE]
 > Questo argomento fa riferimento all'interfaccia della riga di comando di ML.NET e al Machine Learning automatico, attualmente in anteprima, e il materiale può essere soggetto a modifiche.
 
-Il comando `auto-train` è il comando principale dello strumento dell'interfaccia della riga di comando di ML.NET. Il comando consente di generare un modello di ML.NET di buona qualità (file di modello serializzato con estensione zip) e il codice C# di esempio per eseguire/assegnare un punteggio al modello. Viene anche generato automaticamente il codice C# per creare/eseguire il training del modello per ricercare l'algoritmo e le impostazioni usate per il "miglior modello" generato.
+## <a name="overview"></a>Panoramica di
 
-Poiché è possibile generare questi asset dal proprio set di dati senza scrivere alcun codice, è possibile migliorare la produttività anche se si conosce già ML.NET.
-
-Attualmente, le attività di Machine Learning supportate dall'interfaccia della riga di comando di ML.NET sono:
-
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-
-- In futuro saranno supportate altre attività di Machine Learning, ad esempio
-  - `recommendation`
-  - `anomaly-detection`
-  - `clustering`
-
-Esempio di utilizzo nel prompt dei comandi:
+Sintassi di esempio:
 
 ```console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
 Il comando `mlnet auto-train` genera gli asset seguenti:
 
-- Un file di modello serializzato con estensione zip ("miglior modello") pronto per l'uso.
-- Il codice C# per eseguire/assegnare un punteggio al modello generato (per effettuare previsioni nelle app degli utenti finali con il modello).
-- Il codice C# con il codice di training usato per generare il modello (a scopo di apprendimento).
+- Un file ZIP di modello serializzato ("modello ottimale") pronto per l'uso.
+- C#codice per l'esecuzione o il punteggio del modello generato.
+- C#codice con il codice di training utilizzato per generare il modello.
 
-I primi due asset possono essere usati direttamente nelle app degli utenti finali (app Web ASP.NET Core, servizi, app desktop e così via) per effettuare previsioni con il modello di Machine Learning generato.
+Le prime due risorse possono essere usate direttamente nelle app per gli utenti finali (ASP.NET Core app Web, servizi, app desktop e altro ancora) per eseguire stime con il modello.
 
-Poiché il terzo asset, il codice di training, mostra il codice API di ML.NET usato dall'interfaccia della riga di comando per eseguire il training del modello generato, è possibile individuare il trainer/algoritmo specifico e gli iperparametri selezionati dall'interfaccia della riga di comando e dal motore di Machine Learning automatico di ML.NET.
-
-## <a name="the-auto-train-command-uses-the-automl-engine"></a>Il comando 'auto-train' usa il motore di Machine Learning automatico
-
-L'interfaccia della riga di comando usa il motore di Machine Learning automatico di ML.NET (pacchetto NuGet) per cercare in modo intelligente i modelli di migliore qualità, come illustrato nel diagramma seguente:
-
-![immagine](./media/ml-net-automl-working-diagram.png "Motore di Machine Learning automatico usato all'interno dell'interfaccia della riga di comando di ML.NET")
-
-Quando si esegue lo strumento dell'interfaccia della riga comando ML.NET con il comando 'auto-train', è possibile osservare che lo strumento prova a eseguire numerose iterazioni con diversi algoritmi e combinazioni di configurazione.
-
-## <a name="reference-for-auto-train-command"></a>Riferimento per il comando 'auto-train'
+Il terzo asset, il codice di training, Mostra il codice API ML.NET usato dall'interfaccia della riga di comando per eseguire il training del modello generato, in modo da poter esaminare l'algoritmo e le impostazioni specifiche del modello.
 
 ## <a name="examples"></a>Esempi
 
-Comando dell'interfaccia della riga di comando più semplice per un problema di classificazione binaria (la funzionalità di Machine Learning automatico dovrà dedurre la maggior parte della configurazione dai dati forniti):
+Il comando CLI più semplice per un problema di classificazione binaria (AutoML deduce la maggior parte della configurazione dai dati forniti):
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
 Un altro comando dell'interfaccia della riga semplice per un problema di regressione:
 
 ``` console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
 Creare ed eseguire il training di un modello di classificazione binaria con un set di dati con training, un set di dati di test e ulteriori argomenti espliciti di personalizzazione:
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="name"></a>Name
+## <a name="command-options"></a>Opzioni del comando
 
-`mlnet auto-train` - Esegue il training di più modelli ('n' iterazioni) in base al set di dati fornito e seleziona il modello migliore, lo salva come file serializzato con estensione zip e genera il codice C# correlato per l'assegnazione del punteggio e il training.
-
-## <a name="synopsis"></a>Riepilogo
+`mlnet auto-train` esegue il training di più modelli in base al set di dati fornito e infine seleziona il modello migliore, lo salva come file con estensione zip C# serializzato più genera il codice correlato per il punteggio e il training.
 
 ```console
-> mlnet auto-train
+mlnet auto-train
 
 --task | --mltask | -T <value>
 
@@ -116,11 +92,9 @@ Creare ed eseguire il training di un modello di classificazione binaria con un s
 
 ```
 
-Le opzioni di input non valide devono causare la generazione da parte dello strumento dell'interfaccia della riga di comando di un elenco di valori di input validi e un messaggio di errore che indica l'argomento mancante, se applicabile.
+Opzioni di input non valide. lo strumento dell'interfaccia della riga di comando crea un elenco di input validi e un messaggio di errore.
 
-## <a name="options"></a>Opzioni
-
- ----------------------------------------------------------
+## <a name="task"></a>Attività
 
 `--task | --mltask | -T` (string)
 
@@ -130,21 +104,19 @@ Stringa singola che specifica il problema di Machine Learning da risolvere. Ad e
 - `binary-classification` - Scegliere se il risultato del modello di Machine Learning ha due valori booleani categorici possibili (0 o 1).
 - `multiclass-classification` - Scegliere se il risultato del modello di Machine Learning ha più valori categorici possibili.
 
-Nelle versioni successive saranno supportati ulteriori scenari e attività di Machine Learning, ad esempio `recommendations`, `clustering` e `ranking`.
+In questo argomento è necessario specificare una sola attività di Machine Learning.
 
- In questo argomento è necessario specificare una sola attività di Machine Learning.
-
- ----------------------------------------------------------
+## <a name="dataset"></a>Set di dati
 
 `--dataset | -d` (string)
 
 Questo argomento specifica il percorso file di una delle opzioni seguenti:
 
-- *A: File del set di dati completo:* se si usa questa opzione e l'utente non specifica `--test-dataset` e `--validation-dataset`, verranno usati internamente gli approcci di convalida incrociata (k-fold e così via) o di suddivisione dati automatizzata per la convalida del modello. In questo caso l'utente dovrà specificare soltanto il percorso file del set di dati.
+- *R: l'intero file del set di dati:* Se si usa questa opzione e l'utente non fornisce `--test-dataset` e `--validation-dataset`, la convalida incrociata (k-fold e così via) o gli approcci di suddivisione automatica dei dati verranno usati internamente per la convalida del modello. In questo caso l'utente dovrà specificare soltanto il percorso file del set di dati.
 
-- *B: File del training set:* se l'utente specifica anche set di dati per la convalida del modello (usando `--test-dataset` e facoltativamente `--validation-dataset`), l'argomento `--dataset` indica solo la presenza del "training set". Ad esempio, quando viene usato un approccio 80% - 20% per convalidare la qualità del modello e ottenere le metriche di accuratezza, il "training set" avrà l'80% dei dati, mentre il "set di dati di test" avrà il 20% dei dati.
+- *B: file del set di dati di training:* Se l'utente fornisce anche set di dati per la convalida del modello (usando `--test-dataset` e, facoltativamente, `--validation-dataset`), l'argomento `--dataset` significa solo il "set di dati di training". Ad esempio, quando viene usato un approccio 80% - 20% per convalidare la qualità del modello e ottenere le metriche di accuratezza, il "training set" avrà l'80% dei dati, mentre il "set di dati di test" avrà il 20% dei dati.
 
-----------------------------------------------------------
+## <a name="test-dataset"></a>Set di dati di test
 
 `--test-dataset | -t` (string)
 
@@ -154,7 +126,7 @@ Se viene usato `--test-dataset`, è necessario specificare anche `--dataset`.
 
 L'argomento `--test-dataset` è facoltativo, a meno che non venga usato --validation-dataset. In questo caso, l'utente deve usare i tre argomenti.
 
-----------------------------------------------------------
+## <a name="validation-dataset"></a>Set di dati di convalida
 
 `--validation-dataset | -v` (string)
 
@@ -181,7 +153,7 @@ Di conseguenza, la suddivisione dei dati potrebbe essere 80/10/10 o 75/15/10. Ad
 
 In ogni caso, queste percentuali verranno decise dall'utente tramite l'interfaccia della riga di comando che fornirà i file già suddivisi.
 
-----------------------------------------------------------
+## <a name="label-column-name"></a>Nome colonna etichetta
 
 `--label-column-name | -n` (string)
 
@@ -189,17 +161,17 @@ Con questo argomento è possibile specificare una colonna obiettivo/destinazione
 
 Questo argomento viene usato solo per le attività di Machine Learning con supervisione, ad esempio un *problema di classificazione*. Non può essere usato per le attività di Machine Learning senza supervisione, ad esempio il *clustering*.
 
-----------------------------------------------------------
+## <a name="label-column-index"></a>Indice colonna etichetta
 
 `--label-column-index | -i` (int)
 
 Con questo argomento è possibile specificare una colonna obiettivo/destinazione (la variabile di cui effettuare la previsione) usando l'indice numerico della colonna nel file del set di dati (i valori di indice della colonna iniziano da 1).
 
-*Nota:* se l'utente usa anche `--label-column-name`, viene usato `--label-column-name`.
+*Nota:* Se l'utente usa anche il `--label-column-name`, il `--label-column-name` è quello usato.
 
 Questo argomento viene usato per le attività di Machine Learning con supervisione, ad esempio un *problema di classificazione*. Non può essere usato per le attività di Machine Learning senza supervisione, ad esempio il *clustering*.
 
-----------------------------------------------------------
+## <a name="ignore-columns"></a>Ignora colonne
 
 `--ignore-columns | -I` (string)
 
@@ -211,12 +183,12 @@ Esempio:
 
 `--ignore-columns email, address, id, logged_in`
 
-----------------------------------------------------------
+## <a name="has-header"></a>Con intestazione
 
 `--has-header | -h` (bool)
 
 Specificare se i file di set di dati includono una riga di intestazione.
-I valori possibili sono:
+I possibili valori sono:
 
 - `true`
 - `false`
@@ -225,7 +197,7 @@ Il valore predefinito è `true` se questo argomento non viene specificato dall'u
 
 Per usare l'argomento `--label-column-name` è necessario che il file del set di dati includa un'intestazione e che `--has-header` sia impostato su `true` (impostazione predefinita).
 
-----------------------------------------------------------
+## <a name="max-exploration-time"></a>Tempo massimo di esplorazione
 
 `--max-exploration-time | -x` (string)
 
@@ -235,7 +207,7 @@ Questo argomento imposta il tempo massimo (in secondi) per il processo per l'esp
 
 Il tempo necessario per le iterazioni può variare a seconda delle dimensioni del set di dati.
 
-----------------------------------------------------------
+## <a name="cache"></a>Cache
 
 `--cache | -c` (string)
 
@@ -247,13 +219,13 @@ Tuttavia, per i set di dati di grandi dimensioni, il caricamento di tutti i dati
 
 È possibile specificare i valori seguenti:
 
-`on`: impone l'uso della cache durante il training.
-`off`: impedisce l'uso della cache durante il training.
-`auto`: l'uso della cache è determinato dalle regole euristiche della funzionalità di Machine Learning automatico. In genere i set di dati di piccole e medie dimensioni usano la cache, mentre i set di dati di grandi dimensioni non usano la cache se viene usata l'opzione `auto`.
+`on`: forza la cache da usare durante il training.
+`off`: forza la cache a non essere utilizzata durante il training.
+`auto`: a seconda dell'euristica AutoML, la cache verrà utilizzata o meno. In genere i set di dati di piccole e medie dimensioni usano la cache, mentre i set di dati di grandi dimensioni non usano la cache se viene usata l'opzione `auto`.
 
 Se non si specifica il parametro `--cache`, viene usata la configurazione `auto` della cache per impostazione predefinita.
 
-----------------------------------------------------------
+## <a name="name"></a>Name
 
 `--name | -N` (string)
 
@@ -261,13 +233,13 @@ Nome del progetto di output o della soluzione creata. Se viene specificato alcun
 
 Verrà assegnato lo stesso nome anche al file di modello di ML.NET (file con estensione zip).
 
-----------------------------------------------------------
+## <a name="output-path"></a>Percorso output
 
 `--output-path | -o` (string)
 
 Percorso o cartella radice in cui posizionare l'output generato. Il valore predefinito è la directory corrente.
 
-----------------------------------------------------------
+## <a name="verbosity"></a>Livello di dettaglio
 
 `--verbosity | -V` (string)
 
@@ -281,17 +253,15 @@ I valori consentiti sono:
 
 Per impostazione predefinita, lo strumento dell'interfaccia della riga di comando dovrebbe visualizzare un feedback minimo, ad esempio indicare che è attivo e se possibile il tempo rimanente o la percentuale di tempo trascorso.
 
-----------------------------------------------------------
+## <a name="help"></a>Guida di
 
 `-h|--help`
 
 Visualizza le informazioni della Guida per il comando con una descrizione per ogni parametro.
 
-----------------------------------------------------------
-
 ## <a name="see-also"></a>Vedere anche
 
 - [Come installare lo strumento dell'interfaccia della riga comando ML.NET](../how-to-guides/install-ml-net-cli.md)
-- [Automatizzare il training del modello con l'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
-- [Esercitazione: Generare automaticamente un classificatore binario con l'interfaccia della riga di comando di ML.NET](../tutorials/mlnet-cli.md)
-- [Telemetria nell'interfaccia della riga di comando di ML.NET](../resources/ml-net-cli-telemetry.md)
+- [Panoramica dell'interfaccia della riga di comando di ML.NET](../automate-training-with-cli.md)
+- [Esercitazione: analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET](../tutorials/sentiment-analysis-cli.md)
+- [Telemetria nell'interfaccia della riga di comando ML.NET](../resources/ml-net-cli-telemetry.md)

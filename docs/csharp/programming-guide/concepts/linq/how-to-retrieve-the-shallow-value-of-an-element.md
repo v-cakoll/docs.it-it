@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Recuperare il valore superficiale di un elemento (C#)'
+title: Come recuperare il valore superficiale di un elemento (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 662c20cf2b17b9f93e00f0fd3c5cf925b5274de5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253363"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347443"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Procedura: Recuperare il valore superficiale di un elemento (C#)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Come recuperare il valore superficiale di un elemento (C#)
 In questo argomento viene illustrato come ottenere il valore superficiale di un elemento. Per valore superficiale si intende un valore che appartiene solo all'elemento specifico, a differenza del valore completo che include i valori di tutti gli elementi discendenti concatenati in una singola stringa.  
   
  Quando si recupera il valore di un elemento eseguendo il cast o usando la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>, si ottiene il valore completo. Per recuperare il valore superficiale, è possibile usare il metodo di estensione `ShallowValue`, come mostrato nell'esempio seguente. Il recupero del valore superficiale risulta utile quando si desidera selezionare gli elementi in base al relativo contenuto.  

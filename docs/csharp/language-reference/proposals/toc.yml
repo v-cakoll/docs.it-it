@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Membri di istanza Readonly
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: Stackalloc annidato
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
