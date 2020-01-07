@@ -6,34 +6,34 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 3be4ec01137a96a9b38869cbbb81fb0e89b7d700
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116213"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559500"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a><span data-ttu-id="b5ac2-103">Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit</span><span class="sxs-lookup"><span data-stu-id="b5ac2-103">Unit testing F# libraries in .NET Core using dotnet test and NUnit</span></span>
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a><span data-ttu-id="41519-103">Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit</span><span class="sxs-lookup"><span data-stu-id="41519-103">Unit testing F# libraries in .NET Core using dotnet test and NUnit</span></span>
 
-<span data-ttu-id="b5ac2-104">In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="b5ac2-105">Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) prima di iniziare.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) before you begin.</span></span> <span data-ttu-id="b5ac2-106">Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="b5ac2-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="41519-104">In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità.</span><span class="sxs-lookup"><span data-stu-id="41519-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="41519-105">Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) prima di iniziare.</span><span class="sxs-lookup"><span data-stu-id="41519-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) before you begin.</span></span> <span data-ttu-id="41519-106">Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="41519-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a><span data-ttu-id="b5ac2-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="b5ac2-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="41519-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="41519-107">Prerequisites</span></span>
 
-- <span data-ttu-id="b5ac2-108">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-108">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later versions.</span></span>
-- <span data-ttu-id="b5ac2-109">Editor di testo o editor di codice a scelta.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-109">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="41519-108">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="41519-108">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later versions.</span></span>
+- <span data-ttu-id="41519-109">Editor di testo o editor di codice a scelta.</span><span class="sxs-lookup"><span data-stu-id="41519-109">A text editor or code editor of your choice.</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="b5ac2-110">Creazione del progetto di origine</span><span class="sxs-lookup"><span data-stu-id="b5ac2-110">Creating the source project</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="41519-110">Creazione del progetto di origine</span><span class="sxs-lookup"><span data-stu-id="41519-110">Creating the source project</span></span>
 
-<span data-ttu-id="b5ac2-111">Aprire una finestra della shell.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-111">Open a shell window.</span></span> <span data-ttu-id="b5ac2-112">Creare una directory denominata *unit-testing-with-fsharp* in cui archiviare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-112">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
-<span data-ttu-id="b5ac2-113">In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
+<span data-ttu-id="41519-111">Aprire una finestra della shell.</span><span class="sxs-lookup"><span data-stu-id="41519-111">Open a shell window.</span></span> <span data-ttu-id="41519-112">Creare una directory denominata *unit-testing-with-fsharp* in cui archiviare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="41519-112">Create a directory called *unit-testing-with-fsharp* to hold the solution.</span></span>
+<span data-ttu-id="41519-113">In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:</span><span class="sxs-lookup"><span data-stu-id="41519-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
 
 ```dotnetcli
 dotnet new sln
 ```
 
-<span data-ttu-id="b5ac2-114">Creare quindi una directory *MathService*.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-114">Next, create a *MathService* directory.</span></span> <span data-ttu-id="b5ac2-115">Finora è stata creata la struttura di directory e file seguente:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-115">The following outline shows the directory and file structure so far:</span></span>
+<span data-ttu-id="41519-114">Creare quindi una directory *MathService*.</span><span class="sxs-lookup"><span data-stu-id="41519-114">Next, create a *MathService* directory.</span></span> <span data-ttu-id="41519-115">Finora è stata creata la struttura di directory e file seguente:</span><span class="sxs-lookup"><span data-stu-id="41519-115">The following outline shows the directory and file structure so far:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -41,28 +41,28 @@ dotnet new sln
     /MathService
 ```
 
-<span data-ttu-id="b5ac2-116">Impostare *MathService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-116">Make *MathService* the current directory and run the following command to create the source project:</span></span>
+<span data-ttu-id="41519-116">Impostare *MathService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:</span><span class="sxs-lookup"><span data-stu-id="41519-116">Make *MathService* the current directory and run the following command to create the source project:</span></span>
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
-<span data-ttu-id="b5ac2-117">Si crea un'implementazione non corretta del servizio matematico:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-117">You create a failing implementation of the math service:</span></span>
+<span data-ttu-id="41519-117">Si crea un'implementazione non corretta del servizio matematico:</span><span class="sxs-lookup"><span data-stu-id="41519-117">You create a failing implementation of the math service:</span></span>
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-<span data-ttu-id="b5ac2-118">Tornare alla directory *unit-test-con-fsharp*.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-118">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="b5ac2-119">Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-119">Run the following command to add the class library project to the solution:</span></span>
+<span data-ttu-id="41519-118">Tornare alla directory *unit-test-con-fsharp*.</span><span class="sxs-lookup"><span data-stu-id="41519-118">Change the directory back to the *unit-testing-with-fsharp* directory.</span></span> <span data-ttu-id="41519-119">Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:</span><span class="sxs-lookup"><span data-stu-id="41519-119">Run the following command to add the class library project to the solution:</span></span>
 
 ```dotnetcli
 dotnet sln add .\MathService\MathService.fsproj
 ```
 
-## <a name="creating-the-test-project"></a><span data-ttu-id="b5ac2-120">Creazione del progetto di test</span><span class="sxs-lookup"><span data-stu-id="b5ac2-120">Creating the test project</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="41519-120">Creazione del progetto di test</span><span class="sxs-lookup"><span data-stu-id="41519-120">Creating the test project</span></span>
 
-<span data-ttu-id="b5ac2-121">Creare quindi la directory *MathService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-121">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="b5ac2-122">Di seguito è illustrata la struttura di directory:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-122">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="41519-121">Creare quindi la directory *MathService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="41519-121">Next, create the *MathService.Tests* directory.</span></span> <span data-ttu-id="41519-122">Di seguito è illustrata la struttura di directory:</span><span class="sxs-lookup"><span data-stu-id="41519-122">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -73,13 +73,13 @@ dotnet sln add .\MathService\MathService.fsproj
     /MathService.Tests
 ```
 
-<span data-ttu-id="b5ac2-123">Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-123">Make the *MathService.Tests* directory the current directory and create a new project using the following command:</span></span>
+<span data-ttu-id="41519-123">Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="41519-123">Make the *MathService.Tests* directory the current directory and create a new project using the following command:</span></span>
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
-<span data-ttu-id="b5ac2-124">Ciò crea un progetto di test che usa NUnit come framework di test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-124">This creates a test project that uses NUnit as the test framework.</span></span> <span data-ttu-id="b5ac2-125">Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-125">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
+<span data-ttu-id="41519-124">Ciò crea un progetto di test che usa NUnit come framework di test.</span><span class="sxs-lookup"><span data-stu-id="41519-124">This creates a test project that uses NUnit as the test framework.</span></span> <span data-ttu-id="41519-125">Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:</span><span class="sxs-lookup"><span data-stu-id="41519-125">The generated template configures the test runner in the *MathServiceTests.fsproj*:</span></span>
 
 ```xml
 <ItemGroup>
@@ -89,15 +89,15 @@ dotnet new nunit -lang F#
 </ItemGroup>
 ```
 
-<span data-ttu-id="b5ac2-126">Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-126">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="b5ac2-127">`dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-127">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="b5ac2-128">Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-128">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="b5ac2-129">Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="b5ac2-129">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="41519-126">Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti.</span><span class="sxs-lookup"><span data-stu-id="41519-126">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="41519-127">`dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit.</span><span class="sxs-lookup"><span data-stu-id="41519-127">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="41519-128">Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto.</span><span class="sxs-lookup"><span data-stu-id="41519-128">Now, add the `MathService` class library as another dependency to the project.</span></span> <span data-ttu-id="41519-129">Usare il comando `dotnet add reference`:</span><span class="sxs-lookup"><span data-stu-id="41519-129">Use the `dotnet add reference` command:</span></span>
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-<span data-ttu-id="b5ac2-130">È possibile visualizzare l'intero file nel [repository degli esempi](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) su GitHub.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-130">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
+<span data-ttu-id="41519-130">È possibile visualizzare l'intero file nel [repository degli esempi](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) su GitHub.</span><span class="sxs-lookup"><span data-stu-id="41519-130">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) on GitHub.</span></span>
 
-<span data-ttu-id="b5ac2-131">Il layout della soluzione finale è il seguente:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-131">You have the following final solution layout:</span></span>
+<span data-ttu-id="41519-131">Il layout della soluzione finale è il seguente:</span><span class="sxs-lookup"><span data-stu-id="41519-131">You have the following final solution layout:</span></span>
 
 ```
 /unit-testing-with-fsharp
@@ -110,15 +110,15 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.Tests.fsproj
 ```
 
-<span data-ttu-id="b5ac2-132">Eseguire il comando seguente nella directory *unit-testing-with-fsharp*:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-132">Execute the following command in the *unit-testing-with-fsharp* directory:</span></span>
+<span data-ttu-id="41519-132">Eseguire il comando seguente nella directory *unit-testing-with-fsharp*:</span><span class="sxs-lookup"><span data-stu-id="41519-132">Execute the following command in the *unit-testing-with-fsharp* directory:</span></span>
 
 ```dotnetcli
 dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 ```
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="b5ac2-133">Creazione del primo test</span><span class="sxs-lookup"><span data-stu-id="b5ac2-133">Creating the first test</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="41519-133">Creazione del primo test</span><span class="sxs-lookup"><span data-stu-id="41519-133">Creating the first test</span></span>
 
-<span data-ttu-id="b5ac2-134">Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-134">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="b5ac2-135">Aprire *UnitTest1.fs* e aggiungere il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-135">Open *UnitTest1.fs* and add the following code:</span></span>
+<span data-ttu-id="41519-134">Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo.</span><span class="sxs-lookup"><span data-stu-id="41519-134">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="41519-135">Aprire *UnitTest1.fs* e aggiungere il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="41519-135">Open *UnitTest1.fs* and add the following code:</span></span>
 
 ```fsharp
 namespace MathService.Tests
@@ -138,11 +138,11 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-<span data-ttu-id="b5ac2-136">L'attributo `[<TestFixture>]` indica una classe che contiene test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-136">The `[<TestFixture>]` attribute denotes a class that contains tests.</span></span> <span data-ttu-id="b5ac2-137">L'attributo `[<Test>]` indica un metodo di test eseguito dal Test Runner.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-137">The `[<Test>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="b5ac2-138">Dalla directory *unit-test-con-fsharp* eseguire [`dotnet test`](../tools/dotnet-test.md) per compilare i test e la libreria di classi, quindi eseguire i test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-138">From the *unit-testing-with-fsharp* directory, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="b5ac2-139">Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-139">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="b5ac2-140">`dotnet test` avvia il Test Runner usando il progetto di unit test creato.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-140">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="41519-136">L'attributo `[<TestFixture>]` indica una classe che contiene test.</span><span class="sxs-lookup"><span data-stu-id="41519-136">The `[<TestFixture>]` attribute denotes a class that contains tests.</span></span> <span data-ttu-id="41519-137">L'attributo `[<Test>]` indica un metodo di test eseguito dal Test Runner.</span><span class="sxs-lookup"><span data-stu-id="41519-137">The `[<Test>]` attribute denotes a test method that is run by the test runner.</span></span> <span data-ttu-id="41519-138">Dalla directory *Unit-Testing-with-FSharp* eseguire `dotnet test` per compilare i test e la libreria di classi, quindi eseguire i test.</span><span class="sxs-lookup"><span data-stu-id="41519-138">From the *unit-testing-with-fsharp* directory, execute `dotnet test` to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="41519-139">Il Test Runner di NUnit include il punto d'ingresso del programma per l'esecuzione dei test.</span><span class="sxs-lookup"><span data-stu-id="41519-139">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="41519-140">`dotnet test` avvia il Test Runner usando il progetto di unit test creato.</span><span class="sxs-lookup"><span data-stu-id="41519-140">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="b5ac2-141">Questi due test mostrano i test più semplici superati e non superati.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-141">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="b5ac2-142">`My test` viene superato e `Fail every time` non viene superato.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-142">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="b5ac2-143">A questo punto, creare un test per il metodo `squaresOfOdds`.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-143">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="b5ac2-144">Il metodo `squaresOfOdds` restituisce una sequenza di quadrati di tutti i valori interi dispari che fanno parte della sequenza di input.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-144">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="b5ac2-145">Anziché tentare di scrivere tutte queste funzioni in una sola volta, è possibile creare in modo iterativo test per la convalida della funzionalità.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-145">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="b5ac2-146">Fare in modo che ogni test venga superato significa creare le funzionalità necessarie per il metodo.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-146">Making each test pass means creating the necessary functionality for the method.</span></span>
+<span data-ttu-id="41519-141">Questi due test mostrano i test più semplici superati e non superati.</span><span class="sxs-lookup"><span data-stu-id="41519-141">These two tests show the most basic passing and failing tests.</span></span> <span data-ttu-id="41519-142">`My test` viene superato e `Fail every time` non viene superato.</span><span class="sxs-lookup"><span data-stu-id="41519-142">`My test` passes, and `Fail every time` fails.</span></span> <span data-ttu-id="41519-143">A questo punto, creare un test per il metodo `squaresOfOdds`.</span><span class="sxs-lookup"><span data-stu-id="41519-143">Now, create a test for the `squaresOfOdds` method.</span></span> <span data-ttu-id="41519-144">Il metodo `squaresOfOdds` restituisce una sequenza di quadrati di tutti i valori interi dispari che fanno parte della sequenza di input.</span><span class="sxs-lookup"><span data-stu-id="41519-144">The `squaresOfOdds` method returns a sequence of the squares of all odd integer values that are part of the input sequence.</span></span> <span data-ttu-id="41519-145">Anziché tentare di scrivere tutte queste funzioni in una sola volta, è possibile creare in modo iterativo test per la convalida della funzionalità.</span><span class="sxs-lookup"><span data-stu-id="41519-145">Rather than trying to write all of those functions at once, you can iteratively create tests that validate the functionality.</span></span> <span data-ttu-id="41519-146">Fare in modo che ogni test venga superato significa creare le funzionalità necessarie per il metodo.</span><span class="sxs-lookup"><span data-stu-id="41519-146">Making each test pass means creating the necessary functionality for the method.</span></span>
 
-<span data-ttu-id="b5ac2-147">Il test più semplice che si può scrivere consiste nel chiamare `squaresOfOdds` con tutti i numeri pari. In questo caso il risultato dovrebbe essere una sequenza vuota di numeri interi.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-147">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="b5ac2-148">Ecco questo test:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-148">Here's that test:</span></span>
+<span data-ttu-id="41519-147">Il test più semplice che si può scrivere consiste nel chiamare `squaresOfOdds` con tutti i numeri pari. In questo caso il risultato dovrebbe essere una sequenza vuota di numeri interi.</span><span class="sxs-lookup"><span data-stu-id="41519-147">The simplest test we can write is to call `squaresOfOdds` with all even numbers, where the result should be an empty sequence of integers.</span></span>  <span data-ttu-id="41519-148">Ecco questo test:</span><span class="sxs-lookup"><span data-stu-id="41519-148">Here's that test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -152,20 +152,20 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="b5ac2-149">Si noti che la sequenza `expected` è stata convertita in elenco.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-149">Notice that the `expected` sequence has been converted to a list.</span></span> <span data-ttu-id="b5ac2-150">Il framework NUnit si basa su molti tipi .NET standard.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-150">The NUnit framework relies on many standard .NET types.</span></span> <span data-ttu-id="b5ac2-151">Questa dipendenza indica che l'interfaccia pubblica e i risultati previsti supportano <xref:System.Collections.ICollection> invece di <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-151">That dependency means that your public interface and expected results support <xref:System.Collections.ICollection> rather than <xref:System.Collections.IEnumerable>.</span></span>
+<span data-ttu-id="41519-149">Si noti che la sequenza `expected` è stata convertita in elenco.</span><span class="sxs-lookup"><span data-stu-id="41519-149">Notice that the `expected` sequence has been converted to a list.</span></span> <span data-ttu-id="41519-150">Il framework NUnit si basa su molti tipi .NET standard.</span><span class="sxs-lookup"><span data-stu-id="41519-150">The NUnit framework relies on many standard .NET types.</span></span> <span data-ttu-id="41519-151">Questa dipendenza indica che l'interfaccia pubblica e i risultati previsti supportano <xref:System.Collections.ICollection> invece di <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="41519-151">That dependency means that your public interface and expected results support <xref:System.Collections.ICollection> rather than <xref:System.Collections.IEnumerable>.</span></span>
 
-<span data-ttu-id="b5ac2-152">Quando si esegue il test, si noterà che non viene superato.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-152">When you run the test, you see that your test fails.</span></span> <span data-ttu-id="b5ac2-153">Non è stata ancora creata l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-153">You haven't created the implementation yet.</span></span> <span data-ttu-id="b5ac2-154">Fare in modo che questo test venga superato scrivendo il codice più semplice nella classe *Library.fs* nel progetto MathService funzionante:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-154">Make this test pass by writing the simplest code in the *Library.fs* class in your MathService project that works:</span></span>
+<span data-ttu-id="41519-152">Quando si esegue il test, si noterà che non viene superato.</span><span class="sxs-lookup"><span data-stu-id="41519-152">When you run the test, you see that your test fails.</span></span> <span data-ttu-id="41519-153">Non è stata ancora creata l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="41519-153">You haven't created the implementation yet.</span></span> <span data-ttu-id="41519-154">Fare in modo che questo test venga superato scrivendo il codice più semplice nella classe *Library.fs* nel progetto MathService funzionante:</span><span class="sxs-lookup"><span data-stu-id="41519-154">Make this test pass by writing the simplest code in the *Library.fs* class in your MathService project that works:</span></span>
 
 ```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-<span data-ttu-id="b5ac2-155">Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-155">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="b5ac2-156">Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-156">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="b5ac2-157">Dopo la compilazione di entrambi i progetti, verranno eseguiti i test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-157">After building both projects, it runs your tests.</span></span> <span data-ttu-id="b5ac2-158">Due test vengono ora superati.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-158">Two tests pass now.</span></span>
+<span data-ttu-id="41519-155">Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="41519-155">In the *unit-testing-with-fsharp* directory, run `dotnet test` again.</span></span> <span data-ttu-id="41519-156">Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="41519-156">The `dotnet test` command runs a build for the `MathService` project and then for the `MathService.Tests` project.</span></span> <span data-ttu-id="41519-157">Dopo la compilazione di entrambi i progetti, verranno eseguiti i test.</span><span class="sxs-lookup"><span data-stu-id="41519-157">After building both projects, it runs your tests.</span></span> <span data-ttu-id="41519-158">Due test vengono ora superati.</span><span class="sxs-lookup"><span data-stu-id="41519-158">Two tests pass now.</span></span>
 
-## <a name="completing-the-requirements"></a><span data-ttu-id="b5ac2-159">Completamento dei requisiti</span><span class="sxs-lookup"><span data-stu-id="b5ac2-159">Completing the requirements</span></span>
+## <a name="completing-the-requirements"></a><span data-ttu-id="41519-159">Completamento dei requisiti</span><span class="sxs-lookup"><span data-stu-id="41519-159">Completing the requirements</span></span>
 
-<span data-ttu-id="b5ac2-160">Ora che il test è stato superato, è necessario scriverne altri.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-160">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="b5ac2-161">Il prossimo test case semplice opera su una sequenza in cui l'unico numero dispari è `1`.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-161">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="b5ac2-162">Il numero 1 è più semplice perché il quadrato di 1 è 1.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-162">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="b5ac2-163">Ecco questo test:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-163">Here's that next test:</span></span>
+<span data-ttu-id="41519-160">Ora che il test è stato superato, è necessario scriverne altri.</span><span class="sxs-lookup"><span data-stu-id="41519-160">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="41519-161">Il prossimo test case semplice opera su una sequenza in cui l'unico numero dispari è `1`.</span><span class="sxs-lookup"><span data-stu-id="41519-161">The next simple case works with a sequence whose only odd number is `1`.</span></span> <span data-ttu-id="41519-162">Il numero 1 è più semplice perché il quadrato di 1 è 1.</span><span class="sxs-lookup"><span data-stu-id="41519-162">The number 1 is easier because the square of 1 is 1.</span></span> <span data-ttu-id="41519-163">Ecco questo test:</span><span class="sxs-lookup"><span data-stu-id="41519-163">Here's that next test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -175,7 +175,7 @@ member public this.TestOnesAndEvens() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="b5ac2-164">Il nuovo test non viene superato con l'esecuzione di `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-164">Executing `dotnet test` fails the new test.</span></span> <span data-ttu-id="b5ac2-165">È necessario aggiornare il metodo `squaresOfOdds` per gestire il nuovo test.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-165">You must update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="b5ac2-166">È necessario filtrare tutti i numeri pari fuori sequenza per fare in modo che il test venga superato.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-166">You must filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="b5ac2-167">È possibile farlo scrivendo una breve funzione di filtro e usando `Seq.filter`:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-167">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
+<span data-ttu-id="41519-164">Il nuovo test non viene superato con l'esecuzione di `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="41519-164">Executing `dotnet test` fails the new test.</span></span> <span data-ttu-id="41519-165">È necessario aggiornare il metodo `squaresOfOdds` per gestire il nuovo test.</span><span class="sxs-lookup"><span data-stu-id="41519-165">You must update the `squaresOfOdds` method to handle this new test.</span></span> <span data-ttu-id="41519-166">È necessario filtrare tutti i numeri pari fuori sequenza per fare in modo che il test venga superato.</span><span class="sxs-lookup"><span data-stu-id="41519-166">You must filter all the even numbers out of the sequence to make this test pass.</span></span> <span data-ttu-id="41519-167">È possibile farlo scrivendo una breve funzione di filtro e usando `Seq.filter`:</span><span class="sxs-lookup"><span data-stu-id="41519-167">You can do that by writing a small filter function and using `Seq.filter`:</span></span>
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -185,9 +185,9 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-<span data-ttu-id="b5ac2-168">Si noti la chiamata a `Seq.toList`,</span><span class="sxs-lookup"><span data-stu-id="b5ac2-168">Notice the call to `Seq.toList`.</span></span> <span data-ttu-id="b5ac2-169">che crea un elenco che implementa l'interfaccia <xref:System.Collections.ICollection>.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-169">That creates a list, which implements the <xref:System.Collections.ICollection> interface.</span></span>
+<span data-ttu-id="41519-168">Si noti la chiamata a `Seq.toList`,</span><span class="sxs-lookup"><span data-stu-id="41519-168">Notice the call to `Seq.toList`.</span></span> <span data-ttu-id="41519-169">che crea un elenco che implementa l'interfaccia <xref:System.Collections.ICollection>.</span><span class="sxs-lookup"><span data-stu-id="41519-169">That creates a list, which implements the <xref:System.Collections.ICollection> interface.</span></span>
 
-<span data-ttu-id="b5ac2-170">Manca un altro passaggio: elevare al quadrato ciascuno dei numeri di dispari.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-170">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="b5ac2-171">Per iniziare, scrivere un nuovo test:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-171">Start by writing a new test:</span></span>
+<span data-ttu-id="41519-170">Manca un altro passaggio: elevare al quadrato ciascuno dei numeri di dispari.</span><span class="sxs-lookup"><span data-stu-id="41519-170">There's one more step to go: square each of the odd numbers.</span></span> <span data-ttu-id="41519-171">Per iniziare, scrivere un nuovo test:</span><span class="sxs-lookup"><span data-stu-id="41519-171">Start by writing a new test:</span></span>
 
 ```fsharp
 [<Test>]
@@ -197,7 +197,7 @@ member public this.TestSquaresOfOdds() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-<span data-ttu-id="b5ac2-172">È possibile correggere il test tramite il piping della sequenza filtrata attraverso un'operazione di mapping per calcolare il quadrato di ogni numero dispari:</span><span class="sxs-lookup"><span data-stu-id="b5ac2-172">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
+<span data-ttu-id="41519-172">È possibile correggere il test tramite il piping della sequenza filtrata attraverso un'operazione di mapping per calcolare il quadrato di ogni numero dispari:</span><span class="sxs-lookup"><span data-stu-id="41519-172">You can fix the test by piping the filtered sequence through a map operation to compute the square of each odd number:</span></span>
 
 ```fsharp
 let private square x = x * x
@@ -209,4 +209,9 @@ let squaresOfOdds xs =
     |> Seq.map square
 ```
 
-<span data-ttu-id="b5ac2-173">È stata compilata una piccola libreria e un set di unit test per tale libreria.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-173">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="b5ac2-174">La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-174">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="b5ac2-175">La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b5ac2-175">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+<span data-ttu-id="41519-173">È stata compilata una piccola libreria e un set di unit test per tale libreria.</span><span class="sxs-lookup"><span data-stu-id="41519-173">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="41519-174">La soluzione è stata strutturata in modo che l'aggiunta di nuovi pacchetti e test faccia parte del normale flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="41519-174">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="41519-175">La maggior parte del tempo e dell'impegno è dedicata alla soluzione degli obiettivi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="41519-175">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="41519-176">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="41519-176">See also</span></span>
+
+- [<span data-ttu-id="41519-177">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="41519-177">dotnet add reference</span></span>](../tools/dotnet-add-reference.md)
+- [<span data-ttu-id="41519-178">dotnet test</span><span class="sxs-lookup"><span data-stu-id="41519-178">dotnet test</span></span>](../tools/dotnet-test.md)
