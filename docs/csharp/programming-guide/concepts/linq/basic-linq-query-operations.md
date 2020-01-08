@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418715"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635938"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
-Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
+Questo argomento fornisce una breve introduzione alle espressioni di query LINQ e ad alcuni tipi tipici di operazioni eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
   
  [Espressioni di query LINQ](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
  [Procedura dettagliata: scrittura di query in C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> Se si ha già familiarità con un linguaggio di query, ad esempio SQL o XQuery, è possibile ignorare la maggior parte di questo argomento. Leggere la sezione sulla "clausola `from`" più avanti per informazioni sull'ordine delle clausole nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+> Se si ha già familiarità con un linguaggio di query, ad esempio SQL o XQuery, è possibile ignorare la maggior parte di questo argomento. Per informazioni sull'ordine delle clausole nelle espressioni di query LINQ, vedere la clausola "`from`" nella sezione successiva.  
   
 ## <a name="obtaining-a-data-source"></a>Ottenere un'origine dei dati  
- In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], il primo passaggio consiste nella specifica dell'origine dei dati. In C#, come nella maggior parte dei linguaggi di programmazione, una variabile deve essere dichiarata prima di essere usata. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clausola `from` viene dichiarata per prima per introdurre l'origine dei dati (`customers`) e la *variabile di intervallo* (`cust`).  
+ In una query LINQ, il primo passaggio consiste nel specificare l'origine dati. In C#, come nella maggior parte dei linguaggi di programmazione, una variabile deve essere dichiarata prima di essere usata. In una query LINQ la clausola `from` viene visualizzata per prima per introdurre l'origine dati (`customers`) e la *variabile di intervallo* (`cust`).  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  La variabile di intervallo è come la variabile di iterazione in un ciclo `foreach` ad eccezione del fatto che non si verifica alcuna iterazione in un'espressione di query. Quando viene eseguita la query, la variabile di intervallo verrà usata come riferimento a ogni elemento successivo in `customers`. Poiché il compilatore può dedurre il tipo di `cust`, non è necessario specificarlo in modo esplicito. Altre variabili di intervallo possono essere introdotte da una clausola `let`. Per altre informazioni, vedere [Clausola let](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) e [Clausola from](../../../language-reference/keywords/from-clause.md).  
+> Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per ulteriori informazioni, vedere [come eseguire una query su un ArrayList con LINQC#()](./how-to-query-an-arraylist-with-linq.md) e [clausola from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtro  
  Probabilmente l'operazione di query più comune consiste nell'applicazione di un filtro sotto forma di espressione booleana. Il filtro fa in modo che la query restituisca solo gli elementi per i quali l'espressione è vera. Il risultato viene generato utilizzando la clausola `where`. Il filtro in realtà specifica gli elementi da escludere dalla sequenza di origine. Nell'esempio seguente vengono restituiti solo i `customers` che hanno un indirizzo in Londra.  
@@ -84,11 +84,11 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
  Per altre informazioni, vedere [Clausola group](../../../language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Uso di join  
- Le operazioni di join creano associazioni tra le sequenze che non sono modellate in modo esplicito nelle origini dei dati. Ad esempio, è possibile eseguire un join per trovare tutti i clienti e i distributori che hanno la stessa ubicazione. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clausola `join` usa sempre raccolte di oggetti anziché direttamente le tabelle di database.  
+ Le operazioni di join creano associazioni tra le sequenze che non sono modellate in modo esplicito nelle origini dei dati. Ad esempio, è possibile eseguire un join per trovare tutti i clienti e i distributori che hanno la stessa ubicazione. In LINQ la clausola `join` funziona sempre con le raccolte di oggetti anziché direttamente con le tabelle di database.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] non è necessario usare `join` così spesso come in SQL poiché le chiavi esterne in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono rappresentate nel modello a oggetti come proprietà che contengono una raccolta di elementi. Ad esempio, un oggetto `Customer` contiene una raccolta di oggetti `Order`. Anziché eseguire un join, si accede agli ordini usando la notazione "Dot":  
+ In LINQ non è necessario usare `join` con la stessa frequenza di SQL, perché le chiavi esterne in LINQ sono rappresentate nel modello a oggetti come proprietà che contengono una raccolta di elementi. Ad esempio, un oggetto `Customer` contiene una raccolta di oggetti `Order`. Anziché eseguire un join, si accede agli ordini usando la notazione "Dot":  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,7 +97,7 @@ from order in Customer.Orders...
  Per altre informazioni, vedere [Clausola join](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Selezione (proiezioni)  
- La clausola `select` produce i risultati della query e specifica la "forma" o un tipo di ogni elemento restituito. Ad esempio, è possibile specificare se i risultati saranno costituiti di oggetti `Customer` completi, di un solo membro, di un subset di membri, oppure un tipo di risultato completamente diverso basato su un calcolo o su una creazione nuova di oggetti. Quando la clausola `select` produce un valore diverso da una copia dell'elemento d'origine, l'operazione viene chiamata *proiezione*. L'uso di proiezioni per trasformare i dati è una funzionalità efficace delle espressioni delle query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per altre informazioni, vedere [Trasformazioni dati con LINQ (C#)](./data-transformations-with-linq.md) e [Clausola select](../../../language-reference/keywords/select-clause.md).  
+ La clausola `select` produce i risultati della query e specifica la "forma" o un tipo di ogni elemento restituito. Ad esempio, è possibile specificare se i risultati saranno costituiti di oggetti `Customer` completi, di un solo membro, di un subset di membri, oppure un tipo di risultato completamente diverso basato su un calcolo o su una creazione nuova di oggetti. Quando la clausola `select` produce un valore diverso da una copia dell'elemento d'origine, l'operazione viene chiamata *proiezione*. L'utilizzo di proiezioni per trasformare i dati è una potente funzionalità di espressioni di query LINQ. Per altre informazioni, vedere [Trasformazioni dati con LINQ (C#)](./data-transformations-with-linq.md) e [Clausola select](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
