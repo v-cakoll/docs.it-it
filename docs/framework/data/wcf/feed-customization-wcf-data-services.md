@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569216"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348117"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalizzazione di feed (WCF Data Services)
-WCF Data Services USA il Open Data Protocol (OData) per esporre i dati come feed. OData supporta sia i formati Atom che JavaScript Object Notation (JSON) per i feed di dati. Quando si utilizza un feed Atom, OData fornisce un metodo standard per serializzare i dati, ad esempio entità e relazioni, in un formato XML che può essere incluso nel corpo del messaggio HTTP. OData definisce un mapping di proprietà di entità predefinito tra i dati contenuti nelle entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Data Services USA il Open Data Protocol (OData) per esporre i dati come feed. OData supporta sia i formati Atom che JavaScript Object Notation (JSON) per i feed di dati. Quando si utilizza un feed Atom, OData fornisce un metodo standard per serializzare i dati, ad esempio entità e relazioni, in un formato XML che può essere incluso nel corpo del messaggio HTTP. OData definisce un mapping di proprietà di entità predefinito tra i dati contenuti nelle entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: formato Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  È possibile che lo scenario applicativo in uso richieda che i dati delle proprietà restituiti dal servizio dati vengano serializzati in modo personalizzato piuttosto che nel formato dei feed standard. Con OData è possibile personalizzare la serializzazione in un feed di dati in modo che sia possibile eseguire il mapping delle proprietà di un'entità agli elementi e agli attributi inutilizzati di una voce o agli elementi personalizzati di una voce nel feed.  
   
@@ -31,7 +31,7 @@ WCF Data Services USA il Open Data Protocol (OData) per esporre i dati come feed
 > Quando si definiscono feed personalizzati, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate siano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [proiezioni di query](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizzazione di feed con il provider di Entity Framework  
- Il modello di dati utilizzato con il provider di Entity Framework viene rappresentato come XML nel file con estensione edmx. In questo caso, gli attributi che definiscono i feed personalizzati vengono aggiunti agli elementi `EntityType` e `Property` che rappresentano tipi di entità e proprietà nel modello di dati. Questi attributi di personalizzazione del feed non sono definiti in [\[MC-CSDL\]: formato del file di definizione dello schema concettuale](https://go.microsoft.com/fwlink/?LinkId=159072), ovvero il formato utilizzato dal provider di Entity Framework per definire il modello di dati. È pertanto necessario dichiarare gli attributi di personalizzazione dei feed in uno spazio dei nomi dello schema specifico, definito come `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Nel frammento XML seguente vengono illustrati gli attributi di personalizzazione dei feed applicati agli elementi `Property` del tipo di entità `Products` che definiscono le proprietà `ProductName`, `ReorderLevel` e `UnitsInStock`.  
+ Il modello di dati utilizzato con il provider di Entity Framework viene rappresentato come XML nel file con estensione edmx. In questo caso, gli attributi che definiscono i feed personalizzati vengono aggiunti agli elementi `EntityType` e `Property` che rappresentano tipi di entità e proprietà nel modello di dati. Questi attributi di personalizzazione del feed non sono definiti in [\[MC-CSDL\]: formato del file di definizione dello schema concettuale](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12), ovvero il formato utilizzato dal provider di Entity Framework per definire il modello di dati. È pertanto necessario dichiarare gli attributi di personalizzazione dei feed in uno spazio dei nomi dello schema specifico, definito come `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Nel frammento XML seguente vengono illustrati gli attributi di personalizzazione dei feed applicati agli elementi `Property` del tipo di entità `Products` che definiscono le proprietà `ProductName`, `ReorderLevel` e `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

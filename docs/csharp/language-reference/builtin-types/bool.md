@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553037"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342704"
 ---
 # <a name="bool-c-reference"></a>bool (C# riferimento)
 
@@ -29,15 +29,15 @@ Il valore predefinito del tipo di `bool` è `false`.
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
-## <a name="conversions"></a>Conversioni
-
-C#fornisce solo due conversioni che coinvolgono il tipo di `bool`. Si tratta di una conversione implicita al tipo di `bool?` nullable corrispondente e a una conversione esplicita dal tipo di `bool?`. .NET fornisce tuttavia metodi aggiuntivi che è possibile usare per eseguire la conversione da o verso il tipo di `bool`. Per ulteriori informazioni, vedere la sezione [conversione da e verso valori booleani](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) della pagina di riferimento dell'API <xref:System.Boolean?displayProperty=nameWithType>.
-
 ## <a name="three-valued-boolean-logic"></a>Logica booleana a tre valori
 
 Usare il tipo Nullable `bool?`, se è necessario supportare la logica a tre valori, ad esempio quando si lavora con database che supportano un tipo booleano a tre valori. Per gli operandi `bool?`, gli operatori `&` e `|` predefiniti supportano la logica a tre valori. Per altre informazioni, vedere la sezione [Operatori logici booleani nullable](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) dell'articolo [Operatori logici booleani](../operators/boolean-logical-operators.md).
 
 Per ulteriori informazioni sui tipi di valore Nullable, vedere [tipi di valore Nullable](nullable-value-types.md).
+
+## <a name="conversions"></a>Conversioni
+
+C#fornisce solo due conversioni che coinvolgono il tipo di `bool`. Si tratta di una conversione implicita al tipo di `bool?` nullable corrispondente e a una conversione esplicita dal tipo di `bool?`. .NET fornisce tuttavia metodi aggiuntivi che è possibile usare per eseguire la conversione da o verso il tipo di `bool`. Per ulteriori informazioni, vedere la sezione [conversione da e verso valori booleani](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) della pagina di riferimento dell'API <xref:System.Boolean?displayProperty=nameWithType>.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

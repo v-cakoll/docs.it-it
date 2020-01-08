@@ -2,12 +2,12 @@
 title: Estensioni di tipo
 description: Informazioni su F# come le estensioni di tipo consentono di aggiungere nuovi membri a un tipo di oggetto definito in precedenza.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978251"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341575"
 ---
 # <a name="type-extensions"></a>Estensioni di tipo
 
@@ -78,7 +78,7 @@ Le estensioni di tipo intrinseco vengono compilate come membri del tipo che aume
 
 Un'estensione di tipo facoltativa è un'estensione che viene visualizzata all'esterno del modulo, dello spazio dei nomi o dell'assembly originale del tipo esteso.
 
-Le estensioni di tipo facoltative sono utili per estendere un tipo non definito dall'utente. Esempio:
+Le estensioni di tipo facoltative sono utili per estendere un tipo non definito dall'utente. Ad esempio:
 
 ```fsharp
 module Extensions
@@ -98,13 +98,13 @@ Le estensioni facoltative non vengono visualizzate nel tipo esteso quando vengon
 
 I membri di estensione facoltativi vengono compilati in membri statici per i quali l'istanza dell'oggetto viene passata in modo implicito come primo parametro. Tuttavia, agiscono come se fossero membri di istanza o membri statici in base al modo in cui sono dichiarati.
 
-I membri di estensione facoltativi non sono C# visibili anche per i consumer VB o. Possono essere utilizzati solo in altro F# codice.
+Anche i membri di estensione facoltativi non C# sono visibili ai consumer o Visual Basic. Possono essere utilizzati solo in altro F# codice.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitazione generica di estensioni di tipo intrinseche e facoltative
 
 È possibile dichiarare un'estensione di tipo in un tipo generico in cui la variabile di tipo è vincolata. Il requisito è che il vincolo della dichiarazione di estensione corrisponda al vincolo del tipo dichiarato.
 
-Tuttavia, anche quando vengono confrontati vincoli tra un tipo dichiarato e un'estensione del tipo, è possibile che un vincolo venga dedotto dal corpo di un membro esteso che impone un requisito diverso per il parametro di tipo rispetto al tipo dichiarato. Esempio:
+Tuttavia, anche quando vengono confrontati vincoli tra un tipo dichiarato e un'estensione del tipo, è possibile che un vincolo venga dedotto dal corpo di un membro esteso che impone un requisito diverso per il parametro di tipo rispetto al tipo dichiarato. Ad esempio:
 
 ```fsharp
 open System.Collections.Generic
@@ -128,7 +128,7 @@ Gli elementi desiderati sono metodi statici che "fluttuano nello spazio" e posso
 
 Infine, i metodi di estensione, dettiC# anche "membri di estensione di stile", F# possono essere dichiarati in come metodo membro statico in una classe.
 
-I metodi di estensione sono utili per i casi in cui si desidera definire le estensioni in un tipo generico che vincola la variabile di tipo. Esempio:
+I metodi di estensione sono utili per i casi in cui si desidera definire le estensioni in un tipo generico che vincola la variabile di tipo. Ad esempio:
 
 ```fsharp
 namespace Extensions
