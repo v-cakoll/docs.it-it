@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126377"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347633"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Questa classe definisce un attributo personalizzato denominato `MyAttribute` con tipo di contratto `IMyData` e alcuni metadati con nome `MyMetadata`. Tutte le proprietà in una classe contrassegnata con l'attributo `MetadataAttribute` sono considerate come metadati definiti nell'attributo personalizzato. Le due dichiarazioni seguenti sono equivalenti.
+Questa classe definisce un attributo personalizzato denominato `MyAttribute` con tipo di contratto `IMyAddin` e alcuni metadati con nome `MyMetadata`. Tutte le proprietà in una classe contrassegnata con l'attributo `MetadataAttribute` sono considerate come metadati definiti nell'attributo personalizzato. Le due dichiarazioni seguenti sono equivalenti.
 
 ```vb
 <Export(GetType(IMyAddin))>

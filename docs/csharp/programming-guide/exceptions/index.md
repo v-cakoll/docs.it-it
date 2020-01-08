@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 9229c1524a400112a1b48bc40866d6dd1b7cf21b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423259"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346232"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 
@@ -47,11 +47,11 @@ Per ulteriori informazioni sulle eccezioni e la gestione delle eccezioni, vedere
 - [Gestione delle eccezioni](exception-handling.md)
 - [Creazione e generazione di eccezioni](creating-and-throwing-exceptions.md)
 - [Eccezioni generate dal compilatore](compiler-generated-exceptions.md)
-- [Procedura: Gestire un'eccezione usando try-catch (Guida per programmatori C#)](how-to-handle-an-exception-using-try-catch.md)
-- [Procedura: Eseguire codice di pulitura con finally](how-to-execute-cleanup-code-using-finally.md)
-- [Procedura: Intercettare un'eccezione non CLS](how-to-catch-a-non-cls-exception.md)
+- [Come gestire un'eccezione usando try/catch (C# guida per programmatori)](how-to-handle-an-exception-using-try-catch.md)
+- [Come eseguire il codice di pulitura usando infine](how-to-execute-cleanup-code-using-finally.md)
+- [Come intercettare un'eccezione non CLS](how-to-catch-a-non-cls-exception.md)
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifica del linguaggio C#
 
 Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 

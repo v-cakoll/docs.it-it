@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976131"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347099"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: registrare e configurare un moniker servizio
 Prima di utilizzare il moniker del servizio Windows Communication Foundation (WCF) in un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con l'associazione obbligatoria configurazione.  
@@ -87,7 +87,7 @@ Prima di utilizzare il moniker del servizio Windows Communication Foundation (WC
     > [!NOTE]
     > Se il formato del moniker non è valido o il servizio non è disponibile, la chiamata a `GetObject` restituirà un errore di sintassi non valida. Se si riceve questo errore, verificare che il moniker che si sta usando sia valido e che il servizio sia disponibile.  
   
-     Anche se questo argomento si concentra sull'uso del moniker servizio da codice VB 6.0, è possibile usare un moniker servizio da altri linguaggi. Quando si usa un moniker da codice C++, l'assembly generato da Svcutil.exe deve essere importato con "no_namespace named_guids raw_interfaces_only", come illustrato nel codice seguente.  
+     Sebbene questo argomento sia incentrato sull'utilizzo del moniker del servizio dal codice Visual Basic 6,0, è possibile utilizzare un moniker di servizio da altri linguaggi. Quando si usa un moniker da codice C++, l'assembly generato da Svcutil.exe deve essere importato con "no_namespace named_guids raw_interfaces_only", come illustrato nel codice seguente.  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  

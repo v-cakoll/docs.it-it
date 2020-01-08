@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353737"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347845"
 ---
 # <a name="parameter-design"></a>Progettazione di parametri
+
 In questa sezione vengono fornite linee guida generali sulla progettazione dei parametri, incluse le sezioni con linee guida per il controllo degli argomenti. Inoltre, è necessario fare riferimento alle linee guida descritte in [denominazione dei parametri](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **✓ DO** utilizzare il tipo di parametro meno derivato che fornisce le funzionalità richieste da un membro.  
@@ -40,7 +41,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
   
  Ciò comunicherà meglio la relazione tra i metodi.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Scelta tra parametri enum e Boolean  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Scegliere tra i parametri enum e Boolean  
  **✓ DO** utilizzare enumerazioni se un membro in caso contrario sarebbe due o più parametri booleani.  
   
  **X DO NOT** utilizzare valori booleani, a meno che non si è assolutamente certi non sarà mai necessario per più di due valori.  
@@ -49,7 +50,7 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
   
  **✓ CONSIDER** utilizzando valori booleani per i parametri del costruttore che sono realmente due stati, valori e vengono utilizzati per inizializzare le proprietà booleane.  
   
-### <a name="validating-arguments"></a>Convalida degli argomenti  
+### <a name="validate-arguments"></a>Convalida argomenti  
  **✓ DO** convalidare gli argomenti passati ai membri pubblici, protetti o implementati in modo esplicito. Genera <xref:System.ArgumentException?displayProperty=nameWithType>o una delle relative sottoclassi se la convalida ha esito negativo.  
   
  Si noti che la convalida effettiva non deve necessariamente essere eseguita nel membro pubblico o protetto. Potrebbe verificarsi a un livello inferiore in una routine privata o interna. Il punto principale è che l'intera superficie esposta agli utenti finali controlla gli argomenti.  
@@ -66,10 +67,10 @@ In questa sezione vengono fornite linee guida generali sulla progettazione dei p
   
  Se il membro è sensibile alla sicurezza, è consigliabile creare una copia e quindi convalidare ed elaborare l'argomento.  
   
-### <a name="parameter-passing"></a>Passaggio dei parametri  
+### <a name="pass-parameters"></a>Passare parametri  
  Dal punto di vista di una finestra di progettazione del Framework, sono disponibili tre gruppi principali di parametri: parametri per valore, parametri di `ref` e parametri di `out`.  
   
- Quando un argomento viene passato tramite un parametro per valore, il membro riceve una copia dell'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserita una copia dell'argomento nello stack. Se l'argomento è un tipo di riferimento, viene inserita una copia del riferimento nello stack. I linguaggi CLR più diffusi, ad C#esempio, VB.NET, C++e, per impostazione predefinita, passano i parametri per valore.  
+ Quando un argomento viene passato tramite un parametro per valore, il membro riceve una copia dell'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserita una copia dell'argomento nello stack. Se l'argomento è un tipo di riferimento, viene inserita una copia del riferimento nello stack. I linguaggi CLR più diffusi, ad C#esempio Visual Basic e C++, per impostazione predefinita passano i parametri per valore.  
   
  Quando un argomento viene passato tramite un parametro di `ref`, il membro riceve un riferimento all'argomento effettivo passato. Se l'argomento è un tipo valore, viene inserito un riferimento all'argomento nello stack. Se l'argomento è un tipo di riferimento, nello stack viene inserito un riferimento al riferimento. è possibile utilizzare i parametri `Ref` per consentire al membro di modificare gli argomenti passati dal chiamante.  
   
