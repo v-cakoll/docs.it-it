@@ -1,23 +1,23 @@
 ---
-title: Novità di .NET Core 3,1
+title: Novità di .NET Core 3.1
 description: Informazioni sulle nuove funzionalità disponibili in .NET Core 3,1.
 dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342858"
 ---
-# <a name="whats-new-in-net-core-31"></a>Novità di .NET Core 3,1
+# <a name="whats-new-in-net-core-31"></a>Novità di .NET Core 3.1
 
 Questo articolo descrive le novità di .NET Core 3,1. Questa versione contiene miglioramenti secondari a .NET Core 3,0, con particolare attenzione alle piccole, ma importanti correzioni. La funzionalità più importante di .NET Core 3,1 è che si tratta di una versione di [supporto a lungo termine (LTS)](#long-term-support) .
 
-Se si usa Visual Studio 2019, è necessario eseguire l'aggiornamento a [Visual studio 2019 16,4](https://visualstudio.microsoft.com/downloads/) per lavorare con i progetti .net core 3,1. Per ulteriori informazioni sulle novità di Visual Studio, vedere il Blog di [Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Se si usa Visual Studio 2019, è necessario eseguire l'aggiornamento a [Visual studio 2019 versione 16,4](https://visualstudio.microsoft.com/downloads/) per lavorare con i progetti .net core 3,1. Per ulteriori informazioni sulle novità di Visual Studio, vedere il Blog di [Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
 
 Visual Studio per Mac supporta inoltre e include .NET Core 3,1, nel canale di anteprima Visual Studio per Mac 8,4. È necessario scegliere il canale di anteprima per usare .NET Core 3,1.
 

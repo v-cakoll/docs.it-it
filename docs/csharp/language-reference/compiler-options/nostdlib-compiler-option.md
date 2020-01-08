@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (opzioni del compilatore C#)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602694"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345082"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opzioni del compilatore C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "69602694"
 -nostdlib[+ | -]
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Usare questa opzione se si vuole definire o creare uno spazio dei nomi e oggetti System personalizzati.
 
@@ -34,7 +34,7 @@ Se non si specifica **-nostdlib**, mscorlib.dll viene importata nel programma (e
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
 > [!NOTE]
-> Le istruzioni seguenti si applicano solo a Visual Studio 2015 (e versioni precedenti). La proprietà di compilazione **Ometti riferimenti a mscorlib.dll** non esiste in Visual Studio 2017.
+> Le istruzioni seguenti si applicano solo a Visual Studio 2015 (e versioni precedenti). La proprietà di compilazione **mscorlib. dll** non è disponibile nelle versioni più recenti di Visual Studio.
 
 1. Aprire la pagina **Proprietà** del progetto.
 

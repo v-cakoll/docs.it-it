@@ -1,23 +1,23 @@
 ---
-title: Denial of Service
+title: Denial of Service (Negazione del servizio)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: f67a8b2977e84e24654b4b65c0cdd03bcbcb1b20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968828"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346688"
 ---
-# <a name="denial-of-service"></a>Denial of Service
+# <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
   
 ## <a name="excess-memory-consumption"></a>Eccessivo consumo di memoria  
  Quando viene letto un documento XML con un numero elevato di nomi locali, spazi dei nomi o prefissi univoci, può verificarsi un problema. Se si usa una classe che deriva da <xref:System.Xml.XmlReader> e si chiama la proprietà <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> o <xref:System.Xml.XmlReader.NamespaceURI%2A> per ogni elemento, la stringa restituita viene aggiunta a una classe <xref:System.Xml.NameTable>. Le dimensioni della raccolta contenuta nella classe <xref:System.Xml.NameTable> non diminuiscono mai, creando una "perdita di memoria" virtuale degli handle di stringa.  
   
- Le mitigazioni includono:  
+ Le strategie risolutive includono:  
   
 - Derivare dalla classe <xref:System.Xml.NameTable> e imporre una quota della dimensione massima. Non è possibile impedire l'uso di una classe <xref:System.Xml.NameTable> o cambiare la classe <xref:System.Xml.NameTable> quando è completa.  
   
@@ -26,7 +26,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Il client dannoso invia un numero eccessivo di richieste di licenza al servizio  
  Se un client dannoso bombarda un servizio con un numero eccessivo di richieste di licenza, può costringere il server a usare troppa memoria.  
   
- Mitigazione: Usare le proprietà seguenti della <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> classe:  
+ Mitigazione: usare le proprietà seguenti della classe <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>:  
   
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controlla il numero massimo di classi `SecurityContextToken` temporali memorizzate nella cache dal server dopo la negoziazione `SPNego` o `SSL`.  
   
@@ -47,19 +47,19 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo del Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=186123). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Le implementazioni di IAuthorizationPolicy non valide possono causare la mancata risposta del servizio  
- La chiamata <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> al metodo su un'implementazione non corretta <xref:System.IdentityModel.Policy.IAuthorizationPolicy> dell'interfaccia può causare la mancata risposta da parte del servizio.  
+ La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non corretta dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare la mancata risposta da parte del servizio.  
   
- Mitigazione: Utilizzare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. In WCF non viene fatta alcuna distinzione tra il codice dell'applicazione e il codice esterno collegato utilizzando i punti di estendibilità.  
+ Mitigazione: usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. In WCF non viene fatta alcuna distinzione tra il codice dell'applicazione e il codice esterno collegato utilizzando i punti di estendibilità.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Possibile necessità di ridimensionamento per la dimensione massima dei token Kerberos  
  Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare le dimensioni massime dei token Kerberos, come descritto nell'articolo supporto tecnico Microsoft "[autenticazione Kerberos di Internet Explorer non funziona a causa di un buffer insufficiente che si connette a IIS](https://go.microsoft.com/fwlink/?LinkId=89176)". Potrebbe inoltre essere necessario aumentare la dimensione massima dei messaggi WCF per contenere il token Kerberos più grande.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Generazione da parte della registrazione automatica di più certificati per computer con lo stesso nome di soggetto  
- La *registrazione* automatica è la funzionalità di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] per la registrazione automatica di utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
+ La *registrazione* automatica è la funzionalità di Windows Server 2003 per la registrazione automatica di utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
   
  L'effetto è che i servizi WCF potrebbero non riuscire ad aprirsi nei domini con registrazione automatica. Ciò si verifica perché i criteri predefiniti per la ricerca delle credenziali X.509 del servizio potrebbero essere ambigui, dal momento che esistono più certificati con il nome DNS (Domain Name System) completo del computer. Un certificato ha origine dalla registrazione automatica, l'altro potrebbe invece essere un certificato autorilasciato.  
   
- Per attenuare questo problema, fare riferimento al certificato esatto da usare utilizzando un criterio di ricerca più preciso nel [ \<> ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
+ Per attenuare questo problema, fare riferimento al certificato esatto da usare utilizzando un criterio di ricerca più preciso nel [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
  Per ulteriori informazioni sulla funzionalità di registrazione automatica, vedere [registrazione automatica dei certificati in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
   
@@ -69,13 +69,13 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="protect-configuration-files-with-acls"></a>Protezione dei file di configurazione con elenchi di controllo di accesso (ACL)  
  È possibile specificare le attestazioni obbligatorie e facoltative nei file di codice e di configurazione per i token rilasciati da CardSpace. Ciò comporta l'emissione di elementi corrispondenti nei messaggi `RequestSecurityToken` inviati al servizio token di sicurezza. L'autore di un attacco può modificare il codice o la configurazione per rimuovere attestazioni obbligatorie o facoltative, facendo in modo che il servizio token di sicurezza rilasci un token che non consente l'accesso al servizio di destinazione.  
   
- Per attenuare: Richiedere l'accesso al computer per modificare il file di configurazione. Usare elenchi di controllo di accesso (ACL) per proteggere i file di configurazione. WCF richiede che il codice si trovi nella directory dell'applicazione o nella Global Assembly Cache prima di consentire il caricamento di tale codice dalla configurazione. Usare elenchi di controllo di accesso alle directory per proteggere le directory.  
+ Per prevenire il problema: richiedere l'accesso al computer per modificare il file di configurazione. Usare elenchi di controllo di accesso (ACL) per proteggere i file di configurazione. WCF richiede che il codice si trovi nella directory dell'applicazione o nella Global Assembly Cache prima di consentire il caricamento di tale codice dalla configurazione. Usare elenchi di controllo di accesso alle directory per proteggere le directory.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Raggiunto il numero massimo di sessioni protette per un servizio  
  Quando un client viene correttamente autenticato da un servizio e viene stabilita una sessione protetta con il servizio, il servizio tiene traccia della sessione fino a quando il client non la annulla o la sessione non scade. Ogni sessione stabilita viene conteggiata a fronte del numero massimo consentito di sessioni attive simultanee con un servizio. Quando viene raggiunto questo limite, i client che tentano di creare una nuova sessione con il servizio in questione vengono rifiutati fino a quando una o più sessioni attive non scadono o non vengono annullate da un client. Un client può avere più sessioni con un servizio e ognuna di esse viene conteggiata per il raggiungimento del limite.  
   
 > [!NOTE]
-> Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. Per ulteriori informazioni sulle sessioni con stato, vedere [How to: Creare un token del contesto di sicurezza per una](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sessione protetta.  
+> Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. Per altre informazioni sulle sessioni con stato, vedere [procedura: creare un token del contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Per prevenire il problema, impostare il limite per il numero massimo di sessioni attive e la durata massima di una sessione impostando la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

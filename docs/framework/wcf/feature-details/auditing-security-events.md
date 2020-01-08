@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838091"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338024"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create con Windows Communication Foundation (WCF) possono registrare gli eventi di sicurezza (esito positivo, esito negativo o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
@@ -73,7 +73,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
 </configuration>  
 ```  
   
- Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e Windows Vista supportano la scrittura nel registro di sicurezza. Per ulteriori informazioni, vedere la sezione "sistema operativo" più avanti in questo argomento.  
+ Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi Windows Server 2003 e Windows Vista supportano la scrittura nel registro di sicurezza. Per ulteriori informazioni, vedere la sezione "sistema operativo" più avanti in questo argomento.  
   
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
  Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni, vedere l'articolo supporto tecnico Microsoft sulla visualizzazione e la gestione dei registri eventi utilizzando la Visualizzatore eventi in Windows XP disponibile in [come visualizzare e gestire i registri eventi in Visualizzatore eventi di Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
@@ -88,7 +88,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) possono regist
 |System|Registro applicazioni|Registro protezione|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] o versione successiva|Supportato|Non supportato|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] e Windows Vista|Supportato|Il contesto del thread deve disporre del privilegio `SeAuditPrivilege`|  
+|Windows Server 2003 SP1 e Windows Vista|Supportato|Il contesto del thread deve disporre del privilegio `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Altri fattori  
  Oltre al sistema operativo, nella tabella seguente sono descritte le altre impostazioni che controllano l'attivazione della registrazione.  

@@ -3,12 +3,12 @@ title: Introduzione all'analisi della sintassi (API Roslyn)
 description: Introduzione all'attraversamento, all'esecuzione di query e all'esplorazione di alberi della sintassi.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931759"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347007"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introduzione all'analisi della sintassi
 
@@ -51,7 +51,7 @@ Un albero della sintassi è una struttura di dati usata dai compilatori C# e Vis
 
 I quattro principali blocchi predefiniti degli alberi della sintassi sono:
 
-* La classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, un'istanza della quale rappresenta l'intero albero di analisi. <xref:Microsoft.CodeAnalysis.SyntaxTree> è una classe astratta con derivati specifici del linguaggio. Si usano i metodi di analisi della classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) per analizzare il testo in C# o VB.
+* La classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, un'istanza della quale rappresenta l'intero albero di analisi. <xref:Microsoft.CodeAnalysis.SyntaxTree> è una classe astratta con derivati specifici del linguaggio. Usare i metodi Parse della classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) per analizzare il testo in C# o Visual Basic.
 * La classe <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, le cui istanze rappresentano costrutti sintattici, come dichiarazioni, istruzioni, clausole ed espressioni.
 * La struttura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, che rappresenta parole chiave, identificatori, operatori o segni di punteggiatura singoli.
 * E infine la struttura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, che rappresenta elementi di informazioni sintatticamente non significativi, come lo spazio vuoto tra i token, le direttive di pre-elaborazione e i commenti.
@@ -78,7 +78,7 @@ Anche se è possibile trovare qualsiasi elemento in un file di codice usando le 
 Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo):
 
 * In Visual Studio scegliere **File** > **Nuovo** > **Progetto** per visualizzare la finestra di dialogo Nuovo progetto.
-* In **Visual C#** > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo).
+* In **Visual C#**  > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo).
 * Denominare il progetto "**SyntaxTreeManualTraversal**" e fare clic su OK.
 
 Verrà analizzato il semplice programma "Hello World!" mostrato in precedenza.

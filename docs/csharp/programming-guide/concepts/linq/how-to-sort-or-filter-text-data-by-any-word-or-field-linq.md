@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)'
+title: Come ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (C#LINQ) ()
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592387"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347355"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Come ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (C#LINQ) ()
 L'esempio seguente illustra come ordinare righe di testo strutturato, ad esempio valori delimitati da virgole, in base a un qualsiasi campo. Il campo può essere specificato in modo dinamico in runtime. Si supponga che i campi in scores.csv rappresentino il numero ID di uno studente, seguito da una serie di quattro punteggi di test.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contenga i dati  
   
-1. Copiare i dati di scores.csv dall'argomento [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) e salvarli nella cartella della propria soluzione.  
+1. Copiare i dati scores. csv dall'argomento [come unire il contenuto da file non analoghi (LINQ)C#()](./how-to-join-content-from-dissimilar-files-linq.md) e salvarlo nella cartella della soluzione.  
   
 ## <a name="example"></a>Esempio  
   

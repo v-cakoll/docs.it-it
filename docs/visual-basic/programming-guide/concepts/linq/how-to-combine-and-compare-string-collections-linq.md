@@ -2,18 +2,18 @@
 title: 'Procedura: combinare e confrontare raccolte di stringhe (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348433"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337562"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo
+## <a name="set-up-the-project-and-the-text-files"></a>Configurare il progetto e i file di testo
 
 1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:
 
@@ -163,9 +163,9 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>Compilazione del codice
+## <a name="compile-the-code"></a>Compilare il codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione console Visual Basic. Aggiungere un'istruzione `Imports` per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 

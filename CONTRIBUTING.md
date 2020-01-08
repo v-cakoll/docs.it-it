@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191691"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336718"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -22,12 +22,9 @@ Il documento illustra il processo per offrire il proprio contributo per gli arti
 
 Questo repository contiene la documentazione concettuale per .NET. Il sito della documentazione di .NET è costituito da più repository oltre a questo:
 
-- [Esempi e frammenti di codice](https://github.com/dotnet/samples)  
-    I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
-- [Riferimento alle API .NET](https://github.com/dotnet/dotnet-api-docs)  
-    I problemi e le attività per questo repository vengono rilevati in [DotNet/DotNet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
-- [Riferimento di .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)  
-    Problemi e taks per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Esempi di codice e frammenti di codice](https://github.com/dotnet/samples) I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
+- Informazioni di [riferimento sulle API .NET](https://github.com/dotnet/dotnet-api-docs) I problemi e le attività per questo repository vengono rilevati in [DotNet/DotNet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- Informazioni di [riferimento su .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs) I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="dos-and-donts"></a>Cosa fare e cosa non fare
 
@@ -37,7 +34,7 @@ Il seguente elenco illustra alcune regole che è necessario tenere presenti quan
 - **Esaminare i** [problemi correnti per i](https://github.com/dotnet/docs/labels/up-for-grabs) suggerimenti sulle attività.
 - **Creare una** richiesta pull per ogni attività. Le richieste pull che includono più modifiche non correlate sono molto più difficili da rivedere. Che ritarda le revisioni e l'Unione di richieste pull. Questa linea guida si applica anche alle revisioni: si prova a non suggerire modifiche non correlate nelle revisioni. si chiede che le revisioni della community rispettano questa linea guida.
 - **Fornire una** descrizione chiara del lavoro nella richiesta pull. Indicare le modifiche e il motivo. La descrizione predefinita di "Update article.md" non è utile per i revisori.
-- **Non** inviare richieste pull per le modifiche solo stile senza una discussione preliminare. Queste richieste pull hanno tempo aggiuntivo per verificarne l'accuratezza e l'Unione causa spesso conflitti di merge con altri aggiornamenti importanti. Ci stiamo impegnando per seguire uno stile coerente, ma stiamo bilanciando il lavoro con altre attività. Gli articoli vengono introdotti in conformità allo stile quando si eseguono aggiornamenti principali per altri motivi. 
+- **Non** inviare richieste pull per le modifiche solo stile senza una discussione preliminare. Queste richieste pull hanno tempo aggiuntivo per verificarne l'accuratezza e l'Unione causa spesso conflitti di merge con altri aggiornamenti importanti. Ci stiamo impegnando per seguire uno stile coerente, ma stiamo bilanciando il lavoro con altre attività. Gli articoli vengono introdotti in conformità allo stile quando si eseguono aggiornamenti principali per altri motivi.
 - **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md). Le nuove aggiunte devono seguire queste linee guida.
 - **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
 - **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
@@ -64,7 +61,7 @@ oppure
 
 - **New content authoring** (Creazione di nuovi contenuti). Se si è interessati a creare il proprio argomento, questi problemi elencano gli argomenti che sarebbe opportuno aggiungere al set di documenti. Prima di iniziare a lavorare su un argomento, inviare un messaggio. Se si è interessati a scrivere un argomento non elencato qui, aprire un problema.
 
-È anche possibile esaminare l'elenco di [problemi aperti](https://github.com/dotnet/docs/issues) e proporsi per lavorare a quelli a cui si è interessati. I problemi aperti per il contributo sono contrassegnati dall'etichetta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs). 
+È anche possibile esaminare l'elenco di [problemi aperti](https://github.com/dotnet/docs/issues) e proporsi per lavorare a quelli a cui si è interessati. I problemi aperti per il contributo sono contrassegnati dall'etichetta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs).
 
 **Passaggio 2:** Creare una copia tramite fork dei repository `dotnet/docs`, `dotnet/samples` o `dotnet/dotnet-api-docs` in base alle esigenze e creare un ramo per le modifiche.
 
@@ -95,7 +92,7 @@ docs
             portability_report.png
 ```
 
-**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` o `dotnet/samples/master`.
+**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master`o `dotnet/samples/master`.
 
 La richiesta pull deve *sempre* essere destinata al ramo predefinito del repository, a meno che non si stia lavorando a un ramo di rilascio. Per DotNet/docs, Master Branch è il ramo predefinito. Per i repository localizzati, il ramo attivo è quello predefinito. Non aprire *mai* una richiesta pull destinata al ramo Live su DotNet/docs.
 
@@ -138,7 +135,7 @@ Per altre informazioni, vedere il [file leggimi sugli esempi](https://github.com
 
 ## <a name="the-c-interactive-experience"></a>Esperienza interattiva in C#
 
-Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. (Gli esempi di codice inline usano il tag `csharp-interactive` per i frammenti di codice inclusi nell'origine, usare il tag `code-csharp-interactive`). Questi esempi di codice visualizzano una finestra del codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio. 
+Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. (Gli esempi di codice inline usano il tag `csharp-interactive` per i frammenti di codice inclusi nell'origine, usare il tag `code-csharp-interactive`). Questi esempi di codice visualizzano una finestra del codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio.
 
 L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori possono eseguire l'esempio per visualizzare i risultati. Una serie di fattori consente di determinare se l'esempio o il testo corrispondente deve includere informazioni sull'output.
 
@@ -149,7 +146,7 @@ L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori 
 - Quando sia l'esempio che l'output previsto sono brevi, prendere in considerazione la possibilità di visualizzare l'output, per risparmiare tempo.
 - Gli articoli che spiegano come le impostazioni cultura o le impostazioni cultura inglese non dipendenti da paese/area geografica influiscono sull'output devono spiegare l'output previsto. Il ciclo Read–Eval–Print interattivo viene eseguito in un host basato su Linux. Le impostazioni cultura predefinite e le impostazioni cultura inglese non dipendenti da paese/area geografica producono output diversi a seconda dei sistemi operativi e dei computer. L'articolo deve spiegare l'output nei sistemi Windows, Linux e Mac.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Quando escludere l'output previsto dall'esempio 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Quando escludere l'output previsto dall'esempio
 
 - Gli articoli in cui il codice di esempio genera un output di maggiori dimensioni non devono includerlo nei commenti perché nasconde il codice dopo che l'esempio è stato eseguito.
 - Articoli in cui l'esempio illustra un argomento, ma l'output non è fondamentale per comprenderlo, ad esempio un codice che esegue una query LINQ per illustrare la sintassi della query e quindi visualizzare ogni elemento nella raccolta di output.

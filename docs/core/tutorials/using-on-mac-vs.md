@@ -1,19 +1,19 @@
 ---
-title: Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac
+title: Introduzione a .NET Core con Visual Studio per Mac
 description: In questo argomento viene descritto il processo di creazione di una semplice applicazione console con Visual Studio per Mac e .NET Core.
 author: mairaw
-ms.date: 07/11/2019
+ms.date: 12/19/2019
 ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: f6faf5519109202a2865b0f316251bd2c85a5606
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428578"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342958"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac
 
-Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sviluppo di applicazioni .NET Core. In questo argomento viene descritto il processo di creazione di una semplice applicazione console con Visual Studio per Mac e .NET Core.
+Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sviluppo di applicazioni .NET Core. Questo articolo illustra la creazione di una semplice applicazione console con Visual Studio per Mac e .NET Core.
 
 > [!NOTE]
 > Microsoft considera di fondamentale importanza i commenti e i suggerimenti degli utenti. Sono disponibili due modi per comunicare al team di sviluppatori la propria opinione su Visual Studio per Mac:
@@ -23,7 +23,7 @@ Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sv
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Vedere l'argomento [dipendenze e requisiti di .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+Vedere l'articolo [dipendenze e requisiti di .NET Core](../install/dependencies.md?pivots=os-macos) .
 
 Per assicurarsi di usare una versione supportata di .NET Core, vedere l'articolo del [supporto tecnico di .NET Core](/visualstudio/mac/net-core-support) .
 
@@ -35,7 +35,7 @@ Scaricare il [programma di installazione di Visual Studio per Mac](https://visua
 
 ## <a name="creating-a-project"></a>Creazione di un progetto
 
-1. Selezionare **Nuovo** nella finestra di avvio.
+1. Selezionare **nuovo** nella finestra di avvio.
 
    ![Pulsante Nuovo nella schermata iniziale di Visual Studio per Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
@@ -45,7 +45,7 @@ Scaricare il [programma di installazione di Visual Studio per Mac](https://visua
 
 1. Se è installata più di una versione di .NET Core, selezionare il framework di destinazione per il progetto.
 
-1. Digitare "HelloWorld" nel campo **Nome progetto**. Selezionare **Crea**.
+1. Digitare "HelloWorld" nel campo **Nome progetto**. Scegliere **Crea**.
 
    ![Finestra di dialogo di configurazione della nuova applicazione console](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Popolare un albero XML dal file system (C#)'
+title: Come popolare un albero XML dalla file system (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485167"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345776"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Procedura: Popolare un albero XML dal file system (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Come popolare un albero XML dalla file system (C#)
 Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico. È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla. In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti. L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.  
   
 ## <a name="example"></a>Esempio  

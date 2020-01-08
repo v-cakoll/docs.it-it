@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423311"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346372"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../language-reference/builtin-types/reference-types.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -42,7 +42,7 @@ Un [delegate](../../language-reference/builtin-types/reference-types.md) è un t
   
 - In C# versione 2.0 è stato introdotto il concetto di [metodi anonimi](../../language-reference/operators/delegate-operator.md), ovvero metodi che consentono di passare blocchi di codice come parametri in alternativa a un metodo definito separatamente. In C# 3.0 sono state introdotte le espressioni lambda per scrivere in modo più conciso i blocchi di codice in linea. I metodi anonimi e le espressioni lambda vengono compilati, in determinati contesti, in tipi delegati. Queste funzionalità sono ora note complessivamente come funzioni anonime. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 - [Uso dei delegati](./using-delegates.md)  
   
@@ -52,11 +52,11 @@ Un [delegate](../../language-reference/builtin-types/reference-types.md) è un t
   
 - [Uso della varianza nei delegati](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Procedura: Combinare delegati multicast](./how-to-combine-delegates-multicast-delegates.md)  
+- [Come combinare delegati (delegati multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Procedura: Dichiarare un delegato, crearne un'istanza e usarlo](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Come dichiarare, creare un'istanza e usare un delegato](./how-to-declare-instantiate-and-use-a-delegate.md)
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
 
 Per altre informazioni, vedere [Delegati](~/_csharplang/spec/delegates.md) nella [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

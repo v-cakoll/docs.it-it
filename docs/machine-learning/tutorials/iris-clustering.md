@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.openlocfilehash: 77c077df27c856855322b27d6101218d59d29173
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204829"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336670"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Esercitazione: categorizzare i fiori Iris con il clustering k-means con ML.NET
 
@@ -41,7 +41,7 @@ Poiché non si sa a quale gruppo appartenga ciascun fiore, scegliere l'attività
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
-1. Apri Visual Studio. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)** . Nella casella di testo **Nome** digitare "IrisFlowerClustering" e quindi selezionare il pulsante **OK**.
+1. Apri Visual Studio. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App Console (.NET Core)** . Nella casella di testo **Nome** digitare "IrisFlowerClustering" e quindi selezionare il pulsante **OK**.
 
 1. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati e del modello:
 
@@ -118,9 +118,9 @@ Nel metodo `Main` sostituire la riga `Console.WriteLine("Hello World!");` con il
 
 La classe <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> rappresenta l'ambiente di machine learning (apprendimento automatico) e offre meccanismi per la registrazione e punti di ingresso per il caricamento dei dati, il training del modello, le stime e altre attività. A livello concettuale questa operazione è paragonabile all'uso di `DbContext` in Entity Framework.
 
-## <a name="setup-data-loading"></a>Impostazione del caricamento di dati
+## <a name="set-up-data-loading"></a>Configurare il caricamento dei dati
 
-Aggiungere il codice seguente al metodo `Main` per configurare la modalità di caricamento di dati:
+Aggiungere il codice seguente al metodo `Main` per configurare la modalità di caricamento dei dati:
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

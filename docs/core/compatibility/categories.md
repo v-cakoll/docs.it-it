@@ -2,12 +2,12 @@
 title: Categorie di modifiche che causano un'interruzione - .NET Core
 description: Informazioni sui modi in cui le modifiche che causano un'interruzione vengono categorizzate in .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567918"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343595"
 ---
 # <a name="breaking-change-categories"></a>Categorie di modifiche che causano un'interruzione
 
@@ -18,8 +18,7 @@ Per *compatibilità* si intende la possibilità di compilare o eseguire codice i
 - [compatibilità con l'origine](#source-compatibility)
 - [compatibilità con la fase di progettazione](#design-time-compatibility)
 - [compatibilità con le versioni precedenti](#backwards-compatibility)
-
-La compatibilità con le [edizioni](#forward-compatibility) non è un obiettivo di .NET Core.
+- [compatibilità](#forward-compatibility) con le edizioni (non obiettivo di .NET Core)
 
 ## <a name="behavioral-change"></a>Modifiche funzionali
 
@@ -43,7 +42,7 @@ La compatibilità della fase di progettazione si riferisce al mantenimento dell'
 
 La compatibilità con le versioni precedenti si riferisce alla capacità di un consumer esistente di un'API di supportare l'esecuzione su una nuova versione mantenendo invariato il comportamento. Sia le modifiche funzionali che quelle alla compatibilità binaria influiscono sulla compatibilità con le versioni precedenti. Se un consumer non supporta l'esecuzione o funziona in modo diverso quando viene eseguito con la versione più recente dell'API, l'API è *incompatibile con le versioni precedenti*.
 
-Le modifiche che influiscono sulla compatibilità con le versioni precedenti sono fortemente sconsigliate, perché per impostazione predefinita gli sviluppatori danno per scontata la compatibilità con le versioni precedenti nelle nuove versioni di un'API.
+Le modifiche che interessano la compatibilità con le versioni precedenti sono sconsigliate, poiché gli sviluppatori si aspettano la compatibilità con le versioni precedenti di un'API.
 
 ## <a name="forward-compatibility"></a>Compatibilità con le versioni successive
 

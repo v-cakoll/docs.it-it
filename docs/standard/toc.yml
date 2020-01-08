@@ -135,6 +135,8 @@
   href: attributes/
 - name: Linee guida per la progettazione di Framework
   href: design-guidelines/
+- name: Microsoft.Data.Sqlite
+  href: data/sqlite/
 - name: Documenti e dati XML
   href: data/xml/
 - name: Security

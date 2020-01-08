@@ -2,12 +2,12 @@
 title: Filtro di dati (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418470"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346986"
 ---
 # <a name="filtering-data-c"></a>Filtro di dati (C#)
 Il filtro si riferisce all'operazione in base alla quale il set di risultati viene limitato in modo da contenere solo gli elementi che corrispondono a una condizione specificata. È anche noto come selezione.  
@@ -23,9 +23,9 @@ Il filtro si riferisce all'operazione in base alla quale il set di risultati vie
 |Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OfType|Seleziona i valori, a seconda della loro capacità di eseguire il cast a un tipo specificato.|Non applicabile.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|Dove|Seleziona i valori che si basano su una funzione di predicato.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|Percorso|Seleziona i valori che si basano su una funzione di predicato.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Esempi di sintassi delle espressioni di query  
+## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
  Nell'esempio seguente viene usata la clausola `where` per filtrare da una matrice le stringhe con una lunghezza specifica.  
   
 ```csharp  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
 - [Clausola where](../../../language-reference/keywords/where-clause.md)
-- [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Procedura: Eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Come eseguire una query sui metadati di un assembly tramite reflection (LINQC#) ()](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Come eseguire una query per i file con un attributo o unC#nome specifico ()](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Come ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (C#LINQ) ()](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

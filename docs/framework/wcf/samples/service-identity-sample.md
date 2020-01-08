@@ -2,12 +2,12 @@
 title: Esempio identità del servizio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837792"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347929"
 ---
 # <a name="service-identity-sample"></a>Esempio identità del servizio
 Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi nel [client](../../../../docs/framework/wcf/samples/client.md) che mostrano l'autenticazione server.
@@ -117,7 +117,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 1. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o Windows Vista importare il file di certificato Identity. pfx nella cartella Identity Solution nell'archivio certificati LocalMachine/My (Personal) utilizzando lo snap-in MMC. Questo file è protetto da password. Durante l'importazione viene richiesta una password. Digitare `xyz` nella casella password. Per ulteriori informazioni, vedere l'argomento [procedura: visualizzare i certificati con lo snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Al termine, eseguire Setup. bat in una Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore, che copia il certificato nell'archivio CurrentUser/Trusted People per l'utilizzo nel client.
 
-2. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+2. In Windows Server 2003, eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
     > Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat. Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  

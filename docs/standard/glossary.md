@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: MT
+ms.openlocfilehash: 21b2b0fb606333ace05b6525c9f461e6ee1709d1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929071"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338527"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -42,7 +42,7 @@ File *DLL*/*EXE* che possono contenere una raccolta di API che possono essere ch
 
 Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enumerazioni e delegati. Gli assembly presenti nella cartella *bin* di un progetto sono anche denominati *binari*. Vedere anche [libreria](#library).
 
-## <a name="clr"></a>CLR
+## <a name="clr"></a>CLR per
 
 Common Language Runtime.
 
@@ -211,7 +211,7 @@ Un pacchetto NuGet &mdash; o semplicemente un pacchetto &mdash; è un file *ZIP*
 
 Il file *ZIP* è caratterizzato dall'estensione *NUPKG* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni di destinazione. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
 
-## <a name="platform"></a>Piattaforma
+## <a name="platform"></a>piattaforma
 
 Sistema operativo e hardware in cui viene eseguito, ad esempio Windows, macOS, Linux, iOS e Android.
 
@@ -222,11 +222,11 @@ Ecco alcuni esempio di utilizzo nelle frasi:
 
 Nella documentazione di .NET si usa spesso "piattaforma .NET" per indicare un'implementazione di .NET o lo stack .NET che include tutte le implementazioni. Entrambe queste accezioni generano confusione con il significato primario (sistema operativo/hardware), di conseguenza Microsoft intende eliminarle dalla documentazione.
 
-## <a name="runtime"></a>runtime
+## <a name="runtime"></a>runtime di
 
 Ambiente di esecuzione per un programma gestito.
 
-Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime .NET. Ecco alcuni esempi di runtime .NET:
+Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime .NET:
 
 - Common Language Runtime (CLR)
 - Core Common Language Runtime (CoreCLR)
@@ -257,7 +257,7 @@ Per alcuni framework di destinazione, ad esempio .NET Framework, le API disponib
 
 Vedere [Framework di destinazione](frameworks.md).
 
-## <a name="tfm"></a>TFM
+## <a name="tfm"></a>Moniker framework di destinazione
 
 Moniker framework di destinazione.
 
@@ -269,7 +269,7 @@ Vedere [Framework di destinazione](frameworks.md).
 
 Piattaforma UWP (Universal Windows Platform).
 
-Implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C++, C#, VB.NET e JavaScript. Quando si usano C# e VB.NET, le API .NET vengono fornite da .NET Core.
+Implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte C++in C#,, Visual Basic e JavaScript. Quando si C# usano e Visual Basic, le API .NET vengono fornite da .NET Core.
 
 ## <a name="see-also"></a>Vedere anche
 

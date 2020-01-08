@@ -1,55 +1,75 @@
 ---
-title: Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017
+title: Pubblicare l'applicazione Hello World .NET Core con Visual Studio
 description: Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione .NET Core.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 10/05/2017
+ms.date: 12/10/2019
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 44e799ad76848278e3731b26b14a18e7fade760f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660481"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343170"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Pubblicare l'applicazione Hello World .NET Core con Visual Studio
 
-In [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](with-visual-studio.md) o [Compilare un'applicazione Hello World usando Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md) si crea un'applicazione console Hello World. In [Debug dell'applicazione Hello World usando C# con Visual Studio 2017](debugging-with-visual-studio.md) l'applicazione è stata testata con il debugger di Visual Studio. A questo punto è sicuro che l'applicazione funziona nel modo previsto ed è possibile pubblicarla in modo che possa essere eseguita da altri utenti. Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione. È possibile distribuire tali file copiandoli in un computer di destinazione.
+In [creare un'applicazione Hello World con .NET Core in Visual Studio](with-visual-studio.md)è stata compilata un'applicazione console Hello World. Per [eseguire il debug dell'applicazione Hello World con Visual Studio](debugging-with-visual-studio.md), è stato testato con il debugger di Visual Studio. A questo punto è sicuro che l'applicazione funziona nel modo previsto ed è possibile pubblicarla in modo che possa essere eseguita da altri utenti. Con la pubblicazione viene creato il set di file necessari per eseguire l'applicazione. Per distribuire i file, copiarli nel computer di destinazione.
 
-Per pubblicare ed eseguire l'applicazione: 
+## <a name="publish-the-app"></a>Pubblicare l'app
 
 1. Verificare che Visual Studio compili la versione di rilascio dell'applicazione. Se necessario, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.
 
    ![Barra degli strumenti Visual Studio con la build di rilascio selezionata](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Fare clic con il pulsante destro del mouse sul progetto **HelloWorld**, non sulla soluzione HelloWorld, e scegliere **Pubblica** dal menu. È anche possibile scegliere **Pubblica HelloWorld** dal menu principale **Compila** di Visual Studio.
+1. Fare clic con il pulsante destro del mouse sul progetto **HelloWorld**, non sulla soluzione HelloWorld, e scegliere **Pubblica** dal menu. È anche possibile selezionare **Publish HelloWorld** dal menu Main **Build** .
 
    ![Menu di scelta rapida Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
+   
+1. Nella pagina selezionare **una destinazione di pubblicazione** selezionare **cartella**, quindi selezionare **Crea profilo**.
 
-   ![Finestra Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![Selezionare una destinazione di pubblicazione in Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
+   
+1. Nella pagina **pubblica** selezionare **pubblica**.
 
-1. Aprire una finestra della console. Ad esempio nella casella di testo **Digitare qui il testo di ricerca** nella barra delle applicazioni Windows, immettere `Command Prompt` o `cmd` per maggiore brevità e aprire una finestra della console selezionando l'applicazione desktop **Prompt dei comandi** o premendo INVIO se è selezionata nei risultati della ricerca.
+   ![Finestra Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-page.png)
+   
+## <a name="inspect-the-files"></a>Esaminare i file
 
-1. Passare all'applicazione pubblicata nella sottodirectory `bin\release\PublishOutput` della directory del progetto dell'applicazione. Come illustrato nella figura, l'output pubblicato include i quattro file seguenti:
+Il processo di pubblicazione crea una distribuzione dipendente dal Framework, ovvero un tipo di distribuzione in cui l'applicazione pubblicata viene eseguita su qualsiasi piattaforma supportata da .NET Core con .NET Core installato nel sistema. Gli utenti possono eseguire l'app pubblicata facendo doppio clic sul file eseguibile o eseguendo il comando `dotnet HelloWorld.dll` da un prompt dei comandi.
 
-      * *HelloWorld.deps.json*
+Nei passaggi seguenti verranno esaminati i file creati dal processo di pubblicazione.
 
-         File di dipendenze di runtime dell'applicazione. Definisce i componenti e le librerie di .NET Core (inclusa la libreria di collegamento dinamico che contiene l'applicazione) necessari per eseguire l'applicazione. Per altre informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime).
- 
-      * *HelloWorld.dll*
+1. Aprire un prompt dei comandi.
 
-         File che contiene l'applicazione. È una libreria a collegamento dinamico che può essere eseguita tramite l'immissione del comando `dotnet HelloWorld.dll` in una finestra della console. 
+   Un modo per aprire un prompt dei comandi consiste nell'immettere un **prompt dei comandi** (o in breve **cmd** ) nella casella di ricerca della barra delle applicazioni di Windows. Selezionare l'app desktop **prompt dei comandi** oppure premere **invio** se è già selezionata nei risultati della ricerca.
 
-      * *HelloWorld.pdb* (facoltativo per la distribuzione)
-
-         File che contiene i simboli di debug. Non è necessario distribuire tale file insieme all'applicazione, anche se è consigliabile salvarlo nel caso in cui sia necessario eseguire il debug della versione pubblicata dell'applicazione.
-
-      * *HelloWorld.runtimeconfig.json*
-
-         File di configurazione di runtime dell'applicazione. Identifica la versione di .NET Core per la quale è stata compilata l'applicazione. Per altre informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md) (File di configurazione di runtime).  
+1. Passare all'applicazione pubblicata nella sottodirectory *bin\Release\netcoreapp3.1\publish* della directory del progetto dell'applicazione.
 
    ![Finestra della console con file pubblicati](media/publishing-with-visual-studio/published-files-output.png)
 
-Il processo di pubblicazione crea una distribuzione dipendente dal framework. Si tratta di un tipo di distribuzione in cui l'applicazione pubblicata potrà essere eseguita su qualsiasi piattaforma supportata da .NET Core, se installato nel sistema. Gli utenti possono eseguire l'applicazione attivando il comando `dotnet HelloWorld.dll` da una finestra della console.
+   Come illustrato nell'immagine, l'output pubblicato include i file seguenti:
 
-Per altre informazioni sulla pubblicazione e la distribuzione di applicazioni .NET Core, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
+      * *HelloWorld.deps.json*
+
+         Si tratta del file delle dipendenze di runtime dell'applicazione. Definisce i componenti di .NET Core e le librerie (inclusa la libreria a collegamento dinamico che contiene l'applicazione) necessari per eseguire l'app. Per ulteriori informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+      * *HelloWorld.dll*
+
+         Si tratta della versione della [distribuzione dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-deployment) dell'applicazione. Per eseguire questa libreria a collegamento dinamico, immettere `dotnet HelloWorld.dll` al prompt dei comandi.
+
+      * *HelloWorld. exe*
+      
+         Si tratta della versione [eseguibile dipendente dal Framework](../deploying/deploy-with-cli.md#framework-dependent-executable) dell'applicazione. Per eseguirlo, immettere `HelloWorld.exe` al prompt dei comandi.
+
+      * *HelloWorld.pdb* (facoltativo per la distribuzione)
+
+         Questo è il file di simboli di debug. Non è necessario distribuire tale file insieme all'applicazione, anche se è consigliabile salvarlo nel caso in cui sia necessario eseguire il debug della versione pubblicata dell'applicazione.
+
+      * *HelloWorld.runtimeconfig.json*
+
+         Questo è il file di configurazione di runtime dell'applicazione. Identifica la versione di .NET Core per la quale è stata compilata l'applicazione. Per ulteriori informazioni, vedere [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+## <a name="additional-resources"></a>Risorse aggiuntive
+
+- [Distribuzione di applicazioni .NET Core](../deploying/index.md)

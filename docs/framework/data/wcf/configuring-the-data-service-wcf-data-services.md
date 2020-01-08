@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569295"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346144"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurazione del servizio dati (WCF Data Services)
 Con WCF Data Services, è possibile creare servizi dati che espongono i feed di Open Data Protocol (OData). I dati di questi feed possono provenire da una varietà di origini dati. WCF Data Services USA i provider di dati per esporre questi dati come feed OData. Tra tali provider sono inclusi un provider di Entity Framework, un provider di reflection e un set di interfacce del provider di servizio dati personalizzate. L'implementazione del provider definisce il modello di dati per il servizio. Per ulteriori informazioni, vedere [provider di servizi dati](data-services-providers-wcf-data-services.md).  
@@ -29,15 +29,15 @@ Con WCF Data Services, è possibile creare servizi dati che espongono i feed di 
   
 |Member|Comportamento di|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Consente di disabilitare le richieste di conteggio inviate al servizio dati tramite il segmento di percorso `$count` e l'opzione query `$inlinecount`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Consente di disabilitare il supporto per la proiezione dei dati nelle richieste inviate al servizio dati tramite l'opzione di query `$select`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Consente di disabilitare le richieste di conteggio inviate al servizio dati tramite il segmento di percorso `$count` e l'opzione query `$inlinecount`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Consente di disabilitare il supporto per la proiezione dei dati nelle richieste inviate al servizio dati tramite l'opzione di query `$select`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|Consente l'esposizione di un tipo di dati nei metadati per un provider di metadati dinamici definito tramite l'interfaccia <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|Consente di specificare se il runtime del servizio dati deve convertire il tipo incluso nel payload nel tipo di proprietà effettivo specificato nella richiesta.|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|Consente di specificare se gli intercettori di modifica registrati vengono richiamati sulle entità correlate quando viene eliminato un collegamento alla relazione tra due entità.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Consente di limitare il numero massimo di set di modifiche e di operazioni di query consentite in un singolo batch. Per altre informazioni, vedere [OData: operazioni batch](https://go.microsoft.com/fwlink/?LinkId=185602) e [batch](batching-operations-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Consente di limitare il numero massimo di set di modifiche e di operazioni di query consentite in un singolo batch. Per altre informazioni, vedere [OData: operazioni batch](https://www.odata.org/documentation/odata-version-2-0/batch-processing/) e [batch](batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Consente di limitare il numero massimo di modifiche che è possibile includere in un singolo insieme di modifiche. Per altre informazioni, vedere [procedura: abilitare il paging dei risultati del servizio dati](how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Consente di limitare le dimensioni di una risposta limitando il numero di entità correlate che è possibile includere in una singola richiesta tramite l'operatore di query `$expand`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://go.microsoft.com/fwlink/?LinkId=185564) e [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Consente di limitare le dimensioni di una risposta limitando la profondità del grafico delle entità correlate che è possibile includere in una singola richiesta tramite l'operatore di query `$expand`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://go.microsoft.com/fwlink/?LinkId=185564) e [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Consente di limitare le dimensioni di una risposta limitando il numero di entità correlate che è possibile includere in una singola richiesta tramite l'operatore di query `$expand`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) e [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Consente di limitare le dimensioni di una risposta limitando la profondità del grafico delle entità correlate che è possibile includere in una singola richiesta tramite l'operatore di query `$expand`. Per ulteriori informazioni, vedere [OData: convenzioni URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) e [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Consentire di limitare il numero di entità da inserire che possono essere incluse in una singola richiesta POST.|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Definisce la versione del protocollo Atom usata dal servizio dati. Quando il valore del <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> è impostato su un valore minore del valore massimo di <xref:System.Data.Services.Common.DataServiceProtocolVersion>, le funzionalità più recenti di WCF Data Services non sono disponibili per i client che accedono al servizio dati. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Consentire di limitare le dimensioni di una risposta limitando il numero di entità in ogni set di entità restituito come feed di dati.|  

@@ -2,16 +2,16 @@
 title: Tabella dei valori predefiniti - Informazioni di riferimento per C#
 ms.custom: seodec18
 description: Informazioni sui valori predefiniti dei tipi C#.
-ms.date: 07/29/2019
+ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: MT
+ms.openlocfilehash: 3604316b75bb3a6a4de39991899a837f64e547d2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551816"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345492"
 ---
 # <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Informazioni di riferimento per C#)
 
@@ -24,7 +24,7 @@ La tabella seguente mostra i valori predefiniti dei tipi C#:
 |Qualsiasi [tipo numerico a virgola mobile incorporato](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
-|[enum](enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
+|[enum](../builtin-types/enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
 |[struct](struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
 |Qualsiasi [tipo valore nullable](../builtin-types/nullable-value-types.md)|Un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita. Il valore predefinito è noto anche come valore *null* di un tipo di valore Nullable.|
 
@@ -46,6 +46,8 @@ Per un tipo valore, anche il costruttore senza parametri implicito produce il va
 var n = new System.Numerics.Complex();
 Console.WriteLine(n);  // output: (0, 0)
 ```
+
+In fase di esecuzione, se l'istanza di <xref:System.Type?displayProperty=nameWithType> rappresenta un tipo di valore, è possibile usare il metodo <xref:System.Activator.CreateInstance(System.Type)?displayProperty=nameWithType> per richiamare il costruttore senza parametri per ottenere il valore predefinito del tipo.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 004ef2a768f4a5415942d405e4a8292928c89f94
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959832"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340665"
 ---
 # <a name="install-the-net-core-sdk"></a>Installare il .NET Core SDK
 
@@ -44,9 +44,11 @@ macOS dispone di programmi di installazione autonomi che possono essere usati pe
 
 È possibile installare il .NET Core SDK con molti dei gestori di pacchetti Linux comuni. Per altre informazioni, vedere [Linux Package Manager (installare .NET Core](linux-package-managers.md)).
 
+L'installazione di con gestione pacchetti è supportata solo nell'architettura x64. Se si sta installando il .NET Core SDK con un'architettura diversa, ad esempio ARM, seguire le istruzioni di [download e installazione manuale](#download-and-manually-install) riportate di seguito. Per altre informazioni sulle architetture supportate, vedere [dipendenze e requisiti di .NET Core](dependencies.md).
+
 ## <a name="download-and-manually-install"></a>Scaricare e installare manualmente
 
-Per estrarre l'SDK e rendere disponibili i comandi nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, aprire un terminale ed eseguire i comandi seguenti.
+Per estrarre l'SDK e rendere disponibili i interfaccia della riga di comando di .NET Core comandi nel terminale, [scaricare](#all-net-core-downloads) prima di tutto una versione binaria di .NET Core. Quindi, aprire un terminale ed eseguire i comandi seguenti.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> I comandi precedenti comunicheranno solo i comandi .NET SDK disponibili per la sessione terminal in cui è stata eseguita.
+> I comandi di `export` precedenti rendono disponibili solo i comandi interfaccia della riga di comando di .NET Core per la sessione terminal in cui è stata eseguita.
 >
 > È possibile modificare il profilo della Shell per aggiungere i comandi in modo permanente. Sono disponibili numerose Shell diverse per Linux e ognuna presenta un profilo diverso. Ad esempio:
 >
 > - **Shell bash**: *~/. bash_profile*, *~/.bashrc*
 > - **Korn Shell**: *~/.KSHRC* o *. profile*
 > - **Shell Z**: *~/.zshrc* o *. zprofile*
-> 
+>
 > Modificare il file di origine appropriato per la shell e aggiungere `:$HOME/dotnet` alla fine dell'istruzione `PATH` esistente. Se non è inclusa alcuna istruzione `PATH`, aggiungere una nuova riga con `export PATH=$PATH:$HOME/dotnet`.
 >
 > Inoltre, aggiungere `export DOTNET_ROOT=$HOME/dotnet` alla fine del file.
@@ -176,8 +178,7 @@ Per altre informazioni sull'uso di .NET Core in un contenitore Docker, vedere [I
 
 ::: zone pivot="os-windows"
 
-- [Esercitazione: C# Hello World esercitazione](../tutorials/with-visual-studio.md).
-- [Esercitazione: Visual Basic Hello World esercitazione](../tutorials/vb-with-visual-studio.md).
+- [Esercitazione: Hello World esercitazione](../tutorials/with-visual-studio.md).
 - [Esercitazione: creare una nuova app con Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Esercitazione: distribuire un'app .NET Core](../docker/build-container.md).
 

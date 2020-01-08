@@ -2,26 +2,26 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736884"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339212"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
-Nella sezione della Guida a C# dedicata alla procedura è possibile trovare rapidamente le risposte alle domande più frequenti. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
+Nella sezione How to della guida è C# possibile trovare risposte rapide alle domande più comuni. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.
 
 ## <a name="general-c-concepts"></a>Concetti generali di C#
 
-Esistono alcuni suggerimenti e consigli comuni per le procedure di sviluppo di C#.
+Sono disponibili diversi suggerimenti e consigli che sono procedure C# comuni per gli sviluppatori:
 
 - [Inizializzare oggetti usando un inizializzatore di oggetto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Informazioni sulle differenze tra il passaggio a un metodo di uno struct e di una classe](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Usare l'overload degli operatori](../language-reference/operators/operator-overloading.md).
 - [Implementare e chiamare un metodo di estensione personalizzato](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- È possibile che i programmatori C# vogliano [usare lo spazio dei nomi `My` di VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- Anche C# i programmatori potrebbero voler [usare lo spazio dei nomi `My` da Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Creare un nuovo metodo per un tipo `enum` usando i metodi di estensione](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Membri di classi e struct

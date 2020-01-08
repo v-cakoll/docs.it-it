@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837909"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344532"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -16,7 +16,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
 > [!NOTE]
-> In questo esempio viene illustrata ogni coda di messaggi non recapitabili dell'applicazione disponibile solo in Windows Vista. L'esempio può essere modificato per usare le code a livello di sistema predefinite per MSMQ 3.0 su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> In questo esempio viene illustrata ogni coda di messaggi non recapitabili dell'applicazione disponibile solo in Windows Vista. È possibile modificare l'esempio per usare le code predefinite a livello di sistema per MSMQ 3,0 in Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 

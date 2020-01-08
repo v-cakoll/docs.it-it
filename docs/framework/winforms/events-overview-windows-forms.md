@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sugli eventi (Windows Form)
+title: Panoramica degli eventi (Windows Form)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, event handling
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963470"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344997"
 ---
-# <a name="events-overview-windows-forms"></a>Cenni preliminari sugli eventi (Windows Form)
+# <a name="events-overview-windows-forms"></a>Panoramica degli eventi (Windows Form)
 Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel codice. Gli eventi possono essere generati da un'azione utente, ad esempio un clic del mouse o la pressione di un tasto, oppure da codice programma o dal sistema.
 
  Le applicazioni basate su eventi eseguono codice in risposta a un evento. Ogni form e ogni controllo espone un set predefinito di eventi per cui è possibile creare codice. Se si verifica uno di questi eventi e se il gestore eventi associato include codice, tale codice sarà richiamato.
@@ -31,9 +31,9 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
 ## <a name="delegates-and-their-role"></a>Delegati e rispettivo ruolo
  I delegati sono classi comunemente utilizzate all'interno del .NET Framework per compilare meccanismi di gestione degli eventi. Delegati approssimativamente equivalenti a puntatori a funzione, comunemente C++ utilizzati in linguaggi visivi e di altro oggetto. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.
 
- Questo modello di eventi usa i delegati per associare gli eventi ai metodi usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per ulteriori informazioni su come definire i delegati, vedere [eventi](../../standard/events/index.md).
+ Questo modello di eventi USA i *delegati* per associare gli eventi ai metodi usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per ulteriori informazioni su come definire i delegati, vedere [eventi](../../standard/events/index.md).
 
- I delegati possono essere associati a un singolo metodo o a più metodi (multicast). Quando si crea un delegato per un evento, l'utente (o Windows) crea in genere un evento multicast. Una rara eccezione può essere costituita da un evento che ha come risultato una procedura specifica, ad esempio la visualizzazione di una finestra di dialogo, che non si ripeterebbe in modo logico più volte per un evento. Per informazioni su come creare un delegato multicast, vedere [procedura: Combinare delegati (delegati multicast)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+I delegati possono essere associati a un singolo metodo o a più metodi (multicast). Quando si crea un delegato per un evento, l'utente (o Windows) crea in genere un evento multicast. Una rara eccezione può essere costituita da un evento che ha come risultato una procedura specifica, ad esempio la visualizzazione di una finestra di dialogo, che non si ripeterebbe in modo logico più volte per un evento. Per informazioni su come creare un delegato multicast, vedere [come combinare delegati (](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)delegati multicast).
 
  Un delegato multicast mantiene un elenco di chiamate dei metodi a cui è associato. Il delegato multicast supporta un metodo <xref:System.Delegate.Combine%2A> per aggiungere un metodo all'elenco di chiamate e un metodo <xref:System.Delegate.Remove%2A> per rimuoverlo.
 

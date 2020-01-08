@@ -2,12 +2,12 @@
 title: 2026 - CompileVbExpressionStart
 ms.date: 03/30/2017
 ms.assetid: daad57eb-8198-49b5-9920-aa0e7428ccf1
-ms.openlocfilehash: a80cc9c6c7768626d65c3a31570d5342a395edf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8fc79a6b56b85bb55569420ca7511fa7e41d7a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755701"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344594"
 ---
 # <a name="2026---compilevbexpressionstart"></a>2026 - CompileVbExpressionStart
 ## <a name="properties"></a>Proprietà  
@@ -20,10 +20,10 @@ ms.locfileid: "61755701"
 |Canale|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descrizione  
- Indica l'inizio della compilazione di un'espressione VB.  
+ Indica l'inizio di una compilazione dell'espressione Visual Basic.  
   
 ## <a name="message"></a>Messaggio  
- Compilazione espressione VB '%1' in corso  
+ Compilazione dell'espressione Visual Basic ' %1' in corso  
   
 ## <a name="details"></a>Dettagli  
   

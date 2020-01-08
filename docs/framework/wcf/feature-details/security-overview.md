@@ -1,16 +1,16 @@
 ---
-title: Panoramica della sicurezza-WCF
+title: Panoramica della sicurezza
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949349"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344700"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Panoramica della sicurezza Windows Communication Foundation
 Windows Communication Foundation (WCF) è una piattaforma di programmazione distribuita basata su messaggi SOAP e la protezione dei messaggi tra client e servizi è essenziale per la protezione dei dati. WCF offre una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basati sull'infrastruttura di sicurezza esistente e sugli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
 ### <a name="standards-and-interoperability"></a>Standard e interoperabilità  
  In un panorama caratterizzato da grandi distribuzioni esistenti, l'omogeneità è rara. Le piattaforme di calcolo/comunicazione distribuite devono poter interagire con le tecnologie offerte dai diversi fornitori. Anche la sicurezza deve essere quindi interoperativa.  
   
- Per consentire sistemi di sicurezza interoperativi, le aziende che operano nell'industria dei servizi Web hanno creato una serie di standard. In particolare per quanto riguarda la sicurezza, sono stati proposti alcuni standard importanti: WS-Security: Sicurezza dei messaggi SOAP (accettata dal corpo degli standard OASIS e precedentemente nota come WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
+ Per consentire sistemi di sicurezza interoperativi, le aziende che operano nell'industria dei servizi Web hanno creato una serie di standard. Specificamente riguardo alla sicurezza sono stati proposti alcuni standard noti: WS-Security: SOAP Message Security (accettato tra gli standard OASIS e già noto come WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
   
  WCF supporta un'ampia gamma di scenari di interoperabilità. La classe <xref:System.ServiceModel.BasicHttpBinding> è associata allo standard Basic Security Profile (BSP) e la classe <xref:System.ServiceModel.WSHttpBinding> è associata agli standard di sicurezza più recenti quali WS-Security 1.1 e WS-SecureConversation. Aderendo a questi standard, la sicurezza WCF può interagire e integrarsi con i servizi Web ospitati in sistemi operativi e piattaforme diverse da Microsoft Windows.  
   
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
  La sicurezza di WCF è divisa in tre aree funzionali: sicurezza del trasferimento, controllo di accesso e controllo. Nelle sezioni seguenti vengono descritte brevemente queste aree funzionali e vengono forniti collegamenti per altre informazioni.  
   
 ### <a name="transfer-security"></a>Sicurezza del trasferimento  
- La sicurezza del trasferimento comprende tre funzioni di sicurezza principali: integrità, riservatezza e autenticazione. L' *integrità* è la capacità di rilevare se un messaggio è stato alterato. La riservatezza è la possibilità di rendere illeggibile un messaggio da parte di altri utenti del destinatario. Questa operazione viene eseguita tramite la crittografia. L' *autenticazione* è la possibilità di verificare un'identità richiesta. Nel complesso queste tre funzioni consentono di garantire che i messaggi vengano inviati in modo protetto da un punto a un altro.  
+ La sicurezza del trasferimento comprende tre funzioni di sicurezza principali: integrità, riservatezza e autenticazione. L' *integrità* è la capacità di rilevare se un messaggio è stato alterato. La *riservatezza* è la possibilità di rendere illeggibile un messaggio da parte di altri utenti del destinatario. Questa operazione viene eseguita tramite la crittografia. L' *autenticazione* è la possibilità di verificare un'identità richiesta. Nel complesso queste tre funzioni consentono di garantire che i messaggi vengano inviati in modo protetto da un punto a un altro.  
   
 #### <a name="transport-and-message-security-modes"></a>Modalità di sicurezza del trasporto e dei messaggi  
  Per implementare la sicurezza del trasferimento in WCF vengono usati due meccanismi principali: modalità di sicurezza del *trasporto* e modalità di sicurezza dei *messaggi* .  
@@ -89,13 +89,13 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
   
  Una terza modalità di sicurezza usa entrambe le modalità precedenti e sfrutta i vantaggi di entrambe. Questa modalità è detta `TransportWithMessageCredential`. In questa modalità la sicurezza del messaggio viene usata per autenticare il client e la sicurezza del trasporto viene usata per autenticare il server e fornire riservatezza e integrità dei messaggi. La modalità di sicurezza `TransportWithMessageCredential` è infatti veloce quasi quanto la modalità di sicurezza del trasporto e fornisce estensibilità per l'autenticazione client ugualmente alla modalità di sicurezza del messaggio. A differenza della modalità di sicurezza del messaggio, tuttavia, non fornisce la sicurezza end-to-end completa.  
   
-### <a name="access-control"></a>Controllo di accesso  
+### <a name="access-control"></a>Access Control  
  Il *controllo di accesso* è noto anche come autorizzazione. L' *autorizzazione* consente a utenti diversi di disporre di privilegi diversi per la visualizzazione dei dati. Ad esempio, poiché i file relativi alle risorse umane di un'azienda contengono dati riservati sui dipendenti, la visualizzazione di questi dati è consentita soltanto ai dirigenti, che possono tuttavia visualizzare soltanto i dati relativi ai propri subalterni. In questo caso, il controllo di accesso è basato sia sul ruolo ("dirigente") che sull'identità specifica del dirigente (per impedire a un dirigente di accedere ai record relativi ai subalterni di un altro dirigente).  
   
- In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con il <xref:System.Security.Permissions.PrincipalPermissionAttribute> Common Language Runtime (CLR) e tramite un set di API noto come *modello di identità*. Per informazioni dettagliate sul controllo di accesso e sull'autorizzazione basata sulle attestazioni, vedere [estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md).  
+ In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con il Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e tramite un set di API noto come *modello di identità*. Per informazioni dettagliate sul controllo di accesso e sull'autorizzazione basata sulle attestazioni, vedere [estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>Controllo  
- Il *controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate sulla programmazione [, vedere Procedura: Controllare gli eventi](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)di sicurezza.  
+### <a name="auditing"></a>Controllo di  
+ Il *controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate sulla programmazione, vedere [procedura: controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) è una piattaforma di programmazione dist
 - [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
 - [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

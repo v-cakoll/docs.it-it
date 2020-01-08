@@ -1,13 +1,13 @@
 ---
-title: Tipi F#
+title: Tipi
 description: Informazioni sui tipi usati in e sul modo F# F# in cui i tipi vengono denominati e descritti.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425301"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348208"
 ---
 # <a name="f-types"></a>Tipi F#
 
@@ -33,22 +33,22 @@ Nel F# codice è spesso necessario scrivere i nomi dei tipi. Ogni tipo ha una fo
 
 Nella tabella seguente vengono illustrati gli aspetti della sintassi F# del tipo per i tipi.
 
-|Digitare|Sintassi del tipo|Esempi|
+|Tipo di|Sintassi del tipo|Esempi|
 |----|-----------|--------|
-|tipo primitivo|*Nome-tipo*|`int`<br /><br />`float`<br /><br />`string`|
-|tipo aggregato (classe, struttura, Unione, record, enumerazione e così via)|*Nome-tipo*|`System.DateTime`<br /><br />`Color`|
+|tipo primitivo|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|tipo aggregato (classe, struttura, Unione, record, enumerazione e così via)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |abbreviazione di tipo|*tipo-abbreviazione-nome*|`bigint`|
-|tipo completo|*Namespaces. Type-Name*<br /><br />Oppure<br /><br />*Modules. Type-Name*<br /><br />Oppure<br /><br />*Namespaces. Modules. Type-Name*|`System.IO.StreamWriter`|
-|array|*Type-Name*[] o<br /><br />matrice *di nomi di tipo*|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|tipo completo|*namespaces.type-name*<br /><br />oppure<br /><br />*modules.type-name*<br /><br />oppure<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|Matrice di oggetti .|*Type-Name*[] o<br /><br />matrice *di nomi di tipo*|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |matrice bidimensionale|*nome-tipo*[,]|`int[,]`<br /><br />`float[,]`|
 |matrice tridimensionale|*nome-tipo*[,,]|`float[,,]`|
 |tuple|*tipo-name1* &#42; *-name2* ...|Ad esempio, `(1,'b',3)` è di tipo `int * char * int`|
-|tipo generico|*tipo-parametro* *generico-tipo-nome*<br /><br />Oppure<br /><br />*Generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|tipo costruito (un tipo generico con un argomento di tipo specifico fornito)|*tipo-argomento* *generico-tipo-nome*<br /><br />Oppure<br /><br />*Generic-type-name*&lt;*tipo-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|tipo generico|*tipo-parametro* *generico-tipo-nome*<br /><br />oppure<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|tipo costruito (un tipo generico con un argomento di tipo specifico fornito)|*tipo-argomento* *generico-tipo-nome*<br /><br />oppure<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |tipo di funzione con un solo parametro|*Parameter-tipo1* -&gt; *tipo restituito*|Funzione che accetta un `int` e restituisce un `string` di tipo `int -> string`|
 |tipo di funzione con più parametri|*Parameter-tipo1* -&gt; *parametro-tipo2* -&gt;...-&gt; *tipo restituito*|Funzione che accetta un `int` e un `float` e restituisce un `string` di tipo `int -> float -> string`|
 |funzione di ordine superiore come parametro|(*tipo di funzione*)|il tipo di `List.map` è `('a -> 'b) -> 'a list -> 'b list`|
-|delegato|Delegato di *tipo funzione*|`delegate of unit -> int`|
+|delegate|Delegato di *tipo funzione*|`delegate of unit -> int`|
 |tipo flessibile|*nome tipo* #|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Argomenti correlati
@@ -60,7 +60,7 @@ Nella tabella seguente vengono illustrati gli aspetti della sintassi F# del tipo
 |[Tuple](tuples.md)|Descrive il tipo di tupla, un tipo costituito da valori associati di qualsiasi tipo raggruppati in coppie, triple, quadruple e così via.|
 |[Opzioni](options.md)|Descrive il tipo di opzione, un tipo che può avere un valore o essere vuoto.|
 |[Elenchi](lists.md)|Vengono descritti gli elenchi, che sono serie ordinata e non modificabile di elementi tutti dello stesso tipo.|
-|[Array](arrays.md)|Descrive le matrici, che sono set ordinati di elementi modificabili dello stesso tipo che occupano un blocco di memoria contiguo e sono di dimensioni fisse.|
+|[Matrici](arrays.md)|Descrive le matrici, che sono set ordinati di elementi modificabili dello stesso tipo che occupano un blocco di memoria contiguo e sono di dimensioni fisse.|
 |[Sequenze](sequences.md)|Descrive il tipo di sequenza, che rappresenta una serie logica di valori. i singoli valori vengono calcolati solo se necessario.|
 |[Record](records.md)|Descrive il tipo di record, una piccola aggregazione di valori denominati.|
 |[Unioni discriminate](discriminated-unions.md)|Descrive il tipo di unione discriminata, un tipo i cui valori possono essere uno qualsiasi di un set di tipi possibili.|

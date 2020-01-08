@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 7da86a8999f6cc36a7b71f70fd92a363673824b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7c005063ed1d7f881a42d340525c21ee89948b4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924539"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347128"
 ---
 # <a name="constants-c-programming-guide"></a>Costanti (Guida per programmatori C#)
 Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma. Le costanti vengono dichiarate con il modificatore [const](../../language-reference/keywords/const.md). Solo i tipi incorporati C# (ad esclusione di <xref:System.Object?displayProperty=nameWithType>) possono essere dichiarati come `const`. Per l'elenco dei tipi incorporati, vedere [Tabella dei tipi incorporati](../../language-reference/keywords/built-in-types-table.md). I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`. Usare il modificatore [readonly](../../language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.  
   
  C# non supporta metodi, proprietà o eventi `const`.  
   
- Il tipo enum consente di definire costanti denominate per i tipi incorporati interi (ad esempio `int`, `uint`, `long` e così via). Per altre informazioni, vedere [enum](../../language-reference/keywords/enum.md).  
+ Il tipo enum consente di definire costanti denominate per i tipi incorporati interi (ad esempio `int`, `uint`, `long` e così via). Per altre informazioni, vedere [enum](../../language-reference/builtin-types/enum.md).  
   
  Le costanti devono essere inizializzate come vengono dichiarate. Ad esempio:  
   
@@ -43,7 +43,7 @@ Le costanti sono valori non modificabili, che sono noti nella fase di compilazio
   
  [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
@@ -53,4 +53,4 @@ Le costanti sono valori non modificabili, che sono noti nella fase di compilazio
 - [Proprietà](./properties.md)
 - [Tipi](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Immutabilità in C# parte 1: Tipi di immutabilità](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)
+- [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) (Immutabilità in C# - Parte 1: tipi di immutabilità)

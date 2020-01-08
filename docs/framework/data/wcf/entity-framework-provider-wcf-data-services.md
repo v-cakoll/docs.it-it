@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569258"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346089"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provider Entity Framework (WCF Data Services)
-Come WCF Data Services, il Entity Framework ADO.NET è basato sul Entity Data Model, che è un tipo di modello entità-relazione. Il Entity Framework converte le operazioni sulla relativa implementazione del Entity Data Model, denominato *modello concettuale*, in operazioni equivalenti su un'origine dati. In questo modo il Entity Framework un provider ideale per i servizi dati basati su dati relazionali e qualsiasi database che disponga di un provider di dati che supporta l'Entity Framework può essere utilizzato con WCF Data Services. Per un elenco delle origini dati che attualmente supportano il Entity Framework, vedere [provider di terze parti per l'Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
+Come WCF Data Services, il Entity Framework ADO.NET è basato sul Entity Data Model, che è un tipo di modello entità-relazione. Il Entity Framework converte le operazioni sulla relativa implementazione del Entity Data Model, denominato *modello concettuale*, in operazioni equivalenti su un'origine dati. In questo modo il Entity Framework un provider ideale per i servizi dati basati su dati relazionali e qualsiasi database che disponga di un provider di dati che supporta l'Entity Framework può essere utilizzato con WCF Data Services. Per un elenco delle origini dati che attualmente supportano il Entity Framework, vedere [provider di Entity Framework](/ef/ef6/fundamentals/providers/).
   
  In un modello concettuale il contenitore di entità rappresenta la radice del servizio. È necessario definire un modello concettuale in Entity Framework prima che i dati possano essere esposti da un servizio dati. Per altre informazioni, vedere [procedura: creare un servizio dati usando un'origine dati ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   

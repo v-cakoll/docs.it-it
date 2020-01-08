@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi ai messaggi in coda
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837311"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345582"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 
@@ -25,7 +25,7 @@ In questa sezione sono contenute le domande frequenti e la guida alla risoluzion
 
 **D:** È necessario aggiornare MSMQ per usare le associazioni <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** No. Entrambe le associazioni funzionano con MSMQ 3.0 in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Alcune funzionalità dei binding diventano disponibili quando si esegue l'aggiornamento a MSMQ 4,0 in Windows Vista.
+**R:** No. Entrambe le associazioni funzionano con MSMQ 3,0 in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e Windows Server 2003. Alcune funzionalità dei binding diventano disponibili quando si esegue l'aggiornamento a MSMQ 4,0 in Windows Vista.
 
 **D:** Quali funzionalità delle associazioni <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sono disponibili in MSMQ 4,0 ma non in MSMQ 3,0?
 

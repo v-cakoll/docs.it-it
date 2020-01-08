@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ) (C#)'
+title: Come eseguire una query per il numero totale di byte in un set di cartelle (LINQ)C#()
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 2db979c10eae9ecc5d4e154ae58248ca95a7cdc3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: c6bfe6bb6d76e7ce8ea8887eef85cd64f2a025df
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592731"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344822"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Procedura: Eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ) (C#)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Come eseguire una query per il numero totale di byte in un set di cartelle (LINQ)C#()
 Questo esempio illustra come recuperare il numero totale di byte usati da tutti i file in una cartella specificata e in tutte le relative sottocartelle.  
   
 ## <a name="example"></a>Esempio  

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: f73ea93fe76f31c81935dbfb29183c247e41d8cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b938e419a5a650fe0e24445c44a67aead13349fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975279"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348113"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generazione della libreria dati del servizio dati (WCF Data Services)
-Un servizio dati che implementa il Open Data Protocol (OData) può restituire un documento di metadati del servizio che descrive il modello di dati esposto dal feed OData. Per ulteriori informazioni, vedere [OData: documento dei metadati del servizio](https://go.microsoft.com/fwlink/?LinkId=186070). È possibile usare la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio per aggiungere un riferimento a un servizio basato su OData. Quando si utilizza questo strumento per aggiungere un riferimento ai metadati restituiti da un feed OData in un progetto client, vengono eseguite le azioni seguenti:  
+Un servizio dati che implementa il Open Data Protocol (OData) può restituire un documento di metadati del servizio che descrive il modello di dati esposto dal feed OData. Per ulteriori informazioni, vedere la sezione documento metadati del servizio nell'articolo relativo alla [Panoramica di OData](https://www.odata.org/documentation/odata-version-2-0/overview/) . È possibile usare la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio per aggiungere un riferimento a un servizio basato su OData. Quando si utilizza questo strumento per aggiungere un riferimento ai metadati restituiti da un feed OData in un progetto client, vengono eseguite le azioni seguenti:  
   
 - Richiesta del documento dei metadati del servizio al servizio dati e interpretazione dei metadati restituiti.  
   
     > [!NOTE]
-    > I metadati restituiti vengono archiviati nel progetto client come file con estensione edmx. Non è possibile aprire questo file con estensione edmx usando Entity Data Model Designer perché non presenta lo stesso formato di un file con estensione edmx usato da Entity Framework. È possibile visualizzare questo file di metadati usando l'editor XML o qualsiasi editor di testo. Per ulteriori informazioni, vedere la [\[MC-EDMX\]: Entity Data Model per la specifica del formato di pacchetti di servizi dati](https://go.microsoft.com/fwlink/?LinkID=178833)  
+    > I metadati restituiti vengono archiviati nel progetto client come file con estensione edmx. Non è possibile aprire questo file con estensione edmx usando Entity Data Model Designer perché non presenta lo stesso formato di un file con estensione edmx usato da Entity Framework. È possibile visualizzare questo file di metadati usando l'editor XML o qualsiasi editor di testo. Per ulteriori informazioni, vedere [\[MC-EDMX\]: Entity Data Model per il formato di creazione dei pacchetti di servizi dati](https://docs.microsoft.com/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16).
   
 - Generazione di una rappresentazione del servizio come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>. Il comportamento di questa classe contenitore di entità generata è simile a quello del contenitore di entità generato dagli strumenti di Entity Data Model. Per altre informazioni, vedere [Cenni preliminari su Object Services (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
@@ -50,7 +50,7 @@ Un servizio dati che implementa il Open Data Protocol (OData) può restituire un
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Per ulteriori informazioni, vedere [OData: tipi di dati primitivi](https://go.microsoft.com/fwlink/?LinkId=186072).  
+ Per ulteriori informazioni, vedere la sezione tipi di dati primitivi nell'articolo relativo alla [Panoramica di OData](https://www.odata.org/documentation/odata-version-2-0/overview/) .
   
 ## <a name="see-also"></a>Vedere anche
 

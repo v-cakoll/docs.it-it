@@ -5,39 +5,38 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
-ms.translationtype: MT
+ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884202"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343338"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Scopri le esercitazioni su .NET Core e sugli strumenti di .NET Core SDK
 
 Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET Core.
 
-## <a name="building-applications-with-visual-studio-2017"></a>Creazione di applicazioni con Visual Studio 2017
+## <a name="create-applications-with-visual-studio"></a>Creare applicazioni con Visual Studio
 
-- [Creazione di un'applicazione C# denominata Hello World](with-visual-studio.md)
-- [Debug di un'applicazione C# denominata Hello World](debugging-with-visual-studio.md)
-- [Pubblicazione di un'applicazione C# denominata Hello World](publishing-with-visual-studio.md)
-- [Compilazione di una libreria di classi C#](library-with-visual-studio.md)
-- [Compilazione di una libreria di classi con Visual Basic](vb-library-with-visual-studio.md)
-- [Test di una libreria di classi](testing-library-with-visual-studio.md)
-- [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
+- [Creare un'applicazione console Hello World](with-visual-studio.md)
+- [Eseguire il debug dell'applicazione Hello World](debugging-with-visual-studio.md)
+- [Pubblicare l'applicazione Hello World](publishing-with-visual-studio.md)
+- [Compilazione di una libreria di classi](library-with-visual-studio.md)
+- [Testare una libreria di classi](testing-library-with-visual-studio.md)
+- [Utilizzare una libreria di classi](consuming-library-with-visual-studio.md)
 - [Azure Cosmos DB: Introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con Visual Studio Code
+## <a name="build-applications-with-visual-studio-code"></a>Compilazione di applicazioni con Visual Studio Code
 
 - [Introduzione a C# e Visual Studio Code](with-visual-studio-code.md)
 - [Introduzione a .NET Core su macOS](using-on-macos.md)
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>Compilazione di applicazioni con Visual Studio Code per Mac
+## <a name="build-applications-with-visual-studio-for-mac"></a>Compilazione di applicazioni con Visual Studio per Mac
 
 - [Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac](using-on-mac-vs.md)
 - [Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="building-applications-with-the-net-core-cli-tools"></a>Compilazione di applicazioni con gli strumenti dell'interfaccia CLI di .NET Core
+## <a name="build-applications-with-the-net-core-cli-tools"></a>Creazione di applicazioni con gli strumenti di interfaccia della riga di comando di .NET Core
 
 - [Introduzione all'uso di .NET Core in Windows/Linux/macOS con gli strumenti dell'interfaccia CLI di .NET Core](cli-create-console-app.md)
 - [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)

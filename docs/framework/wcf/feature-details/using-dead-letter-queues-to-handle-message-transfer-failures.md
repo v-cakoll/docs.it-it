@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837961"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345564"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
 È possibile che i messaggi in coda non vengano recapitati. Tali messaggi con errori vengono registrati in una coda di messaggi non recapitabili. Il mancato recapito può essere dovuto a errori della rete, all'eliminazione di una coda, a una coda completa, a un errore di autenticazione o alla scadenza del tempo disponibile per il recapito.  
@@ -23,7 +23,7 @@ ms.locfileid: "74837961"
   
  La coda di messaggi non recapitabili personalizzata fornisce l'isolamento tra client che condividono lo stesso servizio MSMQ per l'invio dei messaggi.  
   
- In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) fornisce una coda di messaggi non recapitabili a livello di sistema per tutte le applicazioni client in coda. In Windows Vista, WCF fornisce una coda di messaggi non recapitabili per ogni applicazione client in coda.  
+ In Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Windows Communication Foundation (WCF) fornisce una coda di messaggi non recapitabili a livello di sistema per tutte le applicazioni client in coda. In Windows Vista, WCF fornisce una coda di messaggi non recapitabili per ogni applicazione client in coda.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Specificazione dell'utilizzo della coda dei messaggi non recapitabili  
  La coda dei messaggi non recapitabili si trova nel gestore delle code dell'applicazione mittente. Archivia messaggi scaduti o che non è stato possibile trasferire o recapitare.  

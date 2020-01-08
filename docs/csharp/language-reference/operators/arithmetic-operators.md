@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036433"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345371"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
@@ -183,11 +183,11 @@ L'esempio seguente illustra l'uso dell'assegnazione composta con gli operatori a
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-In ragione delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
+A causa delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-È anche possibile usare gli operatori `+=` e `-=` per sottoscrivere e annullare la sottoscrizione di un [evento](../keywords/event.md), rispettivamente. Per altre informazioni, vedere [Procedura: Sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+È anche possibile usare gli operatori `+=` e `-=` per sottoscrivere e annullare la sottoscrizione di un [evento](../keywords/event.md), rispettivamente. Per ulteriori informazioni, vedere [come sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
 
@@ -196,7 +196,7 @@ Nell'elenco seguente gli operatori aritmetici sono ordinati dalla precedenza pi�
 - Operatori di incremento `x++` e decremento `x--` in forma suffissa
 - Operatori di incremento `++x` e decremento `--x` e unari `+` e `-`
 - Operatori moltiplicativi `*`, `/` e `%`
-- Operatori additivi `+` e `-`
+- Operatori di addizione `+` e `-`
 
 Gli operatori aritmetici binari prevedono l'associazione all'operando sinistro. Ciò significa che gli operatori con lo stesso livello di precedenza vengono valutati da sinistra a destra.
 

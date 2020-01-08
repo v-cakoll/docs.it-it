@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318285"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340357"
 ---
 # <a name="tutorial-create-a-project-template"></a>Esercitazione: creare un modello di progetto
 
@@ -26,16 +26,16 @@ In questa parte della serie si apprenderà come:
 > * Testare un modello di elemento
 > * Disinstallare un modello di elemento
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * Completare la [parte 1](cli-templates-create-item-template.md) di questa serie di esercitazioni.
-* Aprire un terminale e passare alla cartella _working\templates\\_ .
+* Aprire un terminale e passare alla cartella _working\templates_
 
 ## <a name="create-a-project-template"></a>Creare un modello di progetto
 
 I modelli di progetto producono progetti pronti per l'esecuzione che consentono agli utenti di iniziare in modo facile a utilizzare un working set di codice. .NET Core include alcuni modelli di progetto, ad esempio un'applicazione console o una libreria di classi. In questo esempio verrà creato un nuovo progetto console che abilita C# 8.0 e produce un punto di ingresso `async main`.
 
-Nel terminale passare alla cartella _working\templates\\_ e creare una nuova sottocartella denominata _consoleasync_. Immettere la sottocartella ed eseguire `dotnet new console` per generare l'applicazione console standard. Verranno modificati i file prodotti da questo modello per creare un nuovo modello.
+Nel terminale passare alla cartella _working\templates_ e creare una nuova sottocartella denominata _consoleasync_. Immettere la sottocartella ed eseguire `dotnet new console` per generare l'applicazione console standard. Verranno modificati i file prodotti da questo modello per creare un nuovo modello.
 
 ```console
 working
@@ -98,7 +98,7 @@ Ora che è stato creato il contenuto del modello, è necessario creare la config
 
 ## <a name="create-the-template-config"></a>Crea la configurazione del modello
 
-I modelli sono riconosciuti in .NET Core grazie a una cartella e a un file di configurazione speciali disponibili nella radice del modello. In questa esercitazione la cartella del modello si trova in _working\templates\consoleasync\\_ .
+I modelli sono riconosciuti in .NET Core grazie a una cartella e a un file di configurazione speciali disponibili nella radice del modello. In questa esercitazione la cartella dei modelli si trova in _working\templates\consoleasync_.
 
 Quando si crea un modello, tutti i file e le cartelle nella cartella del modello vengono inclusi come parte del modello, ad eccezione della cartella di configurazione speciale. Questa cartella di configurazione è denominata _.template.config_.
 

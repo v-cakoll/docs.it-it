@@ -2,12 +2,12 @@
 title: Come usare gli alberi delle espressioni per la compilazione diC#query dinamiche ()
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 36a81b145b6a9a25c22243f63cfb71a6a39c5891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969869"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635899"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Come usare gli alberi delle espressioni per la compilazione diC#query dinamiche ()
 In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore C# compila le query destinate a tali origini dati nel codice di un albero delle espressioni in runtime. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [Alberi delle espressioni (C#)](./index.md)
 - [Come eseguire gli alberi delle espressioniC#()](./how-to-execute-expression-trees.md)
-- [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

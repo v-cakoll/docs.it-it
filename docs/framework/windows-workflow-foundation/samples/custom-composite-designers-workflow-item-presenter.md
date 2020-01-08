@@ -2,19 +2,18 @@
 title: Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 31dfae70a8b95bdfd457efe7a20ce44c2ba9c61f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1047b8be35545e83eaa8788b53751b6b0056984
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715189"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338050"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro
+
 Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chiave nel modello di programmazione di progettazione WF che consente la creazione di un'"area di rilascio" in cui è possibile posizionare un'attività arbitraria. In questo esempio viene illustrato come compilare un ActivityDesigner che emerge come "area di rilascio".
 
- In questo esempio viene illustrato quanto segue:
-
-## <a name="demonstrates"></a>Dimostrazione
+In questo esempio viene illustrato quanto segue:
 
 - Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
@@ -23,7 +22,8 @@ Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chi
 - Programmazione della casella degli strumenti riallocata in modo dichiarativo e imperativo.
 
 ## <a name="sample-details"></a>Dettagli dell'esempio
- Il codice per questo esempio illustra:
+
+Il codice per questo esempio illustra:
 
 - L'ActivityDesigner personalizzato compilato per la classe `SimpleNativeActivity`.
 
@@ -65,21 +65,21 @@ Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chi
 
  Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Body`. `ModelItem` è la proprietà di <xref:System.Activities.Presentation.ActivityDesigner> che fa riferimento all'oggetto sottostante per il quale viene utilizzata la finestra di progettazione, in questo caso **SimpleNativeActivity**.
 
-#### <a name="to-setup-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
+## <a name="set-up-build-and-run-the-sample"></a>Configurare, compilare ed eseguire l'esempio
 
-1. Aprire la soluzione in Visual Studio 2010.
+1. Aprire la soluzione in Visual Studio.
 
-2. Premere F5 per compilare ed eseguire l'applicazione.
+2. Premere **F5** per compilare ed eseguire l'applicazione.
 
 > [!IMPORTANT]
-> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
-  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

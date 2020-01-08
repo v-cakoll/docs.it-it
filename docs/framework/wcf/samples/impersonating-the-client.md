@@ -1,19 +1,19 @@
 ---
-title: Rappresentazione di client
+title: Rappresentazione del client
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989830"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338706"
 ---
-# <a name="impersonating-the-client"></a>Rappresentazione di client
+# <a name="impersonating-the-client"></a>Rappresentazione del client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
   
  Questo esempio è basato sull'esempio [self-host](../../../../docs/framework/wcf/samples/self-host.md) . Il servizio e i file di configurazione client corrispondono a quelli dell'esempio [self-host](../../../../docs/framework/wcf/samples/self-host.md) .  
@@ -102,10 +102,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
 > [!NOTE]
-> Il servizio deve essere eseguito con un account amministrativo o l'account con cui viene eseguito deve disporre dei diritti per la `http://localhost:8000/ServiceModelSamples` registrazione dell'URI con il livello http. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](https://go.microsoft.com/fwlink/?LinkId=95012) utilizzando lo [strumento HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> Il servizio deve essere eseguito con un account amministrativo o l'account in cui è in esecuzione deve disporre dei diritti per registrare l'URI del `http://localhost:8000/ServiceModelSamples` con il livello HTTP. Tali diritti possono essere concessi impostando una [prenotazione dello spazio dei nomi](https://go.microsoft.com/fwlink/?LinkId=95012) utilizzando lo [strumento HttpCfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
-> In computer che eseguono [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la rappresentazione è supportata solo se l'applicazione Host.exe ha il privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account con cui il servizio è in esecuzione, passare a **strumenti di amministrazione**, aprire **criteri di sicurezza locali**, aprire **criteri locali**, fare clic su **assegnazione diritti utente**e selezionare **rappresenta un client dopo Autenticazione** e fare doppio clic su **Proprietà** per aggiungere un utente o un gruppo.  
+> Nei computer che eseguono Windows Server 2003, la rappresentazione è supportata solo se l'applicazione host. exe dispone del privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account con cui il servizio è in esecuzione, passare a **strumenti di amministrazione**, aprire **criteri di sicurezza locali**, aprire **criteri locali**, fare clic su **assegnazione diritti utente**e selezionare **rappresenta un client dopo l'autenticazione** e fare doppio clic su **Proprietà** per aggiungere un utente o un gruppo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

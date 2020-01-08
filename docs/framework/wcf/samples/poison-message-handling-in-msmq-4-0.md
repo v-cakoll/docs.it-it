@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837818"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337507"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -18,7 +18,7 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 
  In base alla versione di MSMQ, NetMsmqBinding supporta dal rilevamento limitato fino a quello completo dei messaggi non elaborabili. Dopo che il messaggio è stato rilevato come non elaborabile, è possibile gestirlo in alcuni modi. Di nuovo, in base alla versione di MSMQ, NetMsmqBinding supporta dalla gestione limitata fino a quella completa dei messaggi non elaborabili.
 
- In questo esempio vengono illustrate le funzionalità non elaborabili limitate fornite su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] piattaforma e sulle funzionalità complete non elaborabili fornite in Windows Vista. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile in un'altra coda che quindi può essere gestita da un servizio messaggi non elaborabili.
+ In questo esempio vengono illustrate le funzionalità non elaborabili limitate fornite in Windows Server 2003 e la piattaforma [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e le funzionalità complete non elaborabili fornite in Windows Vista. In entrambi gli esempi, l'obiettivo è spostare il messaggio non elaborabile in un'altra coda che quindi può essere gestita da un servizio messaggi non elaborabili.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Esempio di gestione dei messaggi non elaborabili di MSMQ v4.0
  In Windows Vista, MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere utilizzata per archiviare i messaggi non elaborabili. In questo esempio viene illustrata la procedura consigliata per gestire i messaggi non elaborabili utilizzando Windows Vista.

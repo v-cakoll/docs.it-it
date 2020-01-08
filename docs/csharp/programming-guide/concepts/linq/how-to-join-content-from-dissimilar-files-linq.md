@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)'
+title: Come unire il contenuto da file non analoghi (LINQ)C#()
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253556"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345892"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Come unire il contenuto da file non analoghi (LINQ)C#()
 
 In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715164"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338718"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Finestre di progettazione composite personalizzate - Relatore di elementi del flusso di lavoro
 
@@ -24,11 +24,13 @@ In questo esempio viene illustrato quanto segue:
 
 - Esecuzione dell'override di una finestra di progettazione predefinita in un'applicazione riallocata.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
+## <a name="set-up-build-and-run-the-sample"></a>Configurare, compilare ed eseguire l'esempio
 
-1. Aprire la soluzione di esempio **UsingWorkflowItemsPresenter. sln** per C# o per VB in Visual Studio 2010.
+1. Aprire la soluzione di esempio **UsingWorkflowItemsPresenter. sln** per C# o per Visual Basic in Visual Studio 2010.
 
-2. Compilare ed eseguire la soluzione. Dovrebbe essere visualizzata un'applicazione della finestra di progettazione flussi di lavoro riallocata in cui è possibile trascinare attività nell'area di disegno.
+2. Compilare ed eseguire la soluzione.
+
+   Si apre un'applicazione di progettazione flussi di lavoro riallocata ed è possibile trascinare le attività nell'area di disegno.
 
 ## <a name="sample-highlights"></a>Evidenziazioni di esempio
 

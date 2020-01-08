@@ -2,17 +2,17 @@
 title: Creare un pacchetto di modelli per dotnet new
 description: Informazioni su come creare un file csproj che compilerà un pacchetto di modelli per il comando dotnet new.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117398"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340163"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Esercitazione: Creare un pacchetto di modelli
+# <a name="tutorial-create-a-template-pack"></a>Esercitazione: creare un pacchetto di modelli
 
 Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la terza parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il comando `dotnet new`.
 
@@ -20,7 +20,7 @@ In questa parte della serie si apprenderà come:
 
 > [!div class="checklist"]
 >
-> * Creare un \*progetto. csproj per compilare un pacchetto di modelli
+> * Creare un progetto \*. csproj per compilare un pacchetto di modelli
 > * Configurare il file di progetto per la creazione del pacchetto
 > * Installare un modello da un file di pacchetto NuGet
 > * Disinstallare un modello in base all'ID del pacchetto
@@ -29,9 +29,9 @@ In questa parte della serie si apprenderà come:
 
 * Completare la [parte 1](cli-templates-create-item-template.md) e la [parte 2](cli-templates-create-project-template.md) di questa serie di esercitazioni.
 
-  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile usare un modello diverso, a condizione di copiare il modello come cartella nella cartella _working\templates\\_ .
+  Questa esercitazione usa i due modelli creati nelle prime due parti di questa esercitazione. È possibile usare un modello diverso, purché si copi il modello, come cartella, nella cartella _working\templates\\_ .
 
-* Aprire un terminale e passare alla cartella _working\templates\\_ .
+* Aprire un terminale e passare alla cartella _working\\_ .
 
 ## <a name="create-a-template-pack-project"></a>Creare un progetto per il pacchetto di modelli
 

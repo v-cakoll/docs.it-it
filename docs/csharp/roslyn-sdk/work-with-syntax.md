@@ -3,12 +3,12 @@ title: Usare il modello di sintassi di .NET Compiler Platform SDK
 description: Questa panoramica consente di conoscere i tipi usati per comprendere e modificare i nodi di sintassi.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774096"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346920"
 ---
 # <a name="work-with-syntax"></a>Utilizzare la sintassi
 
@@ -35,7 +35,7 @@ I nodi di sintassi sono tra gli elementi principali degli alberi della sintassi.
 
 Tutti i nodi di sintassi sono i nodi non terminali nell'albero della sintassi, ovvero hanno sempre altri nodi e token come elementi figlio. In quanto elemento figlio di un altro nodo, ogni nodo ha un nodo padre accessibile tramite la proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Dato che i nodi e gli alberi non sono modificabili, l'elemento padre di un nodo non cambia mai. La radice dell'albero ha un padre null.
 
-Ogni nodo ha un metodo <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, che restituisce un elenco di nodi figlio in ordine sequenziale in base alla posizione nel testo di origine. L'elenco non contiene token. Ogni nodo dispone anche di metodi per esaminare i discendenti, ad esempio <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> o <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, che rappresentano un elenco di tutti i nodi, i token o le banalità presenti nel sottoalbero radice da tale nodo.
+Ogni nodo ha un metodo <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, che restituisce un elenco di nodi figlio in ordine sequenziale in base alla posizione nel testo di origine. L'elenco non contiene token. Ogni nodo dispone anche di metodi per esaminare i discendenti, ad esempio <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>o <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, che rappresentano un elenco di tutti i nodi, i token o le banalità presenti nel sottoalbero radice da tale nodo.
 
 Inoltre, ogni sottoclasse di nodo della sintassi espone gli stessi elementi figlio tramite proprietà fortemente tipizzate. Ad esempio, una classe di nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> include tre proprietà aggiuntive specifiche per gli operatori binari: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Il tipo di <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> è <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> e il tipo di <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> è <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
@@ -71,7 +71,7 @@ La proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> corrisponde all'int
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> è l'intervallo di testo che include l'intervallo normale del nodo, oltre a tutti gli elementi semplici iniziali o finali.
 
-Esempio:
+Ad esempio:
 
 ``` csharp
       if (x > 3)
@@ -85,13 +85,13 @@ Il nodo dell'istruzione all'interno del blocco ha un intervallo indicato da sing
 
 ## <a name="kinds"></a>Tipi
 
-Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente mediante l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni lingua, C# o Visual Basic, dispone di una sola enumerazione `SyntaxKind` (rispettivamente<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi Trivia possibili della grammatica. Questa conversione può essere eseguita automaticamente mediante l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> consente di risolvere facilmente eventuali ambiguità per i tipi di nodi della sintassi che condividono la stessa classe di nodo. Per i token e gli elementi semplici, questa proprietà è l'unico modo per distinguere un tipo di elemento da un alto.
 
 Ad esempio, una singola classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> include gli elementi figlio <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. La proprietà <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> consente di stabilire se si tratta di un nodo di sintassi di tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> o <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression>.
 
-## <a name="errors"></a>Errori
+## <a name="errors"></a>Errori di
 
 Anche quando il testo di origine contiene errori di sintassi, viene esposto un albero della sintassi completo riconducibile tramite round-trip all'origine. Quando il parser rileva il codice non conforme alla sintassi del linguaggio definita, usa una di due tecniche per creare un albero della sintassi.
 

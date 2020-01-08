@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32695d3bc29693ab4cf1e2f9d721d35598ecfb86
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912053"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344712"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Scripting dei fogli di stile XSLT con \<msxsl:script>
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
@@ -31,7 +31,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  dove `msxsl` è un prefisso associato allo spazio dei nomi `urn:schemas-microsoft-com:xslt`.  
   
- L'attributo `language` non è obbligatorio ma, se specificato, il relativo valore deve essere uno dei seguenti: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
+ L'attributo `language` non è obbligatorio, ma, se specificato, il valore deve essere uno dei seguenti: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`o `CSharp`. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
   
  L'attributo `implements-prefix` è obbligatorio. Questo attributo viene usato per dichiarare uno spazio dei nomi e associarlo al blocco di script. Il valore di questo attributo è il prefisso che rappresenta lo spazio dei nomi. È possibile definire lo spazio dei nomi in un punto qualsiasi di un foglio di stile.  
   
@@ -49,7 +49,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|DESCRIZIONE|  
+|Spazi dei nomi predefiniti|Descrizione|  
 |------------------------|-----------------|  
 |System|Classe di sistema.|  
 |System.Collection|Classi di raccolte.|  
@@ -64,15 +64,15 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È necessario che gli argomenti forniti e i valori restituiti definiti dalle funzioni di script siano di tipo W3C (World Wide Web Consortium) XPath o XSLT. Nella tabella seguente vengono mostrati i tipi W3C corrispondenti, le classi .NET Framework equivalenti (tipo) e se il tipo W3C è un tipo XPath o XSLT.  
   
-|Tipo|Classe .NET Framework equivalente (tipo)|Tipo XPath o tipo XSLT|  
+|Tipo di|Classe .NET Framework equivalente (tipo)|Tipo XPath o tipo XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
 |Stringa|System.String|XPath|  
-|Booleano|System.Boolean|XPath|  
+|Boolean|System.Boolean|XPath|  
 |Number|System.Double|XPath|  
 |Frammento di albero risultato|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Se nella funzione di script viene utilizzato un tipo numerico Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
+ Se la funzione di script usa un tipo numerico quale Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, questo verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
   
  Se la funzione di script usa un tipo diverso da quelli specificati in precedenza o se la funzione non viene compilata quando il foglio di stile viene caricato nell'oggetto <xref:System.Xml.Xsl.XslTransform>, verrà generata un'eccezione.  
   

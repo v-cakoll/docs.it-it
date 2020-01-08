@@ -2,12 +2,12 @@
 title: Come combinare query LINQ con espressioni regolari
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348425"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337554"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Come combinare query LINQ con espressioni regolari (Visual Basic)
 
@@ -84,9 +84,9 @@ End Class
 
 Si noti che è anche possibile eseguire una query sull'oggetto <xref:System.Text.RegularExpressions.MatchCollection> restituito da una ricerca `RegEx`. In questo esempio viene generato nei risultati solo il valore di ogni corrispondenza. Tuttavia, è anche possibile usare LINQ per eseguire tutti i tipi di filtro, ordinamento e raggruppamento sulla raccolta. Poiché <xref:System.Text.RegularExpressions.MatchCollection> è una raccolta non generica <xref:System.Collections.IEnumerable>, è necessario dichiarare esplicitamente il tipo della variabile di intervallo nella query.
 
-## <a name="compiling-the-code"></a>Compilazione del codice
+## <a name="compile-the-code"></a>Compilare il codice
 
-Creare un progetto di applicazione console VB.NET, copiare e incollare l'esempio di codice e modificare il valore dell'oggetto di avvio nelle proprietà del progetto.
+Creare un progetto di applicazione console Visual Basic, copiare e incollare l'esempio di codice e modificare il valore dell'oggetto di avvio nelle proprietà del progetto.
 
 ## <a name="see-also"></a>Vedere anche
 

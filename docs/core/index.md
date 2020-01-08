@@ -1,15 +1,15 @@
 ---
 title: Guida a .NET Core
-description: .NET core è un'implementazione modulare ad alte prestazioni di .NET per la creazione di app di Windows, Mac e Linux. Vedere l'introduzione a .NET Core per iniziare.
+description: .NET Core è un'implementazione modulare e a elevate prestazioni di .NET per la creazione di app Windows, Linux e macOS. Vedere l'introduzione a .NET Core per iniziare.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837012"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341360"
 ---
 # <a name="net-core-guide"></a>Guida a .NET Core
 
@@ -27,11 +27,11 @@ Tutte le versioni di .NET Core sono disponibili nella pagina [Download di .NET C
 
 ## <a name="net-core-31"></a>.NET Core 3,1
 
-La versione più recente è .NET Core 3,1. Che include miglioramenti secondari rispetto a .NET Core 3,0. Tuttavia, .NET Core 3,1 è una versione supportata a lungo termine. Per ulteriori informazioni sulla versione di .NET Core 3,1, vedere Novità [di .net core 3,1](./whats-new/dotnet-core-3-1.md).
+La versione più recente è .NET Core 3,1. 3,1 include miglioramenti minori rispetto a .NET Core 3,0, tuttavia .NET Core 3,1 è una [versione supportata a lungo termine](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). Per ulteriori informazioni sulla versione di .NET Core 3,1, vedere Novità [di .net core 3,1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Creare la prima applicazione
 
-Dopo aver installato .NET Core SDK, aprire un prompt dei comandi. Digitare i seguenti comandi di `dotnet` per creare ed eseguire C# un'applicazione:
+Dopo aver installato .NET Core SDK, aprire un prompt dei comandi. Immettere i seguenti comandi di `dotnet` per creare ed eseguire C# un'applicazione:
 
 ```dotnetcli
 dotnet new console

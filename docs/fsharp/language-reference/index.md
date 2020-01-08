@@ -1,13 +1,13 @@
 ---
-title: Riferimenti per il linguaggio F#
+title: Riferimenti per il linguaggio
 description: Trovare F# le informazioni sulle funzionalità del linguaggio da questo riferimento a token di lingua, concetti, tipi, espressioni e costrutti supportati dal compilatore.
 ms.date: 05/16/2016
-ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d557cc71b34eb7c005eaeb904b01a38b506639fe
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552899"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348200"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
@@ -44,7 +44,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Asserzioni](assertions.md)|Descrive l'espressione `assert`, che è una funzionalità di debug che è possibile usare per verificare un'espressione. In caso di errore in modalità Debug, un'asserzione genera una finestra di dialogo di errore di sistema.|
 |[Gestione delle eccezioni](./exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
 |[Attributi](attributes.md)|Descrive gli attributi, che abilitano i metadati da applicare a un costrutto di programmazione.|
-|[Gestione delle risorse: parola chiave `use` ](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
+|[Gestione delle risorse: parola chiave `use`](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
 |[Spazi dei nomi](namespaces.md)|Descrive il supporto degli spazi dei nomi in F#. Uno spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate perché consente di collegare un nome a un raggruppamento di elementi di programma.|
 |[Moduli](modules.md)|Descrive i moduli. Un modulo F# è un raggruppamento di codice F#, ad esempio valori, tipi e valori di funzioni, in un programma F#. Il codice di raggruppamento nei moduli consente di tenere insieme il codice correlato e consente di evitare conflitti di nome nel programma.|
 |[Dichiarazioni di importazione: parola chiave `open`](import-declarations-the-open-keyword.md)|Descrive il funzionamento di `open`. Una dichiarazione di importazione specifica un modulo o uno spazio dei nomi ai cui elementi è possibile fare riferimento senza usare un nome completo.|
@@ -67,7 +67,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Elenchi](lists.md)|Descrive elenchi. Un elenco in F# è una serie ordinata e non modificabile di elementi dello stesso tipo.|
 |[Opzioni](options.md)|Descrive il tipo di opzione. Un'opzione in F# viene usata quando un valore può esistere o meno. Un'opzione ha un tipo sottostante e può contenere un valore di tale tipo o nessun valore.|
 |[Sequenze](sequences.md)|Descrive le sequenze. Una sequenza è una serie logica di elementi dello stesso tipo. Gli elementi individuali di una sequenza vengono calcolati solo se necessario, pertanto la rappresentazione potrebbe essere minore di quella indicata da un conteggio di elementi letterali.|
-|[Array](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
+|[Matrici](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
 |[Record](records.md)|Descrive record. I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.|
 |[Unioni discriminate](discriminated-unions.md)|Descrive le unioni discriminate, che offrono supporto per i valori che possono essere uno dei vari casi denominati con tipi e i valori potenzialmente diversi.|
 |[Enumerazioni](enumerations.md)|Descrive le enumerazioni, che sono tipi che hanno un set definito di valori denominati. È possibile usarle in sostituzione ai valori letterali per rendere il codice più leggibile e gestibile.|

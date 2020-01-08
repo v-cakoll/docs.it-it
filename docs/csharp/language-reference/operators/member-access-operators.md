@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039003"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345296"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operatori condizionali Null ?. e ?[]
 
-Un operatore condizionale Null, disponibile in C# 6 e nelle versioni successive, applica un'operazione di accesso ai membri, `?.`, o di accesso a elementi, `?[]`, al relativo operando solo se l'operando restituisce un valore diverso da Null. Se l'operando restituisce `null`, il risultato dell'applicazione dell'operatore è `null`. L'operatore di accesso ai membri condizionale Null `?.` è anche noto come operatore Elvis.
+Disponibile in C# 6 e versioni successive, un operatore condizionale null applica un'operazione di [accesso ai membri](#member-access-operator-), `?.`o [elemento](#indexer-operator-), `?[]`, all'operando solo se tale operando restituisce un valore non null. in caso contrario, restituisce `null`. Cioè
+
+- Se `a` restituisce `null`, il risultato di `a?.x` o `a?[x]` è `null`.
+- Se `a` restituisce un valore diverso da null, il risultato di `a?.x` o `a?[x]` è identico a quello del risultato di `a.x` o `a[x]`, rispettivamente.
+
+  > [!NOTE]
+  > Se `a.x` o `a[x]` genera un'eccezione, `a?.x` o `a?[x]` genererebbe la stessa eccezione per `a`non null. Se ad esempio `a` è un'istanza di matrice non null e `x` non rientra nei limiti di `a`, `a?[x]` genera un'<xref:System.IndexOutOfRangeException>.
 
 Gli operatori condizionali Null causano corto circuiti. Vale a dire, se un'operazione in una catena di operazioni condizionali di accesso a un membro o a un elemento restituisce `null`, l'esecuzione delle altre operazioni della catena viene interrotta. Nell'esempio seguente `B` non viene valutato se `A` restituisce `null` e `C` non viene valutato se `A` oppure `B` restituisce `null`:
 
@@ -123,6 +129,8 @@ Nell'esempio seguente viene illustrato l'uso degli operatori `?.` e `?[]`:
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Nell'esempio precedente viene inoltre usato l'operatore di Unione [null `??`](null-coalescing-operator.md) per specificare un'espressione alternativa da valutare nel caso in cui venga `null`il risultato di un'operazione condizionale null.
+
+L'operatore di accesso ai membri condizionale Null `?.` è anche noto come operatore Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Chiamata a delegati thread-safe
 
@@ -160,7 +168,7 @@ Anche le [espressioni cast](type-testing-and-cast.md#cast-operator-), che eseguo
 
 ## <a name="index-from-end-operator-"></a>Index from End Operator ^
 
-Disponibile in C# 8,0 e versioni successive, l'operatore`^`indica la posizione dell'elemento alla fine di una sequenza. Per una sequenza di lunghezza `length`, `^n` punta all'elemento con `length - n` offset dall'inizio di una sequenza. Ad esempio, `^1` punta all'ultimo elemento di una sequenza e `^length` punta al primo elemento di una sequenza.
+Disponibile in C# 8,0 e versioni successive, l'operatore `^` indica la posizione dell'elemento alla fine di una sequenza. Per una sequenza di lunghezza `length`, `^n` punta all'elemento con `length - n` offset dall'inizio di una sequenza. Ad esempio, `^1` punta all'ultimo elemento di una sequenza e `^length` punta al primo elemento di una sequenza.
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
@@ -170,7 +178,7 @@ Per creare un intervallo di indici, è anche possibile usare l'operatore `^` con
 
 ## <a name="range-operator-"></a>Operatore di intervallo..
 
-Disponibile in C# 8,0 e versioni successive, l'operatore`..`specifica l'inizio e la fine di un intervallo di indici come operandi. L'operando sinistro è un inizio *inclusivo* di un intervallo. L'operando destro è una fine *esclusiva* di un intervallo. Uno degli operandi può essere un indice dall'inizio o dalla fine di una sequenza, come illustrato nell'esempio seguente:
+Disponibile in C# 8,0 e versioni successive, l'operatore `..` specifica l'inizio e la fine di un intervallo di indici come operandi. L'operando sinistro è un inizio *inclusivo* di un intervallo. L'operando destro è una fine *esclusiva* di un intervallo. Uno degli operandi può essere un indice dall'inizio o dalla fine di una sequenza, come illustrato nell'esempio seguente:
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 

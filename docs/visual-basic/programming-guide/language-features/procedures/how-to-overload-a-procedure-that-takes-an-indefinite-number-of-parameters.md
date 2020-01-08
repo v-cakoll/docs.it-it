@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345841"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347559"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procedura: eseguire l'overload di una routine che accetta un numero indefinito di parametri (Visual Basic)
 Se una stored procedure dispone di un parametro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , non è possibile definire una versione di overload che accetta una matrice unidimensionale per la matrice di parametri. Per ulteriori informazioni, vedere "Overload impliciti per un parametro ParamArray" in [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
@@ -47,7 +47,7 @@ Se una stored procedure dispone di un parametro [ParamArray](../../../../visual-
   
  Il codice nelle versioni di overload non deve verificare se il codice chiamante ha fornito uno o più valori per il parametro `ParamArray` o, in tal caso, il numero. Visual Basic passa il controllo alla versione corrispondente all'elenco di argomenti chiamante.  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
  Poiché una routine con un parametro `ParamArray` è equivalente a un set di versioni di overload, non è possibile eseguire l'overload di tale procedura con un elenco di parametri corrispondente a uno di questi overload impliciti. Per ulteriori informazioni, vedere [considerazioni sull'overload delle procedure](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
