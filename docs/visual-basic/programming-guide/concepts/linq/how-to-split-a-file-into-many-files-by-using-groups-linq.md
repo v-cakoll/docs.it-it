@@ -2,20 +2,20 @@
 title: 'Procedura: suddividere un file in molti file utilizzando i gruppi (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: bd210f5119540bd35c18a07a21fc836339222bd0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341364"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348034"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="1c7d9-102">Procedura: suddividere un file in molti file usando i gruppi (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c7d9-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="93087-102">Procedura: suddividere un file in molti file usando i gruppi (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93087-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="1c7d9-103">Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.</span><span class="sxs-lookup"><span data-stu-id="1c7d9-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
+<span data-ttu-id="93087-103">Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.</span><span class="sxs-lookup"><span data-stu-id="93087-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
 
-### <a name="to-create-the-data-files"></a><span data-ttu-id="1c7d9-104">Per creare i file di dati</span><span class="sxs-lookup"><span data-stu-id="1c7d9-104">To create the data files</span></span>
+### <a name="to-create-the-data-files"></a><span data-ttu-id="93087-104">Per creare i file di dati</span><span class="sxs-lookup"><span data-stu-id="93087-104">To create the data files</span></span>
 
-1. <span data-ttu-id="1c7d9-105">Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:</span><span class="sxs-lookup"><span data-stu-id="1c7d9-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="93087-105">Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:</span><span class="sxs-lookup"><span data-stu-id="93087-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74341364"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="1c7d9-106">Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.</span><span class="sxs-lookup"><span data-stu-id="1c7d9-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="93087-106">Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.</span><span class="sxs-lookup"><span data-stu-id="93087-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74341364"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="1c7d9-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="1c7d9-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="93087-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="93087-107">Example</span></span>
 
 ```vb
 Class SplitWithGroups
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-<span data-ttu-id="1c7d9-108">Il programma scrive un file separato per ogni gruppo nella stessa cartella dei file di dati.</span><span class="sxs-lookup"><span data-stu-id="1c7d9-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
+<span data-ttu-id="93087-108">Il programma scrive un file separato per ogni gruppo nella stessa cartella dei file di dati.</span><span class="sxs-lookup"><span data-stu-id="93087-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="1c7d9-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="1c7d9-109">Compiling the Code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="93087-109">Compilare il codice</span><span class="sxs-lookup"><span data-stu-id="93087-109">Compile the code</span></span>
 
-<span data-ttu-id="1c7d9-110">Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="1c7d9-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="93087-110">Creare un progetto di applicazione console Visual Basic con un'istruzione `Imports` per lo spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="93087-110">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1c7d9-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1c7d9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93087-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="93087-111">See also</span></span>
 
-- [<span data-ttu-id="1c7d9-112">LINQ e stringhe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c7d9-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- <span data-ttu-id="1c7d9-113">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="1c7d9-113">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
+- [<span data-ttu-id="93087-112">LINQ e stringhe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93087-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- <span data-ttu-id="93087-113">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="93087-113">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
