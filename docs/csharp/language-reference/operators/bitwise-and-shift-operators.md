@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428444"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345336"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
@@ -172,9 +172,9 @@ L'esempio seguente illustra questo comportamento:
 
 ## <a name="enumeration-logical-operators"></a>Operatori logici di enumerazione
 
-Gli operatori `~`, `&`, `|`e `^` sono supportati anche da qualsiasi tipo di [enumerazione](../keywords/enum.md) . Per gli operandi dello stesso tipo di enumerazione, viene eseguita un'operazione logica sui valori corrispondenti del tipo integrale sottostante. Ad esempio, per qualsiasi `x` e `y` di un tipo di enumerazione `T` con un tipo sottostante `U`, l'espressione `x & y` produce lo stesso risultato dell'espressione `(T)((U)x & (U)y)`.
+Gli operatori `~`, `&`, `|`e `^` sono supportati anche da qualsiasi tipo di [enumerazione](../builtin-types/enum.md) . Per gli operandi dello stesso tipo di enumerazione, viene eseguita un'operazione logica sui valori corrispondenti del tipo integrale sottostante. Ad esempio, per qualsiasi `x` e `y` di un tipo di enumerazione `T` con un tipo sottostante `U`, l'espressione `x & y` produce lo stesso risultato dell'espressione `(T)((U)x & (U)y)`.
 
-Gli operatori logici bit per bit vengono in genere usati con un tipo di enumerazione definito con l'attributo [Flags](xref:System.FlagsAttribute). Per altre informazioni, vedere la sezione [Tipi di enumerazione come flag di bit](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) dell'articolo [Tipi di enumerazione](../../programming-guide/enumeration-types.md).
+Gli operatori logici bit per bit vengono in genere usati con un tipo di enumerazione definito con l'attributo [Flags](xref:System.FlagsAttribute). Per altre informazioni, vedere la sezione [Tipi di enumerazione come flag di bit](../builtin-types/enum.md#enumeration-types-as-bit-flags) dell'articolo [Tipi di enumerazione](../builtin-types/enum.md).
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 

@@ -3,12 +3,12 @@ title: Utilizzare il modello di area di lavoro di .NET Compiler Platform SDK
 description: Questa panoramica consente di conoscere i tipi usati per eseguire query sull'area di lavoro e i progetti per il codice e modificarli.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354803"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346919"
 ---
 # <a name="work-with-a-workspace"></a>Utilizzare un'area di lavoro
 
@@ -40,4 +40,4 @@ Il diagramma seguente è una rappresentazione delle correlazioni tra l'area di l
 
 ## <a name="summary"></a>Riepilogo
 
-Roslyn espone un set di API del compilatore e API delle aree di lavoro che forniscono informazioni dettagliate sul codice sorgente, in modo del tutto fedele con i linguaggi C# e Visual Basic.  Con .NET Compiler Platform SDK si riduce drasticamente la barriera all'ingresso per la creazione di strumenti e applicazioni incentrati su codice. Si aprono le porte a molte opportunità di innovazione in aree come la metaprogrammazione, la generazione e trasformazione del codice, l'uso interattivo dei linguaggi C# e VB e l'incorporamento di C# e VB in linguaggi per domini specifici.  
+Roslyn espone un set di API del compilatore e API delle aree di lavoro che forniscono informazioni dettagliate sul codice sorgente, in modo del tutto fedele con i linguaggi C# e Visual Basic.  Con .NET Compiler Platform SDK si riduce drasticamente la barriera all'ingresso per la creazione di strumenti e applicazioni incentrati su codice. Consente di creare numerose opportunità di innovazione in aree quali la metaprogrammazione, la generazione e la trasformazione del codice, l' C# uso interattivo dei linguaggi e Visual Basic e l' C# incorporamento di e Visual Basic in linguaggi specifici del dominio.  

@@ -4,12 +4,12 @@ description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) i
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339288"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -58,11 +58,11 @@ Il linguaggio C# offre un set standard di tipi numerici incorporati per rapprese
   
 ## <a name="custom-types"></a>Tipi personalizzati
 
-Usare i costrutti [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) e [enum](language-reference/keywords/enum.md) per creare tipi personalizzati. La libreria di classi .NET Framework è una raccolta di tipi personalizzati offerti da Microsoft che è possibile usare nelle nuove applicazioni. Per impostazione predefinita, i tipi più comunemente usati nella libreria di classi sono disponibili in qualsiasi programma C#, mentre altri diventano disponibili solo quando si aggiunge in modo esplicito un riferimento di progetto all'assembly in cui sono definiti. Nel momento in cui il compilatore ha un riferimento all'assembly, è possibile dichiarare variabili (e costanti) dei tipi dichiarati nell'assembly in codice sorgente.
+Usare i costrutti [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) e [enum](language-reference/builtin-types/enum.md) per creare tipi personalizzati. La libreria di classi .NET Framework è una raccolta di tipi personalizzati offerti da Microsoft che è possibile usare nelle nuove applicazioni. Per impostazione predefinita, i tipi più comunemente usati nella libreria di classi sono disponibili in qualsiasi programma C#, mentre altri diventano disponibili solo quando si aggiunge in modo esplicito un riferimento di progetto all'assembly in cui sono definiti. Nel momento in cui il compilatore ha un riferimento all'assembly, è possibile dichiarare variabili (e costanti) dei tipi dichiarati nell'assembly in codice sorgente.
   
 ## <a name="generic-types"></a>Tipi generici
 
-Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Tali tipi sono definiti *tipi generici*. Ad esempio, il tipo di .NET Framework <xref:System.Collections.Generic.List%601> dispone di un parametro di tipo a cui per convenzione viene assegnato il nome *t*. Quando si crea un'istanza del tipo, si specifica il tipo degli oggetti che l'elenco conterrà, ad esempio, String:  
+Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Questi tipi sono definiti *tipi generici*. Ad esempio, il tipo di .NET Framework <xref:System.Collections.Generic.List%601> dispone di un parametro di tipo a cui per convenzione viene assegnato il nome *t*. Quando si crea un'istanza del tipo, si specifica il tipo degli oggetti che l'elenco conterrà, ad esempio, String:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -80,9 +80,9 @@ In alcuni casi non è consigliabile creare un tipo denominato per set semplici d
 
 È importante capire due punti fondamentali sul sistema dei tipi in .NET Framework:  
   
-- Supporta il principio di ereditarietà. I tipi possono derivare da altri tipi, denominati *tipi di base*. Il tipo derivato eredita (con alcune limitazioni) metodi, proprietà e altri membri del tipo di base, Il tipo di base può a sua volta derivare da un altro tipo, nel quale caso il tipo derivato eredita i membri di entrambi i tipi di base nella gerarchia di ereditarietà. Tutti i tipi, inclusi i tipi numerici predefiniti, ad esempio <xref:System.Int32> (parola chiave C#: `int`), derivano in definitiva da un unico tipo di base, ovvero <xref:System.Object> (parola chiave C#: `object`). Questa gerarchia di tipi unificati viene chiamata [Common Type System](../standard/common-type-system.md) (CTS). Per altre informazioni sull'ereditarietà in C#, vedere [Ereditarietà](programming-guide/classes-and-structs/inheritance.md).  
+- Supporta il principio di ereditarietà. I tipi possono derivare da altri tipi, denominati *tipi di base*. Il tipo derivato eredita (con alcune limitazioni) metodi, proprietà e altri membri del tipo di base, che a sua volta può derivare da un altro tipo. In questo caso, il tipo derivato eredita i membri di entrambi i tipi di base nella gerarchia di ereditarietà. Tutti i tipi, inclusi i tipi numerici predefiniti, ad esempio <xref:System.Int32> (parola chiave C#: `int`), derivano in definitiva da un unico tipo di base, ovvero <xref:System.Object> (parola chiave C#: `object`). Questa gerarchia di tipi unificati viene chiamata [Common Type System](../standard/common-type-system.md) (CTS). Per altre informazioni sull'ereditarietà in C#, vedere [Ereditarietà](programming-guide/classes-and-structs/inheritance.md).  
   
-- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET Framework e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](language-reference/keywords/struct.md) sono tipi di valore e tutti i tipi numerici predefiniti sono tipi **struct**. Per altre informazioni sui tipi di valori, vedere [Struct](structs.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](programming-guide/classes-and-structs/classes.md). I tipi riferimento e i tipi valore hanno regole diverse in fase di compilazione e un comportamento diverso in fase di esecuzione.
+- Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET Framework e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](language-reference/keywords/struct.md) sono tipi di valore e tutti i tipi numerici predefiniti sono tipi **struct**. Per altre informazioni sui tipi di valori, vedere [Struct](structs.md). I tipi definiti tramite la parola chiave [class](language-reference/keywords/class.md) sono tipi riferimento. Per altre informazioni sui tipi di riferimento, vedere [Classi](programming-guide/classes-and-structs/classes.md). I tipi di riferimento e i tipi di valore hanno regole diverse e un comportamento diverso in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 

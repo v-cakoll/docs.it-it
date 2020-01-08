@@ -1,17 +1,17 @@
 ---
-title: "Procedura: eseguire la ricerca all'interno di una stringa-Visual Basic"
+title: "Procedura: eseguire la ricerca all'interno di una stringa"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 655f746e4e496e1935afcd2a9f9fe36d9e3a2564
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700069"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348415"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Procedura: eseguire la ricerca all'interno di una stringa (Visual Basic)
 
@@ -29,9 +29,9 @@ Il metodo <xref:System.String.IndexOf%2A> restituisce la posizione del primo car
 
 Se <xref:System.String.IndexOf%2A> non trova la sottostringa, viene restituito-1.
 
-Il metodo <xref:System.String.IndexOf%2A> fa distinzione tra maiuscole e minuscole e usa le impostazioni cultura correnti.
+Il metodo <xref:System.String.IndexOf%2A> distingue tra maiuscole e minuscole e usa le impostazioni cultura correnti.
 
-Per un controllo degli errori ottimale, potrebbe essere necessario racchiudere la ricerca della stringa nel blocco `Try` di un [try... Rileva... Costruzione di istruzioni finally](../../../language-reference/statements/try-catch-finally-statement.md) .
+Per un controllo degli errori ottimale, potrebbe essere necessario racchiudere la ricerca della stringa nel blocco `Try` di un'operazione [try... Rileva... Costruzione di istruzioni finally](../../../language-reference/statements/try-catch-finally-statement.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

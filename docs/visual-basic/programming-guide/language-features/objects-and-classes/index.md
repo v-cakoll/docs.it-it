@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346709"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344643"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 
@@ -71,7 +71,7 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>Elenco di membri IntelliSense
 
-Quando si richiama l'opzione Elenca membri relativa a una classe, ad esempio quando si digita un punto (`.`) come operatore di accesso ai membri, IntelliSense elenca i membri di tale classe. Se si digita il punto dopo il nome di una variabile dichiarata come istanza della classe, vengono elencati tutti i membri di istanza ma nessuno dei membri condivisi. Se si digita il punto dopo il nome della classe, vengono elencati tutti i membri condivisi ma nessuno dei membri di istanza. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).
+Quando si richiama l'opzione Elenca membri relativa a una classe, ad esempio quando si digita un punto (`.`) come operatore di accesso ai membri, IntelliSense elenca i membri di tale classe. Se si digita il punto dopo il nome di una variabile dichiarata come istanza della classe, vengono elencati tutti i membri di istanza ma nessuno dei membri condivisi. Se si digita il punto dopo il nome della classe, vengono elencati tutti i membri condivisi ma nessuno dei membri di istanza. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="fields-and-properties"></a>Campi e proprietà
 
@@ -98,7 +98,7 @@ Usare le routine delle proprietà nei casi seguenti:
 
 Usare i campi nei casi seguenti:
 
-- Il valore è di tipo auto-convalidante. Ad esempio, se a una variabile `True` viene assegnato un valore diverso da `False` o `Boolean`, si verifica un errore o una conversione automatica di dati.
+- Il valore è di tipo auto-convalidante. Ad esempio, se a una variabile `Boolean` viene assegnato un valore diverso da `True` o `False`, si verifica un errore o una conversione automatica di dati.
 
 - Tutti i valori compresi nell'intervallo supportato dal tipo dati sono validi. Questa affermazione è vera per diverse proprietà di tipo `Single` o `Double`.
 
@@ -212,9 +212,9 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
    Public Class reversibleButton
    ```
 
-   Verificare che l'ultima riga di codice della classe sia seguita da un'istruzione `End Class`. Per impostazione predefinita, quando si immette un'istruzione `End Class` l'ambiente di sviluppo integrato (IDE) genera automaticamente un'istruzione `Class`.
+   Verificare che l'ultima riga di codice della classe sia seguita da un'istruzione `End Class`. Per impostazione predefinita, quando si immette un'istruzione `Class` l'ambiente di sviluppo integrato (IDE) genera automaticamente un'istruzione `End Class`.
 
-2. Aggiungere un'`Class`istruzione Inherits[ subito dopo l'istruzione ](../../../../visual-basic/language-reference/statements/inherits-statement.md). Specificare la classe dalla quale deriva la nuova classe.
+2. Aggiungere un'[istruzione Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md) subito dopo l'istruzione `Class`. Specificare la classe dalla quale deriva la nuova classe.
 
    ```vb
    Inherits System.Windows.Forms.Button
@@ -239,7 +239,7 @@ Nell'esempio seguente, si supponga di voler definire un tipo speciale di classe 
 
 Le classi derivate ereditano i membri della classe su cui sono basate, consentendo di raggiungere una maggiore complessità mano a mano che si avanza nella gerarchia. Per altre informazioni, vedere [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Compilazione del codice
+### <a name="compile-the-code"></a>Compilare il codice
 
 Verificare che il compilatore possa accedere alla classe da cui si vuole derivare la nuova classe. A tale scopo è possibile fornire il nome completo della classe, come nell'esempio precedente, oppure specificare il relativo spazio dei nomi in un'[istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se la classe si trova in un progetto differente, può essere necessario aggiungere un riferimento a tale progetto. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
 

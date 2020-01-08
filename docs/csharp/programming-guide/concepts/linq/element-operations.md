@@ -2,12 +2,12 @@
 title: Operazioni sugli elementi (C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594583"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345153"
 ---
 # <a name="element-operations-c"></a>Operazioni sugli elementi (C#)
 
@@ -17,7 +17,7 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|DESCRIZIONE|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |ElementAt|Restituisce l'elemento in corrispondenza dell'indice specificato in una Collection.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|Restituisce l'elemento in corrispondenza di un indice specificato in una Collection o un valore predefinito se l'indice è esterno all'intervallo.|Non applicabile.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
@@ -32,4 +32,4 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
 
 - <xref:System.Linq>
 - [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
-- [Procedura: Eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [Come eseguire una query per il file o i file più grandi in un albero di directoryC#(LINQ) ()](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

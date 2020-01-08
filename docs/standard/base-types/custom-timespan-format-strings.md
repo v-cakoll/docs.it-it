@@ -1,5 +1,5 @@
 ---
-title: Stringhe in formato TimeSpan personalizzato - .NET
+title: Stringhe in formato TimeSpan personalizzato
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126560"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348312"
 ---
 # <a name="custom-timespan-format-strings"></a>Stringhe in formato TimeSpan personalizzato
 
-Una stringa in formato <xref:System.TimeSpan> definisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> risultante da un'operazione di formattazione. Una stringa in formato personalizzato è costituita da uno o più identificatori in formato <xref:System.TimeSpan> personalizzato con un numero qualsiasi di caratteri di tipo letterale. Qualsiasi stringa in un formato diverso da [TimeSpan standard](standard-timespan-format-strings.md) viene interpretata come stringa in formato <xref:System.TimeSpan> personalizzato.
+Una stringa in formato <xref:System.TimeSpan> definisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> risultante da un'operazione di formattazione. Una stringa in formato personalizzato è costituita da uno o più identificatori in formato <xref:System.TimeSpan> personalizzato con un numero qualsiasi di caratteri di tipo letterale. Qualsiasi stringa che non sia una [stringa di formato TimeSpan standard](standard-timespan-format-strings.md) viene interpretata come una stringa di formato <xref:System.TimeSpan> personalizzata.
 
 > [!IMPORTANT]
 > Gli identificatori di formato <xref:System.TimeSpan> personalizzati non includono i simboli separatori dei segnaposto, ad esempio i simboli che separano i giorni dalle ore, le ore dai minuti o i secondi dalle frazioni di secondo. Questi simboli devono essere inclusi nella stringa di formato personalizzato come valori letterali stringa. Ad esempio, in `"dd\.hh\:mm"` il punto (.) è definito come separatore tra giorni e ore e i due punti (:) come separatore tra ore e minuti.

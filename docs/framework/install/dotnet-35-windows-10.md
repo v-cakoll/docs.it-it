@@ -1,15 +1,15 @@
 ---
-title: Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
+title: Installare .NET Framework 3,5 in Windows 10, 8,1, 8
 description: Informazioni sull'installazione di .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8.
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.openlocfilehash: 16bc8b48d3e54cf3094b6bcc7a47ef863fa639b2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319145"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344839"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
 
@@ -29,7 +29,7 @@ Se si prova a eseguire un'app che richiede .NET Framework 3.5 può essere visual
 
 .NET Framework 3.5 può essere abilitato dal Pannello di controllo di Windows. Per questa opzione è necessaria una connessione Internet.
 
-1. Premere il tasto Windows ![Screenshot il logo del tasto Windows. ](./media/dotnet-35-windows-10/windows-keyboard-logo.png) sulla tastiera digitare "funzionalità Windows" e premere INVIO. Viene visualizzata la finestra di dialogo **Attivazione o disattivazione delle funzionalità Windows**.
+1. Premere il tasto Windows ![screenshot del logo della chiave di Windows.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) sulla tastiera digitare "funzionalità Windows" e premere INVIO. Viene visualizzata la finestra di dialogo **Attivazione o disattivazione delle funzionalità Windows**.
 
 2. Selezionare la casella di controllo **.NET Framework 3.5 (include .NET 2.0 e 3.0)** , selezionare **OK** e riavviare il computer, se richiesto.
 

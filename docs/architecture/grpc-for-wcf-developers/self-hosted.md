@@ -2,12 +2,12 @@
 title: Applicazioni gRPC self-hosted-gRPC per sviluppatori WCF
 description: Distribuzione di ASP.NET Core applicazioni gRPC come servizi indipendenti.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967217"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545070"
 ---
 # <a name="self-hosted-grpc-applications"></a>Applicazioni gRPC indipendenti
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 A questo punto, pubblicare l'applicazione, da Visual Studio facendo clic con il pulsante destro del mouse sul progetto e scegliendo *pubblica* dal menu di scelta rapida o dalla interfaccia della riga di comando di .NET Core.
 
-Quando si pubblica un'applicazione .NET Core, è possibile scegliere di creare una distribuzione *dipendente dal Framework* o una distribuzione *autonoma* . Per le distribuzioni dipendenti dal Framework è necessario che il runtime condiviso di .NET Core sia installato nell'host in cui vengono eseguiti. Le distribuzioni autosufficienti sono pubblicate con una copia completa del Framework e del runtime di .NET Core e possono essere eseguite in qualsiasi host. Per ulteriori informazioni, inclusi i vantaggi e gli svantaggi di ogni approccio, vedere la documentazione relativa alla [distribuzione di applicazioni .NET Core](https://docs.microsoft.com/dotnet/core/deploying/) .
+Quando si pubblica un'applicazione .NET Core, è possibile scegliere di creare una distribuzione *dipendente dal Framework* o una distribuzione *autonoma* . Per le distribuzioni dipendenti dal Framework è necessario che il runtime condiviso di .NET Core sia installato nell'host in cui vengono eseguiti. Le distribuzioni autosufficienti sono pubblicate con una copia completa del Framework e del runtime di .NET Core e possono essere eseguite in qualsiasi host. Per ulteriori informazioni, inclusi i vantaggi e gli svantaggi di ogni approccio, vedere la documentazione relativa alla [distribuzione di applicazioni .NET Core](../../core/deploying/index.md) .
 
 Per pubblicare una compilazione autonoma dell'applicazione che non richiede l'installazione del runtime di .NET Core 3,0 nell'host, specificare il runtime da includere nell'applicazione usando il flag `-r` (o `--runtime`).
 
@@ -150,7 +150,7 @@ Per ulteriori informazioni sull'esecuzione di query sul Journal systemd dalla ri
 
 Quando si esegue un'applicazione gRPC in produzione, è necessario usare un certificato TLS da un'autorità di certificazione (CA) attendibile. Questa CA può essere una CA pubblica o un'altra per l'organizzazione.
 
-Negli host Windows, il certificato può essere caricato da un [archivio certificati](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) protetto usando la [classe X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). La classe `X509Store` può essere usata anche con l'archivio chiavi OpenSSL in alcuni host Linux.
+Negli host Windows, il certificato può essere caricato da un [archivio certificati](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) protetto usando la classe <xref:System.Security.Cryptography.X509Certificates.X509Store>. La classe `X509Store` può essere usata anche con l'archivio chiavi OpenSSL in alcuni host Linux.
 
 I certificati possono essere creati anche usando uno dei [costruttori X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), da un file, ad esempio un file di `.pfx` protetto da una password complessa, o da dati binari recuperati da un servizio di archiviazione protetto, ad esempio [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 

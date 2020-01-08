@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Sottoscrivere e annullare la sottoscrizione di eventi - Guida per programmatori C#'
+title: Come sottoscrivere e annullare la sottoscrizione di eventi- C# Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e194501d7619d4bc04dec6a10d34fb2b01be2c7a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590405"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346320"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: Sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Come sottoscrivere e annullare la sottoscrizione di eventi (C# guida per programmatori)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Per sottoscrivere gli eventi usando l'IDE di Visual Studio  
@@ -102,6 +102,6 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
 
 - [Eventi](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Come pubblicare eventi conformi alle linee guida di .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operatori - e -=](../../language-reference/operators/subtraction-operator.md)
 - [Operatori + e +=](../../language-reference/operators/addition-operator.md)

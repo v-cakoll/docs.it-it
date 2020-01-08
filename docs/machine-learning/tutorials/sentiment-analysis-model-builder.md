@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551853"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344957"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: analizzare i sentimenti dei commenti del sito Web in un'applicazione Web usando il generatore di modelli ML.NET
 
@@ -62,7 +62,7 @@ Ogni riga nel set di dati *Wikipedia-Detox-250-line-data. TSV* rappresenta una r
 | :---: | :---: |
 1 | = = RUDE = = Dude, l'utente non è in grado di caricare nuovamente l'immagine di Carl, altrimenti.
 1 | = = OK! = = IM PASSERÀ A VANDALIZZARE WILD A UN WIKI, QUINDI!!!
-0 | Spero che questo possa essere utile.
+0 | Spero che sia un'indicazione utile.
 
 ## <a name="choose-a-scenario"></a>Scegliere uno scenario
 
@@ -304,4 +304,4 @@ Per altre informazioni sugli argomenti presentati in questa esercitazione, veder
 
 - [Scenari del generatore di modelli](../automate-training-with-model-builder.md#scenarios)
 - [Classificazione binaria](../resources/glossary.md#binary-classification)
-- [Metriche del modello di classificazione binaria](../resources/metrics.md#metrics-for-binary-classification)
+- [Metriche del modello di classificazione binaria](../resources/metrics.md#evaluation-metrics-for-binary-classification)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Scrivere una query per trovare elementi in base al contesto (C#)'
+title: Come scrivere una query per trovare elementi in base al contesto (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253209"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348372"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Procedura: Scrivere una query per trovare elementi in base al contesto (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Come scrivere una query per trovare elementi in base al contesto (C#)
 A volte può essere necessario scrivere una query per selezionare gli elementi in base al contesto. In questo caso è anche possibile scegliere un filtro basato sugli elementi di pari livello precedenti o successivi oppure sugli elementi figlio o sui predecessori.  
   
  Per ottenere questo risultato, scrivere una query e usare i relativi risultati nella clausola `where`. Se è necessario verificare innanzitutto la presenza di valori Null e quindi testare il valore, è preferibile eseguire la query in una clausola `let` e poi usare i risultati nella clausola `where`.  

@@ -1,18 +1,18 @@
 ---
-title: "Procedura: dichiarare, creare un'istanza e utilizzare una guida per la C# programmazione di delegati"
+title: Come dichiarare, creare un'istanza e usare una guida per la C# programmazione di delegati
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 02c3087d27e5018b77079a2dd6f260a0e7232d3a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423328"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346377"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: dichiarare un delegato, crearne un'istanza e utilizzarlo (Guida per programmatori C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Come dichiarare, creare un'istanza e usare un delegato (C# guida per programmatori)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -56,7 +56,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     In questo modo viene creato un nuovo oggetto delegato associato al metodo [statico](../../language-reference/keywords/static.md) `Test.PrintTitle`. Analogamente, il metodo non statico `AddBookToTotal` dell'oggetto `totaller` viene passato come illustrato nell'esempio seguente:  
+     In questo modo viene creato un nuovo oggetto delegato associato al metodo [statico](../../language-reference/keywords/static.md)`Test.PrintTitle`. Analogamente, il metodo non statico `AddBookToTotal` dell'oggetto `totaller` viene passato come illustrato nell'esempio seguente:  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   

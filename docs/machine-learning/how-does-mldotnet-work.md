@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7d15c49ade4cd32389f7c86440b3a66aec8e4ea8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976730"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345192"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -127,11 +127,11 @@ Sia il modello di tariffazione delle unità immobiliari sia il modello di classi
 
 ## <a name="data-preparation"></a>Preparazione dei dati
 
-Nella maggior parte dei casi i dati disponibili non sono pronti per l'uso nel training di un modello di Machine Learning. I dati non elaborati devono essere preparati o preelaborati prima di poter essere usati per trovare i parametri del modello. Può essere necessaria la conversione dei dati da valori stringa a una rappresentazione numerica. I dati di input potrebbero contenere informazioni ridondanti. Potrebbe essere necessario ridurre o espandere le dimensioni dei dati di input. I dati potrebbero richiedere la normalizzazione o la scalatura.
+Nella maggior parte dei casi i dati disponibili non sono pronti per l'uso nel training di un modello di Machine Learning. I dati non elaborati devono essere preparati o pre-elaborati prima di poter essere utilizzati per trovare i parametri del modello. Può essere necessaria la conversione dei dati da valori stringa a una rappresentazione numerica. I dati di input potrebbero contenere informazioni ridondanti. Potrebbe essere necessario ridurre o espandere le dimensioni dei dati di input. I dati potrebbero richiedere la normalizzazione o la scalatura.
 
 Le [esercitazioni di ML.NET](./tutorials/index.md) illustrano diverse pipeline di elaborazione per dati di testo, immagini, serie temporali e dati numerici usati per attività di apprendimento automatico specifiche.
 
-[How to prepare your data](./how-to-guides/prepare-data-ml-net.md) (Come preparare i dati) illustra come applicare la preparazioni dei dati a livello generale.
+La [procedura per preparare i dati](./how-to-guides/prepare-data-ml-net.md) Mostra come applicare la preparazione dei dati più in generale.
 
 Un'appendice con tutte le [trasformazioni](./resources/transforms.md) è disponibile nella sezione delle risorse.
 
@@ -183,7 +183,7 @@ Un'applicazione ML.NET inizia con un oggetto <xref:Microsoft.ML.MLContext>. Ques
 ||Previsione|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Ranking|<xref:Microsoft.ML.RankingCatalog>||
 ||Regressione|<xref:Microsoft.ML.RegressionCatalog>||
-||Consiglio|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
+||Indicazione|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.TimeSeries`|
 |Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
@@ -212,7 +212,7 @@ Dopo che sono stati creati gli oggetti nella pipeline, è possibile usare i dati
     var model = pipeline.Fit(trainingData);
 ```
 
-La chiamata di `Fit()` usa i dati di training di input per stimare i parametri del modello. Questo processo è noto come training del modello. Ricordare che il modello di regressione lineare precedente aveva due parametri di modello: **bias** e **weight**. Dopo la chiamata `Fit()` i valori dei parametri sono noti. La maggior parte dei modelli ha un numero di parametri di molto superiore a questo.
+La chiamata di `Fit()` usa i dati di training di input per stimare i parametri del modello. Tale processo è noto come training del modello. Ricordare che il modello di regressione lineare precedente aveva due parametri di modello: **bias** e **weight**. Dopo la chiamata `Fit()` i valori dei parametri sono noti. La maggior parte dei modelli ha un numero di parametri di molto superiore a questo.
 
 Per altre informazioni sul training del modello, vedere [Come eseguire il training del modello](./how-to-guides/train-machine-learning-model-ml-net.md)
 
@@ -242,7 +242,7 @@ Ogni trasformazione nella pipeline presenta uno schema di input (nomi, tipi e di
 
 Se lo schema di output di una trasformazione della pipeline non corrisponde allo schema di input della trasformazione successiva, ML.NET genera un'eccezione.
 
-Un oggetto visualizzazione include colonne e righe. Ogni colonna ha un nome, un tipo e una lunghezza. Ad esempio, le colonne di input nell'esempio dei prezzi di unità immobiliari sono **Size** (Dimensioni) e **Price** (Prezzo). Sono entrambe di un tipo e sono quantità scalari anziché vettoriali.
+Un oggetto visualizzazione include colonne e righe. Ogni colonna ha un nome, un tipo e una lunghezza. Ad esempio, le colonne di input nell'esempio del prezzo della casa sono **size** e **Price**. Sono entrambi di tipo e sono quantità scalari piuttosto che vettoriali.
 
    ![Esempio di visualizzazione dati ML.NET con dati di stima dei prezzi di unità immobiliari](./media/ml-net-dataview.png)
 

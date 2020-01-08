@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: Informazioni sul modo in cui LINQ offre funzionalità per eseguire query a livello di linguaggio e un'API per C# e VB che consente di scrivere codice dichiarativo ed espressivo.
+description: Informazioni su come LINQ fornisce funzionalità di query a livello di linguaggio e un' C# API a e Visual Basic come modo per scrivere codice dichiarativo espressivo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: HT
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347266"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>Descrizione
 
-LINQ offre funzionalità per eseguire query a livello di linguaggio e un'API con [funzione di ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) per C# e VB che consente di scrivere codice dichiarativo ed espressivo.
+LINQ fornisce funzionalità di query a livello di linguaggio e un'API di [funzione di ordine superiore](https://en.wikipedia.org/wiki/Higher-order_function) a C# e Visual Basic come modo per scrivere codice dichiarativo espressivo.
 
 Sintassi di query a livello di linguaggio:
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ o Parallel LINQ è un motore di esecuzione parallela per le espressioni LINQ. In altre parole, un'espressione LINQ può essere facilmente parallelizzata su un numero qualsiasi di thread. Questa operazione viene eseguita chiamando `AsParallel()`, che precede l'espressione.
 
-Si consideri quanto segue.
+Tenere presente quanto riportato di seguito:
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -395,5 +395,5 @@ I processi basati su CPU parallelizzabili che possono essere espressi facilmente
 ## <a name="further-resources"></a>Altre risorse:
 
 * [101 esempi di LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), un ambiente di sviluppo e un motore di query sul database per C#/F#/VB
+* [LINQPad](https://www.linqpad.net/), un ambiente Playground e un motore di query di C#databaseF#per//Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un e-book per scoprire come implementare LINQ-to-objects

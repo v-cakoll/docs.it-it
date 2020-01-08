@@ -1,40 +1,40 @@
 ---
-title: Sicurezza del trasporto con un client anonimo - WCF
+title: Sicurezza del trasporto con un client anonimo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637444"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344750"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Sicurezza del trasporto con un client anonimo
 
-Questo scenario di Windows Communication Foundation (WCF) Usa sicurezza del trasporto (HTTPS) per garantire la riservatezza e integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.
+In questo scenario Windows Communication Foundation (WCF) viene utilizzata la sicurezza del trasporto (HTTPS) per garantire la riservatezza e l'integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.
 
-Per un'applicazione di esempio, vedere [la sicurezza del trasporto WS](../samples/ws-transport-security.md). Per altre informazioni sulla sicurezza del trasporto, vedere [Cenni preliminari sulla sicurezza di trasporto](transport-security-overview.md).
+Per un'applicazione di esempio, vedere la pagina relativa alla [sicurezza del trasporto WS](../samples/ws-transport-security.md). Per ulteriori informazioni sulla sicurezza del trasporto, vedere [Panoramica della sicurezza del trasporto](transport-security-overview.md).
 
-Per altre informazioni sull'uso di un certificato con un servizio, vedere [Working with Certificates](working-with-certificates.md) e [come: Configurare una porta con un certificato SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
+Per ulteriori informazioni sull'utilizzo di un certificato con un servizio, vedere [utilizzo dei certificati](working-with-certificates.md) e [procedura: configurare una porta con un certificato SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
 ![Utilizzo della sicurezza del trasporto con un client anonimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |Caratteristica|Descrizione|
 |--------------------|-----------------|
-|Modalità di sicurezza|Trasporto|
+|Modalità di sicurezza|Transport|
 |Interoperabilità|Con i servizi Web e i client esistenti|
-|Autenticazione (server)<br /><br /> Autenticazione (client)|Yes<br /><br /> Livello di applicazione (Nessun supporto WCF)|
-|Integrità|Yes|
-|Riservatezza|Yes|
-|Trasporto|HTTPS|
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|
+|Autenticazione (server)<br /><br /> Autenticazione (client)|Sì<br /><br /> Livello applicazione (nessun supporto WCF)|
+|Integrità|Sì|
+|Riservatezza|Sì|
+|Transport|HTTPS|
+|Associazione|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Service
+## <a name="service"></a>Servizio
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
 
 - Creare un servizio autonomo usando il codice senza alcuna configurazione.
 
@@ -47,7 +47,7 @@ Nel codice seguente viene illustrato come creare un endpoint utilizzando la prot
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>Configurazione
+### <a name="configuration"></a>Configurazione di
 
 Nel codice seguente viene impostato lo stesso endpoint utilizzando la configurazione. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.
 
@@ -80,7 +80,7 @@ Nel codice seguente viene impostato lo stesso endpoint utilizzando la configuraz
 
 ## <a name="client"></a>Client
 
-Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:
+Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Effettuare una delle seguenti operazioni:
 
 - Creare un client autonomo usando il codice (e il codice client).
 
@@ -94,7 +94,7 @@ Il codice e la configurazione seguenti devono essere eseguiti in modo indipenden
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>Configurazione
+### <a name="configuration"></a>Configurazione di
 
 Per configurare il servizio, è possibile utilizzare la configurazione seguente anziché il codice.
 

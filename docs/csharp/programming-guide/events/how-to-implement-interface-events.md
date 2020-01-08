@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Implementare gli eventi di interfaccia - Guida per programmatori C#'
+title: Come implementare gli eventi di interfaccia C# -Guida alla programmazione
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cd2192d6146a431559f5cd9dd1a80da577695d66
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590513"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346344"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Procedura: Implementare gli eventi di interfaccia (Guida per programmatori C#)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Come implementare gli eventi di interfacciaC# (Guida per programmatori)
 Un'[interfaccia](../../language-reference/keywords/interface.md) consente di dichiarare un [evento](../../language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Per implementare eventi di interfaccia in una classe  
@@ -64,4 +64,4 @@ Fornendo funzioni di accesso personalizzate, è possibile specificare se i due e
 - [Eventi](./index.md)
 - [Delegati](../delegates/index.md)
 - [Implementazione esplicita dell'interfaccia](../interfaces/explicit-interface-implementation.md)
-- [Procedura: Generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)
+- [Come generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)

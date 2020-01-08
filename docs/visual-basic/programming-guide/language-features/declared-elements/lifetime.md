@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345306"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347771"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durata in Visual Basic
 La *durata* di un elemento dichiarato è il periodo di tempo durante il quale è disponibile per l'utilizzo. Le variabili sono gli unici elementi con durata. A questo scopo, il compilatore considera i parametri della routine e la funzione restituisce come casi speciali di variabili. La durata di una variabile rappresenta il periodo di tempo durante il quale può conservare un valore. Il valore può variare nel corso della sua durata, ma include sempre un valore.  
@@ -65,10 +65,10 @@ La *durata* di un elemento dichiarato è il periodo di tempo durante il quale è
   
  Se `applesSold` stata dichiarata senza usare `Static`, i valori accumulati precedenti non verrebbero conservati tra le chiamate al `runningTotal`. Alla successiva chiamata di `runningTotal`, `applesSold` sarebbe stato ricreato e inizializzato su 0 e `runningTotal` avrebbe restituito semplicemente lo stesso valore con cui è stato chiamato.  
   
-### <a name="compiling-the-code"></a>Compilazione del codice  
+### <a name="compile-the-code"></a>Compilare il codice  
  È possibile inizializzare il valore di una variabile locale statica come parte della relativa dichiarazione. Se si dichiara una matrice da `Static`, è possibile inizializzare il relativo rango (numero di dimensioni), la lunghezza di ogni dimensione e i valori dei singoli elementi.  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Sicurezza -  
  Nell'esempio precedente, è possibile produrre la stessa durata dichiarando `applesSold` a livello di modulo. Se l'ambito di una variabile è stato modificato in questo modo, tuttavia, la procedura non avrà più accesso esclusivo. Poiché altre procedure possono accedere `applesSold` e modificarne il valore, il totale parziale potrebbe non essere affidabile e il codice potrebbe essere più difficile da gestire.  
   
 ## <a name="see-also"></a>Vedere anche

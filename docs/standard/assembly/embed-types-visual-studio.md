@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733195"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338549"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Procedura dettagliata: incorporare i tipi da assembly gestiti in Visual Studio
 
@@ -22,7 +22,7 @@ Dopo aver specificato le interfacce pubbliche che possono essere incorporate, è
 
 Se si crea una nuova versione dell'assembly di runtime con nome sicuro, non è necessario ricompilare il programma client. Il programma client continua a usare la versione dell'assembly di runtime disponibile, usando le informazioni sul tipo incorporate per le interfacce pubbliche.
 
-In questa procedura dettagliata vengono illustrate le operazioni seguenti:
+Questa procedura dettagliata è costituita dai passaggi seguenti:
 
 1. Creare un assembly con nome sicuro con un'interfaccia pubblica che contiene informazioni sul tipo che possono essere incorporate.
 1. Creare un assembly di runtime con nome sicuro che implementi l'interfaccia pubblica.
@@ -53,7 +53,7 @@ Il primo passaggio consiste nel creare l'assembly dell'interfaccia di equivalenz
 
 1. In Visual Studio selezionare **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *libreria di classi* nella casella **Cerca modelli** . Selezionare il C# modello libreria di **classi o VB (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
+1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *libreria di classi* nella casella **Cerca modelli** . Selezionare il C# modello o Visual Basic **libreria di classi (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
 
 1. Nella finestra di dialogo **Configura nuovo progetto** , in **nome progetto**, digitare *TypeEquivalenceInterface*e quindi selezionare **Crea**. Il nuovo progetto viene creato.
 
@@ -110,7 +110,7 @@ Il primo passaggio consiste nel creare l'assembly dell'interfaccia di equivalenz
    <Assembly: ImportedFromTypeLib("")>
    ```
 
-1. Selezionare **file**  > **Salva tutto** oppure premere **CTRL** +**MAIUSC** +**S** per salvare i file e il progetto.
+1. Selezionare **file** > **Salva tutto** oppure premere **CTRL**+**MAIUSC**+**S** per salvare i file e il progetto.
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceInterface** e selezionare **Compila**. Il file DLL della libreria di classi viene compilato e salvato nel percorso dell'output di compilazione specificato, ad esempio *C:\TypeEquivalenceSample*.
 
@@ -120,7 +120,7 @@ Successivamente, creare la classe runtime di equivalenza del tipo.
 
 1. In Visual Studio selezionare **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *libreria di classi* nella casella **Cerca modelli** . Selezionare il C# modello libreria di **classi o VB (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
+1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *libreria di classi* nella casella **Cerca modelli** . Selezionare il C# modello o Visual Basic **libreria di classi (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
 
 1. Nella finestra di dialogo **Configura nuovo progetto** , in **nome progetto**, digitare *TypeEquivalenceRuntime*e quindi selezionare **Crea**. Il nuovo progetto viene creato.
 
@@ -134,7 +134,7 @@ Successivamente, creare la classe runtime di equivalenza del tipo.
 
 1. Nella finestra di dialogo **Crea chiave con nome sicuro** , in **nome file di chiave**, digitare *Key. snk*. Deselezionare la casella **di controllo Proteggi file di chiave con una password** e quindi fare clic su **OK**.
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceRuntime** e scegliere **Aggiungi**  > **riferimento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceRuntime** e scegliere **Aggiungi** > **riferimento**.
 
 1. Nella finestra di dialogo **Gestione riferimenti** selezionare **Sfoglia** e passare alla cartella percorso di output. Selezionare il file *TypeEquivalenceInterface. dll* , selezionare **Aggiungi**e quindi fare clic su **OK**.
 
@@ -182,7 +182,7 @@ Successivamente, creare la classe runtime di equivalenza del tipo.
    End Class
    ```
 
-1. Selezionare **file**  > **Salva tutto** oppure premere **CTRL** +**MAIUSC** +**S** per salvare i file e il progetto.
+1. Selezionare **file** > **Salva tutto** oppure premere **CTRL**+**MAIUSC**+**S** per salvare i file e il progetto.
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceRuntime** e selezionare **Compila**. Il file DLL della libreria di classi viene compilato e salvato nel percorso dell'output di compilazione specificato.
 
@@ -192,7 +192,7 @@ Infine, creare un programma client di equivalenza del tipo che fa riferimento al
 
 1. In Visual Studio selezionare **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *console* nella casella **Cerca modelli** . Selezionare il modello C# o l' **app Console VB (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
+1. Nella finestra di dialogo **Crea un nuovo progetto** Digitare *console* nella casella **Cerca modelli** . Selezionare il C# modello o Visual Basic **App Console (.NET Framework)** nell'elenco e quindi fare clic su **Avanti**.
 
 1. Nella finestra di dialogo **Configura nuovo progetto** , in **nome progetto**, digitare *TypeEquivalenceClient*e quindi selezionare **Crea**. Il nuovo progetto viene creato.
 
@@ -200,7 +200,7 @@ Infine, creare un programma client di equivalenza del tipo che fa riferimento al
 
 1. Selezionare **Compila** nel riquadro sinistro della schermata **Proprietà** , quindi impostare il **percorso di output** sullo stesso percorso usato per il progetto TypeEquivalenceInterface, ad esempio *C:\TypeEquivalenceSample*.
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceClient** e scegliere **Aggiungi**  > **riferimento**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceClient** e scegliere **Aggiungi** > **riferimento**.
 
 1. Se il file **TypeEquivalenceInterface. dll** è già elencato nella finestra di dialogo **Gestione riferimenti** , selezionarlo. In caso contrario, selezionare **Sfoglia**, passare alla cartella percorso output, selezionare il file *TypeEquivalenceInterface. dll* (non *TypeEquivalenceRuntime. dll*) e selezionare **Aggiungi**. Scegliere **OK**.
 
@@ -250,15 +250,15 @@ Infine, creare un programma client di equivalenza del tipo che fa riferimento al
    End Module
    ```
 
-1. Selezionare **file**  > **Salva tutto** oppure premere **CTRL** +**MAIUSC** +**S** per salvare i file e il progetto.
+1. Selezionare **file** > **Salva tutto** oppure premere **CTRL**+**MAIUSC**+**S** per salvare i file e il progetto.
 
-1. Premere **Ctrl** +**F5** per compilare ed eseguire il programma. Si noti che l'output della console restituisce l'assembly versione **1.0.0.0**.
+1. Premere **Ctrl**+**F5** per compilare ed eseguire il programma. Si noti che l'output della console restituisce l'assembly versione **1.0.0.0**.
 
 ## <a name="modify-the-interface"></a>Modificare l'interfaccia
 
 Modificare ora l'assembly dell'interfaccia e modificarne la versione.
 
-1. In Visual Studio selezionare **File**  > **aprire**  > **progetto/soluzione**e aprire il progetto **TypeEquivalenceInterface** .
+1. In Visual Studio selezionare **File** > **aprire** > **progetto/soluzione**e aprire il progetto **TypeEquivalenceInterface** .
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceInterface** e scegliere **proprietà**.
 
@@ -276,7 +276,7 @@ Modificare ora l'assembly dell'interfaccia e modificarne la versione.
    Function GetDate() As Date
    ```
 
-1. Selezionare **file**  > **Salva tutto** oppure premere **CTRL** +**MAIUSC** +**S** per salvare i file e il progetto.
+1. Selezionare **file** > **Salva tutto** oppure premere **CTRL**+**MAIUSC**+**S** per salvare i file e il progetto.
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceInterface** e selezionare **Compila**. Una nuova versione del file DLL della libreria di classi viene compilata e salvata nel percorso dell'output di compilazione.
 
@@ -284,7 +284,7 @@ Modificare ora l'assembly dell'interfaccia e modificarne la versione.
 
 Modificare anche la classe runtime e aggiornarne la versione.
 
-1. In Visual Studio selezionare **File**  > **aprire**  > **progetto/soluzione**e aprire il progetto **TypeEquivalenceRuntime** .
+1. In Visual Studio selezionare **File** > **aprire** > **progetto/soluzione**e aprire il progetto **TypeEquivalenceRuntime** .
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceRuntime** e scegliere **proprietà**.
 
@@ -307,7 +307,7 @@ Modificare anche la classe runtime e aggiornarne la versione.
    End Function
    ```
 
-1. Selezionare **file**  > **Salva tutto** oppure premere **CTRL** +**MAIUSC** +**S** per salvare i file e il progetto.
+1. Selezionare **file** > **Salva tutto** oppure premere **CTRL**+**MAIUSC**+**S** per salvare i file e il progetto.
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **TypeEquivalenceRuntime** e selezionare **Compila**. Una nuova versione del file DLL della libreria di classi viene compilata e salvata nel percorso dell'output di compilazione.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 310d0abd8fd2ceac5f8dfaa2647cb6ac26513a0f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418037"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346400"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegati con metodi denominati e anonimi (Guida per programmatori C#)
 È possibile associare un [delegato](../../language-reference/builtin-types/reference-types.md) a un metodo denominato. Quando si crea un'istanza di un delegato usando un metodo denominato, il metodo viene passato come parametro, ad esempio:  
@@ -41,5 +41,5 @@ ms.locfileid: "73418037"
 
 - [Guida per programmatori C#](../index.md)
 - [Delegati](./index.md)
-- [Procedura: Combinare delegati multicast](./how-to-combine-delegates-multicast-delegates.md)
+- [Come combinare delegati (delegati multicast)](./how-to-combine-delegates-multicast-delegates.md)
 - [Eventi](../events/index.md)

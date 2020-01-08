@@ -2,12 +2,12 @@
 title: Modifiche di rilievo di .NET Core
 description: Informazioni sulle modifiche di rilievo in ogni versione di .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3e1b2a7d0edea1c06af340711182e533aa007c61
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568044"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343737"
 ---
 # <a name="breaking-change-selectors"></a>Selettori modifiche di rilievo
 
@@ -15,9 +15,12 @@ I selettori di versione e di area seguenti forniscono un elenco filtrato delle m
 
 ## <a name="by-version"></a>Per versione
 
-Selezionare la versione di .NET Core attualmente destinata, quindi la versione di .NET Core a cui si vuole eseguire la migrazione:
+Selezionare la versione di .NET a cui si è attualmente destinati e quindi la versione di .NET Core di cui si vuole eseguire la migrazione:
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+
+> [!TIP]
+> Se si esegue la migrazione di un'app Windows Forms da .NET Framework a .NET Core, vedere [modifiche di rilievo in Windows Forms (.NET Framework a .NET Core)](../porting/winforms-breaking-changes.md) invece di usare il selettore di versione.
 
 ## <a name="by-area"></a>Per area
 

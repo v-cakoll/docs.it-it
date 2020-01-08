@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)'
+title: Come eseguire una query per i file con un attributo o unC#nome specifico ()
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592894"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346720"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Come eseguire una query per i file con un attributo o unC#nome specifico ()
 In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato. Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.  
   
 ## <a name="example"></a>Esempio  

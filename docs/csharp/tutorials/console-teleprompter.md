@@ -4,12 +4,12 @@ description: Questa esercitazione illustra alcune funzionalità disponibili in .
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 0eb9883373484b72f771e0033936f56d00f9186d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346804"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -25,7 +25,7 @@ Verrà creata un'applicazione in grado di leggere un file di testo e restituire 
 
 In questa esercitazione verranno create anche numerose funzionalità.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET Core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito.
@@ -82,7 +82,8 @@ using System.IO;
 
 L'interfaccia <xref:System.Collections.Generic.IEnumerable%601> è definita nello spazio dei nomi <xref:System.Collections.Generic>. La classe <xref:System.IO.File> è definita nello spazio dei nomi <xref:System.IO>.
 
-Questo metodo è un tipo speciale di metodo C# denominato *metodo iteratore*. I metodi enumeratore restituiscono sequenze che vengono valutate in modo differito. In altre parole, ogni elemento della sequenza viene generato nel momento in cui viene richiesto dal codice che utilizza la sequenza. I metodi enumeratore contengono una o più istruzioni [`yield return`](../language-reference/keywords/yield.md). L'oggetto restituito dal metodo `ReadFrom` contiene il codice per generare ogni elemento della sequenza. In questo esempio, ciò consiste nella lettura della riga di testo successiva dal file di origine e nella restituzione della stringa. Ogni volta che il codice chiamante richiede l'elemento successivo della sequenza, il codice legge la riga di testo successiva dal file e la restituisce. Quando il file è stato letto completamente, la sequenza indica che non sono presenti altri elementi.
+Questo metodo è un tipo speciale di metodo C# denominato *metodo iteratore*.
+I metodi enumeratore restituiscono sequenze che vengono valutate in modo differito. In altre parole, ogni elemento della sequenza viene generato nel momento in cui viene richiesto dal codice che utilizza la sequenza. I metodi enumeratore contengono una o più istruzioni [`yield return`](../language-reference/keywords/yield.md). L'oggetto restituito dal metodo `ReadFrom` contiene il codice per generare ogni elemento della sequenza. In questo esempio, ciò consiste nella lettura della riga di testo successiva dal file di origine e nella restituzione della stringa. Ogni volta che il codice chiamante richiede l'elemento successivo della sequenza, il codice legge la riga di testo successiva dal file e la restituisce. Quando il file è stato letto completamente, la sequenza indica che non sono presenti altri elementi.
 
 Altri due elementi della sintassi C# possono risultare nuovi all'utente. L'istruzione [`using`](../language-reference/keywords/using-statement.md) gestisce la pulizia delle risorse in questo metodo. La variabile inizializzata nell'istruzione `using` (`reader`, in questo esempio) deve implementare l'interfaccia <xref:System.IDisposable>. Tale interfaccia definisce un singolo metodo, `Dispose`, che deve essere chiamato quando deve essere rilasciata la risorsa. Il compilatore genera la chiamata quando l'esecuzione raggiunge la parentesi graffa di chiusura dell'istruzione `using`. Il codice generato dal compilatore assicura che la risorsa venga rilasciata anche se viene generata un'eccezione dal codice nel blocco definito tramite l'istruzione using.
 
@@ -156,7 +157,8 @@ Eseguire l'esempio. Sarà possibile ora leggere ad alta voce alla velocità pres
 
 ## <a name="async-tasks"></a>Attività asincrone
 
-In questa fase finale si aggiungerà il codice per scrivere l'output in modo asincrono in un'attività e si eseguirà anche un'altra attività per leggere l'input dell'utente, nel caso in cui si voglia accelerare o rallentare la visualizzazione del testo o arrestarla del tutto. Sarà necessario eseguire alcuni passaggi ma, al termine, saranno implementati tutti gli aggiornamenti necessari.
+In questa fase finale si aggiungerà il codice per scrivere l'output in modo asincrono in un'attività e si eseguirà anche un'altra attività per leggere l'input dell'utente, nel caso in cui si voglia accelerare o rallentare la visualizzazione del testo o arrestarla del tutto.
+Sarà necessario eseguire alcuni passaggi ma, al termine, saranno implementati tutti gli aggiornamenti necessari.
 Il primo passaggio consiste nel creare un metodo di restituzione asincrono <xref:System.Threading.Tasks.Task> che rappresenta il codice creato finora per leggere e visualizzare il file.
 
 Aggiungere questo metodo alla classe `Program` (tratto dal corpo del metodo `Main`):
@@ -189,7 +191,7 @@ ShowTeleprompter().Wait();
 Di seguito, nel metodo `Main`, il codice attende in modo sincrono. Quando possibile, è consigliabile usare l'operatore `await` anziché attendere in modo sincrono. Nel metodo `Main` di un'applicazione console, tuttavia, non è possibile usare l'operatore `await`. Questo comporterebbe infatti la chiusura dell'applicazione prima che siano state completate tutte le attività.
 
 > [!NOTE]
-> Se si usa C# 7.1 o versione successiva è possibile creare applicazioni console con il metodo [ `async` `Main` ](../whats-new/csharp-7-1.md#async-main).
+> Se si usa C# 7,1 o versione successiva, è possibile creare applicazioni console con [`async` `Main` metodo](../whats-new/csharp-7-1.md#async-main).
 
 È ora necessario scrivere il secondo metodo asincrono per leggere dalla console e verificare la presenza del tasto "<" (minore di), ">" (maggiore di), "X" o "x". Di seguito è illustrato il metodo da aggiungere per questa attività.
 

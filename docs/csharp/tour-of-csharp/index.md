@@ -3,16 +3,18 @@ title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.openlocfilehash: 7398703dc75e7ad7ab8da497eb39e8eeba6d1eba
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774069"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346856"
 ---
-# <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
+# <a name="a-tour-of-the-c-language"></a>Panoramica del C# linguaggio
 
-C#, pronunciato "See Sharp", è un linguaggio di programmazione semplice, moderno, orientato a oggetti e indipendente dai tipi. C# ha le sue radici nella famiglia di linguaggi C e risulterà immediatamente familiare ai programmatori di C, C++, Java e JavaScript. Questa panoramica offre una presentazione dei componenti principali del linguaggio. Se si vuole esplorare il linguaggio tramite esempi interattivi, provare le esercitazioni [Introduzione a C# ](../tutorials/intro-to-csharp/index.md).
+C#, pronunciato "See Sharp", è un linguaggio di programmazione semplice, moderno, orientato a oggetti e indipendente dai tipi. C# ha le sue radici nella famiglia di linguaggi C e risulterà immediatamente familiare ai programmatori di C, C++, Java e JavaScript.
+
+In questa presentazione viene fornita una panoramica dei componenti principali della lingua in C# 7 e versioni successive. Per esplorare il linguaggio tramite esempi interattivi, provare [a eseguire l'introduzione alle C# ](../tutorials/intro-to-csharp/index.md) esercitazioni.
 
 C# è un linguaggio orientato a oggetti, ma include anche il supporto per la programmazione ***orientata ai componenti***. La progettazione software contemporanea è basata in misura sempre maggiore su componenti software costituiti da pacchetti di funzionalità autonomi e autodescrittivi. L'aspetto chiave di tali componenti è che presentano un modello di programmazione con proprietà, metodi ed eventi. Presentano inoltre attributi che forniscono informazioni dichiarative sul componente. Questi componenti, infine, includono la propria documentazione. C# offre costrutti di linguaggio in grado di supportare direttamente questi concetti. Per questo motivo, C# è un linguaggio estremamente naturale in cui creare e usare componenti software.
 
@@ -49,30 +51,33 @@ La classe `Hello` dichiarata dal programma "Hello World" ha un solo membro, ovve
 
 L'output del programma viene prodotto dal metodo `WriteLine` della classe `Console` nello spazio dei nomi `System`. Questa classe viene fornita da librerie di classi standard a cui, per impostazione predefinita, fa automaticamente riferimento il compilatore.
 
-Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#. Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche offrono informazioni di base su tutti gli elementi del linguaggio C# e forniscono le informazioni necessarie per approfondire le caratteristiche di questi ultimi:
+## <a name="elements-of-the-c-language"></a>Elementi della C# lingua
+
+Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#. Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche forniscono informazioni di base su tutti gli elementi del linguaggio e forniscono le informazioni necessarie per approfondire la procedura:
 
 - [Struttura del programma](program-structure.md)
   - Vengono descritti i concetti organizzativi chiave di C#: ***programmi***, ***spazi dei nomi***, ***tipi***, ***membri*** e ***assembly***.
 - [Tipi e variabili](types-and-variables.md)
   - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
 - [Espressioni](expressions.md)
-  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori*** e producono un valore.
+  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
 - [Istruzioni](statements.md)
   - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
 - [Classi e oggetti](classes-and-objects.md)
   - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
 - [Struct](structs.md)
   - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
-- [Array](arrays.md)
+- [Matrici](arrays.md)
   - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
 - [Interfacce](interfaces.md)
   - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
-- [Enumerazioni](enums.md)
-  - Un ***tipo enum*** è un tipo valore distinto con un set di costanti denominate.
 - [Delegati](delegates.md)
   - Un ***tipo delegato*** rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
 - [Attributi](attributes.md)
   - Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
+  
+> [!NOTE]
+> Questi articoli si applicano a C# 7,0 e versioni successive. Alcune funzionalità potrebbero non essere disponibili nelle versioni precedenti.
 
 > [!div class="step-by-step"]
-> [avanti](program-structure.md)
+> [Successivo](program-structure.md)

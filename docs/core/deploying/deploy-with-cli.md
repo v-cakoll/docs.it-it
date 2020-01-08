@@ -3,17 +3,17 @@ title: Pubblicare le app .NET Core con l'interfaccia della riga di comando
 description: Informazioni su come pubblicare un'app .NET Core con gli strumenti dell'interfaccia della riga di comando di .NET Core SDK.
 author: thraka
 ms.author: adegeo
-ms.date: 01/16/2019
+ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0c175d8ba8e4011213265a6cfa2e5e8fea0303b2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428907"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343566"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
@@ -43,9 +43,9 @@ Se si vuole impostare più framework di destinazione, è possibile impostare `<T
 
 Se non è stata impostata diversamente, la directory di output del comando [`dotnet publish`](../tools/dotnet-publish.md) è `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. La modalità **BUILD-CONFIGURATION** predefinita è **Debug** a meno che non venga modificata con il parametro `-c`. Ad esempio, `dotnet publish -c Release -f netcoreapp2.1` pubblica in `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
-Se si usa .NET Core SDK 3.0, la modalità di pubblicazione predefinita per le app che hanno come destinazione .NET Core versione 2.1, 2.2 o 3.0 è un file eseguibile dipendente dal framework.
+Se si usa .NET Core SDK 3,0 o versioni successive, la modalità di pubblicazione predefinita per le app destinate a .NET Core versioni 2,1, 2,2, 3,0 o versione successiva è eseguibile dipendente dal Framework.
 
-Se si usa .NET Core SDK 2.1, la modalità di pubblicazione predefinita per le app che hanno come destinazione .NET Core versione 2.1 o 2.2 è una distribuzione dipendente dal framework.
+Se si usa .NET Core SDK 2,1, la modalità di pubblicazione predefinita per le app destinate a .NET Core versione 2,1 e 2,2 è la distribuzione dipendente dal Framework.
 
 ### <a name="native-dependencies"></a>Dipendenze native
 
@@ -110,21 +110,21 @@ Per l'interfaccia della riga di comando di .NET Core SDK 2.x, la distribuzione d
 
 Quando si pubblica l'app come distribuzione dipendente dal framework, viene creato un file `<PROJECT-NAME>.dll` nella cartella `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Per eseguire l'app, passare alla cartella di output e usare il comando `dotnet <PROJECT-NAME>.dll`.
 
-L'app viene configurata con una versione specifica di .NET Core come destinazione. Il runtime .NET Core di destinazione deve trovarsi nel computer in cui si vuole eseguire l'app. Ad esempio, se l'app ha come destinazione .NET Core 2.2, ogni computer in cui viene eseguita l'app deve avere il runtime .NET Core 2.2 installato. Come descritto nella sezione [Nozioni di base sulla pubblicazione](#publishing-basics), è possibile modificare il file di progetto per cambiare il framework di destinazione predefinito o per impostare come destinazione più framework.
+L'app viene configurata con una versione specifica di .NET Core come destinazione. Il runtime di .NET Core di destinazione deve trovarsi in qualsiasi computer in cui viene eseguita l'app. Ad esempio, se l'app ha come destinazione .NET Core 2.2, ogni computer in cui viene eseguita l'app deve avere il runtime .NET Core 2.2 installato. Come descritto nella sezione [Nozioni di base sulla pubblicazione](#publishing-basics), è possibile modificare il file di progetto per cambiare il framework di destinazione predefinito o per impostare come destinazione più framework.
 
 La pubblicazione di una distribuzione dipendente dal framework crea un'app che esegue automaticamente il roll forward all'ultima patch di protezione .NET Core disponibile nel sistema che esegue l'app. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#framework-dependent-apps-roll-forward).
 
 ## <a name="framework-dependent-executable"></a>File eseguibile dipendente dal framework
 
-Per l'interfaccia della riga di comando .NET Core SDK 3. x, l'eseguibile dipendente dal Framework (supportano) è la modalità predefinita per il comando `dotnet publish` di base. Se la destinazione è il sistema operativo corrente, non è necessario specificare altri parametri.
+Per l'interfaccia della riga di comando .NET Core SDK 3. x, l'eseguibile dipendente dal Framework (supportano) è la modalità predefinita per il comando `dotnet publish` di base. Non è necessario specificare altri parametri, purché si voglia destinare il sistema operativo corrente.
 
-In questa modalità viene creato un host eseguibile specifico della piattaforma per ospitare l'app multipiattaforma. Questa modalità è simile alla distribuzione dipendente dal framework che richiede un host sotto forma di comando `dotnet`. Il nome del file eseguibile host varia a seconda della piattaforma ed è simile a `<PROJECT-FILE>.exe`. È possibile eseguire questo eseguibile direttamente anziché chiamare `dotnet <PROJECT-FILE>.dll` per eseguire l'app.
+In questa modalità viene creato un host eseguibile specifico della piattaforma per ospitare l'app multipiattaforma. Questa modalità è simile a FDD, perché FDD richiede un host nel formato del comando `dotnet`. Il nome file eseguibile dell'host varia a seconda della piattaforma e viene denominato un nome simile a `<PROJECT-FILE>.exe`. È possibile eseguire questo eseguibile direttamente anziché chiamare `dotnet <PROJECT-FILE>.dll`, che è ancora un modo accettabile per eseguire l'app.
 
-L'app viene configurata con una versione specifica di .NET Core come destinazione. Il runtime .NET Core di destinazione deve trovarsi nel computer in cui si vuole eseguire l'app. Ad esempio, se l'app ha come destinazione .NET Core 2.2, ogni computer in cui viene eseguita l'app deve avere il runtime .NET Core 2.2 installato. Come descritto nella sezione [Nozioni di base sulla pubblicazione](#publishing-basics), è possibile modificare il file di progetto per cambiare il framework di destinazione predefinito o per impostare come destinazione più framework.
+L'app viene configurata con una versione specifica di .NET Core come destinazione. Il runtime di .NET Core di destinazione deve trovarsi in qualsiasi computer in cui viene eseguita l'app. Ad esempio, se l'app ha come destinazione .NET Core 2.2, ogni computer in cui viene eseguita l'app deve avere il runtime .NET Core 2.2 installato. Come descritto nella sezione [Nozioni di base sulla pubblicazione](#publishing-basics), è possibile modificare il file di progetto per cambiare il framework di destinazione predefinito o per impostare come destinazione più framework.
 
 La pubblicazione di un eseguibile dipendente dal framework crea un'app che esegue automaticamente il roll forward all'ultima patch di protezione .NET Core disponibile nel sistema che esegue l'app. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Per pubblicare un eseguibile dipendente dal framework è necessario usare le opzioni seguenti con il comando `dotnet publish` (ad eccezione di .NET Core 3.x con la piattaforma corrente come destinazione):
+Per .NET Core 2,2 e versioni precedenti, è necessario usare le opzioni seguenti con il comando `dotnet publish` per pubblicare un supportano:
 
 - `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
@@ -141,7 +141,7 @@ Se si usa l'[app di esempio](#sample-app), eseguire `dotnet publish -f netcoreap
 
 Quando si pubblica una distribuzione autonoma, .NET Core SDK crea un eseguibile specifico della piattaforma. La pubblicazione di un SCD include tutti i file di .NET Core necessari per eseguire l'app, ma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Queste dipendenze devono essere presenti nel sistema prima dell'esecuzione dell'app.
 
-La pubblicazione di una distribuzione autonoma crea un'app che non esegue il roll forward alla versione più recente disponibile della patch di protezione di .NET Core. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
+La pubblicazione di un SCD crea un'app che non esegue il rollforward alla patch di sicurezza .NET Core disponibile più recente. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 È necessario usare le opzioni seguenti con il comando `dotnet publish` per pubblicare una distribuzione autonoma:
 

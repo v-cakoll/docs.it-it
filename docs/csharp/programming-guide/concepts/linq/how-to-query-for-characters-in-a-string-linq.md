@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)'
+title: Come eseguire una query per i caratteri in una stringa (LINQC#) ()
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140966"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345672"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Come eseguire una query per i caratteri in una stringa (LINQC#) ()
 Poiché la classe <xref:System.String> implementa l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire una query su qualsiasi stringa come una sequenza di caratteri. Tuttavia, questo uso di LINQ non è comune. Per le operazioni con criteri di ricerca complessi, usare la classe <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Esempio  

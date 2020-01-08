@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834641"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347988"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Specifica del trasferimento di dati nei contratti di servizio
 Il Windows Communication Foundation (WCF) può essere considerato come un'infrastruttura di messaggistica. Le operazioni di servizio possono ricevere, elaborare e inviare messaggi. I messaggi vengono descritti tramite contratti di operazione. Si consideri ad esempio il contratto seguente:  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Talvolta il componente `DataContractSerializer` non è adatto per serializzare i tipi definiti dall'utente. WCF supporta un motore di serializzazione alternativo, il <xref:System.Xml.Serialization.XmlSerializer>, che può essere utilizzato anche per serializzare i parametri. Gli attributi del motore <xref:System.Xml.Serialization.XmlSerializer>, ad esempio `XmlAttributeAttribute`, consentono di migliorare il controllo sul codice XML risultante. Se si desidera attivare il motore <xref:System.Xml.Serialization.XmlSerializer> per una determinata operazione o per l'intero servizio, applicare l'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> a un'operazione o al servizio. Di seguito è riportato un esempio:  
+ Talvolta il componente `DataContractSerializer` non è adatto per serializzare i tipi definiti dall'utente. WCF supporta un motore di serializzazione alternativo, il <xref:System.Xml.Serialization.XmlSerializer>, che può essere utilizzato anche per serializzare i parametri. Gli attributi del motore <xref:System.Xml.Serialization.XmlSerializer>, ad esempio `XmlAttributeAttribute`, consentono di migliorare il controllo sul codice XML risultante. Se si desidera attivare il motore <xref:System.Xml.Serialization.XmlSerializer> per una determinata operazione o per l'intero servizio, applicare l'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> a un'operazione o al servizio. Ad esempio:  
   
 ```csharp  
 [ServiceContract]  
@@ -141,13 +141,13 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>Descrizione dei messaggi vuoti  
- Per descrivere un messaggio di richiesta vuoto è possibile non specificare alcun parametro per riferimento o di input. Ad esempio in C#:  
+ Per descrivere un messaggio di richiesta vuoto è possibile non specificare alcun parametro per riferimento o di input. Ad esempio, in C#:  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- Ad esempio in VB:  
+ Ad esempio, in Visual Basic:  
   
  `<OperationContract()>`  
   
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Specifica delle proprietà Use e Style  
  I due stili più comunemente utilizzati per descrivere i servizi tramite Web Services Description Language (WSDL) sono Document e Remote Procedure Call (RPC). Nello stile Document, l'intero corpo del messaggio viene descritto utilizzando un unico schema e WSDL descrive le varie parti del corpo del messaggio facendo riferimento agli elementi di tale schema. Nello stile RPC, invece, WSDL descrive le varie parti del corpo del messaggio facendo riferimento a vari tipi di schema. In alcuni casi occorre selezionare manualmente uno di questi stili. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.DataContractFormatAttribute> e impostare la proprietà `Style` (quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer>) oppure impostare la proprietà `Style` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> (quando si utilizza il motore <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato più comunemente accettato ed è l'unico formato supportato dal <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP e non è consigliato per i nuovi servizi. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
+ Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato in genere più accettato ed è l'unico a essere supportato da <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP ed è consigliabile evitarne l'utilizzo nei servizi più recenti. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
   
  Nella maggior parte dei casi è consigliabile evitare di modificare le impostazioni predefinite delle proprietà `Style` e `Use`.  
   

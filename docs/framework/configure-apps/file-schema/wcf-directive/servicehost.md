@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968832"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342124"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Associa la factory usata per creare l'host del servizio al servizio da ospitare e agli altri aspetti di programmazione necessari per accedere al codice host fornito nel file .svc o per compilarlo.  
@@ -26,7 +26,7 @@ CodeBehind = "CodeBehind"
   
 ## <a name="attributes"></a>Attributi  
   
-#### <a name="service"></a>Service  
+#### <a name="service"></a>Servizio  
  Nome del tipo CLR del servizio ospitato. Deve essere un nome completo di un tipo che implementa uno o più dei contatti del servizio.  
   
 #### <a name="factory"></a>Factory  
@@ -35,8 +35,8 @@ CodeBehind = "CodeBehind"
 #### <a name="debug"></a>Debug  
  Indica se il servizio Windows Communication Foundation (WCF) deve essere compilato con simboli di debug. `true` se il servizio WCF deve essere compilato con i simboli di debug; in caso contrario, `false`.  
   
-#### <a name="language"></a>Language  
- Specifica il linguaggio usato per la compilazione di tutto il codice inline contenuto nel file con estensione svc. I valori possono rappresentare qualsiasi linguaggio supportato da .NET, inclusi C#, VB e JS, che fanno riferimento, rispettivamente, a C#, Visual Basic .NET e JScript .NET. L'attributo è facoltativo.  
+#### <a name="language"></a>Lingua:  
+ Specifica il linguaggio usato per la compilazione di tutto il codice inline contenuto nel file con estensione svc. I valori possono rappresentare qualsiasi. Lingua supportata da NET, tra cui `C#`, `VB`e `JS`, che fanno riferimento C#rispettivamente a, Visual Basic e JScript .NET. L'attributo è facoltativo.  
   
 #### <a name="codebehind"></a>CodeBehind  
  Specifica il file di origine per l'implementazione del servizio Web XML, quando la classe di implementazione non si trova nello stesso file e non è stata compilata in un assembly e inserita nella directory \Bin.  

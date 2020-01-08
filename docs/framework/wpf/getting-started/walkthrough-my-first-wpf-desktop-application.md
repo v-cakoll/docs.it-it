@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453752"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336814"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Esercitazione: creare la prima applicazione WPF in Visual Studio 2019
 
@@ -41,7 +41,7 @@ Al termine dell'esercitazione, verrà creata un'applicazione Windows autonoma ch
 >
 > È possibile abilitare o disabilitare il linguaggio del codice di esempio tra C# e Visual Basic usando il selettore della lingua nella parte superiore di questa pagina.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro sviluppo di applicazioni **desktop .NET** installato.
 
@@ -83,7 +83,7 @@ Il primo passaggio consiste nel creare l'infrastruttura dell'applicazione, che i
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Aprire *MainWindow. XAML*.
+3. Aprire *MainWindow.xaml*.
 
     Questo file XAML è la finestra principale dell'applicazione e visualizza il contenuto creato in pagine. La classe <xref:System.Windows.Window> definisce le proprietà di una finestra, ad esempio il titolo, le dimensioni o l'icona, e gestisce gli eventi, ad esempio la chiusura o il nascondiglio.
 
@@ -151,7 +151,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Aprire *MainWindow. XAML*.
+1. Aprire *MainWindow.xaml*.
 
 1. Aggiungere una proprietà <xref:System.Windows.Navigation.NavigationWindow.Source%2A> all'elemento <xref:System.Windows.Navigation.NavigationWindow> e impostarla su "`ExpenseItHome.xaml`".
 
@@ -161,7 +161,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    E in C#:
+    E nel linguaggio c#:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -263,7 +263,7 @@ In questa sezione viene creata una tabella a colonna singola con tre righe e un 
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Aggiungi controlli
+## <a name="add-controls"></a>Aggiungere controlli
 
 In questa sezione verrà aggiornata l'interfaccia utente di home page per visualizzare un elenco di persone, in cui è possibile selezionare una persona per visualizzare la nota spese. I controlli sono oggetti dell'interfaccia utente che consentono agli utenti di interagire con l'applicazione. Per altre informazioni, vedere [Controlli](../controls/index.md).
 
@@ -483,7 +483,7 @@ In questa procedura dettagliata sono state illustrate alcune tecniche per la cre
 
 - [Architettura WPF](../advanced/wpf-architecture.md)
 - [Panoramica di XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
+- [Panoramica delle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Per altre informazioni sulla creazione di applicazioni, vedere gli argomenti seguenti:

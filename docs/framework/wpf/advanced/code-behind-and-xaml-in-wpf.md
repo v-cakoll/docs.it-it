@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740897"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559911"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML in WPF
 <a name="introduction"></a>Code-behind è un termine usato per descrivere il codice Unito a oggetti definiti dal markup, quando una pagina di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene compilata con markup. In questo argomento vengono descritti i requisiti per il code-behind e un meccanismo alternativo di codice inline per il codice in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -28,12 +28,12 @@ ms.locfileid: "73740897"
 - [Limitazioni del codice inline](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  In questo argomento si presuppone che sia stata letta la [Panoramica di XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) e che si disponga di una conoscenza di base di CLR e della programmazione orientata a oggetti.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
 ## <a name="code-behind-and-the-xaml-language"></a>Code-behind e linguaggio XAML  
- Il linguaggio XAML include funzionalità a livello di linguaggio che consentono di associare i file di codice ai file di markup, dal lato del file di markup. In particolare, il linguaggio XAML definisce le funzionalità del linguaggio [X:Class Directive](../../xaml-services/x-class-directive.md), [X:Subclass Directive](../../xaml-services/x-subclass-directive.md)e [x:ClassModifier Directive](../../xaml-services/x-classmodifier-directive.md). Il modo esatto in cui il codice deve essere prodotto e come integrare markup e codice non fa parte del linguaggio XAML specificato. Viene lasciato a Framework come WPF per determinare come integrare il codice, come usare XAML nei modelli di applicazione e di programmazione e le azioni di compilazione o altro supporto richiesto da tutti.  
+ Il linguaggio XAML include funzionalità a livello di linguaggio che consentono di associare i file di codice ai file di markup, dal lato del file di markup. In particolare, il linguaggio XAML definisce le funzionalità del linguaggio [X:Class Directive](../../../desktop-wpf/xaml-services/xclass-directive.md), [X:Subclass Directive](../../../desktop-wpf/xaml-services/xsubclass-directive.md)e [x:ClassModifier Directive](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md). Il modo esatto in cui il codice deve essere prodotto e come integrare markup e codice non fa parte del linguaggio XAML specificato. Viene lasciato a Framework come WPF per determinare come integrare il codice, come usare XAML nei modelli di applicazione e di programmazione e le azioni di compilazione o altro supporto richiesto da tutti.  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-behind, gestore eventi e requisiti della classe parziale in WPF  
@@ -50,17 +50,17 @@ ms.locfileid: "73740897"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:code](../../xaml-services/x-code-intrinsic-xaml-type.md) è un elemento di direttiva definito in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un elemento `x:Code` direttiva può contenere codice di programmazione inline. Il codice definito inline può interagire con il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nella stessa pagina. Nell'esempio seguente viene illustrato il codice C# inline. Si noti che il codice si trova all'interno dell'elemento `x:Code` e che il codice deve essere racchiuso tra `<CDATA[`...`]]>` per eseguire l'escape del contenuto per XML, in modo che un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (che interpreta lo schema di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o lo schema di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) non tenti di interpretare il contenuto letteralmente come XML.  
+ [x:code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) è un elemento di direttiva definito in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un elemento `x:Code` direttiva può contenere codice di programmazione inline. Il codice definito inline può interagire con il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nella stessa pagina. Nell'esempio seguente viene illustrato il codice C# inline. Si noti che il codice si trova all'interno dell'elemento `x:Code` e che il codice deve essere racchiuso tra `<CDATA[`...`]]>` per eseguire l'escape del contenuto per XML, in modo che un processore di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], interpretando lo schema di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o lo schema di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], non tenti di interpretare il contenuto letteralmente come XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Limitazioni del codice inline  
- È consigliabile evitare o limitare l'utilizzo del codice inline. In termini di architettura e filosofia di codifica, mantenere una separazione tra markup e code-behind mantiene i ruoli di progettazione e sviluppo molto più distinti. A un livello più tecnico, il codice che si scrive per il codice inline può essere scomodo da scrivere, perché si sta scrivendo sempre in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] classe parziale generata e può utilizzare solo i mapping degli spazi dei nomi XML predefiniti. Poiché non è possibile aggiungere istruzioni `using`, è necessario qualificare in modo completo molte delle chiamate API effettuate. I mapping [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predefiniti includono la maggior parte degli spazi dei nomi CLR presenti negli assembly di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. sarà necessario qualificare completamente le chiamate ai tipi e ai membri contenuti negli altri spazi dei nomi CLR. Non è inoltre possibile definire alcunché oltre la classe parziale nel codice inline e tutte le entità del codice utente a cui si fa riferimento devono esistere come membro o variabile all'interno della classe parziale generata. Non sono inoltre disponibili altre funzionalità di programmazione specifiche del linguaggio, ad esempio macro o `#ifdef` su variabili globali o variabili di compilazione. Per altre informazioni, vedere [tipo XAML intrinseco x:code](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ È consigliabile evitare o limitare l'utilizzo del codice inline. In termini di architettura e filosofia di codifica, mantenere una separazione tra markup e code-behind mantiene i ruoli di progettazione e sviluppo molto più distinti. A un livello più tecnico, il codice che si scrive per il codice inline può essere scomodo da scrivere, perché si sta scrivendo sempre in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] classe parziale generata e può utilizzare solo i mapping degli spazi dei nomi XML predefiniti. Poiché non è possibile aggiungere istruzioni `using`, è necessario qualificare in modo completo molte delle chiamate API effettuate. I mapping [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predefiniti includono la maggior parte degli spazi dei nomi CLR presenti negli assembly di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. sarà necessario qualificare completamente le chiamate ai tipi e ai membri contenuti negli altri spazi dei nomi CLR. Non è inoltre possibile definire alcunché oltre la classe parziale nel codice inline e tutte le entità del codice utente a cui si fa riferimento devono esistere come membro o variabile all'interno della classe parziale generata. Non sono inoltre disponibili altre funzionalità di programmazione specifiche del linguaggio, ad esempio macro o `#ifdef` su variabili globali o variabili di compilazione. Per altre informazioni, vedere [tipo XAML intrinseco x:code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari su XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Tipo XAML intrinseco x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)
+- [Tipo XAML intrinseco x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [Compilazione di un'applicazione WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)

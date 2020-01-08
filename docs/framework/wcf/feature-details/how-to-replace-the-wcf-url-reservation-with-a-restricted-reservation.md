@@ -2,19 +2,19 @@
 title: 'Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837389"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544654"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata
 Una prenotazione URL consente di limitare chi può ricevere messaggi da un URL o un set di URL. Una prenotazione è costituita da un modello di URL, un elenco di controllo di accesso (ACL) e un set di flag. Il modello di URL definisce quali URL sono interessati dalla prenotazione. Per altre informazioni su come vengono elaborati i modelli di URL, vedere [routing delle richieste in ingresso](https://go.microsoft.com/fwlink/?LinkId=136764). L'elenco ACL controlla a quale utente o gruppo di utenti è permesso ricevere messaggi dagli URL specificati. I flag indicano se la prenotazione deve fornire a un utente o a un gruppo l'autorizzazione per ascoltare direttamente l'URL o delegare l'autorizzazione per ascoltare qualche altro processo.  
   
  Come parte della configurazione del sistema operativo predefinita, Windows Communication Foundation (WCF) crea una prenotazione accessibile globalmente per la porta 80 per consentire a tutti gli utenti di eseguire applicazioni che usano un binding HTTP doppio per la comunicazione duplex. Poiché l'elenco ACL in questa prenotazione è per tutti, gli amministratori non possono consentire o impedire in modo esplicito l'autorizzazione all'ascolto di un URL o un set di URL. In questo argomento viene illustrato come eliminare questa prenotazione e come ricrearne una con un ACL limitato.  
   
- In Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)] è possibile visualizzare tutte le prenotazioni URL HTTP da un prompt dei comandi con privilegi elevati digitando `netsh http show urlacl`.  Nell'esempio seguente viene illustrata la somiglianza di una prenotazione URL WCF.  
+In Windows Vista o Windows Server 2008 è possibile visualizzare tutte le prenotazioni URL HTTP da un prompt dei comandi con privilegi elevati immettendo `netsh http show urlacl`. Nell'esempio seguente viene illustrata la somiglianza di una prenotazione URL WCF:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

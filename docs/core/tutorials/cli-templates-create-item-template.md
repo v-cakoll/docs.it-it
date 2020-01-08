@@ -5,14 +5,14 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926156"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340375"
 ---
-# <a name="tutorial-create-an-item-template"></a>Esercitazione: Creare un modello di elemento
+# <a name="tutorial-create-an-item-template"></a>Esercitazione: creare un modello di elemento
 
 Con .NET Core è possibile creare e distribuire modelli per generare progetti, file e persino risorse. Questa esercitazione è la prima parte di una serie che illustra come creare, installare e disinstallare i modelli da usare con il comando `dotnet new`.
 
@@ -33,7 +33,7 @@ In questa parte della serie si apprenderà come:
 
   L'articolo di riferimento presenta i concetti di base sui modelli e il modo in cui vengono creati. Alcune di queste informazioni verranno ripetute qui.
 
-* Aprire un terminale e passare alla cartella _working\templates\\_ .
+* Aprire un terminale e passare alla cartella _working\templates_
 
 ## <a name="create-the-required-folders"></a>Creare le cartelle necessarie
 
@@ -54,7 +54,7 @@ parent_folder
 
 Un modello di elemento è un tipo specifico di modello che contiene uno o più file. Questi tipi di modelli sono utili quando si vogliono generare elementi come un file di configurazione, di codice o di soluzione. In questo esempio verrà creata una classe che aggiunge un metodo di estensione al tipo stringa.
 
-Nel terminale passare alla cartella _working\templates\\_ e creare una nuova sottocartella denominata _extensions_. Accedere alla cartella.
+Nel terminale passare alla cartella _working\templates_ e creare una nuova sottocartella denominata _Extensions_. Accedere alla cartella.
 
 ```console
 working
@@ -85,7 +85,7 @@ Ora che è stato creato il contenuto del modello, è necessario creare la config
 
 ## <a name="create-the-template-config"></a>Crea la configurazione del modello
 
-I modelli sono riconosciuti in .NET Core grazie a una cartella e a un file di configurazione speciali disponibili nella radice del modello. In questa esercitazione la cartella dei modelli si trova in _working\templates\extensions\\_ .
+I modelli sono riconosciuti in .NET Core grazie a una cartella e a un file di configurazione speciali disponibili nella radice del modello. In questa esercitazione la cartella dei modelli si trova in _working\templates\extensions_.
 
 Quando si crea un modello, tutti i file e le cartelle nella cartella del modello vengono inclusi come parte del modello, ad eccezione della cartella di configurazione speciale. Questa cartella di configurazione è denominata _.template.config_.
 

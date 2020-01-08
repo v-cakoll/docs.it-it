@@ -1,5 +1,5 @@
 ---
-title: Tipi di valore Nullable-Visual Basic
+title: Tipi di valori nullable
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732928"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347831"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipi di valori nullable (Visual Basic)
 
@@ -66,7 +66,7 @@ Per recuperare il valore di una variabile di un tipo nullable, è necessario inn
 
 Quando si utilizzano valori null `Boolean` variabili in espressioni booleane, il risultato può essere `True`, `False`o `Nothing`. Di seguito è riportata la tabella di verità per `And` e `Or`. Poiché `b1` e `b2` ora hanno tre valori possibili, è possibile valutare nove combinazioni.
 
-|B1|B2|B1 e B2|B1 o B2|
+|b1|b2|B1 e B2|B1 o B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|

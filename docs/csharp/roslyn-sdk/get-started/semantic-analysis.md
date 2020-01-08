@@ -3,12 +3,12 @@ title: Introduzione all'analisi semantica
 description: Questa esercitazione offre una panoramica dell'utilizzo dell'analisi semantica con .NET Compiler SDK.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252941"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346976"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introduzione all'analisi semantica
 
@@ -22,7 +22,7 @@ In questa esercitazione verranno esplorate le API **Symbol** e **Binding**. Ques
 
 ## <a name="understanding-compilations-and-symbols"></a>Informazioni su compilazioni e simboli
 
-Man mano che si lavora con .NET Compiler SDK si acquisirà familiarità con le distinzioni tra API Syntax e API Semantic. L'**API Syntax** consente di esaminare la _struttura_ di un programma. Tuttavia, spesso servono informazioni più dettagliate sulla semantica o il _significato_ di un programma. Anche se un singolo file o frammento di codice Visual Basic o C# può essere analizzato sintatticamente in isolamento, non ha molto senso porsi domande del tipo "qual è il tipo di questa variabile" in un contesto isolato. Il significato di un nome di tipo potrebbe essere dipendente da riferimenti ad assembly, importazioni di spazi dei nomi o altri file di codice. Queste domande possono ottenere risposta tramite l'**API Semantic**, in particolare la classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
+Man mano che si lavora con .NET Compiler SDK si acquisirà familiarità con le distinzioni tra API Syntax e API Semantic. L'**API Syntax** consente di esaminare la _struttura_ di un programma. Tuttavia, spesso servono informazioni più dettagliate sulla semantica o il _significato_ di un programma. Anche se un file di codice separato o un frammento di codice Visual Basic o C# codice può essere analizzato sintatticamente in isolamento, non è significativo porre domande come "Qual è il tipo di questa variabile" in un vuoto. Il significato di un nome di tipo potrebbe essere dipendente da riferimenti ad assembly, importazioni di spazi dei nomi o altri file di codice. Queste domande possono ottenere risposta tramite l'**API Semantic**, in particolare la classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
 
 Un'istanza di <xref:Microsoft.CodeAnalysis.Compilation> è paragonabile a un singolo progetto, dal punto di vista del compilatore e rappresenta tutti gli elementi necessari per compilare un programma Visual Basic o C#. La **compilazione** include il set di file di origine da compilare, i riferimenti agli assembly e le opzioni del compilatore. È possibile ragionare sul significato del codice usando tutte le altre informazioni in questo contesto. <xref:Microsoft.CodeAnalysis.Compilation> consente di trovare i **simboli**, ovvero entità come i tipi, gli spazi dei nomi, i membri e le variabili a cui fanno riferimento i nomi e altre espressioni. Il processo di associazione di nomi ed espressioni a **simboli** viene chiamato **associazione**.
 

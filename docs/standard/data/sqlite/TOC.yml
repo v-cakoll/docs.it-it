@@ -1,0 +1,59 @@
+- name: Panoramica
+  href: index.md
+- name: Stringhe di connessione
+  href: connection-strings.md
+- name: Tipi di dati
+  href: types.md
+- name: Parametri
+  href: parameters.md
+- name: Errori del database
+  displayName: 'Busy, locked, retries, timeouts'
+  href: database-errors.md
+- name: Transazioni
+  href: transactions.md
+- name: Batch
+  href: batching.md
+- name: Metadati
+  href: metadata.md
+- name: Funzionalità SQLite
+  items:
+    - name: Database in memoria
+      href: in-memory-databases.md
+    - name: Crittografia
+      href: encryption.md
+    - name: Backup online
+      href: backup.md
+    - name: Funzioni definite dall'utente
+      displayName: UDFs
+      href: user-defined-functions.md
+    - name: Versioni di SQLite personalizzate
+      href: custom-versions.md
+    - name: Regole di confronto
+      href: collation.md
+    - name: I/O BLOB
+      displayName: Streams
+      href: blob-io.md
+    - name: Interoperabilità
+      href: interop.md
+    - name: Estensioni
+      href: extensions.md
+- name: Limitazioni
+  items:
+    - name: ADO.NET
+      href: adonet-limitations.md
+    - name: Async
+      href: async.md
+    - name: Inserimento bulk
+      href: bulk-insert.md
+    - name: Entity Framework Core
+      href: /ef/core/providers/sqlite/limitations
+    - name: Dapper
+      href: dapper-limitations.md
+    - name: System.Data.SQLite
+      href: compare.md
+    - name: Xamarin
+      href: xamarin.md
+- name: Informazioni di riferimento sull'API >>
+  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+- name: Sintassi SQL >>
+  href: 'https://www.sqlite.org/lang.html'

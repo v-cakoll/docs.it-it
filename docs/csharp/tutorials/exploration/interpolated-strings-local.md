@@ -2,12 +2,12 @@
 title: Interpolazione di stringhe - Esercitazione su C#
 description: Questa esercitazione mostra come usare la funzionalità di interpolazione di stringhe di C# per includere risultati di espressioni formattate in una stringa più grande.
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120112"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346787"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
@@ -32,7 +32,7 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-Per provare questo codice, digitare `dotnet run` nella finestra della console. Quando si esegue il programma viene visualizzata un'unica stringa contenente un messaggio di saluto che include il nome dell'utente. La stringa inclusa nella chiamata del metodo <xref:System.Console.WriteLine%2A> è un'*espressione di stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe.
+Per provare questo codice, digitare `dotnet run` nella finestra della console. Quando si esegue il programma viene visualizzata una singola stringa con una formula di benvenuto che include il nome dell'utente. La stringa inclusa nella chiamata del metodo <xref:System.Console.WriteLine%2A> è un'*espressione di stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe.
 
 Questo semplice esempio contiene i due elementi che devono essere presenti in ogni stringa interpolata:
 
@@ -46,7 +46,7 @@ Ora si proveranno altri esempi di interpolazione di stringhe con altri tipi di d
 
 Nella sezione precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione di interpolazione può avere tuttavia qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
 
-Nell'esempio seguente viene definito prima di tutto un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con la [proprietà](../../properties.md) `Name` e un [metodo](../../methods.md) `ToString` che esegue l'[override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`:
+Nell'esempio seguente viene innanzitutto definito un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con una [Proprietà](../../properties.md) `Name` e un [Metodo](../../methods.md)`ToString` che esegue l' [override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md)`Vegetable`:
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -58,7 +58,7 @@ Viene quindi creata un'istanza della classe `Vegetable` denominata `item` usando
 var item = new Vegetable("eggplant");
 ```
 
-Infine, includere la variabile `item` in una stringa interpolata che contenga anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di [enumerazione](../../programming-guide/enumeration-types.md)`Unit`. Sostituire tutto il codice C# in un editor con il codice seguente e usare il comando `dotnet run` per l'eseguirlo:
+Infine, includere la variabile `item` in una stringa interpolata che contiene anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di [enumerazione](../../language-reference/builtin-types/enum.md) `Unit`. Sostituire tutto il codice C# in un editor con il codice seguente e usare il comando `dotnet run` per l'eseguirlo:
 
 ```csharp
 using System;
@@ -97,7 +97,7 @@ Nell'output di questo esempio la data è troppo precisa (il prezzo delle melanza
 
 ## <a name="control-the-formatting-of-interpolation-expressions"></a>Controllare la formattazione delle espressioni di interpolazione
 
-Nella sezione precedente sono state inserite nella stringa di risultato due stringhe con formattazione non valida. Il primo problema è un valore di data e ora nel quale solo la data risultava corretta. Il secondo è un prezzo che non indica la valuta. Entrambi i problemi sono di facile risoluzione. L'interpolazione di stringhe consente di specificare *stringhe di formato* che controllano la formattazione di determinati tipi. Modificare la chiamata in `Console.WriteLine` dell'esempio precedente in modo da includere le stringhe di formato per le espressioni di data e prezzo, come indicato nella riga seguente:
+Nella sezione precedente sono state inserite nella stringa di risultato due stringhe con formattazione non valida. Uno è un valore di data e ora nel quale solo la data risultava corretta. Il secondo è un prezzo che non indica la valuta. Entrambi i problemi sono di facile risoluzione. L'interpolazione di stringhe consente di specificare *stringhe di formato* che controllano la formattazione di determinati tipi. Modificare la chiamata in `Console.WriteLine` dell'esempio precedente in modo da includere le stringhe di formato per le espressioni di data e prezzo, come indicato nella riga seguente:
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
@@ -107,7 +107,7 @@ Per specificare una stringa di formato, aggiungere i due punti (":") e la string
 
 Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
 
-Provare a modificare le stringhe di formato nell'editor di testo ed eseguire nuovamente il programma ogni volta che si apporta una modifica, per verificare l'effetto delle modifiche sulla formattazione di data, ora e valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero di quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
+Provare a modificare le stringhe di formato nell'editor di testo ed eseguire nuovamente il programma ogni volta che si apporta una modifica, per verificare l'effetto delle modifiche sulla formattazione di data, ora e valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero a quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
 
 Oltre alla formattazione è possibile controllare la larghezza del campo e l'allineamento delle stringhe formattate incluse nella stringa di risultato. La sezione successiva spiega come eseguire questa operazione.
 

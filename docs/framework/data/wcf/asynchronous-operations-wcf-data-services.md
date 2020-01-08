@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569370"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346187"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operazioni asincrone (WCF Data Services)
 Le applicazioni Web devono includere una latenza tra client e server superiore a quella delle applicazioni eseguite in reti interne. Per ottimizzare le prestazioni e l'esperienza utente dell'applicazione, è consigliabile utilizzare i metodi asincroni delle classi <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> per l'accesso ai server WCF Data Services sul Web.  
@@ -21,7 +21,7 @@ Le applicazioni Web devono includere una latenza tra client e server superiore a
  È possibile eseguire operazioni asincrone tramite una coppia di metodi sulle classi <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> che iniziano rispettivamente con *Begin* e *end* . I metodi *Begin* registrano un delegato chiamato dal servizio al completamento dell'operazione. I metodi *end* devono essere chiamati nel delegato registrato per gestire il callback dalle operazioni completate. Quando si chiama il metodo *end* per completare un'operazione asincrona, è necessario eseguire questa operazione dalla stessa <xref:System.Data.Services.Client.DataServiceQuery%601> o <xref:System.Data.Services.Client.DataServiceContext> istanza usata per avviare l'operazione. Ogni metodo *Begin* accetta un parametro `state` che può passare un oggetto di stato al callback. Questo oggetto di stato viene recuperato dal <xref:System.IAsyncResult> fornito con il callback e viene utilizzato per chiamare il metodo *end* corrispondente per completare l'operazione asincrona. Ad esempio, quando si fornisce l'istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> come parametro `state` durante la chiamata del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> sull'istanza, la stessa istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> viene restituita da <xref:System.IAsyncResult>. Questa istanza di <xref:System.Data.Services.Client.DataServiceQuery%601> viene quindi usata per chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> per completare l'operazione di query. Per altre informazioni, vedere [procedura: eseguire query asincrone sul servizio dati](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
   
 > [!NOTE]
-> Solo le operazioni asincrone sono supportate dalle librerie client fornite in .NET Framework per Silverlight. Per ulteriori informazioni, vedere [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Solo le operazioni asincrone sono supportate dalle librerie client fornite in .NET Framework per Silverlight. Per ulteriori informazioni, vedere [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Le librerie client di .NET Framework supportano le operazioni asincrone seguenti:  
   

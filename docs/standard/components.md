@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838195"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348052"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -49,7 +49,7 @@ Per altre informazioni su .NET Framework, vedere [Guida a .NET Framework](../fra
 
 ### <a name="mono"></a>Mono
 
-Mono è un'implementazione di .NET usata principalmente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime su cui si basano le applicazioni Xamarin in Android, Mac, iOS, tvOS e watchOS ed è incentrato principalmente su un footprint ridotto. Mono inoltre consente di compilare giochi tramite il motore Unity.
+Mono è un'implementazione di .NET usata principalmente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime che alimenta le applicazioni Novell in Android, macOS, iOS, tvOS e watchos ed è incentrato principalmente su un footprint ridotto. Mono inoltre consente di compilare giochi tramite il motore Unity.
 
 Supporta tutte le versioni attualmente pubblicate di .NET Standard.
 
@@ -61,13 +61,13 @@ Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono
 
 ### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)
 
-La piattaforma UWP è un'implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte in C++, C#, VB.NET e JavaScript. Quando si usano C# e VB.NET, le API .NET vengono fornite da .NET Core.
+La piattaforma UWP è un'implementazione di .NET usata per la creazione di applicazioni Windows moderne e abilitate per il tocco e di software per Internet delle cose. È stata progettata per unificare i diversi tipi di dispositivi da specificare come destinazione, ad esempio computer, tablet, phablet, telefoni e anche Xbox. La piattaforma UWP offre molti servizi, ad esempio un App Store centralizzato, un ambiente di esecuzione (AppContainer) e un set di API di Windows da usare invece di Win32 (WinRT). Le app possono essere scritte C++in C#,, Visual Basic e JavaScript. Quando si C# usano e Visual Basic, le API .NET vengono fornite da .NET Core.
 
 Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattaforma UWP (Universal Windows Platform)](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>Runtime .NET
 
-Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime di .NET:
+Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime .NET:
 
 - CRL (Common Language Runtime) per .NET Framework
 - CoreCLR (Core Common Language Runtime) per .NET Core
@@ -112,4 +112,4 @@ I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [di
 - [Guida a .NET Framework](../framework/index.md)
 - [Guida a C#](../csharp/index.yml)
 - [Guida a F#](../fsharp/index.yml)
-- [Guida a VB.NET](../visual-basic/index.yml)
+- [Guida a Visual Basic](../visual-basic/index.yml)

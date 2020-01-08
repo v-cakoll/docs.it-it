@@ -4,12 +4,12 @@ description: I recenti miglioramenti apportati al linguaggio C# consentono di sc
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039638"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346709"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Scrivere codice C# sicuro ed efficiente
 
@@ -72,42 +72,42 @@ Seguire questa raccomandazione quando la finalità della progettazione è la cre
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Dichiarare i membri di sola lettura quando uno struct non può essere non modificabile
 
-In C# 8,0 e versioni successive, quando un tipo di struct è modificabile, è necessario dichiarare i membri che non provocano la`readonly`della mutazione. Ad esempio, di seguito è riportata una variante modificabile della struttura dei punti 3D:
+In C# 8,0 e versioni successive, quando un tipo di struct è modificabile, è necessario dichiarare i membri che non provocano la `readonly`della mutazione. Ad esempio, di seguito è riportata una variante modificabile della struttura dei punti 3D:
 
 ```csharp
 public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-Per fare in modo che i chiamanti non modifichino l'origine, restituire il valore per `readonly ref`:
+Per fare in modo che i chiamanti non modifichino l'origine, restituire il valore per `ref readonly`:
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 La restituzione di `ref readonly` consente un risparmio a livello di copie di strutture di dimensioni maggiori e di mantenere l'immutabilità dei membri dati interni.
 
-Nel sito della chiamata i chiamanti scelgono di usare la proprietà `Origin` come `readonly ref` o come valore:
+Nel sito della chiamata i chiamanti scelgono di usare la proprietà `Origin` come `ref readonly` o come valore:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
@@ -220,7 +220,7 @@ Le tecniche descritte in precedenza illustrano come evitare le copie restituendo
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-La struttura `Point3D` *non* è uno struct readonly. Sono presenti sei diverse chiamate di accesso a proprietà nel corpo di questo metodo. A un primo esame, si potrebbe pensare che questi accessi siano sicuri. Una funzione di accesso `get` infatti non dovrebbe modificare lo stato dell'oggetto, ma nessuna regola del linguaggio lo impone. È solo una convenzione comune. Qualsiasi tipo può implementare una funzione di accesso `get` che modifica lo stato interno. Senza una garanzia da parte del linguaggio, il compilatore deve creare una copia temporanea dell'argomento prima di chiamare qualsiasi membro. La risorsa di archiviazione temporanea viene creata nello stack, i valori dell'argomento vengono copiati nella risorsa di archiviazione temporanea e il valore viene copiato nello stack per ogni accesso ai membri come argomento `this`. In molte situazioni, queste copie danneggiano le prestazioni tanto che il passaggio per valore è più veloce del passaggio per riferimento di sola lettura quando il tipo di argomento non è `readonly struct`.
+La struttura `Point3D`*non* è uno struct readonly. Sono presenti sei diverse chiamate di accesso a proprietà nel corpo di questo metodo. A un primo esame, si potrebbe pensare che questi accessi siano sicuri. Una funzione di accesso `get` infatti non dovrebbe modificare lo stato dell'oggetto, ma nessuna regola del linguaggio lo impone. È solo una convenzione comune. Qualsiasi tipo può implementare una funzione di accesso `get` che modifica lo stato interno. Senza una garanzia da parte del linguaggio, il compilatore deve creare una copia temporanea dell'argomento prima di chiamare qualsiasi membro. La risorsa di archiviazione temporanea viene creata nello stack, i valori dell'argomento vengono copiati nella risorsa di archiviazione temporanea e il valore viene copiato nello stack per ogni accesso ai membri come argomento `this`. In molte situazioni, queste copie danneggiano le prestazioni tanto che il passaggio per valore è più veloce del passaggio per riferimento di sola lettura quando il tipo di argomento non è `readonly struct`.
 
 Se, invece, il calcolo della distanza utilizza lo struct non modificabile, non è necessario `ReadonlyPoint3D`gli oggetti temporanei:
 

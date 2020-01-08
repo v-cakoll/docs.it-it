@@ -1,16 +1,16 @@
 ---
-title: 'Esercitazione: Creare una soluzione .NET Core in macOS usando Visual Studio Code'
+title: 'Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code'
 description: Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core usando Visual Studio Code.
-ms.date: 03/23/2017
+ms.date: 12/19/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 825665264d4db902ba4c6cbcce7a7add11ec003d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117366"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339608"
 ---
-# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Esercitazione: Creare una soluzione .NET Core in macOS usando Visual Studio Code
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Esercitazione: creare una soluzione .NET Core in macOS usando Visual Studio Code
 
 Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core per macOS. Si imparerà come creare progetti, unit test, usare gli strumenti di debug e incorporare librerie di terze parti tramite [NuGet](https://www.nuget.org/).
 
@@ -23,15 +23,15 @@ Installare [.NET Core SDK](https://dotnet.microsoft.com/download). .NET Core SDK
 
 Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che migliorano l'esperienza di sviluppo in .NET Core.
 
-Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e premendo <kbd>F1</kbd> per aprire la tavolozza di Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+Installare l'estensione C# Visual Studio Code aprendo Visual Studio Code e premendo <kbd>FN</kbd>+<kbd>F1</kbd> per aprire la tavolozza Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
-In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo argomento nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare l'origine](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo articolo nel repository DotNet/Samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Avviare Visual Studio Code. Premere <kbd>CTRL</kbd> + <kbd> \` </kbd> (carattere virgoletta aperta o apice inverso) oppure selezionare **Visualizza > Terminale integrato** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
+Avviare Visual Studio Code. Premere <kbd>Ctrl</kbd>+<kbd>\`</kbd> (carattere di apice inverso o apice inverso) oppure selezionare **Visualizza > terminale** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
 
-Iniziare creando un file di soluzione, che funge da contenitore per uno o più progetti .NET Core. Nel terminale eseguire il [`dotnet new`](../tools/dotnet-new.md) comando per creare una nuova soluzione *Golden. sln* all'interno di una nuova cartella denominata *Golden*:
+Iniziare creando un file di soluzione, che funge da contenitore per uno o più progetti .NET Core. Nel terminale eseguire il comando [`dotnet new`](../tools/dotnet-new.md) per creare una nuova soluzione *Golden. sln* all'interno di una nuova cartella denominata *Golden*:
 
 ```dotnetcli
 dotnet new sln -o golden
@@ -210,13 +210,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>Eseguire il debug dell'applicazione
 
-Impostare un punto di interruzione nell'istruzione `WriteLine` nel metodo `Main`. A tale scopo, premere il tasto <kbd>F9</kbd> quando il cursore è posizionato sulla riga `WriteLine` o fare clic sul margine sinistro della riga in cui si vuole inserire il punto di interruzione. Verrà visualizzato un cerchio rosso sul margine accanto alla riga di codice. Quando viene raggiunto il punto di interruzione, l'esecuzione del codice si interrompe *prima* che venga eseguita la riga del punto di interruzione.
+Impostare un punto di interruzione nell'istruzione `WriteLine` nel metodo `Main`. A tale scopo, premere il tasto <kbd>Fn</kbd>+<kbd>F9</kbd> quando il cursore si trova sulla linea `WriteLine` oppure facendo clic sul margine sinistro della riga in cui si vuole impostare il punto di interruzione. Verrà visualizzato un cerchio rosso sul margine accanto alla riga di codice. Quando viene raggiunto il punto di interruzione, l'esecuzione del codice si interrompe *prima* che venga eseguita la riga del punto di interruzione.
 
-Aprire la scheda del debugger selezionando l'icona Debug sulla barra degli strumenti di Visual Studio Code, selezionando **Visualizza > Debug** nella barra dei menu o tramite il tasto di scelta rapida <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
+Aprire la scheda debugger selezionando l'icona debug nella barra degli strumenti Visual Studio Code, selezionando **visualizza > debug** dalla barra dei menu o usando il <kbd>comando</kbd> di scelta rapida da tastiera+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
 
 ![Debugger di Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
-Premere il pulsante per la riproduzione per avviare l'applicazione nel debugger. L'applicazione inizia l'esecuzione e procede fino al punto di interruzione, in cui si arresta. Eseguire un'istruzione nel metodo `Get` e assicurarsi di aver passato gli argomenti corretti. Confermare che la risposta è 42.
+Premere il pulsante per la riproduzione per avviare l'applicazione nel debugger. In questo progetto sono stati creati sia un progetto di test che un'applicazione. Il debugger chiede quale progetto si vuole avviare. Selezionare il progetto "app". L'applicazione inizia l'esecuzione e procede fino al punto di interruzione, in cui si arresta. Eseguire un'istruzione nel metodo `Get` e assicurarsi di aver passato gli argomenti corretti. Confermare che la risposta è 42.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

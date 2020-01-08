@@ -1,15 +1,15 @@
 ---
-title: Documentazione XML (F#)
+title: Documentazione XML
 description: Informazioni sul supporto di F# per la generazione di documentazione dai commenti.
 ms.date: 05/16/2016
-ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630828"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344694"
 ---
-# <a name="xml-documentation"></a>Documentazione di XML
+# <a name="xml-documentation"></a>Documentazione XML
 
 È possibile produrre documentazione dai commenti del codice a tre barre (///) F#in. I commenti XML possono precedere le dichiarazioni nei file di codice (. FS) o nei file di firma (. FSI).
 
@@ -28,17 +28,17 @@ Esistono due modi per scrivere commenti di documentazione XML. Uno è sempliceme
 |**\<c\>** _text_ **\</c\>**|Specifica che il *testo* è di codice. Questo tag può essere usato dai generatori di documentazione per visualizzare il testo in un tipo di carattere appropriato per il codice.|
 |**\<summary\>** _text_ **\</summary\>**|Specifica che il *testo* è una breve descrizione dell'elemento del programma. La descrizione è in genere una o due frasi.|
 |**\<remarks\>** _text_ **\</remarks\>**|Specifica che il *testo* contiene informazioni supplementari sull'elemento del programma.|
-|**\>**  **param\<Name = "** Name"**Description/paramReturns\<\>**|Specifica il nome e la descrizione di una funzione o di un parametro del metodo.|
-|**\>**  **typeparam\<nome = "** nome"**Descrizione/typeparam\<\>**|Specifica il nome e la descrizione per un parametro di tipo.|
+|**\<param name = "** _Name_ **"\>** _Description_ **\</param Returns\>**|Specifica il nome e la descrizione di una funzione o di un parametro del metodo.|
+|**\<typeparam Name = "** _Name_ **"\>** _Description_ **\</typeparam\>**|Specifica il nome e la descrizione per un parametro di tipo.|
 |**\<returns\>** _text_ **\</returns\>**|Specifica che il *testo* descrive il valore restituito di una funzione o di un metodo.|
-|**\>**  **Exception\<cref = "** Type"**Description/Exception\<\>**|Specifica il tipo di eccezione che può essere generata e le circostanze in cui viene generata.|
-|**\>**  **vedere\<cref = "** Reference"**Text/See\<\>**|Specifica un collegamento inline a un altro elemento del programma. Il *riferimento* è il nome che viene visualizzato nel file di documentazione XML. Il *testo* è il testo visualizzato nel collegamento.|
-|**\>** seealso cref = "Reference"/  **\<**|Specifica un collegamento vedere anche alla documentazione per un altro tipo. Il *riferimento* è il nome che viene visualizzato nel file di documentazione XML. Vedere anche i collegamenti vengono visualizzati in genere nella parte inferiore della pagina della documentazione.|
+|**\<Exception cref = "** _Type_ **"\>** _Description_ **\</Exception\>**|Specifica il tipo di eccezione che può essere generata e le circostanze in cui viene generata.|
+|**\<vedere cref = "** _Reference_ **"\>** _Text_ **\</See\>**|Specifica un collegamento inline a un altro elemento del programma. Il *riferimento* è il nome che viene visualizzato nel file di documentazione XML. Il *testo* è il testo visualizzato nel collegamento.|
+|**\<seealso cref = "** _reference_ **"/\>**|Specifica un collegamento vedere anche alla documentazione per un altro tipo. Il *riferimento* è il nome che viene visualizzato nel file di documentazione XML. Vedere anche i collegamenti vengono visualizzati in genere nella parte inferiore della pagina della documentazione.|
 |**\<para\>** _text_ **\</para\>**|Specifica un paragrafo di testo. Viene usato per separare il testo all'interno del tag **Note** .|
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>DESCRIZIONE
+### <a name="description"></a>Descrizione
 
 Di seguito è riportato un tipico commento della documentazione XML in un file di firma.
 
@@ -48,9 +48,9 @@ Di seguito è riportato un tipico commento della documentazione XML in un file d
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>DESCRIZIONE
+### <a name="description"></a>Descrizione
 
-Nell'esempio seguente viene illustrato il metodo alternativo senza tag XML. In questo esempio, l'intero testo del commento viene considerato un riepilogo. Si noti che se non si specifica in modo esplicito un tag di riepilogo, non è necessario specificare altri tag, ad esempio **param** o Returns.
+Nell'esempio seguente viene illustrato il metodo alternativo senza tag XML. In questo esempio, l'intero testo del commento viene considerato un riepilogo. Si noti che se non si specifica in modo esplicito un tag di riepilogo, non è necessario specificare altri tag, ad esempio **param** o **Returns** .
 
 ### <a name="code"></a>Codice
 

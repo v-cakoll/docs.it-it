@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: 6647e52ef8477221dd5849a19809a34fb06189a6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 899955a9f3302e67de4efa0ce0cb6baf6bf0ec5d
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455415"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559781"
 ---
 # <a name="merged-resource-dictionaries"></a>Dizionari risorse uniti
 Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] supportano una funzionalità di dizionari risorse uniti. Questa funzionalità consente di definire la parte delle risorse di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] al di fuori dell'applicazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilata. Le risorse possono quindi essere condivise nelle applicazioni, oltre che isolate più facilmente per la localizzazione.  
@@ -20,7 +20,7 @@ Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
   
  [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Si noti che l'elemento <xref:System.Windows.ResourceDictionary> non dispone di una [direttiva x:Key](../../xaml-services/x-key-directive.md), che in genere è necessaria per tutti gli elementi di una raccolta di risorse. Un altro <xref:System.Windows.ResourceDictionary> riferimento all'interno della raccolta di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> è un caso speciale, riservato per questo scenario di dizionario risorse Unito. Il <xref:System.Windows.ResourceDictionary> che introduce un dizionario risorse Unito non può avere una [direttiva x:Key](../../xaml-services/x-key-directive.md). In genere, ogni <xref:System.Windows.ResourceDictionary> all'interno della raccolta di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> specifica un attributo di <xref:System.Windows.ResourceDictionary.Source%2A>. Il valore di <xref:System.Windows.ResourceDictionary.Source%2A> deve essere un URI (Uniform Resource Identifier) che viene risolto nel percorso del file di risorse da unire. La destinazione di tale URI deve essere un altro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file, con <xref:System.Windows.ResourceDictionary> come elemento radice.  
+ Si noti che l'elemento <xref:System.Windows.ResourceDictionary> non dispone di una [direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md), che in genere è necessaria per tutti gli elementi di una raccolta di risorse. Un altro <xref:System.Windows.ResourceDictionary> riferimento all'interno della raccolta di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> è un caso speciale, riservato per questo scenario di dizionario risorse Unito. Il <xref:System.Windows.ResourceDictionary> che introduce un dizionario risorse Unito non può avere una [direttiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md). In genere, ogni <xref:System.Windows.ResourceDictionary> all'interno della raccolta di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> specifica un attributo di <xref:System.Windows.ResourceDictionary.Source%2A>. Il valore di <xref:System.Windows.ResourceDictionary.Source%2A> deve essere un URI (Uniform Resource Identifier) che viene risolto nel percorso del file di risorse da unire. La destinazione di tale URI deve essere un altro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file, con <xref:System.Windows.ResourceDictionary> come elemento radice.  
   
 > [!NOTE]
 > È possibile definire le risorse all'interno di un <xref:System.Windows.ResourceDictionary> specificato come dizionario Unito, in alternativa alla specifica di <xref:System.Windows.ResourceDictionary.Source%2A>o in aggiunta a qualsiasi risorsa inclusa dall'origine specificata. ma questo non è uno scenario comune. Lo scenario principale per i dizionari uniti prevede l'unione delle risorse da percorsi di file esterni. Se si desidera specificare le risorse all'interno del markup per una pagina, è in genere necessario definirle nel <xref:System.Windows.ResourceDictionary> principale e non nei dizionari uniti.  

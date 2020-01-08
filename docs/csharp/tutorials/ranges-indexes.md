@@ -4,12 +4,12 @@ description: Questa esercitazione avanzata descrive come esplorare i dati usando
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039676"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345627"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
@@ -78,9 +78,11 @@ L'esempio seguente illustra molti dei motivi per cui sono state fatte tali scelt
 
 ## <a name="type-support-for-indices-and-ranges"></a>Supporto dei tipi per gli indici e gli intervalli
 
-Se un tipo fornisce un [indicizzatore](../programming-guide/indexers/index.md) con un parametro <xref:System.Index> o <xref:System.Range>, supporta in modo esplicito gli indici o gli intervalli rispettivamente.
+Gli indici e gli intervalli forniscono una sintassi chiara e concisa per accedere a un singolo elemento o a un intervallo secondario di elementi in una sequenza. Un'espressione di indice restituisce in genere il tipo degli elementi di una sequenza. Un'espressione di intervallo restituisce in genere lo stesso tipo di sequenza della sequenza di origine.
 
-Un tipo può essere **conteggiato** se dispone di una proprietà denominata `Length` o `Count` con un getter accessibile e un tipo restituito di `int`. Un tipo conteggiabile che non supporta in modo esplicito gli indici o gli intervalli può fornire un supporto implicito. Per ulteriori informazioni, vedere le sezioni supporto implicito degli [indici](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [supporto per intervalli impliciti](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) della [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Se un tipo fornisce un [indicizzatore](../programming-guide/indexers/index.md) con un parametro <xref:System.Index> o <xref:System.Range>, supporta in modo esplicito gli indici o gli intervalli rispettivamente. Quando il tipo fornisce un indicizzatore che accetta un singolo parametro di <xref:System.Range>, può scegliere di restituire un tipo di sequenza diverso, ad esempio <xref:System.Span%601?displayProperty=nameWithType>.
+
+Un tipo può essere **conteggiato** se dispone di una proprietà denominata `Length` o `Count` con un getter accessibile e un tipo restituito di `int`. Un tipo conteggiabile che non supporta in modo esplicito gli indici o gli intervalli può fornire un supporto implicito. Per ulteriori informazioni, vedere le sezioni supporto implicito degli [indici](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [supporto per intervalli impliciti](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) della [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/ranges.md). Gli intervalli che usano il supporto di intervalli impliciti restituiscono lo stesso tipo di sequenza della sequenza di origine.
 
 I tipi .NET seguenti, ad esempio, supportano sia gli indici che gli intervalli: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>e <xref:System.ReadOnlySpan%601>. Il <xref:System.Collections.Generic.List%601> supporta gli indici, ma non supporta gli intervalli.
 

@@ -2,12 +2,12 @@
 title: 'Procedura: eseguire una query per trovare caratteri in una stringa (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347714"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345518"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Procedura: eseguire una query per i caratteri in una stringa (LINQ) (Visual Basic)
 
@@ -56,9 +56,9 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compiling-the-code"></a>Compilazione del codice
+## <a name="compile-the-code"></a>Compilare il codice
 
-Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione console Visual Basic con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 

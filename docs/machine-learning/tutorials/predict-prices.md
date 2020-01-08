@@ -1,19 +1,19 @@
 ---
 title: 'Esercitazione: stimare i prezzi tramite regressione'
-description: Questa esercitazione illustra come creare un modello di regressione usando ML.NET per stimare i prezzi, precisamente delle tariffe dei taxi a New York.
+description: Questa esercitazione illustra come compilare un modello di regressione usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 500eef32f569acfe3a28adbd63b1465c8153d5ba
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459156"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344981"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: stimare i prezzi usando la regressione con ML.NET
 
-Questa esercitazione illustra come creare un [modello di regressione](../resources/glossary.md#regression) usando ML.NET per stimare i prezzi, precisamente delle tariffe dei taxi a New York.
+Questa esercitazione illustra come creare un [modello di regressione](../resources/glossary.md#regression) usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
@@ -25,7 +25,7 @@ In questa esercitazione si imparerà a:
 > * Valutare il modello
 > * Usare il modello per le stime
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
@@ -37,7 +37,7 @@ In questa esercitazione si imparerà a:
 
 1. Installare il pacchetto NuGet **Microsoft.ML**:
 
-    In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come Origine del pacchetto, selezionare la scheda **Sfoglia**, trovare **Microsoft.ML**, selezionare il pacchetto nell'elenco e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Eseguire la stessa operazione per il pacchetto Nuget **Microsoft.ML.FastTree**.
+    In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come Origine del pacchetto, selezionare la scheda **Sfoglia**, trovare **Microsoft.ML**, selezionare il pacchetto nell'elenco e quindi selezionare il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Eseguire la stessa operazione per il pacchetto NuGet **Microsoft.ML.FastTree**.
 
 ## <a name="prepare-and-understand-the-data"></a>Preparare e identificare i dati
 
@@ -54,7 +54,7 @@ Il set di dati fornito contiene le colonne seguenti:
 * **vendor_id:** l'ID della società di taxi è una funzionalità.
 * **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
 * **passenger_count:** il numero di passeggeri è una funzionalità.
-* **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. Al momento non si conosce la durata del viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
+* **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. A questo punto, non si sa quanto tempo è necessario per il viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
 * **trip_distance:** la distanza del viaggio è una funzionalità.
 * **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
 * **fare_amount:** la tariffa totale per il viaggio in taxi è l'etichetta.
@@ -75,7 +75,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 `TaxiTrip` è la classe dei dati di input e contiene le definizioni per ognuna delle colonne del set di dati. Usare l'attributo <xref:Microsoft.ML.Data.LoadColumnAttribute> per specificare gli indici delle colonne di origine nel set di dati.
 
-La classe `TaxiTripFarePrediction` rappresenta i risultati previsti. Ha un singolo campo float, `FareAmount`, a cui è applicato un attributo `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute>. Nel caso dell'attività di regressione, la colonna **Score** contiene i valori delle etichette previsti.
+La classe `TaxiTripFarePrediction` rappresenta i risultati previsti. Dispone di un singolo campo float, `FareAmount`, con un attributo `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> applicato. Nel caso dell'attività di regressione, la colonna **Score** contiene i valori delle etichette stimate.
 
 > [!NOTE]
 > Usare il tipo `float` per rappresentare i valori a virgola mobile nelle classi di dati di input e di previsione.
@@ -126,11 +126,11 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Caricare e trasformare i dati
 
-ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo efficiente e flessibile per descrivere i dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio file di database SQL o file di log). Aggiungere il codice seguente come prima riga del metodo `Train()`:
+ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo efficiente e flessibile per descrivere i dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio, file di database SQL o di log). Aggiungere il codice seguente come prima riga del metodo `Train()`:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-Dato che si vuole stimare la tariffa di un viaggio in taxi, la colonna `FareAmount` è l'elemento `Label` che si andrà a stimare (output del modello). Usare la classe di trasformazione `CopyColumnsEstimator` per copiare `FareAmount` e aggiungere il codice seguente:
+Per stimare la tariffa per le corse dei taxi, il `FareAmount` colonna è il `Label` che verrà stimato (l'output del modello). Usare la classe Transformation `CopyColumnsEstimator` per copiare `FareAmount`e aggiungere il codice seguente:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) è una delle metriche di valutazione del modello di regressione. Più basso è il valore, migliore è il modello. Aggiungere il codice seguente nel metodo `Evaluate` per visualizzare il valore di RMS:
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) è una delle metriche di valutazione del modello di regressione. Più basso è il valore, migliore è il modello. Aggiungere il codice seguente nel metodo `Evaluate` per visualizzare il valore di RMS:
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 

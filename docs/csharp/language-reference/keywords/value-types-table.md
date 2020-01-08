@@ -6,25 +6,25 @@ helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2f2d81d90f6d68f1bada40c81f0f28febd51bd1f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: MT
+ms.openlocfilehash: 5619f163dc3050a37a23d824bd17ee1f67e4bebe
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552358"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345374"
 ---
 # <a name="value-types-table-c-reference"></a>Tabella tipi di valoreC# (riferimento)
 
 La tabella seguente mostra i tipi valore di C#:
 
-|Tipo valore|Category|
+|Tipo valore|Categoria|
 |----------------|--------------|
 |[bool](../builtin-types/bool.md)|Boolean|
 |`byte`|Senza segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|
 |[char](../builtin-types/char.md)|Senza segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|
 |`decimal`|Numerico, [virgola mobile](../builtin-types/floating-point-numeric-types.md)|
 |`double`|Numerico, [virgola mobile](../builtin-types/floating-point-numeric-types.md)|
-|[enum](enum.md)|Enumerazione|
+|[enum](../builtin-types/enum.md)|Enumerazione|
 |`float`|Numerico, [virgola mobile](../builtin-types/floating-point-numeric-types.md)|
 |`int`|Con segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|
 |`long`|Con segno, numerico, [integrale](../builtin-types/integral-numeric-types.md)|

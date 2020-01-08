@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340236"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345958"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: chiamare una routine di operatore (Visual Basic)
 Una routine di operatore viene chiamata utilizzando il simbolo dell'operatore in un'espressione. Nel caso di un operatore di conversione, si chiama la [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo di dati a un altro.  
@@ -50,7 +50,7 @@ Una routine di operatore viene chiamata utilizzando il simbolo dell'operatore in
   
  Per un esempio di chiamata a una routine dell'operatore di conversazione, vedere [procedura: usare una classe che definisce gli operatori](./how-to-use-a-class-that-defines-operators.md).  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
  Assicurarsi che la classe o la struttura utilizzata definisca l'operatore che si desidera utilizzare.  
   
 ## <a name="see-also"></a>Vedere anche
@@ -58,7 +58,7 @@ Una routine di operatore viene chiamata utilizzando il simbolo dell'operatore in
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

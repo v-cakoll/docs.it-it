@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.openlocfilehash: 19bf511ee7252bc305dbb4b6f32636955eba0ab8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204645"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337263"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -25,8 +25,8 @@ I vincoli indicano al compilatore quali funzionalità deve usare un argomento ti
 |`where T : notnull`|L'argomento di tipo deve essere un tipo non nullable. L'argomento può essere un tipo di riferimento non nullable in C# 8,0 o versione successiva oppure un tipo di valore non nullable. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
 |`where T : unmanaged`|L'argomento di tipo deve essere un tipo non [gestito](../../language-reference/builtin-types/unmanaged-types.md)che non ammette i valori null. Il vincolo `unmanaged` implica il vincolo `struct` e non può essere combinato con i vincoli `struct` o `new()`.|
 |`where T : new()`|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo. Non è possibile combinare il vincolo `new()` con i vincoli `struct` e `unmanaged`.|
-|`where T :` *\<nome della classe di base>*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|
-|`where T :` *\<nome dell'interfaccia>*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|
+|`where T :` *\<nome della classe base >*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|
+|`where T :` *\<nome dell'interfaccia >*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|
 |`where T : U`|L'argomento tipo fornito per T deve corrispondere all'argomento fornito per U o derivare da esso.|
 
 ## <a name="why-use-constraints"></a>Motivi per cui usare i vincoli
@@ -107,15 +107,15 @@ Se si rimuove il commento dall'ultima riga, non verrà compilata. Sia `first` ch
 
 A partire da C# 7.3 è anche possibile specificare il tipo <xref:System.Enum?displayProperty=nameWithType> come vincolo di classe di base. Il supporto Common Language Runtime (CLR) consente sempre questo vincolo, a differenza del linguaggio C#. I generics che usano `System.Enum` offrono una programmazione indipendente dai tipi che consente di memorizzare nella cache i risultati dei metodi statici in `System.Enum`. Nell'esempio seguente vengono individuati tutti i valori validi per un tipo di enumerazione e viene compilato un dizionario che esegue il mapping di tali valori alla propria rappresentazione di stringa.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-I metodi usano la reflection, che presenta implicazioni a livello di prestazioni. È possibile chiamare questo metodo per creare una raccolta da memorizzare nella cache e riusare anziché ripetere le chiamate che richiedono reflection.
+Metodi utilizzati per utilizzare la reflection, che ha implicazioni sulle prestazioni. È possibile chiamare questo metodo per creare una raccolta da memorizzare nella cache e riusare anziché ripetere le chiamate che richiedono reflection.
 
 Il metodo può essere usato come illustrato nell'esempio seguente per creare un'enumerazione e compilare un dizionario dei relativi valori e nomi:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 19708d03b0514f4572c2baa53e05781e5949766b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350065"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341579"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedura: convertire un oggetto in un altro tipo in Visual Basic
 Per convertire una variabile di `Object` in un altro tipo di dati, è possibile usare una parola chiave di conversione come la [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
@@ -28,7 +28,7 @@ End Sub
   
  Se si è certi che il contenuto di una variabile `Object` è di un determinato tipo di dati, è preferibile convertire la variabile in quel tipo di dati. Se si continua a usare la variabile di `Object`, è necessario eseguire la *conversione boxing* e unboxing (per un tipo di valore) o l' *associazione tardiva* *(per* un tipo di riferimento). Queste operazioni consentono di ottenere tempo di esecuzione aggiuntivo e rallentare le prestazioni.  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
  L'esempio presenta i requisiti seguenti:  
   
 - Un riferimento allo spazio dei nomi <xref:System?displayProperty=nameWithType>.  
@@ -43,4 +43,4 @@ End Sub
 - [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
-- [CString](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349460"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545124"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Proprietà Child Axis XML (Visual Basic)
 Fornisce l'accesso agli elementi figlio di uno dei seguenti oggetti: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, raccolta di <xref:System.Xml.Linq.XElement> o raccolta di <xref:System.Xml.Linq.XDocument>.  
@@ -26,14 +26,14 @@ Fornisce l'accesso agli elementi figlio di uno dei seguenti oggetti: <xref:Syste
 object.<child>  
 ```  
   
-## <a name="parts"></a>Parti  
+## <a name="parts"></a>Componenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`object`|Obbligatoria. Un oggetto <xref:System.Xml.Linq.XElement>, un oggetto <xref:System.Xml.Linq.XDocument>, una raccolta di oggetti <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XDocument>.|  
-|. <|Obbligatoria. Indica l'inizio di una proprietà axis dell'elemento figlio.|  
-|`child`|Obbligatoria. Nome dei nodi figlio a cui accedere, nel formato [`prefix:]name`.<br /><br /> -   `Prefix`-facoltativo. Prefisso dello spazio dei nomi XML per il nodo figlio. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.<br />-   `Name`: obbligatorio. Nome del nodo figlio locale. Vedere [nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Obbligatoria. Indica la fine di una proprietà axis dell'elemento figlio.|  
+|`object`|Richiesto. Un oggetto <xref:System.Xml.Linq.XElement>, un oggetto <xref:System.Xml.Linq.XDocument>, una raccolta di oggetti <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XDocument>.|  
+|. <|Richiesto. Indica l'inizio di una proprietà axis dell'elemento figlio.|  
+|`child`|Richiesto. Nome dei nodi figlio a cui accedere, nel formato `[prefix:]name`.<br /><br /> -   `Prefix`-facoltativo. Prefisso dello spazio dei nomi XML per il nodo figlio. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.<br />-   `Name`: obbligatorio. Nome del nodo figlio locale. Vedere [nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Richiesto. Indica la fine di una proprietà axis dell'elemento figlio.|  
   
 ## <a name="return-value"></a>Valore restituito  
  Raccolta di oggetti <xref:System.Xml.Linq.XElement>.  

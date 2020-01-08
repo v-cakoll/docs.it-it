@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120782"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337666"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -44,7 +44,7 @@ Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si sp
 
 È possibile determinare se un percorso di file è completo (ovvero se il percorso è indipendente dalla directory corrente e non cambia quando la directory corrente viene modificata) chiamando il metodo <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Si noti che tale percorso può includere segmenti di directory relativi (`.` e `..`) ed essere comunque completo se il percorso risolto punta sempre alla stessa posizione.
 
-L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che la directory D:\FY2018\ esista già e che non sia stata impostata una directory corrente per D:\ dal prompt dei comandi prima di eseguire l'esempio.
+L'esempio seguente illustra la differenza fra percorsi assoluti e relativi. Si presuppone che la directory D:\FY2018\ esista e che non sia stata impostata alcuna directory corrente per D:\ dal prompt dei comandi prima di eseguire l'esempio.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -71,7 +71,7 @@ I percorsi UNC devono essere sempre completi. Possono includere segmenti di dire
 
 Il sistema operativo Windows ha un modello a oggetti unificato che punta a tutte le risorse, inclusi i file. Questi percorsi degli oggetti sono accessibili dalla finestra della console e vengono esposti al livello Win32 tramite una cartella speciale di collegamenti simbolici a cui sono mappati i percorsi UNC e DOS legacy. Questa cartella speciale è accessibile tramite la sintassi del percorso del dispositivo DOS, ovvero uno dei due riportati di seguito:
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 Oltre a identificare un'unità con la relativa lettera di unità, è possibile identificare un volume usando l'identificatore univoco globale (GUID) del volume. Assume il formato:
@@ -93,12 +93,12 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    Il primo segmento del percorso del dispositivo DOS dopo l'identificatore del percorso del dispositivo identifica il volume o l'unità (ad esempio, `\\?\C:\` e `\\.\BootPartition\`).
 
-   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Esempio:
+   È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Per i percorsi UNC del dispositivo, la parte server/condivisione costituisce il volume. Ad esempio, in `\\?\server1\e:\utilities\\filecomparer\` la parte server/condivisione è server1\utilities. Ciò risulta particolarmente importante quando si chiama un metodo come <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmenti di directory relativi; non è mai possibile andare oltre il volume. 
+    Per i percorsi UNC del dispositivo, la parte server/condivisione costituisce il volume. Ad esempio, in `\\?\server1\e:\utilities\\filecomparer\` la parte server/condivisione è server1\utilities. Ciò risulta particolarmente importante quando si chiama un metodo come <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmenti di directory relativi; non è mai possibile andare oltre il volume.
 
 I percorsi del dispositivo DOS sono completi per definizione. I segmenti di directory relativi (`.` e `..`) non sono consentiti. Le directory correnti non entrano mai in uso.
 
@@ -126,7 +126,7 @@ Questa normalizzazione avviene in modo implicito, ma è possibile eseguirla in m
 Il primo passaggio nella normalizzazione del percorso consiste nell'identificare il tipo di percorso. I percorsi rientrano in una delle categorie seguenti:
 
 - Sono percorsi del dispositivo, vale a dire iniziano con due separatori e un punto interrogativo o un punto (`\\?` o `\\.`).
-- Sono percorsi UNC, vale a dire iniziano con due separatori senza un punto interrogativo o un punto. 
+- Sono percorsi UNC, vale a dire iniziano con due separatori senza un punto interrogativo o un punto.
 - Sono percorsi DOS completi, vale a dire iniziano con una lettera di unità, un separatore di volume e un separatore di componenti (`C:\`).
 - Definiscono un dispositivo legacy (`CON`, `LPT1`).
 - Sono relativi alla radice dell'unità corrente, vale a dire iniziano con un separatore di componenti singolo (`\`).
@@ -137,7 +137,7 @@ Il tipo di percorso determina se una directory corrente viene applicata o meno i
 
 ### <a name="handling-legacy-devices"></a>Gestione dei dispositivi legacy
 
-Se il percorso è un dispositivo DOS legacy come `CON`, `COM1` o `LPT1`, viene convertito in un percorso del dispositivo anteponendo `\\.\` e viene restituito. 
+Se il percorso è un dispositivo DOS legacy come `CON`, `COM1` o `LPT1`, viene convertito in un percorso del dispositivo anteponendo `\\.\` e viene restituito.
 
 Un percorso che inizia con il nome di un dispositivo legacy viene sempre interpretato come dispositivo legacy dal metodo <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Ad esempio, il percorso del dispositivo DOS per `CON.TXT` è `\\.\CON` e il percorso del dispositivo DOS per `COM1.TXT\file1.txt` è `\\.\COM1`.
 
@@ -152,7 +152,7 @@ Se il percorso inizia con una lettera di unità, un separatore di volume e nessu
 Se il percorso inizia con un elemento diverso da un separatore, vengono applicate l'unità e la directory correnti. Ad esempio, se il percorso è `filecompare` e la directory corrente è `C:\utilities\`, il risultato è `C:\utilities\filecompare\`.
 
 > [!IMPORTANT]
-> I percorsi relativi sono pericolosi nelle applicazioni multithreading (vale a dire, la maggior parte delle applicazioni) perché la directory corrente è un'impostazione specifica per il processo. Qualsiasi thread può modificare la directory corrente in qualsiasi momento. A partire da .NET Core 2.1, è possibile chiamare il metodo <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> per ottenere un percorso assoluto da un percorso relativo e il percorso base (directory corrente) in base a cui si procede alla risoluzione. 
+> I percorsi relativi sono pericolosi nelle applicazioni multithreading (vale a dire, la maggior parte delle applicazioni) perché la directory corrente è un'impostazione specifica per il processo. Qualsiasi thread può modificare la directory corrente in qualsiasi momento. A partire da .NET Core 2.1, è possibile chiamare il metodo <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> per ottenere un percorso assoluto da un percorso relativo e il percorso base (directory corrente) in base a cui si procede alla risoluzione.
 
 ### <a name="canonicalizing-separators"></a>Conversione in forma canonica dei separatori
 
@@ -160,7 +160,7 @@ Tutte le barre (`/`) sono convertite nel separatore di Windows standard, la barr
 
 ### <a name="evaluating-relative-components"></a>Valutazione dei componenti relativi
 
-Mentre il percorso viene elaborato, vengono valutati tutti i componenti o i segmenti costituiti da un punto singolo o doppio (`.` o `..`): 
+Mentre il percorso viene elaborato, vengono valutati tutti i componenti o i segmenti costituiti da un punto singolo o doppio (`.` o `..`):
 
 - Nel caso di un punto singolo, il segmento corrente viene rimosso, perché fa riferimento alla directory corrente.
 
@@ -174,9 +174,9 @@ Insieme ai separatori e ai segmenti relativi rimossi in precedenza, durante la n
 
 - Se un segmento termina con un punto singolo, il punto viene rimosso (un segmento di un punto singolo o doppio è normalizzato nel passaggio precedente; un segmento di tre o più punti non è normalizzato ed è in realtà un nome di file/directory valido).
 
-- Se il percorso non termina con un separatore, tutti gli spazi e i punti finali (U+0020) vengono rimossi. Se l'ultimo segmento è semplicemente un punto singolo o doppio, rientra nella regola dei componenti relativi esposta in precedenza. 
+- Se il percorso non termina con un separatore, tutti gli spazi e i punti finali (U+0020) vengono rimossi. Se l'ultimo segmento è semplicemente un punto singolo o doppio, rientra nella regola dei componenti relativi esposta in precedenza.
 
-   Questa regola indica che è possibile creare un nome di directory con uno spazio finale mediante l'aggiunta di un separatore finale dopo lo spazio.  
+   Questa regola indica che è possibile creare un nome di directory con uno spazio finale mediante l'aggiunta di un separatore finale dopo lo spazio.
 
    > [!IMPORTANT]
    > Non creare **mai** una directory o un nome file con uno spazio finale. Gli spazi finali possono rendere difficile o impossibile l'accesso a una directory e le applicazioni riscontrano in genere un errore quando si tenta di gestire directory o file i cui nomi includono spazi finali.
@@ -187,7 +187,7 @@ Normalmente, qualsiasi percorso passato a un'API di Windows viene effettivamente
 
 Perché escludere la normalizzazione? Per tre motivi principali:
 
-1. Per ottenere l'accesso a percorsi che non sono in genere disponibili ma sono validi. A un file o una directory denominata `hidden.`, ad esempio, è impossibile accedere in qualsiasi altro modo. 
+1. Per ottenere l'accesso a percorsi che non sono in genere disponibili ma sono validi. A un file o una directory denominata `hidden.`, ad esempio, è impossibile accedere in qualsiasi altro modo.
 
 1. Per migliorare le prestazioni escludendo la normalizzazione se è già stata eseguita.
 
@@ -200,7 +200,7 @@ L'esclusione della normalizzazione e dei controlli MAX_PATH è l'unica differenz
 
 I percorsi che iniziano con `\\?\` vengono comunque normalizzati se si passano in modo esplicito alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Si noti che è possibile passare contenenti più caratteri di `MAX_PATH` a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza `\\?\`. Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
+È possibile passare i percorsi di più di `MAX_PATH` caratteri a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza `\\?\`. Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiuscole/minuscole e file system di Windows
 

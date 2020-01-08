@@ -4,16 +4,16 @@ description: Indicazioni per i responsabili di progetti che desiderano compilare
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.openlocfilehash: acb73720d231bdb9f27eb0b75b3383c33cef2202
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801934"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343545"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organizzare il progetto per il supporto sia di .NET Framework che di .NET Core
 
-Informazioni su come creare una soluzione che viene compilata sia per .NET Framework che per .NET Core side-by-side. Vedere le diverse opzioni per organizzare i progetti e poter raggiungere tale obiettivo. Ecco alcuni scenari tipici da considerare quando si decide quale modalità di configurazione del layout di progetto usare con .NET Core. È possibile che l'elenco non includa tutti gli aspetti desiderati. Definire le priorità in base alle esigenze.
+Informazioni su come creare una soluzione che viene compilata sia per .NET Framework che per .NET Core side-by-side. Vedere le diverse opzioni per organizzare i progetti e poter raggiungere tale obiettivo. Ecco alcuni scenari tipici da considerare quando si decide come impostare il layout del progetto con .NET Core. È possibile che l'elenco non includa tutti gli aspetti desiderati. Definire le priorità in base alle esigenze.
 
 - [**Combinare progetti esistenti e progetti .NET Core in singoli progetti**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
@@ -46,7 +46,7 @@ Di seguito vengono illustrati vari metodi per l'aggiunta del supporto .NET Core 
 
 Riorganizzare il repository in modo che venga rimosso qualsiasi file *\*csproj* esistente e venga creato un singolo file *\*csproj* destinato a più framework. Questa è un'ottima opzione perché consente di compilare un singolo progetto per diversi framework. Include anche la possibilità di gestire diverse opzioni di compilazione e dipendenze a seconda del framework di destinazione.
 
-![Creare un file csproj con più framework di destinazione](./media/project-structure/multi-targeted-project.png)
+![Creare un csproj destinato a più Framework](./media/project-structure/multi-targeted-project.png)
 
 [**Codice sorgente**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
