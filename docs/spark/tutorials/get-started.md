@@ -4,12 +4,12 @@ description: Informazioni su come eseguire un'app .NET per Apache Spark usando .
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740523"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337596"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Esercitazione: Introduzione a .NET per Apache Spark
 
@@ -23,7 +23,7 @@ In questa esercitazione si imparerà a:
 > * Scrivere la prima applicazione .NET per Apache Spark
 > * Creazione ed esecuzione di un'applicazione .NET semplice per Apache Spark
 
-## <a name="prepare-your-environment"></a>Preparare l'ambiente
+## <a name="prepare-your-environment"></a>Preparazione dell'ambiente
 
 Prima di iniziare a scrivere l'app, è necessario configurare alcune dipendenze dei prerequisiti. Se è possibile eseguire `dotnet`, `java`, `mvn``spark-shell` dall'ambiente della riga di comando, l'ambiente è già pronto ed è possibile passare alla sezione successiva. Se non è possibile eseguire uno o tutti i comandi, seguire questa procedura.
 
@@ -31,18 +31,18 @@ Prima di iniziare a scrivere l'app, è necessario configurare alcune dipendenze 
 
 Per iniziare a creare app .NET, è necessario scaricare e installare .NET SDK (Software Development Kit).
 
-scaricare e installare [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). L'installazione dell'SDK consente di aggiungere la toolchain `dotnet` a PATH. 
+scaricare e installare [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). L'installazione dell'SDK consente di aggiungere la toolchain `dotnet` a PATH.
 
 Una volta installato il .NET Core SDK, aprire un nuovo prompt dei comandi ed eseguire `dotnet`.
 
-Se il comando viene eseguito e stampa le informazioni su come usare dotnet, può passare al passaggio successivo. Se viene visualizzato un errore di `'dotnet' is not recognized as an internal or external command`, assicurarsi di aprire un **nuovo** prompt dei comandi prima di eseguire il comando. 
+Se il comando viene eseguito e stampa le informazioni su come usare dotnet, può passare al passaggio successivo. Se viene visualizzato un errore di `'dotnet' is not recognized as an internal or external command`, assicurarsi di aprire un **nuovo** prompt dei comandi prima di eseguire il comando.
 
 ### <a name="2-install-java"></a>2. installare Java
 
 Installare [Java 8,1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Selezionare la versione appropriata per il sistema operativo in uso. Ad esempio, selezionare **jdk-8u201-windows-x64.exe** per un computer Windows x64. Usare quindi il comando `java` per verificare l'installazione.
-   
+
 ![Download Java](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3. installare 7-zip
@@ -52,12 +52,12 @@ Apache Spark viene scaricato come file con estensione TGZ compresso. Per estrarr
 * Visita [7-download zip](https://www.7-zip.org/).
 * Nella prima tabella della pagina selezionare il download x64 a 32 bit x86 o a 64 bit, a seconda del sistema operativo in uso.
 * Al termine del download, eseguire il programma di installazione.
-   
+
 ![Download 7Zip](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4. installare Apache Spark
 
-[Scaricare e installare Apache Spark](https://spark.apache.org/downloads.html). È necessario effettuare una selezione dalla versione 2,3. * o 2.4.0, 2.4.1, 2.4.3 o 2.4.4 (.NET per Apache Spark non è compatibile con le altre versioni di Apache Spark).  
+[Scaricare e installare Apache Spark](https://spark.apache.org/downloads.html). È necessario effettuare una selezione dalla versione 2,3. * o 2.4.0, 2.4.1, 2.4.3 o 2.4.4 (.NET per Apache Spark non è compatibile con le altre versioni di Apache Spark).
 
 I comandi usati nei passaggi seguenti presuppongono che siano stati [scaricati e installati Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz). Se si vuole usare una versione diversa, sostituire **2.4.1** con il numero di versione appropriato. Estrarre quindi il file con estensione **tar** e i file di Apache Spark.
 
@@ -74,9 +74,9 @@ Per estrarre i file di Apache Spark:
 * Deselezionare la casella di controllo sotto il campo **Estrai in** .
 * Scegliere **OK**.
 * I file Apache Spark vengono estratti in C:\bin\spark-2.4.1-bin-hadoop2.7\
-      
+
 ![Installare Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 Eseguire i comandi seguenti per impostare le variabili di ambiente usate per individuare Apache Spark:
 
 ```console
@@ -103,7 +103,7 @@ Per estrarre Microsoft. Spark. Worker:
 * Immettere **C:\bin** nel campo **Estrai** in.
 * Deselezionare la casella di controllo sotto il campo **Estrai in** .
 * Scegliere **OK**.
-  
+
 ![Installare .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6. installare file winutils
@@ -111,7 +111,7 @@ Per estrarre Microsoft. Spark. Worker:
 .NET per Apache Spark richiede l'installazione di file winutils insieme a Apache Spark. [Scaricare file winutils. exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Quindi, copiare file winutils in **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.
 
 > [!NOTE]
-> Se si usa una versione diversa di Hadoop, annotata alla fine del nome della cartella di installazione di Spark, [selezionare la versione di file winutils](https://github.com/steveloughran/winutils) compatibile con la versione di Hadoop. 
+> Se si usa una versione diversa di Hadoop, annotata alla fine del nome della cartella di installazione di Spark, [selezionare la versione di file winutils](https://github.com/steveloughran/winutils) compatibile con la versione di Hadoop.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. impostare DOTNET_WORKER_DIR e controllare le dipendenze
 
