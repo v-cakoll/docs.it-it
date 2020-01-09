@@ -4,12 +4,12 @@ description: Informazioni su come creare componenti dell'interfaccia utente riut
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337393"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705730"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crea componenti dell'interfaccia utente riutilizzabili con blazer
 
@@ -269,7 +269,7 @@ I gestori di eventi possono essere eseguiti in modo sincrono o asincrono. Ad ese
 Una volta gestito un evento, viene eseguito il rendering del componente per tenere conto di eventuali modifiche dello stato dei componenti. Con i gestori eventi asincroni, il rendering del componente viene eseguito subito dopo il completamento dell'esecuzione del gestore. Il rendering del componente viene eseguito *nuovamente* dopo il completamento del `Task` asincrono. Questa modalità di esecuzione asincrona consente di eseguire il rendering di un'interfaccia utente appropriata mentre il `Task` asincrono è ancora in corso.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
