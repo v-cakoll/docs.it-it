@@ -9,34 +9,33 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: KrzysztofCwalina
-ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fee7f5b7749c97a87e37581f67cbe1b49250b9ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615262"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709530"
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
-Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di case che, quando applicata in modo coerente, verificare gli identificatori per i tipi, membri e parametri di facile lettura.  
+Le linee guida in questo capitolo definiscono un metodo semplice per l'utilizzo di case che, quando vengono applicate in modo coerente, rendono facili da leggere gli identificatori di tipi, membri e parametri.  
   
-## <a name="capitalization-rules-for-identifiers"></a>Regole di maiuscole/minuscole per gli identificatori  
- Per differenziare le parole in un identificatore, converte in maiuscolo la prima lettera di ogni parola nell'identificatore. Non usare caratteri di sottolineatura per differenziare le parole o parimenti, in qualsiasi punto negli identificatori. Esistono due modi appropriati da convertire in maiuscolo identificatori, a seconda dell'utilizzo dell'identificatore:  
+## <a name="capitalization-rules-for-identifiers"></a>Regole relative alle maiuscole per gli identificatori  
+ Per distinguere le parole in un identificatore, sfruttare la prima lettera di ogni parola nell'identificatore. Non usare caratteri di sottolineatura per distinguere le parole, o per tale importanza, in qualsiasi punto degli identificatori. Esistono due modi appropriati per capitalizzare gli identificatori, a seconda dell'utilizzo dell'identificatore:  
   
 - Sistema Pascal  
   
-- notazione camel  
+- camelCasing  
   
- La convenzione, il sistema Pascal utilizzata per tutti gli identificatori, ad eccezione di nomi di parametro, converte in maiuscolo il primo carattere di ogni parola (inclusi gli acronimi su due lettere), come illustrato negli esempi seguenti:  
+ La convenzione sistema Pascal, usata per tutti gli identificatori eccetto i nomi di parametro, converte in maiuscolo il primo carattere di ogni parola (inclusi gli acronimi per due lettere di lunghezza), come illustrato negli esempi seguenti:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Un caso speciale viene effettuato per due lettere acronimi in cui sia le lettere sono in maiuscolo, come illustrato nell'identificatore seguente:  
+ Viene creato un caso speciale per gli acronimi di due lettere in cui entrambe le lettere sono in maiuscolo, come illustrato nell'identificatore seguente:  
   
  `IOStream`  
   
- La convenzione camel, usata solo per i nomi dei parametri, converte in maiuscolo il primo carattere di ogni parola eccetto la prima parola, come illustrato negli esempi seguenti. Come illustrato anche nell'esempio, gli acronimi di due lettere che iniziano un identificatore di maiuscole/minuscole camel sono entrambi caratteri minuscoli.  
+ La convenzione camelCasing, usata solo per i nomi dei parametri, converte in maiuscolo il primo carattere di ogni parola eccetto la prima parola, come illustrato negli esempi seguenti. Come illustrato nell'esempio, gli acronimi a due lettere che iniziano un identificatore con distinzione tra maiuscole e minuscole sono entrambi minuscoli.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -46,28 +45,28 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
   
  **✓ DO** utilizzare camel per i nomi dei parametri.  
   
- Nella tabella seguente vengono descritte le regole di maiuscole/minuscole per i diversi tipi di identificatori.  
+ Nella tabella seguente vengono descritte le regole di utilizzo delle maiuscole per diversi tipi di identificatori.  
   
 |Identificatore|Maiuscole/minuscole|Esempio|  
 |----------------|------------|-------------|  
-|Spazio dei nomi|Convenzione Pascal|`namespace System.Security { ... }`|  
-|Tipo|Convenzione Pascal|`public class StreamReader { ... }`|  
-|Interfaccia|Convenzione Pascal|`public interface IEnumerable { ... }`|  
-|Metodo|Convenzione Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Proprietà|Convenzione Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|event|Convenzione Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
-|Campo|Convenzione Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|Valore enum|Convenzione Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parametro|Notazione camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Spazio dei nomi|Pascal|`namespace System.Security { ... }`|  
+|Tipo di|Pascal|`public class StreamReader { ... }`|  
+|Interfaccia|Pascal|`public interface IEnumerable { ... }`|  
+|Metodo|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
+|Gli|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
+|Valore enum|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|Parametro|notazione Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Sfruttando le parole composte e termini comuni  
- La maggior parte dei termini composte vengono considerate come singole parole per scopi di maiuscole/minuscole.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Capitalizzazione di parole composte e termini comuni  
+ La maggior parte dei termini composti viene considerata come una singola parola per scopi di maiuscole.  
   
  **X DO NOT** tutte iniziali maiuscole in cosiddette parole composte forma chiusa.  
   
- Queste sono le parole composte scritte come una parola singola, come endpoint. Ai fini di linee guida per le maiuscole e minuscole, considerare una chiusura parola composta come una singola parola. Usare un dizionario corrente per determinare se una parola composta è scritto in forma chiusa.  
+ Si tratta di parole composte scritte come una singola parola, ad esempio endpoint. Ai fini delle linee guida per l'utilizzo di maiuscole e minuscole, considerare una parola composta a forma chiusa come una singola parola. Usare un dizionario corrente per determinare se una parola composta viene scritta in formato chiuso.  
   
-|Convenzione Pascal|Notazione camel|not|  
+|Pascal|notazione Camel|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -96,13 +95,13 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole  
- I linguaggi che è possano eseguirla in CLR non devono supportare distinzione maiuscole/minuscole, anche se alcune eseguire. Anche se il linguaggio la supporta, altri linguaggi che potrebbero accedere il framework non. Tutte le API che siano accessibili esternamente, pertanto, non si basano su case da solo per distinguere tra i due nomi nello stesso contesto.  
+ Le lingue che possono essere eseguite su CLR non devono supportare la distinzione tra maiuscole e minuscole, sebbene alcune operazioni. Anche se il linguaggio lo supporta, altre lingue che potrebbero accedere al Framework non lo sono. Le API che sono accessibili esternamente, pertanto, non possono basarsi solo su case per distinguere tra due nomi nello stesso contesto.  
   
- **X DO NOT** presupporre che tutti i linguaggi di programmazione siano distinzione maiuscole / minuscole. Ma non lo sono. I nomi non può essere diversa di maiuscole/minuscole solo.  
+ **X DO NOT** presupporre che tutti i linguaggi di programmazione siano distinzione maiuscole / minuscole. Ma non lo sono. I nomi non possono differire solo per caso.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

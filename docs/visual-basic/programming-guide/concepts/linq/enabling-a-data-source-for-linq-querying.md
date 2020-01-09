@@ -2,43 +2,43 @@
 title: Abilitazione di un'origine dati per Querying2 LINQ
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 312a880158e4d9254d6ead81538dc9a17e5c31b0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ecd43b371a8e907e9bcfc8687c04bdd0350235ac
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "68959778"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636887"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Abilitazione di un'origine dati per l'esecuzione di query LINQ
 
-Esistono diversi modi per estendere [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in modo da consentire l'esecuzione di una query su un'origine dati nel modello [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. L'origine dati potrebbe, ad esempio, essere una struttura ad albero dei dati, un servizio Web, un file system o un database. Il modello [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consente ai client di eseguire una query su un'origine dati per la quale è attivata l'esecuzione di query[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], poiché la sintassi e il modello della query non vengono modificati. Di seguito vengono riportati i modi in cui è possibile estendere [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] a queste origini dati:
+Sono disponibili diversi modi per estendere LINQ in modo da consentire la query su qualsiasi origine dati nel modello LINQ. L'origine dati potrebbe, ad esempio, essere una struttura ad albero dei dati, un servizio Web, un file system o un database. Il modello LINQ rende più semplice per i client eseguire una query su un'origine dati per cui è abilitata l'esecuzione di query LINQ, perché la sintassi e il modello della query non cambiano. I modi in cui LINQ può essere esteso a queste origini dati sono i seguenti:
 
-- Implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> in un tipo in modo da consentire l'esecuzione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects per quel tipo.
+- Implementazione dell'interfaccia <xref:System.Collections.Generic.IEnumerable%601> in un tipo per consentire LINQ to Objects l'esecuzione di query su quel tipo.
 
-- Creando metodi degli operatori query standard, ad esempio <xref:System.Linq.Enumerable.Where%2A> e <xref:System.Linq.Enumerable.Select%2A>, che estendono un tipo in modo da consentire l'esecuzione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] personalizzate per quel tipo.
+- Creazione di metodi di operatori di query standard, ad esempio <xref:System.Linq.Enumerable.Where%2A> e <xref:System.Linq.Enumerable.Select%2A> che estendono un tipo, per consentire l'esecuzione di query LINQ personalizzate su tale tipo.
 
-- Creando un provider per l'origine dati che implementi l'interfaccia <xref:System.Linq.IQueryable%601>. Un provider che implementa questa interfaccia riceve le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sotto forma di strutture ad albero dell'espressione, che possono essere eseguite in modo personalizzato, ad esempio in modalità remota.
+- Creando un provider per l'origine dati che implementi l'interfaccia <xref:System.Linq.IQueryable%601>. Un provider che implementa questa interfaccia riceve le query LINQ sotto forma di alberi delle espressioni, che può essere eseguito in modo personalizzato, ad esempio in modalità remota.
 
-- Creazione di un provider per l'origine dati in grado di sfruttare una tecnologia [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esistente. Tale provider consentirebbe non solo l'esecuzione di query, ma anche le operazioni di inserimento, aggiornamento ed eliminazione e il mapping per i tipi definiti dall'utente.
+- Creazione di un provider per l'origine dati che sfrutta una tecnologia LINQ esistente. Tale provider consentirebbe non solo l'esecuzione di query, ma anche le operazioni di inserimento, aggiornamento ed eliminazione e il mapping per i tipi definiti dall'utente.
 
 In questo argomento vengono descritte queste opzioni.
 
 ## <a name="how-to-enable-linq-querying-of-your-data-source"></a>Come attivare l'esecuzione di query LINQ sull'origine dati
 
 ### <a name="in-memory-data"></a>Dati in memoria
- Per consentire l'esecuzione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sui dati in memoria sono disponibili due modi. Se il tipo di dati implementa <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire una query sui dati utilizzando [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects. Se non ha senso abilitare l'enumerazione del tipo implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, è possibile definire i metodi degli operatori query standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in quel tipo oppure creare metodi degli operatori query standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] che estendono il tipo. Le implementazioni personalizzate degli operatori di query standard devono utilizzare l'esecuzione posticipata per restituire i risultati.
+ Esistono due modi per abilitare l'esecuzione di query LINQ sui dati in memoria. Se i dati sono di un tipo che implementa <xref:System.Collections.Generic.IEnumerable%601>, è possibile eseguire una query sui dati utilizzando LINQ to Objects. Se non ha senso abilitare l'enumerazione del tipo implementando l'interfaccia di <xref:System.Collections.Generic.IEnumerable%601>, è possibile definire i metodi degli operatori di query standard LINQ in quel tipo o creare metodi di operatori di query standard LINQ che estendono il tipo. Le implementazioni personalizzate degli operatori di query standard devono utilizzare l'esecuzione posticipata per restituire i risultati.
 
 ### <a name="remote-data"></a>Dati remoti
- L'opzione migliore per abilitare l'esecuzione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] su un'origine dati remota consiste nell'implementare l'interfaccia <xref:System.Linq.IQueryable%601>. È tuttavia diverso dall'estendere un provider come [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per un'origine dati. In Visual Studio 2008 non sono disponibili modelli di provider per l'estensione di tecnologie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esistenti, ad esempio [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], ad altri tipi di origine dati.
+ L'opzione migliore per abilitare l'esecuzione di query LINQ su un'origine dati remota consiste nell'implementare l'interfaccia <xref:System.Linq.IQueryable%601>. È tuttavia diverso dall'estendere un provider come [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per un'origine dati. In Visual Studio 2008 non sono disponibili modelli di provider per l'estensione di tecnologie LINQ esistenti, ad esempio [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], ad altri tipi di origine dati.
 
 ## <a name="iqueryable-linq-providers"></a>Provider LINQ IQueryable
- I provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] che implementano <xref:System.Linq.IQueryable%601> possono variare notevolmente per quanto riguarda la complessità. In questa sezione vengono illustrati i diversi livelli di complessità.
+ I provider LINQ che implementano <xref:System.Linq.IQueryable%601> possono variare notevolmente nella loro complessità. In questa sezione vengono illustrati i diversi livelli di complessità.
 
  Un provider `IQueryable` meno complesso potrebbe interfacciarsi con un singolo metodo di un servizio Web. Questo tipo di provider è molto specifico poiché prevede informazioni specifiche nelle query che gestisce. Ha un sistema del tipo chiuso, forse esponendo un solo tipo di risultato. La maggior parte dell'esecuzione della query avviene localmente, utilizzando ad esempio le implementazioni <xref:System.Linq.Enumerable> degli operatori di query standard. Un provider meno complesso potrebbe esaminare solo un'espressione della chiamata al metodo nella struttura ad albero dell'espressione che rappresenta la query facendo sì che la logica rimanente della query venga gestita altrove.
 
  Un provider `IQueryable` mediamente complesso potrebbe essere destinato a un'origine dati che ha un linguaggio di query parzialmente espressivo. Se è destinato a un servizio Web, potrebbe interagire con più metodi del servizio Web e selezionare il metodo da chiamare in base alla domanda posta dalla query. Un provider mediamente complesso può avere un sistema di tipi più dettagliato rispetto a un provider semplice, ma rimane sempre un sistema di tipi fisso. Ad esempio, il provider può esporre tipi che hanno relazioni uno-a-molti che possono essere attraversate, ma non fornisce la tecnologia di mapping per i tipi definiti dall'utente.
 
- Un provider `IQueryable` complesso, ad esempio il provider [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], può convertire le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] complete in un linguaggio di query espressivo, ad esempio SQL. Un provider complesso è più generale di un provider meno complesso, poiché può gestire un'ampia gamma di domande nella query. Ha anche un sistema di tipi aperto e pertanto deve contenere un'infrastruttura completa per eseguire il mapping dei tipi definiti dall'utente. Lo sviluppo di un provider complesso è molto impegnativo.
+ Un provider di `IQueryable` complesso, ad esempio il provider di [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], potrebbe tradurre le query LINQ complete in un linguaggio di query espressivo, ad esempio SQL. Un provider complesso è più generale di un provider meno complesso, poiché può gestire un'ampia gamma di domande nella query. Ha anche un sistema di tipi aperto e pertanto deve contenere un'infrastruttura completa per eseguire il mapping dei tipi definiti dall'utente. Lo sviluppo di un provider complesso è molto impegnativo.
 
 ## <a name="see-also"></a>Vedere anche
 

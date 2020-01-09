@@ -1,15 +1,13 @@
 ---
 title: NuGet e librerie .NET
 description: Procedure consigliate per la creazione di pacchetti con NuGet per le librerie .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775306"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706478"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +44,7 @@ Le dipendenze dei pacchetti NuGet sono illustrate in dettaglio nell'articolo [Di
 
 Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che deve offrire ogni pacchetto in NuGet.org:
 
-| Nome proprietà MSBuild              | Nome nuspec              | description  |
+| Nome proprietà MSBuild              | Nome nuspec              | Descrizione  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificatore del pacchetto. Un prefisso dell'identificatore può essere riservato se soddisfa i [criteri](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versione del pacchetto NuGet. Per altre informazioni, vedere [Versione dei pacchetti NuGet](./versioning.md#nuget-package-version).             |

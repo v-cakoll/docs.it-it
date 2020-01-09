@@ -3,14 +3,12 @@ title: Output da un XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924961"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710492"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Output da un XslTransform
 Poiché i fogli di stile consentono di determinare il formato di output usando un'istruzione `<xsl:output>` con l'attributo `method`, nella tabella seguente viene descritto il formato di output ottenuto quando si usa il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> per scrivere l'output e il formato dell'output è dichiarato come tipo <xref:System.IO.Stream> o <xref:System.IO.TextWriter>.  
@@ -27,7 +25,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
 |method="text"|Testo|  
   
 > [!NOTE]
-> Nota: l'istruzione `<xsl:output>` viene ignorata quando l'output del metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> è una classe <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
+> Nota: quando l'output del metodo `<xsl:output>` è un oggetto <xref:System.Xml.Xsl.XslTransform.Transform%2A> o <xref:System.Xml.XmlReader>, l'istruzione <xref:System.Xml.XmlWriter> viene ignorata.  
   
  Quando l'output del metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> è di tipo <xref:System.IO.Stream> o <xref:System.IO.TextWriter>, sono supportati i seguenti attributi:  
   
@@ -35,7 +33,7 @@ Poiché i fogli di stile consentono di determinare il formato di output usando u
   
 - omit-xml-declaration  
   
-- autonomi  
+- standalone  
   
 - doctype-public  
   

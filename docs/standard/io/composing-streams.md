@@ -13,14 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: HT
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674347"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708148"
 ---
 # <a name="compose-streams"></a>Comporre flussi
 Un *archivio di backup* è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>. 
@@ -34,13 +32,13 @@ Gli esempi di codice seguenti creano un **FileStream** per il file esistente *My
 >[!IMPORTANT]
 >Gli esempi presuppongono che un file denominato *MyFile.txt* esista già nella stessa cartella dell'app.  
 
-## <a name="example-use-streamreader"></a>Esempio: Usare StreamReader
+## <a name="example-use-streamreader"></a>Esempio: usare StreamReader
 L'esempio seguente crea un elemento <xref:System.IO.StreamReader> per leggere i caratteri da **FileStream**, che viene passato a **StreamReader** come argomento del costruttore. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> legge finché <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> non trova più caratteri.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
-## <a name="example-use-binaryreader"></a>Esempio: Usare BinaryReader
+## <a name="example-use-binaryreader"></a>Esempio: usare BinaryReader
 L'esempio seguente crea un elemento <xref:System.IO.BinaryReader> per leggere i byte da **FileStream**, che viene passato a **BinaryReader** come argomento del costruttore. <xref:System.IO.BinaryReader.ReadByte%2A> legge finché <xref:System.IO.BinaryReader.PeekChar%2A> non trova più byte.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

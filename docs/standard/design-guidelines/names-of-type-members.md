@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353717"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709218"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
 I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.  
@@ -48,9 +47,9 @@ public class String {
   
  Questo criterio in genere indica che la proprietà dovrebbe di fatto essere un metodo.  
   
- **✓ DO** Assegnare alle proprietà raccolta una frase plurale che descrive gli elementi nella raccolta, anziché usare una frase singolare seguita da "List" o "Collection".  
+ **✓** Assegnare un nome alle proprietà della raccolta con una frase plurale che descrive gli elementi nella raccolta invece di usare una frase singolare seguita da "list" o "Collection".  
   
- **✓ DO** Assegnare alle proprietà booleane una frase affermativa (`CanSeek` invece di `CantSeek`). È anche possibile fare iniziare le proprietà booleane con "Is", "Can" o "Has", ma solo se si aggiunge valore.  
+ **✓ DO** Assegnare alle proprietà booleane una frase affermativa (`CanSeek` invece di `CantSeek`). Facoltativamente, è anche possibile precedere le proprietà booleane con "is", "Can" o "has", ma solo dove viene aggiunto value.  
   
  **✓ CONSIDER** Assegnare a una proprietà lo stesso nome del tipo della proprietà.  
   

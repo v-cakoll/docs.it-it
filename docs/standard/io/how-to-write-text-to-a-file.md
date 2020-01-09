@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scrivere testo in un file'
+title: 'Procedura: scrivere testo in un file'
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640755"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706608"
 ---
-# <a name="how-to-write-text-to-a-file"></a>Procedura: Scrivere testo in un file
+# <a name="how-to-write-text-to-a-file"></a>Procedura: scrivere testo in un file
 Questo argomento illustra diversi modi per scrivere testo in un file per un'app .NET. 
 
 Per scrivere un testo in un file vengono in genere usati le classi e i metodi seguenti:  
@@ -34,28 +32,28 @@ Per scrivere un testo in un file vengono in genere usati le classi e i metodi se
 > [!NOTE]
 > Gli esempi seguenti visualizzano solo la quantità minima di codice necessario. Un'applicazione reale include in genere procedure di controllo degli errori e di gestione delle eccezioni più efficaci.  
   
-## <a name="example-synchronously-write-text-with-streamwriter"></a>Esempio: Scrivere testo in modo sincrono con StreamWriter
+## <a name="example-synchronously-write-text-with-streamwriter"></a>Esempio: scrivere testo in modo sincrono con StreamWriter
 
 L'esempio seguente illustra come usare la classe <xref:System.IO.StreamWriter> per scrivere un testo in modo sincrono una riga alla volta in un nuovo file. Poiché l'oggetto <xref:System.IO.StreamWriter> viene dichiarato in un'istruzione `using` in cui viene creata anche un'istanza dell'oggetto stesso, viene chiamato il metodo <xref:System.IO.StreamWriter.Dispose%2A> che scarica e chiude automaticamente il flusso.  
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
 
-## <a name="example-synchronously-append-text-with-streamwriter"></a>Esempio: Accodare testo in modo sincrono con StreamWriter
+## <a name="example-synchronously-append-text-with-streamwriter"></a>Esempio: accodare in modo sincrono il testo con StreamWriter
 
 L'esempio seguente illustra come usare la classe <xref:System.IO.StreamWriter> per accodare testo in modo sincrono al file di testo creato nel primo esempio.   
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
 
-## <a name="example-asynchronously-write-text-with-streamwriter"></a>Esempio: Scrivere testo in modo asincrono con StreamWriter
+## <a name="example-asynchronously-write-text-with-streamwriter"></a>Esempio: scrivere in modo asincrono un testo con StreamWriter
 
 L'esempio seguente illustra come scrivere in modo asincrono un testo in un nuovo file usando la classe <xref:System.IO.StreamWriter> . Per chiamare il metodo <xref:System.IO.StreamWriter.WriteAsync%2A>, la chiamata al metodo deve essere inclusa in un metodo `async`. L'esempio C# richiede C# 7.1 o versioni successive, che aggiunge il supporto per il modificatore `async` nel punto di ingresso del programma. 
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
 
-## <a name="example-write-and-append-text-with-the-file-class"></a>Esempio: Scrivere e accodare testo con la classe File
+## <a name="example-write-and-append-text-with-the-file-class"></a>Esempio: scrivere e aggiungere testo con la classe file
 
 L'esempio seguente illustra come scrivere un testo in un nuovo file e aggiungere nuove righe di testo nello stesso file usando la classe <xref:System.IO.File> . I metodi <xref:System.IO.File.WriteAllText%2A> e <xref:System.IO.File.AppendAllLines%2A> aprono e chiudono automaticamente il file. Se il percorso specificato per il metodo <xref:System.IO.File.WriteAllText%2A> esiste già, il file viene sovrascritto.  
 
@@ -67,8 +65,8 @@ L'esempio seguente illustra come scrivere un testo in un nuovo file e aggiungere
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>
 - <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
-- [Procedura: Enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [Procedura: Aprire e accodare un file di log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
-- [Procedura: Leggere testo da un file](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Procedura: leggere e scrivere in un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Procedura: aprire e accodare un file di log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Procedura: leggere testo da un file](../../../docs/standard/io/how-to-read-text-from-a-file.md)
 - [I/O di file e di flussi](../../../docs/standard/io/index.md)

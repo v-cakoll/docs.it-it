@@ -5,31 +5,30 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099959"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713926"
 ---
 # <a name="get-started-with-c"></a>Introduzione a C\#
 
-Questa sezione include brevi esercitazioni semplici che illustrano come creare velocemente un'applicazione con C# e .NET Core. Sono disponibili argomenti introduttivi per Visual Studio 2017 e Visual Studio Code. Questi articoli presuppongono una certa esperienza di programmazione. Se non si ha familiarità con la programmazione, provare le esercitazioni interattive di [Introduzione a C#](../tutorials/intro-to-csharp/index.md).
+Questa sezione include brevi esercitazioni semplici che illustrano come creare velocemente un'applicazione con C# e .NET Core. Sono disponibili argomenti introduttivi per Visual Studio e Visual Studio Code. Questi articoli presuppongono una certa esperienza di programmazione. Se non si ha familiarità con la programmazione, provare le esercitazioni interattive di [Introduzione a C#](../tutorials/intro-to-csharp/index.md).
 
 Sono disponibili gli argomenti seguenti:
 
-- [Introduzione al linguaggio C# e .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [Introduzione alla C# lingua e al .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      Viene fornita una panoramica del linguaggio C# e di .NET.
 
-- [Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
+- [Creare un' C# applicazione Hello World con .NET Core in Visual Studio](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio consente di scrivere codice, compilare, eseguire, eseguire il debug, profilare e pubblicare le applicazioni da un Integrated Development Environment per Windows o Mac.
 
-   Le informazioni in questo argomento consentono di creare ed eseguire una semplice applicazione Hello World e quindi modificarla per ottenere un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](../../core/tutorials/debugging-with-visual-studio.md) e [pubblicarla](../../core/tutorials/publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
+   Questo argomento consente di creare ed eseguire una semplice applicazione Hello World e di modificarla per eseguire un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](../../core/tutorials/debugging-with-visual-studio.md) e [pubblicarla](../../core/tutorials/publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
 
-- [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
+- [Creare una libreria di classi C# con e .NET standard in Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
    Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](../../core/tutorials/testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 

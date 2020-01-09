@@ -1,21 +1,19 @@
 ---
 title: Marshalling dei tipi - .NET
 description: Informazioni su come .NET effettua il marshalling dei tipi in una rappresentazione nativa.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929058"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706266"
 ---
 # <a name="type-marshaling"></a>Marshalling dei tipi
 
 Il **marshalling** è il processo di trasformazione dei tipi quando questi devono attraversare codice gestito e nativo.
 
-Il marshalling è necessario perché i tipi nel codice gestito e non gestito sono diversi. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenta di eseguire le operazioni necessarie in base al comportamento predefinito, descritto in questo articolo. Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione Null, è possibile usare codice simile al seguente:
+Il marshalling è necessario perché i tipi nel codice gestito e non gestito sono diversi. Nel codice gestito, ad esempio, si dispone di un `String`, mentre nelle stringhe internazionali non gestite possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII e così via. Per impostazione predefinita, il sottosistema P/Invoke tenta di eseguire la corretta operazione in base al comportamento predefinito, descritto in questo articolo. Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione Null, è possibile usare codice simile al seguente:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -28,7 +26,7 @@ Il runtime tenta in genere di eseguire le operazioni necessarie durante il marsh
 
 La prima tabella descrive i mapping per i vari tipi per i quali il marshalling è lo stesso per P/Invoke e i campi.
 
-| Tipo di .NET | Tipo nativo  |
+| Tipo .NET | Tipo nativo  |
 |-----------|-------------------------|
 | `byte`    | `uint8_t`               |
 | `sbyte`   | `int8_t`                |
@@ -53,10 +51,10 @@ La prima tabella descrive i mapping per i vari tipi per i quali il marshalling �
 
 Alcune categorie di marshalling hanno impostazioni predefinite diverse a seconda che si stia eseguendo il marshalling come parametro o struttura.
 
-| Tipo di .NET | Tipo nativo (parametro) | Tipo nativo (campo) |
+| Tipo .NET | Tipo nativo (parametro) | Tipo nativo (campo) |
 |-----------|-------------------------|---------------------|
 | Matrice .NET | Un puntatore all'inizio della matrice delle rappresentazioni native degli elementi della matrice. | Non consentito senza un attributo `[MarshalAs]`|
-| Una classe con `LayoutKind` `Sequential` o `Explicit` | Un puntatore alla rappresentazione nativa della classe | La rappresentazione nativa della classe |
+| Una classe con `LayoutKind``Sequential` o `Explicit` | Un puntatore alla rappresentazione nativa della classe | La rappresentazione nativa della classe |
 
 La tabella seguente include regole di marshalling predefinite valide solo per Windows. Nelle piattaforme non Windows non è possibile effettuare il marshalling di questi tipi.
 
@@ -84,7 +82,7 @@ Se queste impostazioni predefinite non producono esattamente il risultato deside
 
 Quando si chiama un metodo su oggetti COM in .NET, il runtime di .NET cambia le regole del marshalling predefinito in modo da rispettare la semantica COM. Nella tabella seguente sono elencate le regole che i runtime .NET usano negli scenari COM:
 
-| Tipo di .NET | Tipo nativo (chiamate al metodo COM) |
+| Tipo .NET | Tipo nativo (chiamate al metodo COM) |
 |-----------|--------------------------------|
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |

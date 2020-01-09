@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339951"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344481"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedura: cambiare il valore di un argomento di routine (Visual Basic)
 Quando si chiama una routine, ogni argomento fornito corrisponde a uno dei parametri definiti nella stored procedure. In alcuni casi, il codice della procedura può modificare il valore sottostante un argomento nel codice chiamante. In altri casi, la procedura può modificare solo la copia locale di un argomento.  
@@ -48,7 +48,7 @@ Quando si chiama una routine, ogni argomento fornito corrisponde a uno dei param
   
 1. Nella dichiarazione di routine specificare [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) per il parametro corrispondente all'argomento.  
   
-     -oppure-  
+     oppure  
   
      Nel codice chiamante racchiudere l'argomento tra parentesi nell'elenco di argomenti. Questa operazione impone Visual Basic di passare l'argomento per valore, anche se il parametro corrispondente specifica `ByRef`.  
   
@@ -69,7 +69,7 @@ Quando si chiama una routine, ogni argomento fornito corrisponde a uno dei param
   
  È possibile impedire la modifica della variabile nel codice chiamante da parte della stored procedure. Vedere [procedura: proteggere un argomento di routine in base alle modifiche del valore](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compile-the-code"></a>Compilare il codice  
  Quando si passa una variabile in base al riferimento, è necessario usare la parola chiave `ByRef` per specificare questo meccanismo.  
   
  Il valore predefinito in Visual Basic consiste nel passare gli argomenti per valore. Tuttavia, è consigliabile includere la parola chiave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) con tutti i parametri dichiarati. Questo rende il codice più facile da leggere.  
@@ -88,4 +88,4 @@ Quando si chiama una routine, ogni argomento fornito corrisponde a uno dei param
 - [Procedura: impedire la modifica del valore di un argomento di una routine](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Procedura: forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
-- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

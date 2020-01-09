@@ -1,15 +1,13 @@
 ---
 title: Linee guida per le librerie .NET open source
 description: Procedure consigliate per gli sviluppatori nella creazione di librerie .NET di qualità.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928956"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706452"
 ---
 # <a name="open-source-library-guidance"></a>Linee guida per le librerie open source
 
@@ -42,11 +40,11 @@ In genere è utile osservare le indicazioni di tipo **Da considerare**, ma esist
 
 I suggerimenti di tipo **Da evitare** si riferiscono a operazioni in genere non consigliabili, ma che talvolta possono avere un'utilità:
 
-**❌ DA EVITARE** Riferimenti ai pacchetti NuGet che richiedono una versione esatta.
+**❌ evitare** Riferimenti ai pacchetti NuGet che richiedono una versione esatta.
 
 E infine, i suggerimenti di tipo **Da non fare** indicano operazioni che quasi sempre è necessario evitare:
 
-**❌ DA NON FARE** Pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌** non pubblicare versioni con nome sicuro e senza nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
->[avanti](get-started.md)
+>[Successivo](get-started.md)

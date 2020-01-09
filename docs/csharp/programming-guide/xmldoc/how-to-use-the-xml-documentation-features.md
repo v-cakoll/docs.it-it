@@ -1,19 +1,18 @@
 ---
 title: Come utilizzare le funzionalità della documentazione XML- C# Guida alla programmazione
-ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 40b90bd12687becacddf2e75c39057683b43b945
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634989"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696714"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Come utilizzare le funzionalità della documentazione XML
+# <a name="how-to-use-the-xml-documentation-features"></a>Come usare le funzionalità relative alla documentazione XML
 
 L'esempio seguente fornisce una panoramica di base di un tipo documentato.
 

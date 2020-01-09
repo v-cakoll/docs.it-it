@@ -10,13 +10,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.author: mairaw
-ms.openlocfilehash: 4a061b3128f8d0952f800be7173203b62f89c672
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34ba6cb658a52b647c6fbf9a4161d046f31cd73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639128"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705821"
 ---
 # <a name="binary-serialization"></a>Serializzazione binaria
 
@@ -110,7 +109,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Data.DataException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Data.DataSet?displayProperty=nameWithType>
-- <xref:System.Data.DataTable?displayProperty=nameWithType> (a meno che non si imposta RemotingFormat su SerializationFormat.Binary nel qual caso si può solo essere scambiato con .NET Core 2.1 e versioni successive.)
+- <xref:System.Data.DataTable?displayProperty=nameWithType> (a meno che non si imposti RemotingFormat su SerializationFormat. Binary, in questo caso può essere scambiato solo con .NET Core 2,1 e versioni successive).
 - <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Data.EvaluateException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
@@ -276,7 +275,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Security.HostProtectionException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
-- <xref:System.Security.SecurityException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive, i dati di serializzazione limitata)
+- <xref:System.Security.SecurityException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive, dati di serializzazione limitati)
 - <xref:System.Security.VerificationException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
@@ -323,7 +322,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Uri?displayProperty=nameWithType>
 - <xref:System.UriFormatException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
-- <xref:System.ValueTuple?displayProperty=nameWithType> (non serializzabile in .NET Framework 4.7 e versioni precedenti)
+- <xref:System.ValueTuple?displayProperty=nameWithType> (non serializzabile in .NET Framework 4,7 e versioni precedenti)
 - <xref:System.ValueType?displayProperty=nameWithType>
 - <xref:System.Version?displayProperty=nameWithType>
 - <xref:System.WeakReference%601?displayProperty=nameWithType>
@@ -336,18 +335,18 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> (disponibile in .NET Core 2.0.4 e versioni successive)
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
-- [Concetti relativi alla serializzazione](../../../docs/standard/serialization/serialization-concepts.md)\
+- [Concetti di serializzazione](../../../docs/standard/serialization/serialization-concepts.md)\
 Vengono illustrati due scenari in cui la serializzazione risulta utile: quando si conservano i dati da archiviare e quando si trasferiscono oggetti tra più domini dell'applicazione.
 
 - [Serializzazione di base](../../../docs/standard/serialization/basic-serialization.md)\
 Descrive come utilizzare i formattatori binari e SOAP per serializzare gli oggetti.
 
-- [Serializzazione selettiva](../../../docs/standard/serialization/selective-serialization.md)\
+- \ di [serializzazione selettiva](../../../docs/standard/serialization/selective-serialization.md)
 Descrive come impedire la serializzazione di alcuni membri di una classe.
 
-- [Serializzazione personalizzata](../../../docs/standard/serialization/custom-serialization.md)\
+- \ di [serializzazione personalizzata](../../../docs/standard/serialization/custom-serialization.md)
 Descrive come personalizzare la serializzazione per una classe usando l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.
 
 - [Passaggi del processo di serializzazione](../../../docs/standard/serialization/steps-in-the-serialization-process.md)\
@@ -356,7 +355,7 @@ Descrive il corso di azioni intraprese dalla serializzazione quando viene chiama
 - [Serializzazione a tolleranza di versione](../../../docs/standard/serialization/version-tolerant-serialization.md)\
 Spiega come creare tipi serializzabili modificabili nel tempo evitando che le applicazioni generino eccezioni.
 
-- [Linee guida per la serializzazione](../../../docs/standard/serialization/serialization-guidelines.md)\
+- [Linee guida sulla serializzazione](../../../docs/standard/serialization/serialization-guidelines.md)\
 Fornisce alcune linee guida generali che consentono di decidere quando serializzare un oggetto.
 
 ## <a name="reference"></a>Riferimenti
@@ -372,8 +371,8 @@ Descrive il meccanismo della serializzazione XML incluso nel Common Language Run
 - [Sicurezza e serializzazione](../../../docs/framework/misc/security-and-serialization.md)\
 Descrive le linee guida per la creazione di codice protetto da seguire in caso di scrittura di codice che esegue la serializzazione.
 
-- [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- \ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 Vengono descritti i diversi metodi di comunicazione disponibili in .NET Framework per le comunicazioni remote.
 
-- [Servizi Web XML creati utilizzando ASP.NET e client di servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [I servizi Web XML creati utilizzando ASP.NET e i client del servizio Web xml](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Fornisce gli argomenti che descrivono e spiegano come programmare i servizi Web XML creati tramite ASP.NET.

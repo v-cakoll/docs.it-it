@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140395"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344763"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profiler CLR e app di Windows Store
 
@@ -25,7 +25,7 @@ In questo argomento vengono illustrati gli elementi necessari per la scrittura d
 
 ## <a name="introduction"></a>Introduzione
 
-Se è stata eseguita oltre il paragrafo introduttivo, si ha familiarità con l'API di profilatura CLR. È già stato scritto uno strumento di diagnostica che funziona correttamente con le applicazioni desktop gestite. A questo punto si è curiosi di cosa fare per fare in modo che lo strumento funzioni con un'app di Windows Store gestita. Forse si è già tentato di eseguire questo lavoro e si è scoperto che non si tratta di un'attività semplice. Esistono tuttavia alcune considerazioni che potrebbero non essere ovvie a tutti gli sviluppatori di strumenti. Esempio:
+Se è stata eseguita oltre il paragrafo introduttivo, si ha familiarità con l'API di profilatura CLR. È già stato scritto uno strumento di diagnostica che funziona correttamente con le applicazioni desktop gestite. A questo punto si è curiosi di cosa fare per fare in modo che lo strumento funzioni con un'app di Windows Store gestita. Forse si è già tentato di eseguire questo lavoro e si è scoperto che non si tratta di un'attività semplice. Esistono tuttavia alcune considerazioni che potrebbero non essere ovvie a tutti gli sviluppatori di strumenti. Ad esempio:
 
 - Le app di Windows Store vengono eseguite in un contesto con autorizzazioni notevolmente ridotte.
 
@@ -53,7 +53,7 @@ Si tratta dell'applicazione analizzata dal profiler. In genere, lo sviluppatore 
 
 **DLL del profiler**
 
-Si tratta del componente che viene caricato nello spazio di processo dell'applicazione analizzata. Questo componente, noto anche come "agente" del profiler, implementa le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback Interface](icorprofilercallback-interface.md)(2, 3 e così via) e utilizza le interfacce [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3 e così via) per raccogliere i dati relativi al applicazione analizzata e potenzialmente modificare gli aspetti del comportamento dell'applicazione.
+Si tratta del componente che viene caricato nello spazio di processo dell'applicazione analizzata. Questo componente, noto anche come "agente" del profiler, implementa le interfacce [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback Interface](icorprofilercallback-interface.md)(2, 3 e così via) e utilizza le interfacce [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3 e così via) per raccogliere dati sull'applicazione analizzata e potenzialmente modificare gli aspetti del comportamento dell'applicazione.
 
 **Interfaccia utente del profiler**
 
@@ -112,7 +112,7 @@ In genere, le app di Windows Store possono accedere solo a un set limitato di pe
 
 ### <a name="startup-load"></a>Caricamento avvio
 
-In genere, in un'applicazione desktop, l'interfaccia utente del profiler richiede un caricamento di avvio della DLL del profiler inizializzando un blocco di ambiente che contiene le variabili di ambiente dell'API di profilatura CLR richieste (ad esempio, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e quindi creando un nuovo elaborare con il blocco di ambiente. Lo stesso vale per le app di Windows Store, ma i meccanismi sono diversi.
+In genere, in un'applicazione desktop, l'interfaccia utente del profiler richiede un caricamento di avvio della DLL del profiler inizializzando un blocco di ambiente che contiene le variabili di ambiente dell'API di profilatura CLR richieste (ad esempio, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e quindi creando un nuovo processo con tale blocco di ambiente. Lo stesso vale per le app di Windows Store, ma i meccanismi sono diversi.
 
 **Non eseguire con privilegi elevati**
 
@@ -302,7 +302,7 @@ Nel frattempo, la DLL del profiler può eseguire fondamentalmente la stessa oper
 
 Se si vuole una semplice semantica di segnalazione tra l'interfaccia utente del profiler e la DLL del profiler, è possibile usare gli eventi nelle app di Windows Store e nelle app desktop.
 
-Dalla DLL del profiler è possibile chiamare semplicemente la funzione [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) per creare un evento denominato con il nome desiderato. Esempio:
+Dalla DLL del profiler è possibile chiamare semplicemente la funzione [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) per creare un evento denominato con il nome desiderato. Ad esempio:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -342,7 +342,7 @@ Esula dall'ambito di questo documento per approfondire il contenuto dei file di 
 
 ### <a name="managed-and-non-managed-winmds"></a>File WinMD gestiti e non gestiti
 
-Se uno sviluppatore usa Visual Studio per creare un nuovo progetto di componente Windows Runtime, una compilazione di tale progetto produce un file WinMD che descrive i metadati (le descrizioni dei tipi di classi, interfacce e così via) creati dallo sviluppatore. Se questo progetto è un progetto di linguaggio gestito scritto C# in o VB, lo stesso file WinMD contiene anche l'implementazione di tali tipi, ovvero contiene tutto il compilato dal codice sorgente dello sviluppatore. Tali file sono noti come file WinMD gestiti. Sono interessanti perché contengono sia i metadati Windows Runtime che l'implementazione sottostante.
+Se uno sviluppatore usa Visual Studio per creare un nuovo progetto di componente Windows Runtime, una compilazione di tale progetto produce un file WinMD che descrive i metadati (le descrizioni dei tipi di classi, interfacce e così via) creati dallo sviluppatore. Se il progetto è un progetto di linguaggio gestito scritto C# in o Visual Basic, lo stesso file WinMD contiene anche l'implementazione di tali tipi, ovvero contiene tutto il compilato dal codice sorgente dello sviluppatore. Tali file sono noti come file WinMD gestiti. Sono interessanti perché contengono sia i metadati Windows Runtime che l'implementazione sottostante.
 
 Al contrario, se uno sviluppatore crea un progetto di componente Windows Runtime C++per, una compilazione di tale progetto produce un file WinMD che contiene solo metadati e l'implementazione viene compilata in una DLL nativa separata. Analogamente, i file WinMD forniti nel Windows SDK contengono solo metadati, con l'implementazione compilata in DLL native separate che vengono fornite come parte di Windows.
 
@@ -352,7 +352,7 @@ Le informazioni riportate di seguito si applicano a entrambi i file WinMD gestit
 
 Per quanto concerne CLR, tutti i file WinMD sono moduli. L'API di profilatura CLR indica quindi alla DLL del profiler quando i file WinMD vengono caricati e quali sono i rispettivi I ModuleID, nello stesso modo di altri moduli gestiti.
 
-La DLL del profiler può distinguere i file WinMD da altri moduli chiamando il metodo [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) ed esaminando il parametro di output `pdwModuleFlags` per il flag [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (È impostato solo se ModuleID rappresenta un WinMD).
+La DLL del profiler può distinguere i file WinMD da altri moduli chiamando il metodo [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) ed esaminando il parametro di output `pdwModuleFlags` per il flag di [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (È impostato solo se ModuleID rappresenta un WinMD).
 
 ### <a name="reading-metadata-from-winmds"></a>Lettura dei metadati da file WinMD
 
@@ -364,7 +364,7 @@ Quando si chiama il metodo [ICorProfilerInfo:: GetModuleMetaData](icorprofilerin
 
 ### <a name="modifying-metadata-from-winmds"></a>Modifica dei metadati da file WinMD
 
-La modifica dei metadati in file WinMD non è supportata. Se si chiama il metodo [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) per un file WinMD e si specifica [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) nel parametro `dwOpenFlags` o si richiede un'interfaccia di metadati scrivibile, ad esempio [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) avrà esito negativo. Questa operazione è particolarmente importante per IL riscrittura del profiler, che deve modificare i metadati per supportare la strumentazione (ad esempio, per aggiungere riferimenti o nuovi metodi). Quindi, è necessario verificare prima di tutto [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (come descritto nella sezione precedente) e evitare di richiedere interfacce di metadati scrivibili in tali moduli.
+La modifica dei metadati in file WinMD non è supportata. Se si chiama il metodo [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) per un file WinMD e si specifica [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) nel parametro `dwOpenFlags` o si richiede un'interfaccia di metadati scrivibile, ad esempio [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) avrà esito negativo. Questa operazione è particolarmente importante per IL riscrittura del profiler, che deve modificare i metadati per supportare la strumentazione (ad esempio, per aggiungere riferimenti o nuovi metodi). È quindi consigliabile verificare prima di tutto [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (come illustrato nella sezione precedente) ed evitare di richiedere interfacce di metadati scrivibili in tali moduli.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Risoluzione dei riferimenti ad assembly con file WinMD
 
@@ -378,11 +378,11 @@ Il Garbage Collector e l'heap gestito non sono fondamentalmente diversi in un'ap
 
 Quando si esegue la profilatura della memoria, la DLL del profiler crea in genere un thread separato dal quale chiamare il metodo del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) . Non si tratta di una novità. Tuttavia, ciò che potrebbe sorprendere è che l'atto di eseguire un Garbage Collection all'interno di un'app di Windows Store può trasformare il thread in un thread gestito. ad esempio, verrà creata una ThreadID dell'API di profilatura per quel thread.
 
-Per comprendere le conseguenze di questo, è importante comprendere le differenze tra le chiamate sincrone e asincrone definite dall'API di profilatura CLR. Si noti che questo è molto diverso dal concetto di chiamate asincrone nelle app di Windows Store. Per ulteriori informazioni, vedere il post di Blog relativo alla [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) .
+Per comprendere le conseguenze di questo, è importante comprendere le differenze tra le chiamate sincrone e asincrone definite dall'API di profilatura CLR. Si noti che questo è molto diverso dal concetto di chiamate asincrone nelle app di Windows Store. Per ulteriori informazioni, vedere il post di Blog relativo al [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) .
 
 Il punto rilevante è che le chiamate effettuate sui thread creati dal profiler sono sempre considerate sincrone, anche se tali chiamate vengono effettuate dall'esterno di un'implementazione di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler. Almeno, questo era il caso. Ora che CLR ha trasformato il thread del profiler in un thread gestito a causa della chiamata al [Metodo ForceGC](icorprofilerinfo-forcegc-method.md), il thread non è più considerato il thread del profiler. Di conseguenza, CLR applica una definizione più rigorosa di ciò che si qualifica come sincrono per quel thread, ovvero che una chiamata deve provenire dall'interno di uno dei metodi [ICorProfilerCallback](icorprofilercallback-interface.md) della dll del profiler per essere qualificata come sincrona.
 
-Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi . Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. Per ulteriori informazioni, vedere il post di Blog relativo all' [analisi dello stack del profiler: Nozioni di base e](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) altro.
+Cosa significa in pratica? La maggior parte dei metodi [ICorProfilerInfo](icorprofilerinfo-interface.md) può essere chiamata solo in modo sincrono e avrà esito negativo. Quindi, se la DLL del profiler riutilizza il thread del [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) per altre chiamate eseguite in genere nei thread creati dal profiler (ad esempio, in [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), si verificano problemi. Anche una funzione asincrona sicura, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , ha regole speciali quando viene chiamata da thread gestiti. Per ulteriori informazioni, vedere il post di Blog relativo all' [analisi dello stack del profiler: Nozioni di base e](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) altro.
 
 Pertanto, è consigliabile usare qualsiasi thread creato dalla DLL del profiler per chiamare il [Metodo ForceGC](icorprofilerinfo-forcegc-method.md) *solo* per l'attivazione di cataloghi globali e la risposta ai callback GC. Non deve chiamare l'API di profilatura per eseguire altre attività, come il campionamento dello stack o lo scollegamento.
 

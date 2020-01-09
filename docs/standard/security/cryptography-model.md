@@ -6,14 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42e5c7018f83f3849f46f33e09e09ea1749e7c70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753292"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706227"
 ---
 # <a name="net-framework-cryptography-model"></a>Modello di crittografia di .NET Framework
 
@@ -55,7 +53,7 @@ Common Language Runtime usa una progettazione orientata al flusso per l'implemen
 
 ## <a name="cryptographic-configuration"></a>Configurazione della crittografia
 
-La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per altre informazioni sulla configurazione della crittografia, vedere [configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per ulteriori informazioni sulla configurazione della crittografia, vedere [Configuring Cryptography Classes](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Scelta di un algoritmo
 

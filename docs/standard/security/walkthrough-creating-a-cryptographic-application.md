@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creazione di un'applicazione di crittografia"
+title: "Procedura dettagliata: creazione di un'applicazione di crittografia"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895281"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705834"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: Creazione di un'applicazione di crittografia
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
   
  Questa procedura dettagliata usa le linee guida seguenti per la crittografia:  
@@ -82,7 +80,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Crittografia di un file  
- Questa attività include due metodi: il metodo del gestore eventi per `Encrypt File` il pulsante`buttonEncryptFile_Click`() e `EncryptFile` il metodo. Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
+ Questa attività include due metodi: il metodo del gestore eventi per il pulsante `Encrypt File` (`buttonEncryptFile_Click`) e il metodo `EncryptFile`. Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
   
  Il contenuto, la chiave e il vettore di inizializzazione (IV) crittografati vengono tutti salvati in un <xref:System.IO.FileStream>, a cui si fa riferimento come pacchetto di crittografia.  
   

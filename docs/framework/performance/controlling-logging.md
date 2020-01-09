@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447683"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716114"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 
@@ -55,9 +53,9 @@ Per attivare la registrazione, un utente deve specificare tre impostazioni:
 
     - Il parametro `-p` identifica il GUID del provider.
 
-    - `0x1CCBD` specifica le categorie di eventi che verranno generati.
+    - `0x1CCBD` specifica le categorie degli eventi che saranno generati.
 
-    - `0x5` imposta il livello di registrazione (in questo caso, Verbose (5)).
+    - `0x5` imposta il livello di registrazione, in questo caso Verbose (5).
 
     - Il parametro `-ets` indica a Logman di inviare comandi alle sessioni di traccia degli eventi.
 

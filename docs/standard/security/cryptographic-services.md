@@ -1,5 +1,5 @@
 ---
-title: servizi crittografici
+title: Servizi crittografici
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,16 +24,14 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975832"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709205"
 ---
-# <a name="cryptographic-services"></a>servizi crittografici
+# <a name="cryptographic-services"></a>Servizi crittografici
 
 Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.
 
@@ -59,7 +57,7 @@ La crittografia permette di realizzare gli obiettivi seguenti:
 
 Per realizzare questi obiettivi, è possibile usare una combinazione di algoritmi e procedure nota come primitive di crittografia per creare uno schema crittografico. La tabella seguente elenca le primitive di crittografia e il rispettivo uso.
 
-|Primitiva di crittografia|Usa|
+|Primitiva di crittografia|Utilizza|
 |-----------------------------|---------|
 |Crittografia a chiave segreta (crittografia simmetrica)|Esegue una trasformazione sui dati per impedirne la lettura da terze parti. Questo tipo di crittografia usa una singola chiave segreta condivisa per crittografare e decrittografare i dati.|
 |Crittografia a chiave pubblica (crittografia asimmetrica)|Esegue una trasformazione sui dati per impedirne la lettura da terze parti. Questo tipo di crittografia usa una coppia di chiavi pubblica/privata per crittografare e decrittografare i dati.|
@@ -90,15 +88,15 @@ Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di 
 
 - <xref:System.Security.Cryptography.AesManaged> (introdotto nel .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> : si tratta tecnicamente di un algoritmo a chiave segreta in quanto rappresenta il codice di autenticazione del messaggio calcolato usando una funzione hash di crittografia combinata con una chiave segreta. Vedere [Valori hash](#hash-values)più avanti in questo argomento.
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>Crittografia a chiave pubblica
 
@@ -187,21 +185,21 @@ Nessuno dei metodi precedenti impedisce la lettura dei messaggi di Alice, perch�
 
 Il .NET Framework fornisce le classi seguenti che implementano gli algoritmi di hash:
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - Varianti HMAC di tutti gli algoritmi SHA (Secure Hash Algorithm), MD5 (Message Digest 5) e RIPEMD-160.
 

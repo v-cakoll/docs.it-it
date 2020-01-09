@@ -6,24 +6,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: KrzysztofCwalina
-ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff38cfdc228fd1eae1ace734ed2688c62c66499a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785567"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709556"
 ---
 # <a name="attributes"></a>Attributi
-<xref:System.Attribute?displayProperty=nameWithType> una classe di base consente di definire attributi personalizzati.  
+<xref:System.Attribute?displayProperty=nameWithType> è una classe di base utilizzata per definire attributi personalizzati.  
   
- Gli attributi sono annotazioni che possono essere aggiunti a elementi di programmazione, ad esempio assembly, tipi, membri e parametri. Essi vengono archiviate nei metadati dell'assembly ed è accessibile in fase di esecuzione usando le API di reflection. Ad esempio, il Framework definisce il <xref:System.ObsoleteAttribute>, che può essere applicato a un tipo o membro per indicare che il tipo o membro è stato deprecato.  
+ Gli attributi sono annotazioni che possono essere aggiunte a elementi di programmazione quali assembly, tipi, membri e parametri. Sono archiviati nei metadati dell'assembly ed è possibile accedervi in fase di esecuzione usando le API di Reflection. Il Framework, ad esempio, definisce il <xref:System.ObsoleteAttribute>, che può essere applicato a un tipo o a un membro per indicare che il tipo o il membro è stato deprecato.  
   
- Gli attributi possono avere una o più proprietà che contengono dati aggiuntivi correlati all'attributo. Ad esempio, `ObsoleteAttribute` potrebbe contenere informazioni aggiuntive relative alla versione in cui un tipo o membro è stato deprecato e la descrizione delle nuove API sostituendo l'API obsoleta.  
+ Gli attributi possono avere una o più proprietà che contengono dati aggiuntivi correlati all'attributo. Ad esempio, `ObsoleteAttribute` potrebbe contenere informazioni aggiuntive sulla versione in cui un tipo o un membro è stato deprecato e la descrizione delle nuove API che sostituiscono l'API obsoleta.  
   
- Alcune proprietà di un attributo deve essere specificato quando è applicato l'attributo. Queste vengono denominate le proprietà obbligatorie o gli argomenti obbligatori, in quanto vengono rappresentati come parametri posizionali del costruttore. Ad esempio, il <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> proprietà del <xref:System.Diagnostics.ConditionalAttribute> questa proprietà è obbligatoria.  
+ Quando l'attributo viene applicato, è necessario specificare alcune proprietà di un attributo. Queste proprietà sono denominate proprietà obbligatorie o argomenti obbligatori, perché sono rappresentate come parametri del costruttore posizionale. Ad esempio, la proprietà <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> del <xref:System.Diagnostics.ConditionalAttribute> è una proprietà obbligatoria.  
   
- Le proprietà che non hanno necessariamente specificare quando viene applicato l'attributo vengono chiamate proprietà facoltative (o gli argomenti facoltativi). Sono rappresentate da proprietà impostabili. I compilatori forniscono una sintassi speciale per impostare queste proprietà quando viene applicato un attributo. Ad esempio, il <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> proprietà rappresenta un argomento facoltativo.  
+ Le proprietà che non devono necessariamente essere specificate quando l'attributo viene applicato sono denominate proprietà facoltative (o argomenti facoltativi). Sono rappresentate da proprietà impostabili. I compilatori forniscono una sintassi speciale per impostare queste proprietà quando viene applicato un attributo. Ad esempio, la proprietà <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> rappresenta un argomento facoltativo.  
   
  **✓ DO** denominare le classi di attributo personalizzato con il suffisso "Attributo".  
   
@@ -33,21 +32,21 @@ ms.locfileid: "61785567"
   
  **✓ DO** forniscono proprietà solo get per gli argomenti obbligatori.  
   
- **✓ DO** forniscono i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti obbligatori. Ogni parametro deve avere lo stesso nome (anche se con maiuscole e minuscole diverse) come la proprietà corrispondente.  
+ **✓ DO** forniscono i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti obbligatori. Ogni parametro deve avere lo stesso nome (anche se con maiuscole e minuscole diverse) come proprietà corrispondente.  
   
  **X AVOID** fornendo i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti facoltativi.  
   
- In altre parole, non includono proprietà che possono essere impostate con un costruttore e un setter. Questa linea guida rende molto esplicite quali gli argomenti sono facoltativi e sono necessari che consenta di evitare la due modi di ottenere la stessa cosa.  
+ In altre parole, non dispongono di proprietà che possono essere impostate con un costruttore e un setter. Questa linea guida rende molto espliciti gli argomenti facoltativi e quelli necessari, evitando di avere due modi per eseguire la stessa operazione.  
   
  **X AVOID** l'overload di costruttori di attributo personalizzato.  
   
- Con un solo costruttore chiaramente comunica all'utente cui gli argomenti sono obbligatori e facoltativi.  
+ La presenza di un solo costruttore comunica chiaramente all'utente quali argomenti sono obbligatori e quali sono facoltativi.  
   
- **✓ DO** proteggere le classi di attributo personalizzato, se possibile. In questo modo la ricerca per l'attributo più velocemente.  
+ **✓ DO** proteggere le classi di attributo personalizzato, se possibile. Questa operazione rende più veloce la ricerca dell'attributo.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

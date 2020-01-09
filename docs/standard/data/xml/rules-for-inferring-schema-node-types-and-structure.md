@@ -3,14 +3,12 @@ title: Regole per l'inferenza dello schema per tipi di nodo e struttura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939636"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710245"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regole per l'inferenza dello schema per tipi di nodo e struttura
 In questo argomento viene descritto in che modo il processo di inferenza converte in una struttura XSD (XML Schema Definition Language) i tipi di nodo di un documento XML.  
@@ -141,7 +139,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 |Commento|Ignorato.|  
 |Riferimento all'entità|La classe <xref:System.Xml.Schema.XmlSchemaInference> non gestisce i riferimenti all'entità. Se un documento XML contiene riferimenti all'entità, è necessario usare un lettore che espande le entità. Ad esempio, è possibile passare un tipo <xref:System.Xml.XmlTextReader> con la proprietà <xref:System.Xml.XmlTextReader.EntityHandling%2A> impostata su <xref:System.Xml.EntityHandling.ExpandEntities> come parametro. Se si rilevano riferimenti all'entità che il lettore non espande, viene generata un'eccezione.|  
 |CDATA|Le sezioni `<![CDATA[ … ]]` di un documento XML verranno inferite come `xs:string`.|  
-|Document type|Ignorato.|  
+|Tipo di documento|Ignorato.|  
 |Spazi dei nomi|Ignorato.|  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  

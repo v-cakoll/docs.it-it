@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974692"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708397"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 Covarianza e controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -146,23 +144,23 @@ Covarianza e controvarianza sono termini che fanno riferimento alla possibilità
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Elenco di tipi di interfacce e delegati generici varianti
  In .NET Framework 4 il tipo di interfaccia e il tipo delegato seguenti presentano parametri di tipo covariante e/o controvariante.  
   
-|Digitare|Parametri di tipo covariante|Parametri di tipo controvariante|  
+|Tipo di|Parametri di tipo covariante|Parametri di tipo controvariante|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> in <xref:System.Action%6016>||Yes|  
-|<xref:System.Comparison%601>||Yes|  
-|<xref:System.Converter%602>|Yes|Yes|  
-|<xref:System.Func%601>|Yes||  
-|<xref:System.Func%602> in <xref:System.Func%6017>|Yes|Yes|  
-|<xref:System.IComparable%601>||Yes|  
-|<xref:System.Predicate%601>||Yes|  
-|<xref:System.Collections.Generic.IComparer%601>||Yes|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Yes||  
-|<xref:System.Collections.Generic.IEnumerator%601>|Yes||  
-|<xref:System.Collections.Generic.IEqualityComparer%601>||Yes|  
-|<xref:System.Linq.IGrouping%602>|Yes||  
-|<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
-|<xref:System.Linq.IOrderedQueryable%601>|Yes||  
-|<xref:System.Linq.IQueryable%601>|Yes||  
+|<xref:System.Action%601> in <xref:System.Action%6016>||Sì|  
+|<xref:System.Comparison%601>||Sì|  
+|<xref:System.Converter%602>|Sì|Sì|  
+|<xref:System.Func%601>|Sì||  
+|<xref:System.Func%602> in <xref:System.Func%6017>|Sì|Sì|  
+|<xref:System.IComparable%601>||Sì|  
+|<xref:System.Predicate%601>||Sì|  
+|<xref:System.Collections.Generic.IComparer%601>||Sì|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Sì||  
+|<xref:System.Collections.Generic.IEnumerator%601>|Sì||  
+|<xref:System.Collections.Generic.IEqualityComparer%601>||Sì|  
+|<xref:System.Linq.IGrouping%602>|Sì||  
+|<xref:System.Linq.IOrderedEnumerable%601>|Sì||  
+|<xref:System.Linq.IOrderedQueryable%601>|Sì||  
+|<xref:System.Linq.IQueryable%601>|Sì||  
   
 ## <a name="see-also"></a>Vedere anche
 

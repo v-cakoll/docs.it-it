@@ -1,15 +1,13 @@
 ---
 title: Controllo delle versioni e librerie .NET
 description: Procedure consigliate per il controllo delle versioni delle librerie .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969013"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706413"
 ---
 # <a name="versioning"></a>Versionamento
 
@@ -43,7 +41,7 @@ Poiché la versione del pacchetto NuGet è la versione più visibile agli svilup
 
 > Gli utenti devono scegliere esplicitamente di ottenere i pacchetti in versione non definitiva, quindi saranno consapevoli del fatto che il pacchetto non è completo.
 
-### <a name="assembly-version"></a>Versione dell'assembly
+### <a name="assembly-version"></a>Versione assembly
 
 La versione dell'assembly viene usata da CLR in fase di esecuzione per scegliere la versione di un assembly da caricare. La selezione di un assembly tramite il controllo delle versioni si applica solo agli assembly con nome sicuro.
 
@@ -63,7 +61,7 @@ La combinazione di nome sicuro e versione dell'assembly permette il [caricamento
 
 > Il valore di AssemblyVersion è incluso in alcuni messaggi informativi visualizzati per l'utente, ad esempio, il nome dell'assembly e i nomi di tipi qualificati dall'assembly nei messaggi di eccezione. Mantenendo una relazione tra le versioni è possibile fornire agli sviluppatori più informazioni sulla versione in uso.
 
-**❌ NON** impostare un valore fisso di AssemblyVersion.
+**❌ non** dispongono di un AssemblyVersion fisso.
 
 > Sebbene evitando di modificare AssemblyVersion si eviti l'esigenza di reindirizzamenti di binding, ciò significa che è possibile installare solo un'unica versione dell'assembly nella Global Assembly Cache (GAC). Inoltre, le applicazioni che fanno riferimento all'assembly nella Global Assembly Cache non funzioneranno più se un'altra applicazione aggiorna l'assembly nella GAC con modifiche che causano un'interruzione.
 
@@ -96,7 +94,7 @@ La versione informativa dell'assembly viene usata per registrare informazioni ag
 > [!NOTE]
 > Le versioni precedenti di Visual Studio generano un avviso di compilazione se questa versione non usa il formato `Major.Minor.Build.Revision`. L'avviso può essere ignorato senza problemi.
 
-**❌ EVITARE** di impostare autonomamente la versione informativa dell'assembly.
+**❌ evitare** di impostare manualmente la versione informativa dell'assembly.
 
 > Lasciare che SourceLink generi automaticamente la versione contenente i metadati del controllo del codice sorgente e NuGet.
 

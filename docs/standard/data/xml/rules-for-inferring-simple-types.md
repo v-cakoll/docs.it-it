@@ -3,14 +3,12 @@ title: Regole per l'inferenza di tipi semplici
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550500"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710232"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -24,7 +22,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.  
   
-|Tipo semplice|Description|  
+|Tipo semplice|Descrizione|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Numeri interi nell'intervallo compreso tra -128 e 127.|  
@@ -33,18 +31,18 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |unsignedShort|Numeri interi nell'intervallo compreso tra 0 e 65535.|  
 |int|Numeri interi nell'intervallo compreso tra -2147483648 e 2147483647.|  
 |unsignedInt|Numeri interi nell'intervallo compreso tra 0 e 4294967295.|  
-|long|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
+|(long)|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
 |unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
 |numero intero|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
 |decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
-|float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF, -INF e NaN.|  
-|double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF, -INF e NaN.|  
+|mobile|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
+|doppio|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
 |duration|Formato della durata W3C.|  
 |dateTime|Formato dateTime W3C.|  
-|ora|Formato di ora W3C.|  
+|time|Formato di ora W3C.|  
 |date|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
 |gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|stringa|Uno o più caratteri Unicode.|  
+|string|Uno o più caratteri Unicode.|  
   
 ## <a name="type-promotion"></a>Promozione tipo  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente. Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno. Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore. Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
@@ -69,7 +67,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 
 Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
-|Attributo|Description|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`xsi:type`|Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.|  
 |`xsi:nil`|Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`. Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.|  

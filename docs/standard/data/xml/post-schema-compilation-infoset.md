@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083819"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710479"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)
 Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +21,7 @@ Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https:
   
  Il modello SOM è il modello a oggetti che rappresenta gli infoset di convalida pre-schema e di compilazione post-schema. Include le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>. Tutte le proprietà di lettura e scrittura delle classi nello spazio dei nomi <xref:System.Xml.Schema> appartengono all'infoset sulla convalida pre-schema, mentre tutte le proprietà delle classi nello spazio dei nomi <xref:System.Xml.Schema> appartengono all'infoset sulla compilazione post-schema. L'eccezione a questa regola è rappresentata dalle seguenti proprietà, che sono proprietà sia di infoset di convalida pre-schema sia di infoset di compilazione post-schema.  
   
-|Classe|Proprietà|  
+|Classe|Gli|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  

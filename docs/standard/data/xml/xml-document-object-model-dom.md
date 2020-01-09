@@ -3,14 +3,12 @@ title: XML DOM (Document Object Model)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662474"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709959"
 ---
 # <a name="xml-document-object-model-dom"></a>XML DOM (Document Object Model)
 
@@ -35,7 +33,7 @@ La classe DOM (Document Object Model) XML è una rappresentazione in memoria di 
 
 Nella figura seguente viene illustrato come è strutturata la memoria quando questi dati XML vengono letti nella struttura del DOM.
 
-![Struttura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "AlberoXML_a_DOM") Struttura del documento XML
+![Struttura del documento XML](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Struttura del documento XML
 
 All'interno della struttura del documento XML, ogni cerchio di questa figura rappresenta un nodo, denominato oggetto **XmlNode**, **XmlNode**che costituisce l'oggetto di base nell'albero DOM. La classe **XmlDocument**, che estende **XmlNode**, supporta i metodi per l'esecuzione di operazioni sul documento nella sua totalità, ad esempio il caricamento del documento in memoria o il salvataggio del documento XML in un file. **XmlDocument** costituisce inoltre un modo per visualizzare e modificare i nodi nell'intero documento XML. **XmlNode** e **XmlDocument** sono stati entrambi migliorati dal punto di vista delle prestazioni e dell'usabilità e dispongono di metodi e proprietà per:
 

@@ -2,21 +2,21 @@
 title: Esecuzione di query su strutture ad albero XML
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346572"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636900"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Esecuzione di query su strutture ad albero XML (Visual Basic)
 Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Per ulteriori informazioni sulla scrittura di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vedere [Introduzione con LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ Per ulteriori informazioni sulla scrittura di query LINQ, vedere [Introduzione con LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Dopo aver creato un'istanza di un albero XML, la scrittura di query è il modo più efficace per estrarre dati dall'albero. Inoltre, le query combinate con la costruzione funzionale consentono di generare un nuovo documento XML con una forma diversa rispetto all'originale.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

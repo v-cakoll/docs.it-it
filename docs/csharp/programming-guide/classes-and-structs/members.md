@@ -1,17 +1,16 @@
 ---
 title: Membri - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922151"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705509"
 ---
 # <a name="members-c-programming-guide"></a>Membri (Guida per programmatori C#)
 
@@ -19,7 +18,7 @@ Le classi e gli struct contengono membri che ne rappresentano i dati e il compor
   
  Nella tabella seguente sono elencati i tipi di membri che possono essere contenuti in una classe o in uno struct:  
   
-|Member|DESCRIZIONE|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |[Campi](./fields.md)|I campi sono variabili dichiarate nell'ambito della classe. Un campo può essere un tipo numerico incorporato o un'istanza di un'altra classe. Una classe calendario può ad esempio avere un campo che contiene la data corrente.|  
 |[Costanti](./constants.md)|Le costanti sono campi il cui valore è impostato in fase di compilazione e non può essere modificato.|  

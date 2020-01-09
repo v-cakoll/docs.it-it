@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 2a751acc129ebd1c917b87f8083ffef72c7d8c17
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568096"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344443"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>API che segnalano ora la versione del prodotto e non la versione del file
 
-Molte API che restituiscono versioni in .NET Core hanno ora restituito la versione del prodotto anziché la versione del file.
+Molte API che restituiscono versioni in .NET Core restituiscono ora la versione del prodotto anziché la versione del file.
 
-#### <a name="change-description"></a>Descrizione della modifica
+#### <a name="change-description"></a>Descrizione delle modifiche
 
 In .NET Core 2,2 e versioni precedenti, i metodi come <xref:System.Environment.Version?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>e la finestra di dialogo Proprietà file per gli assembly .NET Core riflettono la versione del file. A partire da .NET Core 3,0, riflettono la versione del prodotto.
 
@@ -26,7 +26,7 @@ La figura seguente illustra la differenza nelle informazioni sulla versione per 
 
 nessuna. Questa modifica dovrebbe rendere intuitivo il rilevamento della versione anziché ottuso.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Categoria
 
 CoreFx
 

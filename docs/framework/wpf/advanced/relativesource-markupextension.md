@@ -7,18 +7,18 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458767"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559746"
 ---
 # <a name="relativesource-markupextension"></a>Estensione del markup RelativeSource
 
 Specifica le proprietà di un'origine di associazione <xref:System.Windows.Data.RelativeSource>, da utilizzare in un' [estensione di markup dell'associazione](binding-markup-extension.md)o quando si imposta la proprietà <xref:System.Windows.Data.Binding.RelativeSource%2A> di un elemento <xref:System.Windows.Data.Binding> definito in XAML.
 
-## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi
+## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per attributi
 
 ```xml
 <Binding RelativeSource="{RelativeSource modeEnumValue}" .../>
@@ -30,7 +30,7 @@ Specifica le proprietà di un'origine di associazione <xref:System.Windows.Data.
 <object property="{Binding RelativeSource={RelativeSource modeEnumValue} ...}" .../>
 ```
 
-## <a name="xaml-object-element-usage"></a>Utilizzo della sintassi XAML per gli elementi oggetto
+## <a name="xaml-object-element-usage"></a>Utilizzo della sintassi XAML per elementi oggetto
 
 ```xml
 <Binding>
@@ -54,7 +54,7 @@ oppure
 </Binding>
 ```
 
-## <a name="xaml-values"></a>Valori XAML
+## <a name="xaml-values"></a>Valor XAML
 
 |||
 |-|-|
@@ -69,13 +69,13 @@ oppure
 
 `{RelativeSource FindAncestor}` viene utilizzata principalmente nei modelli di controllo o nelle composizioni dell'interfaccia utente autonomia prevedibile, nei casi in cui un controllo deve essere sempre incluso in una struttura ad albero visuale di un determinato tipo di predecessore. Ad esempio, gli elementi di un controllo di elementi potrebbero utilizzare `FindAncestor` per associarsi alle proprietà del relativo predecessore padre del controllo di elementi. In alternativa, gli elementi che fanno parte della composizione del controllo in un modello possono utilizzare le associazioni `FindAncestor` agli elementi padre nella stessa struttura della composizione.
 
-Nella sintassi dell'elemento oggetto per la modalità `FindAncestor` illustrata nelle sezioni sulla sintassi XAML, la sintassi del secondo elemento oggetto viene utilizzata specificamente per la modalità `FindAncestor`. La modalità `FindAncestor` richiede un valore <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. È necessario impostare <xref:System.Windows.Data.RelativeSource.AncestorType%2A> come attributo utilizzando un riferimento all' [estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md) al tipo di predecessore da cercare. Il valore <xref:System.Windows.Data.RelativeSource.AncestorType%2A> viene utilizzato quando la richiesta di associazione viene elaborata in fase di esecuzione.
+Nella sintassi dell'elemento oggetto per la modalità `FindAncestor` illustrata nelle sezioni sulla sintassi XAML, la sintassi del secondo elemento oggetto viene utilizzata specificamente per la modalità `FindAncestor`. La modalità `FindAncestor` richiede un valore <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. È necessario impostare <xref:System.Windows.Data.RelativeSource.AncestorType%2A> come attributo utilizzando un riferimento all' [estensione di markup x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) al tipo di predecessore da cercare. Il valore <xref:System.Windows.Data.RelativeSource.AncestorType%2A> viene utilizzato quando la richiesta di associazione viene elaborata in fase di esecuzione.
 
 Per la modalità `FindAncestor`, la proprietà facoltativa <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> consente di rendere meno ambigua la ricerca del predecessore laddove vi sono più predecessori di questo tipo nella struttura ad albero dell'elemento.
 
 Per ulteriori informazioni su come utilizzare la modalità `FindAncestor`, vedere <xref:System.Windows.Data.RelativeSource>.
 
-`{RelativeSource Self}` è utile per gli scenari in cui una proprietà di un'istanza deve dipendere dal valore di un'altra proprietà della stessa istanza e non esiste già una relazione di proprietà di dipendenza generale, ad esempio la coercizione, tra queste due proprietà. Sebbene sia raro che esistano due proprietà su un oggetto in modo che i valori siano letteralmente identici (e siano tipizzati in modo identico), è anche possibile applicare un `Converter` parametro a un'associazione con `{RelativeSource Self}`e usare il convertitore per eseguire la conversione tra l'origine e la destinazione. tipi. Un altro scenario per `{RelativeSource Self}` è come parte di un <xref:System.Windows.MultiDataTrigger>.
+`{RelativeSource Self}` è utile per gli scenari in cui una proprietà di un'istanza deve dipendere dal valore di un'altra proprietà della stessa istanza e non esiste già una relazione di proprietà di dipendenza generale, ad esempio la coercizione, tra queste due proprietà. Sebbene sia raro che esistano due proprietà su un oggetto in modo che i valori siano letteralmente identici (e siano tipizzati in modo identico), è anche possibile applicare un `Converter` parametro a un'associazione con `{RelativeSource Self}`e usare il convertitore per eseguire la conversione tra i tipi di origine e di destinazione. Un altro scenario per `{RelativeSource Self}` è come parte di un <xref:System.Windows.MultiDataTrigger>.
 
 Ad esempio, nel codice XAML seguente viene definito un elemento <xref:System.Windows.Shapes.Rectangle> in modo che, indipendentemente dal valore inserito per <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.Shapes.Rectangle> sia sempre un quadrato: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
@@ -115,6 +115,6 @@ Nell'implementazione del processore XAML [!INCLUDE[TLA2#tla_winclient](../../../
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
 - [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Panoramica sul data binding](../../../desktop-wpf/data/data-binding-overview.md)
+- [Cenni preliminari sull'associazione dati](../../../desktop-wpf/data/data-binding-overview.md)
 - [Panoramica sulle dichiarazioni di associazione](../data/binding-declarations-overview.md)
-- [Estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md)
+- [Estensione di markup x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609629"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708178"
 ---
 # <a name="common-io-tasks"></a>Attività di I/O comuni
 Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseguire diverse operazioni, ad esempio la lettura e la scrittura, su file, directory e flussi. Per altre informazioni, vedere [I/O di file e di flussi](../../../docs/standard/io/index.md).  
@@ -28,7 +26,7 @@ Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseg
 |Rinominare o spostare un file|Metodo <xref:System.IO.File.Move%2A?displayProperty=nameWithType><br /><br /> Metodo <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Eliminare un file|Metodo <xref:System.IO.File.Delete%2A?displayProperty=nameWithType><br /><br /> Metodo <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType>|  
 |Copiare un file|Metodo <xref:System.IO.File.Copy%2A?displayProperty=nameWithType><br /><br /> Metodo <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType>|  
-|Ottenere la dimensione di un file|Proprietà<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> |  
+|Ottenere la dimensione di un file|Proprietà<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
 |Ottenere gli attributi di un file|Metodo <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
 |Impostare gli attributi di un file|Metodo <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
 |Verificare se un file esiste|Metodo <xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
@@ -44,7 +42,7 @@ Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseg
 |Per eseguire questa operazione...|Vedere l'esempio riportato in questo argomento...|  
 |-------------------|--------------------------------------|  
 |Accedere a un file in una cartella speciale, ad esempio Documenti|[Procedura: Scrivere un testo in un file](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Creare una directory|Metodo <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Proprietà<xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> |  
+|Creare una directory|Metodo <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Proprietà<xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>|  
 |Creare una sottodirectory|Metodo <xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType>|  
 |Rinominare o spostare una directory|Metodo <xref:System.IO.Directory.Move%2A?displayProperty=nameWithType><br /><br /> Metodo <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Copiare una directory|[Procedura: Copiare le directory](../../../docs/standard/io/how-to-copy-directories.md)|  
@@ -57,4 +55,4 @@ Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseg
 
 - [I/O di file e di flussi](../../../docs/standard/io/index.md)
 - [Composizione dei flussi](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)

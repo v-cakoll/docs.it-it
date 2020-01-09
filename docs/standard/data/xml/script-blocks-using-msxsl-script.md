@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710193"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocchi di script utilizzando msxsl:script
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorporato mediante l'elemento `msxsl:script`. Quando viene caricato il foglio di stile, le funzioni definite vengono compilate in MSIL (Microsoft Intermediate Language) da CodeDOM (Code Document Object Model) e vengono attivate in fase di esecuzione. L'assembly generato dal blocco di script incorporato è separato rispetto all'assembly generato per il foglio di stile.  
@@ -68,7 +66,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 ### <a name="importing-namespaces-and-assemblies"></a>Importazione di spazi dei nomi e assembly  
  La classe <xref:System.Xml.Xsl.XslCompiledTransform> contiene un set predefinito di assembly e di spazi dei nomi che è supportato per impostazione predefinita dall'elemento `msxsl:script`. Tuttavia, è possibile usare le classi e i membri appartenenti a uno spazio dei nomi che non è presente nell'elenco predefinito importando l'assembly e lo spazio dei nomi nel blocco `msxsl:script`.  
   
-#### <a name="assemblies"></a>Assembly  
+#### <a name="assemblies"></a>Assemblies  
  Per impostazione predefinita, viene fatto riferimento ai due assembly seguenti:  
   
 - System.dll  

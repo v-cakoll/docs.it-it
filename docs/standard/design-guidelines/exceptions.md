@@ -8,24 +8,23 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: KrzysztofCwalina
-ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64b6052aeb99c6e878c1a9aac50e67bca7f8d2a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669052"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709374"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Linee guida di progettazione delle eccezioni
-La gestione delle eccezioni ha numerosi vantaggi rispetto alla creazione di report errori basato sul valore restituito. Framework buona struttura consente lo sviluppatore di applicazioni di sfruttare i vantaggi delle eccezioni. In questa sezione illustra i vantaggi delle eccezioni e vengono fornite linee guida per il loro utilizzo in modo efficace.  
+La gestione delle eccezioni presenta molti vantaggi rispetto alla segnalazione degli errori basata sul valore restituito. Una progettazione di Framework efficace consente allo sviluppatore di applicazioni di realizzare i vantaggi delle eccezioni. In questa sezione vengono illustrati i vantaggi delle eccezioni e vengono presentate le linee guida per utilizzarle in modo efficace.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Generazione di eccezioni](../../../docs/standard/design-guidelines/exception-throwing.md)  
  [Uso di tipi di eccezioni standard](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
  [Eccezioni e prestazioni](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

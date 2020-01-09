@@ -3,14 +3,12 @@ title: Note sull'implementazione del supporto per il tipo XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916039"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709868"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Note sull'implementazione del supporto per il tipo XML
 In questo argomento vengono descritti alcuni dettagli sull'implementazione di cui è consigliabile essere a conoscenza.  
@@ -34,7 +32,7 @@ In questo argomento vengono descritti alcuni dettagli sull'implementazione di cu
   
  La classe <xref:System.TimeSpan> non supporta questo ordinamento parziale. Invece, stabilisce un numero specifico di giorni per 1 anno e 1 mese: rispettivamente 365 e 30 giorni.  
   
- Per altre informazioni sul tipo `xs:duration`, vedere la raccomandazione W3C [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/).
+ Per altre informazioni sul tipo `xs:duration`, vedere la raccomandazione W3C [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) (Schema XML parte 2: tipi di dati).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, tipi di date gregoriane e System.DateTime  
  Quando un valore `xs:time` è associato a un oggetto <xref:System.DateTime>, il campo <xref:System.DateTime.MinValue> viene usato per inizializzare le proprietà relative alla data dell'oggetto <xref:System.DateTime> (ad esempio, <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> e <xref:System.DateTime.Day%2A>) impostandole sul valore <xref:System.DateTime> più basso possibile.  

@@ -1,6 +1,5 @@
 ---
 title: Ereditarietà - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,19 +9,19 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924476"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705548"
 ---
 # <a name="inheritance-c-programming-guide"></a>Ereditarietà (Guida per programmatori C#)
 
 L'ereditarietà, insieme all'incapsulamento e al polimorfismo, rappresenta una delle tre principali caratteristiche (o pilastri) della programmazione orientata a oggetti. L'ereditarietà consente di creare nuove classi che riusano, estendono e modificano il comportamento definito in altre classi. La classe i cui membri vengono ereditati è denominata *classe di base*, mentre la classe che eredita tali membri è denominata *classe derivata*. Una classe derivata può avere una sola classe di base diretta. L'ereditarietà, tuttavia, è transitiva. Se la classe C viene derivata dalla classe B e la classe B viene derivata dalla classe A, la classe C eredita i membri dichiarati nella classe B e nella classe A.  
   
 > [!NOTE]
-> Gli struct non supportano l'ereditarietà, mentre possono implementare interfacce. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
+> Gli struct non supportano l'ereditarietà, mentre possono implementare interfacce. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
  Concettualmente, una classe derivata rappresenta una specializzazione della classe di base. Ad esempio, avendo una classe di base `Animal`, è possibile definire una classe derivata denominata `Mammal` e un'altra classe derivata denominata `Reptile`. Un oggetto `Mammal` è anche un oggetto `Animal` e un oggetto `Reptile` è anche un `Animal`, ma ogni classe derivata rappresenta una diversa specializzazione della classe di base.  
   
@@ -45,7 +44,7 @@ L'ereditarietà, insieme all'incapsulamento e al polimorfismo, rappresenta una d
 ## <a name="interfaces"></a>Interfacce  
  Un'*interfaccia* rappresenta un tipo di riferimento ed è per vari aspetti simile a una classe di base astratta costituita solo da membri astratti. Quando una classe implementa un'interfaccia, deve fornire un'implementazione per tutti i membri definiti nell'interfaccia. Una classe può implementare più interfacce, anche se può essere derivata solo da una singola classe di base diretta.  
   
- Le interfacce sono usate per definire specifiche funzionalità per le classi che non sono necessariamente caratterizzate da una relazione di tipo "è un". Ad esempio, l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType> può essere implementata da qualunque classe o struct che debba abilitare il codice client per determinare se due oggetti di un dato tipo sono equivalenti, indipendentemente da come il tipo definisca l'equivalenza. <xref:System.IEquatable%601> non implica lo stesso tipo di relazione "è" esistente tra una classe di base e una classe derivata. Ad esempio, un `Mammal` è un `Animal`. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
+ Le interfacce sono usate per definire specifiche funzionalità per le classi che non sono necessariamente caratterizzate da una relazione di tipo "è un". Ad esempio, l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType> può essere implementata da qualunque classe o struct che debba abilitare il codice client per determinare se due oggetti di un dato tipo sono equivalenti, indipendentemente da come il tipo definisca l'equivalenza. <xref:System.IEquatable%601> non implica lo stesso tipo di relazione "è" esistente tra una classe di base e una classe derivata. Ad esempio, un `Mammal` è un `Animal`. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Prevenzione di un'ulteriore derivazione  
  È possibile evitare che altre classi ereditino da una data classe o da uno qualsiasi dei suoi membri, dichiarando tale classe o tale membro come [sealed](../../language-reference/keywords/sealed.md). Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](./abstract-and-sealed-classes-and-class-members.md).  
@@ -57,5 +56,5 @@ L'ereditarietà, insieme all'incapsulamento e al polimorfismo, rappresenta una d
 
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](./index.md)
-- [class](../../language-reference/keywords/class.md)
+- [classe](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

@@ -1,21 +1,20 @@
 ---
 title: Matrici irregolari - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597333"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705704"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrici irregolari (Guida per programmatori C#)
 
-Una matrice di matrici è una matrice i cui elementi sono costituiti da matrici. Gli elementi di una matrice di matrici possono presentare dimensioni e misure diverse. Una matrice di matrici è chiamata talvolta "matrice irregolare". Gli esempi seguenti mostrano come dichiarare, inizializzare e accedere a matrici di matrici.  
+Una matrice di matrici contiene elementi sotto forma di matrici. Gli elementi di una matrice di matrici possono presentare dimensioni e misure diverse. Una matrice di matrici è chiamata talvolta "matrice irregolare". Gli esempi seguenti mostrano come dichiarare, inizializzare e accedere a matrici di matrici.  
   
  Di seguito è riportata la dichiarazione di una matrice unidimensionale a tre elementi, ognuno dei quali è una matrice unidimensionale di Integer:  
   

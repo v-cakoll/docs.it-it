@@ -1,15 +1,13 @@
 ---
 title: Pubblicazione di un pacchetto NuGet
 description: Procedure consigliate per la pubblicazione delle librerie .NET in NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640762"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706465"
 ---
 # <a name="publishing-a-nuget-package"></a>Pubblicazione di un pacchetto NuGet
 
@@ -24,7 +22,7 @@ I pacchetti NuGet sono pubblicati e utilizzati dai repository di pacchetti. Anch
 > [!NOTE]
 > NuGet.org [non consente di eliminare un pacchetto](/nuget/policies/deleting-packages) dopo averlo caricato. Un pacchetto può essere rimosso dall'elenco in modo che non sia visibile pubblicamente nell'interfaccia utente, ma `*.nupkg` può essere ugualmente scaricato al momento del ripristino. Nuget.org non consente inoltre le versioni dei pacchetti duplicate. Per correggere un pacchetto NuGet con un errore, è necessario rimuovere il pacchetto non corretto dall'elenco, incrementare il numero di versione e pubblicare una nuova versione del pacchetto.
 
-**✔️ ESEGUIRE** [la pubblicazione di pacchetti stabili e di pacchetti in versione non definitiva](/nuget/create-packages/publish-a-package) per cui si vogliono conoscere i commenti e suggerimenti della community in NuGet.org.
+**✔️** [pubblicare pacchetti stabili e pacchetti di versioni](/nuget/create-packages/publish-a-package) non definitive per i quali si desidera inviare commenti alla community a NuGet.org.
 
 **✔️ VALUTARE** la possibilità di pubblicare pacchetti in versione non definitiva in un feed MyGet da una build di integrazione continua.
 

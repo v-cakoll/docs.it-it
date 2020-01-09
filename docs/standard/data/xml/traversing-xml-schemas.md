@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6040a7aa8f3244ea0ce2e66042537bc45c347b05
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037846"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710115"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 
@@ -24,7 +22,7 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
 
 Le seguenti proprietà della classe <xref:System.Xml.Schema.XmlSchema> forniscono l'accesso alla raccolta degli elementi globali aggiunti a XML Schema.
 
-|Proprietà|Tipo di oggetto archiviato nella raccolta o nella matrice|
+|Gli|Tipo di oggetto archiviato nella raccolta o nella matrice|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|

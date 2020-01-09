@@ -8,20 +8,19 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-author: KrzysztofCwalina
-ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4f1d2fee73e3e65dc4d92ea97a62f4a7e4c4e5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945522"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709270"
 ---
 # <a name="member-design-guidelines"></a>Linee guida di progettazione dei membri
-I metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come membri. I membri sono infine i mezzi mediante il quale framework funzionalità viene esposta agli utenti finali di un framework.  
+Metodi, proprietà, eventi, costruttori e campi vengono collettivamente definiti membri. I membri sono infine i mezzi con cui la funzionalità del Framework viene esposta agli utenti finali di un Framework.  
   
- I membri possono essere virtuale o non virtuali, concreto o astratti, statico o istanza e possono avere diversi ambiti diversi di accessibilità. Tutto questo varietà fornisce espressività incredibile ma nello stesso momento richiede attenzione da parte la finestra di progettazione di framework.  
+ I membri possono essere virtuali o non virtuali, concreti, astratti, statici o di istanza e possono avere diversi ambiti di accessibilità. Questa varietà fornisce un'espressività incredibile, ma allo stesso tempo richiede attenzione da parte di progettazione Framework.  
   
- In questo capitolo offre linee guida di base da seguire quando si progettano i membri di qualsiasi tipo.  
+ In questo capitolo vengono fornite le linee guida di base da seguire per la progettazione di membri di qualsiasi tipo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Overload dei membri](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -32,9 +31,9 @@ I metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come
  [Metodi di estensione](../../../docs/standard/design-guidelines/extension-methods.md)  
  [Overload dell'operatore](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Progettazione di parametri](../../../docs/standard/design-guidelines/parameter-design.md)  
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

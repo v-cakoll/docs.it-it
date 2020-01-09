@@ -1,6 +1,5 @@
 ---
 title: Come eseguire la conversione tra stringhe esadecimali e tipi C# numerici-Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 26c2aa12c9c67c59d1ba6fbd20bf675b947b3967
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635028"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698521"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Come eseguire la conversione tra stringhe esadecimali e tipiC# numerici (Guida per programmatori)
 In questi esempi viene mostrato come effettuare le seguenti attività:  

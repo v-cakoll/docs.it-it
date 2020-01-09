@@ -3,14 +3,12 @@ title: Copia di nodi esistenti da un documento all'altro
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965922"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711025"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia di nodi esistenti da un documento all'altro
 Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sottoalbero di nodi viene copiato da un oggetto **XmlDocument** a un altro. Il nodo restituito dalla chiamata è una copia del nodo dal documento di origine, inclusi i valori degli attributi, il nome del nodo, il tipo di nodo e tutti gli attributi relativi allo spazio dei nomi quali il prefisso, il nome locale e l'URI dello spazio dei nomi. Il documento di origine non viene modificato. Dopo aver importato il nodo, è necessario aggiungerlo all'albero usando uno dei metodi di inserimento dei nodi.  
@@ -28,7 +26,7 @@ Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sotto
 |XmlComment|Copia il nodo, compresi i dati.|Copia il nodo, compresi i dati.|  
 |XmlDocumentFragment|Gli elementi discendenti del nodo di origine vengono importati in modo ricorsivo e i nodi risultanti vengono riassemblati per formare il sottoalbero corrispondente.|Viene creato un **XmlDocumentFragment** vuoto.|  
 |XmlDocumentType|Copia il nodo, compresi i dati.*|Copia il nodo, compresi i dati.*|  
-|XmlElement|Gli elementi discendenti dell'elemento di origine vengono importati in modo ricorsivo e i nodi risultanti vengono riassemblati per formare il sottoalbero corrispondente. **Nota:**  Gli attributi predefiniti non vengono copiati. Se il documento verso il quale avviene l'importazione definisce attributi predefiniti per questo nome di elemento, verranno assegnati tali attributi.|I nodi Attribute specificati dell'elemento di origine vengono importati e i nodi **XmlAttribute** generati vengono associati al nuovo elemento. I nodi discendenti non vengono copiati. **Nota:**  Gli attributi predefiniti non vengono copiati. Se il documento verso il quale avviene l'importazione definisce attributi predefiniti per questo nome di elemento, verranno assegnati tali attributi.|  
+|XmlElement|Gli elementi discendenti dell'elemento di origine vengono importati in modo ricorsivo e i nodi risultanti vengono riassemblati per formare il sottoalbero corrispondente. **Nota:** gli attributi predefiniti non vengono copiati. Se il documento verso il quale avviene l'importazione definisce attributi predefiniti per questo nome di elemento, verranno assegnati tali attributi.|I nodi Attribute specificati dell'elemento di origine vengono importati e i nodi **XmlAttribute** generati vengono associati al nuovo elemento. I nodi discendenti non vengono copiati. **Nota:** gli attributi predefiniti non vengono copiati. Se il documento verso il quale avviene l'importazione definisce attributi predefiniti per questo nome di elemento, verranno assegnati tali attributi.|  
 |XmlEntityReference|Poiché nei documenti di origine e di destinazione le entità potrebbero essere definite in modo diverso, questo metodo copia solo il nodo **XmlEntityReference**. Il testo di sostituzione non viene incluso. Se nel documento di destinazione l'entità è definita, viene assegnato il suo valore.|Poiché nei documenti di origine e di destinazione le entità potrebbero essere definite in modo diverso, questo metodo copia solo il nodo **XmlEntityReference**. Il testo di sostituzione non viene incluso. Se nel documento di destinazione l'entità è definita, viene assegnato il suo valore.|  
 |XmlProcessingInstruction|Copia il valore di destinazione e dei dati dal nodo importato.|Copia il valore di destinazione e dei dati dal nodo importato.|  
 |XmlText|Copia il nodo, compresi i dati.|Copia il nodo, compresi i dati.|  

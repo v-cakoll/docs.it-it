@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832ea3c976a0a2e6bb3b4df8a2541248cfc56933
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663918"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705860"
 ---
 # <a name="security-and-user-input"></a>Sicurezza e input dell'utente
 
@@ -57,7 +55,7 @@ Tra gli aspetti importanti dei dati utente sono inclusi i seguenti:
 
   - Escape doppi (%nn diviene %mmnn, dove %mm è il carattere di escape per '%').
 
-- Prestare attenzione ai nomi utente che possono avere più di un formato canonico. Ad esempio, è spesso possibile utilizzare la forma MYDOMAIN\\*nomeutente* o la forma *nomeutente@mydomain.example.com* @mydomain.example.com.
+- Prestare attenzione ai nomi utente che possono avere più di un formato canonico. Ad esempio, è spesso possibile utilizzare la forma MYDOMAIN\\*nomeutente* o la forma *nomeutente@mydomain.example.com*@mydomain.example.com.
 
 ## <a name="see-also"></a>Vedere anche
 

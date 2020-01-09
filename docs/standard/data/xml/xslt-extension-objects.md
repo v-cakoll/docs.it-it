@@ -3,14 +3,12 @@ title: Oggetti di estensione XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25c9c1c81db0bb6775aa9226318d7ec726a93e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924935"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709712"
 ---
 # <a name="xslt-extension-objects"></a>Oggetti di estensione XSLT
 Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli di stile. Gli oggetti di estensione sono gestiti dalla classe <xref:System.Xml.Xsl.XsltArgumentList>.  

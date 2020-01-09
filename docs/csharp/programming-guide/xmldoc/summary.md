@@ -1,6 +1,5 @@
 ---
 title: <summary> - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f0e67ca248e5c94318032c8769410d4fd4c9d3a9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 63c65e11a274779015cf99859b7fa67bb536529d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523303"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711688"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -28,7 +27,7 @@ ms.locfileid: "72523303"
  Un riepilogo dell'oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo. Utilizzare [ \<osservazioni >](./remarks.md) per aggiungere informazioni supplementari alla descrizione di un tipo. Usare l'[attributo cref](./cref-attribute.md) per abilitare strumenti della documentazione come [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per creare collegamenti ipertestuali interni alle pagine della documentazione per gli elementi di codice.  
+ Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo. Utilizzare [\<osservazioni >](./remarks.md) per aggiungere informazioni supplementari alla descrizione di un tipo. Usare l'[attributo cref](./cref-attribute.md) per abilitare strumenti della documentazione come [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per creare collegamenti ipertestuali interni alle pagine della documentazione per gli elementi di codice.  
   
  Il testo del tag \<summary> rappresenta l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nella finestra Visualizzatore oggetti.  
   

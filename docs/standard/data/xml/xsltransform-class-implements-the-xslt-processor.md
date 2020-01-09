@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709608"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implementazione del processore XSLT da parte della classe XslTransform
 
@@ -82,7 +80,7 @@ Per altre informazioni sui livelli di sicurezza, sul parametro Evidence e su com
 
 Per altre informazioni sui livelli di sicurezza, sul parametro Evidence e su come questi influiscono sulla funzione `document()`, vedere [Risoluzione di fogli di stile e documenti XSLT esterni](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Insieme al foglio di stile è possibile fornire vari parametri di input. È inoltre possibile usare il foglio di stile per chiamare le funzioni sugli oggetti di estensione. Sia i parametri che gli oggetti di estensione vengono forniti al foglio di stile mediante la classe <xref:System.Xml.Xsl.XsltArgumentList>. Per altre informazioni su <xref:System.Xml.Xsl.XsltArgumentList>, vedere <xref:System.Xml.Xsl.XsltArgumentList>.
+Insieme al foglio di stile è possibile fornire vari parametri di input. È inoltre possibile usare il foglio di stile per chiamare le funzioni sugli oggetti di estensione. Sia i parametri che gli oggetti di estensione vengono forniti al foglio di stile mediante la classe <xref:System.Xml.Xsl.XsltArgumentList>. Per altre informazioni sul <xref:System.Xml.Xsl.XsltArgumentList>, vedere <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Uso protetto consigliato per la classe XslTransform
 

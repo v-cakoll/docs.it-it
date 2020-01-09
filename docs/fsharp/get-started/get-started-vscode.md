@@ -2,12 +2,12 @@
 title: Introduzione a F# in Visual Studio Code
 description: Informazioni su come usare F# con Visual Studio Code e la suite di plug-in Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204918"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559664"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introduzione a F# in Visual Studio Code
 
@@ -20,7 +20,7 @@ Per iniziare, verificare che [ F# sia installato correttamente il plug](install-
 Per creare un nuovo F# progetto, aprire una riga di comando e creare un nuovo progetto con la interfaccia della riga di comando di .NET Core:
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 Al termine, passare alla directory del progetto e aprire Visual Studio Code:
@@ -68,7 +68,7 @@ Poiché ciò che è stato inviato è una [funzione](../language-reference/functi
 toPigLatin "banana";;
 ```
 
-Dovrebbe essere visualizzato il risultato seguente:
+Verrà visualizzato il risultato seguente:
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ A questo punto, proviamo con una vocale come prima lettera. Immettere quanto seg
 toPigLatin "apple";;
 ```
 
-Dovrebbe essere visualizzato il risultato seguente:
+Verrà visualizzato il risultato seguente:
 
 ```fsharp
 val it : string = "appleyay"
@@ -109,7 +109,7 @@ Questo indica che `toPigLatin` è una funzione che accetta un `string` come inpu
 
 Nel corpo della funzione si noteranno due parti distinte:
 
-1. Funzione interna, chiamata `isVowel`, che determina se un carattere specificato (`c`) è una vocale controllando se corrisponde a uno dei modelli [forniti tramite criteri](../language-reference/pattern-matching.md)di ricerca:
+1. Funzione interna, denominata `isVowel`, che determina se un carattere specificato (`c`) è una vocale controllando se corrisponde a uno dei modelli forniti tramite [criteri di ricerca](../language-reference/pattern-matching.md):
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
@@ -133,7 +133,7 @@ Per iniziare, aprire il file *Program. FS* creato in precedenza con il interfacc
 
 Successivamente, creare un nuovo [`module`](../language-reference/modules.md) denominato `PigLatin` e copiare la funzione `toPigLatin` creata in precedenza nel modo seguente:
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 Questo modulo deve essere superiore alla funzione `main` e al di sotto della dichiarazione di `open System`. L'ordine delle dichiarazioni è importante F#in, quindi è necessario definire la funzione prima di chiamarla in un file.
 
@@ -151,7 +151,7 @@ let main argv =
 
 A questo punto è possibile eseguire l'app console dalla riga di comando:
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ Ecco alcuni modi in cui è possibile risolvere alcuni problemi che potrebbero ve
 1. Per ottenere le funzionalità di modifica del codice di Ionide F# , è necessario salvare i file su disco e all'interno di una cartella aperta nell'area di lavoro Visual Studio Code.
 1. Se sono state apportate modifiche al sistema o sono stati installati i prerequisiti di Ionide con Visual Studio Code aprire, riavviare Visual Studio Code.
 1. Se nelle directory del progetto sono presenti caratteri non validi, Ionide potrebbe non funzionare.  Se questo è il caso, rinominare le directory del progetto.
-1. Se nessuno dei comandi Ionide funziona, controllare i tasti di scelta [Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) per verificare se si sta eseguendo l'override per errore.
+1. Se nessuno dei comandi Ionide funziona, controllare i tasti di scelta [Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) per verificare se si sta eseguendo l'override per errore.
 1. Se Ionide è danneggiato nel computer e nessuno dei precedenti ha risolto il problema, provare a rimuovere la directory `ionide-fsharp` nel computer e reinstallare la suite di plug-in.
 1. Se non è stato possibile caricare un progetto F# (il Esplora soluzioni lo visualizzerà), fare clic con il pulsante destro del mouse sul progetto e fare clic su **Visualizza dettagli** per ottenere altre informazioni di diagnostica.
 
