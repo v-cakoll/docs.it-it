@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046728"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716174"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
@@ -37,7 +35,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
  La registrazione ETW viene in genere abilitata prima dell'avvio di un processo e disattivata al termine dello stesso. Se tuttavia la registrazione ETW viene attivata durante l'esecuzione del processo, sono necessarie informazioni aggiuntive sul processo. Per la risoluzione dei simboli, ad esempio, è necessario registrare gli eventi di metodo per i metodi già caricati prima dell'attivazione della registrazione.  
   
- Gli eventi `DCStart` e `DCEnd` acquisiscono lo stato del processo al momento dell'avvio e dell'arresto della raccolta dei dati. Lo stato fa riferimento a informazioni di livello elevato, inclusi i metodi già compilati tramite Just-In-Time (JIT) e gli assembly caricati. Questi due eventi possono fornire informazioni su ciò che è già avvenuto nel processo, ad esempio sui metodi compilati tramite JIT e così via.  
+ Gli eventi `DCStart` e `DCEnd` acquisiscono lo stato del processo al momento dell'avvio e dell'arresto della raccolta dei dati. (Lo stato si riferisce alle informazioni a livello generale, inclusi i metodi che sono già stati compilati JIT (just-in-Time) e gli assembly caricati. Questi due eventi possono fornire informazioni sugli eventi che si sono già verificati nel processo. ad esempio, quali metodi sono stati compilati tramite JIT e così via.  
   
  Solo gli eventi il cui nome contiene `DC`, `DCStart`, `DCEnd` o `DCInit` vengono generati nel provider di rundown ed esclusivamente in questo provider.  
   

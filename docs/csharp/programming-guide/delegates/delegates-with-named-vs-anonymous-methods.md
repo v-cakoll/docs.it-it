@@ -1,17 +1,16 @@
 ---
 title: Delegati con metodi denominati C# e anonimi-Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 310d0abd8fd2ceac5f8dfaa2647cb6ac26513a0f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346400"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712377"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegati con metodi denominati e anonimi (Guida per programmatori C#)
 È possibile associare un [delegato](../../language-reference/builtin-types/reference-types.md) a un metodo denominato. Quando si crea un'istanza di un delegato usando un metodo denominato, il metodo viene passato come parametro, ad esempio:  

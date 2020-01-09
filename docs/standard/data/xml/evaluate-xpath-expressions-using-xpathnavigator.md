@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8666aa9cb9f0512c600a77891b16f439c46995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1a17aea66be7f9d35336434408c49bae8046b7e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517409"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710908"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Valutazione di espressioni XPath con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce il metodo <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> per valutare un'espressione XPath. Il metodo <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> rileva un'espressione XPath, la valuta e restituisce un W3C XPath di tipo booleano, numero, stringa o set di nodi, in base al risultato dell'espressione XPath.  

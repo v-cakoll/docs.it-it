@@ -3,13 +3,12 @@ title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281779"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714107"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 
@@ -57,13 +56,13 @@ La funzionalità di telemetria raccoglie i dati seguenti:
 
 | Versioni dell'SDK | Data |
 |--------------|------|
-| Tutte          | Timestamp della chiamata. |
-| Tutte          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
-| Tutte          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
-| Tutte          | Sistema operativo e versione. |
-| Tutte          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
-| Tutte          | Versione di .NET Core SDK. |
-| Tutte          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
+| Tutte le          | Timestamp della chiamata. |
+| Tutte le          | Comando richiamato (ad esempio, "build"), con hash a partire dalla versione 2.1. |
+| Tutte le          | Indirizzo IP di tre ottetti usato per determinare la posizione geografica. |
+| Tutte le          | Sistema operativo e versione. |
+| Tutte le          | ID Runtime (RID) in cui è in esecuzione l'SDK. |
+| Tutte le          | Versione di .NET Core SDK. |
+| Tutte le          | Profilo di telemetria: valore facoltativo usato solo con consenso esplicito dell'utente e usato internamente a Microsoft. |
 | >=2.0        | Argomenti e opzioni di comando: vengono raccolti vari argomenti e opzioni (non stringhe arbitrarie). Vedere [Opzioni raccolte](#collected-options). Con hash dopo la versione 2.1.300. |
 | >=2.0         | Se il SDK è in esecuzione in un contenitore. |
 | >=2.0         | Framework di destinazione (dall'evento `TargetFramework`), con hash a partire dalla versione 2.1. |
@@ -91,7 +90,7 @@ Alcuni comandi inviano dati aggiuntivi. Un subset di comandi invia il primo argo
 
 Un subset di comandi invia le opzioni selezionate se vengono usate, insieme ai relativi valori:
 
-| Opzione                  | Commands                                                                                       |
+| Opzione                  | Comandi                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Tutti i comandi                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |

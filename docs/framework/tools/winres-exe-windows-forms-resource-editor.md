@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043896"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715700"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -110,7 +108,7 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
 2. Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
 
-     -oppure-
+     oppure
 
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.
 

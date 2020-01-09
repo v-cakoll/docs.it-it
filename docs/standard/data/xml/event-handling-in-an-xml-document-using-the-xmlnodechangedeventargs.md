@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965884"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710895"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nell'oggetto **XmlDocument** per gestire gli eventi. Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
   
-|event|Generato|  
+|Event|Generato|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Quando un nodo che appartiene al documento corrente sta per essere inserito in un altro nodo.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Quando un nodo che appartiene al documento corrente è stato inserito in un altro nodo.|  

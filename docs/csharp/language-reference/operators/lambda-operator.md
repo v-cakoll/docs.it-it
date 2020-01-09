@@ -1,6 +1,5 @@
 ---
 title: Operatore => Riferimenti per C#
-ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b8d1a4e3971eb30e76bf543497931ce029c5541d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036369"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712702"
 ---
 # <a name="-operator-c-reference"></a>Operatore => (Riferimenti per C#)
 
@@ -68,7 +67,7 @@ Per altre informazioni, vedere [Membri con corpo di espressione](../../programmi
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Non è possibile sottoporre l'operatore `=>` a overload.
+Non è possibile eseguire l'overload dell'operatore `=>`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

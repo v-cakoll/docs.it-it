@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044882"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715778"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -45,11 +43,11 @@ aximp [options]{file.dll | file.ocx}
 |`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |`/keycontainer:` *containerName*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
-|`/keyfile:` *filename*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  
+|*nome file* `/keyfile:`|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  
 |`/nologo`|Evita la visualizzazione del messaggio di avvio Microsoft.|  
-|`/out:` *filename*|Specifica il nome dell'assembly da creare.|  
-|`/publickey:` *filename*|Firma il controllo risultante con un nome sicuro usando la chiave pubblica presente nel file specificato da *filename*.|  
-|`/rcw:` *filename*|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) .|  
+|*nome file* `/out:`|Specifica il nome dell'assembly da creare.|  
+|*nome file* `/publickey:`|Firma il controllo risultante con un nome sicuro usando la chiave pubblica presente nel file specificato da *filename*.|  
+|*nome file* `/rcw:`|Utilizza il Runtime Callable Wrapper specificato invece di generarne uno nuovo. È possibile specificare più istanze. La directory corrente viene usata per i percorsi relativi. Per altre informazioni, vedere la sezione [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) .|  
 |`/silent`|Evita la visualizzazione dei messaggi di operazione riuscita.|  
 |`/source`|Genera codice sorgente C# per il wrapper di Windows Form.|  
 |`/verbose`|Specifica la modalità dettagliata. Visualizza ulteriori informazioni sullo stato.|  
@@ -59,7 +57,7 @@ aximp [options]{file.dll | file.ocx}
   
  Proxy di Common Language Runtime per i tipi COM: *progid*.dll  
   
- Proxy di Windows Form per i controlli ActiveX (dove Ax significa ActiveX): Ax*progid*.dll  
+ Proxy di Windows Forms per i controlli ActiveX (dove Ax significa ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
 > Se il nome di un membro del controllo ActiveX corrisponde a un nome definito in .NET Framework, il nome del membro verrà fatto precedere dal prefisso "Ctl" durante la creazione della classe derivata da AxHost. Se, ad esempio, il controllo ActiveX contiene un membro denominato "Layout", questo verrà rinominato "CtlLayout" nella classe derivata da AxHost in quanto l'evento Layout è definito all'interno di .NET Framework.  
@@ -70,7 +68,7 @@ aximp [options]{file.dll | file.ocx}
   
  L'esecuzione di Aximp.exe sul file shdocvw.dll comporterà sempre la creazione di un altro file denominato shdocvw.dll nella directory da cui viene eseguito lo strumento. L'inserimento nella directory Documents and Settings del file generato causerà problemi per Microsoft Internet Explorer ed Esplora risorse. Al riavvio del computer, viene eseguita una ricerca nella directory Documents and Settings prima che nella directory system32 per trovare una copia di shdocvw.dll. Verrà utilizzata la copia trovata in Documents and Settings e verrà effettuato un tentativo di caricamento dei wrapper gestiti. Internet Explorer ed Esplora risorse non funzioneranno correttamente in quanto dipendono dal motore di rendering della versione di shdocvw.dll presente nella directory system32. Se si verifica tale problema, eliminare la copia di shdocvw.dll nella directory Documents and Settings e riavviare il computer.  
   
- Anche l'utilizzo di Aximp.exe con shdocvw.dll per creare un assembly .NET da utilizzare nello sviluppo di un'applicazione può causare problemi. In questo caso, l'applicazione caricherà sia la versione del sistema di shdocvw.dll sia la versione generata ed è possibile che venga data priorità alla versione del sistema. In questa situazione, quando si tenta di caricare una pagina Web all'interno del controllo ActiveX WebBrowser è possibile che per l'utente venga visualizzata una finestra di dialogo Apri/Salva. Quando l'utente fa clic su **Apri** la pagina Web viene aperta in Internet Explorer. Ciò si verifica solo su computer in cui viene eseguito Internet Explorer versione 6 o precedenti. Per evitare questo problema, usare il controllo <xref:System.Windows.Forms.WebBrowser> gestito o usare Visual Studio per generare il file shdocvw.dll gestito come descritto in [ Procedura: Aggiungere riferimenti alle librerie dei tipi](../interop/how-to-add-references-to-type-libraries.md).  
+ Anche l'utilizzo di Aximp.exe con shdocvw.dll per creare un assembly .NET da utilizzare nello sviluppo di un'applicazione può causare problemi. In questo caso, l'applicazione caricherà sia la versione del sistema di shdocvw.dll sia la versione generata ed è possibile che venga data priorità alla versione del sistema. In questa situazione, quando si tenta di caricare una pagina Web all'interno del controllo ActiveX WebBrowser è possibile che per l'utente venga visualizzata una finestra di dialogo Apri/Salva. Quando l'utente fa clic su **Apri** la pagina Web viene aperta in Internet Explorer. Ciò si verifica solo su computer in cui viene eseguito Internet Explorer versione 6 o precedenti. Per evitare questo problema, usare il controllo <xref:System.Windows.Forms.WebBrowser> gestito o Visual Studio per generare il file shdocvw.dll gestito come descritto in [Procedura: Aggiungere riferimenti alle librerie dei tipi](../interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Esempio  
  Il comando che segue genera MediaPlayer.dll e AxMediaPlayer.dll per il controllo `msdxm.ocx` di Media Player.  

@@ -1,21 +1,20 @@
 ---
 title: Metodi - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699972"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714775"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 
-Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il metodo `Main` è il punto di ingresso per C# ogni applicazione e viene chiamato dal Common Language Runtime (CLR) all'avvio del programma.
+Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il `Main` metodo è il punto di ingresso per C# ogni applicazione e viene chiamato dal Common Language Runtime (CLR) all'avvio del programma.
 
 > [!NOTE]
 > Questo articolo illustra i metodi denominati. Per informazioni sulle funzioni anonime, vedere [Funzioni anonime](../statements-expressions-operators/anonymous-functions.md).
@@ -39,7 +38,7 @@ Chiamare un metodo su un oggetto è come accedere a un campo. Dopo il nome dell'
 
 ## <a name="method-parameters-vs-arguments"></a>Parametri di metodo e argomenti
 
-La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Esempio:
+La definizione del metodo specifica i nomi e i tipi di tutti i parametri obbligatori. Quando il codice chiamante chiama il metodo, fornisce valori concreti, detti argomenti, per ogni parametro. Gli argomenti devono essere compatibili con il tipo di parametro, ma il nome dell'argomento (se presente) usato nel codice chiamante non deve essere lo stesso del parametro denominato definito nel metodo. Ad esempio:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -120,7 +119,7 @@ Per altre informazioni, vedere [return](../../language-reference/keywords/return
 
 Tramite la funzionalità async, è possibile richiamare i metodi asincroni senza usare callback espliciti o suddividere manualmente il codice in più metodi o espressioni lambda.
 
-Se si contrassegna un metodo con il modificatore [async](../../language-reference/keywords/async.md) , è possibile usare l'operatore [await](../../language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione await nel metodo asincrono, il controllo torna al chiamante e l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
+Se si contrassegna un metodo con il modificatore [async](../../language-reference/keywords/async.md), è possibile usare l'operatore [await](../../language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione await nel metodo asincrono, il controllo torna al chiamante e l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
 
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.
@@ -154,11 +153,11 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 ## <a name="iterators"></a>Iterators
 
-Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento per volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
+Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione [yield return](../../language-reference/keywords/yield.md) , la posizione corrente nel codice viene memorizzata. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
 
 Per chiamare un iteratore dal codice client, usare un'istruzione [foreach](../../language-reference/keywords/foreach-in.md) .
 
-Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Per altre informazioni, vedere [Iteratori](../concepts/iterators.md).
 

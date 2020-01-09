@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: fb01d29c723962e28d8ec4afc984cb4d6c48f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664542"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711324"
 ---
 # <a name="blockingcollection-overview"></a>Panoramica di BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> è una classe di raccolta thread-safe che offre le funzionalità seguenti:  
@@ -75,10 +73,10 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Per altre informazioni, vedere [Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>Supporto di IEnumerable  
- <xref:System.Collections.Concurrent.BlockingCollection%601> offre un metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> che consente agli utenti di usare `foreach` (`For Each` in Visual Basic) per rimuovere gli elementi fino a quando non viene completata la raccolta, ovvero finché non è vuota e non vengono aggiunti altri elementi. Per altre informazioni, vedere [Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> offre un metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> che consente agli utenti di usare `foreach` (`For Each` in Visual Basic) per rimuovere gli elementi fino a quando non viene completata la raccolta, ovvero finché non è vuota e non vengono aggiunti altri elementi. Per altre informazioni, vedere [Procedura: usare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Uso di più oggetti BlockingCollections come uno solo  
- Per gli scenari in cui un Consumer deve rimuovere elementi da più raccolte contemporaneamente, è possibile creare matrici di <xref:System.Collections.Concurrent.BlockingCollection%601> e usare i metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> che eseguiranno operazioni di aggiunta o rimozione in qualsiasi raccolta nella matrice. Se una raccolta è bloccata, il metodo ne cerca immediatamente un'altra finché non ne trova una che può eseguire l'operazione. Per altre informazioni, vedere [Procedura: Usare matrici di raccolte di blocco in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
+ Per gli scenari in cui un Consumer deve rimuovere elementi da più raccolte contemporaneamente, è possibile creare matrici di <xref:System.Collections.Concurrent.BlockingCollection%601> e usare i metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> che eseguiranno operazioni di aggiunta o rimozione in qualsiasi raccolta nella matrice. Se una raccolta è bloccata, il metodo ne cerca immediatamente un'altra finché non ne trova una che può eseguire l'operazione. Per altre informazioni, vedere [Procedura: usare matrici di BlockingCollection in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

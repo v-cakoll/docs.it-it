@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716700"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345151"
 ---
 # <a name="srmp"></a>SRMP
 In questo esempio viene illustrato come eseguire comunicazioni transazionali in coda usando Accodamento messaggi (MSMQ) su HTTP.  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come eseguire comunicazioni transazionali in 
   
 5. Per essere sicuri che venga usato HTTP per la comunicazione, è possibile abilitare MSMQ per l'esecuzione in modalità di protezione avanzata. In questo modo si garantisce che i messaggi inviati alla coda sul computer ospitato usando un trasporto diverso da HTTP non arrivino a destinazione.  
   
-6. Dopo avere selezionato la modalità di protezione avanzata di MSMQ, il computer richiede di riavviare in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Dopo aver selezionato MSMQ per l'esecuzione in modalità di protezione avanzata, è necessario riavviare il computer in Windows Server 2003.  
   
 7. Eseguire il servizio.  
   

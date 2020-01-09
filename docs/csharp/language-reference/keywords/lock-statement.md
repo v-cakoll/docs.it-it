@@ -1,6 +1,5 @@
 ---
 title: Istruzione lock - Riferimenti per C#
-ms.custom: seodec18
 description: Usare l'istruzione lock C# per sincronizzare l'accesso dei thread alla risorsa condivisa
 ms.date: 10/01/2018
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713394"
 ---
 # <a name="lock-statement-c-reference"></a>Istruzione lock (Riferimenti per C#)
 
@@ -49,7 +48,7 @@ Poiché il codice usa un blocco [try... finally](try-finally.md), il blocco vien
 
 Non è possibile usare l'[operatore await](../operators/await.md) nel corpo di un'istruzione `lock`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Quando si sincronizza l'accesso dei thread a una risorsa condivisa, applicare il blocco a un'istanza dell'oggetto dedicata (ad esempio `private readonly object balanceLock = new object();`) o a un'altra istanza che ha poche probabilità di essere usata come oggetto di blocco da parti del codice non correlate. Evitare di usare la stessa istanza di oggetto di blocco per diverse risorse condivise. Questo può originare problemi di deadlock o conflitti di blocco. In particolare, evitare di usare gli elementi seguenti come oggetti di blocco:
 

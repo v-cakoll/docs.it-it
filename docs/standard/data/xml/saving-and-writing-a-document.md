@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0af160b720b9eddd9e72689c920316bffdc6d21e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589967"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710219"
 ---
 # <a name="saving-and-writing-a-document"></a>Salvataggio e scrittura di un documento
 Quando si carica e si salva un <xref:System.Xml.XmlDocument>, il documento salvato potrebbe essere diverso dall'originale nei seguenti modi:  
@@ -22,7 +20,7 @@ Quando si carica e si salva un <xref:System.Xml.XmlDocument>, il documento salva
   
 - Tutti gli spazi vuoti tra gli attributi vengono ridotti a un singolo carattere di spazio.  
   
-- Lo spazio vuoto tra gli elementi viene modificato. I caratteri spazio vuoto significativi vengono mantenuti, a differenza di quelli non significativi. Tuttavia, quando il documento viene salvato, per impostazione predefinita utilizzerà la modalità **Rientri** del tipo <xref:System.Xml.XmlTextWriter> per stampare accuratamente l'output in modo che sia più leggibile.  
+- Lo spazio vuoto tra gli elementi viene modificato. I caratteri spazio vuoto significativi vengono mantenuti, a differenza di quelli non significativi. Tuttavia, quando il documento viene salvato, utilizzerà la modalità di **rientro** <xref:System.Xml.XmlTextWriter> per impostazione predefinita per stampare accuratamente l'output per renderlo più leggibile.  
   
 - Il carattere virgoletta usato intorno ai valori degli attributi viene modificato in virgolette doppie per impostazione predefinita. È possibile usare la proprietà <xref:System.Xml.XmlTextReader.QuoteChar%2A> su <xref:System.Xml.XmlTextWriter> per impostare il carattere virgoletta su virgolette doppie o virgoletta singola.  
   
@@ -35,7 +33,7 @@ Quando si carica e si salva un <xref:System.Xml.XmlDocument>, il documento salva
 ## <a name="writing-an-xmldeclaration"></a>Scrittura di una XmlDeclaration  
  I membri <xref:System.Xml.XmlDocument> e <xref:System.Xml.XmlDeclaration> delle proprietà <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A> e <xref:System.Xml.XmlNode.WriteTo%2A>, oltre ai metodi <xref:System.Xml.XmlDocument> di <xref:System.Xml.XmlDocument.Save%2A> e <xref:System.Xml.XmlDocument.WriteContentTo%2A>, consentono di creare una dichiarazione XML.  
   
- Per le proprietà <xref:System.Xml.XmlDocument> e <xref:System.Xml.XmlNode.OuterXml%2A> di <xref:System.Xml.XmlDocument.InnerXml%2A> e i metodi <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> e <xref:System.Xml.XmlDocument.WriteContentTo%2A>, la codifica riportata nella dichiarazione XML deriva dal nodo <xref:System.Xml.XmlDeclaration>. Se non vi è un nodo <xref:System.Xml.XmlDeclaration>, la classe <xref:System.Xml.XmlDeclaration> non viene riportata. Se non vi è una codifica nel nodo <xref:System.Xml.XmlDeclaration>, la codifica non viene riportata nella dichiarazione XML.  
+ Per le proprietà <xref:System.Xml.XmlDocument> e <xref:System.Xml.XmlNode.OuterXml%2A> di <xref:System.Xml.XmlDocument.InnerXml%2A> e i metodi <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> e <xref:System.Xml.XmlDocument.WriteContentTo%2A>, la codifica riportata nella dichiarazione XML deriva dal nodo <xref:System.Xml.XmlDeclaration>. Se non è presente alcun nodo <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> non viene scritto. Se non è presente alcuna codifica nel nodo <xref:System.Xml.XmlDeclaration>, la codifica non viene scritta nella dichiarazione XML.  
   
  I metodi <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> e <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> riportano sempre una <xref:System.Xml.XmlDeclaration>. Questi metodi prendono la codifica dal writer sul quale stanno scrivendo. Vale a dire che il valore di codifica nel writer sostituisce la codifica nel documento e nell'oggetto <xref:System.Xml.XmlDeclaration>. Il codice seguente, ad esempio, non scrive una codifica nella dichiarazione XML trovata nel file di output `out.xml`.  
   
@@ -55,7 +53,7 @@ doc.Save(tw);
   
  Per il metodo <xref:System.Xml.XmlDocument.Save%2A> la dichiarazione XML viene riportata usando il metodo <xref:System.Xml.XmlWriter.WriteStartDocument%2A> nella classe <xref:System.Xml.XmlWriter>. Per questo motivo, sovrascrivendo il metodo <xref:System.Xml.XmlWriter.WriteStartDocument%2A> si modifica il modo in cui viene scritto l'inizio del documento.  
   
- Per i membri <xref:System.Xml.XmlDeclaration> delle proprietà <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> e <xref:System.Xml.XmlNode.InnerXml%2A>, se non è impostata la proprietà <xref:System.Xml.XmlDeclaration.Encoding%2A>, non viene riportata alcuna codifica. In caso contrario, la codifica scritta nella dichiarazione XML sarà uguale alla codifica trovata nella proprietà <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
+ Per i membri <xref:System.Xml.XmlDeclaration> di <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>e <xref:System.Xml.XmlNode.InnerXml%2A>, se la proprietà <xref:System.Xml.XmlDeclaration.Encoding%2A> non è impostata, non viene scritta alcuna codifica. In caso contrario, la codifica scritta nella dichiarazione XML corrisponde alla codifica trovata nella proprietà <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Scrittura del contenuto del documento tramite la proprietà OuterXml  
  La proprietà <xref:System.Xml.XmlNode.OuterXml%2A> è un'estensione Microsoft degli standard del modello DOM (Document Object Model) XML del World Wide Web Consortium (W3C). ‎La proprietà <xref:System.Xml.XmlNode.OuterXml%2A> viene usata per ottenere il markup dell'intero documento XML o solo il markup di un singolo nodo e dei relativi nodi figlio. <xref:System.Xml.XmlNode.OuterXml%2A> restituisce il markup che rappresenta il nodo specificato e tutti i relativi nodi figlio.  

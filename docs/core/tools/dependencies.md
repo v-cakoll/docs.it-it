@@ -2,13 +2,12 @@
 title: Gestione delle dipendenze negli strumenti di .NET Core
 description: Viene illustrato come gestire le dipendenze con gli strumenti di .NET Core.
 ms.date: 03/06/2017
-ms.custom: seodec18
-ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611926"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714206"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Gestione delle dipendenze con .NET Core SDK 1.0
 

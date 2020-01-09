@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Accedere ai dispositivi di crittografia hardware'
+title: 'Procedura: accedere ai dispositivi di crittografia hardware'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654385"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706175"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Procedura: Accedere ai dispositivi di crittografia hardware
+# <a name="how-to-access-hardware-encryption-devices"></a>Procedura: accedere ai dispositivi di crittografia hardware
 È possibile usare la classe <xref:System.Security.Cryptography.CspParameters> per accedere ai dispositivi di crittografia hardware. Questa classe può essere usata, ad esempio, per integrare l'applicazione in uso con una smart card, un generatore di numeri casuali hardware o per l'implementazione hardware di un determinato algoritmo di crittografia.  
   
- La classe <xref:System.Security.Cryptography.CspParameters> crea un provider del servizio di crittografia (CSP, Cryptographic Service Provider) che accede a un dispositivo di crittografia hardware installato correttamente.  È possibile verificare la disponibilità di un CSP esaminando la seguente chiave del Registro di sistema utilizzando l'Editor del Registro di sistema (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ La classe <xref:System.Security.Cryptography.CspParameters> crea un provider del servizio di crittografia (CSP, Cryptographic Service Provider) che accede a un dispositivo di crittografia hardware installato correttamente.  È possibile verificare la disponibilità di un CSP esaminando la chiave del Registro di sistema (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Per firmare i dati mediante una scheda di chiavi  
   
@@ -37,7 +35,7 @@ ms.locfileid: "64654385"
   
 4. Firmare i dati mediante uno dei metodi `Sign` e verificarli mediante uno dei metodi `Verify`.  
   
-### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Per generare un numero casuale usando un generatore di numeri casuali hardware   
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>Per generare un numero casuale usando un generatore di numeri casuali hardware  
   
 1. Creare una nuova istanza della classe <xref:System.Security.Cryptography.CspParameters>, passando il tipo di provider integer e il nome del provider al costruttore.  
   

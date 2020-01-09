@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037678"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713945"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -107,9 +106,9 @@ Rispondere a queste due domande prima di scrivere il codice:
 
     Se la risposta è "Sì", l'operazione è **associata alla CPU**.
 
-Se l'operazione è **associata a I/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
+Se il lavoro è associato a **i/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
 
-Se l'operazione è **associata alla CPU** e si è interessati nella velocità di risposta, usare `async` e `await`, ma passare l'operazione a un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
+Se il lavoro di cui si dispone è **associato alla CPU** e si è interessati alla velocità di risposta, utilizzare `async` e `await` ma generare il lavoro in un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 È anche necessario valutare sempre l'esecuzione del codice.  Ad esempio, ci si potrebbe trovare in una situazione in cui l'operazione associata alla CPU non è abbastanza onerosa confrontata al sovraccarico di commutazioni di contesto durante il multithreading.  Ogni scelta presenta un compromesso ed è necessario selezionare il compromesso più adatto alla situazione.
 
@@ -219,7 +218,7 @@ Sebbene produca una quantità minore di codice, è necessario prestare molta att
 
 Sebbene la programmazione asincrona è relativamente semplice, ci sono alcuni dettagli da tenere presente per evitare comportamenti non previsti.
 
-* `async`I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
+* `async` **metodi devono avere una** **parola chiave `await` nel corpo o non verranno mai procedono.**
 
 Questo è importante da tenere presente.  Se `await` non viene usato nel corpo di un metodo `async`, il compilatore C# genererà un avviso, ma il codice verrà compilato ed eseguito come se fosse un metodo normale.  Si noti che anche questo sarebbe estremamente inefficiente, perché la macchina a stati generata dal compilatore C# per il metodo asincrono non produrrebbe niente.
 
@@ -227,7 +226,7 @@ Questo è importante da tenere presente.  Se `await` non viene usato nel corpo d
 
 Questa è la convenzione usata in .NET per differenziare più facilmente i metodi sincroni dai metodi asincroni. Si noti che alcuni metodi non chiamati in modo esplicito dal codice, ad esempio un gestore di eventi o un metodo di controller del Web, non vengono necessariamente applicati. Poiché questi metodi non vengono chiamati in modo esplicito dal codice, non è importante denominarli in modo esplicito.
 
-* `async void`  **deve essere usato solo per i gestori eventi.**
+* `async void` **deve essere usato solo per i gestori eventi.**
 
 `async void` è l'unico modo per consentire ai gestori eventi asincroni di funzionare correttamente, poiché gli eventi non hanno tipi restituiti (quindi non possono usare `Task` e `Task<T>`). Qualsiasi altro uso di `async void` non segue il modello TAP e può essere difficile da usare, ad esempio:
 

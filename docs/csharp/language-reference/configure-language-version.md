@@ -2,12 +2,12 @@
 title: Controllo delle versioni del linguaggio C# - Guida a C#
 description: Informazioni su come viene determinata la versione del linguaggio C# in base al progetto e sui diversi valori ai quali è possibile adattarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698801"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713867"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
@@ -15,17 +15,17 @@ Il compilatore C# più recente determina la versione di un linguaggio predefinit
 
 Le regole in questo articolo si applicano al compilatore fornito con Visual Studio 2019 o .NET Core 3.0 SDK. I compilatori C# che fanno parte dell'installazione di Visual Studio 2017 o di versioni precedenti di .NET Core SDK usano C# 7.0 come destinazione per impostazione predefinita. 
 
-## <a name="defaults"></a>attività
+## <a name="defaults"></a>Impostazioni predefinite
 
 Il compilatore determina un'impostazione predefinita in base a queste regole:
 
-|Framework di destinazione|version|Impostazione predefinita della versione del linguaggio C#|
+|Framework di destinazione|Versione di|Impostazione predefinita della versione del linguaggio C#|
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
 |.NET Standard|2.0|C# 7.3|
-|.NET Standard|1. x|C# 7.3|
+|.NET Standard|1.x|C# 7.3|
 |.NET Framework|tutti|C# 7.3|
 
 ## <a name="default-for-previews"></a>Impostazione predefinita per le anteprime
@@ -38,7 +38,7 @@ Se è necessario specificare in modo esplicito la versione di C#, è possibile f
 
 - Modificare manualmente il [file di progetto](#edit-the-project-file).
 - Impostare la versione del linguaggio [per più progetti in una sottodirectory](#configure-multiple-projects).
-- Configurare l'[`-langversion`opzione del compilatore](compiler-options/langversion-compiler-option.md)
+- Configurare l'[opzione del compilatore `-langversion`](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Modificare il file di progetto
 
@@ -70,7 +70,7 @@ Ora le build presenti in ogni sottodirectory della directory contenente il file 
 
 La tabella seguente illustra tutte le versioni del linguaggio C# correnti. Il compilatore in uso potrebbe non riconoscere necessariamente ogni valore, se è antecedente. Se si installa .NET Core 3.0, si avrà accesso a tutti gli elementi elencati.
 
-|Value|Significato|
+|Valore|Significato|
 |------------|-------------|
 |preview|Il compilatore accetta tutte le sintassi di linguaggio valide dalla versione di anteprima più recente.|
 |latest|Il compilatore accetta la sintassi dalla versione rilasciata più recente del compilatore (inclusa la versione secondaria).|
@@ -83,6 +83,6 @@ La tabella seguente illustra tutte le versioni del linguaggio C# correnti. Il co
 |6|Il compilatore accetta solo la sintassi inclusa in C# 6.0 o versione precedente.|
 |5|Il compilatore accetta solo la sintassi inclusa in C# 5.0 o versione precedente.|
 |4|Il compilatore accetta solo la sintassi inclusa in C# 4.0 o versione precedente.|
-|3|Il compilatore accetta solo la sintassi inclusa in C# 3.0 o versione precedente.|
+|3\.|Il compilatore accetta solo la sintassi inclusa in C# 3.0 o versione precedente.|
 |ISO-2|Il compilatore accetta solo la sintassi inclusa nella specifica ISO/IEC 23270:2006 C# (2.0) |
 |ISO-1|Il compilatore accetta solo la sintassi inclusa nella specifica ISO/IEC 23270:2003 C# (1.0/1.2) |

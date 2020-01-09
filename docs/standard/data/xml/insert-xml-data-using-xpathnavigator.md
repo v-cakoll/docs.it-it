@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966960"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710726"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Inserimento dei dati XML utilizzando XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per inserire nodi di pari livello, nodi figlio e nodi Attribute in un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
@@ -256,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  Nella tabella seguente vengono descritti i metodi della classe <xref:System.Xml.XmlWriter> non supportati dalla classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-|Metodo|DESCRIZIONE|  
+|Metodo|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Genera un'eccezione <xref:System.NotSupportedException>.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Ignorato al livello radice e genera un'eccezione <xref:System.NotSupportedException> se chiamato a qualsiasi altro livello nel documento XML.|  

@@ -3,14 +3,12 @@ title: Accesso ai dati XML con XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1827d93925b3ff2322d246f3d7d214cb57ac02fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707898"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711168"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Accesso ai dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce metodi per esplorare i nodi, estrarre dati XML e accedere a dati XML tipizzati in modo sicuro in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  

@@ -3,13 +3,12 @@ title: Pacchetti, metapacchetti e framework - .NET Core
 description: Informazioni sulla terminologia relativa a pacchetti, metapacchetti e framework.
 author: richlander
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275760"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715513"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacchetti, metapacchetti e framework
 
@@ -71,7 +70,7 @@ Il metapacchetto di .NET Standard è:
 
 I metapacchetti principali di .NET Core sono:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): descrive le librerie che fanno parte della distribuzione .NET Core. Stabilisce il framework [`.NETCoreApp` ](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Dipende dalla `NETStandard.Library` di minori dimensioni.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): descrive le librerie che fanno parte della distribuzione .NET Core. Stabilisce il framework [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Dipende dalla `NETStandard.Library` di minori dimensioni.
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.App): include tutti i pacchetti supportati da ASP.NET Core ed Entity Framework Core, ad eccezione di quelli che contengono dipendenze di terze parti. Per altre informazioni, vedere [Metapacchetto Microsoft.AspNetCore.All per ASP.NET Core](/aspnet/core/fundamentals/metapackage-app).
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - Include tutti i pacchetti supportati da ASP.NET Core, Entity Framework Core e dipendenze interne e di terze parti usate da ASP.NET Core ed Entity Framework Core. Per altre informazioni, vedere [Metapacchetto Microsoft.AspNetCore.All per ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility): set di caratteristiche di compatibilità che abilitano l'esecuzione in .NET Core di librerie di classi portabili basate su mscorlib.
@@ -109,7 +108,7 @@ I due principali framework basati su pacchetti usati con .NET Core sono i seguen
 
 ### <a name="net-standard"></a>.NET Standard
 
-Il framework .NET Standard ([moniker framework di destinazione](../standard/frameworks.md): `netstandard`) rappresenta le API definite e create sulla base di [.NET Standard](../standard/net-standard.md). Le librerie da eseguire su più runtime devono avere come destinazione questo framework. Tali librerie verranno supportate su qualsiasi runtime compatibile con .NET Standard, ad esempio .NET Core, .NET Framework e Mono/Xamarin. Ciascuno di questi runtime supporta un set di versioni di .NET Standard, a seconda delle API implementate.
+Il framework .NET Standard ([moniker framework di destinazione](../standard/frameworks.md): `netstandard`) rappresenta le API definite e create sulla base di [.NET Standard](../standard/net-standard.md). Le librerie che devono essere eseguite in più runtime devono avere come destinazione questo framework. Tali librerie verranno supportate su qualsiasi runtime compatibile con .NET Standard, ad esempio .NET Core, .NET Framework e Mono/Xamarin. Ciascuno di questi runtime supporta un set di versioni di .NET Standard, a seconda delle API implementate.
 
 Il framework `netstandard` fa riferimento in modo implicito al metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Ad esempio, il file di progetto MSBuild seguente indica che il progetto è destinato a `netstandard1.6`, che fa riferimento al metapacchetto di [`NETStandard.Library` versione 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 

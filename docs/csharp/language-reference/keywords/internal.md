@@ -1,6 +1,5 @@
 ---
 title: internal - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422719"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713433"
 ---
 # <a name="internal-c-reference"></a>internal (Riferimenti per C#)
 La parola chiave `internal` è un [modificatore di accesso](./access-modifiers.md) per tipi e membri dei tipi. 
@@ -87,7 +86,7 @@ public class TestAccess
 }  
 ```  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
 
 Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0561ff5212fd6bc4e9015bea8da1d1082dd027e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046701"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716162"
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
 Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di codice gestito affidabile. Un'area a esecuzione vincolata è un'area in cui Common Language Runtime (CLR) non può generare eccezioni fuori banda che impedirebbero l'esecuzione completa del codice nell'area. All'interno di tale area il codice non può eseguire codice che comporterebbe la generazione di eccezioni fuori banda. Il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve precedere immediatamente un blocco `try` e contrassegna i blocchi `catch`, `finally` e `fault` come aree a esecuzione vincolata. Dopo che è stato contrassegnato come area a esecuzione vincolata, il codice può chiamare solo altro codice con contratto di affidabilità efficace e può allocare o effettuare chiamate virtuali a metodi non preparati o non affidabili solo se è in grado di gestire eventuali errori. Per il codice in esecuzione in un'area a esecuzione vincolata, CLR ritarda le interruzioni di thread.  
@@ -49,7 +47,7 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
 ### <a name="reliability-guarantees"></a>Garanzie di affidabilità  
  Le garanzie di affidabilità, rappresentate da valori di enumerazione <xref:System.Runtime.ConstrainedExecution.Cer>, indicano il grado di affidabilità di un metodo specifico:  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Runtime.ConstrainedExecution.Cer.MayFail>). In condizioni eccezionali il metodo potrebbe avere esito negativo. In questo caso, il metodo segnala al metodo di chiamata se l'esito è stato positivo o negativo. Perché possa segnalare il valore restituito, il metodo deve trovarsi all'interno di un'area a esecuzione vincolata.  
+- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. In condizioni eccezionali il metodo potrebbe avere esito negativo. In questo caso, il metodo segnala al metodo di chiamata se l'esito è stato positivo o negativo. Perché possa segnalare il valore restituito, il metodo deve trovarsi all'interno di un'area a esecuzione vincolata.  
   
 - <xref:System.Runtime.ConstrainedExecution.Cer.None>. Il metodo, il tipo o l'assembly non include alcun concetto di area a esecuzione vincolata. Molto probabilmente non è sicuro chiamarlo all'interno di un'area a esecuzione vincolata senza una mitigazione sostanziale dei rischi di danneggiamento dello stato. Non usufruisce dei vantaggi delle garanzie di un'area a esecuzione vincolata. Questo implica quanto segue:  
   
@@ -66,13 +64,13 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
 ### <a name="corruption-levels"></a>Livelli di danneggiamento  
  I livelli di danneggiamento, rappresentati da valori di enumerazione <xref:System.Runtime.ConstrainedExecution.Consistency>, indicano il livello di danneggiamento dello stato in un determinato ambiente:  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>). In condizioni eccezionali, Common Language Runtime (CLR) non garantisce la coerenza dello stato nel dominio dell'applicazione corrente.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. In condizioni eccezionali, Common Language Runtime (CLR) non garantisce la coerenza dello stato nel dominio dell'applicazione corrente.  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>). In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
   
 - <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. In condizioni eccezionali, CLR non garantisce la coerenza dello stato. In altre parole, la condizione potrebbe danneggiare il processo.  
   
-- [https://login.microsoftonline.com/consumers/](<xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>). In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
   
 ## <a name="reliability-trycatchfinally"></a>Blocco Try/catch/finally di affidabilità  
  Il blocco `try/catch/finally` di affidabilità è un meccanismo di gestione delle eccezioni con lo stesso livello di garanzie di prevedibilità della versione non gestita. Il blocco `catch/finally` costituisce l'area a esecuzione vincolata. I metodi nel blocco richiedono la preparazione anticipata e non devono poter essere interrotti.  

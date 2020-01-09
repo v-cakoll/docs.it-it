@@ -6,18 +6,17 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-author: KrzysztofCwalina
-ms.openlocfilehash: 1fa45c2934ec1c8358bd024af7a05877d183b945
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2c51b1c9bc970d6ff143fa5986eade4a8b69f25a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421354"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709504"
 ---
 # <a name="common-design-patterns"></a>Modelli di progettazione comuni
 Sono disponibili numerosi libri sui modelli software, i linguaggi dei modelli e gli antipattern che affrontano l'argomento molto ampio dei modelli. Pertanto, in questo capitolo vengono fornite linee guida e discussioni correlate a un set molto limitato di modelli utilizzati spesso nella progettazione delle API .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Proprietà di dipendenza](../../../docs/standard/design-guidelines/dependency-properties.md)  
  [Criterio Dispose](../garbage-collection/implementing-dispose.md)  
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  

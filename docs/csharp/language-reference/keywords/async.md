@@ -1,6 +1,5 @@
 ---
 title: async - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - async_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925351"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713778"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 
@@ -65,7 +64,7 @@ Per eseguire il codice come app di Windows Store:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> Per altre informazioni sulle attività e sul codice eseguito in attesa di un'attività, vedere [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Per un esempio completo di WPF in cui sono usati elementi simili, vedere [Procedura dettagliata: Accesso al Web con Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+> Per altre informazioni sulle attività e sul codice eseguito in attesa di un'attività, vedere [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Per un esempio di WPF completo che usa elementi simili, vedere [Procedura dettagliata: accesso al Web tramite async e await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
 Un metodo asincrono può avere i tipi restituiti seguenti:
@@ -89,5 +88,5 @@ Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../progr
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)
-- [Procedura dettagliata: Accesso al Web con Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procedura dettagliata: Accesso al Web tramite Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md)

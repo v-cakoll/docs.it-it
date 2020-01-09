@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bcf9ea0bb9a8346284c49060786afefa0f77745e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341384"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714387"
 ---
 # <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
@@ -54,9 +54,7 @@ Per iniziare a sviluppare applicazioni .NET Core, seguire queste esercitazioni d
 | ![icona della telecamera per un video](./media/video-icon.png "Guarda un video") | Vedere le [procedure per installare e usare Visual Studio Code e](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) il video di .NET Core su Channel 9. |
 | ![icona della telecamera per un video](./media/video-icon.png "Guarda un video") | Guarda i video su [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) su YouTube. |
 
-Per un elenco delle versioni supportate di Windows, vedere l'articolo relativo alle [dipendenze e ai requisiti di .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) .
-
-Per un elenco delle versioni supportate di Windows, vedere l'articolo sulle [dipendenze .NET Core SDK e di runtime](install/dependencies.md?pivots=os-windows) .
+Per un elenco delle versioni supportate di Windows, vedere l'articolo relativo alle [dipendenze e ai requisiti di .NET Core](install/dependencies.md?pivots=os-windows) .
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -68,7 +66,7 @@ Per iniziare a sviluppare applicazioni .NET Core, seguire queste esercitazioni d
 |---|---|
 | ![icona della telecamera per un video](./media/video-icon.png "Guarda un video") | Guardare un video sull'[Introduzione a Visual Studio Code con C# e .NET Core in Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). |
 
-Per un elenco delle distribuzioni e delle versioni di Linux supportate, vedere l'articolo sulle [dipendenze di .NET Core SDK e Runtime](install/dependencies.md?pivots=os-linux) .
+Per un elenco delle distribuzioni e delle versioni di Linux supportate, vedere l'articolo relativo alle [dipendenze e ai requisiti di .NET Core](install/dependencies.md?pivots=os-linux) .
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
@@ -83,6 +81,6 @@ Per iniziare a sviluppare applicazioni .NET Core, seguire queste esercitazioni d
 |---|---|
 | ![icona della telecamera per un video](media/video-icon.png "Guarda un video") | Guarda un video su [come iniziare a usare C# Visual Studio Code con e .NET Core in MacOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). |
 
-Per un elenco delle versioni di OS X/macOS supportate, vedere l'articolo sulle [dipendenze .NET Core SDK e di runtime](install/dependencies.md?pivots=os-macos) .
+Per un elenco delle versioni supportate di OS X/macOS, vedere l'articolo relativo alle [dipendenze e ai requisiti di .NET Core](install/dependencies.md?pivots=os-macos) .
 
 ---

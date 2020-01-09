@@ -5,13 +5,13 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
-ms.custom: seodec18,updateeachrelease
-ms.openlocfilehash: 4c6a8e495d8532a0ab2e90368663a287731a9af0
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.custom: updateeachrelease
+ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884277"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714083"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -19,7 +19,7 @@ Questo articolo illustra come iniziare a sviluppare app multipiattaforma nel com
 
 Se non si ha familiarità con il set di strumenti dell'interfaccia della riga di comando di .NET Core, leggere [Panoramica di .NET Core SDK](../tools/index.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) o versioni successive.
 - Editor di testo o editor di codice a scelta.

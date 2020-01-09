@@ -1,6 +1,5 @@
 ---
 title: Parola chiave readonly - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454968"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713118"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
 La parola chiave `readonly` è un modificatore che può essere usata in quattro contesti:
 
-- In una [dichiarazione di campo](#readonly-field-example) `readonly` indica che l'assegnazione al campo può avvenire solo come parte della dichiarazione del campo o in un costruttore della stessa classe. Un campo readonly può essere assegnato e riassegnato più volte nella dichiarazione del campo e nel costruttore. 
+- In una [dichiarazione di campo](#readonly-field-example)`readonly` indica che l'assegnazione al campo può avvenire solo come parte della dichiarazione del campo o in un costruttore della stessa classe. Un campo readonly può essere assegnato e riassegnato più volte nella dichiarazione del campo e nel costruttore. 
   
   Non è possibile assegnare un campo `readonly` dopo la chiusura del costruttore. Questa regola ha implicazioni diverse per i tipi di valore e i tipi di riferimento:
   
@@ -29,7 +28,7 @@ La parola chiave `readonly` è un modificatore che può essere usata in quattro 
   > [!WARNING]
   > Un tipo visibile esternamente che contiene un campo di sola lettura visibile esternamente che è un tipo di riferimento modificabile può essere una vulnerabilità di sicurezza e può generare un avviso [CA2104](/visualstudio/code-quality/ca2104) : "non dichiarare tipi di riferimento modificabili in sola lettura".
 
-- In una definizione [`readonly struct` ](#readonly-struct-example), `readonly` indica che non è possibile modificare `struct`.
+- In una definizione [`readonly struct`](#readonly-struct-example), `readonly` indica che non è possibile modificare `struct`.
 - In una [definizione di membro`readonly`](#readonly-member-examples)`readonly` indica che un membro di un `struct` non modifica lo stato interno dello struct.
 - In un [`ref readonly` metodo restituito](#ref-readonly-return-example), il modificatore di `readonly` indica che il metodo restituisce un riferimento e le Scritture non sono consentite a tale riferimento.
 
@@ -103,7 +102,7 @@ Si ottengono due vantaggi applicando il modificatore `readonly` ai metodi `struc
 
 Il modificatore `readonly` è valido per la maggior parte dei membri di un `struct`, inclusi i metodi che eseguono l'override dei metodi dichiarati in <xref:System.Object?displayProperty=nameWithType>. Esistono alcune restrizioni:
 
-- Non è possibile dichiarare `readonly` membri statici.
+- Non è possibile dichiarare `readonly` metodi o proprietà statiche.
 - Non è possibile dichiarare `readonly` costruttori.
 
 È possibile aggiungere il modificatore `readonly` a una dichiarazione di proprietà o di indicizzatore:

@@ -1,6 +1,5 @@
 ---
 title: get - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - get_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d6c0452a7890a6ade480054115c1383199a3f91c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602141"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713499"
 ---
 # <a name="get-c-reference"></a>get (Riferimenti per C#)
 
@@ -31,7 +30,7 @@ Per i casi semplici in cui le funzioni di accesso `get` e `set` di una propriet√
   
  [!code-csharp[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifica del linguaggio C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   

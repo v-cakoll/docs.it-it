@@ -1,6 +1,5 @@
 ---
 title: Classi e struct - Guida per programmatori C#
-ms.custom: seodec18
 description: Descrive le modalità d'uso di classi e strutture (struct) in C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922263"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714827"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
 Classi e struct sono due dei costrutti di base del Common Type System in .NET Framework. Ognuno di essi è costituito essenzialmente da una struttura di dati che incapsula un set di dati e comportamenti che formano insieme un'unità logica. I dati e i comportamenti sono i *membri* della classe o del tipo struct e ne includono i metodi, le proprietà, gli eventi e così via, come illustrato più avanti in questo argomento.  
@@ -65,7 +64,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 - [Tipi annidati](./nested-types.md)  
   
 ### <a name="accessibility"></a>Accessibilità  
- Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare l'accessibilità dei tipi e dei loro membri dal codice client usando i modificatori di accesso [public](../../language-reference/keywords/public.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [private](../../language-reference/keywords/private.md) e [private protected](../../language-reference/keywords/private-protected.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Access Modifiers](./access-modifiers.md) (Modificatori di accesso).  
+ Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare l'accessibilità dei tipi e dei loro membri dal codice client usando i modificatori di accesso [public](../../language-reference/keywords/public.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [private](../../language-reference/keywords/private.md) e [private protected](../../language-reference/keywords/private-protected.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Modificatori di accesso](./access-modifiers.md).  
   
 ### <a name="inheritance"></a>Ereditarietà  
  Le classi (ma non i tipi struct) supportano il concetto di ereditarietà. Una classe che deriva da un'altra classe definita *classe di base* contiene automaticamente tutti i membri pubblici, protetti e interni della classe di base, ad eccezione di costruttori e finalizzatori. Per altre informazioni, vedere [Ereditarietà](./inheritance.md) e [Polimorfismo](./polymorphism.md).  
@@ -73,7 +72,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
  Le classi possono essere dichiarate come [astratte](../../language-reference/keywords/abstract.md). Ciò significa che uno o più metodi di tali classi sono privi di implementazione. Anche se non è possibile crearne direttamente un'istanza, le classi astratte possono svolgere la funzione di classi di base per altre classi che forniscono l'implementazione mancante. Le classi possono anche essere dichiarate come [sealed](../../language-reference/keywords/sealed.md) per impedire che altre classi ereditino da esse. Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](./abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Interfacce  
- Le classi e i tipi struct possono ereditare più interfacce. Quando eredita da un'interfaccia, un tipo implementa tutti i metodi definiti in tale interfaccia. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
+ Le classi e i tipi struct possono ereditare più interfacce. Quando eredita da un'interfaccia, un tipo implementa tutti i metodi definiti in tale interfaccia. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
 ### <a name="generic-types"></a>Tipi generici  
  Le classi e i tipi struct possono essere definiti con uno o più parametri di tipo. Il codice client fornisce il tipo quando ne crea un'istanza. Ad esempio, la classe <xref:System.Collections.Generic.List%601> nello spazio dei nomi <xref:System.Collections.Generic> viene definita con un solo parametro di tipo. Il codice client crea un'istanza di `List<string>` o `List<int>` per specificare il tipo che sarà contenuto nell'elenco. Per altre informazioni, vedere [Generics](../generics/index.md).  
@@ -81,7 +80,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 ### <a name="static-types"></a>Tipi statici  
  Le classi (ma non i tipi struct) possono essere dichiarate come [statiche](../../language-reference/keywords/static.md). Una classe statica può contenere solo membri statici e non è possibile crearne un'istanza con la nuova parola chiave. Una copia della classe viene caricata in memoria durante il caricamento del programma e i relativi membri sono accessibili tramite il nome della classe. Sia le classi che i tipi struct possono contenere membri statici. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md).  
   
-### <a name="nested-types"></a>Tipi annidati  
+### <a name="nested-types"></a>Tipi nidificati  
  Una classe o un tipo struct può essere annidato all'interno di un'altra classe o di un altro tipo struct. Per altre informazioni, vedere [Tipi annidati](./nested-types.md).  
   
 ### <a name="partial-types"></a>Tipi parziali  
@@ -99,7 +98,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 ### <a name="implicitly-typed-local-variables"></a>Variabili locali tipizzate in modo implicito  
  All'interno di un metodo di classe o struct è possibile usare la tipizzazione implicita per indicare al compilatore di determinare il tipo corretto in fase di compilazione. Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](./implicitly-typed-local-variables.md).  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

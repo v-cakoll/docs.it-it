@@ -3,13 +3,12 @@ title: Introduzione a C# e Visual Studio Code
 description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002330"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715312"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -139,7 +138,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Non sono più disponibili gli asset necessari per compilare ed eseguire il debug di C# in Visual Studio Code. Ildebugger indica "Nessuna configurazione".
 
-L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando ">.NET: genera asset per la compilazione e il debug". Selezionando questa operazione vengono generati i file di configurazione *. VSCODE*, *Launch. JSON*e *Tasks. JSON* necessari.
+L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando "> .NET: generare gli asset per la compilazione e il debug". Selezionando questa operazione vengono generati i file di configurazione *. VSCODE*, *Launch. JSON*e *Tasks. JSON* necessari.
 
 ## <a name="see-also"></a>Vedere anche
 

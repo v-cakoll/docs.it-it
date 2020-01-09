@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716804"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definisce le costanti del compilatore condizionali.  
@@ -35,19 +35,19 @@ oppure
   
 |Termine|Definizione|  
 |---|---|  
-|`symbol`|Obbligatoria. Il simbolo da definire.|  
-|`value`|Facoltativa. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\") anziché virgolette. Se non è specificato un valore, è considerato True.|  
+|`symbol`|Richiesto. Il simbolo da definire.|  
+|`value`|Parametro facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\") anziché virgolette. Se non è specificato un valore, è considerato True.|  
   
 ## <a name="remarks"></a>Note  
  L'opzione `-define` ha un effetto simile all'uso di una direttiva per il preprocessore `#Const` nel file di origine, ad eccezione del fatto che le costanti definite con `-define` sono pubbliche e si applicano a tutti i file del progetto.  
   
  È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.  
   
- `-d` è la forma abbreviata di `-define`.  
+ `-d` è la versione abbreviata di `-define`.  
   
  È possibile definire più simboli con `-define`, separando le definizioni dei simboli con una virgola.  
   
-|Per impostare /define nell'ambiente di sviluppo integrato di Visual Studio|  
+|Per impostare-define in Visual Studio Integrated Development Environment|  
 |---|  
 |1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. fare clic su **Avanzate**.<br />4. modificare il valore nella casella **costanti personalizzate** .|  
   

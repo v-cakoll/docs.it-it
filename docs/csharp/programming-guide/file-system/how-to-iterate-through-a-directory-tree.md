@@ -1,17 +1,16 @@
 ---
 title: Come scorrere un albero di directory- C# Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 5ae41fa0b18ef31c7cd7d00fb8a9c4afa7df93ac
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635379"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712260"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Come scorrere un albero di directory (C# guida per programmatori)
 Eseguire l'iterazione in un albero di directory significa accedere a ogni file in ogni sottodirectory annidata in una cartella radice specificata, a qualsiasi livello. Non è necessario aprire ogni file. È possibile recuperare semplicemente il nome del file o della sottodirectory come `string` oppure è possibile recuperare informazioni aggiuntive sotto forma di oggetto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  

@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711246"
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 .NET Framework 4 introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType> che include diverse classi di raccolta thread-safe e scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che più thread scriveranno nella raccolta contemporaneamente. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
@@ -34,7 +32,7 @@ ms.locfileid: "69962986"
   
  Nella tabella seguente sono elencati i tipi di raccolta dello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|DESCRIZIONE|  
+|Tipo di|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Offre la funzionalità di delimitazione e blocco per qualsiasi tipo che implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Per altre informazioni, vedere [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementazione thread-safe di un dizionario di coppie chiave-valore.|  
@@ -45,14 +43,14 @@ ms.locfileid: "69962986"
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Descrive la funzionalità fornita dal tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descrive come aggiungere e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descrive come aggiungere e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
 |[Procedura: Aggiungere e rimuovere singoli elementi di un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descrive come aggiungere e recuperare elementi da una raccolta di blocco senza usare l'enumeratore di sola lettura.|  
 |[Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descrive come usare una classe di raccolta come meccanismo di archiviazione sottostante per una raccolta <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descrive come usare `foreach` (`For Each` in Visual Basic) per rimuovere tutti gli elementi in una raccolta di blocco.|  
-|[Procedura: Usare matrici di raccolte di blocco in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descrive come usare più raccolte di blocco contemporaneamente per implementare una pipeline.|  
+|[Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descrive come usare `foreach` (`For Each` in Visual Basic) per rimuovere tutti gli elementi in una raccolta di blocco.|  
+|[Procedura: utilizzare matrici di raccolte di blocco in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descrive come usare più raccolte di blocco contemporaneamente per implementare una pipeline.|  
 |[Procedura: Creare un pool di oggetti con un oggetto ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Illustra come usare un contenitore simultaneo per migliorare le prestazioni negli scenari in cui è possibile riutilizzare gli oggetti anziché crearne continuamente di nuovi.|  
   
 ## <a name="reference"></a>Riferimenti  

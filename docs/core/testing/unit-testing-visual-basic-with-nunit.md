@@ -3,13 +3,12 @@ title: Testing unità di Visual Basic in .NET Core con il test dotnet e NUnit
 description: Informazioni sui concetti relativi agli unit test in .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di Visual Basic di esempio con NUnit.
 author: rprouse
 ms.date: 10/04/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4776916c316e18de954c8ccaa985075dc2ea0fc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715412"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e NUnit
 
@@ -148,7 +147,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-Eseguire di nuovo *nella directory*unit-testing-vb-nunit`dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Eseguire di nuovo `dotnet test` nella directory *unit-testing-vb-nunit*. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
 
 ## <a name="adding-more-features"></a>Aggiunta di altre funzionalità
 

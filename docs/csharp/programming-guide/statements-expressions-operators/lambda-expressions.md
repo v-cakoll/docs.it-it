@@ -1,6 +1,5 @@
 ---
 title: Espressioni lambda - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: d401c832dd3b29de609e9eaab69ea3334d6591b9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417675"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711948"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 
@@ -90,7 +89,7 @@ Non è possibile usare le espressioni lambda dell'istruzione per creare alberi d
   
 ## <a name="async-lambdas"></a>Espressioni lambda asincrone
 
-Usando le parole chiave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) è facile creare istruzioni ed espressioni lambda che includono l'elaborazione asincrona. Nell'esempio seguente di Windows Form è presente un gestore eventi che chiama e attende un metodo asincrono, `ExampleMethodAsync`.
+È facile creare istruzioni ed espressioni lambda che includono l'elaborazione asincrona utilizzando le parole chiave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) . Nell'esempio seguente di Windows Form è presente un gestore eventi che chiama e attende un metodo asincrono, `ExampleMethodAsync`.
 
 ```csharp
 public partial class Form1 : Form
@@ -156,7 +155,7 @@ Per altre informazioni sulle tuple in C#, vedere [Tipi tupla in C#](../../tuples
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Espressioni lambda con operatori query standard
 
-LINQ to Objects, tra altre implementazioni, ha un parametro di input il cui tipo appartiene alla famiglia <xref:System.Func%601> di delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati `Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Considerare ad esempio il tipo delegato <xref:System.Func%602>:  
+LINQ to Objects, tra altre implementazioni, ha un parametro di input il cui tipo appartiene alla famiglia <xref:System.Func%601> di delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati`Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Considerare ad esempio il tipo delegato <xref:System.Func%602>:  
 
 ```csharp
 public delegate TResult Func<in T, out TResult>(T arg)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975686"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716469"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 
@@ -32,9 +30,9 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - Opzioni del programma di installazione:
 
-    - [Programma di installazione Web](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Programma di installazione offline](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Modalità di installazione:
 
@@ -120,7 +118,7 @@ In .NET Framework sono disponibili diverse funzionalità di base che semplifican
 
 Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NET Framework vengono illustrati in altre sezioni della documentazione. Queste sezioni includono informazioni sulle unità autodescrittive denominate [assembly](../../standard/assembly/index.md), che non richiedono voci nel Registro di sistema, sugli [assembly con nome sicuro](../../standard/assembly/strong-named.md), che assicurano l'univocità dei nomi e prevengono lo spoofing dei nomi e sul [controllo delle versioni degli assembly](../../standard/assembly/versioning.md), che consente di risolvere molti dei problemi associati ai conflitti di DLL. Le sezioni seguenti forniscono informazioni sulla creazione di pacchetti e sulla distribuzione di applicazioni .NET Framework.
 
-### <a name="packaging"></a>Pacchetto
+### <a name="packaging"></a>Creazione del package
 
 .NET Framework consente di creare i pacchetti delle applicazioni nei seguenti modi:
 
@@ -136,7 +134,7 @@ Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NE
 
      Con questa opzione vengono creati file MSI che possono essere usati con Windows Installer oppure viene creato un pacchetto dell'applicazione per l'uso con altri programmi di installazione.
 
-### <a name="distribution"></a>Distribuzione
+### <a name="distribution"></a>Punto di
 
 .NET Framework consente di distribuire le applicazioni nei seguenti modi:
 
@@ -165,7 +163,7 @@ La modalità di distribuzione delle applicazioni dipende anche da alcune conside
 |[Come il runtime individua gli assembly](how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|
 |[Procedure consigliate per il caricamento di assembly](best-practices-for-assembly-loading.md)|Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.|
 |[Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)|Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.|
-|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Illustra le modalità in cui un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema attraverso una rete usando System Center Configuration Manager (SCCM).|
+|[Guida alla distribuzione per amministratori](guide-for-administrators.md)|Viene illustrato come un amministratore di sistema può distribuire il .NET Framework e le relative dipendenze di sistema attraverso una rete usando Microsoft endpoint Configuration Manager.|
 |[Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)|Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.|
 |[Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)|Illustra le opzioni di distribuzione di Visual Studio, incluse le istruzioni per la pubblicazione di un'applicazione usando le tecnologie ClickOnce e Windows Installer.|
 |[Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descrive come creare il pacchetto di un'applicazione Windows Forms e distribuirla con ClickOnce nei computer client di una rete.|

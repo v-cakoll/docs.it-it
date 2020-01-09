@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975506"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716000"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
 Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.
@@ -22,19 +20,19 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|L'incorporamento JIT non è riuscito.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -52,19 +50,19 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|L'incorporamento del metodo è riuscito.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -82,19 +80,19 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|La chiamata tail al metodo non è riuscita.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -112,19 +110,19 @@ Questi eventi raccolgono informazioni relative all'esito positivo o negativo del
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La chiamata tail al metodo è riuscita.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  

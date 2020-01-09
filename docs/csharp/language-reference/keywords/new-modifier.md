@@ -1,16 +1,15 @@
 ---
 title: Modificatore new - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422677"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713335"
 ---
 # <a name="new-modifier-c-reference"></a>Modificatore new (Riferimenti per C#)
 
@@ -18,7 +17,7 @@ Se usata come modificatore di dichiarazione, la parola chiave `new` nasconde in 
 
 È anche possibile usare la parola chiave `new` per [creare un'istanza di un tipo](../operators/new-operator.md) o come [vincolo di tipo generico](./new-constraint.md).
 
-Per nascondere un membro ereditato, dichiararlo nella classe derivata usando lo stesso nome di membro e modificarlo con la parola chiave `new`. Esempio:
+Per nascondere un membro ereditato, dichiararlo nella classe derivata usando lo stesso nome di membro e modificarlo con la parola chiave `new`. Ad esempio:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 

@@ -1,19 +1,17 @@
 ---
 title: Come serializzare e deserializzare JSON con C# -.NET
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283340"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705795"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Come serializzare e deserializzare JSON in .NET
 
@@ -184,7 +182,7 @@ Di seguito è riportato un esempio di tipo da serializzare e da un output JSON a
 
 ## <a name="customize-json-names-and-values"></a>Personalizzare i nomi e i valori JSON
 
-Per impostazione predefinita, i nomi delle proprietà e le chiavi del dizionario non cambiano nell'output JSON, inclusa la distinzione tra maiuscole e minuscole. I valori enum sono rappresentati come numeri. Questa sezione illustra come eseguire le operazioni seguenti:
+Per impostazione predefinita, i nomi delle proprietà e le chiavi del dizionario non cambiano nell'output JSON, inclusa la distinzione tra maiuscole e minuscole. I valori enum sono rappresentati come numeri. Questa sezione illustra come eseguire queste operazioni:
 
 * [Personalizzare i singoli nomi di proprietà](#customize-individual-property-names)
 * [Converte tutti i nomi di proprietà in Camel case](#use-camel-case-for-all-json-property-names)
@@ -377,9 +375,9 @@ Per escludere tutte le proprietà con valore null, impostare la proprietà <xref
 
 Di seguito è riportato un esempio di oggetto da serializzare e output JSON:
 
-|Proprietà |Value  |
+|Gli |Valore  |
 |---------|---------|
-| Data    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
 | Riepilogo| null|
 
@@ -460,7 +458,7 @@ Per ridurre al minimo l'escape, è possibile usare <xref:System.Text.Encodings.W
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serializzare le proprietà delle classi derivate
 
-La serializzazione polimorfica non è supportata quando si specifica in fase di compilazione il tipo da serializzare. Si supponga, ad esempio, di avere una classe `WeatherForecast` e una classe derivata `WeatherForecastWithWind`:
+La serializzazione polimorfica non è supportata quando si specifica in fase di compilazione il tipo da serializzare. Si supponga, ad esempio, di avere una classe `WeatherForecast` e una classe derivata `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ E si supponga che l'argomento di tipo del metodo `Serialize` in fase di compilaz
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-In questo scenario, la proprietà `WindSpeed` non viene serializzata anche se l'oggetto `weatherForecast` è effettivamente un oggetto `WeatherForecastWithWind`. Vengono serializzate solo le proprietà della classe base:
+In questo scenario, la proprietà `WindSpeed` non viene serializzata anche se l'oggetto `weatherForecast` è effettivamente un oggetto `WeatherForecastDerived`. Vengono serializzate solo le proprietà della classe base:
 
 ```json
 {
@@ -571,9 +569,9 @@ Se si deserializza il codice JSON mostrato nel tipo visualizzato, le proprietà 
 
 Quando si deserializza il codice JSON illustrato in precedenza in questo tipo di esempio, i dati aggiuntivi diventano coppie chiave-valore della proprietà `ExtensionData`:
 
-|Proprietà |Value  |Note  |
+|Gli |Valore  |Note  |
 |---------|---------|---------|
-| Data    | 8/1/2019 12:00:00 AM-07:00||
+| Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Mancata corrispondenza tra maiuscole e minuscole (`temperatureCelsius` in JSON), quindi la proprietà non è impostata. |
 | Riepilogo | Alto ||
 | ExtensionData | temperatureCelsius: 25 |Poiché il caso non corrisponde, questa proprietà JSON è un oggetto aggiuntivo e diventa una coppia chiave-valore nel dizionario.|

@@ -1,5 +1,5 @@
 ---
-title: Tipi di raccolta ordinati
+title: Tipi di raccolte ordinate
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c49b3fcd5b50cc5b48497dcf97862e80b066ab46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957876"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711337"
 ---
-# <a name="sorted-collection-types"></a>Tipi di raccolta ordinati
+# <a name="sorted-collection-types"></a>Tipi di raccolte ordinate
 La classe <xref:System.Collections.SortedList?displayProperty=nameWithType> e le classi generiche <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> e <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> sono simili alla classe <xref:System.Collections.Hashtable> e alla classe generica <xref:System.Collections.Generic.Dictionary%602> in quanto implementano l'interfaccia <xref:System.Collections.IDictionary>, ma gestiscono l'ordinamento degli elementi in base alla chiave e non hanno la caratteristica di inserimento e recupero O(1) propria delle tabelle hash. Le tre classi hanno diverse funzionalità in comune:  
   
 - Le tre classi implementano tutte l'interfaccia <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Le due classi generiche implementano anche l'interfaccia generica <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
@@ -53,4 +51,4 @@ La classe <xref:System.Collections.SortedList?displayProperty=nameWithType> e le
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipi di raccolte usate comunemente](../../../docs/standard/collections/commonly-used-collection-types.md)

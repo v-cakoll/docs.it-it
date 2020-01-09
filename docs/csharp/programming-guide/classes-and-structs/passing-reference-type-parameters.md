@@ -1,17 +1,16 @@
 ---
 title: Passaggio di parametri di tipo di riferimento - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419048"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714712"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di riferimento (Guida per programmatori C#)
 Una variabile di un [tipo riferimento](../../language-reference/keywords/reference-types.md) non contiene direttamente i dati, ma solo un riferimento a essi. Quando si passa un parametro di tipo riferimento per valore, è possibile modificare i dati appartenenti all'oggetto di riferimento, ad esempio il valore del membro di una classe. Non è tuttavia possibile modificare il valore del riferimento stesso. Ad esempio, non è possibile usare lo stesso riferimento per allocare memoria per un nuovo oggetto e per renderlo persistente all'esterno del metodo. In questo caso, è necessario passare il parametro usando la parola chiave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). Per semplicità, negli esempi seguenti viene usato `ref`.  
@@ -46,4 +45,4 @@ Una variabile di un [tipo riferimento](../../language-reference/keywords/referen
 - [ref](../../language-reference/keywords/ref.md)
 - [in](../../language-reference/keywords/in-parameter-modifier.md)
 - [out](../../language-reference/keywords/out.md)
-- [Tipi di riferimento](../../language-reference/keywords/reference-types.md)
+- [Tipi riferimento](../../language-reference/keywords/reference-types.md)

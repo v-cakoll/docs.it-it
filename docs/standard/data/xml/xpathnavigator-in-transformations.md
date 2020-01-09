@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003984"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709751"
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator nelle trasformazioni
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un accesso casuale di sola lettura ai dati ed è progettata per essere usata come input per XSLT (Extensible Stylesheet Language for Transformations). Viene implementata su <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> è basato sul modello di dati W3C (World Wide Web Consortium) secondo la descrizione fornita nella sezione 5 della raccomandazione XML Path Language (XPath) (informazioni in lingua inglese).  

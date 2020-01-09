@@ -2,19 +2,18 @@
 title: Strumenti dell'interfaccia della riga di comando di .NET Core
 description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117387"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714143"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
 L'interfaccia della riga di comando di .NET Core è una nuova toolchain multipiattaforma per lo sviluppo di applicazioni .NET. È un elemento di base su cui possono essere costruiti altri strumenti di livello più elevato, come gli ambienti di sviluppo integrato (IDE, Integrated Development Environment), gli editor e gli agenti di orchestrazione della compilazione.
 
-## <a name="installation"></a>Installazione
+## <a name="installation"></a>Installazione di
 
 È possibile usare programmi di installazione nativi o script della shell di installazione:
 
@@ -144,7 +143,7 @@ Il comando esegue un'azione. Ad esempio, `dotnet build` compila il codice. `dotn
 
 Gli argomenti passati alla riga di comando sono gli argomenti per il comando richiamato. Quando si esegue `dotnet publish my_app.csproj`, ad esempio, l'argomento `my_app.csproj` indica il progetto da pubblicare e viene passato al comando `publish`.
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Quando si esegue `dotnet publish --output /build_output`, ad esempio, l'opzione `--output` e il relativo valore vengono passati al comando `publish`.
 

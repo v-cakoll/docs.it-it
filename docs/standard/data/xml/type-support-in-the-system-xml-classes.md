@@ -3,14 +3,12 @@ title: Supporto di tipi di dati nelle classi System.Xml
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939444"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710102"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Supporto di tipi di dati nelle classi System.Xml
 In .NET Framework versione 2.0 le classi principali XML sono state migliorate per includere funzionalità di supporto dei tipi di dati. Le classi <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.XPath.XPathNavigator> includono funzionalità di supporto dei tipi che comprendono la capacità di conversione tra tipi XML Schema e tipi CLR (Common Language Runtime).  

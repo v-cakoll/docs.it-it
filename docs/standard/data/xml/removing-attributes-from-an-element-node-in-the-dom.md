@@ -3,14 +3,12 @@ title: Rimozione di attributi da un nodo di elemento nel DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: bb18e712d5ed2cd06c7ae0e867b19ca8a9ad2513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590044"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710349"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Rimozione di attributi da un nodo di elemento nel DOM
 Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consiste nel rimuoverli dalla raccolta di attributi. Per eseguire questa operazione, attenersi alla procedura seguente:  

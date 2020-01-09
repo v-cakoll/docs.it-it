@@ -1,17 +1,16 @@
 ---
 title: Come implementare gli eventi di interfaccia C# -Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: cd2192d6146a431559f5cd9dd1a80da577695d66
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346344"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712338"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Come implementare gli eventi di interfacciaC# (Guida per programmatori)
 Un'[interfaccia](../../language-reference/keywords/interface.md) consente di dichiarare un [evento](../../language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  

@@ -4,14 +4,14 @@ description: Informazioni su come documentare il codice con commenti della docum
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713931"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
+# <a name="document-your-code-with-xml-comments"></a>Documentare il codice con commenti XML
 
 I commenti in formato documentazione XML sono commenti speciali, aggiunti alla definizione di ogni tipo o membro definito dall'utente.
 Sono speciali perché possono essere elaborati dal compilatore per generare un file di documentazione XML in fase di compilazione.
@@ -137,7 +137,7 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 ## <a name="param"></a>\<param>
 
-Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double. Il parametro descritto dal tag viene specificato nell'attributo `name` **obbligatorio**.
+Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito è riportato un esempio relativo al metodo Double `Add`: il parametro descritto dal tag è specificato nell'attributo `name` **obbligatorio** .
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ Aggiungere un metodo generico semplice alla classe `Math` per verificare se una 
 
 ## <a name="paramref"></a>\<paramref>
 
-A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>`, il nome del parametro viene specificato nell'attributo `name` **obbligatorio**.
+A volte è possibile che durante la descrizione dell'operazione di un metodo in un tag `<summary>` si vuole fare un riferimento a un parametro. Il tag `<paramref>` è molto utile per questa operazione. Ora si aggiorna il riepilogo del metodo `Add` basato su double. Analogamente al tag `<param>` il nome del parametro viene specificato nell'attributo `name` **obbligatorio** .
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -170,7 +170,7 @@ Creare un elenco non ordinato di ogni operazione matematica supportata dalla lib
 
 È possibile creare un elenco ordinato o una tabella sostituendo l'attributo `type` con `number` o `table` rispettivamente.
 
-### <a name="putting-it-all-together"></a>Riassumendo
+### <a name="put-it-all-together"></a>Combinare tutti gli elementi
 
 Dopo aver eseguito questa esercitazione e applicato i tag al codice, dove necessario, il codice dovrebbe ora essere simile al seguente:
 
@@ -206,7 +206,7 @@ L'attributo `id` che può essere usato al posto di `name` rappresenta l'ID per i
 ### <a name="user-defined-tags"></a>Tag definiti dall'utente
 
 Tutti i tag specificati in precedenza rappresentano i tag riconosciuti dal compilatore C#. Gli utenti comunque possono definire tag personalizzati.
-Alcuni strumenti, ad esempio Sandcastle, offrono supporto per altri tag, ad esempio [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e per [documentare gli spazi dei nomi](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Strumenti come Sandcastle portano il supporto per tag aggiuntivi come [\<> di eventi](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) e [\<nota >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)e supportano anche la [documentazione degli spazi dei nomi](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Gli strumenti di creazione della documentazione interna o personalizzata possono anche essere usati con i tag standard e con più formati di output da HTML a PDF.
 
 ## <a name="recommendations"></a>Suggerimenti
@@ -218,7 +218,7 @@ La documentazione del codice è consigliabile per vari motivi. Di seguito vengon
 - Il minimo necessario è che i tipi e i loro membri abbiano i tag `<summary>` perché il loro contenuto è necessario per IntelliSense.
 - Il testo della documentazione deve essere scritto usando frasi complete che terminano con un punto.
 - Le classi parziali sono completamente supportate e le informazioni sulla documentazione verranno concatenate in una singola voce per tale tipo.
-- Il compilatore verifica la sintassi dei tag `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
+- Il compilatore verifica la sintassi dei tag `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>`e `<typeparam>`.
 - Il compilatore convalida i parametri che contengono i percorsi dei file e i riferimenti ad altre parti del codice.
 
 ## <a name="see-also"></a>Vedere anche

@@ -1,18 +1,17 @@
 ---
 title: where (vincolo di tipo generico) - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972719"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712806"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (vincolo di tipo generico) (Riferimenti per C#)
 
@@ -44,7 +43,7 @@ La clausola `where` può anche includere un vincolo `unmanaged`. Il vincolo `unm
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo New ()](new-constraint.md) consente al compilatore di verificare che qualsiasi argomento di tipo fornito disponga di un costruttore senza parametri accessibile. Esempio:
+La clausola `where` può anche includere un vincolo di costruttore, `new()`. Tale vincolo consente di creare un'istanza di un parametro di tipo usando l'operatore `new`. Il [vincolo New ()](new-constraint.md) consente al compilatore di verificare che qualsiasi argomento di tipo fornito disponga di un costruttore senza parametri accessibile. Ad esempio:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

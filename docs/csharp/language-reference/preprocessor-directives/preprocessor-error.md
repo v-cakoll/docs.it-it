@@ -1,18 +1,17 @@
 ---
 title: '#error - Riferimenti per C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#error'
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: f18dbd007e80397b815256231a1d56e5ca50010e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7203e1271da66e78bfbd70717b0f5e536a7ebd86
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712520"
 ---
 # <a name="error-c-reference"></a>#error (Riferimenti per C#)
 `#error` consente di generare l'errore definito dall'utente [CS1029](../compiler-messages/cs1029.md) da una posizione specifica nel codice. Ad esempio:  
@@ -21,7 +20,7 @@ ms.locfileid: "69608566"
 #error Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  La direttiva `#error` viene generalmente usata nelle direttive condizionali.  
   
  È possibile anche generare un avviso definito dall'utente tramite [#warning](./preprocessor-warning.md).  

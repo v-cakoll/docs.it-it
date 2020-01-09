@@ -5,14 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800332"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716039"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -57,4 +55,4 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |[Memorizzazione nella cache in applicazioni .NET Framework](caching-in-net-framework-applications.md)|Descrive tecniche per la memorizzazione nella cache dei dati per migliorare le prestazioni dell'app.|  
 |[Inizializzazione differita](lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
 |[Affidabilità](reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
-|[Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework](writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|
+|[Writing Large, Responsive .NET Framework Apps](writing-large-responsive-apps.md) (Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|

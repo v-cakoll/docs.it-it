@@ -2,15 +2,13 @@
 title: Installare .NET Framework in Windows 8
 ms.custom: updateeachrelease
 description: Informazioni sull'installazione di .NET Framework in Windows 8
-author: rlander
-ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: d0ee776fce94988478c8432e265c834ff2082ef0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853894"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716721"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Installare .NET Framework in Windows 8 e Windows Server 2012
 
@@ -35,13 +33,13 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 .NET Framework 4.6 supporta le app create per .NET Framework da 4.0 a 4.6.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Seguire le istruzioni per l'installazione di [.NET Framework 3.5 in Windows 8 e 10](dotnet-35-windows-10.md).
 
 .NET Framework 3.5 supporta le app create per .NET Framework da 1.0 a 3.5.
 
-## <a name="help"></a>?
+## <a name="help"></a>Guida di
 
 È possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) se non si riesce a installare la versione corretta di .NET Framework.
 

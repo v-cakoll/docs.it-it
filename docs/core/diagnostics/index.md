@@ -1,16 +1,14 @@
 ---
 title: Panoramica degli strumenti di diagnostica -.NET Core
 description: Panoramica degli strumenti e delle tecniche disponibili per la diagnosi delle applicazioni .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: 20374c53769bf19901b042e0909175718665b523
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341485"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715577"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quali strumenti di diagnostica sono disponibili in .NET Core?
 

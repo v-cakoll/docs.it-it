@@ -1,6 +1,5 @@
 ---
 title: extern alias - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520284"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713552"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Riferimenti per C#)
 È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi. Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione. Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.  
@@ -28,7 +27,7 @@ ms.locfileid: "72520284"
   
  `/r:GridV2=grid20.dll`  
   
- In questo modo vengono creati gli alias extern `GridV1` e `GridV2`. Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`. Esempio:  
+ In questo modo vengono creati gli alias extern `GridV1` e `GridV2`. Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`. Ad esempio:  
   
  `extern alias GridV1;`  
   
@@ -38,7 +37,7 @@ ms.locfileid: "72520284"
   
  Nell'esempio precedente, l'oggetto `GridV1::Grid` rappresenta il controllo griglia dell'oggetto `grid.dll`, e `GridV2::Grid` rappresenta il controllo griglia dell'oggetto `grid20.dll`.  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

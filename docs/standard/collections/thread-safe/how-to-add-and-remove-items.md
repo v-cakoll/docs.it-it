@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
+title: 'Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,21 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543422"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711311"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
 In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Questa classe di raccolta è un'implementazione thread-safe. È consigliabile usarla ogni volta che più thread tentano di accedere contemporaneamente agli elementi.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> offre molti metodi pratici che consentono al codice di evitare il controllo dell'esistenza di una chiave prima di aggiungere o rimuovere dati. Nella tabella seguente vengono elencati questi metodi pratici e viene specificato quando usarli.  
   
-|Metodo|Casi di uso|  
+|Metodo|Casi di utilizzo|  
 |------------|---------------|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Si vuole aggiungere un nuovo valore ad una chiave specificata e, se la chiave esiste già, si vuole sostituirne il valore.|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Si vuole recuperare il valore esistente per una chiave specificata e, se la chiave non esiste, si vuole specificare una coppia chiave/valore.|  

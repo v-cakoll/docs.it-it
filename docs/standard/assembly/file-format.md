@@ -2,16 +2,15 @@
 title: Formato dei file di assembly .NET
 description: Informazioni sul formato dei file di assembly .NET, usato per descrivere e contenere le app e le librerie .NET.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711584"
 ---
 # <a name="net-assembly-file-format"></a>Formato dei file di assembly .NET
 

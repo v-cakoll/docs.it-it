@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005639"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716797"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -44,7 +44,7 @@ Il compilatore considera i seguenti input al fine del determinismo:
   - File aggiuntivi che possono essere usati dagli analizzatori
 - Le impostazioni cultura correnti (per la lingua in cui vengono generati la diagnostica e i messaggi di eccezione).
 - La codifica predefinita (o la tabella codici corrente) se non è specificata la codifica.
-- L'esistenza, non esistenza e contenuto dei file nei percorsi di ricerca del compilatore (specificati, ad esempio, da `/lib` o `/recurse`).
+- L'esistenza, non esistenza e contenuto dei file nei percorsi di ricerca del compilatore (specificati, ad esempio, da `-lib` o `-recurse`).
 - La piattaforma CLR in cui viene eseguito il compilatore.
 - Il valore di `%LIBPATH%`, che può influenzare il caricamento delle dipendenze dell'analizzatore.
 

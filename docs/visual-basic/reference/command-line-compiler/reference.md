@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348589"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716696"
 ---
 # <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
 Fa in modo che il compilatore renda le informazioni sul tipo negli assembly specificati disponibili per il progetto attualmente in fase di compilazione.  
@@ -35,7 +35,7 @@ oppure
   
 |Termine|Definizione|  
 |---|---|  
-|`fileList`|Obbligatoria. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
+|`fileList`|Richiesto. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
   
 ## <a name="remarks"></a>Note  
  I file importati devono contenere i metadati dell'assembly. Solo i tipi pubblici sono visibili all'esterno dell'assembly. L'opzione [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa i metadati da un modulo.  
@@ -52,7 +52,7 @@ oppure
   
  Per impostazione predefinita, viene usato il file di risposta vbc. rsp, che fa riferimento a assembly .NET Framework di uso comune. Usare `-noconfig` se non si vuole che il compilatore usi vbc. rsp.  
   
- La forma breve di `-reference` è `/r`.  
+ La forma breve di `-reference` è `-r`.  
   
 ## <a name="example"></a>Esempio  
  Il comando seguente compila `Input.vb` di file di origine e gli assembly di riferimento da `Metad1.dll` e `Metad2.dll` per produrre `Out.exe`.  

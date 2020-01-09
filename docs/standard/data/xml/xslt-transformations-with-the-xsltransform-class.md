@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d534553fcc6ee63d560e731a535d44c3acd1a214
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5f670fa5e83d1802496c0cc6972a7e3af7cae374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347902"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709647"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Trasformazioni XSLT con la classe XslTransform
 
@@ -22,7 +20,7 @@ ms.locfileid: "74347902"
 
 Lo scopo dell'XSLT (Extensible Stylesheet Language Transformation) è quello di trasformare il contenuto di un documento XML di origine in un altro documento di formato o struttura diversa, ad esempio, per trasformare il codice XML in HTML per l'uso su un sito Web o per trasformarlo in un documento che contenga solo i campi richiesti da un'applicazione. Questo processo di trasformazione è specificato dalla raccomandazione [XSLT versione 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) di World Wide Web Consortium (W3C). In .NET Framework la classe <xref:System.Xml.Xsl.XslTransform>, disponibile nello spazio dei nomi <xref:System.Xml.Xsl>, è il processore XSLT che implementa la funzionalità di questa specifica. Alcune funzionalità non sono state implementate dalla raccomandazione W3C XSL Transformations (XSLT) versione 1.0 e sono elencate in [Output da un XslTransform](outputs-from-an-xsltransform.md). La figura seguente illustra l'architettura di trasformazione di .NET Framework.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 ![Diagramma che illustra l'architettura di trasformazione XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351723"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716693"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
@@ -23,13 +23,13 @@ Specifica il formato dell'output del compilatore.
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Nella tabella seguente sono riepilogati gli effetti dell'opzione `-target`.
 
 |**Opzione**|**Classe Behavior**|
 |----------------|------------------|
-|`-target:exe`|Determina la creazione di un'applicazione console eseguibile da parte del compilatore.<br /><br /> Questa è l'opzione predefinita se non è specificata alcuna opzione `-target`. Il file eseguibile viene creato con estensione exe.<br /><br /> Se non diversamente specificato con l'opzione `/out`, il nome del file di output prende il nome del file di input che contiene la procedura `Sub Main`.<br /><br /> Nei file del codice sorgente compilati in un file con estensione exe è necessaria una sola procedura `Sub Main`. Usare l'opzione del compilatore `-main` per specificare la classe che contiene la routine `Sub Main`.|
+|`-target:exe`|Determina la creazione di un'applicazione console eseguibile da parte del compilatore.<br /><br /> Questa è l'opzione predefinita se non è specificata alcuna opzione `-target`. Il file eseguibile viene creato con estensione exe.<br /><br /> Se non diversamente specificato con l'opzione `-out`, il nome del file di output prende il nome del file di input che contiene la procedura `Sub Main`.<br /><br /> Nei file del codice sorgente compilati in un file con estensione exe è necessaria una sola procedura `Sub Main`. Usare l'opzione del compilatore `-main` per specificare la classe che contiene la routine `Sub Main`.|
 |`-target:library`|Determina la creazione di una libreria di collegamento dinamico (DLL) da parte del compilatore.<br /><br /> Il file della libreria a collegamento dinamico viene creato con estensione dll.<br /><br /> Se non diversamente specificato con l'opzione `-out`, il nome del file di output prende il nome del primo file di input.<br /><br /> Quando si compila una DLL, non è necessaria una procedura `Sub Main`.|
 |`-target:module`|Fa in modo che il compilatore generi un modulo che può essere aggiunto a un assembly.<br /><br /> Il file di output viene creato con estensione. netmodule.<br /><br /> Il Common Language Runtime .NET non è in grado di caricare un file che non dispone di un assembly. Tuttavia, è possibile incorporare un file di questo tipo nel manifesto dell'assembly di un assembly utilizzando `-reference`.<br /><br /> Quando il codice in un modulo fa riferimento a tipi interni in un altro modulo, è necessario incorporare entrambi i moduli in un manifesto dell'assembly usando `-reference`.<br /><br /> L'opzione [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa i metadati da un modulo.|
 |`-target:winexe`|Fa in modo che il compilatore crei un'applicazione eseguibile basata su Windows.<br /><br /> Il file eseguibile viene creato con estensione exe. Un'applicazione basata su Windows è una che fornisce un'interfaccia utente dalla libreria di classi .NET Framework o con le API di Windows.<br /><br /> Se non diversamente specificato con l'opzione `-out`, il nome del file di output prende il nome del file di input che contiene la procedura `Sub Main`.<br /><br /> Nei file del codice sorgente compilati in un file con estensione exe è necessaria una sola procedura `Sub Main`. Nei casi in cui il codice ha più di una classe con una procedura `Sub Main`, usare l'opzione del compilatore `-main` per specificare la classe che contiene la routine `Sub Main`|

@@ -1,5 +1,5 @@
 ---
-title: Quali aggiornamenti e hotfix della sicurezza .NET Framework installati
+title: Vedere installato .NET Framework aggiornamenti della sicurezza e hotfix
 description: Informazioni su come determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati in un computer.
 ms.date: 11/27/2017
 dev_langs:
@@ -9,14 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735196"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716262"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Come determinare quali aggiornamenti di sicurezza e hotfix di .NET Framework sono installati
 
@@ -33,7 +31,7 @@ Gli aggiornamenti della sicurezza e gli aggiornamenti rapidi installati per ogni
 
 2. Nell'Editor del Registro di sistema aprire la seguente sottochiave:
 
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
+     **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Gli aggiornamenti installati sono elencati nelle sottochiavi che identificano la versione di .NET Framework a che si applicano. Ogni aggiornamento è identificato da un numero di Knowledge Base (KB).
 

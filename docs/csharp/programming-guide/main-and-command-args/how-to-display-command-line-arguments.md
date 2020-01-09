@@ -1,16 +1,15 @@
 ---
 title: Come visualizzare gli argomenti della riga di C# comando-Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 3ae2f65696c6661ab4f732b604267116996162b2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635171"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712026"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Come visualizzare gli argomenti della riga diC# comando (Guida per programmatori)
 Gli argomenti specificati per un file eseguibile dalla riga di comando sono accessibili tramite un parametro facoltativo per `Main`. Gli argomenti vengono specificati sotto forma di una matrice di stringhe. Ogni elemento della matrice contiene un solo argomento. Gli spazi vuoti tra gli argomenti vengono rimossi. Si considerino ad esempio le chiamate seguenti della riga di comando di un file eseguibile fittizio:  

@@ -1,17 +1,16 @@
 ---
 title: Costruttori di istanze - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 198f9db1430226343fd3709c66d16b68e975ab3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922175"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714806"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Costruttori di istanze (Guida per programmatori C#)
 
@@ -52,7 +51,7 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
  Si noti che il valore predefinito di `age` è `0` e il valore predefinito di `name` è `null`. Per altre informazioni sui valori predefiniti, vedere [Tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md).  
   
-## <a name="example-3"></a>Esempio 3  
+## <a name="example-3"></a>Esempio 3:  
  Nell'esempio riportato di seguito viene illustrato l'uso dell'inizializzatore della classe di base. La classe `Circle` è derivata dalla classe generale `Shape`e la classe `Cylinder` è derivata dalla classe `Circle`. Il costruttore di ogni classe derivata usa il relativo inizializzatore della classe di base.  
   
  [!code-csharp[csProgGuideObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#9)]  

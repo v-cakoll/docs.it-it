@@ -2,12 +2,12 @@
 title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105555"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714587"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -17,9 +17,9 @@ C# 7.1 aggiunge l'elemento di configurazione per la [selezione della versione de
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-- Metodo [`async` `Main` ](#async-main)
+- [Metodo di `Main` `async`](#async-main)
   - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
-- Espressioni letterali [`default` ](#default-literal-expressions)
+- Espressioni letterali [`default`](#default-literal-expressions)
   - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
 - [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
   - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.
@@ -28,7 +28,7 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
 
 Infine, il compilatore offre due opzioni `-refout` e `-refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).
 
-Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione.
+Per usare le funzionalità più recenti in una versione a punti, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione.
 
 La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
 

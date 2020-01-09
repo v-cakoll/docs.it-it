@@ -1,18 +1,17 @@
 ---
 title: '#line - Riferimenti per C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712494"
 ---
 # <a name="line-c-reference"></a>#line (Riferimenti per C#)
 
@@ -49,7 +48,7 @@ MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
 MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La direttiva `#line` può essere usata in un'istruzione automatizzata intermedia nel processo di compilazione. Se, ad esempio, sono state rimosse delle righe dal file del codice sorgente originale e si vuole che il compilatore generi comunque un output basato sulla numerazione originale delle righe del file, è possibile rimuovere le righe e simulare la numerazione originale tramite `#line`.
 

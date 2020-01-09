@@ -1,33 +1,32 @@
 ---
 title: Usare Windows Compatibility Pack per convertire il codice per .NET Core
-description: Informazioni su Windows Compatibility Pack e su come è possibile usarlo per la conversione di codice .NET Framework esistente per .NET Core
+description: Informazioni su Windows Compatibility Pack e su come è possibile usarlo per trasferire il codice di .NET Framework esistente a .NET Core.
 author: terrajobst
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521274"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715474"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usare Windows Compatibility Pack per convertire il codice per .NET Core
 
-Alcuni dei problemi più comuni riscontrati durante la conversione del codice esistente a .NET Core sono le dipendenze da API e tecnologie presenti solo in .NET Framework. *Windows Compatibility Pack* fornisce molte di queste tecnologie ed è quindi molto più semplice compilare applicazioni .NET Core e librerie .NET Standard.
+Alcuni dei problemi più comuni riscontrati durante il porting di codice esistente a .NET Core sono dipendenze da API e tecnologie disponibili solo in .NET Framework. *Windows Compatibility Pack* fornisce molte di queste tecnologie ed è quindi molto più semplice compilare applicazioni .NET Core e librerie .NET Standard.
 
-Questo pacchetto è un'[estensione logica di .NET 2.0 Standard](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) che incrementa in modo significativo il set di API e consente la compilazione di codice esistente praticamente senza modifiche. Tuttavia, per rispettare i principi di .NET Standard ("è il set di API fornite da tutte le implementazioni .NET"), questo pacchetto non include tecnologie che non funzionano in tutte le piattaforme, ad esempio le API per Registro di sistema, Strumentazione gestione Windows (WMI) o reflection emit.
+Questo pacchetto è un'[estensione logica di .NET 2.0 Standard](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) che incrementa in modo significativo il set di API e consente la compilazione di codice esistente praticamente senza modifiche. Per garantire la promessa di .NET Standard ("è il set di API fornite da tutte le implementazioni .NET"), il pacchetto non include tecnologie che non possono essere usate in tutte le piattaforme, come registro di sistema, Strumentazione gestione Windows (WMI) o Reflection Emit API.
 
-*Windows Compatibility Pack* si sovrappone a .NET Standard e consente l'accesso a tecnologie solo Windows. È particolarmente utile per i clienti che vogliono passare a .NET Core ma prevedono di rimanere sulla piattaforma Windows come primo passo. In questo scenario, l'impossibilità di usare tecnologie solo Windows è solo un ostacolo per la migrazione senza alcun vantaggio a livello di architettura.
+Windows Compatibility Pack è posizionato sopra .NET Standard e fornisce l'accesso a tecnologie solo Windows. È particolarmente utile per i clienti che vogliono passare a .NET Core ma prevedono di rimanere sulla piattaforma Windows come primo passo. In questo scenario, non è possibile utilizzare le tecnologie solo Windows è solo un ostacolo alla migrazione senza vantaggi architettonici.
 
 ## <a name="package-contents"></a>Contenuto del pacchetto
 
-*Windows Compatibility Pack* viene fornito tramite il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) ed è possibile farvi riferimento dai progetti destinati a .NET Core o .NET Standard.
+Windows Compatibility Pack viene fornito tramite il [pacchetto NuGet Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) ed è possibile farvi riferimento dai progetti destinati a .NET Core o .NET standard.
 
 Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma per le aree tecnologiche seguenti:
 
 - Tabelle codici
 - CodeDom
-- Configurazione
+- Configurazione di
 - Servizi directory
 - Disegno
 - ODBC
@@ -37,25 +36,25 @@ Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma pe
 - Windows Communication Foundation (WCF)
 - Crittografia di Windows
 - Registro eventi di Windows
-- Strumentazione gestione Windows (WMI, Windows Management Instrumentation)
+- Windows Management Instrumentation (WMI)
 - Contatori delle prestazioni di Windows
 - Registro di sistema di Windows
 - Memorizzazione nella cache di Windows Runtime
-- servizi Windows
+- Servizi Windows
 
 Per altre informazioni, vedere la [specifica del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
-1. Prima di procedere alla conversione, assicurarsi di esaminare il [processo di conversione](index.md).
+1. Prima di eseguire il porting, assicurarsi di esaminare il [processo di porting](index.md).
 
-2. Per la conversione di codice esistente per .NET Core o .NET Standard, installare il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
+2. Quando si porta il codice esistente in .NET Core o .NET Standard, installare il [pacchetto NuGet Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
 
-3. Se si desidera rimanere in ambiente Windows, questo è tutto.
+   Se si desidera rimanere in ambiente Windows, questo è tutto.
 
-4. Se si vuole eseguire l'applicazione .NET Core o la libreria .NET Standard in Linux o macOS, usare l'[analizzatore delle API](../../standard/analyzers/api-analyzer.md) per trovare informazioni sull'utilizzo delle API non supportato in tutte le piattaforme.
+3. Se si vuole eseguire l'applicazione .NET Core o la libreria .NET Standard in Linux o macOS, usare l'[analizzatore delle API](../../standard/analyzers/api-analyzer.md) per trovare informazioni sull'utilizzo delle API non supportato in tutte le piattaforme.
 
-5. Rimuovere questi utilizzi di tali API, sostituirli con alternative multipiattaforma o proteggerli con un controllo di piattaforma, ad esempio:
+4. Rimuovere questi utilizzi di tali API, sostituirli con alternative multipiattaforma o proteggerli con un controllo di piattaforma, ad esempio:
 
     ```csharp
     private static string GetLoggingPath()

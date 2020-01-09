@@ -3,21 +3,19 @@ title: Conversione dei tipi di .NET Framework in stringhe
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 98ebc9248b0585295adf12e04dece0fef654c2e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a63e0175f6660967eb4aa678c6731d353e44e2d5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583129"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711077"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Conversione dei tipi di .NET Framework in stringhe
 Per convertire un tipo .NET Framework in una stringa, usare il metodo **ToString**, che**ToString** restituisce una rappresentazione di stringa del tipo passato. Nella tabella seguente sono elencati i tipi .NET Framework che restituiscono una stringa in un formato corrispondente alle specifiche XML Schema (XSD).  
   
 |Tipo .NET Framework|Tipo di stringa restituito|  
 |-------------------------|--------------------------|  
-|Booleano|"true", "false"|  
+|Boolean|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  

@@ -1,18 +1,17 @@
 ---
 title: Parola chiave contestuale remove - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: b5c604cbb0fef158750b0fa487374ab293795fc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 8ea3ea1910e28c03b2a894c64415cb2ccff942d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713144"
 ---
 # <a name="remove-c-reference"></a>remove (Riferimenti per C#)
 
@@ -20,7 +19,7 @@ La parola chiave contestuale `remove` viene usata per definire una funzione di a
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente mostra un evento con le funzioni di accesso [add](add.md) personalizzata e `remove`. Per l'esempio completo, vedere [Procedura:  Implementare eventi di interfaccia](../../programming-guide/events/how-to-implement-interface-events.md).
+L'esempio seguente mostra un evento con le funzioni di accesso [add](add.md) personalizzata e `remove`. Per l'esempio completo, vedere [come implementare eventi di interfaccia](../../programming-guide/events/how-to-implement-interface-events.md).
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 

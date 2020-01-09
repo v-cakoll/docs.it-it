@@ -1,6 +1,5 @@
 ---
 title: throw - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 03/02/2015
 f1_keywords:
 - throw
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: f274802c84ff8f3dd2588db8b83a0d0de36d2d68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713053"
 ---
 # <a name="throw-c-reference"></a>throw (Riferimenti per C#)
 
@@ -48,9 +47,9 @@ I caller al metodo usano quindi un blocco `try-catch` o `try-catch-finally` per 
 
 ## <a name="the-throw-expression"></a>Espressione `throw`
 
-A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzione. Ciò consente di generare un'eccezione in contesti non supportati in precedenza. tra cui:
+A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzione. Ciò consente di generare un'eccezione in contesti non supportati in precedenza. Sono inclusi:
 
-- [L'operatore condizionale](../operators/conditional-operator.md). Nell'esempio seguente viene usata un'espressione `throw` per generare una <xref:System.ArgumentException> se a un metodo viene passato una matrice di stringa vuota. Prima di C# 7.0, la logica avrebbe dovuto usare un'istruzione `if` / `else`.
+- [L'operatore condizionale](../operators/conditional-operator.md). Nell'esempio seguente viene usata un'espressione `throw` per generare una <xref:System.ArgumentException> se a un metodo viene passato una matrice di stringa vuota. Prima di C# 7.0, la logica avrebbe dovuto usare un'istruzione `if`/`else`.
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
 

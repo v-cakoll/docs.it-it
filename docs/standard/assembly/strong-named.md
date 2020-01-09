@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67beeba6ce33fb1a8c3d02337d98282ccf30341a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991298"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711571"
 ---
 # <a name="strong-named-assemblies"></a>Assembly con nomi sicuri
 
@@ -22,7 +20,7 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
 
 Per generare un assembly con nome sicuro usare la chiave privata corrispondente alla chiave pubblica distribuita con l'assembly, oltre all'assembly stesso. L'assembly include il relativo manifesto, che a sua volta contiene i nomi e gli hash di tutti i file che costituiscono l'assembly. Gli assembly che hanno lo stesso nome sicuro devono essere uguali.
 
-È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome](sign-strong-name.md) sicuro o [sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md).
+È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [procedura: firmare un assembly con un nome sicuro](sign-strong-name.md) o [sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md).
 
 Nel creare un assembly con nome sicuro è necessario includere il nome in formato testo semplice dell'assembly, il numero di versione, le informazioni facoltative relative alle impostazioni cultura, una firma digitale e la chiave pubblica corrispondente alla chiave privata usata per apporre la firma.
 
@@ -48,6 +46,6 @@ Se si è uno sviluppatore open source e si desiderano i vantaggi di identità di
 ## <a name="see-also"></a>Vedere anche
 
 - [Assembly Cache globale](../../framework/app-domains/gac.md)
-- [Procedura: Firmare un assembly con un nome sicuro](sign-strong-name.md)
+- [Procedura: firmare un assembly con un nome sicuro](sign-strong-name.md)
 - [Sn. exe (strumento nome sicuro)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Creazione e utilizzo di assembly con nome sicuro](create-use-strong-named.md)

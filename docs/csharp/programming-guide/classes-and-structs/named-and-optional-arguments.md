@@ -1,6 +1,5 @@
 ---
 title: Argomenti denominati e facoltativi - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970512"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714792"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -70,7 +69,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
 - un'espressione costante;  
   
-- un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../language-reference/keywords/enum.md) o [struct](./structs.md);  
+- un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../language-reference/builtin-types/enum.md) o [struct](structs.md);  
   
 - un'espressione del form [default(ValType)](../../language-reference/operators/default.md), dove `ValType` è un tipo di valore.  
   
@@ -113,7 +112,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Per altre informazioni ed esempi, vedere [come usare gli argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [procedura: accedere agli oggetti di C# interoperabilità di Office usando le funzionalità visive](../interop/how-to-access-office-onterop-objects.md).  
+ Per ulteriori informazioni ed esempi, vedere [come utilizzare gli argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [come accedere agli oggetti C# di interoperabilità di Office utilizzando le funzionalità di](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:  
@@ -124,12 +123,12 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
 - Se due candidati sono giudicati ugualmente validi, la preferenza va a un candidato che non ha parametri facoltativi per i quali sono stati omessi gli argomenti nella chiamata. Si tratta di una conseguenza di una preferenza generale nella risoluzione dell'overload per i candidati che hanno un numero di parametri inferiore.  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Come usare gli argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Uso del tipo dinamico](../types/using-type-dynamic.md)
 - [Uso dei costruttori](./using-constructors.md)
 - [Uso degli indicizzatori](../indexers/using-indexers.md)

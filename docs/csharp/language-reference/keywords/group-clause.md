@@ -1,6 +1,5 @@
 ---
 title: Clausola group (Riferimento C#)
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428511"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713464"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
 
@@ -54,7 +53,7 @@ L'esempio seguente illustra l'uso di un valore booleano per una chiave in modo d
 
 ### <a name="grouping-by-numeric-range"></a>Raggruppamento per intervallo numerico
 
-Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [Procedura: Gestire le eccezioni nelle espressioni di query](../../linq/handle-exceptions-in-query-expressions.md).
+Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [gestire le eccezioni nelle espressioni di query](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ Usare una chiave composta se si vuole raggruppare gli elementi in base a più di
 group person by new {name = person.surname, city = person.city};
 ```
 
-Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. Per ulteriori informazioni, vedere [come implementare una classe Lightweight con proprietà implementate automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [procedura: eseguire una query per file duplicati in un albero di directory](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
+Usare un tipo denominato se è necessario passare la variabile di query a un altro metodo. Creare una classe speciale usando proprietà implementate automaticamente per le chiavi e quindi eseguire l'override dei metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. È anche possibile usare uno struct e in questo caso non è strettamente necessario eseguire l'override dei metodi. Per ulteriori informazioni, vedere [come implementare una classe Lightweight con proprietà implementate automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [come eseguire una query per i file duplicati in un albero di directory](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Il secondo articolo contiene un esempio di codice che illustra come usare una chiave composta con un tipo denominato.
 
 ## <a name="example"></a>Esempio
 

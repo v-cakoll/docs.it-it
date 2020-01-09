@@ -8,16 +8,15 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-author: KrzysztofCwalina
-ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b202d618d9d2216c8998181303250081de6781c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026336"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708984"
 ---
 # <a name="using-standard-exception-types"></a>Utilizzo di tipi di eccezioni standard
-In questa sezione descrive le eccezioni standard fornite dal Framework e i dettagli del loro utilizzo. L'elenco è in alcun modo esaustivo. Consultare la documentazione di riferimento di .NET Framework per l'utilizzo di altri Framework dei tipi di eccezione.  
+In questa sezione vengono descritte le eccezioni standard fornite dal Framework e i dettagli relativi all'utilizzo. L'elenco non è esaustivo. Per informazioni sull'utilizzo di altri tipi di eccezioni del Framework, fare riferimento alla documentazione di riferimento .NET Framework.  
   
 ## <a name="exception-and-systemexception"></a>Eccezione e SystemException  
  **X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> o <xref:System.SystemException?displayProperty=nameWithType>.  
@@ -32,36 +31,36 @@ In questa sezione descrive le eccezioni standard fornite dal Framework e i detta
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
  **✓ DO** generano un <xref:System.InvalidOperationException> se l'oggetto è in uno stato non appropriato.  
   
-## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException ArgumentNullException e dell'eccezione ArgumentOutOfRangeException  
- **✓ DO** throw <xref:System.ArgumentException> o uno dei sottotipi se a un membro vengono passati argomenti non validi. Preferisce il tipo più derivato di eccezione, se applicabile.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException ed ArgumentOutOfRangeException  
+ **✓ DO** throw <xref:System.ArgumentException> o uno dei sottotipi se a un membro vengono passati argomenti non validi. Preferisce il tipo di eccezione più derivato, se applicabile.  
   
  **✓ DO** impostare il `ParamName` proprietà durante la generazione di una delle sottoclassi di `ArgumentException`.  
   
- Questa proprietà rappresenta il nome del parametro che ha causato l'eccezione viene generata. Si noti che la proprietà può essere impostata usando uno degli overload del costruttore.  
+ Questa proprietà rappresenta il nome del parametro che ha causato la generazione dell'eccezione. Si noti che la proprietà può essere impostata utilizzando uno degli overload del costruttore.  
   
  **✓ DO** utilizzare `value` per il nome del parametro del valore implicito dell'impostazione delle proprietà.  
   
-## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException, and AccessViolationException  
- **X DO NOT** consentire pubblicamente disponibile per la chiamata API generare in modo esplicito o implicito <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Queste eccezioni sono riservate e generate dal motore di esecuzione e nella che maggior parte dei casi indica un bug.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException e AccessViolationException  
+ **X DO NOT** consentire pubblicamente disponibile per la chiamata API generare in modo esplicito o implicito <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Queste eccezioni sono riservate e generate dal motore di esecuzione e nella maggior parte dei casi indicano un bug.  
   
- Eseguire un controllo per evitare la generazione di queste eccezioni di argomento. Generazione di queste eccezioni espone i dettagli di implementazione del metodo che possono cambiare nel tempo.  
+ Eseguire il controllo degli argomenti per evitare la generazione di queste eccezioni. La generazione di queste eccezioni espone i dettagli di implementazione del metodo che potrebbero cambiare nel tempo.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X DO NOT** generare in modo esplicito <xref:System.StackOverflowException>. L'eccezione deve essere generato in modo esplicito solo da CLR.  
+ **X DO NOT** generare in modo esplicito <xref:System.StackOverflowException>. L'eccezione deve essere generata in modo esplicito solo da CLR.  
   
  **X DO NOT** catch `StackOverflowException`.  
   
- È quasi impossibile scrivere il codice gestito che rimane consistente in presenza di un overflow dello stack arbitrario. Le parti non gestite di Common Language Runtime rimangano coerente per l'uso di probe per spostare gli overflow dello stack a posizioni ben definiti anziché per il backup da un overflow dello stack arbitrario.  
+ È quasi impossibile scrivere codice gestito che rimanga coerente in presenza di overflow dello stack arbitrario. Le parti non gestite di CLR rimangono coerenti usando i probe per spostare gli overflow dello stack in posizioni ben definite anziché eseguendo il backup da overflow dello stack arbitrario.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X DO NOT** generare in modo esplicito <xref:System.OutOfMemoryException>. Questa eccezione viene generata solo dall'infrastruttura di CLR.  
+ **X DO NOT** generare in modo esplicito <xref:System.OutOfMemoryException>. Questa eccezione deve essere generata solo dall'infrastruttura CLR.  
   
-## <a name="comexception-sehexception-and-executionengineexception"></a>ComException SEHException ed ExecutionEngineException  
- **X DO NOT** generare in modo esplicito <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Queste eccezioni devono essere generate solo dall'infrastruttura di CLR.  
+## <a name="comexception-sehexception-and-executionengineexception"></a>COMException, SEHException e ExecutionEngineException  
+ **X DO NOT** generare in modo esplicito <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Queste eccezioni devono essere generate solo dall'infrastruttura CLR.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

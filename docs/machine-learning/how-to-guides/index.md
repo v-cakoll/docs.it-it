@@ -1,14 +1,13 @@
 ---
 title: Guide pratiche di ML.NET
 description: Informazioni su come eseguire attività specifiche per agevolare la creazione di soluzioni di intelligenza artificiale personalizzate e l'integrazione di Machine Learning nelle applicazioni .NET.
-ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977101"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715660"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guide pratiche di Machine Learning in .NET
 
@@ -38,7 +37,7 @@ Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte a
 
 * [Usare modelli additivi generalizzati e funzioni di forma per la comprensibilità dei modelli.](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>Esegui
+## <a name="run"></a>Eseguire
 
 * [Esaminare i valori dei dati intermedi durante l'elaborazione della pipeline di ML.NET.](inspect-intermediate-data-ml-net.md)
 

@@ -3,17 +3,15 @@ title: Modifica di nodi, contenuto e valori in un documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647881"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710674"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modifica di nodi, contenuto e valori in un documento XML
-Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. È possibile:  
+Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. Procedi così:  
   
 - Modificare il valore dei nodi usando la proprietà <xref:System.Xml.XmlNode.Value%2A>.  
   
@@ -33,7 +31,7 @@ Sono disponibili molti modi per modificare i nodi e il contenuto in un documento
 |CDATASection|Contenuto di CDATASection.|  
 |Commento|Contenuto del commento.|  
 |ProcessingInstruction|Contenuto eccetto la destinazione.|  
-|Testo|Il contenuto del testo.|  
+|Testo|Contenuto del testo.|  
 |XmlDeclaration|Il contenuto della dichiarazione, esclusi i markup `<?xml` e `?>`.|  
 |Whitespace|Il valore dello spazio vuoto. È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  
 |SignificantWhitespace|Il valore dello spazio vuoto significativo. È possibile impostare il valore in modo che sia uno dei quattro caratteri di spazio vuoto XML riconosciuti: spazio, tabulazione, ritorno a capo o avanzamento riga.|  

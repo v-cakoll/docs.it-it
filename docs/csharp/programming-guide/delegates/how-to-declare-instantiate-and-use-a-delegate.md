@@ -1,16 +1,15 @@
 ---
 title: Come dichiarare, creare un'istanza e usare una guida per la C# programmazione di delegati
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 02c3087d27e5018b77079a2dd6f260a0e7232d3a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346377"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712364"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Come dichiarare, creare un'istanza e usare un delegato (C# guida per programmatori)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  

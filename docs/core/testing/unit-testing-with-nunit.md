@@ -3,13 +3,12 @@ title: Testing unità di C# con NUnit e .NET Core
 description: Informazioni sui concetti relativi agli unit test in C# e .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di esempio con test dotnet e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117308"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714224"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testing unità di C# con NUnit e .NET Core
 

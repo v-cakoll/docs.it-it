@@ -1,6 +1,5 @@
 ---
 title: Checked e Unchecked - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 7abc19e0657330752e7798d060516c48aa402297
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a3b1ef8e6d8e496eda74ab25b3fe17f8174bac11
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771768"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713711"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked e Unchecked (Riferimenti per C#)
 È possibile eseguire istruzioni C# in contesti verificati o non verificati. In un contesto verificato l'overflow aritmetico genera un'eccezione. In un contesto non verificato, l'overflow aritmetico viene ignorato e il risultato viene troncato mediante l'eliminazione di tutti i bit più significativi che non corrispondono al tipo di destinazione.  

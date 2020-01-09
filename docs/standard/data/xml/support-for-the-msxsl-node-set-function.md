@@ -3,14 +3,12 @@ title: Supporto per la funzione msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710128"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Supporto per la funzione msxsl:node-set()
 La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi. Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.  

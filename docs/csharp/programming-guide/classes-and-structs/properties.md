@@ -1,6 +1,5 @@
 ---
 title: Proprietà - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 16dbfddb6f947ca07b60ab0e676e8c0ed118ac40
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4f83d574357aa725b955870e3d93aa1f8222723a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418848"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714704"
 ---
 # <a name="properties-c-programming-guide"></a>Proprietà (Guida per programmatori C#)
 
@@ -70,7 +69,7 @@ Se una proprietà ha entrambe le funzioni di accesso `get` e `set`, entrambe le 
   
 - [Proprietà implementate automaticamente](./auto-implemented-properties.md)  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
 
 Per altre informazioni, vedere [Tipi integrali](~/_csharplang/spec/classes.md#properties) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

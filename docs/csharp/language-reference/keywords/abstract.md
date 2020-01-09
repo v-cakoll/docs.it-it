@@ -1,6 +1,5 @@
 ---
 title: abstract - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422947"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713856"
 ---
 # <a name="abstract-c-reference"></a>abstract (Riferimenti per C#)
 Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implementazione mancante o incompleta. Il modificatore abstract può essere usato con classi, metodi, proprietà, indicizzatori ed eventi. Usare il modificatore `abstract` in una dichiarazione di classe per indicare che una classe verrà usata solo come classe di base per altre classi e che non verrà creata un'istanza relativamente alla stessa. I membri contrassegnati come astratti devono essere implementati da classi non astratte che derivano dalla classe astratta.
@@ -41,7 +40,7 @@ Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implem
   
 - Le dichiarazioni di metodi astratti sono consentite solo in classi astratte.  
   
-- Poiché una dichiarazione di un metodo astratto non offre alcuna implementazione effettiva, non c'è nessun corpo del metodo. La dichiarazione del metodo termina semplicemente con un punto e virgola e non ci sono parentesi graffe ({ }) dopo la firma. Esempio:  
+- Poiché una dichiarazione di un metodo astratto non offre alcuna implementazione effettiva, non c'è nessun corpo del metodo. La dichiarazione del metodo termina semplicemente con un punto e virgola e non ci sono parentesi graffe ({ }) dopo la firma. Ad esempio:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -61,7 +60,7 @@ Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implem
   
  Una classe astratta deve specificare l'implementazione per tutti i membri di interfaccia.  
   
- Una classe astratta che implementa un'interfaccia può eseguire il mapping dei metodi di interfaccia su metodi astratti. Esempio:  
+ Una classe astratta che implementa un'interfaccia può eseguire il mapping dei metodi di interfaccia su metodi astratti. Ad esempio:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
@@ -78,7 +77,7 @@ BaseClass bc = new BaseClass();   // Error
   
 si ottiene un messaggio di errore che informa che il compilatore non può creare un'istanza della classe astratta "BaseClass".  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

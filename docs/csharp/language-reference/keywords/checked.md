@@ -1,6 +1,5 @@
 ---
 title: Parola chiave checked - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - checked_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605908"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713698"
 ---
 # <a name="checked-c-reference"></a>checked (Riferimenti per C#)
 

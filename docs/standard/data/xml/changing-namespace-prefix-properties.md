@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
+ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46525700"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711116"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Modifica delle proprietà del prefisso dello spazio dei nomi
 La classe **XmlNode** consente di modificare il prefisso dello spazio dei nomi associato a un determinato nodo. Nel codice seguente, ad esempio, viene mostrata la modifica del prefisso di un elemento.  
@@ -40,7 +38,7 @@ Console.WriteLine(doc.InnerXml);
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- La modifica del prefisso di un nodo non comporta cambiamenti dello spazio dei nomi. Lo spazio dei nomi può essere impostato solo al momento della creazione del nodo. Quando si mantiene fissa l'albero, i nuovi attributi dello spazio dei nomi possono essere mantenuti fissi per soddisfare il prefisso impostato. Se non è possibile creare il nuovo spazio dei nomi, il prefisso viene modificato in modo che il nodo conservi il nome locale e lo spazio dei nomi. Nell'esempio seguente viene illustrato come aggiungere un attributo dello spazio dei nomi.  
+ La modifica del prefisso di un nodo non comporta cambiamenti dello spazio dei nomi. Lo spazio dei nomi può essere impostato solo al momento della creazione del nodo. Quando si mantiene fisso l'albero, i nuovi attributi dello spazio dei nomi possono essere mantenuti fissi per soddisfare il prefisso impostato. Se non è possibile creare il nuovo spazio dei nomi, il prefisso viene modificato in modo che il nodo conservi il nome locale e lo spazio dei nomi. Nell'esempio seguente viene illustrato come aggiungere un attributo dello spazio dei nomi.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f0988c3a112fefc351175de02c790dc25fe6e94a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923331"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710687"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Corrispondenza di nodi utilizzando XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce il metodo <xref:System.Xml.XPath.XPathNavigator.Matches%2A> per determinare se un nodo corrisponde a un'espressione XPath. Il metodo <xref:System.Xml.XPath.XPathNavigator.Matches%2A> accetta un'espressione XPath come input e restituisce un oggetto <xref:System.Boolean> che indica se il nodo corrente corrisponde all'espressione XPath o all'oggetto <xref:System.Xml.XPath.XPathExpression> compilato fornito.  

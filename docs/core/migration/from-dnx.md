@@ -2,17 +2,16 @@
 title: Migrazione da DNX all'interfaccia della riga di comando .NET Core
 description: Eseguire la migrazione dagli strumenti DNX agli strumenti dell'interfaccia della riga di comando di .NET Core.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160836"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715519"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 La versione RC1 di .NET Core e ASP.NET Core 1.0 Microsoft hanno presentato gli strumenti DNX. La versione RC2 di .NET Core e ASP.NET Core 1.0 hanno eseguito il passaggio da DNX all'interfaccia della riga di comando di .NET Core.
 
 Di seguito è riportato un breve riepilogo delle caratteristiche di DNX. DNX è un runtime e un set di strumenti usati per creare applicazioni .NET Core e, più specificamente, ASP.NET Core 1.0. È costituito da tre componenti principali:
@@ -47,7 +46,7 @@ Se si usa DNX, sono disponibili i comandi di uno dei tre componenti (DNX, DNU o 
 
 La tabella seguente mostra il mapping tra i comandi DNX/DNU e i corrispondenti comandi dell'interfaccia della riga di comando.
 
-| Comando DNX                    | Comando dell'interfaccia della riga di comando    | Description                                                                                                     |
+| Comando DNX                    | Comando dell'interfaccia della riga di comando    | Descrizione                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | dnx run                        | dotnet run     | Esegue il codice dall'origine.                                                                                           |
 | dnu build                      | dotnet build   | Crea un file binario IL (Intermediate Language) del codice.                                                                                |
@@ -117,8 +116,8 @@ Al termine di queste operazioni, è necessario decidere il tipo di portabilità 
 
 Una volta deciso il tipo di portabilità, è necessario modificare i framework di destinazione. Se si stanno creando applicazioni per .NET Core, è probabile che come framework di destinazione venga usato `dnxcore50`. Con l'interfaccia della riga di comando e le modifiche apportate dal nuovo [.NET Standard](../../standard/net-standard.md), è necessario che il framework sia uno dei seguenti:
 
-1. `netcoreapp1.0` - se si stanno creando applicazioni in .NET Core (incluse applicazioni ASP.NET Core)
-2. `netstandard1.6` - se si stanno creando librerie di classi per .NET Core
+1. `netcoreapp1.0`: se si stanno creando applicazioni in .NET Core (incluse applicazioni ASP.NET Core)
+2. `netstandard1.6`: se si stanno creando librerie di classi per .NET Core
 
 Se si usano altre destinazioni `dnx`, ad esempio `dnx451`, sarà necessario modificare anche tali destinazioni. `dnx451` deve essere modificato in `net451`.
 Per altre informazioni, vedere l'argomento [.NET Standard](../../standard/net-standard.md).

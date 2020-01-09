@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972108"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709478"
 ---
 # <a name="constructor-design"></a>Progettazione di costruttori
 
@@ -76,9 +75,9 @@ Se un'eccezione viene generata da un costruttore di tipo, il tipo non è utilizz
 
 **✓ CONSIDER** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.
 
-*Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
+*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*
 
-*Ristampato dall'autorizzazione di Pearson Education, Inc. dalle [linee guida di progettazione del Framework: Convenzioni, idiomi e modelli per le librerie .NET riutilizzabili,](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 2a edizione di Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo Microsoft Windows.*
+*Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>Vedere anche
 

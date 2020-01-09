@@ -3,12 +3,12 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739147"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694660"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
@@ -338,7 +338,7 @@ Si noti che le operazioni matematiche con il tipo decimal includono più cifre a
 Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore.
 
 Si otterrà una risposta compresa tra 19 e 20.
-È possibile controllare la risposta [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
+È possibile controllare la risposta esaminando [il codice di esempio completato su GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
 È anche possibile provare alcune altre formule.
 

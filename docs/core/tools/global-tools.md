@@ -3,13 +3,12 @@ title: Strumenti globali .NET Core
 description: Panoramica degli strumenti globali .NET Core e dei comandi dell'interfaccia della riga di comando di .NET Core disponibili.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318310"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714163"
 ---
 # <a name="net-core-global-tools-overview"></a>Panoramica degli strumenti globali .NET Core
 
@@ -72,7 +71,7 @@ Gli strumenti globali possono essere installati nella directory predefinita o in
 | Sistema operativo          | Percorso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
+| Portale di     | `%USERPROFILE%\.dotnet\tools` |
 
 Questi percorsi vengono aggiunti al percorso dell'utente alla prima esecuzione dell'SDK in modo che gli strumenti globali installati possano essere chiamati direttamente.
 

@@ -8,18 +8,17 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-author: KrzysztofCwalina
-ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80c16e29f1d8a0653295ebc3cf25be6fb78b7dc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960397"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709413"
 ---
 # <a name="events-and-callbacks"></a>Eventi e callback
-I callback sono punti di estendibilità che consentono un framework di eseguire il callback nel codice utente attraverso un delegato. Questi delegati vengono in genere passati al framework tramite un parametro di un metodo.  
+I callback sono punti di estensibilità che consentono a un Framework di richiamare il codice utente tramite un delegato. Questi delegati vengono in genere passati al Framework tramite un parametro di un metodo.  
   
- Gli eventi sono un caso speciale di callback che supporta la sintassi semplice e uniforme per fornire il delegato (un gestore eventi). Inoltre, il completamento delle istruzioni e le finestre di progettazione di Visual Studio forniscono informazioni sull'uso di API basate su eventi. (Vedere [progettazione di eventi](../../../docs/standard/design-guidelines/event.md).)  
+ Gli eventi sono un caso speciale di callback che supporta una sintassi semplice e coerente per fornire il delegato (un gestore eventi). Inoltre, il completamento delle istruzioni e le finestre di progettazione di Visual Studio forniscono supporto per l'uso di API basate su eventi. (Vedere [progettazione degli eventi](../../../docs/standard/design-guidelines/event.md)).  
   
  **✓ CONSIDER** utilizzando i callback per permettere agli utenti di fornire codice personalizzato deve essere eseguita dal framework.  
   
@@ -31,17 +30,17 @@ I callback sono punti di estendibilità che consentono un framework di eseguire 
   
  **✓ DO** usare il nuovo `Func<...>`, `Action<...>`, o `Expression<...>` tipi anziché delegati personalizzati, quando si definiscono le API con callback.  
   
- `Func<...>` e `Action<...>` rappresentano i delegati generici. `Expression<...>` rappresenta le definizioni di funzione che possono essere compilate e successivamente richiamate in fase di esecuzione ma può anche essere serializzate e passate a processi remoti.  
+ `Func<...>` e `Action<...>` rappresentano delegati generici. `Expression<...>` rappresenta le definizioni di funzione che possono essere compilate e successivamente richiamate in fase di esecuzione, ma possono anche essere serializzate e passate ai processi remoti.  
   
  **✓ DO** misurare e comprendere le implicazioni sulle prestazioni dell'uso `Expression<...>`, anziché utilizzare `Func<...>` e `Action<...>` delegati.  
   
- `Expression<...>` i tipi sono logicamente equivalente alla maggior parte dei casi `Func<...>` e `Action<...>` delegati. La differenza principale tra di esse è che i delegati sono destinati a essere usato in scenari del processo locale. le espressioni sono concepite per casi in cui risulta vantaggioso e consente di valutare l'espressione in una macchina o il processo remoto.  
+ i tipi di `Expression<...>` sono nella maggior parte dei casi equivalenti logicamente ai delegati `Func<...>` e `Action<...>`. La differenza principale tra di esse è che i delegati devono essere utilizzati negli scenari di processo locale; le espressioni sono destinate ai casi in cui è vantaggioso e possibile valutare l'espressione in un processo o in un computer remoto.  
   
  **✓ DO** comprendere che la chiamata a un delegato, si eseguono codice arbitrario e che potrebbe avere ripercussioni sicurezza, la correttezza e compatibilità.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

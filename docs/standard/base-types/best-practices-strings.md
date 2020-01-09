@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973950"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711480"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 
@@ -75,7 +74,7 @@ Ad esempio, il metodo <xref:System.String.IndexOf%2A> , che restituisce l'indice
 Si consiglia di selezione un overload che non uso i valori predefiniti, per i seguenti motivi:
 
 - Alcuni overload con parametri predefiniti (quelli che cercano <xref:System.Char> nell'istanza della stringa) eseguono un confronto ordinale, mentre altri (quelli che cercano una stringa nell'istanza della stringa) applicano la distinzione delle impostazioni cultura. È difficile ricordare quale valore predefinito viene usato dai diversi metodi ed è facile confondere gli overload.
-- Lo scopo del codice basato sui valori predefiniti per le chiamate al metodo non è chiaro. Nell'esempio seguente, che si basa su impostazioni predefinite, è difficile capire se lo sviluppatore intendeva eseguire un confronto ordinale o linguistico tra due stringhe o se la differenza tra maiuscole e minuscole tra `protocol` e "http" può causare la restituzione di `false` nel test di uguaglianza.
+- Lo scopo del codice basato sui valori predefiniti per le chiamate al metodo non è chiaro. Nell'esempio seguente, che si basa su impostazioni predefinite, è difficile capire se lo sviluppatore intendeva eseguire un confronto ordinale o linguistico tra due stringhe o se la differenza tra maiuscole e minuscole tra `protocol` e "http" può causare la restituzione di `false`.
 
      [!code-csharp[Conceptual.Strings.BestPractices#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]
@@ -111,8 +110,8 @@ I confronti che usano la semantica delle impostazioni cultura correnti sono i co
 
 - Overload<xref:System.String.Compare%2A?displayProperty=nameWithType> che non includono un parametro <xref:System.StringComparison> .
 - Overload<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .
-- Metodo <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.
-- Metodo <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.
+- Metodo <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo> .
+- Metodo <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo> .
 - Overload<xref:System.String.IndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison> .
 - Overload<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison> .
 
@@ -200,7 +199,7 @@ In realtà la lingua inglese ha poche proprietà che la rendono utile per il con
 
 La tabella seguente illustra il mapping tra il contesto di stringa semantico e un membro di enumerazione <xref:System.StringComparison>:
 
-|Dati|Comportamento|System.StringComparison corrispondente<br /><br /> valore|
+|Data|Comportamento di|System.StringComparison corrispondente<br /><br /> Valore di|
 |----------|--------------|-----------------------------------------------------|
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -281,7 +280,7 @@ Alcuni metodi non di tipo stringa in cui il confronto tra stringhe rappresenta l
 
 Interpretazione predefinita: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.
 
-Quando si archiviano dati in una raccolta o si leggono dati persistenti da un file o da un database nella raccolta, la modifica delle impostazioni cultura correnti può invalidare le invarianti nella raccolta. Il metodo <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> presuppone che gli elementi nella matrice da cercare siano già ordinati. Per ordinare qualsiasi elemento di tipo stringa nella matrice, il metodo <xref:System.Array.Sort%2A?displayProperty=nameWithType> chiama il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per ordinare i singoli elementi. L'uso di un operatore di confronto con distinzione delle impostazioni cultura può essere pericoloso se le impostazioni cultura vengono modificate tra l'ordinamento della matrice e la ricerca dei contenuti. Nel codice seguente, ad esempio, le operazioni di archiviazione e recupero vengono eseguite nell'operatore di confronto fornito in modo implicito dalla proprietà `Thread.CurrentThread.CurrentCulture`. Se le impostazioni cultura possono cambiare tra le chiamate a `StoreNames` e `DoesNameExist` e, in particolare, se il contenuto della matrice viene conservato tra le due chiamate al metodo, è possibile che la ricerca binaria non riesca.
+Quando si archiviano dati in una raccolta o si leggono dati persistenti da un file o da un database nella raccolta, la modifica delle impostazioni cultura correnti può invalidare le invarianti nella raccolta. Il metodo <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> presuppone che gli elementi nella matrice da cercare siano già ordinati. Per ordinare qualsiasi elemento di tipo stringa nella matrice, il metodo <xref:System.Array.Sort%2A?displayProperty=nameWithType> chiama il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per ordinare i singoli elementi. L'uso di un operatore di confronto con distinzione delle impostazioni cultura può essere pericoloso se le impostazioni cultura vengono modificate tra l'ordinamento della matrice e la ricerca dei contenuti. Nel codice seguente, ad esempio, le operazioni di archiviazione e recupero vengono eseguite sull'operatore di confronto fornito in modo implicito dalla proprietà `Thread.CurrentThread.CurrentCulture` . Se le impostazioni cultura possono cambiare tra le chiamate a `StoreNames` e `DoesNameExist`e, in particolare, se il contenuto della matrice viene conservato tra le due chiamate al metodo, è possibile che la ricerca binaria non riesca.
 
 [!code-csharp[Conceptual.Strings.BestPractices#7](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]

@@ -4,12 +4,12 @@ description: Usare uno Gestione pacchetti per installare .NET Core SDK e Runtime
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 8674b5d9d0f0ee384ca6798a7ea699bad67c5e5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341179"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714383"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>Gestione pacchetti RHEL 8,1-installare .NET Core
 
@@ -37,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 Dopo la registrazione con Gestione sottoscrizioni, si è pronti per installare e abilitare il runtime di ASP.NET Core. Nel terminale eseguire i comandi seguenti.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash

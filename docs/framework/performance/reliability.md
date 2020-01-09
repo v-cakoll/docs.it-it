@@ -8,14 +8,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: acb84c6617cdffabfe276895f81e7df2b04bb8bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046242"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715959"
 ---
 # <a name="reliability"></a>Affidabilità
 È importante che il codice in esecuzione in ambienti server, ad esempio SQL Server, fornisca protezione contro le eccezioni asincrone. L'affidabilità, come descritto in questo argomento, non è specifica di SQL Server, ma della scrittura di codice affidabile per qualsiasi host in esecuzione in un ambiente .NET Framework versione 2.0. SQL Server è tuttavia il primo servizio che fa un uso completo delle nuove funzionalità di affidabilità della versione 2.0, quindi viene usato come esempio.  

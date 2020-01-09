@@ -1,17 +1,16 @@
 ---
 title: Spazi dei nomi - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 8a03baffc17da07ccab14c89dc9f99be2fc5ba1a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: e3e9dc22186e5e319c63e34bd85e5e317effde88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635210"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712013"
 ---
 # <a name="namespaces-c-programming-guide"></a>Spazi dei nomi (Guida per programmatori C#)
 

@@ -3,14 +3,12 @@ title: Documenti e dati XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424859"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710791"
 ---
 # <a name="xml-documents-and-data"></a>Documenti e dati XML
 
@@ -28,7 +26,7 @@ ms.locfileid: "73424859"
 
 Per un elenco completo, cercare "System.Xml" nel [browser API .NET](https://docs.microsoft.com/dotnet/api/?term=system.xml).
 
-Le classi in questi spazi dei nomi supportano le raccomandazioni W3C (World Wide Web Consortium). Esempio:
+Le classi in questi spazi dei nomi supportano le raccomandazioni W3C (World Wide Web Consortium). Ad esempio:
 
 - La classe <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa le raccomandazioni [W3C Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) e [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).
 
@@ -42,7 +40,7 @@ Le classi XML in .NET Framework offrono i vantaggi seguenti:
 
 - **Produttività.** Grazie a [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) è più semplice programmare con XML. Inoltre, viene garantita un'esperienza per le query simile a SQL.
 
-- **Estendibilità.** Le classi XML di .NET Framework sono estendibili mediante l'utilizzo di classi astratte di base e metodi virtuali. Ad esempio, è possibile creare una classe derivata della classe <xref:System.Xml.XmlUrlResolver> tramite cui viene archiviato il flusso della cache nel disco locale.
+- **Estendibilità.** Le classi XML di .NET Framework sono estendibili mediante l'uso di classi di base astratte e metodi virtuali. Ad esempio, è possibile creare una classe derivata della classe <xref:System.Xml.XmlUrlResolver> tramite cui viene archiviato il flusso della cache nel disco locale.
 
 - **Architettura modulare.** .NET Framework offre un'architettura in cui è possibile un utilizzo interscambiabile dei componenti e i dati possono essere trasmessi tra i componenti. Ad esempio, un archivio dati quale un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> può essere trasformato con la classe <xref:System.Xml.Xsl.XslCompiledTransform> e l'output potrà quindi essere inserito in un flusso di un altro archivio o restituito come flusso da un servizio Web.
 
@@ -58,7 +56,7 @@ Le classi XML in .NET Framework offrono i vantaggi seguenti:
 
 - **Integrazione con ADO.NET.** Le classi XML e [ADO.NET](../../../../docs/framework/data/adonet/index.md) sono strettamente integrati per riunire dati relazionali e XML. La classe <xref:System.Data.DataSet> è una cache in memoria dei dati recuperati da un database. Con la classe <xref:System.Data.DataSet> è possibile leggere e scrivere il codice XML usando le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>, mantenere la struttura interna degli schemi relazionali come XML Schema (XSD) e dedurre la struttura dello schema di un documento XML.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Opzioni di elaborazione XML](../../../../docs/standard/data/xml/xml-processing-options.md) illustra le opzioni per l'elaborazione di dati XML.
 

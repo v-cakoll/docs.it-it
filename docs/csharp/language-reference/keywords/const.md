@@ -1,6 +1,5 @@
 ---
 title: Parola chiave const - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - const_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 81660e6a56efe5737600122d4ff7e182654f9a9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 812aeb331b6dd333075d19076a896246ecc5b374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422899"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713683"
 ---
 # <a name="const-c-reference"></a>const (Riferimenti per C#)
 
-Si usa la parola chiave `const` per dichiarare un campo costante o una variabile locale costante. I campi e le variabili locali costanti non sono variabili e non sono quindi modificabili. Gli elementi costanti possono essere numeri, valori booleani, stringhe o un riferimento Null. Non creare una costante per rappresentare informazioni di cui si prevede la modifica in qualsiasi momento. Un campo costante, ad esempio, non deve essere usato per archiviare il prezzo di un servizio, il numero di versione di un prodotto o il nome dell'organizzazione di una società. Tali valori potrebbero cambiare nel tempo e, poiché i compilatori propagano le costanti, eventuale altro codice compilato con quelle librerie dovrebbe essere ricompilato per riflettere le modifiche. Vedere anche la parola chiave [readonly](./readonly.md). Esempio:
+Si usa la parola chiave `const` per dichiarare un campo costante o una variabile locale costante. I campi e le variabili locali costanti non sono variabili e non sono quindi modificabili. Gli elementi costanti possono essere numeri, valori booleani, stringhe o un riferimento Null. Non creare una costante per rappresentare informazioni di cui si prevede la modifica in qualsiasi momento. Un campo costante, ad esempio, non deve essere usato per archiviare il prezzo di un servizio, il numero di versione di un prodotto o il nome dell'organizzazione di una società. Tali valori potrebbero cambiare nel tempo e, poiché i compilatori propagano le costanti, eventuale altro codice compilato con quelle librerie dovrebbe essere ricompilato per riflettere le modifiche. Vedere anche la parola chiave [readonly](./readonly.md). Ad esempio:
 
 ```csharp
 const int X = 0;

@@ -3,14 +3,12 @@ title: Elaborazione di dati XML in memoria
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fee2b5f4950efedc6ee335d5fbd417b8c178fbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424401"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710427"
 ---
 # <a name="processing-xml-data-in-memory"></a>Elaborazione di dati XML in memoria
 Microsoft .NET Framework include tre modelli per l'elaborazione dei dati XML: la classe <xref:System.Xml.XmlDocument>, la classe <xref:System.Xml.XPath.XPathDocument>, nonché [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
@@ -21,7 +19,7 @@ Microsoft .NET Framework include tre modelli per l'elaborazione dei dati XML: la
   
  [LINQ to XML](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) è un modello di elaborazione dei dati XML introdotto in .NET Framework versione 3.5. Si tratta di un modello in memoria che usa [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md). LINQ estende la sintassi dei linguaggi C# e Visual Basic offrendo nuove funzionalità di query.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  Viene illustrato l'uso della classe <xref:System.Xml.XmlDocument> e delle classi correlate per l'elaborazione dei dati XML.  
   

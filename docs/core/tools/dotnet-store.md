@@ -3,19 +3,18 @@ title: comando dotnet store
 description: Il comando 'dotnet store' archivia gli assembly specificati nell'archivio pacchetti di runtime.
 author: bleroy
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3a81e06f36ffbed68b7cc35de47aa5dca32bab6e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606751"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714193"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet store`: archivia gli assembly specificati nell'[archivio pacchetti di runtime](../deploying/runtime-store.md).
 
@@ -23,7 +22,7 @@ ms.locfileid: "54606751"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
 `dotnet store` archivia gli assembly specificati nell'[archivio pacchetti di runtime](../deploying/runtime-store.md). Per impostazione predefinita, gli assembly sono ottimizzati per il framework e il runtime di destinazione. Per altre informazioni, vedere l'argomento [Archivio pacchetti di runtime](../deploying/runtime-store.md).
 

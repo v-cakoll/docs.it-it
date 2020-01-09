@@ -1,24 +1,23 @@
 ---
 title: Polimorfismo - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970347"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714736"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
   
 - In fase di esecuzione, oggetti di una classe derivata possono essere trattati come oggetti di una classe base in posizioni quali parametri del metodo e raccolte o matrici. In questo caso, il tipo dichiarato dell'oggetto non è più identico al tipo in fase di esecuzione.  
   
-- Le classi base possono definire e implementare *metodi* [virtuali](../../language-reference/keywords/virtual.md) e le classi derivate possono eseguirne l'[override](../../language-reference/keywords/override.md), ovvero possono specificarne una propria definizione e implementazione. Durante la fase di esecuzione, quando il codice client chiama il metodo, CLR cerca il tipo in fase di esecuzione dell'oggetto e richiama quell'override del metodo virtuale. Quindi, nel codice sorgente è possibile chiamare un metodo su una classe base, causando l'esecuzione di una versione di tale metodo definita in una classe derivata.  
+- Le classi base possono definire e implementare *Metodi* [virtuali](../../language-reference/keywords/virtual.md) e le classi derivate possono [eseguirne l'override](../../language-reference/keywords/override.md) , il che significa che forniscono la definizione e l'implementazione. Durante la fase di esecuzione, quando il codice client chiama il metodo, CLR cerca il tipo in fase di esecuzione dell'oggetto e richiama quell'override del metodo virtuale. Quindi, nel codice sorgente è possibile chiamare un metodo su una classe base, causando l'esecuzione di una versione di tale metodo definita in una classe derivata.  
   
  I metodi virtuali consentono di usare gruppi di oggetti correlati in modo uniforme. Si supponga ad esempio di avere un'applicazione di disegno che consenta a un utente di creare vari tipi di forme in un'area di disegno. In fase di compilazione non è possibile sapere i tipi specifici di forme che l'utente creerà. L'applicazione deve tuttavia tenere traccia di tutti i vari tipi di forme create e deve aggiornarli in risposta alle azioni del mouse dell'utente. È possibile usare il polimorfismo per risolvere questo problema in due passaggi di base:  
   
@@ -51,14 +50,14 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
  [!code-csharp[csProgGuideInheritance#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#21)]  
   
- Metodi virtuali e proprietà consentono alle classi derivate di estendere una classe base senza dover usare l'implementazione della classe base di un metodo. Per altre informazioni, vedere [Controllo delle versioni con le parole chiave Override e New](./versioning-with-the-override-and-new-keywords.md). Un'interfaccia fornisce un'altra modalità per definire un metodo o un insieme di metodi la cui implementazione è lasciata alle classi derivate. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
+ Metodi virtuali e proprietà consentono alle classi derivate di estendere una classe base senza dover usare l'implementazione della classe base di un metodo. Per altre informazioni, vedere [Controllo delle versioni con le parole chiave Override e New](./versioning-with-the-override-and-new-keywords.md). Un'interfaccia fornisce un'altra modalità per definire un metodo o un insieme di metodi la cui implementazione è lasciata alle classi derivate. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Nascondere un membro di una classe base con nuovi membri  
  Se si vuole che il membro derivato abbia lo stesso nome di un membro in una classe di base, ma non si vuole che partecipi a una chiamata virtuale, è possibile usare la parola chiave [new](../../language-reference/keywords/new-modifier.md). La parola chiave `new` viene inserita prima del tipo restituito di un membro di classe che viene sostituito. Nel codice seguente ne viene illustrato un esempio:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- I membri nascosti della classe base sono comunque accessibili dal codice client se si esegue il cast di un'istanza della classe derivata in un'istanza della classe base. Esempio:  
+ I membri nascosti della classe base sono comunque accessibili dal codice client se si esegue il cast di un'istanza della classe derivata in un'istanza della classe base. Ad esempio:  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
@@ -87,7 +86,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 > [!NOTE]
 > Nell'implementazione dei membri virtuali è consigliabile l'uso della parola chiave `base` per le chiamate all'implementazione della classe base di tali membri. In questo modo, nella classe derivata sarà possibile definire la sola implementazione del comportamento specifico per tale classe. Se l'implementazione della classe base non viene chiamata, spetterà alla classe derivata rendere il proprio comportamento compatibile con quello della classe base.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 - [Controllo delle versioni con le parole chiave Override e New](./versioning-with-the-override-and-new-keywords.md)  
   

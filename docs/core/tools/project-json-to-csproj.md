@@ -3,13 +3,12 @@ title: Confronto tra project.json e csproj
 description: Vedere il mapping tra gli elementi project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: HT
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747411"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714127"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapping tra le proprietà di project.json e csproj
 
@@ -31,7 +30,7 @@ Il nuovo formato, \*.csproj, è un formato basato su XML. L'esempio seguente ill
 
 ## <a name="common-top-level-properties"></a>Proprietà comuni di livello superiore
 
-### <a name="name"></a>name
+### <a name="name"></a>nome
 
 ```json
 {
@@ -53,7 +52,7 @@ Per impostazione predefinita, il nome del file di progetto specifica anche il va
 La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.
 Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
 
-### <a name="version"></a>version
+### <a name="version"></a>Versione di
 
 ```json
 {
@@ -142,7 +141,7 @@ Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di de
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>dependencies
+## <a name="dependencies"></a>dipendenze
 
 > [!IMPORTANT]
 > Se la dipendenza è un **progetto** e non un pacchetto, il formato è diverso.
@@ -562,7 +561,7 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>shared
+## <a name="shared"></a>condivise
 
 ```json
 {

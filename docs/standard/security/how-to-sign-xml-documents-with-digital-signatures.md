@@ -14,21 +14,19 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0928f6091a80877609b545a25c8ac014f011d0b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0df036b3336527f3cc0e48d9a7ec835ab9f1cf4a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602610"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706045"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedura: Firmare documenti XML con firme digitali
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
+È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per ulteriori informazioni sullo standard XMLDSIG, vedere la pagina relativa all' [elaborazione e alla sintassi della firma XML](https://www.w3.org/TR/xmldsig-core/)del World Wide Web Consortium (W3C).  
   
- L'esempio di codice in questa procedura viene illustrato come firmare un intero documento XML digitalmente e allegare la firma al documento in un <`Signature`> elemento.  L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.  La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.  
+ Nell'esempio di codice di questa procedura viene illustrato come firmare digitalmente un intero documento XML e come alleghi la firma al documento in un elemento <`Signature`>.  L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.  La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.  
   
- Per informazioni su come verificare una firma digitale XML creata mediante questa procedura, vedere [come: Verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Per informazioni su come verificare una firma digitale XML creata con questa procedura, vedere [procedura: verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Per firmare digitalmente un documento XML  
   
@@ -77,7 +75,7 @@ ms.locfileid: "64602610"
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. Recuperare la rappresentazione XML della firma (un <`Signature`> elemento) e salvarlo in un nuovo <xref:System.Xml.XmlElement> oggetto.  
+10. Recuperare la rappresentazione XML della firma (un <`Signature`elemento >) e salvarla in un nuovo oggetto <xref:System.Xml.XmlElement>.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
@@ -114,9 +112,9 @@ ms.locfileid: "64602610"
 - Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly usando il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
+ Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly tramite [Ildasm. exe (DISASSEMBLER il)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo, ad esempio Blocco note.  
   
 ## <a name="see-also"></a>Vedere anche
 

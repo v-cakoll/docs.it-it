@@ -3,14 +3,12 @@ title: Elaborazione di dati XML con il modello di dati XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f964864577cf08eb074bdfb9af7f7daf3ffb37b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728398"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710440"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Elaborazione di dati XML con il modello di dati XPath
 Lo spazio dei nomi <xref:System.Xml?displayProperty=nameWithType> fornisce una rappresentazione programmatica in memoria di documenti, frammenti, nodi o set di nodi XML usando la classe <xref:System.Xml.XmlDocument> o la classe <xref:System.Xml.XPath.XPathDocument>.  

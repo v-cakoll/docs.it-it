@@ -4,13 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.custom: seodec18
-ms.openlocfilehash: d9ad21aded45c8955e24b93fd4ddf8a86b989055
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116186"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715391"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Testing unità di C# con MSTest e .NET Core
 

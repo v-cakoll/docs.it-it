@@ -1,6 +1,5 @@
 ---
 title: Creazione e generazione di eccezioni - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417945"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712299"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Creazione e generazione di eccezioni (Guida per programmatori C#)
 Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  
@@ -56,13 +55,13 @@ Le eccezioni vengono usate per indicare che si è verificato un errore durante l
 - Non creare eccezioni che possono essere generate in modalità di debug e non in modalità di rilascio. Per identificare gli errori di run-time durante la fase di sviluppo, usare il metodo di asserzione di debug.  
   
 ## <a name="defining-exception-classes"></a>Definizione delle classi di eccezioni  
- I programmi possono generare una classe di eccezione predefinita nello spazio dei nomi <xref:System>, tranne nei casi indicati in precedenza, oppure creare le proprie classi di eccezione derivando da <xref:System.Exception>. Le classi derivate devono definire almeno quattro costruttori: un costruttore senza parametri, uno che imposta la proprietà del messaggio e uno che imposta entrambe le proprietà <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>. Il quarto costruttore viene usato per serializzare l'eccezione. Le nuove classi di eccezione devono essere serializzabili. Esempio:  
+ I programmi possono generare una classe di eccezione predefinita nello spazio dei nomi <xref:System>, tranne nei casi indicati in precedenza, oppure creare le proprie classi di eccezione derivando da <xref:System.Exception>. Le classi derivate devono definire almeno quattro costruttori: un costruttore senza parametri, uno che imposta la proprietà del messaggio e uno che imposta entrambe le proprietà <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>. Il quarto costruttore viene usato per serializzare l'eccezione. Le nuove classi di eccezione devono essere serializzabili. Ad esempio:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
  Le nuove proprietà devono semplicemente essere aggiunte alla classe di eccezioni quando i dati che forniscono sono utili per risolvere l'eccezione. Se vengono aggiunte nuove proprietà alla classe di eccezioni derivata, `ToString()` deve essere sottoposto a override per restituire le informazioni aggiunte.  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
 
 Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) e [Istruzione throw](~/_csharplang/spec/statements.md#the-throw-statement) in [Specifica del linguaggio C#](/dotnet/csharp/language-reference/language-specification/introduction). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
   

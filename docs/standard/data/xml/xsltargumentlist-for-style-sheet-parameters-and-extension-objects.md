@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910314"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709621"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList per i parametri dei fogli di stile e gli oggetti di estensione
 La classe <xref:System.Xml.Xsl.XsltArgumentList> contiene parametri Extensible Stylesheet Language for Transformations (XSLT) e oggetti di estensione XSLT. Quando vengono passati al metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A>, questi parametri e oggetti di estensione possono essere richiamati dai fogli di stile.  
@@ -41,7 +39,7 @@ La classe <xref:System.Xml.Xsl.XsltArgumentList> contiene parametri Extensible S
 |Tipo W3C|Classe .NET Framework equivalente (tipo)|Tipo XPath o tipo XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
 |Stringa|System.String|XPath|  
-|Booleano|System.Boolean|XPath|  
+|Boolean|System.Boolean|XPath|  
 |Number|System.Double|XPath|  
 |Frammento di albero risultato|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node set|System.Xml.XPath.XPathNodeIterator|XPath|  

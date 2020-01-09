@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974921"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715992"
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 
@@ -26,7 +24,7 @@ Tutti gli eventi dei metodi vengono generati dalla parola chiave `JITKeyword` (0
 
 La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [parole chiave e livelli ETW di CLR](clr-etw-keywords-and-levels.md).
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Informativo (4)|
 |`NGenKeyword` (0x20) nel provider di runtime|Informativo (4)|
@@ -35,7 +33,7 @@ La tabella seguente illustra la parola chiave e il livello Per altre informazion
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|event|ID evento|Descrizione|
+|Event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Generato per un metodo con caricamento JIT (JIT-loaded) o quando viene caricata un'immagine NGEN. I metodi dinamici e generici non usano questa versione per il caricamento. Gli helper JIT non usano mai questa versione.|
 |`MethodUnLoad_V1`|137|Generato quando viene scaricato un modulo o viene distrutto un dominio dell'applicazione. I metodi dinamici non usano mai questa versione per lo scaricamento.|
@@ -44,7 +42,7 @@ La tabella seguente mostra le informazioni sull'evento:
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome del campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco di un metodo. Per i metodi helper JIT, è impostato sull'indirizzo iniziale del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo (0 per helper JIT).|
@@ -60,7 +58,7 @@ Questi eventi vengono generati solo nel provider di rundown. Indicano la fine de
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) nel provider di rundown|Informativo (4)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|
@@ -68,7 +66,7 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|event|ID evento|Descrizione|
+|Event|ID evento|Descrizione|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Inviato prima dell'avvio dell'enumerazione durante un rundown di avvio.|
 |`DCStartComplete_V1`|145|Inviato alla fine dell'enumerazione durante un rundown di avvio.|
@@ -77,7 +75,7 @@ La tabella seguente mostra le informazioni sull'evento:
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome del campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 
@@ -85,7 +83,7 @@ La tabella seguente mostra i dati dell'evento:
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
@@ -94,7 +92,7 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|event|ID evento|Descrizione|
+|Event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Generato per un metodo con caricamento JIT o quando viene caricata un'immagine NGEN. I metodi dinamici e generici usano sempre questa versione per il caricamento. Gli helper JIT usano sempre questa versione.|
 |`MethodUnLoadVerbose_V1`|144|Generato quando viene distrutto un metodo dinamico, viene scaricato un modulo o viene distrutto un dominio dell'applicazione. I metodi dinamici usano sempre questa versione per lo scaricamento.|
@@ -103,7 +101,7 @@ La tabella seguente mostra le informazioni sull'evento:
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome del campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco del metodo. Per i metodi helper JIT, è impostato sull'indirizzo iniziale del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo (0 per helper JIT).|
@@ -120,7 +118,7 @@ La tabella seguente mostra i dati dell'evento:
 
 La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
@@ -129,13 +127,13 @@ La tabella seguente illustra la parola chiave e il livello:
 
 La tabella seguente mostra le informazioni sull'evento:
 
-|event|ID evento|Descrizione|
+|Event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Generato quando un metodo viene compilato tramite JIT.|
 
 La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome del campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo.|

@@ -1,6 +1,5 @@
 ---
 title: + Operatori + e += - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972643"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712767"
 ---
 # <a name="-and--operators-c-reference"></a>Operatori + e += (Riferimenti per C#)
 
@@ -27,7 +26,7 @@ Gli operatori `+` e `+=` sono supportati dai tipi numerici [integrali](../builti
 
 Per informazioni sull'operatore aritmetico `+`, vedere le sezioni [Operatori più e meno unari](arithmetic-operators.md#unary-plus-and-minus-operators) e [Operatore di addizione +](arithmetic-operators.md#addition-operator-) dell'articolo [Operatori aritmetici](arithmetic-operators.md).
 
-## <a name="string-concatenation"></a>Concatenazione di stringhe
+## <a name="string-concatenation"></a>Concatenazione stringhe
 
 Quando uno o entrambi gli operandi sono di tipo [stringa](../builtin-types/reference-types.md#the-string-type), l'operatore `+` concatena le rappresentazioni di stringa dei due operandi:
 

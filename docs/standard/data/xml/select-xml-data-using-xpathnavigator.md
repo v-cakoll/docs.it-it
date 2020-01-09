@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 99b6b3b6959abf4c8adc313364ad641249bd9bc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589983"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710167"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Selezione di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usato per selezionare un set di nodi in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> usando un'espressione XPath. È possibile scorrere il set di nodi dopo averlo selezionato.  

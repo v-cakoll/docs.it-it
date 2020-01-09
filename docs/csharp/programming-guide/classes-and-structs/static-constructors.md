@@ -1,24 +1,23 @@
 ---
 title: Costruttori statici - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596027"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714681"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
 Un costruttore statico consente di inizializzare gli eventuali dati [static](../../language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 I costruttori statici hanno le proprietà seguenti:  
   
 - Un costruttore statico non accetta modificatori di accesso e non ha parametri.  
@@ -44,7 +43,7 @@ I costruttori statici hanno le proprietà seguenti:
 > [!Note]
 > Anche se non è direttamente accessibile, la presenza di un costruttore statico esplicito deve essere documentata per facilitare la risoluzione dei problemi relativi alle eccezioni di inizializzazione.
 
-### <a name="usage"></a>Utilizzo
+### <a name="usage"></a>Usage
 
 - In genere, i costruttori statici sono usati per scrivere voci nel file di log, quando alla classe è associato un file di log.  
 - I costruttori statici risultano utili anche durante la creazione di classi wrapper per il codice non gestito, quando il costruttore può chiamare il metodo `LoadLibrary`.  
@@ -67,4 +66,4 @@ Per altre informazioni, vedere la sezione [Costruttori statici](~/_csharplang/sp
 - [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md)
 - [Finalizzatori](./destructors.md)
 - [Linee guida per la progettazione di costruttori](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [Avviso di sicurezza - CA2121: I costruttori statici devono essere privati](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [Avviso di sicurezza-CA2121: i costruttori statici devono essere privati](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

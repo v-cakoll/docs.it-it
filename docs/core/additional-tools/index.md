@@ -1,28 +1,33 @@
 ---
-title: Strumenti dell'interfaccia della riga di comando aggiuntivi per .NET core
+title: Strumenti dell'interfaccia della riga di comando aggiuntivi
 description: Panoramica degli strumenti aggiuntivi che è possibile installare e che supportano ed estendono la funzionalità di .NET Core.
 author: mlacouture
-ms.date: 11/27/2018
-ms.custom: mvc, seodec18
-ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.date: 12/02/2019
+ms.custom: mvc
+ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771961"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714541"
 ---
 # <a name="net-core-additional-tools-overview"></a>Panoramica degli strumenti aggiuntivi per .NET Core
 
 Questa sezione consente di compilare un elenco di strumenti che supportano ed estendono la funzionalità di .NET Core, oltre agli strumenti [di interfaccia della riga di comando di .NET Core (CLI)](../tools/index.md).
 
+## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Strumento di disinstallazione di .NET Core](uninstall-tool.md)
+
+Lo [strumento di disinstallazione di .NET Core](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) consente di pulire gli SDK e i Runtime .NET Core in un sistema in modo che rimangano solo le versioni specificate. È disponibile una raccolta di opzioni per specificare quali versioni vengono disinstallate.
+
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Strumento WCF Web Service Reference](wcf-web-service-reference-guide.md)
 
-WCF (Windows Communication Foundation) Web Service Reference è un provider di servizi connessi di Visual Studio disponibile per la prima volta con [Visual Studio 2017 versione 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). Questo strumento consente di recuperare metadati da un servizio Web nella soluzione corrente, in un percorso di rete o da un file WSDL, e genera un file di origine compatibile con .NET Core che definisce una classe proxy WCF con metodi utilizzabili per accedere alle operazioni del servizio Web.
+WCF (Windows Communication Foundation) Web Service Reference è un provider di servizi connessi di Visual Studio disponibile per la prima volta con [Visual Studio 2017 versione 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). Questo strumento consente di recuperare i metadati da un servizio Web nella soluzione corrente, in un percorso di rete o da un file WSDL. Genera un file di origine compatibile con .NET Core, definendo una classe proxy WCF con i metodi che è possibile usare per accedere alle operazioni del servizio Web.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Strumento WCF dotnet-svcutil](dotnet-svcutil-guide.md)
 
-Lo strumento WCF (Windows Communication Foundation) dotnet-svcutil consente di recuperare metadati da un servizio Web, in un percorso di rete o da un file WSDL e genera un file di origine compatibile con .NET Core che definisce una classe proxy WCF con metodi utilizzabili per accedere alle operazioni del servizio Web.
-Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF riferimento**](wcf-web-service-reference-guide.md) al provider di servizi connessi di Visual Studio, che è stato prima fornito con visual studio 2017 versione 15,5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
+Lo strumento DotNet-Svcutil WCF (Windows Communication Foundation) è uno strumento interfaccia della riga di comando di .NET Core che consente di recuperare metadati da un servizio Web in un percorso di rete o da un file WSDL. Genera un file di origine compatibile con .NET Core, definendo una classe proxy WCF con i metodi che è possibile usare per accedere alle operazioni del servizio Web.
+
+Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF riferimento**](wcf-web-service-reference-guide.md) al provider di servizi connessi di Visual Studio, che è stato prima fornito con visual studio 2017 versione 15,5. Lo strumento **DotNet-Svcutil** , come strumento di interfaccia della riga di comando di .NET Core, è disponibile su più piattaforme in Linux, MacOS e Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Strumento dotnet-svcutil.xmlserializer WCF](dotnet-svcutil.xmlserializer-guide.md)
 

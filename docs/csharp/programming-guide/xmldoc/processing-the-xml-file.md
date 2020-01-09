@@ -1,17 +1,16 @@
 ---
 title: Elaborazione del file XML - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696519"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
 
@@ -27,8 +26,8 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
     |Carattere|Descrizione|
     |---------------|-----------------|
-    |N|namespace<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
-    |T|tipo: classe, interfaccia, struct, enum, delegato|
+    |N|Spazio dei nomi<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
+    |Elemento|tipo: classe, interfaccia, struct, enum, delegato|
     |F|campo|
     |P|proprietà (compresi gli indicizzatori o altre proprietà indicizzate)|
     |M|metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via)|
@@ -41,7 +40,7 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
   - Tipi di base. I tipi regolari (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) vengono rappresentati con il nome completo del tipo.
 
-  - I tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF e ELEMENT_TYPE_VOID) sono rappresentati come il nome completo del tipo completo corrispondente. ad esempio System.Int32 o System.TypedReference.
+  - I tipi intrinseci, ad esempio ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF e ELEMENT_TYPE_VOID, sono rappresentati come nome completo del tipo completo corrispondente. ad esempio System.Int32 o System.TypedReference.
 
   - ELEMENT_TYPE_PTR viene rappresentato con '\*' dopo il tipo modificato.
 
@@ -71,7 +70,7 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
 - Limitatamente agli operatori di conversione (op_Implicit e op_Explicit), il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.
 
-- Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Esempio:
+- Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Ad esempio:
 
      ``<member name="T:SampleClass`2">`` è il tag di un tipo che viene definito come `public class SampleClass<T, U>`.
 

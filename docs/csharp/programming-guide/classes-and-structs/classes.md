@@ -1,18 +1,17 @@
 ---
 title: Classi - Guida per programmatori C#
-ms.custom: seodec18
 description: Informazioni sui tipi di classe e su come crearli
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597179"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714983"
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 
@@ -84,7 +83,7 @@ L'ereditarietà si ottiene usando una *derivazione*, vale a dire che una classe 
 
 Quando una classe dichiara una classe di base, eredita tutti i membri della classe di base, a eccezione dei costruttori. Per altre informazioni, vedere [Ereditarietà](inheritance.md).
   
-Diversamente da C++, una classe di C# può ereditare direttamente solo da una classe di base. Tuttavia, poiché una classe di base può ereditare da un'altra classe, una classe può ereditare indirettamente più classi di base. Una classe può anche implementare direttamente più di un'interfaccia. Per altre informazioni, vedere [Interfacce](../interfaces/index.md).  
+Diversamente da C++, una classe di C# può ereditare direttamente solo da una classe di base. Tuttavia, poiché una classe di base può ereditare da un'altra classe, una classe può ereditare indirettamente più classi di base. Una classe può anche implementare direttamente più di un'interfaccia. Per ulteriori informazioni, vedi [Interfacce](../interfaces/index.md).  
   
 Una classe può essere dichiarata come [astratta](../../language-reference/keywords/abstract.md). Una classe astratta contiene metodi astratti che hanno una definizione di firma, ma senza implementazione. Non è possibile creare un'istanza di classi astratte. Le classi astratte possono essere usate solo tramite classi derivate che implementano i metodi astratti. Al contrario, una classe [sealed](../../language-reference/keywords/sealed.md) non consente ad altre classi di derivare da tale classe. Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md).  
   
@@ -96,7 +95,7 @@ L'esempio seguente definisce una classe pubblica che contiene una [proprietà im
   
 [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifica del linguaggio C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   

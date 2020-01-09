@@ -3,13 +3,12 @@ title: Panoramica dello strumento WCF svcutil
 description: Panoramica dello strumento Microsoft WCF dotnet-svcutil che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come lo strumento WCF svcutil per i progetti .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771974"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714559"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Strumento WCF dotnet-svcutil per .NET Core
 
@@ -22,7 +21,7 @@ Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 <!-- markdownlint-disable MD025 -->
 
@@ -179,6 +178,6 @@ In caso di domande o commenti e suggerimenti, [segnalare un problema in GitHub](
 
 - Fare riferimento alle [note sulla versione](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) per informazioni aggiornate sulle versioni, compresi i problemi noti.
 
-## <a name="information"></a>Informazioni
+## <a name="information"></a>Informazioni su
 
 - [Pacchetto NuGet dotnet-svcutil](https://nuget.org/packages/dotnet-svcutil)

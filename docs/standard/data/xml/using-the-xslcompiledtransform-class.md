@@ -3,14 +3,12 @@ title: Utilizzo della classe XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a524b80d8789567dc2aa943d7321fd49fe3c7c33
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8212e37171ce693ee5624541f7886ef33a33b1da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939415"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710050"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>Utilizzo della classe XslCompiledTransform
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> è il processore XSLT di Microsoft .NET Framework. Questa classe consente di compilare fogli di stile e di eseguire trasformazioni XSLT.  

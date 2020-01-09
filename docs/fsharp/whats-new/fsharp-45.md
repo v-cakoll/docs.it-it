@@ -2,12 +2,12 @@
 title: Novità di F# 4,5- F# Guida
 description: Ottenere una panoramica delle nuove funzionalità disponibili in F# 4,5.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644110"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715694"
 ---
 # <a name="whats-new-in-f-45"></a>Novità di F# 4,5
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Ciò impedisce di dichiarare un membro modificabile nello struct e di emettere metadati che consentono F# e C# di considerarli come ReadOnly quando vengono utilizzati da un assembly. Per altre informazioni, vedere [struct](../language-reference/structures.md#readonly-structs) di sola lettura
+Ciò impedisce di dichiarare un membro modificabile nello struct e di emettere metadati che consentono F# e C# di considerarli come ReadOnly quando vengono utilizzati da un assembly. Per altre informazioni, vedere [struct](../language-reference/structures.md#readonly-structs)di sola lettura.
 
 ## <a name="void-pointers"></a>Puntatori void
 

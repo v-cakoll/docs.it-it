@@ -1,18 +1,17 @@
 ---
 title: add - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - add_CSharpKeyword
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 937e12b813d96a0ea7e02ee70d3033f4a3b8e7f4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 323064dcbe7596b5f1d2f0f6aa566b07cee45789
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636133"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713802"
 ---
 # <a name="add-c-reference"></a>add (Riferimenti per C#)
 La parola chiave contestuale `add` viene usata per definire una funzione di accesso a eventi personalizzata che viene chiamata quando il codice client sottoscrive l'[evento](./event.md). Se si specifica una funzione di accesso `add` personalizzata, è necessario specificare anche una funzione di accesso [remove](./remove.md).  

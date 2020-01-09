@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974925"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716011"
 ---
 # <a name="interop-etw-events"></a>Eventi ETW di interoperabilità
 Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di stub e la memorizzazione nella cache di Microsoft Intermediate Language (MSIL).  
@@ -21,19 +19,19 @@ Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di s
 
 La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informativo (4)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|È stato generato lo stub MSIL.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|L’identificatore del modulo.|  
 |StubMethodID|win:UInt64|L’identificatore del metodo stub.|  
@@ -51,19 +49,19 @@ La tabella seguente illustra la parola chiave e il livello Per altre informazion
 
 La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informativo (4)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Generato quando|  
+|Event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|La cache MSIL ha avuto accesso.|  
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome del campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|L’identificatore del modulo.|  
 |StubMethodID|win:UInt64|L’identificatore del metodo stub.|  

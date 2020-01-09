@@ -1,17 +1,16 @@
 ---
 title: Generics e reflection - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659881"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712169"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generics e reflection (Guida per programmatori C#)
 Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici. Per altre informazioni, vedere [Generics nel runtime](./generics-in-the-run-time.md).  
@@ -20,7 +19,7 @@ Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi gene
   
  Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection generico, vedere i commenti sulla proprietà <xref:System.Type.IsGenericType%2A>.  
   
-|Nome del membro System. Type|DESCRIZIONE|  
+|Nome del membro System. Type|Descrizione|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Restituisce true se un tipo è generico.|  
 |<xref:System.Type.GetGenericArguments%2A>|Restituisce una matrice di oggetti `Type` che rappresentano gli argomenti di tipo specificati per un tipo costruito oppure i parametri di tipo di una definizione di un tipo generico.|  
@@ -36,7 +35,7 @@ Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi gene
   
  Inoltre, i membri della classe <xref:System.Reflection.MethodInfo> abilitano le informazioni di runtime per i tipi generici. Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection per i metodi generici, vedere le note sulla proprietà <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|System.Reflection.MemberInfo Member Name|DESCRIZIONE|  
+|System.Reflection.MemberInfo Member Name|Descrizione|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Restituisce true se un metodo è generico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Restituisce una matrice di oggetti Type che rappresentano gli argomenti di tipo di un metodo generico costruito oppure i parametri di tipo di una definizione di un metodo generico.|  

@@ -3,14 +3,12 @@ title: Opzioni di output nella classe XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647848"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710505"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opzioni di output nella classe XslCompiledTransform
 In questo argomento vengono illustrate le opzioni disponibili per l'output di XSLT. È possibile specificare le opzioni di output nel foglio di stile oppure nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -20,13 +18,13 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
  Nella tabella seguente viene descritto il comportamento di ciascun attributo disponibile nell'elemento `xsl:output` se il tipo di output è un flusso o un oggetto <xref:System.IO.TextWriter>.  
   
-|Nome attributo|Comportamento|  
+|Nome attributo|Comportamento di|  
 |--------------------|--------------|  
-|metodo|Supportato.|  
-|version|Ignorato. La versione è sempre 1.0 per XML e 4.0 per HTML.|  
+|method|Supportato.|  
+|Versione di|Ignorato. La versione è sempre 1.0 per XML e 4.0 per HTML.|  
 |encoding|Ignorato se si invia l'output a un tipo <xref:System.IO.TextWriter>. Viene invece usata la proprietà <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
 |omit-xml-declaration|Supportato.|  
-|autonomi|Supportato.|  
+|standalone|Supportato.|  
 |doctype-public|Supportato.|  
 |doctype-system|Supportato.|  
 |cdata-section-elements|Supportato.|  
@@ -45,7 +43,7 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
 #### <a name="string"></a>Stringa  
  Usare questo tipo di output per specificare l'URI del file di output.  
   
-#### <a name="stream"></a>Flusso  
+#### <a name="stream"></a>Stream  
  Un flusso è un'astrazione di una sequenza di byte, ad esempio un file, un dispositivo di input/output, una pipe di comunicazione tra processi o un socket TCP/IP. La classe <xref:System.IO.Stream> e le relative classi derivate forniscono una rappresentazione generica di questi diversi tipi di input e output, senza che il programmatore venga a contatto con i dettagli specifici del sistema operativo e con i dispositivi sottostanti.  
   
  Usare questo tipo di output per inviare dati a un tipo <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> oppure per inviare un flusso di output (`Response.OutputStream`).  

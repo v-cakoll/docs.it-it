@@ -1,16 +1,15 @@
 ---
 title: Restrizioni relative all'uso dei livelli di accessibilità - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922321"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715155"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrizioni relative all'uso dei livelli di accessibilità (Riferimenti per C#)
 
@@ -23,7 +22,7 @@ public class MyClass: BaseClass {...} // Error
 
 Nella tabella seguente sono riepilogate le restrizioni relative ai livelli di accessibilità dichiarata.
 
-|Contesto|Osservazioni|
+|Contesto|Note|
 |-------------|-------------|
 |[Classi](../../programming-guide/classes-and-structs/classes.md)|La classe di base diretta di un tipo di classe deve essere accessibile almeno quanto il tipo di classe.|
 |[Interfacce](../../programming-guide/interfaces/index.md)|Le interfacce di base esplicite di un tipo di interfaccia devono essere accessibili almeno quanto il tipo di interfaccia.|

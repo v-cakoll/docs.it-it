@@ -1,21 +1,19 @@
 ---
-title: 'Procedura: Trasformare un frammento di nodo'
+title: 'Procedura: trasformare un frammento di nodo'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 56e9ef6031a5736acfa066ed6c068f954bd5af8d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345170"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710817"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Procedura: Trasformare un frammento di nodo
+# <a name="how-to-transform-a-node-fragment"></a>Procedura: trasformare un frammento di nodo
 Quando si trasformano i dati contenuti in un oggetto <xref:System.Xml.XmlDocument> o in un oggetto <xref:System.Xml.XPath.XPathDocument>, le trasformazioni XSLT si applicano a un documento completo. In altre parole, se viene passato un nodo diverso dal nodo radice del documento, il processo di trasformazione accederà comunque a tutti i nodi nel documento caricato. Per trasformare un frammento di nodo, è necessario creare un oggetto contenente solo il frammento di nodo e passare tale oggetto al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Procedure  

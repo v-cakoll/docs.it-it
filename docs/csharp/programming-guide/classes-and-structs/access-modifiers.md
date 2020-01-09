@@ -1,17 +1,16 @@
 ---
 title: Modificatori di accesso - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0d8e536902317c1e5b00dadde069dd6242189088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971671"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705665"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificatori di accesso (Guida per programmatori C#)
 Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che controlla se possono essere usati da altro codice nell'assembly o in assembly di terze parti. È possibile usare i modificatori di accesso seguenti per specificare l'accessibilità di un tipo o di un membro quando viene dichiarato:  
@@ -71,7 +70,7 @@ Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che control
   
  I delegati si comportano come classi e struct. Per impostazione predefinita, hanno accesso internal quando dichiarati direttamente all'interno di uno spazio dei nomi e accesso private se annidati.  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
@@ -85,6 +84,6 @@ Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che control
 - [protected](../../language-reference/keywords/protected.md)
 - [protected internal](../../language-reference/keywords/protected-internal.md)
 - [private protected](../../language-reference/keywords/private-protected.md)
-- [class](../../language-reference/keywords/class.md)
+- [classe](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)
 - [interface](../../language-reference/keywords/interface.md)

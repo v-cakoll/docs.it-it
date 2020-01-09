@@ -38,14 +38,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834532"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715975"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 
@@ -241,7 +239,7 @@ Per SQL Server, tutti i metodi usati per introdurre la sincronizzazione o il thr
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Non bloccare a tempo indefinito nel codice non gestito
 
-L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco mediante una primitiva di sincronizzazione di Windows è un esempio chiaro di qualcosa che non è consentito.  Il blocco in una chiamata `ReadFile` a in un socket deve essere evitato se possibile. idealmente, l'API Windows deve fornire un meccanismo per il timeout di un'operazione di questo tipo.
+L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco mediante una primitiva di sincronizzazione di Windows è un esempio chiaro di qualcosa che non è consentito.  Il blocco in una chiamata a `ReadFile` in un socket deve essere evitato se possibile. idealmente, l'API Windows deve fornire un meccanismo per il timeout di un'operazione come questa.
 
 Tutti i metodi che effettuano chiamate nel codice nativo dovrebbero usare una chiamata Win32 con un valore finito e ragionevole di timeout.  Anche se autorizzato a specificare il timeout, l'utente non deve avere la possibilità di impostare un timeout infinito, a meno che non abbia autorizzazioni di sicurezza specifiche.  Come indicazione generale, tenere presente che, se un metodo si blocca per più di circa 10 secondi, sarà necessario usare una versione che supporta i timeout oppure disporre di supporto CLR aggiuntivo.
 

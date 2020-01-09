@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933809"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705873"
 ---
 # <a name="security-and-race-conditions"></a>Sicurezza e race condition
-Un'altra area di interesse è il rischio di sicurezza possano essere sfruttati da situazioni di race condition. Esistono diversi modi in cui questo può verificarsi. Negli argomenti che seguono illustrano alcuni aspetti problematici che lo sviluppatore deve evitare.  
+Un'altra area di interesse è la possibilità di buchi di sicurezza sfruttati da race condition. Questa situazione può verificarsi in diversi modi. Gli argomenti secondari che seguono illustrano alcune delle principali insidie che lo sviluppatore deve evitare.  
   
-## <a name="race-conditions-in-the-dispose-method"></a>Le race condition nel metodo Dispose  
- Se una classe **Dispose** (metodo) (per altre informazioni, vedere [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) non è sincronizzato, è possibile che il codice di pulitura all'interno **Dispose** può essere eseguito più di una volta, come illustrato nell'esempio seguente.  
+## <a name="race-conditions-in-the-dispose-method"></a>Race condition nel metodo Dispose  
+ Se il metodo **Dispose** di una classe (per altre informazioni, vedere [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) non è sincronizzato, è possibile che il codice di pulitura all'interno di **Dispose** possa essere eseguito più di una volta, come illustrato nell'esempio seguente.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Perché ciò **Dispose** implementazione non è sincronizzata, è possibile `Cleanup` deve essere chiamato da un primo thread e quindi un secondo thread prima `_myObj` è impostata su **null**. Se si tratta di una questione di sicurezza varia a seconda che cosa accade quando il `Cleanup` codice viene eseguito. Un problema principale con non sincronizzate **Dispose** implementazioni prevede l'uso degli handle di risorsa, ad esempio i file. Eliminazione non corretta può causare l'handle non corretto da usare, che spesso comporta le vulnerabilità di sicurezza.  
+ Poiché questa implementazione di **Dispose** non è sincronizzata, è possibile che `Cleanup` venga chiamata dal primo thread e quindi da un secondo thread prima che `_myObj` sia impostato su **null**. Se questo è un problema di sicurezza, dipende da cosa accade quando viene eseguito il codice `Cleanup`. Un problema importante con le implementazioni **Dispose** non sincronizzate prevede l'uso di handle di risorsa, ad esempio i file. L'eliminazione non corretta può causare l'uso di un handle errato, che spesso genera vulnerabilità di sicurezza.  
   
-## <a name="race-conditions-in-constructors"></a>Condizioni di competizione nei costruttori  
- In alcune applicazioni, potrebbe essere possibile accedere ai membri della classe prima che i costruttori di classe sono completata l'esecuzione di altri thread. È consigliabile esaminare tutti i costruttori della classe per assicurarsi che non siano presenti problemi di sicurezza se questo deve verificarsi o sincronizzare i thread se necessario.  
+## <a name="race-conditions-in-constructors"></a>Race condition nei costruttori  
+ In alcune applicazioni, è possibile che altri thread accedano ai membri della classe prima che i costruttori della classe vengano eseguiti completamente. È necessario esaminare tutti i costruttori di classe per assicurarsi che non vi siano problemi di sicurezza, se necessario, o sincronizzare i thread, se necessario.  
   
-## <a name="race-conditions-with-cached-objects"></a>Le race condition con gli oggetti memorizzati nella cache  
- Il codice che memorizza nella cache le informazioni di sicurezza o Usa la sicurezza dall'accesso di codice [Assert](../../../docs/framework/misc/using-the-assert-method.md) operazione può essere vulnerabile a situazioni di race condition se altre parti della classe non sono sincronizzati in modo appropriato, come illustrato nell'esempio seguente.  
+## <a name="race-conditions-with-cached-objects"></a>Race condition con oggetti memorizzati nella cache  
+ Il codice che memorizza nella cache le informazioni di sicurezza o utilizza l'operazione di [asserzione](../../../docs/framework/misc/using-the-assert-method.md) di sicurezza dall'accesso di codice potrebbe essere vulnerabile alle race condition se altre parti della classe non sono sincronizzate in modo appropriato, come illustrato nell'esempio seguente.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +95,12 @@ void DoOtherWork()
 }  
 ```  
   
- Se sono presenti altri percorsi `DoOtherWork` che può essere chiamato da un altro thread con lo stesso oggetto, un chiamante non attendibile può essere aggirata da una richiesta.  
+ Se sono presenti altri percorsi da `DoOtherWork` che possono essere chiamati da un altro thread con lo stesso oggetto, un chiamante non attendibile può sfuggire a una richiesta.  
   
- Se il codice memorizza nella cache le informazioni di sicurezza, assicurarsi che esaminarlo per questa vulnerabilità.  
+ Se il codice memorizza nella cache le informazioni di sicurezza, assicurarsi di esaminarle per questa vulnerabilità.  
   
-## <a name="race-conditions-in-finalizers"></a>Condizioni di competizione nei finalizzatori  
- Le race condition possono verificarsi anche in un oggetto che fa riferimento a una risorsa statica o non gestita che viene resa disponibile nel relativo finalizzatore. Se più oggetti condividono una risorsa che verrà modificata in un finalizzatore di classe, è necessario sincronizzare gli oggetti tutti gli accessi alla risorsa.  
+## <a name="race-conditions-in-finalizers"></a>Race condition nei finalizzatori  
+ Le race condition possono verificarsi anche in un oggetto che fa riferimento a una risorsa statica o non gestita che quindi libera nel finalizzatore. Se più oggetti condividono una risorsa che viene modificata nel finalizzatore di una classe, gli oggetti devono sincronizzare tutti gli accessi a tale risorsa.  
   
 ## <a name="see-also"></a>Vedere anche
 

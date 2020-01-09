@@ -4,13 +4,13 @@ description: Questo articolo descrive come determinare le versioni del runtime d
 ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
-ms.custom: seodec18,updateeachrelease
-ms.openlocfilehash: 8c235a4b38e991b6ba2c9d2489151995f3031a27
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: updateeachrelease
+ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713992"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Come rimuovere Runtime di .NET Core e .NET Core SDK
 

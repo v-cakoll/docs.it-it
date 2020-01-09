@@ -1,15 +1,13 @@
 ---
 title: strumento DotNet-Trace-.NET Core
 description: Installazione e utilizzo dello strumento da riga di comando DotNet-Trace.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428888"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714427"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>utilità di analisi delle prestazioni DotNet-Trace
 
@@ -38,7 +36,7 @@ Lo strumento `dotnet-trace`:
 * È basato sulla tecnologia di `EventPipe` multipiattaforma del runtime di .NET Core.
 * Offre la stessa esperienza in Windows, Linux o macOS.
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a>Options
 
 - **`--version`**  
 
@@ -48,7 +46,7 @@ Lo strumento `dotnet-trace`:
 
   Mostra la guida della riga di comando.
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandi
 
 | Comando                                                     |
 | ----------------------------------------------------------- |
@@ -68,7 +66,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
     [--providers] [--profile <profile-name>] [--format]
 ```
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 - **`-p|--process-id <PID>`**
 
@@ -116,7 +114,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
   File di traccia di input da convertire. Il valore predefinito è *Trace. NetTrace*.
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
 - **`--format <NetTrace|Speedscope>`**
 
@@ -210,7 +208,7 @@ Il comando precedente Disabilita gli eventi di runtime e il profiler dello stack
 
 Il runtime di .NET Core supporta i provider .NET seguenti. .NET Core usa le stesse parole chiave per abilitare sia `Event Tracing for Windows (ETW)` che `EventPipe` tracce.
 
-| Nome provider                            | Informazioni |
+| Nome provider                            | Informazioni su |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [Il provider di runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Parole chiave di runtime CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [Il provider di rundown](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Parole chiave di rundown CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

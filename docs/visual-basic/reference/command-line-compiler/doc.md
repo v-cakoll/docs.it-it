@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005644"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716737"
 ---
 # <a name="-doc"></a>-doc
 Elabora commenti sulla documentazione in un file XML.  
@@ -30,9 +30,9 @@ oppure
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|facoltativo. Se si specifica +, o semplicemente `-doc`, il compilatore genera informazioni di documentazione e le inserisce in un file XML. La specifica di `-` equivale a non specificare `-doc`, quindi non vengono create informazione di documentazione.|  
+|`+` &#124; `-`|Parametro facoltativo. Se si specifica +, o semplicemente `-doc`, il compilatore genera informazioni di documentazione e le inserisce in un file XML. La specifica di `-` equivale a non specificare `-doc`, quindi non vengono create informazione di documentazione.|  
 |`file`|Richiesto se è usato `-doc:`. Specifica il file di output XML, popolato con i commenti dai file del codice sorgente della compilazione. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette doppie (" ").|  
   
 ## <a name="remarks"></a>Note  
@@ -46,13 +46,13 @@ oppure
   
  Per usare il file XML generato con la funzionalità [IntelliSense](/visualstudio/ide/using-intellisense) di Visual Studio, usare un nome per il file XML uguale al nome dell'assembly che si vuole supportare. Assicurarsi che il file XML sia nella stessa directory dell'assembly, in modo che quando si fa riferimento all'assembly nel progetto di Visual Studio, venga trovato anche il file XML. I file di documentazione XML non sono necessari per il funzionamento di IntelliSense per il codice all'interno di un progetto o all'interno di progetti a cui viene fatto riferimento da un progetto.  
   
- A meno che non si esegua la compilazione con `/target:module`, il file XML contiene i tag `<assembly></assembly>`. Questi tag specificano il nome del file contenente il manifesto dell'assembly per il file di output della compilazione.  
+ A meno che non si esegua la compilazione con `-target:module`, il file XML contiene i tag `<assembly></assembly>`. Questi tag specificano il nome del file contenente il manifesto dell'assembly per il file di output della compilazione.  
   
  Vedere [Tag XML consigliati per i commenti relativi alla documentazione](../../../visual-basic/language-reference/xmldoc/index.md) per informazioni su come generare documentazione dai commenti nel codice.  
   
 |Per impostare -doc nell'ambiente di sviluppo integrato di Visual Studio|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Impostare il valore nella casella **Genera il file di documentazione XML**.|  
+|1. è stato selezionato un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2. fare clic sulla scheda **Compila** .<br />3. impostare il valore nella casella **genera file di documentazione XML** .|  
   
 ## <a name="example"></a>Esempio  
  Vedere [Documentazione del codice tramite XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) per un esempio.  

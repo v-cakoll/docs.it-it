@@ -12,46 +12,45 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615271"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709517"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
-Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è se un tipo di progettazione come una classe (un tipo riferimento) o uno struct (tipo di valore). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.  
+Una delle decisioni di progettazione di base ogni volto di progettazione Framework è se progettare un tipo come classe (un tipo di riferimento) o come struct (tipo valore). Una migliore comprensione delle differenze nel comportamento dei tipi di riferimento e dei tipi di valore è essenziale per la scelta.  
   
- La prima delle differenze tra i tipi di riferimento e tipi di valore verranno presi in considerazione è che i tipi di riferimento vengono allocati nell'heap e sottoposto a garbage collection, mentre i tipi di valore vengono allocati nello stack o inline nel che contiene i tipi e deallocato quando lo stack viene rimosso o quando deallocata relativo tipo contenitore. Pertanto, le allocazioni e deallocazioni di tipi di valore sono in genere più economica rispetto alle allocazioni e deallocazioni dei tipi di riferimento.  
+ La prima differenza tra i tipi di riferimento e i tipi di valore da considerare è che i tipi di riferimento vengono allocati nell'heap e sottoposti a Garbage Collection, mentre i tipi di valore vengono allocati nello stack o inline nei tipi che li contengono e deallocati quando lo stack viene rimosso o quando il tipo contenitore viene deallocato. Pertanto, le allocazioni e le deallocazioni di tipi di valore sono in genere più convenienti rispetto alle allocazioni e alle deallocazioni dei tipi di riferimento.  
   
- Successivamente, le matrici di riferimento sono tipi allocati out-of-line, vale a dire la matrice di elementi sono semplicemente i riferimenti alle istanze del tipo di riferimento che risiedono nell'heap. Matrici di tipi valore vengono allocate inline, vale a dire che gli elementi della matrice sono le istanze effettive del tipo di valore. Pertanto, le allocazioni e deallocazioni di matrici di tipi valore sono molto più economiche rispetto alle allocazioni e deallocazioni delle matrici di tipo riferimento. Inoltre, nella maggior parte dei casi le matrici di tipo valore presentano molto posizionamento ottimale dei riferimenti.  
+ Successivamente, le matrici di tipi di riferimento vengono allocate fuori riga, ovvero gli elementi della matrice sono solo riferimenti a istanze del tipo di riferimento che risiedono nell'heap. Le matrici di tipi di valore vengono allocate inline, vale a dire che gli elementi della matrice sono le istanze effettive del tipo di valore. Pertanto, le allocazioni e le deallocazioni di matrici di tipi di valore sono molto più convenienti delle allocazioni e delle deallocazioni di matrici di tipi di riferimento. Inoltre, nella maggior parte dei casi, le matrici di tipi di valore presentano una maggiore località di riferimento.  
   
- Differenza successiva è correlata all'utilizzo della memoria. I tipi di valore compattati quando esegue il cast a un tipo riferimento o una delle interfacce implementate. Ricevono unboxed quando esegue il cast nel tipo di valore. Poiché le finestre sono oggetti vengono allocati nell'heap e sottoposto a garbage collection, troppe operazioni conversione boxing e unboxing può avere un impatto negativo su heap, il garbage collector e infine le prestazioni dell'applicazione.  Al contrario, si verifica alcun tali boxing quando vengono eseguito il cast di tipi di riferimento. (Per altre informazioni, vedere [conversioni Boxing e Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
+ La differenza successiva riguarda l'utilizzo della memoria. Quando si esegue il cast a un tipo di riferimento o a una delle interfacce implementate, i tipi di valore ottengono il Boxing. Ottengono unboxed quando viene eseguito il cast al tipo di valore. Poiché le caselle sono oggetti allocati nell'heap e vengono sottoposti a Garbage Collection, un numero eccessivo di operazioni di Boxing e unboxing può avere un impatto negativo sull'heap, il Garbage Collector e infine le prestazioni dell'applicazione.  Al contrario, non viene eseguita la conversione boxing in quanto viene eseguito il cast di tipi di riferimento. Per ulteriori informazioni, vedere [Boxing e unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).
   
- Le assegnazioni dei tipi riferimento successivamente, copiare il riferimento, mentre le assegnazioni dei tipi valore copiare l'intero valore. Pertanto, le assegnazioni dei tipi di riferimento di grandi dimensioni sono più economiche rispetto all'assegnazione dei tipi di valori di grandi dimensioni.  
+ Le assegnazioni dei tipi di riferimento, quindi, copiano il riferimento, mentre le assegnazioni dei tipi di valore copiano l'intero valore. Pertanto, le assegnazioni di tipi di riferimento di grandi dimensioni sono più convenienti rispetto alle assegnazioni di tipi di valore di grandi dimensioni.  
   
- Infine, i tipi di riferimento vengono passati per riferimento, mentre i tipi di valore vengono passati per valore. Le modifiche a un'istanza di un tipo riferimento influiscono su tutti i riferimenti che puntano all'istanza. Istanze del tipo di valore vengono copiate quando vengono passati per valore. Quando viene modificata un'istanza di un tipo di valore, ovviamente non influirà proprie copie. Poiché le copie non vengono create in modo esplicito dall'utente, ma vengono create in modo implicito quando gli argomenti vengono passati o i valori vengono restituiti, tipi di valore che possono essere modificati possono generare confusione a molti utenti. Pertanto, i tipi di valore devono essere non modificabili.  
+ Infine, i tipi di riferimento vengono passati per riferimento, mentre i tipi di valore vengono passati per valore. Le modifiche apportate a un'istanza di un tipo riferimento influiscono su tutti i riferimenti che puntano all'istanza. Le istanze del tipo di valore vengono copiate quando vengono passate per valore. Quando viene modificata un'istanza di un tipo di valore, ovviamente non influisce sulle copie. Poiché le copie non vengono create in modo esplicito dall'utente, ma vengono create in modo implicito quando gli argomenti vengono passati o vengono restituiti valori restituiti, i tipi di valore che possono essere modificati possono generare confusione per molti utenti. Pertanto, i tipi di valore non devono essere modificabili.  
   
- Come regola generale, la maggior parte dei tipi in un framework deve essere classi. Esistono tuttavia alcune situazioni in cui le caratteristiche di un tipo valore rendano più opportuno usare struct.  
+ Come regola generale, la maggior parte dei tipi in un Framework deve essere una classe. In alcune situazioni, tuttavia, le caratteristiche di un tipo di valore rendono più appropriato utilizzare gli struct.  
   
  **✓ CONSIDER** definire una struttura invece di una classe, se le istanze del tipo sono ridotti e generalmente di breve durata o vengono comunemente incorporate in altri oggetti.  
   
  **X AVOID** che definisce uno struct, a meno che il tipo dispone di tutte le caratteristiche seguenti:  
   
-- In modo logico rappresenta un singolo valore, simile ai tipi primitivi (`int`, `double`e così via.).  
+- Rappresenta logicamente un singolo valore, simile ai tipi primitivi (`int`, `double`e così via).  
   
 - Ha una dimensione di istanza inferiore a 16 byte.  
   
 - Non è modificabile.  
   
-- Non dovrà eseguire la conversione boxing di frequente.  
+- Non sarà necessario eseguire la conversione boxing di frequente.  
   
  In tutti gli altri casi, è necessario definire i tipi come classi.  
   
- *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche
 

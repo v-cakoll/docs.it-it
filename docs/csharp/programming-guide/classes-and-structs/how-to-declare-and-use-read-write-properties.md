@@ -1,6 +1,5 @@
 ---
 title: Come dichiarare e usare le proprietà di lettura/ C# scrittura-Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 2865feb74692e7075c92a9ee2b5cd2a7735a8e62
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5b880cfc3ace197a3bad2f707cf55543dbe7b78e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971020"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714924"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Come dichiarare e usare le proprietà di lettura/C# scrittura (Guida per programmatori)
 Le proprietà offrono i vantaggi dei membri dati pubblici senza i rischi associati all'accesso non protetto, non controllato e non verificato ai dati di un oggetto. Ciò si ottiene tramite le *funzioni di accesso*, ovvero metodi speciali che assegnano e recuperano valori dal membro dati sottostante. La funzione di accesso [set](../../language-reference/keywords/set.md) consente l'assegnazione di valori ai membri dati, mentre la funzione di accesso [get](../../language-reference/keywords/get.md) recupera i valori dei membri dati.  

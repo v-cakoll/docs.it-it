@@ -12,13 +12,12 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: KrzysztofCwalina
-ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 96d9904af0106d797c9fc5199bda76da53874451
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353716"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709244"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomi di classi, struct e interfacce
 Le linee guida per la denominazione che seguono si applicano alla denominazione generale dei tipi.  
@@ -71,7 +70,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 ## <a name="names-of-common-types"></a>Nomi dei tipi comuni  
  **✓ DO** seguire le linee guida descritte nella tabella seguente, la denominazione dei tipi derivati da o implementare determinati tipi di .NET Framework.  
   
-|Base Type|Linee guida sul tipo derivato/di implementazione|  
+|Tipo di base|Linee guida sul tipo derivato/di implementazione|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** aggiungere il suffisso "Attribute" ai nomi delle classi di attributi personalizzati.|  
 |`System.Delegate`|**✓ DO** aggiungere il suffisso "EventHandler" ai nomi dei delegati vengono utilizzati negli eventi.<br /><br /> **✓ DO** aggiungere il suffisso "Callback" ai nomi dei delegati diversi da quelli usati come gestori eventi.<br /><br /> **X DO NOT** aggiungere il suffisso "Delegato" a un delegato.|  

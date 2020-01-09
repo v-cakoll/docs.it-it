@@ -1,16 +1,15 @@
 ---
 title: Come utilizzare le espressioni lambda in una query- C# Guida alla programmazione
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e66239174d5598d7cf532d21426a9e15d5075085
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635119"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711961"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Come usare le espressioni lambda in una query (C# guida per programmatori)
 Le espressioni lambda non vengono usate direttamente nella sintassi delle query, ma nelle chiamate al metodo e le espressioni di query possono contenere chiamate al metodo. Di fatto, alcune operazioni di query possono essere espresse solo nella sintassi del metodo. Per altre informazioni sulle differenze tra la sintassi delle query e la sintassi dei metodi, vedere [Sintassi di query e sintassi di metodi in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  

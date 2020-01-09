@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490999"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711220"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
 .NET Framework 4 introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
@@ -33,7 +31,7 @@ ms.locfileid: "66490999"
  *Scalabilità*  
  Miglioramento delle prestazioni proporzionale al numero di core nel computer. Un algoritmo con scalabilità viene eseguito più velocemente su otto core che su due core.  
   
-## <a name="concurrentqueuet-vs-queuet"></a>Confronto tra ConcurrentQueue(T) e Queue(T)  
+## <a name="concurrentqueuet-vs-queuet"></a>Confronta tra ConcurrentQueue(T) e Queue(T)  
  Negli scenari producer-consumer puri, in cui il tempo di elaborazione per ogni elemento è molto ridotto (poche istruzioni), <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> offre vantaggi di prestazioni modesti rispetto a <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> con blocco esterno. In questo scenario, <xref:System.Collections.Concurrent.ConcurrentQueue%601> offre le prestazioni migliori quando un thread dedicato aggiunge elementi alla coda e un altro thread dedicato rimuove elementi dalla coda. Se non si applica questa regola, le prestazioni di <xref:System.Collections.Generic.Queue%601> potrebbe persino risultare leggermente più veloci di quelle di <xref:System.Collections.Concurrent.ConcurrentQueue%601> nei computer che dispongono di più core.  
   
  Quando il tempo di elaborazione è pari o superiore a circa 500 FLOPS (floating point operations, operazioni a virgola mobile), la regola dei due thread non è più valida per <xref:System.Collections.Concurrent.ConcurrentQueue%601>, che in questo caso registra una scalabilità ottimale. <xref:System.Collections.Generic.Queue%601> non presenta una scalabilità ottimale in questo scenario.  
@@ -47,7 +45,7 @@ ms.locfileid: "66490999"
   
  L'uso di <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> e <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> può accelerare notevolmente i tempi di accesso.  
   
-## <a name="concurrentdictionary-vs-dictionary"></a>Confronto tra ConcurrentDictionary e Dizionario  
+## <a name="concurrentdictionary-vs-dictionary"></a>Confronto tra ConcurrentDictionary e Dictionary  
  In generale, è consigliabile usare <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> negli scenari in cui si aggiungono e aggiornano chiavi o valori da più thread simultaneamente. Negli scenari che presentano aggiornamenti frequenti e letture poco frequenti, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> offre in genere moderati vantaggi. Negli scenari che presentano molte letture e molti aggiornamenti, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> è in genere molto più rapida su computer con un numero qualsiasi di core.  
   
  Negli scenari con aggiornamenti frequenti è possibile aumentare il livello di concorrenza di <xref:System.Collections.Concurrent.ConcurrentDictionary%602> e quindi effettuare una misurazione per quantificare eventuali incrementi delle prestazioni nei computer con più core. Se si modifica il livello di concorrenza, evitare per quanto possibile le operazioni globali.  

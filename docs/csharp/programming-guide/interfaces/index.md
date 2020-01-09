@@ -1,17 +1,16 @@
 ---
 title: Interfacce - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635236"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714617"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -54,7 +53,7 @@ Un'interfaccia presenta le proprietà seguenti:
 - Un'interfaccia è paragonabile a una classe di base astratta contente solo membri astratti. Qualsiasi classe o struct che implementa l'interfaccia deve implementarne tutti i membri.
 - Non è possibile creare direttamente un'istanza di un'interfaccia. I membri vengono implementati da qualsiasi classe o struct che implementa l'interfaccia.
 - Le interfacce possono contenere eventi, indicizzatori, metodi e proprietà.
-- Le interfacce non contengono implementazioni di metodi.
+- Le interfacce non contengono implementazioni di metodi C# (in 8,0, le interfacce possono avere un' [implementazione predefinita per i metodi](../../whats-new/csharp-8.md#default-interface-methods)).
 - Una classe o struct può implementare più interfacce. Una classe può ereditare una classe base e anche implementare una o più interfacce.
 
 ## <a name="in-this-section"></a>In questa sezione

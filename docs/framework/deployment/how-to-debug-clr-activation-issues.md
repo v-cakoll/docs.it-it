@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052111"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716499"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Procedura: debug dei problemi di attivazione CLR
 
-Se si verificano problemi nell'eseguire l'applicazione con la versione corretta di Common Language Runtime (CLR), è possibile visualizzare ed eseguire il debug dei log di attivazione CLR. Questi log possono essere molto utili nell'individuazione della causa principale di un problema di attivazione quando l'applicazione carica una versione di CLR diversa da quella prevista o non carica CLR. In Errori di inizializzazione di [.NET Framework: gestione dell'esperienza utente](initialization-errors-managing-the-user-experience.md) è descritto il caso in cui non viene trovato alcun CLR per un'applicazione.
+Se si verificano problemi nell'eseguire l'applicazione con la versione corretta di Common Language Runtime (CLR), è possibile visualizzare ed eseguire il debug dei log di attivazione CLR. Questi log possono essere molto utili nell'individuazione della causa principale di un problema di attivazione quando l'applicazione carica una versione di CLR diversa da quella prevista o non carica CLR. In [Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente](initialization-errors-managing-the-user-experience.md) è descritto il caso in cui non viene trovato alcun CLR per un'applicazione.
 
 La registrazione dell'attivazione di CLR può essere abilitata a livello di sistema usando una chiave del Registro di sistema HKEY_LOCAL_MACHINE o una variabile di ambiente di sistema. Il log verrà generato fino a quando la voce del Registro di sistema o la variabile di ambiente non viene rimossa. In alternativa, è possibile usare una variabile di ambiente a livello locale o una variabile dell'utente per attivare la registrazione con ambito e durata differenti.
 
@@ -112,7 +110,7 @@ Nell'esempio seguente di log di attivazione le informazioni più utili sono evid
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- L'**installazione funzionalità su richiesta** fa riferimento all'abilitazione di .NET Framework 3.5 in Windows 8. Vedere [Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente](initialization-errors-managing-the-user-experience.md) per altre informazioni su questo scenario.
+- L'**installazione funzionalità su richiesta** fa riferimento all'abilitazione di .NET Framework 3.5 in Windows 8. Per altre informazioni su questo scenario, vedere [Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente](initialization-errors-managing-the-user-experience.md).
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -121,4 +119,4 @@ Nell'esempio seguente di log di attivazione le informazioni più utili sono evid
 ## <a name="see-also"></a>Vedere anche
 
 - [Distribuzione](index.md)
-- [Procedura: Configurare un'app per supportare .NET Framework 4 o versioni successive](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Procedura: configurare un'app per supportare .NET Framework 4 o versioni successive](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

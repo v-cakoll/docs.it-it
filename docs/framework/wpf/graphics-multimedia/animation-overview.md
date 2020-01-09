@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039184"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559716"
 ---
 # <a name="animation-overview"></a>Cenni preliminari sull'animazione
 
@@ -201,7 +201,7 @@ L'esempio seguente illustra come creare un rettangolo a cui viene applicata la d
 
 Poiché le animazioni generano valori di proprietà, per i diversi tipi di proprietà esistono tipi di animazione differenti. Per animare una proprietà che accetta un <xref:System.Double>, ad esempio la proprietà <xref:System.Windows.FrameworkElement.Width%2A> di un elemento, usare un'animazione che produce valori di <xref:System.Double>. Per animare una proprietà che accetta una <xref:System.Windows.Point>, utilizzare un'animazione che produce valori <xref:System.Windows.Point> e così via. A causa del numero di tipi di proprietà diversi, nello spazio dei nomi <xref:System.Windows.Media.Animation> sono presenti diverse classi di animazione. che fortunatamente seguono una convenzione di denominazione rigorosa che ne facilita la differenziazione:
 
-- *tipo*di \<> animazione
+- \<*Tipo*>Animation
 
   Nota come animazione "From/To/By" o "di base", viene applicata tra un valore iniziale e un valore di destinazione o con l'aggiunta di un valore di offset al valore iniziale.
 
@@ -213,17 +213,17 @@ Poiché le animazioni generano valori di proprietà, per i diversi tipi di propr
 
   Gli esempi del presente documento usano queste animazioni perché sono le più semplici. Le animazioni from/to/by sono descritte in dettaglio in Cenni preliminari sulle animazioni from/to/by.
 
-- *tipo*di \<> AnimationUsingKeyFrames
+- \<*Tipo*>AnimationUsingKeyFrames
 
   Le animazioni basate su fotogrammi chiave sono più efficaci delle animazioni From/To/By perché è possibile specificare un numero qualsiasi di valori di destinazione e controllarne il metodo di interpolazione. Alcuni tipi possono essere animati solo con animazioni basate su fotogrammi chiave. Le animazioni con fotogramma chiave sono descritte in dettaglio nella [Panoramica delle animazioni con fotogrammi chiave](key-frame-animations-overview.md).
 
-- *tipo*di \<> AnimationUsingPath
+- \<*Tipo*>AnimationUsingPath
 
   Le animazioni basate su tracciato consentono di usare un tracciato geometrico per produrre valori animati.
 
-- *tipo*di \<> AnimationBase
+- \<*Tipo*>AnimationBase
 
-  Classe astratta che, quando viene implementata, aggiunge un'animazione a un *tipo*di \<> valore. Questa classe funge da classe di base per \<*tipo*> animazione e \<*tipo*> classi AnimationUsingKeyFrames. È necessario gestire direttamente queste classi solo se si vuole creare animazioni personalizzate. In caso contrario, usare un *tipo*di \<> animazione o un fotogramma chiave\<*tipo*> animazione.
+  Classe astratta che, quando implementata, anima un valore \<*Type*>. Questa classe funge da classe di base per le classi \<*Tipo*>Animation e \<*Type*>AnimationUsingKeyFrames. È necessario gestire direttamente queste classi solo se si vuole creare animazioni personalizzate. In caso contrario, usare una classe \<*Tipo*>Animation o KeyFrame\<*Tipo*>Animation.
 
 Nella maggior parte dei casi, è consigliabile usare il *tipo*di \<> classi di animazione, ad esempio <xref:System.Windows.Media.Animation.DoubleAnimation> e <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -231,10 +231,10 @@ La tabella seguente illustra diversi tipi di animazione comuni e alcune propriet
 
 |Tipo di proprietà|Animazione (From/To/By) di base corrispondente|Animazione basata su fotogrammi chiave corrispondente|Animazione basata su tracciato corrispondente|Esempio di uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> o di un <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|nessuna|Animare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> o di un <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animare il <xref:System.Windows.FrameworkElement.Width%2A> di un <xref:System.Windows.Controls.DockPanel> o il <xref:System.Windows.FrameworkElement.Height%2A> di una <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animare la posizione del <xref:System.Windows.Media.EllipseGeometry.Center%2A> di un <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animare il <xref:System.Windows.Controls.TextBlock.Text%2A> di un <xref:System.Windows.Controls.TextBlock> o il <xref:System.Windows.Controls.ContentControl.Content%2A> di una <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|nessuna|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|nessuna|Animare il <xref:System.Windows.Controls.TextBlock.Text%2A> di un <xref:System.Windows.Controls.TextBlock> o il <xref:System.Windows.Controls.ContentControl.Content%2A> di una <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -258,7 +258,7 @@ Nella sintassi seguente viene illustrata una versione semplificata della sintass
 
 Nella tabella seguente vengono illustrate diverse impostazioni <xref:System.Windows.Duration> e i valori risultanti.
 
-|Impostazioni|Valore risultante|
+|Impostazione di|Valore risultante|
 |-------------|---------------------|
 |0:0:5.5|5,5 secondi.|
 |0:30:5.5|30 minuti e 5,5 secondi.|
@@ -292,7 +292,7 @@ L'assegnazione di un nome a una <xref:System.Windows.FrameworkElement> è divers
 
 - Per creare un <xref:System.Windows.FrameworkElement> una destinazione di animazione, assegnargli un nome impostando la relativa proprietà <xref:System.Windows.FrameworkElement.Name%2A>. Nel codice è anche necessario usare il metodo <xref:System.Windows.FrameworkElement.RegisterName%2A> per registrare il nome dell'elemento con la pagina a cui appartiene.
 
-- Per rendere un <xref:System.Windows.Freezable> oggetto una destinazione dell'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usare la [direttiva x:Name](../../xaml-services/x-name-directive.md) per assegnarle un nome. Nel codice è sufficiente usare il metodo <xref:System.Windows.FrameworkElement.RegisterName%2A> per registrare l'oggetto con la pagina a cui appartiene.
+- Per rendere un <xref:System.Windows.Freezable> oggetto una destinazione dell'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usare la [direttiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) per assegnarle un nome. Nel codice è sufficiente usare il metodo <xref:System.Windows.FrameworkElement.RegisterName%2A> per registrare l'oggetto con la pagina a cui appartiene.
 
 Nelle sezioni seguenti viene fornito un esempio di denominazione di un elemento in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e codice. Per informazioni più dettagliate sulla denominazione e la destinazione, vedere [Cenni preliminari sugli storyboard](storyboards-overview.md).
 
@@ -367,7 +367,7 @@ Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applica
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|description|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[Cenni preliminari sull'animazione e sul sistema di temporizzazione](animation-and-timing-system-overview.md)|Viene descritto il modo in cui il sistema di temporizzazione usa le classi <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock>, che consentono di creare animazioni.|
 |[Suggerimenti sulle animazioni](animation-tips-and-tricks.md)|Contiene suggerimenti utili per la risoluzione di problemi relativi alle animazioni, ad esempio problemi di prestazioni.|
@@ -380,7 +380,7 @@ Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applica
 |[Cenni preliminari sugli storyboard](storyboards-overview.md)|Descrive come usare gli storyboard con più sequenze temporali per creare animazioni complesse.|
 |[Cenni preliminari sui comportamenti temporali](timing-behaviors-overview.md)|Vengono descritti i tipi e le proprietà <xref:System.Windows.Media.Animation.Timeline> utilizzati nelle animazioni.|
 |[Cenni preliminari sugli eventi di tempo](timing-events-overview.md)|Vengono descritti gli eventi disponibili nell'<xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> oggetti per l'esecuzione di codice nei punti della sequenza temporale, ad esempio Begin, pause, Resume, Skip o stop.|
-|[Procedure relative](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|
+|[Procedure relative alle proprietà](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|
 |[Procedure relative a oggetti Clock](clocks-how-to-topics.md)|Contiene esempi di codice per l'utilizzo dell'oggetto <xref:System.Windows.Media.Animation.Clock> nell'applicazione.|
 |[Procedure relative ai fotogrammi chiave](key-frame-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni con fotogrammi chiave in un'applicazione.|
 |[Procedure relative all'animazione percorso](path-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni basate su tracciato in un'applicazione.|

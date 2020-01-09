@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120597"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711441"
 ---
 # <a name="character-encoding-in-net"></a>Codifica dei caratteri in .NET
 
@@ -67,7 +66,7 @@ Tutte le classi Encoding dei caratteri in .NET ereditano dalla classe <xref:Syst
 
 È possibile recuperare informazioni su tutte le codifiche disponibili in .NET chiamando il metodo <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET supporta i sistemi di codifica dei caratteri elencati nella tabella seguente.
 
-|Codifica|Class|Descrizione|Vantaggi/Svantaggi|
+|Encoding|Classe|Descrizione|Vantaggi/Svantaggi|
 |--------------|-----------|-----------------|-------------------------------|
 |non|<xref:System.Text.ASCIIEncoding>|Codifica un intervallo limitato di caratteri usando i sette bit più bassi di un byte.|Poiché questa codifica supporta solo i valori dei caratteri compresi tra U+0000 e U+007F, nella maggior parte dei casi non è adatta per le applicazioni internazionalizzate.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Rappresenta i caratteri come sequenze di caratteri ASCII a 7 bit. I caratteri Unicode non ASCII sono rappresentati da una sequenza di escape di caratteri ASCII.|UTF-7 supporta protocolli di newsgroup e di posta elettronica. UTF-7 non è tuttavia particolarmente sicura o affidabile. In alcuni casi, la modifica di un bit può alterare radicalmente l'interpretazione di un'intera stringa UTF-7. In altri casi, stringhe UTF-7 diverse possono codificare lo stesso testo. Per le sequenze che includono caratteri non ASCII, UTF-7 richiede più spazio di UTF-8 e la codifica/decodifica è più lenta. Di conseguenza, è consigliabile usare UTF-8 anziché UTF-7, se possibile.|
@@ -217,7 +216,7 @@ Anche se gli oggetti <xref:System.Text.EncoderFallbackException> e <xref:System.
 
 <a name="Custom"></a>
 
-## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy
+## <a name="implementing-a-custom-fallback-strategy"></a>Implementazione di una strategia di fallback personalizzata
 
 Oltre al mapping più appropriato che viene implementato internamente dalle tabelle codici, .NET include le classi seguenti per implementare una strategia di fallback:
 

@@ -1,16 +1,15 @@
 ---
 title: Modificatore del parametro in - Riferimenti per C#
-ms.custom: seodec18
 ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112645"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715245"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -57,7 +56,7 @@ Specificare `in` per gli argomenti presso il sito di chiamata è in genere facol
 
 In primo luogo, se si specifica `in` presso il sito di chiamata si impone al compilatore di selezionare un metodo definito con un parametro `in` corrispondente. In caso contrario, se due metodi si differenziano solo per la presenza di `in`, l'overload per valore rappresenta una corrispondenza migliore.
 
-In secondo luogo, se si specifica `in` si dichiara l'intenzione di passare un argomento per riferimento. L'argomento usato con `in` deve rappresentare una posizione a cui sia possibile fare riferimento direttamente. Sono valide le stesse regole generali applicabili agli argomenti `out` e `ref`: non è possibile usare costanti, proprietà ordinarie o altre espressioni che producono valori. In caso contrario, l'omissione di `in` presso il sito di chiamata informa il compilatore che è consentito creare una variabile temporanea da passare per riferimento di sola lettura al metodo. Il compilatore crea una variabile temporanea per superare diverse restrizioni degli argomenti `in`:
+In secondo luogo, se si specifica `in` si dichiara l'intenzione di passare un argomento per riferimento. L'argomento usato con `in` deve rappresentare una posizione a cui sia possibile fare riferimento direttamente. Sono valide le stesse regole generali di `out` e `ref`: non è possibile usare costanti, proprietà ordinarie o altre espressioni che producono valori. In caso contrario, l'omissione di `in` presso il sito di chiamata informa il compilatore che è consentito creare una variabile temporanea da passare per riferimento di sola lettura al metodo. Il compilatore crea una variabile temporanea per superare diverse restrizioni degli argomenti `in`:
 
 - Una variabile temporanea consente costanti in fase di compilazione come parametri `in`.
 - Una variabile temporanea consente proprietà o altre espressioni per i parametri `in`.
@@ -118,7 +117,7 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
 - Metodi asincroni definiti usando il modificatore [async](async.md).  
 - Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.  
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifica del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche

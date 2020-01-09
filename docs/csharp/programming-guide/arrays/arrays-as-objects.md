@@ -1,16 +1,15 @@
 ---
 title: Matrici come oggetti - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 9905168662496c46d20f191c04f21d8630d02fa2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772116"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715097"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Matrici come oggetti (Guida per programmatori C#)
 
@@ -29,7 +28,7 @@ Questo esempio usa la proprietà <xref:System.Array.Rank%2A> per visualizzare il
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Array](./index.md)
+- [Matrici](./index.md)
 - [Matrici unidimensionali](./single-dimensional-arrays.md)
 - [Matrici multidimensionali](./multidimensional-arrays.md)
 - [Matrici irregolari](./jagged-arrays.md)

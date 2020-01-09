@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105712"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711415"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -76,7 +75,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |sealed|Specifica che da questo tipo non è possibile derivare un'altra classe.|  
 |implementa|Indica che la classe utilizza una o più interfacce fornendo implementazioni dei membri di interfaccia.|  
 |abstract|Indica che non è possibile creare un'istanza della classe. Per utilizzarla è necessario derivare da essa un'altra classe.|  
-|inherits|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
+|eredita|Indica che le istanze della classe possono essere utilizzate ovunque la classe sia specificata. Una classe derivata che eredita da una classe di base può utilizzare l'implementazione di qualsiasi membro pubblico fornito dalla classe di base oppure la classe derivata può eseguire l'override dell'implementazione dei membri pubblici con la propria implementazione.|  
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
@@ -110,7 +109,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 - Con un'enumerazione non è possibile definire proprietà o eventi.  
   
-- Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri dei tipi propri.  
+- Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri di tipo propri.  
   
     > [!NOTE]
     > I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipo. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
@@ -240,7 +239,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 - [Tipi annidati](#NestedTypes)  
   
 <a name="Fields"></a>   
-### <a name="fields"></a>Campi  
+### <a name="fields"></a>Fields  
  Un campo descrive e contiene parte dello stato del tipo. I campi possono essere di qualsiasi tipo supportato dal runtime. Nella maggior parte dei casi, i campi sono `private` o `protected`, in modo che siano accessibili solo dall'interno della classe o da una classe derivata. Se il valore di un campo può essere modificato dall'esterno del relativo tipo, viene in genere utilizzata una funzione di accesso set della proprietà. I campi esposti pubblicamente sono in genere di sola lettura e possono essere di due tipi:  
   
 - Costanti, il cui valore viene assegnato durante la fase di progettazione. Si tratta di membri statici di una classe, sebbene non vengano definiti utilizzando la parola chiave `static` (`Shared` in Visual Basic).  
@@ -276,11 +275,11 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  Se il codice sorgente per una struttura definisce i costruttori, essi devono essere con parametri. Una struttura non può definire un costruttore senza parametri e i compilatori non generano costruttori senza parametri per strutture o altri tipi di valori. Tutti i tipi di valori hanno un costruttore senza parametri. Questo costruttore viene implementato da Common Language Runtime e inizializza tutti i campi della struttura sui valori predefiniti.  
   
 <a name="Events"></a>   
-### <a name="events"></a>eventi  
+### <a name="events"></a>Events  
  Un evento definisce una situazione a cui è possibile fornire risposta e metodi per la sottoscrizione, l'annullamento della sottoscrizione e la generazione dell'evento. Gli eventi sono spesso utilizzati per indicare modifiche di stato a tipi diversi. Per altre informazioni, vedere [Eventi](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>   
-### <a name="nested-types"></a>Tipi annidati  
+### <a name="nested-types"></a>Tipi nidificati  
  I tipi annidati sono tipi membri di altri tipi. I tipi annidati devono essere strettamente collegati ai rispettivi tipi contenitori e non devono essere utilizzati come tipi generici. I tipi annidati risultano utili quando il tipo dichiarante utilizza e crea istanze del tipo annidato e quando il loro utilizzo non viene esposto in membri pubblici.  
   
  Per alcuni sviluppatori i tipi annidati possono generare confusione e dovrebbero essere visibili pubblicamente solo in casi di assoluta necessità. In una libreria progettata correttamente è improbabile che gli sviluppatori debbano utilizzare tipi annidati per creare istanze di oggetti o dichiarare variabili.  
@@ -292,14 +291,14 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |Caratteristica|Si applica a|Descrizione|  
 |--------------------|------------------|-----------------|  
 |abstract|Metodi, proprietà ed eventi|Il tipo non fornisce l'implementazione del metodo. I tipi che ereditano o implementano metodi astratti devono fornire un'implementazione per il metodo. L'unica eccezione si verifica nel caso in cui il tipo derivato sia esso stesso un tipo astratto. Tutti i metodi astratti sono virtuali.|  
-|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|All|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
+|private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutte le|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  
 |final|Metodi, proprietà ed eventi|Il metodo virtuale non può essere sottoposto a override in un tipo derivato.|  
-|initialize-only|Campi|Il valore può essere solo inizializzato e non può essere scritto dopo l'inizializzazione.|  
-|istanza|Campi, metodi, proprietà ed eventi|Se un membro non è contrassegnato come `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) o `Overridable` (Visual Basic), è un membro di istanza (nessuna parola chiave di istanza). Ci saranno tante copie di tali membri in memoria quanti sono gli oggetti che li utilizzano.|  
-|literal|Campi|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
-|newslot o override|All|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> ignora<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
-|static|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
-|virtuale|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
+|initialize-only|Fields|Il valore può essere solo inizializzato e non può essere scritto dopo l'inizializzazione.|  
+|Istanza|Campi, metodi, proprietà ed eventi|Se un membro non è contrassegnato come `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) o `Overridable` (Visual Basic), è un membro di istanza (nessuna parola chiave di istanza). Ci saranno tante copie di tali membri in memoria quanti sono gli oggetti che li utilizzano.|  
+|valore letterale|Fields|Il valore assegnato al campo è un valore fisso, noto in fase di compilazione, di un tipo di valore incorporato. Ai campi literal viene a volte fatto riferimento come a costanti.|  
+|newslot o override|Tutte le|Definisce il modo in cui il membro interagisce con membri ereditati aventi la stessa firma:<br /><br /> newslot<br /> Nasconde i membri ereditati aventi la stessa firma.<br /><br /> sostituzione<br /> Sostituisce la definizione di un metodo virtuale ereditato.<br /><br /> Il valore predefinito è newslot.|  
+|statiche|Campi, metodi, proprietà ed eventi|Il membro appartiene al tipo sul quale viene definito, non a un'istanza specifica del tipo. Il membro esiste anche se non viene creata un'istanza del tipo ed è condiviso tra tutte le istanze del tipo.|  
+|virtuali|Metodi, proprietà ed eventi|Il metodo può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico. Se viene utilizzata la chiamata dinamica, il tipo dell'istanza che effettua la chiamata in fase di esecuzione, e non il tipo noto in fase di compilazione, determina l'implementazione del metodo chiamata. Per richiamare un metodo virtuale in modo statico, potrebbe essere necessario eseguire il cast della variabile in un tipo che utilizza la versione desiderata del metodo.|  
   
 ### <a name="overloading"></a>Overload  
  Ciascun membro di tipo dispone di una firma univoca. La firma di un metodo è costituita dal nome del metodo e da un elenco di parametri, ovvero l'ordine e i tipi degli argomenti del metodo. All'interno di un tipo è possibile definire più metodi con lo stesso nome, purché la relativa firma sia diversa. Quando vengono definiti due o più metodi con lo stesso nome si dice che il metodo è stato sottoposto a overload. In <xref:System.Char?displayProperty=nameWithType>, ad esempio, il metodo <xref:System.Char.IsDigit%2A> è sottoposto a overload. Un metodo accetta un oggetto <xref:System.Char>. L'altro metodo accetta un oggetto <xref:System.String> e un oggetto <xref:System.Int32>.  

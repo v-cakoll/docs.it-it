@@ -3,14 +3,12 @@ title: Modifica di dati XML con XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef68511e425e047fa853e47bd4d463d9662c740c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3b9225f1efcca0f4874a98f2b83d1964aacef735
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495672"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710960"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Modifica di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce dei metodi per inserire, modificare e rimuovere nodi e valori da un documento XML contenuto in un oggetto <xref:System.Xml.XmlDocument>. Per usare tali metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero che la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> sia impostata su true.  

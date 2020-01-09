@@ -1,15 +1,13 @@
 ---
 title: Registrazione e traccia-.NET Core
 description: Introduzione alla registrazione e alla traccia di .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926357"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714416"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registrazione e traccia di .NET Core
 
@@ -29,22 +27,22 @@ Questa semplice tecnica è sorprendentemente potente. Può essere usato in situa
 
 ### <a name="print-style-apis"></a>API stile di stampa
 
-Ognuna <xref:System.Console?displayProperty=nameWithType>delle <xref:System.Diagnostics.Trace?displayProperty=nameWithType>classi, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e fornisce API dello stile di stampa simili, utili per la registrazione.
+Le classi <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> offrono API simili per lo stile di stampa utili per la registrazione.
 
-La scelta dell'API dello stile di stampa da usare dipende dall'utente. Le differenze principali sono:
+La scelta dell'API dello stile di stampa da usare dipende dall'utente. Le differenze principali sono le seguenti:
 
 - <xref:System.Console?displayProperty=nameWithType>
   - Sempre abilitato e scrive sempre nella console.
   - Utile per le informazioni che il cliente potrebbe dover visualizzare nella versione.
   - Poiché è l'approccio più semplice, viene spesso usato per il debug temporaneo ad hoc. Questo codice di debug spesso non viene mai archiviato nel controllo del codice sorgente.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Abilitato solo quando `TRACE` è definito.
-  - Scrive nell'oggetto <xref:System.Diagnostics.Trace.Listeners> <xref:System.Diagnostics.DefaultTraceListener>collegato, per impostazione predefinita.
+  - Abilitato solo quando viene definito `TRACE`.
+  - Scrive nel <xref:System.Diagnostics.Trace.Listeners>allegato, per impostazione predefinita il <xref:System.Diagnostics.DefaultTraceListener>.
   - Usare questa API durante la creazione di log che verranno abilitati nella maggior parte delle compilazioni.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Abilitato solo quando `DEBUG` è definito.
+  - Abilitato solo quando viene definito `DEBUG`.
   - Scrive in un debugger collegato.
-  - Durante `*nix` le operazioni di scrittura `COMPlus_DebugWriteToStdErr` su stderr se è impostato.
+  - In `*nix` scrive in stderr se è impostato `COMPlus_DebugWriteToStdErr`.
   - Usare questa API durante la creazione di log che saranno abilitati solo nelle build di debug.
 
 ### <a name="logging-events"></a>Registrazione di eventi
@@ -64,7 +62,7 @@ Le API seguenti sono più orientate agli eventi. Anziché registrare semplici st
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Incluso in .NET Core e come [pacchetto NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) per .NET Framework.
   - Consente la traccia in-process di oggetti non serializzabili.
-  - Include un Bridge per consentire la scrittura dei campi selezionati degli oggetti registrati in un <xref:System.Diagnostics.Tracing.EventSource>oggetto.
+  - Include un Bridge per consentire la scrittura dei campi selezionati degli oggetti registrati in un <xref:System.Diagnostics.Tracing.EventSource>.
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
   - Consente di identificare in modo definitivo i messaggi di log derivanti da un'attività o una transazione specifica. Questo oggetto può essere utilizzato per correlare i log tra servizi diversi.
@@ -78,9 +76,9 @@ Le API seguenti sono più orientate agli eventi. Anziché registrare semplici st
 
 Le API di basso livello potrebbero non essere la scelta migliore per le esigenze di registrazione. Si consiglia di prendere in considerazione un Framework di registrazione.
 
-L' <xref:Microsoft.Extensions.Logging.ILogger> interfaccia è stata usata per creare un'interfaccia di registrazione comune in cui i logger possono essere inseriti tramite l'inserimento di dipendenze.
+L'interfaccia <xref:Microsoft.Extensions.Logging.ILogger> è stata usata per creare un'interfaccia di registrazione comune in cui i logger possono essere inseriti tramite l'inserimento di dipendenze.
 
-Ad esempio, per consentire all'utente di scegliere la scelta migliore per l' `ASP.NET` applicazione, offre il supporto per una selezione di Framework incorporati e di terze parti:
+Ad esempio, per consentire all'utente di scegliere la scelta migliore per l'applicazione `ASP.NET` offre supporto per la selezione di Framework predefiniti e di terze parti:
 
 - [ASP.NET incorporati nei provider di registrazione](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET provider di registrazione di terze parti](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
@@ -89,15 +87,15 @@ Ad esempio, per consentire all'utente di scegliere la scelta migliore per l' `AS
 
 - [Procedura: Compilare in modo condizionale con traccia e debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - La [registrazione ASP.NET](/aspnet/core/fundamentals/logging) offre una panoramica delle tecniche di registrazione supportate.
 
 - L'interpolazione di stringhe può semplificare la scrittura del codice di registrazione. [ C# ](../../csharp/language-reference/tokens/interpolated.md)
 
-- La <xref:System.Exception.Message?displayProperty=nameWithType> proprietà è utile per la registrazione delle eccezioni.
+- La proprietà <xref:System.Exception.Message?displayProperty=nameWithType> è utile per la registrazione delle eccezioni.
 
-- La <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> classe può essere utile per fornire informazioni sullo stack nei log.
+- La classe <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> può essere utile per fornire informazioni sullo stack nei log.
 
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 

@@ -1,18 +1,17 @@
 ---
 title: '#define - Riferimenti per C#'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7457b05ae827675969398792bcb02f025f3028fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712585"
 ---
 # <a name="define-c-reference"></a>#define (Riferimenti per C#)
 Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressione passata alla direttiva [#if](./preprocessor-if.md), l'espressione restituisce `true`, come illustrato nell'esempio seguente:  
@@ -21,7 +20,7 @@ Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressi
  #define DEBUG
  ```
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 > [!NOTE]
 > Non è possibile usare la direttiva `#define` per dichiarare valori costanti come in C e in C++. Le costanti in C# possono essere definite come membri statici di una classe o di uno struct. Se sono presenti più costanti di questo tipo, per usarle può essere utile creare una classe di costanti separata.  

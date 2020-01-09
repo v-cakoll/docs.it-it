@@ -12,13 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711532"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 
@@ -33,7 +32,7 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
 
 Nei backreference numerati si usa la sintassi seguente:
 
-`\` *numero*
+*numero* `\`
 
 dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se nel modello di espressione regolare *numero* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`. Inoltre, se *numero* identifica un gruppo di acquisizione in una determinata posizione ordinale, ma a tale gruppo di acquisizione è stato assegnato un valore numerico diverso dalla relativa posizione ordinale, il parser delle espressioni regolari genera anche un'eccezione <xref:System.ArgumentException>.
 
@@ -63,11 +62,11 @@ L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno 
 
 Per definire un backreference denominato, usare la sintassi seguente:
 
-`\k<` *nome* `>`
+*nome* `\k<` `>`
 
 oppure:
 
-`\k'` *nome* `'`
+*nome* `\k'` `'`
 
 dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare. Se nel modello di espressione regolare *nome* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.
 

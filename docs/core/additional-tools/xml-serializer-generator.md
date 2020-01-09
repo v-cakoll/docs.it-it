@@ -4,13 +4,13 @@ description: Panoramica dello strumento Microsoft per la generazione di serializ
 author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522825"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714516"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
 
@@ -26,7 +26,7 @@ In questa esercitazione viene illustrato come usare lo strumento Microsoft per l
 
 Lo [strumento per la generazione di serializzatori XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) è la soluzione per .NET Framework, mentre il [pacchetto NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) è la soluzione equivalente per NET Core e .NET Standard. Crea un assembly di serializzazione XML per tipi contenuti in un assembly per migliorare le prestazioni di avvio della serializzazione XML durante la serializzazione o deserializzazione di oggetti di questi tipi usando <xref:System.Xml.Serialization.XmlSerializer>.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa esercitazione:
 
@@ -131,5 +131,5 @@ La procedura è stata completata. Sono state eseguite le attività seguenti:
 ## <a name="related-resources"></a>Risorse correlate
 
 - [Introduzione alla serializzazione XML](../../standard/serialization/introducing-xml-serialization.md)
-- [Procedura: Serializzare tramite XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Come serializzare tramite XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [Procedura: Serializzare tramite XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

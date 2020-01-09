@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140559"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711558"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 
@@ -50,7 +49,7 @@ L'espressione regolare che usa il carattere `|`, `\bgr(a|e)y\b`, viene interpret
 |<code>(a&#124;e)</code>|Corrisponde a una "a" o una "e".|  
 |`y\b`|Corrisponde a una "y" in un confine di parola.|  
 
-Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari. (La classe di caratteri non fornisce questa funzionalità). Nell'esempio seguente viene usato il carattere `|` per estrarre un numero di previdenza sociale (SSN) statunitense, ovvero un numero a 9 cifre con formato *ddd*-*DD*-*dddd*o un numero di identificazione del datore di lavoro (EIN) statunitense, che è un numero a 9 cifre con formato *gg*-*ddddddd*.
+Il carattere `|` può essere usato anche per trovare una corrispondenza di tipo either/or con più caratteri o sottoesspressioni, che possono includere qualsiasi combinazione di valori letterali carattere ed elementi del linguaggio di espressioni regolari. (La classe di caratteri non fornisce questa funzionalità). Nell'esempio seguente viene usato il carattere `|` per estrarre un numero di previdenza sociale (SSN) statunitense, ovvero un numero a 9 cifre con formato *ddd*-*DD*-*dddd*o un numero di identificazione del datore di lavoro (EIN) statunitense, che è un numero a 9 cifre con formato *GG*-*ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -68,16 +67,16 @@ L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata 
 
 Questo elemento del linguaggio tenta di trovare una corrispondenza con uno di due criteri, a seconda della possibilità di trovare una corrispondenza con un criterio iniziale. La sintassi è la seguente:  
 
-`(?(` *expression* `)` *yes* `|` *no* `)`
+`(?(` *espressione* `)` *sì* `|` *No* `)`
 
 dove *espressione* è il criterio iniziale per la corrispondenza, *sì* è il criterio di corrispondenza se viene trovata una corrispondenza per *espressione* e *no* è il criterio facoltativo di corrispondenza se non viene trovata una corrispondenza per *espressione* . Il motore delle espressioni regolari considera *espressione* come un'asserzione di larghezza zero, ovvero questo motore non avanza nel flusso di input dopo aver valutato *espressione*. Questo costrutto è pertanto equivalente a quanto segue:
 
-`(?(?=` *expression* `)` *yes* `|` *no* `)`
+`(?(?=` *espressione* `)` *sì* `|` *No* `)`
 
-dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per ulteriori informazioni, vedere [costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *Expression* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [ancoraggi](anchors-in-regular-expressions.md)) o una sottoespressione anch ' essa contenuta in *Sì*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì* .  
+dove `(?=`*espressione*`)` è un costrutto di asserzione di larghezza zero. Per ulteriori informazioni, vedere [costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md). Poiché il motore delle espressioni regolari interpreta *espressione* come un ancoraggio (un'asserzione di larghezza zero), *Expression* deve essere un'asserzione di larghezza zero (per altre informazioni, vedere [ancoraggi](anchors-in-regular-expressions.md)) o una sottoespressione anch ' essa contenuta in *Yes*. In caso contrario, non è possibile trovare una corrispondenza per il criterio *sì* .  
   
 > [!NOTE]
-> Se *espressione* è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per altre informazioni, vedere la sezione successiva, [Corrispondenza condizionale in base a un gruppo Capture valido](#Conditional_Group). In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.  
+> Se *Expression* è un gruppo di acquisizione denominato o numerato, il costrutto di alternanza viene interpretato come un test di acquisizione. Per ulteriori informazioni, vedere la sezione successiva, [corrispondenza condizionale basata su un gruppo Capture valido](#Conditional_Group). In altre parole, il motore delle espressioni regolari non tenta di trovare la corrispondenza con la sottostringa acquisita, ma verifica invece la presenza o l'assenza del gruppo.  
   
 L'esempio seguente è una variante dell'esempio visualizzato nella sezione relativa ai [criteri di ricerca either/or con &#124;](#Either_Or). L'esempio usa la corrispondenza condizionale per determinare se i primi tre caratteri dopo un confine di parola sono due cifre seguite da un trattino. In caso affermativo, viene effettuato un tentativo di trovare una corrispondenza con un identificativo del datore di lavoro (EIN) degli Stati Uniti. In caso contrario, viene effettuato un tentativo di trovare una corrispondenza con un numero di previdenza sociale (SSN) degli Stati Uniti.
 
@@ -99,11 +98,11 @@ Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d
 
 Tramite questo elemento di linguaggio viene effettuato un tentativo di corrispondenza con uno dei due modelli, a seconda dell'effettiva corrispondenza con un gruppo di acquisizione specificato. La sintassi è la seguente:
 
-`(?(` *name* `)` *yes* `|` *no* `)`
+`(?(` *nome* `)` *sì* `|` *No* `)`
 
-Oppure
+oppure
 
-`(?(` *numero* `)` *sì* `|` *no* `)`
+`(?(` *numero* `)` *sì* `|` *No* `)`
 
 dove *nome* è il nome e *numero* è il numero di un gruppo di acquisizione, *sì* è l'espressione di cui trovare la corrispondenza se per *nome* o *numero* è disponibile una corrispondenza e *no* è l'espressione facoltativa di cui trovare la corrispondenza in caso contrario.
 

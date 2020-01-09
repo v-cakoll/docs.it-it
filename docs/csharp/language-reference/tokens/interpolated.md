@@ -1,6 +1,5 @@
 ---
 title: $-String Interpolation C# -Reference
-ms.custom: seodec18
 description: L'interpolazione di stringhe offro una sintassi più leggibile e pratica per la formattazione dell'output di tipo stringa rispetto alla formattazione composita tradizionale.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421849"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715076"
 ---
 # <a name="---string-interpolation-c-reference"></a>interpolazione di $-C# String (riferimento)
 
@@ -61,7 +60,7 @@ L'esempio seguente illustra come includere una parentesi graffa in una stringa d
 Una stringa Verbatim interpolata inizia con il carattere `$` seguito dal carattere di `@`. Per altre informazioni sulle stringhe verbatim, vedere gli argomenti relativi a [string](../builtin-types/reference-types.md) e all'[identificatore verbatim](verbatim.md).
 
 > [!NOTE]
-> A partire C# da 8,0, è possibile usare i token di`$`e di`@`in qualsiasi ordine: sia `$@"..."`che`@$"..."`sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token di `$` deve essere visualizzato prima del token di `@`.
+> A partire C# da 8,0, è possibile usare i token di `$` e di `@` in qualsiasi ordine: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token di `$` deve essere visualizzato prima del token di `@`.
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversioni implicite e come specificare l'implementazione di `IFormatProvider`
 
