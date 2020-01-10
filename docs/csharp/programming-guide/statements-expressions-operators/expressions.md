@@ -1,17 +1,16 @@
 ---
 title: Espressioni - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417691"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699093"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 
@@ -61,7 +60,7 @@ System.Convert.ToInt32("35");
 DoWork();  
 ```  
   
- Una chiamata al metodo richiede il nome del metodo, che può essere un nome come nell'esempio precedente o il risultato di un'altra espressione, seguito da parentesi ed eventuali parametri di metodo. Per altre informazioni, vedere [Metodi](../classes-and-structs/methods.md). Una chiamata al delegato usa il nome di un delegato e i parametri di metodo tra parentesi. Per altre informazioni, vedere [Delegati](../delegates/index.md). Le chiamate ai metodi e le chiamate ai delegati restituiscono il valore restituito del metodo, se il metodo restituisce un valore. I metodi che restituiscono void non possono essere usati al posto di un valore in un'espressione.  
+ Una chiamata al metodo richiede il nome del metodo, che può essere un nome come nell'esempio precedente o il risultato di un'altra espressione, seguito da parentesi ed eventuali parametri di metodo. Per altre informazioni, vedere [Metodi](../classes-and-structs/methods.md). Una chiamata al delegato usa il nome di un delegato e i parametri di metodo tra parentesi. Per ulteriori informazioni, vedi [Delegati](../delegates/index.md). Le chiamate ai metodi e le chiamate ai delegati restituiscono il valore restituito del metodo, se il metodo restituisce un valore. I metodi che restituiscono void non possono essere usati al posto di un valore in un'espressione.  
 
 ## <a name="query-expressions"></a>Espressioni di query
 

@@ -1,16 +1,15 @@
 ---
 title: Tipi annidati - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: de2e369702c48047835bc49b98df8f48fbd13480
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 982eeceb2088dd6e1e57fe796b38e46c0f2d4de8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596531"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705496"
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipi annidati (Guida per programmatori C#)
 Per tipo annidato si intende un tipo definito all'interno di una [classe](../../language-reference/keywords/class.md) o di uno [struct](../../language-reference/keywords/struct.md). Ad esempio:  

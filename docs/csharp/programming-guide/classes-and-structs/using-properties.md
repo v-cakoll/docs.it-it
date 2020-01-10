@@ -1,18 +1,17 @@
 ---
 title: Uso delle proprietà - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579168"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705405"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizzo delle proprietà (Guida per programmatori C#)
 
@@ -22,7 +21,7 @@ A differenza dei campi, le proprietà non sono classificate come variabili. Non 
 
 Le proprietà possono essere usate per diversi scopi: possono convalidare i dati prima di consentire una modifica, esporre in modo trasparente i dati in una classe in cui i dati vengono effettivamente recuperati da un'altra origine come un database oppure eseguire un'azione quando i dati vengono modificati, ad esempio generare un evento o modificare il valore di altri campi.
 
-Le proprietà sono dichiarate nel blocco della classe specificando il livello di accesso del campo, seguito dal tipo della proprietà, seguito dal nome della proprietà, seguito da un blocco di codice che dichiara una funzione di accesso `get` e/o una funzione di accesso `set`. Esempio:
+Le proprietà sono dichiarate nel blocco della classe specificando il livello di accesso del campo, seguito dal tipo della proprietà, seguito dal nome della proprietà, seguito da un blocco di codice che dichiara una funzione di accesso `get` e/o una funzione di accesso `set`. Ad esempio:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -36,7 +35,7 @@ Il corpo della funzione di accesso `get` è simile a quello di un metodo. Deve r
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-Quando si fa riferimento alla proprietà, tranne che come destinazione di un'assegnazione, viene chiamata la funzione di accesso `get` per leggere il valore della proprietà. Esempio:
+Quando si fa riferimento alla proprietà, tranne che come destinazione di un'assegnazione, viene chiamata la funzione di accesso `get` per leggere il valore della proprietà. Ad esempio:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -46,7 +45,7 @@ La funzione di accesso `get` deve terminare con un'istruzione [return](../../lan
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-La funzione di accesso `get` può essere usata per restituire il valore del campo o per calcolarlo e restituirlo. Esempio:
+La funzione di accesso `get` può essere usata per restituire il valore del campo o per calcolarlo e restituirlo. Ad esempio:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -58,7 +57,7 @@ La funzione di accesso `set` è simile a un metodo il cui tipo restituito è [vo
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-Quando si assegna un valore alla proprietà, viene richiamata la funzione di accesso `set` tramite un argomento che fornisce il nuovo valore. Esempio:
+Quando si assegna un valore alla proprietà, viene richiamata la funzione di accesso `set` tramite un argomento che fornisce il nuovo valore. Ad esempio:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
@@ -66,7 +65,7 @@ Quando si assegna un valore alla proprietà, viene richiamata la funzione di acc
 
 ## <a name="remarks"></a>Note
 
-Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Access Modifiers](./access-modifiers.md) (Modificatori di accesso).
+Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Modificatori di accesso](./access-modifiers.md).
 
 Una proprietà può essere dichiarata come proprietà statica tramite la parola chiave `static`. Questo rende la proprietà disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md).
 

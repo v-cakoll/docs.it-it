@@ -1,6 +1,5 @@
 ---
 title: Istruzioni, espressioni e operatori - Guida per programmatori C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2b3b4a760ac16f55b6b9bcb808c6515548165297
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921830"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698638"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Istruzioni, espressioni e operatori (Guida per programmatori C#)
 
@@ -33,7 +32,7 @@ Il codice C# di un'applicazione è costituito da istruzioni che contengono parol
 
 - [Confronti di uguaglianza](equality-comparisons.md)
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifica del linguaggio C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926567"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694582"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -57,7 +57,7 @@ Si consiglia di specificare il tipo della variabile `out` per maggiore chiarezza
 - Non è necessario assegnare un valore iniziale.
   - Se si dichiara la variabile `out` nel punto in cui viene usata in una chiamata al metodo, non è possibile usarla accidentalmente prima che venga assegnata.
 
-## <a name="tuples"></a>Tuple
+## <a name="tuples"></a>Tuples
 
 C# offre una sintassi completa per le classi e gli struct usati per spiegare la finalità della progettazione. In alcuni casi tale sintassi richiede ulteriore lavoro con vantaggi minimi. Spesso è possibile scrivere metodi che richiedono una struttura semplice contenente più di un elemento dati. Per supportare questi scenari, sono state aggiunte *tuple* a C#. Le tuple sono strutture di dati leggere che contengono più campi per rappresentare i membri dati.
 I campi non vengono convalidati e non è possibile definire i propri metodi
@@ -211,7 +211,7 @@ La stessa tecnica può essere usata con i metodi `async` per garantire che le ec
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche usando le *espressioni lambda*. Per chi è interessato sono disponibili [altre informazioni sulle differenze](../local-functions-vs-lambdas.md)
+> Alcune delle progettazioni supportate dalle funzioni locali possono essere eseguite anche usando le *espressioni lambda*. Per ulteriori informazioni, vedere [funzioni locali rispetto alle espressioni lambda](../local-functions-vs-lambdas.md).
 
 ## <a name="more-expression-bodied-members"></a>Più membri con corpo di espressione
 
@@ -222,7 +222,7 @@ In C# 6 sono stati introdotti i [membri con corpo di espressione](csharp-6.md#ex
 > [!NOTE]
 > In questo esempio non è necessario un finalizzatore, ma viene incluso per illustrare la sintassi. Non implementare un finalizzatore nella classe a meno che non sia necessario per rilasciare risorse non gestite. È inoltre consigliabile usare la classe <xref:System.Runtime.InteropServices.SafeHandle> anziché gestire direttamente le risorse non gestite.
 
-Questi nuovi percorsi per i membri con corpo di espressione rappresentano un importante punto cardine per il linguaggio C#: Queste funzionalità sono state implementate da membri della community che lavorano sul progetto open source [Roslyn](https://github.com/dotnet/Roslyn).
+Le nuove posizioni per i membri con corpo di espressione rappresentano un importante punto cardine per il linguaggio C#: queste funzionalità sono state implementate dai membri della community che lavoravano al progetto open source [Roslyn](https://github.com/dotnet/Roslyn).
 
 La modifica di un metodo in un membro con corpo di espressione è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
 
