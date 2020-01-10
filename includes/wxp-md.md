@@ -6,4 +6,4 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65671378"
 ---
-<span data-ttu-id="2ebec-101">Windows XP</span><span class="sxs-lookup"><span data-stu-id="2ebec-101">Windows XP</span></span>
+<span data-ttu-id="beb81-101">Windows XP</span><span class="sxs-lookup"><span data-stu-id="beb81-101">Windows XP</span></span>
