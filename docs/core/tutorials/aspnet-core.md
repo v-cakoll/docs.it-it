@@ -2,14 +2,13 @@
 title: Introduzione ad ASP.NET Core
 description: Raccogliere altre informazioni su ASP.NET Core con le esercitazioni nella documentazione di ASP.NET Core.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 2f256796bab461a20a3d88465db12e564a119604
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
-ms.translationtype: HT
+ms.openlocfilehash: ade7d2ca8a4dcec555d0052e60fb13bba7a7380c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788232"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714094"
 ---
-# <a name="get-started-with-aspnet-core"></a><span data-ttu-id="b20bb-103">Introduzione ad ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b20bb-103">Get started with ASP.NET Core</span></span>
+# <a name="get-started-with-aspnet-core"></a><span data-ttu-id="c79a1-103">Introduzione ad ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c79a1-103">Get started with ASP.NET Core</span></span>
 
-<span data-ttu-id="b20bb-104">Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere [Esercitazioni su ASP.NET Core](/aspnet/core/tutorials).</span><span class="sxs-lookup"><span data-stu-id="b20bb-104">For tutorials about developing ASP.NET Core web applications, see [ASP.NET Core Tutorials](/aspnet/core/tutorials).</span></span>
+<span data-ttu-id="c79a1-104">Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere [Esercitazioni su ASP.NET Core](/aspnet/core/tutorials).</span><span class="sxs-lookup"><span data-stu-id="c79a1-104">For tutorials about developing ASP.NET Core web applications, see [ASP.NET Core Tutorials](/aspnet/core/tutorials).</span></span>

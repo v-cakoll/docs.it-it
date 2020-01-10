@@ -3,27 +3,25 @@ title: Supporto per la funzione msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710128"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="a4b79-102">Supporto per la funzione msxsl:node-set()</span><span class="sxs-lookup"><span data-stu-id="a4b79-102">Support for the msxsl:node-set() Function</span></span>
-<span data-ttu-id="a4b79-103">La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a4b79-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="a4b79-104">Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.</span><span class="sxs-lookup"><span data-stu-id="a4b79-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="a49f4-102">Supporto per la funzione msxsl:node-set()</span><span class="sxs-lookup"><span data-stu-id="a49f4-102">Support for the msxsl:node-set() Function</span></span>
+<span data-ttu-id="a49f4-103">La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a49f4-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="a49f4-104">Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.</span><span class="sxs-lookup"><span data-stu-id="a49f4-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a4b79-105">La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="a4b79-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="a4b79-106">È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="a4b79-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="a4b79-107">Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="a4b79-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="a49f4-105">La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="a49f4-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="a49f4-106">È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="a49f4-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="a49f4-107">Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="a49f4-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="a4b79-108">La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a4b79-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="a4b79-109">Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.</span><span class="sxs-lookup"><span data-stu-id="a4b79-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+ <span data-ttu-id="a49f4-108">La funzione `msxsl:node-set` consente di convertire un frammento di albero risultato in un set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a49f4-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="a49f4-109">Il set di nodi risultante contiene sempre un nodo singolo ed è il nodo radice dell'albero.</span><span class="sxs-lookup"><span data-stu-id="a49f4-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4b79-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="a4b79-110">Example</span></span>  
- <span data-ttu-id="a4b79-111">Nell'esempio seguente `$var` è una variabile che rappresenta l'albero dei nodi del foglio di stile.</span><span class="sxs-lookup"><span data-stu-id="a4b79-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="a4b79-112">L'istruzione for-each combinata con la funzione `node-set` consente all'utente di eseguire un'iterazione su questo albero come set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a4b79-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
+## <a name="example"></a><span data-ttu-id="a49f4-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="a49f4-110">Example</span></span>  
+ <span data-ttu-id="a49f4-111">Nell'esempio seguente `$var` è una variabile che rappresenta l'albero dei nodi del foglio di stile.</span><span class="sxs-lookup"><span data-stu-id="a49f4-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="a49f4-112">L'istruzione for-each combinata con la funzione `node-set` consente all'utente di eseguire un'iterazione su questo albero come set di nodi.</span><span class="sxs-lookup"><span data-stu-id="a49f4-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
   
-## <a name="nodesetxsl"></a><span data-ttu-id="a4b79-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="a4b79-113">nodeset.xsl</span></span>  
+## <a name="nodesetxsl"></a><span data-ttu-id="a49f4-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="a49f4-113">nodeset.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -45,14 +43,14 @@ ms.locfileid: "69939530"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="a4b79-114">Output</span><span class="sxs-lookup"><span data-stu-id="a4b79-114">Output</span></span>  
- <span data-ttu-id="a4b79-115">Output della trasformazione:</span><span class="sxs-lookup"><span data-stu-id="a4b79-115">The output of the transformation is</span></span>  
+## <a name="output"></a><span data-ttu-id="a49f4-114">Output</span><span class="sxs-lookup"><span data-stu-id="a49f4-114">Output</span></span>  
+ <span data-ttu-id="a49f4-115">Output della trasformazione:</span><span class="sxs-lookup"><span data-stu-id="a49f4-115">The output of the transformation is</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4b79-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4b79-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a49f4-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a49f4-116">See also</span></span>
 
-- [<span data-ttu-id="a4b79-117">Implementazione del processore XSLT da parte della classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="a4b79-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="a49f4-117">Implementazione del processore XSLT da parte della classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="a49f4-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
